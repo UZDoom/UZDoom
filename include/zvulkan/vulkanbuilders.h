@@ -13,11 +13,8 @@ public:
 
 	VulkanInstanceBuilder& ApiVersionsToTry(const std::vector<uint32_t>& versions);
 	VulkanInstanceBuilder& RequireExtension(const std::string& extensionName);
-	VulkanInstanceBuilder& RequireExtensions(const std::vector<std::string>& extensions);
-	VulkanInstanceBuilder& RequireExtensions(const std::vector<const char*>& extensions);
-	VulkanInstanceBuilder& RequireExtensions(const char** extensions, size_t count);
+	VulkanInstanceBuilder& RequireSurfaceExtensions(bool enable = true);
 	VulkanInstanceBuilder& OptionalExtension(const std::string& extensionName);
-	VulkanInstanceBuilder& OptionalSwapchainColorspace();
 	VulkanInstanceBuilder& DebugLayer(bool enable = true);
 
 	std::shared_ptr<VulkanInstance> Create();
@@ -28,6 +25,23 @@ private:
 	std::set<std::string> optionalExtensions;
 	bool debugLayer = false;
 };
+
+#ifdef VK_USE_PLATFORM_WIN32_KHR
+
+class VulkanSurfaceBuilder
+{
+public:
+	VulkanSurfaceBuilder();
+
+	VulkanSurfaceBuilder& Win32Window(HWND handle);
+
+	std::shared_ptr<VulkanSurface> Create(std::shared_ptr<VulkanInstance> instance);
+
+private:
+	HWND hwnd = {};
+};
+
+#endif
 
 class VulkanDeviceBuilder
 {
@@ -105,8 +119,6 @@ class ImageBuilder
 public:
 	ImageBuilder();
 
-	ImageBuilder& Type(VkImageType type);
-	ImageBuilder& Flags(VkImageCreateFlags flags);
 	ImageBuilder& Size(int width, int height, int miplevels = 1, int arrayLayers = 1);
 	ImageBuilder& Samples(VkSampleCountFlagBits samples);
 	ImageBuilder& Format(VkFormat format);
@@ -197,34 +209,38 @@ enum class ShaderType
 class ShaderIncludeResult
 {
 public:
-	ShaderIncludeResult(std::string name, std::string text) : name(std::move(name)), text(std::move(text)) {}
-	ShaderIncludeResult(std::string error) : text(std::move(error)) {}
+	ShaderIncludeResult(std::string name, std::string text) : name(std::move(name)), text(std::move(text)) { }
+	ShaderIncludeResult(std::string error) : text(std::move(error)) { }
 
 	std::string name; // fully resolved name of the included header file
 	std::string text; // the file contents - or include error message if name is empty
 };
 
-class GLSLCompiler
+class ShaderBuilder
 {
 public:
+	ShaderBuilder();
+
 	static void Init();
 	static void Deinit();
 
-	GLSLCompiler& Type(ShaderType type);
-	GLSLCompiler& AddSource(const std::string& name, const std::string& code);
+	ShaderBuilder& Type(ShaderType type);
+	ShaderBuilder& AddSource(const std::string& name, const std::string& code);
 
-	GLSLCompiler& OnIncludeSystem(std::function<ShaderIncludeResult(std::string headerName, std::string includerName, size_t inclusionDepth)> onIncludeSystem);
-	GLSLCompiler& OnIncludeLocal(std::function<ShaderIncludeResult(std::string headerName, std::string includerName, size_t inclusionDepth)> onIncludeLocal);
+	ShaderBuilder& OnIncludeSystem(std::function<ShaderIncludeResult(std::string headerName, std::string includerName, size_t inclusionDepth)> onIncludeSystem);
+	ShaderBuilder& OnIncludeLocal(std::function<ShaderIncludeResult(std::string headerName, std::string includerName, size_t inclusionDepth)> onIncludeLocal);
 
-	std::vector<uint32_t> Compile(uint32_t apiVersion/* = VK_API_VERSION_1_0*/);
-	std::vector<uint32_t> Compile(VulkanDevice* device);
+	ShaderBuilder& DebugName(const char* name) { debugName = name; return *this; }
+
+	std::unique_ptr<VulkanShader> Create(const char *shadername, VulkanDevice *device);
 
 private:
 	std::vector<std::pair<std::string, std::string>> sources;
 	std::function<ShaderIncludeResult(std::string headerName, std::string includerName, size_t inclusionDepth)> onIncludeSystem;
 	std::function<ShaderIncludeResult(std::string headerName, std::string includerName, size_t inclusionDepth)> onIncludeLocal;
 	int stage = 0;
-	friend class GLSLCompilerIncluderImpl;
+	const char* debugName = nullptr;
+	friend class ShaderBuilderIncluderImpl;
 };
 
 class AccelerationStructureBuilder
@@ -251,7 +267,7 @@ public:
 
 	ComputePipelineBuilder& Cache(VulkanPipelineCache* cache);
 	ComputePipelineBuilder& Layout(VulkanPipelineLayout *layout);
-	ComputePipelineBuilder& ComputeShader(std::vector<uint32_t> spirv) { computeShader = std::move(spirv); return *this; }
+	ComputePipelineBuilder& ComputeShader(VulkanShader *shader);
 	ComputePipelineBuilder& DebugName(const char* name) { debugName = name; return *this; }
 
 	std::unique_ptr<VulkanPipeline> Create(VulkanDevice *device);
@@ -259,7 +275,6 @@ public:
 private:
 	VkComputePipelineCreateInfo pipelineInfo = {};
 	VkPipelineShaderStageCreateInfo stageInfo = {};
-	std::vector<uint32_t> computeShader;
 	VulkanPipelineCache* cache = nullptr;
 	const char* debugName = nullptr;
 };
@@ -374,61 +389,36 @@ public:
 
 	GraphicsPipelineBuilder& AddColorBlendAttachment(VkPipelineColorBlendAttachmentState state);
 
-	GraphicsPipelineBuilder& AddVertexShader(std::vector<uint32_t> spirv);
-	GraphicsPipelineBuilder& AddFragmentShader(std::vector<uint32_t> spirv);
-
-	GraphicsPipelineBuilder& AddConstant(uint32_t constantID, const void* data, size_t size);
-	GraphicsPipelineBuilder& AddConstant(uint32_t constantID, uint32_t value);
-	GraphicsPipelineBuilder& AddConstant(uint32_t constantID, int32_t value);
-	GraphicsPipelineBuilder& AddConstant(uint32_t constantID, float value);
+	GraphicsPipelineBuilder& AddVertexShader(VulkanShader *shader);
+	GraphicsPipelineBuilder& AddFragmentShader(VulkanShader *shader);
 
 	GraphicsPipelineBuilder& AddVertexBufferBinding(int index, size_t stride);
 	GraphicsPipelineBuilder& AddVertexAttribute(int location, int binding, VkFormat format, size_t offset);
-	
+
 	GraphicsPipelineBuilder& AddDynamicState(VkDynamicState state);
-
-	GraphicsPipelineBuilder& PolygonMode(VkPolygonMode mode) {rasterizer.polygonMode = mode; return *this;};
-
-	GraphicsPipelineBuilder& Flags(VkPipelineCreateFlags flags);
-	GraphicsPipelineBuilder& LibraryFlags(VkGraphicsPipelineLibraryFlagsEXT flags);
-	GraphicsPipelineBuilder& AddLibrary(VulkanPipeline* pipeline);
 
 	GraphicsPipelineBuilder& DebugName(const char* name) { debugName = name; return *this; }
 
 	std::unique_ptr<VulkanPipeline> Create(VulkanDevice *device);
 
 private:
-	VkGraphicsPipelineCreateInfo pipelineInfo = { VK_STRUCTURE_TYPE_GRAPHICS_PIPELINE_CREATE_INFO };
-	VkPipelineVertexInputStateCreateInfo vertexInputInfo = { VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO };
-	VkPipelineInputAssemblyStateCreateInfo inputAssembly = { VK_STRUCTURE_TYPE_PIPELINE_INPUT_ASSEMBLY_STATE_CREATE_INFO };
+	VkGraphicsPipelineCreateInfo pipelineInfo = { };
+	VkPipelineVertexInputStateCreateInfo vertexInputInfo = { };
+	VkPipelineInputAssemblyStateCreateInfo inputAssembly = { };
 	VkViewport viewport = { };
 	VkRect2D scissor = { };
-	VkPipelineViewportStateCreateInfo viewportState = { VK_STRUCTURE_TYPE_PIPELINE_VIEWPORT_STATE_CREATE_INFO };
-	VkPipelineRasterizationStateCreateInfo rasterizer = { VK_STRUCTURE_TYPE_PIPELINE_RASTERIZATION_STATE_CREATE_INFO };
-	VkPipelineMultisampleStateCreateInfo multisampling = { VK_STRUCTURE_TYPE_PIPELINE_MULTISAMPLE_STATE_CREATE_INFO };
-	VkPipelineColorBlendStateCreateInfo colorBlending = { VK_STRUCTURE_TYPE_PIPELINE_COLOR_BLEND_STATE_CREATE_INFO };
-	VkPipelineDepthStencilStateCreateInfo depthStencil = { VK_STRUCTURE_TYPE_PIPELINE_DEPTH_STENCIL_STATE_CREATE_INFO };
-	VkPipelineDynamicStateCreateInfo dynamicState = { VK_STRUCTURE_TYPE_PIPELINE_DYNAMIC_STATE_CREATE_INFO };
-
-	VkPipelineLibraryCreateInfoKHR libraryCreate = { VK_STRUCTURE_TYPE_PIPELINE_LIBRARY_CREATE_INFO_KHR };
-	VkGraphicsPipelineLibraryCreateInfoEXT pipelineLibrary = { VK_STRUCTURE_TYPE_GRAPHICS_PIPELINE_LIBRARY_CREATE_INFO_EXT };
+	VkPipelineViewportStateCreateInfo viewportState = { };
+	VkPipelineRasterizationStateCreateInfo rasterizer = { };
+	VkPipelineMultisampleStateCreateInfo multisampling = { };
+	VkPipelineColorBlendStateCreateInfo colorBlending = { };
+	VkPipelineDepthStencilStateCreateInfo depthStencil = { };
+	VkPipelineDynamicStateCreateInfo dynamicState = {};
 
 	std::vector<VkPipelineShaderStageCreateInfo> shaderStages;
 	std::vector<VkPipelineColorBlendAttachmentState> colorBlendAttachments;
 	std::vector<VkVertexInputBindingDescription> vertexInputBindings;
 	std::vector<VkVertexInputAttributeDescription> vertexInputAttributes;
 	std::vector<VkDynamicState> dynamicStates;
-	std::vector<VkPipeline> libraries;
-	std::vector<std::vector<uint32_t>> shaderCode;
-
-	struct ShaderSpecialization
-	{
-		VkSpecializationInfo info = {};
-		std::vector<VkSpecializationMapEntry> entries;
-		std::vector<uint8_t> data;
-	};
-
-	std::vector<std::unique_ptr<ShaderSpecialization>> specializations;
 
 	VulkanPipelineCache* cache = nullptr;
 	const char* debugName = nullptr;

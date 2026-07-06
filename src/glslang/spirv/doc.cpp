@@ -1,6 +1,5 @@
 //
 // Copyright (C) 2014-2015 LunarG, Inc.
-// Copyright (C) 2022-2025 Arm Limited.
 // Modifications Copyright (C) 2020 Advanced Micro Devices, Inc. All rights reserved.
 //
 // All rights reserved.
@@ -46,7 +45,6 @@
 #include <cstdio>
 #include <cstring>
 #include <algorithm>
-#include <mutex>
 
 namespace spv {
     extern "C" {
@@ -55,8 +53,6 @@ namespace spv {
         #include "GLSL.ext.EXT.h"
         #include "GLSL.ext.AMD.h"
         #include "GLSL.ext.NV.h"
-        #include "GLSL.ext.ARM.h"
-        #include "GLSL.ext.QCOM.h"
     }
 }
 
@@ -101,8 +97,6 @@ const char* ExecutionModelString(int model)
     case 6:  return "Kernel";
     case ExecutionModelTaskNV: return "TaskNV";
     case ExecutionModelMeshNV: return "MeshNV";
-    case ExecutionModelTaskEXT: return "TaskEXT";
-    case ExecutionModelMeshEXT: return "MeshEXT";
 
     default: return "Bad";
 
@@ -179,33 +173,28 @@ const char* ExecutionModeString(int mode)
     case 31: return "ContractionOff";
     case 32: return "Bad";
 
-    case ExecutionModeInitializer:                   return "Initializer";
-    case ExecutionModeFinalizer:                     return "Finalizer";
-    case ExecutionModeSubgroupSize:                  return "SubgroupSize";
-    case ExecutionModeSubgroupsPerWorkgroup:         return "SubgroupsPerWorkgroup";
-    case ExecutionModeSubgroupsPerWorkgroupId:       return "SubgroupsPerWorkgroupId";
-    case ExecutionModeLocalSizeId:                   return "LocalSizeId";
-    case ExecutionModeLocalSizeHintId:               return "LocalSizeHintId";
+    case ExecutionModeInitializer:              return "Initializer";
+    case ExecutionModeFinalizer:                return "Finalizer";
+    case ExecutionModeSubgroupSize:             return "SubgroupSize";
+    case ExecutionModeSubgroupsPerWorkgroup:    return "SubgroupsPerWorkgroup";
+    case ExecutionModeSubgroupsPerWorkgroupId:  return "SubgroupsPerWorkgroupId";
+    case ExecutionModeLocalSizeId:              return "LocalSizeId";
+    case ExecutionModeLocalSizeHintId:          return "LocalSizeHintId";
 
-    case ExecutionModePostDepthCoverage:             return "PostDepthCoverage";
-    case ExecutionModeDenormPreserve:                return "DenormPreserve";
-    case ExecutionModeDenormFlushToZero:             return "DenormFlushToZero";
-    case ExecutionModeSignedZeroInfNanPreserve:      return "SignedZeroInfNanPreserve";
-    case ExecutionModeRoundingModeRTE:               return "RoundingModeRTE";
-    case ExecutionModeRoundingModeRTZ:               return "RoundingModeRTZ";
-    case ExecutionModeEarlyAndLateFragmentTestsAMD:  return "EarlyAndLateFragmentTestsAMD";
-    case ExecutionModeStencilRefUnchangedFrontAMD:   return "StencilRefUnchangedFrontAMD";
-    case ExecutionModeStencilRefLessFrontAMD:        return "StencilRefLessFrontAMD";
-    case ExecutionModeStencilRefGreaterBackAMD:      return "StencilRefGreaterBackAMD";
-    case ExecutionModeStencilRefReplacingEXT:        return "StencilRefReplacingEXT";
+    case ExecutionModePostDepthCoverage:        return "PostDepthCoverage";
+    case ExecutionModeDenormPreserve:           return "DenormPreserve";
+    case ExecutionModeDenormFlushToZero:        return "DenormFlushToZero";
+    case ExecutionModeSignedZeroInfNanPreserve: return "SignedZeroInfNanPreserve";
+    case ExecutionModeRoundingModeRTE:          return "RoundingModeRTE";
+    case ExecutionModeRoundingModeRTZ:          return "RoundingModeRTZ";
+    case ExecutionModeStencilRefReplacingEXT:   return "StencilRefReplacingEXT";
     case ExecutionModeSubgroupUniformControlFlowKHR: return "SubgroupUniformControlFlow";
-    case ExecutionModeMaximallyReconvergesKHR:       return "MaximallyReconverges";
 
-    case ExecutionModeOutputLinesNV:                 return "OutputLinesNV";
-    case ExecutionModeOutputPrimitivesNV:            return "OutputPrimitivesNV";
-    case ExecutionModeOutputTrianglesNV:             return "OutputTrianglesNV";
-    case ExecutionModeDerivativeGroupQuadsNV:        return "DerivativeGroupQuadsNV";
-    case ExecutionModeDerivativeGroupLinearNV:       return "DerivativeGroupLinearNV";
+    case ExecutionModeOutputLinesNV:            return "OutputLinesNV";
+    case ExecutionModeOutputPrimitivesNV:       return "OutputPrimitivesNV";
+    case ExecutionModeOutputTrianglesNV:        return "OutputTrianglesNV";
+    case ExecutionModeDerivativeGroupQuadsNV:   return "DerivativeGroupQuadsNV";
+    case ExecutionModeDerivativeGroupLinearNV:  return "DerivativeGroupLinearNV";
 
     case ExecutionModePixelInterlockOrderedEXT:         return "PixelInterlockOrderedEXT";
     case ExecutionModePixelInterlockUnorderedEXT:       return "PixelInterlockUnorderedEXT";
@@ -218,13 +207,6 @@ const char* ExecutionModeString(int mode)
     case ExecutionModeMaxWorkDimINTEL:          return "MaxWorkDimINTEL";
     case ExecutionModeNoGlobalOffsetINTEL:      return "NoGlobalOffsetINTEL";
     case ExecutionModeNumSIMDWorkitemsINTEL:    return "NumSIMDWorkitemsINTEL";
-
-    case ExecutionModeRequireFullQuadsKHR:      return "RequireFullQuadsKHR";
-    case ExecutionModeQuadDerivativesKHR:       return "QuadDerivativesKHR";
-
-    case ExecutionModeNonCoherentColorAttachmentReadEXT:        return "NonCoherentColorAttachmentReadEXT";
-    case ExecutionModeNonCoherentDepthAttachmentReadEXT:        return "NonCoherentDepthAttachmentReadEXT";
-    case ExecutionModeNonCoherentStencilAttachmentReadEXT:      return "NonCoherentStencilAttachmentReadEXT";
 
     case ExecutionModeCeiling:
     default: return "Bad";
@@ -256,9 +238,7 @@ const char* StorageClassString(int StorageClass)
     case StorageClassIncomingCallableDataKHR:  return "IncomingCallableDataKHR";
 
     case StorageClassPhysicalStorageBufferEXT: return "PhysicalStorageBufferEXT";
-    case StorageClassTaskPayloadWorkgroupEXT:  return "TaskPayloadWorkgroupEXT";
-    case StorageClassHitObjectAttributeNV:     return "HitObjectAttributeNV";
-    case StorageClassTileImageEXT:             return "TileImageEXT";
+
     default: return "Bad";
     }
 }
@@ -317,10 +297,7 @@ const char* DecorationString(int decoration)
     case DecorationCeiling:
     default:  return "Bad";
 
-    case DecorationWeightTextureQCOM:           return "DecorationWeightTextureQCOM";
-    case DecorationBlockMatchTextureQCOM:       return "DecorationBlockMatchTextureQCOM";
-    case DecorationBlockMatchSamplerQCOM:       return "DecorationBlockMatchSamplerQCOM";
-    case DecorationExplicitInterpAMD:           return "ExplicitInterpAMD";
+    case DecorationExplicitInterpAMD: return "ExplicitInterpAMD";
     case DecorationOverrideCoverageNV:          return "OverrideCoverageNV";
     case DecorationPassthroughNV:               return "PassthroughNV";
     case DecorationViewportRelativeNV:          return "ViewportRelativeNV";
@@ -328,16 +305,13 @@ const char* DecorationString(int decoration)
     case DecorationPerPrimitiveNV:              return "PerPrimitiveNV";
     case DecorationPerViewNV:                   return "PerViewNV";
     case DecorationPerTaskNV:                   return "PerTaskNV";
-
-    case DecorationPerVertexKHR:                return "PerVertexKHR";
+    case DecorationPerVertexNV:                 return "PerVertexNV";
 
     case DecorationNonUniformEXT:           return "DecorationNonUniformEXT";
     case DecorationHlslCounterBufferGOOGLE: return "DecorationHlslCounterBufferGOOGLE";
     case DecorationHlslSemanticGOOGLE:      return "DecorationHlslSemanticGOOGLE";
     case DecorationRestrictPointerEXT:      return "DecorationRestrictPointerEXT";
     case DecorationAliasedPointerEXT:       return "DecorationAliasedPointerEXT";
-
-    case DecorationHitObjectShaderRecordBufferNV:  return "DecorationHitObjectShaderRecordBufferNV";
     }
 }
 
@@ -418,18 +392,6 @@ const char* BuiltInString(int builtIn)
     case BuiltInObjectRayDirectionKHR:       return "ObjectRayDirectionKHR";
     case BuiltInRayTminKHR:                  return "RayTminKHR";
     case BuiltInRayTmaxKHR:                  return "RayTmaxKHR";
-    case BuiltInCullMaskKHR:                 return "CullMaskKHR";
-    case BuiltInHitTriangleVertexPositionsKHR: return "HitTriangleVertexPositionsKHR";
-    case BuiltInHitMicroTriangleVertexPositionsNV: return "HitMicroTriangleVertexPositionsNV";
-    case BuiltInHitMicroTriangleVertexBarycentricsNV: return "HitMicroTriangleVertexBarycentricsNV";
-    case BuiltInHitKindFrontFacingMicroTriangleNV: return "HitKindFrontFacingMicroTriangleNV";
-    case BuiltInHitKindBackFacingMicroTriangleNV: return "HitKindBackFacingMicroTriangleNV";
-    case BuiltInHitIsSphereNV:               return "HitIsSphereNV";
-    case BuiltInHitIsLSSNV:                  return "HitIsLSSNV";
-    case BuiltInHitSpherePositionNV:         return "HitSpherePositionNV";
-    case BuiltInHitSphereRadiusNV:           return "HitSphereRadiusNV";
-    case BuiltInHitLSSPositionsNV:           return "HitLSSPositionsNV";
-    case BuiltInHitLSSRadiiNV:               return "HitLLSSRadiiNV";
     case BuiltInInstanceCustomIndexKHR:      return "InstanceCustomIndexKHR";
     case BuiltInRayGeometryIndexKHR:         return "RayGeometryIndexKHR";
     case BuiltInObjectToWorldKHR:            return "ObjectToWorldKHR";
@@ -444,9 +406,8 @@ const char* BuiltInString(int builtIn)
     case BuiltInViewportMaskPerViewNV:       return "ViewportMaskPerViewNV";
 //    case BuiltInFragmentSizeNV:             return "FragmentSizeNV";        // superseded by BuiltInFragSizeEXT
 //    case BuiltInInvocationsPerPixelNV:      return "InvocationsPerPixelNV"; // superseded by BuiltInFragInvocationCountEXT
-    case BuiltInBaryCoordKHR:                return "BaryCoordKHR";
-    case BuiltInBaryCoordNoPerspKHR:         return "BaryCoordNoPerspKHR";
-    case BuiltInClusterIDNV:                 return "ClusterIDNV";
+    case BuiltInBaryCoordNV:                 return "BaryCoordNV";
+    case BuiltInBaryCoordNoPerspNV:          return "BaryCoordNoPerspNV";
 
     case BuiltInFragSizeEXT:                 return "FragSizeEXT";
     case BuiltInFragInvocationCountEXT:      return "FragInvocationCountEXT";
@@ -466,15 +427,6 @@ const char* BuiltInString(int builtIn)
     case BuiltInWarpIDNV:               return "WarpIDNV";
     case BuiltInSMIDNV:                 return "SMIDNV";
     case BuiltInCurrentRayTimeNV:       return "CurrentRayTimeNV";
-    case BuiltInPrimitivePointIndicesEXT:        return "PrimitivePointIndicesEXT";
-    case BuiltInPrimitiveLineIndicesEXT:         return "PrimitiveLineIndicesEXT";
-    case BuiltInPrimitiveTriangleIndicesEXT:     return "PrimitiveTriangleIndicesEXT";
-    case BuiltInCullPrimitiveEXT:                return "CullPrimitiveEXT";
-    case BuiltInCoreCountARM:           return "CoreCountARM";
-    case BuiltInCoreIDARM:              return "CoreIDARM";
-    case BuiltInCoreMaxIDARM:           return "CoreMaxIDARM";
-    case BuiltInWarpIDARM:              return "WarpIDARM";
-    case BuiltInWarpMaxIDARM:           return "BuiltInWarpMaxIDARM";
 
     default: return "Bad";
     }
@@ -490,7 +442,6 @@ const char* DimensionString(int dim)
     case 4:  return "Rect";
     case 5:  return "Buffer";
     case 6:  return "SubpassData";
-    case DimTileImageDataEXT:  return "TileImageDataEXT";
 
     default: return "Bad";
     }
@@ -605,7 +556,7 @@ const char* ImageChannelOrderString(int format)
     case 17: return "sRGBA";
     case 18: return "sBGRA";
 
-    default:
+    default: 
         return "Bad";
     }
 }
@@ -637,7 +588,7 @@ const char* ImageChannelDataTypeString(int type)
     }
 }
 
-const int ImageOperandsCeiling = 15;
+const int ImageOperandsCeiling = 14;
 
 const char* ImageOperandsString(int format)
 {
@@ -656,7 +607,6 @@ const char* ImageOperandsString(int format)
     case ImageOperandsVolatileTexelKHRShift:        return "VolatileTexelKHR";
     case ImageOperandsSignExtendShift:              return "SignExtend";
     case ImageOperandsZeroExtendShift:              return "ZeroExtend";
-    case ImageOperandsNontemporalShift:             return "Nontemporal";
 
     case ImageOperandsCeiling:
     default:
@@ -811,33 +761,6 @@ const char* MemoryAccessString(int mem)
     }
 }
 
-const int CooperativeMatrixOperandsCeiling = 6;
-
-const char* CooperativeMatrixOperandsString(int op)
-{
-    switch (op) {
-    case CooperativeMatrixOperandsMatrixASignedComponentsKHRShift:  return "ASignedComponentsKHR";
-    case CooperativeMatrixOperandsMatrixBSignedComponentsKHRShift:  return "BSignedComponentsKHR";
-    case CooperativeMatrixOperandsMatrixCSignedComponentsKHRShift:  return "CSignedComponentsKHR";
-    case CooperativeMatrixOperandsMatrixResultSignedComponentsKHRShift:  return "ResultSignedComponentsKHR";
-    case CooperativeMatrixOperandsSaturatingAccumulationKHRShift:   return "SaturatingAccumulationKHR";
-
-    default: return "Bad";
-    }
-}
-
-const int TensorAddressingOperandsCeiling = 3;
-
-const char* TensorAddressingOperandsString(int op)
-{
-    switch (op) {
-    case TensorAddressingOperandsTensorViewShift:  return "TensorView";
-    case TensorAddressingOperandsDecodeFuncShift:  return "DecodeFunc";
-
-    default: return "Bad";
-    }
-}
-
 const char* ScopeString(int mem)
 {
     switch (mem) {
@@ -919,7 +842,7 @@ const char* CapabilityString(int info)
     case 22: return "Int16";
     case 23: return "TessellationPointSize";
     case 24: return "GeometryPointSize";
-    case 25: return "ImageGatherExtended";
+    case 25: return "ImageGatherExtended"; 
     case 26: return "Bad";
     case 27: return "StorageImageMultisample";
     case 28: return "UniformBufferArrayDynamicIndexing";
@@ -964,7 +887,6 @@ const char* CapabilityString(int info)
     case CapabilitySubgroupBallotKHR: return "SubgroupBallotKHR";
     case CapabilityDrawParameters:    return "DrawParameters";
     case CapabilitySubgroupVoteKHR:   return "SubgroupVoteKHR";
-    case CapabilityGroupNonUniformRotateKHR: return "CapabilityGroupNonUniformRotateKHR";
 
     case CapabilityStorageUniformBufferBlock16: return "StorageUniformBufferBlock16";
     case CapabilityStorageUniform16:            return "StorageUniform16";
@@ -977,12 +899,6 @@ const char* CapabilityString(int info)
 
     case CapabilityDeviceGroup: return "DeviceGroup";
     case CapabilityMultiView:   return "MultiView";
-
-    case CapabilityDenormPreserve:           return "DenormPreserve";
-    case CapabilityDenormFlushToZero:        return "DenormFlushToZero";
-    case CapabilitySignedZeroInfNanPreserve: return "SignedZeroInfNanPreserve";
-    case CapabilityRoundingModeRTE:          return "RoundingModeRTE";
-    case CapabilityRoundingModeRTZ:          return "RoundingModeRTZ";
 
     case CapabilityStencilExportEXT: return "StencilExportEXT";
 
@@ -1003,21 +919,14 @@ const char* CapabilityString(int info)
     case CapabilityRayTracingNV:                    return "RayTracingNV";
     case CapabilityRayTracingMotionBlurNV:          return "RayTracingMotionBlurNV";
     case CapabilityRayTracingKHR:                   return "RayTracingKHR";
-    case CapabilityRayCullMaskKHR:                  return "RayCullMaskKHR";
     case CapabilityRayQueryKHR:                     return "RayQueryKHR";
     case CapabilityRayTracingProvisionalKHR:        return "RayTracingProvisionalKHR";
     case CapabilityRayTraversalPrimitiveCullingKHR: return "RayTraversalPrimitiveCullingKHR";
-    case CapabilityRayTracingPositionFetchKHR:      return "RayTracingPositionFetchKHR";
-    case CapabilityDisplacementMicromapNV:           return "DisplacementMicromapNV";
-    case CapabilityRayTracingOpacityMicromapEXT:    return "RayTracingOpacityMicromapEXT";
-    case CapabilityRayTracingDisplacementMicromapNV: return "CapabilityRayTracingDisplacementMicromapNV";
-    case CapabilityRayQueryPositionFetchKHR:        return "RayQueryPositionFetchKHR";
     case CapabilityComputeDerivativeGroupQuadsNV:   return "ComputeDerivativeGroupQuadsNV";
     case CapabilityComputeDerivativeGroupLinearNV:  return "ComputeDerivativeGroupLinearNV";
-    case CapabilityFragmentBarycentricKHR:          return "FragmentBarycentricKHR";
+    case CapabilityFragmentBarycentricNV:           return "FragmentBarycentricNV";
     case CapabilityMeshShadingNV:                   return "MeshShadingNV";
     case CapabilityImageFootprintNV:                return "ImageFootprintNV";
-    case CapabilityMeshShadingEXT:                  return "MeshShadingEXT";
 //    case CapabilityShadingRateNV:                   return "ShadingRateNV";  // superseded by FragmentDensityEXT
     case CapabilitySampleMaskOverrideCoverageNV:    return "SampleMaskOverrideCoverageNV";
     case CapabilityFragmentDensityEXT:              return "FragmentDensityEXT";
@@ -1045,40 +954,19 @@ const char* CapabilityString(int info)
     case CapabilityVariablePointers:                    return "VariablePointers";
 
     case CapabilityCooperativeMatrixNV:     return "CooperativeMatrixNV";
-    case CapabilityCooperativeMatrixKHR:    return "CooperativeMatrixKHR";
-    case CapabilityCooperativeMatrixReductionsNV:           return "CooperativeMatrixReductionsNV";
-    case CapabilityCooperativeMatrixConversionsNV:          return "CooperativeMatrixConversionsNV";
-    case CapabilityCooperativeMatrixPerElementOperationsNV: return "CooperativeMatrixPerElementOperationsNV";
-    case CapabilityCooperativeMatrixTensorAddressingNV:     return "CooperativeMatrixTensorAddressingNV";
-    case CapabilityCooperativeMatrixBlockLoadsNV:           return "CooperativeMatrixBlockLoadsNV";
-    case CapabilityTensorAddressingNV:                      return "TensorAddressingNV";
-
     case CapabilityShaderSMBuiltinsNV:      return "ShaderSMBuiltinsNV";
-
-    case CapabilityCooperativeVectorNV:                     return "CooperativeVectorNV";
-    case CapabilityCooperativeVectorTrainingNV:             return "CooperativeVectorTrainingNV";
 
     case CapabilityFragmentShaderSampleInterlockEXT:        return "CapabilityFragmentShaderSampleInterlockEXT";
     case CapabilityFragmentShaderPixelInterlockEXT:         return "CapabilityFragmentShaderPixelInterlockEXT";
     case CapabilityFragmentShaderShadingRateInterlockEXT:   return "CapabilityFragmentShaderShadingRateInterlockEXT";
 
-    case CapabilityTileImageColorReadAccessEXT:           return "TileImageColorReadAccessEXT";
-    case CapabilityTileImageDepthReadAccessEXT:           return "TileImageDepthReadAccessEXT";
-    case CapabilityTileImageStencilReadAccessEXT:         return "TileImageStencilReadAccessEXT";
-
-    case CapabilityCooperativeMatrixLayoutsARM:             return "CooperativeMatrixLayoutsARM";
-
     case CapabilityFragmentShadingRateKHR:                  return "FragmentShadingRateKHR";
 
     case CapabilityDemoteToHelperInvocationEXT:             return "DemoteToHelperInvocationEXT";
-    case CapabilityAtomicFloat16VectorNV:                   return "AtomicFloat16VectorNV";
     case CapabilityShaderClockKHR:                          return "ShaderClockKHR";
-    case CapabilityQuadControlKHR:                          return "QuadControlKHR";
     case CapabilityInt64ImageEXT:                           return "Int64ImageEXT";
 
     case CapabilityIntegerFunctions2INTEL:              return "CapabilityIntegerFunctions2INTEL";
-
-    case CapabilityExpectAssumeKHR:                         return "ExpectAssumeKHR";
 
     case CapabilityAtomicFloat16AddEXT:                     return "AtomicFloat16AddEXT";
     case CapabilityAtomicFloat32AddEXT:                     return "AtomicFloat32AddEXT";
@@ -1090,26 +978,7 @@ const char* CapabilityString(int info)
     case CapabilityWorkgroupMemoryExplicitLayoutKHR:            return "CapabilityWorkgroupMemoryExplicitLayoutKHR";
     case CapabilityWorkgroupMemoryExplicitLayout8BitAccessKHR:  return "CapabilityWorkgroupMemoryExplicitLayout8BitAccessKHR";
     case CapabilityWorkgroupMemoryExplicitLayout16BitAccessKHR: return "CapabilityWorkgroupMemoryExplicitLayout16BitAccessKHR";
-    case CapabilityCoreBuiltinsARM:                             return "CoreBuiltinsARM";
 
-    case CapabilityShaderInvocationReorderNV:                return "ShaderInvocationReorderNV";
-
-    case CapabilityTextureSampleWeightedQCOM:           return "TextureSampleWeightedQCOM";
-    case CapabilityTextureBoxFilterQCOM:                return "TextureBoxFilterQCOM";
-    case CapabilityTextureBlockMatchQCOM:               return "TextureBlockMatchQCOM";
-    case CapabilityTextureBlockMatch2QCOM:              return "TextureBlockMatch2QCOM";
-
-    case CapabilityReplicatedCompositesEXT:             return "CapabilityReplicatedCompositesEXT";
-
-    case CapabilityDotProductKHR:                       return "DotProductKHR";
-    case CapabilityDotProductInputAllKHR:               return "DotProductInputAllKHR";
-    case CapabilityDotProductInput4x8BitKHR:            return "DotProductInput4x8BitKHR";
-    case CapabilityDotProductInput4x8BitPackedKHR:      return "DotProductInput4x8BitPackedKHR";
-
-    case CapabilityRayTracingClusterAccelerationStructureNV:   return "RayTracingClusterAccelerationStructureNV";
-
-    case CapabilityRayTracingSpheresGeometryNV:             return "RayTracingSpheresGeometryNV";
-    case CapabilityRayTracingLinearSweptSpheresGeometryNV:  return "RayTracingLinearSweptSpheresGeometryNV";
     default: return "Bad";
     }
 }
@@ -1487,17 +1356,10 @@ const char* OpcodeString(int op)
     case 4429: return "OpSubgroupAnyKHR";
     case 4430: return "OpSubgroupAllEqualKHR";
     case 4432: return "OpSubgroupReadInvocationKHR";
-    case 4433: return "OpExtInstWithForwardRefsKHR";
-
-    case OpGroupNonUniformQuadAllKHR: return "OpGroupNonUniformQuadAllKHR";
-    case OpGroupNonUniformQuadAnyKHR: return "OpGroupNonUniformQuadAnyKHR";
 
     case OpAtomicFAddEXT: return "OpAtomicFAddEXT";
     case OpAtomicFMinEXT: return "OpAtomicFMinEXT";
     case OpAtomicFMaxEXT: return "OpAtomicFMaxEXT";
-
-    case OpAssumeTrueKHR: return "OpAssumeTrueKHR";
-    case OpExpectKHR: return "OpExpectKHR";
 
     case 5000: return "OpGroupIAddNonUniformAMD";
     case 5001: return "OpGroupFAddNonUniformAMD";
@@ -1532,10 +1394,6 @@ const char* OpcodeString(int op)
     case OpGroupNonUniformPartitionNV:       return "OpGroupNonUniformPartitionNV";
     case OpImageSampleFootprintNV:           return "OpImageSampleFootprintNV";
     case OpWritePackedPrimitiveIndices4x8NV: return "OpWritePackedPrimitiveIndices4x8NV";
-    case OpEmitMeshTasksEXT:                 return "OpEmitMeshTasksEXT";
-    case OpSetMeshOutputsEXT:                return "OpSetMeshOutputsEXT";
-
-    case OpGroupNonUniformRotateKHR:         return "OpGroupNonUniformRotateKHR";
 
     case OpTypeRayQueryKHR:                                                   return "OpTypeRayQueryKHR";
     case OpRayQueryInitializeKHR:                                             return "OpRayQueryInitializeKHR";
@@ -1561,127 +1419,17 @@ const char* OpcodeString(int op)
     case OpRayQueryGetWorldRayOriginKHR:                                      return "OpRayQueryGetWorldRayOriginKHR";
     case OpRayQueryGetIntersectionObjectToWorldKHR:                           return "OpRayQueryGetIntersectionObjectToWorldKHR";
     case OpRayQueryGetIntersectionWorldToObjectKHR:                           return "OpRayQueryGetIntersectionWorldToObjectKHR";
-    case OpRayQueryGetIntersectionTriangleVertexPositionsKHR:                 return "OpRayQueryGetIntersectionTriangleVertexPositionsKHR";
-    case OpRayQueryGetIntersectionClusterIdNV:                                return "OpRayQueryGetIntersectionClusterIdNV";
-
-    case OpRayQueryGetIntersectionSpherePositionNV:                           return "OpRayQueryGetIntersectionSpherePositionNV";
-    case OpRayQueryGetIntersectionSphereRadiusNV:                             return "OpRayQueryGetIntersectionSphereRadiusNV";
-    case OpRayQueryGetIntersectionLSSHitValueNV:                              return "OpRayQueryGetIntersectionLSSHitValueNV";
-    case OpRayQueryGetIntersectionLSSPositionsNV:                             return "OpRayQueryGetIntersectionLSSPositionsNV";
-    case OpRayQueryGetIntersectionLSSRadiiNV:                                 return "OpRayQueryGetIntersectionLSSRadiiNV";
-    case OpRayQueryIsSphereHitNV:                                             return "OpRayQueryIsSphereHitNV";
-    case OpRayQueryIsLSSHitNV:                                                return "OpRayQueryIsLSSHitNV";
 
     case OpTypeCooperativeMatrixNV:         return "OpTypeCooperativeMatrixNV";
     case OpCooperativeMatrixLoadNV:         return "OpCooperativeMatrixLoadNV";
     case OpCooperativeMatrixStoreNV:        return "OpCooperativeMatrixStoreNV";
     case OpCooperativeMatrixMulAddNV:       return "OpCooperativeMatrixMulAddNV";
     case OpCooperativeMatrixLengthNV:       return "OpCooperativeMatrixLengthNV";
-    case OpTypeCooperativeMatrixKHR:        return "OpTypeCooperativeMatrixKHR";
-    case OpCooperativeMatrixLoadKHR:        return "OpCooperativeMatrixLoadKHR";
-    case OpCooperativeMatrixStoreKHR:       return "OpCooperativeMatrixStoreKHR";
-    case OpCooperativeMatrixMulAddKHR:      return "OpCooperativeMatrixMulAddKHR";
-    case OpCooperativeMatrixLengthKHR:      return "OpCooperativeMatrixLengthKHR";
     case OpDemoteToHelperInvocationEXT:     return "OpDemoteToHelperInvocationEXT";
     case OpIsHelperInvocationEXT:           return "OpIsHelperInvocationEXT";
 
-    case OpCooperativeMatrixConvertNV:      return "OpCooperativeMatrixConvertNV";
-    case OpCooperativeMatrixTransposeNV:    return "OpCooperativeMatrixTransposeNV";
-    case OpCooperativeMatrixReduceNV:       return "OpCooperativeMatrixReduceNV";
-    case OpCooperativeMatrixLoadTensorNV:   return "OpCooperativeMatrixLoadTensorNV";
-    case OpCooperativeMatrixStoreTensorNV:  return "OpCooperativeMatrixStoreTensorNV";
-    case OpCooperativeMatrixPerElementOpNV: return "OpCooperativeMatrixPerElementOpNV";
-    case OpTypeTensorLayoutNV:              return "OpTypeTensorLayoutNV";
-    case OpTypeTensorViewNV:                return "OpTypeTensorViewNV";
-    case OpCreateTensorLayoutNV:            return "OpCreateTensorLayoutNV";
-    case OpTensorLayoutSetBlockSizeNV:      return "OpTensorLayoutSetBlockSizeNV";
-    case OpTensorLayoutSetDimensionNV:      return "OpTensorLayoutSetDimensionNV";
-    case OpTensorLayoutSetStrideNV:         return "OpTensorLayoutSetStrideNV";
-    case OpTensorLayoutSliceNV:             return "OpTensorLayoutSliceNV";
-    case OpTensorLayoutSetClampValueNV:     return "OpTensorLayoutSetClampValueNV";
-    case OpCreateTensorViewNV:              return "OpCreateTensorViewNV";
-    case OpTensorViewSetDimensionNV:        return "OpTensorViewSetDimensionNV";
-    case OpTensorViewSetStrideNV:           return "OpTensorViewSetStrideNV";
-    case OpTensorViewSetClipNV:             return "OpTensorViewSetClipNV";
-
-    case OpTypeCooperativeVectorNV:         return "OpTypeCooperativeVectorNV";
-    case OpCooperativeVectorMatrixMulNV:    return "OpCooperativeVectorMatrixMulNV";
-    case OpCooperativeVectorMatrixMulAddNV: return "OpCooperativeVectorMatrixMulAddNV";
-    case OpCooperativeVectorLoadNV:         return "OpCooperativeVectorLoadNV";
-    case OpCooperativeVectorStoreNV:        return "OpCooperativeVectorStoreNV";
-    case OpCooperativeVectorOuterProductAccumulateNV:   return "OpCooperativeVectorOuterProductAccumulateNV";
-    case OpCooperativeVectorReduceSumAccumulateNV:      return "OpCooperativeVectorReduceSumAccumulateNV";
-
     case OpBeginInvocationInterlockEXT:     return "OpBeginInvocationInterlockEXT";
     case OpEndInvocationInterlockEXT:       return "OpEndInvocationInterlockEXT";
-
-    case OpTypeHitObjectNV:                     return "OpTypeHitObjectNV";
-    case OpHitObjectTraceRayNV:                 return "OpHitObjectTraceRayNV";
-    case OpHitObjectTraceRayMotionNV:           return "OpHitObjectTraceRayMotionNV";
-    case OpHitObjectRecordHitNV:                return "OpHitObjectRecordHitNV";
-    case OpHitObjectRecordHitMotionNV:          return "OpHitObjectRecordHitMotionNV";
-    case OpHitObjectRecordHitWithIndexNV:       return "OpHitObjectRecordHitWithIndexNV";
-    case OpHitObjectRecordHitWithIndexMotionNV: return "OpHitObjectRecordHitWithIndexMotionNV";
-    case OpHitObjectRecordMissNV:               return "OpHitObjectRecordMissNV";
-    case OpHitObjectRecordMissMotionNV:         return "OpHitObjectRecordMissMotionNV";
-    case OpHitObjectRecordEmptyNV:              return "OpHitObjectRecordEmptyNV";
-    case OpHitObjectExecuteShaderNV:            return "OpHitObjectExecuteShaderNV";
-    case OpReorderThreadWithHintNV:             return "OpReorderThreadWithHintNV";
-    case OpReorderThreadWithHitObjectNV:        return "OpReorderThreadWithHitObjectNV";
-    case OpHitObjectGetCurrentTimeNV:           return "OpHitObjectGetCurrentTimeNV";
-    case OpHitObjectGetAttributesNV:            return "OpHitObjectGetAttributesNV";
-    case OpHitObjectGetHitKindNV:               return "OpHitObjectGetFrontFaceNV";
-    case OpHitObjectGetPrimitiveIndexNV:        return "OpHitObjectGetPrimitiveIndexNV";
-    case OpHitObjectGetGeometryIndexNV:         return "OpHitObjectGetGeometryIndexNV";
-    case OpHitObjectGetInstanceIdNV:            return "OpHitObjectGetInstanceIdNV";
-    case OpHitObjectGetInstanceCustomIndexNV:   return "OpHitObjectGetInstanceCustomIndexNV";
-    case OpHitObjectGetObjectRayDirectionNV:    return "OpHitObjectGetObjectRayDirectionNV";
-    case OpHitObjectGetObjectRayOriginNV:       return "OpHitObjectGetObjectRayOriginNV";
-    case OpHitObjectGetWorldRayDirectionNV:     return "OpHitObjectGetWorldRayDirectionNV";
-    case OpHitObjectGetWorldRayOriginNV:        return "OpHitObjectGetWorldRayOriginNV";
-    case OpHitObjectGetWorldToObjectNV:         return "OpHitObjectGetWorldToObjectNV";
-    case OpHitObjectGetObjectToWorldNV:         return "OpHitObjectGetObjectToWorldNV";
-    case OpHitObjectGetRayTMaxNV:               return "OpHitObjectGetRayTMaxNV";
-    case OpHitObjectGetRayTMinNV:               return "OpHitObjectGetRayTMinNV";
-    case OpHitObjectIsEmptyNV:                  return "OpHitObjectIsEmptyNV";
-    case OpHitObjectIsHitNV:                    return "OpHitObjectIsHitNV";
-    case OpHitObjectIsMissNV:                   return "OpHitObjectIsMissNV";
-    case OpHitObjectGetShaderBindingTableRecordIndexNV: return "OpHitObjectGetShaderBindingTableRecordIndexNV";
-    case OpHitObjectGetShaderRecordBufferHandleNV:   return "OpHitObjectGetShaderRecordBufferHandleNV";
-    case OpHitObjectGetClusterIdNV:             return "OpHitObjectGetClusterIdNV";
-    case OpHitObjectGetSpherePositionNV:        return "OpHitObjectGetSpherePositionNV";
-    case OpHitObjectGetSphereRadiusNV:          return "OpHitObjectGetSphereRadiusNV";
-    case OpHitObjectGetLSSPositionsNV:          return "OpHitObjectGetLSSPositionsNV";
-    case OpHitObjectGetLSSRadiiNV:              return "OpHitObjectGetLSSRadiiNV";
-    case OpHitObjectIsSphereHitNV:              return "OpHitObjectIsSphereHitNV";
-    case OpHitObjectIsLSSHitNV:                 return "OpHitObjectIsLSSHitNV";
-
-    case OpFetchMicroTriangleVertexBarycentricNV:       return "OpFetchMicroTriangleVertexBarycentricNV";
-    case OpFetchMicroTriangleVertexPositionNV:    return "OpFetchMicroTriangleVertexPositionNV";
-
-    case OpColorAttachmentReadEXT:          return "OpColorAttachmentReadEXT";
-    case OpDepthAttachmentReadEXT:          return "OpDepthAttachmentReadEXT";
-    case OpStencilAttachmentReadEXT:        return "OpStencilAttachmentReadEXT";
-
-    case OpImageSampleWeightedQCOM:         return "OpImageSampleWeightedQCOM";
-    case OpImageBoxFilterQCOM:              return "OpImageBoxFilterQCOM";
-    case OpImageBlockMatchSADQCOM:          return "OpImageBlockMatchSADQCOM";
-    case OpImageBlockMatchSSDQCOM:          return "OpImageBlockMatchSSDQCOM";
-    case OpImageBlockMatchWindowSSDQCOM:    return "OpImageBlockMatchWindowSSDQCOM";
-    case OpImageBlockMatchWindowSADQCOM:    return "OpImageBlockMatchWindowSADQCOM";
-    case OpImageBlockMatchGatherSSDQCOM:    return "OpImageBlockMatchGatherSSDQCOM";
-    case OpImageBlockMatchGatherSADQCOM:    return "OpImageBlockMatchGatherSADQCOM";
-
-    case OpConstantCompositeReplicateEXT: return "OpConstantCompositeReplicateEXT";
-    case OpSpecConstantCompositeReplicateEXT: return "OpSpecConstantCompositeReplicateEXT";
-    case OpCompositeConstructReplicateEXT: return "OpCompositeConstructReplicateEXT";
-
-    case OpSDotKHR: return "OpSDotKHR";
-    case OpUDotKHR: return "OpUDotKHR";
-    case OpSUDotKHR: return "OpSUDotKHR";
-    case OpSDotAccSatKHR: return "OpSDotAccSatKHR";
-    case OpUDotAccSatKHR: return "OpUDotAccSatKHR";
-    case OpSUDotAccSatKHR: return "OpSUDotAccSatKHR";
 
     default:
         return "Bad";
@@ -1702,2087 +1450,1553 @@ EnumParameters LoopControlParams[FunctionControlCeiling];
 EnumParameters SelectionControlParams[SelectControlCeiling];
 EnumParameters FunctionControlParams[FunctionControlCeiling];
 EnumParameters MemoryAccessParams[MemoryAccessCeiling];
-EnumParameters CooperativeMatrixOperandsParams[CooperativeMatrixOperandsCeiling];
-EnumParameters TensorAddressingOperandsParams[TensorAddressingOperandsCeiling];
 
 // Set up all the parameterizing descriptions of the opcodes, operands, etc.
 void Parameterize()
 {
     // only do this once.
-    static std::once_flag initialized;
-    std::call_once(initialized, [](){
-
-        // Exceptions to having a result <id> and a resulting type <id>.
-        // (Everything is initialized to have both).
-
-        InstructionDesc[OpNop].setResultAndType(false, false);
-        InstructionDesc[OpSource].setResultAndType(false, false);
-        InstructionDesc[OpSourceContinued].setResultAndType(false, false);
-        InstructionDesc[OpSourceExtension].setResultAndType(false, false);
-        InstructionDesc[OpExtension].setResultAndType(false, false);
-        InstructionDesc[OpExtInstImport].setResultAndType(true, false);
-        InstructionDesc[OpCapability].setResultAndType(false, false);
-        InstructionDesc[OpMemoryModel].setResultAndType(false, false);
-        InstructionDesc[OpEntryPoint].setResultAndType(false, false);
-        InstructionDesc[OpExecutionMode].setResultAndType(false, false);
-        InstructionDesc[OpExecutionModeId].setResultAndType(false, false);
-        InstructionDesc[OpTypeVoid].setResultAndType(true, false);
-        InstructionDesc[OpTypeBool].setResultAndType(true, false);
-        InstructionDesc[OpTypeInt].setResultAndType(true, false);
-        InstructionDesc[OpTypeFloat].setResultAndType(true, false);
-        InstructionDesc[OpTypeVector].setResultAndType(true, false);
-        InstructionDesc[OpTypeMatrix].setResultAndType(true, false);
-        InstructionDesc[OpTypeImage].setResultAndType(true, false);
-        InstructionDesc[OpTypeSampler].setResultAndType(true, false);
-        InstructionDesc[OpTypeSampledImage].setResultAndType(true, false);
-        InstructionDesc[OpTypeArray].setResultAndType(true, false);
-        InstructionDesc[OpTypeRuntimeArray].setResultAndType(true, false);
-        InstructionDesc[OpTypeStruct].setResultAndType(true, false);
-        InstructionDesc[OpTypeOpaque].setResultAndType(true, false);
-        InstructionDesc[OpTypePointer].setResultAndType(true, false);
-        InstructionDesc[OpTypeForwardPointer].setResultAndType(false, false);
-        InstructionDesc[OpTypeFunction].setResultAndType(true, false);
-        InstructionDesc[OpTypeEvent].setResultAndType(true, false);
-        InstructionDesc[OpTypeDeviceEvent].setResultAndType(true, false);
-        InstructionDesc[OpTypeReserveId].setResultAndType(true, false);
-        InstructionDesc[OpTypeQueue].setResultAndType(true, false);
-        InstructionDesc[OpTypePipe].setResultAndType(true, false);
-        InstructionDesc[OpFunctionEnd].setResultAndType(false, false);
-        InstructionDesc[OpStore].setResultAndType(false, false);
-        InstructionDesc[OpImageWrite].setResultAndType(false, false);
-        InstructionDesc[OpDecorationGroup].setResultAndType(true, false);
-        InstructionDesc[OpDecorate].setResultAndType(false, false);
-        InstructionDesc[OpDecorateId].setResultAndType(false, false);
-        InstructionDesc[OpDecorateStringGOOGLE].setResultAndType(false, false);
-        InstructionDesc[OpMemberDecorate].setResultAndType(false, false);
-        InstructionDesc[OpMemberDecorateStringGOOGLE].setResultAndType(false, false);
-        InstructionDesc[OpGroupDecorate].setResultAndType(false, false);
-        InstructionDesc[OpGroupMemberDecorate].setResultAndType(false, false);
-        InstructionDesc[OpName].setResultAndType(false, false);
-        InstructionDesc[OpMemberName].setResultAndType(false, false);
-        InstructionDesc[OpString].setResultAndType(true, false);
-        InstructionDesc[OpLine].setResultAndType(false, false);
-        InstructionDesc[OpNoLine].setResultAndType(false, false);
-        InstructionDesc[OpCopyMemory].setResultAndType(false, false);
-        InstructionDesc[OpCopyMemorySized].setResultAndType(false, false);
-        InstructionDesc[OpEmitVertex].setResultAndType(false, false);
-        InstructionDesc[OpEndPrimitive].setResultAndType(false, false);
-        InstructionDesc[OpEmitStreamVertex].setResultAndType(false, false);
-        InstructionDesc[OpEndStreamPrimitive].setResultAndType(false, false);
-        InstructionDesc[OpControlBarrier].setResultAndType(false, false);
-        InstructionDesc[OpMemoryBarrier].setResultAndType(false, false);
-        InstructionDesc[OpAtomicStore].setResultAndType(false, false);
-        InstructionDesc[OpLoopMerge].setResultAndType(false, false);
-        InstructionDesc[OpSelectionMerge].setResultAndType(false, false);
-        InstructionDesc[OpLabel].setResultAndType(true, false);
-        InstructionDesc[OpBranch].setResultAndType(false, false);
-        InstructionDesc[OpBranchConditional].setResultAndType(false, false);
-        InstructionDesc[OpSwitch].setResultAndType(false, false);
-        InstructionDesc[OpKill].setResultAndType(false, false);
-        InstructionDesc[OpTerminateInvocation].setResultAndType(false, false);
-        InstructionDesc[OpReturn].setResultAndType(false, false);
-        InstructionDesc[OpReturnValue].setResultAndType(false, false);
-        InstructionDesc[OpUnreachable].setResultAndType(false, false);
-        InstructionDesc[OpLifetimeStart].setResultAndType(false, false);
-        InstructionDesc[OpLifetimeStop].setResultAndType(false, false);
-        InstructionDesc[OpCommitReadPipe].setResultAndType(false, false);
-        InstructionDesc[OpCommitWritePipe].setResultAndType(false, false);
-        InstructionDesc[OpGroupCommitWritePipe].setResultAndType(false, false);
-        InstructionDesc[OpGroupCommitReadPipe].setResultAndType(false, false);
-        InstructionDesc[OpCaptureEventProfilingInfo].setResultAndType(false, false);
-        InstructionDesc[OpSetUserEventStatus].setResultAndType(false, false);
-        InstructionDesc[OpRetainEvent].setResultAndType(false, false);
-        InstructionDesc[OpReleaseEvent].setResultAndType(false, false);
-        InstructionDesc[OpGroupWaitEvents].setResultAndType(false, false);
-        InstructionDesc[OpAtomicFlagClear].setResultAndType(false, false);
-        InstructionDesc[OpModuleProcessed].setResultAndType(false, false);
-        InstructionDesc[OpTypeCooperativeMatrixNV].setResultAndType(true, false);
-        InstructionDesc[OpCooperativeMatrixStoreNV].setResultAndType(false, false);
-        InstructionDesc[OpTypeCooperativeMatrixKHR].setResultAndType(true, false);
-        InstructionDesc[OpCooperativeMatrixStoreKHR].setResultAndType(false, false);
-        InstructionDesc[OpBeginInvocationInterlockEXT].setResultAndType(false, false);
-        InstructionDesc[OpEndInvocationInterlockEXT].setResultAndType(false, false);
-        InstructionDesc[OpAssumeTrueKHR].setResultAndType(false, false);
-        InstructionDesc[OpTypeTensorLayoutNV].setResultAndType(true, false);
-        InstructionDesc[OpTypeTensorViewNV].setResultAndType(true, false);
-        InstructionDesc[OpCooperativeMatrixStoreTensorNV].setResultAndType(false, false);
-        InstructionDesc[OpTypeCooperativeVectorNV].setResultAndType(true, false);
-        InstructionDesc[OpCooperativeVectorStoreNV].setResultAndType(false, false);
-        InstructionDesc[OpCooperativeVectorOuterProductAccumulateNV].setResultAndType(false, false);
-        InstructionDesc[OpCooperativeVectorReduceSumAccumulateNV].setResultAndType(false, false);
-
-        // Specific additional context-dependent operands
-
-        ExecutionModeOperands[ExecutionModeInvocations].push(OperandLiteralNumber, "'Number of <<Invocation,invocations>>'");
-
-        ExecutionModeOperands[ExecutionModeLocalSize].push(OperandLiteralNumber, "'x size'");
-        ExecutionModeOperands[ExecutionModeLocalSize].push(OperandLiteralNumber, "'y size'");
-        ExecutionModeOperands[ExecutionModeLocalSize].push(OperandLiteralNumber, "'z size'");
-
-        ExecutionModeOperands[ExecutionModeLocalSizeHint].push(OperandLiteralNumber, "'x size'");
-        ExecutionModeOperands[ExecutionModeLocalSizeHint].push(OperandLiteralNumber, "'y size'");
-        ExecutionModeOperands[ExecutionModeLocalSizeHint].push(OperandLiteralNumber, "'z size'");
-
-        ExecutionModeOperands[ExecutionModeOutputVertices].push(OperandLiteralNumber, "'Vertex count'");
-        ExecutionModeOperands[ExecutionModeVecTypeHint].push(OperandLiteralNumber, "'Vector type'");
-
-        DecorationOperands[DecorationStream].push(OperandLiteralNumber, "'Stream Number'");
-        DecorationOperands[DecorationLocation].push(OperandLiteralNumber, "'Location'");
-        DecorationOperands[DecorationComponent].push(OperandLiteralNumber, "'Component'");
-        DecorationOperands[DecorationIndex].push(OperandLiteralNumber, "'Index'");
-        DecorationOperands[DecorationBinding].push(OperandLiteralNumber, "'Binding Point'");
-        DecorationOperands[DecorationDescriptorSet].push(OperandLiteralNumber, "'Descriptor Set'");
-        DecorationOperands[DecorationOffset].push(OperandLiteralNumber, "'Byte Offset'");
-        DecorationOperands[DecorationXfbBuffer].push(OperandLiteralNumber, "'XFB Buffer Number'");
-        DecorationOperands[DecorationXfbStride].push(OperandLiteralNumber, "'XFB Stride'");
-        DecorationOperands[DecorationArrayStride].push(OperandLiteralNumber, "'Array Stride'");
-        DecorationOperands[DecorationMatrixStride].push(OperandLiteralNumber, "'Matrix Stride'");
-        DecorationOperands[DecorationBuiltIn].push(OperandLiteralNumber, "See <<BuiltIn,*BuiltIn*>>");
-        DecorationOperands[DecorationFPRoundingMode].push(OperandFPRoundingMode, "'Floating-Point Rounding Mode'");
-        DecorationOperands[DecorationFPFastMathMode].push(OperandFPFastMath, "'Fast-Math Mode'");
-        DecorationOperands[DecorationLinkageAttributes].push(OperandLiteralString, "'Name'");
-        DecorationOperands[DecorationLinkageAttributes].push(OperandLinkageType, "'Linkage Type'");
-        DecorationOperands[DecorationFuncParamAttr].push(OperandFuncParamAttr, "'Function Parameter Attribute'");
-        DecorationOperands[DecorationSpecId].push(OperandLiteralNumber, "'Specialization Constant ID'");
-        DecorationOperands[DecorationInputAttachmentIndex].push(OperandLiteralNumber, "'Attachment Index'");
-        DecorationOperands[DecorationAlignment].push(OperandLiteralNumber, "'Alignment'");
-
-        OperandClassParams[OperandSource].set(0, SourceString, nullptr);
-        OperandClassParams[OperandExecutionModel].set(0, ExecutionModelString, nullptr);
-        OperandClassParams[OperandAddressing].set(0, AddressingString, nullptr);
-        OperandClassParams[OperandMemory].set(0, MemoryString, nullptr);
-        OperandClassParams[OperandExecutionMode].set(ExecutionModeCeiling, ExecutionModeString, ExecutionModeParams);
-        OperandClassParams[OperandExecutionMode].setOperands(ExecutionModeOperands);
-        OperandClassParams[OperandStorage].set(0, StorageClassString, nullptr);
-        OperandClassParams[OperandDimensionality].set(0, DimensionString, nullptr);
-        OperandClassParams[OperandSamplerAddressingMode].set(0, SamplerAddressingModeString, nullptr);
-        OperandClassParams[OperandSamplerFilterMode].set(0, SamplerFilterModeString, nullptr);
-        OperandClassParams[OperandSamplerImageFormat].set(0, ImageFormatString, nullptr);
-        OperandClassParams[OperandImageChannelOrder].set(0, ImageChannelOrderString, nullptr);
-        OperandClassParams[OperandImageChannelDataType].set(0, ImageChannelDataTypeString, nullptr);
-        OperandClassParams[OperandImageOperands].set(ImageOperandsCeiling, ImageOperandsString, ImageOperandsParams, true);
-        OperandClassParams[OperandFPFastMath].set(0, FPFastMathString, nullptr, true);
-        OperandClassParams[OperandFPRoundingMode].set(0, FPRoundingModeString, nullptr);
-        OperandClassParams[OperandLinkageType].set(0, LinkageTypeString, nullptr);
-        OperandClassParams[OperandFuncParamAttr].set(0, FuncParamAttrString, nullptr);
-        OperandClassParams[OperandAccessQualifier].set(0, AccessQualifierString, nullptr);
-        OperandClassParams[OperandDecoration].set(DecorationCeiling, DecorationString, DecorationParams);
-        OperandClassParams[OperandDecoration].setOperands(DecorationOperands);
-        OperandClassParams[OperandBuiltIn].set(0, BuiltInString, nullptr);
-        OperandClassParams[OperandSelect].set(SelectControlCeiling, SelectControlString, SelectionControlParams, true);
-        OperandClassParams[OperandLoop].set(LoopControlCeiling, LoopControlString, LoopControlParams, true);
-        OperandClassParams[OperandFunction].set(FunctionControlCeiling, FunctionControlString, FunctionControlParams, true);
-        OperandClassParams[OperandMemorySemantics].set(0, MemorySemanticsString, nullptr, true);
-        OperandClassParams[OperandMemoryAccess].set(MemoryAccessCeiling, MemoryAccessString, MemoryAccessParams, true);
-        OperandClassParams[OperandScope].set(0, ScopeString, nullptr);
-        OperandClassParams[OperandGroupOperation].set(0, GroupOperationString, nullptr);
-        OperandClassParams[OperandKernelEnqueueFlags].set(0, KernelEnqueueFlagsString, nullptr);
-        OperandClassParams[OperandKernelProfilingInfo].set(0, KernelProfilingInfoString, nullptr, true);
-        OperandClassParams[OperandCapability].set(0, CapabilityString, nullptr);
-        OperandClassParams[OperandCooperativeMatrixOperands].set(CooperativeMatrixOperandsCeiling, CooperativeMatrixOperandsString, CooperativeMatrixOperandsParams, true);
-        OperandClassParams[OperandTensorAddressingOperands].set(TensorAddressingOperandsCeiling, TensorAddressingOperandsString, TensorAddressingOperandsParams, true);
-        OperandClassParams[OperandOpcode].set(OpCodeMask + 1, OpcodeString, nullptr);
-
-        // set name of operator, an initial set of <id> style operands, and the description
-
-        InstructionDesc[OpSource].operands.push(OperandSource, "");
-        InstructionDesc[OpSource].operands.push(OperandLiteralNumber, "'Version'");
-        InstructionDesc[OpSource].operands.push(OperandId, "'File'", true);
-        InstructionDesc[OpSource].operands.push(OperandLiteralString, "'Source'", true);
-
-        InstructionDesc[OpSourceContinued].operands.push(OperandLiteralString, "'Continued Source'");
-
-        InstructionDesc[OpSourceExtension].operands.push(OperandLiteralString, "'Extension'");
-
-        InstructionDesc[OpName].operands.push(OperandId, "'Target'");
-        InstructionDesc[OpName].operands.push(OperandLiteralString, "'Name'");
-
-        InstructionDesc[OpMemberName].operands.push(OperandId, "'Type'");
-        InstructionDesc[OpMemberName].operands.push(OperandLiteralNumber, "'Member'");
-        InstructionDesc[OpMemberName].operands.push(OperandLiteralString, "'Name'");
-
-        InstructionDesc[OpString].operands.push(OperandLiteralString, "'String'");
-
-        InstructionDesc[OpLine].operands.push(OperandId, "'File'");
-        InstructionDesc[OpLine].operands.push(OperandLiteralNumber, "'Line'");
-        InstructionDesc[OpLine].operands.push(OperandLiteralNumber, "'Column'");
-
-        InstructionDesc[OpExtension].operands.push(OperandLiteralString, "'Name'");
-
-        InstructionDesc[OpExtInstImport].operands.push(OperandLiteralString, "'Name'");
-
-        InstructionDesc[OpCapability].operands.push(OperandCapability, "'Capability'");
-
-        InstructionDesc[OpMemoryModel].operands.push(OperandAddressing, "");
-        InstructionDesc[OpMemoryModel].operands.push(OperandMemory, "");
-
-        InstructionDesc[OpEntryPoint].operands.push(OperandExecutionModel, "");
-        InstructionDesc[OpEntryPoint].operands.push(OperandId, "'Entry Point'");
-        InstructionDesc[OpEntryPoint].operands.push(OperandLiteralString, "'Name'");
-        InstructionDesc[OpEntryPoint].operands.push(OperandVariableIds, "'Interface'");
-
-        InstructionDesc[OpExecutionMode].operands.push(OperandId, "'Entry Point'");
-        InstructionDesc[OpExecutionMode].operands.push(OperandExecutionMode, "'Mode'");
-        InstructionDesc[OpExecutionMode].operands.push(OperandOptionalLiteral, "See <<Execution_Mode,Execution Mode>>");
-
-        InstructionDesc[OpExecutionModeId].operands.push(OperandId, "'Entry Point'");
-        InstructionDesc[OpExecutionModeId].operands.push(OperandExecutionMode, "'Mode'");
-        InstructionDesc[OpExecutionModeId].operands.push(OperandVariableIds, "See <<Execution_Mode,Execution Mode>>");
-
-        InstructionDesc[OpTypeInt].operands.push(OperandLiteralNumber, "'Width'");
-        InstructionDesc[OpTypeInt].operands.push(OperandLiteralNumber, "'Signedness'");
-
-        InstructionDesc[OpTypeFloat].operands.push(OperandLiteralNumber, "'Width'");
-
-        InstructionDesc[OpTypeVector].operands.push(OperandId, "'Component Type'");
-        InstructionDesc[OpTypeVector].operands.push(OperandLiteralNumber, "'Component Count'");
-
-        InstructionDesc[OpTypeMatrix].operands.push(OperandId, "'Column Type'");
-        InstructionDesc[OpTypeMatrix].operands.push(OperandLiteralNumber, "'Column Count'");
-
-        InstructionDesc[OpTypeImage].operands.push(OperandId, "'Sampled Type'");
-        InstructionDesc[OpTypeImage].operands.push(OperandDimensionality, "");
-        InstructionDesc[OpTypeImage].operands.push(OperandLiteralNumber, "'Depth'");
-        InstructionDesc[OpTypeImage].operands.push(OperandLiteralNumber, "'Arrayed'");
-        InstructionDesc[OpTypeImage].operands.push(OperandLiteralNumber, "'MS'");
-        InstructionDesc[OpTypeImage].operands.push(OperandLiteralNumber, "'Sampled'");
-        InstructionDesc[OpTypeImage].operands.push(OperandSamplerImageFormat, "");
-        InstructionDesc[OpTypeImage].operands.push(OperandAccessQualifier, "", true);
-
-        InstructionDesc[OpTypeSampledImage].operands.push(OperandId, "'Image Type'");
-
-        InstructionDesc[OpTypeArray].operands.push(OperandId, "'Element Type'");
-        InstructionDesc[OpTypeArray].operands.push(OperandId, "'Length'");
-
-        InstructionDesc[OpTypeRuntimeArray].operands.push(OperandId, "'Element Type'");
-
-        InstructionDesc[OpTypeStruct].operands.push(OperandVariableIds, "'Member 0 type', +\n'member 1 type', +\n...");
+    static bool initialized = false;
+    if (initialized)
+        return;
+    initialized = true;
+
+    // Exceptions to having a result <id> and a resulting type <id>.
+    // (Everything is initialized to have both).
+
+    InstructionDesc[OpNop].setResultAndType(false, false);
+    InstructionDesc[OpSource].setResultAndType(false, false);
+    InstructionDesc[OpSourceContinued].setResultAndType(false, false);
+    InstructionDesc[OpSourceExtension].setResultAndType(false, false);
+    InstructionDesc[OpExtension].setResultAndType(false, false);
+    InstructionDesc[OpExtInstImport].setResultAndType(true, false);
+    InstructionDesc[OpCapability].setResultAndType(false, false);
+    InstructionDesc[OpMemoryModel].setResultAndType(false, false);
+    InstructionDesc[OpEntryPoint].setResultAndType(false, false);
+    InstructionDesc[OpExecutionMode].setResultAndType(false, false);
+    InstructionDesc[OpExecutionModeId].setResultAndType(false, false);
+    InstructionDesc[OpTypeVoid].setResultAndType(true, false);
+    InstructionDesc[OpTypeBool].setResultAndType(true, false);
+    InstructionDesc[OpTypeInt].setResultAndType(true, false);
+    InstructionDesc[OpTypeFloat].setResultAndType(true, false);
+    InstructionDesc[OpTypeVector].setResultAndType(true, false);
+    InstructionDesc[OpTypeMatrix].setResultAndType(true, false);
+    InstructionDesc[OpTypeImage].setResultAndType(true, false);
+    InstructionDesc[OpTypeSampler].setResultAndType(true, false);
+    InstructionDesc[OpTypeSampledImage].setResultAndType(true, false);
+    InstructionDesc[OpTypeArray].setResultAndType(true, false);
+    InstructionDesc[OpTypeRuntimeArray].setResultAndType(true, false);
+    InstructionDesc[OpTypeStruct].setResultAndType(true, false);
+    InstructionDesc[OpTypeOpaque].setResultAndType(true, false);
+    InstructionDesc[OpTypePointer].setResultAndType(true, false);
+    InstructionDesc[OpTypeForwardPointer].setResultAndType(false, false);
+    InstructionDesc[OpTypeFunction].setResultAndType(true, false);
+    InstructionDesc[OpTypeEvent].setResultAndType(true, false);
+    InstructionDesc[OpTypeDeviceEvent].setResultAndType(true, false);
+    InstructionDesc[OpTypeReserveId].setResultAndType(true, false);
+    InstructionDesc[OpTypeQueue].setResultAndType(true, false);
+    InstructionDesc[OpTypePipe].setResultAndType(true, false);
+    InstructionDesc[OpFunctionEnd].setResultAndType(false, false);
+    InstructionDesc[OpStore].setResultAndType(false, false);
+    InstructionDesc[OpImageWrite].setResultAndType(false, false);
+    InstructionDesc[OpDecorationGroup].setResultAndType(true, false);
+    InstructionDesc[OpDecorate].setResultAndType(false, false);
+    InstructionDesc[OpDecorateId].setResultAndType(false, false);
+    InstructionDesc[OpDecorateStringGOOGLE].setResultAndType(false, false);
+    InstructionDesc[OpMemberDecorate].setResultAndType(false, false);
+    InstructionDesc[OpMemberDecorateStringGOOGLE].setResultAndType(false, false);
+    InstructionDesc[OpGroupDecorate].setResultAndType(false, false);
+    InstructionDesc[OpGroupMemberDecorate].setResultAndType(false, false);
+    InstructionDesc[OpName].setResultAndType(false, false);
+    InstructionDesc[OpMemberName].setResultAndType(false, false);
+    InstructionDesc[OpString].setResultAndType(true, false);
+    InstructionDesc[OpLine].setResultAndType(false, false);
+    InstructionDesc[OpNoLine].setResultAndType(false, false);
+    InstructionDesc[OpCopyMemory].setResultAndType(false, false);
+    InstructionDesc[OpCopyMemorySized].setResultAndType(false, false);
+    InstructionDesc[OpEmitVertex].setResultAndType(false, false);
+    InstructionDesc[OpEndPrimitive].setResultAndType(false, false);
+    InstructionDesc[OpEmitStreamVertex].setResultAndType(false, false);
+    InstructionDesc[OpEndStreamPrimitive].setResultAndType(false, false);
+    InstructionDesc[OpControlBarrier].setResultAndType(false, false);
+    InstructionDesc[OpMemoryBarrier].setResultAndType(false, false);
+    InstructionDesc[OpAtomicStore].setResultAndType(false, false);
+    InstructionDesc[OpLoopMerge].setResultAndType(false, false);
+    InstructionDesc[OpSelectionMerge].setResultAndType(false, false);
+    InstructionDesc[OpLabel].setResultAndType(true, false);
+    InstructionDesc[OpBranch].setResultAndType(false, false);
+    InstructionDesc[OpBranchConditional].setResultAndType(false, false);
+    InstructionDesc[OpSwitch].setResultAndType(false, false);
+    InstructionDesc[OpKill].setResultAndType(false, false);
+    InstructionDesc[OpTerminateInvocation].setResultAndType(false, false);
+    InstructionDesc[OpReturn].setResultAndType(false, false);
+    InstructionDesc[OpReturnValue].setResultAndType(false, false);
+    InstructionDesc[OpUnreachable].setResultAndType(false, false);
+    InstructionDesc[OpLifetimeStart].setResultAndType(false, false);
+    InstructionDesc[OpLifetimeStop].setResultAndType(false, false);
+    InstructionDesc[OpCommitReadPipe].setResultAndType(false, false);
+    InstructionDesc[OpCommitWritePipe].setResultAndType(false, false);
+    InstructionDesc[OpGroupCommitWritePipe].setResultAndType(false, false);
+    InstructionDesc[OpGroupCommitReadPipe].setResultAndType(false, false);
+    InstructionDesc[OpCaptureEventProfilingInfo].setResultAndType(false, false);
+    InstructionDesc[OpSetUserEventStatus].setResultAndType(false, false);
+    InstructionDesc[OpRetainEvent].setResultAndType(false, false);
+    InstructionDesc[OpReleaseEvent].setResultAndType(false, false);
+    InstructionDesc[OpGroupWaitEvents].setResultAndType(false, false);
+    InstructionDesc[OpAtomicFlagClear].setResultAndType(false, false);
+    InstructionDesc[OpModuleProcessed].setResultAndType(false, false);
+    InstructionDesc[OpTypeCooperativeMatrixNV].setResultAndType(true, false);
+    InstructionDesc[OpCooperativeMatrixStoreNV].setResultAndType(false, false);
+    InstructionDesc[OpBeginInvocationInterlockEXT].setResultAndType(false, false);
+    InstructionDesc[OpEndInvocationInterlockEXT].setResultAndType(false, false);
+
+    // Specific additional context-dependent operands
+
+    ExecutionModeOperands[ExecutionModeInvocations].push(OperandLiteralNumber, "'Number of <<Invocation,invocations>>'");
+
+    ExecutionModeOperands[ExecutionModeLocalSize].push(OperandLiteralNumber, "'x size'");
+    ExecutionModeOperands[ExecutionModeLocalSize].push(OperandLiteralNumber, "'y size'");
+    ExecutionModeOperands[ExecutionModeLocalSize].push(OperandLiteralNumber, "'z size'");
+
+    ExecutionModeOperands[ExecutionModeLocalSizeHint].push(OperandLiteralNumber, "'x size'");
+    ExecutionModeOperands[ExecutionModeLocalSizeHint].push(OperandLiteralNumber, "'y size'");
+    ExecutionModeOperands[ExecutionModeLocalSizeHint].push(OperandLiteralNumber, "'z size'");
+
+    ExecutionModeOperands[ExecutionModeOutputVertices].push(OperandLiteralNumber, "'Vertex count'");
+    ExecutionModeOperands[ExecutionModeVecTypeHint].push(OperandLiteralNumber, "'Vector type'");
+
+    DecorationOperands[DecorationStream].push(OperandLiteralNumber, "'Stream Number'");
+    DecorationOperands[DecorationLocation].push(OperandLiteralNumber, "'Location'");
+    DecorationOperands[DecorationComponent].push(OperandLiteralNumber, "'Component'");
+    DecorationOperands[DecorationIndex].push(OperandLiteralNumber, "'Index'");
+    DecorationOperands[DecorationBinding].push(OperandLiteralNumber, "'Binding Point'");
+    DecorationOperands[DecorationDescriptorSet].push(OperandLiteralNumber, "'Descriptor Set'");
+    DecorationOperands[DecorationOffset].push(OperandLiteralNumber, "'Byte Offset'");
+    DecorationOperands[DecorationXfbBuffer].push(OperandLiteralNumber, "'XFB Buffer Number'");
+    DecorationOperands[DecorationXfbStride].push(OperandLiteralNumber, "'XFB Stride'");
+    DecorationOperands[DecorationArrayStride].push(OperandLiteralNumber, "'Array Stride'");
+    DecorationOperands[DecorationMatrixStride].push(OperandLiteralNumber, "'Matrix Stride'");
+    DecorationOperands[DecorationBuiltIn].push(OperandLiteralNumber, "See <<BuiltIn,*BuiltIn*>>");
+    DecorationOperands[DecorationFPRoundingMode].push(OperandFPRoundingMode, "'Floating-Point Rounding Mode'");
+    DecorationOperands[DecorationFPFastMathMode].push(OperandFPFastMath, "'Fast-Math Mode'");
+    DecorationOperands[DecorationLinkageAttributes].push(OperandLiteralString, "'Name'");
+    DecorationOperands[DecorationLinkageAttributes].push(OperandLinkageType, "'Linkage Type'");
+    DecorationOperands[DecorationFuncParamAttr].push(OperandFuncParamAttr, "'Function Parameter Attribute'");
+    DecorationOperands[DecorationSpecId].push(OperandLiteralNumber, "'Specialization Constant ID'");
+    DecorationOperands[DecorationInputAttachmentIndex].push(OperandLiteralNumber, "'Attachment Index'");
+    DecorationOperands[DecorationAlignment].push(OperandLiteralNumber, "'Alignment'");
+
+    OperandClassParams[OperandSource].set(0, SourceString, 0);
+    OperandClassParams[OperandExecutionModel].set(0, ExecutionModelString, nullptr);
+    OperandClassParams[OperandAddressing].set(0, AddressingString, nullptr);
+    OperandClassParams[OperandMemory].set(0, MemoryString, nullptr);
+    OperandClassParams[OperandExecutionMode].set(ExecutionModeCeiling, ExecutionModeString, ExecutionModeParams);
+    OperandClassParams[OperandExecutionMode].setOperands(ExecutionModeOperands);
+    OperandClassParams[OperandStorage].set(0, StorageClassString, nullptr);
+    OperandClassParams[OperandDimensionality].set(0, DimensionString, nullptr);
+    OperandClassParams[OperandSamplerAddressingMode].set(0, SamplerAddressingModeString, nullptr);
+    OperandClassParams[OperandSamplerFilterMode].set(0, SamplerFilterModeString, nullptr);
+    OperandClassParams[OperandSamplerImageFormat].set(0, ImageFormatString, nullptr);
+    OperandClassParams[OperandImageChannelOrder].set(0, ImageChannelOrderString, nullptr);
+    OperandClassParams[OperandImageChannelDataType].set(0, ImageChannelDataTypeString, nullptr);
+    OperandClassParams[OperandImageOperands].set(ImageOperandsCeiling, ImageOperandsString, ImageOperandsParams, true);
+    OperandClassParams[OperandFPFastMath].set(0, FPFastMathString, nullptr, true);
+    OperandClassParams[OperandFPRoundingMode].set(0, FPRoundingModeString, nullptr);
+    OperandClassParams[OperandLinkageType].set(0, LinkageTypeString, nullptr);
+    OperandClassParams[OperandFuncParamAttr].set(0, FuncParamAttrString, nullptr);
+    OperandClassParams[OperandAccessQualifier].set(0, AccessQualifierString, nullptr);
+    OperandClassParams[OperandDecoration].set(DecorationCeiling, DecorationString, DecorationParams);
+    OperandClassParams[OperandDecoration].setOperands(DecorationOperands);
+    OperandClassParams[OperandBuiltIn].set(0, BuiltInString, nullptr);
+    OperandClassParams[OperandSelect].set(SelectControlCeiling, SelectControlString, SelectionControlParams, true);
+    OperandClassParams[OperandLoop].set(LoopControlCeiling, LoopControlString, LoopControlParams, true);
+    OperandClassParams[OperandFunction].set(FunctionControlCeiling, FunctionControlString, FunctionControlParams, true);
+    OperandClassParams[OperandMemorySemantics].set(0, MemorySemanticsString, nullptr, true);
+    OperandClassParams[OperandMemoryAccess].set(MemoryAccessCeiling, MemoryAccessString, MemoryAccessParams, true);
+    OperandClassParams[OperandScope].set(0, ScopeString, nullptr);
+    OperandClassParams[OperandGroupOperation].set(0, GroupOperationString, nullptr);
+    OperandClassParams[OperandKernelEnqueueFlags].set(0, KernelEnqueueFlagsString, nullptr);
+    OperandClassParams[OperandKernelProfilingInfo].set(0, KernelProfilingInfoString, nullptr, true);
+    OperandClassParams[OperandCapability].set(0, CapabilityString, nullptr);
+    OperandClassParams[OperandOpcode].set(OpCodeMask + 1, OpcodeString, 0);
+
+    // set name of operator, an initial set of <id> style operands, and the description
+
+    InstructionDesc[OpSource].operands.push(OperandSource, "");
+    InstructionDesc[OpSource].operands.push(OperandLiteralNumber, "'Version'");
+    InstructionDesc[OpSource].operands.push(OperandId, "'File'", true);
+    InstructionDesc[OpSource].operands.push(OperandLiteralString, "'Source'", true);
+
+    InstructionDesc[OpSourceContinued].operands.push(OperandLiteralString, "'Continued Source'");
+
+    InstructionDesc[OpSourceExtension].operands.push(OperandLiteralString, "'Extension'");
+
+    InstructionDesc[OpName].operands.push(OperandId, "'Target'");
+    InstructionDesc[OpName].operands.push(OperandLiteralString, "'Name'");
+
+    InstructionDesc[OpMemberName].operands.push(OperandId, "'Type'");
+    InstructionDesc[OpMemberName].operands.push(OperandLiteralNumber, "'Member'");
+    InstructionDesc[OpMemberName].operands.push(OperandLiteralString, "'Name'");
+
+    InstructionDesc[OpString].operands.push(OperandLiteralString, "'String'");
+
+    InstructionDesc[OpLine].operands.push(OperandId, "'File'");
+    InstructionDesc[OpLine].operands.push(OperandLiteralNumber, "'Line'");
+    InstructionDesc[OpLine].operands.push(OperandLiteralNumber, "'Column'");
+
+    InstructionDesc[OpExtension].operands.push(OperandLiteralString, "'Name'");
+
+    InstructionDesc[OpExtInstImport].operands.push(OperandLiteralString, "'Name'");
+
+    InstructionDesc[OpCapability].operands.push(OperandCapability, "'Capability'");
+
+    InstructionDesc[OpMemoryModel].operands.push(OperandAddressing, "");
+    InstructionDesc[OpMemoryModel].operands.push(OperandMemory, "");
+
+    InstructionDesc[OpEntryPoint].operands.push(OperandExecutionModel, "");
+    InstructionDesc[OpEntryPoint].operands.push(OperandId, "'Entry Point'");
+    InstructionDesc[OpEntryPoint].operands.push(OperandLiteralString, "'Name'");
+    InstructionDesc[OpEntryPoint].operands.push(OperandVariableIds, "'Interface'");
+
+    InstructionDesc[OpExecutionMode].operands.push(OperandId, "'Entry Point'");
+    InstructionDesc[OpExecutionMode].operands.push(OperandExecutionMode, "'Mode'");
+    InstructionDesc[OpExecutionMode].operands.push(OperandOptionalLiteral, "See <<Execution_Mode,Execution Mode>>");
+
+    InstructionDesc[OpExecutionModeId].operands.push(OperandId, "'Entry Point'");
+    InstructionDesc[OpExecutionModeId].operands.push(OperandExecutionMode, "'Mode'");
+    InstructionDesc[OpExecutionModeId].operands.push(OperandVariableIds, "See <<Execution_Mode,Execution Mode>>");
+
+    InstructionDesc[OpTypeInt].operands.push(OperandLiteralNumber, "'Width'");
+    InstructionDesc[OpTypeInt].operands.push(OperandLiteralNumber, "'Signedness'");
+
+    InstructionDesc[OpTypeFloat].operands.push(OperandLiteralNumber, "'Width'");
+
+    InstructionDesc[OpTypeVector].operands.push(OperandId, "'Component Type'");
+    InstructionDesc[OpTypeVector].operands.push(OperandLiteralNumber, "'Component Count'");
+
+    InstructionDesc[OpTypeMatrix].operands.push(OperandId, "'Column Type'");
+    InstructionDesc[OpTypeMatrix].operands.push(OperandLiteralNumber, "'Column Count'");
+
+    InstructionDesc[OpTypeImage].operands.push(OperandId, "'Sampled Type'");
+    InstructionDesc[OpTypeImage].operands.push(OperandDimensionality, "");
+    InstructionDesc[OpTypeImage].operands.push(OperandLiteralNumber, "'Depth'");
+    InstructionDesc[OpTypeImage].operands.push(OperandLiteralNumber, "'Arrayed'");
+    InstructionDesc[OpTypeImage].operands.push(OperandLiteralNumber, "'MS'");
+    InstructionDesc[OpTypeImage].operands.push(OperandLiteralNumber, "'Sampled'");
+    InstructionDesc[OpTypeImage].operands.push(OperandSamplerImageFormat, "");
+    InstructionDesc[OpTypeImage].operands.push(OperandAccessQualifier, "", true);
+
+    InstructionDesc[OpTypeSampledImage].operands.push(OperandId, "'Image Type'");
+
+    InstructionDesc[OpTypeArray].operands.push(OperandId, "'Element Type'");
+    InstructionDesc[OpTypeArray].operands.push(OperandId, "'Length'");
+
+    InstructionDesc[OpTypeRuntimeArray].operands.push(OperandId, "'Element Type'");
+
+    InstructionDesc[OpTypeStruct].operands.push(OperandVariableIds, "'Member 0 type', +\n'member 1 type', +\n...");
+
+    InstructionDesc[OpTypeOpaque].operands.push(OperandLiteralString, "The name of the opaque type.");
+
+    InstructionDesc[OpTypePointer].operands.push(OperandStorage, "");
+    InstructionDesc[OpTypePointer].operands.push(OperandId, "'Type'");
 
-        InstructionDesc[OpTypeOpaque].operands.push(OperandLiteralString, "The name of the opaque type.");
-
-        InstructionDesc[OpTypePointer].operands.push(OperandStorage, "");
-        InstructionDesc[OpTypePointer].operands.push(OperandId, "'Type'");
-
-        InstructionDesc[OpTypeForwardPointer].operands.push(OperandId, "'Pointer Type'");
-        InstructionDesc[OpTypeForwardPointer].operands.push(OperandStorage, "");
+    InstructionDesc[OpTypeForwardPointer].operands.push(OperandId, "'Pointer Type'");
+    InstructionDesc[OpTypeForwardPointer].operands.push(OperandStorage, "");
+
+    InstructionDesc[OpTypePipe].operands.push(OperandAccessQualifier, "'Qualifier'");
 
-        InstructionDesc[OpTypePipe].operands.push(OperandAccessQualifier, "'Qualifier'");
+    InstructionDesc[OpTypeFunction].operands.push(OperandId, "'Return Type'");
+    InstructionDesc[OpTypeFunction].operands.push(OperandVariableIds, "'Parameter 0 Type', +\n'Parameter 1 Type', +\n...");
+
+    InstructionDesc[OpConstant].operands.push(OperandVariableLiterals, "'Value'");
+
+    InstructionDesc[OpConstantComposite].operands.push(OperandVariableIds, "'Constituents'");
 
-        InstructionDesc[OpTypeFunction].operands.push(OperandId, "'Return Type'");
-        InstructionDesc[OpTypeFunction].operands.push(OperandVariableIds, "'Parameter 0 Type', +\n'Parameter 1 Type', +\n...");
+    InstructionDesc[OpConstantSampler].operands.push(OperandSamplerAddressingMode, "");
+    InstructionDesc[OpConstantSampler].operands.push(OperandLiteralNumber, "'Param'");
+    InstructionDesc[OpConstantSampler].operands.push(OperandSamplerFilterMode, "");
 
-        InstructionDesc[OpConstant].operands.push(OperandVariableLiterals, "'Value'");
+    InstructionDesc[OpSpecConstant].operands.push(OperandVariableLiterals, "'Value'");
+
+    InstructionDesc[OpSpecConstantComposite].operands.push(OperandVariableIds, "'Constituents'");
 
-        InstructionDesc[OpConstantComposite].operands.push(OperandVariableIds, "'Constituents'");
-
-        InstructionDesc[OpConstantSampler].operands.push(OperandSamplerAddressingMode, "");
-        InstructionDesc[OpConstantSampler].operands.push(OperandLiteralNumber, "'Param'");
-        InstructionDesc[OpConstantSampler].operands.push(OperandSamplerFilterMode, "");
+    InstructionDesc[OpSpecConstantOp].operands.push(OperandLiteralNumber, "'Opcode'");
+    InstructionDesc[OpSpecConstantOp].operands.push(OperandVariableIds, "'Operands'");
+
+    InstructionDesc[OpVariable].operands.push(OperandStorage, "");
+    InstructionDesc[OpVariable].operands.push(OperandId, "'Initializer'", true);
+
+    InstructionDesc[OpFunction].operands.push(OperandFunction, "");
+    InstructionDesc[OpFunction].operands.push(OperandId, "'Function Type'");
+
+    InstructionDesc[OpFunctionCall].operands.push(OperandId, "'Function'");
+    InstructionDesc[OpFunctionCall].operands.push(OperandVariableIds, "'Argument 0', +\n'Argument 1', +\n...");
+
+    InstructionDesc[OpExtInst].operands.push(OperandId, "'Set'");
+    InstructionDesc[OpExtInst].operands.push(OperandLiteralNumber, "'Instruction'");
+    InstructionDesc[OpExtInst].operands.push(OperandVariableIds, "'Operand 1', +\n'Operand 2', +\n...");
+
+    InstructionDesc[OpLoad].operands.push(OperandId, "'Pointer'");
+    InstructionDesc[OpLoad].operands.push(OperandMemoryAccess, "", true);
+    InstructionDesc[OpLoad].operands.push(OperandLiteralNumber, "", true);
+    InstructionDesc[OpLoad].operands.push(OperandId, "", true);
+
+    InstructionDesc[OpStore].operands.push(OperandId, "'Pointer'");
+    InstructionDesc[OpStore].operands.push(OperandId, "'Object'");
+    InstructionDesc[OpStore].operands.push(OperandMemoryAccess, "", true);
+    InstructionDesc[OpStore].operands.push(OperandLiteralNumber, "", true);
+    InstructionDesc[OpStore].operands.push(OperandId, "", true);
+
+    InstructionDesc[OpPhi].operands.push(OperandVariableIds, "'Variable, Parent, ...'");
+
+    InstructionDesc[OpDecorate].operands.push(OperandId, "'Target'");
+    InstructionDesc[OpDecorate].operands.push(OperandDecoration, "");
+    InstructionDesc[OpDecorate].operands.push(OperandVariableLiterals, "See <<Decoration,'Decoration'>>.");
+
+    InstructionDesc[OpDecorateId].operands.push(OperandId, "'Target'");
+    InstructionDesc[OpDecorateId].operands.push(OperandDecoration, "");
+    InstructionDesc[OpDecorateId].operands.push(OperandVariableIds, "See <<Decoration,'Decoration'>>.");
+
+    InstructionDesc[OpDecorateStringGOOGLE].operands.push(OperandId, "'Target'");
+    InstructionDesc[OpDecorateStringGOOGLE].operands.push(OperandDecoration, "");
+    InstructionDesc[OpDecorateStringGOOGLE].operands.push(OperandVariableLiteralStrings, "'Literal Strings'");
+
+    InstructionDesc[OpMemberDecorate].operands.push(OperandId, "'Structure Type'");
+    InstructionDesc[OpMemberDecorate].operands.push(OperandLiteralNumber, "'Member'");
+    InstructionDesc[OpMemberDecorate].operands.push(OperandDecoration, "");
+    InstructionDesc[OpMemberDecorate].operands.push(OperandVariableLiterals, "See <<Decoration,'Decoration'>>.");
+
+    InstructionDesc[OpMemberDecorateStringGOOGLE].operands.push(OperandId, "'Structure Type'");
+    InstructionDesc[OpMemberDecorateStringGOOGLE].operands.push(OperandLiteralNumber, "'Member'");
+    InstructionDesc[OpMemberDecorateStringGOOGLE].operands.push(OperandDecoration, "");
+    InstructionDesc[OpMemberDecorateStringGOOGLE].operands.push(OperandVariableLiteralStrings, "'Literal Strings'");
+
+    InstructionDesc[OpGroupDecorate].operands.push(OperandId, "'Decoration Group'");
+    InstructionDesc[OpGroupDecorate].operands.push(OperandVariableIds, "'Targets'");
+
+    InstructionDesc[OpGroupMemberDecorate].operands.push(OperandId, "'Decoration Group'");
+    InstructionDesc[OpGroupMemberDecorate].operands.push(OperandVariableIdLiteral, "'Targets'");
+
+    InstructionDesc[OpVectorExtractDynamic].operands.push(OperandId, "'Vector'");
+    InstructionDesc[OpVectorExtractDynamic].operands.push(OperandId, "'Index'");
+
+    InstructionDesc[OpVectorInsertDynamic].operands.push(OperandId, "'Vector'");
+    InstructionDesc[OpVectorInsertDynamic].operands.push(OperandId, "'Component'");
+    InstructionDesc[OpVectorInsertDynamic].operands.push(OperandId, "'Index'");
+
+    InstructionDesc[OpVectorShuffle].operands.push(OperandId, "'Vector 1'");
+    InstructionDesc[OpVectorShuffle].operands.push(OperandId, "'Vector 2'");
+    InstructionDesc[OpVectorShuffle].operands.push(OperandVariableLiterals, "'Components'");
+
+    InstructionDesc[OpCompositeConstruct].operands.push(OperandVariableIds, "'Constituents'");
+
+    InstructionDesc[OpCompositeExtract].operands.push(OperandId, "'Composite'");
+    InstructionDesc[OpCompositeExtract].operands.push(OperandVariableLiterals, "'Indexes'");
+
+    InstructionDesc[OpCompositeInsert].operands.push(OperandId, "'Object'");
+    InstructionDesc[OpCompositeInsert].operands.push(OperandId, "'Composite'");
+    InstructionDesc[OpCompositeInsert].operands.push(OperandVariableLiterals, "'Indexes'");
+
+    InstructionDesc[OpCopyObject].operands.push(OperandId, "'Operand'");
+
+    InstructionDesc[OpCopyMemory].operands.push(OperandId, "'Target'");
+    InstructionDesc[OpCopyMemory].operands.push(OperandId, "'Source'");
+    InstructionDesc[OpCopyMemory].operands.push(OperandMemoryAccess, "", true);
+
+    InstructionDesc[OpCopyMemorySized].operands.push(OperandId, "'Target'");
+    InstructionDesc[OpCopyMemorySized].operands.push(OperandId, "'Source'");
+    InstructionDesc[OpCopyMemorySized].operands.push(OperandId, "'Size'");
+    InstructionDesc[OpCopyMemorySized].operands.push(OperandMemoryAccess, "", true);
+
+    InstructionDesc[OpSampledImage].operands.push(OperandId, "'Image'");
+    InstructionDesc[OpSampledImage].operands.push(OperandId, "'Sampler'");
+
+    InstructionDesc[OpImage].operands.push(OperandId, "'Sampled Image'");
+
+    InstructionDesc[OpImageRead].operands.push(OperandId, "'Image'");
+    InstructionDesc[OpImageRead].operands.push(OperandId, "'Coordinate'");
+    InstructionDesc[OpImageRead].operands.push(OperandImageOperands, "", true);
+    InstructionDesc[OpImageRead].operands.push(OperandVariableIds, "", true);
+
+    InstructionDesc[OpImageWrite].operands.push(OperandId, "'Image'");
+    InstructionDesc[OpImageWrite].operands.push(OperandId, "'Coordinate'");
+    InstructionDesc[OpImageWrite].operands.push(OperandId, "'Texel'");
+    InstructionDesc[OpImageWrite].operands.push(OperandImageOperands, "", true);
+    InstructionDesc[OpImageWrite].operands.push(OperandVariableIds, "", true);
+
+    InstructionDesc[OpImageSampleImplicitLod].operands.push(OperandId, "'Sampled Image'");
+    InstructionDesc[OpImageSampleImplicitLod].operands.push(OperandId, "'Coordinate'");
+    InstructionDesc[OpImageSampleImplicitLod].operands.push(OperandImageOperands, "", true);
+    InstructionDesc[OpImageSampleImplicitLod].operands.push(OperandVariableIds, "", true);
+
+    InstructionDesc[OpImageSampleExplicitLod].operands.push(OperandId, "'Sampled Image'");
+    InstructionDesc[OpImageSampleExplicitLod].operands.push(OperandId, "'Coordinate'");
+    InstructionDesc[OpImageSampleExplicitLod].operands.push(OperandImageOperands, "", true);
+    InstructionDesc[OpImageSampleExplicitLod].operands.push(OperandVariableIds, "", true);
+
+    InstructionDesc[OpImageSampleDrefImplicitLod].operands.push(OperandId, "'Sampled Image'");
+    InstructionDesc[OpImageSampleDrefImplicitLod].operands.push(OperandId, "'Coordinate'");
+    InstructionDesc[OpImageSampleDrefImplicitLod].operands.push(OperandId, "'D~ref~'");
+    InstructionDesc[OpImageSampleDrefImplicitLod].operands.push(OperandImageOperands, "", true);
+    InstructionDesc[OpImageSampleDrefImplicitLod].operands.push(OperandVariableIds, "", true);
+
+    InstructionDesc[OpImageSampleDrefExplicitLod].operands.push(OperandId, "'Sampled Image'");
+    InstructionDesc[OpImageSampleDrefExplicitLod].operands.push(OperandId, "'Coordinate'");
+    InstructionDesc[OpImageSampleDrefExplicitLod].operands.push(OperandId, "'D~ref~'");
+    InstructionDesc[OpImageSampleDrefExplicitLod].operands.push(OperandImageOperands, "", true);
+    InstructionDesc[OpImageSampleDrefExplicitLod].operands.push(OperandVariableIds, "", true);
+
+    InstructionDesc[OpImageSampleProjImplicitLod].operands.push(OperandId, "'Sampled Image'");
+    InstructionDesc[OpImageSampleProjImplicitLod].operands.push(OperandId, "'Coordinate'");
+    InstructionDesc[OpImageSampleProjImplicitLod].operands.push(OperandImageOperands, "", true);
+    InstructionDesc[OpImageSampleProjImplicitLod].operands.push(OperandVariableIds, "", true);
+
+    InstructionDesc[OpImageSampleProjExplicitLod].operands.push(OperandId, "'Sampled Image'");
+    InstructionDesc[OpImageSampleProjExplicitLod].operands.push(OperandId, "'Coordinate'");
+    InstructionDesc[OpImageSampleProjExplicitLod].operands.push(OperandImageOperands, "", true);
+    InstructionDesc[OpImageSampleProjExplicitLod].operands.push(OperandVariableIds, "", true);
+
+    InstructionDesc[OpImageSampleProjDrefImplicitLod].operands.push(OperandId, "'Sampled Image'");
+    InstructionDesc[OpImageSampleProjDrefImplicitLod].operands.push(OperandId, "'Coordinate'");
+    InstructionDesc[OpImageSampleProjDrefImplicitLod].operands.push(OperandId, "'D~ref~'");
+    InstructionDesc[OpImageSampleProjDrefImplicitLod].operands.push(OperandImageOperands, "", true);
+    InstructionDesc[OpImageSampleProjDrefImplicitLod].operands.push(OperandVariableIds, "", true);
+
+    InstructionDesc[OpImageSampleProjDrefExplicitLod].operands.push(OperandId, "'Sampled Image'");
+    InstructionDesc[OpImageSampleProjDrefExplicitLod].operands.push(OperandId, "'Coordinate'");
+    InstructionDesc[OpImageSampleProjDrefExplicitLod].operands.push(OperandId, "'D~ref~'");
+    InstructionDesc[OpImageSampleProjDrefExplicitLod].operands.push(OperandImageOperands, "", true);
+    InstructionDesc[OpImageSampleProjDrefExplicitLod].operands.push(OperandVariableIds, "", true);
+
+    InstructionDesc[OpImageFetch].operands.push(OperandId, "'Image'");
+    InstructionDesc[OpImageFetch].operands.push(OperandId, "'Coordinate'");
+    InstructionDesc[OpImageFetch].operands.push(OperandImageOperands, "", true);
+    InstructionDesc[OpImageFetch].operands.push(OperandVariableIds, "", true);
+
+    InstructionDesc[OpImageGather].operands.push(OperandId, "'Sampled Image'");
+    InstructionDesc[OpImageGather].operands.push(OperandId, "'Coordinate'");
+    InstructionDesc[OpImageGather].operands.push(OperandId, "'Component'");
+    InstructionDesc[OpImageGather].operands.push(OperandImageOperands, "", true);
+    InstructionDesc[OpImageGather].operands.push(OperandVariableIds, "", true);
+
+    InstructionDesc[OpImageDrefGather].operands.push(OperandId, "'Sampled Image'");
+    InstructionDesc[OpImageDrefGather].operands.push(OperandId, "'Coordinate'");
+    InstructionDesc[OpImageDrefGather].operands.push(OperandId, "'D~ref~'");
+    InstructionDesc[OpImageDrefGather].operands.push(OperandImageOperands, "", true);
+    InstructionDesc[OpImageDrefGather].operands.push(OperandVariableIds, "", true);
+
+    InstructionDesc[OpImageSparseSampleImplicitLod].operands.push(OperandId, "'Sampled Image'");
+    InstructionDesc[OpImageSparseSampleImplicitLod].operands.push(OperandId, "'Coordinate'");
+    InstructionDesc[OpImageSparseSampleImplicitLod].operands.push(OperandImageOperands, "", true);
+    InstructionDesc[OpImageSparseSampleImplicitLod].operands.push(OperandVariableIds, "", true);
+
+    InstructionDesc[OpImageSparseSampleExplicitLod].operands.push(OperandId, "'Sampled Image'");
+    InstructionDesc[OpImageSparseSampleExplicitLod].operands.push(OperandId, "'Coordinate'");
+    InstructionDesc[OpImageSparseSampleExplicitLod].operands.push(OperandImageOperands, "", true);
+    InstructionDesc[OpImageSparseSampleExplicitLod].operands.push(OperandVariableIds, "", true);
+
+    InstructionDesc[OpImageSparseSampleDrefImplicitLod].operands.push(OperandId, "'Sampled Image'");
+    InstructionDesc[OpImageSparseSampleDrefImplicitLod].operands.push(OperandId, "'Coordinate'");
+    InstructionDesc[OpImageSparseSampleDrefImplicitLod].operands.push(OperandId, "'D~ref~'");
+    InstructionDesc[OpImageSparseSampleDrefImplicitLod].operands.push(OperandImageOperands, "", true);
+    InstructionDesc[OpImageSparseSampleDrefImplicitLod].operands.push(OperandVariableIds, "", true);
+
+    InstructionDesc[OpImageSparseSampleDrefExplicitLod].operands.push(OperandId, "'Sampled Image'");
+    InstructionDesc[OpImageSparseSampleDrefExplicitLod].operands.push(OperandId, "'Coordinate'");
+    InstructionDesc[OpImageSparseSampleDrefExplicitLod].operands.push(OperandId, "'D~ref~'");
+    InstructionDesc[OpImageSparseSampleDrefExplicitLod].operands.push(OperandImageOperands, "", true);
+    InstructionDesc[OpImageSparseSampleDrefExplicitLod].operands.push(OperandVariableIds, "", true);
 
-        InstructionDesc[OpSpecConstant].operands.push(OperandVariableLiterals, "'Value'");
+    InstructionDesc[OpImageSparseSampleProjImplicitLod].operands.push(OperandId, "'Sampled Image'");
+    InstructionDesc[OpImageSparseSampleProjImplicitLod].operands.push(OperandId, "'Coordinate'");
+    InstructionDesc[OpImageSparseSampleProjImplicitLod].operands.push(OperandImageOperands, "", true);
+    InstructionDesc[OpImageSparseSampleProjImplicitLod].operands.push(OperandVariableIds, "", true);
 
-        InstructionDesc[OpSpecConstantComposite].operands.push(OperandVariableIds, "'Constituents'");
+    InstructionDesc[OpImageSparseSampleProjExplicitLod].operands.push(OperandId, "'Sampled Image'");
+    InstructionDesc[OpImageSparseSampleProjExplicitLod].operands.push(OperandId, "'Coordinate'");
+    InstructionDesc[OpImageSparseSampleProjExplicitLod].operands.push(OperandImageOperands, "", true);
+    InstructionDesc[OpImageSparseSampleProjExplicitLod].operands.push(OperandVariableIds, "", true);
 
-        InstructionDesc[OpSpecConstantOp].operands.push(OperandLiteralNumber, "'Opcode'");
-        InstructionDesc[OpSpecConstantOp].operands.push(OperandVariableIds, "'Operands'");
+    InstructionDesc[OpImageSparseSampleProjDrefImplicitLod].operands.push(OperandId, "'Sampled Image'");
+    InstructionDesc[OpImageSparseSampleProjDrefImplicitLod].operands.push(OperandId, "'Coordinate'");
+    InstructionDesc[OpImageSparseSampleProjDrefImplicitLod].operands.push(OperandId, "'D~ref~'");
+    InstructionDesc[OpImageSparseSampleProjDrefImplicitLod].operands.push(OperandImageOperands, "", true);
+    InstructionDesc[OpImageSparseSampleProjDrefImplicitLod].operands.push(OperandVariableIds, "", true);
 
-        InstructionDesc[OpVariable].operands.push(OperandStorage, "");
-        InstructionDesc[OpVariable].operands.push(OperandId, "'Initializer'", true);
+    InstructionDesc[OpImageSparseSampleProjDrefExplicitLod].operands.push(OperandId, "'Sampled Image'");
+    InstructionDesc[OpImageSparseSampleProjDrefExplicitLod].operands.push(OperandId, "'Coordinate'");
+    InstructionDesc[OpImageSparseSampleProjDrefExplicitLod].operands.push(OperandId, "'D~ref~'");
+    InstructionDesc[OpImageSparseSampleProjDrefExplicitLod].operands.push(OperandImageOperands, "", true);
+    InstructionDesc[OpImageSparseSampleProjDrefExplicitLod].operands.push(OperandVariableIds, "", true);
 
-        InstructionDesc[OpFunction].operands.push(OperandFunction, "");
-        InstructionDesc[OpFunction].operands.push(OperandId, "'Function Type'");
+    InstructionDesc[OpImageSparseFetch].operands.push(OperandId, "'Image'");
+    InstructionDesc[OpImageSparseFetch].operands.push(OperandId, "'Coordinate'");
+    InstructionDesc[OpImageSparseFetch].operands.push(OperandImageOperands, "", true);
+    InstructionDesc[OpImageSparseFetch].operands.push(OperandVariableIds, "", true);
 
-        InstructionDesc[OpFunctionCall].operands.push(OperandId, "'Function'");
-        InstructionDesc[OpFunctionCall].operands.push(OperandVariableIds, "'Argument 0', +\n'Argument 1', +\n...");
-
-        InstructionDesc[OpExtInst].operands.push(OperandId, "'Set'");
-        InstructionDesc[OpExtInst].operands.push(OperandLiteralNumber, "'Instruction'");
-        InstructionDesc[OpExtInst].operands.push(OperandVariableIds, "'Operand 1', +\n'Operand 2', +\n...");
-
-        InstructionDesc[OpExtInstWithForwardRefsKHR].operands.push(OperandId, "'Set'");
-        InstructionDesc[OpExtInstWithForwardRefsKHR].operands.push(OperandLiteralNumber, "'Instruction'");
-        InstructionDesc[OpExtInstWithForwardRefsKHR].operands.push(OperandVariableIds, "'Operand 1', +\n'Operand 2', +\n...");
-
-        InstructionDesc[OpLoad].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpLoad].operands.push(OperandMemoryAccess, "", true);
-        InstructionDesc[OpLoad].operands.push(OperandLiteralNumber, "", true);
-        InstructionDesc[OpLoad].operands.push(OperandId, "", true);
-
-        InstructionDesc[OpStore].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpStore].operands.push(OperandId, "'Object'");
-        InstructionDesc[OpStore].operands.push(OperandMemoryAccess, "", true);
-        InstructionDesc[OpStore].operands.push(OperandLiteralNumber, "", true);
-        InstructionDesc[OpStore].operands.push(OperandId, "", true);
-
-        InstructionDesc[OpPhi].operands.push(OperandVariableIds, "'Variable, Parent, ...'");
-
-        InstructionDesc[OpDecorate].operands.push(OperandId, "'Target'");
-        InstructionDesc[OpDecorate].operands.push(OperandDecoration, "");
-        InstructionDesc[OpDecorate].operands.push(OperandVariableLiterals, "See <<Decoration,'Decoration'>>.");
-
-        InstructionDesc[OpDecorateId].operands.push(OperandId, "'Target'");
-        InstructionDesc[OpDecorateId].operands.push(OperandDecoration, "");
-        InstructionDesc[OpDecorateId].operands.push(OperandVariableIds, "See <<Decoration,'Decoration'>>.");
-
-        InstructionDesc[OpDecorateStringGOOGLE].operands.push(OperandId, "'Target'");
-        InstructionDesc[OpDecorateStringGOOGLE].operands.push(OperandDecoration, "");
-        InstructionDesc[OpDecorateStringGOOGLE].operands.push(OperandVariableLiteralStrings, "'Literal Strings'");
-
-        InstructionDesc[OpMemberDecorate].operands.push(OperandId, "'Structure Type'");
-        InstructionDesc[OpMemberDecorate].operands.push(OperandLiteralNumber, "'Member'");
-        InstructionDesc[OpMemberDecorate].operands.push(OperandDecoration, "");
-        InstructionDesc[OpMemberDecorate].operands.push(OperandVariableLiterals, "See <<Decoration,'Decoration'>>.");
-
-        InstructionDesc[OpMemberDecorateStringGOOGLE].operands.push(OperandId, "'Structure Type'");
-        InstructionDesc[OpMemberDecorateStringGOOGLE].operands.push(OperandLiteralNumber, "'Member'");
-        InstructionDesc[OpMemberDecorateStringGOOGLE].operands.push(OperandDecoration, "");
-        InstructionDesc[OpMemberDecorateStringGOOGLE].operands.push(OperandVariableLiteralStrings, "'Literal Strings'");
-
-        InstructionDesc[OpGroupDecorate].operands.push(OperandId, "'Decoration Group'");
-        InstructionDesc[OpGroupDecorate].operands.push(OperandVariableIds, "'Targets'");
-
-        InstructionDesc[OpGroupMemberDecorate].operands.push(OperandId, "'Decoration Group'");
-        InstructionDesc[OpGroupMemberDecorate].operands.push(OperandVariableIdLiteral, "'Targets'");
-
-        InstructionDesc[OpVectorExtractDynamic].operands.push(OperandId, "'Vector'");
-        InstructionDesc[OpVectorExtractDynamic].operands.push(OperandId, "'Index'");
-
-        InstructionDesc[OpVectorInsertDynamic].operands.push(OperandId, "'Vector'");
-        InstructionDesc[OpVectorInsertDynamic].operands.push(OperandId, "'Component'");
-        InstructionDesc[OpVectorInsertDynamic].operands.push(OperandId, "'Index'");
-
-        InstructionDesc[OpVectorShuffle].operands.push(OperandId, "'Vector 1'");
-        InstructionDesc[OpVectorShuffle].operands.push(OperandId, "'Vector 2'");
-        InstructionDesc[OpVectorShuffle].operands.push(OperandVariableLiterals, "'Components'");
-
-        InstructionDesc[OpCompositeConstruct].operands.push(OperandVariableIds, "'Constituents'");
-
-        InstructionDesc[OpCompositeExtract].operands.push(OperandId, "'Composite'");
-        InstructionDesc[OpCompositeExtract].operands.push(OperandVariableLiterals, "'Indexes'");
-
-        InstructionDesc[OpCompositeInsert].operands.push(OperandId, "'Object'");
-        InstructionDesc[OpCompositeInsert].operands.push(OperandId, "'Composite'");
-        InstructionDesc[OpCompositeInsert].operands.push(OperandVariableLiterals, "'Indexes'");
-
-        InstructionDesc[OpCopyObject].operands.push(OperandId, "'Operand'");
-
-        InstructionDesc[OpCopyMemory].operands.push(OperandId, "'Target'");
-        InstructionDesc[OpCopyMemory].operands.push(OperandId, "'Source'");
-        InstructionDesc[OpCopyMemory].operands.push(OperandMemoryAccess, "", true);
-
-        InstructionDesc[OpCopyMemorySized].operands.push(OperandId, "'Target'");
-        InstructionDesc[OpCopyMemorySized].operands.push(OperandId, "'Source'");
-        InstructionDesc[OpCopyMemorySized].operands.push(OperandId, "'Size'");
-        InstructionDesc[OpCopyMemorySized].operands.push(OperandMemoryAccess, "", true);
-
-        InstructionDesc[OpSampledImage].operands.push(OperandId, "'Image'");
-        InstructionDesc[OpSampledImage].operands.push(OperandId, "'Sampler'");
-
-        InstructionDesc[OpImage].operands.push(OperandId, "'Sampled Image'");
-
-        InstructionDesc[OpImageRead].operands.push(OperandId, "'Image'");
-        InstructionDesc[OpImageRead].operands.push(OperandId, "'Coordinate'");
-        InstructionDesc[OpImageRead].operands.push(OperandImageOperands, "", true);
-        InstructionDesc[OpImageRead].operands.push(OperandVariableIds, "", true);
-
-        InstructionDesc[OpImageWrite].operands.push(OperandId, "'Image'");
-        InstructionDesc[OpImageWrite].operands.push(OperandId, "'Coordinate'");
-        InstructionDesc[OpImageWrite].operands.push(OperandId, "'Texel'");
-        InstructionDesc[OpImageWrite].operands.push(OperandImageOperands, "", true);
-        InstructionDesc[OpImageWrite].operands.push(OperandVariableIds, "", true);
-
-        InstructionDesc[OpImageSampleImplicitLod].operands.push(OperandId, "'Sampled Image'");
-        InstructionDesc[OpImageSampleImplicitLod].operands.push(OperandId, "'Coordinate'");
-        InstructionDesc[OpImageSampleImplicitLod].operands.push(OperandImageOperands, "", true);
-        InstructionDesc[OpImageSampleImplicitLod].operands.push(OperandVariableIds, "", true);
-
-        InstructionDesc[OpImageSampleExplicitLod].operands.push(OperandId, "'Sampled Image'");
-        InstructionDesc[OpImageSampleExplicitLod].operands.push(OperandId, "'Coordinate'");
-        InstructionDesc[OpImageSampleExplicitLod].operands.push(OperandImageOperands, "", true);
-        InstructionDesc[OpImageSampleExplicitLod].operands.push(OperandVariableIds, "", true);
-
-        InstructionDesc[OpImageSampleDrefImplicitLod].operands.push(OperandId, "'Sampled Image'");
-        InstructionDesc[OpImageSampleDrefImplicitLod].operands.push(OperandId, "'Coordinate'");
-        InstructionDesc[OpImageSampleDrefImplicitLod].operands.push(OperandId, "'D~ref~'");
-        InstructionDesc[OpImageSampleDrefImplicitLod].operands.push(OperandImageOperands, "", true);
-        InstructionDesc[OpImageSampleDrefImplicitLod].operands.push(OperandVariableIds, "", true);
-
-        InstructionDesc[OpImageSampleDrefExplicitLod].operands.push(OperandId, "'Sampled Image'");
-        InstructionDesc[OpImageSampleDrefExplicitLod].operands.push(OperandId, "'Coordinate'");
-        InstructionDesc[OpImageSampleDrefExplicitLod].operands.push(OperandId, "'D~ref~'");
-        InstructionDesc[OpImageSampleDrefExplicitLod].operands.push(OperandImageOperands, "", true);
-        InstructionDesc[OpImageSampleDrefExplicitLod].operands.push(OperandVariableIds, "", true);
-
-        InstructionDesc[OpImageSampleProjImplicitLod].operands.push(OperandId, "'Sampled Image'");
-        InstructionDesc[OpImageSampleProjImplicitLod].operands.push(OperandId, "'Coordinate'");
-        InstructionDesc[OpImageSampleProjImplicitLod].operands.push(OperandImageOperands, "", true);
-        InstructionDesc[OpImageSampleProjImplicitLod].operands.push(OperandVariableIds, "", true);
-
-        InstructionDesc[OpImageSampleProjExplicitLod].operands.push(OperandId, "'Sampled Image'");
-        InstructionDesc[OpImageSampleProjExplicitLod].operands.push(OperandId, "'Coordinate'");
-        InstructionDesc[OpImageSampleProjExplicitLod].operands.push(OperandImageOperands, "", true);
-        InstructionDesc[OpImageSampleProjExplicitLod].operands.push(OperandVariableIds, "", true);
-
-        InstructionDesc[OpImageSampleProjDrefImplicitLod].operands.push(OperandId, "'Sampled Image'");
-        InstructionDesc[OpImageSampleProjDrefImplicitLod].operands.push(OperandId, "'Coordinate'");
-        InstructionDesc[OpImageSampleProjDrefImplicitLod].operands.push(OperandId, "'D~ref~'");
-        InstructionDesc[OpImageSampleProjDrefImplicitLod].operands.push(OperandImageOperands, "", true);
-        InstructionDesc[OpImageSampleProjDrefImplicitLod].operands.push(OperandVariableIds, "", true);
-
-        InstructionDesc[OpImageSampleProjDrefExplicitLod].operands.push(OperandId, "'Sampled Image'");
-        InstructionDesc[OpImageSampleProjDrefExplicitLod].operands.push(OperandId, "'Coordinate'");
-        InstructionDesc[OpImageSampleProjDrefExplicitLod].operands.push(OperandId, "'D~ref~'");
-        InstructionDesc[OpImageSampleProjDrefExplicitLod].operands.push(OperandImageOperands, "", true);
-        InstructionDesc[OpImageSampleProjDrefExplicitLod].operands.push(OperandVariableIds, "", true);
-
-        InstructionDesc[OpImageFetch].operands.push(OperandId, "'Image'");
-        InstructionDesc[OpImageFetch].operands.push(OperandId, "'Coordinate'");
-        InstructionDesc[OpImageFetch].operands.push(OperandImageOperands, "", true);
-        InstructionDesc[OpImageFetch].operands.push(OperandVariableIds, "", true);
-
-        InstructionDesc[OpImageGather].operands.push(OperandId, "'Sampled Image'");
-        InstructionDesc[OpImageGather].operands.push(OperandId, "'Coordinate'");
-        InstructionDesc[OpImageGather].operands.push(OperandId, "'Component'");
-        InstructionDesc[OpImageGather].operands.push(OperandImageOperands, "", true);
-        InstructionDesc[OpImageGather].operands.push(OperandVariableIds, "", true);
-
-        InstructionDesc[OpImageDrefGather].operands.push(OperandId, "'Sampled Image'");
-        InstructionDesc[OpImageDrefGather].operands.push(OperandId, "'Coordinate'");
-        InstructionDesc[OpImageDrefGather].operands.push(OperandId, "'D~ref~'");
-        InstructionDesc[OpImageDrefGather].operands.push(OperandImageOperands, "", true);
-        InstructionDesc[OpImageDrefGather].operands.push(OperandVariableIds, "", true);
-
-        InstructionDesc[OpImageSparseSampleImplicitLod].operands.push(OperandId, "'Sampled Image'");
-        InstructionDesc[OpImageSparseSampleImplicitLod].operands.push(OperandId, "'Coordinate'");
-        InstructionDesc[OpImageSparseSampleImplicitLod].operands.push(OperandImageOperands, "", true);
-        InstructionDesc[OpImageSparseSampleImplicitLod].operands.push(OperandVariableIds, "", true);
-
-        InstructionDesc[OpImageSparseSampleExplicitLod].operands.push(OperandId, "'Sampled Image'");
-        InstructionDesc[OpImageSparseSampleExplicitLod].operands.push(OperandId, "'Coordinate'");
-        InstructionDesc[OpImageSparseSampleExplicitLod].operands.push(OperandImageOperands, "", true);
-        InstructionDesc[OpImageSparseSampleExplicitLod].operands.push(OperandVariableIds, "", true);
-
-        InstructionDesc[OpImageSparseSampleDrefImplicitLod].operands.push(OperandId, "'Sampled Image'");
-        InstructionDesc[OpImageSparseSampleDrefImplicitLod].operands.push(OperandId, "'Coordinate'");
-        InstructionDesc[OpImageSparseSampleDrefImplicitLod].operands.push(OperandId, "'D~ref~'");
-        InstructionDesc[OpImageSparseSampleDrefImplicitLod].operands.push(OperandImageOperands, "", true);
-        InstructionDesc[OpImageSparseSampleDrefImplicitLod].operands.push(OperandVariableIds, "", true);
-
-        InstructionDesc[OpImageSparseSampleDrefExplicitLod].operands.push(OperandId, "'Sampled Image'");
-        InstructionDesc[OpImageSparseSampleDrefExplicitLod].operands.push(OperandId, "'Coordinate'");
-        InstructionDesc[OpImageSparseSampleDrefExplicitLod].operands.push(OperandId, "'D~ref~'");
-        InstructionDesc[OpImageSparseSampleDrefExplicitLod].operands.push(OperandImageOperands, "", true);
-        InstructionDesc[OpImageSparseSampleDrefExplicitLod].operands.push(OperandVariableIds, "", true);
+    InstructionDesc[OpImageSparseGather].operands.push(OperandId, "'Sampled Image'");
+    InstructionDesc[OpImageSparseGather].operands.push(OperandId, "'Coordinate'");
+    InstructionDesc[OpImageSparseGather].operands.push(OperandId, "'Component'");
+    InstructionDesc[OpImageSparseGather].operands.push(OperandImageOperands, "", true);
+    InstructionDesc[OpImageSparseGather].operands.push(OperandVariableIds, "", true);
 
-        InstructionDesc[OpImageSparseSampleProjImplicitLod].operands.push(OperandId, "'Sampled Image'");
-        InstructionDesc[OpImageSparseSampleProjImplicitLod].operands.push(OperandId, "'Coordinate'");
-        InstructionDesc[OpImageSparseSampleProjImplicitLod].operands.push(OperandImageOperands, "", true);
-        InstructionDesc[OpImageSparseSampleProjImplicitLod].operands.push(OperandVariableIds, "", true);
+    InstructionDesc[OpImageSparseDrefGather].operands.push(OperandId, "'Sampled Image'");
+    InstructionDesc[OpImageSparseDrefGather].operands.push(OperandId, "'Coordinate'");
+    InstructionDesc[OpImageSparseDrefGather].operands.push(OperandId, "'D~ref~'");
+    InstructionDesc[OpImageSparseDrefGather].operands.push(OperandImageOperands, "", true);
+    InstructionDesc[OpImageSparseDrefGather].operands.push(OperandVariableIds, "", true);
 
-        InstructionDesc[OpImageSparseSampleProjExplicitLod].operands.push(OperandId, "'Sampled Image'");
-        InstructionDesc[OpImageSparseSampleProjExplicitLod].operands.push(OperandId, "'Coordinate'");
-        InstructionDesc[OpImageSparseSampleProjExplicitLod].operands.push(OperandImageOperands, "", true);
-        InstructionDesc[OpImageSparseSampleProjExplicitLod].operands.push(OperandVariableIds, "", true);
+    InstructionDesc[OpImageSparseRead].operands.push(OperandId, "'Image'");
+    InstructionDesc[OpImageSparseRead].operands.push(OperandId, "'Coordinate'");
+    InstructionDesc[OpImageSparseRead].operands.push(OperandImageOperands, "", true);
+    InstructionDesc[OpImageSparseRead].operands.push(OperandVariableIds, "", true);
 
-        InstructionDesc[OpImageSparseSampleProjDrefImplicitLod].operands.push(OperandId, "'Sampled Image'");
-        InstructionDesc[OpImageSparseSampleProjDrefImplicitLod].operands.push(OperandId, "'Coordinate'");
-        InstructionDesc[OpImageSparseSampleProjDrefImplicitLod].operands.push(OperandId, "'D~ref~'");
-        InstructionDesc[OpImageSparseSampleProjDrefImplicitLod].operands.push(OperandImageOperands, "", true);
-        InstructionDesc[OpImageSparseSampleProjDrefImplicitLod].operands.push(OperandVariableIds, "", true);
+    InstructionDesc[OpImageSparseTexelsResident].operands.push(OperandId, "'Resident Code'");
 
-        InstructionDesc[OpImageSparseSampleProjDrefExplicitLod].operands.push(OperandId, "'Sampled Image'");
-        InstructionDesc[OpImageSparseSampleProjDrefExplicitLod].operands.push(OperandId, "'Coordinate'");
-        InstructionDesc[OpImageSparseSampleProjDrefExplicitLod].operands.push(OperandId, "'D~ref~'");
-        InstructionDesc[OpImageSparseSampleProjDrefExplicitLod].operands.push(OperandImageOperands, "", true);
-        InstructionDesc[OpImageSparseSampleProjDrefExplicitLod].operands.push(OperandVariableIds, "", true);
+    InstructionDesc[OpImageQuerySizeLod].operands.push(OperandId, "'Image'");
+    InstructionDesc[OpImageQuerySizeLod].operands.push(OperandId, "'Level of Detail'");
 
-        InstructionDesc[OpImageSparseFetch].operands.push(OperandId, "'Image'");
-        InstructionDesc[OpImageSparseFetch].operands.push(OperandId, "'Coordinate'");
-        InstructionDesc[OpImageSparseFetch].operands.push(OperandImageOperands, "", true);
-        InstructionDesc[OpImageSparseFetch].operands.push(OperandVariableIds, "", true);
+    InstructionDesc[OpImageQuerySize].operands.push(OperandId, "'Image'");
 
-        InstructionDesc[OpImageSparseGather].operands.push(OperandId, "'Sampled Image'");
-        InstructionDesc[OpImageSparseGather].operands.push(OperandId, "'Coordinate'");
-        InstructionDesc[OpImageSparseGather].operands.push(OperandId, "'Component'");
-        InstructionDesc[OpImageSparseGather].operands.push(OperandImageOperands, "", true);
-        InstructionDesc[OpImageSparseGather].operands.push(OperandVariableIds, "", true);
+    InstructionDesc[OpImageQueryLod].operands.push(OperandId, "'Image'");
+    InstructionDesc[OpImageQueryLod].operands.push(OperandId, "'Coordinate'");
 
-        InstructionDesc[OpImageSparseDrefGather].operands.push(OperandId, "'Sampled Image'");
-        InstructionDesc[OpImageSparseDrefGather].operands.push(OperandId, "'Coordinate'");
-        InstructionDesc[OpImageSparseDrefGather].operands.push(OperandId, "'D~ref~'");
-        InstructionDesc[OpImageSparseDrefGather].operands.push(OperandImageOperands, "", true);
-        InstructionDesc[OpImageSparseDrefGather].operands.push(OperandVariableIds, "", true);
+    InstructionDesc[OpImageQueryLevels].operands.push(OperandId, "'Image'");
 
-        InstructionDesc[OpImageSparseRead].operands.push(OperandId, "'Image'");
-        InstructionDesc[OpImageSparseRead].operands.push(OperandId, "'Coordinate'");
-        InstructionDesc[OpImageSparseRead].operands.push(OperandImageOperands, "", true);
-        InstructionDesc[OpImageSparseRead].operands.push(OperandVariableIds, "", true);
+    InstructionDesc[OpImageQuerySamples].operands.push(OperandId, "'Image'");
 
-        InstructionDesc[OpImageSparseTexelsResident].operands.push(OperandId, "'Resident Code'");
+    InstructionDesc[OpImageQueryFormat].operands.push(OperandId, "'Image'");
 
-        InstructionDesc[OpImageQuerySizeLod].operands.push(OperandId, "'Image'");
-        InstructionDesc[OpImageQuerySizeLod].operands.push(OperandId, "'Level of Detail'");
+    InstructionDesc[OpImageQueryOrder].operands.push(OperandId, "'Image'");
 
-        InstructionDesc[OpImageQuerySize].operands.push(OperandId, "'Image'");
+    InstructionDesc[OpAccessChain].operands.push(OperandId, "'Base'");
+    InstructionDesc[OpAccessChain].operands.push(OperandVariableIds, "'Indexes'");
 
-        InstructionDesc[OpImageQueryLod].operands.push(OperandId, "'Image'");
-        InstructionDesc[OpImageQueryLod].operands.push(OperandId, "'Coordinate'");
+    InstructionDesc[OpInBoundsAccessChain].operands.push(OperandId, "'Base'");
+    InstructionDesc[OpInBoundsAccessChain].operands.push(OperandVariableIds, "'Indexes'");
 
-        InstructionDesc[OpImageQueryLevels].operands.push(OperandId, "'Image'");
+    InstructionDesc[OpPtrAccessChain].operands.push(OperandId, "'Base'");
+    InstructionDesc[OpPtrAccessChain].operands.push(OperandId, "'Element'");
+    InstructionDesc[OpPtrAccessChain].operands.push(OperandVariableIds, "'Indexes'");
 
-        InstructionDesc[OpImageQuerySamples].operands.push(OperandId, "'Image'");
+    InstructionDesc[OpInBoundsPtrAccessChain].operands.push(OperandId, "'Base'");
+    InstructionDesc[OpInBoundsPtrAccessChain].operands.push(OperandId, "'Element'");
+    InstructionDesc[OpInBoundsPtrAccessChain].operands.push(OperandVariableIds, "'Indexes'");
 
-        InstructionDesc[OpImageQueryFormat].operands.push(OperandId, "'Image'");
+    InstructionDesc[OpSNegate].operands.push(OperandId, "'Operand'");
 
-        InstructionDesc[OpImageQueryOrder].operands.push(OperandId, "'Image'");
+    InstructionDesc[OpFNegate].operands.push(OperandId, "'Operand'");
 
-        InstructionDesc[OpAccessChain].operands.push(OperandId, "'Base'");
-        InstructionDesc[OpAccessChain].operands.push(OperandVariableIds, "'Indexes'");
+    InstructionDesc[OpNot].operands.push(OperandId, "'Operand'");
 
-        InstructionDesc[OpInBoundsAccessChain].operands.push(OperandId, "'Base'");
-        InstructionDesc[OpInBoundsAccessChain].operands.push(OperandVariableIds, "'Indexes'");
+    InstructionDesc[OpAny].operands.push(OperandId, "'Vector'");
 
-        InstructionDesc[OpPtrAccessChain].operands.push(OperandId, "'Base'");
-        InstructionDesc[OpPtrAccessChain].operands.push(OperandId, "'Element'");
-        InstructionDesc[OpPtrAccessChain].operands.push(OperandVariableIds, "'Indexes'");
+    InstructionDesc[OpAll].operands.push(OperandId, "'Vector'");
 
-        InstructionDesc[OpInBoundsPtrAccessChain].operands.push(OperandId, "'Base'");
-        InstructionDesc[OpInBoundsPtrAccessChain].operands.push(OperandId, "'Element'");
-        InstructionDesc[OpInBoundsPtrAccessChain].operands.push(OperandVariableIds, "'Indexes'");
+    InstructionDesc[OpConvertFToU].operands.push(OperandId, "'Float Value'");
 
-        InstructionDesc[OpSNegate].operands.push(OperandId, "'Operand'");
+    InstructionDesc[OpConvertFToS].operands.push(OperandId, "'Float Value'");
 
-        InstructionDesc[OpFNegate].operands.push(OperandId, "'Operand'");
+    InstructionDesc[OpConvertSToF].operands.push(OperandId, "'Signed Value'");
 
-        InstructionDesc[OpNot].operands.push(OperandId, "'Operand'");
+    InstructionDesc[OpConvertUToF].operands.push(OperandId, "'Unsigned Value'");
 
-        InstructionDesc[OpAny].operands.push(OperandId, "'Vector'");
+    InstructionDesc[OpUConvert].operands.push(OperandId, "'Unsigned Value'");
 
-        InstructionDesc[OpAll].operands.push(OperandId, "'Vector'");
+    InstructionDesc[OpSConvert].operands.push(OperandId, "'Signed Value'");
 
-        InstructionDesc[OpConvertFToU].operands.push(OperandId, "'Float Value'");
+    InstructionDesc[OpFConvert].operands.push(OperandId, "'Float Value'");
 
-        InstructionDesc[OpConvertFToS].operands.push(OperandId, "'Float Value'");
+    InstructionDesc[OpSatConvertSToU].operands.push(OperandId, "'Signed Value'");
 
-        InstructionDesc[OpConvertSToF].operands.push(OperandId, "'Signed Value'");
+    InstructionDesc[OpSatConvertUToS].operands.push(OperandId, "'Unsigned Value'");
 
-        InstructionDesc[OpConvertUToF].operands.push(OperandId, "'Unsigned Value'");
+    InstructionDesc[OpConvertPtrToU].operands.push(OperandId, "'Pointer'");
 
-        InstructionDesc[OpUConvert].operands.push(OperandId, "'Unsigned Value'");
+    InstructionDesc[OpConvertUToPtr].operands.push(OperandId, "'Integer Value'");
 
-        InstructionDesc[OpSConvert].operands.push(OperandId, "'Signed Value'");
+    InstructionDesc[OpPtrCastToGeneric].operands.push(OperandId, "'Pointer'");
 
-        InstructionDesc[OpFConvert].operands.push(OperandId, "'Float Value'");
+    InstructionDesc[OpGenericCastToPtr].operands.push(OperandId, "'Pointer'");
 
-        InstructionDesc[OpSatConvertSToU].operands.push(OperandId, "'Signed Value'");
+    InstructionDesc[OpGenericCastToPtrExplicit].operands.push(OperandId, "'Pointer'");
+    InstructionDesc[OpGenericCastToPtrExplicit].operands.push(OperandStorage, "'Storage'");
 
-        InstructionDesc[OpSatConvertUToS].operands.push(OperandId, "'Unsigned Value'");
+    InstructionDesc[OpGenericPtrMemSemantics].operands.push(OperandId, "'Pointer'");
 
-        InstructionDesc[OpConvertPtrToU].operands.push(OperandId, "'Pointer'");
+    InstructionDesc[OpBitcast].operands.push(OperandId, "'Operand'");
 
-        InstructionDesc[OpConvertUToPtr].operands.push(OperandId, "'Integer Value'");
+    InstructionDesc[OpQuantizeToF16].operands.push(OperandId, "'Value'");
 
-        InstructionDesc[OpPtrCastToGeneric].operands.push(OperandId, "'Pointer'");
+    InstructionDesc[OpTranspose].operands.push(OperandId, "'Matrix'");
 
-        InstructionDesc[OpGenericCastToPtr].operands.push(OperandId, "'Pointer'");
+    InstructionDesc[OpCopyLogical].operands.push(OperandId, "'Operand'");
 
-        InstructionDesc[OpGenericCastToPtrExplicit].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpGenericCastToPtrExplicit].operands.push(OperandStorage, "'Storage'");
+    InstructionDesc[OpIsNan].operands.push(OperandId, "'x'");
 
-        InstructionDesc[OpGenericPtrMemSemantics].operands.push(OperandId, "'Pointer'");
+    InstructionDesc[OpIsInf].operands.push(OperandId, "'x'");
 
-        InstructionDesc[OpBitcast].operands.push(OperandId, "'Operand'");
+    InstructionDesc[OpIsFinite].operands.push(OperandId, "'x'");
 
-        InstructionDesc[OpQuantizeToF16].operands.push(OperandId, "'Value'");
+    InstructionDesc[OpIsNormal].operands.push(OperandId, "'x'");
 
-        InstructionDesc[OpTranspose].operands.push(OperandId, "'Matrix'");
+    InstructionDesc[OpSignBitSet].operands.push(OperandId, "'x'");
 
-        InstructionDesc[OpCopyLogical].operands.push(OperandId, "'Operand'");
+    InstructionDesc[OpLessOrGreater].operands.push(OperandId, "'x'");
+    InstructionDesc[OpLessOrGreater].operands.push(OperandId, "'y'");
 
-        InstructionDesc[OpIsNan].operands.push(OperandId, "'x'");
+    InstructionDesc[OpOrdered].operands.push(OperandId, "'x'");
+    InstructionDesc[OpOrdered].operands.push(OperandId, "'y'");
 
-        InstructionDesc[OpIsInf].operands.push(OperandId, "'x'");
+    InstructionDesc[OpUnordered].operands.push(OperandId, "'x'");
+    InstructionDesc[OpUnordered].operands.push(OperandId, "'y'");
 
-        InstructionDesc[OpIsFinite].operands.push(OperandId, "'x'");
+    InstructionDesc[OpArrayLength].operands.push(OperandId, "'Structure'");
+    InstructionDesc[OpArrayLength].operands.push(OperandLiteralNumber, "'Array member'");
 
-        InstructionDesc[OpIsNormal].operands.push(OperandId, "'x'");
+    InstructionDesc[OpIAdd].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpIAdd].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpSignBitSet].operands.push(OperandId, "'x'");
+    InstructionDesc[OpFAdd].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpFAdd].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpLessOrGreater].operands.push(OperandId, "'x'");
-        InstructionDesc[OpLessOrGreater].operands.push(OperandId, "'y'");
+    InstructionDesc[OpISub].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpISub].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpOrdered].operands.push(OperandId, "'x'");
-        InstructionDesc[OpOrdered].operands.push(OperandId, "'y'");
+    InstructionDesc[OpFSub].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpFSub].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpUnordered].operands.push(OperandId, "'x'");
-        InstructionDesc[OpUnordered].operands.push(OperandId, "'y'");
+    InstructionDesc[OpIMul].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpIMul].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpArrayLength].operands.push(OperandId, "'Structure'");
-        InstructionDesc[OpArrayLength].operands.push(OperandLiteralNumber, "'Array member'");
+    InstructionDesc[OpFMul].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpFMul].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpIAdd].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpIAdd].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpUDiv].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpUDiv].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpFAdd].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpFAdd].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpSDiv].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpSDiv].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpISub].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpISub].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpFDiv].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpFDiv].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpFSub].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpFSub].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpUMod].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpUMod].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpIMul].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpIMul].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpSRem].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpSRem].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpFMul].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpFMul].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpSMod].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpSMod].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpUDiv].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpUDiv].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpFRem].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpFRem].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpSDiv].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpSDiv].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpFMod].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpFMod].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpFDiv].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpFDiv].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpVectorTimesScalar].operands.push(OperandId, "'Vector'");
+    InstructionDesc[OpVectorTimesScalar].operands.push(OperandId, "'Scalar'");
 
-        InstructionDesc[OpUMod].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpUMod].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpMatrixTimesScalar].operands.push(OperandId, "'Matrix'");
+    InstructionDesc[OpMatrixTimesScalar].operands.push(OperandId, "'Scalar'");
 
-        InstructionDesc[OpSRem].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpSRem].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpVectorTimesMatrix].operands.push(OperandId, "'Vector'");
+    InstructionDesc[OpVectorTimesMatrix].operands.push(OperandId, "'Matrix'");
 
-        InstructionDesc[OpSMod].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpSMod].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpMatrixTimesVector].operands.push(OperandId, "'Matrix'");
+    InstructionDesc[OpMatrixTimesVector].operands.push(OperandId, "'Vector'");
 
-        InstructionDesc[OpFRem].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpFRem].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpMatrixTimesMatrix].operands.push(OperandId, "'LeftMatrix'");
+    InstructionDesc[OpMatrixTimesMatrix].operands.push(OperandId, "'RightMatrix'");
 
-        InstructionDesc[OpFMod].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpFMod].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpOuterProduct].operands.push(OperandId, "'Vector 1'");
+    InstructionDesc[OpOuterProduct].operands.push(OperandId, "'Vector 2'");
 
-        InstructionDesc[OpVectorTimesScalar].operands.push(OperandId, "'Vector'");
-        InstructionDesc[OpVectorTimesScalar].operands.push(OperandId, "'Scalar'");
+    InstructionDesc[OpDot].operands.push(OperandId, "'Vector 1'");
+    InstructionDesc[OpDot].operands.push(OperandId, "'Vector 2'");
 
-        InstructionDesc[OpMatrixTimesScalar].operands.push(OperandId, "'Matrix'");
-        InstructionDesc[OpMatrixTimesScalar].operands.push(OperandId, "'Scalar'");
+    InstructionDesc[OpIAddCarry].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpIAddCarry].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpVectorTimesMatrix].operands.push(OperandId, "'Vector'");
-        InstructionDesc[OpVectorTimesMatrix].operands.push(OperandId, "'Matrix'");
+    InstructionDesc[OpISubBorrow].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpISubBorrow].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpMatrixTimesVector].operands.push(OperandId, "'Matrix'");
-        InstructionDesc[OpMatrixTimesVector].operands.push(OperandId, "'Vector'");
+    InstructionDesc[OpUMulExtended].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpUMulExtended].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpMatrixTimesMatrix].operands.push(OperandId, "'LeftMatrix'");
-        InstructionDesc[OpMatrixTimesMatrix].operands.push(OperandId, "'RightMatrix'");
+    InstructionDesc[OpSMulExtended].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpSMulExtended].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpOuterProduct].operands.push(OperandId, "'Vector 1'");
-        InstructionDesc[OpOuterProduct].operands.push(OperandId, "'Vector 2'");
+    InstructionDesc[OpShiftRightLogical].operands.push(OperandId, "'Base'");
+    InstructionDesc[OpShiftRightLogical].operands.push(OperandId, "'Shift'");
 
-        InstructionDesc[OpDot].operands.push(OperandId, "'Vector 1'");
-        InstructionDesc[OpDot].operands.push(OperandId, "'Vector 2'");
+    InstructionDesc[OpShiftRightArithmetic].operands.push(OperandId, "'Base'");
+    InstructionDesc[OpShiftRightArithmetic].operands.push(OperandId, "'Shift'");
 
-        InstructionDesc[OpIAddCarry].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpIAddCarry].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpShiftLeftLogical].operands.push(OperandId, "'Base'");
+    InstructionDesc[OpShiftLeftLogical].operands.push(OperandId, "'Shift'");
 
-        InstructionDesc[OpISubBorrow].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpISubBorrow].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpLogicalOr].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpLogicalOr].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpUMulExtended].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpUMulExtended].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpLogicalAnd].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpLogicalAnd].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpSMulExtended].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpSMulExtended].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpLogicalEqual].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpLogicalEqual].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpShiftRightLogical].operands.push(OperandId, "'Base'");
-        InstructionDesc[OpShiftRightLogical].operands.push(OperandId, "'Shift'");
+    InstructionDesc[OpLogicalNotEqual].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpLogicalNotEqual].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpShiftRightArithmetic].operands.push(OperandId, "'Base'");
-        InstructionDesc[OpShiftRightArithmetic].operands.push(OperandId, "'Shift'");
+    InstructionDesc[OpLogicalNot].operands.push(OperandId, "'Operand'");
 
-        InstructionDesc[OpShiftLeftLogical].operands.push(OperandId, "'Base'");
-        InstructionDesc[OpShiftLeftLogical].operands.push(OperandId, "'Shift'");
+    InstructionDesc[OpBitwiseOr].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpBitwiseOr].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpLogicalOr].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpLogicalOr].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpBitwiseXor].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpBitwiseXor].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpLogicalAnd].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpLogicalAnd].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpBitwiseAnd].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpBitwiseAnd].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpLogicalEqual].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpLogicalEqual].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpBitFieldInsert].operands.push(OperandId, "'Base'");
+    InstructionDesc[OpBitFieldInsert].operands.push(OperandId, "'Insert'");
+    InstructionDesc[OpBitFieldInsert].operands.push(OperandId, "'Offset'");
+    InstructionDesc[OpBitFieldInsert].operands.push(OperandId, "'Count'");
 
-        InstructionDesc[OpLogicalNotEqual].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpLogicalNotEqual].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpBitFieldSExtract].operands.push(OperandId, "'Base'");
+    InstructionDesc[OpBitFieldSExtract].operands.push(OperandId, "'Offset'");
+    InstructionDesc[OpBitFieldSExtract].operands.push(OperandId, "'Count'");
+    
+    InstructionDesc[OpBitFieldUExtract].operands.push(OperandId, "'Base'");
+    InstructionDesc[OpBitFieldUExtract].operands.push(OperandId, "'Offset'");
+    InstructionDesc[OpBitFieldUExtract].operands.push(OperandId, "'Count'");
+    
+    InstructionDesc[OpBitReverse].operands.push(OperandId, "'Base'");
 
-        InstructionDesc[OpLogicalNot].operands.push(OperandId, "'Operand'");
+    InstructionDesc[OpBitCount].operands.push(OperandId, "'Base'");
 
-        InstructionDesc[OpBitwiseOr].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpBitwiseOr].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpSelect].operands.push(OperandId, "'Condition'");
+    InstructionDesc[OpSelect].operands.push(OperandId, "'Object 1'");
+    InstructionDesc[OpSelect].operands.push(OperandId, "'Object 2'");
 
-        InstructionDesc[OpBitwiseXor].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpBitwiseXor].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpIEqual].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpIEqual].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpBitwiseAnd].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpBitwiseAnd].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpFOrdEqual].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpFOrdEqual].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpBitFieldInsert].operands.push(OperandId, "'Base'");
-        InstructionDesc[OpBitFieldInsert].operands.push(OperandId, "'Insert'");
-        InstructionDesc[OpBitFieldInsert].operands.push(OperandId, "'Offset'");
-        InstructionDesc[OpBitFieldInsert].operands.push(OperandId, "'Count'");
+    InstructionDesc[OpFUnordEqual].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpFUnordEqual].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpBitFieldSExtract].operands.push(OperandId, "'Base'");
-        InstructionDesc[OpBitFieldSExtract].operands.push(OperandId, "'Offset'");
-        InstructionDesc[OpBitFieldSExtract].operands.push(OperandId, "'Count'");
+    InstructionDesc[OpINotEqual].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpINotEqual].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpBitFieldUExtract].operands.push(OperandId, "'Base'");
-        InstructionDesc[OpBitFieldUExtract].operands.push(OperandId, "'Offset'");
-        InstructionDesc[OpBitFieldUExtract].operands.push(OperandId, "'Count'");
+    InstructionDesc[OpFOrdNotEqual].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpFOrdNotEqual].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpBitReverse].operands.push(OperandId, "'Base'");
+    InstructionDesc[OpFUnordNotEqual].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpFUnordNotEqual].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpBitCount].operands.push(OperandId, "'Base'");
+    InstructionDesc[OpULessThan].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpULessThan].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpSelect].operands.push(OperandId, "'Condition'");
-        InstructionDesc[OpSelect].operands.push(OperandId, "'Object 1'");
-        InstructionDesc[OpSelect].operands.push(OperandId, "'Object 2'");
+    InstructionDesc[OpSLessThan].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpSLessThan].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpIEqual].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpIEqual].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpFOrdLessThan].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpFOrdLessThan].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpFOrdEqual].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpFOrdEqual].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpFUnordLessThan].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpFUnordLessThan].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpFUnordEqual].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpFUnordEqual].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpUGreaterThan].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpUGreaterThan].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpINotEqual].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpINotEqual].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpSGreaterThan].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpSGreaterThan].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpFOrdNotEqual].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpFOrdNotEqual].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpFOrdGreaterThan].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpFOrdGreaterThan].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpFUnordNotEqual].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpFUnordNotEqual].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpFUnordGreaterThan].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpFUnordGreaterThan].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpULessThan].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpULessThan].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpULessThanEqual].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpULessThanEqual].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpSLessThan].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpSLessThan].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpSLessThanEqual].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpSLessThanEqual].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpFOrdLessThan].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpFOrdLessThan].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpFOrdLessThanEqual].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpFOrdLessThanEqual].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpFUnordLessThan].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpFUnordLessThan].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpFUnordLessThanEqual].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpFUnordLessThanEqual].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpUGreaterThan].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpUGreaterThan].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpUGreaterThanEqual].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpUGreaterThanEqual].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpSGreaterThan].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpSGreaterThan].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpSGreaterThanEqual].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpSGreaterThanEqual].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpFOrdGreaterThan].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpFOrdGreaterThan].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpFOrdGreaterThanEqual].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpFOrdGreaterThanEqual].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpFUnordGreaterThan].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpFUnordGreaterThan].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpFUnordGreaterThanEqual].operands.push(OperandId, "'Operand 1'");
+    InstructionDesc[OpFUnordGreaterThanEqual].operands.push(OperandId, "'Operand 2'");
 
-        InstructionDesc[OpULessThanEqual].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpULessThanEqual].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpDPdx].operands.push(OperandId, "'P'");
 
-        InstructionDesc[OpSLessThanEqual].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpSLessThanEqual].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpDPdy].operands.push(OperandId, "'P'");
 
-        InstructionDesc[OpFOrdLessThanEqual].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpFOrdLessThanEqual].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpFwidth].operands.push(OperandId, "'P'");
 
-        InstructionDesc[OpFUnordLessThanEqual].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpFUnordLessThanEqual].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpDPdxFine].operands.push(OperandId, "'P'");
 
-        InstructionDesc[OpUGreaterThanEqual].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpUGreaterThanEqual].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpDPdyFine].operands.push(OperandId, "'P'");
 
-        InstructionDesc[OpSGreaterThanEqual].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpSGreaterThanEqual].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpFwidthFine].operands.push(OperandId, "'P'");
 
-        InstructionDesc[OpFOrdGreaterThanEqual].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpFOrdGreaterThanEqual].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpDPdxCoarse].operands.push(OperandId, "'P'");
 
-        InstructionDesc[OpFUnordGreaterThanEqual].operands.push(OperandId, "'Operand 1'");
-        InstructionDesc[OpFUnordGreaterThanEqual].operands.push(OperandId, "'Operand 2'");
+    InstructionDesc[OpDPdyCoarse].operands.push(OperandId, "'P'");
 
-        InstructionDesc[OpDPdx].operands.push(OperandId, "'P'");
+    InstructionDesc[OpFwidthCoarse].operands.push(OperandId, "'P'");
 
-        InstructionDesc[OpDPdy].operands.push(OperandId, "'P'");
+    InstructionDesc[OpEmitStreamVertex].operands.push(OperandId, "'Stream'");
 
-        InstructionDesc[OpFwidth].operands.push(OperandId, "'P'");
+    InstructionDesc[OpEndStreamPrimitive].operands.push(OperandId, "'Stream'");
 
-        InstructionDesc[OpDPdxFine].operands.push(OperandId, "'P'");
+    InstructionDesc[OpControlBarrier].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpControlBarrier].operands.push(OperandScope, "'Memory'");
+    InstructionDesc[OpControlBarrier].operands.push(OperandMemorySemantics, "'Semantics'");
 
-        InstructionDesc[OpDPdyFine].operands.push(OperandId, "'P'");
+    InstructionDesc[OpMemoryBarrier].operands.push(OperandScope, "'Memory'");
+    InstructionDesc[OpMemoryBarrier].operands.push(OperandMemorySemantics, "'Semantics'");
 
-        InstructionDesc[OpFwidthFine].operands.push(OperandId, "'P'");
+    InstructionDesc[OpImageTexelPointer].operands.push(OperandId, "'Image'");
+    InstructionDesc[OpImageTexelPointer].operands.push(OperandId, "'Coordinate'");
+    InstructionDesc[OpImageTexelPointer].operands.push(OperandId, "'Sample'");
 
-        InstructionDesc[OpDPdxCoarse].operands.push(OperandId, "'P'");
+    InstructionDesc[OpAtomicLoad].operands.push(OperandId, "'Pointer'");
+    InstructionDesc[OpAtomicLoad].operands.push(OperandScope, "'Scope'");
+    InstructionDesc[OpAtomicLoad].operands.push(OperandMemorySemantics, "'Semantics'");
 
-        InstructionDesc[OpDPdyCoarse].operands.push(OperandId, "'P'");
+    InstructionDesc[OpAtomicStore].operands.push(OperandId, "'Pointer'");
+    InstructionDesc[OpAtomicStore].operands.push(OperandScope, "'Scope'");
+    InstructionDesc[OpAtomicStore].operands.push(OperandMemorySemantics, "'Semantics'");
+    InstructionDesc[OpAtomicStore].operands.push(OperandId, "'Value'");
 
-        InstructionDesc[OpFwidthCoarse].operands.push(OperandId, "'P'");
+    InstructionDesc[OpAtomicExchange].operands.push(OperandId, "'Pointer'");
+    InstructionDesc[OpAtomicExchange].operands.push(OperandScope, "'Scope'");
+    InstructionDesc[OpAtomicExchange].operands.push(OperandMemorySemantics, "'Semantics'");
+    InstructionDesc[OpAtomicExchange].operands.push(OperandId, "'Value'");
 
-        InstructionDesc[OpEmitStreamVertex].operands.push(OperandId, "'Stream'");
+    InstructionDesc[OpAtomicCompareExchange].operands.push(OperandId, "'Pointer'");
+    InstructionDesc[OpAtomicCompareExchange].operands.push(OperandScope, "'Scope'");
+    InstructionDesc[OpAtomicCompareExchange].operands.push(OperandMemorySemantics, "'Equal'");
+    InstructionDesc[OpAtomicCompareExchange].operands.push(OperandMemorySemantics, "'Unequal'");
+    InstructionDesc[OpAtomicCompareExchange].operands.push(OperandId, "'Value'");
+    InstructionDesc[OpAtomicCompareExchange].operands.push(OperandId, "'Comparator'");
 
-        InstructionDesc[OpEndStreamPrimitive].operands.push(OperandId, "'Stream'");
+    InstructionDesc[OpAtomicCompareExchangeWeak].operands.push(OperandId, "'Pointer'");
+    InstructionDesc[OpAtomicCompareExchangeWeak].operands.push(OperandScope, "'Scope'");
+    InstructionDesc[OpAtomicCompareExchangeWeak].operands.push(OperandMemorySemantics, "'Equal'");
+    InstructionDesc[OpAtomicCompareExchangeWeak].operands.push(OperandMemorySemantics, "'Unequal'");
+    InstructionDesc[OpAtomicCompareExchangeWeak].operands.push(OperandId, "'Value'");
+    InstructionDesc[OpAtomicCompareExchangeWeak].operands.push(OperandId, "'Comparator'");
 
-        InstructionDesc[OpControlBarrier].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpControlBarrier].operands.push(OperandScope, "'Memory'");
-        InstructionDesc[OpControlBarrier].operands.push(OperandMemorySemantics, "'Semantics'");
+    InstructionDesc[OpAtomicIIncrement].operands.push(OperandId, "'Pointer'");
+    InstructionDesc[OpAtomicIIncrement].operands.push(OperandScope, "'Scope'");
+    InstructionDesc[OpAtomicIIncrement].operands.push(OperandMemorySemantics, "'Semantics'");
 
-        InstructionDesc[OpMemoryBarrier].operands.push(OperandScope, "'Memory'");
-        InstructionDesc[OpMemoryBarrier].operands.push(OperandMemorySemantics, "'Semantics'");
+    InstructionDesc[OpAtomicIDecrement].operands.push(OperandId, "'Pointer'");
+    InstructionDesc[OpAtomicIDecrement].operands.push(OperandScope, "'Scope'");
+    InstructionDesc[OpAtomicIDecrement].operands.push(OperandMemorySemantics, "'Semantics'");
 
-        InstructionDesc[OpImageTexelPointer].operands.push(OperandId, "'Image'");
-        InstructionDesc[OpImageTexelPointer].operands.push(OperandId, "'Coordinate'");
-        InstructionDesc[OpImageTexelPointer].operands.push(OperandId, "'Sample'");
+    InstructionDesc[OpAtomicIAdd].operands.push(OperandId, "'Pointer'");
+    InstructionDesc[OpAtomicIAdd].operands.push(OperandScope, "'Scope'");
+    InstructionDesc[OpAtomicIAdd].operands.push(OperandMemorySemantics, "'Semantics'");
+    InstructionDesc[OpAtomicIAdd].operands.push(OperandId, "'Value'");
 
-        InstructionDesc[OpAtomicLoad].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpAtomicLoad].operands.push(OperandScope, "'Scope'");
-        InstructionDesc[OpAtomicLoad].operands.push(OperandMemorySemantics, "'Semantics'");
+    InstructionDesc[OpAtomicFAddEXT].operands.push(OperandId, "'Pointer'");
+    InstructionDesc[OpAtomicFAddEXT].operands.push(OperandScope, "'Scope'");
+    InstructionDesc[OpAtomicFAddEXT].operands.push(OperandMemorySemantics, "'Semantics'");
+    InstructionDesc[OpAtomicFAddEXT].operands.push(OperandId, "'Value'");
 
-        InstructionDesc[OpAtomicStore].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpAtomicStore].operands.push(OperandScope, "'Scope'");
-        InstructionDesc[OpAtomicStore].operands.push(OperandMemorySemantics, "'Semantics'");
-        InstructionDesc[OpAtomicStore].operands.push(OperandId, "'Value'");
+    InstructionDesc[OpAtomicISub].operands.push(OperandId, "'Pointer'");
+    InstructionDesc[OpAtomicISub].operands.push(OperandScope, "'Scope'");
+    InstructionDesc[OpAtomicISub].operands.push(OperandMemorySemantics, "'Semantics'");
+    InstructionDesc[OpAtomicISub].operands.push(OperandId, "'Value'");
 
-        InstructionDesc[OpAtomicExchange].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpAtomicExchange].operands.push(OperandScope, "'Scope'");
-        InstructionDesc[OpAtomicExchange].operands.push(OperandMemorySemantics, "'Semantics'");
-        InstructionDesc[OpAtomicExchange].operands.push(OperandId, "'Value'");
+    InstructionDesc[OpAtomicUMin].operands.push(OperandId, "'Pointer'");
+    InstructionDesc[OpAtomicUMin].operands.push(OperandScope, "'Scope'");
+    InstructionDesc[OpAtomicUMin].operands.push(OperandMemorySemantics, "'Semantics'");
+    InstructionDesc[OpAtomicUMin].operands.push(OperandId, "'Value'");
 
-        InstructionDesc[OpAtomicCompareExchange].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpAtomicCompareExchange].operands.push(OperandScope, "'Scope'");
-        InstructionDesc[OpAtomicCompareExchange].operands.push(OperandMemorySemantics, "'Equal'");
-        InstructionDesc[OpAtomicCompareExchange].operands.push(OperandMemorySemantics, "'Unequal'");
-        InstructionDesc[OpAtomicCompareExchange].operands.push(OperandId, "'Value'");
-        InstructionDesc[OpAtomicCompareExchange].operands.push(OperandId, "'Comparator'");
+    InstructionDesc[OpAtomicUMax].operands.push(OperandId, "'Pointer'");
+    InstructionDesc[OpAtomicUMax].operands.push(OperandScope, "'Scope'");
+    InstructionDesc[OpAtomicUMax].operands.push(OperandMemorySemantics, "'Semantics'");
+    InstructionDesc[OpAtomicUMax].operands.push(OperandId, "'Value'");
 
-        InstructionDesc[OpAtomicCompareExchangeWeak].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpAtomicCompareExchangeWeak].operands.push(OperandScope, "'Scope'");
-        InstructionDesc[OpAtomicCompareExchangeWeak].operands.push(OperandMemorySemantics, "'Equal'");
-        InstructionDesc[OpAtomicCompareExchangeWeak].operands.push(OperandMemorySemantics, "'Unequal'");
-        InstructionDesc[OpAtomicCompareExchangeWeak].operands.push(OperandId, "'Value'");
-        InstructionDesc[OpAtomicCompareExchangeWeak].operands.push(OperandId, "'Comparator'");
+    InstructionDesc[OpAtomicSMin].operands.push(OperandId, "'Pointer'");
+    InstructionDesc[OpAtomicSMin].operands.push(OperandScope, "'Scope'");
+    InstructionDesc[OpAtomicSMin].operands.push(OperandMemorySemantics, "'Semantics'");
+    InstructionDesc[OpAtomicSMin].operands.push(OperandId, "'Value'");
 
-        InstructionDesc[OpAtomicIIncrement].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpAtomicIIncrement].operands.push(OperandScope, "'Scope'");
-        InstructionDesc[OpAtomicIIncrement].operands.push(OperandMemorySemantics, "'Semantics'");
+    InstructionDesc[OpAtomicSMax].operands.push(OperandId, "'Pointer'");
+    InstructionDesc[OpAtomicSMax].operands.push(OperandScope, "'Scope'");
+    InstructionDesc[OpAtomicSMax].operands.push(OperandMemorySemantics, "'Semantics'");
+    InstructionDesc[OpAtomicSMax].operands.push(OperandId, "'Value'");
 
-        InstructionDesc[OpAtomicIDecrement].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpAtomicIDecrement].operands.push(OperandScope, "'Scope'");
-        InstructionDesc[OpAtomicIDecrement].operands.push(OperandMemorySemantics, "'Semantics'");
+    InstructionDesc[OpAtomicFMinEXT].operands.push(OperandId, "'Pointer'");
+    InstructionDesc[OpAtomicFMinEXT].operands.push(OperandScope, "'Scope'");
+    InstructionDesc[OpAtomicFMinEXT].operands.push(OperandMemorySemantics, "'Semantics'");
+    InstructionDesc[OpAtomicFMinEXT].operands.push(OperandId, "'Value'");
 
-        InstructionDesc[OpAtomicIAdd].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpAtomicIAdd].operands.push(OperandScope, "'Scope'");
-        InstructionDesc[OpAtomicIAdd].operands.push(OperandMemorySemantics, "'Semantics'");
-        InstructionDesc[OpAtomicIAdd].operands.push(OperandId, "'Value'");
+    InstructionDesc[OpAtomicFMaxEXT].operands.push(OperandId, "'Pointer'");
+    InstructionDesc[OpAtomicFMaxEXT].operands.push(OperandScope, "'Scope'");
+    InstructionDesc[OpAtomicFMaxEXT].operands.push(OperandMemorySemantics, "'Semantics'");
+    InstructionDesc[OpAtomicFMaxEXT].operands.push(OperandId, "'Value'");
 
-        InstructionDesc[OpAtomicFAddEXT].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpAtomicFAddEXT].operands.push(OperandScope, "'Scope'");
-        InstructionDesc[OpAtomicFAddEXT].operands.push(OperandMemorySemantics, "'Semantics'");
-        InstructionDesc[OpAtomicFAddEXT].operands.push(OperandId, "'Value'");
+    InstructionDesc[OpAtomicAnd].operands.push(OperandId, "'Pointer'");
+    InstructionDesc[OpAtomicAnd].operands.push(OperandScope, "'Scope'");
+    InstructionDesc[OpAtomicAnd].operands.push(OperandMemorySemantics, "'Semantics'");
+    InstructionDesc[OpAtomicAnd].operands.push(OperandId, "'Value'");
 
-        InstructionDesc[OpAssumeTrueKHR].operands.push(OperandId, "'Condition'");
+    InstructionDesc[OpAtomicOr].operands.push(OperandId, "'Pointer'");
+    InstructionDesc[OpAtomicOr].operands.push(OperandScope, "'Scope'");
+    InstructionDesc[OpAtomicOr].operands.push(OperandMemorySemantics, "'Semantics'");
+    InstructionDesc[OpAtomicOr].operands.push(OperandId, "'Value'");
 
-        InstructionDesc[OpExpectKHR].operands.push(OperandId, "'Value'");
-        InstructionDesc[OpExpectKHR].operands.push(OperandId, "'ExpectedValue'");
+    InstructionDesc[OpAtomicXor].operands.push(OperandId, "'Pointer'");
+    InstructionDesc[OpAtomicXor].operands.push(OperandScope, "'Scope'");
+    InstructionDesc[OpAtomicXor].operands.push(OperandMemorySemantics, "'Semantics'");
+    InstructionDesc[OpAtomicXor].operands.push(OperandId, "'Value'");
 
-        InstructionDesc[OpAtomicISub].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpAtomicISub].operands.push(OperandScope, "'Scope'");
-        InstructionDesc[OpAtomicISub].operands.push(OperandMemorySemantics, "'Semantics'");
-        InstructionDesc[OpAtomicISub].operands.push(OperandId, "'Value'");
+    InstructionDesc[OpAtomicFlagTestAndSet].operands.push(OperandId, "'Pointer'");
+    InstructionDesc[OpAtomicFlagTestAndSet].operands.push(OperandScope, "'Scope'");
+    InstructionDesc[OpAtomicFlagTestAndSet].operands.push(OperandMemorySemantics, "'Semantics'");
 
-        InstructionDesc[OpAtomicUMin].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpAtomicUMin].operands.push(OperandScope, "'Scope'");
-        InstructionDesc[OpAtomicUMin].operands.push(OperandMemorySemantics, "'Semantics'");
-        InstructionDesc[OpAtomicUMin].operands.push(OperandId, "'Value'");
+    InstructionDesc[OpAtomicFlagClear].operands.push(OperandId, "'Pointer'");
+    InstructionDesc[OpAtomicFlagClear].operands.push(OperandScope, "'Scope'");
+    InstructionDesc[OpAtomicFlagClear].operands.push(OperandMemorySemantics, "'Semantics'");
 
-        InstructionDesc[OpAtomicUMax].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpAtomicUMax].operands.push(OperandScope, "'Scope'");
-        InstructionDesc[OpAtomicUMax].operands.push(OperandMemorySemantics, "'Semantics'");
-        InstructionDesc[OpAtomicUMax].operands.push(OperandId, "'Value'");
+    InstructionDesc[OpLoopMerge].operands.push(OperandId, "'Merge Block'");
+    InstructionDesc[OpLoopMerge].operands.push(OperandId, "'Continue Target'");
+    InstructionDesc[OpLoopMerge].operands.push(OperandLoop, "");
+    InstructionDesc[OpLoopMerge].operands.push(OperandOptionalLiteral, "");
 
-        InstructionDesc[OpAtomicSMin].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpAtomicSMin].operands.push(OperandScope, "'Scope'");
-        InstructionDesc[OpAtomicSMin].operands.push(OperandMemorySemantics, "'Semantics'");
-        InstructionDesc[OpAtomicSMin].operands.push(OperandId, "'Value'");
+    InstructionDesc[OpSelectionMerge].operands.push(OperandId, "'Merge Block'");
+    InstructionDesc[OpSelectionMerge].operands.push(OperandSelect, "");
 
-        InstructionDesc[OpAtomicSMax].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpAtomicSMax].operands.push(OperandScope, "'Scope'");
-        InstructionDesc[OpAtomicSMax].operands.push(OperandMemorySemantics, "'Semantics'");
-        InstructionDesc[OpAtomicSMax].operands.push(OperandId, "'Value'");
+    InstructionDesc[OpBranch].operands.push(OperandId, "'Target Label'");
 
-        InstructionDesc[OpAtomicFMinEXT].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpAtomicFMinEXT].operands.push(OperandScope, "'Scope'");
-        InstructionDesc[OpAtomicFMinEXT].operands.push(OperandMemorySemantics, "'Semantics'");
-        InstructionDesc[OpAtomicFMinEXT].operands.push(OperandId, "'Value'");
+    InstructionDesc[OpBranchConditional].operands.push(OperandId, "'Condition'");
+    InstructionDesc[OpBranchConditional].operands.push(OperandId, "'True Label'");
+    InstructionDesc[OpBranchConditional].operands.push(OperandId, "'False Label'");
+    InstructionDesc[OpBranchConditional].operands.push(OperandVariableLiterals, "'Branch weights'");
 
-        InstructionDesc[OpAtomicFMaxEXT].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpAtomicFMaxEXT].operands.push(OperandScope, "'Scope'");
-        InstructionDesc[OpAtomicFMaxEXT].operands.push(OperandMemorySemantics, "'Semantics'");
-        InstructionDesc[OpAtomicFMaxEXT].operands.push(OperandId, "'Value'");
+    InstructionDesc[OpSwitch].operands.push(OperandId, "'Selector'");
+    InstructionDesc[OpSwitch].operands.push(OperandId, "'Default'");
+    InstructionDesc[OpSwitch].operands.push(OperandVariableLiteralId, "'Target'");
 
-        InstructionDesc[OpAtomicAnd].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpAtomicAnd].operands.push(OperandScope, "'Scope'");
-        InstructionDesc[OpAtomicAnd].operands.push(OperandMemorySemantics, "'Semantics'");
-        InstructionDesc[OpAtomicAnd].operands.push(OperandId, "'Value'");
 
-        InstructionDesc[OpAtomicOr].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpAtomicOr].operands.push(OperandScope, "'Scope'");
-        InstructionDesc[OpAtomicOr].operands.push(OperandMemorySemantics, "'Semantics'");
-        InstructionDesc[OpAtomicOr].operands.push(OperandId, "'Value'");
+    InstructionDesc[OpReturnValue].operands.push(OperandId, "'Value'");
 
-        InstructionDesc[OpAtomicXor].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpAtomicXor].operands.push(OperandScope, "'Scope'");
-        InstructionDesc[OpAtomicXor].operands.push(OperandMemorySemantics, "'Semantics'");
-        InstructionDesc[OpAtomicXor].operands.push(OperandId, "'Value'");
+    InstructionDesc[OpLifetimeStart].operands.push(OperandId, "'Pointer'");
+    InstructionDesc[OpLifetimeStart].operands.push(OperandLiteralNumber, "'Size'");
 
-        InstructionDesc[OpAtomicFlagTestAndSet].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpAtomicFlagTestAndSet].operands.push(OperandScope, "'Scope'");
-        InstructionDesc[OpAtomicFlagTestAndSet].operands.push(OperandMemorySemantics, "'Semantics'");
+    InstructionDesc[OpLifetimeStop].operands.push(OperandId, "'Pointer'");
+    InstructionDesc[OpLifetimeStop].operands.push(OperandLiteralNumber, "'Size'");
 
-        InstructionDesc[OpAtomicFlagClear].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpAtomicFlagClear].operands.push(OperandScope, "'Scope'");
-        InstructionDesc[OpAtomicFlagClear].operands.push(OperandMemorySemantics, "'Semantics'");
+    InstructionDesc[OpGroupAsyncCopy].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupAsyncCopy].operands.push(OperandId, "'Destination'");
+    InstructionDesc[OpGroupAsyncCopy].operands.push(OperandId, "'Source'");
+    InstructionDesc[OpGroupAsyncCopy].operands.push(OperandId, "'Num Elements'");
+    InstructionDesc[OpGroupAsyncCopy].operands.push(OperandId, "'Stride'");
+    InstructionDesc[OpGroupAsyncCopy].operands.push(OperandId, "'Event'");
 
-        InstructionDesc[OpLoopMerge].operands.push(OperandId, "'Merge Block'");
-        InstructionDesc[OpLoopMerge].operands.push(OperandId, "'Continue Target'");
-        InstructionDesc[OpLoopMerge].operands.push(OperandLoop, "");
-        InstructionDesc[OpLoopMerge].operands.push(OperandOptionalLiteral, "");
+    InstructionDesc[OpGroupWaitEvents].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupWaitEvents].operands.push(OperandId, "'Num Events'");
+    InstructionDesc[OpGroupWaitEvents].operands.push(OperandId, "'Events List'");
 
-        InstructionDesc[OpSelectionMerge].operands.push(OperandId, "'Merge Block'");
-        InstructionDesc[OpSelectionMerge].operands.push(OperandSelect, "");
+    InstructionDesc[OpGroupAll].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupAll].operands.push(OperandId, "'Predicate'");
 
-        InstructionDesc[OpBranch].operands.push(OperandId, "'Target Label'");
+    InstructionDesc[OpGroupAny].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupAny].operands.push(OperandId, "'Predicate'");
 
-        InstructionDesc[OpBranchConditional].operands.push(OperandId, "'Condition'");
-        InstructionDesc[OpBranchConditional].operands.push(OperandId, "'True Label'");
-        InstructionDesc[OpBranchConditional].operands.push(OperandId, "'False Label'");
-        InstructionDesc[OpBranchConditional].operands.push(OperandVariableLiterals, "'Branch weights'");
+    InstructionDesc[OpGroupBroadcast].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupBroadcast].operands.push(OperandId, "'Value'");
+    InstructionDesc[OpGroupBroadcast].operands.push(OperandId, "'LocalId'");
 
-        InstructionDesc[OpSwitch].operands.push(OperandId, "'Selector'");
-        InstructionDesc[OpSwitch].operands.push(OperandId, "'Default'");
-        InstructionDesc[OpSwitch].operands.push(OperandVariableLiteralId, "'Target'");
+    InstructionDesc[OpGroupIAdd].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupIAdd].operands.push(OperandGroupOperation, "'Operation'");
+    InstructionDesc[OpGroupIAdd].operands.push(OperandId, "'X'");
 
+    InstructionDesc[OpGroupFAdd].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupFAdd].operands.push(OperandGroupOperation, "'Operation'");
+    InstructionDesc[OpGroupFAdd].operands.push(OperandId, "'X'");
 
-        InstructionDesc[OpReturnValue].operands.push(OperandId, "'Value'");
+    InstructionDesc[OpGroupUMin].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupUMin].operands.push(OperandGroupOperation, "'Operation'");
+    InstructionDesc[OpGroupUMin].operands.push(OperandId, "'X'");
 
-        InstructionDesc[OpLifetimeStart].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpLifetimeStart].operands.push(OperandLiteralNumber, "'Size'");
+    InstructionDesc[OpGroupSMin].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupSMin].operands.push(OperandGroupOperation, "'Operation'");
+    InstructionDesc[OpGroupSMin].operands.push(OperandId, "X");
 
-        InstructionDesc[OpLifetimeStop].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpLifetimeStop].operands.push(OperandLiteralNumber, "'Size'");
+    InstructionDesc[OpGroupFMin].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupFMin].operands.push(OperandGroupOperation, "'Operation'");
+    InstructionDesc[OpGroupFMin].operands.push(OperandId, "X");
 
-        InstructionDesc[OpGroupAsyncCopy].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupAsyncCopy].operands.push(OperandId, "'Destination'");
-        InstructionDesc[OpGroupAsyncCopy].operands.push(OperandId, "'Source'");
-        InstructionDesc[OpGroupAsyncCopy].operands.push(OperandId, "'Num Elements'");
-        InstructionDesc[OpGroupAsyncCopy].operands.push(OperandId, "'Stride'");
-        InstructionDesc[OpGroupAsyncCopy].operands.push(OperandId, "'Event'");
+    InstructionDesc[OpGroupUMax].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupUMax].operands.push(OperandGroupOperation, "'Operation'");
+    InstructionDesc[OpGroupUMax].operands.push(OperandId, "X");
 
-        InstructionDesc[OpGroupWaitEvents].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupWaitEvents].operands.push(OperandId, "'Num Events'");
-        InstructionDesc[OpGroupWaitEvents].operands.push(OperandId, "'Events List'");
+    InstructionDesc[OpGroupSMax].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupSMax].operands.push(OperandGroupOperation, "'Operation'");
+    InstructionDesc[OpGroupSMax].operands.push(OperandId, "X");
 
-        InstructionDesc[OpGroupAll].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupAll].operands.push(OperandId, "'Predicate'");
+    InstructionDesc[OpGroupFMax].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupFMax].operands.push(OperandGroupOperation, "'Operation'");
+    InstructionDesc[OpGroupFMax].operands.push(OperandId, "X");
 
-        InstructionDesc[OpGroupAny].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupAny].operands.push(OperandId, "'Predicate'");
+    InstructionDesc[OpReadPipe].operands.push(OperandId, "'Pipe'");
+    InstructionDesc[OpReadPipe].operands.push(OperandId, "'Pointer'");
+    InstructionDesc[OpReadPipe].operands.push(OperandId, "'Packet Size'");
+    InstructionDesc[OpReadPipe].operands.push(OperandId, "'Packet Alignment'");
 
-        InstructionDesc[OpGroupBroadcast].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupBroadcast].operands.push(OperandId, "'Value'");
-        InstructionDesc[OpGroupBroadcast].operands.push(OperandId, "'LocalId'");
+    InstructionDesc[OpWritePipe].operands.push(OperandId, "'Pipe'");
+    InstructionDesc[OpWritePipe].operands.push(OperandId, "'Pointer'");
+    InstructionDesc[OpWritePipe].operands.push(OperandId, "'Packet Size'");
+    InstructionDesc[OpWritePipe].operands.push(OperandId, "'Packet Alignment'");
 
-        InstructionDesc[OpGroupIAdd].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupIAdd].operands.push(OperandGroupOperation, "'Operation'");
-        InstructionDesc[OpGroupIAdd].operands.push(OperandId, "'X'");
+    InstructionDesc[OpReservedReadPipe].operands.push(OperandId, "'Pipe'");
+    InstructionDesc[OpReservedReadPipe].operands.push(OperandId, "'Reserve Id'");
+    InstructionDesc[OpReservedReadPipe].operands.push(OperandId, "'Index'");
+    InstructionDesc[OpReservedReadPipe].operands.push(OperandId, "'Pointer'");
+    InstructionDesc[OpReservedReadPipe].operands.push(OperandId, "'Packet Size'");
+    InstructionDesc[OpReservedReadPipe].operands.push(OperandId, "'Packet Alignment'");
 
-        InstructionDesc[OpGroupFAdd].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupFAdd].operands.push(OperandGroupOperation, "'Operation'");
-        InstructionDesc[OpGroupFAdd].operands.push(OperandId, "'X'");
+    InstructionDesc[OpReservedWritePipe].operands.push(OperandId, "'Pipe'");
+    InstructionDesc[OpReservedWritePipe].operands.push(OperandId, "'Reserve Id'");
+    InstructionDesc[OpReservedWritePipe].operands.push(OperandId, "'Index'");
+    InstructionDesc[OpReservedWritePipe].operands.push(OperandId, "'Pointer'");
+    InstructionDesc[OpReservedWritePipe].operands.push(OperandId, "'Packet Size'");
+    InstructionDesc[OpReservedWritePipe].operands.push(OperandId, "'Packet Alignment'");
 
-        InstructionDesc[OpGroupUMin].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupUMin].operands.push(OperandGroupOperation, "'Operation'");
-        InstructionDesc[OpGroupUMin].operands.push(OperandId, "'X'");
+    InstructionDesc[OpReserveReadPipePackets].operands.push(OperandId, "'Pipe'");
+    InstructionDesc[OpReserveReadPipePackets].operands.push(OperandId, "'Num Packets'");
+    InstructionDesc[OpReserveReadPipePackets].operands.push(OperandId, "'Packet Size'");
+    InstructionDesc[OpReserveReadPipePackets].operands.push(OperandId, "'Packet Alignment'");
 
-        InstructionDesc[OpGroupSMin].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupSMin].operands.push(OperandGroupOperation, "'Operation'");
-        InstructionDesc[OpGroupSMin].operands.push(OperandId, "X");
+    InstructionDesc[OpReserveWritePipePackets].operands.push(OperandId, "'Pipe'");
+    InstructionDesc[OpReserveWritePipePackets].operands.push(OperandId, "'Num Packets'");
+    InstructionDesc[OpReserveWritePipePackets].operands.push(OperandId, "'Packet Size'");
+    InstructionDesc[OpReserveWritePipePackets].operands.push(OperandId, "'Packet Alignment'");
 
-        InstructionDesc[OpGroupFMin].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupFMin].operands.push(OperandGroupOperation, "'Operation'");
-        InstructionDesc[OpGroupFMin].operands.push(OperandId, "X");
+    InstructionDesc[OpCommitReadPipe].operands.push(OperandId, "'Pipe'");
+    InstructionDesc[OpCommitReadPipe].operands.push(OperandId, "'Reserve Id'");
+    InstructionDesc[OpCommitReadPipe].operands.push(OperandId, "'Packet Size'");
+    InstructionDesc[OpCommitReadPipe].operands.push(OperandId, "'Packet Alignment'");
 
-        InstructionDesc[OpGroupUMax].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupUMax].operands.push(OperandGroupOperation, "'Operation'");
-        InstructionDesc[OpGroupUMax].operands.push(OperandId, "X");
+    InstructionDesc[OpCommitWritePipe].operands.push(OperandId, "'Pipe'");
+    InstructionDesc[OpCommitWritePipe].operands.push(OperandId, "'Reserve Id'");
+    InstructionDesc[OpCommitWritePipe].operands.push(OperandId, "'Packet Size'");
+    InstructionDesc[OpCommitWritePipe].operands.push(OperandId, "'Packet Alignment'");
 
-        InstructionDesc[OpGroupSMax].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupSMax].operands.push(OperandGroupOperation, "'Operation'");
-        InstructionDesc[OpGroupSMax].operands.push(OperandId, "X");
+    InstructionDesc[OpIsValidReserveId].operands.push(OperandId, "'Reserve Id'");
 
-        InstructionDesc[OpGroupFMax].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupFMax].operands.push(OperandGroupOperation, "'Operation'");
-        InstructionDesc[OpGroupFMax].operands.push(OperandId, "X");
+    InstructionDesc[OpGetNumPipePackets].operands.push(OperandId, "'Pipe'");
+    InstructionDesc[OpGetNumPipePackets].operands.push(OperandId, "'Packet Size'");
+    InstructionDesc[OpGetNumPipePackets].operands.push(OperandId, "'Packet Alignment'");
 
-        InstructionDesc[OpReadPipe].operands.push(OperandId, "'Pipe'");
-        InstructionDesc[OpReadPipe].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpReadPipe].operands.push(OperandId, "'Packet Size'");
-        InstructionDesc[OpReadPipe].operands.push(OperandId, "'Packet Alignment'");
+    InstructionDesc[OpGetMaxPipePackets].operands.push(OperandId, "'Pipe'");
+    InstructionDesc[OpGetMaxPipePackets].operands.push(OperandId, "'Packet Size'");
+    InstructionDesc[OpGetMaxPipePackets].operands.push(OperandId, "'Packet Alignment'");
 
-        InstructionDesc[OpWritePipe].operands.push(OperandId, "'Pipe'");
-        InstructionDesc[OpWritePipe].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpWritePipe].operands.push(OperandId, "'Packet Size'");
-        InstructionDesc[OpWritePipe].operands.push(OperandId, "'Packet Alignment'");
+    InstructionDesc[OpGroupReserveReadPipePackets].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupReserveReadPipePackets].operands.push(OperandId, "'Pipe'");
+    InstructionDesc[OpGroupReserveReadPipePackets].operands.push(OperandId, "'Num Packets'");
+    InstructionDesc[OpGroupReserveReadPipePackets].operands.push(OperandId, "'Packet Size'");
+    InstructionDesc[OpGroupReserveReadPipePackets].operands.push(OperandId, "'Packet Alignment'");
 
-        InstructionDesc[OpReservedReadPipe].operands.push(OperandId, "'Pipe'");
-        InstructionDesc[OpReservedReadPipe].operands.push(OperandId, "'Reserve Id'");
-        InstructionDesc[OpReservedReadPipe].operands.push(OperandId, "'Index'");
-        InstructionDesc[OpReservedReadPipe].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpReservedReadPipe].operands.push(OperandId, "'Packet Size'");
-        InstructionDesc[OpReservedReadPipe].operands.push(OperandId, "'Packet Alignment'");
+    InstructionDesc[OpGroupReserveWritePipePackets].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupReserveWritePipePackets].operands.push(OperandId, "'Pipe'");
+    InstructionDesc[OpGroupReserveWritePipePackets].operands.push(OperandId, "'Num Packets'");
+    InstructionDesc[OpGroupReserveWritePipePackets].operands.push(OperandId, "'Packet Size'");
+    InstructionDesc[OpGroupReserveWritePipePackets].operands.push(OperandId, "'Packet Alignment'");
 
-        InstructionDesc[OpReservedWritePipe].operands.push(OperandId, "'Pipe'");
-        InstructionDesc[OpReservedWritePipe].operands.push(OperandId, "'Reserve Id'");
-        InstructionDesc[OpReservedWritePipe].operands.push(OperandId, "'Index'");
-        InstructionDesc[OpReservedWritePipe].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpReservedWritePipe].operands.push(OperandId, "'Packet Size'");
-        InstructionDesc[OpReservedWritePipe].operands.push(OperandId, "'Packet Alignment'");
+    InstructionDesc[OpGroupCommitReadPipe].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupCommitReadPipe].operands.push(OperandId, "'Pipe'");
+    InstructionDesc[OpGroupCommitReadPipe].operands.push(OperandId, "'Reserve Id'");
+    InstructionDesc[OpGroupCommitReadPipe].operands.push(OperandId, "'Packet Size'");
+    InstructionDesc[OpGroupCommitReadPipe].operands.push(OperandId, "'Packet Alignment'");
 
-        InstructionDesc[OpReserveReadPipePackets].operands.push(OperandId, "'Pipe'");
-        InstructionDesc[OpReserveReadPipePackets].operands.push(OperandId, "'Num Packets'");
-        InstructionDesc[OpReserveReadPipePackets].operands.push(OperandId, "'Packet Size'");
-        InstructionDesc[OpReserveReadPipePackets].operands.push(OperandId, "'Packet Alignment'");
+    InstructionDesc[OpGroupCommitWritePipe].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupCommitWritePipe].operands.push(OperandId, "'Pipe'");
+    InstructionDesc[OpGroupCommitWritePipe].operands.push(OperandId, "'Reserve Id'");
+    InstructionDesc[OpGroupCommitWritePipe].operands.push(OperandId, "'Packet Size'");
+    InstructionDesc[OpGroupCommitWritePipe].operands.push(OperandId, "'Packet Alignment'");
 
-        InstructionDesc[OpReserveWritePipePackets].operands.push(OperandId, "'Pipe'");
-        InstructionDesc[OpReserveWritePipePackets].operands.push(OperandId, "'Num Packets'");
-        InstructionDesc[OpReserveWritePipePackets].operands.push(OperandId, "'Packet Size'");
-        InstructionDesc[OpReserveWritePipePackets].operands.push(OperandId, "'Packet Alignment'");
+    InstructionDesc[OpBuildNDRange].operands.push(OperandId, "'GlobalWorkSize'");
+    InstructionDesc[OpBuildNDRange].operands.push(OperandId, "'LocalWorkSize'");
+    InstructionDesc[OpBuildNDRange].operands.push(OperandId, "'GlobalWorkOffset'");
 
-        InstructionDesc[OpCommitReadPipe].operands.push(OperandId, "'Pipe'");
-        InstructionDesc[OpCommitReadPipe].operands.push(OperandId, "'Reserve Id'");
-        InstructionDesc[OpCommitReadPipe].operands.push(OperandId, "'Packet Size'");
-        InstructionDesc[OpCommitReadPipe].operands.push(OperandId, "'Packet Alignment'");
+    InstructionDesc[OpCaptureEventProfilingInfo].operands.push(OperandId, "'Event'");
+    InstructionDesc[OpCaptureEventProfilingInfo].operands.push(OperandId, "'Profiling Info'");
+    InstructionDesc[OpCaptureEventProfilingInfo].operands.push(OperandId, "'Value'");
 
-        InstructionDesc[OpCommitWritePipe].operands.push(OperandId, "'Pipe'");
-        InstructionDesc[OpCommitWritePipe].operands.push(OperandId, "'Reserve Id'");
-        InstructionDesc[OpCommitWritePipe].operands.push(OperandId, "'Packet Size'");
-        InstructionDesc[OpCommitWritePipe].operands.push(OperandId, "'Packet Alignment'");
+    InstructionDesc[OpSetUserEventStatus].operands.push(OperandId, "'Event'");
+    InstructionDesc[OpSetUserEventStatus].operands.push(OperandId, "'Status'");
 
-        InstructionDesc[OpIsValidReserveId].operands.push(OperandId, "'Reserve Id'");
+    InstructionDesc[OpIsValidEvent].operands.push(OperandId, "'Event'");
 
-        InstructionDesc[OpGetNumPipePackets].operands.push(OperandId, "'Pipe'");
-        InstructionDesc[OpGetNumPipePackets].operands.push(OperandId, "'Packet Size'");
-        InstructionDesc[OpGetNumPipePackets].operands.push(OperandId, "'Packet Alignment'");
+    InstructionDesc[OpRetainEvent].operands.push(OperandId, "'Event'");
 
-        InstructionDesc[OpGetMaxPipePackets].operands.push(OperandId, "'Pipe'");
-        InstructionDesc[OpGetMaxPipePackets].operands.push(OperandId, "'Packet Size'");
-        InstructionDesc[OpGetMaxPipePackets].operands.push(OperandId, "'Packet Alignment'");
+    InstructionDesc[OpReleaseEvent].operands.push(OperandId, "'Event'");
 
-        InstructionDesc[OpGroupReserveReadPipePackets].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupReserveReadPipePackets].operands.push(OperandId, "'Pipe'");
-        InstructionDesc[OpGroupReserveReadPipePackets].operands.push(OperandId, "'Num Packets'");
-        InstructionDesc[OpGroupReserveReadPipePackets].operands.push(OperandId, "'Packet Size'");
-        InstructionDesc[OpGroupReserveReadPipePackets].operands.push(OperandId, "'Packet Alignment'");
+    InstructionDesc[OpGetKernelWorkGroupSize].operands.push(OperandId, "'Invoke'");
+    InstructionDesc[OpGetKernelWorkGroupSize].operands.push(OperandId, "'Param'");
+    InstructionDesc[OpGetKernelWorkGroupSize].operands.push(OperandId, "'Param Size'");
+    InstructionDesc[OpGetKernelWorkGroupSize].operands.push(OperandId, "'Param Align'");
 
-        InstructionDesc[OpGroupReserveWritePipePackets].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupReserveWritePipePackets].operands.push(OperandId, "'Pipe'");
-        InstructionDesc[OpGroupReserveWritePipePackets].operands.push(OperandId, "'Num Packets'");
-        InstructionDesc[OpGroupReserveWritePipePackets].operands.push(OperandId, "'Packet Size'");
-        InstructionDesc[OpGroupReserveWritePipePackets].operands.push(OperandId, "'Packet Alignment'");
+    InstructionDesc[OpGetKernelPreferredWorkGroupSizeMultiple].operands.push(OperandId, "'Invoke'");
+    InstructionDesc[OpGetKernelPreferredWorkGroupSizeMultiple].operands.push(OperandId, "'Param'");
+    InstructionDesc[OpGetKernelPreferredWorkGroupSizeMultiple].operands.push(OperandId, "'Param Size'");
+    InstructionDesc[OpGetKernelPreferredWorkGroupSizeMultiple].operands.push(OperandId, "'Param Align'");
 
-        InstructionDesc[OpGroupCommitReadPipe].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupCommitReadPipe].operands.push(OperandId, "'Pipe'");
-        InstructionDesc[OpGroupCommitReadPipe].operands.push(OperandId, "'Reserve Id'");
-        InstructionDesc[OpGroupCommitReadPipe].operands.push(OperandId, "'Packet Size'");
-        InstructionDesc[OpGroupCommitReadPipe].operands.push(OperandId, "'Packet Alignment'");
+    InstructionDesc[OpGetKernelNDrangeSubGroupCount].operands.push(OperandId, "'ND Range'");
+    InstructionDesc[OpGetKernelNDrangeSubGroupCount].operands.push(OperandId, "'Invoke'");
+    InstructionDesc[OpGetKernelNDrangeSubGroupCount].operands.push(OperandId, "'Param'");
+    InstructionDesc[OpGetKernelNDrangeSubGroupCount].operands.push(OperandId, "'Param Size'");
+    InstructionDesc[OpGetKernelNDrangeSubGroupCount].operands.push(OperandId, "'Param Align'");
 
-        InstructionDesc[OpGroupCommitWritePipe].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupCommitWritePipe].operands.push(OperandId, "'Pipe'");
-        InstructionDesc[OpGroupCommitWritePipe].operands.push(OperandId, "'Reserve Id'");
-        InstructionDesc[OpGroupCommitWritePipe].operands.push(OperandId, "'Packet Size'");
-        InstructionDesc[OpGroupCommitWritePipe].operands.push(OperandId, "'Packet Alignment'");
+    InstructionDesc[OpGetKernelNDrangeMaxSubGroupSize].operands.push(OperandId, "'ND Range'");
+    InstructionDesc[OpGetKernelNDrangeMaxSubGroupSize].operands.push(OperandId, "'Invoke'");
+    InstructionDesc[OpGetKernelNDrangeMaxSubGroupSize].operands.push(OperandId, "'Param'");
+    InstructionDesc[OpGetKernelNDrangeMaxSubGroupSize].operands.push(OperandId, "'Param Size'");
+    InstructionDesc[OpGetKernelNDrangeMaxSubGroupSize].operands.push(OperandId, "'Param Align'");
 
-        InstructionDesc[OpBuildNDRange].operands.push(OperandId, "'GlobalWorkSize'");
-        InstructionDesc[OpBuildNDRange].operands.push(OperandId, "'LocalWorkSize'");
-        InstructionDesc[OpBuildNDRange].operands.push(OperandId, "'GlobalWorkOffset'");
+    InstructionDesc[OpEnqueueKernel].operands.push(OperandId, "'Queue'");
+    InstructionDesc[OpEnqueueKernel].operands.push(OperandId, "'Flags'");
+    InstructionDesc[OpEnqueueKernel].operands.push(OperandId, "'ND Range'");
+    InstructionDesc[OpEnqueueKernel].operands.push(OperandId, "'Num Events'");
+    InstructionDesc[OpEnqueueKernel].operands.push(OperandId, "'Wait Events'");
+    InstructionDesc[OpEnqueueKernel].operands.push(OperandId, "'Ret Event'");
+    InstructionDesc[OpEnqueueKernel].operands.push(OperandId, "'Invoke'");
+    InstructionDesc[OpEnqueueKernel].operands.push(OperandId, "'Param'");
+    InstructionDesc[OpEnqueueKernel].operands.push(OperandId, "'Param Size'");
+    InstructionDesc[OpEnqueueKernel].operands.push(OperandId, "'Param Align'");
+    InstructionDesc[OpEnqueueKernel].operands.push(OperandVariableIds, "'Local Size'");
 
-        InstructionDesc[OpCaptureEventProfilingInfo].operands.push(OperandId, "'Event'");
-        InstructionDesc[OpCaptureEventProfilingInfo].operands.push(OperandId, "'Profiling Info'");
-        InstructionDesc[OpCaptureEventProfilingInfo].operands.push(OperandId, "'Value'");
+    InstructionDesc[OpEnqueueMarker].operands.push(OperandId, "'Queue'");
+    InstructionDesc[OpEnqueueMarker].operands.push(OperandId, "'Num Events'");
+    InstructionDesc[OpEnqueueMarker].operands.push(OperandId, "'Wait Events'");
+    InstructionDesc[OpEnqueueMarker].operands.push(OperandId, "'Ret Event'");
 
-        InstructionDesc[OpSetUserEventStatus].operands.push(OperandId, "'Event'");
-        InstructionDesc[OpSetUserEventStatus].operands.push(OperandId, "'Status'");
+    InstructionDesc[OpGroupNonUniformElect].operands.push(OperandScope, "'Execution'");
 
-        InstructionDesc[OpIsValidEvent].operands.push(OperandId, "'Event'");
+    InstructionDesc[OpGroupNonUniformAll].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupNonUniformAll].operands.push(OperandId, "X");
 
-        InstructionDesc[OpRetainEvent].operands.push(OperandId, "'Event'");
+    InstructionDesc[OpGroupNonUniformAny].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupNonUniformAny].operands.push(OperandId, "X");
 
-        InstructionDesc[OpReleaseEvent].operands.push(OperandId, "'Event'");
+    InstructionDesc[OpGroupNonUniformAllEqual].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupNonUniformAllEqual].operands.push(OperandId, "X");
 
-        InstructionDesc[OpGetKernelWorkGroupSize].operands.push(OperandId, "'Invoke'");
-        InstructionDesc[OpGetKernelWorkGroupSize].operands.push(OperandId, "'Param'");
-        InstructionDesc[OpGetKernelWorkGroupSize].operands.push(OperandId, "'Param Size'");
-        InstructionDesc[OpGetKernelWorkGroupSize].operands.push(OperandId, "'Param Align'");
+    InstructionDesc[OpGroupNonUniformBroadcast].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupNonUniformBroadcast].operands.push(OperandId, "X");
+    InstructionDesc[OpGroupNonUniformBroadcast].operands.push(OperandId, "ID");
 
-        InstructionDesc[OpGetKernelPreferredWorkGroupSizeMultiple].operands.push(OperandId, "'Invoke'");
-        InstructionDesc[OpGetKernelPreferredWorkGroupSizeMultiple].operands.push(OperandId, "'Param'");
-        InstructionDesc[OpGetKernelPreferredWorkGroupSizeMultiple].operands.push(OperandId, "'Param Size'");
-        InstructionDesc[OpGetKernelPreferredWorkGroupSizeMultiple].operands.push(OperandId, "'Param Align'");
+    InstructionDesc[OpGroupNonUniformBroadcastFirst].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupNonUniformBroadcastFirst].operands.push(OperandId, "X");
 
-        InstructionDesc[OpGetKernelNDrangeSubGroupCount].operands.push(OperandId, "'ND Range'");
-        InstructionDesc[OpGetKernelNDrangeSubGroupCount].operands.push(OperandId, "'Invoke'");
-        InstructionDesc[OpGetKernelNDrangeSubGroupCount].operands.push(OperandId, "'Param'");
-        InstructionDesc[OpGetKernelNDrangeSubGroupCount].operands.push(OperandId, "'Param Size'");
-        InstructionDesc[OpGetKernelNDrangeSubGroupCount].operands.push(OperandId, "'Param Align'");
+    InstructionDesc[OpGroupNonUniformBallot].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupNonUniformBallot].operands.push(OperandId, "X");
 
-        InstructionDesc[OpGetKernelNDrangeMaxSubGroupSize].operands.push(OperandId, "'ND Range'");
-        InstructionDesc[OpGetKernelNDrangeMaxSubGroupSize].operands.push(OperandId, "'Invoke'");
-        InstructionDesc[OpGetKernelNDrangeMaxSubGroupSize].operands.push(OperandId, "'Param'");
-        InstructionDesc[OpGetKernelNDrangeMaxSubGroupSize].operands.push(OperandId, "'Param Size'");
-        InstructionDesc[OpGetKernelNDrangeMaxSubGroupSize].operands.push(OperandId, "'Param Align'");
+    InstructionDesc[OpGroupNonUniformInverseBallot].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupNonUniformInverseBallot].operands.push(OperandId, "X");
 
-        InstructionDesc[OpEnqueueKernel].operands.push(OperandId, "'Queue'");
-        InstructionDesc[OpEnqueueKernel].operands.push(OperandId, "'Flags'");
-        InstructionDesc[OpEnqueueKernel].operands.push(OperandId, "'ND Range'");
-        InstructionDesc[OpEnqueueKernel].operands.push(OperandId, "'Num Events'");
-        InstructionDesc[OpEnqueueKernel].operands.push(OperandId, "'Wait Events'");
-        InstructionDesc[OpEnqueueKernel].operands.push(OperandId, "'Ret Event'");
-        InstructionDesc[OpEnqueueKernel].operands.push(OperandId, "'Invoke'");
-        InstructionDesc[OpEnqueueKernel].operands.push(OperandId, "'Param'");
-        InstructionDesc[OpEnqueueKernel].operands.push(OperandId, "'Param Size'");
-        InstructionDesc[OpEnqueueKernel].operands.push(OperandId, "'Param Align'");
-        InstructionDesc[OpEnqueueKernel].operands.push(OperandVariableIds, "'Local Size'");
+    InstructionDesc[OpGroupNonUniformBallotBitExtract].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupNonUniformBallotBitExtract].operands.push(OperandId, "X");
+    InstructionDesc[OpGroupNonUniformBallotBitExtract].operands.push(OperandId, "Bit");
 
-        InstructionDesc[OpEnqueueMarker].operands.push(OperandId, "'Queue'");
-        InstructionDesc[OpEnqueueMarker].operands.push(OperandId, "'Num Events'");
-        InstructionDesc[OpEnqueueMarker].operands.push(OperandId, "'Wait Events'");
-        InstructionDesc[OpEnqueueMarker].operands.push(OperandId, "'Ret Event'");
+    InstructionDesc[OpGroupNonUniformBallotBitCount].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupNonUniformBallotBitCount].operands.push(OperandGroupOperation, "'Operation'");
+    InstructionDesc[OpGroupNonUniformBallotBitCount].operands.push(OperandId, "X");
 
-        InstructionDesc[OpGroupNonUniformElect].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupNonUniformBallotFindLSB].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupNonUniformBallotFindLSB].operands.push(OperandId, "X");
 
-        InstructionDesc[OpGroupNonUniformAll].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupNonUniformAll].operands.push(OperandId, "X");
+    InstructionDesc[OpGroupNonUniformBallotFindMSB].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupNonUniformBallotFindMSB].operands.push(OperandId, "X");
 
-        InstructionDesc[OpGroupNonUniformAny].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupNonUniformAny].operands.push(OperandId, "X");
+    InstructionDesc[OpGroupNonUniformShuffle].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupNonUniformShuffle].operands.push(OperandId, "X");
+    InstructionDesc[OpGroupNonUniformShuffle].operands.push(OperandId, "'Id'");
 
-        InstructionDesc[OpGroupNonUniformAllEqual].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupNonUniformAllEqual].operands.push(OperandId, "X");
+    InstructionDesc[OpGroupNonUniformShuffleXor].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupNonUniformShuffleXor].operands.push(OperandId, "X");
+    InstructionDesc[OpGroupNonUniformShuffleXor].operands.push(OperandId, "Mask");
 
-        InstructionDesc[OpGroupNonUniformBroadcast].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupNonUniformBroadcast].operands.push(OperandId, "X");
-        InstructionDesc[OpGroupNonUniformBroadcast].operands.push(OperandId, "ID");
+    InstructionDesc[OpGroupNonUniformShuffleUp].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupNonUniformShuffleUp].operands.push(OperandId, "X");
+    InstructionDesc[OpGroupNonUniformShuffleUp].operands.push(OperandId, "Offset");
 
-        InstructionDesc[OpGroupNonUniformBroadcastFirst].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupNonUniformBroadcastFirst].operands.push(OperandId, "X");
+    InstructionDesc[OpGroupNonUniformShuffleDown].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupNonUniformShuffleDown].operands.push(OperandId, "X");
+    InstructionDesc[OpGroupNonUniformShuffleDown].operands.push(OperandId, "Offset");
 
-        InstructionDesc[OpGroupNonUniformBallot].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupNonUniformBallot].operands.push(OperandId, "X");
+    InstructionDesc[OpGroupNonUniformIAdd].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupNonUniformIAdd].operands.push(OperandGroupOperation, "'Operation'");
+    InstructionDesc[OpGroupNonUniformIAdd].operands.push(OperandId, "X");
+    InstructionDesc[OpGroupNonUniformIAdd].operands.push(OperandId, "'ClusterSize'", true);
 
-        InstructionDesc[OpGroupNonUniformInverseBallot].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupNonUniformInverseBallot].operands.push(OperandId, "X");
+    InstructionDesc[OpGroupNonUniformFAdd].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupNonUniformFAdd].operands.push(OperandGroupOperation, "'Operation'");
+    InstructionDesc[OpGroupNonUniformFAdd].operands.push(OperandId, "X");
+    InstructionDesc[OpGroupNonUniformFAdd].operands.push(OperandId, "'ClusterSize'", true);
 
-        InstructionDesc[OpGroupNonUniformBallotBitExtract].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupNonUniformBallotBitExtract].operands.push(OperandId, "X");
-        InstructionDesc[OpGroupNonUniformBallotBitExtract].operands.push(OperandId, "Bit");
+    InstructionDesc[OpGroupNonUniformIMul].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupNonUniformIMul].operands.push(OperandGroupOperation, "'Operation'");
+    InstructionDesc[OpGroupNonUniformIMul].operands.push(OperandId, "X");
+    InstructionDesc[OpGroupNonUniformIMul].operands.push(OperandId, "'ClusterSize'", true);
 
-        InstructionDesc[OpGroupNonUniformBallotBitCount].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupNonUniformBallotBitCount].operands.push(OperandGroupOperation, "'Operation'");
-        InstructionDesc[OpGroupNonUniformBallotBitCount].operands.push(OperandId, "X");
+    InstructionDesc[OpGroupNonUniformFMul].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupNonUniformFMul].operands.push(OperandGroupOperation, "'Operation'");
+    InstructionDesc[OpGroupNonUniformFMul].operands.push(OperandId, "X");
+    InstructionDesc[OpGroupNonUniformFMul].operands.push(OperandId, "'ClusterSize'", true);
 
-        InstructionDesc[OpGroupNonUniformBallotFindLSB].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupNonUniformBallotFindLSB].operands.push(OperandId, "X");
+    InstructionDesc[OpGroupNonUniformSMin].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupNonUniformSMin].operands.push(OperandGroupOperation, "'Operation'");
+    InstructionDesc[OpGroupNonUniformSMin].operands.push(OperandId, "X");
+    InstructionDesc[OpGroupNonUniformSMin].operands.push(OperandId, "'ClusterSize'", true);
 
-        InstructionDesc[OpGroupNonUniformBallotFindMSB].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupNonUniformBallotFindMSB].operands.push(OperandId, "X");
+    InstructionDesc[OpGroupNonUniformUMin].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupNonUniformUMin].operands.push(OperandGroupOperation, "'Operation'");
+    InstructionDesc[OpGroupNonUniformUMin].operands.push(OperandId, "X");
+    InstructionDesc[OpGroupNonUniformUMin].operands.push(OperandId, "'ClusterSize'", true);
 
-        InstructionDesc[OpGroupNonUniformShuffle].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupNonUniformShuffle].operands.push(OperandId, "X");
-        InstructionDesc[OpGroupNonUniformShuffle].operands.push(OperandId, "'Id'");
+    InstructionDesc[OpGroupNonUniformFMin].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupNonUniformFMin].operands.push(OperandGroupOperation, "'Operation'");
+    InstructionDesc[OpGroupNonUniformFMin].operands.push(OperandId, "X");
+    InstructionDesc[OpGroupNonUniformFMin].operands.push(OperandId, "'ClusterSize'", true);
 
-        InstructionDesc[OpGroupNonUniformShuffleXor].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupNonUniformShuffleXor].operands.push(OperandId, "X");
-        InstructionDesc[OpGroupNonUniformShuffleXor].operands.push(OperandId, "Mask");
+    InstructionDesc[OpGroupNonUniformSMax].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupNonUniformSMax].operands.push(OperandGroupOperation, "'Operation'");
+    InstructionDesc[OpGroupNonUniformSMax].operands.push(OperandId, "X");
+    InstructionDesc[OpGroupNonUniformSMax].operands.push(OperandId, "'ClusterSize'", true);
 
-        InstructionDesc[OpGroupNonUniformShuffleUp].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupNonUniformShuffleUp].operands.push(OperandId, "X");
-        InstructionDesc[OpGroupNonUniformShuffleUp].operands.push(OperandId, "Offset");
+    InstructionDesc[OpGroupNonUniformUMax].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupNonUniformUMax].operands.push(OperandGroupOperation, "'Operation'");
+    InstructionDesc[OpGroupNonUniformUMax].operands.push(OperandId, "X");
+    InstructionDesc[OpGroupNonUniformUMax].operands.push(OperandId, "'ClusterSize'", true);
 
-        InstructionDesc[OpGroupNonUniformShuffleDown].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupNonUniformShuffleDown].operands.push(OperandId, "X");
-        InstructionDesc[OpGroupNonUniformShuffleDown].operands.push(OperandId, "Offset");
+    InstructionDesc[OpGroupNonUniformFMax].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupNonUniformFMax].operands.push(OperandGroupOperation, "'Operation'");
+    InstructionDesc[OpGroupNonUniformFMax].operands.push(OperandId, "X");
+    InstructionDesc[OpGroupNonUniformFMax].operands.push(OperandId, "'ClusterSize'", true);
 
-        InstructionDesc[OpGroupNonUniformIAdd].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupNonUniformIAdd].operands.push(OperandGroupOperation, "'Operation'");
-        InstructionDesc[OpGroupNonUniformIAdd].operands.push(OperandId, "X");
-        InstructionDesc[OpGroupNonUniformIAdd].operands.push(OperandId, "'ClusterSize'", true);
+    InstructionDesc[OpGroupNonUniformBitwiseAnd].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupNonUniformBitwiseAnd].operands.push(OperandGroupOperation, "'Operation'");
+    InstructionDesc[OpGroupNonUniformBitwiseAnd].operands.push(OperandId, "X");
+    InstructionDesc[OpGroupNonUniformBitwiseAnd].operands.push(OperandId, "'ClusterSize'", true);
 
-        InstructionDesc[OpGroupNonUniformFAdd].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupNonUniformFAdd].operands.push(OperandGroupOperation, "'Operation'");
-        InstructionDesc[OpGroupNonUniformFAdd].operands.push(OperandId, "X");
-        InstructionDesc[OpGroupNonUniformFAdd].operands.push(OperandId, "'ClusterSize'", true);
+    InstructionDesc[OpGroupNonUniformBitwiseOr].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupNonUniformBitwiseOr].operands.push(OperandGroupOperation, "'Operation'");
+    InstructionDesc[OpGroupNonUniformBitwiseOr].operands.push(OperandId, "X");
+    InstructionDesc[OpGroupNonUniformBitwiseOr].operands.push(OperandId, "'ClusterSize'", true);
 
-        InstructionDesc[OpGroupNonUniformIMul].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupNonUniformIMul].operands.push(OperandGroupOperation, "'Operation'");
-        InstructionDesc[OpGroupNonUniformIMul].operands.push(OperandId, "X");
-        InstructionDesc[OpGroupNonUniformIMul].operands.push(OperandId, "'ClusterSize'", true);
+    InstructionDesc[OpGroupNonUniformBitwiseXor].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupNonUniformBitwiseXor].operands.push(OperandGroupOperation, "'Operation'");
+    InstructionDesc[OpGroupNonUniformBitwiseXor].operands.push(OperandId, "X");
+    InstructionDesc[OpGroupNonUniformBitwiseXor].operands.push(OperandId, "'ClusterSize'", true);
 
-        InstructionDesc[OpGroupNonUniformFMul].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupNonUniformFMul].operands.push(OperandGroupOperation, "'Operation'");
-        InstructionDesc[OpGroupNonUniformFMul].operands.push(OperandId, "X");
-        InstructionDesc[OpGroupNonUniformFMul].operands.push(OperandId, "'ClusterSize'", true);
+    InstructionDesc[OpGroupNonUniformLogicalAnd].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupNonUniformLogicalAnd].operands.push(OperandGroupOperation, "'Operation'");
+    InstructionDesc[OpGroupNonUniformLogicalAnd].operands.push(OperandId, "X");
+    InstructionDesc[OpGroupNonUniformLogicalAnd].operands.push(OperandId, "'ClusterSize'", true);
 
-        InstructionDesc[OpGroupNonUniformSMin].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupNonUniformSMin].operands.push(OperandGroupOperation, "'Operation'");
-        InstructionDesc[OpGroupNonUniformSMin].operands.push(OperandId, "X");
-        InstructionDesc[OpGroupNonUniformSMin].operands.push(OperandId, "'ClusterSize'", true);
+    InstructionDesc[OpGroupNonUniformLogicalOr].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupNonUniformLogicalOr].operands.push(OperandGroupOperation, "'Operation'");
+    InstructionDesc[OpGroupNonUniformLogicalOr].operands.push(OperandId, "X");
+    InstructionDesc[OpGroupNonUniformLogicalOr].operands.push(OperandId, "'ClusterSize'", true);
 
-        InstructionDesc[OpGroupNonUniformUMin].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupNonUniformUMin].operands.push(OperandGroupOperation, "'Operation'");
-        InstructionDesc[OpGroupNonUniformUMin].operands.push(OperandId, "X");
-        InstructionDesc[OpGroupNonUniformUMin].operands.push(OperandId, "'ClusterSize'", true);
+    InstructionDesc[OpGroupNonUniformLogicalXor].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupNonUniformLogicalXor].operands.push(OperandGroupOperation, "'Operation'");
+    InstructionDesc[OpGroupNonUniformLogicalXor].operands.push(OperandId, "X");
+    InstructionDesc[OpGroupNonUniformLogicalXor].operands.push(OperandId, "'ClusterSize'", true);
 
-        InstructionDesc[OpGroupNonUniformFMin].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupNonUniformFMin].operands.push(OperandGroupOperation, "'Operation'");
-        InstructionDesc[OpGroupNonUniformFMin].operands.push(OperandId, "X");
-        InstructionDesc[OpGroupNonUniformFMin].operands.push(OperandId, "'ClusterSize'", true);
+    InstructionDesc[OpGroupNonUniformQuadBroadcast].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupNonUniformQuadBroadcast].operands.push(OperandId, "X");
+    InstructionDesc[OpGroupNonUniformQuadBroadcast].operands.push(OperandId, "'Id'");
 
-        InstructionDesc[OpGroupNonUniformSMax].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupNonUniformSMax].operands.push(OperandGroupOperation, "'Operation'");
-        InstructionDesc[OpGroupNonUniformSMax].operands.push(OperandId, "X");
-        InstructionDesc[OpGroupNonUniformSMax].operands.push(OperandId, "'ClusterSize'", true);
+    InstructionDesc[OpGroupNonUniformQuadSwap].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupNonUniformQuadSwap].operands.push(OperandId, "X");
+    InstructionDesc[OpGroupNonUniformQuadSwap].operands.push(OperandId, "'Direction'");
 
-        InstructionDesc[OpGroupNonUniformUMax].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupNonUniformUMax].operands.push(OperandGroupOperation, "'Operation'");
-        InstructionDesc[OpGroupNonUniformUMax].operands.push(OperandId, "X");
-        InstructionDesc[OpGroupNonUniformUMax].operands.push(OperandId, "'ClusterSize'", true);
+    InstructionDesc[OpSubgroupBallotKHR].operands.push(OperandId, "'Predicate'");
 
-        InstructionDesc[OpGroupNonUniformFMax].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupNonUniformFMax].operands.push(OperandGroupOperation, "'Operation'");
-        InstructionDesc[OpGroupNonUniformFMax].operands.push(OperandId, "X");
-        InstructionDesc[OpGroupNonUniformFMax].operands.push(OperandId, "'ClusterSize'", true);
+    InstructionDesc[OpSubgroupFirstInvocationKHR].operands.push(OperandId, "'Value'");
 
-        InstructionDesc[OpGroupNonUniformBitwiseAnd].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupNonUniformBitwiseAnd].operands.push(OperandGroupOperation, "'Operation'");
-        InstructionDesc[OpGroupNonUniformBitwiseAnd].operands.push(OperandId, "X");
-        InstructionDesc[OpGroupNonUniformBitwiseAnd].operands.push(OperandId, "'ClusterSize'", true);
+    InstructionDesc[OpSubgroupAnyKHR].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpSubgroupAnyKHR].operands.push(OperandId, "'Predicate'");
 
-        InstructionDesc[OpGroupNonUniformBitwiseOr].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupNonUniformBitwiseOr].operands.push(OperandGroupOperation, "'Operation'");
-        InstructionDesc[OpGroupNonUniformBitwiseOr].operands.push(OperandId, "X");
-        InstructionDesc[OpGroupNonUniformBitwiseOr].operands.push(OperandId, "'ClusterSize'", true);
+    InstructionDesc[OpSubgroupAllKHR].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpSubgroupAllKHR].operands.push(OperandId, "'Predicate'");
 
-        InstructionDesc[OpGroupNonUniformBitwiseXor].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupNonUniformBitwiseXor].operands.push(OperandGroupOperation, "'Operation'");
-        InstructionDesc[OpGroupNonUniformBitwiseXor].operands.push(OperandId, "X");
-        InstructionDesc[OpGroupNonUniformBitwiseXor].operands.push(OperandId, "'ClusterSize'", true);
+    InstructionDesc[OpSubgroupAllEqualKHR].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpSubgroupAllEqualKHR].operands.push(OperandId, "'Predicate'");
 
-        InstructionDesc[OpGroupNonUniformLogicalAnd].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupNonUniformLogicalAnd].operands.push(OperandGroupOperation, "'Operation'");
-        InstructionDesc[OpGroupNonUniformLogicalAnd].operands.push(OperandId, "X");
-        InstructionDesc[OpGroupNonUniformLogicalAnd].operands.push(OperandId, "'ClusterSize'", true);
+    InstructionDesc[OpSubgroupReadInvocationKHR].operands.push(OperandId, "'Value'");
+    InstructionDesc[OpSubgroupReadInvocationKHR].operands.push(OperandId, "'Index'");
 
-        InstructionDesc[OpGroupNonUniformLogicalOr].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupNonUniformLogicalOr].operands.push(OperandGroupOperation, "'Operation'");
-        InstructionDesc[OpGroupNonUniformLogicalOr].operands.push(OperandId, "X");
-        InstructionDesc[OpGroupNonUniformLogicalOr].operands.push(OperandId, "'ClusterSize'", true);
+    InstructionDesc[OpModuleProcessed].operands.push(OperandLiteralString, "'process'");
 
-        InstructionDesc[OpGroupNonUniformLogicalXor].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupNonUniformLogicalXor].operands.push(OperandGroupOperation, "'Operation'");
-        InstructionDesc[OpGroupNonUniformLogicalXor].operands.push(OperandId, "X");
-        InstructionDesc[OpGroupNonUniformLogicalXor].operands.push(OperandId, "'ClusterSize'", true);
+    InstructionDesc[OpGroupIAddNonUniformAMD].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupIAddNonUniformAMD].operands.push(OperandGroupOperation, "'Operation'");
+    InstructionDesc[OpGroupIAddNonUniformAMD].operands.push(OperandId, "'X'");
 
-        InstructionDesc[OpGroupNonUniformQuadBroadcast].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupNonUniformQuadBroadcast].operands.push(OperandId, "X");
-        InstructionDesc[OpGroupNonUniformQuadBroadcast].operands.push(OperandId, "'Id'");
+    InstructionDesc[OpGroupFAddNonUniformAMD].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupFAddNonUniformAMD].operands.push(OperandGroupOperation, "'Operation'");
+    InstructionDesc[OpGroupFAddNonUniformAMD].operands.push(OperandId, "'X'");
 
-        InstructionDesc[OpGroupNonUniformQuadSwap].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupNonUniformQuadSwap].operands.push(OperandId, "X");
-        InstructionDesc[OpGroupNonUniformQuadSwap].operands.push(OperandId, "'Direction'");
+    InstructionDesc[OpGroupUMinNonUniformAMD].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupUMinNonUniformAMD].operands.push(OperandGroupOperation, "'Operation'");
+    InstructionDesc[OpGroupUMinNonUniformAMD].operands.push(OperandId, "'X'");
 
-        InstructionDesc[OpSubgroupBallotKHR].operands.push(OperandId, "'Predicate'");
+    InstructionDesc[OpGroupSMinNonUniformAMD].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupSMinNonUniformAMD].operands.push(OperandGroupOperation, "'Operation'");
+    InstructionDesc[OpGroupSMinNonUniformAMD].operands.push(OperandId, "X");
 
-        InstructionDesc[OpSubgroupFirstInvocationKHR].operands.push(OperandId, "'Value'");
+    InstructionDesc[OpGroupFMinNonUniformAMD].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupFMinNonUniformAMD].operands.push(OperandGroupOperation, "'Operation'");
+    InstructionDesc[OpGroupFMinNonUniformAMD].operands.push(OperandId, "X");
 
-        InstructionDesc[OpSubgroupAnyKHR].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpSubgroupAnyKHR].operands.push(OperandId, "'Predicate'");
+    InstructionDesc[OpGroupUMaxNonUniformAMD].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupUMaxNonUniformAMD].operands.push(OperandGroupOperation, "'Operation'");
+    InstructionDesc[OpGroupUMaxNonUniformAMD].operands.push(OperandId, "X");
 
-        InstructionDesc[OpSubgroupAllKHR].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpSubgroupAllKHR].operands.push(OperandId, "'Predicate'");
+    InstructionDesc[OpGroupSMaxNonUniformAMD].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupSMaxNonUniformAMD].operands.push(OperandGroupOperation, "'Operation'");
+    InstructionDesc[OpGroupSMaxNonUniformAMD].operands.push(OperandId, "X");
 
-        InstructionDesc[OpSubgroupAllEqualKHR].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpSubgroupAllEqualKHR].operands.push(OperandId, "'Predicate'");
+    InstructionDesc[OpGroupFMaxNonUniformAMD].operands.push(OperandScope, "'Execution'");
+    InstructionDesc[OpGroupFMaxNonUniformAMD].operands.push(OperandGroupOperation, "'Operation'");
+    InstructionDesc[OpGroupFMaxNonUniformAMD].operands.push(OperandId, "X");
 
-        InstructionDesc[OpGroupNonUniformRotateKHR].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupNonUniformRotateKHR].operands.push(OperandId, "'X'");
-        InstructionDesc[OpGroupNonUniformRotateKHR].operands.push(OperandId, "'Delta'");
-        InstructionDesc[OpGroupNonUniformRotateKHR].operands.push(OperandId, "'ClusterSize'", true);
+    InstructionDesc[OpFragmentMaskFetchAMD].operands.push(OperandId, "'Image'");
+    InstructionDesc[OpFragmentMaskFetchAMD].operands.push(OperandId, "'Coordinate'");
 
-        InstructionDesc[OpSubgroupReadInvocationKHR].operands.push(OperandId, "'Value'");
-        InstructionDesc[OpSubgroupReadInvocationKHR].operands.push(OperandId, "'Index'");
+    InstructionDesc[OpFragmentFetchAMD].operands.push(OperandId, "'Image'");
+    InstructionDesc[OpFragmentFetchAMD].operands.push(OperandId, "'Coordinate'");
+    InstructionDesc[OpFragmentFetchAMD].operands.push(OperandId, "'Fragment Index'");
 
-        InstructionDesc[OpModuleProcessed].operands.push(OperandLiteralString, "'process'");
+    InstructionDesc[OpGroupNonUniformPartitionNV].operands.push(OperandId, "X");
 
-        InstructionDesc[OpGroupIAddNonUniformAMD].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupIAddNonUniformAMD].operands.push(OperandGroupOperation, "'Operation'");
-        InstructionDesc[OpGroupIAddNonUniformAMD].operands.push(OperandId, "'X'");
+    InstructionDesc[OpTypeAccelerationStructureKHR].setResultAndType(true, false);
 
-        InstructionDesc[OpGroupFAddNonUniformAMD].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupFAddNonUniformAMD].operands.push(OperandGroupOperation, "'Operation'");
-        InstructionDesc[OpGroupFAddNonUniformAMD].operands.push(OperandId, "'X'");
+    InstructionDesc[OpTraceNV].operands.push(OperandId, "'Acceleration Structure'");
+    InstructionDesc[OpTraceNV].operands.push(OperandId, "'Ray Flags'");
+    InstructionDesc[OpTraceNV].operands.push(OperandId, "'Cull Mask'");
+    InstructionDesc[OpTraceNV].operands.push(OperandId, "'SBT Record Offset'");
+    InstructionDesc[OpTraceNV].operands.push(OperandId, "'SBT Record Stride'");
+    InstructionDesc[OpTraceNV].operands.push(OperandId, "'Miss Index'");
+    InstructionDesc[OpTraceNV].operands.push(OperandId, "'Ray Origin'");
+    InstructionDesc[OpTraceNV].operands.push(OperandId, "'TMin'");
+    InstructionDesc[OpTraceNV].operands.push(OperandId, "'Ray Direction'");
+    InstructionDesc[OpTraceNV].operands.push(OperandId, "'TMax'");
+    InstructionDesc[OpTraceNV].operands.push(OperandId, "'Payload'");
+    InstructionDesc[OpTraceNV].setResultAndType(false, false);
 
-        InstructionDesc[OpGroupUMinNonUniformAMD].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupUMinNonUniformAMD].operands.push(OperandGroupOperation, "'Operation'");
-        InstructionDesc[OpGroupUMinNonUniformAMD].operands.push(OperandId, "'X'");
+    InstructionDesc[OpTraceRayMotionNV].operands.push(OperandId, "'Acceleration Structure'");
+    InstructionDesc[OpTraceRayMotionNV].operands.push(OperandId, "'Ray Flags'");
+    InstructionDesc[OpTraceRayMotionNV].operands.push(OperandId, "'Cull Mask'");
+    InstructionDesc[OpTraceRayMotionNV].operands.push(OperandId, "'SBT Record Offset'");
+    InstructionDesc[OpTraceRayMotionNV].operands.push(OperandId, "'SBT Record Stride'");
+    InstructionDesc[OpTraceRayMotionNV].operands.push(OperandId, "'Miss Index'");
+    InstructionDesc[OpTraceRayMotionNV].operands.push(OperandId, "'Ray Origin'");
+    InstructionDesc[OpTraceRayMotionNV].operands.push(OperandId, "'TMin'");
+    InstructionDesc[OpTraceRayMotionNV].operands.push(OperandId, "'Ray Direction'");
+    InstructionDesc[OpTraceRayMotionNV].operands.push(OperandId, "'TMax'");
+    InstructionDesc[OpTraceRayMotionNV].operands.push(OperandId, "'Time'");
+    InstructionDesc[OpTraceRayMotionNV].operands.push(OperandId, "'Payload'");
+    InstructionDesc[OpTraceRayMotionNV].setResultAndType(false, false);
 
-        InstructionDesc[OpGroupSMinNonUniformAMD].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupSMinNonUniformAMD].operands.push(OperandGroupOperation, "'Operation'");
-        InstructionDesc[OpGroupSMinNonUniformAMD].operands.push(OperandId, "X");
+    InstructionDesc[OpTraceRayKHR].operands.push(OperandId, "'Acceleration Structure'");
+    InstructionDesc[OpTraceRayKHR].operands.push(OperandId, "'Ray Flags'");
+    InstructionDesc[OpTraceRayKHR].operands.push(OperandId, "'Cull Mask'");
+    InstructionDesc[OpTraceRayKHR].operands.push(OperandId, "'SBT Record Offset'");
+    InstructionDesc[OpTraceRayKHR].operands.push(OperandId, "'SBT Record Stride'");
+    InstructionDesc[OpTraceRayKHR].operands.push(OperandId, "'Miss Index'");
+    InstructionDesc[OpTraceRayKHR].operands.push(OperandId, "'Ray Origin'");
+    InstructionDesc[OpTraceRayKHR].operands.push(OperandId, "'TMin'");
+    InstructionDesc[OpTraceRayKHR].operands.push(OperandId, "'Ray Direction'");
+    InstructionDesc[OpTraceRayKHR].operands.push(OperandId, "'TMax'");
+    InstructionDesc[OpTraceRayKHR].operands.push(OperandId, "'Payload'");
+    InstructionDesc[OpTraceRayKHR].setResultAndType(false, false);
 
-        InstructionDesc[OpGroupFMinNonUniformAMD].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupFMinNonUniformAMD].operands.push(OperandGroupOperation, "'Operation'");
-        InstructionDesc[OpGroupFMinNonUniformAMD].operands.push(OperandId, "X");
+    InstructionDesc[OpReportIntersectionKHR].operands.push(OperandId, "'Hit Parameter'");
+    InstructionDesc[OpReportIntersectionKHR].operands.push(OperandId, "'Hit Kind'");
 
-        InstructionDesc[OpGroupUMaxNonUniformAMD].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupUMaxNonUniformAMD].operands.push(OperandGroupOperation, "'Operation'");
-        InstructionDesc[OpGroupUMaxNonUniformAMD].operands.push(OperandId, "X");
+    InstructionDesc[OpIgnoreIntersectionNV].setResultAndType(false, false);
 
-        InstructionDesc[OpGroupSMaxNonUniformAMD].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupSMaxNonUniformAMD].operands.push(OperandGroupOperation, "'Operation'");
-        InstructionDesc[OpGroupSMaxNonUniformAMD].operands.push(OperandId, "X");
+    InstructionDesc[OpIgnoreIntersectionKHR].setResultAndType(false, false);
 
-        InstructionDesc[OpGroupFMaxNonUniformAMD].operands.push(OperandScope, "'Execution'");
-        InstructionDesc[OpGroupFMaxNonUniformAMD].operands.push(OperandGroupOperation, "'Operation'");
-        InstructionDesc[OpGroupFMaxNonUniformAMD].operands.push(OperandId, "X");
+    InstructionDesc[OpTerminateRayNV].setResultAndType(false, false);
 
-        InstructionDesc[OpFragmentMaskFetchAMD].operands.push(OperandId, "'Image'");
-        InstructionDesc[OpFragmentMaskFetchAMD].operands.push(OperandId, "'Coordinate'");
+    InstructionDesc[OpTerminateRayKHR].setResultAndType(false, false);
+    
+    InstructionDesc[OpExecuteCallableNV].operands.push(OperandId, "SBT Record Index");
+    InstructionDesc[OpExecuteCallableNV].operands.push(OperandId, "CallableData ID");
+    InstructionDesc[OpExecuteCallableNV].setResultAndType(false, false);
 
-        InstructionDesc[OpFragmentFetchAMD].operands.push(OperandId, "'Image'");
-        InstructionDesc[OpFragmentFetchAMD].operands.push(OperandId, "'Coordinate'");
-        InstructionDesc[OpFragmentFetchAMD].operands.push(OperandId, "'Fragment Index'");
+    InstructionDesc[OpExecuteCallableKHR].operands.push(OperandId, "SBT Record Index");
+    InstructionDesc[OpExecuteCallableKHR].operands.push(OperandId, "CallableData");
+    InstructionDesc[OpExecuteCallableKHR].setResultAndType(false, false);
 
-        InstructionDesc[OpGroupNonUniformPartitionNV].operands.push(OperandId, "X");
+    InstructionDesc[OpConvertUToAccelerationStructureKHR].operands.push(OperandId, "Value");
+    InstructionDesc[OpConvertUToAccelerationStructureKHR].setResultAndType(true, true);
 
-        InstructionDesc[OpGroupNonUniformQuadAllKHR].operands.push(OperandId, "'Predicate'");
-        InstructionDesc[OpGroupNonUniformQuadAnyKHR].operands.push(OperandId, "'Predicate'");
-        InstructionDesc[OpTypeAccelerationStructureKHR].setResultAndType(true, false);
+    // Ray Query
+    InstructionDesc[OpTypeAccelerationStructureKHR].setResultAndType(true, false);
+    InstructionDesc[OpTypeRayQueryKHR].setResultAndType(true, false);
 
-        InstructionDesc[OpTraceNV].operands.push(OperandId, "'Acceleration Structure'");
-        InstructionDesc[OpTraceNV].operands.push(OperandId, "'Ray Flags'");
-        InstructionDesc[OpTraceNV].operands.push(OperandId, "'Cull Mask'");
-        InstructionDesc[OpTraceNV].operands.push(OperandId, "'SBT Record Offset'");
-        InstructionDesc[OpTraceNV].operands.push(OperandId, "'SBT Record Stride'");
-        InstructionDesc[OpTraceNV].operands.push(OperandId, "'Miss Index'");
-        InstructionDesc[OpTraceNV].operands.push(OperandId, "'Ray Origin'");
-        InstructionDesc[OpTraceNV].operands.push(OperandId, "'TMin'");
-        InstructionDesc[OpTraceNV].operands.push(OperandId, "'Ray Direction'");
-        InstructionDesc[OpTraceNV].operands.push(OperandId, "'TMax'");
-        InstructionDesc[OpTraceNV].operands.push(OperandId, "'Payload'");
-        InstructionDesc[OpTraceNV].setResultAndType(false, false);
+    InstructionDesc[OpRayQueryInitializeKHR].operands.push(OperandId, "'RayQuery'");
+    InstructionDesc[OpRayQueryInitializeKHR].operands.push(OperandId, "'AccelerationS'");
+    InstructionDesc[OpRayQueryInitializeKHR].operands.push(OperandId, "'RayFlags'");
+    InstructionDesc[OpRayQueryInitializeKHR].operands.push(OperandId, "'CullMask'");
+    InstructionDesc[OpRayQueryInitializeKHR].operands.push(OperandId, "'Origin'");
+    InstructionDesc[OpRayQueryInitializeKHR].operands.push(OperandId, "'Tmin'");
+    InstructionDesc[OpRayQueryInitializeKHR].operands.push(OperandId, "'Direction'");
+    InstructionDesc[OpRayQueryInitializeKHR].operands.push(OperandId, "'Tmax'");
+    InstructionDesc[OpRayQueryInitializeKHR].setResultAndType(false, false);
 
-        InstructionDesc[OpTraceRayMotionNV].operands.push(OperandId, "'Acceleration Structure'");
-        InstructionDesc[OpTraceRayMotionNV].operands.push(OperandId, "'Ray Flags'");
-        InstructionDesc[OpTraceRayMotionNV].operands.push(OperandId, "'Cull Mask'");
-        InstructionDesc[OpTraceRayMotionNV].operands.push(OperandId, "'SBT Record Offset'");
-        InstructionDesc[OpTraceRayMotionNV].operands.push(OperandId, "'SBT Record Stride'");
-        InstructionDesc[OpTraceRayMotionNV].operands.push(OperandId, "'Miss Index'");
-        InstructionDesc[OpTraceRayMotionNV].operands.push(OperandId, "'Ray Origin'");
-        InstructionDesc[OpTraceRayMotionNV].operands.push(OperandId, "'TMin'");
-        InstructionDesc[OpTraceRayMotionNV].operands.push(OperandId, "'Ray Direction'");
-        InstructionDesc[OpTraceRayMotionNV].operands.push(OperandId, "'TMax'");
-        InstructionDesc[OpTraceRayMotionNV].operands.push(OperandId, "'Time'");
-        InstructionDesc[OpTraceRayMotionNV].operands.push(OperandId, "'Payload'");
-        InstructionDesc[OpTraceRayMotionNV].setResultAndType(false, false);
+    InstructionDesc[OpRayQueryTerminateKHR].operands.push(OperandId, "'RayQuery'");
+    InstructionDesc[OpRayQueryTerminateKHR].setResultAndType(false, false);
 
-        InstructionDesc[OpTraceRayKHR].operands.push(OperandId, "'Acceleration Structure'");
-        InstructionDesc[OpTraceRayKHR].operands.push(OperandId, "'Ray Flags'");
-        InstructionDesc[OpTraceRayKHR].operands.push(OperandId, "'Cull Mask'");
-        InstructionDesc[OpTraceRayKHR].operands.push(OperandId, "'SBT Record Offset'");
-        InstructionDesc[OpTraceRayKHR].operands.push(OperandId, "'SBT Record Stride'");
-        InstructionDesc[OpTraceRayKHR].operands.push(OperandId, "'Miss Index'");
-        InstructionDesc[OpTraceRayKHR].operands.push(OperandId, "'Ray Origin'");
-        InstructionDesc[OpTraceRayKHR].operands.push(OperandId, "'TMin'");
-        InstructionDesc[OpTraceRayKHR].operands.push(OperandId, "'Ray Direction'");
-        InstructionDesc[OpTraceRayKHR].operands.push(OperandId, "'TMax'");
-        InstructionDesc[OpTraceRayKHR].operands.push(OperandId, "'Payload'");
-        InstructionDesc[OpTraceRayKHR].setResultAndType(false, false);
+    InstructionDesc[OpRayQueryGenerateIntersectionKHR].operands.push(OperandId, "'RayQuery'");
+    InstructionDesc[OpRayQueryGenerateIntersectionKHR].operands.push(OperandId, "'THit'");
+    InstructionDesc[OpRayQueryGenerateIntersectionKHR].setResultAndType(false, false);
 
-        InstructionDesc[OpReportIntersectionKHR].operands.push(OperandId, "'Hit Parameter'");
-        InstructionDesc[OpReportIntersectionKHR].operands.push(OperandId, "'Hit Kind'");
+    InstructionDesc[OpRayQueryConfirmIntersectionKHR].operands.push(OperandId, "'RayQuery'");
+    InstructionDesc[OpRayQueryConfirmIntersectionKHR].setResultAndType(false, false);
 
-        InstructionDesc[OpIgnoreIntersectionNV].setResultAndType(false, false);
+    InstructionDesc[OpRayQueryProceedKHR].operands.push(OperandId, "'RayQuery'");
+    InstructionDesc[OpRayQueryProceedKHR].setResultAndType(true, true);
 
-        InstructionDesc[OpIgnoreIntersectionKHR].setResultAndType(false, false);
+    InstructionDesc[OpRayQueryGetIntersectionTypeKHR].operands.push(OperandId, "'RayQuery'");
+    InstructionDesc[OpRayQueryGetIntersectionTypeKHR].operands.push(OperandId, "'Committed'");
+    InstructionDesc[OpRayQueryGetIntersectionTypeKHR].setResultAndType(true, true);
 
-        InstructionDesc[OpTerminateRayNV].setResultAndType(false, false);
+    InstructionDesc[OpRayQueryGetRayTMinKHR].operands.push(OperandId, "'RayQuery'");
+    InstructionDesc[OpRayQueryGetRayTMinKHR].setResultAndType(true, true);
 
-        InstructionDesc[OpTerminateRayKHR].setResultAndType(false, false);
+    InstructionDesc[OpRayQueryGetRayFlagsKHR].operands.push(OperandId, "'RayQuery'");
+    InstructionDesc[OpRayQueryGetRayFlagsKHR].setResultAndType(true, true);
 
-        InstructionDesc[OpExecuteCallableNV].operands.push(OperandId, "SBT Record Index");
-        InstructionDesc[OpExecuteCallableNV].operands.push(OperandId, "CallableData ID");
-        InstructionDesc[OpExecuteCallableNV].setResultAndType(false, false);
+    InstructionDesc[OpRayQueryGetIntersectionTKHR].operands.push(OperandId, "'RayQuery'");
+    InstructionDesc[OpRayQueryGetIntersectionTKHR].operands.push(OperandId, "'Committed'");
+    InstructionDesc[OpRayQueryGetIntersectionTKHR].setResultAndType(true, true);
 
-        InstructionDesc[OpExecuteCallableKHR].operands.push(OperandId, "SBT Record Index");
-        InstructionDesc[OpExecuteCallableKHR].operands.push(OperandId, "CallableData");
-        InstructionDesc[OpExecuteCallableKHR].setResultAndType(false, false);
+    InstructionDesc[OpRayQueryGetIntersectionInstanceCustomIndexKHR].operands.push(OperandId, "'RayQuery'");
+    InstructionDesc[OpRayQueryGetIntersectionInstanceCustomIndexKHR].operands.push(OperandId, "'Committed'");
+    InstructionDesc[OpRayQueryGetIntersectionInstanceCustomIndexKHR].setResultAndType(true, true);
 
-        InstructionDesc[OpConvertUToAccelerationStructureKHR].operands.push(OperandId, "Value");
-        InstructionDesc[OpConvertUToAccelerationStructureKHR].setResultAndType(true, true);
+    InstructionDesc[OpRayQueryGetIntersectionInstanceIdKHR].operands.push(OperandId, "'RayQuery'");
+    InstructionDesc[OpRayQueryGetIntersectionInstanceIdKHR].operands.push(OperandId, "'Committed'");
+    InstructionDesc[OpRayQueryGetIntersectionInstanceIdKHR].setResultAndType(true, true);
 
-        // Ray Query
-        InstructionDesc[OpTypeAccelerationStructureKHR].setResultAndType(true, false);
-        InstructionDesc[OpTypeRayQueryKHR].setResultAndType(true, false);
+    InstructionDesc[OpRayQueryGetIntersectionInstanceShaderBindingTableRecordOffsetKHR].operands.push(OperandId, "'RayQuery'");
+    InstructionDesc[OpRayQueryGetIntersectionInstanceShaderBindingTableRecordOffsetKHR].operands.push(OperandId, "'Committed'");
+    InstructionDesc[OpRayQueryGetIntersectionInstanceShaderBindingTableRecordOffsetKHR].setResultAndType(true, true);
 
-        InstructionDesc[OpRayQueryInitializeKHR].operands.push(OperandId, "'RayQuery'");
-        InstructionDesc[OpRayQueryInitializeKHR].operands.push(OperandId, "'AccelerationS'");
-        InstructionDesc[OpRayQueryInitializeKHR].operands.push(OperandId, "'RayFlags'");
-        InstructionDesc[OpRayQueryInitializeKHR].operands.push(OperandId, "'CullMask'");
-        InstructionDesc[OpRayQueryInitializeKHR].operands.push(OperandId, "'Origin'");
-        InstructionDesc[OpRayQueryInitializeKHR].operands.push(OperandId, "'Tmin'");
-        InstructionDesc[OpRayQueryInitializeKHR].operands.push(OperandId, "'Direction'");
-        InstructionDesc[OpRayQueryInitializeKHR].operands.push(OperandId, "'Tmax'");
-        InstructionDesc[OpRayQueryInitializeKHR].setResultAndType(false, false);
+    InstructionDesc[OpRayQueryGetIntersectionGeometryIndexKHR].operands.push(OperandId, "'RayQuery'");
+    InstructionDesc[OpRayQueryGetIntersectionGeometryIndexKHR].operands.push(OperandId, "'Committed'");
+    InstructionDesc[OpRayQueryGetIntersectionGeometryIndexKHR].setResultAndType(true, true);
 
-        InstructionDesc[OpRayQueryTerminateKHR].operands.push(OperandId, "'RayQuery'");
-        InstructionDesc[OpRayQueryTerminateKHR].setResultAndType(false, false);
+    InstructionDesc[OpRayQueryGetIntersectionPrimitiveIndexKHR].operands.push(OperandId, "'RayQuery'");
+    InstructionDesc[OpRayQueryGetIntersectionPrimitiveIndexKHR].operands.push(OperandId, "'Committed'");
+    InstructionDesc[OpRayQueryGetIntersectionPrimitiveIndexKHR].setResultAndType(true, true);
 
-        InstructionDesc[OpRayQueryGenerateIntersectionKHR].operands.push(OperandId, "'RayQuery'");
-        InstructionDesc[OpRayQueryGenerateIntersectionKHR].operands.push(OperandId, "'THit'");
-        InstructionDesc[OpRayQueryGenerateIntersectionKHR].setResultAndType(false, false);
+    InstructionDesc[OpRayQueryGetIntersectionBarycentricsKHR].operands.push(OperandId, "'RayQuery'");
+    InstructionDesc[OpRayQueryGetIntersectionBarycentricsKHR].operands.push(OperandId, "'Committed'");
+    InstructionDesc[OpRayQueryGetIntersectionBarycentricsKHR].setResultAndType(true, true);
 
-        InstructionDesc[OpRayQueryConfirmIntersectionKHR].operands.push(OperandId, "'RayQuery'");
-        InstructionDesc[OpRayQueryConfirmIntersectionKHR].setResultAndType(false, false);
+    InstructionDesc[OpRayQueryGetIntersectionFrontFaceKHR].operands.push(OperandId, "'RayQuery'");
+    InstructionDesc[OpRayQueryGetIntersectionFrontFaceKHR].operands.push(OperandId, "'Committed'");
+    InstructionDesc[OpRayQueryGetIntersectionFrontFaceKHR].setResultAndType(true, true);
 
-        InstructionDesc[OpRayQueryProceedKHR].operands.push(OperandId, "'RayQuery'");
-        InstructionDesc[OpRayQueryProceedKHR].setResultAndType(true, true);
+    InstructionDesc[OpRayQueryGetIntersectionCandidateAABBOpaqueKHR].operands.push(OperandId, "'RayQuery'");
+    InstructionDesc[OpRayQueryGetIntersectionCandidateAABBOpaqueKHR].setResultAndType(true, true);
 
-        InstructionDesc[OpRayQueryGetIntersectionTypeKHR].operands.push(OperandId, "'RayQuery'");
-        InstructionDesc[OpRayQueryGetIntersectionTypeKHR].operands.push(OperandId, "'Committed'");
-        InstructionDesc[OpRayQueryGetIntersectionTypeKHR].setResultAndType(true, true);
+    InstructionDesc[OpRayQueryGetIntersectionObjectRayDirectionKHR].operands.push(OperandId, "'RayQuery'");
+    InstructionDesc[OpRayQueryGetIntersectionObjectRayDirectionKHR].operands.push(OperandId, "'Committed'");
+    InstructionDesc[OpRayQueryGetIntersectionObjectRayDirectionKHR].setResultAndType(true, true);
 
-        InstructionDesc[OpRayQueryGetRayTMinKHR].operands.push(OperandId, "'RayQuery'");
-        InstructionDesc[OpRayQueryGetRayTMinKHR].setResultAndType(true, true);
+    InstructionDesc[OpRayQueryGetIntersectionObjectRayOriginKHR].operands.push(OperandId, "'RayQuery'");
+    InstructionDesc[OpRayQueryGetIntersectionObjectRayOriginKHR].operands.push(OperandId, "'Committed'");
+    InstructionDesc[OpRayQueryGetIntersectionObjectRayOriginKHR].setResultAndType(true, true);
 
-        InstructionDesc[OpRayQueryGetRayFlagsKHR].operands.push(OperandId, "'RayQuery'");
-        InstructionDesc[OpRayQueryGetRayFlagsKHR].setResultAndType(true, true);
+    InstructionDesc[OpRayQueryGetWorldRayDirectionKHR].operands.push(OperandId, "'RayQuery'");
+    InstructionDesc[OpRayQueryGetWorldRayDirectionKHR].setResultAndType(true, true);
 
-        InstructionDesc[OpRayQueryGetIntersectionTKHR].operands.push(OperandId, "'RayQuery'");
-        InstructionDesc[OpRayQueryGetIntersectionTKHR].operands.push(OperandId, "'Committed'");
-        InstructionDesc[OpRayQueryGetIntersectionTKHR].setResultAndType(true, true);
+    InstructionDesc[OpRayQueryGetWorldRayOriginKHR].operands.push(OperandId, "'RayQuery'");
+    InstructionDesc[OpRayQueryGetWorldRayOriginKHR].setResultAndType(true, true);
 
-        InstructionDesc[OpRayQueryGetIntersectionInstanceCustomIndexKHR].operands.push(OperandId, "'RayQuery'");
-        InstructionDesc[OpRayQueryGetIntersectionInstanceCustomIndexKHR].operands.push(OperandId, "'Committed'");
-        InstructionDesc[OpRayQueryGetIntersectionInstanceCustomIndexKHR].setResultAndType(true, true);
+    InstructionDesc[OpRayQueryGetIntersectionObjectToWorldKHR].operands.push(OperandId, "'RayQuery'");
+    InstructionDesc[OpRayQueryGetIntersectionObjectToWorldKHR].operands.push(OperandId, "'Committed'");
+    InstructionDesc[OpRayQueryGetIntersectionObjectToWorldKHR].setResultAndType(true, true);
 
-        InstructionDesc[OpRayQueryGetIntersectionInstanceIdKHR].operands.push(OperandId, "'RayQuery'");
-        InstructionDesc[OpRayQueryGetIntersectionInstanceIdKHR].operands.push(OperandId, "'Committed'");
-        InstructionDesc[OpRayQueryGetIntersectionInstanceIdKHR].setResultAndType(true, true);
+    InstructionDesc[OpRayQueryGetIntersectionWorldToObjectKHR].operands.push(OperandId, "'RayQuery'");
+    InstructionDesc[OpRayQueryGetIntersectionWorldToObjectKHR].operands.push(OperandId, "'Committed'");
+    InstructionDesc[OpRayQueryGetIntersectionWorldToObjectKHR].setResultAndType(true, true);
 
-        InstructionDesc[OpRayQueryGetIntersectionInstanceShaderBindingTableRecordOffsetKHR].operands.push(OperandId, "'RayQuery'");
-        InstructionDesc[OpRayQueryGetIntersectionInstanceShaderBindingTableRecordOffsetKHR].operands.push(OperandId, "'Committed'");
-        InstructionDesc[OpRayQueryGetIntersectionInstanceShaderBindingTableRecordOffsetKHR].setResultAndType(true, true);
+    InstructionDesc[OpImageSampleFootprintNV].operands.push(OperandId, "'Sampled Image'");
+    InstructionDesc[OpImageSampleFootprintNV].operands.push(OperandId, "'Coordinate'");
+    InstructionDesc[OpImageSampleFootprintNV].operands.push(OperandId, "'Granularity'");
+    InstructionDesc[OpImageSampleFootprintNV].operands.push(OperandId, "'Coarse'");
+    InstructionDesc[OpImageSampleFootprintNV].operands.push(OperandImageOperands, "", true);
+    InstructionDesc[OpImageSampleFootprintNV].operands.push(OperandVariableIds, "", true);
+    
+    InstructionDesc[OpWritePackedPrimitiveIndices4x8NV].operands.push(OperandId, "'Index Offset'");
+    InstructionDesc[OpWritePackedPrimitiveIndices4x8NV].operands.push(OperandId, "'Packed Indices'");
 
-        InstructionDesc[OpRayQueryGetIntersectionGeometryIndexKHR].operands.push(OperandId, "'RayQuery'");
-        InstructionDesc[OpRayQueryGetIntersectionGeometryIndexKHR].operands.push(OperandId, "'Committed'");
-        InstructionDesc[OpRayQueryGetIntersectionGeometryIndexKHR].setResultAndType(true, true);
+    InstructionDesc[OpTypeCooperativeMatrixNV].operands.push(OperandId, "'Component Type'");
+    InstructionDesc[OpTypeCooperativeMatrixNV].operands.push(OperandId, "'Scope'");
+    InstructionDesc[OpTypeCooperativeMatrixNV].operands.push(OperandId, "'Rows'");
+    InstructionDesc[OpTypeCooperativeMatrixNV].operands.push(OperandId, "'Columns'");
 
-        InstructionDesc[OpRayQueryGetIntersectionPrimitiveIndexKHR].operands.push(OperandId, "'RayQuery'");
-        InstructionDesc[OpRayQueryGetIntersectionPrimitiveIndexKHR].operands.push(OperandId, "'Committed'");
-        InstructionDesc[OpRayQueryGetIntersectionPrimitiveIndexKHR].setResultAndType(true, true);
+    InstructionDesc[OpCooperativeMatrixLoadNV].operands.push(OperandId, "'Pointer'");
+    InstructionDesc[OpCooperativeMatrixLoadNV].operands.push(OperandId, "'Stride'");
+    InstructionDesc[OpCooperativeMatrixLoadNV].operands.push(OperandId, "'Column Major'");
+    InstructionDesc[OpCooperativeMatrixLoadNV].operands.push(OperandMemoryAccess, "'Memory Access'");
+    InstructionDesc[OpCooperativeMatrixLoadNV].operands.push(OperandLiteralNumber, "", true);
+    InstructionDesc[OpCooperativeMatrixLoadNV].operands.push(OperandId, "", true);
 
-        InstructionDesc[OpRayQueryGetIntersectionBarycentricsKHR].operands.push(OperandId, "'RayQuery'");
-        InstructionDesc[OpRayQueryGetIntersectionBarycentricsKHR].operands.push(OperandId, "'Committed'");
-        InstructionDesc[OpRayQueryGetIntersectionBarycentricsKHR].setResultAndType(true, true);
+    InstructionDesc[OpCooperativeMatrixStoreNV].operands.push(OperandId, "'Pointer'");
+    InstructionDesc[OpCooperativeMatrixStoreNV].operands.push(OperandId, "'Object'");
+    InstructionDesc[OpCooperativeMatrixStoreNV].operands.push(OperandId, "'Stride'");
+    InstructionDesc[OpCooperativeMatrixStoreNV].operands.push(OperandId, "'Column Major'");
+    InstructionDesc[OpCooperativeMatrixStoreNV].operands.push(OperandMemoryAccess, "'Memory Access'");
+    InstructionDesc[OpCooperativeMatrixStoreNV].operands.push(OperandLiteralNumber, "", true);
+    InstructionDesc[OpCooperativeMatrixStoreNV].operands.push(OperandId, "", true);
 
-        InstructionDesc[OpRayQueryGetIntersectionFrontFaceKHR].operands.push(OperandId, "'RayQuery'");
-        InstructionDesc[OpRayQueryGetIntersectionFrontFaceKHR].operands.push(OperandId, "'Committed'");
-        InstructionDesc[OpRayQueryGetIntersectionFrontFaceKHR].setResultAndType(true, true);
+    InstructionDesc[OpCooperativeMatrixMulAddNV].operands.push(OperandId, "'A'");
+    InstructionDesc[OpCooperativeMatrixMulAddNV].operands.push(OperandId, "'B'");
+    InstructionDesc[OpCooperativeMatrixMulAddNV].operands.push(OperandId, "'C'");
 
-        InstructionDesc[OpRayQueryGetIntersectionCandidateAABBOpaqueKHR].operands.push(OperandId, "'RayQuery'");
-        InstructionDesc[OpRayQueryGetIntersectionCandidateAABBOpaqueKHR].setResultAndType(true, true);
+    InstructionDesc[OpCooperativeMatrixLengthNV].operands.push(OperandId, "'Type'");
 
-        InstructionDesc[OpRayQueryGetIntersectionObjectRayDirectionKHR].operands.push(OperandId, "'RayQuery'");
-        InstructionDesc[OpRayQueryGetIntersectionObjectRayDirectionKHR].operands.push(OperandId, "'Committed'");
-        InstructionDesc[OpRayQueryGetIntersectionObjectRayDirectionKHR].setResultAndType(true, true);
+    InstructionDesc[OpDemoteToHelperInvocationEXT].setResultAndType(false, false);
 
-        InstructionDesc[OpRayQueryGetIntersectionObjectRayOriginKHR].operands.push(OperandId, "'RayQuery'");
-        InstructionDesc[OpRayQueryGetIntersectionObjectRayOriginKHR].operands.push(OperandId, "'Committed'");
-        InstructionDesc[OpRayQueryGetIntersectionObjectRayOriginKHR].setResultAndType(true, true);
-
-        InstructionDesc[OpRayQueryGetWorldRayDirectionKHR].operands.push(OperandId, "'RayQuery'");
-        InstructionDesc[OpRayQueryGetWorldRayDirectionKHR].setResultAndType(true, true);
-
-        InstructionDesc[OpRayQueryGetWorldRayOriginKHR].operands.push(OperandId, "'RayQuery'");
-        InstructionDesc[OpRayQueryGetWorldRayOriginKHR].setResultAndType(true, true);
-
-        InstructionDesc[OpRayQueryGetIntersectionObjectToWorldKHR].operands.push(OperandId, "'RayQuery'");
-        InstructionDesc[OpRayQueryGetIntersectionObjectToWorldKHR].operands.push(OperandId, "'Committed'");
-        InstructionDesc[OpRayQueryGetIntersectionObjectToWorldKHR].setResultAndType(true, true);
-
-        InstructionDesc[OpRayQueryGetIntersectionWorldToObjectKHR].operands.push(OperandId, "'RayQuery'");
-        InstructionDesc[OpRayQueryGetIntersectionWorldToObjectKHR].operands.push(OperandId, "'Committed'");
-        InstructionDesc[OpRayQueryGetIntersectionWorldToObjectKHR].setResultAndType(true, true);
-
-        InstructionDesc[OpRayQueryGetIntersectionTriangleVertexPositionsKHR].operands.push(OperandId, "'RayQuery'");
-        InstructionDesc[OpRayQueryGetIntersectionTriangleVertexPositionsKHR].operands.push(OperandId, "'Committed'");
-        InstructionDesc[OpRayQueryGetIntersectionTriangleVertexPositionsKHR].setResultAndType(true, true);
-
-        InstructionDesc[OpRayQueryGetIntersectionClusterIdNV].operands.push(OperandId, "'RayQuery'");
-        InstructionDesc[OpRayQueryGetIntersectionClusterIdNV].operands.push(OperandId, "'Committed'");
-        InstructionDesc[OpRayQueryGetIntersectionClusterIdNV].setResultAndType(true, true);
-        InstructionDesc[OpRayQueryGetIntersectionSpherePositionNV].operands.push(OperandId, "'RayQuery'");
-        InstructionDesc[OpRayQueryGetIntersectionSpherePositionNV].operands.push(OperandId, "'Committed'");
-        InstructionDesc[OpRayQueryGetIntersectionSpherePositionNV].setResultAndType(true, true);
-
-        InstructionDesc[OpRayQueryGetIntersectionSphereRadiusNV].operands.push(OperandId, "'RayQuery'");
-        InstructionDesc[OpRayQueryGetIntersectionSphereRadiusNV].operands.push(OperandId, "'Committed'");
-        InstructionDesc[OpRayQueryGetIntersectionSphereRadiusNV].setResultAndType(true, true);
-
-        InstructionDesc[OpRayQueryGetIntersectionLSSHitValueNV].operands.push(OperandId, "'RayQuery'");
-        InstructionDesc[OpRayQueryGetIntersectionLSSHitValueNV].operands.push(OperandId, "'Committed'");
-        InstructionDesc[OpRayQueryGetIntersectionLSSHitValueNV].setResultAndType(true, true);
-
-        InstructionDesc[OpRayQueryGetIntersectionLSSPositionsNV].operands.push(OperandId, "'RayQuery'");
-        InstructionDesc[OpRayQueryGetIntersectionLSSPositionsNV].operands.push(OperandId, "'Committed'");
-        InstructionDesc[OpRayQueryGetIntersectionLSSPositionsNV].setResultAndType(true, true);
-
-        InstructionDesc[OpRayQueryGetIntersectionLSSRadiiNV].operands.push(OperandId, "'RayQuery'");
-        InstructionDesc[OpRayQueryGetIntersectionLSSRadiiNV].operands.push(OperandId, "'Committed'");
-        InstructionDesc[OpRayQueryGetIntersectionLSSRadiiNV].setResultAndType(true, true);
-
-        InstructionDesc[OpRayQueryIsSphereHitNV].operands.push(OperandId, "'RayQuery'");
-        InstructionDesc[OpRayQueryIsSphereHitNV].operands.push(OperandId, "'Committed'");
-        InstructionDesc[OpRayQueryIsSphereHitNV].setResultAndType(true, true);
-
-        InstructionDesc[OpRayQueryIsLSSHitNV].operands.push(OperandId, "'RayQuery'");
-        InstructionDesc[OpRayQueryIsLSSHitNV].operands.push(OperandId, "'Committed'");
-        InstructionDesc[OpRayQueryIsLSSHitNV].setResultAndType(true, true);
-
-        InstructionDesc[OpImageSampleFootprintNV].operands.push(OperandId, "'Sampled Image'");
-        InstructionDesc[OpImageSampleFootprintNV].operands.push(OperandId, "'Coordinate'");
-        InstructionDesc[OpImageSampleFootprintNV].operands.push(OperandId, "'Granularity'");
-        InstructionDesc[OpImageSampleFootprintNV].operands.push(OperandId, "'Coarse'");
-        InstructionDesc[OpImageSampleFootprintNV].operands.push(OperandImageOperands, "", true);
-        InstructionDesc[OpImageSampleFootprintNV].operands.push(OperandVariableIds, "", true);
-
-        InstructionDesc[OpWritePackedPrimitiveIndices4x8NV].operands.push(OperandId, "'Index Offset'");
-        InstructionDesc[OpWritePackedPrimitiveIndices4x8NV].operands.push(OperandId, "'Packed Indices'");
-
-        InstructionDesc[OpEmitMeshTasksEXT].operands.push(OperandId, "'groupCountX'");
-        InstructionDesc[OpEmitMeshTasksEXT].operands.push(OperandId, "'groupCountY'");
-        InstructionDesc[OpEmitMeshTasksEXT].operands.push(OperandId, "'groupCountZ'");
-        InstructionDesc[OpEmitMeshTasksEXT].operands.push(OperandId, "'Payload'");
-        InstructionDesc[OpEmitMeshTasksEXT].setResultAndType(false, false);
-
-        InstructionDesc[OpSetMeshOutputsEXT].operands.push(OperandId, "'vertexCount'");
-        InstructionDesc[OpSetMeshOutputsEXT].operands.push(OperandId, "'primitiveCount'");
-        InstructionDesc[OpSetMeshOutputsEXT].setResultAndType(false, false);
-
-
-        InstructionDesc[OpTypeCooperativeMatrixNV].operands.push(OperandId, "'Component Type'");
-        InstructionDesc[OpTypeCooperativeMatrixNV].operands.push(OperandId, "'Scope'");
-        InstructionDesc[OpTypeCooperativeMatrixNV].operands.push(OperandId, "'Rows'");
-        InstructionDesc[OpTypeCooperativeMatrixNV].operands.push(OperandId, "'Columns'");
-
-        InstructionDesc[OpCooperativeMatrixLoadNV].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpCooperativeMatrixLoadNV].operands.push(OperandId, "'Stride'");
-        InstructionDesc[OpCooperativeMatrixLoadNV].operands.push(OperandId, "'Column Major'");
-        InstructionDesc[OpCooperativeMatrixLoadNV].operands.push(OperandMemoryAccess, "'Memory Access'");
-        InstructionDesc[OpCooperativeMatrixLoadNV].operands.push(OperandLiteralNumber, "", true);
-        InstructionDesc[OpCooperativeMatrixLoadNV].operands.push(OperandId, "", true);
-
-        InstructionDesc[OpCooperativeMatrixStoreNV].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpCooperativeMatrixStoreNV].operands.push(OperandId, "'Object'");
-        InstructionDesc[OpCooperativeMatrixStoreNV].operands.push(OperandId, "'Stride'");
-        InstructionDesc[OpCooperativeMatrixStoreNV].operands.push(OperandId, "'Column Major'");
-        InstructionDesc[OpCooperativeMatrixStoreNV].operands.push(OperandMemoryAccess, "'Memory Access'");
-        InstructionDesc[OpCooperativeMatrixStoreNV].operands.push(OperandLiteralNumber, "", true);
-        InstructionDesc[OpCooperativeMatrixStoreNV].operands.push(OperandId, "", true);
-
-        InstructionDesc[OpCooperativeMatrixMulAddNV].operands.push(OperandId, "'A'");
-        InstructionDesc[OpCooperativeMatrixMulAddNV].operands.push(OperandId, "'B'");
-        InstructionDesc[OpCooperativeMatrixMulAddNV].operands.push(OperandId, "'C'");
-
-        InstructionDesc[OpCooperativeMatrixLengthNV].operands.push(OperandId, "'Type'");
-
-        InstructionDesc[OpTypeCooperativeMatrixKHR].operands.push(OperandId, "'Component Type'");
-        InstructionDesc[OpTypeCooperativeMatrixKHR].operands.push(OperandId, "'Scope'");
-        InstructionDesc[OpTypeCooperativeMatrixKHR].operands.push(OperandId, "'Rows'");
-        InstructionDesc[OpTypeCooperativeMatrixKHR].operands.push(OperandId, "'Columns'");
-        InstructionDesc[OpTypeCooperativeMatrixKHR].operands.push(OperandId, "'Use'");
-
-        InstructionDesc[OpCooperativeMatrixLoadKHR].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpCooperativeMatrixLoadKHR].operands.push(OperandId, "'Memory Layout'");
-        InstructionDesc[OpCooperativeMatrixLoadKHR].operands.push(OperandId, "'Stride'");
-        InstructionDesc[OpCooperativeMatrixLoadKHR].operands.push(OperandMemoryAccess, "'Memory Access'");
-        InstructionDesc[OpCooperativeMatrixLoadKHR].operands.push(OperandLiteralNumber, "", true);
-        InstructionDesc[OpCooperativeMatrixLoadKHR].operands.push(OperandId, "", true);
-
-        InstructionDesc[OpCooperativeMatrixStoreKHR].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpCooperativeMatrixStoreKHR].operands.push(OperandId, "'Object'");
-        InstructionDesc[OpCooperativeMatrixStoreKHR].operands.push(OperandId, "'Memory Layout'");
-        InstructionDesc[OpCooperativeMatrixStoreKHR].operands.push(OperandId, "'Stride'");
-        InstructionDesc[OpCooperativeMatrixStoreKHR].operands.push(OperandMemoryAccess, "'Memory Access'");
-        InstructionDesc[OpCooperativeMatrixStoreKHR].operands.push(OperandLiteralNumber, "", true);
-        InstructionDesc[OpCooperativeMatrixStoreKHR].operands.push(OperandId, "", true);
-
-        InstructionDesc[OpCooperativeMatrixMulAddKHR].operands.push(OperandId, "'A'");
-        InstructionDesc[OpCooperativeMatrixMulAddKHR].operands.push(OperandId, "'B'");
-        InstructionDesc[OpCooperativeMatrixMulAddKHR].operands.push(OperandId, "'C'");
-        InstructionDesc[OpCooperativeMatrixMulAddKHR].operands.push(OperandCooperativeMatrixOperands, "'Cooperative Matrix Operands'", true);
-
-        InstructionDesc[OpCooperativeMatrixLengthKHR].operands.push(OperandId, "'Type'");
-
-        InstructionDesc[OpTypeCooperativeVectorNV].operands.push(OperandId, "'Component Type'");
-        InstructionDesc[OpTypeCooperativeVectorNV].operands.push(OperandId, "'Components'");
-
-        InstructionDesc[OpCooperativeVectorMatrixMulNV].operands.push(OperandId, "'Input'");
-        InstructionDesc[OpCooperativeVectorMatrixMulNV].operands.push(OperandId, "'InputInterpretation'");
-        InstructionDesc[OpCooperativeVectorMatrixMulNV].operands.push(OperandId, "'Matrix'");
-        InstructionDesc[OpCooperativeVectorMatrixMulNV].operands.push(OperandId, "'MatrixOffset'");
-        InstructionDesc[OpCooperativeVectorMatrixMulNV].operands.push(OperandId, "'MatrixInterpretation'");
-        InstructionDesc[OpCooperativeVectorMatrixMulNV].operands.push(OperandId, "'M'");
-        InstructionDesc[OpCooperativeVectorMatrixMulNV].operands.push(OperandId, "'K'");
-        InstructionDesc[OpCooperativeVectorMatrixMulNV].operands.push(OperandId, "'MemoryLayout'");
-        InstructionDesc[OpCooperativeVectorMatrixMulNV].operands.push(OperandId, "'Transpose'");
-        InstructionDesc[OpCooperativeVectorMatrixMulNV].operands.push(OperandId, "'MatrixStride'", true);
-        InstructionDesc[OpCooperativeVectorMatrixMulNV].operands.push(OperandCooperativeMatrixOperands, "'Cooperative Matrix Operands'", true);
-
-        InstructionDesc[OpCooperativeVectorMatrixMulAddNV].operands.push(OperandId, "'Input'");
-        InstructionDesc[OpCooperativeVectorMatrixMulAddNV].operands.push(OperandId, "'InputInterpretation'");
-        InstructionDesc[OpCooperativeVectorMatrixMulAddNV].operands.push(OperandId, "'Matrix'");
-        InstructionDesc[OpCooperativeVectorMatrixMulAddNV].operands.push(OperandId, "'MatrixOffset'");
-        InstructionDesc[OpCooperativeVectorMatrixMulAddNV].operands.push(OperandId, "'MatrixInterpretation'");
-        InstructionDesc[OpCooperativeVectorMatrixMulAddNV].operands.push(OperandId, "'Bias'");
-        InstructionDesc[OpCooperativeVectorMatrixMulAddNV].operands.push(OperandId, "'BiasOffset'");
-        InstructionDesc[OpCooperativeVectorMatrixMulAddNV].operands.push(OperandId, "'BiasInterpretation'");
-        InstructionDesc[OpCooperativeVectorMatrixMulAddNV].operands.push(OperandId, "'M'");
-        InstructionDesc[OpCooperativeVectorMatrixMulAddNV].operands.push(OperandId, "'K'");
-        InstructionDesc[OpCooperativeVectorMatrixMulAddNV].operands.push(OperandId, "'MemoryLayout'");
-        InstructionDesc[OpCooperativeVectorMatrixMulAddNV].operands.push(OperandId, "'Transpose'");
-        InstructionDesc[OpCooperativeVectorMatrixMulAddNV].operands.push(OperandId, "'MatrixStride'", true);
-        InstructionDesc[OpCooperativeVectorMatrixMulAddNV].operands.push(OperandCooperativeMatrixOperands, "'Cooperative Matrix Operands'", true);
-
-        InstructionDesc[OpCooperativeVectorLoadNV].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpCooperativeVectorLoadNV].operands.push(OperandId, "'Offset'");
-        InstructionDesc[OpCooperativeVectorLoadNV].operands.push(OperandMemoryAccess, "'Memory Access'");
-        InstructionDesc[OpCooperativeVectorLoadNV].operands.push(OperandLiteralNumber, "", true);
-        InstructionDesc[OpCooperativeVectorLoadNV].operands.push(OperandId, "", true);
-
-        InstructionDesc[OpCooperativeVectorStoreNV].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpCooperativeVectorStoreNV].operands.push(OperandId, "'Offset'");
-        InstructionDesc[OpCooperativeVectorStoreNV].operands.push(OperandId, "'Object'");
-        InstructionDesc[OpCooperativeVectorStoreNV].operands.push(OperandMemoryAccess, "'Memory Access'");
-        InstructionDesc[OpCooperativeVectorStoreNV].operands.push(OperandLiteralNumber, "", true);
-        InstructionDesc[OpCooperativeVectorStoreNV].operands.push(OperandId, "", true);
-
-        InstructionDesc[OpCooperativeVectorOuterProductAccumulateNV].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpCooperativeVectorOuterProductAccumulateNV].operands.push(OperandId, "'Offset'");
-        InstructionDesc[OpCooperativeVectorOuterProductAccumulateNV].operands.push(OperandId, "'A'");
-        InstructionDesc[OpCooperativeVectorOuterProductAccumulateNV].operands.push(OperandId, "'B'");
-        InstructionDesc[OpCooperativeVectorOuterProductAccumulateNV].operands.push(OperandId, "'MemoryLayout'");
-        InstructionDesc[OpCooperativeVectorOuterProductAccumulateNV].operands.push(OperandId, "'MatrixInterpretation'");
-        InstructionDesc[OpCooperativeVectorOuterProductAccumulateNV].operands.push(OperandId, "'MatrixStride'", true);
-
-        InstructionDesc[OpCooperativeVectorReduceSumAccumulateNV].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpCooperativeVectorReduceSumAccumulateNV].operands.push(OperandId, "'Offset'");
-        InstructionDesc[OpCooperativeVectorReduceSumAccumulateNV].operands.push(OperandId, "'V'");
-
-        InstructionDesc[OpDemoteToHelperInvocationEXT].setResultAndType(false, false);
-
-        InstructionDesc[OpReadClockKHR].operands.push(OperandScope, "'Scope'");
-
-        InstructionDesc[OpTypeHitObjectNV].setResultAndType(true, false);
-
-        InstructionDesc[OpHitObjectGetShaderRecordBufferHandleNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpHitObjectGetShaderRecordBufferHandleNV].setResultAndType(true, true);
-
-        InstructionDesc[OpReorderThreadWithHintNV].operands.push(OperandId, "'Hint'");
-        InstructionDesc[OpReorderThreadWithHintNV].operands.push(OperandId, "'Bits'");
-        InstructionDesc[OpReorderThreadWithHintNV].setResultAndType(false, false);
-
-        InstructionDesc[OpReorderThreadWithHitObjectNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpReorderThreadWithHitObjectNV].operands.push(OperandId, "'Hint'");
-        InstructionDesc[OpReorderThreadWithHitObjectNV].operands.push(OperandId, "'Bits'");
-        InstructionDesc[OpReorderThreadWithHitObjectNV].setResultAndType(false, false);
-
-        InstructionDesc[OpHitObjectGetCurrentTimeNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpHitObjectGetCurrentTimeNV].setResultAndType(true, true);
-
-        InstructionDesc[OpHitObjectGetHitKindNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpHitObjectGetHitKindNV].setResultAndType(true, true);
-
-        InstructionDesc[OpHitObjectGetPrimitiveIndexNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpHitObjectGetPrimitiveIndexNV].setResultAndType(true, true);
-
-        InstructionDesc[OpHitObjectGetGeometryIndexNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpHitObjectGetGeometryIndexNV].setResultAndType(true, true);
-
-        InstructionDesc[OpHitObjectGetInstanceIdNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpHitObjectGetInstanceIdNV].setResultAndType(true, true);
-
-        InstructionDesc[OpHitObjectGetInstanceCustomIndexNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpHitObjectGetInstanceCustomIndexNV].setResultAndType(true, true);
-
-        InstructionDesc[OpHitObjectGetObjectRayDirectionNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpHitObjectGetObjectRayDirectionNV].setResultAndType(true, true);
-
-        InstructionDesc[OpHitObjectGetObjectRayOriginNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpHitObjectGetObjectRayOriginNV].setResultAndType(true, true);
-
-        InstructionDesc[OpHitObjectGetWorldRayDirectionNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpHitObjectGetWorldRayDirectionNV].setResultAndType(true, true);
-
-        InstructionDesc[OpHitObjectGetWorldRayOriginNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpHitObjectGetWorldRayOriginNV].setResultAndType(true, true);
-
-        InstructionDesc[OpHitObjectGetWorldToObjectNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpHitObjectGetWorldToObjectNV].setResultAndType(true, true);
-
-        InstructionDesc[OpHitObjectGetObjectToWorldNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpHitObjectGetObjectToWorldNV].setResultAndType(true, true);
-
-        InstructionDesc[OpHitObjectGetRayTMaxNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpHitObjectGetRayTMaxNV].setResultAndType(true, true);
-
-        InstructionDesc[OpHitObjectGetRayTMinNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpHitObjectGetRayTMinNV].setResultAndType(true, true);
-
-        InstructionDesc[OpHitObjectGetShaderBindingTableRecordIndexNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpHitObjectGetShaderBindingTableRecordIndexNV].setResultAndType(true, true);
-
-        InstructionDesc[OpHitObjectIsEmptyNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpHitObjectIsEmptyNV].setResultAndType(true, true);
-
-        InstructionDesc[OpHitObjectIsHitNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpHitObjectIsHitNV].setResultAndType(true, true);
-
-        InstructionDesc[OpHitObjectIsMissNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpHitObjectIsMissNV].setResultAndType(true, true);
-
-        InstructionDesc[OpHitObjectGetAttributesNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpHitObjectGetAttributesNV].operands.push(OperandId, "'HitObjectAttribute'");
-        InstructionDesc[OpHitObjectGetAttributesNV].setResultAndType(false, false);
-
-        InstructionDesc[OpHitObjectExecuteShaderNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpHitObjectExecuteShaderNV].operands.push(OperandId, "'Payload'");
-        InstructionDesc[OpHitObjectExecuteShaderNV].setResultAndType(false, false);
-
-        InstructionDesc[OpHitObjectRecordHitNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpHitObjectRecordHitNV].operands.push(OperandId, "'Acceleration Structure'");
-        InstructionDesc[OpHitObjectRecordHitNV].operands.push(OperandId, "'InstanceId'");
-        InstructionDesc[OpHitObjectRecordHitNV].operands.push(OperandId, "'PrimitiveId'");
-        InstructionDesc[OpHitObjectRecordHitNV].operands.push(OperandId, "'GeometryIndex'");
-        InstructionDesc[OpHitObjectRecordHitNV].operands.push(OperandId, "'HitKind'");
-        InstructionDesc[OpHitObjectRecordHitNV].operands.push(OperandId, "'SBT Record Offset'");
-        InstructionDesc[OpHitObjectRecordHitNV].operands.push(OperandId, "'SBT Record Stride'");
-        InstructionDesc[OpHitObjectRecordHitNV].operands.push(OperandId, "'Origin'");
-        InstructionDesc[OpHitObjectRecordHitNV].operands.push(OperandId, "'TMin'");
-        InstructionDesc[OpHitObjectRecordHitNV].operands.push(OperandId, "'Direction'");
-        InstructionDesc[OpHitObjectRecordHitNV].operands.push(OperandId, "'TMax'");
-        InstructionDesc[OpHitObjectRecordHitNV].operands.push(OperandId, "'HitObject Attribute'");
-        InstructionDesc[OpHitObjectRecordHitNV].setResultAndType(false, false);
-
-        InstructionDesc[OpHitObjectRecordHitMotionNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpHitObjectRecordHitMotionNV].operands.push(OperandId, "'Acceleration Structure'");
-        InstructionDesc[OpHitObjectRecordHitMotionNV].operands.push(OperandId, "'InstanceId'");
-        InstructionDesc[OpHitObjectRecordHitMotionNV].operands.push(OperandId, "'PrimitiveId'");
-        InstructionDesc[OpHitObjectRecordHitMotionNV].operands.push(OperandId, "'GeometryIndex'");
-        InstructionDesc[OpHitObjectRecordHitMotionNV].operands.push(OperandId, "'HitKind'");
-        InstructionDesc[OpHitObjectRecordHitMotionNV].operands.push(OperandId, "'SBT Record Offset'");
-        InstructionDesc[OpHitObjectRecordHitMotionNV].operands.push(OperandId, "'SBT Record Stride'");
-        InstructionDesc[OpHitObjectRecordHitMotionNV].operands.push(OperandId, "'Origin'");
-        InstructionDesc[OpHitObjectRecordHitMotionNV].operands.push(OperandId, "'TMin'");
-        InstructionDesc[OpHitObjectRecordHitMotionNV].operands.push(OperandId, "'Direction'");
-        InstructionDesc[OpHitObjectRecordHitMotionNV].operands.push(OperandId, "'TMax'");
-        InstructionDesc[OpHitObjectRecordHitMotionNV].operands.push(OperandId, "'Current Time'");
-        InstructionDesc[OpHitObjectRecordHitMotionNV].operands.push(OperandId, "'HitObject Attribute'");
-        InstructionDesc[OpHitObjectRecordHitMotionNV].setResultAndType(false, false);
-
-        InstructionDesc[OpHitObjectRecordHitWithIndexNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpHitObjectRecordHitWithIndexNV].operands.push(OperandId, "'Acceleration Structure'");
-        InstructionDesc[OpHitObjectRecordHitWithIndexNV].operands.push(OperandId, "'InstanceId'");
-        InstructionDesc[OpHitObjectRecordHitWithIndexNV].operands.push(OperandId, "'PrimitiveId'");
-        InstructionDesc[OpHitObjectRecordHitWithIndexNV].operands.push(OperandId, "'GeometryIndex'");
-        InstructionDesc[OpHitObjectRecordHitWithIndexNV].operands.push(OperandId, "'HitKind'");
-        InstructionDesc[OpHitObjectRecordHitWithIndexNV].operands.push(OperandId, "'SBT Record Index'");
-        InstructionDesc[OpHitObjectRecordHitWithIndexNV].operands.push(OperandId, "'Origin'");
-        InstructionDesc[OpHitObjectRecordHitWithIndexNV].operands.push(OperandId, "'TMin'");
-        InstructionDesc[OpHitObjectRecordHitWithIndexNV].operands.push(OperandId, "'Direction'");
-        InstructionDesc[OpHitObjectRecordHitWithIndexNV].operands.push(OperandId, "'TMax'");
-        InstructionDesc[OpHitObjectRecordHitWithIndexNV].operands.push(OperandId, "'HitObject Attribute'");
-        InstructionDesc[OpHitObjectRecordHitWithIndexNV].setResultAndType(false, false);
-
-        InstructionDesc[OpHitObjectRecordHitWithIndexMotionNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpHitObjectRecordHitWithIndexMotionNV].operands.push(OperandId, "'Acceleration Structure'");
-        InstructionDesc[OpHitObjectRecordHitWithIndexMotionNV].operands.push(OperandId, "'InstanceId'");
-        InstructionDesc[OpHitObjectRecordHitWithIndexMotionNV].operands.push(OperandId, "'PrimitiveId'");
-        InstructionDesc[OpHitObjectRecordHitWithIndexMotionNV].operands.push(OperandId, "'GeometryIndex'");
-        InstructionDesc[OpHitObjectRecordHitWithIndexMotionNV].operands.push(OperandId, "'HitKind'");
-        InstructionDesc[OpHitObjectRecordHitWithIndexMotionNV].operands.push(OperandId, "'SBT Record Index'");
-        InstructionDesc[OpHitObjectRecordHitWithIndexMotionNV].operands.push(OperandId, "'Origin'");
-        InstructionDesc[OpHitObjectRecordHitWithIndexMotionNV].operands.push(OperandId, "'TMin'");
-        InstructionDesc[OpHitObjectRecordHitWithIndexMotionNV].operands.push(OperandId, "'Direction'");
-        InstructionDesc[OpHitObjectRecordHitWithIndexMotionNV].operands.push(OperandId, "'TMax'");
-        InstructionDesc[OpHitObjectRecordHitWithIndexMotionNV].operands.push(OperandId, "'Current Time'");
-        InstructionDesc[OpHitObjectRecordHitWithIndexMotionNV].operands.push(OperandId, "'HitObject Attribute'");
-        InstructionDesc[OpHitObjectRecordHitWithIndexMotionNV].setResultAndType(false, false);
-
-        InstructionDesc[OpHitObjectRecordMissNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpHitObjectRecordMissNV].operands.push(OperandId, "'SBT Index'");
-        InstructionDesc[OpHitObjectRecordMissNV].operands.push(OperandId, "'Origin'");
-        InstructionDesc[OpHitObjectRecordMissNV].operands.push(OperandId, "'TMin'");
-        InstructionDesc[OpHitObjectRecordMissNV].operands.push(OperandId, "'Direction'");
-        InstructionDesc[OpHitObjectRecordMissNV].operands.push(OperandId, "'TMax'");
-        InstructionDesc[OpHitObjectRecordMissNV].setResultAndType(false, false);
-
-        InstructionDesc[OpHitObjectRecordMissMotionNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpHitObjectRecordMissMotionNV].operands.push(OperandId, "'SBT Index'");
-        InstructionDesc[OpHitObjectRecordMissMotionNV].operands.push(OperandId, "'Origin'");
-        InstructionDesc[OpHitObjectRecordMissMotionNV].operands.push(OperandId, "'TMin'");
-        InstructionDesc[OpHitObjectRecordMissMotionNV].operands.push(OperandId, "'Direction'");
-        InstructionDesc[OpHitObjectRecordMissMotionNV].operands.push(OperandId, "'TMax'");
-        InstructionDesc[OpHitObjectRecordMissMotionNV].operands.push(OperandId, "'Current Time'");
-        InstructionDesc[OpHitObjectRecordMissMotionNV].setResultAndType(false, false);
-
-        InstructionDesc[OpHitObjectRecordEmptyNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpHitObjectRecordEmptyNV].setResultAndType(false, false);
-
-        InstructionDesc[OpHitObjectTraceRayNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpHitObjectTraceRayNV].operands.push(OperandId, "'Acceleration Structure'");
-        InstructionDesc[OpHitObjectTraceRayNV].operands.push(OperandId, "'RayFlags'");
-        InstructionDesc[OpHitObjectTraceRayNV].operands.push(OperandId, "'Cullmask'");
-        InstructionDesc[OpHitObjectTraceRayNV].operands.push(OperandId, "'SBT Record Offset'");
-        InstructionDesc[OpHitObjectTraceRayNV].operands.push(OperandId, "'SBT Record Stride'");
-        InstructionDesc[OpHitObjectTraceRayNV].operands.push(OperandId, "'Miss Index'");
-        InstructionDesc[OpHitObjectTraceRayNV].operands.push(OperandId, "'Origin'");
-        InstructionDesc[OpHitObjectTraceRayNV].operands.push(OperandId, "'TMin'");
-        InstructionDesc[OpHitObjectTraceRayNV].operands.push(OperandId, "'Direction'");
-        InstructionDesc[OpHitObjectTraceRayNV].operands.push(OperandId, "'TMax'");
-        InstructionDesc[OpHitObjectTraceRayNV].operands.push(OperandId, "'Payload'");
-        InstructionDesc[OpHitObjectTraceRayNV].setResultAndType(false, false);
-
-        InstructionDesc[OpHitObjectTraceRayMotionNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpHitObjectTraceRayMotionNV].operands.push(OperandId, "'Acceleration Structure'");
-        InstructionDesc[OpHitObjectTraceRayMotionNV].operands.push(OperandId, "'RayFlags'");
-        InstructionDesc[OpHitObjectTraceRayMotionNV].operands.push(OperandId, "'Cullmask'");
-        InstructionDesc[OpHitObjectTraceRayMotionNV].operands.push(OperandId, "'SBT Record Offset'");
-        InstructionDesc[OpHitObjectTraceRayMotionNV].operands.push(OperandId, "'SBT Record Stride'");
-        InstructionDesc[OpHitObjectTraceRayMotionNV].operands.push(OperandId, "'Miss Index'");
-        InstructionDesc[OpHitObjectTraceRayMotionNV].operands.push(OperandId, "'Origin'");
-        InstructionDesc[OpHitObjectTraceRayMotionNV].operands.push(OperandId, "'TMin'");
-        InstructionDesc[OpHitObjectTraceRayMotionNV].operands.push(OperandId, "'Direction'");
-        InstructionDesc[OpHitObjectTraceRayMotionNV].operands.push(OperandId, "'TMax'");
-        InstructionDesc[OpHitObjectTraceRayMotionNV].operands.push(OperandId, "'Time'");
-        InstructionDesc[OpHitObjectTraceRayMotionNV].operands.push(OperandId, "'Payload'");
-        InstructionDesc[OpHitObjectTraceRayMotionNV].setResultAndType(false, false);
-
-        InstructionDesc[OpHitObjectGetClusterIdNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpHitObjectGetClusterIdNV].setResultAndType(true, true);
-        InstructionDesc[OpHitObjectGetSpherePositionNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpHitObjectGetSpherePositionNV].setResultAndType(true, true);
-
-        InstructionDesc[OpHitObjectGetSphereRadiusNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpHitObjectGetSphereRadiusNV].setResultAndType(true, true);
-
-        InstructionDesc[OpHitObjectGetLSSPositionsNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpHitObjectGetLSSPositionsNV].setResultAndType(true, true);
-
-        InstructionDesc[OpHitObjectGetLSSRadiiNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpHitObjectGetLSSRadiiNV].setResultAndType(true, true);
-
-        InstructionDesc[OpHitObjectIsSphereHitNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpHitObjectIsSphereHitNV].setResultAndType(true, true);
-
-        InstructionDesc[OpHitObjectIsLSSHitNV].operands.push(OperandId, "'HitObject'");
-        InstructionDesc[OpHitObjectIsLSSHitNV].setResultAndType(true, true);
-
-        InstructionDesc[OpFetchMicroTriangleVertexBarycentricNV].operands.push(OperandId, "'Acceleration Structure'");
-        InstructionDesc[OpFetchMicroTriangleVertexBarycentricNV].operands.push(OperandId, "'Instance ID'");
-        InstructionDesc[OpFetchMicroTriangleVertexBarycentricNV].operands.push(OperandId, "'Geometry Index'");
-        InstructionDesc[OpFetchMicroTriangleVertexBarycentricNV].operands.push(OperandId, "'Primitive Index'");
-        InstructionDesc[OpFetchMicroTriangleVertexBarycentricNV].operands.push(OperandId, "'Barycentrics'");
-        InstructionDesc[OpFetchMicroTriangleVertexBarycentricNV].setResultAndType(true, true);
-
-        InstructionDesc[OpFetchMicroTriangleVertexPositionNV].operands.push(OperandId, "'Acceleration Structure'");
-        InstructionDesc[OpFetchMicroTriangleVertexPositionNV].operands.push(OperandId, "'Instance ID'");
-        InstructionDesc[OpFetchMicroTriangleVertexPositionNV].operands.push(OperandId, "'Geometry Index'");
-        InstructionDesc[OpFetchMicroTriangleVertexPositionNV].operands.push(OperandId, "'Primitive Index'");
-        InstructionDesc[OpFetchMicroTriangleVertexPositionNV].operands.push(OperandId, "'Barycentrics'");
-        InstructionDesc[OpFetchMicroTriangleVertexPositionNV].setResultAndType(true, true);
-
-        InstructionDesc[OpColorAttachmentReadEXT].operands.push(OperandId, "'Attachment'");
-        InstructionDesc[OpColorAttachmentReadEXT].operands.push(OperandId, "'Sample'", true);
-        InstructionDesc[OpStencilAttachmentReadEXT].operands.push(OperandId, "'Sample'", true);
-        InstructionDesc[OpDepthAttachmentReadEXT].operands.push(OperandId, "'Sample'", true);
-
-        InstructionDesc[OpImageSampleWeightedQCOM].operands.push(OperandId, "'source texture'");
-        InstructionDesc[OpImageSampleWeightedQCOM].operands.push(OperandId, "'texture coordinates'");
-        InstructionDesc[OpImageSampleWeightedQCOM].operands.push(OperandId, "'weights texture'");
-        InstructionDesc[OpImageSampleWeightedQCOM].operands.push(OperandImageOperands, "", true);
-        InstructionDesc[OpImageSampleWeightedQCOM].setResultAndType(true, true);
-
-        InstructionDesc[OpImageBoxFilterQCOM].operands.push(OperandId, "'source texture'");
-        InstructionDesc[OpImageBoxFilterQCOM].operands.push(OperandId, "'texture coordinates'");
-        InstructionDesc[OpImageBoxFilterQCOM].operands.push(OperandId, "'box size'");
-        InstructionDesc[OpImageBoxFilterQCOM].operands.push(OperandImageOperands, "", true);
-        InstructionDesc[OpImageBoxFilterQCOM].setResultAndType(true, true);
-
-        InstructionDesc[OpImageBlockMatchSADQCOM].operands.push(OperandId, "'target texture'");
-        InstructionDesc[OpImageBlockMatchSADQCOM].operands.push(OperandId, "'target coordinates'");
-        InstructionDesc[OpImageBlockMatchSADQCOM].operands.push(OperandId, "'reference texture'");
-        InstructionDesc[OpImageBlockMatchSADQCOM].operands.push(OperandId, "'reference coordinates'");
-        InstructionDesc[OpImageBlockMatchSADQCOM].operands.push(OperandId, "'block size'");
-        InstructionDesc[OpImageBlockMatchSADQCOM].operands.push(OperandImageOperands, "", true);
-        InstructionDesc[OpImageBlockMatchSADQCOM].setResultAndType(true, true);
-
-        InstructionDesc[OpImageBlockMatchSSDQCOM].operands.push(OperandId, "'target texture'");
-        InstructionDesc[OpImageBlockMatchSSDQCOM].operands.push(OperandId, "'target coordinates'");
-        InstructionDesc[OpImageBlockMatchSSDQCOM].operands.push(OperandId, "'reference texture'");
-        InstructionDesc[OpImageBlockMatchSSDQCOM].operands.push(OperandId, "'reference coordinates'");
-        InstructionDesc[OpImageBlockMatchSSDQCOM].operands.push(OperandId, "'block size'");
-        InstructionDesc[OpImageBlockMatchSSDQCOM].operands.push(OperandImageOperands, "", true);
-        InstructionDesc[OpImageBlockMatchSSDQCOM].setResultAndType(true, true);
-
-        InstructionDesc[OpImageBlockMatchWindowSSDQCOM].operands.push(OperandId, "'target texture'");
-        InstructionDesc[OpImageBlockMatchWindowSSDQCOM].operands.push(OperandId, "'target coordinates'");
-        InstructionDesc[OpImageBlockMatchWindowSSDQCOM].operands.push(OperandId, "'reference texture'");
-        InstructionDesc[OpImageBlockMatchWindowSSDQCOM].operands.push(OperandId, "'reference coordinates'");
-        InstructionDesc[OpImageBlockMatchWindowSSDQCOM].operands.push(OperandId, "'block size'");
-        InstructionDesc[OpImageBlockMatchWindowSSDQCOM].operands.push(OperandImageOperands, "", true);
-        InstructionDesc[OpImageBlockMatchWindowSSDQCOM].setResultAndType(true, true);
-
-        InstructionDesc[OpImageBlockMatchWindowSADQCOM].operands.push(OperandId, "'target texture'");
-        InstructionDesc[OpImageBlockMatchWindowSADQCOM].operands.push(OperandId, "'target coordinates'");
-        InstructionDesc[OpImageBlockMatchWindowSADQCOM].operands.push(OperandId, "'reference texture'");
-        InstructionDesc[OpImageBlockMatchWindowSADQCOM].operands.push(OperandId, "'reference coordinates'");
-        InstructionDesc[OpImageBlockMatchWindowSADQCOM].operands.push(OperandId, "'block size'");
-        InstructionDesc[OpImageBlockMatchWindowSADQCOM].operands.push(OperandImageOperands, "", true);
-        InstructionDesc[OpImageBlockMatchWindowSADQCOM].setResultAndType(true, true);
-
-        InstructionDesc[OpImageBlockMatchGatherSSDQCOM].operands.push(OperandId, "'target texture'");
-        InstructionDesc[OpImageBlockMatchGatherSSDQCOM].operands.push(OperandId, "'target coordinates'");
-        InstructionDesc[OpImageBlockMatchGatherSSDQCOM].operands.push(OperandId, "'reference texture'");
-        InstructionDesc[OpImageBlockMatchGatherSSDQCOM].operands.push(OperandId, "'reference coordinates'");
-        InstructionDesc[OpImageBlockMatchGatherSSDQCOM].operands.push(OperandId, "'block size'");
-        InstructionDesc[OpImageBlockMatchGatherSSDQCOM].operands.push(OperandImageOperands, "", true);
-        InstructionDesc[OpImageBlockMatchGatherSSDQCOM].setResultAndType(true, true);
-
-        InstructionDesc[OpImageBlockMatchGatherSADQCOM].operands.push(OperandId, "'target texture'");
-        InstructionDesc[OpImageBlockMatchGatherSADQCOM].operands.push(OperandId, "'target coordinates'");
-        InstructionDesc[OpImageBlockMatchGatherSADQCOM].operands.push(OperandId, "'reference texture'");
-        InstructionDesc[OpImageBlockMatchGatherSADQCOM].operands.push(OperandId, "'reference coordinates'");
-        InstructionDesc[OpImageBlockMatchGatherSADQCOM].operands.push(OperandId, "'block size'");
-        InstructionDesc[OpImageBlockMatchGatherSADQCOM].operands.push(OperandImageOperands, "", true);
-        InstructionDesc[OpImageBlockMatchGatherSADQCOM].setResultAndType(true, true);
-
-        InstructionDesc[OpConstantCompositeReplicateEXT].operands.push(OperandId, "'Value'");
-        InstructionDesc[OpSpecConstantCompositeReplicateEXT].operands.push(OperandId, "'Value'");
-        InstructionDesc[OpCompositeConstructReplicateEXT].operands.push(OperandId, "'Value'");
-
-        InstructionDesc[OpCooperativeMatrixConvertNV].operands.push(OperandId, "'Value'");
-
-        InstructionDesc[OpCooperativeMatrixTransposeNV].operands.push(OperandId, "'Matrix'");
-
-        InstructionDesc[OpCooperativeMatrixReduceNV].operands.push(OperandId, "'Matrix'");
-        InstructionDesc[OpCooperativeMatrixReduceNV].operands.push(OperandLiteralNumber, "'ReduceMask'");
-        InstructionDesc[OpCooperativeMatrixReduceNV].operands.push(OperandId, "'CombineFunc'");
-
-        InstructionDesc[OpCooperativeMatrixPerElementOpNV].operands.push(OperandId, "'Matrix'");
-        InstructionDesc[OpCooperativeMatrixPerElementOpNV].operands.push(OperandId, "'Operation'");
-        InstructionDesc[OpCooperativeMatrixPerElementOpNV].operands.push(OperandVariableIds, "'Operands'");
-
-        InstructionDesc[OpCooperativeMatrixLoadTensorNV].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpCooperativeMatrixLoadTensorNV].operands.push(OperandId, "'Object'");
-        InstructionDesc[OpCooperativeMatrixLoadTensorNV].operands.push(OperandId, "'TensorLayout'");
-        InstructionDesc[OpCooperativeMatrixLoadTensorNV].operands.push(OperandMemoryAccess, "'Memory Access'");
-        InstructionDesc[OpCooperativeMatrixLoadTensorNV].operands.push(OperandTensorAddressingOperands, "'Tensor Addressing Operands'");
-
-        InstructionDesc[OpCooperativeMatrixStoreTensorNV].operands.push(OperandId, "'Pointer'");
-        InstructionDesc[OpCooperativeMatrixStoreTensorNV].operands.push(OperandId, "'Object'");
-        InstructionDesc[OpCooperativeMatrixStoreTensorNV].operands.push(OperandId, "'TensorLayout'");
-        InstructionDesc[OpCooperativeMatrixStoreTensorNV].operands.push(OperandMemoryAccess, "'Memory Access'");
-        InstructionDesc[OpCooperativeMatrixStoreTensorNV].operands.push(OperandTensorAddressingOperands, "'Tensor Addressing Operands'");
-
-        InstructionDesc[OpCooperativeMatrixReduceNV].operands.push(OperandId, "'Matrix'");
-        InstructionDesc[OpCooperativeMatrixReduceNV].operands.push(OperandLiteralNumber, "'ReduceMask'");
-
-        InstructionDesc[OpTypeTensorLayoutNV].operands.push(OperandId, "'Dim'");
-        InstructionDesc[OpTypeTensorLayoutNV].operands.push(OperandId, "'ClampMode'");
-
-        InstructionDesc[OpTypeTensorViewNV].operands.push(OperandId, "'Dim'");
-        InstructionDesc[OpTypeTensorViewNV].operands.push(OperandId, "'HasDimensions'");
-        InstructionDesc[OpTypeTensorViewNV].operands.push(OperandVariableIds, "'p'");
-
-        InstructionDesc[OpTensorLayoutSetBlockSizeNV].operands.push(OperandId, "'TensorLayout'");
-        InstructionDesc[OpTensorLayoutSetBlockSizeNV].operands.push(OperandVariableIds, "'BlockSize'");
-
-        InstructionDesc[OpTensorLayoutSetDimensionNV].operands.push(OperandId, "'TensorLayout'");
-        InstructionDesc[OpTensorLayoutSetDimensionNV].operands.push(OperandVariableIds, "'Dim'");
-
-        InstructionDesc[OpTensorLayoutSetStrideNV].operands.push(OperandId, "'TensorLayout'");
-        InstructionDesc[OpTensorLayoutSetStrideNV].operands.push(OperandVariableIds, "'Stride'");
-
-        InstructionDesc[OpTensorLayoutSliceNV].operands.push(OperandId, "'TensorLayout'");
-        InstructionDesc[OpTensorLayoutSliceNV].operands.push(OperandVariableIds, "'Operands'");
-
-        InstructionDesc[OpTensorLayoutSetClampValueNV].operands.push(OperandId, "'TensorLayout'");
-        InstructionDesc[OpTensorLayoutSetClampValueNV].operands.push(OperandId, "'Value'");
-
-        InstructionDesc[OpTensorViewSetDimensionNV].operands.push(OperandId, "'TensorView'");
-        InstructionDesc[OpTensorViewSetDimensionNV].operands.push(OperandVariableIds, "'Dim'");
-
-        InstructionDesc[OpTensorViewSetStrideNV].operands.push(OperandId, "'TensorView'");
-        InstructionDesc[OpTensorViewSetStrideNV].operands.push(OperandVariableIds, "'Stride'");
-
-        InstructionDesc[OpTensorViewSetClipNV].operands.push(OperandId, "'TensorView'");
-        InstructionDesc[OpTensorViewSetClipNV].operands.push(OperandId, "'ClipRowOffset'");
-        InstructionDesc[OpTensorViewSetClipNV].operands.push(OperandId, "'ClipRowSpan'");
-        InstructionDesc[OpTensorViewSetClipNV].operands.push(OperandId, "'ClipColOffset'");
-        InstructionDesc[OpTensorViewSetClipNV].operands.push(OperandId, "'ClipColSpan'");
-
-        InstructionDesc[OpSDotKHR].operands.push(OperandId, "'Vector1'");
-        InstructionDesc[OpSDotKHR].operands.push(OperandId, "'Vector2'");
-        InstructionDesc[OpSDotKHR].operands.push(OperandLiteralNumber, "'PackedVectorFormat'");
-
-        InstructionDesc[OpUDotKHR].operands.push(OperandId, "'Vector1'");
-        InstructionDesc[OpUDotKHR].operands.push(OperandId, "'Vector2'");
-        InstructionDesc[OpUDotKHR].operands.push(OperandLiteralNumber, "'PackedVectorFormat'");
-
-        InstructionDesc[OpSUDotKHR].operands.push(OperandId, "'Vector1'");
-        InstructionDesc[OpSUDotKHR].operands.push(OperandId, "'Vector2'");
-        InstructionDesc[OpSUDotKHR].operands.push(OperandLiteralNumber, "'PackedVectorFormat'");
-
-        InstructionDesc[OpSDotAccSatKHR].operands.push(OperandId, "'Vector1'");
-        InstructionDesc[OpSDotAccSatKHR].operands.push(OperandId, "'Vector2'");
-        InstructionDesc[OpSDotAccSatKHR].operands.push(OperandId, "'Accumulator'");
-        InstructionDesc[OpSDotAccSatKHR].operands.push(OperandLiteralNumber, "'PackedVectorFormat'");
-
-        InstructionDesc[OpUDotAccSatKHR].operands.push(OperandId, "'Vector1'");
-        InstructionDesc[OpUDotAccSatKHR].operands.push(OperandId, "'Vector2'");
-        InstructionDesc[OpUDotAccSatKHR].operands.push(OperandId, "'Accumulator'");
-        InstructionDesc[OpUDotAccSatKHR].operands.push(OperandLiteralNumber, "'PackedVectorFormat'");
-
-        InstructionDesc[OpSUDotAccSatKHR].operands.push(OperandId, "'Vector1'");
-        InstructionDesc[OpSUDotAccSatKHR].operands.push(OperandId, "'Vector2'");
-        InstructionDesc[OpSUDotAccSatKHR].operands.push(OperandId, "'Accumulator'");
-        InstructionDesc[OpSUDotAccSatKHR].operands.push(OperandLiteralNumber, "'PackedVectorFormat'");
-    });
+    InstructionDesc[OpReadClockKHR].operands.push(OperandScope, "'Scope'");
 }
 
-} // end spv namespace
+}; // end spv namespace

@@ -10,15 +10,6 @@
 #ifndef VOLK_H_
 #define VOLK_H_
 
-//************************************************************************************
-//** IF YOU UPDATE THIS FILE TO A NEWER VERSION OF VOLK, ADD THIS TO THE NEW FILE:
-//************************************************************************************
-
-#include "../vulkan.h" // note: zvulkan's version
-
-//************************************************************************************
-//************************************************************************************
-
 #if defined(VULKAN_H_) && !defined(VK_NO_PROTOTYPES)
 #	error To use volk, you need to define VK_NO_PROTOTYPES before including vulkan.h
 #endif

@@ -1,4 +1,4 @@
-# Copyright (C) 2020-2025 The Khronos Group Inc.
+# Copyright (C) 2020 The Khronos Group Inc.
 #
 # All rights reserved.
 #
@@ -34,7 +34,7 @@
 if(ENABLE_GLSLANG_JS)
     add_executable(glslang.js "glslang.js.cpp")
     glslang_set_link_args(glslang.js)
-    target_link_libraries(glslang.js glslang)
+    target_link_libraries(glslang.js glslang SPIRV)
 
     # Link library names that start with "-" are treated as link flags.
     # "-Os" should be OK in MSVC; don't use /Os because CMake won't
@@ -53,12 +53,9 @@ if(ENABLE_GLSLANG_JS)
         target_link_libraries(glslang.js "-s ALLOW_MEMORY_GROWTH=1")
         target_link_libraries(glslang.js "-s FILESYSTEM=0")
 
-        # We use ccall in glslang.pre.js, so make sure it's exposed
-        target_link_libraries(glslang.js "-s EXPORTED_RUNTIME_METHODS=ccall")
-
         if(ENABLE_EMSCRIPTEN_SINGLE_FILE)
             target_link_libraries(glslang.js "-s SINGLE_FILE=1")
-        endif()
+        endif(ENABLE_EMSCRIPTEN_SINGLE_FILE)
 
         if(ENABLE_EMSCRIPTEN_ENVIRONMENT_NODE)
             target_link_libraries(glslang.js "-s ENVIRONMENT=node -s BINARYEN_ASYNC_COMPILATION=0")
@@ -68,8 +65,7 @@ if(ENABLE_GLSLANG_JS)
 
         if(NOT ENABLE_EMSCRIPTEN_ENVIRONMENT_NODE)
             add_custom_command(TARGET glslang.js POST_BUILD
-                COMMAND ${CMAKE_COMMAND} -E cat ${CMAKE_CURRENT_SOURCE_DIR}/glslang.after.js >> ${CMAKE_CURRENT_BINARY_DIR}/glslang.js
-            )
+                COMMAND cat ${CMAKE_CURRENT_SOURCE_DIR}/glslang.after.js >> ${CMAKE_CURRENT_BINARY_DIR}/glslang.js)
         endif()
-    endif()
-endif()
+    endif(EMSCRIPTEN)
+endif(ENABLE_GLSLANG_JS)

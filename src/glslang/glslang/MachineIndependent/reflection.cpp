@@ -33,6 +33,8 @@
 // POSSIBILITY OF SUCH DAMAGE.
 //
 
+#if !defined(GLSLANG_WEB) && !defined(GLSLANG_ANGLE)
+
 #include "../Include/Common.h"
 #include "reflection.h"
 #include "LiveTraverser.h"
@@ -680,7 +682,7 @@ public:
     }
 
     // For a binary operation indexing into an aggregate, chase down the base of the aggregate.
-    // Return nullptr if the topology does not fit this situation.
+    // Return 0 if the topology does not fit this situation.
     TIntermSymbol* findBase(const TIntermBinary* node)
     {
         TIntermSymbol *base = node->getLeft()->getAsSymbolNode();
@@ -704,73 +706,69 @@ public:
             case EbtFloat:
                 switch ((int)sampler.dim) {
                 case Esd1D:
-                    if (sampler.shadow)
-                        return sampler.arrayed ? GL_SAMPLER_1D_ARRAY_SHADOW : GL_SAMPLER_1D_SHADOW;
-                    else
-                        return sampler.arrayed ? GL_SAMPLER_1D_ARRAY : GL_SAMPLER_1D;
+                    switch ((int)sampler.shadow) {
+                    case false: return sampler.arrayed ? GL_SAMPLER_1D_ARRAY : GL_SAMPLER_1D;
+                    case true:  return sampler.arrayed ? GL_SAMPLER_1D_ARRAY_SHADOW : GL_SAMPLER_1D_SHADOW;
+                    }
                 case Esd2D:
-                    if (sampler.ms) {
-                        return sampler.arrayed ? GL_SAMPLER_2D_MULTISAMPLE_ARRAY : GL_SAMPLER_2D_MULTISAMPLE;
-                    } else {
-                        if (sampler.shadow)
-                            return sampler.arrayed ? GL_SAMPLER_2D_ARRAY_SHADOW : GL_SAMPLER_2D_SHADOW;
-                        else
-                            return sampler.arrayed ? GL_SAMPLER_2D_ARRAY : GL_SAMPLER_2D;
+                    switch ((int)sampler.ms) {
+                    case false:
+                        switch ((int)sampler.shadow) {
+                        case false: return sampler.arrayed ? GL_SAMPLER_2D_ARRAY : GL_SAMPLER_2D;
+                        case true:  return sampler.arrayed ? GL_SAMPLER_2D_ARRAY_SHADOW : GL_SAMPLER_2D_SHADOW;
+                        }
+                    case true:      return sampler.arrayed ? GL_SAMPLER_2D_MULTISAMPLE_ARRAY : GL_SAMPLER_2D_MULTISAMPLE;
                     }
                 case Esd3D:
                     return GL_SAMPLER_3D;
                 case EsdCube:
-                    if (sampler.shadow)
-                        return sampler.arrayed ? GL_SAMPLER_CUBE_MAP_ARRAY_SHADOW : GL_SAMPLER_CUBE_SHADOW;
-                    else
-                        return sampler.arrayed ? GL_SAMPLER_CUBE_MAP_ARRAY : GL_SAMPLER_CUBE;
+                    switch ((int)sampler.shadow) {
+                    case false: return sampler.arrayed ? GL_SAMPLER_CUBE_MAP_ARRAY : GL_SAMPLER_CUBE;
+                    case true:  return sampler.arrayed ? GL_SAMPLER_CUBE_MAP_ARRAY_SHADOW : GL_SAMPLER_CUBE_SHADOW;
+                    }
                 case EsdRect:
                     return sampler.shadow ? GL_SAMPLER_2D_RECT_SHADOW : GL_SAMPLER_2D_RECT;
                 case EsdBuffer:
                     return GL_SAMPLER_BUFFER;
-                default:
-                    return 0;
                 }
             case EbtFloat16:
                 switch ((int)sampler.dim) {
                 case Esd1D:
-                    if (sampler.shadow)
-                        return sampler.arrayed ? GL_FLOAT16_SAMPLER_1D_ARRAY_SHADOW_AMD : GL_FLOAT16_SAMPLER_1D_SHADOW_AMD;
-                    else
-                        return sampler.arrayed ? GL_FLOAT16_SAMPLER_1D_ARRAY_AMD : GL_FLOAT16_SAMPLER_1D_AMD;
+                    switch ((int)sampler.shadow) {
+                    case false: return sampler.arrayed ? GL_FLOAT16_SAMPLER_1D_ARRAY_AMD : GL_FLOAT16_SAMPLER_1D_AMD;
+                    case true:  return sampler.arrayed ? GL_FLOAT16_SAMPLER_1D_ARRAY_SHADOW_AMD : GL_FLOAT16_SAMPLER_1D_SHADOW_AMD;
+                    }
                 case Esd2D:
-                    if (sampler.ms) {
-                        return sampler.arrayed ? GL_FLOAT16_SAMPLER_2D_MULTISAMPLE_ARRAY_AMD : GL_FLOAT16_SAMPLER_2D_MULTISAMPLE_AMD;
-                    } else {
-                        if (sampler.shadow)
-                            return sampler.arrayed ? GL_FLOAT16_SAMPLER_2D_ARRAY_SHADOW_AMD : GL_FLOAT16_SAMPLER_2D_SHADOW_AMD;
-                        else
-                            return sampler.arrayed ? GL_FLOAT16_SAMPLER_2D_ARRAY_AMD : GL_FLOAT16_SAMPLER_2D_AMD;
+                    switch ((int)sampler.ms) {
+                    case false:
+                        switch ((int)sampler.shadow) {
+                        case false: return sampler.arrayed ? GL_FLOAT16_SAMPLER_2D_ARRAY_AMD : GL_FLOAT16_SAMPLER_2D_AMD;
+                        case true:  return sampler.arrayed ? GL_FLOAT16_SAMPLER_2D_ARRAY_SHADOW_AMD : GL_FLOAT16_SAMPLER_2D_SHADOW_AMD;
+                        }
+                    case true:      return sampler.arrayed ? GL_FLOAT16_SAMPLER_2D_MULTISAMPLE_ARRAY_AMD : GL_FLOAT16_SAMPLER_2D_MULTISAMPLE_AMD;
                     }
                 case Esd3D:
                     return GL_FLOAT16_SAMPLER_3D_AMD;
                 case EsdCube:
-                    if (sampler.shadow)
-                        return sampler.arrayed ? GL_FLOAT16_SAMPLER_CUBE_MAP_ARRAY_SHADOW_AMD : GL_FLOAT16_SAMPLER_CUBE_SHADOW_AMD;
-                    else
-                        return sampler.arrayed ? GL_FLOAT16_SAMPLER_CUBE_MAP_ARRAY_AMD : GL_FLOAT16_SAMPLER_CUBE_AMD;
+                    switch ((int)sampler.shadow) {
+                    case false: return sampler.arrayed ? GL_FLOAT16_SAMPLER_CUBE_MAP_ARRAY_AMD : GL_FLOAT16_SAMPLER_CUBE_AMD;
+                    case true:  return sampler.arrayed ? GL_FLOAT16_SAMPLER_CUBE_MAP_ARRAY_SHADOW_AMD : GL_FLOAT16_SAMPLER_CUBE_SHADOW_AMD;
+                    }
                 case EsdRect:
                     return sampler.shadow ? GL_FLOAT16_SAMPLER_2D_RECT_SHADOW_AMD : GL_FLOAT16_SAMPLER_2D_RECT_AMD;
                 case EsdBuffer:
                     return GL_FLOAT16_SAMPLER_BUFFER_AMD;
-                default:
-                    return 0;
                 }
             case EbtInt:
                 switch ((int)sampler.dim) {
                 case Esd1D:
                     return sampler.arrayed ? GL_INT_SAMPLER_1D_ARRAY : GL_INT_SAMPLER_1D;
                 case Esd2D:
-                    if (sampler.ms)
-                        return sampler.arrayed ? GL_INT_SAMPLER_2D_MULTISAMPLE_ARRAY
-                                               : GL_INT_SAMPLER_2D_MULTISAMPLE;
-                    else
-                        return sampler.arrayed ? GL_INT_SAMPLER_2D_ARRAY : GL_INT_SAMPLER_2D;
+                    switch ((int)sampler.ms) {
+                    case false:  return sampler.arrayed ? GL_INT_SAMPLER_2D_ARRAY : GL_INT_SAMPLER_2D;
+                    case true:   return sampler.arrayed ? GL_INT_SAMPLER_2D_MULTISAMPLE_ARRAY
+                                                        : GL_INT_SAMPLER_2D_MULTISAMPLE;
+                    }
                 case Esd3D:
                     return GL_INT_SAMPLER_3D;
                 case EsdCube:
@@ -779,19 +777,17 @@ public:
                     return GL_INT_SAMPLER_2D_RECT;
                 case EsdBuffer:
                     return GL_INT_SAMPLER_BUFFER;
-                default:
-                    return 0;
                 }
             case EbtUint:
                 switch ((int)sampler.dim) {
                 case Esd1D:
                     return sampler.arrayed ? GL_UNSIGNED_INT_SAMPLER_1D_ARRAY : GL_UNSIGNED_INT_SAMPLER_1D;
                 case Esd2D:
-                    if (sampler.ms)
-                        return sampler.arrayed ? GL_UNSIGNED_INT_SAMPLER_2D_MULTISAMPLE_ARRAY
-                                               : GL_UNSIGNED_INT_SAMPLER_2D_MULTISAMPLE;
-                    else
-                        return sampler.arrayed ? GL_UNSIGNED_INT_SAMPLER_2D_ARRAY : GL_UNSIGNED_INT_SAMPLER_2D;
+                    switch ((int)sampler.ms) {
+                    case false:  return sampler.arrayed ? GL_UNSIGNED_INT_SAMPLER_2D_ARRAY : GL_UNSIGNED_INT_SAMPLER_2D;
+                    case true:   return sampler.arrayed ? GL_UNSIGNED_INT_SAMPLER_2D_MULTISAMPLE_ARRAY
+                                                        : GL_UNSIGNED_INT_SAMPLER_2D_MULTISAMPLE;
+                    }
                 case Esd3D:
                     return GL_UNSIGNED_INT_SAMPLER_3D;
                 case EsdCube:
@@ -800,8 +796,6 @@ public:
                     return GL_UNSIGNED_INT_SAMPLER_2D_RECT;
                 case EsdBuffer:
                     return GL_UNSIGNED_INT_SAMPLER_BUFFER;
-                default:
-                    return 0;
                 }
             default:
                 return 0;
@@ -814,10 +808,10 @@ public:
                 case Esd1D:
                     return sampler.arrayed ? GL_IMAGE_1D_ARRAY : GL_IMAGE_1D;
                 case Esd2D:
-                    if (sampler.ms)
-                        return sampler.arrayed ? GL_IMAGE_2D_MULTISAMPLE_ARRAY : GL_IMAGE_2D_MULTISAMPLE;
-                    else
-                        return sampler.arrayed ? GL_IMAGE_2D_ARRAY : GL_IMAGE_2D;
+                    switch ((int)sampler.ms) {
+                    case false:     return sampler.arrayed ? GL_IMAGE_2D_ARRAY : GL_IMAGE_2D;
+                    case true:      return sampler.arrayed ? GL_IMAGE_2D_MULTISAMPLE_ARRAY : GL_IMAGE_2D_MULTISAMPLE;
+                    }
                 case Esd3D:
                     return GL_IMAGE_3D;
                 case EsdCube:
@@ -826,18 +820,16 @@ public:
                     return GL_IMAGE_2D_RECT;
                 case EsdBuffer:
                     return GL_IMAGE_BUFFER;
-                default:
-                    return 0;
                 }
             case EbtFloat16:
                 switch ((int)sampler.dim) {
                 case Esd1D:
                     return sampler.arrayed ? GL_FLOAT16_IMAGE_1D_ARRAY_AMD : GL_FLOAT16_IMAGE_1D_AMD;
                 case Esd2D:
-                    if (sampler.ms)
-                        return sampler.arrayed ? GL_FLOAT16_IMAGE_2D_MULTISAMPLE_ARRAY_AMD : GL_FLOAT16_IMAGE_2D_MULTISAMPLE_AMD;
-                    else
-                        return sampler.arrayed ? GL_FLOAT16_IMAGE_2D_ARRAY_AMD : GL_FLOAT16_IMAGE_2D_AMD;
+                    switch ((int)sampler.ms) {
+                    case false:     return sampler.arrayed ? GL_FLOAT16_IMAGE_2D_ARRAY_AMD : GL_FLOAT16_IMAGE_2D_AMD;
+                    case true:      return sampler.arrayed ? GL_FLOAT16_IMAGE_2D_MULTISAMPLE_ARRAY_AMD : GL_FLOAT16_IMAGE_2D_MULTISAMPLE_AMD;
+                    }
                 case Esd3D:
                     return GL_FLOAT16_IMAGE_3D_AMD;
                 case EsdCube:
@@ -846,18 +838,16 @@ public:
                     return GL_FLOAT16_IMAGE_2D_RECT_AMD;
                 case EsdBuffer:
                     return GL_FLOAT16_IMAGE_BUFFER_AMD;
-                default:
-                    return 0;
                 }
             case EbtInt:
                 switch ((int)sampler.dim) {
                 case Esd1D:
                     return sampler.arrayed ? GL_INT_IMAGE_1D_ARRAY : GL_INT_IMAGE_1D;
                 case Esd2D:
-                    if (sampler.ms)
-                        return sampler.arrayed ? GL_INT_IMAGE_2D_MULTISAMPLE_ARRAY : GL_INT_IMAGE_2D_MULTISAMPLE;
-                    else
-                        return sampler.arrayed ? GL_INT_IMAGE_2D_ARRAY : GL_INT_IMAGE_2D;
+                    switch ((int)sampler.ms) {
+                    case false:  return sampler.arrayed ? GL_INT_IMAGE_2D_ARRAY : GL_INT_IMAGE_2D;
+                    case true:   return sampler.arrayed ? GL_INT_IMAGE_2D_MULTISAMPLE_ARRAY : GL_INT_IMAGE_2D_MULTISAMPLE;
+                    }
                 case Esd3D:
                     return GL_INT_IMAGE_3D;
                 case EsdCube:
@@ -866,19 +856,17 @@ public:
                     return GL_INT_IMAGE_2D_RECT;
                 case EsdBuffer:
                     return GL_INT_IMAGE_BUFFER;
-                default:
-                    return 0;
                 }
             case EbtUint:
                 switch ((int)sampler.dim) {
                 case Esd1D:
                     return sampler.arrayed ? GL_UNSIGNED_INT_IMAGE_1D_ARRAY : GL_UNSIGNED_INT_IMAGE_1D;
                 case Esd2D:
-                    if (sampler.ms)
-                        return sampler.arrayed ? GL_UNSIGNED_INT_IMAGE_2D_MULTISAMPLE_ARRAY
-                                               : GL_UNSIGNED_INT_IMAGE_2D_MULTISAMPLE;
-                    else
-                        return sampler.arrayed ? GL_UNSIGNED_INT_IMAGE_2D_ARRAY : GL_UNSIGNED_INT_IMAGE_2D;
+                    switch ((int)sampler.ms) {
+                    case false:  return sampler.arrayed ? GL_UNSIGNED_INT_IMAGE_2D_ARRAY : GL_UNSIGNED_INT_IMAGE_2D;
+                    case true:   return sampler.arrayed ? GL_UNSIGNED_INT_IMAGE_2D_MULTISAMPLE_ARRAY
+                                                        : GL_UNSIGNED_INT_IMAGE_2D_MULTISAMPLE;
+                    }
                 case Esd3D:
                     return GL_UNSIGNED_INT_IMAGE_3D;
                 case EsdCube:
@@ -887,8 +875,6 @@ public:
                     return GL_UNSIGNED_INT_IMAGE_2D_RECT;
                 case EsdBuffer:
                     return GL_UNSIGNED_INT_IMAGE_BUFFER;
-                default:
-                    return 0;
                 }
             default:
                 return 0;
@@ -953,7 +939,6 @@ public:
                     case 4:    return GL_FLOAT_MAT4;
                     default:   return 0;
                     }
-                default: return 0;
                 }
             case EbtDouble:
                 switch (type.getMatrixCols()) {
@@ -978,7 +963,6 @@ public:
                     case 4:    return GL_DOUBLE_MAT4;
                     default:   return 0;
                     }
-                default: return 0;
                 }
             case EbtFloat16:
                 switch (type.getMatrixCols()) {
@@ -1003,7 +987,6 @@ public:
                     case 4:    return GL_FLOAT16_MAT4_AMD;
                     default:   return 0;
                     }
-                default: return 0;
                 }
             default:
                 return 0;
@@ -1287,3 +1270,5 @@ void TReflection::dump()
 }
 
 } // end namespace glslang
+
+#endif // !GLSLANG_WEB && !GLSLANG_ANGLE

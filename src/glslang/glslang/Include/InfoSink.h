@@ -36,7 +36,6 @@
 #define _INFOSINK_INCLUDED_
 
 #include "../Include/Common.h"
-#include <filesystem>
 #include <cmath>
 
 namespace glslang {
@@ -68,7 +67,7 @@ enum TOutputStream {
 //
 class TInfoSinkBase {
 public:
-    TInfoSinkBase() : outputStream(4), shaderFileName(nullptr) {}
+    TInfoSinkBase() : outputStream(4) {}
     void erase() { sink.erase(); }
     TInfoSinkBase& operator<<(const TPersistString& t) { append(t); return *this; }
     TInfoSinkBase& operator<<(char c)                  { append(1, c); return *this; }
@@ -95,26 +94,11 @@ public:
         default:                   append("UNKNOWN ERROR: ");   break;
         }
     }
-    void location(const TSourceLoc& loc, bool absolute = false, bool displayColumn = false) {
+    void location(const TSourceLoc& loc) {
         const int maxSize = 24;
         char locText[maxSize];
-        if (displayColumn) {
-            snprintf(locText, maxSize, ":%d:%d", loc.line, loc.column);
-        } else {
-            snprintf(locText, maxSize, ":%d", loc.line);
-        }
-
-        if(loc.getFilename() == nullptr && shaderFileName != nullptr && absolute) {
-            append(std::filesystem::absolute(shaderFileName).string());
-        } else {
-            std::string location = loc.getStringNameOrNum(false);
-            if (absolute) {
-                append(std::filesystem::absolute(location).string());
-            } else {
-                append(location);
-            }
-        }
-
+        snprintf(locText, maxSize, ":%d", loc.line);
+        append(loc.getStringNameOrNum(false).c_str());
         append(locText);
         append(": ");
     }
@@ -123,11 +107,9 @@ public:
         append(s);
         append("\n");
     }
-    void message(TPrefixType message, const char* s, const TSourceLoc& loc, bool absolute = false,
-                 bool displayColumn = false)
-    {
+    void message(TPrefixType message, const char* s, const TSourceLoc& loc) {
         prefix(message);
-        location(loc, absolute, displayColumn);
+        location(loc);
         append(s);
         append("\n");
     }
@@ -135,11 +117,6 @@ public:
     void setOutputStream(int output = 4)
     {
         outputStream = output;
-    }
-
-    void setShaderFileName(const char* file = nullptr)
-    {
-        shaderFileName = file;
     }
 
 protected:
@@ -154,7 +131,6 @@ protected:
     void appendToStream(const char* s);
     TPersistString sink;
     int outputStream;
-    const char* shaderFileName;
 };
 
 } // end namespace glslang

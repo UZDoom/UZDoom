@@ -19,10 +19,6 @@ void VulkanError(const char* message)
 
 #ifdef WIN32
 
-#define NOMINMAX
-#define WIN32_MEAN_AND_LEAN
-#include <Windows.h>
-
 #pragma comment(linker,"/manifestdependency:\"type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' processorArchitecture='*' publicKeyToken='6595b64144ccf1df' language='*'\"")
 
 bool exitFlag;
@@ -65,23 +61,14 @@ int APIENTRY WinMain(HINSTANCE hInst, HINSTANCE hInstPrev, PSTR cmdline, int cmd
 
 		// Create vulkan instance
 		auto instance = VulkanInstanceBuilder()
-			.RequireExtension(VK_KHR_SURFACE_EXTENSION_NAME)
-			.RequireExtension(VK_KHR_WIN32_SURFACE_EXTENSION_NAME)
-			.DebugLayer(true)
+			.RequireSurfaceExtensions()
+			.DebugLayer(false)
 			.Create();
 
 		// Create a surface for our window
-		
-		VkWin32SurfaceCreateInfoKHR createInfo = { VK_STRUCTURE_TYPE_WIN32_SURFACE_CREATE_INFO_KHR };
-		createInfo.hwnd = hwnd;
-		createInfo.hinstance = GetModuleHandle(nullptr);
-
-		VkSurfaceKHR surfaceHandle = {};
-		VkResult vkresult = vkCreateWin32SurfaceKHR(instance->Instance, &createInfo, nullptr, &surfaceHandle);
-		if (vkresult != VK_SUCCESS)
-			throw std::runtime_error("Could not create vulkan surface");
-
-		auto surface = std::make_shared<VulkanSurface>(instance, surfaceHandle);
+		auto surface = VulkanSurfaceBuilder()
+			.Win32Window(hwnd)
+			.Create(instance);
 
 		// Create the vulkan device
 		auto device = VulkanDeviceBuilder()
@@ -197,26 +184,29 @@ int APIENTRY WinMain(HINSTANCE hInst, HINSTANCE hInstPrev, PSTR cmdline, int cmd
 
 		// Create a vertex shader
 
-		auto vertexShader = GLSLCompiler()
+		auto vertexShader = ShaderBuilder()
 			.Type(ShaderType::Vertex)
 			.AddSource("versionblock", versionBlock)
 			.AddSource("vertexCode.glsl", vertexCode)
 			.OnIncludeLocal([=](auto headerName, auto includerName, size_t depth) { if (headerName == "uniforms.glsl") return ShaderIncludeResult(headerName, includedCode); else return ShaderIncludeResult("File not found: " + headerName); })
-			.Compile(device.get());
+			.DebugName("vertexShader")
+			.Create("vertex", device.get());
 
 		// Create fragment shaders
 
-		auto fragmentShaderNoTex = GLSLCompiler()
+		auto fragmentShaderNoTex = ShaderBuilder()
 			.Type(ShaderType::Fragment)
 			.AddSource("versionblock", versionBlock)
 			.AddSource("fragmentShaderNoTexCode.glsl", fragmentShaderNoTexCode)
-			.Compile(device.get());
+			.DebugName("fragmentShaderNoTex")
+			.Create("fragmentShaderNoTex", device.get());
 
-		auto fragmentShaderTextured = GLSLCompiler()
+		auto fragmentShaderTextured = ShaderBuilder()
 			.Type(ShaderType::Fragment)
 			.AddSource("versionblock", versionBlock)
 			.AddSource("fragmentShaderTexturedCode.glsl", fragmentShaderTexturedCode)
-			.Compile(device.get());
+			.DebugName("fragmentShaderTextured")
+			.Create("fragmentShaderTextured", device.get());
 
 		// Create descriptor set layouts
 
@@ -230,7 +220,7 @@ int APIENTRY WinMain(HINSTANCE hInst, HINSTANCE hInstPrev, PSTR cmdline, int cmd
 			.DebugName("textureSetLayout")
 			.Create(device.get());
 
-		// Create pipeline layouts
+		// Create a pipeline layouts
 
 		auto pipelineLayoutNoTex = PipelineLayoutBuilder()
 			.AddSetLayout(uniformSetLayout.get())
@@ -251,83 +241,31 @@ int APIENTRY WinMain(HINSTANCE hInst, HINSTANCE hInstPrev, PSTR cmdline, int cmd
 			.AddSubpassColorAttachmentRef(0, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL)
 			.Create(device.get());
 
-		// Create pipelines
+		// Create pipelines (which shaders to use, blending rules, etc.)
 
-		std::unique_ptr<VulkanPipeline> libraryNoTex, libraryBlend;
-		std::unique_ptr<VulkanPipeline> pipelineNoTex, pipelineTextured;
+		auto pipelineNoTex = GraphicsPipelineBuilder()
+			.RenderPass(renderPass.get())
+			.Layout(pipelineLayoutNoTex.get())
+			.AddVertexBufferBinding(0, sizeof(Vertex))
+			.AddVertexAttribute(0, 0, VK_FORMAT_R32G32B32_SFLOAT, offsetof(Vertex, x))
+			.AddVertexAttribute(1, 0, VK_FORMAT_R32G32_SFLOAT, offsetof(Vertex, u))
+			.AddVertexAttribute(2, 0, VK_FORMAT_R32G32B32A32_SFLOAT, offsetof(Vertex, r))
+			.AddVertexShader(vertexShader.get())
+			.AddFragmentShader(fragmentShaderNoTex.get())
+			.AddDynamicState(VK_DYNAMIC_STATE_VIEWPORT)
+			.AddDynamicState(VK_DYNAMIC_STATE_SCISSOR)
+			.DebugName("pipelineNoTex")
+			.Create(device.get());
 
-		// Can we use pipeline libraries?
-
-		if (device->EnabledFeatures.GraphicsPipelineLibrary.graphicsPipelineLibrary)
-		{
-			libraryNoTex = GraphicsPipelineBuilder()
-				.RenderPass(renderPass.get())
-				.Layout(pipelineLayoutNoTex.get())
-				.Flags(
-					VK_PIPELINE_CREATE_LIBRARY_BIT_KHR |
-					VK_PIPELINE_CREATE_RETAIN_LINK_TIME_OPTIMIZATION_INFO_BIT_EXT)
-				.LibraryFlags(
-					VK_GRAPHICS_PIPELINE_LIBRARY_VERTEX_INPUT_INTERFACE_BIT_EXT |
-					VK_GRAPHICS_PIPELINE_LIBRARY_PRE_RASTERIZATION_SHADERS_BIT_EXT |
-					VK_GRAPHICS_PIPELINE_LIBRARY_FRAGMENT_SHADER_BIT_EXT)
-				.AddVertexBufferBinding(0, sizeof(Vertex))
-				.AddVertexAttribute(0, 0, VK_FORMAT_R32G32B32_SFLOAT, offsetof(Vertex, x))
-				.AddVertexAttribute(1, 0, VK_FORMAT_R32G32_SFLOAT, offsetof(Vertex, u))
-				.AddVertexAttribute(2, 0, VK_FORMAT_R32G32B32A32_SFLOAT, offsetof(Vertex, r))
-				.AddVertexShader(vertexShader)
-				.AddFragmentShader(fragmentShaderNoTex)
-				.AddDynamicState(VK_DYNAMIC_STATE_VIEWPORT)
-				.AddDynamicState(VK_DYNAMIC_STATE_SCISSOR)
-				.DebugName("libraryNoTex")
-				.Create(device.get());
-
-			libraryBlend = GraphicsPipelineBuilder()
-				.RenderPass(renderPass.get())
-				.Layout(pipelineLayoutNoTex.get())
-				.Flags(
-					VK_PIPELINE_CREATE_LIBRARY_BIT_KHR |
-					VK_PIPELINE_CREATE_RETAIN_LINK_TIME_OPTIMIZATION_INFO_BIT_EXT)
-				.LibraryFlags(
-					VK_GRAPHICS_PIPELINE_LIBRARY_FRAGMENT_OUTPUT_INTERFACE_BIT_EXT)
-				.AddColorBlendAttachment(ColorBlendAttachmentBuilder()
-					.AlphaBlendMode()
-					.Create())
-				.DebugName("libraryNoTex")
-				.Create(device.get());
-
-			pipelineNoTex = GraphicsPipelineBuilder()
-				.Flags(VK_PIPELINE_CREATE_LINK_TIME_OPTIMIZATION_BIT_EXT)
-				.AddLibrary(libraryNoTex.get())
-				.AddLibrary(libraryBlend.get())
-				.DebugName("pipelineNoTex")
-				.Create(device.get());
-		}
-		else
-		{
-			pipelineNoTex = GraphicsPipelineBuilder()
-				.RenderPass(renderPass.get())
-				.Layout(pipelineLayoutNoTex.get())
-				.AddVertexBufferBinding(0, sizeof(Vertex))
-				.AddVertexAttribute(0, 0, VK_FORMAT_R32G32B32_SFLOAT, offsetof(Vertex, x))
-				.AddVertexAttribute(1, 0, VK_FORMAT_R32G32_SFLOAT, offsetof(Vertex, u))
-				.AddVertexAttribute(2, 0, VK_FORMAT_R32G32B32A32_SFLOAT, offsetof(Vertex, r))
-				.AddVertexShader(vertexShader)
-				.AddFragmentShader(fragmentShaderNoTex)
-				.AddDynamicState(VK_DYNAMIC_STATE_VIEWPORT)
-				.AddDynamicState(VK_DYNAMIC_STATE_SCISSOR)
-				.DebugName("pipelineNoTex")
-				.Create(device.get());
-		}
-
-		pipelineTextured = GraphicsPipelineBuilder()
+		auto pipelineTextured = GraphicsPipelineBuilder()
 			.RenderPass(renderPass.get())
 			.Layout(pipelineLayoutTextured.get())
 			.AddVertexBufferBinding(0, sizeof(Vertex))
 			.AddVertexAttribute(0, 0, VK_FORMAT_R32G32B32_SFLOAT, offsetof(Vertex, x))
 			.AddVertexAttribute(1, 0, VK_FORMAT_R32G32_SFLOAT, offsetof(Vertex, u))
 			.AddVertexAttribute(2, 0, VK_FORMAT_R32G32B32A32_SFLOAT, offsetof(Vertex, r))
-			.AddVertexShader(vertexShader)
-			.AddFragmentShader(fragmentShaderTextured)
+			.AddVertexShader(vertexShader.get())
+			.AddFragmentShader(fragmentShaderTextured.get())
 			.AddDynamicState(VK_DYNAMIC_STATE_VIEWPORT)
 			.AddDynamicState(VK_DYNAMIC_STATE_SCISSOR)
 			.DebugName("pipelineTextured")
@@ -504,7 +442,7 @@ int APIENTRY WinMain(HINSTANCE hInst, HINSTANCE hInstPrev, PSTR cmdline, int cmd
 				lastHeight = height;
 				framebuffers.clear();
 
-				swapchain->Create(width, height, 1, true, false);
+				swapchain->Create(width, height, 1, true, false, false);
 
 				// Create frame buffer objects for the new swap chain images
 				for (int imageIndex = 0; imageIndex < swapchain->ImageCount(); imageIndex++)

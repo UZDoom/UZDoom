@@ -11,7 +11,7 @@ VulkanInstance::VulkanInstance(std::vector<uint32_t> apiVersionsToTry, std::set<
 {
 	try
 	{
-		GLSLCompiler::Init();
+		ShaderBuilder::Init();
 		InitVolk();
 		CreateInstance();
 	}
@@ -65,68 +65,12 @@ void VulkanInstance::CreateInstance()
 		{
 			if (layer.layerName == debugLayer)
 			{
-				EnabledLayers.insert(layer.layerName);
+				EnabledValidationLayers.insert(layer.layerName);
 				EnabledExtensions.insert(VK_EXT_DEBUG_UTILS_EXTENSION_NAME);
 				debugLayerFound = true;
 				break;
 			}
 		}
-	}
-
-	// Are we running on Apple's horrible platform?
-	std::string moltenVKLayer = "MoltenVK"; // kMVKMoltenVKDriverLayerName
-	bool moltenVKLayerFound = false;
-	for (const VkLayerProperties& layer : AvailableLayers)
-	{
-		if (layer.layerName == moltenVKLayer)
-		{
-			EnabledLayers.insert(layer.layerName);
-			EnabledExtensions.insert("VK_EXT_layer_settings");
-			moltenVKLayerFound = true;
-			break;
-		}
-	}
-
-	// Provided by VK_EXT_layer_settings (not sure why volk doesn't have this...)
-	enum VkLayerSettingTypeEXT
-	{
-		VK_LAYER_SETTING_TYPE_BOOL32_EXT = 0,
-		VK_LAYER_SETTING_TYPE_INT32_EXT = 1,
-		VK_LAYER_SETTING_TYPE_INT64_EXT = 2,
-		VK_LAYER_SETTING_TYPE_UINT32_EXT = 3,
-		VK_LAYER_SETTING_TYPE_UINT64_EXT = 4,
-		VK_LAYER_SETTING_TYPE_FLOAT32_EXT = 5,
-		VK_LAYER_SETTING_TYPE_FLOAT64_EXT = 6,
-		VK_LAYER_SETTING_TYPE_STRING_EXT = 7,
-	};
-	struct VkLayerSettingEXT
-	{
-		const char* pLayerName;
-		const char* pSettingName;
-		VkLayerSettingTypeEXT type;
-		uint32_t valueCount;
-		const void* pValues;
-	};
-	struct VkLayerSettingsCreateInfoEXT
-	{
-		VkStructureType sType;
-		const void* pNext;
-		uint32_t settingCount;
-		const VkLayerSettingEXT* pSettings;
-	};
-	const VkStructureType VK_STRUCTURE_TYPE_LAYER_SETTINGS_CREATE_INFO_EXT = (VkStructureType)1000496000;
-
-	std::vector<VkLayerSettingEXT> layersettings;
-	int32_t mkvalue2 = 2;
-	if (moltenVKLayerFound)
-	{
-		VkLayerSettingEXT setting = {};
-		setting.pLayerName = "MoltenVK";
-		setting.pSettingName = "MVK_CONFIG_USE_METAL_ARGUMENT_BUFFERS";
-		setting.type = VK_LAYER_SETTING_TYPE_INT32_EXT;
-		setting.valueCount = 1;
-		setting.pValues = &mkvalue2; // Use Metal Argument Buffers only if the VK_EXT_descriptor_indexing extension is enabled
-		layersettings.push_back(setting);
 	}
 
 	// Enable optional instance extensions we are interested in
@@ -138,9 +82,9 @@ void VulkanInstance::CreateInstance()
 		}
 	}
 
-	std::vector<const char*> enabledLayersCStr;
-	for (const std::string& layer : EnabledLayers)
-		enabledLayersCStr.push_back(layer.c_str());
+	std::vector<const char*> enabledValidationLayersCStr;
+	for (const std::string& layer : EnabledValidationLayers)
+		enabledValidationLayersCStr.push_back(layer.c_str());
 
 	std::vector<const char*> enabledExtensionsCStr;
 	for (const std::string& ext : EnabledExtensions)
@@ -162,15 +106,9 @@ void VulkanInstance::CreateInstance()
 		createInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
 		createInfo.pApplicationInfo = &appInfo;
 		createInfo.enabledExtensionCount = (uint32_t)EnabledExtensions.size();
-		createInfo.enabledLayerCount = (uint32_t)enabledLayersCStr.size();
-		createInfo.ppEnabledLayerNames = enabledLayersCStr.data();
+		createInfo.enabledLayerCount = (uint32_t)enabledValidationLayersCStr.size();
+		createInfo.ppEnabledLayerNames = enabledValidationLayersCStr.data();
 		createInfo.ppEnabledExtensionNames = enabledExtensionsCStr.data();
-
-		VkLayerSettingsCreateInfoEXT layerSettingsInfo = { VK_STRUCTURE_TYPE_LAYER_SETTINGS_CREATE_INFO_EXT };
-		layerSettingsInfo.settingCount = (uint32_t)layersettings.size();
-		layerSettingsInfo.pSettings = layersettings.data();
-		if (moltenVKLayerFound)
-			createInfo.pNext = &layerSettingsInfo;
 
 		result = vkCreateInstance(&createInfo, nullptr, &Instance);
 		if (result >= VK_SUCCESS)
@@ -267,18 +205,12 @@ std::vector<VulkanPhysicalDevice> VulkanInstance::GetPhysicalDevices(VkInstance 
 				*next = &dev.Properties.LayeredDriver;
 				next = &dev.Properties.LayeredDriver.pNext;
 			}
-			if (checkForExtension(VK_EXT_GRAPHICS_PIPELINE_LIBRARY_EXTENSION_NAME))
-			{
-				*next = &dev.Properties.GraphicsPipelineLibrary;
-				next = &dev.Properties.GraphicsPipelineLibrary.pNext;
-			}
 
 			vkGetPhysicalDeviceProperties2(dev.Device, &deviceProperties2);
 			dev.Properties.Properties = deviceProperties2.properties;
 			dev.Properties.AccelerationStructure.pNext = nullptr;
 			dev.Properties.DescriptorIndexing.pNext = nullptr;
 			dev.Properties.LayeredDriver.pNext = nullptr;
-			dev.Properties.GraphicsPipelineLibrary.pNext = nullptr;
 
 			VkPhysicalDeviceFeatures2 deviceFeatures2 = { VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_FEATURES_2 };
 
@@ -303,16 +235,6 @@ std::vector<VulkanPhysicalDevice> VulkanInstance::GetPhysicalDevices(VkInstance 
 				*next = &dev.Features.DescriptorIndexing;
 				next = &dev.Features.DescriptorIndexing.pNext;
 			}
-			if (checkForExtension(VK_EXT_DEVICE_FAULT_EXTENSION_NAME))
-			{
-				*next = &dev.Features.Fault;
-				next = &dev.Features.Fault.pNext;
-			}
-			if (checkForExtension(VK_EXT_GRAPHICS_PIPELINE_LIBRARY_EXTENSION_NAME))
-			{
-				*next = &dev.Features.GraphicsPipelineLibrary;
-				next = &dev.Features.GraphicsPipelineLibrary.pNext;
-			}
 
 			vkGetPhysicalDeviceFeatures2(dev.Device, &deviceFeatures2);
 			dev.Features.Features = deviceFeatures2.features;
@@ -320,8 +242,6 @@ std::vector<VulkanPhysicalDevice> VulkanInstance::GetPhysicalDevices(VkInstance 
 			dev.Features.AccelerationStructure.pNext = nullptr;
 			dev.Features.RayQuery.pNext = nullptr;
 			dev.Features.DescriptorIndexing.pNext = nullptr;
-			dev.Features.Fault.pNext = nullptr;
-			dev.Features.GraphicsPipelineLibrary.pNext = nullptr;
 		}
 		else
 		{
@@ -369,12 +289,9 @@ VkBool32 VulkanInstance::DebugCallback(VkDebugUtilsMessageSeverityFlagBitsEXT me
 	if (parts.size() == 3)
 	{
 		msg = parts[2];
-		size_t pos = msg.find("The Vulkan spec states:");
+		size_t pos = msg.find(" The Vulkan spec states:");
 		if (pos != std::string::npos)
 			msg = msg.substr(0, pos);
-
-		while (!msg.empty() && (msg.back() == '\n' || msg.back() == '\r' || msg.back() == ' '))
-			msg.pop_back();
 
 		if (callbackData->objectCount > 0)
 		{

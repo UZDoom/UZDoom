@@ -35,11 +35,12 @@
 
 #pragma once
 
+#ifndef GLSLANG_WEB
+
 //
 // GL_EXT_spirv_intrinsics
 //
 #include "Common.h"
-#include <variant>
 
 namespace glslang {
 
@@ -64,7 +65,7 @@ struct TSpirvExecutionMode {
     // spirv_execution_mode
     TMap<int, TVector<const TIntermConstantUnion*>> modes;
     // spirv_execution_mode_id
-    TMap<int, TVector<const TIntermTyped*> > modeIds;
+    TMap<int, TVector<const TIntermConstantUnion*> > modeIds;
 };
 
 // SPIR-V decorations
@@ -74,7 +75,7 @@ struct TSpirvDecorate {
     // spirv_decorate
     TMap<int, TVector<const TIntermConstantUnion*> > decorates;
     // spirv_decorate_id
-    TMap<int, TVector<const TIntermTyped*>> decorateIds;
+    TMap<int, TVector<const TIntermConstantUnion*> > decorateIds;
     // spirv_decorate_string
     TMap<int, TVector<const TIntermConstantUnion*> > decorateStrings;
 };
@@ -97,27 +98,20 @@ struct TSpirvInstruction {
 struct TSpirvTypeParameter {
     POOL_ALLOCATOR_NEW_DELETE(GetThreadPoolAllocator())
 
-    TSpirvTypeParameter(const TIntermConstantUnion* arg) { value = arg; }
-    TSpirvTypeParameter(const TType* arg) { value = arg; }
+    TSpirvTypeParameter(const TIntermConstantUnion* arg) { isConstant = true; constant = arg; }
+    TSpirvTypeParameter(const TType* arg) { isConstant = false; type = arg; }
 
-    const TIntermConstantUnion* getAsConstant() const
+    bool operator==(const TSpirvTypeParameter& rhs) const
     {
-        if (value.index() == 0)
-            return std::get<const TIntermConstantUnion*>(value);
-        return nullptr;
+        return isConstant == rhs.isConstant && ((isConstant && constant == rhs.constant) || (!isConstant && type == rhs.type));
     }
-    const TType* getAsType() const
-    {
-        if (value.index() == 1)
-            return std::get<const TType*>(value);
-        return nullptr;
-    }
-
-    bool operator==(const TSpirvTypeParameter& rhs) const;
     bool operator!=(const TSpirvTypeParameter& rhs) const { return !operator==(rhs); }
 
-    // Parameter value: constant expression or type specifier
-    std::variant<const TIntermConstantUnion*, const TType*> value;
+    bool isConstant;
+    union {
+        const TIntermConstantUnion* constant;
+        const TType* type;
+    };
 };
 
 typedef TVector<TSpirvTypeParameter> TSpirvTypeParameters;
@@ -138,3 +132,5 @@ struct TSpirvType {
 };
 
 } // end namespace glslang
+
+#endif // GLSLANG_WEB
