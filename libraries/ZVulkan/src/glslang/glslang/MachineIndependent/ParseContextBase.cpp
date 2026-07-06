@@ -59,7 +59,7 @@ void TParseContextBase::outputMessage(const TSourceLoc& loc, const char* szReaso
     safe_vsprintf(szExtraInfo, maxSize, szExtraInfoFormat, args);
 
     infoSink.info.prefix(prefix);
-    infoSink.info.location(loc, messages & EShMsgAbsolutePath, messages & EShMsgDisplayErrorColumn);
+    infoSink.info.location(loc);
     infoSink.info << "'" << szToken <<  "' : " << szReason << " " << szExtraInfo << "\n";
 
     if (prefix == EPrefixError) {
@@ -67,13 +67,12 @@ void TParseContextBase::outputMessage(const TSourceLoc& loc, const char* szReaso
     }
 }
 
+#if !defined(GLSLANG_WEB) || defined(GLSLANG_WEB_DEVEL)
+
 void C_DECL TParseContextBase::error(const TSourceLoc& loc, const char* szReason, const char* szToken,
                                      const char* szExtraInfoFormat, ...)
 {
     if (messages & EShMsgOnlyPreprocessor)
-        return;
-    // If enhanced msg readability, only print one error
-    if (messages & EShMsgEnhanced && numErrors > 0)
         return;
     va_list args;
     va_start(args, szExtraInfoFormat);
@@ -116,6 +115,8 @@ void C_DECL TParseContextBase::ppWarn(const TSourceLoc& loc, const char* szReaso
     va_end(args);
 }
 
+#endif
+
 //
 // Both test and if necessary, spit out an error, to see if the node is really
 // an l-value that can be operated on this way.
@@ -136,6 +137,7 @@ bool TParseContextBase::lValueErrorCheck(const TSourceLoc& loc, const char* op, 
     case EvqConst:          message = "can't modify a const";        break;
     case EvqConstReadOnly:  message = "can't modify a const";        break;
     case EvqUniform:        message = "can't modify a uniform";      break;
+#ifndef GLSLANG_WEB
     case EvqBuffer:
         if (node->getQualifier().isReadOnly())
             message = "can't modify a readonly buffer";
@@ -146,6 +148,7 @@ bool TParseContextBase::lValueErrorCheck(const TSourceLoc& loc, const char* op, 
         if (language != EShLangIntersect)
             message = "cannot modify hitAttributeNV in this stage";
         break;
+#endif
 
     default:
         //
@@ -153,12 +156,12 @@ bool TParseContextBase::lValueErrorCheck(const TSourceLoc& loc, const char* op, 
         //
         switch (node->getBasicType()) {
         case EbtSampler:
-            if (extensionTurnedOn(E_GL_ARB_bindless_texture) == false)
-                message = "can't modify a sampler";
+            message = "can't modify a sampler";
             break;
         case EbtVoid:
             message = "can't modify void";
             break;
+#ifndef GLSLANG_WEB
         case EbtAtomicUint:
             message = "can't modify an atomic_uint";
             break;
@@ -168,9 +171,7 @@ bool TParseContextBase::lValueErrorCheck(const TSourceLoc& loc, const char* op, 
         case EbtRayQuery:
             message = "can't modify rayQueryEXT";
             break;
-        case EbtHitObjectNV:
-            message = "can't modify hitObjectNV";
-            break;
+#endif
         default:
             break;
         }
@@ -208,7 +209,7 @@ bool TParseContextBase::lValueErrorCheck(const TSourceLoc& loc, const char* op, 
     //
     // If we get here, we have an error and a message.
     //
-    const TIntermTyped* leftMostTypeNode = TIntermediate::traverseLValueBase(node, true);
+    const TIntermTyped* leftMostTypeNode = TIntermediate::findLValueBase(node, true);
 
     if (symNode)
         error(loc, " l-value required", op, "\"%s\" (%s)", symbol, message);
@@ -227,14 +228,14 @@ bool TParseContextBase::lValueErrorCheck(const TSourceLoc& loc, const char* op, 
 // Test for and give an error if the node can't be read from.
 void TParseContextBase::rValueErrorCheck(const TSourceLoc& loc, const char* op, TIntermTyped* node)
 {
-    if (! node)
-        return;
-
     TIntermBinary* binaryNode = node->getAsBinaryNode();
     const TIntermSymbol* symNode = node->getAsSymbolNode();
 
+    if (! node)
+        return;
+
     if (node->getQualifier().isWriteOnly()) {
-        const TIntermTyped* leftMostTypeNode = TIntermediate::traverseLValueBase(node, true);
+        const TIntermTyped* leftMostTypeNode = TIntermediate::findLValueBase(node, true);
 
         if (symNode != nullptr)
             error(loc, "can't read from writeonly object: ", op, symNode->getName().c_str());
@@ -257,7 +258,6 @@ void TParseContextBase::rValueErrorCheck(const TSourceLoc& loc, const char* op, 
             case EOpVectorSwizzle:
             case EOpMatrixSwizzle:
                 rValueErrorCheck(loc, op, binaryNode->getLeft());
-                break;
             default:
                 break;
             }
@@ -304,11 +304,6 @@ void TParseContextBase::checkIndex(const TSourceLoc& loc, const TType& type, int
         if (index >= type.getMatrixCols()) {
             error(loc, "", "[", "matrix index out of range '%d'", index);
             index = type.getMatrixCols() - 1;
-        }
-    } else if (type.isCoopVecNV()) {
-        if (index >= type.computeNumComponents()) {
-            error(loc, "", "[", "cooperative vector index out of range '%d'", index);
-            index = type.computeNumComponents() - 1;
         }
     }
 }
@@ -627,17 +622,6 @@ void TParseContextBase::growGlobalUniformBlock(const TSourceLoc& loc, TType& mem
     globalUniformBlock->getWritableType().getQualifier().layoutBinding = globalUniformBinding;
     globalUniformBlock->getWritableType().getQualifier().layoutSet = globalUniformSet;
 
-    // Check for declarations of this default uniform that already exist due to other compilation units.
-    TSymbol* symbol = symbolTable.find(memberName);
-    if (symbol) {
-        if (memberType != symbol->getType()) {
-            TString err;
-            err += "Redeclaration: already declared as \"" + symbol->getType().getCompleteString() + "\"";
-            error(loc, "", memberName.c_str(), err.c_str());
-        }
-        return;
-    }
-
     // Add the requested member as a member to the global block.
     TType* type = new TType;
     type->shallowCopy(memberType);
@@ -727,24 +711,6 @@ void TParseContextBase::finish()
 {
     if (parsingBuiltins)
         return;
-
-    for (const TString& relaxedSymbol : relaxedSymbols)
-    {
-        TSymbol* symbol = symbolTable.find(relaxedSymbol);
-        TType& type = symbol->getWritableType();
-        for (const TTypeLoc& typeLoc : *type.getStruct())
-        {
-            if (typeLoc.type->isOpaque())
-            {
-                typeLoc.type->getSampler() = TSampler{};
-                typeLoc.type->setBasicType(EbtInt);
-                TString fieldName("/*");
-                fieldName.append(typeLoc.type->getFieldName());
-                fieldName.append("*/");
-                typeLoc.type->setFieldName(fieldName);
-            }
-        }
-    }
 
     // Transfer the linkage symbols to AST nodes, preserving order.
     TIntermAggregate* linkage = new TIntermAggregate;

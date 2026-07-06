@@ -1,6 +1,12 @@
 #pragma once
 
-#include "vulkan.h"
+#if defined(_WIN32)
+#define VK_USE_PLATFORM_WIN32_KHR
+#elif defined(__APPLE__)
+#define VK_USE_PLATFORM_MACOS_MVK
+#define VK_USE_PLATFORM_METAL_EXT
+#endif
+
 #include "volk/volk.h"
 #include "vk_mem_alloc/vk_mem_alloc.h"
 
@@ -15,11 +21,6 @@
 #include <vector>
 #include <set>
 
-std::string VkResultToString(VkResult result);
-
-void VulkanPrintLog(const char* typestr, const std::string& msg);
-void VulkanError(const char* text);
-
 class VulkanDeviceFeatures
 {
 public:
@@ -28,8 +29,6 @@ public:
 	VkPhysicalDeviceAccelerationStructureFeaturesKHR AccelerationStructure = { VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_ACCELERATION_STRUCTURE_FEATURES_KHR };
 	VkPhysicalDeviceRayQueryFeaturesKHR RayQuery = { VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_RAY_QUERY_FEATURES_KHR };
 	VkPhysicalDeviceDescriptorIndexingFeatures DescriptorIndexing = { VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_DESCRIPTOR_INDEXING_FEATURES_EXT };
-	VkPhysicalDeviceFaultFeaturesEXT Fault = { VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_FAULT_FEATURES_EXT };
-	VkPhysicalDeviceGraphicsPipelineLibraryFeaturesEXT GraphicsPipelineLibrary = { VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_GRAPHICS_PIPELINE_LIBRARY_FEATURES_EXT };
 };
 
 class VulkanDeviceProperties
@@ -40,7 +39,6 @@ public:
 	VkPhysicalDeviceAccelerationStructurePropertiesKHR AccelerationStructure = { VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_ACCELERATION_STRUCTURE_PROPERTIES_KHR };
 	VkPhysicalDeviceDescriptorIndexingProperties DescriptorIndexing = { VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_DESCRIPTOR_INDEXING_PROPERTIES_EXT };
 	VkPhysicalDeviceLayeredDriverPropertiesMSFT LayeredDriver = { VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_LAYERED_DRIVER_PROPERTIES_MSFT };
-	VkPhysicalDeviceGraphicsPipelineLibraryPropertiesEXT GraphicsPipelineLibrary = { VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_GRAPHICS_PIPELINE_LIBRARY_PROPERTIES_EXT };
 };
 
 class VulkanPhysicalDevice
@@ -67,7 +65,7 @@ public:
 	std::vector<VkLayerProperties> AvailableLayers;
 	std::vector<VkExtensionProperties> AvailableExtensions;
 
-	std::set<std::string> EnabledLayers;
+	std::set<std::string> EnabledValidationLayers;
 	std::set<std::string> EnabledExtensions;
 
 	std::vector<VulkanPhysicalDevice> PhysicalDevices;
@@ -76,12 +74,6 @@ public:
 	VkInstance Instance = VK_NULL_HANDLE;
 
 	bool DebugLayerActive = false;
-
-	static void CheckVulkanError(VkResult result, const char* text)
-	{
-		if (result >= VK_SUCCESS) return;
-		VulkanError((text + std::string(": ") + VkResultToString(result)).c_str());
-	}
 
 private:
 	bool WantDebugLayer = false;
@@ -98,3 +90,14 @@ private:
 	static VKAPI_ATTR VkBool32 VKAPI_CALL DebugCallback(VkDebugUtilsMessageSeverityFlagBitsEXT messageSeverity, VkDebugUtilsMessageTypeFlagsEXT messageType, const VkDebugUtilsMessengerCallbackDataEXT* pCallbackData, void* pUserData);
 	static std::vector<std::string> SplitString(const std::string& s, const std::string& seperator);
 };
+
+std::string VkResultToString(VkResult result);
+
+void VulkanPrintLog(const char* typestr, const std::string& msg);
+void VulkanError(const char* text);
+
+inline void CheckVulkanError(VkResult result, const char* text)
+{
+	if (result >= VK_SUCCESS) return;
+	VulkanError((text + std::string(": ") + VkResultToString(result)).c_str());
+}

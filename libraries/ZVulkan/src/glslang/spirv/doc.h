@@ -156,8 +156,6 @@ enum OperandClass {
     OperandKernelEnqueueFlags,
     OperandKernelProfilingInfo,
     OperandCapability,
-    OperandCooperativeMatrixOperands,
-    OperandTensorAddressingOperands,
 
     OperandOpcode,
 
@@ -192,15 +190,15 @@ protected:
 // Parameterize an enumerant
 class EnumParameters {
 public:
-    EnumParameters() : desc(nullptr) { }
+    EnumParameters() : desc(0) { }
     const char* desc;
 };
 
 // Parameterize a set of enumerants that form an enum
 class EnumDefinition : public EnumParameters {
 public:
-    EnumDefinition() :
-        ceiling(0), bitmask(false), getName(nullptr), enumParams(nullptr), operandParams(nullptr) { }
+    EnumDefinition() : 
+        ceiling(0), bitmask(false), getName(0), enumParams(0), operandParams(0) { }
     void set(int ceil, const char* (*name)(int), EnumParameters* ep, bool mask = false)
     {
         ceiling = ceil;
@@ -241,8 +239,8 @@ public:
     OperandParameters operands;
 
 protected:
-    bool typePresent   : 1;
-    bool resultPresent : 1;
+    int typePresent   : 1;
+    int resultPresent : 1;
 };
 
 // The set of objects that hold all the instruction/operand

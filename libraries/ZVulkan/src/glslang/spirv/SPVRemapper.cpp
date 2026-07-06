@@ -36,8 +36,13 @@
 #include "SPVRemapper.h"
 #include "doc.h"
 
+#if !defined (use_cpp11)
+// ... not supported before C++11
+#else // defined (use_cpp11)
+
 #include <algorithm>
 #include <cassert>
+#include "../glslang/Include/Common.h"
 
 namespace spv {
 
@@ -155,29 +160,15 @@ namespace spv {
     }
 
     // Is this an opcode we should remove when using --strip?
-    bool spirvbin_t::isStripOp(spv::Op opCode, unsigned start) const
+    bool spirvbin_t::isStripOp(spv::Op opCode) const
     {
         switch (opCode) {
         case spv::OpSource:
         case spv::OpSourceExtension:
         case spv::OpName:
         case spv::OpMemberName:
-        case spv::OpLine :
-        {
-            const std::string name = literalString(start + 2);
-
-            std::vector<std::string>::const_iterator it;
-            for (it = stripWhiteList.begin(); it < stripWhiteList.end(); it++)
-            {
-                if (name.find(*it) != std::string::npos) {
-                    return false;
-                }
-            }
-
-            return true;
-        }
-        default :
-            return false;
+        case spv::OpLine:           return true;
+        default:                    return false;
         }
     }
 
@@ -306,21 +297,15 @@ namespace spv {
     std::string spirvbin_t::literalString(unsigned word) const
     {
         std::string literal;
-        const spirword_t * pos = spv.data() + word;
 
         literal.reserve(16);
 
-        do {
-            spirword_t word = *pos;
-            for (int i = 0; i < 4; i++) {
-                char c = word & 0xff;
-                if (c == '\0')
-                    return literal;
-                literal += c;
-                word >>= 8;
-            }
-            pos++;
-        } while (true);
+        const char* bytes = reinterpret_cast<const char*>(spv.data() + word);
+
+        while (bytes && *bytes)
+            literal += *bytes++;
+
+        return literal;
     }
 
     void spirvbin_t::applyMap()
@@ -381,7 +366,7 @@ namespace spv {
         process(
             [&](spv::Op opCode, unsigned start) {
                 // remember opcodes we want to strip later
-                if (isStripOp(opCode, start))
+                if (isStripOp(opCode))
                     stripInst(start);
                 return true;
             },
@@ -650,40 +635,6 @@ namespace spv {
             case spv::OperandExecutionMode:
                 return nextInst;
 
-            case spv::OperandMemoryAccess:
-                {
-                    uint32_t mask = spv[word];
-                    if (mask & uint32_t(spv::MemoryAccessMask::MemoryAccessAlignedMask)) {
-                        ++word;
-                        --numOperands;
-                    }
-                    if (mask & uint32_t(spv::MemoryAccessMask::MemoryAccessMakePointerAvailableMask |
-                                        spv::MemoryAccessMask::MemoryAccessMakePointerVisibleMask)) {
-                        idFn(asId(word+1));
-                        ++word;
-                        --numOperands;
-                    }
-                    ++word;
-                }
-                break;
-
-            case spv::OperandTensorAddressingOperands:
-                {
-                    uint32_t mask = spv[word];
-                    if (mask & uint32_t(spv::TensorAddressingOperandsMask::TensorAddressingOperandsTensorViewMask)) {
-                        idFn(asId(word+1));
-                        ++word;
-                        --numOperands;
-                    }
-                    if (mask & uint32_t(spv::TensorAddressingOperandsMask::TensorAddressingOperandsDecodeFuncMask)) {
-                        idFn(asId(word+1));
-                        ++word;
-                        --numOperands;
-                    }
-                    ++word;
-                }
-                break;
-
             // Single word operands we simply ignore, as they hold no IDs
             case spv::OperandLiteralNumber:
             case spv::OperandSource:
@@ -708,11 +659,11 @@ namespace spv {
             case spv::OperandSelect:
             case spv::OperandLoop:
             case spv::OperandFunction:
+            case spv::OperandMemoryAccess:
             case spv::OperandGroupOperation:
             case spv::OperandKernelEnqueueFlags:
             case spv::OperandKernelProfilingInfo:
             case spv::OperandCapability:
-            case spv::OperandCooperativeMatrixOperands:
                 ++word;
                 break;
 
@@ -1384,15 +1335,13 @@ namespace spv {
                 return hash;
             }
 
-        case spv::OpTypeEvent:                      return 300000;
-        case spv::OpTypeDeviceEvent:                return 300001;
-        case spv::OpTypeReserveId:                  return 300002;
-        case spv::OpTypeQueue:                      return 300003;
-        case spv::OpTypePipe:                       return 300004;
-        case spv::OpConstantTrue:                   return 300007;
-        case spv::OpConstantFalse:                  return 300008;
-        case spv::OpTypeRayQueryKHR:                return 300009;
-        case spv::OpTypeAccelerationStructureKHR:   return 300010;
+        case spv::OpTypeEvent:           return 300000;
+        case spv::OpTypeDeviceEvent:     return 300001;
+        case spv::OpTypeReserveId:       return 300002;
+        case spv::OpTypeQueue:           return 300003;
+        case spv::OpTypePipe:            return 300004;
+        case spv::OpConstantTrue:        return 300007;
+        case spv::OpConstantFalse:       return 300008;
         case spv::OpConstantComposite:
             {
                 std::uint32_t hash = 300011 + hashType(idPos(spv[typeStart+1]));
@@ -1539,23 +1488,14 @@ namespace spv {
     }
 
     // remap from a memory image
-    void spirvbin_t::remap(std::vector<std::uint32_t>& in_spv, const std::vector<std::string>& whiteListStrings,
-                           std::uint32_t opts)
+    void spirvbin_t::remap(std::vector<std::uint32_t>& in_spv, std::uint32_t opts)
     {
-        stripWhiteList = whiteListStrings;
         spv.swap(in_spv);
         remap(opts);
         spv.swap(in_spv);
     }
 
-    // remap from a memory image - legacy interface without white list
-    void spirvbin_t::remap(std::vector<std::uint32_t>& in_spv, std::uint32_t opts)
-    {
-      stripWhiteList.clear();
-      spv.swap(in_spv);
-      remap(opts);
-      spv.swap(in_spv);
-    }
-
 } // namespace SPV
+
+#endif // defined (use_cpp11)
 

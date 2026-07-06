@@ -40,10 +40,6 @@ bool VulkanDevice::SupportsExtension(const char* ext) const
 		Instance->EnabledExtensions.find(ext) != Instance->EnabledExtensions.end();
 }
 
-#ifndef VK_KHR_MAINTENANCE4_EXTENSION_NAME
-#define VK_KHR_MAINTENANCE4_EXTENSION_NAME "VK_KHR_maintenance4"
-#endif
-
 void VulkanDevice::CreateAllocator()
 {
 	VmaAllocatorCreateInfo allocinfo = {};
@@ -52,16 +48,6 @@ void VulkanDevice::CreateAllocator()
 		allocinfo.flags |= VMA_ALLOCATOR_CREATE_KHR_DEDICATED_ALLOCATION_BIT;
 	if (SupportsExtension(VK_KHR_BUFFER_DEVICE_ADDRESS_EXTENSION_NAME))
 		allocinfo.flags |= VMA_ALLOCATOR_CREATE_BUFFER_DEVICE_ADDRESS_BIT;
-	if (SupportsExtension(VK_KHR_BIND_MEMORY_2_EXTENSION_NAME))
-		allocinfo.flags |= VMA_ALLOCATOR_CREATE_KHR_BIND_MEMORY2_BIT;
-	//if (SupportsExtension(VK_KHR_MAINTENANCE4_EXTENSION_NAME))
-	//	allocinfo.flags |= MA_ALLOCATOR_CREATE_KHR_MAINTENANCE4_BIT;
-	if (SupportsExtension(VK_EXT_MEMORY_BUDGET_EXTENSION_NAME))
-		allocinfo.flags |= VMA_ALLOCATOR_CREATE_EXT_MEMORY_BUDGET_BIT;
-	if (SupportsExtension(VK_EXT_MEMORY_PRIORITY_EXTENSION_NAME))
-		allocinfo.flags |= VMA_ALLOCATOR_CREATE_EXT_MEMORY_PRIORITY_BIT;
-	if (SupportsExtension(VK_AMD_DEVICE_COHERENT_MEMORY_EXTENSION_NAME))
-		allocinfo.flags |= VMA_ALLOCATOR_CREATE_AMD_DEVICE_COHERENT_MEMORY_BIT;
 	allocinfo.physicalDevice = PhysicalDevice.Device;
 	allocinfo.device = device;
 	allocinfo.instance = Instance->Instance;
@@ -83,7 +69,8 @@ void VulkanDevice::CreateDevice()
 
 	for (int index : neededFamilies)
 	{
-		VkDeviceQueueCreateInfo queueCreateInfo = { VK_STRUCTURE_TYPE_DEVICE_QUEUE_CREATE_INFO };
+		VkDeviceQueueCreateInfo queueCreateInfo = {};
+		queueCreateInfo.sType = VK_STRUCTURE_TYPE_DEVICE_QUEUE_CREATE_INFO;
 		queueCreateInfo.queueFamilyIndex = index;
 		queueCreateInfo.queueCount = 1;
 		queueCreateInfo.pQueuePriorities = &queuePriority;
@@ -136,16 +123,6 @@ void VulkanDevice::CreateDevice()
 		*next = &EnabledFeatures.DescriptorIndexing;
 		next = &EnabledFeatures.DescriptorIndexing.pNext;
 	}
-	if (SupportsExtension(VK_EXT_DEVICE_FAULT_EXTENSION_NAME))
-	{
-		*next = &EnabledFeatures.Fault;
-		next = &EnabledFeatures.Fault.pNext;
-	}
-	if (SupportsExtension(VK_EXT_GRAPHICS_PIPELINE_LIBRARY_EXTENSION_NAME))
-	{
-		*next = &EnabledFeatures.GraphicsPipelineLibrary;
-		next = &EnabledFeatures.GraphicsPipelineLibrary.pNext;
-	}
 
 	VkResult result = vkCreateDevice(PhysicalDevice.Device, &deviceCreateInfo, nullptr, &device);
 	CheckVulkanError(result, "Could not create vulkan device");
@@ -173,52 +150,12 @@ void VulkanDevice::ReleaseResources()
 
 void VulkanDevice::SetObjectName(const char* name, uint64_t handle, VkObjectType type)
 {
-	if (!Instance->DebugLayerActive) return;
+	if (!DebugLayerActive) return;
 
-	VkDebugUtilsObjectNameInfoEXT info = { VK_STRUCTURE_TYPE_DEBUG_UTILS_OBJECT_NAME_INFO_EXT };
+	VkDebugUtilsObjectNameInfoEXT info = {};
+	info.sType = VK_STRUCTURE_TYPE_DEBUG_UTILS_OBJECT_NAME_INFO_EXT;
 	info.objectHandle = handle;
 	info.objectType = type;
 	info.pObjectName = name;
 	vkSetDebugUtilsObjectNameEXT(device, &info);
-}
-
-VulkanDeviceFaultInfo VulkanDevice::GetDeviceFaultInfo()
-{
-	if (!SupportsExtension(VK_EXT_DEVICE_FAULT_EXTENSION_NAME) || !EnabledFeatures.Fault.deviceFault)
-		return {};
-
-	VkDeviceFaultCountsEXT counts = { VK_STRUCTURE_TYPE_DEVICE_FAULT_COUNTS_EXT };
-	VkResult result = vkGetDeviceFaultInfoEXT(device, &counts, nullptr);
-	if (result != VK_INCOMPLETE && result != VK_SUCCESS)
-		return {};
-
-	std::vector<VkDeviceFaultAddressInfoEXT> addressInfos(counts.addressInfoCount);
-	std::vector<VkDeviceFaultVendorInfoEXT> vendorInfos(counts.vendorInfoCount);
-	std::vector<uint8_t> vendorBinaryData(counts.vendorBinarySize);
-
-	VkDeviceFaultInfoEXT info = { VK_STRUCTURE_TYPE_DEVICE_FAULT_INFO_EXT };
-	info.pAddressInfos = addressInfos.data();
-	info.pVendorInfos = vendorInfos.data();
-	info.pVendorBinaryData = vendorBinaryData.data();
-
-	result = vkGetDeviceFaultInfoEXT(device, &counts, &info);
-	if (result != VK_SUCCESS)
-		return {};
-
-	VulkanDeviceFaultInfo lostinfo;
-	lostinfo.description = info.description;
-
-	/*
-	for (const VkDeviceFaultAddressInfoEXT& addressInfo : addressInfos)
-	{
-		// To do: does vk_mem_alloc have anything that helps us map an address to an allocation?
-	}
-	*/
-
-	for (const VkDeviceFaultVendorInfoEXT& vendorInfo : vendorInfos)
-	{
-		lostinfo.vendorInfos.push_back(vendorInfo.description);
-	}
-
-	return lostinfo;
 }

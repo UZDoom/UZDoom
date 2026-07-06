@@ -1,6 +1,5 @@
 //
-// Copyright (C) 2016 Google, Inc.
-//
+// Copyright (C) 2002-2005  3Dlabs Inc. Ltd.
 // All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
@@ -15,7 +14,7 @@
 //    disclaimer in the documentation and/or other materials provided
 //    with the distribution.
 //
-//    Neither the name of Google Inc. nor the names of its
+//    Neither the name of 3Dlabs Inc. Ltd. nor the names of its
 //    contributors may be used to endorse or promote products derived
 //    from this software without specific prior written permission.
 //
@@ -31,28 +30,20 @@
 // LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
 // ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
+//
+#ifndef __INITIALIZEDLL_H
+#define __INITIALIZEDLL_H
 
-#ifndef _STAND_ALONE_RESOURCE_LIMITS_INCLUDED_
-#define _STAND_ALONE_RESOURCE_LIMITS_INCLUDED_
+#include "../glslang/OSDependent/osinclude.h"
 
-#include <string>
+namespace glslang {
 
-#include "../Include/ResourceLimits.h"
-#include "../Include/visibility.h"
+bool InitProcess();
+bool InitThread();
+bool DetachThread();  // not called from standalone, perhaps other tools rely on parts of it
+bool DetachProcess(); // not called from standalone, perhaps other tools rely on parts of it
 
-// Return pointer to user-writable Resource to pass through API in
-// future-proof way.
-GLSLANG_EXPORT extern TBuiltInResource* GetResources();
+} // end namespace glslang
 
-// These are the default resources for TBuiltInResources, used for both
-//  - parsing this string for the case where the user didn't supply one,
-//  - dumping out a template for user construction of a config file.
-GLSLANG_EXPORT extern const TBuiltInResource* GetDefaultResources();
+#endif // __INITIALIZEDLL_H
 
-// Returns the DefaultTBuiltInResource as a human-readable string.
-GLSLANG_EXPORT std::string GetDefaultTBuiltInResourceString();
-
-// Decodes the resource limits from |config| to |resources|.
-GLSLANG_EXPORT void DecodeResourceLimits(TBuiltInResource* resources, char* config);
-
-#endif  // _STAND_ALONE_RESOURCE_LIMITS_INCLUDED_

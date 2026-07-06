@@ -1,5 +1,5 @@
-// Copyright (C) 2020 The Khronos Group Inc.
 //
+// Copyright (C) 2002-2005  3Dlabs Inc. Ltd.
 // All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
@@ -14,7 +14,7 @@
 //    disclaimer in the documentation and/or other materials provided
 //    with the distribution.
 //
-//    Neither the name of The Khronos Group Inc. nor the names of its
+//    Neither the name of 3Dlabs Inc. Ltd. nor the names of its
 //    contributors may be used to endorse or promote products derived
 //    from this software without specific prior written permission.
 //
@@ -30,33 +30,45 @@
 // LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
 // ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
+//
 
-#ifndef GLSLANG_BUILD_INFO
-#define GLSLANG_BUILD_INFO
+#include "InitializeDll.h"
 
-#define GLSLANG_VERSION_MAJOR 15
-#define GLSLANG_VERSION_MINOR 2
-#define GLSLANG_VERSION_PATCH 0
-#define GLSLANG_VERSION_FLAVOR ""
+#define STRICT
+#define VC_EXTRALEAN 1
+#include <windows.h>
+#include <assert.h>
 
-#define GLSLANG_VERSION_GREATER_THAN(major, minor, patch) \
-    ((GLSLANG_VERSION_MAJOR) > (major) || ((major) == GLSLANG_VERSION_MAJOR && \
-    ((GLSLANG_VERSION_MINOR) > (minor) || ((minor) == GLSLANG_VERSION_MINOR && \
-     (GLSLANG_VERSION_PATCH) > (patch)))))
+BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpvReserved)
+{
+	switch (fdwReason)
+	{
+		case DLL_PROCESS_ATTACH:
 
-#define GLSLANG_VERSION_GREATER_OR_EQUAL_TO(major, minor, patch) \
-    ((GLSLANG_VERSION_MAJOR) > (major) || ((major) == GLSLANG_VERSION_MAJOR && \
-    ((GLSLANG_VERSION_MINOR) > (minor) || ((minor) == GLSLANG_VERSION_MINOR && \
-     (GLSLANG_VERSION_PATCH >= (patch))))))
+            if (! glslang::InitProcess())
+                return FALSE;
+            break;
+		case DLL_THREAD_ATTACH:
 
-#define GLSLANG_VERSION_LESS_THAN(major, minor, patch) \
-    ((GLSLANG_VERSION_MAJOR) < (major) || ((major) == GLSLANG_VERSION_MAJOR && \
-    ((GLSLANG_VERSION_MINOR) < (minor) || ((minor) == GLSLANG_VERSION_MINOR && \
-     (GLSLANG_VERSION_PATCH) < (patch)))))
+            if (! glslang::InitThread())
+                return FALSE;
+            break;
 
-#define GLSLANG_VERSION_LESS_OR_EQUAL_TO(major, minor, patch) \
-    ((GLSLANG_VERSION_MAJOR) < (major) || ((major) == GLSLANG_VERSION_MAJOR && \
-    ((GLSLANG_VERSION_MINOR) < (minor) || ((minor) == GLSLANG_VERSION_MINOR && \
-     (GLSLANG_VERSION_PATCH <= (patch))))))
+		case DLL_THREAD_DETACH:
 
-#endif // GLSLANG_BUILD_INFO
+			if (! glslang::DetachThread())
+				return FALSE;
+			break;
+
+		case DLL_PROCESS_DETACH:
+
+			glslang::DetachProcess();
+			break;
+
+		default:
+			assert(0 && "DllMain(): Reason for calling DLL Main is unknown");
+			return FALSE;
+	}
+
+	return TRUE;
+}

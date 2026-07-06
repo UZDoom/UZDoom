@@ -1,5 +1,17 @@
-cmake_minimum_required(VERSION 3.11)
+cmake_minimum_required(VERSION 3.24)
+
 project(zvulkan)
+
+option( VULKAN_USE_XLIB "Use Vulkan xlib (X11) WSI integration" ON )
+option( VULKAN_USE_WAYLAND "Use Vulkan Wayland WSI integration" OFF )
+
+if ( VULKAN_USE_XLIB )
+	add_definitions( -DVULKAN_USE_XLIB=1 )
+else()
+	if (VULKAN_USE_WAYLAND)
+		add_definitions( -DVULKAN_USE_WAYLAND=1 )
+	endif()
+endif()
 
 set(ZVULKAN_SOURCES
 	src/vulkanbuilders.cpp
@@ -10,109 +22,97 @@ set(ZVULKAN_SOURCES
 	src/vk_mem_alloc/vk_mem_alloc.cpp
 	src/vk_mem_alloc/vk_mem_alloc.natvis
 	src/volk/volk.c
-	src/glslang/glslang/CInterface/glslang_c_interface.cpp
-	src/glslang/glslang/GenericCodeGen/CodeGen.cpp
-	src/glslang/glslang/GenericCodeGen/Link.cpp
-	src/glslang/glslang/Include/arrays.h
-	src/glslang/glslang/Include/BaseTypes.h
-	src/glslang/glslang/Include/Common.h
-	src/glslang/glslang/Include/ConstantUnion.h
-	src/glslang/glslang/Include/glslang_c_interface.h
-	src/glslang/glslang/Include/glslang_c_shader_types.h
-	src/glslang/glslang/Include/InfoSink.h
-	src/glslang/glslang/Include/InitializeGlobals.h
-	src/glslang/glslang/Include/intermediate.h
-	src/glslang/glslang/Include/PoolAlloc.h
-	src/glslang/glslang/Include/ResourceLimits.h
-	src/glslang/glslang/Include/ShHandle.h
-	src/glslang/glslang/Include/SpirvIntrinsics.h
-	src/glslang/glslang/Include/Types.h
-	src/glslang/glslang/MachineIndependent/attribute.cpp
-	src/glslang/glslang/MachineIndependent/attribute.h
-	src/glslang/glslang/MachineIndependent/Constant.cpp
-	src/glslang/glslang/MachineIndependent/glslang.y
-	src/glslang/glslang/MachineIndependent/glslang_tab.cpp
-	src/glslang/glslang/MachineIndependent/glslang_tab.cpp.h
-	src/glslang/glslang/MachineIndependent/gl_types.h
-	src/glslang/glslang/MachineIndependent/InfoSink.cpp
-	src/glslang/glslang/MachineIndependent/Initialize.cpp
-	src/glslang/glslang/MachineIndependent/Initialize.h
-	src/glslang/glslang/MachineIndependent/Intermediate.cpp
-	src/glslang/glslang/MachineIndependent/intermOut.cpp
-	src/glslang/glslang/MachineIndependent/IntermTraverse.cpp
-	src/glslang/glslang/MachineIndependent/iomapper.cpp
-	src/glslang/glslang/MachineIndependent/iomapper.h
-	src/glslang/glslang/MachineIndependent/limits.cpp
-	src/glslang/glslang/MachineIndependent/linkValidate.cpp
-	src/glslang/glslang/MachineIndependent/LiveTraverser.h
-	src/glslang/glslang/MachineIndependent/localintermediate.h
-	src/glslang/glslang/MachineIndependent/parseConst.cpp
-	src/glslang/glslang/MachineIndependent/ParseContextBase.cpp
-	src/glslang/glslang/MachineIndependent/ParseHelper.cpp
-	src/glslang/glslang/MachineIndependent/ParseHelper.h
-	src/glslang/glslang/MachineIndependent/parseVersions.h
-	src/glslang/glslang/MachineIndependent/pch.h
-	src/glslang/glslang/MachineIndependent/PoolAlloc.cpp
-	src/glslang/glslang/MachineIndependent/preprocessor
-	src/glslang/glslang/MachineIndependent/propagateNoContraction.cpp
-	src/glslang/glslang/MachineIndependent/propagateNoContraction.h
-	src/glslang/glslang/MachineIndependent/reflection.cpp
-	src/glslang/glslang/MachineIndependent/reflection.h
-	src/glslang/glslang/MachineIndependent/RemoveTree.cpp
-	src/glslang/glslang/MachineIndependent/RemoveTree.h
-	src/glslang/glslang/MachineIndependent/Scan.cpp
-	src/glslang/glslang/MachineIndependent/Scan.h
-	src/glslang/glslang/MachineIndependent/ScanContext.h
-	src/glslang/glslang/MachineIndependent/ShaderLang.cpp
-	src/glslang/glslang/MachineIndependent/span.h
-	src/glslang/glslang/MachineIndependent/SpirvIntrinsics.cpp
-	src/glslang/glslang/MachineIndependent/SymbolTable.cpp
 	src/glslang/glslang/MachineIndependent/SymbolTable.h
-	src/glslang/glslang/MachineIndependent/Versions.cpp
+	src/glslang/glslang/MachineIndependent/propagateNoContraction.cpp
+	src/glslang/glslang/MachineIndependent/PoolAlloc.cpp
+	src/glslang/glslang/MachineIndependent/Intermediate.cpp
+	src/glslang/glslang/MachineIndependent/gl_types.h
+	src/glslang/glslang/MachineIndependent/parseVersions.h
+	src/glslang/glslang/MachineIndependent/attribute.cpp
+	src/glslang/glslang/MachineIndependent/Scan.cpp
+	src/glslang/glslang/MachineIndependent/iomapper.h
+	src/glslang/glslang/MachineIndependent/ParseHelper.h
+	src/glslang/glslang/MachineIndependent/glslang_tab.cpp.h
+	src/glslang/glslang/MachineIndependent/SymbolTable.cpp
+	src/glslang/glslang/MachineIndependent/RemoveTree.cpp
 	src/glslang/glslang/MachineIndependent/Versions.h
+	src/glslang/glslang/MachineIndependent/reflection.cpp
+	src/glslang/glslang/MachineIndependent/LiveTraverser.h
+	src/glslang/glslang/MachineIndependent/iomapper.cpp
+	src/glslang/glslang/MachineIndependent/intermOut.cpp
+	src/glslang/glslang/MachineIndependent/Versions.cpp
+	src/glslang/glslang/MachineIndependent/Initialize.h
+	src/glslang/glslang/MachineIndependent/linkValidate.cpp
+	src/glslang/glslang/MachineIndependent/InfoSink.cpp
+	src/glslang/glslang/MachineIndependent/Constant.cpp
+	src/glslang/glslang/MachineIndependent/IntermTraverse.cpp
+	src/glslang/glslang/MachineIndependent/propagateNoContraction.h
+	src/glslang/glslang/MachineIndependent/glslang_tab.cpp
+	src/glslang/glslang/MachineIndependent/ShaderLang.cpp
 	src/glslang/glslang/MachineIndependent/preprocessor/Pp.cpp
+	src/glslang/glslang/MachineIndependent/preprocessor/PpTokens.h
 	src/glslang/glslang/MachineIndependent/preprocessor/PpAtom.cpp
 	src/glslang/glslang/MachineIndependent/preprocessor/PpContext.cpp
-	src/glslang/glslang/MachineIndependent/preprocessor/PpContext.h
-	src/glslang/glslang/MachineIndependent/preprocessor/PpScanner.cpp
 	src/glslang/glslang/MachineIndependent/preprocessor/PpTokens.cpp
-	src/glslang/glslang/MachineIndependent/preprocessor/PpTokens.h
+	src/glslang/glslang/MachineIndependent/preprocessor/PpScanner.cpp
+	src/glslang/glslang/MachineIndependent/preprocessor/PpContext.h
+	src/glslang/glslang/MachineIndependent/attribute.h
+	src/glslang/glslang/MachineIndependent/localintermediate.h
+	src/glslang/glslang/MachineIndependent/parseConst.cpp
+	src/glslang/glslang/MachineIndependent/Initialize.cpp
+	src/glslang/glslang/MachineIndependent/limits.cpp
+	src/glslang/glslang/MachineIndependent/ParseContextBase.cpp
+	src/glslang/glslang/MachineIndependent/RemoveTree.h
+	src/glslang/glslang/MachineIndependent/ParseHelper.cpp
+	src/glslang/glslang/MachineIndependent/Scan.h
+	src/glslang/glslang/MachineIndependent/reflection.h
+	src/glslang/glslang/MachineIndependent/ScanContext.h
+	src/glslang/glslang/MachineIndependent/SpirvIntrinsics.cpp
 	src/glslang/glslang/OSDependent/osinclude.h
-	src/glslang/glslang/Public/ResourceLimits.h
-	src/glslang/glslang/Public/resource_limits_c.h
+	src/glslang/glslang/GenericCodeGen/Link.cpp
+	src/glslang/glslang/GenericCodeGen/CodeGen.cpp
 	src/glslang/glslang/Public/ShaderLang.h
-	src/glslang/glslang/ResourceLimits/ResourceLimits.cpp
-	src/glslang/glslang/ResourceLimits/resource_limits_c.cpp
-	src/glslang/spirv/bitutils.h
-	src/glslang/spirv/disassemble.cpp
-	src/glslang/spirv/disassemble.h
-	src/glslang/spirv/doc.cpp
-	src/glslang/spirv/doc.h
-	src/glslang/spirv/GLSL.ext.AMD.h
-	src/glslang/spirv/GLSL.ext.ARM.h
-	src/glslang/spirv/GLSL.ext.EXT.h
-	src/glslang/spirv/GLSL.ext.KHR.h
-	src/glslang/spirv/GLSL.ext.NV.h
-	src/glslang/spirv/GLSL.ext.QCOM.h
-	src/glslang/spirv/GLSL.std.450.h
-	src/glslang/spirv/GlslangToSpv.cpp
-	src/glslang/spirv/GlslangToSpv.h
-	src/glslang/spirv/hex_float.h
-	src/glslang/spirv/InReadableOrder.cpp
-	src/glslang/spirv/Logger.cpp
+	src/glslang/glslang/Include/ConstantUnion.h
+	src/glslang/glslang/Include/InitializeGlobals.h
+	src/glslang/glslang/Include/Common.h
+	src/glslang/glslang/Include/PoolAlloc.h
+	src/glslang/glslang/Include/arrays.h
+	src/glslang/glslang/Include/ShHandle.h
+	src/glslang/glslang/Include/InfoSink.h
+	src/glslang/glslang/Include/ResourceLimits.h
+	src/glslang/glslang/Include/Types.h
+	src/glslang/glslang/Include/BaseTypes.h
+	src/glslang/glslang/Include/intermediate.h
+	src/glslang/glslang/Include/SpirvIntrinsics.h
+	src/glslang/glslang/Include/build_info.h
+	src/glslang/glslang/OSDependent/osinclude.h
 	src/glslang/spirv/Logger.h
-	src/glslang/spirv/NonSemanticDebugPrintf.h
-	src/glslang/spirv/NonSemanticShaderDebugInfo100.h
-	src/glslang/spirv/spirv.hpp
-	src/glslang/spirv/SpvBuilder.cpp
-	src/glslang/spirv/SpvBuilder.h
-	src/glslang/spirv/spvIR.h
-	src/glslang/spirv/SpvPostProcess.cpp
-	src/glslang/spirv/SPVRemapper.cpp
+	src/glslang/spirv/GlslangToSpv.cpp
 	src/glslang/spirv/SPVRemapper.h
+	src/glslang/spirv/GLSL.ext.EXT.h
+	src/glslang/spirv/hex_float.h
+	src/glslang/spirv/doc.cpp
+	src/glslang/spirv/disassemble.cpp
+	src/glslang/spirv/SpvPostProcess.cpp
+	src/glslang/spirv/bitutils.h
+	src/glslang/spirv/InReadableOrder.cpp
+	src/glslang/spirv/GLSL.ext.AMD.h
+	src/glslang/spirv/GLSL.ext.NV.h
+	src/glslang/spirv/SPVRemapper.cpp
+	src/glslang/spirv/SpvBuilder.h
+	src/glslang/spirv/GLSL.ext.KHR.h
+	src/glslang/spirv/disassemble.h
+	src/glslang/spirv/SpvBuilder.cpp
+	src/glslang/spirv/GlslangToSpv.h
+	src/glslang/spirv/doc.h
 	src/glslang/spirv/SpvTools.cpp
+	src/glslang/spirv/spvIR.h
+	src/glslang/spirv/Logger.cpp
 	src/glslang/spirv/SpvTools.h
-	src/glslang/spirv/CInterface/spirv_c_interface.cpp
+	src/glslang/spirv/GLSL.std.450.h
+	src/glslang/spirv/NonSemanticDebugPrintf.h
+	src/glslang/OGLCompilersDLL/InitializeDll.cpp
+	src/glslang/OGLCompilersDLL/InitializeDll.h
 )
 
 set(ZVULKAN_INCLUDES
@@ -169,7 +169,6 @@ set(EXAMPLE_SOURCES
 source_group("src" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/.+")
 source_group("src\\glslang" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/glslang/.+")
 source_group("src\\glslang\\glslang" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/glslang/glslang/.+")
-source_group("src\\glslang\\glslang\\CInterface" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/glslang/glslang/CInterface/.+")
 source_group("src\\glslang\\glslang\\GenericCodeGen" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/glslang/glslang/GenericCodeGen/.+")
 source_group("src\\glslang\\glslang\\Include" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/glslang/glslang/Include/.+")
 source_group("src\\glslang\\glslang\\MachineIndependent" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/glslang/glslang/MachineIndependent/.+")
@@ -179,9 +178,8 @@ source_group("src\\glslang\\glslang\\OSDependent\\Unix" REGULAR_EXPRESSION "${CM
 source_group("src\\glslang\\glslang\\OSDependent\\Web" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/glslang/glslang/OSDependent/Web/.+")
 source_group("src\\glslang\\glslang\\OSDependent\\Windows" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/glslang/glslang/OSDependent/Windows/.+")
 source_group("src\\glslang\\glslang\\Public" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/glslang/glslang/Public/.+")
-source_group("src\\glslang\\glslang\\ResourceLimits" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/glslang/glslang/ResourceLimits/.+")
+source_group("src\\glslang\\OGLCompilersDLL" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/glslang/OGLCompilersDLL/.+")
 source_group("src\\glslang\\spirv" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/glslang/spirv/.+")
-source_group("src\\glslang\\spirv\\CInterface" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/glslang/spirv/CInterface/.+")
 source_group("src\\vk_mem_alloc" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/vk_mem_alloc/.+")
 source_group("src\\volk" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/src/volk/.+")
 source_group("include" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/include/zvulkan/.+")
@@ -193,11 +191,19 @@ source_group("example" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/example/.
 include_directories(include include/zvulkan src)
 
 if(WIN32)
-	set(ZVULKAN_SOURCES ${ZVULKAN_SOURCES} ${ZVULKAN_WIN32_SOURCES})
+	list(APPEND ZVULKAN_SOURCES ${ZVULKAN_WIN32_SOURCES})
 	add_definitions(-DUNICODE -D_UNICODE)
 else()
-	set(ZVULKAN_SOURCES ${ZVULKAN_SOURCES} ${ZVULKAN_UNIX_SOURCES})
-	set(ZVULKAN_LIBS ${CMAKE_DL_LIBS} -ldl)
+	if(APPLE)
+		find_package(Vulkan REQUIRED COMPONENTS MoltenVK)
+		list(APPEND ZVULKAN_LIBS Vulkan::Vulkan)
+	elseif(NOT HAIKU AND NOT CMAKE_SYSTEM_NAME MATCHES "FreeBSD|NetBSD|OpenBSD|DragonFly")
+		list(APPEND ZVULKAN_LIBS ${CMAKE_DL_LIBS} -ldl)
+	else()
+		list(APPEND ZVULKAN_LIBS ${CMAKE_DL_LIBS})
+	endif()
+
+	list(APPEND ZVULKAN_SOURCES ${ZVULKAN_UNIX_SOURCES})
 	add_definitions(-DUNIX -D_UNIX)
 	add_link_options(-pthread)
 endif()
@@ -211,14 +217,21 @@ if(MSVC)
 endif()
 
 add_library(zvulkan STATIC ${ZVULKAN_SOURCES} ${ZVULKAN_INCLUDES} ${VULKAN_INCLUDES})
-target_link_libraries(zvulkan ${ZVULKAN_LIBS})
+target_link_libraries(zvulkan PUBLIC ${ZVULKAN_LIBS})
 set_target_properties(zvulkan PROPERTIES CXX_STANDARD 17)
-
-add_executable(zvulkan_example WIN32 MACOSX_BUNDLE ${EXAMPLE_SOURCES})
-target_link_libraries(zvulkan_example zvulkan)
-set_target_properties(zvulkan_example PROPERTIES CXX_STANDARD 17)
 
 if(MSVC)
 	set_property(TARGET zvulkan PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
-	set_property(TARGET zvulkan_example PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 endif()
+
+option( BUILD_EXAMPLE "Build exmaple" OFF )
+if(BUILD_EXAMPLE)
+	add_executable(zvulkan_example WIN32 MACOSX_BUNDLE ${EXAMPLE_SOURCES})
+	target_link_libraries(zvulkan_example zvulkan)
+	set_target_properties(zvulkan_example PROPERTIES CXX_STANDARD 17)
+
+  if(MSVC)
+	  set_property(TARGET zvulkan_example PROPERTY MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+  endif()
+endif()
+

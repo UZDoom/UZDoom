@@ -3,20 +3,131 @@
 #include "vulkancompatibledevice.h"
 #include "vulkanswapchain.h"
 #include "glslang/glslang/Public/ShaderLang.h"
-#include "glslang/glslang/Public/ResourceLimits.h"
 #include "glslang/spirv/GlslangToSpv.h"
 
-void GLSLCompiler::Init()
+static const TBuiltInResource DefaultTBuiltInResource = {
+	/* .MaxLights = */ 32,
+	/* .MaxClipPlanes = */ 6,
+	/* .MaxTextureUnits = */ 32,
+	/* .MaxTextureCoords = */ 32,
+	/* .MaxVertexAttribs = */ 64,
+	/* .MaxVertexUniformComponents = */ 4096,
+	/* .MaxVaryingFloats = */ 64,
+	/* .MaxVertexTextureImageUnits = */ 32,
+	/* .MaxCombinedTextureImageUnits = */ 80,
+	/* .MaxTextureImageUnits = */ 32,
+	/* .MaxFragmentUniformComponents = */ 4096,
+	/* .MaxDrawBuffers = */ 32,
+	/* .MaxVertexUniformVectors = */ 128,
+	/* .MaxVaryingVectors = */ 8,
+	/* .MaxFragmentUniformVectors = */ 16,
+	/* .MaxVertexOutputVectors = */ 16,
+	/* .MaxFragmentInputVectors = */ 15,
+	/* .MinProgramTexelOffset = */ -8,
+	/* .MaxProgramTexelOffset = */ 7,
+	/* .MaxClipDistances = */ 8,
+	/* .MaxComputeWorkGroupCountX = */ 65535,
+	/* .MaxComputeWorkGroupCountY = */ 65535,
+	/* .MaxComputeWorkGroupCountZ = */ 65535,
+	/* .MaxComputeWorkGroupSizeX = */ 1024,
+	/* .MaxComputeWorkGroupSizeY = */ 1024,
+	/* .MaxComputeWorkGroupSizeZ = */ 64,
+	/* .MaxComputeUniformComponents = */ 1024,
+	/* .MaxComputeTextureImageUnits = */ 16,
+	/* .MaxComputeImageUniforms = */ 8,
+	/* .MaxComputeAtomicCounters = */ 8,
+	/* .MaxComputeAtomicCounterBuffers = */ 1,
+	/* .MaxVaryingComponents = */ 60,
+	/* .MaxVertexOutputComponents = */ 64,
+	/* .MaxGeometryInputComponents = */ 64,
+	/* .MaxGeometryOutputComponents = */ 128,
+	/* .MaxFragmentInputComponents = */ 128,
+	/* .MaxImageUnits = */ 8,
+	/* .MaxCombinedImageUnitsAndFragmentOutputs = */ 8,
+	/* .MaxCombinedShaderOutputResources = */ 8,
+	/* .MaxImageSamples = */ 0,
+	/* .MaxVertexImageUniforms = */ 0,
+	/* .MaxTessControlImageUniforms = */ 0,
+	/* .MaxTessEvaluationImageUniforms = */ 0,
+	/* .MaxGeometryImageUniforms = */ 0,
+	/* .MaxFragmentImageUniforms = */ 8,
+	/* .MaxCombinedImageUniforms = */ 8,
+	/* .MaxGeometryTextureImageUnits = */ 16,
+	/* .MaxGeometryOutputVertices = */ 256,
+	/* .MaxGeometryTotalOutputComponents = */ 1024,
+	/* .MaxGeometryUniformComponents = */ 1024,
+	/* .MaxGeometryVaryingComponents = */ 64,
+	/* .MaxTessControlInputComponents = */ 128,
+	/* .MaxTessControlOutputComponents = */ 128,
+	/* .MaxTessControlTextureImageUnits = */ 16,
+	/* .MaxTessControlUniformComponents = */ 1024,
+	/* .MaxTessControlTotalOutputComponents = */ 4096,
+	/* .MaxTessEvaluationInputComponents = */ 128,
+	/* .MaxTessEvaluationOutputComponents = */ 128,
+	/* .MaxTessEvaluationTextureImageUnits = */ 16,
+	/* .MaxTessEvaluationUniformComponents = */ 1024,
+	/* .MaxTessPatchComponents = */ 120,
+	/* .MaxPatchVertices = */ 32,
+	/* .MaxTessGenLevel = */ 64,
+	/* .MaxViewports = */ 16,
+	/* .MaxVertexAtomicCounters = */ 0,
+	/* .MaxTessControlAtomicCounters = */ 0,
+	/* .MaxTessEvaluationAtomicCounters = */ 0,
+	/* .MaxGeometryAtomicCounters = */ 0,
+	/* .MaxFragmentAtomicCounters = */ 8,
+	/* .MaxCombinedAtomicCounters = */ 8,
+	/* .MaxAtomicCounterBindings = */ 1,
+	/* .MaxVertexAtomicCounterBuffers = */ 0,
+	/* .MaxTessControlAtomicCounterBuffers = */ 0,
+	/* .MaxTessEvaluationAtomicCounterBuffers = */ 0,
+	/* .MaxGeometryAtomicCounterBuffers = */ 0,
+	/* .MaxFragmentAtomicCounterBuffers = */ 1,
+	/* .MaxCombinedAtomicCounterBuffers = */ 1,
+	/* .MaxAtomicCounterBufferSize = */ 16384,
+	/* .MaxTransformFeedbackBuffers = */ 4,
+	/* .MaxTransformFeedbackInterleavedComponents = */ 64,
+	/* .MaxCullDistances = */ 8,
+	/* .MaxCombinedClipAndCullDistances = */ 8,
+	/* .MaxSamples = */ 4,
+	/* .maxMeshOutputVerticesNV = */ 256,
+	/* .maxMeshOutputPrimitivesNV = */ 512,
+	/* .maxMeshWorkGroupSizeX_NV = */ 32,
+	/* .maxMeshWorkGroupSizeY_NV = */ 1,
+	/* .maxMeshWorkGroupSizeZ_NV = */ 1,
+	/* .maxTaskWorkGroupSizeX_NV = */ 32,
+	/* .maxTaskWorkGroupSizeY_NV = */ 1,
+	/* .maxTaskWorkGroupSizeZ_NV = */ 1,
+	/* .maxMeshViewCountNV = */ 4,
+	/* .maxDualSourceDrawBuffersEXT = */ 1,
+
+	/* .limits = */ {
+		/* .nonInductiveForLoops = */ 1,
+		/* .whileLoops = */ 1,
+		/* .doWhileLoops = */ 1,
+		/* .generalUniformIndexing = */ 1,
+		/* .generalAttributeMatrixVectorIndexing = */ 1,
+		/* .generalVaryingIndexing = */ 1,
+		/* .generalSamplerIndexing = */ 1,
+		/* .generalVariableIndexing = */ 1,
+		/* .generalConstantMatrixVectorIndexing = */ 1,
+	}
+};
+
+void ShaderBuilder::Init()
 {
 	ShInitialize();
 }
 
-void GLSLCompiler::Deinit()
+void ShaderBuilder::Deinit()
 {
 	ShFinalize();
 }
 
-GLSLCompiler& GLSLCompiler::Type(ShaderType type)
+ShaderBuilder::ShaderBuilder()
+{
+}
+
+ShaderBuilder& ShaderBuilder::Type(ShaderType type)
 {
 	switch (type)
 	{
@@ -30,34 +141,34 @@ GLSLCompiler& GLSLCompiler::Type(ShaderType type)
 	return *this;
 }
 
-GLSLCompiler& GLSLCompiler::AddSource(const std::string& name, const std::string& code)
+ShaderBuilder& ShaderBuilder::AddSource(const std::string& name, const std::string& code)
 {
 	sources.push_back({ name, code });
 	return *this;
 }
 
-GLSLCompiler& GLSLCompiler::OnIncludeSystem(std::function<ShaderIncludeResult(std::string headerName, std::string includerName, size_t inclusionDepth)> onIncludeSystem)
+ShaderBuilder& ShaderBuilder::OnIncludeSystem(std::function<ShaderIncludeResult(std::string headerName, std::string includerName, size_t inclusionDepth)> onIncludeSystem)
 {
 	this->onIncludeSystem = std::move(onIncludeSystem);
 	return *this;
 }
 
-GLSLCompiler& GLSLCompiler::OnIncludeLocal(std::function<ShaderIncludeResult(std::string headerName, std::string includerName, size_t inclusionDepth)> onIncludeLocal)
+ShaderBuilder& ShaderBuilder::OnIncludeLocal(std::function<ShaderIncludeResult(std::string headerName, std::string includerName, size_t inclusionDepth)> onIncludeLocal)
 {
 	this->onIncludeLocal = std::move(onIncludeLocal);
 	return *this;
 }
 
-class GLSLCompilerIncluderImpl : public glslang::TShader::Includer
+class ShaderBuilderIncluderImpl : public glslang::TShader::Includer
 {
 public:
-	GLSLCompilerIncluderImpl(GLSLCompiler* compiler) : compiler(compiler)
+	ShaderBuilderIncluderImpl(ShaderBuilder* shaderBuilder) : shaderBuilder(shaderBuilder)
 	{
 	}
 
 	IncludeResult* includeSystem(const char* headerName, const char* includerName, size_t inclusionDepth) override
 	{
-		if (!compiler->onIncludeSystem)
+		if (!shaderBuilder->onIncludeSystem)
 		{
 			return nullptr;
 		}
@@ -67,7 +178,7 @@ public:
 			std::unique_ptr<ShaderIncludeResult> result;
 			try
 			{
-				result = std::make_unique<ShaderIncludeResult>(compiler->onIncludeSystem(headerName, includerName, inclusionDepth));
+				result = std::make_unique<ShaderIncludeResult>(shaderBuilder->onIncludeSystem(headerName, includerName, inclusionDepth));
 			}
 			catch (const std::exception& e)
 			{
@@ -91,7 +202,7 @@ public:
 
 	IncludeResult* includeLocal(const char* headerName, const char* includerName, size_t inclusionDepth) override
 	{
-		if (!compiler->onIncludeLocal)
+		if (!shaderBuilder->onIncludeLocal)
 		{
 			return nullptr;
 		}
@@ -101,7 +212,7 @@ public:
 			std::unique_ptr<ShaderIncludeResult> result;
 			try
 			{
-				result = std::make_unique<ShaderIncludeResult>(compiler->onIncludeLocal(headerName, includerName, inclusionDepth));
+				result = std::make_unique<ShaderIncludeResult>(shaderBuilder->onIncludeLocal(headerName, includerName, inclusionDepth));
 			}
 			catch (const std::exception& e)
 			{
@@ -133,15 +244,10 @@ public:
 	}
 
 private:
-	GLSLCompiler* compiler = nullptr;
+	ShaderBuilder* shaderBuilder = nullptr;
 };
 
-std::vector<uint32_t> GLSLCompiler::Compile(VulkanDevice* device)
-{
-	return Compile(device->Instance->ApiVersion);
-}
-
-std::vector<uint32_t> GLSLCompiler::Compile(uint32_t apiVersion)
+std::unique_ptr<VulkanShader> ShaderBuilder::Create(const char *shadername, VulkanDevice *device)
 {
 	EShLanguage stage = (EShLanguage)this->stage;
 
@@ -154,26 +260,27 @@ std::vector<uint32_t> GLSLCompiler::Compile(uint32_t apiVersion)
 		lengthsC.push_back((int)s.second.size());
 	}
 
+	TBuiltInResource resources = DefaultTBuiltInResource;
+
 	glslang::TShader shader(stage);
 	shader.setStringsWithLengthsAndNames(sourcesC.data(), lengthsC.data(), namesC.data(), (int)sources.size());
 	shader.setEnvInput(glslang::EShSourceGlsl, stage, glslang::EShClientVulkan, 100);
-	if (apiVersion >= VK_API_VERSION_1_2)
-	{
-		shader.setEnvClient(glslang::EShClientVulkan, glslang::EShTargetVulkan_1_2);
-		shader.setEnvTarget(glslang::EShTargetSpv, glslang::EShTargetSpv_1_4);
-	}
-	else
-	{
-		shader.setEnvClient(glslang::EShClientVulkan, glslang::EShTargetVulkan_1_0);
-		shader.setEnvTarget(glslang::EShTargetSpv, glslang::EShTargetSpv_1_0);
-	}
+    if (device->Instance->ApiVersion >= VK_API_VERSION_1_2)
+    {
+        shader.setEnvClient(glslang::EShClientVulkan, glslang::EShTargetVulkan_1_2);
+        shader.setEnvTarget(glslang::EShTargetSpv, glslang::EShTargetSpv_1_4);
+    }
+    else
+    {
+        shader.setEnvClient(glslang::EShClientVulkan, glslang::EShTargetVulkan_1_0);
+        shader.setEnvTarget(glslang::EShTargetSpv, glslang::EShTargetSpv_1_0);
+    }
 
-	GLSLCompilerIncluderImpl includer(this);
-	bool compileSuccess = shader.parse(GetDefaultResources(), 110, false, EShMsgVulkanRules, includer);
+	ShaderBuilderIncluderImpl includer(this);
+	bool compileSuccess = shader.parse(&resources, 110, false, EShMsgVulkanRules, includer);
 	if (!compileSuccess)
 	{
 		VulkanError((std::string("Shader compile failed: ") + shader.getInfoLog()).c_str());
-		return {};
 	}
 
 	glslang::TProgram program;
@@ -182,14 +289,12 @@ std::vector<uint32_t> GLSLCompiler::Compile(uint32_t apiVersion)
 	if (!linkSuccess)
 	{
 		VulkanError((std::string("Shader link failed: ") + program.getInfoLog()).c_str());
-		return {};
 	}
 
-	glslang::TIntermediate* intermediate = program.getIntermediate(stage);
+	glslang::TIntermediate *intermediate = program.getIntermediate(stage);
 	if (!intermediate)
 	{
 		VulkanError("Internal shader compiler error");
-		return {};
 	}
 
 	glslang::SpvOptions spvOptions;
@@ -197,10 +302,24 @@ std::vector<uint32_t> GLSLCompiler::Compile(uint32_t apiVersion)
 	spvOptions.disableOptimizer = false;
 	spvOptions.optimizeSize = true;
 
-	std::vector<uint32_t> spirv;
+	std::vector<unsigned int> spirv;
 	spv::SpvBuildLogger logger;
 	glslang::GlslangToSpv(*intermediate, spirv, &logger, &spvOptions);
-	return spirv;
+
+	VkShaderModuleCreateInfo createInfo = {};
+	createInfo.sType = VK_STRUCTURE_TYPE_SHADER_MODULE_CREATE_INFO;
+	createInfo.codeSize = spirv.size() * sizeof(unsigned int);
+	createInfo.pCode = spirv.data();
+
+	VkShaderModule shaderModule;
+	VkResult result = vkCreateShaderModule(device->device, &createInfo, nullptr, &shaderModule);
+	if (result != VK_SUCCESS)
+		VulkanError("Could not create vulkan shader module");
+
+	auto obj = std::make_unique<VulkanShader>(device, shaderModule);
+	if (debugName)
+		obj->SetDebugName(debugName);
+	return obj;
 }
 
 /////////////////////////////////////////////////////////////////////////////
@@ -264,18 +383,6 @@ ImageBuilder::ImageBuilder()
 	imageInfo.sharingMode = VK_SHARING_MODE_EXCLUSIVE;
 	imageInfo.samples = VK_SAMPLE_COUNT_1_BIT;
 	imageInfo.flags = 0;
-}
-
-ImageBuilder& ImageBuilder::Type(VkImageType type)
-{
-	imageInfo.imageType = type;
-	return *this;
-}
-
-ImageBuilder& ImageBuilder::Flags(VkImageCreateFlags flags)
-{
-	imageInfo.flags = flags;
-	return *this;
 }
 
 ImageBuilder& ImageBuilder::Size(int width, int height, int mipLevels, int arrayLayers)
@@ -348,7 +455,7 @@ std::unique_ptr<VulkanImage> ImageBuilder::Create(VulkanDevice* device, VkDevice
 	VmaAllocation allocation;
 
 	VkResult result = vmaCreateImage(device->allocator, &imageInfo, &allocInfo, &image, &allocation, nullptr);
-	device->CheckVulkanError(result, "Could not create vulkan image");
+	CheckVulkanError(result, "Could not create vulkan image");
 
 	if (allocatedBytes != nullptr)
 	{
@@ -413,7 +520,7 @@ std::unique_ptr<VulkanImageView> ImageViewBuilder::Create(VulkanDevice* device)
 {
 	VkImageView view;
 	VkResult result = vkCreateImageView(device->device, &viewInfo, nullptr, &view);
-	device->CheckVulkanError(result, "Could not create texture image view");
+	CheckVulkanError(result, "Could not create texture image view");
 
 	auto obj = std::make_unique<VulkanImageView>(device, view);
 	if (debugName)
@@ -500,7 +607,7 @@ std::unique_ptr<VulkanSampler> SamplerBuilder::Create(VulkanDevice* device)
 {
 	VkSampler sampler;
 	VkResult result = vkCreateSampler(device->device, &samplerInfo, nullptr, &sampler);
-	device->CheckVulkanError(result, "Could not create texture sampler");
+	CheckVulkanError(result, "Could not create texture sampler");
 	auto obj = std::make_unique<VulkanSampler>(device, sampler);
 	if (debugName)
 		obj->SetDebugName(debugName);
@@ -551,15 +658,15 @@ std::unique_ptr<VulkanBuffer> BufferBuilder::Create(VulkanDevice* device)
 	if (minAlignment == 0)
 	{
 		VkResult result = vmaCreateBuffer(device->allocator, &bufferInfo, &allocInfo, &buffer, &allocation, nullptr);
-		device->CheckVulkanError(result, "Could not allocate memory for vulkan buffer");
+		CheckVulkanError(result, "Could not allocate memory for vulkan buffer");
 	}
 	else
 	{
 		VkResult result = vmaCreateBufferWithAlignment(device->allocator, &bufferInfo, &allocInfo, minAlignment, &buffer, &allocation, nullptr);
-		device->CheckVulkanError(result, "Could not allocate memory for vulkan buffer");
+		CheckVulkanError(result, "Could not allocate memory for vulkan buffer");
 	}
 
-	auto obj = std::make_unique<VulkanBuffer>(device, buffer, allocation, (size_t)bufferInfo.size);
+	auto obj = std::make_unique<VulkanBuffer>(device, buffer, allocation, bufferInfo.size);
 	if (debugName)
 		obj->SetDebugName(debugName);
 	return obj;
@@ -607,31 +714,6 @@ std::unique_ptr<VulkanAccelerationStructure> AccelerationStructureBuilder::Creat
 
 /////////////////////////////////////////////////////////////////////////////
 
-static std::unique_ptr<VulkanShader> CreateShaderModule(VulkanDevice* device, const char* debugName, const uint32_t* code, size_t size)
-{
-	// To do:
-	// If we have VK_KHR_maintenance5 enabled or Vulkan 1.4 we can chain
-	// VkShaderModuleCreateInfo to VkPipelineShaderStageCreateInfo instead of
-	// creating this pointless object.
-
-	VkShaderModuleCreateInfo createInfo = {};
-	createInfo.sType = VK_STRUCTURE_TYPE_SHADER_MODULE_CREATE_INFO;
-	createInfo.codeSize = size * sizeof(uint32_t);
-	createInfo.pCode = code;
-
-	VkShaderModule shaderModule;
-	VkResult result = vkCreateShaderModule(device->device, &createInfo, nullptr, &shaderModule);
-	if (result != VK_SUCCESS)
-		VulkanError("Could not create vulkan shader module");
-
-	auto obj = std::make_unique<VulkanShader>(device, shaderModule);
-	if (debugName)
-		obj->SetDebugName(debugName);
-	return obj;
-}
-
-/////////////////////////////////////////////////////////////////////////////
-
 ComputePipelineBuilder::ComputePipelineBuilder()
 {
 	pipelineInfo.sType = VK_STRUCTURE_TYPE_COMPUTE_PIPELINE_CREATE_INFO;
@@ -650,14 +732,18 @@ ComputePipelineBuilder& ComputePipelineBuilder::Layout(VulkanPipelineLayout* lay
 	return *this;
 }
 
-std::unique_ptr<VulkanPipeline> ComputePipelineBuilder::Create(VulkanDevice* device)
+ComputePipelineBuilder& ComputePipelineBuilder::ComputeShader(VulkanShader* shader)
 {
-	auto shader = CreateShaderModule(device, debugName, computeShader.data(), computeShader.size());
 	stageInfo.stage = VK_SHADER_STAGE_COMPUTE_BIT;
 	stageInfo.module = shader->module;
 	stageInfo.pName = "main";
-	pipelineInfo.stage = stageInfo;
 
+	pipelineInfo.stage = stageInfo;
+	return *this;
+}
+
+std::unique_ptr<VulkanPipeline> ComputePipelineBuilder::Create(VulkanDevice* device)
+{
 	VkPipeline pipeline;
 	vkCreateComputePipelines(device->device, cache ? cache->cache : VK_NULL_HANDLE, 1, &pipelineInfo, nullptr, &pipeline);
 	auto obj = std::make_unique<VulkanPipeline>(device, pipeline);
@@ -705,7 +791,7 @@ std::unique_ptr<VulkanDescriptorSetLayout> DescriptorSetLayoutBuilder::Create(Vu
 {
 	VkDescriptorSetLayout layout;
 	VkResult result = vkCreateDescriptorSetLayout(device->device, &layoutInfo, nullptr, &layout);
-	device->CheckVulkanError(result, "Could not create descriptor set layout");
+	CheckVulkanError(result, "Could not create descriptor set layout");
 	auto obj = std::make_unique<VulkanDescriptorSetLayout>(device, layout);
 	if (debugName)
 		obj->SetDebugName(debugName);
@@ -749,7 +835,7 @@ std::unique_ptr<VulkanDescriptorPool> DescriptorPoolBuilder::Create(VulkanDevice
 {
 	VkDescriptorPool descriptorPool;
 	VkResult result = vkCreateDescriptorPool(device->device, &poolInfo, nullptr, &descriptorPool);
-	device->CheckVulkanError(result, "Could not create descriptor pool");
+	CheckVulkanError(result, "Could not create descriptor pool");
 	auto obj = std::make_unique<VulkanDescriptorPool>(device, descriptorPool);
 	if (debugName)
 		obj->SetDebugName(debugName);
@@ -775,7 +861,7 @@ std::unique_ptr<VulkanQueryPool> QueryPoolBuilder::Create(VulkanDevice* device)
 {
 	VkQueryPool queryPool;
 	VkResult result = vkCreateQueryPool(device->device, &poolInfo, nullptr, &queryPool);
-	device->CheckVulkanError(result, "Could not create query pool");
+	CheckVulkanError(result, "Could not create query pool");
 	auto obj = std::make_unique<VulkanQueryPool>(device, queryPool);
 	if (debugName)
 		obj->SetDebugName(debugName);
@@ -825,7 +911,7 @@ std::unique_ptr<VulkanFramebuffer> FramebufferBuilder::Create(VulkanDevice* devi
 {
 	VkFramebuffer framebuffer = 0;
 	VkResult result = vkCreateFramebuffer(device->device, &framebufferInfo, nullptr, &framebuffer);
-	device->CheckVulkanError(result, "Could not create framebuffer");
+	CheckVulkanError(result, "Could not create framebuffer");
 	auto obj = std::make_unique<VulkanFramebuffer>(device, framebuffer);
 	if (debugName)
 		obj->SetDebugName(debugName);
@@ -893,6 +979,7 @@ ColorBlendAttachmentBuilder& ColorBlendAttachmentBuilder::BlendMode(VkBlendOp op
 
 GraphicsPipelineBuilder::GraphicsPipelineBuilder()
 {
+	pipelineInfo.sType = VK_STRUCTURE_TYPE_GRAPHICS_PIPELINE_CREATE_INFO;
 	pipelineInfo.pVertexInputState = &vertexInputInfo;
 	pipelineInfo.pInputAssemblyState = &inputAssembly;
 	pipelineInfo.pViewportState = &viewportState;
@@ -905,19 +992,23 @@ GraphicsPipelineBuilder::GraphicsPipelineBuilder()
 	pipelineInfo.basePipelineHandle = VK_NULL_HANDLE;
 	pipelineInfo.basePipelineIndex = -1;
 
+	vertexInputInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_VERTEX_INPUT_STATE_CREATE_INFO;
 	vertexInputInfo.vertexBindingDescriptionCount = 0;
 	vertexInputInfo.pVertexBindingDescriptions = nullptr;
 	vertexInputInfo.vertexAttributeDescriptionCount = 0;
 	vertexInputInfo.pVertexAttributeDescriptions = nullptr;
 
+	inputAssembly.sType = VK_STRUCTURE_TYPE_PIPELINE_INPUT_ASSEMBLY_STATE_CREATE_INFO;
 	inputAssembly.topology = VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST;
 	inputAssembly.primitiveRestartEnable = VK_FALSE;
 
+	viewportState.sType = VK_STRUCTURE_TYPE_PIPELINE_VIEWPORT_STATE_CREATE_INFO;
 	viewportState.viewportCount = 1;
 	viewportState.pViewports = &viewport;
 	viewportState.scissorCount = 1;
 	viewportState.pScissors = &scissor;
 
+	depthStencil.sType = VK_STRUCTURE_TYPE_PIPELINE_DEPTH_STENCIL_STATE_CREATE_INFO;
 	depthStencil.depthCompareOp = VK_COMPARE_OP_LESS_OR_EQUAL;
 	depthStencil.depthBoundsTestEnable = VK_FALSE;
 	depthStencil.minDepthBounds = 0.0f;
@@ -926,6 +1017,7 @@ GraphicsPipelineBuilder::GraphicsPipelineBuilder()
 	depthStencil.front = {};
 	depthStencil.back = {};
 
+	rasterizer.sType = VK_STRUCTURE_TYPE_PIPELINE_RASTERIZATION_STATE_CREATE_INFO;
 	rasterizer.depthClampEnable = VK_FALSE;
 	rasterizer.rasterizerDiscardEnable = VK_FALSE;
 	rasterizer.polygonMode = VK_POLYGON_MODE_FILL;
@@ -937,6 +1029,7 @@ GraphicsPipelineBuilder::GraphicsPipelineBuilder()
 	rasterizer.depthBiasClamp = 0.0f;
 	rasterizer.depthBiasSlopeFactor = 0.0f;
 
+	multisampling.sType = VK_STRUCTURE_TYPE_PIPELINE_MULTISAMPLE_STATE_CREATE_INFO;
 	multisampling.sampleShadingEnable = VK_FALSE;
 	multisampling.rasterizationSamples = VK_SAMPLE_COUNT_1_BIT;
 	multisampling.minSampleShading = 1.0f;
@@ -944,30 +1037,15 @@ GraphicsPipelineBuilder::GraphicsPipelineBuilder()
 	multisampling.alphaToCoverageEnable = VK_FALSE;
 	multisampling.alphaToOneEnable = VK_FALSE;
 
+	colorBlending.sType = VK_STRUCTURE_TYPE_PIPELINE_COLOR_BLEND_STATE_CREATE_INFO;
 	colorBlending.logicOpEnable = VK_FALSE;
 	colorBlending.logicOp = VK_LOGIC_OP_COPY;
 	colorBlending.blendConstants[0] = 0.0f;
 	colorBlending.blendConstants[1] = 0.0f;
 	colorBlending.blendConstants[2] = 0.0f;
 	colorBlending.blendConstants[3] = 0.0f;
-}
 
-GraphicsPipelineBuilder& GraphicsPipelineBuilder::AddLibrary(VulkanPipeline* pipeline)
-{
-	libraries.push_back(pipeline->pipeline);
-	return *this;
-}
-
-GraphicsPipelineBuilder& GraphicsPipelineBuilder::Flags(VkPipelineCreateFlags flags)
-{
-	pipelineInfo.flags = flags;
-	return *this;
-}
-
-GraphicsPipelineBuilder& GraphicsPipelineBuilder::LibraryFlags(VkGraphicsPipelineLibraryFlagsEXT flags)
-{
-	pipelineLibrary.flags = flags;
-	return *this;
+	dynamicState.sType = VK_STRUCTURE_TYPE_PIPELINE_DYNAMIC_STATE_CREATE_INFO;
 }
 
 GraphicsPipelineBuilder& GraphicsPipelineBuilder::RasterizationSamples(VkSampleCountFlagBits samples)
@@ -1088,68 +1166,32 @@ GraphicsPipelineBuilder& GraphicsPipelineBuilder::AddColorBlendAttachment(VkPipe
 	return *this;
 }
 
-GraphicsPipelineBuilder& GraphicsPipelineBuilder::AddVertexShader(std::vector<uint32_t> spirv)
+GraphicsPipelineBuilder& GraphicsPipelineBuilder::AddVertexShader(VulkanShader* shader)
 {
 	VkPipelineShaderStageCreateInfo vertShaderStageInfo = {};
 	vertShaderStageInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_SHADER_STAGE_CREATE_INFO;
 	vertShaderStageInfo.stage = VK_SHADER_STAGE_VERTEX_BIT;
+	vertShaderStageInfo.module = shader->module;
 	vertShaderStageInfo.pName = "main";
 	shaderStages.push_back(vertShaderStageInfo);
-	shaderCode.push_back(std::move(spirv));
+
+	pipelineInfo.stageCount = (uint32_t)shaderStages.size();
+	pipelineInfo.pStages = shaderStages.data();
 	return *this;
 }
 
-GraphicsPipelineBuilder& GraphicsPipelineBuilder::AddFragmentShader(std::vector<uint32_t> spirv)
+GraphicsPipelineBuilder& GraphicsPipelineBuilder::AddFragmentShader(VulkanShader* shader)
 {
 	VkPipelineShaderStageCreateInfo fragShaderStageInfo = {};
 	fragShaderStageInfo.sType = VK_STRUCTURE_TYPE_PIPELINE_SHADER_STAGE_CREATE_INFO;
 	fragShaderStageInfo.stage = VK_SHADER_STAGE_FRAGMENT_BIT;
+	fragShaderStageInfo.module = shader->module;
 	fragShaderStageInfo.pName = "main";
 	shaderStages.push_back(fragShaderStageInfo);
-	shaderCode.push_back(std::move(spirv));
+
+	pipelineInfo.stageCount = (uint32_t)shaderStages.size();
+	pipelineInfo.pStages = shaderStages.data();
 	return *this;
-}
-
-GraphicsPipelineBuilder& GraphicsPipelineBuilder::AddConstant(uint32_t constantID, const void* data, size_t size)
-{
-	VkPipelineShaderStageCreateInfo& stage = shaderStages.back();
-	if (!stage.pSpecializationInfo)
-	{
-		specializations.push_back(std::make_unique<ShaderSpecialization>());
-		stage.pSpecializationInfo = &specializations.back()->info;
-	}
-
-	ShaderSpecialization* s = specializations.back().get();
-
-	VkSpecializationMapEntry entry = {};
-	entry.constantID = constantID;
-	entry.offset = (uint32_t)s->data.size();
-	entry.size = (uint32_t)size;
-
-	s->data.insert(s->data.end(), (uint8_t*)data, (uint8_t*)data + size);
-	s->entries.push_back(entry);
-
-	s->info.mapEntryCount = (uint32_t)s->entries.size();
-	s->info.dataSize = (uint32_t)s->data.size();
-	s->info.pMapEntries = s->entries.data();
-	s->info.pData = s->data.data();
-
-	return *this;
-}
-
-GraphicsPipelineBuilder& GraphicsPipelineBuilder::AddConstant(uint32_t constantID, uint32_t value)
-{
-	return AddConstant(constantID, &value, sizeof(uint32_t));
-}
-
-GraphicsPipelineBuilder& GraphicsPipelineBuilder::AddConstant(uint32_t constantID, int32_t value)
-{
-	return AddConstant(constantID, &value, sizeof(int32_t));
-}
-
-GraphicsPipelineBuilder& GraphicsPipelineBuilder::AddConstant(uint32_t constantID, float value)
-{
-	return AddConstant(constantID, &value, sizeof(float));
 }
 
 GraphicsPipelineBuilder& GraphicsPipelineBuilder::AddVertexBufferBinding(int index, size_t stride)
@@ -1194,43 +1236,9 @@ std::unique_ptr<VulkanPipeline> GraphicsPipelineBuilder::Create(VulkanDevice* de
 	colorBlending.pAttachments = colorBlendAttachments.data();
 	colorBlending.attachmentCount = (uint32_t)colorBlendAttachments.size();
 
-	if (!libraries.empty())
-	{
-		auto flags = pipelineInfo.flags;
-		pipelineInfo = { VK_STRUCTURE_TYPE_GRAPHICS_PIPELINE_CREATE_INFO };
-		pipelineInfo.flags = flags;
-		libraryCreate.libraryCount = (uint32_t)libraries.size();
-		libraryCreate.pLibraries = libraries.data();
-	}
-
-	std::vector<std::unique_ptr<VulkanShader>> shaders;
-	shaders.reserve(shaderStages.size());
-	for (size_t i = 0; i < shaderStages.size(); i++)
-	{
-		auto shader = CreateShaderModule(device, debugName, shaderCode[i].data(), shaderCode[i].size());
-		shaderStages[i].module = shader->module;
-		shaders.push_back(std::move(shader));
-	}
-	pipelineInfo.stageCount = (uint32_t)shaderStages.size();
-	pipelineInfo.pStages = shaderStages.data();
-
-	const void** ppNext = &pipelineInfo.pNext;
-
-	if (libraryCreate.libraryCount > 0 && device->SupportsExtension(VK_KHR_PIPELINE_LIBRARY_EXTENSION_NAME))
-	{
-		*ppNext = &libraryCreate;
-		ppNext = &libraryCreate.pNext;
-	}
-
-	if (pipelineLibrary.flags != 0 && device->SupportsExtension(VK_EXT_GRAPHICS_PIPELINE_LIBRARY_EXTENSION_NAME))
-	{
-		*ppNext = &pipelineLibrary;
-		ppNext = &pipelineLibrary.pNext;
-	}
-
 	VkPipeline pipeline = 0;
 	VkResult result = vkCreateGraphicsPipelines(device->device, cache ? cache->cache : VK_NULL_HANDLE, 1, &pipelineInfo, nullptr, &pipeline);
-	device->CheckVulkanError(result, "Could not create graphics pipeline");
+	CheckVulkanError(result, "Could not create graphics pipeline");
 	auto obj = std::make_unique<VulkanPipeline>(device, pipeline);
 	if (debugName)
 		obj->SetDebugName(debugName);
@@ -1268,7 +1276,7 @@ std::unique_ptr<VulkanPipelineLayout> PipelineLayoutBuilder::Create(VulkanDevice
 {
 	VkPipelineLayout pipelineLayout;
 	VkResult result = vkCreatePipelineLayout(device->device, &pipelineLayoutInfo, nullptr, &pipelineLayout);
-	device->CheckVulkanError(result, "Could not create pipeline layout");
+	CheckVulkanError(result, "Could not create pipeline layout");
 	auto obj = std::make_unique<VulkanPipelineLayout>(device, pipelineLayout);
 	if (debugName)
 		obj->SetDebugName(debugName);
@@ -1316,7 +1324,7 @@ std::unique_ptr<VulkanPipelineCache> PipelineCacheBuilder::Create(VulkanDevice* 
 
 	VkPipelineCache pipelineCache;
 	VkResult result = vkCreatePipelineCache(device->device, &pipelineCacheInfo, nullptr, &pipelineCache);
-	device->CheckVulkanError(result, "Could not create pipeline cache");
+	CheckVulkanError(result, "Could not create pipeline cache");
 	auto obj = std::make_unique<VulkanPipelineCache>(device, pipelineCache);
 	if (debugName)
 		obj->SetDebugName(debugName);
@@ -1420,7 +1428,7 @@ std::unique_ptr<VulkanRenderPass> RenderPassBuilder::Create(VulkanDevice* device
 {
 	VkRenderPass renderPass = 0;
 	VkResult result = vkCreateRenderPass(device->device, &renderPassInfo, nullptr, &renderPass);
-	device->CheckVulkanError(result, "Could not create render pass");
+	CheckVulkanError(result, "Could not create render pass");
 	auto obj = std::make_unique<VulkanRenderPass>(device, renderPass);
 	if (debugName)
 		obj->SetDebugName(debugName);
@@ -1563,7 +1571,7 @@ QueueSubmit& QueueSubmit::AddSignal(VulkanSemaphore* semaphore)
 void QueueSubmit::Execute(VulkanDevice* device, VkQueue queue, VulkanFence* fence)
 {
 	VkResult result = vkQueueSubmit(device->GraphicsQueue, 1, &submitInfo, fence ? fence->fence : VK_NULL_HANDLE);
-	device->CheckVulkanError(result, "Could not submit command buffer");
+	CheckVulkanError(result, "Could not submit command buffer");
 }
 
 /////////////////////////////////////////////////////////////////////////////
@@ -1695,30 +1703,22 @@ VulkanInstanceBuilder& VulkanInstanceBuilder::RequireExtension(const std::string
 	return *this;
 }
 
-VulkanInstanceBuilder& VulkanInstanceBuilder::RequireExtensions(const std::vector<std::string>& extensions)
+VulkanInstanceBuilder& VulkanInstanceBuilder::RequireSurfaceExtensions(bool enable)
 {
-	for (const auto& ext : extensions)
-		RequireExtension(ext);
-	return *this;
-}
+	if (enable)
+	{
+		RequireExtension(VK_KHR_SURFACE_EXTENSION_NAME);
 
-VulkanInstanceBuilder& VulkanInstanceBuilder::RequireExtensions(const std::vector<const char*>& extensions)
-{
-	for (const auto& ext : extensions)
-		RequireExtension(ext);
-	return *this;
-}
+#if defined(VK_USE_PLATFORM_WIN32_KHR)
+		RequireExtension(VK_KHR_WIN32_SURFACE_EXTENSION_NAME);
+#elif defined(VK_USE_PLATFORM_MACOS_MVK)
+		RequireExtension(VK_MVK_MACOS_SURFACE_EXTENSION_NAME);
+#elif defined(VK_USE_PLATFORM_XLIB_KHR)
+		RequireExtension(VK_KHR_XLIB_SURFACE_EXTENSION_NAME);
+#endif
 
-VulkanInstanceBuilder& VulkanInstanceBuilder::RequireExtensions(const char** extensions, size_t count)
-{
-	for (size_t i = 0; i < count; i++)
-		RequireExtension(extensions[i]);
-	return *this;
-}
-
-VulkanInstanceBuilder& VulkanInstanceBuilder::OptionalSwapchainColorspace()
-{
-	OptionalExtension(VK_EXT_SWAPCHAIN_COLOR_SPACE_EXTENSION_NAME); // For HDR support
+		OptionalExtension(VK_EXT_SWAPCHAIN_COLOR_SPACE_EXTENSION_NAME); // For HDR support
+	}
 	return *this;
 }
 
@@ -1741,27 +1741,31 @@ std::shared_ptr<VulkanInstance> VulkanInstanceBuilder::Create()
 
 /////////////////////////////////////////////////////////////////////////////
 
-#ifndef VK_KHR_MAINTENANCE4_EXTENSION_NAME
-#define VK_KHR_MAINTENANCE4_EXTENSION_NAME "VK_KHR_maintenance4"
+#ifdef VK_USE_PLATFORM_WIN32_KHR
+
+VulkanSurfaceBuilder::VulkanSurfaceBuilder()
+{
+}
+
+VulkanSurfaceBuilder& VulkanSurfaceBuilder::Win32Window(HWND hwnd)
+{
+	this->hwnd = hwnd;
+	return *this;
+}
+
+std::shared_ptr<VulkanSurface> VulkanSurfaceBuilder::Create(std::shared_ptr<VulkanInstance> instance)
+{
+	return std::make_shared<VulkanSurface>(std::move(instance), hwnd);
+}
+
 #endif
+
+/////////////////////////////////////////////////////////////////////////////
 
 VulkanDeviceBuilder::VulkanDeviceBuilder()
 {
-	// Extensions desired by vk_mem_alloc
 	OptionalExtension(VK_KHR_DEDICATED_ALLOCATION_EXTENSION_NAME);
 	OptionalExtension(VK_KHR_GET_MEMORY_REQUIREMENTS_2_EXTENSION_NAME);
-	OptionalExtension(VK_KHR_BIND_MEMORY_2_EXTENSION_NAME);
-	//OptionalExtension(VK_KHR_MAINTENANCE4_EXTENSION_NAME);
-	OptionalExtension(VK_EXT_MEMORY_BUDGET_EXTENSION_NAME);
-	OptionalExtension(VK_EXT_MEMORY_PRIORITY_EXTENSION_NAME);
-	OptionalExtension(VK_AMD_DEVICE_COHERENT_MEMORY_EXTENSION_NAME);
-
-	// Extensions desired for debugging
-	OptionalExtension(VK_EXT_DEVICE_FAULT_EXTENSION_NAME);
-
-	// For pipeline building
-	OptionalExtension(VK_KHR_PIPELINE_LIBRARY_EXTENSION_NAME);
-	OptionalExtension(VK_EXT_GRAPHICS_PIPELINE_LIBRARY_EXTENSION_NAME);
 }
 
 VulkanDeviceBuilder& VulkanDeviceBuilder::RequireExtension(const std::string& extensionName)
@@ -1854,7 +1858,6 @@ std::vector<VulkanCompatibleDevice> VulkanDeviceBuilder::FindDevices(const std::
 		enabledFeatures.Features.shaderClipDistance = deviceFeatures.Features.shaderClipDistance;
 		enabledFeatures.Features.multiDrawIndirect = deviceFeatures.Features.multiDrawIndirect;
 		enabledFeatures.Features.independentBlend = deviceFeatures.Features.independentBlend;
-		enabledFeatures.Features.imageCubeArray = deviceFeatures.Features.imageCubeArray;
 		enabledFeatures.BufferDeviceAddress.bufferDeviceAddress = deviceFeatures.BufferDeviceAddress.bufferDeviceAddress;
 		enabledFeatures.AccelerationStructure.accelerationStructure = deviceFeatures.AccelerationStructure.accelerationStructure;
 		enabledFeatures.RayQuery.rayQuery = deviceFeatures.RayQuery.rayQuery;
@@ -1863,8 +1866,6 @@ std::vector<VulkanCompatibleDevice> VulkanDeviceBuilder::FindDevices(const std::
 		enabledFeatures.DescriptorIndexing.descriptorBindingSampledImageUpdateAfterBind = deviceFeatures.DescriptorIndexing.descriptorBindingSampledImageUpdateAfterBind;
 		enabledFeatures.DescriptorIndexing.descriptorBindingVariableDescriptorCount = deviceFeatures.DescriptorIndexing.descriptorBindingVariableDescriptorCount;
 		enabledFeatures.DescriptorIndexing.shaderSampledImageArrayNonUniformIndexing = deviceFeatures.DescriptorIndexing.shaderSampledImageArrayNonUniformIndexing;
-		enabledFeatures.Fault.deviceFault = deviceFeatures.Fault.deviceFault;
-		enabledFeatures.GraphicsPipelineLibrary.graphicsPipelineLibrary = deviceFeatures.GraphicsPipelineLibrary.graphicsPipelineLibrary;
 
 		// Figure out which queue can present
 		if (surface)

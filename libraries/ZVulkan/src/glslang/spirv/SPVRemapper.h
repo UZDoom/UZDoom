@@ -41,22 +41,13 @@
 #include <cstdlib>
 #include <exception>
 
-#ifdef GLSLANG_IS_SHARED_LIBRARY
-    #ifdef _WIN32
-        #ifdef GLSLANG_EXPORTING
-            #define GLSLANG_EXPORT __declspec(dllexport)
-        #else
-            #define GLSLANG_EXPORT __declspec(dllimport)
-        #endif
-    #elif __GNUC__ >= 4
-        #define GLSLANG_EXPORT __attribute__((visibility("default")))
-    #endif
-#endif // GLSLANG_IS_SHARED_LIBRARY
-#ifndef GLSLANG_EXPORT
-#define GLSLANG_EXPORT
-#endif
-
 namespace spv {
+
+// MSVC defines __cplusplus as an older value, even when it supports almost all of 11.
+// We handle that here by making our own symbol.
+#if __cplusplus >= 201103L || (defined(_MSC_VER) && _MSC_VER >= 1700)
+#   define use_cpp11 1
+#endif
 
 class spirvbin_base_t
 {
@@ -83,6 +74,27 @@ public:
 
 } // namespace SPV
 
+#if !defined (use_cpp11)
+#include <cstdio>
+#include <cstdint>
+
+namespace spv {
+class spirvbin_t : public spirvbin_base_t
+{
+public:
+    spirvbin_t(int /*verbose = 0*/) { }
+
+    void remap(std::vector<std::uint32_t>& /*spv*/, unsigned int /*opts = 0*/)
+    {
+        printf("Tool not compiled for C++11, which is required for SPIR-V remapping.\n");
+        exit(5);
+    }
+};
+
+} // namespace SPV
+
+#else // defined (use_cpp11)
+
 #include <functional>
 #include <cstdint>
 #include <unordered_map>
@@ -92,13 +104,12 @@ public:
 #include <cassert>
 
 #include "spirv.hpp"
+#include "spvIR.h"
 
 namespace spv {
 
-static inline constexpr Id NoResult = 0;
-
 // class to hold SPIR-V binary data for remapping, DCE, and debug stripping
-class GLSLANG_EXPORT spirvbin_t : public spirvbin_base_t
+class spirvbin_t : public spirvbin_base_t
 {
 public:
    spirvbin_t(int verbose = 0) : entryPoint(spv::NoResult), largestNewId(0), verbose(verbose), errorLatch(false)
@@ -107,10 +118,6 @@ public:
    virtual ~spirvbin_t() { }
 
    // remap on an existing binary in memory
-   void remap(std::vector<std::uint32_t>& spv, const std::vector<std::string>& whiteListStrings,
-              std::uint32_t opts = DO_EVERYTHING);
-
-   // remap on an existing binary in memory - legacy interface without white list
    void remap(std::vector<std::uint32_t>& spv, std::uint32_t opts = DO_EVERYTHING);
 
    // Type for error/log handler functions
@@ -172,8 +179,6 @@ private:
    range_t  constRange(spv::Op opCode)     const;
    unsigned typeSizeInWords(spv::Id id)    const;
    unsigned idTypeSizeInWords(spv::Id id)  const;
-
-   bool isStripOp(spv::Op opCode, unsigned start) const;
 
    spv::Id&        asId(unsigned word)                { return spv[word]; }
    const spv::Id&  asId(unsigned word)          const { return spv[word]; }
@@ -244,8 +249,6 @@ private:
 
    std::vector<spirword_t> spv;      // SPIR words
 
-   std::vector<std::string> stripWhiteList;
-
    namemap_t               nameMap;  // ID names from OpName
 
    // Since we want to also do binary ops, we can't use std::vector<bool>.  we could use
@@ -297,4 +300,5 @@ private:
 
 } // namespace SPV
 
+#endif // defined (use_cpp11)
 #endif // SPIRVREMAPPER_H

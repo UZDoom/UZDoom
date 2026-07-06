@@ -25,7 +25,7 @@ public:
 	VulkanSwapChain(VulkanDevice* device);
 	~VulkanSwapChain();
 
-	void Create(int width, int height, int imageCount, bool vsync, bool hdr);
+	void Create(int width, int height, int imageCount, bool vsync, bool hdr, bool exclusivefullscreen);
 	bool Lost() const { return lost; }
 
 	int Width() const { return actualExtent.width; }
@@ -42,9 +42,9 @@ public:
 private:
 	void SelectFormat(const VulkanSurfaceCapabilities& caps, bool hdr);
 
-	bool CreateSwapchain(int width, int height, int imageCount, bool vsync, bool hdr);
+	bool CreateSwapchain(int width, int height, int imageCount, bool vsync, bool hdr, bool exclusivefullscreen);
 
-	VulkanSurfaceCapabilities GetSurfaceCapabilities();
+	VulkanSurfaceCapabilities GetSurfaceCapabilities(bool exclusivefullscreen);
 
 	VulkanDevice* device = nullptr;
 	bool lost = true;
@@ -52,7 +52,7 @@ private:
 	VkExtent2D actualExtent = {};
 	VkSwapchainKHR swapchain = VK_NULL_HANDLE;
 	VkSurfaceFormatKHR format = {};
-	VkPresentModeKHR presentMode = {};
+	VkPresentModeKHR presentMode;
 	std::vector<std::unique_ptr<VulkanImage>> images;
 	std::vector<std::unique_ptr<VulkanImageView>> views;
 

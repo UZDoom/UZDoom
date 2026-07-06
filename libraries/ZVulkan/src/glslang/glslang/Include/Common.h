@@ -39,14 +39,9 @@
 
 #include <algorithm>
 #include <cassert>
-#ifdef _MSC_VER
-#include <cfloat>
-#else
-#include <cmath>
-#endif
-#include <cstdint>
 #include <cstdio>
 #include <cstdlib>
+#include <cstdint>
 #include <list>
 #include <map>
 #include <set>
@@ -55,7 +50,7 @@
 #include <unordered_set>
 #include <vector>
 
-#if defined(__ANDROID__)
+#if defined(__ANDROID__) || (defined(_MSC_VER) && _MSC_VER < 1700)
 #include <sstream>
 namespace std {
 template<typename T>
@@ -67,7 +62,7 @@ std::string to_string(const T& val) {
 }
 #endif
 
-#if defined(MINGW_HAS_SECURE_API) && MINGW_HAS_SECURE_API
+#if (defined(_MSC_VER) && _MSC_VER < 1900 /*vs2015*/) || defined MINGW_HAS_SECURE_API
     #include <basetsd.h>
     #ifndef snprintf
     #define snprintf sprintf_s
@@ -83,7 +78,24 @@ std::string to_string(const T& val) {
     #define UINT_PTR uintptr_t
 #endif
 
-#if defined(_MSC_VER) && !defined(strdup)
+#if defined(_MSC_VER) && _MSC_VER < 1800
+    #include <stdlib.h>
+    inline long long int strtoll (const char* str, char** endptr, int base)
+    {
+        return _strtoi64(str, endptr, base);
+    }
+    inline unsigned long long int strtoull (const char* str, char** endptr, int base)
+    {
+        return _strtoui64(str, endptr, base);
+    }
+    inline long long int atoll (const char* str)
+    {
+        return strtoll(str, NULL, 10);
+    }
+#endif
+
+#if defined(_MSC_VER)
+#undef strdup
 #define strdup _strdup
 #endif
 
@@ -92,11 +104,6 @@ std::string to_string(const T& val) {
     #pragma warning(disable : 4786) // Don't warn about too long identifiers
     #pragma warning(disable : 4514) // unused inline method
     #pragma warning(disable : 4201) // nameless union
-#endif
-
-// Allow compilation to WASI which does not support threads yet.
-#ifdef __wasi__ 
-#define DISABLE_THREAD_SUPPORT
 #endif
 
 #include "PoolAlloc.h"
@@ -164,11 +171,6 @@ template<class T> inline T* NewPoolObject(T, int instances)
     return new(GetThreadPoolAllocator().allocate(instances * sizeof(T))) T[instances];
 }
 
-inline bool StartsWith(TString const &str, const char *prefix)
-{
-    return str.compare(0, strlen(prefix), prefix) == 0;
-}
-
 //
 // Pool allocator versions of vectors, lists, and maps
 //
@@ -213,7 +215,7 @@ template <class T> T Max(const T a, const T b) { return a > b ? a : b; }
 //
 // Create a TString object from an integer.
 //
-#if defined(_MSC_VER) || (defined(MINGW_HAS_SECURE_API) && MINGW_HAS_SECURE_API)
+#if defined _MSC_VER || defined MINGW_HAS_SECURE_API
 inline const TString String(const int i, const int base = 10)
 {
     char text[16];     // 32 bit ints are at most 10 digits in base 10
