@@ -1,0 +1,249 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-05-11 03:43+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Romanian <https://hosted.weblate.org/projects/doom-engine-games/harmony-filter/ro/>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2;\n"
+"X-Generator: Weblate 2026.5-dev\n"
+
+#, fuzzy
+msgctxt "doom harmony"
+msgid "NIGHTMARE"
+msgstr ""
+"Chiar crezi că poți face față?\n"
+"\n"
+"apasă 'Y' sau 'N'..."
+
+msgctxt "doom harmony"
+msgid "AMSTR_MARKEDSPOT"
+msgstr "Loc marcat"
+
+msgctxt "doom harmony"
+msgid "PD_BLUEO"
+msgstr "Necesită cardul VERDE"
+
+msgctxt "doom harmony"
+msgid "PD_REDO"
+msgstr "Necesită cardul MOV"
+
+msgctxt "doom harmony"
+msgid "PD_YELLOWO"
+msgstr "Necesită cardul GALBEN"
+
+msgctxt "doom harmony"
+msgid "PD_BLUEK"
+msgstr "Necesită cheia VERDE"
+
+msgctxt "doom harmony"
+msgid "PD_YELLOWK"
+msgstr "Necesită cheia GALBENĂ"
+
+msgctxt "doom harmony"
+msgid "PD_REDK"
+msgstr "Necesită cheia MOV"
+
+msgctxt "doom harmony"
+msgid "GOTARMOR"
+msgstr "Ai ridicat Armura."
+
+msgctxt "doom harmony"
+msgid "GOTMEGA"
+msgstr "Ai ridicat Armura de Luptă."
+
+msgctxt "doom harmony"
+msgid "GOTMSPHERE"
+msgstr "Supersănătate"
+
+msgctxt "doom harmony"
+msgid "GOTBLUECARD"
+msgstr "Ai achiziționat cardul VERDE."
+
+msgctxt "doom harmony"
+msgid "GOTYELWCARD"
+msgstr "Ai achiziționat cardul GALBEN."
+
+msgctxt "doom harmony"
+msgid "GOTREDCARD"
+msgstr "Ai achiziționat cardul MOV."
+
+msgctxt "doom harmony"
+msgid "GOTBLUESKUL"
+msgstr "Ai achiziționat cheia VERDE."
+
+msgctxt "doom harmony"
+msgid "GOTYELWSKUL"
+msgstr "Ai achiziționat cheia GALBENĂ."
+
+msgctxt "doom harmony"
+msgid "GOTREDSKUL"
+msgstr "Ai achiziționat cheia MOV."
+
+msgctxt "doom harmony"
+msgid "GOTSTIM"
+msgstr "Ciupercă vindecătoare"
+
+msgctxt "doom harmony"
+msgid "GOTMEDIKIT"
+msgstr "Ai ridicat: Kit de Prim-Ajutor."
+
+msgctxt "doom harmony"
+msgid "GOTMEDINEED"
+msgstr "Ai ridicat: Kit de Prim-Ajutor de care CHIAR ai nevoie."
+
+msgctxt "doom harmony"
+msgid "GOTMAP"
+msgstr "Hartă"
+
+msgctxt "doom harmony"
+msgid "GOTCLIPBOX"
+msgstr "Ai achiziționat: Cutie de gloanțe."
+
+msgctxt "doom harmony"
+msgid "GOTROCKET"
+msgstr "Ai achiziționat: Grenadă."
+
+msgctxt "doom harmony"
+msgid "GOTROCKBOX"
+msgstr "Ai achiziționat: Grenade."
+
+msgctxt "doom harmony"
+msgid "GOTSHELLBOX"
+msgstr "Ai achiziționat: Cutie de muniție pentru pușcă."
+
+msgctxt "doom harmony"
+msgid "GOTBACKPACK"
+msgstr "Ai achiziționat: Raniță."
+
+msgctxt "doom harmony"
+msgid "GOTBFG9000"
+msgstr "Ai achiziționat: Grenadă."
+
+msgctxt "doom harmony"
+msgid "GOTCHAINGUN"
+msgstr "Ai achiziționat: Minimitralieră."
+
+msgctxt "doom harmony"
+msgid "GOTLAUNCHER"
+msgstr "Ai achiziționat: Lansator de grenade."
+
+msgctxt "doom harmony"
+msgid "GOTPLASMA"
+msgstr "Aruncător entropic!"
+
+msgctxt "doom harmony"
+msgid "GOTSHOTGUN"
+msgstr "Ai achiziționat: Pușcă."
+
+msgctxt "doom harmony"
+msgid "STSTR_DQDON"
+msgstr "Modul Invincibil PORNIT"
+
+msgctxt "doom harmony"
+msgid "STSTR_DQDOFF"
+msgstr "Modul Invincibil OPRIT"
+
+msgctxt "doom harmony"
+msgid "STSTR_KFAADDED"
+msgstr "Toate armele/muniție/chei"
+
+msgctxt "doom harmony"
+msgid "STSTR_FAADDED"
+msgstr "Toate armele și muniție"
+
+msgid "TXT_HARMMAP01"
+msgstr "Răpire"
+
+msgid "TXT_HARMMAP02"
+msgstr "Calea pericolului"
+
+msgid "TXT_HARMMAP03"
+msgstr "Fricțiune"
+
+msgid "TXT_HARMMAP04"
+msgstr "Megalopolis"
+
+msgid "TXT_HARMMAP05"
+msgstr "Spitalul"
+
+msgid "TXT_HARMMAP06"
+msgstr "Fabrica de Arme"
+
+msgid "TXT_HARMMAP07"
+msgstr "Laboratorul Subacvatic"
+
+msgid "TXT_HARMMAP08"
+msgstr "Pista Unu"
+
+msgid "TXT_HARMMAP09"
+msgstr "Baza de Lansare"
+
+msgid "TXT_HARMMAP10"
+msgstr "Zona Radioactivă"
+
+msgid "TXT_HARMMAP11"
+msgstr ""
+
+#, fuzzy
+msgid "CLUSTEREXIT1"
+msgstr ""
+"Îți vine rău de la stomac...\n"
+"Uitându-te în ochii reginei mutant...\n"
+"Acel lucru... Acel lucru obișnuia să fie...\n"
+"Prietena ta... Amira!\n"
+"\n"
+"Moștrii trebuie să fii reușit cumva să o\n"
+"transforme în această creatură hidoasă capabilă \n"
+"să le poarte progeniturile...\n"
+"\n"
+"-oftezi-\n"
+"\n"
+"Te aduni...\n"
+"Îi vei face să plătească pentru că te-au făcut să\n"
+"îți omori prietena...\n"
+"\n"
+"\"Iadul nu e nimic în comparație cu o femeie disprețuită!\"\n"
+"\n"
+"              = S F Â R Ș I T ="
+
+# This text is deliberately empty
+msgctxt "doom harmony"
+msgid "WI_FINISHED"
+msgstr ""
+
+# Yellow needs retranslation
+msgctxt "doom harmony"
+msgid "WI_ENTERING"
+msgstr "Se încarcă"
+
+msgctxt "doom harmony"
+msgid "SKILL_BABY"
+msgstr "Foarte Ușor"
+
+msgctxt "doom harmony"
+msgid "SKILL_EASY"
+msgstr "Ușor"
+
+msgctxt "doom harmony"
+msgid "SKILL_NORMAL"
+msgstr "Mediu"
+
+msgctxt "doom harmony"
+msgid "SKILL_HARD"
+msgstr "Greu"
+
+msgctxt "doom harmony"
+msgid "SKILL_NIGHTMARE"
+msgstr "Foarte Greu"
+
+msgid "HARMQUITMSG"
+msgstr "Mulțumim că ai jucat"
+
+msgctxt "doom harmony"
+msgid "TXT_D2E1"
+msgstr ""

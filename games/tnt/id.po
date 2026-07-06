@@ -1,0 +1,185 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-03-09 15:09+0000\n"
+"Last-Translator: Arif Budiman <arifpedia@gmail.com>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/doom-engine-games/tnt-evilution/id/>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.17-dev\n"
+
+msgid "THUSTR_1"
+msgstr "Level 1: Kontrol Sistem"
+
+msgid "THUSTR_2"
+msgstr "Level 2: BBQ Manusia"
+
+msgid "THUSTR_3"
+msgstr "Level 3: Kontrol Daya"
+
+msgid "THUSTR_4"
+msgstr "Level 4: Lubang Cacing"
+
+msgid "THUSTR_5"
+msgstr "Level 5: Hanggar"
+
+msgid "THUSTR_7"
+msgstr "Level 7: Penjara"
+
+msgid "THUSTR_8"
+msgstr "Level 8: Logam"
+
+msgid "THUSTR_9"
+msgstr "Level 9: Benteng"
+
+msgid "THUSTR_10"
+msgstr "Level 10: Penebusan"
+
+msgid "THUSTR_11"
+msgstr "Level 11: Fasilitas Penyimpanan"
+
+msgid "THUSTR_12"
+msgstr "Level 12: Kawah"
+
+msgid "THUSTR_13"
+msgstr "Level 13: Pemrosesan Nukage"
+
+msgid "THUSTR_14"
+msgstr "Level 14: Pabrik Baja"
+
+msgid "THUSTR_15"
+msgstr "Level 15: Zona Mati"
+
+msgid "THUSTR_16"
+msgstr "Level 16: Jangkauan Terdalam"
+
+msgid "THUSTR_17"
+msgstr "Level 17: Area Pemrosesan"
+
+msgid "THUSTR_18"
+msgstr "Level 18: Pabrik"
+
+msgid "THUSTR_19"
+msgstr "Level 19: Pengiriman/kemunculan kembali"
+
+msgid "THUSTR_20"
+msgstr "Level 20: Pemrosesan Sentral"
+
+msgid "THUSTR_21"
+msgstr "Level 21: Pusat Administrasi"
+
+msgid "THUSTR_23"
+msgstr "Level 23: Proyek Penambangan Bulan"
+
+msgid "TXT_TNT_EP"
+msgstr "TNT: Evilution"
+
+msgid "THUSTR_6"
+msgstr "Level 6: Musim Berburu"
+
+msgid "THUSTR_22"
+msgstr "Level 22: Habitat"
+
+msgid "THUSTR_24"
+msgstr "Level 24: Tambang Batu"
+
+msgid "THUSTR_25"
+msgstr "Level 25: Sarang Baron"
+
+msgid "THUSTR_26"
+msgstr "Level 26: Ballistyx"
+
+msgid "THUSTR_27"
+msgstr "Level 27: Gunung Derita"
+
+msgid "THUSTR_28"
+msgstr "Level 28: Neraka Kecil"
+
+msgid "THUSTR_29"
+msgstr "Level 29: Sungai Styx"
+
+msgid "THUSTR_30"
+msgstr "Level 30: Panggilan Terakhir"
+
+msgid "THUSTR_31"
+msgstr "Level 31: Firaun"
+
+msgid "THUSTR_32"
+msgstr "Level 32: Karibia"
+
+msgid "T1TEXT"
+msgstr ""
+"Kau telah bertarung keluar dari lab eksperimen\n"
+"yang dipenuhi wabah. Tampaknya UAC sekali lagi\n"
+"telah menelannya bulat-bulat. Dengan tingkat\n"
+"perputaran pegawai setinggi itu, pasti sulit bagi\n"
+"UAC tua malang untuk membeli asuransi kesehatan\n"
+"perusahaan akhir-akhir ini..\n"
+"\n"
+"Di depan terbentang kompleks militer, kini\n"
+"dipenuhi kengerian berpenyakit yang tak sabar\n"
+"ingin menancapkan gigi mereka ke tubuhmu. Dengan\n"
+"sedikit keberuntungan, kompleks itu masih memiliki\n"
+"persenjataan perang yang tergeletak di sana-sini."
+
+msgid "T2TEXT"
+msgstr ""
+"Kau mendengar derak mesin-mesin berat\n"
+"di depan. Kau sangat berharap mereka tidak sedang\n"
+"mencetak makhluk neraka baru, tetapi kamu siap\n"
+"menghajar satu gerombolan penuh jika memang harus.\n"
+"Mungkin mereka sedang merencanakan pesta darah, tetapi\n"
+"kau merasa seganas dua ribu orang gila\n"
+"yang dipadatkan menjadi satu pembunuh sinting.\n"
+"\n"
+"Kau tidak berniat tumbang dengan mudah."
+
+msgid "T3TEXT"
+msgstr ""
+"Pemandangan yang terbuka di depan tampak\n"
+"sangat familiar. Baunya juga familiar -- seperti\n"
+"kotoran yang digoreng. Kau tidak menyukai tempat\n"
+"ini dulu, dan jelas kamu juga tidak berniat\n"
+"menyukainya sekarang. Semakin lama kamu\n"
+"merenungkannya, semakin besar amarahmu.\n"
+"Sambil mengangkat senjatamu, seringai jahat\n"
+"merayap di wajahmu. Saatnya memberi pelajaran."
+
+msgid "T4TEXT"
+msgstr ""
+"Tiba-tiba, semuanya sunyi, dari satu cakrawala\n"
+"ke cakrawala lainnya. Gema penderitaan Neraka\n"
+"memudar, langit mimpi buruk berubah menjadi\n"
+"biru, tumpukan mayat monster mulai\n"
+"menguap bersama bau busuk jahat\n"
+"yang memenuhi udara. Astaga, mungkin kamu\n"
+"berhasil. Apa kamu benar-benar menang?\n"
+"\n"
+"Sesuatu bergemuruh di kejauhan.\n"
+"Cahaya biru mulai bersinar dari dalam\n"
+"tengkorak hancur si peludah iblis."
+
+msgid "T5TEXT"
+msgstr ""
+"Sekarang apa? Tempat ini terlihat sangat berbeda. Agak\n"
+"mirip rumah Raja Tut. Yah,\n"
+"apa pun yang ada di sini tidak mungkin lebih buruk\n"
+"daripada biasanya. Benarkah? Atau mungkin lebih baik\n"
+"membiarkan dewa yang tertidur tetap tidur.."
+
+msgid "T6TEXT"
+msgstr ""
+"Saatnya berlibur. Kau telah membobol\n"
+"isi perut neraka dan demi apa pun kamu sudah siap\n"
+"untuk beristirahat. Kau bergumam pada diri sendiri,\n"
+"Mungkin lain kali ada orang lain yang bisa menghajar\n"
+"Neraka. Di depan terbentang sebuah kota tenang,\n"
+"dengan air yang mengalir damai, bangunan-bangunan\n"
+"yang menawan, dan mungkin tanpa makhluk neraka.\n"
+"\n"
+"Saat kamu turun dari transportasi, kamu mendengar\n"
+"dentuman sepatu besi seorang cyberdemon."

@@ -1,0 +1,148 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-06-27 08:01+0000\n"
+"Last-Translator: ssantos <ssantos@web.de>\n"
+"Language-Team: Portuguese <https://hosted.weblate.org/projects/doom-engine-games/heretic/pt/>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2026.7.dev0\n"
+
+msgid "HHUSTR_E2M5"
+msgstr "Os Túmulos"
+
+msgid "HHUSTR_E2M9"
+msgstr "O Glaciar"
+
+msgid "HHUSTR_E1M1"
+msgstr "As Docas"
+
+msgid "HHUSTR_E1M2"
+msgstr "As Masmorras"
+
+msgid "HHUSTR_E1M3"
+msgstr "O Portão de Entrada"
+
+msgid "HHUSTR_E1M4"
+msgstr "A Torre de Guarda"
+
+msgid "HHUSTR_E1M5"
+msgstr "A Cidadela"
+
+msgid "HHUSTR_E1M6"
+msgstr "A Catedral"
+
+msgid "HHUSTR_E1M7"
+msgstr "As Criptas"
+
+msgid "HHUSTR_E1M8"
+msgstr "A Boca do Inferno"
+
+msgid "HHUSTR_E1M9"
+msgstr "O Cemitério"
+
+msgid "HHUSTR_E2M1"
+msgstr "A Cratera"
+
+msgid "HHUSTR_E2M2"
+msgstr "Os Fossos de Lava"
+
+msgid "HHUSTR_E2M3"
+msgstr "O Rio de Fogo"
+
+msgid "HHUSTR_E2M4"
+msgstr "A Gruta de Gelo"
+
+msgid "HHUSTR_E2M6"
+msgstr "O Labirinto"
+
+msgid "HHUSTR_E2M7"
+msgstr "O Grande Salão"
+
+msgid "HHUSTR_E2M8"
+msgstr "Os Portais do Caos"
+
+msgid "HHUSTR_E3M1"
+msgstr "O Armazém"
+
+msgid "HHUSTR_E3M2"
+msgstr "A Fossa"
+
+msgid "HHUSTR_E3M3"
+msgstr "A Confluência"
+
+msgid "HHUSTR_E3M4"
+msgstr "A Fortaleza Azul"
+
+msgid "HHUSTR_E3M5"
+msgstr "A Cova dos Ofídios"
+
+msgid "HHUSTR_E3M6"
+msgstr "Os Salões do Medo"
+
+msgid "HHUSTR_E3M7"
+msgstr "O Abismo"
+
+msgid "HHUSTR_E3M8"
+msgstr "Fortaleza de D'Sparil"
+
+msgid "HHUSTR_E3M9"
+msgstr "O Aquífero"
+
+msgid "HHUSTR_E4M1"
+msgstr "Catafalco"
+
+msgid "HHUSTR_E4M2"
+msgstr "O Forte"
+
+msgid "HHUSTR_E4M3"
+msgstr "Ambulatório"
+
+msgid "HHUSTR_E4M4"
+msgstr "Sepulcro"
+
+msgid "HHUSTR_E4M5"
+msgstr "Grande Escada"
+
+msgid "HHUSTR_E4M6"
+msgstr "Os Salões dos Apóstatas"
+
+msgid "HHUSTR_E4M7"
+msgstr "Muralhas da Perdição"
+
+msgid "HHUSTR_E4M8"
+msgstr "Ponte Despedaçada"
+
+msgid "HHUSTR_E4M9"
+msgstr "Mausoléu"
+
+msgid "HHUSTR_E5M1"
+msgstr "Penhascos Ocres"
+
+msgid "HHUSTR_E5M2"
+msgstr "Corredeiras"
+
+msgid "HHUSTR_E5M3"
+msgstr "Cais"
+
+msgid "HHUSTR_E5M4"
+msgstr "Pátio"
+
+msgid "HHUSTR_E5M5"
+msgstr "Reservatório"
+
+msgid "HHUSTR_E5M6"
+msgstr "Colunata"
+
+msgid "HHUSTR_E5M7"
+msgstr "Mansão Fétida"
+
+msgid "HHUSTR_E5M8"
+msgstr "Campo de Julgamento"
+
+msgid "HHUSTR_E5M9"
+msgstr "Meada de D'Sparil"

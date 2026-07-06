@@ -1,0 +1,251 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-05-11 03:43+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/doom-engine-games/harmony-filter/pt_BR/>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2026.5-dev\n"
+
+#, fuzzy
+msgctxt "doom harmony"
+msgid "NIGHTMARE"
+msgstr ""
+"Você acha que dá conta?\n"
+"\n"
+"Aperte Y ou N..."
+
+msgctxt "doom harmony"
+msgid "AMSTR_MARKEDSPOT"
+msgstr "Posição marcada"
+
+msgctxt "doom harmony"
+msgid "PD_BLUEO"
+msgstr "Você precisa do cartão de passe VERDE"
+
+msgctxt "doom harmony"
+msgid "PD_REDO"
+msgstr "Você precisa do cartão de passe ROXO"
+
+msgctxt "doom harmony"
+msgid "PD_YELLOWO"
+msgstr "Você precisa do cartão de passe AMARELO"
+
+msgctxt "doom harmony"
+msgid "PD_BLUEK"
+msgstr "Você precisa da chave VERDE"
+
+msgctxt "doom harmony"
+msgid "PD_YELLOWK"
+msgstr "Você precisa da chave AMARELA"
+
+msgctxt "doom harmony"
+msgid "PD_REDK"
+msgstr "Você precisa da chave ROXA"
+
+msgctxt "doom harmony"
+msgid "GOTARMOR"
+msgstr "Pegou uma armadura."
+
+msgctxt "doom harmony"
+msgid "GOTMEGA"
+msgstr "Pegou uma Armadura de Combate."
+
+msgctxt "doom harmony"
+msgid "GOTMSPHERE"
+msgstr "Superssaúde"
+
+msgctxt "doom harmony"
+msgid "GOTBLUECARD"
+msgstr "Pegou o cartão de passe VERDE."
+
+msgctxt "doom harmony"
+msgid "GOTYELWCARD"
+msgstr "Pegou o cartão de passe AMARELO."
+
+msgctxt "doom harmony"
+msgid "GOTREDCARD"
+msgstr "Pegou o cartão de passe ROXO."
+
+msgctxt "doom harmony"
+msgid "GOTBLUESKUL"
+msgstr "Pegou a chave VERDE."
+
+msgctxt "doom harmony"
+msgid "GOTYELWSKUL"
+msgstr "Pegou a chave AMARELA."
+
+msgctxt "doom harmony"
+msgid "GOTREDSKUL"
+msgstr "Pegou a chave ROXA."
+
+msgctxt "doom harmony"
+msgid "GOTSTIM"
+msgstr "Cogumelo medicinal"
+
+msgctxt "doom harmony"
+msgid "GOTMEDIKIT"
+msgstr "Pegou um kit médico."
+
+msgctxt "doom harmony"
+msgid "GOTMEDINEED"
+msgstr "Pegou um kit médico que você REALMENTE precisa."
+
+msgctxt "doom harmony"
+msgid "GOTMAP"
+msgstr "Mapa"
+
+msgctxt "doom harmony"
+msgid "GOTCLIPBOX"
+msgstr "Pegou uma caixa de balas"
+
+msgctxt "doom harmony"
+msgid "GOTROCKET"
+msgstr "Pegou uma granada."
+
+msgctxt "doom harmony"
+msgid "GOTROCKBOX"
+msgstr "Pegou granadas."
+
+msgctxt "doom harmony"
+msgid "GOTSHELLBOX"
+msgstr "Pegou uma caixa de cartuchos de espingarda."
+
+msgctxt "doom harmony"
+msgid "GOTBACKPACK"
+msgstr "Pegou uma mochila de munição."
+
+msgctxt "doom harmony"
+msgid "GOTBFG9000"
+msgstr "Pegou uma granada."
+
+msgctxt "doom harmony"
+msgid "GOTCHAINGUN"
+msgstr "Pegou uma metralhadora giratória."
+
+msgctxt "doom harmony"
+msgid "GOTLAUNCHER"
+msgstr "Pegou um lança-granadas."
+
+msgctxt "doom harmony"
+msgid "GOTPLASMA"
+msgstr "Lançador de entropia!"
+
+msgctxt "doom harmony"
+msgid "GOTSHOTGUN"
+msgstr "Pegou uma espingarda."
+
+msgctxt "doom harmony"
+msgid "STSTR_DQDON"
+msgstr "Modo Deus LIGADO"
+
+msgctxt "doom harmony"
+msgid "STSTR_DQDOFF"
+msgstr "Modo Deus DESLIGADO"
+
+msgctxt "doom harmony"
+msgid "STSTR_KFAADDED"
+msgstr "Todas as armas/munição/chaves"
+
+msgctxt "doom harmony"
+msgid "STSTR_FAADDED"
+msgstr "Todas as armas e munição completa"
+
+msgid "TXT_HARMMAP01"
+msgstr "Sequestro"
+
+msgid "TXT_HARMMAP02"
+msgstr "No Caminho do Perigo"
+
+msgid "TXT_HARMMAP03"
+msgstr "Mau Humor"
+
+msgid "TXT_HARMMAP04"
+msgstr "Megalópole"
+
+msgid "TXT_HARMMAP05"
+msgstr "O Hospital"
+
+msgid "TXT_HARMMAP06"
+msgstr "A Fábrica de Armamentos"
+
+msgid "TXT_HARMMAP07"
+msgstr "O Laboratório Submarino"
+
+msgid "TXT_HARMMAP08"
+msgstr "Base Aérea Um"
+
+msgid "TXT_HARMMAP09"
+msgstr "A Base de Lançamento"
+
+msgid "TXT_HARMMAP10"
+msgstr "A Zona Radioativa"
+
+msgid "TXT_HARMMAP11"
+msgstr "Equidna"
+
+#, fuzzy
+msgid "CLUSTEREXIT1"
+msgstr ""
+"Você sente vontade de vomitar...\n"
+"Vendo o rosto da rainha mutante...\n"
+"Essa coisa... Que costumava ser...\n"
+"Sua amiga... Amira!\n"
+"\n"
+"Aqueles monstros devem ter encontrado\n"
+"uma maneira de causar alguma mutação\n"
+"nela e transformá-la nessa criatura horrível,\n"
+"usando-a para se reproduzirem.\n"
+"\n"
+"-suspiro-\n"
+"\n"
+"Você se recompõe...\n"
+"Eles vão pagar caro por fazer você matar\n"
+"a sua própria amiga...\n"
+"\n"
+"\"Não há no inferno ferocidade como a de \n"
+"uma mulher desprezada!\"\n"
+"\n"
+"     = F I M ="
+
+# This text is deliberately empty
+msgctxt "doom harmony"
+msgid "WI_FINISHED"
+msgstr "Este texto está deliberadamente vazio"
+
+# Yellow needs retranslation
+msgctxt "doom harmony"
+msgid "WI_ENTERING"
+msgstr "Carregando"
+
+msgctxt "doom harmony"
+msgid "SKILL_BABY"
+msgstr "Muito fácil"
+
+msgctxt "doom harmony"
+msgid "SKILL_EASY"
+msgstr "Fácil"
+
+msgctxt "doom harmony"
+msgid "SKILL_NORMAL"
+msgstr "Médio"
+
+msgctxt "doom harmony"
+msgid "SKILL_HARD"
+msgstr "Difícil"
+
+msgctxt "doom harmony"
+msgid "SKILL_NIGHTMARE"
+msgstr "Muito difícil"
+
+msgid "HARMQUITMSG"
+msgstr "Obrigado por jogar"
+
+msgctxt "doom harmony"
+msgid "TXT_D2E1"
+msgstr ""

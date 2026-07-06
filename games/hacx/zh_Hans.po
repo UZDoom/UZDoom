@@ -1,0 +1,638 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-05-18 13:11+0000\n"
+"Last-Translator: dwing <12104745@qq.com>\n"
+"Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/projects/doom-engine-games/hacx-filter/zh_Hans/>\n"
+"Language: zh_Hans\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2026.6.dev0\n"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG1"
+msgstr "这些虫子对你来说太难搞了吗？"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG"
+msgstr ""
+"你确定要\n"
+"强行脱离行动吗？"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG2"
+msgstr "想退出？你也配叫黑客？"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG3"
+msgstr "给我滚回来，不然我往你的后门塞个病毒进去！"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG4"
+msgstr "真正的黑客从不强行脱离行动。"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG5"
+msgstr "别啊！最精彩的部分还没开始呢！"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG6"
+msgstr "现在放弃，赛博空间就完蛋了！"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG7"
+msgstr "GENIE系统向你致意，人渣！"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG8"
+msgstr "哼。所谓的英雄黑客，不过如此。"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG9"
+msgstr "什么？你宁愿回去蹲大牢？"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG10"
+msgstr "早知道该选蓝色药丸的。"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG11"
+msgstr "这游戏可不是让你抽搐两下就跑路的！"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG12"
+msgstr "别担心。拯救世界可以等等，对吧？"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG13"
+msgstr "看来是像断网一样闪人的时候了！"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG14"
+msgstr "别一走了之忘了HacX啊！"
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_SUICIDE"
+msgstr "%o 把 %hself 从宇宙中删除了。"
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_FALLING"
+msgstr "%o 砸出了一个堪萨斯州那么大的坑。"
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_CRUSH"
+msgstr "%o 变成了人肉煎饼。"
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_EXIT"
+msgstr "%o 试图强行脱离了。"
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_WATER"
+msgstr "%o 像块砖头一样沉底了。"
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_SLIME"
+msgstr "%o 遭到了核辐射。"
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_LAVA"
+msgstr "%o 洗了个滚烫的热水澡。"
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_BARREL"
+msgstr "%o 过量服用了硝化甘油。"
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_SPLASH"
+msgstr "%o 被炸成了细小的碎片。"
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_R_SPLASH"
+msgstr "%o 想看看从 %g 里面翻出来是什么样。"
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_ROCKET"
+msgstr "%o 想看看从 %g 里面翻出来是什么样。"
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_KILLEDSELF"
+msgstr "%o 把 %hself 从宇宙中删除了。"
+
+msgid "OB_THUG"
+msgstr "%o 不再是优势物种了。"
+
+msgid "OB_ANDROID"
+msgstr "%o 插错了机器的接口。"
+
+msgid "OB_MONSTRUCT"
+msgstr "%o 遭受了怪兽级的赛博屁股猛踢。"
+
+msgid "OB_ICE"
+msgstr "%o 被冻住了。"
+
+msgid "OB_BUZZER"
+msgstr "%o 感觉有点麻。"
+
+msgid "OB_STEALTH"
+msgstr "%o 发现了一个令人相当震惊的进展。"
+
+msgid "OB_DMAN"
+msgstr "%o 从赛博空间被抹除了。"
+
+msgid "OB_GLASS"
+msgstr "%o 把 %hself 的下巴打碎了。"
+
+msgid "OB_MANIAC"
+msgstr "%o 的终身会员资格已终止。"
+
+msgid "OB_MANIACHIT"
+msgstr "%o 死于某种我无法理解的随机方式。"
+
+msgid "OB_TERMIN"
+msgstr "%o 被一个蛇蝎美人怪胎烤焦了。"
+
+# This text is not gender neutral, obviously...
+msgid "OB_TERMINHIT"
+msgstr "%o 离异性有点太近了。"
+
+msgid "OB_REPLI"
+msgstr "%o 向一位老朋友说了再见。"
+
+msgid "OB_REPLIHIT"
+msgstr "%o 被一位老朋友背后捅了刀子。"
+
+msgid "OB_PHAGE"
+msgstr "%o 被自然选择淘汰了。"
+
+msgid "OB_THORN"
+msgstr "%o 未能逃脱痛苦的死亡。"
+
+msgid "OB_SUMATIC"
+msgstr "%o 的裤裆挨了一记相扑重拳。"
+
+msgid "OB_GENIE"
+msgstr "%o 没能实现 %p 的三个愿望。"
+
+msgid "OB_MINE"
+msgstr "%o 试图去抚摸地雷。"
+
+msgid "OB_MPKICK"
+msgstr "%o 脸上挨了 %k 的一记李小龙式飞踢。"
+
+msgid "OB_MPREZNATOR"
+msgstr "%o 在 %k 的震撼揭秘中分崩离析。"
+
+msgid "OB_MPXPISTOL"
+msgstr "%o 吃了两倍剂量的 %k 式惩罚。"
+
+msgid "OB_MPTAZER"
+msgstr "%o 被 %k 的电击棒强制关机了。"
+
+msgid "OB_MPCRYOGUN"
+msgstr "%o 脸上挨了 %k 一记冰冷的愤怒。"
+
+msgid "OB_MPUZI"
+msgstr "%o 被 %k 用帮派风格打成了筛子。"
+
+msgid "OB_MPZOOKA"
+msgstr "%o 吃了 %k 一发光子炸弹。"
+
+msgid "OB_MPZ_SPLASH"
+msgstr "%o 被 %k 还原成了一堆整齐的光子。"
+
+# Physically this is utter nonsense, of course.
+msgid "OB_MPANTIGUN"
+msgstr "%o 被 %k 还原成了反物质。"
+
+msgid "OB_MPNUKE"
+msgstr "%o 吞下了 %k 的核弹。"
+
+msgid "OB_MPNUKESPLASH"
+msgstr "%o 在 %k 的大规模杀伤狂欢中遭了核灾。"
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_MPTELEFRAG"
+msgstr "%o 被 %k 翻了个底朝天。"
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_MONTELEFRAG"
+msgstr "%o 的原子结构被撕裂了。"
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_DEFAULT"
+msgstr "%o 自发地断气了。"
+
+msgid "GOTNUKER"
+msgstr "你拿到了毁灭者！尝尝这个！"
+
+msgid "GOTUZI"
+msgstr "你得到了一把乌兹！！"
+
+msgid "GOTREZNATOR"
+msgstr "一把霍伊格谐振器——去烧烂几个屁股"
+
+msgid "GOTPHOTONZOOKA"
+msgstr "你得到了一把光子火箭筒！"
+
+msgid "GOTBIGSTICK"
+msgstr "你拿着一根大棒！"
+
+msgid "GOTTAZER"
+msgstr "你得到了电击器！！"
+
+msgid "GOTCRYOGUN"
+msgstr "你拿到一把冷冻枪！不许动！"
+
+msgid "GOTROUNDS"
+msgstr "你拿到了一些弹药！"
+
+msgid "GOTROUNDSCASE"
+msgstr "你拿到了一箱弹药！"
+
+# Was "grap" for some reason.
+msgid "GOTTORPEDO"
+msgstr "你拿到了一枚鱼雷！"
+
+msgid "GOTTORPEDOS"
+msgstr "你拿到了一箱鱼雷！"
+
+msgid "GOTMOLECULES"
+msgstr "你拿到了一个分子模块！"
+
+msgid "GOTMOLECULESTANK"
+msgstr "你拿到了满满一罐分子！"
+
+msgid "GOTCARTRIDGES"
+msgstr "你拿到了一些弹药筒！"
+
+msgid "GOTCARTRIDGESCASE"
+msgstr "你拿到了一箱弹药筒！"
+
+msgid "GOTVALISE"
+msgstr "你拿到了一个塞满好货的手提箱！"
+
+msgid "GOTFORCEFIELD"
+msgstr "力场护盾！"
+
+msgid "GOTMICROTEL"
+msgstr "007微讯芯片"
+
+msgid "GOTENKBLIND"
+msgstr "你获得了EnK隐形！"
+
+msgid "GOTRUBBERBOOTS"
+msgstr "硫化橡胶靴！"
+
+msgid "GOTSIARRAY"
+msgstr "SI阵列地图！"
+
+msgid "GOTINFRARED"
+msgstr "红外线面罩！"
+
+msgid "GOTINHALER"
+msgstr "深呼吸，吸入器！"
+
+msgid "GOTHYPONEED"
+msgstr "注射一剂海得琴救了你的命！"
+
+msgid "GOTHYPO"
+msgstr "你拿到了一个注射器！"
+
+msgid "GOTKEYCARD"
+msgstr "你找到了一张钥匙卡！"
+
+msgid "GOTCKEY"
+msgstr "你找到了一把C钥匙！"
+
+msgid "GOTPASSWORD"
+msgstr "你找到了一个密码！"
+
+msgid "GOTBLUEZKEY"
+msgstr "你找到了一把蓝色Z钥匙！"
+
+msgid "GOTYELWZKEY"
+msgstr "你找到了一把黄色Z钥匙！"
+
+msgid "GOTREDZKEY"
+msgstr "你找到了一把红色Z钥匙！"
+
+msgid "GOTBODYARMOR"
+msgstr "防弹衣！"
+
+msgid "GOTCENTROPHENOXINE"
+msgstr "氯芬酯"
+
+msgid "GOTKEVLARVEST"
+msgstr "你拿到了一件凯夫拉背心！"
+
+msgid "GOTSKEVLARVEST"
+msgstr "你拿到了一件超级凯夫拉背心！"
+
+msgid "GOTMICROKIT"
+msgstr "你拿到了一个微型急救包！"
+
+msgid "GOTDAMPENER"
+msgstr "你拿到了一个消声器！"
+
+msgid "PD_CKEY"
+msgstr "你需要一把C钥匙才能获取此物品！"
+
+msgid "PD_KEYCARD"
+msgstr "你需要一张钥匙卡才能获取此物品！"
+
+msgid "PD_PASSWORD"
+msgstr "你需要一个密码才能获取此物品！"
+
+msgid "PD_BLUEZKEY"
+msgstr "你需要一把蓝色Z钥匙才能操作"
+
+msgid "PD_REDZKEY"
+msgstr "你需要一把红色Z钥匙才能操作！"
+
+msgid "PD_YELWZKEY"
+msgstr "你需要一把黄色Z钥匙才能操作！"
+
+msgid "X1TEXT"
+msgstr ""
+"为了两千万黄金惹这一身骚似乎不太划算，\n"
+"对吧，黑客？这让蹲大牢简直就像去野餐\n"
+"一样轻松！\n"
+"\n"
+"丑陋不堪的生化变异体，还有你的人类同胞\n"
+"像粮袋一样被挂在天花板上。\n"
+"\n"
+"这个GENIE到底是什么鬼？跟你以前黑过的\n"
+"任何电脑都不一样！\n"
+"\n"
+"你最好找到下一个终端，在赛博空间里\n"
+"杀出一条血路，切碎那些变异混球，\n"
+"然后赶紧逃离这个鬼地方！\n"
+"\n"
+
+msgid "X2TEXT"
+msgstr ""
+"人都去哪了？！\n"
+"\n"
+"巴黎成了一座鬼城，除非你把变异虫子\n"
+"也算作杰出市民。\n"
+"\n"
+"你遭遇了血腥的抵抗。天啊，这些虫子真能打！\n"
+"算你走运，它们不是街区里最亮的灯泡。\n"
+"\n"
+"但你已经拿到了一些委员会想要的信息数据。\n"
+"而且这很恶心！\n"
+"\n"
+"这些虫子以人类的神经液为食！难怪这附近\n"
+"变得越来越荒凉。去向委员会汇报吧。\n"
+"还有，注意你的背后……\n"
+
+msgid "X3TEXT"
+msgstr ""
+"你熟知的文明已经玩完了！\n"
+"\n"
+"没有朋友，没有家人。不再有人类。\n"
+"至少没有正常人了。\n"
+"\n"
+"只剩下一件事……GENIE！\n"
+"哪怕要追到宇宙的尽头，你也要找到它那\n"
+"变异的屁股！因为现在你彻底怒了！\n"
+"\n"
+"至于那笔黄金？去他妈的，这回老子免费干。\n"
+"\n"
+"……（未完待续）……"
+
+msgid "X5TEXT"
+msgstr ""
+"你还活着！\n"
+"\n"
+"这几率有多大，黑客？！\n"
+"因为到处都爬满了虫子。\n"
+"\n"
+"你联系不上委员会，这意味着\n"
+"那边也已经沦陷了。\n"
+"\n"
+"\n"
+"你……现在孤身一人。"
+
+msgid "TXT_HACXMAP01"
+msgstr "GenEmp公司"
+
+msgid "TXT_HACXMAP02"
+msgstr "隧道镇"
+
+msgid "TXT_HACXMAP03"
+msgstr "熔岩别馆"
+
+msgid "TXT_HACXMAP04"
+msgstr "恶魔岛"
+
+msgid "TXT_HACXMAP05"
+msgstr "赛博马戏团"
+
+msgid "TXT_HACXMAP06"
+msgstr "数码宅"
+
+msgid "TXT_HACXMAP07"
+msgstr "长城"
+
+msgid "TXT_HACXMAP08"
+msgstr "极乐花园"
+
+msgid "TXT_HACXMAP09"
+msgstr "隐秘堡垒"
+
+msgid "TXT_HACXMAP10"
+msgstr "无政府主义之梦"
+
+msgid "TXT_HACXMAP11"
+msgstr "不是我们！"
+
+msgid "TXT_HACXMAP12"
+msgstr "哥特试炼场"
+
+msgid "TXT_HACXMAP13"
+msgstr "下水道"
+
+msgid "TXT_HACXMAP14"
+msgstr "电极战争"
+
+msgid "TXT_HACXMAP15"
+msgstr "Enk的黄昏"
+
+msgid "TXT_HACXMAP16"
+msgstr "千变赛博"
+
+msgid "TXT_HACXMAP17"
+msgstr "血河"
+
+msgid "TXT_HACXMAP18"
+msgstr "怪奇之地"
+
+msgid "TXT_HACXMAP19"
+msgstr "战争室"
+
+msgid "TXT_HACXMAP20"
+msgstr "入侵警报！"
+
+msgid "TXT_HACXMAP31"
+msgstr "干燥室"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_CLEV"
+msgstr "即将抵达……"
+
+# Printed when entering the idchoppers cheat, which gives the player a
+# chainsaw
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_CHOPPERS"
+msgstr "……要把你的屁股烤焦！"
+
+# Hacx's content here was totally useless so it got removed. However, this
+# string has to be defined and minimally altered so that the Dehacked
+# replacement is not being triggered.
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_BEHOLD"
+msgstr "无敌、力量、隐形、防护服、地图、还是夜视镜？"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_BEHOLDX"
+msgstr "来点真格的！"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_NCON"
+msgstr "赛博切割模式已开启"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_NCOFF"
+msgstr "赛博切割模式已关闭"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_NOMUS"
+msgstr "选择：不可能 "
+
+# Should probably not be translated...
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_MUS"
+msgstr "加大音量\n"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_KFAADDED"
+msgstr "初始化抽搐杀戮模式"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_FAADDED"
+msgstr "就这样吧，黑客。"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_DQDON"
+msgstr "赛博全能模式已开启"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_DQDOFF"
+msgstr "赛博全能模式已关闭"
+
+msgctxt "doom hacx.hacx1"
+msgid "AMSTR_FOLLOWON"
+msgstr "追踪已开启"
+
+msgctxt "doom hacx.hacx1"
+msgid "AMSTR_FOLLOWOFF"
+msgstr "追踪已关闭"
+
+msgctxt "doom hacx.hacx1"
+msgid "DOSY"
+msgstr "- 按Y键逃跑！ -"
+
+msgctxt "doom hacx.hacx1"
+msgid "ENDGAME"
+msgstr ""
+"你是疯了还是调节失灵？\n"
+"哪个？是还是否！"
+
+msgctxt "doom hacx.hacx1"
+msgid "NIGHTMARE"
+msgstr ""
+"你确定吗？你驾驭不了\n"
+"这种难度，黑客！\n"
+"\n"
+"按Y键去死。 \n"
+
+# For most languages the original Doom text should suffice.
+msgctxt "doom hacx.hacx1"
+msgid "QSPROMPT"
+msgstr ""
+"快速保存会覆盖你的存档\n"
+"\n"
+"“%s”？\n"
+"\n"
+"按Y键确认，按N键取消。"
+
+msgctxt "doom hacx.hacx1"
+msgid "QLPROMPT"
+msgstr ""
+"你想要快速载入存档\n"
+"\n"
+"“%s”？\n"
+"\n"
+"按Y键确认，按N键取消。"
+
+msgid "CC_THUG"
+msgstr "暴徒"
+
+msgid "CC_ANDROID"
+msgstr "仿生人"
+
+msgid "CC_ICE"
+msgstr "冰"
+
+msgid "CC_BUZZER"
+msgstr "蜂鸣者"
+
+msgid "CC_DMAN"
+msgstr "D人"
+
+msgid "CC_PHAGE"
+msgstr "噬菌体"
+
+msgid "CC_MONSTRUCT"
+msgstr "构造怪"
+
+msgid "CC_MECH"
+msgstr "机甲狂人"
+
+msgid "CC_TERMI"
+msgstr "终结女妖"
+
+msgid "CC_THORN"
+msgstr "荆棘怪"
+
+msgid "CC_MAJONG"
+msgstr "麻将7"
+
+msgctxt "doom hacx.hacx1"
+msgid "CC_HERO"
+msgstr "丹·伊凡杰"
+
+msgctxt "doom hacx.hacx1"
+msgid "SKILL_BABY"
+msgstr "请别开枪！"
+
+msgctxt "doom hacx.hacx1"
+msgid "SKILL_EASY"
+msgstr "啊，我需要补血！"
+
+msgctxt "doom hacx.hacx1"
+msgid "SKILL_NORMAL"
+msgstr "让我们撕碎它们！"
+
+msgctxt "doom hacx.hacx1"
+msgid "SKILL_HARD"
+msgstr "我是不朽的！"
+
+msgctxt "doom hacx.hacx1"
+msgid "SKILL_NIGHTMARE"
+msgstr "疯狂！"

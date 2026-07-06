@@ -1,0 +1,265 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-06-07 01:01+0000\n"
+"Last-Translator: Júlia Rosell Saldaña <contacte@juliars.cat>\n"
+"Language-Team: Catalan <https://hosted.weblate.org/projects/doom-engine-games/doom-2/ca/>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6\n"
+
+msgid "TXT_D2E1"
+msgstr "Infern a la Terra"
+
+# References "No rest for the wicked" in Isaiah 48:22
+msgid "TXT_D2E2"
+msgstr "Sense descans per als vius"
+
+# Note that the "LEVEL" part of the string will be stripped so it shouldn't be
+# translated
+msgid "HUSTR_1"
+msgstr "Nivell 1: Entrada"
+
+msgid "HUSTR_2"
+msgstr "Nivell 2: Sotapassos"
+
+# “a form of punishment in which a person is forced to run between two lines
+# of men facing each other and armed with clubs or whips to beat the victim”
+msgid "HUSTR_3"
+msgstr "Nivell 3: El Gantlet"
+
+msgid "HUSTR_4"
+msgstr "Nivell 4: El focus"
+
+msgid "HUSTR_5"
+msgstr "Nivell 5: Els túnels de residus"
+
+msgid "HUSTR_6"
+msgstr "Nivell 6: La trituradora"
+
+msgid "HUSTR_7"
+msgstr "Nivell 7: Simples morts"
+
+msgid "HUSTR_8"
+msgstr "Nivell 8: Trucs i trampes"
+
+msgid "HUSTR_9"
+msgstr "Nivell 9: El Pou"
+
+msgid "HUSTR_10"
+msgstr "Nivell 10: Base d'avituallament"
+
+# Alternative title:
+# Circle of Death
+msgid "HUSTR_11"
+msgstr "Nivell 11: 'O' de la destrucció!"
+
+msgid "HUSTR_12"
+msgstr "Nivell 12: La fàbrica"
+
+msgid "HUSTR_13"
+msgstr "Nivell 13: Centre de la ciutat"
+
+msgid "HUSTR_14"
+msgstr "Nivell 14: Els caus més interns"
+
+msgid "HUSTR_15"
+msgstr "Nivell 15: Zona Industrial"
+
+msgid "HUSTR_16"
+msgstr "Nivell 16: Suburbis"
+
+msgid "HUSTR_17"
+msgstr "Nivell 17: Habitatges"
+
+msgid "HUSTR_18"
+msgstr "Nivell 18: El Pati"
+
+msgid "HUSTR_19"
+msgstr "Nivell 19: La Ciutadella"
+
+msgid "HUSTR_20"
+msgstr "Nivell 20: Entenc!"
+
+msgid "HUSTR_21"
+msgstr "Nivell 21: Nirvana"
+
+msgid "HUSTR_22"
+msgstr "Nivell 22: Les Catacumbes"
+
+msgid "HUSTR_23"
+msgstr "Nivell 23: Barrils O' Diversió"
+
+msgid "HUSTR_24"
+msgstr "Nivell 24: L'Avenc"
+
+msgid "HUSTR_25"
+msgstr "Nivell 25: Caigudes de sang"
+
+msgid "HUSTR_26"
+msgstr "Nivell 26: Les mines abandonades"
+
+msgid "HUSTR_27"
+msgstr "Nivell 27: Condomini Monstruós"
+
+msgid "HUSTR_28"
+msgstr "Nivell 28: El món dels esperits"
+
+msgid "HUSTR_29"
+msgstr "Nivell 29: El final vivent"
+
+msgid "HUSTR_30"
+msgstr "Nivell 30: Icona del pecat"
+
+msgid "HUSTR_31"
+msgstr "Nivell 31: Wolfenstein"
+
+msgid "HUSTR_32"
+msgstr "Nivell 32: Xungo"
+
+msgid "HUSTR_31B"
+msgstr "Nivell 31: IDKFA"
+
+msgid "HUSTR_32B"
+msgstr "Nivell 32: Entusiasmat"
+
+msgid "HUSTR_33"
+msgstr "Nivell 33: Trair"
+
+msgid "NHUSTR_1"
+msgstr "Nivell 1: La base terrestre"
+
+msgid "NHUSTR_2"
+msgstr "Nivell 2: Els laboratoris del dolor"
+
+msgid "NHUSTR_3"
+msgstr "Nivell 3: El canó dels morts"
+
+msgid "NHUSTR_4"
+msgstr "Nivell 4: Muntanya infernal"
+
+msgid "NHUSTR_5"
+msgstr "Nivell 5: Vivisecció"
+
+msgid "NHUSTR_6"
+msgstr "Nivell 6: Infern de sang"
+
+msgid "NHUSTR_7"
+msgstr "Nivell 7: El banquet del baró"
+
+msgid "NHUSTR_8"
+msgstr "Nivell 8: Tomba de la Malevolència"
+
+msgid "NHUSTR_9"
+msgstr "Nivell 9: La Marxa dels Dimonis"
+
+# Doom2 after MAP06
+msgid "C1TEXT"
+msgstr ""
+"Has entrat profundament a l'infestat\n"
+"port estel·lar. Però alguna cosa no va bé. Els\n"
+"monstres han portat la seva pròpia realitat\n"
+"amb ells, i la tecnologia del port estel·lar\n"
+"està sent subvertida per la seva presència.\n"
+"\n"
+"Davant teu, veus un lloc avançat de l'infern, una\n"
+"zona fortificada. Si pots superar-la,\n"
+"podràs penetrar al cor encantat\n"
+"de la base estel·lar i trobar l'interruptor de control\n"
+"que manté la població de la Terra\n"
+"com a ostatge."
+
+# Doom2 after MAP11
+msgid "C2TEXT"
+msgstr ""
+"Has guanyat! La teva victòria ha permès\n"
+"a la humanitat evacuar la Terra i escapar\n"
+"del malson. Ara ets l'únic\n"
+"humà que queda a la faç del planeta.\n"
+"Mutacions caníbals, extraterrestres carnívors\n"
+"i esperits malvats són els teus únics veïns.\n"
+"T'asseus i esperes la mort, content\n"
+"d'haver salvat la teva espècie.\n"
+"\n"
+"Però llavors, Control de la Terra envia un\n"
+"missatge des de l'espai: \"Els sensors han localitzat\n"
+"l'origen de la invasió alienígena. Si hi\n"
+"vas, potser podràs bloquejar la seva\n"
+"entrada. La base alienígena és al cor de la\n"
+"teva ciutat natal, no gaire lluny del\n"
+"port estel·lar.\" Lentament i dolorosament t'aixeques\n"
+"i tornes a la baralla."
+
+# Doom 2 after MAP20
+msgid "C3TEXT"
+msgstr ""
+"Ets al cor corrupte de la ciutat,\n"
+"envoltat dels cadàvers dels teus enemics.\n"
+"No veus cap manera de destruir les criatures\n"
+"l'entrada d'aquest costat, de manera que tanqueu el vostre\n"
+"les dents i s'hi enfonsen.\n"
+"\n"
+"Hi ha d'haver una manera de tancar-lo al\n"
+"altre costat. Què t'importa si ho has fet\n"
+"has de passar per l'infern per arribar-hi?"
+
+# Doom2 victory
+msgid "C4TEXT"
+msgstr ""
+"El rostre horrible del dimoni més gran\n"
+"que hagis vist mai s'esmicola abans\n"
+"que tu, després de disparar els teus coets al\n"
+"seu cervell exposat. El monstre s'encongeix\n"
+"i mor, i les seves extremitats es descontrolen\n"
+"devasten quilòmetres incalculables de la superfície \n"
+"de l'infern.\n"
+"\n"
+"Ho has aconseguit. La invasió s'ha acabat.\n"
+"La Terra està salvada. L'infern és un desastre. Et preguntes\n"
+"on anirà la gent dolenta quan mori, ara. Eixugant-te la suor del\n"
+"front, comences el llarg viatge de tornada\n"
+"a casa. Reconstruir la Terra hauria de ser\n"
+"molt més divertit \n"
+"que arruïnar-la.\n"
+
+# Doom2 before MAP31
+msgid "C5TEXT"
+msgstr ""
+"Felicitats, has trobat el nivell secret!\n"
+"Sembla que l'han construït\n"
+"humans, en lloc de dimonis. Et preguntes\n"
+"qui seran els habitants d'aquest \n"
+"racó de l'infern."
+
+# Doom2 before MAP32
+msgid "C6TEXT"
+msgstr ""
+"Enhorabona, has trobat el\n"
+"nivell súper secret! Millor\n"
+"sort a través d'aquest!\n"
+
+# NRFTL victory
+msgid "NERVETEXT"
+msgstr ""
+"Els problemes tornaven a sorgir al vostre lloc de vacances\n"
+"preferit... L'Infern. Algun ciberdimoni\n"
+"punk pensava que podia convertir l'infern en un\n"
+"parc d'atraccions personal i fer de la Terra\n"
+"la taquilla.\n"
+"\n"
+"Doncs bé, aquell espectacle de fenòmens mig robot no\n"
+"sabia qui venia a la fira. No hi ha\n"
+"res com una galeria de tir plena de\n"
+"desviats de l'infern per fer pujar la sang...\n"
+"\n"
+"Ara les parets del laberint del dimoni\n"
+"ressonen amb el so de les seves extremitats metàl·liques\n"
+"colpejant el terra. El seu gemec de mort borbolleja\n"
+"a través del desastre que li has deixat a la cara.\n"
+"\n"
+"Aquesta atracció està tancada.\n"
+"\n"

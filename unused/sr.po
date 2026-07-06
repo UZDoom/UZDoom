@@ -1,0 +1,343 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-02-24 06:01+0000\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-memory@weblate.org>\n"
+"Language-Team: Serbian <https://hosted.weblate.org/projects/uzdoom/unused/sr/>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.16.1-dev\n"
+
+msgid "ADVSNDMNU_ADLOPLCORES"
+msgstr "OPL језгро емулације"
+
+msgid "ADVSNDMNU_FLUIDPATCHSET"
+msgstr "Печ сет"
+
+msgid "ADVSNDMNU_GUSCONFIG"
+msgstr "GUS конфигурациона датотека"
+
+# Jargon.
+msgid "ADVSNDMNU_TIMIDITYCONFIG"
+msgstr "Timidity конфигурациона датотека"
+
+msgid "ADVSNDMNU_TIMIDITYVOLUME"
+msgstr "Релативна јачина"
+
+# Jargon.
+msgid "ADVSNDMNU_WILDMIDICONFIG"
+msgstr "WildMidi конфигурациона датотека"
+
+msgid "CNTRLMNU_ADJUST_GAMMA"
+msgstr "Подесите осветљење"
+
+msgid "CNTRLMNU_CHAT"
+msgstr "Ћаскање"
+
+msgid "CNTRLMNU_CHAT_TITLE"
+msgstr "Контроле ћаскања"
+
+msgid "DSPLYMNU_ADVANCED"
+msgstr "Напредне опције приказа"
+
+msgid "DSPLYMNU_APPEARANCE"
+msgstr "Изглед"
+
+msgid "DSPLYMNU_CROSSHAIRSCALE"
+msgstr "Размера нишана"
+
+msgid "DSPLYMNU_MESSAGES"
+msgstr "Поруке"
+
+msgid "DSPLYMNU_SBSCALE"
+msgstr "Размера статусне траке"
+
+msgid "GLTEXMNU_ENABLEHIRES"
+msgstr "Омогући текстуре велике резолуције"
+
+msgid "GLTEXMNU_TEXENABLED"
+msgstr "Текстуре омогућене"
+
+msgid "MOUSEMNU_SMOOTHMOUSE"
+msgstr "Глатки окрет"
+
+msgid "MSGMNU_MESSAGESCALE"
+msgstr "Скала поруке"
+
+msgid "NOTSET"
+msgstr "Није намештено"
+
+msgid "OPTMNU_INPUT"
+msgstr "Опције уноса"
+
+msgid "OPTMNU_LIGHT"
+msgstr "Опције осветљења"
+
+msgid "OPTMNU_MULTIPLAYER"
+msgstr "Опције за више играча"
+
+msgid "OPTMNU_SPRITE"
+msgstr "Сприте опције"
+
+msgid "OPTMNU_SYSTEM"
+msgstr "Системске опције"
+
+msgid "OPTVAL_4000HZ"
+msgstr "4000 Hz"
+
+msgid "OPTVAL_AUTOMAP"
+msgstr "Аутомап"
+
+msgid "OPTVAL_HUD"
+msgstr "HUD"
+
+msgid "OPTVAL_HUDANDMAP"
+msgstr "HUD + Аутомап"
+
+msgid "OPTVAL_PMDWINOPNA"
+msgstr "ПМДВин ОПНА"
+
+msgid "OPTVAL_SCALENEAREST"
+msgstr "Скалиран (најближи)"
+
+msgid "OPTVAL_SCALELINEAR"
+msgstr "Скалиран (линеарно)"
+
+msgid "PICKER_NETAUTO"
+msgstr "Аутоматски (препоручено)"
+
+msgid "PICKER_NETMODE"
+msgstr "Режим мреже:"
+
+# Players connect to each other individually.
+msgid "PICKER_NETPEER"
+msgstr "Од равноправних до равноправних"
+
+# Connections are routed through the host instead of all players connecting to
+# each other individually.
+msgid "PICKER_NETSERVER"
+msgstr "Пакет-сервер"
+
+# Jargon.
+msgid "REVMNU_AIR_ABSORPTION_HF"
+msgstr "Апсорпција ваздуха HF"
+
+# Jargon.
+msgid "REVMNU_DECAY_HF_RATIO"
+msgstr "Однос високог интензитета опадања"
+
+# Jargon.
+msgid "REVMNU_DECAY_LF_RATIO"
+msgstr "Однос ниског броја опадања"
+
+# Jargon.
+msgid "REVMNU_DECAY_TIME"
+msgstr "Време распада"
+
+# Jargon.
+msgid "REVMNU_DENSITY"
+msgstr "Густина"
+
+# Jargon.
+msgid "REVMNU_DIFFUSION"
+msgstr "Дифузија"
+
+# Jargon.
+msgid "REVMNU_ECHO_DEPTH"
+msgstr "Дубина одјека"
+
+# Jargon.
+msgid "REVMNU_ECHO_TIME"
+msgstr "Време одјека"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_DIFFUSION"
+msgstr "Дифузија у окружењу"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_SIZE"
+msgstr "Величина окружења"
+
+# Jargon.
+msgid "REVMNU_HF_REFERENCE"
+msgstr "ВФ референца"
+
+# Jargon.
+msgid "REVMNU_LF_REFERENCE"
+msgstr "НФ референца"
+
+# Jargon.
+msgid "REVMNU_MODULATION_DEPTH"
+msgstr "Дубина модулације"
+
+# Jargon.
+msgid "REVMNU_MODULATION_TIME"
+msgstr "Време модулације"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS"
+msgstr "Рефлексије"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_DELAY"
+msgstr "Кашњење рефлексија"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_X"
+msgstr "Рефлексије Пан X"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Y"
+msgstr "Рефлексије Пан Y"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Z"
+msgstr "Рефлексије Пан З"
+
+# Jargon.
+msgid "REVMNU_REVERB"
+msgstr "Одјек"
+
+# Jargon.
+msgid "REVMNU_REVERB_DELAY"
+msgstr "Одјек реверба"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_X"
+msgstr "Реверб Пан X"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Y"
+msgstr "Реверб Пан Y"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Z"
+msgstr "Реверб Пан З"
+
+# Jargon.
+msgid "REVMNU_ROOM"
+msgstr "Соба"
+
+# Jargon.
+msgid "REVMNU_ROOM_HF"
+msgstr "Соба ВФ"
+
+# Jargon.
+msgid "REVMNU_ROOM_LF"
+msgstr "Соба ЛФ"
+
+# Jargon.
+msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
+msgstr "Фактор опадања просторија"
+
+msgid "SNDMNU_BACKEND"
+msgstr "Звучни бекенд"
+
+msgid "SNDMNU_MENUSOUND"
+msgstr "Звук у менијима"
+
+msgid "SNDMNU_MUSENABLED"
+msgstr "Музика омогућена"
+
+msgid "SNDMNU_SNDENABLED"
+msgstr "Звук омогућен"
+
+msgid "VIDMNU_5X4ASPECTRATIO"
+msgstr "Омогући 5:4 однос гледишта"
+
+msgid "VIDMNU_ASPECTRATIO"
+msgstr "Однос ширине и висине"
+
+msgid "VKMNU_DEVICESELECT"
+msgstr "Изаберите Vulkan уређај"
+
+msgid "VKMNU_ENABLE"
+msgstr "Омогући Vulkan"
+
+msgid "CMPTMNU_SOUNDCUTOFF"
+msgstr "Звукови престају кад глумац нестане"
+
+msgid "DSPLYMNU_TOOLTIP_WHITEPOINT"
+msgstr ""
+
+msgid "DSPLYMNU_TRANSSOUL"
+msgstr "Транспарентност изгубљених душа"
+
+msgid "DSPLYMNU_WHITEPOINT"
+msgstr ""
+
+msgid "GLLIGHTMNU_LIGHTDEFS"
+msgstr "Омогући светлосне дефиниције"
+
+msgid "GLMNU_PREFS"
+msgstr "Преференце"
+
+msgid "GLPREFMNU_PALTONENOGREY"
+msgstr "Онемогући сиве сенке"
+
+msgid "GLTEXMNU_TRIMSPREDGE"
+msgstr "Подсећи ивице спрајтова"
+
+msgid "JOYMNU_HAPTRIGGERS"
+msgstr "Омогући хаптичке окидаче"
+
+msgid "NETMNU_MOVEPREDICTION"
+msgstr "Предвиђање покрета"
+
+msgid "NETMNU_TICBALANCE"
+msgstr "Балансирање кашњења"
+
+msgid "OPTSTR_NOSOUND"
+msgstr "Без-звучни"
+
+msgid "OPTSTR_OPENAL"
+msgstr "OpenAL"
+
+msgid "OPTVAL_ALLUNACKNOWLEDGED"
+msgstr "Све неусвојено"
+
+msgid "OPTVAL_DEDICATED"
+msgstr "Високо-перформанси"
+
+msgid "OPTVAL_DOUBLE"
+msgstr "Дупло"
+
+msgid "OPTVAL_INTEGRATED"
+msgstr "Енергетско-штедљиви"
+
+msgid "OPTVAL_OPTIMAL"
+msgstr "Оптимал"
+
+msgid "OPTVAL_OPTIMIZED"
+msgstr "Оптимизовано"
+
+msgid "OPTVAL_ORIGINAL"
+msgstr "Оригинално"
+
+msgid "OPTVAL_PIXELDOUBLE"
+msgstr "Дупли пиксел"
+
+msgid "OPTVAL_PIXELQUADRUPLE"
+msgstr "Четвороструки пиксел"
+
+msgid "OPTVAL_QUADRUPLE"
+msgstr "Четвороструко"
+
+msgid "OPTVAL_SCALETO640X400"
+msgstr "Скалирај на 640x400"
+
+msgid "OPTVAL_TRIPLE"
+msgstr "Тродупло"
+
+msgid "OPTVAL_VTAVANILLA"
+msgstr "Аутоматски (ванила преферијални)"
+
+msgid "OPTVAL_VTAZDOOM"
+msgstr "Аутоматски (ZDoom преферијални)"
+
+msgid "TCMNU_TRUECOLOR"
+msgstr "Излаз правих боја"

@@ -1,0 +1,249 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-05-11 03:44+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/doom-engine-games/harmony-filter/id/>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2026.5-dev\n"
+
+#, fuzzy
+msgctxt "doom harmony"
+msgid "NIGHTMARE"
+msgstr ""
+"Emangnya kamu bisa menghadapi itu?\n"
+"\n"
+"tekan 'Y' atau 'N'..."
+
+msgctxt "doom harmony"
+msgid "AMSTR_MARKEDSPOT"
+msgstr "Spot ditandai"
+
+msgctxt "doom harmony"
+msgid "PD_BLUEO"
+msgstr "Butuh keycard HIJAU"
+
+msgctxt "doom harmony"
+msgid "PD_REDO"
+msgstr "Butuh keycard UNGU"
+
+msgctxt "doom harmony"
+msgid "PD_YELLOWO"
+msgstr "Butuh keycard KUNING"
+
+msgctxt "doom harmony"
+msgid "PD_BLUEK"
+msgstr "Butuh kunci HIJAU"
+
+msgctxt "doom harmony"
+msgid "PD_YELLOWK"
+msgstr "Butuh kunci KUNING"
+
+msgctxt "doom harmony"
+msgid "PD_REDK"
+msgstr "Butuh kunci UNGU"
+
+msgctxt "doom harmony"
+msgid "GOTARMOR"
+msgstr "Dapat armor."
+
+msgctxt "doom harmony"
+msgid "GOTMEGA"
+msgstr "Dapat Combat Armor."
+
+msgctxt "doom harmony"
+msgid "GOTMSPHERE"
+msgstr "Superhealth"
+
+msgctxt "doom harmony"
+msgid "GOTBLUECARD"
+msgstr "Dapat keycard HIJAU."
+
+msgctxt "doom harmony"
+msgid "GOTYELWCARD"
+msgstr "Dapat keycard KUNING."
+
+msgctxt "doom harmony"
+msgid "GOTREDCARD"
+msgstr "Dapat keycard UNGU."
+
+msgctxt "doom harmony"
+msgid "GOTBLUESKUL"
+msgstr "Dapat kunci HIJAU."
+
+msgctxt "doom harmony"
+msgid "GOTYELWSKUL"
+msgstr "Dapat kunci KUNING."
+
+msgctxt "doom harmony"
+msgid "GOTREDSKUL"
+msgstr "Dapat kunci UNGU."
+
+msgctxt "doom harmony"
+msgid "GOTSTIM"
+msgstr "Jamur penyembuh"
+
+msgctxt "doom harmony"
+msgid "GOTMEDIKIT"
+msgstr "Mendapatkan: kit medis."
+
+msgctxt "doom harmony"
+msgid "GOTMEDINEED"
+msgstr "Mendapatkan: kit medis yang kamu SANGAT butuhkan."
+
+msgctxt "doom harmony"
+msgid "GOTMAP"
+msgstr "Peta"
+
+msgctxt "doom harmony"
+msgid "GOTCLIPBOX"
+msgstr "Mendapatkan: sekotak peluru."
+
+msgctxt "doom harmony"
+msgid "GOTROCKET"
+msgstr "Mendapatkan: Granat."
+
+msgctxt "doom harmony"
+msgid "GOTROCKBOX"
+msgstr "Mendapatkan: Granat."
+
+msgctxt "doom harmony"
+msgid "GOTSHELLBOX"
+msgstr "Diperoleh: sekotak peluru shotgun."
+
+msgctxt "doom harmony"
+msgid "GOTBACKPACK"
+msgstr "Diperoleh: ransel amunisi."
+
+msgctxt "doom harmony"
+msgid "GOTBFG9000"
+msgstr "Diperoleh: Granat."
+
+msgctxt "doom harmony"
+msgid "GOTCHAINGUN"
+msgstr "Diperoleh: Minigun."
+
+msgctxt "doom harmony"
+msgid "GOTLAUNCHER"
+msgstr "Diperoleh: Peluncur granat."
+
+msgctxt "doom harmony"
+msgid "GOTPLASMA"
+msgstr "Pelempar entropi!"
+
+msgctxt "doom harmony"
+msgid "GOTSHOTGUN"
+msgstr "Diperoleh: Shotgun."
+
+msgctxt "doom harmony"
+msgid "STSTR_DQDON"
+msgstr "Mode Dewa AKTIF"
+
+msgctxt "doom harmony"
+msgid "STSTR_DQDOFF"
+msgstr "Mode Dewa NONAKTIF"
+
+msgctxt "doom harmony"
+msgid "STSTR_KFAADDED"
+msgstr "Semua senjata/ amunisi/ kunci"
+
+msgctxt "doom harmony"
+msgid "STSTR_FAADDED"
+msgstr "Semua senjata dan amunisi"
+
+msgid "TXT_HARMMAP01"
+msgstr "Penculikan"
+
+msgid "TXT_HARMMAP02"
+msgstr "Jalan Kehancuran"
+
+msgid "TXT_HARMMAP03"
+msgstr "Suasana Owt"
+
+msgid "TXT_HARMMAP04"
+msgstr "Megalapolis"
+
+msgid "TXT_HARMMAP05"
+msgstr "Rumah Sakit"
+
+msgid "TXT_HARMMAP06"
+msgstr "Pabrik Senjata"
+
+msgid "TXT_HARMMAP07"
+msgstr "Lab Bawah Air"
+
+msgid "TXT_HARMMAP08"
+msgstr "Landasan Udara Satu"
+
+msgid "TXT_HARMMAP09"
+msgstr "Pangkalan Peluncuran"
+
+msgid "TXT_HARMMAP10"
+msgstr "Zona Radioaktif"
+
+msgid "TXT_HARMMAP11"
+msgstr "Echidna"
+
+#, fuzzy
+msgid "CLUSTEREXIT1"
+msgstr ""
+"Perutmu terasa mual...\n"
+"Menatap wajah sang ratu mutan... \n"
+"Makhluk itu... Yang dulu adalah... \n"
+"Temanmu... Amira!\n"
+"\n"
+"Monster-monster itu pasti telah menemukan cara untuk\n"
+"memutasinya dan mengubahnya menjadi\n"
+"makhluk mengerikan ini untuk melahirkan keturunan mereka.\n"
+"\n"
+"-huh-\n"
+"\n"
+"Kau menenangkan dirimu... \n"
+"Mereka akan membayar karena membuatmu membunuh\n"
+"temanmu...\n"
+"\n"
+"\"Neraka tak memiliki amarah sebesar wanita yang tersakiti!\"\n"
+"\n"
+"     = T A M A T ="
+
+# This text is deliberately empty
+msgctxt "doom harmony"
+msgid "WI_FINISHED"
+msgstr ""
+
+# Yellow needs retranslation
+msgctxt "doom harmony"
+msgid "WI_ENTERING"
+msgstr "Memuat"
+
+msgctxt "doom harmony"
+msgid "SKILL_BABY"
+msgstr "Sangat Mudah"
+
+msgctxt "doom harmony"
+msgid "SKILL_EASY"
+msgstr "Mudah"
+
+msgctxt "doom harmony"
+msgid "SKILL_NORMAL"
+msgstr "Sedang"
+
+msgctxt "doom harmony"
+msgid "SKILL_HARD"
+msgstr "Sulit"
+
+msgctxt "doom harmony"
+msgid "SKILL_NIGHTMARE"
+msgstr "Sangat Sulit"
+
+msgid "HARMQUITMSG"
+msgstr "Terima kasih telah bermain"
+
+msgctxt "doom harmony"
+msgid "TXT_D2E1"
+msgstr "Harmoni"

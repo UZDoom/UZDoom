@@ -1,0 +1,185 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-05-11 03:44+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/doom-engine-games/heretic/id/>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2026.5-dev\n"
+
+msgid "HHUSTR_E1M1"
+msgstr "Dermaga"
+
+msgid "HHUSTR_E1M2"
+msgstr "Penjara Bawah Tanah"
+
+msgid "HHUSTR_E1M3"
+msgstr "Rumah Gerbang"
+
+msgid "HHUSTR_E1M4"
+msgstr "Menara Penjaga"
+
+msgid "HHUSTR_E1M5"
+msgstr "Benteng Besar"
+
+msgid "HHUSTR_E1M6"
+msgstr "Katedral"
+
+msgid "HHUSTR_E1M7"
+msgstr "Makam Bawah Tanah"
+
+msgid "HHUSTR_E1M8"
+msgstr "Rahim Neraka"
+
+msgid "HHUSTR_E1M9"
+msgstr "Kuburan"
+
+msgid "HHUSTR_E2M1"
+msgstr "Kawah"
+
+msgid "HHUSTR_E2M2"
+msgstr "Lubang Lava"
+
+msgid "HHUSTR_E2M3"
+msgstr "Sungai Api"
+
+msgid "HHUSTR_E2M4"
+msgstr "Gua Es"
+
+msgid "HHUSTR_E2M5"
+msgstr "Katakomba"
+
+msgid "HHUSTR_E2M6"
+msgstr "Labirin"
+
+msgid "HHUSTR_E2M7"
+msgstr "Aula Agung"
+
+msgid "HHUSTR_E2M8"
+msgstr "Gerbang Kekacauan"
+
+msgid "HHUSTR_E2M9"
+msgstr "Gletser"
+
+msgid "HHUSTR_E3M1"
+msgstr "Gudang"
+
+msgid "HHUSTR_E3M2"
+msgstr "Got Kotor"
+
+msgid "HHUSTR_E3M3"
+msgstr "Persimpangan"
+
+msgid "HHUSTR_E3M4"
+msgstr "Benteng Biru Langit"
+
+msgid "HHUSTR_E3M5"
+msgstr "Sarang Ular Raksasa"
+
+msgid "HHUSTR_E3M6"
+msgstr "Aula Ketakutan"
+
+msgid "HHUSTR_E3M7"
+msgstr "Jurang"
+
+msgid "HHUSTR_E3M8"
+msgstr "Benteng D’Sparil"
+
+msgid "HHUSTR_E3M9"
+msgstr "Akuifer"
+
+msgid "HHUSTR_E4M1"
+msgstr "Peti Jenazah Raksasa"
+
+msgid "HHUSTR_E4M2"
+msgstr "Rumah Blok"
+
+msgid "HHUSTR_E4M3"
+msgstr "Lorong Samping"
+
+msgid "HHUSTR_E4M4"
+msgstr "Makam"
+
+msgid "HHUSTR_E4M5"
+msgstr "Tangga Besar"
+
+msgid "HHUSTR_E4M6"
+msgstr "Aula Para Murtad"
+
+msgid "HHUSTR_E4M7"
+msgstr "Benteng Dosa"
+
+msgid "HHUSTR_E4M8"
+msgstr "Jembatan Hancur"
+
+msgid "HHUSTR_E4M9"
+msgstr "Mausoleum"
+
+msgid "HHUSTR_E5M1"
+msgstr "Tebing Oker"
+
+msgid "HHUSTR_E5M2"
+msgstr "Jeram"
+
+msgid "HHUSTR_E5M3"
+msgstr "Dermaga Tepi"
+
+msgid "HHUSTR_E5M4"
+msgstr "Halaman Dalam"
+
+msgid "HHUSTR_E5M5"
+msgstr "Hydratyr"
+
+msgid "HHUSTR_E5M6"
+msgstr "Deretan Kolom"
+
+msgid "HHUSTR_E5M7"
+msgstr "Rumah Busuk"
+
+msgid "HHUSTR_E5M8"
+msgstr "Ladang Penghakiman"
+
+msgid "HHUSTR_E5M9"
+msgstr "Jalinan D’Sparil"
+
+msgid "HE1TEXT"
+msgstr ""
+"Dengan hancurnya Para Lich Besi dan pasukan mereka, sisa-sisa mayat hidup telah disingkirkan dari alam ini.\n"
+"\n"
+"Namun makhluk-makhluk itu pasti berasal dari suatu tempat, dan kamu punya firasat licik bahwa portal berapi di Rahim Neraka terbuka menuju dimensi asal mereka.\n"
+"\n"
+"Untuk memastikan tidak ada lagi mayat hidup (atau hal yang lebih buruk) datang ke sini, kamu harus menutup Rahim Neraka dari sisi lain. Tentu saja ini berarti kamu mungkin terjebak di dunia yang sangat tidak bersahabat, tapi tidak ada yang pernah bilang menjadi seorang bidah itu mudah!"
+
+#, fuzzy
+msgid "HE2TEXT"
+msgstr ""
+"Para maulotaur yang perkasa ternyata tidak sebanding denganmu, dan saat tubuh mereka yang mengepul jatuh ke tanah, kamu merasakan kepuasan suram bahwa mereka telah dihancurkan.\n"
+"\n"
+"Gerbang-gerbang yang mereka jaga kini terbuka, menampakkan sesuatu yang kamu harap adalah jalan pulang. Tapi saat kamu melangkah melewatinya, terdengar tawa mengejek di telingamu.\n"
+"\n"
+"Apakah ada kekuatan lain yang mengendalikan para maulotaur? Bisa jadi ada makhluk yang bahkan lebih mengerikan di balik gerbang ini? Kubah kristal di atas kepala menggantikan langit — itu jelas bukan tanda yang baik...."
+
+msgid "HE3TEXT"
+msgstr ""
+"Kematian D’Sparil telah melepaskan ikatan sihir yang menahan para makhluknya di alam ini, jeritan kematian mereka menenggelamkan teriakan penderitaannya sendiri.\n"
+"\n"
+"Sumpah balas dendammu terpenuhi, kamu memasuki portal menuju duniamu sendiri, hanya beberapa saat sebelum kubah itu pecah menjadi jutaan keping.\n"
+"\n"
+"Namun jika kekuatan D’Sparil telah hancur selamanya, mengapa kamu tidak merasa aman? Apakah itu karena teriakan terakhirnya sebelum mati — yang terdengar seperti kutukan? Atau panggilan? Kamu tidak yakin, tapi mungkin saja itu hanya jeritan.\n"
+"\n"
+"Lagi pula, bagaimana dengan Para Penunggang Ular lainnya?"
+
+#, fuzzy
+msgid "HE4TEXT"
+msgstr "Kamu mengira akan kembali ke duniamu sendiri setelah D’Sparil mati, tapi tindakan terakhirnya mengusirmu ke alam miliknya sendiri. Di sini kamu memasuki sisa-sisa tanah yang hancur, yang pernah ditaklukkan oleh D’Sparil. Kamu menaklukkan para penjaga terakhir tanah-tanah ini, namun kini kamu berdiri di depan gerbang menuju benteng D’Sparil. Hingga saat ini kamu tak pernah ragu pada kemampuanmu menghadapi apa pun, tapi di balik portal ini terletak jantung dari kejahatan yang telah menyerbu duniamu. D’Sparil mungkin sudah mati, tapi jurang tempat ia lahir masih ada. Sekarang kamu harus memasuki jurang itu dengan harapan menemukan jalan keluar. Dan di suatu tempat, di sudut tergelap wilayah D’Sparil, pengawal pribadinya menantikan kedatanganmu..."
+
+msgid "HE5TEXT"
+msgstr ""
+"Saat maulotaur terakhir meraung dalam kesakitan menjelang ajalnya, kamu menyadari bahwa belum pernah sekalipun kamu sedekat ini dengan kehancuranmu sendiri. Bahkan pertarungan melawan D’Sparil dan para pengikutnya tidak pernah seputus asa ini. Dengan tatapan suram, kamu memandang gerbang-gerbang yang terbuka di hadapanmu, sambil bertanya-tanya apakah mereka mengarah ke rumah, atau justru menuju kengerian yang tak pernah terbayangkan.\n"
+"\n"
+"Kamu mulai meragukan apakah masih punya kekuatan untuk terus maju, jika yang menantimu hanyalah kematian dan penderitaan. Tapi apa lagi yang bisa kamu lakukan, bila tekad untuk bertarung telah hilang? Dapatkah kamu memaksa dirimu untuk terus melangkah di tengah keputusasaan sebesar ini? Apakah kamu masih punya keberanian? Pada akhirnya kamu tahu — menyerah tanpa bertarung bukanlah pilihan bagimu. Dengan mata terbuka lebar, kamu melangkah menyongsong takdirmu."

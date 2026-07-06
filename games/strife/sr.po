@@ -1,0 +1,4067 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-05-27 16:12+0000\n"
+"Last-Translator: SecularSteve <fairfull.playing@gmail.com>\n"
+"Language-Team: Serbian <https://hosted.weblate.org/projects/doom-engine-games/strife/sr/>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 2026.6.dev0\n"
+
+msgid "TXT_STRIFE_MAP01"
+msgstr "ПОДРУЧЈЕ 1: Светилиште"
+
+msgid "TXT_STRIFE_MAP02"
+msgstr "ПОДРУЧЈЕ 2: ГРАД"
+
+msgid "TXT_STRIFE_MAP03"
+msgstr "ПОДРУЧЈЕ 3: Предња база"
+
+msgid "TXT_STRIFE_MAP04"
+msgstr "ПОДРУЧЈЕ 4: Електрана"
+
+msgid "TXT_STRIFE_MAP05"
+msgstr "ПОДРУЧЈЕ 5: Затвор"
+
+msgid "TXT_STRIFE_MAP06"
+msgstr "ПОДРУЧЈЕ 6: Канализација"
+
+msgid "TXT_STRIFE_MAP07"
+msgstr "ПОДРУЧЈЕ 7: Замак"
+
+msgid "TXT_STRIFE_MAP08"
+msgstr "ПОДРУЧЈЕ 8: Публична комора"
+
+msgid "TXT_STRIFE_MAP09"
+msgstr "ПОДРУЧЈЕ 9: Замак: Програмеров двор"
+
+msgid "TXT_STRIFE_MAP10"
+msgstr "ПОДРУЧЈЕ 10: Нова фронт база"
+
+msgid "TXT_STRIFE_MAP11"
+msgstr "ПОДРУЧЈЕ 11: Пограничне области"
+
+msgid "TXT_STRIFE_MAP12"
+msgstr "ПОДРУЧЈЕ 12: Храм орaкула"
+
+msgid "TXT_STRIFE_MAP13"
+msgstr "ПОДРУЧЈЕ 13: Катакомбе"
+
+msgid "TXT_STRIFE_MAP14"
+msgstr "ПОДРУЧЈЕ 14: Рудници"
+
+msgid "TXT_STRIFE_MAP15"
+msgstr "ПОДРУЧЈЕ 15: Тврђава: Администрација"
+
+msgid "TXT_STRIFE_MAP16"
+msgstr "ПОДРУЧЈЕ 16: Тврђава: Бискупова кула"
+
+msgid "TXT_STRIFE_MAP17"
+msgstr "ПОДРУЧЈЕ 17: Тврђава: Бејли"
+
+msgid "TXT_STRIFE_MAP18"
+msgstr "ПОДРУЧЈЕ 18: Тврђава: Складишта"
+
+msgid "TXT_STRIFE_MAP19"
+msgstr "ПОДРУЧЈЕ 19: Тврђава: Безбедносни комплекс"
+
+msgid "TXT_STRIFE_MAP20"
+msgstr "ПОДРУЧЈЕ 20: Фабрика: Пријем"
+
+msgid "TXT_STRIFE_MAP21"
+msgstr "ПОДРУЧЈЕ 21: Фабрика: Производња"
+
+msgid "TXT_STRIFE_MAP22"
+msgstr "ПОДРУЧЈЕ 22: Фабрика: Ковачница"
+
+msgid "TXT_STRIFE_MAP23"
+msgstr "ПОДРУЧЈЕ 23: Ред Комонс"
+
+msgid "TXT_STRIFE_MAP24"
+msgstr "ПОДРУЧЈЕ 24: Фабрика: Преуређење капеле"
+
+msgid "TXT_STRIFE_MAP25"
+msgstr "ПОДРУЧЈЕ 25: Катакомбе: Срушени храм"
+
+msgid "TXT_STRIFE_MAP26"
+msgstr "ПОДРУЧЈЕ 26: Испитно поље"
+
+msgid "TXT_STRIFE_MAP27"
+msgstr "ПОДРУЧЈЕ 27: Лабораторија"
+
+msgid "TXT_STRIFE_MAP28"
+msgstr "ПОДРУЧЈЕ 28: Вонземљанински брод"
+
+msgid "TXT_STRIFE_MAP29"
+msgstr "ПОДРУЧЈЕ 29: Скровиште ентитета"
+
+msgid "TXT_STRIFE_MAP30"
+msgstr "ПОДРУЧЈЕ 30: Напуштена предња база"
+
+msgid "TXT_STRIFE_MAP31"
+msgstr "ПОДРУЧЈЕ 31: Објекат за обуку"
+
+msgid "TXT_STRIFE_MAP32"
+msgstr "ПОДРУЧЈЕ 1: Светилиште"
+
+msgid "TXT_STRIFE_MAP33"
+msgstr "ПОДРУЧЈЕ 2: ГРАД"
+
+msgid "TXT_STRIFE_MAP34"
+msgstr "ПОДРУЧЈЕ 3: База кретања"
+
+msgid "TXT_STRIFE_MAP35"
+msgstr "ПОДРУЧЈЕ 35: Фабрика: Производња"
+
+msgid "TXT_STRIFE_MAP36"
+msgstr "ПОДРУЧЈЕ 36: Castle Clash"
+
+msgid "TXT_STRIFE_MAP37"
+msgstr "ПОДРУЧЈЕ 37: Поља смрти"
+
+msgid "TXT_STRIFE_MAP38"
+msgstr "ПОДРУЧЈЕ 38: Уређени хаос"
+
+msgid "TXT_DLG_SCRIPT01_D0_IDONT"
+msgstr "Не желим никакве невоље, држи се даље од мене. Имам довољно невоља због онога што ми је тај гад Харис урадио. Обећао ми је новац, а уместо тога могу да се радујем испитивању од стране Програмера."
+
+msgid "TXT_DLG_SCRIPT02_D0_ILLHE"
+msgstr "Помоћи ћу ти ако ми помогнеш. Пет златних комада и рећи ћу све што знам."
+
+msgid "TXT_RPLY0_SCRIPT02_D0_HERES"
+msgstr "Ево злата."
+
+msgid "TXT_RYES0_SCRIPT02_D0_BESTE"
+msgstr "Буди притајен када убијаш, нећеш покренути аларме."
+
+msgid "TXT_RNO0_SCRIPT02_D0_WELLI"
+msgstr "Па, нећу ти ништа рећи бесплатно!"
+
+msgid "TXT_DLG_SCRIPT02_D1516_HAVEY"
+msgstr "Имаш ли случајно још пет златника?"
+
+msgid "TXT_RPLY0_SCRIPT02_D1516_5GOLD"
+msgstr "5 златних."
+
+msgid "TXT_RYES0_SCRIPT02_D1516_WELLP"
+msgstr "Па, отровни стрели могу одмах убити стражаре и неће активирати аларме."
+
+msgid "TXT_RNO0_SCRIPT02_D1516_NOSIR"
+msgstr "Не, господине, нећу вам ништа рећи бесплатно!"
+
+msgid "TXT_DLG_SCRIPT02_D3032_YOUVE"
+msgstr "Већ си извукла последњу трач-вести од мене!"
+
+msgid "TXT_DLG_SCRIPT02_D4548_WHATC"
+msgstr "Шта могу да вам донесем?"
+
+msgid "TXT_RPLY0_SCRIPT02_D4548_ASSAU"
+msgstr "Нападни пиштољ"
+
+msgid "TXT_RYES0_SCRIPT02_D4548_HEREY"
+msgstr "Ево."
+
+msgid "TXT_RNO0_SCRIPT02_D4548_YOUCA"
+msgstr "Тренутно то не можете приуштити."
+
+msgid "TXT_RPLY1_SCRIPT02_D4548_CLIPO"
+msgstr "Клип за метке"
+
+msgid "TXT_RYES1_SCRIPT02_D4548_THANK"
+msgstr "Хвала."
+
+msgid "TXT_RNO1_SCRIPT02_D4548_COMEO"
+msgstr "Хајде, 10 злата."
+
+msgid "TXT_RPLY2_SCRIPT02_D4548_AMMOB"
+msgstr "Кутија за муницију"
+
+msgid "TXT_RYES2_SCRIPT02_D4548_HERES"
+msgstr "Ево твог муниције."
+
+msgid "TXT_RNO2_SCRIPT02_D4548_MAYBE"
+msgstr "Можда неком другом приликом."
+
+msgid "TXT_DLG_SCRIPT02_D6064_GOODN"
+msgstr "За промену, добре вести са фронта. Мацил те је послао по награду и обуку. Он ми је наложио да ти их предајем."
+
+msgid "TXT_RPLY0_SCRIPT02_D6064_THANK"
+msgstr "Хвала."
+
+msgid "TXT_RYES0_SCRIPT02_D6064_GLADT"
+msgstr "Драго ми је што могу да помогнем."
+
+msgid "TXT_DLG_SCRIPT02_D7580_ALLRI"
+msgstr "У реду, ево неколико савета шта да радите: не стојте на путу Крусејдерсима – кратким серијама из вашег аутоматског пушка ћете их држати на нишану."
+
+msgid "TXT_RPLY0_SCRIPT02_D7580_ISTHA"
+msgstr "Да ли је то?"
+
+msgid "TXT_RYES0_SCRIPT02_D7580_LOOKY"
+msgstr "Погледај, сазнаћеш више касније."
+
+msgid "TXT_DLG_SCRIPT02_D9096_ITHIN"
+msgstr "Мислим да могу да претворим бацач пламена из једног од Крусејдера за употребу од стране човека. Ох, још нешто што могу да ти набавим?"
+
+msgid "TXT_RPLY0_SCRIPT02_D9096_FLAME"
+msgstr "Бацач пламена."
+
+msgid "TXT_RYES0_SCRIPT02_D9096_IKNEW"
+msgstr "Знао сам да ће то да ради! Ево, узми је и прошетај се с њом!"
+
+msgid "TXT_RNO0_SCRIPT02_D9096_LISTE"
+msgstr "Слушај, не могу ништа да направим без правих делова!"
+
+msgid "TXT_RPLY1_SCRIPT02_D9096_ASSAU"
+msgstr "Нападни пиштољ"
+
+msgid "TXT_RYES1_SCRIPT02_D9096_WELLH"
+msgstr "Ево, господине!"
+
+msgid "TXT_RNO1_SCRIPT02_D9096_OBVIO"
+msgstr "Очигледно, ти то тренутно не можеш да приуштиш."
+
+msgid "TXT_RPLY2_SCRIPT02_D9096_CLIPO"
+msgstr "Клип метака"
+
+msgid "TXT_RYES2_SCRIPT02_D9096_THANK"
+msgstr "Хвала."
+
+msgid "TXT_RNO2_SCRIPT02_D9096_COMEO"
+msgstr "Хајде, 10 злата."
+
+msgid "TXT_RPLY3_SCRIPT02_D9096_AMMOB"
+msgstr "Кутија за муницију"
+
+msgid "TXT_RYES3_SCRIPT02_D9096_HERES"
+msgstr "Ево твог муниције."
+
+msgid "TXT_RNO3_SCRIPT02_D9096_MAYBE"
+msgstr "Можда неком другом приликом. Збогом!"
+
+msgid "TXT_DLG_SCRIPT02_D10612_NOWTH"
+msgstr "Сада када имаш бацач пламена, можеш ли још нешто да ти набавим?"
+
+msgid "TXT_RPLY0_SCRIPT02_D10612_ASSAU"
+msgstr "Нападни пиштољ"
+
+msgid "TXT_RYES0_SCRIPT02_D10612_HEREY"
+msgstr "Ево."
+
+msgid "TXT_RNO0_SCRIPT02_D10612_YOUCA"
+msgstr "Тренутно то не можете приуштити."
+
+msgid "TXT_RPLY1_SCRIPT02_D10612_CLIPO"
+msgstr "Клип метака"
+
+msgid "TXT_RYES1_SCRIPT02_D10612_THANK"
+msgstr "Хвала."
+
+msgid "TXT_RNO1_SCRIPT02_D10612_COMEO"
+msgstr "Хајде, 10 злата."
+
+msgid "TXT_RPLY2_SCRIPT02_D10612_AMMOB"
+msgstr "Кутија за муницију"
+
+msgid "TXT_RYES2_SCRIPT02_D10612_HERES"
+msgstr "Ево твог муниције."
+
+msgid "TXT_RNO2_SCRIPT02_D10612_MAYBE"
+msgstr "Можда неком другом приликом."
+
+msgid "TXT_DLG_SCRIPT02_D12128_NOWTH"
+msgstr "Сада када имаш бацач пламена, има ли још нечега што могу да ти набавим?"
+
+msgid "TXT_RPLY0_SCRIPT02_D12128_CLIPO"
+msgstr "Клип метака"
+
+msgid "TXT_RYES0_SCRIPT02_D12128_THANK"
+msgstr "Хвала."
+
+msgid "TXT_RNO0_SCRIPT02_D12128_COMEO"
+msgstr "Хајде, 10 злата."
+
+msgid "TXT_RPLY1_SCRIPT02_D12128_AMMOB"
+msgstr "Кутија за муницију"
+
+msgid "TXT_RYES1_SCRIPT02_D12128_HERES"
+msgstr "Ево твог муниције."
+
+msgid "TXT_RNO1_SCRIPT02_D12128_MAYBE"
+msgstr "Можда неком другом приликом."
+
+msgid "TXT_RPLY2_SCRIPT02_D12128_PHOSP"
+msgstr "Фосфорне гранате"
+
+msgid "TXT_RYES2_SCRIPT02_D12128_THANK"
+msgstr "Хвала."
+
+msgid "TXT_RNO2_SCRIPT02_D12128_YOUDO"
+msgstr "Немате довољно"
+
+msgid "TXT_RPLY3_SCRIPT02_D12128_POISO"
+msgstr "Отровни болтови"
+
+msgid "TXT_RYES3_SCRIPT02_D12128_WORTH"
+msgstr "Вреди сваког злата!"
+
+msgid "TXT_RNO3_SCRIPT02_D12128_COMEO"
+msgstr "Хајде, 200 злата!"
+
+msgid "TXT_DLG_SCRIPT02_D13644_ICANT"
+msgstr "Не могу да верујем да сам заглављен на овој дужности. Кажу да је нешто зло изашло из овог канализационог отвора… Сада морам да стојим овде док опет не изађе!"
+
+msgid "TXT_RPLY0_SCRIPT02_D13644_WHATG"
+msgstr "Који капија?"
+
+msgid "TXT_RYES0_SCRIPT02_D13644_THESE"
+msgstr "Шахт за прелив канализације."
+
+msgid "TXT_DLG_SCRIPT02_D15160_HELLO"
+msgstr "Здраво, пријатељу. Шта могу да ти донесем?"
+
+msgid "TXT_RPLY0_SCRIPT02_D15160_ELECT"
+msgstr "Електрични болтови"
+
+msgid "TXT_RYES0_SCRIPT02_D15160_YOUGO"
+msgstr "Добио си електричне болтове."
+
+msgid "TXT_RPLY1_SCRIPT02_D15160_AMMOS"
+msgstr "Патронска торба"
+
+msgid "TXT_RNO0_SCRIPT02_D15160_NOYOU"
+msgstr "Не. Ти немаш оно што желим за електричне болтове!"
+
+msgid "TXT_RNO0_SCRIPT02_D16676_NOYOU"
+msgstr "Не. Ти немаш оно што желим за електричне болтове!"
+
+msgid "TXT_RYES1_SCRIPT02_D15160_THANK"
+msgstr "Хвала. Има ли још нешто?"
+
+msgid "TXT_RNO1_SCRIPT02_D15160_YOUCA"
+msgstr "Не можете то да приуштите, добар дан."
+
+msgid "TXT_DLG_SCRIPT02_D16676_WHATC"
+msgstr "Шта могу да вам донесем?"
+
+msgid "TXT_RPLY0_SCRIPT02_D16676_ELECT"
+msgstr "Електрични болтови"
+
+msgid "TXT_RYES0_SCRIPT02_D16676_YOUGO"
+msgstr "Добио си електричне болтове."
+
+msgid "TXT_RPLY1_SCRIPT02_D16676_AMMOS"
+msgstr "Патронска торба"
+
+msgid "TXT_RYES1_SCRIPT02_D16676_THANK"
+msgstr "Хвала вам, има ли још нечега?"
+
+msgid "TXT_RNO1_SCRIPT02_D16676_YOUCA"
+msgstr "Не можете то да приуштите, леп дан вам!"
+
+msgid "TXT_DLG_SCRIPT02_D18192_WELCO"
+msgstr "Добродошли. Шта могу да вам покажем?"
+
+msgid "TXT_RPLY0_SCRIPT02_D18192_ENVIR"
+msgstr "Тужба за заштиту животне средине"
+
+msgid "TXT_RYES0_SCRIPT02_D18192_WELLH"
+msgstr "Па, ево те."
+
+msgid "TXT_RNO0_SCRIPT02_D18192_IMSOR"
+msgstr "Жао ми је, али немате довољно новца за то."
+
+msgid "TXT_RPLY1_SCRIPT02_D18192_LEATH"
+msgstr "Кожна оклоп"
+
+msgid "TXT_RYES1_SCRIPT02_D18192_HEREY"
+msgstr "Ево те."
+
+msgid "TXT_RNO1_SCRIPT02_D18192_PERHA"
+msgstr "Можда неком другом приликом?"
+
+msgid "TXT_RPLY2_SCRIPT02_D18192_METAL"
+msgstr "Метална оклоп"
+
+msgid "TXT_RYES2_SCRIPT02_D18192_WEARI"
+msgstr "Носи га у здрављу."
+
+msgid "TXT_RNO2_SCRIPT02_D18192_COMEB"
+msgstr "Врати се када будеш могао да приуштиш нешто да купиш, кретену!"
+
+msgid "TXT_DLG_SCRIPT02_D19708_WELCO"
+msgstr "Добродошли. Шта могу да вам покажем?"
+
+msgid "TXT_RPLY0_SCRIPT02_D19708_ENVIR"
+msgstr "Тужба за заштиту животне средине"
+
+msgid "TXT_RYES0_SCRIPT02_D19708_WELLH"
+msgstr "Па, ево те."
+
+msgid "TXT_RNO0_SCRIPT02_D19708_IMSOR"
+msgstr "Жао ми је, али немате довољно новца за то."
+
+msgid "TXT_RPLY1_SCRIPT02_D19708_LEATH"
+msgstr "Кожна оклоп"
+
+msgid "TXT_RYES1_SCRIPT02_D19708_HEREY"
+msgstr "Ево те."
+
+msgid "TXT_RNO1_SCRIPT02_D19708_PERHA"
+msgstr "Можда неком другом приликом?"
+
+msgid "TXT_RPLY2_SCRIPT02_D19708_METAL"
+msgstr "Метална оклоп"
+
+msgid "TXT_RYES2_SCRIPT02_D19708_WEARI"
+msgstr "Носи га у здрављу."
+
+msgid "TXT_RNO2_SCRIPT02_D19708_COMEB"
+msgstr "Врати се када будеш могао да приуштиш нешто да купиш, идиоте!"
+
+msgid "TXT_DLG_SCRIPT02_D21224_HOWMA"
+msgstr "Како могу да вам помогнем?"
+
+msgid "TXT_RPLY0_SCRIPT02_D21224_MEDPA"
+msgstr "Медицинска закрпа"
+
+msgid "TXT_RYES0_SCRIPT02_D21224_HERES"
+msgstr "Ево твог закрпа."
+
+msgid "TXT_RNO0_SCRIPT02_D21224_YOUNE"
+msgstr "За то ти треба 10 злата."
+
+msgid "TXT_RPLY1_SCRIPT02_D21224_MEDIC"
+msgstr "Медицински комплет"
+
+msgid "TXT_RYES1_SCRIPT02_D21224_THANK"
+msgstr "Хвала вам."
+
+msgid "TXT_RNO1_SCRIPT02_D21224_IWISH"
+msgstr "Волео бих да их могу поклонити, али коштају 25 злата."
+
+msgid "TXT_RPLY2_SCRIPT02_D21224_FIELD"
+msgstr "Комплет за теренску хирургију"
+
+msgid "TXT_RYES2_SCRIPT02_D21224_THERE"
+msgstr "Ево ти. Чувај се сад."
+
+msgid "TXT_RNO2_SCRIPT02_D21224_WELLM"
+msgstr "Па, можда можете да приуштите неке медицинске закрпе?"
+
+msgid "TXT_DLG_SCRIPT02_D22740_IHOPE"
+msgstr "Надам се да Мацил зна шта ради. Ако Орден сазна да помажем Фронту, готово је са мном… Није да ти то уопште значи. Медик Фронта ми је дао унапређени чип за тебе, спреман ли си?"
+
+msgid "TXT_RPLY0_SCRIPT02_D22740_YESIM"
+msgstr "Да, спреман сам."
+
+msgid "TXT_RYES0_SCRIPT02_D22740_WELLT"
+msgstr "Па добро, ово ће потрајати само секунду. Ево, већ је готово."
+
+msgid "TXT_DLG_SCRIPT02_D24256_HOWMA"
+msgstr "Како могу да вам помогнем?"
+
+msgid "TXT_RPLY0_SCRIPT02_D24256_MEDPA"
+msgstr "Медицинска закрпа"
+
+msgid "TXT_RYES0_SCRIPT02_D24256_HERES"
+msgstr "Ево твог закрпа."
+
+msgid "TXT_RNO0_SCRIPT02_D24256_YOUNE"
+msgstr "За то ти треба 10 злата."
+
+msgid "TXT_RPLY1_SCRIPT02_D24256_MEDIC"
+msgstr "Медицински комплет"
+
+msgid "TXT_RYES1_SCRIPT02_D24256_THANK"
+msgstr "Хвала вам."
+
+msgid "TXT_RNO1_SCRIPT02_D24256_IWISH"
+msgstr "Волео бих да их могу поклонити, али коштају 25 злата."
+
+msgid "TXT_RPLY2_SCRIPT02_D24256_FIELD"
+msgstr "Комплет за теренску хирургију"
+
+msgid "TXT_RYES2_SCRIPT02_D24256_THERE"
+msgstr "Ево ти. Чувај се сада."
+
+msgid "TXT_RNO2_SCRIPT02_D24256_WELLM"
+msgstr "Па, можда можете да приуштите неке медицинске закрпе?"
+
+msgid "TXT_DLG_SCRIPT02_D25772_HELLO"
+msgstr "Здраво, странац, нисам те раније видео овде. Дозволи ми да ти дам један бесплатан савет. Пазио бих да сам на твом месту. Ред не толерише слободну вољу, а њихова правда је брза."
+
+msgid "TXT_RPLY0_SCRIPT02_D25772_WHATS"
+msgstr "Какве су вести?"
+
+msgid "TXT_RYES0_SCRIPT02_D25772_THEWO"
+msgstr "Реч је… Канализација крије више од пацова и робота."
+
+msgid "TXT_DLG_SCRIPT02_D27288_WHATC"
+msgstr "Шта могу сада да урадим за вас?"
+
+msgid "TXT_RPLY0_SCRIPT02_D27288_MOREI"
+msgstr "Више информација."
+
+msgid "TXT_RYES0_SCRIPT02_D27288_THEGO"
+msgstr "Гувернер је једноставан подсетник да више нисмо слободни људи."
+
+msgid "TXT_RNO0_SCRIPT02_D27288_COMEB"
+msgstr "Врати се када добијеш мало злата."
+
+msgid "TXT_DLG_SCRIPT02_D28804_WELLY"
+msgstr "Па, постављаш пуно питања за некога ко не покушава да умре. Пази да не одеш и не убијеш се, или још горе."
+
+msgid "TXT_RPLY0_SCRIPT02_D28804_MOREI"
+msgstr "Више информација."
+
+msgid "TXT_RYES0_SCRIPT02_D28804_THERE"
+msgstr "У Реду има више него што се чини."
+
+msgid "TXT_RNO0_SCRIPT02_D28804_WELLT"
+msgstr "Поздравићемо се кад добијеш злато!"
+
+msgid "TXT_DLG_SCRIPT02_D30320_THATS"
+msgstr "То је то, пријатељу, бунар знања се исушио. У сваком случају, рекао сам ти више него што сам требао. Срећно… И немој се враћати."
+
+msgid "TXT_DLG_SCRIPT02_D31836_HEYIM"
+msgstr "Хеј, ја сам овде само у случају ванредне ситуације. Ако језгро пропадне, ја ћу се побринути да нико не уђе… нити изађе."
+
+msgid "TXT_DLG_SCRIPT02_D33352_WATCH"
+msgstr "Пази где стајеш, сељаче!"
+
+msgid "TXT_DLG_SCRIPT02_D34868_WEREG"
+msgstr "Убићемо те! "
+
+msgid "TXT_DLG_SCRIPT02_D36384_WHOIN"
+msgstr "Ко си, дођавола? Нико не сме да се задржава у овом крају!"
+
+msgid "TXT_DLG_SCRIPT02_D37900_YOUTH"
+msgstr "Ти тамо, овде никоме није дозвољено да уђе. Иди даље!"
+
+msgid "TXT_DLG_SCRIPT02_D39416_IRALE"
+msgstr "Ирале ће те средити!"
+
+msgid "TXT_DLG_SCRIPT02_D40932_IMKIN"
+msgstr "Ја сам нека врста посредника за таленте побуњеника. Тип који је добар колико и ти можеш зарадити много злата… ако се повежеш са правим људима."
+
+msgid "TXT_RPLY0_SCRIPT02_D40932_IMINT"
+msgstr "Занима ме."
+
+msgid "TXT_RPLY1_SCRIPT02_D40932_SCREW"
+msgstr "Јебите побуњенике!"
+
+msgid "TXT_DLG_SCRIPT02_D42448_NONOS"
+msgstr "Не, нема друге шансе. О, чувари, убијте га."
+
+msgid "TXT_DLG_SCRIPT02_D43964_GOODC"
+msgstr "Добар избор. Светилиште Реда поред реке је њихова незванична комора за мучење. Унутра је скривен златни чаша. Узмеш је и убереш своју награду."
+
+msgid "TXT_RPLY0_SCRIPT02_D43964_HOWAM"
+msgstr "Како да то урадим?"
+
+msgid "TXT_DLG_SCRIPT02_D45480_HERES"
+msgstr "Ево праћке, само циљај право и – сплат –. Запамти, узми тај раскошни чашак и крени у таверну."
+
+msgid "TXT_RPLY0_SCRIPT02_D45480_COOLI"
+msgstr "Супер. Хвала."
+
+msgid "TXT_DLG_SCRIPT02_D46996_WHATA"
+msgstr "Чега чекаш? Донеси ми тај чаша."
+
+msgid "TXT_DLG_SCRIPT02_D48512_HEYIK"
+msgstr "Хеј, знам, изгледа као намештено. Никада не бих то урадио тако сјајној машини за убијање. Имаш ли предмет? Одлично! Сада се припреми, злато и слава баш као што сам обећао. Узми овај кључ и гувернер ће те наградити."
+
+msgid "TXT_RPLY0_SCRIPT02_D48512_HEDBE"
+msgstr "Боље да. За твоје добро!"
+
+msgid "TXT_RPLY1_SCRIPT02_D48512_WHATW"
+msgstr "Шта! Где је мој новац?"
+
+msgid "TXT_DLG_SCRIPT02_D50028_GETLO"
+msgstr "Нестани, дете, сметаш ми."
+
+msgid "TXT_DLG_SCRIPT02_D51544_NOSEC"
+msgstr "Нема друге шансе. О, стражари, убијте га."
+
+msgid "TXT_DLG_SCRIPT02_D53060_FIRST"
+msgstr "Прво су побили хиљаде, а сада хоће све способне сељаке за неодређена \"тестирања\". Како Орден очекује да одржавам мир? Шта, дођавола, хоћете?"
+
+msgid "TXT_RPLY0_SCRIPT02_D53060_APRIS"
+msgstr "Пропусница за затвор, хајде да се договоримо."
+
+msgid "TXT_DLG_SCRIPT02_D54576_ILIKE"
+msgstr "Већ ми се свиђаш. Имам два посла која не желим да радим сам. Једно је прљаво, друго крваво."
+
+msgid "TXT_RPLY0_SCRIPT02_D54576_CALLM"
+msgstr "Назови ме чистачем"
+
+msgid "TXT_RPLY1_SCRIPT02_D54576_IMNOT"
+msgstr "Не сам гадљив"
+
+msgid "TXT_DLG_SCRIPT02_D56092_ONEOF"
+msgstr "Један од мојих слугу краде струју негде тако што је прикључио кабл на мрежу. Пронађи га и прекини му напајање, па ћу ти дати оно што желиш. Донеси ми нешто као знак."
+
+msgid "TXT_RPLY0_SCRIPT02_D56092_WHERE"
+msgstr "Где да нађем овај славина?"
+
+msgid "TXT_DLG_SCRIPT02_D57608_IFIKN"
+msgstr "Да сам знао, не би било мука, зар не? Искористи свој шарм, али прекини му снабдевање."
+
+msgid "TXT_DLG_SCRIPT02_D59124_TELLY"
+msgstr "Рецимо ти, постоји једна лажљива бурад по имену Дервин који продаје децу Ордену. Нећу толерисати такву поквареност. Не без мог дела. Дервин ради у складишту. Убиј га и донеси ми његово уво, па ћу видети шта могу да урадим."
+
+msgid "TXT_RPLY0_SCRIPT02_D59124_HOWDO"
+msgstr "Како да уђем?"
+
+msgid "TXT_DLG_SCRIPT02_D60640_THISK"
+msgstr "Овај кључ ће ти омогућити улаз у електрану. Након размишљања, одсеци му уво, па га убиј. Много боље."
+
+msgid "TXT_DLG_SCRIPT02_D62156_OHIJU"
+msgstr "Ох, ја једноставно обожавам сувенире. Ево, ово ће те увести у затвор. Разговарај са управником Монтагом. Шта год да урадиш после тога, не желим да знам."
+
+msgid "TXT_RPLY0_SCRIPT02_D62156_THANK"
+msgstr "Хвала."
+
+msgid "TXT_DLG_SCRIPT02_D63672_GIVEY"
+msgstr "Даћу ти савет. Када престанем да причам са тобом, ти одлазиш."
+
+msgid "TXT_DLG_SCRIPT02_D65188_DOYOU"
+msgstr "Имаш ли добре вести за мене? Цело уво сам."
+
+msgid "TXT_RPLY0_SCRIPT02_D65188_THEDE"
+msgstr "Чињеница је готова!"
+
+msgid "TXT_DLG_SCRIPT02_D66704_OHIJU"
+msgstr "Ох, ја једноставно обожавам сувенире. Ево, ово ће те увести у затвор. Разговарај са управником Монтагом. Шта год да урадиш после тога, не желим да знам."
+
+msgid "TXT_RPLY0_SCRIPT02_D66704_FINEB"
+msgstr "У реду је."
+
+msgid "TXT_DLG_SCRIPT02_D68220_SOYOU"
+msgstr "Значи, ти си онај будала који је украо чашу? Ухапсићу те као побуњеничког лопова… чиме ћу ојачати свој положај у Ордену. Како ти је бити несвесна пешачица? Даћу ти савет: болеће."
+
+msgid "TXT_RPLY0_SCRIPT02_D68220_ITSUC"
+msgstr "То је срање!"
+
+msgid "TXT_RYES0_SCRIPT02_D68220_FORYO"
+msgstr "За тебе јесте."
+
+msgid "TXT_RPLY1_SCRIPT02_D68220_HARRI"
+msgstr "Харис ми је обећао новац!"
+
+msgid "TXT_RYES1_SCRIPT02_D68220_TOOBA"
+msgstr "Штета. Једино што ћеш добити је смрт!"
+
+msgid "TXT_DLG_SCRIPT02_D69736_INASM"
+msgstr "У малом свету вести се брзо шире. Чујем да си управо уклонио неке препреке са свог пута. Браво. Да ли би био заинтересован за неке профитабилније пројекте?"
+
+msgid "TXT_RPLY0_SCRIPT02_D69736_SUREW"
+msgstr "Наравно, зашто да не."
+
+msgid "TXT_RPLY1_SCRIPT02_D69736_NOTHA"
+msgstr "Не, хвала."
+
+msgid "TXT_RYES1_SCRIPT02_D69736_THENG"
+msgstr "Онда иди к ђаволу!"
+
+msgid "TXT_DLG_SCRIPT02_D71252_FOOLG"
+msgstr "Идиоте! Чувари, ослободите ме овог досадног пејона."
+
+msgid "TXT_DLG_SCRIPT02_D72768_GOODS"
+msgstr "Добро. Неки моји пријатељи желе да неко буде ућутан. Белдина држи Орден у свом светилишту. Постоји ретко коришћен улаз поред малог пристана на реци који није обезбеђен. Уђи, ућути га и донеси ми његов прстен као доказ."
+
+msgid "TXT_RPLY0_SCRIPT02_D72768_WILLI"
+msgstr "Да ли ће се труд исплатити?"
+
+msgid "TXT_DLG_SCRIPT02_D74284_ILLGU"
+msgstr "Гарантујем 50 злата, а ако се вратиш без да си покренуо сва упозорења у граду, постоји шанса да зарадиш много, много више, и ево једног малог помагала који ће ти дати предност."
+
+msgid "TXT_RPLY0_SCRIPT02_D74284_THANK"
+msgstr "Хвала, биће ми потребно."
+
+msgid "TXT_DLG_SCRIPT02_D75800_GOODR"
+msgstr "Добро. Запамти, његово ћутање је златно."
+
+msgid "TXT_RPLY0_SCRIPT02_D75800_ILLGE"
+msgstr "Ухватићу га."
+
+msgid "TXT_DLG_SCRIPT02_D77316_MISSI"
+msgstr "Мисија остварена? Имаш прстен издајника?"
+
+msgid "TXT_RPLY0_SCRIPT02_D77316_HESDE"
+msgstr "Он је мртав, где је мој новац?"
+
+msgid "TXT_RNO0_SCRIPT02_D77316_LIARG"
+msgstr "Лажов! Иди по прстен!"
+
+msgid "TXT_DLG_SCRIPT02_D78832_HEREY"
+msgstr "Ево, заслужили сте то. Преварант кога сте убили управо је требало да открије локацију Фронта. Спасили сте животе. Како бисте желели да зарадите више злата и обезбедите будућност слободну од тираније?"
+
+msgid "TXT_RPLY0_SCRIPT02_D78832_TELLM"
+msgstr "Реци ми више."
+
+msgid "TXT_RPLY1_SCRIPT02_D78832_NOTMY"
+msgstr "Није мој стил."
+
+msgid "TXT_DLG_SCRIPT02_D80348_IHAVE"
+msgstr "Имам пословни однос са вођом Фронта, Мацилом. Знам да му треба оштар момак попут тебе и добро плаћа. Узми ову повраћену комуникациону јединицу и бићеш вођен ка, рецимо, приликама."
+
+msgid "TXT_RPLY0_SCRIPT02_D80348_THANK"
+msgstr "Хвала."
+
+msgid "TXT_DLG_SCRIPT02_D81864_GETGO"
+msgstr "Крећи се. Ако останемо овде, обоје ћемо умрети."
+
+msgid "TXT_DLG_SCRIPT02_D83380_APITY"
+msgstr "Штета, али сада када знаш за моје пријатеље, морам да те убијем. Чувари, избаците ово смеће!"
+
+msgid "TXT_DLG_SCRIPT02_D84896_FOOLG"
+msgstr "Идиоте. Чувари! Ослободите ме од ометајућег пеона."
+
+msgid "TXT_DLG_SCRIPT02_D86412_WALKA"
+msgstr "Одлази, дечаче, само одлази."
+
+msgid "TXT_DLG_SCRIPT02_D87928_WHATA"
+msgstr "Шта радиш овде?"
+
+msgid "TXT_RPLY0_SCRIPT02_D87928_HEYIN"
+msgstr "Хеј, треба ми злато!"
+
+msgid "TXT_DLG_SCRIPT02_D89444_BLACK"
+msgstr "Блекберд ти је рекао код, зар не? Дозволи ми да искључим аларм. Масил је спрат ниже."
+
+msgid "TXT_RPLY0_SCRIPT02_D89444_THANK"
+msgstr "Хвала."
+
+msgid "TXT_DLG_SCRIPT02_D90960_WALKA"
+msgstr "Одлази, дечаче, само одлази."
+
+msgid "TXT_DLG_SCRIPT02_D92476_DOYOU"
+msgstr "Да ли имате састанак са гувернером? "
+
+msgid "TXT_RPLY0_SCRIPT02_D92476_OFCOU"
+msgstr "Наравно!"
+
+msgid "TXT_RPLY1_SCRIPT02_D92476_NOAND"
+msgstr "Не, и не треба ми један!"
+
+msgid "TXT_DLG_SCRIPT02_D93992_SORRY"
+msgstr "Извини! Нисам хтео да кажем… Молим те, слободно иди горе."
+
+msgid "TXT_RPLY0_SCRIPT02_D93992_IKNEW"
+msgstr "Знао сам да ћеш то рећи."
+
+msgid "TXT_DLG_SCRIPT02_D95508_IFYOU"
+msgstr "Ако си тако ужурбан, не троши време са мном."
+
+msgid "TXT_DLG_SCRIPT02_D97024_RELEA"
+msgstr "Ослободи ме, остави старог човека на миру."
+
+msgid "TXT_DLG_SCRIPT02_D98540_YOUSE"
+msgstr "Тражиш ли мудрост, сине мој? Рeд је побринуо да постављамо само једно питање: \"Зашто?\""
+
+msgid "TXT_RPLY0_SCRIPT02_D98540_WHERE"
+msgstr "Где је купловка за напајање?"
+
+msgid "TXT_RPLY1_SCRIPT02_D98540_WHERE"
+msgstr "Где је главни ред?"
+
+msgid "TXT_RPLY2_SCRIPT02_D98540_WHERE"
+msgstr "Где је илегално прикључење?"
+
+msgid "TXT_DLG_SCRIPT02_D100056_ILLTE"
+msgstr "Рећи ћу ти где се налази, али не знам чије ћеш прикључење дирати. То је управо овде у постројењу за пречишћавање отпадних вода."
+
+msgid "TXT_RPLY0_SCRIPT02_D100056_THANK"
+msgstr "Хвала"
+
+msgid "TXT_DLG_SCRIPT02_D101572_THATS"
+msgstr "Ево га овде у постројењу за пречишћавање отпадних вода. Али то је спој Фронта. Ко год ти је рекао да је то Ордена, грешио је."
+
+msgid "TXT_RPLY0_SCRIPT02_D101572_THANK"
+msgstr "Хвала"
+
+msgid "TXT_DLG_SCRIPT02_D103088_IFYOU"
+msgstr "Ако кажеш да је то илегално, не желим ништа да имам са тобом. Имам већ довољно проблема."
+
+msgid "TXT_RPLY0_SCRIPT02_D103088_THANK"
+msgstr "Хвала"
+
+msgid "TXT_DLG_SCRIPT02_D104604_RELEA"
+msgstr "Ослободи ме, остави старог човека на миру."
+
+msgid "TXT_DLG_SCRIPT03_D0_WELCO"
+msgstr "Добродошли у последњи трептај наде. Само ми имамо слободну вољу да се супротставимо Реду. Имамо најоштрија научна ума и многа способна тела, али нам недостаје онај један прави, хм… решавач проблема који ће нам дати предност која нам је потребна. Помозите нам."
+
+msgid "TXT_RPLY0_SCRIPT03_D0_ALLRI"
+msgstr "У реду, прихватам."
+
+msgid "TXT_RPLY1_SCRIPT03_D0_NOTHA"
+msgstr "Не, хвала!"
+
+msgid "TXT_DLG_SCRIPT03_D1516_YOUMI"
+msgstr "Можда бисте желели да преиспитате своју одлуку, с обзиром на то да сте окружени тешко наоружаним, бесним побуњеницима."
+
+msgid "TXT_RPLY0_SCRIPT03_D1516_ALLRI"
+msgstr "У реду, прихватам!"
+
+msgid "TXT_RPLY1_SCRIPT03_D1516_NOTHA"
+msgstr "Не, хвала."
+
+msgid "TXT_DLG_SCRIPT03_D3032_THEND"
+msgstr "Онда умри у срамоти и бешчашћу."
+
+msgid "TXT_DLG_SCRIPT03_D4548_GOODB"
+msgstr "Добро, Блекберд ће и даље бити твој водич. Она се прилично привргла теби. Заједно морате открити тајне Ордена и њихових нељудских слугу. Уђите унутра и поразите их."
+
+msgid "TXT_RPLY0_SCRIPT03_D4548_WHERE"
+msgstr "Одакле да почнем?"
+
+msgid "TXT_DLG_SCRIPT03_D6064_FRANK"
+msgstr "Искрено, ситуација је у хаосу. Мораш да обавиш неколико мисија како би припремио пут за нове нападе на Орден. Наша последња рација била је катастрофа и већина наших трупа је заробљена. Треба да ослободиш те заробљенике."
+
+msgid "TXT_RPLY0_SCRIPT03_D6064_ITHIN"
+msgstr "Мислим да могу да се носим са тим."
+
+msgid "TXT_DLG_SCRIPT03_D7580_TAKET"
+msgstr "Узми овај новац и посети Иралеа, који нам испоручује оружје. Овај кључ ће ти омогућити приступ гувернеру. Он је корумпирана марионета Ордена, али воли да склапа послове. Уради све што је потребно да ослободиш наше ратнике."
+
+msgid "TXT_RPLY0_SCRIPT03_D7580_ILLSE"
+msgstr "Побринућу се за то."
+
+msgid "TXT_DLG_SCRIPT03_D9096_FIGHT"
+msgstr "Бори се за фронт и слободу. Полази."
+
+msgid "TXT_DLG_SCRIPT03_D10612_THEPR"
+msgstr "Због тебе су затвореници поново добродошли. Ево мало злата, иди код медицинара и инструктора за оружје, а затим имам веће циљеве за тебе."
+
+msgid "TXT_RPLY0_SCRIPT03_D10612_IWILL"
+msgstr "Урадићу. Шта је следеће?"
+
+msgid "TXT_DLG_SCRIPT03_D12128_ASING"
+msgstr "Један кристал напаја мрежу која покреће штитове Ордена. Уништи тај кристал и направићеш огромне рупе у одбрани Ордена. Блекберд ће те одвести до шпијуна који има приступ, срећно."
+
+msgid "TXT_RPLY0_SCRIPT03_D12128_WELLG"
+msgstr "Разumeћемо."
+
+msgid "TXT_DLG_SCRIPT03_D13644_FIGHT"
+msgstr "Бори се за фронт и слободу. Полази."
+
+msgid "TXT_DLG_SCRIPT03_D15160_YOUVE"
+msgstr "Премашили сте сва наша очекивања. Захваљујући вашој храбрости, наше трупе су у покрету. Желим да се ви двоје придружите нападу са конкретним циљем. Уклоните Програмера. Време је да откријемо шта смо сазнали о овом слоју Реда."
+
+msgid "TXT_RPLY0_SCRIPT03_D15160_TELLM"
+msgstr "Реци ми шта знамо."
+
+msgid "TXT_DLG_SCRIPT03_D16676_THEPR"
+msgstr "Програмерово уточиште је у замку. Сада иди до медицинара, узми неке муниције и иди да га ухватиш."
+
+msgid "TXT_RPLY0_SCRIPT03_D16676_LETME"
+msgstr "Пусти ме на њих!"
+
+msgid "TXT_DLG_SCRIPT03_D18192_FIGHT"
+msgstr "Бори се за фронт и слободу. Полази."
+
+msgid "TXT_DLG_SCRIPT03_D19708_REMEM"
+msgstr "Сећаш ли се како је изгледала општинска зграда? То је благ подсетник на то шта су све спремни да ураде да би нас докопали. Буди опрезан."
+
+msgid "TXT_DLG_SCRIPT03_D21224_TALKT"
+msgstr "Разговарај са Мацилом. Он ће ти моћи помоћи."
+
+msgid "TXT_DLG_SCRIPT03_D22740_IVEHE"
+msgstr "Чуо сам да Мацил има план да поткопа Ред. Боље да буде добар. Још један неуспех и сви смо мртва храна."
+
+msgid "TXT_DLG_SCRIPT03_D24256_AFEWO"
+msgstr "Неколико ових буриња бачених у њихово снабдевање водом требало би да мало изједначи шансе."
+
+msgid "TXT_DLG_SCRIPT03_D25772_SOYOU"
+msgstr "Значи, ти си нови оперативац? Хвала, без тебе бисмо сви сада били мртви."
+
+msgid "TXT_DLG_SCRIPT03_D27288_IMWOR"
+msgstr "Радим на нечему што ће нам дати предност. То ће ти повећати издржљивост и потпуно те разбудити. Скоро сам отклонио све грешке. Могу ли ти помоћи?"
+
+msgid "TXT_RPLY0_SCRIPT03_D27288_PATCH"
+msgstr "Залечи ме."
+
+msgid "TXT_RYES0_SCRIPT03_D27288_BOYYO"
+msgstr "Човече, ти си права збрка. Видећу шта могу да урадим."
+
+msgid "TXT_RPLY1_SCRIPT03_D27288_STAMI"
+msgstr "Имплант издржљивости?"
+
+msgid "TXT_RYES1_SCRIPT03_D27288_ALLRI"
+msgstr "У реду, ово ће потрајати само тренутак."
+
+msgid "TXT_RNO1_SCRIPT03_D27288_ITSNO"
+msgstr "Још није готово."
+
+msgid "TXT_DLG_SCRIPT03_D28804_HEYIM"
+msgstr "Хеј, радим на ажурираној верзији твог импланта. Има ли још нешто што могу да урадим?"
+
+msgid "TXT_RPLY0_SCRIPT03_D28804_PATCH"
+msgstr "Залечи ме."
+
+msgid "TXT_RYES0_SCRIPT03_D28804_WELLA"
+msgstr "Па барем видиш акцију."
+
+msgid "TXT_RPLY1_SCRIPT03_D28804_IMPLA"
+msgstr "Унапређење имплантата?"
+
+msgid "TXT_RYES1_SCRIPT03_D28804_GOODT"
+msgstr "Добра ствар, никад није сувишно бити превише опрезан."
+
+msgid "TXT_RNO1_SCRIPT03_D28804_IMALM"
+msgstr "Готово сам, али нисам сасвим."
+
+msgid "TXT_DLG_SCRIPT03_D30320_ALLRI"
+msgstr "У реду, скоро све ради савршено. Остало је још неколико проблема које треба решити. Треба ли ти још нешто? "
+
+msgid "TXT_RPLY0_SCRIPT03_D30320_PATCH"
+msgstr "Залечи ме."
+
+msgid "TXT_RYES0_SCRIPT03_D30320_WHATH"
+msgstr "Шта си покушавао да урадиш? Да се супротставиш крстоносном?"
+
+msgid "TXT_RPLY1_SCRIPT03_D30320_IMPLA"
+msgstr "Унапређење имплантата?."
+
+msgid "TXT_RYES1_SCRIPT03_D30320_THATS"
+msgstr "То би требало да буде довољно за вас."
+
+msgid "TXT_RNO1_SCRIPT03_D30320_LETME"
+msgstr "Дозволите ми да прво обавим још неке тестове."
+
+msgid "TXT_DLG_SCRIPT03_D31836_THATS"
+msgstr "То је све што тренутно могу да урадим са имплантатом. Можда ће се мало зацелити?"
+
+msgid "TXT_RPLY0_SCRIPT03_D31836_YEAH"
+msgstr "Да."
+
+msgid "TXT_RYES0_SCRIPT03_D31836_BOYYO"
+msgstr "Човече, ти си права збрка. Видећу шта могу да урадим."
+
+msgid "TXT_DLG_SCRIPT03_D33352_WHATC"
+msgstr "Шта могу да учиним за вас?"
+
+msgid "TXT_RPLY0_SCRIPT03_D33352_IMOUT"
+msgstr "Немам више метака."
+
+msgid "TXT_RYES0_SCRIPT03_D33352_HERES"
+msgstr "Ево ти муниције. Не троши је узалуд."
+
+msgid "TXT_RPLY1_SCRIPT03_D33352_TEACH"
+msgstr "Научи ме."
+
+msgid "TXT_RYES1_SCRIPT03_D33352_ALLRI"
+msgstr "У реду, само ћу ти показати неколико малих савета."
+
+msgid "TXT_RNO1_SCRIPT03_D33352_YOURE"
+msgstr "Још нисте спремни."
+
+msgid "TXT_DLG_SCRIPT03_D34868_BACKA"
+msgstr "Поново овде? Шта ти треба?"
+
+msgid "TXT_RPLY0_SCRIPT03_D34868_IMOUT"
+msgstr "Немам више метака."
+
+msgid "TXT_RYES0_SCRIPT03_D34868_HERES"
+msgstr "Ево ти муниције. Не троши је узалуд."
+
+msgid "TXT_RNO0_SCRIPT03_D34868_YOUVE"
+msgstr "Имаш довољно муниције."
+
+msgid "TXT_RPLY1_SCRIPT03_D34868_TEACH"
+msgstr "Научи ме."
+
+msgid "TXT_RYES1_SCRIPT03_D34868_ALLRI"
+msgstr "У реду, ово ће те издржати неко време."
+
+msgid "TXT_RNO1_SCRIPT03_D34868_SORRY"
+msgstr "Жао ми је, не могу. Ја само извршавам Мацилове наредбе."
+
+msgid "TXT_DLG_SCRIPT03_D36384_WELLW"
+msgstr "Па шта је то, метци или обука? Једва чекам да дохватим те нове оружје које смо заробили. Мало обуке, а онда пуно освете."
+
+msgid "TXT_RPLY0_SCRIPT03_D36384_IMOUT"
+msgstr "Немам више муниције."
+
+msgid "TXT_RYES0_SCRIPT03_D36384_HERES"
+msgstr "Ево ти муниције. Не троши је узалуд."
+
+msgid "TXT_RNO0_SCRIPT03_D36384_YOUVE"
+msgstr "Имаш довољно муниције."
+
+msgid "TXT_RPLY1_SCRIPT03_D36384_TEACH"
+msgstr "Научи ме."
+
+msgid "TXT_RYES1_SCRIPT03_D36384_OKTAK"
+msgstr "У реду. Узми оно што си овде научио и покажи тим глупацима из Ордера пут у пакао."
+
+msgid "TXT_RNO1_SCRIPT03_D36384_COMEB"
+msgstr "Врати се касније, када Мацил каже да је време."
+
+msgid "TXT_DLG_SCRIPT03_D37900_IVETA"
+msgstr "Научио сам те свему што тренутно могу. Дај ми мало времена да испробам ново наоружање. Осим ако ти нису понестале муниције."
+
+msgid "TXT_RPLY0_SCRIPT03_D37900_YESIA"
+msgstr "Да, ја сам."
+
+msgid "TXT_RYES0_SCRIPT03_D37900_HEREY"
+msgstr "Ево."
+
+msgid "TXT_DLG_SCRIPT03_D39416_DONTG"
+msgstr "Немој да се ужурбаш са оружјем у граду. Укључићеш аларм и они ће почети да шаљу гарду из замка. "
+
+msgid "TXT_DLG_SCRIPT03_D40932_WELCO"
+msgstr "Добродошли, увек нам треба више помоћи."
+
+msgid "TXT_DLG_SCRIPT03_D42448_WHENI"
+msgstr "Када сам још био у акцији, имали смо прилику да прегледамо аколита пре него што су стигли појачања. Слушај, они нису људи."
+
+msgid "TXT_DLG_SCRIPT03_D43964_WERET"
+msgstr "Покушавамо да пронађемо где се налазе механизми капија замка, али до сада нисмо имали среће."
+
+msgid "TXT_DLG_SCRIPT03_D45480_DONTG"
+msgstr "Не дај да те ухвате. Чуо сам ужасне приче о томе шта раде нашим људима након што их затворе. Они једноставно нестану… без трага."
+
+msgid "TXT_DLG_SCRIPT03_D46996_HERES"
+msgstr "Ево неког савета: ако икада видиш неке од војника Реда, крени у супротном правцу. Они су брзи и брутални."
+
+msgid "TXT_DLG_SCRIPT03_D48512_LEAVE"
+msgstr "Остави ме на миру. Радим нешто за Мацила."
+
+msgid "TXT_DLG_SCRIPT04_D0_SORRY"
+msgstr "Жао ми је, не. Ви немате дозволу."
+
+msgid "TXT_DLG_SCRIPT04_D1516_STOPS"
+msgstr "Станите! Покажите ми своју пропусницу."
+
+msgid "TXT_RPLY0_SCRIPT04_D1516_HERES"
+msgstr "Ево мог лица."
+
+msgid "TXT_DLG_SCRIPT04_D3032_OHOKS"
+msgstr "Ох, у реду. Наравно, слободно. Имајте леп дан."
+
+msgid "TXT_DLG_SCRIPT04_D4548_DERWI"
+msgstr "Дервин? Да, он је у складишту, али нећеш ући осим ако немаш дозволу."
+
+msgid "TXT_RPLY0_SCRIPT04_D4548_IVEGO"
+msgstr "Имам дозволу."
+
+msgid "TXT_DLG_SCRIPT04_D6064_GOON"
+msgstr "Настави."
+
+msgid "TXT_RPLY0_SCRIPT04_D6064_DOYOU"
+msgstr "Знаш ли где је он?"
+
+msgid "TXT_DLG_SCRIPT04_D7580_IDONT"
+msgstr "Не знам где је ико. Само држим поклопац на замци за пацове."
+
+msgid "TXT_DLG_SCRIPT04_D9096_YOUAR"
+msgstr "Ти си непријатна сметња."
+
+msgid "TXT_DLG_SCRIPT04_D10612_MOVEA"
+msgstr "Иди даље или окуси метал."
+
+msgid "TXT_DLG_SCRIPT04_D12128_PASSY"
+msgstr "Прођите овде са личним документом за приступ."
+
+msgid "TXT_DLG_SCRIPT04_D13644_GETBA"
+msgstr "Врати се на посао, сад!"
+
+msgid "TXT_DLG_SCRIPT04_D15160_GETBA"
+msgstr "Врати се на посао, сад!"
+
+msgid "TXT_DLG_SCRIPT04_D16676_WEVEB"
+msgstr "Већ недељама радимо без престанка, без икаквог одмора. Рекао бих да Ред планира сузбијачки напад на Фронт."
+
+msgid "TXT_DLG_SCRIPT04_D18192_OHDAM"
+msgstr "О, поган. Гувернер те је послао. Хтео сам му дати његов део, стварно сам хтео. Добро, слушај. Имам сакривен сноп новца. Твој је ако зажмуриш."
+
+msgid "TXT_RPLY0_SCRIPT04_D18192_ALLRI"
+msgstr "У реду, пустићу те."
+
+msgid "TXT_RPLY1_SCRIPT04_D18192_SORRY"
+msgstr "Извини, ништа лично."
+
+msgid "TXT_DLG_SCRIPT04_D19708_NUTSI"
+msgstr "Ћао, ако ја падам, онда ћеш и ти. Чувари!!"
+
+msgid "TXT_DLG_SCRIPT04_D21224_BUSIN"
+msgstr "Бизнис, бре. Помоћ, стражари, ухватио сам жива."
+
+msgid "TXT_DLG_SCRIPT04_D22740_AHIGO"
+msgstr "Ах, добио сам вест од Мацила да ћеш доћи. Имам начин да те убацим у електрану, али је то прилично ризично."
+
+msgid "TXT_RPLY0_SCRIPT04_D22740_ILLTA"
+msgstr "Узећу своје шансе."
+
+msgid "TXT_DLG_SCRIPT04_D24256_ALLRI"
+msgstr "У реду, украо сам личну карту са леша неког будале који је пао у јаму за хлађење реактора. --blat-- тренутно пржење."
+
+msgid "TXT_RPLY0_SCRIPT04_D24256_WHATS"
+msgstr "Шта да радим када уђем?"
+
+msgid "TXT_DLG_SCRIPT04_D25772_TELLW"
+msgstr "Реци свакоме ко те пита да си замена господина Криспија. Довољно је глупо да прође. О, и можда би требало да погледаш складиште које је право изнад нас."
+
+msgid "TXT_RPLY0_SCRIPT04_D25772_BOYIH"
+msgstr "Човече, надам се да овај ИД ради."
+
+msgid "TXT_DLG_SCRIPT04_D27288_GETOU"
+msgstr "Иди одавде, осим ако не желиш да завршиш као господин Мртвац."
+
+msgid "TXT_DLG_SCRIPT04_D28804_HEYLE"
+msgstr "Хеј, остави ме на миру. Ако нас ухвате да губимо време, умирамо или ћемо имати додатни посао."
+
+msgid "TXT_DLG_SCRIPT04_D30320_SUCHP"
+msgstr "Такво оптерећење, овим темпом ћемо ускоро поново имати нормалне смене. Пумпамо тоне снаге у замак и скоро сам завршио евидентирање тих нових оружја."
+
+msgid "TXT_RPLY0_SCRIPT04_D30320_WEAPO"
+msgstr "Оружје?"
+
+msgid "TXT_DLG_SCRIPT04_D31836_WHATD"
+msgstr "Шта мислиш, да ли нам је превише чарапа?"
+
+msgid "TXT_RPLY0_SCRIPT04_D31836_WHATK"
+msgstr "Какво оружје?"
+
+msgid "TXT_DLG_SCRIPT04_D33352_AREYO"
+msgstr "Јеси ли глув? Управо сам ти рекао колико сам заузет. Врати се на посао."
+
+msgid "TXT_DLG_SCRIPT04_D34868_WHOAR"
+msgstr "Ко сте ви? Само особље са нивоом пропуста два има дозволу да уђе у ову зону."
+
+msgid "TXT_RPLY0_SCRIPT04_D34868_IMTHE"
+msgstr "Ја сам замена на раду."
+
+msgid "TXT_DLG_SCRIPT04_D36384_ABOUT"
+msgstr "Баш је било време да се појавиш. Иди и разговарај са Кетриком у језгру. О, и узми ову картицу. Не желим да те упуцају првог дана, ха?"
+
+msgid "TXT_RPLY0_SCRIPT04_D36384_WHERE"
+msgstr "Где је кристал снаге?"
+
+msgid "TXT_DLG_SCRIPT04_D37900_IFYOU"
+msgstr "Ако не стигнеш на посао, ионако ће те упуцати. Помери своју тунику."
+
+msgid "TXT_DLG_SCRIPT04_D39416_IDONT"
+msgstr "Не желим да звучим алармантно, али ако наставe да тако јако гурају кристал моћи, он ће развити пукотину, па се распасти, а онда *бум*! …Само размишљам."
+
+msgid "TXT_DLG_SCRIPT04_D40932_LETME"
+msgstr "Да будем сасвим јасан. Ако се овај терминал поново заглави, ниво расхладног средства ће опасти и сви ћемо морати да одговарамо Програмеру. Ако преживимо."
+
+msgid "TXT_DLG_SCRIPT04_D42448_YOUYE"
+msgstr "Ти! Да, ти. Ниси овлашћен за овај простор. Дај ми своју картицу, брзо. Тако сам лоше расположен!"
+
+msgid "TXT_RPLY0_SCRIPT04_D42448_HEREH"
+msgstr "Ево, ево моју картицу."
+
+msgid "TXT_DLG_SCRIPT04_D43964_THISI"
+msgstr "Ово је смеће! Чекај овде. Ах, ма ко то брине. Чувари, убијте овог упадача!"
+
+msgid "TXT_DLG_SCRIPT04_D45480_WORKS"
+msgstr "Рад, сан, мучење – какав живот. Кажи, да ли си ти замена за немарног рониоца у јами?"
+
+msgid "TXT_RPLY0_SCRIPT04_D45480_YEAHC"
+msgstr "Да, једва чекам да почнем."
+
+msgid "TXT_DLG_SCRIPT04_D46996_YEAHR"
+msgstr "Да, добро. У реду, крећи се на посао."
+
+msgid "TXT_RPLY0_SCRIPT04_D46996_WHERE"
+msgstr "Где је кристал?"
+
+msgid "TXT_DLG_SCRIPT04_D48512_GOTAL"
+msgstr "Иди и разговарај са Кетриком. Подигни шетницу помоћу прекидача, а затим употреби ову легитимацију за лифт."
+
+msgid "TXT_RPLY0_SCRIPT04_D48512_WHERE"
+msgstr "Где је поново кристал?"
+
+msgid "TXT_DLG_SCRIPT04_D50028_NONEO"
+msgstr "Није твоја ствар, иди разговарај са Кетриком."
+
+msgid "TXT_RPLY0_SCRIPT04_D50028_OK"
+msgstr "У реду."
+
+msgid "TXT_DLG_SCRIPT04_D51544_IFITS"
+msgstr "Ако ти треба само да се забавиш, иди и гледај у тај екран неко време, досадиће ти до суза."
+
+msgid "TXT_DLG_SCRIPT04_D53060_THEAL"
+msgstr "Свемоћни Програмер је толико параноичан због инфилтрације да је закључао језгро рачунара. Како да обавим посао? Једини улаз је самоубилачки продор."
+
+msgid "TXT_RPLY0_SCRIPT04_D53060_SUICI"
+msgstr "Побег у самоубиство? Шта је то?"
+
+msgid "TXT_DLG_SCRIPT04_D54576_ITSAS"
+msgstr "То је сигуран начин да те убију, али то сада није важно. Спусти се лифтом ако желиш."
+
+msgid "TXT_DLG_SCRIPT05_D0_HALTN"
+msgstr "Станите. Нико не пролази овде без одобрења управника или гувернера."
+
+msgid "TXT_RPLY0_SCRIPT05_D0_HERES"
+msgstr "Ево мог пропуснице, пусти ме унутра."
+
+msgid "TXT_DLG_SCRIPT05_D1516_OKBUT"
+msgstr "У реду, али разговарај само са управником."
+
+msgid "TXT_DLG_SCRIPT05_D3032_DOILO"
+msgstr "Да ли ми мислиш да личим на управника? Настави да се крећеш, ова зона је забрањена."
+
+msgid "TXT_DLG_SCRIPT05_D4548_THEOR"
+msgstr "Гнев Реда ће се обрушити на ове слуге док не затраже смрт."
+
+msgid "TXT_DLG_SCRIPT05_D6064_IDONT"
+msgstr "Не занима ме да ли ти је Морел дао пропусницу. Ово је мој затвор. Мој кључ је једини начин да уђеш или изађеш, и нећу да ризикујем. Ред не толерише грешке."
+
+msgid "TXT_RPLY0_SCRIPT05_D6064_GIVEM"
+msgstr "Дај ми проклети кључ!"
+
+msgid "TXT_DLG_SCRIPT05_D7580_OVERM"
+msgstr "Никад!"
+
+msgid "TXT_RPLY0_SCRIPT05_D7580_GREAT"
+msgstr "Одлична идеја!"
+
+msgid "TXT_DLG_SCRIPT05_D9096_SHACK"
+msgstr "Лисице или ланци, желим да останеш са мном."
+
+msgid "TXT_DLG_SCRIPT05_D10612_IDONT"
+msgstr "Не знам како си успео да прођеш поред чувара и управника, али се надам да ти се свиђа декор, јер си управо уселио."
+
+msgid "TXT_RPLY0_SCRIPT05_D10612_FREEM"
+msgstr "Ослободите моје другове или умрите!"
+
+msgid "TXT_DLG_SCRIPT05_D12128_KILLM"
+msgstr "Убиј ме и никада никога нећеш ослободити. Ја поседујем једини обрасци кључ који ће откључати ћелије."
+
+msgid "TXT_RPLY0_SCRIPT05_D12128_CANYO"
+msgstr "Можеш ли ми онда помоћи?"
+
+msgid "TXT_DLG_SCRIPT05_D13644_MOVEA"
+msgstr "Прођите даље или се придружите пријатељима."
+
+msgid "TXT_DLG_SCRIPT05_D15160_DONTJ"
+msgstr "Немој само да стојиш тамо, изведи нас одавде!"
+
+msgid "TXT_DLG_SCRIPT05_D16676_THESK"
+msgstr "Небо, желим да видим небо."
+
+msgid "TXT_DLG_SCRIPT05_D18192_FIVEF"
+msgstr "Пет стопа на четири стопе, пет стопа на четири стопе, пет стопа на четири стопе."
+
+msgid "TXT_DLG_SCRIPT05_D19708_DONTR"
+msgstr "Не ослобађај ме ако је Ред још увек на власти. Не могу да поднесем терор."
+
+msgid "TXT_DLG_SCRIPT05_D21224_IDONT"
+msgstr "Не желим да се жалим, али већ је било време да Мацил пошаље некога да нас извуче."
+
+msgid "TXT_DLG_SCRIPT05_D22740_IDGIV"
+msgstr "Дао бих све за само кору хлеба. Тако сам гладан."
+
+msgid "TXT_DLG_SCRIPT06_D0_AHASU"
+msgstr "Ах, површинац који тражи услугу. Овде доле мораш учинити услугу да би ти учинили услугу, а мени треба да се отвори улаз у град, који нам је пут до хране. Ред га је запечатио и чува."
+
+msgid "TXT_RPLY0_SCRIPT06_D0_WHERE"
+msgstr "Где је механизам капије?"
+
+msgid "TXT_DLG_SCRIPT06_D1516_DOMYF"
+msgstr "Уради ми прво услугу, или од мене нећеш добити ништа."
+
+msgid "TXT_RPLY0_SCRIPT06_D1516_HOWWI"
+msgstr "Како ћете знати да је отворено?"
+
+msgid "TXT_DLG_SCRIPT06_D3032_BRING"
+msgstr "Донеси ми назад униформу стражара. Тако ће један од мојих пацовских другова моћи да је обуче и нико више неће покушати да затвори врата."
+
+msgid "TXT_RPLY0_SCRIPT06_D3032_YOUWA"
+msgstr "Хоћеш његову униформу?"
+
+msgid "TXT_DLG_SCRIPT06_D4548_OPENT"
+msgstr "Отвори врата, донеси ми униформу и разменимо се. Иначе, иди у три лепе."
+
+msgid "TXT_DLG_SCRIPT06_D6064_HAVEY"
+msgstr "Да ли си ми донео оно што желим?"
+
+msgid "TXT_RPLY0_SCRIPT06_D6064_HOWAB"
+msgstr "Како вам се свиђа ова униформа?"
+
+msgid "TXT_RNO0_SCRIPT06_D6064_BRING"
+msgstr "Донеси ми униформу."
+
+msgid "TXT_DLG_SCRIPT06_D7580_GOODH"
+msgstr "Добро. Ево још нечега. Моји другови су ово скинули са обореног крстоносца, то су делови који чине бацач пламена. Сада ти Ирале може направити један. Можеш се тако забавити."
+
+msgid "TXT_RPLY0_SCRIPT06_D7580_WHERE"
+msgstr "Где је механизам капије?"
+
+msgid "TXT_DLG_SCRIPT06_D9096_YOUHA"
+msgstr "Морате да уђете у други део канализације. Да бисте стигли тамо, морате да уђете у замак кроз сервисни отвор за канализацију и испразните резервоар за рециклажу течности. На дну се налази скривени улаз у канализацију, а одмах иза њега је ручна контрола капије."
+
+msgid "TXT_RPLY0_SCRIPT06_D9096_ANYTH"
+msgstr "Можеш ли још нешто да урадиш?"
+
+msgid "TXT_DLG_SCRIPT06_D10612_GOODL"
+msgstr "Срећно. Отворио сам неколико наших тунела за тебе. То би требало да ти олакша задатак. О, величина десет, савршено! …Али ужасне боје."
+
+msgid "TXT_RPLY0_SCRIPT06_D10612_THANK"
+msgstr "Хвала вам на помоћи."
+
+msgid "TXT_DLG_SCRIPT06_D12128_YOUGI"
+msgstr "Не дајеш ми ништа, не добијаш ништа."
+
+msgid "TXT_DLG_SCRIPT06_D13644_WERAN"
+msgstr "Веран ће нас спасити. Он нас још никада није изневерио."
+
+msgid "TXT_DLG_SCRIPT06_D15160_IFYOU"
+msgstr "Ако тражите одговор на свој проблем, пронађите Верана. "
+
+msgid "TXT_DLG_SCRIPT06_D16676_LONGL"
+msgstr "Да живи фронт? Све је то глупост. Сви само чекамо да умремо. "
+
+msgid "TXT_DLG_SCRIPT06_D18192_WITHO"
+msgstr "Са нашим излазом на површину запечаћеним, не можемо ни да се нахранимо."
+
+msgid "TXT_DLG_SCRIPT06_D19708_FOODD"
+msgstr "Храна, имаш ли неку храну? Молим те, помогни нам."
+
+msgid "TXT_DLG_SCRIPT06_D21224_THISI"
+msgstr "Ово је моја награда за то што сам пустио затворенике да побегну и чувао канализацију. Ако икад нађем човека који их је ослободио, поклаћу га."
+
+msgid "TXT_DLG_SCRIPT06_D22740_WEVEG"
+msgstr "Имамо те мале просјаке баш тамо где смо хтели. Још неколико дана овако, и изгладнеће до заборава."
+
+msgid "TXT_DLG_SCRIPT06_D24256_WHATS"
+msgstr "Која је ваша дозвола за приступ? Овде горе није дозвољен неовлашћени персонал."
+
+msgid "TXT_DLG_SCRIPT07_D0_WHATT"
+msgstr "Шта је, дођавола? Ко је отворио капије? Укључите аларм!!!"
+
+msgid "TXT_DLG_SCRIPT07_D1516_THERE"
+msgstr "Постоји још један улаз у канализацију: притисни тај прекидач, а затим иди горе и испразни резервоар за прераду."
+
+msgid "TXT_DLG_SCRIPT07_D3032_WHATT"
+msgstr "Који је, бре, твој проблем. Ако Програмер изађе из своје аудијенс-сале, мртав си."
+
+msgid "TXT_DLG_SCRIPT07_D4548_HEYYO"
+msgstr "Хеј, немаш дозволу да се спушташ тамо."
+
+msgid "TXT_DLG_SCRIPT07_D6064_PROGR"
+msgstr "Програмер? Ко ти је то рекао? Не постоји Програмер. Та прича је проширена пре много година. Не говори ми да је Фронт заиста веровао у то срање. Идиоти."
+
+msgid "TXT_RPLY0_SCRIPT07_D6064_WELLW"
+msgstr "Па, шта је онда истина?"
+
+msgid "TXT_DLG_SCRIPT07_D7580_ITOLD"
+msgstr "Рекао сам ти све што знам. Губиш време."
+
+msgid "TXT_DLG_SCRIPT07_D9096_FIGHT"
+msgstr "Бори се даље, победићемо. Овај дан ће бити наш!"
+
+msgid "TXT_DLG_SCRIPT07_D10612_FIGHT"
+msgstr "Бори се даље, победићемо. Овај дан ће бити наш!"
+
+msgid "TXT_DLG_SCRIPT07_D12128_FIGHT"
+msgstr "Бори се даље, победићемо. Овај дан ће бити наш!"
+
+msgid "TXT_DLG_SCRIPT07_D13644_FIGHT"
+msgstr "Бори се даље, победићемо. Овај дан ће бити наш!"
+
+msgid "TXT_DLG_SCRIPT07_D15160_FIGHT"
+msgstr "Бори се даље, победићемо. Овај дан ће бити наш!"
+
+msgid "TXT_DLG_SCRIPT07_D16676_FIGHT"
+msgstr "Бори се даље, победићемо. Овај дан ће бити наш!"
+
+msgid "TXT_DLG_SCRIPT08_D0_YOUKI"
+msgstr "Убио си све чуваре. Немој ми нашкодити. Рекао сам му да је ово глупа идеја. Прави Програмер је у замку. Ево, узми овај кључ."
+
+msgid "TXT_RPLY0_SCRIPT08_D0_YOURE"
+msgstr "Ти си програмер!"
+
+msgid "TXT_DLG_SCRIPT08_D1516_DOILO"
+msgstr "Да ли изгледам као да поседујем врховну моћ? Ред нас све користи. Сад иди, ја сам већ мртав."
+
+msgid "TXT_DLG_SCRIPT08_D3032_POWER"
+msgstr "Моћ је кључ!"
+
+msgid "TXT_DLG_SCRIPT10_D0_GOODY"
+msgstr "Добро, поново си при себи. Када си узео онај предмет који је Програмер испустио, ослободио си нека ужасна тајна."
+
+msgid "TXT_RPLY0_SCRIPT10_D0_WHATK"
+msgstr "Какве тајне. "
+
+msgid "TXT_DLG_SCRIPT10_D1516_WEHAV"
+msgstr "Немамо појма одакле је ово оружје, али морамо сазнати. Одузели сте један од Ордена, али морамо добити свих пет. Достигли смо границе мог знања. Потражите Оракул и замолите га за помоћ."
+
+msgid "TXT_RPLY0_SCRIPT10_D1516_IMGON"
+msgstr "Требаће ми више залиха."
+
+msgid "TXT_DLG_SCRIPT10_D3032_HERES"
+msgstr "Ево мало злата. Иди код медицинара и код тренера за оружје, па крени даље!"
+
+msgid "TXT_RPLY0_SCRIPT10_D3032_RIGHT"
+msgstr "У реду!"
+
+msgid "TXT_DLG_SCRIPT10_D4548_FIGHT"
+msgstr "Бори се за фронт и слободу. Полази."
+
+msgid "TXT_DLG_SCRIPT10_D6064_WHATP"
+msgstr "Шта те наводи да се вратиш? Јеси ли повређен? Нема времена за губљење, настави са својом мисијом. Заврши Сигил."
+
+msgid "TXT_RPLY0_SCRIPT10_D6064_THEOR"
+msgstr "Оракул каже да мораш умрети!"
+
+msgid "TXT_DLG_SCRIPT10_D7580_IHAVE"
+msgstr "Заклео сам се на слободу. То је Оракул који држи трећи део. Ево ти твог издајника."
+
+msgid "TXT_RPLY0_SCRIPT10_D7580_THEOR"
+msgstr "Оракул ће тада умрети!"
+
+msgid "TXT_RPLY1_SCRIPT10_D7580_ITHIN"
+msgstr "Мислим да си ти издајник!"
+
+msgid "TXT_DLG_SCRIPT10_D9096_SPIRI"
+msgstr "Духу једног Бога, освети ме и претвори овај свет у прах."
+
+msgid "TXT_DLG_SCRIPT10_D10612_YOUHA"
+msgstr "Донели сте праву одлуку. Јасно је да је Оракул под контролом оног зла које управља Редом. Вратите се код њега и преузмите трећи део Сигила."
+
+msgid "TXT_DLG_SCRIPT10_D12128_THERE"
+msgstr "Чини се да ужаса који нас снађе нема краја. Сазнали смо да Ред не убија наш народ. Он их претвара у биомеханичке војнике. Пронађите објекат у којем се то ради и затворите га заувек."
+
+msgid "TXT_RPLY0_SCRIPT10_D12128_WHERE"
+msgstr "Где се ово налази?"
+
+msgid "TXT_DLG_SCRIPT10_D13644_ONEOF"
+msgstr "Један од наших капетана, Рихтер, чека вас поред водопада у заједничком простору. Он је видео објекат и може да вас поведе унутра. Зауставите ову зверство, одмах."
+
+msgid "TXT_RPLY0_SCRIPT10_D13644_THEYL"
+msgstr "Они ће платити за ово!"
+
+msgid "TXT_DLG_SCRIPT10_D15160_FIGHT"
+msgstr "Бори се за фронт и слободу. Полази."
+
+msgid "TXT_DLG_SCRIPT10_D16676_IAMTH"
+msgstr "Ја сам Једини Бог… Потребно ми је да његов дух буде слободан да бих могао да напустим своје тело и придружим му се у лету. Немаш појма шта поседујеш… И какав те терор чека… Једини Бог мора бити слободан… И он ће ме наградити… Бићу један…"
+
+msgid "TXT_RPLY0_SCRIPT10_D16676_IWILL"
+msgstr "Уништићу те!"
+
+msgid "TXT_DLG_SCRIPT10_D18192_GLADT"
+msgstr "Драго ми је што си стигао. Шта ти треба? "
+
+msgid "TXT_RPLY0_SCRIPT10_D18192_HEALM"
+msgstr "Излечи ме."
+
+msgid "TXT_RYES0_SCRIPT10_D18192_WELLL"
+msgstr "Добро, хајде да те средим."
+
+msgid "TXT_RNO0_SCRIPT10_D18192_YOURE"
+msgstr "Све је у реду."
+
+msgid "TXT_RPLY1_SCRIPT10_D18192_ANYTH"
+msgstr "Има ли шта ново?"
+
+msgid "TXT_RYES1_SCRIPT10_D18192_YESIV"
+msgstr "Да, имам за тебе неки нови хардвер."
+
+msgid "TXT_RNO1_SCRIPT10_D18192_NOPEI"
+msgstr "Не, али радим на томе."
+
+msgid "TXT_DLG_SCRIPT10_D19708_WHATC"
+msgstr "Шта могу сада да учиним за вас? Ферис дешифрује неке заиста сложене фајлове, али се све то исплати. Већ постоје неке информације које ћу моћи да применим на следећу верзију имплантата издржљивости."
+
+msgid "TXT_RPLY0_SCRIPT10_D19708_HEALM"
+msgstr "Излечи ме."
+
+msgid "TXT_RYES0_SCRIPT10_D19708_YOUSH"
+msgstr "Требало би да научиш да будеш мало пажљивији."
+
+msgid "TXT_RPLY1_SCRIPT10_D19708_WHENW"
+msgstr "Када ће то бити спремно?"
+
+msgid "TXT_RYES1_SCRIPT10_D19708_ITSRE"
+msgstr "Сада је спремно. Ово ће потрајати само тренутак."
+
+msgid "TXT_RNO1_SCRIPT10_D19708_SOON"
+msgstr "Ускоро."
+
+msgid "TXT_DLG_SCRIPT10_D21224_ITHIN"
+msgstr "Мислим да сам пронашао грешку у вашем имплантатном хардверу. Ферис ми помаже да осмислим ретрофит који ће то решити и мало повећати брзину вашег хардвера. Могу ли вам помоћи?"
+
+msgid "TXT_RPLY0_SCRIPT10_D21224_PATCH"
+msgstr "Залечи ме."
+
+msgid "TXT_RYES0_SCRIPT10_D21224_THERE"
+msgstr "Ево, као ново, претпостављам."
+
+msgid "TXT_RPLY1_SCRIPT10_D21224_RETRO"
+msgstr "Ретрофит?"
+
+msgid "TXT_RYES1_SCRIPT10_D21224_AHNOW"
+msgstr "Ах, сад кувамо."
+
+msgid "TXT_RNO1_SCRIPT10_D21224_ILLHA"
+msgstr "Узећу то чим Ферис заврши."
+
+msgid "TXT_DLG_SCRIPT10_D22740_HOWSI"
+msgstr "Како иде? Човече, неке од ових нових технологија су једноставно невероватне. Ово би такође требало да помогне са твојим имплантатом. Имам неколико идеја које скицирам и ускоро ћу их припремити. Шта могу да урадим за тебе, можда неку исцелитељску помоћ?"
+
+msgid "TXT_RPLY0_SCRIPT10_D22740_YESHE"
+msgstr "Да, излечи ме."
+
+msgid "TXT_RYES0_SCRIPT10_D22740_ALLRI"
+msgstr "У реду, ево."
+
+msgid "TXT_RPLY1_SCRIPT10_D22740_HOWAB"
+msgstr "Шта кажеш на ту нову технологију?"
+
+msgid "TXT_RYES1_SCRIPT10_D22740_LETME"
+msgstr "Јави ми како ово функционише."
+
+msgid "TXT_RNO1_SCRIPT10_D22740_IMNOT"
+msgstr "Још нисам завршио да га дизајнирам."
+
+msgid "TXT_DLG_SCRIPT10_D24256_BACKA"
+msgstr "Поново сам овде, зар ти никад не досади ово? Имам добре вести, Ферис је нашао начин да повећа излазност твог импланта. Он ми је дао спецификације и покушавам да их ускладим са твојом физиологијом. Присилно узгајам ткиво, потпуно нове ствари овде, надам се да ће успети. Треба ли ти лечење?"
+
+msgid "TXT_RPLY0_SCRIPT10_D24256_YESHE"
+msgstr "Да, излечи ме."
+
+msgid "TXT_RYES0_SCRIPT10_D24256_DONEN"
+msgstr "У реду, сад води рачуна о себи."
+
+msgid "TXT_RPLY1_SCRIPT10_D24256_WHENW"
+msgstr "Када ћеш завршити?"
+
+msgid "TXT_RYES1_SCRIPT10_D24256_NOWHE"
+msgstr "Сада. Хеј, супер, успело је!"
+
+msgid "TXT_RNO1_SCRIPT10_D24256_IMWAI"
+msgstr "Чекам да ткиво заврши свој циклус раста."
+
+msgid "TXT_DLG_SCRIPT10_D25772_WELLI"
+msgstr "Па, опет сам се вратио старим триковима, још увек радим на твојим имплантатима. Да ли си знао да је Мацил сада одобрио их свима? Не, зар не? То је зато што си се показао тако добро. Можеш ли ми помоћи?"
+
+msgid "TXT_RPLY0_SCRIPT10_D25772_HELPM"
+msgstr "Помозите ми овде."
+
+msgid "TXT_RYES0_SCRIPT10_D25772_THATS"
+msgstr "То је све што могу да урадим."
+
+msgid "TXT_RPLY1_SCRIPT10_D25772_NEWIM"
+msgstr "Нови имплант?"
+
+msgid "TXT_RYES1_SCRIPT10_D25772_YEPMY"
+msgstr "Да, мој најбољи до сада."
+
+msgid "TXT_RNO1_SCRIPT10_D25772_SORRY"
+msgstr "Жао ми је, али мораш само да сачекаш."
+
+msgid "TXT_DLG_SCRIPT10_D27288_THISI"
+msgstr "Ево, Ферис је успео да извуче све што је могао из свих података које имамо, ово ће бити најбоље и последње унапређење имплантата. Биће помало депресивно видети моју најбољу креацију како достиже врхунац. Па, барем ће ме остатак ове посаде држати заузетим."
+
+msgid "TXT_RPLY0_SCRIPT10_D27288_COULD"
+msgstr "Можете ли ме излечити?"
+
+msgid "TXT_RYES0_SCRIPT10_D27288_THERE"
+msgstr "Ево, сада си све спреман."
+
+msgid "TXT_DLG_SCRIPT10_D28804_ITSTH"
+msgstr "То је јунак. Одличан посао! Шта могу да ти обезбедим? Сада имамо мало већи избор, пошто смо добили сву муницију из замка. Ако ти треба муниција, обрати се Џастину. Он ће се побринути за тебе. "
+
+msgid "TXT_RPLY0_SCRIPT10_D28804_IMOUT"
+msgstr "Немам више метака."
+
+msgid "TXT_RYES0_SCRIPT10_D28804_HERES"
+msgstr "Ево ти муниције. Не троши је узалуд."
+
+msgid "TXT_RPLY1_SCRIPT10_D28804_TEACH"
+msgstr "Научи ме."
+
+msgid "TXT_RYES1_SCRIPT10_D28804_NOWAF"
+msgstr "Сада, неколико савета о тешком наоружању."
+
+msgid "TXT_RNO1_SCRIPT10_D28804_YOURE"
+msgstr "Још нисте спремни."
+
+msgid "TXT_DLG_SCRIPT10_D30320_HOWST"
+msgstr "Како иде ратни напор? Нема везе, ако смо још овде, мора да иде добро. Шта могу да учиним за вас?"
+
+msgid "TXT_RPLY0_SCRIPT10_D30320_IRANO"
+msgstr "Завршиле су ми се муниције."
+
+msgid "TXT_RYES0_SCRIPT10_D30320_THATS"
+msgstr "То би требало да помогне."
+
+msgid "TXT_RNO0_SCRIPT10_D30320_YOUVE"
+msgstr "Имаш довољно муниције."
+
+msgid "TXT_RPLY1_SCRIPT10_D30320_TEACH"
+msgstr "Научи ме."
+
+msgid "TXT_RYES1_SCRIPT10_D30320_HEREI"
+msgstr "Ево, показаћу ти неколико трикова заната."
+
+msgid "TXT_RNO1_SCRIPT10_D30320_YOURE"
+msgstr "Још нисте спремни."
+
+msgid "TXT_DLG_SCRIPT10_D31836_WELLH"
+msgstr "Па, да ли си дошао по подучавање или тражиш муницију? Не мисли да сам са тобом још готово. Имам још неколико трикова у рукаву."
+
+msgid "TXT_RPLY0_SCRIPT10_D31836_ITSAM"
+msgstr "За сада је муниција."
+
+msgid "TXT_RYES0_SCRIPT10_D31836_HERES"
+msgstr "Ево ти муниције. Не троши је узалуд."
+
+msgid "TXT_RNO0_SCRIPT10_D31836_YOUVE"
+msgstr "Имаш довољно муниције."
+
+msgid "TXT_RPLY1_SCRIPT10_D31836_TEACH"
+msgstr "Научи ме."
+
+msgid "TXT_RYES1_SCRIPT10_D31836_TIMEF"
+msgstr "Време је за напредне лекције."
+
+msgid "TXT_RNO1_SCRIPT10_D31836_YOURE"
+msgstr "Још нисте спремни."
+
+msgid "TXT_DLG_SCRIPT10_D33352_WELLW"
+msgstr "Па шта је сад? Зар никад не правиш паузу? Драго ми је што још увек дишеш. Мрзео бих да се мој омиљени ученик врати и изгледа као да је у врећи за лешеве."
+
+msgid "TXT_RPLY0_SCRIPT10_D33352_INEED"
+msgstr "Треба ми још метака."
+
+msgid "TXT_RYES0_SCRIPT10_D33352_THERE"
+msgstr "Ево, немој да га узалуд трошиш."
+
+msgid "TXT_RNO0_SCRIPT10_D33352_YOUHA"
+msgstr "Имаш довољно."
+
+msgid "TXT_RPLY1_SCRIPT10_D33352_WHATC"
+msgstr "Шта ме можеш научити?"
+
+msgid "TXT_RYES1_SCRIPT10_D33352_DONTG"
+msgstr "Не буди дрзак, још увек имаш простора за раст."
+
+msgid "TXT_RNO1_SCRIPT10_D33352_NOTHI"
+msgstr "Ништа док не будете спремни."
+
+msgid "TXT_DLG_SCRIPT10_D34868_LOOKW"
+msgstr "Погледај ко се вратио, шта ти је на уму? Знам да је било тешко, али сви ми ценимо твоје напоре, веруј ми."
+
+msgid "TXT_RPLY0_SCRIPT10_D34868_IVERU"
+msgstr "Завршиле су ми се муниције."
+
+msgid "TXT_RYES0_SCRIPT10_D34868_WHATE"
+msgstr "Шта још ново, ево."
+
+msgid "TXT_RNO0_SCRIPT10_D34868_YOUHA"
+msgstr "Имаш више него што ти могу дати."
+
+msgid "TXT_RPLY1_SCRIPT10_D34868_TEACH"
+msgstr "Научи ме свему што можеш."
+
+msgid "TXT_RYES1_SCRIPT10_D34868_ALLRI"
+msgstr "У реду, ево неколико савета."
+
+msgid "TXT_RNO1_SCRIPT10_D34868_NOTRI"
+msgstr "Не сада."
+
+msgid "TXT_DLG_SCRIPT10_D36384_WHATI"
+msgstr "Шта ти треба? Надам се да Ордену пружаш укус бола који осећамо већ годинама."
+
+msgid "TXT_RPLY0_SCRIPT10_D36384_SOMEA"
+msgstr "Неколико метака."
+
+msgid "TXT_RYES0_SCRIPT10_D36384_THERE"
+msgstr "Ево ти, немој да га упропастиш."
+
+msgid "TXT_RNO0_SCRIPT10_D36384_YOUVE"
+msgstr "Имаш довољно муниције."
+
+msgid "TXT_RPLY1_SCRIPT10_D36384_TEACH"
+msgstr "Научи ме."
+
+msgid "TXT_RYES1_SCRIPT10_D36384_AFEWM"
+msgstr "Још неколико часова и сазнаћеш све што могу да те научим."
+
+msgid "TXT_RNO1_SCRIPT10_D36384_YOURE"
+msgstr "Још нисте спремни."
+
+msgid "TXT_DLG_SCRIPT10_D37900_ICANT"
+msgstr "Не могу да верујем да смо још увек овде, ти и ја. Превише нас је пало од почетка. Шта могу да учиним за тебе, пријатељу?"
+
+msgid "TXT_RPLY0_SCRIPT10_D37900_IMOUT"
+msgstr "Немам више метака."
+
+msgid "TXT_RYES0_SCRIPT10_D37900_HEREU"
+msgstr "Ево, искористи их да останеш у добром здрављу."
+
+msgid "TXT_RNO0_SCRIPT10_D37900_YOUHA"
+msgstr "Имаш довољно."
+
+msgid "TXT_RPLY1_SCRIPT10_D37900_TEACH"
+msgstr "Научи ме."
+
+msgid "TXT_RYES1_SCRIPT10_D37900_WELLT"
+msgstr "Па, то је то, готово је. Не могу више да предајем."
+
+msgid "TXT_RNO1_SCRIPT10_D37900_RETUR"
+msgstr "Врати се након што ти Мацил каже да је време."
+
+msgid "TXT_DLG_SCRIPT10_D39416_IVETA"
+msgstr "Научио сам те свему што тренутно могу. Дао сам ти све што би ти икада могло затребати, осим ако ти не понестане метака. У томе ти и даље могу помоћи."
+
+msgid "TXT_RPLY0_SCRIPT10_D39416_YESIA"
+msgstr "Да, ја сам."
+
+msgid "TXT_RYES0_SCRIPT10_D39416_HEREY"
+msgstr "Ево. "
+
+msgid "TXT_DLG_SCRIPT10_D40932_CHECK"
+msgstr "Погледајте шта је ново – телепортерски сигналник. Када употребите сигналник, пратићемо сигнал и послати помоћ. Може ли вам још нешто донети?"
+
+msgid "TXT_RPLY0_SCRIPT10_D40932_BOXOF"
+msgstr "Кутија ракета"
+
+msgid "TXT_RYES0_SCRIPT10_D40932_THERE"
+msgstr "Ево ти."
+
+msgid "TXT_RNO0_SCRIPT10_D40932_YOUCA"
+msgstr "Не можеш то да приуштиш!"
+
+msgid "TXT_RPLY1_SCRIPT10_D40932_HEGRE"
+msgstr "Х-Е гранате."
+
+msgid "TXT_RYES1_SCRIPT10_D40932_HEREY"
+msgstr "Ево."
+
+msgid "TXT_RNO1_SCRIPT10_D40932_COMEB"
+msgstr "Врати се када имаш довољно новца."
+
+msgid "TXT_RPLY2_SCRIPT10_D40932_ENERG"
+msgstr "Енергетски модул"
+
+msgid "TXT_RYES2_SCRIPT10_D40932_HERES"
+msgstr "Ево твог енергетског под-а"
+
+msgid "TXT_RNO2_SCRIPT10_D40932_YOUDO"
+msgstr "Немаш довољно за то."
+
+msgid "TXT_RPLY3_SCRIPT10_D40932_TELEP"
+msgstr "Телепортерски сигнал"
+
+msgid "TXT_RYES3_SCRIPT10_D40932_HELPW"
+msgstr "Помоћ, када и где вам је потребна."
+
+msgid "TXT_RNO3_SCRIPT10_D40932_SORRY"
+msgstr "Жао ми је, нема добротворне помоћи."
+
+msgid "TXT_DLG_SCRIPT10_D42448_NOWTH"
+msgstr "Сада када смо заиста довели замак под контролу, морамо бити изузетно опрезни да га задржимо. Вероватно се Орден управо сада припрема да узврати ударац."
+
+msgid "TXT_DLG_SCRIPT10_D43964_BECAR"
+msgstr "Пази тамо напољу."
+
+msgid "TXT_DLG_SCRIPT10_D45480_KEEPU"
+msgstr "Наставите са одличном радом, не бисмо могли да то урадимо без вас."
+
+msgid "TXT_DLG_SCRIPT11_D0_IMTHE"
+msgstr "Ја сам кључар."
+
+msgid "TXT_DLG_SCRIPT11_D1516_ALOTO"
+msgstr "Многи људи би рекли да је ово захвалјан и незначајан посао. Али то није, заправо…"
+
+msgid "TXT_RPLY0_SCRIPT11_D1516_GIVEM"
+msgstr "Дај ми кључ!"
+
+msgid "TXT_DLG_SCRIPT11_D3032_OKBUT"
+msgstr "У реду, али запамти, ја сам господар кључева."
+
+msgid "TXT_RPLY0_SCRIPT11_D3032_OKPAL"
+msgstr "ОК, друже, шта год."
+
+msgid "TXT_DLG_SCRIPT11_D4548_IMTHE"
+msgstr "Ја сам кључар."
+
+msgid "TXT_DLG_SCRIPT11_D6064_DIETR"
+msgstr "Проклети издајниче!"
+
+msgid "TXT_DLG_SCRIPT11_D7580_DIETR"
+msgstr "Проклети издајниче!"
+
+msgid "TXT_DLG_SCRIPT11_D9096_HAVEY"
+msgstr "Јеси ли дошао да се похвалиш? Иако смо иза ових решетака, све док се држимо, ти и даље губиш."
+
+msgid "TXT_DLG_SCRIPT11_D10612_LETUS"
+msgstr "Пустите нас одавде!"
+
+msgid "TXT_DLG_SCRIPT11_D12128_LEAVE"
+msgstr "Остави ме на миру!"
+
+msgid "TXT_DLG_SCRIPT12_D0_WHATI"
+msgstr "Коју мудрост тражиш, једноставни један?"
+
+msgid "TXT_RPLY0_SCRIPT12_D0_THESI"
+msgstr "Печат Једног Бога."
+
+msgid "TXT_DLG_SCRIPT12_D1516_IFEEL"
+msgstr "Осећам да један фрагмент одзвања у теби. Други лежи у срцу крвавоцрвене и обсидијанске куле. Тамо мораш да се бориш са Епископом, који је свестан и чека те. Пронаћи ћеш га пратећи његов симбол моћи. Одведи овај знак кључару. Врати ми се када убијеш звер."
+
+msgid "TXT_RPLY0_SCRIPT12_D1516_ILLBE"
+msgstr "Вратићу се."
+
+msgid "TXT_DLG_SCRIPT12_D3032_ALTHO"
+msgstr "Иако је бискуп застрашујући, ова потрага је безначајна. Врати се код мене када поседујеш следећи фрагмент."
+
+msgid "TXT_DLG_SCRIPT12_D4548_YOURN"
+msgstr "Ваш следећи изазов ће испитати ваш дух. Трећи део држи ваш вођа. Он је исти као онај кога вас шаље да убијете."
+
+msgid "TXT_RPLY0_SCRIPT12_D4548_MACIL"
+msgstr "Масил? Предајник?"
+
+msgid "TXT_DLG_SCRIPT12_D6064_YOURB"
+msgstr "Ваша слепа вера му је омогућила да напредује ка својим циљевима са сваким комадом који освојите. Суочите се с њим и одредите своју судбину."
+
+msgid "TXT_RPLY0_SCRIPT12_D6064_ALLRI"
+msgstr "У реду, то је Мацил."
+
+msgid "TXT_RPLY1_SCRIPT12_D6064_ITSYO"
+msgstr "Не верујем теби."
+
+msgid "TXT_DLG_SCRIPT12_D7580_WHATE"
+msgstr "Који год избор направите, ваш род ће пропасти по вољи Једног Бога."
+
+msgid "TXT_RPLY0_SCRIPT12_D7580_ILLBE"
+msgstr "Вратићу се када Мацил умре."
+
+msgid "TXT_RPLY1_SCRIPT12_D7580_ICANT"
+msgstr "Не могу да дозволим да се то догоди."
+
+msgid "TXT_DLG_SCRIPT12_D9096_THERI"
+msgstr "Река времена вечито тече напред, док ти стојиш у месту."
+
+msgid "TXT_DLG_SCRIPT12_D10612_YOUHA"
+msgstr "Уклонили сте рак из свог тела, али ваше срце и даље куца. Сада морате пронаћи хирурга који касапи и контролише ваш народ, Лоремастера. Зауставите га и следећи део ће бити ваш."
+
+msgid "TXT_RPLY0_SCRIPT12_D10612_WHERE"
+msgstr "Где да га нађем?"
+
+msgid "TXT_DLG_SCRIPT12_D12128_USETH"
+msgstr "Користи телепортер иза врата која сам управо отворио да би стигао до Лоремастера. Када он буде мртав, користи исти уређај да се вратиш код мене."
+
+msgid "TXT_RPLY0_SCRIPT12_D12128_ILLBE"
+msgstr "Вратићу се са његовим делом!"
+
+msgid "TXT_DLG_SCRIPT12_D13644_THERI"
+msgstr "Река времена вечито тече напред, док ти стојиш у месту."
+
+msgid "TXT_DLG_SCRIPT12_D15160_PITIF"
+msgstr "Јадник, учинио си оно што су хиљаде покушале, а нису успеле… Доносиш ми моћ Печата, глас Једног Бога."
+
+msgid "TXT_RPLY0_SCRIPT12_D15160_IDONT"
+msgstr "Не разумем."
+
+msgid "TXT_DLG_SCRIPT12_D16676_THESI"
+msgstr "Сigil ће отворити врата и ослободити дух који ће очистити ову планету и омогућити ми да живим заувек. Обешчастићу овај свет његовим енергијама и пронаћи ћу нове светове за освајање."
+
+msgid "TXT_RPLY0_SCRIPT12_D16676_ICANT"
+msgstr "Не могу да ти дозволим да то урадиш."
+
+msgid "TXT_DLG_SCRIPT12_D18192_YOUCA"
+msgstr "Можете ако сте мртви."
+
+msgid "TXT_DLG_SCRIPT14_D0_AREYO"
+msgstr "Јеси ли овде да нас ослободиш? Пошто сам био добар, узели су ми имплант. Ипак, и даље морам да останем овде доле и обришем пљувачку."
+
+msgid "TXT_RPLY0_SCRIPT14_D0_YESIM"
+msgstr "Да, овде сам да те ослободим."
+
+msgid "TXT_RYES0_SCRIPT14_D0_YOUME"
+msgstr "Заиста то мислиш?"
+
+msgid "TXT_DLG_SCRIPT14_D1516_ICANT"
+msgstr "Не могу да помогнем никоме другом. Не могу док не разнесеш предајник. То је оно што се крије иза заштитног поља горе. Мој посао је да проверам транспортере да бих се уверио да нису заглављени. Више не!"
+
+msgid "TXT_RPLY0_SCRIPT14_D1516_THATS"
+msgstr "Тачно је, спасен си!"
+
+msgid "TXT_RYES0_SCRIPT14_D1516_OHTHA"
+msgstr "Ох, хвала вам!"
+
+msgid "TXT_DLG_SCRIPT14_D3032_WEREF"
+msgstr "Слободни смо!! Слободни смо!! Слободни смо!!"
+
+msgid "TXT_DLG_SCRIPT14_D4548_MUSTM"
+msgstr "Морам да ископам више руде!"
+
+msgid "TXT_DLG_SCRIPT14_D6064_WEREF"
+msgstr "Слободни смо!! Слободни смо!! Слободни смо!!"
+
+msgid "TXT_DLG_SCRIPT14_D7580_MUSTM"
+msgstr "Морам да ископам више руде!"
+
+msgid "TXT_DLG_SCRIPT14_D9096_WEREF"
+msgstr "Слободни смо!! Слободни смо!! Слободни смо!!"
+
+msgid "TXT_DLG_SCRIPT14_D10612_MUSTM"
+msgstr "Морам да ископам више руде!"
+
+msgid "TXT_DLG_SCRIPT14_D12128_WEREF"
+msgstr "Слободни смо!! Слободни смо!! Слободни смо!!"
+
+msgid "TXT_DLG_SCRIPT15_D0_WHATA"
+msgstr "Шта радиш овде?"
+
+msgid "TXT_RPLY0_SCRIPT15_D0_ROUTI"
+msgstr "Рутински преглед."
+
+msgid "TXT_RYES0_SCRIPT15_D0_ALLRI"
+msgstr "У реду, наставите."
+
+msgid "TXT_DLG_SCRIPT15_D1516_NOTHI"
+msgstr "Овде нема шта да се пријави. Све функционише у реду. Ако се нешто поквари, обавезно ћу то пријавити."
+
+msgid "TXT_DLG_SCRIPT15_D3032_SIRTH"
+msgstr "Господине, раније је био проблем, али је решен."
+
+msgid "TXT_DLG_SCRIPT17_D0_MOVEA"
+msgstr "Иди даље или окуси метал."
+
+msgid "TXT_DLG_SCRIPT17_D1516_IDCHE"
+msgstr "Провера личних докумената."
+
+msgid "TXT_RPLY0_SCRIPT17_D1516_HEREI"
+msgstr "Ево, журим."
+
+msgid "TXT_DLG_SCRIPT17_D3032_STOPW"
+msgstr "Престани да ми машеш личом пред носем и уђи."
+
+msgid "TXT_DLG_SCRIPT17_D4548_NOTHI"
+msgstr "Овде нема шта да се види. Идите даље."
+
+msgid "TXT_DLG_SCRIPT17_D6064_WHATA"
+msgstr "Каква здрава јединка. Не треба ти моја помоћ, зар не?"
+
+msgid "TXT_RPLY0_SCRIPT17_D6064_WELLY"
+msgstr "Па, да. Масил ме је послао."
+
+msgid "TXT_DLG_SCRIPT17_D7580_SHHHH"
+msgstr "Шшш… Ћути, осим ако не желиш да нас обоје убију. Сада, шта могу да учиним за тебе?"
+
+msgid "TXT_RPLY0_SCRIPT17_D7580_TELLM"
+msgstr "Реци ми како да пронађем бискупа."
+
+msgid "TXT_DLG_SCRIPT17_D9096_OHHHI"
+msgstr "Оххх, знао сам да ћеш ме за то питати. Погледај иза себе. То је улаз у епископску цитаделу. Чувана је силовим пољем које се искључује само за званичне посетиоце, а не за тебе."
+
+msgid "TXT_RPLY0_SCRIPT17_D9096_IMUST"
+msgstr "Морам да убијем бискупа."
+
+msgid "TXT_DLG_SCRIPT17_D10612_OHSUR"
+msgstr "О, наравно да можеш. Прво се пробиј до безбедносног комплекса и искористи телепортер. А ово ти се можда више свиђа: уништи рачунар у централној администрацији. Без рачунара нема поља силе."
+
+msgid "TXT_RPLY0_SCRIPT17_D10612_GREAT"
+msgstr "Одлично, то звучи лако."
+
+msgid "TXT_DLG_SCRIPT17_D12128_THERE"
+msgstr "Постоји предност у томе да уништиш рачунар, јер су тамо сачувани планови за кулу. Можеш ли рећи \"крађа уз попуст од пет прстију\"? Хе-хе!"
+
+msgid "TXT_RPLY0_SCRIPT17_D12128_ANYTH"
+msgstr "Има ли још нешто?"
+
+msgid "TXT_DLG_SCRIPT17_D13644_OHWEL"
+msgstr "Па добро, кажу да је магацин Бејлија примио пошиљку маулера, то је оружје које испаравља."
+
+msgid "TXT_RPLY0_SCRIPT17_D13644_ISTHA"
+msgstr "Да ли је то сад?"
+
+msgid "TXT_DLG_SCRIPT17_D15160_DONTY"
+msgstr "Зар не знаш шта значију речи \"иди у три лепе\"?"
+
+msgid "TXT_DLG_SCRIPT17_D16676_TALKT"
+msgstr "Прво разговарај са Квинсијем. Не смем никоме да помогнем осим ако он не каже да је у реду."
+
+msgid "TXT_DLG_SCRIPT17_D18192_HOWHO"
+msgstr "Како, како могу данас да вам помогнем?"
+
+msgid "TXT_RPLY0_SCRIPT17_D18192_MEDPA"
+msgstr "Медицинска закрпа"
+
+msgid "TXT_RYES0_SCRIPT17_D18192_HERES"
+msgstr "Ево твог закрпа."
+
+msgid "TXT_RNO0_SCRIPT17_D18192_THATI"
+msgstr "То је 15 злата, пријатељу мој."
+
+msgid "TXT_RPLY1_SCRIPT17_D18192_MEDIC"
+msgstr "Медицински комплет"
+
+msgid "TXT_RYES1_SCRIPT17_D18192_HERES"
+msgstr "Ево твог медицинског комплета."
+
+msgid "TXT_RNO1_SCRIPT17_D18192_YOURE"
+msgstr "Имаш мало новца за то."
+
+msgid "TXT_RPLY2_SCRIPT17_D18192_FIELD"
+msgstr "Комплет за теренску хирургију"
+
+msgid "TXT_RYES2_SCRIPT17_D18192_ONEFI"
+msgstr "Један теренски хируршки комплет, готов."
+
+msgid "TXT_RNO2_SCRIPT17_D18192_COMEB"
+msgstr "Врати се када имаш новац!"
+
+msgid "TXT_DLG_SCRIPT18_D0_WHATI"
+msgstr "Шта је то?"
+
+msgid "TXT_RPLY0_SCRIPT18_D0_JUSTL"
+msgstr "Само се разгледам."
+
+msgid "TXT_RYES0_SCRIPT18_D0_JUSTK"
+msgstr "Само држи се по страни."
+
+msgid "TXT_DLG_SCRIPT18_D1516_THETE"
+msgstr "Темплари ће ускоро доћи да преузму своје нове маулере. Ако им станеш на пут, мртав си."
+
+msgid "TXT_RPLY0_SCRIPT18_D1516_MAULE"
+msgstr "Маулерси?"
+
+msgid "TXT_RYES0_SCRIPT18_D1516_THETE"
+msgstr "Темпларско омиљено оружје."
+
+msgid "TXT_DLG_SCRIPT18_D3032_THEYC"
+msgstr "Ушли су раније. Зато је и обезбеђење. Имао сам прилику да их видим кад сам закључао. Нико не сме да улази или излази отуда док остатак вода не дође по своје оружје."
+
+msgid "TXT_DLG_SCRIPT19_D0_THISI"
+msgstr "Овде добијате планове за централну администрацију."
+
+msgid "TXT_DLG_SCRIPT22_D0_IRUNT"
+msgstr "Ја водим ово место. Мој посао је да правим сировине потребне за дизајне робота Лоремастера. Ако нисте овде по службеној дужности, бојим се да немам времена за разговор."
+
+msgid "TXT_RPLY0_SCRIPT22_D0_IAMON"
+msgstr "Ја сам на званичном послу."
+
+msgid "TXT_DLG_SCRIPT22_D1516_SOYOU"
+msgstr "Видим да сте разговарали са Тимотијем. Он и ја смо радили заједно да бисмо покушали да разјаснимо мистерије Ордена, пре него што буде прекасно за све нас. Можда нам можете помоћи. Отворио сам врата производног сектора."
+
+msgid "TXT_RPLY0_SCRIPT22_D1516_DOYOU"
+msgstr "Знаш ли шта је унутра?"
+
+msgid "TXT_DLG_SCRIPT22_D3032_ITSAT"
+msgstr "То је подручје најстроже тајне. Не само да Орден тамо узгаја неку врсту… створења, већ сам својим очима видео чудан артефакт назван Талисман. Никоме није дозвољено да му се приближи. Према гласинама, он поседује велику моћ ако се уједини са још два слична артефакта."
+
+msgid "TXT_RPLY0_SCRIPT22_D3032_ISUPP"
+msgstr "Претпостављам да желиш ову ствар?"
+
+msgid "TXT_DLG_SCRIPT22_D4548_NOIFY"
+msgstr "Не! Ако га успеш да пронађеш, твоје је да га задржиш. Можда ћеш га моћи искористити да нам помогнеш да се ослободимо од нашег угњетавања. Пожелео бих ти срећу, али ће ти требати много више од тога ако тамо уђеш…"
+
+msgid "TXT_RPLY0_SCRIPT22_D4548_WHATS"
+msgstr "О чему је све ово о прошлости?"
+
+msgid "TXT_DLG_SCRIPT22_D6064_YOUVE"
+msgstr "Сигурно сте видели и друге рушевине у близини. Чини се да је Комета која се срушила на нашу планету заправо свемирски брод, и веровали или не, он потиче управо са овог света, пре много времена."
+
+msgid "TXT_RPLY0_SCRIPT22_D6064_SOTHE"
+msgstr "Дакле, спектири, Један Бог…"
+
+msgid "TXT_DLG_SCRIPT22_D7580_THEYA"
+msgstr "Они су створења која су некада владала овим светом и намерена су да потроше његов живот. Стародавни су их успели запечати, али су при том изгубили животе. Бојим се да је то све што знам."
+
+msgid "TXT_RPLY0_SCRIPT22_D7580_THANK"
+msgstr "Хвала… Урадићу шта могу."
+
+msgid "TXT_DLG_SCRIPT22_D9096_GODSP"
+msgstr "Срећан пут, пријатељу."
+
+msgid "TXT_DLG_SCRIPT22_D10612_TALKT"
+msgstr "Разговарај са мајстором ковачом ако имаш питања. Све што радим је да стављам етикете на сандуке."
+
+msgid "TXT_DLG_SCRIPT23_D0_WHATC"
+msgstr "Шта могу да вам донесем, грађанине?"
+
+msgid "TXT_RPLY0_SCRIPT23_D0_AMMOB"
+msgstr "Кутија за муницију"
+
+msgid "TXT_RYES0_SCRIPT23_D0_HERES"
+msgstr "Ево твог муниције."
+
+msgid "TXT_RNO0_SCRIPT23_D0_YOUDO"
+msgstr "Немаш довољно за то!"
+
+msgid "TXT_RPLY1_SCRIPT23_D0_CRATE"
+msgstr "Сандук ракета"
+
+msgid "TXT_RYES1_SCRIPT23_D0_HEREC"
+msgstr "Ево, грађанине."
+
+msgid "TXT_RNO1_SCRIPT23_D0_ITS85"
+msgstr "То је 85 злата, грађанине!"
+
+msgid "TXT_RPLY2_SCRIPT23_D0_HEGRE"
+msgstr "Х-Е гранате"
+
+msgid "TXT_RYES2_SCRIPT23_D0_HEREA"
+msgstr "Ево ваших граната."
+
+msgid "TXT_RNO2_SCRIPT23_D0_THEYA"
+msgstr "Они су 100 златних, пријатељу."
+
+msgid "TXT_RPLY3_SCRIPT23_D0_ENERG"
+msgstr "Енергетски модул"
+
+msgid "TXT_RYES3_SCRIPT23_D0_HEREY"
+msgstr "Ево те."
+
+msgid "TXT_RNO3_SCRIPT23_D0_THATS"
+msgstr "То је 135 злата, извини."
+
+msgid "TXT_DLG_SCRIPT23_D1516_WHATC"
+msgstr "У чему могу да вам помогнем?"
+
+msgid "TXT_RPLY0_SCRIPT23_D1516_LEATH"
+msgstr "Кожна оклоп"
+
+msgid "TXT_RYES0_SCRIPT23_D1516_HEREI"
+msgstr "Ево га, грађанине."
+
+msgid "TXT_RNO0_SCRIPT23_D1516_THERE"
+msgstr "Овде нема никакве добротворне помоћи!"
+
+msgid "TXT_RPLY1_SCRIPT23_D1516_METAL"
+msgstr "Метална оклоп"
+
+msgid "TXT_RYES1_SCRIPT23_D1516_ANEXC"
+msgstr "Одличан избор, грађанине."
+
+msgid "TXT_RNO1_SCRIPT23_D1516_YOUDO"
+msgstr "Немаш довољно за ово!"
+
+msgid "TXT_RPLY2_SCRIPT23_D1516_ENVIR"
+msgstr "Тужба за заштиту животне средине"
+
+msgid "TXT_RYES2_SCRIPT23_D1516_HEREY"
+msgstr "Ево те."
+
+msgid "TXT_RNO2_SCRIPT23_D1516_NOMON"
+msgstr "Без новца, без тужбе."
+
+msgid "TXT_RPLY3_SCRIPT23_D1516_SOMET"
+msgstr "Нешто другачије?"
+
+msgid "TXT_RYES3_SCRIPT23_D1516_GOTHR"
+msgstr "Прођите кроз врата у ходнику."
+
+msgid "TXT_RNO3_SCRIPT23_D1516_YOUMU"
+msgstr "Мораш да платиш ако желиш да играш."
+
+msgid "TXT_DLG_SCRIPT23_D3032_WHATC"
+msgstr "Шта да ти донесем?"
+
+msgid "TXT_RPLY0_SCRIPT23_D3032_LEATH"
+msgstr "Кожна оклоп"
+
+msgid "TXT_RYES0_SCRIPT23_D3032_HEREI"
+msgstr "Ево га, грађанине."
+
+msgid "TXT_RNO0_SCRIPT23_D3032_THERE"
+msgstr "Овде нема никакве добротворне помоћи!"
+
+msgid "TXT_RPLY1_SCRIPT23_D3032_METAL"
+msgstr "Метална оклоп"
+
+msgid "TXT_RYES1_SCRIPT23_D3032_ANEXC"
+msgstr "Одличан избор, грађанине."
+
+msgid "TXT_RNO1_SCRIPT23_D3032_YOUDO"
+msgstr "Немаш довољно за ово!"
+
+msgid "TXT_RPLY2_SCRIPT23_D3032_ENVIR"
+msgstr "Тужба за заштиту животне средине"
+
+msgid "TXT_RYES2_SCRIPT23_D3032_HEREY"
+msgstr "Ево те."
+
+msgid "TXT_RNO2_SCRIPT23_D3032_NOMON"
+msgstr "Без новца, без тужбе."
+
+msgid "TXT_DLG_SCRIPT23_D4548_HOWCA"
+msgstr "Како могу данас да вам помогнем?"
+
+msgid "TXT_RPLY0_SCRIPT23_D4548_MEDPA"
+msgstr "Медицинска закрпа"
+
+msgid "TXT_RYES0_SCRIPT23_D4548_HERES"
+msgstr "Ево твог закрпа."
+
+msgid "TXT_RNO0_SCRIPT23_D4548_THATI"
+msgstr "То је 15 злата, пријатељу мој."
+
+msgid "TXT_RPLY1_SCRIPT23_D4548_MEDIC"
+msgstr "Медицински комплет"
+
+msgid "TXT_RYES1_SCRIPT23_D4548_HERES"
+msgstr "Ево твог медицинског комплета."
+
+msgid "TXT_RNO1_SCRIPT23_D4548_YOURA"
+msgstr "Имаш мало новца за то."
+
+msgid "TXT_RPLY2_SCRIPT23_D4548_FIELD"
+msgstr "Комплет за теренску хирургију"
+
+msgid "TXT_RYES2_SCRIPT23_D4548_ONEFI"
+msgstr "Један комплет за теренску хирургију."
+
+msgid "TXT_RNO2_SCRIPT23_D4548_COMEB"
+msgstr "Врати се када имаш новац!"
+
+msgid "TXT_DLG_SCRIPT23_D6064_HELLO"
+msgstr "Здраво пријатељу, шта могу да ти донесем?"
+
+msgid "TXT_RPLY0_SCRIPT23_D6064_INFOR"
+msgstr "Информација"
+
+msgid "TXT_RYES0_SCRIPT23_D6064_IVENE"
+msgstr "Никада нисам видео никога како улази или излази из фабрике, заштитни поље је увек укључено."
+
+msgid "TXT_RNO0_SCRIPT23_D6064_NOMON"
+msgstr "Без новца, без информација."
+
+msgid "TXT_DLG_SCRIPT23_D7580_YESWH"
+msgstr "Да, шта бисте желели?"
+
+msgid "TXT_RPLY0_SCRIPT23_D7580_MOREI"
+msgstr "Више информација."
+
+msgid "TXT_RYES0_SCRIPT23_D7580_THEFA"
+msgstr "Фабрика је изграђена на месту удара комете. Не мислим да је то случајно."
+
+msgid "TXT_RNO0_SCRIPT23_D7580_COMEO"
+msgstr "Хајде, то су свега 5 злата."
+
+msgid "TXT_DLG_SCRIPT23_D9096_HELLO"
+msgstr "Здраво опет, шта ћете?"
+
+msgid "TXT_RPLY0_SCRIPT23_D9096_MOREI"
+msgstr "Више информација."
+
+msgid "TXT_RYES0_SCRIPT23_D9096_THEFA"
+msgstr "Фабрика је затворена када је Ред открио своју нову ужасну ствар: Инквизитора."
+
+msgid "TXT_RNO0_SCRIPT23_D9096_5GOLD"
+msgstr "5 злата, молим."
+
+msgid "TXT_DLG_SCRIPT23_D10612_THATS"
+msgstr "То је све што знам. Чак и бармени понекад остану без речи, извини."
+
+msgid "TXT_DLG_SCRIPT23_D12128_HELLO"
+msgstr "Здраво."
+
+msgid "TXT_RPLY0_SCRIPT23_D12128_WHATA"
+msgstr "Шта радиш?"
+
+msgid "TXT_RYES0_SCRIPT23_D12128_IMDOI"
+msgstr "Радим неке ствари, иди одавде!"
+
+msgid "TXT_DLG_SCRIPT23_D13644_NOWWH"
+msgstr "Сада, чиме могу да вам помогнем?"
+
+msgid "TXT_RPLY0_SCRIPT23_D13644_SHADO"
+msgstr "Сеновит оклоп?"
+
+msgid "TXT_RYES0_SCRIPT23_D13644_AHHTO"
+msgstr "Ах, бити чујен, али не и виђен!"
+
+msgid "TXT_RNO0_SCRIPT23_D13644_GETOU"
+msgstr "Иди одавде, врати се кад будеш имао неки новац."
+
+msgid "TXT_DLG_SCRIPT23_D15160_THANK"
+msgstr "Хвала Богу што си стигао. Да би ушао у фабрику, потребан ти је кључ. Ми смо га украли, али нам агент недостаје у мрежи катакомби испод упоришта Ордена. Послао сам десет добрих људи у те тунеле да га пронађу, и ниједан се није вратио. Нешто тамо доле вреба!"
+
+msgid "TXT_RPLY0_SCRIPT23_D15160_WHATI"
+msgstr "Шта је то? Човек или… ?"
+
+msgid "TXT_DLG_SCRIPT23_D16676_NOTDE"
+msgstr "Не. Апсолутно не. Шта год да је, мораш да се бориш с тим да повратиш кључ. Отворићу улаз у катакомбе. Када га добијеш, фабрика је поред рудника. Пожури, свака секунда је битна."
+
+msgid "TXT_RPLY0_SCRIPT23_D16676_SOMET"
+msgstr "Нешто нељудско, јел' тако? Одлично."
+
+msgid "TXT_DLG_SCRIPT23_D18192_YOURE"
+msgstr "Трошиш време и животе! Помери се!"
+
+msgid "TXT_DLG_SCRIPT23_D10612_CANIB"
+msgstr "Могу ли вам још нечим помоћи?"
+
+msgid "TXT_RPLY0_SCRIPT23_D10612_MOREI"
+msgstr "Више информација."
+
+msgid "TXT_RYES0_SCRIPT23_D10612_LOOKF"
+msgstr "Потражи Тимотија. Чуо сам да зна неке тајне Ордена."
+
+msgid "TXT_RNO0_SCRIPT23_D10612_JUSTA"
+msgstr "Само још пет злата."
+
+msgid "TXT_DLG_SCRIPT23_D12128_THATS"
+msgstr "То је све што знам. Чак и бармени понекад остану без речи, извини."
+
+msgid "TXT_DLG_SCRIPT23_D13644_HELLO"
+msgstr "Здраво."
+
+msgid "TXT_RPLY0_SCRIPT23_D13644_WHATA"
+msgstr "Шта радиш?"
+
+msgid "TXT_RYES0_SCRIPT23_D13644_IMDOI"
+msgstr "Радим неке ствари, иди одавде!"
+
+msgid "TXT_DLG_SCRIPT23_D15160_IFYOU"
+msgstr "Ако имаш толико времена за губљење, покушај да пронађеш плави чаша. Моја истраживања Ордена указују да су је негде сакрили у производној сектори фабрике. Овај артефакт би ми био од велике вредности, па ми га донеси, а ја ћу ти помоћи."
+
+msgid "TXT_DLG_SCRIPT23_D16676_YOUFO"
+msgstr "Пронашао си плави чаша! У реду, прво ми је дај, па ћемо разменити."
+
+msgid "TXT_RPLY0_SCRIPT23_D16676_TAKEI"
+msgstr "Узми, ионако доноси несрећу."
+
+msgid "TXT_RPLY1_SCRIPT23_D16676_SCREW"
+msgstr "Јеби се, задржавам га."
+
+msgid "TXT_RYES1_SCRIPT23_D16676_THENI"
+msgstr "Онда ти ништа не дајем. Исчезни!"
+
+msgid "TXT_DLG_SCRIPT23_D18192_LOCAT"
+msgstr "Пронађи ковачницу. Информације које сам ти управо дао требало би да ти помогну да уђеш у тајни сектор фабрике. Један од радника у ковачници може да отвори врата."
+
+msgid "TXT_RPLY0_SCRIPT23_D18192_WHATC"
+msgstr "Шта могу тамо да нађем?"
+
+msgid "TXT_DLG_SCRIPT23_D19708_MYRES"
+msgstr "Моје истраживање указује да се тамо крије нека мрачна сила из давна прошлости. Будите опрезни!"
+
+msgid "TXT_DLG_SCRIPT23_D21224_THATB"
+msgstr "Како си дошао до тог плавог чаше? Истраживао сам Орден и њихове везе са давном прошлошћу, а тај артефакт би ми помогао. Хајде да се договоримо. Дај ми чашу, а ја ћу ти дати неке информације."
+
+msgid "TXT_RPLY0_SCRIPT23_D21224_TAKEI"
+msgstr "Узми, ионако доноси несрећу."
+
+msgid "TXT_RPLY1_SCRIPT23_D21224_SCREW"
+msgstr "Јеби се, задржаћу га."
+
+msgid "TXT_RYES1_SCRIPT23_D21224_THENI"
+msgstr "Онда ти ништа не дајем. Исчезни!"
+
+msgid "TXT_DLG_SCRIPT23_D22740_NOWWH"
+msgstr "Сада, чиме могу да вам помогнем?"
+
+msgid "TXT_RPLY0_SCRIPT23_D22740_SHADO"
+msgstr "Сеновит оклоп?"
+
+msgid "TXT_RYES0_SCRIPT23_D22740_AHHTO"
+msgstr "Ах, бити чујен, али не и виђен!"
+
+msgid "TXT_RNO0_SCRIPT23_D22740_GETOU"
+msgstr "Иди одавде, врати се кад будеш имао неки новац."
+
+msgid "TXT_DLG_SCRIPT23_D24256_THANK"
+msgstr "Хвала Богу што си стигао. Да би ушао у фабрику, потребан ти је кључ. Ми смо га украли, али нам агент недостаје у мрежи катакомби испод упоришта Реда. Послао сам десет добрих људи у те тунеле да га пронађу, и ниједан се није вратио. Нешто тамо доле вреба!"
+
+msgid "TXT_RPLY0_SCRIPT23_D24256_WHATI"
+msgstr "Шта је то? Човек или… ?"
+
+msgid "TXT_DLG_SCRIPT23_D25772_NOTDE"
+msgstr "Не. Апсолутно не. Шта год да је, мораш да се бориш против тога да би повратио кључ. Отворићу улаз у катакомбе. Када га добијеш, фабрика је поред рудника. Пожури, свака секунда је битна."
+
+msgid "TXT_RPLY0_SCRIPT23_D25772_SOMET"
+msgstr "Нешто нељудско, а? Одлично."
+
+msgid "TXT_DLG_SCRIPT23_D27288_YOURE"
+msgstr "Трошиш време и животе! Помери се!"
+
+msgid "TXT_DLG_SCRIPT27_D0_THEMA"
+msgstr "Учитељ не воли посетиоце. Он жели да му сваки посао остане неометан. Морам да идем по свеже делове из складишта. Мислим да је рекао ногу и руку. Ох, нема више времена за разговор. Отишао бих пре него што те он нађе."
+
+msgid "TXT_RPLY0_SCRIPT27_D0_WHYST"
+msgstr "Зашто је то тако."
+
+msgid "TXT_RYES0_SCRIPT27_D0_BECAU"
+msgstr "Јер сам ти рекао да он не воли посетиоце!"
+
+msgid "TXT_DLG_SCRIPT27_D1516_YOUKN"
+msgstr "Знаш, ти си отприлике праве величине за једну од униформи аколита."
+
+msgid "TXT_DLG_SCRIPT31_D0_OHNOI"
+msgstr "О не, ја нисам прави програмер, он се крије. Настави даље од подручја за обуку чувара, веома је тешко. Ако преживиш, можда ћеш моћи да разговараш с њим. Или да га убијеш."
+
+msgid "TXT_RPLY0_SCRIPT31_D0_WHOAR"
+msgstr "Ко си ти?"
+
+msgid "TXT_DLG_SCRIPT31_D1516_YOULL"
+msgstr "Нећеш никада ништа пронаћи ако се овде задржаваш."
+
+msgid "TXT_DLG_SCRIPT32_D0_PISSO"
+msgstr "Јеби се сељачине!"
+
+msgid "TXT_DLG_SCRIPT32_D1516_DIELI"
+msgstr "Умри, мали човече!"
+
+msgid "TXT_DLG_SCRIPT32_D3032_FINAL"
+msgstr "Коначно могу да изађем из ове ћелије."
+
+msgid "TXT_RPLY0_SCRIPT32_D3032_WHYAR"
+msgstr "Зашто си овде?"
+
+msgid "TXT_RYES0_SCRIPT32_D3032_IWASF"
+msgstr "Оптужили су ме лажно."
+
+msgid "TXT_DLG_SCRIPT32_D4548_HARRI"
+msgstr "Харис је рекао да сам планирао да убијем гувернера. Никада не бих повредио ни душу."
+
+msgid "TXT_DLG_SCRIPT33_D0_BECAR"
+msgstr "Пази се тамо."
+
+msgid "TXT_DLG_SCRIPT33_D1516_SAYFR"
+msgstr "Реци, пријатељу, помоћи ћу ти ако ми помогнеш. Дај ми пет златника и рећи ћу ти шта знам."
+
+msgid "TXT_RPLY0_SCRIPT33_D1516_HERES"
+msgstr "Ево злата."
+
+msgid "TXT_RYES0_SCRIPT33_D1516_IFYOU"
+msgstr "Ако некога удариш, неће се огласити аларми."
+
+msgid "TXT_RNO0_SCRIPT33_D1516_IWONT"
+msgstr "Нећу ти ништа рећи бесплатно!"
+
+msgid "TXT_DLG_SCRIPT33_D3032_IVEAL"
+msgstr "Већ сам ти рекао шта знам."
+
+msgid "TXT_DLG_SCRIPT33_D4548_HELLO"
+msgstr "Здраво, пријатељу. Шта могу да ти донесем?"
+
+msgid "TXT_RPLY0_SCRIPT33_D4548_ELECT"
+msgstr "Електрични болтови"
+
+msgid "TXT_RYES0_SCRIPT33_D4548_ONEQU"
+msgstr "То је једна свађа."
+
+msgid "TXT_RNO0_SCRIPT33_D4548_YOURE"
+msgstr "Ти си без пара!"
+
+msgid "TXT_RPLY1_SCRIPT33_D4548_10ROU"
+msgstr "Клип метака"
+
+msgid "TXT_RYES1_SCRIPT33_D4548_HERES"
+msgstr "Ево твог муниције"
+
+msgid "TXT_RNO1_SCRIPT33_D4548_SORRY"
+msgstr "Жао ми је, нема новца, нема метака."
+
+msgid "TXT_RPLY2_SCRIPT33_D4548_50ROU"
+msgstr "Кутија за муницију"
+
+msgid "TXT_RYES2_SCRIPT33_D4548_HEREY"
+msgstr "Ево"
+
+msgid "TXT_RNO2_SCRIPT33_D4548_YOUDO"
+msgstr "Немаш довољно злата!"
+
+msgid "TXT_RPLY3_SCRIPT33_D4548_AMMOS"
+msgstr "Патронска торба"
+
+msgid "TXT_RYES3_SCRIPT33_D4548_THANK"
+msgstr "Хвала вам, има ли још нечега?"
+
+msgid "TXT_RNO3_SCRIPT33_D4548_YOUCA"
+msgstr "Не можете то да приуштите, добар дан."
+
+msgid "TXT_DLG_SCRIPT33_D6064_WELCO"
+msgstr "Добродошли. Шта могу да вам покажем?"
+
+msgid "TXT_RPLY0_SCRIPT33_D6064_ENVIR"
+msgstr "Тужба за заштиту животне средине"
+
+msgid "TXT_RYES0_SCRIPT33_D6064_HEREY"
+msgstr "Ево те."
+
+msgid "TXT_RNO0_SCRIPT33_D6064_YOUDO"
+msgstr "Немаш довољно новца за то."
+
+msgid "TXT_RPLY1_SCRIPT33_D6064_LEATH"
+msgstr "Кожна оклоп."
+
+msgid "TXT_RYES1_SCRIPT33_D6064_HEREY"
+msgstr "Ево те."
+
+msgid "TXT_RNO1_SCRIPT33_D6064_PERHA"
+msgstr "Можда неком другом приликом?"
+
+msgid "TXT_RPLY2_SCRIPT33_D6064_METAL"
+msgstr "Метална оклоп"
+
+msgid "TXT_RYES2_SCRIPT33_D6064_WEARI"
+msgstr "Носи га у здрављу."
+
+msgid "TXT_RNO2_SCRIPT33_D6064_COMEB"
+msgstr "Врати се када будеш могао да приуштиш."
+
+msgid "TXT_DLG_SCRIPT33_D7580_HOWMA"
+msgstr "Како могу да вам помогнем?"
+
+msgid "TXT_RPLY0_SCRIPT33_D7580_MEDPA"
+msgstr "Медицинска закрпа"
+
+msgid "TXT_RYES0_SCRIPT33_D7580_HERES"
+msgstr "Ево вашег комплета закрпа."
+
+msgid "TXT_RNO0_SCRIPT33_D7580_YOUNE"
+msgstr "За то ти треба 10 злата."
+
+msgid "TXT_RPLY1_SCRIPT33_D7580_FIELD"
+msgstr "Комплет за теренску хирургију"
+
+msgid "TXT_RYES1_SCRIPT33_D7580_THANK"
+msgstr "Хвала вам."
+
+msgid "TXT_RNO1_SCRIPT33_D7580_IWISH"
+msgstr "Волео бих да их могу поклонити, али коштају 25 злата."
+
+msgid "TXT_RPLY2_SCRIPT33_D7580_HEALI"
+msgstr "Исцељење"
+
+msgid "TXT_RYES2_SCRIPT33_D7580_THERE"
+msgstr "Ево ти. Чувај се сада."
+
+msgid "TXT_RNO2_SCRIPT33_D7580_WELLM"
+msgstr "Па, можда можете да приуштите неке медицинске закрпе?"
+
+msgid "TXT_DLG_SCRIPT33_D9096_HELLO"
+msgstr "Здраво, пријатељу, нисам те раније видео овде. Све што могу да кажем је да бих био опрезан на твом месту, много се тога дешава и боље је да не стојиш на путу."
+
+msgid "TXT_RPLY0_SCRIPT33_D9096_INFOR"
+msgstr "Информација"
+
+msgid "TXT_RYES0_SCRIPT33_D9096_THESE"
+msgstr "Канализација садржи више од пацова и робота."
+
+msgid "TXT_RNO0_SCRIPT33_D9096_HEYAG"
+msgstr "Хеј, човек мора негде да заради нешто новца. Мислиш ли да ти ови будале добро дају бакшиш?"
+
+msgid "TXT_DLG_SCRIPT33_D10612_BACKA"
+msgstr "Поново си ту, зар не? Па, барем знаш довољно да сачуваш своју кожу нетакнутом. Шта могу сада да учиним за тебе?"
+
+msgid "TXT_RPLY0_SCRIPT33_D10612_MOREI"
+msgstr "Više informacija"
+
+msgid "TXT_RYES0_SCRIPT33_D10612_THEGO"
+msgstr "Гувернер је једноставан подсетник на утицај Реда."
+
+msgid "TXT_RNO0_SCRIPT33_D10612_COMEB"
+msgstr "Врати се ако промениш мишљење."
+
+msgid "TXT_DLG_SCRIPT33_D12128_WELLY"
+msgstr "Па, сигурно постављаш пуно питања за некога ко је живео овако дуго. Али је у реду, радије бих разговарао са неким попут тебе него са већином ових људи."
+
+msgid "TXT_RPLY0_SCRIPT33_D12128_MOREI"
+msgstr "Више информација."
+
+msgid "TXT_RYES0_SCRIPT33_D12128_THERE"
+msgstr "У Реду има више од онога што се овде дешава."
+
+msgid "TXT_RNO0_SCRIPT33_D12128_COMEB"
+msgstr "Врати се ако промениш мишљење."
+
+msgid "TXT_DLG_SCRIPT33_D13644_THATS"
+msgstr "То је то, пријатељу, бунар знања је исцрпљен. Уосталом, рекао сам ти више него што сам требао."
+
+msgid "TXT_DLG_SCRIPT33_D15160_HARDT"
+msgstr "Тешко је куповати нове играчке… када си без пара. Уради ми једну малу пословичку и добићеш више него што би икада могао потрошити. Учинићу те богаташем."
+
+msgid "TXT_RPLY0_SCRIPT33_D15160_IGOTN"
+msgstr "Немам ништа боље да радим."
+
+msgid "TXT_RPLY1_SCRIPT33_D15160_NOTHA"
+msgstr "Не, хвала."
+
+msgid "TXT_RYES1_SCRIPT33_D15160_NOBOD"
+msgstr "Нико не одлази од мене!"
+
+msgid "TXT_DLG_SCRIPT33_D16676_GOODC"
+msgstr "Добар избор. Светилиште Реда поред реке је њихова незванична комора за мучење. Унутра је скривен златни чаша. Узмеш је, састанемо се у крчми и узмеш своју награду."
+
+msgid "TXT_RPLY0_SCRIPT33_D16676_HOWAM"
+msgstr "Како да то урадим?"
+
+msgid "TXT_RPLY1_SCRIPT33_D16676_LETME"
+msgstr "Да размислим о томе."
+
+msgid "TXT_RYES1_SCRIPT33_D16676_SORRY"
+msgstr "Жао ми је, нема друге шансе. О, чувари, убијте га!"
+
+msgid "TXT_DLG_SCRIPT33_D18192_HERES"
+msgstr "Ево праћке, само циљај право и – сплат! –. Запамти, узми тај раскошни чашак и састанемо се у таверни."
+
+msgid "TXT_RPLY0_SCRIPT33_D18192_ILLSE"
+msgstr "Видимо се тамо."
+
+msgid "TXT_DLG_SCRIPT33_D19708_WHATA"
+msgstr "Чега чекаш? Не брини, ја ћу очистити лешеве, само ми донеси тај чаша!"
+
+msgid "TXT_DLG_SCRIPT33_D21224_GUARD"
+msgstr "Чувари! Убијте издајника!"
+
+msgid "TXT_DLG_SCRIPT33_D22740_HEYIK"
+msgstr "Хеј, знам шта мислиш, изгледа као намештаљка, никад не бих то урадио таквој убилачкој машини, стварно. Уф, сва ова врева због једне чаше, чудно. Сад се припреми, злато и слава, као што сам обећао. Узми овај кључ и сам гувернер ће те наградити."
+
+msgid "TXT_RPLY0_SCRIPT33_D22740_GREAT"
+msgstr "Одлично, једва чекам!"
+
+msgid "TXT_RNO0_SCRIPT33_D22740_NOCHA"
+msgstr "Без чаше, без новца!"
+
+msgid "TXT_RPLY1_SCRIPT33_D22740_ILLKE"
+msgstr "Задржићу чашу, хвала."
+
+msgid "TXT_RYES1_SCRIPT33_D22740_KEEPI"
+msgstr "Да задржим? Мислим да не!"
+
+msgid "TXT_DLG_SCRIPT33_D24256_WHATA"
+msgstr "Чега чекаш? Сам гувернер ће те наградити."
+
+msgid "TXT_DLG_SCRIPT33_D25772_DIETR"
+msgstr "Проклети издајниче! "
+
+msgid "TXT_DLG_SCRIPT33_D27288_SOYOU"
+msgstr "Значи, ти си онај будала који је украо чашу? Ухапсићу те као побуњеничког крадљивца… чиме ћу ојачати свој положај у Ордену. Како ти је бити несвесна пешачица?"
+
+msgid "TXT_RPLY0_SCRIPT33_D27288_ITSUC"
+msgstr "То је срање!"
+
+msgid "TXT_RYES0_SCRIPT33_D27288_FORYO"
+msgstr "За тебе јесте."
+
+msgid "TXT_RPLY1_SCRIPT33_D27288_HARRI"
+msgstr "Харис ми је обећао новац!"
+
+msgid "TXT_RYES1_SCRIPT33_D27288_TOOBA"
+msgstr "Штета. Једино што ћеш добити је смрт!"
+
+msgid "TXT_DLG_SCRIPT33_D28804_WEREG"
+msgstr "Убићемо те!"
+
+msgid "TXT_DLG_SCRIPT33_D30320_GETOU"
+msgstr "Иди одавде!"
+
+msgid "TXT_DLG_SCRIPT33_D31836_WEREG"
+msgstr "Убићемо те!"
+
+msgid "TXT_DLG_SCRIPT33_D33352_GETOU"
+msgstr "Иди одавде!"
+
+msgid "TXT_DLG_SCRIPT34_D0_WHATA"
+msgstr "Какво савршено место за нас, испод старе општине. Ред мисли да нас је истребио, али то је био само подсетник шта се може догодити када постанеш немаран. "
+
+msgid "TXT_DLG_SCRIPT34_D1516_TALKT"
+msgstr "Разговарај са Мацилом, он ће ти моћи помоћи."
+
+msgid "TXT_DLG_SCRIPT34_D3032_IVEHE"
+msgstr "Чуо сам да ће Мацил ускоро поново нешто започети. Након последњег фијаска нам треба велики погодак. Још један такав и бићемо преслаби да наставимо."
+
+msgid "TXT_DLG_SCRIPT34_D4548_AFEWO"
+msgstr "Неколико ових буриња бачених у њихово снабдевање водом требало би мало изједначити шансе. "
+
+msgid "TXT_DLG_SCRIPT34_D6064_IMWOR"
+msgstr "Радим на нечему што ће нам дати предност. То ће ти повећати издржљивост и потпуно те разбудити. Скоро сам отклонио све грешке. Могу ли ти помоћи? "
+
+msgid "TXT_RPLY0_SCRIPT34_D6064_PATCH"
+msgstr "Залечи ме."
+
+msgid "TXT_RYES0_SCRIPT34_D6064_BOYYO"
+msgstr "Човече, ти си права збрка. Видећу шта могу да урадим."
+
+msgid "TXT_RPLY1_SCRIPT34_D6064_STAMI"
+msgstr "Имплант издржљивости?"
+
+msgid "TXT_RYES1_SCRIPT34_D6064_ALLRI"
+msgstr "У реду, ово ће потрајати само тренутак."
+
+msgid "TXT_RNO1_SCRIPT34_D6064_ITSNO"
+msgstr "Још није готово."
+
+msgid "TXT_DLG_SCRIPT34_D7580_HEYIM"
+msgstr "Хеј, радим на ажурираној верзији твог импланта. Има ли још нешто што могу да урадим?"
+
+msgid "TXT_RPLY0_SCRIPT34_D7580_PATCH"
+msgstr "Залечи ме."
+
+msgid "TXT_RYES0_SCRIPT34_D7580_WELLA"
+msgstr "Па барем видиш акцију."
+
+msgid "TXT_RPLY1_SCRIPT34_D7580_IMPLA"
+msgstr "Унапређење имплантата?"
+
+msgid "TXT_RYES1_SCRIPT34_D7580_GOODT"
+msgstr "Добра ствар, никад не може бити превише безбедно."
+
+msgid "TXT_RNO1_SCRIPT34_D7580_IMALM"
+msgstr "Готово сам, али нисам сасвим."
+
+msgid "TXT_DLG_SCRIPT34_D9096_ALLRI"
+msgstr "У реду, ево га. Скоро све ради савршено. Остало је још неколико проблема за решити, треба ли ти још нешто? "
+
+msgid "TXT_RPLY0_SCRIPT34_D9096_PATCH"
+msgstr "Залечи ме."
+
+msgid "TXT_RYES0_SCRIPT34_D9096_WHATH"
+msgstr "Шта си покушавао да урадиш? Да се супротставиш крстоноснику?"
+
+msgid "TXT_RPLY1_SCRIPT34_D9096_IMPLA"
+msgstr "Унапређење имплантата?"
+
+msgid "TXT_RYES1_SCRIPT34_D9096_THATS"
+msgstr "То би требало да буде довољно за вас."
+
+msgid "TXT_RNO1_SCRIPT34_D9096_LETME"
+msgstr "Дозволите ми да прво обавим још неке тестове."
+
+msgid "TXT_DLG_SCRIPT34_D10612_THATS"
+msgstr "То је све што тренутно могу да урадим са имплантатом. Можда ће доћи до зарастања?"
+
+msgid "TXT_RPLY0_SCRIPT34_D10612_YEAH"
+msgstr "Да."
+
+msgid "TXT_RYES0_SCRIPT34_D10612_BOYYO"
+msgstr "Човече, ти си права збрка. Видећу шта могу да урадим."
+
+msgid "TXT_DLG_SCRIPT34_D12128_WHATC"
+msgstr "Шта могу да учиним за вас?"
+
+msgid "TXT_RPLY0_SCRIPT34_D12128_IMOUT"
+msgstr "Немам више метака."
+
+msgid "TXT_RYES0_SCRIPT34_D12128_HERES"
+msgstr "Ево ти муниције. Не троши је узалуд."
+
+msgid "TXT_RPLY1_SCRIPT34_D12128_TEACH"
+msgstr "Научи ме."
+
+msgid "TXT_RYES1_SCRIPT34_D12128_ALLRI"
+msgstr "У реду, само ћу ти показати неколико малих савета."
+
+msgid "TXT_RNO1_SCRIPT34_D12128_YOURE"
+msgstr "Још нисте спремни."
+
+msgid "TXT_DLG_SCRIPT34_D13644_BACKA"
+msgstr "Поново овде? Шта ти треба?"
+
+msgid "TXT_RPLY0_SCRIPT34_D13644_IMOUT"
+msgstr "Немам више метака."
+
+msgid "TXT_RYES0_SCRIPT34_D13644_HERES"
+msgstr "Ево ти муниције. Не троши је узалуд."
+
+msgid "TXT_RNO0_SCRIPT34_D13644_YOUVE"
+msgstr "Имаш довољно муниције."
+
+msgid "TXT_RPLY1_SCRIPT34_D13644_TEACH"
+msgstr "Научи ме."
+
+msgid "TXT_RYES1_SCRIPT34_D13644_ALLRI"
+msgstr "У реду, ово ће те одржати неко време."
+
+msgid "TXT_RNO1_SCRIPT34_D13644_SORRY"
+msgstr "Жао ми је, не могу. Ја само извршавам Мацилове наредбе."
+
+msgid "TXT_DLG_SCRIPT34_D15160_WELLW"
+msgstr "Па шта је то, муниција или обука? Једва чекам да дохватим оне нове оружје које смо запленили. Кад завршим са њима, моћи ћу да почнем да обучавам све остале."
+
+msgid "TXT_RPLY0_SCRIPT34_D15160_IMOUT"
+msgstr "Немам више муниције."
+
+msgid "TXT_RYES0_SCRIPT34_D15160_HERES"
+msgstr "Ево ти муниције. Не троши је узалуд."
+
+msgid "TXT_RNO0_SCRIPT34_D15160_YOUVE"
+msgstr "Имаш довољно муниције."
+
+msgid "TXT_RPLY1_SCRIPT34_D15160_TEACH"
+msgstr "Научи ме."
+
+msgid "TXT_RYES1_SCRIPT34_D15160_OKTAK"
+msgstr "У реду. Узми оно што си научио и покажи тим кретенцима из Ордера пут у пакао."
+
+msgid "TXT_RNO1_SCRIPT34_D15160_COMEB"
+msgstr "Врати се касније, када Мацил каже да је време."
+
+msgid "TXT_DLG_SCRIPT34_D16676_IVETA"
+msgstr "Научио сам те свему што тренутно могу. Дај ми мало времена да испробам нова оружја. Осим ако ти нису понестале муниције."
+
+msgid "TXT_RPLY0_SCRIPT34_D16676_YESIA"
+msgstr "Да, ја сам."
+
+msgid "TXT_RYES0_SCRIPT34_D16676_HEREY"
+msgstr "Ево."
+
+msgid "TXT_DLG_SCRIPT34_D18192_DONTG"
+msgstr "Не буди претерано брз са окидачем у граду, иначе ћеш покренути аларм и они ће почети да шаљу гарду из замка."
+
+msgid "TXT_DLG_SCRIPT34_D19708_WELCO"
+msgstr "Добродошли, увек нам треба више помоћи."
+
+msgid "TXT_DLG_SCRIPT34_D21224_WHENI"
+msgstr "Када сам још био у акцији, имали смо прилику да прегледамо аколита пре него што су стигли појачања, они нису људи, кажем ти."
+
+msgid "TXT_DLG_SCRIPT34_D22740_WERET"
+msgstr "Покушавамо да пронађемо где се налазе механизми капија замка, али до сада нисмо имали среће."
+
+msgid "TXT_DLG_SCRIPT34_D24256_DONTG"
+msgstr "Немој да те ухвате. Чуо сам ужасне приче о томе шта раде нашим људима након што их затворе. Они једноставно нестану, без трага, ништа. "
+
+msgid "TXT_DLG_SCRIPT34_D25772_HERES"
+msgstr "Ево једног савета: ако икада видиш неке од војника Ордена, бежи у супротном правцу. Посебно не волим Ривере, те ствари су проклето брзе!"
+
+msgid "TXT_DLG_SCRIPT34_D27288_WELCO"
+msgstr "Добродошли у последњи трептај наде. Само ми имамо слободну вољу да се супротставимо Реду. Имамо најоштрија научна ума и многа способна тела. Али нам недостаје онај један прави решавач проблема који ће нам дати предност која нам је потребна."
+
+msgid "TXT_RPLY0_SCRIPT34_D27288_WHATW"
+msgstr "Шта ћу морати да урадим? "
+
+msgid "TXT_DLG_SCRIPT34_D28804_HELPU"
+msgstr "Помозите нам. Помозите нам да украдемо њихову технологију. Ослободите наше саборце. Борите се против ових изопачених психопата до смрти. Молим вас да ризикујете живот за истину."
+
+msgid "TXT_RPLY0_SCRIPT34_D28804_IMWIT"
+msgstr "Ја сам с тобом!"
+
+msgid "TXT_DLG_SCRIPT34_D30320_GOODB"
+msgstr "Добро. Блекберд ће и даље бити твој водич. Она се прилично привргла теби. Заједно морате открити тајне Ордена и њихових нечовечанских слугу. Постоји присуство које вреба на ивици нашег разумевања и усмерава њихов терор. Уђи унутра и порази их. "
+
+msgid "TXT_RPLY0_SCRIPT34_D30320_LETME"
+msgstr "Пусти ме на њих!"
+
+msgid "TXT_RYES0_SCRIPT34_D30320_THATS"
+msgstr "То је дух."
+
+msgid "TXT_DLG_SCRIPT34_D31836_WELCO"
+msgstr "Добродошао, пријатељу!"
+
+msgid "TXT_RANDOM_PEASANT_01"
+msgstr "Молим те, немој да ме повредиш."
+
+msgid "TXT_RANDOM_PEASANT_02"
+msgstr "Ако желиш да ме повредиш, заиста нисам вредан тог труда."
+
+msgid "TXT_RANDOM_PEASANT_03"
+msgstr "Не знам ништа."
+
+msgid "TXT_RANDOM_PEASANT_04"
+msgstr "Иди одавде или ћу позвати стражаре!"
+
+msgid "TXT_RANDOM_PEASANT_05"
+msgstr "Понекад бих волео да сви ти побуњеници једноставно науче своје место и престану са овим глупостима."
+
+msgid "TXT_RANDOM_PEASANT_06"
+msgstr "Само ме остави на миру, у реду?"
+
+msgid "TXT_RANDOM_PEASANT_07"
+msgstr "Нисам сигуран, али понекад мислим да познајем неке од аколита."
+
+msgid "TXT_RANDOM_PEASANT_08"
+msgstr "Ред је овде све прилично чврсто закључао."
+
+msgid "TXT_RANDOM_PEASANT_09"
+msgstr "Нема шансе да је ово само безбедносна снага."
+
+msgid "TXT_RANDOM_PEASANT_10"
+msgstr "Чуо сам да је Орден заиста нервозан због акција Фронта овде."
+
+msgid "TXT_RANDOM_REBEL_01"
+msgstr "Нема шансе да се Ред успротиви нама."
+
+msgid "TXT_RANDOM_REBEL_02"
+msgstr "Скоро смо спремни да ударимо. Мацилови планови се остварују."
+
+msgid "TXT_RANDOM_REBEL_03"
+msgstr "Сви смо уз тебе, не брини."
+
+msgid "TXT_RANDOM_REBEL_04"
+msgstr "Не прилази превише близу тим великим роботима. Они ће те растопити за шрот!"
+
+msgid "TXT_RANDOM_REBEL_05"
+msgstr "Дан наше славе ће ускоро доћи, и они који нам се супротстављају биће згажени!"
+
+msgid "TXT_RANDOM_REBEL_06"
+msgstr "Немој да се превише удобно сместиш. Пред нама је још доста посла."
+
+msgid "TXT_RANDOM_REBEL_07"
+msgstr "Масил каже да си нова нада. Имај то на уму."
+
+msgid "TXT_RANDOM_REBEL_08"
+msgstr "Кад једном поразимо ове шарлатане, моћи ћемо да обновимо овај свет онаквим какав треба да буде."
+
+msgid "TXT_RANDOM_REBEL_09"
+msgstr "Запамти да се не бориш само за себе, већ за све овде и оне ван."
+
+msgid "TXT_RANDOM_REBEL_10"
+msgstr "Док год један од нас још увек стоји, победићемо."
+
+msgid "TXT_RANDOM_AGUARD_01"
+msgstr "Иди даље, сељаче."
+
+msgid "TXT_RANDOM_AGUARD_02"
+msgstr "Пратите истинску веру, тек тада ћете почети да разумете."
+
+msgid "TXT_RANDOM_AGUARD_03"
+msgstr "Само кроз смрт човек може заиста да се прероди."
+
+msgid "TXT_RANDOM_AGUARD_04"
+msgstr "Не занимају ме твоје бескорисне глупости."
+
+msgid "TXT_RANDOM_AGUARD_05"
+msgstr "Да сам хтео да разговарам са тобом, рекао бих ти то."
+
+msgid "TXT_RANDOM_AGUARD_06"
+msgstr "Иди и нервирај неког другог!"
+
+msgid "TXT_RANDOM_AGUARD_07"
+msgstr "Настави да се крећеш!"
+
+msgid "TXT_RANDOM_AGUARD_08"
+msgstr "Ако аларм зазвони, само останите ван нашег пута!"
+
+msgid "TXT_RANDOM_AGUARD_09"
+msgstr "Ред ће очистити свет и увести га у нову еру."
+
+msgid "TXT_RANDOM_AGUARD_10"
+msgstr "Проблем? Не, мислио сам да нема."
+
+msgid "TXT_RANDOM_BEGGAR_01"
+msgstr "Милостиња за сиромашне?"
+
+msgid "TXT_RANDOM_BEGGAR_02"
+msgstr "Шта гледаш, серферу?"
+
+msgid "TXT_RANDOM_BEGGAR_03"
+msgstr "Немаш ли неку вишак храну?"
+
+msgid "TXT_RANDOM_BEGGAR_04"
+msgstr "Ви, људи са површине, никада нас нећете разумети."
+
+msgid "TXT_RANDOM_BEGGAR_05"
+msgstr "Ха, стражари нас не могу пронаћи. Ти идиоти чак ни не знају да постојимо."
+
+msgid "TXT_RANDOM_BEGGAR_06"
+msgstr "Једног дана ће сви, осим оних који служе Реду, бити приморани да нам се придруже."
+
+msgid "TXT_RANDOM_BEGGAR_07"
+msgstr "Гледај сада, али знаш да ће једног дана то бити твоје сопствено лице."
+
+msgid "TXT_RANDOM_BEGGAR_08"
+msgstr "Ништа није иритантније од фарбача са дрским ставом!"
+
+msgid "TXT_RANDOM_BEGGAR_09"
+msgstr "Ред ће за кратко време уништити ваш жалосни фронт."
+
+msgid "TXT_RANDOM_BEGGAR_10"
+msgstr "Пази се, површинчару. Знамо наше непријатеље!"
+
+msgid "TXT_RANDOM_PGUARD_01"
+msgstr "Ми смо руке судбине. Заслужити наш гнев значи наћи заборав!"
+
+msgid "TXT_RANDOM_PGUARD_02"
+msgstr "Ред ће очистити свет од слабих и корумпираних!"
+
+msgid "TXT_RANDOM_PGUARD_03"
+msgstr "Поштујте вољу господара!"
+
+msgid "TXT_RANDOM_PGUARD_04"
+msgstr "Да живе браћа Ордена!"
+
+msgid "TXT_RANDOM_PGUARD_05"
+msgstr "Слободна воља је илузија која везује слабоуме."
+
+msgid "TXT_RANDOM_PGUARD_06"
+msgstr "Моћ је пут ка слави. Следити Ред значи ићи тим путем!"
+
+msgid "TXT_RANDOM_PGUARD_07"
+msgstr "Заузми своје место међу праведнима, придружи нам се!"
+
+msgid "TXT_RANDOM_PGUARD_08"
+msgstr "Ред штити своје."
+
+msgid "TXT_RANDOM_PGUARD_09"
+msgstr "Аколити? Они још нису видели пуну славу Реда."
+
+msgid "TXT_RANDOM_PGUARD_10"
+msgstr "Ако у тој жалосној љусци тела постоји икаква част, приступићеш у наручје Реда."
+
+msgid "TXT_RANDOMGOODBYE_1"
+msgstr "Збогом!"
+
+msgid "TXT_RANDOMGOODBYE_2"
+msgstr "Хвала, збогом!"
+
+msgid "TXT_RANDOMGOODBYE_3"
+msgstr "Видимо се касније!"
+
+msgid "TXT_ILOG1"
+msgstr "Здраво? Командо, комуникациона јединица је управо активирана… Примам визуелне и звучне податке од… некога… Еј, ти, изађи одатле одмах… и испусти чашу!"
+
+msgid "TXT_ILOG2"
+msgstr "Слушај, ова комуникациона јединица ми говори да си ти 100% huчовек. Добио сам налог да те доведем, овде је реч о поверењу. Издаш ме и плати. О, и успут, можеш ме звати Блекберд."
+
+msgctxt "strifeteaser"
+msgid "TXT_ILOG2"
+msgstr "Слушај, ова комуникациона јединица ми говори да си ти 100% huчовек. Можда си један од нас, и можда можемо покушати да се међусобно поверемо. Размотри овај тест: у Гувернеровој вили налази се бацач пламена. Донеси га, и ја ћу те одвести до нас."
+
+msgid "TXT_ILOG3"
+msgstr "Упути се ка старој општини. Масил је изградио тунел који нам омогућава да уђемо и изађемо без знања аколита."
+
+msgid "TXT_ILOG4"
+msgstr "Прођи кроз врата са леве стране, а затим кроз она са десне. Чувар се зове Џеф. Реци му да ти треба злато."
+
+msgctxt "strifeteaser"
+msgid "TXT_ILOG5"
+msgstr "Не улази у градску већницу. Више није безбедно, откривени смо. Убиј све велике роботе, \"Крусејдерсе\", и ја ћу те одвести до нас."
+
+msgctxt "strifeteaser"
+msgid "TXT_ILOG6"
+msgstr "Врата поред продавнице оружја ће се отворити када сви крстоносни буду мртви. Унутар складишта налази се телепортер, искористи га и он ће те довести код нас"
+
+msgctxt "strifeteaser"
+msgid "TXT_ILOG7"
+msgstr "Врата поред продавнице оружја отвориће се када сви крстоносни буду мртви. Унутар складишта налази се телепортер, искористи га и он ће те довести код нас."
+
+msgctxt "strifeteaser"
+msgid "TXT_ILOG8"
+msgstr "Убиј што више великих робота, Крусејдера, колико можеш. Када завршиш, ја ћу те одвести до Мацила"
+
+msgctxt "strifeteaser"
+msgid "TXT_ILOG9"
+msgstr "Прођи кроз врата и разговарај са Мацилом."
+
+msgid "TXT_ILOG10"
+msgstr "Пронађи прикључак за струју на мрежи и искључи га. Донеси Гувернеру нешто као доказ. Пронађи Макгафина и разговарај с њим."
+
+msgid "TXT_ILOG11"
+msgstr "Пронађи прикључак за струју на мрежи и искључи га. Донеси Гувернеру нешто као доказ. Пронађи Макгафина и разговарај с њим. Он је код постројења за пречишћавање отпадних вода, у \"бум холу\", низ степенице."
+
+msgid "TXT_ILOG13"
+msgstr "Идиоте! Искључио си напајање за кола за ометање која користимо да сакријемо нашу базу од Ордена. Иди до градске већнице и елиминиши екипу за скенирање, одмах! Затим се врати гувернеру и предај му покварено кућиште."
+
+msgid "TXT_ILOG14"
+msgstr "У реду, \"Не веруј никоме\" је име игре! Хајде да добијемо тај затворски пролаз од гувернера. Одведи му тај поломљени спој."
+
+msgid "TXT_ILOG15"
+msgstr "Добра потез! Гувернер је лажов. Ово је наше кућиште за напајање. Користимо га да сакријемо базу од Реда. Врати му ово покварено кућиште и хајде да набавимо ту пропусницу."
+
+msgid "TXT_ILOG18"
+msgstr "Користи кључ надзорника да уђеш у блокове затворских ћелија и пронађи начин да ослободиш затворенике."
+
+msgid "TXT_ILOG19"
+msgstr "Пронађи начин да ослободиш затворенике. Пронађи начин да отвориш прекидач ручног скенера."
+
+msgid "TXT_ILOG20"
+msgstr "Пронађи начин да ослободиш затворенике. Користи судијину руку да би притиснуо прекидач скенера за руке."
+
+msgid "TXT_ILOG21"
+msgstr "Браво, пријатељу. Добро си обавио посао ослобађајући заробљенике. Скочи на један од телепортера и он ће те вратити у базу."
+
+msgid "TXT_ILOG22"
+msgstr "Уништи кристал моћи који покреће мрежу која напаја штитове Ордена. Иди и посети Ворнера, шпијуна кога смо регрутовали у складишту електране."
+
+msgid "TXT_ILOG24"
+msgstr "Хајде да се изгубимо. Ускоро ће бити још више забаве."
+
+msgid "TXT_ILOG25"
+msgstr "Још једна авантура пре него што команда процени да је безбедно да нападне замак. Мацил је уговорио да ти Ирале да злато и обезбеди тренинг. Након што га посетиш, потражи лекара у граду за појачање снаге."
+
+msgid "TXT_ILOG26"
+msgstr "Посетите Ирале и лекара у граду ради злата и обуке, затим пронађите канализацију. Идите дуж реке преко пута Гувернерове виле."
+
+msgid "TXT_ILOG28"
+msgstr "Тражимо Верана, који себе назива Краљем пацова. Сигуран сам да је то описно и живописно."
+
+msgid "TXT_ILOG33"
+msgstr "Одведи делове бацача пламена Иралеу. Испразни резервоар за рециклажу. На дну се налази скривени улаз у канализацију. Контроле капије су тамо доле, негде. Уништи их."
+
+msgid "TXT_ILOG37"
+msgstr "Командо, успео је! Врата су отворена. Упути ударне трупе и јави Мацилу да улазимо! Враћамо се у базу на фронту."
+
+msgid "TXT_ILOG38"
+msgstr "Придружите се нападу на замак. Пронађите и елиминишите програмера. Имамо супротстављена извештаја о његовом боравишту. Један каже да је у рачунарској соби, други да се крије у храму на доњем нивоу, а трећи да је на крају дугог ходника."
+
+msgid "TXT_ILOG45"
+msgstr "Пронађи програмера и убиј га."
+
+msgid "TXT_ILOG46"
+msgstr "Потражи Орaкул и питај га о осталим деловима Сигила. Орaкул се налази у пограничним пределима, одмах изван града. Пређи реку, упути се ка замку и скрени лево кроз лук."
+
+msgid "TXT_ILOG47"
+msgstr "Потражи Оракул и питај га о осталим деловима Сигила. Храм Оракула се налази у пограничним крајевима, на ивици града."
+
+msgid "TXT_ILOG48"
+msgstr "Потражите Оракул и питајте га о осталим деловима Сигила. Узмите своју награду и идите код медицинара и тренера за оружје ради здравља и обуке. Храм Оракула се налази у пограничним пределима, на ивици града."
+
+msgid "TXT_ILOG50"
+msgstr "Пронађи храм Оракула и питај га о осталим деловима Сигила. Ево га. Снимам све. Није да немам поверења да ћеш преживети. Само не можемо дозволити Ордену да контролише Сигил."
+
+msgid "TXT_ILOG56"
+msgstr "Други комад се налази у самом срцу крвавоцрвене и обсидијанске куле. Тамо ћеш наћи Епископа. Епископ је војни вођа Реда. Ми га убијамо и постижемо дупли бод. Одведи жетон Оракула код мајстора кључева у пограничним земљама."
+
+msgid "TXT_ILOG57"
+msgstr "Епископ ће бити под јаком заштитом, па зашто не украдемо униформу и не уклопимо се? Пронађи епископа. Када га уништиш, врати се Оракулу."
+
+msgid "TXT_ILOG59"
+msgstr "Управо сам добио вест да имамо доушника унутар тврђаве. Хајде да кренемо ка болници. Он тамо ради. Након тога пронађи Епископа и уништи га. Кад буде мртав, врати се Оракулу."
+
+msgid "TXT_ILOG64"
+msgstr "Не одустај. Ово је то. Право напред. Скочи на телепортер до централне администрације и уништи компјутерско језгро. То ће уклонити силово поље на улазу у бискупову кулу. Када он умре, врати се Оракулу."
+
+msgid "TXT_ILOG70"
+msgstr "Веома импресивно. Хајде да га разнесемо. То би требало да реши проблем са пољем силе. Вратимо се у Бејли, а затим на кулу и код Бишопа."
+
+msgid "TXT_ILOG74"
+msgstr "Браво, још један део Сигила! Јеси ли видео оно чудно привидење које је изашло из тела бискупа? Где сам то раније видео? Хајде да се вратимо Оракулу."
+
+msgid "TXT_ILOG76"
+msgstr "Имам извештај да је спектрална енергија коју смо пронашли у близини Бишопа такође присутна поред Оракула, будимо опрезни."
+
+msgid "TXT_ILOG79"
+msgstr "Рихтер је преузео командовање нашим снагама. Изгледа да нас је Мацил све време варао. Његова права оданост била је Ордену. Каква змија. Враћамо се код Оракула."
+
+msgid "TXT_ILOG83"
+msgstr "Још један комад Сигила. Ми смо корак ближе слободи. А ти си корак ближе мени. Вратимо се Оракулу!"
+
+msgid "TXT_ILOG85"
+msgstr "Ти поседујеш моћ потпуног Сигила. Шта кажеш да завршимо посао. Хајде да видимо шта је Лоремастер штитио."
+
+msgid "TXT_ILOG87"
+msgstr "Па, толико о пророковању. Чекај, Мацил нас зове назад. Хајде да одавде изађемо цели."
+
+msgid "TXT_ILOG89"
+msgstr "Фабрика је поред рудника. Рихтер мора да мисли на руднике Дегнина. Дегнинско рудо је магнетско и експлозивно, баш оно што треба за искључивање пољских баријера. Хајде да узмемо тај кључ из катакомби, па онда у руднике по руду."
+
+msgid "TXT_ILOG93"
+msgstr "Фабрика је поред рудника. Дегнинско рудо је магнетско и експлозивно, баш оно што је потребно за искључивање пољских сила. Хајде да узмемо тај кључ из катакомби, па онда силазимо по руду. Ово мора да су рушевине које су Рихтерови агенти тражили, пази."
+
+msgid "TXT_ILOG95"
+msgstr "Фабрика је поред рудника. Дегнинова руда је магнетна и експлозивна, баш оно што је потребно за гашење поља снаге. Пријатељу мој, шта год да је то против чега се боримо, то је више од самог Реда. Враћамо се на заједничко, па онда у руднике. Треба нам руда."
+
+msgid "TXT_ILOG96"
+msgstr "Фабрика је поред рудника. Дегнин руда је магнетна и експлозивна, баш оно што је потребно за гашење поља снаге. Без опуштања, потражите лежишта руде."
+
+msgid "TXT_ILOG97"
+msgstr "Без опуштања, потражите лежишта руде. Ове бедне душе су дронови. Њихове синапске функције су блокиране РЦ имплантима. Уништимо предајник и они су слободни."
+
+msgid "TXT_ILOG99"
+msgstr "Фабрика је поред рудника. Без спуштања гарде, потражите лежишта руде. Мој предлог је да руду баците на пољско поље и потом је експлодирајте; настала компресија треба да створи магнетни покривач и угаси светла."
+
+msgid "TXT_ILOG100"
+msgstr "Сада пређимо на фабрику. Изађите из рудника и не можете је пропустити. Хајде да пронађемо ту машину и искључимо је!"
+
+msgid "TXT_ILOG102"
+msgstr "Читам масивне изобличења можданих таласа право испред нас. Мислим да смо га пронашли. Хајде да уђемо тамо и искључимо га!"
+
+msgid "TXT_ILOG103"
+msgstr "Управо када помислим да смо све видели! Улазе као људи, а изађу… чак не желим ни да размишљам о томе. Уништите ову ужасну ствар!"
+
+msgid "TXT_ILOG104"
+msgstr "Мацил је полудео. Он је управо свесно послао 200 људи на смрт. Желим освету! За мртве и за живе мртве! Хајде да се вратимо и сазнамо шта се дешава."
+
+msgid "TXT_ILOG106"
+msgstr "Фабрика води до \"лабораторије\", и из ње стиже моћни потпис Сигила. Враћамо се у фабрику и то је наш следећи корак ка слободи."
+
+msgid "TXT_ILOG120"
+msgstr "Пронађи бискупа и уништи га! Кад умре, врати се код Оракула."
+
+msgid "TXT_ILOG122"
+msgstr "Лабораторија лоремастера је иза телепортера који се управо отворио. Хајде да сазнамо о чему је он управо причао. И наш следећи корак ка слободи."
+
+msgid "TXT_ILOG211"
+msgstr "Хајде, да кренемо одавде. Поље силе је искључено, кренимо ка Бишоповој кули. Кад он умре, врати се код Оракула."
+
+msgid "TXT_ILOG1001"
+msgstr "Пронађи светилиште поред реке. Укради чашу изнутра. Донеси је Харису у таверни."
+
+msgid "TXT_ILOG1002"
+msgstr "Пронађи гувернера. Разговарај са њим о својој награди."
+
+msgid "TXT_ILOG1003"
+msgstr "Пронађи светилиште поред реке. Унутра је неко кога зову Белдином. Ућути га и врати његов прстен Ровану као доказ."
+
+msgid "TXT_ILOG1004"
+msgstr "Пронађи локацију Фронта и разговарај са Мацилом."
+
+msgid "TXT_ILOG1005"
+msgstr "Спусти се низ степенице, пронађи Мацила и разговарај с њим."
+
+msgid "TXT_ILOG1006"
+msgstr "Посети Иралеа, добављача оружја Фронта у граду. Он је иза врата поред продавнице оружја. Затим употреби кључ који ти је дао Масил да би разговарао са гувернером."
+
+msgid "TXT_ILOG1007"
+msgstr "Пронађи прикључак за струју на мрежи и искључи га. Донеси Гувернеру нешто као доказ."
+
+msgid "TXT_ILOG1008"
+msgstr "Пронађи Дервина у складишту електране. Убиј га и донеси Морелу његово уво."
+
+msgid "TXT_ILOG1009"
+msgstr "Користи пропусницу коју ти је дао Морел да уђеш у затвор. Када уђеш, разговарај са управником Монтагом. Пронађи начин да ослободиш затворенике."
+
+msgid "TXT_ILOG1010"
+msgstr "Користи кључ надзорника да уђеш у блокове затворских ћелија и пронађи начин да ослободиш затворенике."
+
+msgid "TXT_ILOG1011"
+msgstr "Уништи кристал енергије који покреће мрежу која напаја штитове Ордена. Посети Ворнера, шпијуна кога смо регрутовали у складишту електране. Не заборави да посетиш медицинара и тренера за оружје пре него што одеш."
+
+msgid "TXT_ILOG1012"
+msgstr "Уништите кристал енергије који покреће електричну мрежу и напаја штитове Реда. Користите И.Д. да бисте ушли у електрану. Можда бисте желели да погледате складиште изнад Ворнера."
+
+msgid "TXT_ILOG1013"
+msgstr "Уништи кристал енергије који покреће енергетску мрежу и напаја штитове Реда. Иди и разговарај са Кетриком у језгровом подручју."
+
+msgid "TXT_ILOG1014"
+msgstr "Уништи кристал енергије. Иди и разговарај са Кетриком, подигни пролаз користећи прекидаче, а затим употреби ову картицу за лифт."
+
+msgid "TXT_ILOG1015"
+msgstr "Пронађи улаз у град који је чувао Ред. Отвори врата и врати униформу стражара Верену."
+
+msgid "TXT_ILOG1016"
+msgstr "Одведи делове бацача пламена Ирале. Пронађи врата за одржавање канализације. Пронађи и испразни резервоар за рекултивацију унутар замка. На дну се налази скривени улаз у канализацију. Ниже тим улазом негде су контроле за капију."
+
+msgid "TXT_ILOG1017"
+msgstr "Придружи се нападу на замак. Пронађи и елиминиши програмера. Посети лекара и тренера за оружје. Потроши све што имаш. Ово ће бити паклена борба."
+
+msgid "TXT_ILOG1018"
+msgstr "Користи кључ који ти је дао лажни Програмер да отвориш улаз у Програмеров двор. Мора да је тамо где се он крије. Пронађи Програмера и убиј га."
+
+msgid "TXT_ILOG1019"
+msgstr "Потражи Оракул и питај га о осталим деловима Сигила. Узми своју награду и иди код медицинара и тренера за оружје ради здравља и обуке."
+
+msgid "TXT_ILOG1020"
+msgstr "Други комад се налази у срцу крвавоцрвене и обсидијанске куле. Тамо мораш пронаћи Епископа који те чека. Одведи Орaкулoву ознаку код мајстора кључева у пограничним земљама. Када погубиш Епископа, врати се Орaкулу."
+
+msgid "TXT_ILOG1021"
+msgstr "Пронађи крвавоцрвену и обсидијанску кулу. Употриби ИД кључ који ти је дао мајстор кључева да би ушао у кулу. Када уђеш, мораш пронаћи бискупа. Када уништиш бискупа, врати се код Оракула."
+
+msgid "TXT_ILOG1022"
+msgstr "Пронађи безбедносни комплекс, пробиј се кроз њега и искористи телепортер до централне администрације. Уништи компјутерско језгро у централној администрацији. То ће уклонити заштитно поље на кули бискупа. Кад бискуп умре, врати се Оракулу."
+
+msgid "TXT_ILOG1023"
+msgstr "Ваш следећи изазов ће испитати ваш дух. Трећи део држи ваш вођа. Он је исти као онај кога вас шаље да убијете. Суочите се с њим и одредите своју судбину."
+
+msgid "TXT_ILOG1024"
+msgstr "То је Оракул који држи трећи део. Ево твог издајника. Врати се Оракулу и уклони га. Врати се код мене када буде мртав."
+
+msgid "TXT_ILOG1025"
+msgstr "Уклонили сте рак из свог тела, али ваше срце и даље куца. Сада морате пронаћи хирурга који касапи и контролише ваш народ… Лоремастера. Зауставите га и следећи део ће бити ваш."
+
+msgid "TXT_ILOG1026"
+msgstr "Следеће мораш да пронађеш хирурга који касапи и контролише твој народ… Лоремастера. Заустави га и следећи део ће бити твој. Користи телепортер који сам отворио да би га достигао. Када умре, користи исти уређај да се вратиш код мене."
+
+msgid "TXT_ILOG1027"
+msgstr "Мудро си изабрао. Трећи комад држи твој вођа. Уништи оно што се крије у твом срцу и врати ми се."
+
+msgid "TXT_ILOG1028"
+msgstr "Сазнали смо да Орден претвара наш народ у биомеханичке војнике. Пронађите објекат у којем се то ради и затворите га заувек! Пронађите Рихтера у заједничком простору, поред водопада, и он ће вам рећи како да зауставите ову атроцитет."
+
+msgid "TXT_ILOG1029"
+msgstr "Да бисте ушли у фабрику, потребан вам је кључ. Украли смо један, али агент који га је имао нестао је у катакомбама испод заједничког простора. Тамо доле нешто одводи наше људе. Шта год да је, морате га пронаћи и добити кључ. Када га набавите, фабрика је поред рудника."
+
+msgid "TXT_ILOG1101"
+msgstr "Пронађи чашу у капели светилиште и однеси је Харису на горњем спрату у таверни."
+
+msgid "TXT_ILOG1102"
+msgstr "Пронађи гувернерову резиденцију и разговарај са гувернером да би добио своју награду"
+
+msgid "TXT_ILOG1201"
+msgstr "Честитамо! Заслужили сте нашу захвалност. Посетите лекара и инструктора за оружје и они ће вас припремити за оно што вас чека. Слободно шетајте по бази."
+
+msgid "TXT_SPEAKER_ORDER_SERGEANT"
+msgstr "Налог наредника"
+
+msgid "TXT_SPEAKER_ROWAN"
+msgstr "Рowan"
+
+msgid "TXT_SPEAKER_FERIS"
+msgstr "Ферис"
+
+msgid "TXT_SPEAKER_PRISON_GUARD"
+msgstr "Темничар"
+
+msgid "TXT_SPEAKER_JUSTIN"
+msgstr "Џастин"
+
+msgid "TXT_SPEAKER_MACIL"
+msgstr "Мацил"
+
+msgid "TXT_SPEAKER_ASSISTANT"
+msgstr "Помоћник"
+
+msgid "TXT_SPEAKER_KEY_MASTER"
+msgstr "Кључни мајстор"
+
+msgid "TXT_SPEAKER_BODYGUARD"
+msgstr "Телесни чувар"
+
+msgid "TXT_SPEAKER_INTERROGATOR"
+msgstr "Испитивач"
+
+msgid "TXT_SPEAKER_WARDEN_MONTAG"
+msgstr "Надзорник Монтаг"
+
+msgid "TXT_SPEAKER_RICHTER"
+msgstr "Рихтер"
+
+msgid "TXT_SPEAKER_MACIL_S_ADVISOR"
+msgstr "Мацилов саветник"
+
+msgid "TXT_SPEAKER_JUDGE_WOLENICK"
+msgstr "Судија Воленик"
+
+msgid "TXT_SPEAKER_TEVICK"
+msgstr "Тевик"
+
+msgid "TXT_SPEAKER_HARRIS"
+msgstr "Харис"
+
+msgid "TXT_SPEAKER_FOREMAN"
+msgstr "Фореман"
+
+msgid "TXT_SPEAKER_PRISONER"
+msgstr "Затвореник"
+
+msgid "TXT_SPEAKER_SAMMIS"
+msgstr "Самис"
+
+msgid "TXT_SPEAKER_WEAPON_SMITH"
+msgstr "Смоундж"
+
+msgid "TXT_SPEAKER_REACTOR_GUARD"
+msgstr "Реакторски чувар"
+
+msgid "TXT_SPEAKER_APPRENTICE"
+msgstr "Шегрт"
+
+msgid "TXT_SPEAKER_DOOR_GUARD"
+msgstr "Чувар врата"
+
+msgid "TXT_SPEAKER_MASTER_SMITHY"
+msgstr "Главни ковач"
+
+msgid "TXT_SPEAKER_WAREHOUSE_GUARD"
+msgstr "Чувар складишта"
+
+msgid "TXT_SPEAKER_BARKEEP"
+msgstr "Бармен"
+
+msgid "TXT_SPEAKER_TIMOTHY"
+msgstr "Тимоти"
+
+msgid "TXT_SPEAKER_JAMES"
+msgstr "Џејмс"
+
+msgid "TXT_SPEAKER_WORNER"
+msgstr "Ворнер"
+
+msgid "TXT_SPEAKER_BAILEY_GUARD"
+msgstr "Бејли гарда"
+
+msgid "TXT_SPEAKER_DRONE"
+msgstr "Дрон"
+
+msgid "TXT_SPEAKER_FRONT_GUARD"
+msgstr "Предња гарда"
+
+msgid "TXT_SPEAKER_QUINCY"
+msgstr "Квинси"
+
+msgid "TXT_SPEAKER_SERGEANT"
+msgstr "Сержант"
+
+msgid "TXT_SPEAKER_TEMPLE_GUARD"
+msgstr "Чувар храма"
+
+msgid "TXT_SPEAKER_ORACLE"
+msgstr "Оракул"
+
+msgid "TXT_SPEAKER_ULAINE"
+msgstr "Улајна"
+
+msgid "TXT_SPEAKER_FRONT_SOLDIER"
+msgstr "Први војник"
+
+msgid "TXT_SPEAKER_PROGRAMMER"
+msgstr "Програмер"
+
+msgid "TXT_SPEAKER_MEDIC"
+msgstr "Медик"
+
+msgid "TXT_SPEAKER_WATCHMAN"
+msgstr "Стражар"
+
+msgid "TXT_SPEAKER_KETRICK"
+msgstr "Кетрик"
+
+msgid "TXT_SPEAKER_WERAN"
+msgstr "Веран"
+
+msgid "TXT_SPEAKER_ADVISOR"
+msgstr "Саветник"
+
+msgid "TXT_SPEAKER_GEOFF"
+msgstr "Џеф"
+
+msgid "TXT_SPEAKER_OVERSEER"
+msgstr "Надзорник"
+
+msgid "TXT_SPEAKER_SECURITY_COMPLE"
+msgstr "Безбедносни компле"
+
+msgid "TXT_SPEAKER_COMPUTER_TECH"
+msgstr "Рачунарска техника"
+
+msgid "TXT_SPEAKER_MACGUFFIN"
+msgstr "Макгаффин"
+
+msgid "TXT_SPEAKER_ARION"
+msgstr "Арион"
+
+msgid "TXT_SPEAKER_DOCK_WORKER"
+msgstr "Докски радник"
+
+msgid "TXT_SPEAKER_IRALE"
+msgstr "Ирал"
+
+msgid "TXT_SPEAKER_CORE_GUARD"
+msgstr "Језгро штит"
+
+msgid "TXT_SPEAKER_SEWER_GUARD"
+msgstr "Чувар канализације"
+
+msgid "TXT_SPEAKER_TECHNICIAN"
+msgstr "Техничар"
+
+msgid "TXT_SPEAKER_GUARD"
+msgstr "Чувар"
+
+msgid "TXT_SPEAKER_PEASANT"
+msgstr "Сељак"
+
+msgid "TXT_SPEAKER_ARMORER"
+msgstr "Оружар"
+
+msgid "TXT_SPEAKER_BELDIN"
+msgstr "Белдин"
+
+msgid "TXT_SPEAKER_GERARD"
+msgstr "Жерар"
+
+msgid "TXT_SPEAKER_GOVERNOR_MOUREL"
+msgstr "Гувернер Морел"
+
+msgid "TXT_SPEAKER_BOWYER"
+msgstr "Бојер"
+
+msgid "TXT_SPEAKER_DERWIN"
+msgstr "Дервин"
+
+msgid "TXT_SUB_INTRO1"
+msgstr "Комета је ударила у нашу планету без упозорења. Изгубили смо наш рај у једном насиљном удару."
+
+msgid "TXT_SUB_INTRO2"
+msgstr "Удар је ослободио вирус који је прошао кроз земљу и убио милионе. Они су се показали као срећници."
+
+msgid "TXT_SUB_INTRO3"
+msgstr "Они који нису умрли постали су мутације човечанства. Неки су постали фанатици који су у главама чули глас злокобног бога и називали су се \"Ред\"."
+
+msgid "TXT_SUB_INTRO4"
+msgstr "Они од нас који су глуви на овај глас страшно пате и приморани су да служе овим немилосрдним психопатама који користе оружје моћније од свега што можемо да прикупимо."
+
+msgid "TXT_SUB_INTRO5"
+msgstr "Они уништавају наше жене и децу, па морамо да их кријемо под земљом и да живимо као животиње у сталном страху за своје животе."
+
+msgid "TXT_SUB_INTRO6"
+msgstr "Али се чују шапутања незадовољства. Ако се организујемо, можемо ли победити наше господаре? Оружје се краде, војници се обучавају. Роди се покрет: рођен из доживотне борбе!"
+
+msgid "TXT_SUB_GOOD1"
+msgstr "Пажња, све јединице Фронта: он је успео! Свршено је. Војник Блекберда убио је Зло. Ред више не постоји. Блекберд, да ли ме чујеш?"
+
+msgid "TXT_SUB_GOOD2"
+msgstr "Знао сам да ћеш победити, мој храбри јуначе. Све борбе су престале. Твоја победа ће нам омогућити да створимо вакцину која ће прочистити вирус из наших тела."
+
+msgid "TXT_SUB_GOOD3"
+msgstr "Спасили сте нашу планету и ослободили нас. Сада бих вам хтела лично захвалити… О, и успут: зовем се Шауна."
+
+msgid "TXT_SUB_SAD1"
+msgstr "Да, зло је нестало, али наша будућност је била неизвесна и помрачена сумњом."
+
+msgid "TXT_SUB_SAD2"
+msgstr "Требало би генерације да исчистимо вирус из нашег народа. Ако бисмо преживели толико дуго."
+
+msgid "TXT_SUB_SAD3"
+msgstr "Шта год је зло желело, исцедило је из нас једину ствар која нам је била потребна: оставило нас је без наде."
+
+msgid "TXT_SUB_BAD1"
+msgstr "Свесни вирус нас је погодио као плимални талас, терајући нас све да полудимо. Чули смо сиренову песму смрти и плесали смо."
+
+msgid "TXT_SUB_BAD2"
+msgstr "Ово зло нам је одузело сваки људски живот и, презирући прокреацију, рециклирало наше породице."
+
+msgid "TXT_SUB_BAD3"
+msgstr "Једног дана зло је нестало. Једноставно није било ничега на чему би се могло хранити. Ми смо изумрли."
+
+msgid "TXT_SUB_MAP03_1"
+msgstr "Генетске мутације изазване вирусом не само да су искривиле психе Реда, већ су и изазвале распад њихових тела."
+
+msgid "TXT_SUB_MAP03_2"
+msgstr "Без размножавања, Ред је утврдио да су биомеханичка унапређења једини начин да одржи своју снагу и бројност."
+
+msgid "TXT_SUB_MAP03_3"
+msgstr "Распад је толико напредовао да је већина трупа са којима се суочавамо више машина него људи, али верујемо да њихова колективна свест контролише један извор…"
+
+msgid "TXT_SUB_MAP03_4"
+msgstr "…Програмер: творац ВИ која контролише Аколите. Уништи Програмера и можемо једним ударом онеспособити трупе Ордена. Али пажња: имамо извештаје да може испарити нападаче."
+
+msgid "TXT_SUB_MAP10_1"
+msgstr "Делови састављени из фајлова програмера говоре нам да Орден обожава интелигентно оружје. Они га зову \"Зигил\"."
+
+msgid "TXT_SUB_MAP10_2"
+msgstr "Део који си дохватио и поново покрио један је од пет. Он користи моћ црпљену из животне енергије самог корисника. Док год живиш, контролишеш његову моћ."
+
+msgid "TXT_SUB_MAP10_3"
+msgstr "Шок који те је онесвестио био је комад Сигила који се подесио на тебе, твој пулс и можне таласе. Можеш га користити, али по цени: испразниће те до последње капи."
+
+msgid "TXT_SUB_MAP10_4"
+msgstr "Један комад представља огромну моћ. Поседовање свих пет комада било би разорно и дало би кориснику потпуну контролу над планетом."
+
+msgid "TXT_SUB_LOG2"
+msgstr "Слушај, ова комуникациона јединица ми говори да си ти 100% huчовек. Добио сам налог да те доведем, овде је реч о поверењу. Издаш ме и плати. О, и успут, можеш ме звати Блекберд."
+
+msgid "TXT_SUB_LOG3"
+msgstr "Упути се ка старој општини. Након што ју је Ред бомбардовао, Мацил је наредио да се изгради тунел који нам омогућава да улазимо и излазимо без знања аколита."
+
+msgid "TXT_SUB_LOG4"
+msgstr "Прођи кроз врата са своје леве стране, а затим кроз она са десне. Чувар се зове Џеф. Реци му да ти треба злато."
+
+msgid "TXT_SUB_LOG5"
+msgstr "Ирале је \"фиксер\" Фронта. Он се налази иза неназначаних врата поред продавнице оружја."
+
+msgid "TXT_SUB_LOG6"
+msgstr "Запамти: убијај прикривено уместо силом. Нећеш покренути аларме."
+
+msgid "TXT_SUB_LOG7"
+msgstr "Све што знам о гувернеру је да игра на обе стране према средини. Ево његове такозване \"виле.\""
+
+msgid "TXT_SUB_LOG8"
+msgstr "Уф. Шљам човечанства сигурно је нашао свој дом."
+
+msgid "TXT_SUB_LOG9"
+msgstr "Назвати Морела гадним јесте му упутити комплимент. Он је мешанчина говна на штапићу."
+
+msgid "TXT_SUB_LOG10"
+msgstr "Морамо да разговарамо са неким ко познаје Стари град и зна где се налази ово спојно место. Команда каже: пронађи Макгафина. "
+
+msgid "TXT_SUB_LOG11"
+msgstr "Он је у ономе што се пристојно зове \"бум холе\". Идите ходницом поред постројења за пречишћавање отпадних вода и спустите се степеницама."
+
+msgid "TXT_SUB_LOG12"
+msgstr "Узми си времена за ову мисију. Не могу да добијем обавештења о овоме од команде."
+
+msgid "TXT_SUB_LOG13"
+msgstr "Идиоте! Искључио си напајање за кола за ометање која користимо да сакријемо нашу базу од Ордена. Иди до градске већнице и елиминиши екипу за скенирање, одмах!"
+
+msgid "TXT_SUB_LOG14"
+msgstr "У реду, \"Не веруј никоме\" је име игре! Хајде да добијемо тај пролаз од гувернера и ослободимо те затворенике."
+
+msgid "TXT_SUB_LOG15"
+msgstr "Добра потеза! Гувернер је лош лажов. То је наше куповање моћи. Сада хајде да то прођемо."
+
+msgid "TXT_SUB_LOG16"
+msgstr "Складиште се налази у електрани. Хајде да ово буде кратко и слатко."
+
+msgid "TXT_SUB_LOG17"
+msgstr "Никад нисам мислио да ћу се провући у затвор…"
+
+msgid "TXT_SUB_LOG18"
+msgstr "Изгледа да нема бесплатног ручка. Време је да се наоружамо и припремимо."
+
+msgid "TXT_SUB_LOG19"
+msgstr "У реду. Удовољио си гувернеру, испрскао управника… Сада изгледа да ћемо морати да обавимо мало операције."
+
+msgid "TXT_SUB_LOG20"
+msgstr "О, ти си му одсекао руку! А ја сам мислио да си фин момак… ма како. Хајде да идемо."
+
+msgid "TXT_SUB_LOG21"
+msgstr "Браво, пријатељу. Ускочи на један од телепортера и он ће те вратити у базу."
+
+msgid "TXT_SUB_LOG22"
+msgstr "Ворнер је шпијун кога смо регрутовали у складишту електране."
+
+msgid "TXT_SUB_LOG23"
+msgstr "Реч шефа је да се држите даље када ударите кристал, иначе ћете и ви завршити са укусом мескита."
+
+msgid "TXT_SUB_LOG25"
+msgstr "Још једна авантура пре него што команда процени да је безбедно да нападне. Мацил је уговорио да ти Ирале да злато и обезбеди тренинг. И посети медицинара за снагу."
+
+msgid "TXT_SUB_LOG26"
+msgstr "Ред мисли да је сигуран у свом замку. Погрешно! Ако отвориш капије, биће лака мета. За то ћеш морати да сиђеш у канализацију. Иди дуж реке преко Гувернерове виле. "
+
+msgid "TXT_SUB_LOG27"
+msgstr "ОК, сагни се овде. Станари канализације су ужасни мутанти, али њихова мрежа тунела им омогућава приступ тајнама. Задржи нос… Спуштамо се доле."
+
+msgid "TXT_SUB_LOG28"
+msgstr "Тражимо Верана, који себе назива Краљем пацова. Сигуран сам да је то описно и живописно."
+
+msgid "TXT_SUB_LOG29"
+msgstr "Ох, бљак. Чак ни не желим да помислим у шта газиш!"
+
+msgid "TXT_SUB_LOG30"
+msgstr "Баш ми треба. Више смеђег лепљивог праха!"
+
+msgid "TXT_SUB_LOG31"
+msgstr "Хеј, погледај! Мислим да је то врата која Веран жели да остави отворена!"
+
+msgid "TXT_SUB_LOG32"
+msgstr "Затвори очи! Не желим да видим! Ох, прекасно… Бљак. То не личи на људско тело. Шта је Орден урадио? Морам да извештам команду."
+
+msgid "TXT_SUB_LOG33"
+msgstr "Зашто не можемо једном да обавимо мисију у пољу цвећа?"
+
+msgid "TXT_SUB_LOG34"
+msgstr "Мрзим што то морам да кажем, али ме ово подсећа на дом. Ја сам под земљом, не тако далеко одавде."
+
+msgid "TXT_SUB_LOG35"
+msgstr "Не питај ме где смо. И ја сам изгубљен. Извини."
+
+msgid "TXT_SUB_LOG36"
+msgstr "Та цигла… Зар нисмо прошли ту циглу? Не…"
+
+msgid "TXT_SUB_LOG37"
+msgstr "Командо, он је успео! Врата су отворена. Упути ударне трупе и јави Мацилу да улазимо! "
+
+msgid "TXT_SUB_LOG38"
+msgstr "Имамо супротстављена саопштења о локацији програмера. Једно каже да је у рачунарској соби, друго да је у замку, а треће помиње дугачак ходник. Извините. "
+
+msgid "TXT_SUB_LOG39"
+msgstr "Ах, добро је поново бити у офанзиви. Покажите им шта значе пакао, момци!"
+
+msgid "TXT_SUB_LOG40"
+msgstr "Ово изгледа добро. Рачунари… Програмер… Шта мислиш?"
+
+msgid "TXT_SUB_LOG41"
+msgstr "Ово мора да је дугачак ходник. Или је мој осећај за пропорције потпуно уништен."
+
+msgid "TXT_SUB_LOG42"
+msgstr "Ово су сви карактеристични знаци храма зла. Строга архитектура, велики транспарент… Рекао бих – бинго!"
+
+msgid "TXT_SUB_LOG43"
+msgstr "Ово је свемоћни програмер? Не може бити!"
+
+msgid "TXT_SUB_LOG44"
+msgstr "Не знам више шта да верујем. Једина ствар која ми говори \"задржи\" је та огромна чудовишност с леве стране. Али немам појма како да уђем. "
+
+msgid "TXT_SUB_LOG45"
+msgstr "Кад ствари постану чудне, чудни крену. Пази се."
+
+msgid "TXT_SUB_LOG46"
+msgstr "Оракул борави у пограничним пределима, одмах изван града. Пређи реку, упути се ка замку и скрени лево кроз лук."
+
+msgid "TXT_SUB_LOG47"
+msgstr "Оракул је наводно саосећајни врховни свештеник који делује ван Реда."
+
+msgid "TXT_SUB_LOG48"
+msgstr "Храм пророчице се налази у Пограничју, на ивици града."
+
+msgid "TXT_SUB_LOG49"
+msgstr "Ред је узео нашу прелепу планету и претворио је у депонију."
+
+msgid "TXT_SUB_LOG50"
+msgstr "Ево га. Снимам све, није да немам поверења да ћеш преживети, већ једноставно не можемо дозволити Ордену да контролише Сигил."
+
+msgid "TXT_SUB_LOG51"
+msgstr "Ти си храбар, друже мој. Поносан сам што сам уз тебе на овом путу."
+
+msgid "TXT_SUB_LOG52"
+msgstr "Можете ли да станете на тренутак? Помало ми је мучно."
+
+msgid "TXT_SUB_LOG53"
+msgstr "Зашто морамо да проводимо толико времена под земљом? Видео сам подземље."
+
+msgid "TXT_SUB_LOG54"
+msgstr "Да ли заиста треба да верујемо човеку чије је унутрашње светилиште зелено?"
+
+msgid "TXT_SUB_LOG55"
+msgstr "Крмзен и обсидијан? Зашто не може да каже црвена и црна."
+
+msgid "TXT_SUB_LOG56"
+msgstr "Епископ је војни вођа Реда. Он осмишљава њихове тактике, управља њиховим шпијунима и задужен је да нас контролише. Ми га убијамо и постижемо два гола."
+
+msgid "TXT_SUB_LOG57"
+msgstr "Епископ ће бити строго обезбеђен, па зашто не украдемо униформу и не уклопимо се?"
+
+msgid "TXT_SUB_LOG58"
+msgstr "Подсети ме, ако ово освојимо, позваћу декоратера."
+
+msgid "TXT_SUB_LOG59"
+msgstr "Управо сам сазнао да имамо обавештајца унутар тврђаве. Хајде да кренемо ка ономе што они зову болницом, он тамо ради."
+
+msgid "TXT_SUB_LOG60"
+msgstr "Узми планове и искључи рачунар, океј?"
+
+msgid "TXT_SUB_LOG61"
+msgstr "У реду, не жалим се, али следећи пут бисмо могли да пробамо начин који није препун крви."
+
+msgid "TXT_SUB_LOG62"
+msgstr "Већ смо прошли кроз бескрајне ходнике, али кунем се, ови зидови се померају док пролазимо."
+
+msgid "TXT_SUB_LOG63"
+msgstr "Па, мораш да схватиш. Војни вођа значи мноштво лоших момака."
+
+msgid "TXT_SUB_LOG64"
+msgstr "Не одустај. Ово је то. Право напред."
+
+msgid "TXT_SUB_LOG65"
+msgstr "Следећи пут ћемо стати на бензинској станици и питати за упутства."
+
+msgid "TXT_SUB_LOG66"
+msgstr "О, не! Поново звона и свирале и зли момци нас гоне."
+
+msgid "TXT_SUB_LOG67"
+msgstr "Знаш, споља ово место изгледа ситно."
+
+msgid "TXT_SUB_LOG68"
+msgstr "Добијам ново читање непријатеља. Немој да станеш и зуриш, само их уништи."
+
+msgid "TXT_SUB_LOG69"
+msgstr "Мрзим ова поља силе. Потражи прекидач за искључивање, мора да је негде у близини."
+
+msgid "TXT_SUB_LOG70"
+msgstr "Ух, веома импресивно. Хајде да га разнесемо!"
+
+msgid "TXT_SUB_LOG71"
+msgstr "Ускочи на телепортер, хајде да срушимо овај штанд за сок."
+
+msgid "TXT_SUB_LOG72"
+msgstr "Чекај, Оракул је рекао да ћемо га препознати по његовом симболу моћи. Да ли мислиш оно што и ја мислим?"
+
+msgid "TXT_SUB_LOG73"
+msgstr "Ови момци су дошли на једну идеју за декорацију која функционише, и једноставно је претерано користе."
+
+msgid "TXT_SUB_LOG74"
+msgstr "Јеси ли видео то чудно привидење које је изашло из тела бискупа? Где сам то раније видео?"
+
+msgid "TXT_SUB_LOG75"
+msgstr "Време је за одлуку. Сада када смо добили два дела, можда бисмо желели да се вратимо у базу. Шта ти инстинкт говори?"
+
+msgid "TXT_SUB_LOG76"
+msgstr "Имам извештај да је спектрална енергија коју смо пронашли у близини Бишопа такође присутна поред Оракула, будимо опрезни."
+
+msgid "TXT_SUB_LOG77"
+msgstr "Мацил? Део овог нереда? Не знам шта да мислим. Надам се да ћеш донети праву одлуку."
+
+msgid "TXT_SUB_LOG78"
+msgstr "Да ли верујем Мацилу, који је ризиковао живот за Фронт, или неком ружном шпијуну? Не знам. Али теби верујем."
+
+msgid "TXT_SUB_LOG79"
+msgstr "Рихтер је преузео командовање нашим снагама. Изгледа да нас је Мацил све време варао. Његова права оданост била је Ордену. Каква змија."
+
+msgid "TXT_SUB_LOG80"
+msgstr "Проклето импресиван улаз. Али оно што тражимо је на другом нивоу. Главу доле."
+
+msgid "TXT_SUB_LOG81"
+msgstr "Каква штета. Наша технологија се троши на мучење уместо на живот."
+
+msgid "TXT_SUB_LOG82"
+msgstr "Будући сујетни као ђаво, они обележавају своје слепоочнице великим транспарентима."
+
+msgid "TXT_SUB_LOG83"
+msgstr "Још један комад Сигила. Ми смо корак ближе слободи. А ти си корак ближе мени."
+
+msgid "TXT_SUB_LOG84"
+msgstr "По свему судећи, треба нам цео Сигил да бисмо откључали ову ствар. Нешто ми говори да је ово крај дуге."
+
+msgid "TXT_SUB_LOG85"
+msgstr "Ти поседујеш моћ потпуног Сигила. Шта кажеш да одемо да нађемо мало закључка."
+
+msgid "TXT_SUB_LOG86"
+msgstr "У подне, мој јуначе. Припреми се да прихватиш славу."
+
+msgid "TXT_SUB_LOG87"
+msgstr "Па, толико о пророковању. Чекај, Мацил нас зове назад. Хајде да одавде изађемо цели."
+
+msgid "TXT_SUB_LOG88"
+msgstr "Жао ми је, али након што сам до кукова у крви, не могу да смислим ништа духовито да кажем. Вратимо се Мацилу."
+
+msgid "TXT_SUB_LOG89"
+msgstr "Фабрика је поред рудника. Рихтер мора да мисли на руднике Дегнина. Дегнинско рудо је магнетско и експлозивно, баш оно што је потребно за искључивање пољских сила."
+
+msgid "TXT_SUB_LOG90"
+msgstr "Руднике, катакомбе, канализацију… Какво прво састајање!"
+
+msgid "TXT_SUB_LOG91"
+msgstr "Желео бих да је Рихтер био мало конкретнији. Хм, хајде да овде покушамо."
+
+msgid "TXT_SUB_LOG92"
+msgstr "Мислим да смо… О, јеботе. Немам појма где смо."
+
+msgid "TXT_SUB_LOG93"
+msgstr "Ово мора да су рушевине које су Рихтерови агенти тражили. О, пази! Крсташи!"
+
+msgid "TXT_SUB_LOG94"
+msgstr "Уф, покушава да се обнови. Уништи га пре него што повратим!"
+
+msgid "TXT_SUB_LOG95"
+msgstr "Пријатељу мој, шта год да се боримо против тога, то је важније од Реда. Идемо у руднике!"
+
+msgid "TXT_SUB_LOG96"
+msgstr "Без опуштања, потражите лежишта руде."
+
+msgid "TXT_SUB_LOG97"
+msgstr "Ове бедне душе су дронови, њихове синапсе су блокиране РЦ имплантима. Уништимо предајник и они су слободни!"
+
+msgid "TXT_SUB_LOG98"
+msgstr "Команда каже да је предајник заштићен пољем силе. Дакле, убијена су два зеца једним метком: ослободите дронове и вежбајте са рудом."
+
+msgid "TXT_SUB_LOG99"
+msgstr "Мој предлог је да баците руду на пољско поље и затим је експлодирајте. Настала компресија треба да створи магнетни покривач и угаси светла."
+
+msgid "TXT_SUB_LOG100"
+msgstr "Сада пређимо на фабрику. Изађите из рудника и не можете је пропустити!"
+
+msgid "TXT_SUB_LOG101"
+msgstr "Извини, јуначе, све ми је ово ново."
+
+msgid "TXT_SUB_LOG102"
+msgstr "Читам масивне изобличења можданих таласа директно испред нас. Мислим да смо га пронашли."
+
+msgid "TXT_SUB_LOG103"
+msgstr "Управо када помислим да смо све видели! Улазе као људи, а изађу… чак не желим ни да размишљам о томе."
+
+msgid "TXT_SUB_LOG104"
+msgstr "Прорицатељка је била у праву. Масил је полудео. Он је управо свесно послао 200 људи на смрт. Желим освету. За мртве и за живе мртве!"
+
+msgid "TXT_SUB_LOG105"
+msgstr "Масил? Заражен и са комадом Сигила. Све ове године сам веровао у њега, у ту сврху. И за шта?"
+
+msgid "TXT_SUB_LOG106"
+msgstr "Рихтер извештава да фабрика коју смо уништили води до \"лабораторије\", и из ње стиже Сигилова енергетска потпис. Враћамо се у фабрику и то је наш следећи корак ка слободи."
+
+msgid "TXT_SUB_LOG120"
+msgstr "Ко се усуђује да ми се супротстави и уђе у моју тврђаву? Бескорисни човече? Суочи се са мном и умри!"
+
+msgid "TXT_SUB_LOG121"
+msgstr "Не можеш да ме убијеш. Ти си само човек. А ја сам више од човека."
+
+msgid "TXT_SUB_LOG122"
+msgstr ""
+"Ни смрти, вечни живот и још много тога. Много више! Ово је мој задатак: киборзи, пола меса, пола челика, сви да служе Једном Богу. Не служите? Умирете!\n"
+"Овај путз има још један комад Сигила."
+
+msgid "TXT_SUB_LOG128"
+msgstr "Ха-ха! Добродошли. Чекао сам овај тренутак. Чекао сам да ми будала попут тебе донесе слободу. Твоја мала планета је моја, и пожелећеш да никад ниси рођен! "
+
+msgid "TXT_SUB_LOG129"
+msgstr ""
+"Истина се може наћи само у универзалној вољи. Пашћеш на колена пред Истинитим Богом, Једном Светлошћу. Придружи ми се и ја ћу довршити Печат.\n"
+"Досадило ми је ово мистично двојезичење."
+
+msgid "TXT_SUB_LOG130"
+msgstr "Ти… Ти си здробио мој Ред, разорио моје замке и угрозио векове жеље. Али ја ћу надвладати, заразићу те и искривити по својој вољи…"
+
+msgid "TXT_SUB_LOG200"
+msgstr "Звучи као посао из снова, зар не?"
+
+msgid "TXT_SUB_LOG201"
+msgstr "Видео си превише. Онемогући га, Мацил!"
+
+msgid "TXT_SUB_LOG202"
+msgstr "Следећи пут ћеш ме послушати."
+
+msgid "TXT_SUB_LOG203"
+msgstr "Уф, ове пост-апокалиптичне цене…"
+
+msgid "TXT_SUB_LOG204"
+msgstr "Узми оног великог. Он те неће зауставити."
+
+msgid "TXT_SUB_LOG205"
+msgstr "Не оклевај. Право напред!"
+
+msgid "TXT_SUB_LOG206"
+msgstr "Да ли си икада приметио да ови ходници изгледају исто?"
+
+msgid "TXT_SUB_LOG207"
+msgstr "Хеј, понекад и ја морам да погађам!"
+
+msgid "TXT_SUB_LOG208"
+msgstr "О, и пази на аларм."
+
+msgid "TXT_SUB_LOG209"
+msgstr "О, боже. Сад погледај шта си урадио!"
+
+msgid "TXT_SUB_LOG210"
+msgstr "Јеботе. Сад си то упропастио!"
+
+msgid "TXT_SUB_LOG211"
+msgstr "Хајде! Побежимо одавде у пакао."
+
+msgid "TXT_SUB_LOG212"
+msgstr "Ух. Ти не мареш."
+
+msgid "TXT_SUB_LOG213"
+msgstr "Поставићеш их на зид! Настави!"
+
+msgid "TXT_SUB_LOG214"
+msgstr "Мм. Ти си звер."
+
+msgid "TXT_SUB_LOG215"
+msgstr "Овде је леп ритам."
+
+msgid "TXT_SUB_LOG216"
+msgstr "Ух. Обожавам тај бум-бум стик."
+
+msgid "TXT_SUB_LOG217"
+msgstr "Мм. Свиђа ми се како се држиш."
+
+msgid "TXT_SUB_LOG218"
+msgstr "Испуцај их! Они нису људи!"
+
+msgid "TXT_SUB_LOG219"
+msgstr "Вау! Црни аколит! Ново укусно откриће…"
+
+msgid "TXT_SUB_LOG220"
+msgstr "Настави тако и ослепићеш… али ми се свиђа."
+
+msgid "TXT_SUB_LOG221"
+msgstr "Изгледа да нас више неће позвати на вечеру!"
+
+msgid "TXT_SUB_LOG222"
+msgstr "Морамо да стигнемо до последњег спрата."
+
+msgid "TXT_SUB_LOG223"
+msgstr "Чекај… Ово изгледа занимљиво. Погледај."
+
+msgid "TXT_SUB_LOG224"
+msgstr "Уф. Тај тип ми језа пролази низ кичму. Хајде да га заобиђемо."
+
+msgid "TXT_SUB_LOG225"
+msgstr "Лево! Скрени лево!… Ох, друго лево!"
+
+msgid "TXT_SUB_LOG226"
+msgstr "Типичан тврдоглави мушкарац!… Осим ако ниси девојка."
+
+msgid "TXT_SUB_LOG227"
+msgstr "Снажан, бруталан и ћутљив. Мој тип партнера."
+
+msgid "TXT_SUB_LOG228"
+msgstr "У реду! Погрешио сам!"
+
+msgid "TXT_SUB_LOG229"
+msgstr "Штета што се никада нисмо срели… лицем у лице."
+
+msgid "TXT_SUB_LOG230"
+msgstr "Имао сам снове за тебе… Јебига."
+
+msgid "TXT_SUB_LOG231"
+msgstr "Не. Не улази у градску већницу. Више није безбедно. Открили су нас. Зато пада тешки метал. Убиј што више тих великих момака. Зову се \"Крусејдерси\". Кад завршиш, поведећу те до Мацила."
+
+msgid "TXT_SUB_LOG232"
+msgstr "Добра посао, пријатељу! Време је да те уведем унутра."
+
+msgid "TXT_SUB_LOG233"
+msgstr "Пази на те Крусејдерсе. То су велики, масивни роботи и ђаволно су злобни. Ништа не знамо о њиховом наоружању, али шансе су да си у неповољном положају. Буди опрезан."
+
+msgid "TXT_SUB_LOG234"
+msgstr "Одличан посао. Ти си моја идеја за добар провод. Сада, да те нико не види, прођи кроз врата с десне стране, попни се горе и сретни човека."
+
+msgid "TXT_SUB_LOG235"
+msgstr "Ако дозволиш било коме да те види, узећемо ти главу."
+
+msgid "TXT_SUB_LOG236"
+msgstr "Ти глупи, спотичући се, кривоноги, грбави идиоте! Ти си нас издао!"
+
+msgid "TXT_SUB_LOG237"
+msgstr "Волео бих да те чекам иза те врата… али морам да останем под земљом. Време је да упознаш нашег вођу, Мацила."
+
+msgid "TXT_BBSUB_SCRIPT02_D57608_IFIKN"
+msgstr "Набубрела свиња. Не знам ништа о овом такозваном преносу снаге, па хајде да идемо полако."
+
+msgid "TXT_BBSUB_SCRIPT03_D4548_GOODB"
+msgstr "Звучи као посао из снова, зар не?"
+
+msgid "TXT_BBSUB_SCRIPT03_D7580_TAKET"
+msgstr "И ја ћу бити баш ту са тобом."
+
+msgid "TXT_BBSUB_SCRIPT03_D12128_ASING"
+msgstr "Ворнер је шпијун кога смо регрутовали у складишту електране."
+
+msgid "TXT_BBSUB_SCRIPT03_D16676_THEPR"
+msgstr "Увери се да си спреман за борбу живота. Не штеди. Потроши све што имаш."
+
+msgid "TXT_BBSUB_SCRIPT04_D21224_BUSIN"
+msgstr "Извините, хоћу да повратим."
+
+msgid "TXT_BBSUB_SCRIPT04_D25772_TELLW"
+msgstr "Ммм. Звучи као оружје. Увек нам треба више ватрене моћи."
+
+msgid "TXT_BBSUB_SCRIPT04_D31836_WHATD"
+msgstr "Ово звучи превише лако, али хајде да покушамо."
+
+msgid "TXT_BBSUB_SCRIPT04_D40932_LETME"
+msgstr "Ко се брине. Нико ионако не слуша програмере."
+
+msgid "TXT_BBSUB_SCRIPT04_D54576_ITSAS"
+msgstr "Ух. Драго ми је што сам у скривању, ако знаш на шта мислим."
+
+msgid "TXT_BBSUB_SCRIPT05_D1516_OKBUT"
+msgstr "Каква мрзовољка. Надам се да ћеш га касније убити."
+
+msgid "TXT_BBSUB_SCRIPT05_D3032_DOILO"
+msgstr "\"Ова област је забрањена!\" Понзовити неки тамо."
+
+msgid "TXT_BBSUB_SCRIPT05_D4548_THEOR"
+msgstr "Каква позитивна особа."
+
+msgid "TXT_BBSUB_SCRIPT05_D7580_OVERM"
+msgstr "Можда је зато што ниси рекао \"молим те\"."
+
+msgid "TXT_BBSUB_SCRIPT06_D1516_DOMYF"
+msgstr "Сви су тако потребити.\n"
+
+msgid "TXT_BBSUB_SCRIPT06_D3032_BRING"
+msgstr "Одлично. Сада купујемо за Краља пацова."
+
+msgid "TXT_BBSUB_SCRIPT06_D4548_OPENT"
+msgstr "Кладим се да овај тип такође смрди."
+
+msgid "TXT_BBSUB_SCRIPT06_D9096_YOUHA"
+msgstr "Још канализација… Одлично. Питам се шта тамо доле живи."
+
+msgid "TXT_BBSUB_SCRIPT07_D6064_PROGR"
+msgstr "Овде је слепа улица. Боље да наставимо да тражимо."
+
+msgid "TXT_BBSUB_SCRIPT10_D10612_YOUHA"
+msgstr "Напред, мој шампионе. Хајде да натерамо господина Ружног да се врти и виче.\n"
+
+msgid "TXT_BBSUB_SCRIPT10_D12128_THERE"
+msgstr "Биомеханички? Па, то објашњава њихову наизглед бескрајну залиху трупа! И њихов лош став.\n"
+
+msgid "TXT_BBSUB_SCRIPT10_D16676_IAMTH"
+msgstr "Болесни копиле… Уништи га!"
+
+msgid "TXT_BBSUB_SCRIPT12_D12128_USETH"
+msgstr "Можда је ружан, али изгледа да је на нашој страни."
+
+msgid "TXT_BBSUB_SCRIPT17_D10612_OHSUR"
+msgstr "Судећи по недавној историји, претпостављам да прикривање више није опција."
+
+msgid "TXT_BBSUB_SCRIPT17_D13644_OHWEL"
+msgstr "Хмм. Без праве хаме, без нереда, мама не мора ништа да чисти… Узми ми један, молим те.\n"
+
+msgid "TXT_BBSUB_SCRIPT31_D0_OHNOI"
+msgstr "Мислиш да бих се уморио од свег овог убијања свих, али знам да ће ми недостајати кад се све ово заврши.\n"

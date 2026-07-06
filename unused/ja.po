@@ -1,0 +1,343 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-02-24 05:23+0000\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-memory@weblate.org>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/uzdoom/unused/ja/>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.16.1-dev\n"
+
+msgid "ADVSNDMNU_ADLOPLCORES"
+msgstr "OPL エミュレート コア"
+
+msgid "ADVSNDMNU_FLUIDPATCHSET"
+msgstr "パッチ セット"
+
+msgid "ADVSNDMNU_GUSCONFIG"
+msgstr "GUS コンフィグファイル"
+
+# Jargon.
+msgid "ADVSNDMNU_TIMIDITYCONFIG"
+msgstr "Timidity コンフィグファイル"
+
+msgid "ADVSNDMNU_TIMIDITYVOLUME"
+msgstr "相対音量"
+
+# Jargon.
+msgid "ADVSNDMNU_WILDMIDICONFIG"
+msgstr "WildMidi コンフィグファイル"
+
+msgid "CNTRLMNU_ADJUST_GAMMA"
+msgstr "ガンマ値を調整"
+
+msgid "CNTRLMNU_CHAT"
+msgstr "チャット"
+
+msgid "CNTRLMNU_CHAT_TITLE"
+msgstr "チャット操作設定"
+
+msgid "DSPLYMNU_ADVANCED"
+msgstr "高度なディスプレイオプション"
+
+msgid "DSPLYMNU_APPEARANCE"
+msgstr "アピアランス"
+
+msgid "DSPLYMNU_CROSSHAIRSCALE"
+msgstr "照準サイズ"
+
+msgid "DSPLYMNU_MESSAGES"
+msgstr "メッセージ類"
+
+msgid "DSPLYMNU_SBSCALE"
+msgstr "ステータススケール"
+
+msgid "GLTEXMNU_ENABLEHIRES"
+msgstr "ハイレゾ テクスチャー有効"
+
+msgid "GLTEXMNU_TEXENABLED"
+msgstr "テクスチャー有効"
+
+msgid "MOUSEMNU_SMOOTHMOUSE"
+msgstr "マウス操作を滑らかにする"
+
+msgid "MSGMNU_MESSAGESCALE"
+msgstr "メッセージスケール"
+
+msgid "NOTSET"
+msgstr "セットされてない"
+
+msgid "OPTMNU_INPUT"
+msgstr "入力オプション"
+
+msgid "OPTMNU_LIGHT"
+msgstr "光源オプション"
+
+msgid "OPTMNU_MULTIPLAYER"
+msgstr "マルチプレイ オプション"
+
+msgid "OPTMNU_SPRITE"
+msgstr "スプライトオプション"
+
+msgid "OPTMNU_SYSTEM"
+msgstr "システムオプション"
+
+msgid "OPTVAL_4000HZ"
+msgstr ""
+
+msgid "OPTVAL_AUTOMAP"
+msgstr "オートマップ"
+
+msgid "OPTVAL_HUD"
+msgstr ""
+
+msgid "OPTVAL_HUDANDMAP"
+msgstr "HUD+オートマップ"
+
+msgid "OPTVAL_PMDWINOPNA"
+msgstr ""
+
+msgid "OPTVAL_SCALENEAREST"
+msgstr "スケーリング (最寄り)"
+
+msgid "OPTVAL_SCALELINEAR"
+msgstr "スケーリング (リニア)"
+
+msgid "PICKER_NETAUTO"
+msgstr "自動 (推奨)"
+
+msgid "PICKER_NETMODE"
+msgstr "ネットワークモード:"
+
+# Players connect to each other individually.
+msgid "PICKER_NETPEER"
+msgstr "P2P (直接通信)"
+
+# Connections are routed through the host instead of all players connecting to
+# each other individually.
+msgid "PICKER_NETSERVER"
+msgstr "パケットサーバー"
+
+# Jargon.
+msgid "REVMNU_AIR_ABSORPTION_HF"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DECAY_HF_RATIO"
+msgstr "Decay HF比率"
+
+# Jargon.
+msgid "REVMNU_DECAY_LF_RATIO"
+msgstr "Decay LF比率"
+
+# Jargon.
+msgid "REVMNU_DECAY_TIME"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DENSITY"
+msgstr "密度"
+
+# Jargon.
+msgid "REVMNU_DIFFUSION"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ECHO_DEPTH"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ECHO_TIME"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_DIFFUSION"
+msgstr "反響伝播"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_SIZE"
+msgstr "反響サイズ"
+
+# Jargon.
+msgid "REVMNU_HF_REFERENCE"
+msgstr "HF参照値"
+
+# Jargon.
+msgid "REVMNU_LF_REFERENCE"
+msgstr "LF参照値"
+
+# Jargon.
+msgid "REVMNU_MODULATION_DEPTH"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_MODULATION_TIME"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS"
+msgstr "反射"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_DELAY"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_X"
+msgstr "Reflections X定位"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Y"
+msgstr "Reflections Y定位"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Z"
+msgstr "Reflections Z定位"
+
+# Jargon.
+msgid "REVMNU_REVERB"
+msgstr "リバーブ"
+
+# Jargon.
+msgid "REVMNU_REVERB_DELAY"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_X"
+msgstr "Reverb X定位"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Y"
+msgstr "Reverb Y定位"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Z"
+msgstr "Reverb Z定位"
+
+# Jargon.
+msgid "REVMNU_ROOM"
+msgstr "部屋"
+
+# Jargon.
+msgid "REVMNU_ROOM_HF"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ROOM_LF"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
+msgstr ""
+
+msgid "SNDMNU_BACKEND"
+msgstr "サウンド バックエンド"
+
+msgid "SNDMNU_MENUSOUND"
+msgstr "メニューでのサウンド"
+
+msgid "SNDMNU_MUSENABLED"
+msgstr "音楽有効"
+
+msgid "SNDMNU_SNDENABLED"
+msgstr "サウンド有効"
+
+msgid "VIDMNU_5X4ASPECTRATIO"
+msgstr "5:4アスペクト比を可能にする"
+
+msgid "VIDMNU_ASPECTRATIO"
+msgstr "アスペクト比"
+
+msgid "VKMNU_DEVICESELECT"
+msgstr "Vulkanデバイスの選択"
+
+msgid "VKMNU_ENABLE"
+msgstr "Vulkanを有効化"
+
+msgid "CMPTMNU_SOUNDCUTOFF"
+msgstr "アクター消滅で音を止める"
+
+msgid "DSPLYMNU_TOOLTIP_WHITEPOINT"
+msgstr ""
+
+msgid "DSPLYMNU_TRANSSOUL"
+msgstr "ロストソウルの透明度"
+
+msgid "DSPLYMNU_WHITEPOINT"
+msgstr ""
+
+msgid "GLLIGHTMNU_LIGHTDEFS"
+msgstr "ライト定義 許可"
+
+msgid "GLMNU_PREFS"
+msgstr "設定"
+
+msgid "GLPREFMNU_PALTONENOGREY"
+msgstr "グレイシャドウを防ぐ"
+
+msgid "GLTEXMNU_TRIMSPREDGE"
+msgstr "スプライトの角を取る"
+
+msgid "JOYMNU_HAPTRIGGERS"
+msgstr "Hapticトリガー 有効"
+
+msgid "NETMNU_MOVEPREDICTION"
+msgstr "移動予測"
+
+msgid "NETMNU_TICBALANCE"
+msgstr "レイテンシーバランス"
+
+msgid "OPTSTR_NOSOUND"
+msgstr "サウンドなし"
+
+msgid "OPTSTR_OPENAL"
+msgstr ""
+
+msgid "OPTVAL_ALLUNACKNOWLEDGED"
+msgstr "未確認全て"
+
+msgid "OPTVAL_DEDICATED"
+msgstr "ハイパフォーマンス"
+
+msgid "OPTVAL_DOUBLE"
+msgstr "ダブル"
+
+msgid "OPTVAL_INTEGRATED"
+msgstr "パワーセービング"
+
+msgid "OPTVAL_OPTIMAL"
+msgstr "最適"
+
+msgid "OPTVAL_OPTIMIZED"
+msgstr "最適化"
+
+msgid "OPTVAL_ORIGINAL"
+msgstr "オリジナル"
+
+msgid "OPTVAL_PIXELDOUBLE"
+msgstr "ピクセル2倍"
+
+msgid "OPTVAL_PIXELQUADRUPLE"
+msgstr "ピクセル4倍"
+
+msgid "OPTVAL_QUADRUPLE"
+msgstr "クァッド"
+
+msgid "OPTVAL_SCALETO640X400"
+msgstr "640x400スケール"
+
+msgid "OPTVAL_TRIPLE"
+msgstr "トリプル"
+
+msgid "OPTVAL_VTAVANILLA"
+msgstr "自動(バニラ優先)"
+
+msgid "OPTVAL_VTAZDOOM"
+msgstr "自動(ZDoom優先)"
+
+msgid "TCMNU_TRUECOLOR"
+msgstr "トゥルーカラー出力"
