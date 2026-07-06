@@ -1,0 +1,1791 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-05-06 22:58+0000\n"
+"Last-Translator: Arif Budiman <arifpedia@gmail.com>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/uzdoom/common/id/>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.17.1\n"
+
+msgid "PRESSYN"
+msgstr "Tekan Y atau N."
+
+msgid "TXT_YES"
+msgstr "Ya"
+
+msgid "TXT_NO"
+msgstr "Tidak"
+
+msgid "SAVEDEAD"
+msgstr ""
+"Kamu tidak bisa menyimpan progres jika kamu tidak sedang bermain!\n"
+"\n"
+"Tekan tombol apapun."
+
+msgid "SAFEMESSAGE"
+msgstr "Apakah kamu benar-benar ingin melakukan ini?"
+
+msgid "QSPROMPT"
+msgstr ""
+"Quicksave menimpa permainanmu bernama\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Tekan Y atau N."
+
+msgid "QLPROMPT"
+msgstr ""
+"Apa kamu ingin quickload permainan bernama\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Tekan Y atau N."
+
+# This is a gender sensitive message where %s represents the player
+msgid "TXT_X_CHEATS"
+msgstr "Cheat %s"
+
+msgid "MSGOFF"
+msgstr "Pesan: MATI"
+
+msgid "MSGON"
+msgstr "Pesan: AKTIF"
+
+msgid "TXT_SAY"
+msgstr "Katakan:"
+
+msgid "TXT_QUITENDOOM"
+msgstr "Tekan tombol apa saja atau klik di mana saja di jendela untuk keluar."
+
+msgid "NEWSAVE"
+msgstr "<Simpan Game Baru>"
+
+msgid "GGSAVED"
+msgstr "Game disimpan."
+
+msgid "SAVECOMMENT_TIME"
+msgstr "Waktu"
+
+msgid "MNU_LOADGAME"
+msgstr "Muat Game"
+
+msgid "MNU_SAVEGAME"
+msgstr "Simpan Game"
+
+msgid "MNU_NOPICTURE"
+msgstr "Tidak Ada Gambar"
+
+msgid "MNU_DIFFVERSION"
+msgstr "Versi Berbeda"
+
+msgid "MNU_NOFILES"
+msgstr "Tidak ada file"
+
+msgid "MNU_DELETESG"
+msgstr "Apa kamu benar-benar ingin menghapus savegame?"
+
+msgid "OPTVAL_OFF"
+msgstr "Mati"
+
+msgid "OPTVAL_ON"
+msgstr "Nyala"
+
+msgid "OPTVAL_AUTO"
+msgstr "Otomatis"
+
+msgid "OPTMNU_TITLE"
+msgstr "Opsi"
+
+msgid "OPTMNU_CONTROLS"
+msgstr "Sesuaikan Kontrol"
+
+msgid "OPTMNU_MOUSE"
+msgstr "Opsi Mouse"
+
+msgid "OPTMNU_JOYSTICK"
+msgstr "Opsi Kontroler"
+
+msgid "OPTMNU_PLAYER"
+msgstr "Pengaturan Pemain"
+
+msgid "OPTMNU_GAMEPLAY"
+msgstr "Opsi Gameplay"
+
+msgid "OPTMNU_AUTOMAP"
+msgstr "Opsi Automap"
+
+msgid "OPTMNU_HUD"
+msgstr "Opsi HUD"
+
+msgid "OPTMNU_MISCELLANEOUS"
+msgstr "Opsi Lain-lain"
+
+msgid "OPTMNU_SOUND"
+msgstr "Opsi Suara"
+
+msgid "OPTMNU_DISPLAY"
+msgstr "Opsi Tampilan"
+
+msgid "OPTMNU_VIDEO"
+msgstr "Atur mode video"
+
+msgid "OPTMNU_DEFAULTS"
+msgstr "Reset ke default"
+
+msgid "OPTMNU_RESETTOSAVED"
+msgstr "Reset ke yang terakhir disimpan"
+
+msgid "OPTMNU_WRITEINI"
+msgstr "Simpan pengaturan saat ini"
+
+msgid "OPTMNU_CONSOLE"
+msgstr "Pergi ke konsol"
+
+msgid "OPTMNU_NETWORK"
+msgstr "Opsi Jaringan"
+
+msgid "OPTMNU_REVERB"
+msgstr "Editor lingkungan reverb"
+
+msgid "CNTRLMNU_SWITCHTEXT1"
+msgstr "ENTER untuk mengubah, BACKSPACE untuk menghapus"
+
+msgid "CNTRLMNU_SWITCHTEXT2"
+msgstr "Tekan tombol baru untuk kontrol, ESC untuk membatalkan"
+
+msgid "CNTRLMNU_CONTROLS"
+msgstr "Kontrol"
+
+msgid "CNTRLMNU_ATTACK"
+msgstr "Tembak"
+
+msgid "CNTRLMNU_ALTATTACK"
+msgstr "Tembak Sekunder"
+
+msgid "CNTRLMNU_RELOAD"
+msgstr "Isi Ulang Senjata"
+
+msgid "CNTRLMNU_USE"
+msgstr "Gunakan / Buka"
+
+msgid "CNTRLMNU_FORWARD"
+msgstr "Maju"
+
+msgid "CNTRLMNU_BACK"
+msgstr "Mundur"
+
+msgid "CNTRLMNU_MOVELEFT"
+msgstr "Strafe ke kiri"
+
+msgid "CNTRLMNU_MOVERIGHT"
+msgstr "Strafe ke kanan"
+
+msgid "CNTRLMNU_TURNLEFT"
+msgstr "Belok kiri"
+
+msgid "CNTRLMNU_TURNRIGHT"
+msgstr "Belok kanan"
+
+msgid "CNTRLMNU_TURN180"
+msgstr "Putar Cepat"
+
+msgid "CNTRLMNU_JUMP"
+msgstr "Lompat"
+
+msgid "CNTRLMNU_CROUCH"
+msgstr "Jongkok"
+
+msgid "CNTRLMNU_TOGGLECROUCH"
+msgstr "Toggle Jongkok"
+
+msgid "CNTRLMNU_MOUSELOOK"
+msgstr "Lihat dengan mouse"
+
+# Look doesn't change the aim! It only alters the view pitch
+msgid "CNTRLMNU_LOOKUP"
+msgstr "Lihat ke atas"
+
+msgid "CNTRLMNU_LOOKDOWN"
+msgstr "Lihat ke bawah"
+
+msgid "CNTRLMNU_CENTERVIEW"
+msgstr "Tengahkan pandangan"
+
+msgid "CNTRLMNU_RUN"
+msgstr "Lari"
+
+msgid "CNTRLMNU_TOGGLERUN"
+msgstr "Toggle Lari"
+
+msgid "CNTRLMNU_STRAFE"
+msgstr "Strafe"
+
+msgid "CNTRLMNU_SCOREBOARD"
+msgstr "Tampilkan Papan Skor"
+
+msgid "CNTRLMNU_ACTION"
+msgstr "Aksi"
+
+msgid "CNTRLMNU_ACTION_TITLE"
+msgstr "Sesuaikan Kontrol Aksi"
+
+msgid "MNU_MULTIPLAYER"
+msgstr "Multipemain"
+
+msgid "CNTRLMNU_SAY"
+msgstr "Katakan"
+
+msgid "CNTRLMNU_WEAPONS_TITLE"
+msgstr "Sesuaikan Kontrol Senjata"
+
+msgid "CNTRLMNU_INVENTORY_TITLE"
+msgstr "Sesuaikan Kontrol Inventaris"
+
+msgid "CNTRLMNU_OTHER_TITLE"
+msgstr "Sesuaikan Kontrol Lainnya"
+
+msgid "CNTRLMNU_WEAPONS"
+msgstr "Senjata"
+
+msgid "CNTRLMNU_NEXTWEAPON"
+msgstr "Senjata berikutnya"
+
+msgid "CNTRLMNU_PREVIOUSWEAPON"
+msgstr "Senjata sebelumnya"
+
+# Todo - make game specific
+msgid "CNTRLMNU_SLOT1"
+msgstr "Senjata 1"
+
+# only show appropriate slots per game
+# 
+msgid "CNTRLMNU_SLOT2"
+msgstr "Senjata 2"
+
+msgid "CNTRLMNU_SLOT3"
+msgstr "Senjata 3"
+
+msgid "CNTRLMNU_SLOT4"
+msgstr "Senjata 4"
+
+msgid "CNTRLMNU_SLOT5"
+msgstr "Senjata 5"
+
+msgid "CNTRLMNU_SLOT6"
+msgstr "Senjata 6"
+
+msgid "CNTRLMNU_SLOT7"
+msgstr "Senjata 7"
+
+msgid "CNTRLMNU_SLOT8"
+msgstr "Senjata 8"
+
+msgid "CNTRLMNU_SLOT9"
+msgstr "Senjata 9"
+
+msgid "CNTRLMNU_SLOT0"
+msgstr "Senjata 10"
+
+msgid "CNTRLMNU_INVENTORY"
+msgstr "Inventaris"
+
+msgid "CNTRLMNU_USEITEM"
+msgstr "Aktifkan item"
+
+msgid "CNTRLMNU_USEALLITEMS"
+msgstr "Aktifkan semua item"
+
+msgid "CNTRLMNU_NEXTITEM"
+msgstr "Item berikutnya"
+
+msgid "CNTRLMNU_PREVIOUSITEM"
+msgstr "Item sebelumnya"
+
+# most are not used yet but will be
+msgid "MAPCNTRLMNU_TITLE"
+msgstr "Kontrol Peta"
+
+msgid "MAPCNTRLMNU_CONTROLS"
+msgstr "Kontrol Peta"
+
+msgid "MAPCNTRLMNU_PANLEFT"
+msgstr "Geser ke kiri"
+
+msgid "MAPCNTRLMNU_PANRIGHT"
+msgstr "Geser ke kanan"
+
+msgid "MAPCNTRLMNU_PANUP"
+msgstr "Geser ke atas"
+
+msgid "MAPCNTRLMNU_PANDOWN"
+msgstr "Geser ke bawah"
+
+msgid "MAPCNTRLMNU_ZOOMIN"
+msgstr "Perbesar"
+
+msgid "MAPCNTRLMNU_ZOOMOUT"
+msgstr "Perkecil"
+
+msgid "MAPCNTRLMNU_TOGGLEZOOM"
+msgstr "Alihkan zoom"
+
+msgid "MAPCNTRLMNU_TOGGLEFOLLOW"
+msgstr "Toggle ikuti"
+
+msgid "MAPCNTRLMNU_TOGGLEGRID"
+msgstr "Toggle kisi"
+
+msgid "MAPCNTRLMNU_ROTATE"
+msgstr "Toggle putar"
+
+msgid "MAPCNTRLMNU_TOGGLETEXTURE"
+msgstr "Toggle tekstur"
+
+msgid "CNTRLMNU_AUTOMAP"
+msgstr "Toggle automap"
+
+msgid "CNTRLMNU_CHASECAM"
+msgstr "Kamera Mengejar"
+
+msgid "CNTRLMNU_SCREENSHOT"
+msgstr "Screenshot"
+
+msgid "CNTRLMNU_PAUSE"
+msgstr "Jeda"
+
+msgid "CNTRLMNU_DISPLAY_INC"
+msgstr "Perbesar Tampilan"
+
+msgid "CNTRLMNU_DISPLAY_DEC"
+msgstr "Perkecil Tampilan"
+
+msgid "CNTRLMNU_OPEN_HELP"
+msgstr "Buka Bantuan"
+
+msgid "CNTRLMNU_OPEN_SAVE"
+msgstr "Buka Menu Simpan"
+
+msgid "CNTRLMNU_OPEN_LOAD"
+msgstr "Buka Menu Muat"
+
+msgid "CNTRLMNU_OPEN_OPTIONS"
+msgstr "Buka Menu Opsi"
+
+msgid "CNTRLMNU_OPEN_DISPLAY"
+msgstr "Buka Menu Tampilan"
+
+msgid "CNTRLMNU_QUICKSAVE"
+msgstr "Simpan Cepat"
+
+msgid "CNTRLMNU_QUICKLOAD"
+msgstr "Muat Cepat"
+
+msgid "CNTRLMNU_EXIT_TO_MAIN"
+msgstr "Keluar ke Menu Utama"
+
+msgid "CNTRLMNU_TOGGLE_MESSAGES"
+msgstr "Toggle Pesan"
+
+msgid "CNTRLMNU_MENU_QUIT"
+msgstr "Keluar dari Game"
+
+msgid "MOUSEMNU_ENABLEMOUSE"
+msgstr "Aktifkan mouse"
+
+msgid "MOUSEMNU_MOUSEINMENU"
+msgstr "Aktifkan mouse di menu"
+
+msgid "MOUSEMNU_SHOWBACKBUTTON"
+msgstr "Tampilkan tombol kembali"
+
+msgid "MOUSEMNU_CURSOR"
+msgstr "Kursor"
+
+msgid "MOUSEMNU_SENSITIVITY_X"
+msgstr "Sensitivitas horizontal"
+
+msgid "MOUSEMNU_SENSITIVITY_Y"
+msgstr "Sensitivitas vertikal"
+
+msgid "MOUSEMNU_SMOOTHMOUSE"
+msgstr "Gerakan mouse halus"
+
+msgid "MOUSEMNU_TURNSPEED"
+msgstr "Kecepatan putar"
+
+msgid "MOUSEMNU_MOUSELOOKSPEED"
+msgstr "Kecepatan lihat dengan mouse"
+
+msgid "MOUSEMNU_FORWBACKSPEED"
+msgstr "Kecepatan maju/mundur"
+
+msgid "MOUSEMNU_STRAFESPEED"
+msgstr "Kecepatan strafe"
+
+msgid "MOUSEMNU_ALWAYSMOUSELOOK"
+msgstr "Selalu Lihat dengan Mouse"
+
+msgid "MOUSEMNU_INVERTMOUSE"
+msgstr "Balikkan Mouse Y"
+
+msgid "MOUSEMNU_INVERTMOUSEX"
+msgstr "Balikkan Mouse X"
+
+msgid "OPTVAL_UPPERLEFT"
+msgstr "Kiri atas"
+
+msgid "OPTVAL_UPPERRIGHT"
+msgstr "Kanan atas"
+
+msgid "OPTVAL_LOWERLEFT"
+msgstr "Kiri bawah"
+
+msgid "OPTVAL_LOWERRIGHT"
+msgstr "Kanan bawah"
+
+msgid "OPTVAL_TOUCHSCREENLIKE"
+msgstr "Mirip layar sentuh"
+
+msgid "OPTSTR_SIMPLEARROW"
+msgstr "Panah sederhana"
+
+msgid "OPTSTR_SYSTEMCURSOR"
+msgstr "Kursor sistem"
+
+msgid "OPTVAL_DEFAULT"
+msgstr "Default"
+
+msgid "JOYMNU_TITLE"
+msgstr "Konfigurasi Kontroler"
+
+msgid "JOYMNU_OPTIONS"
+msgstr "Opsi Kontroler"
+
+msgid "JOYMNU_NOMENU"
+msgstr "Blok input kontroler di menu"
+
+msgid "JOYMNU_ENABLE"
+msgstr "Aktifkan dukungan kontroler"
+
+msgid "JOYMNU_DINPUT"
+msgstr "Aktifkan kontroler DirectInput"
+
+msgid "JOYMNU_XINPUT"
+msgstr "Aktifkan kontroler XInput"
+
+msgid "JOYMNU_PS2"
+msgstr "Aktifkan adaptor PlayStation 2 mentah"
+
+msgid "JOYMNU_NOCON"
+msgstr "Tidak ada kontroler terdeteksi"
+
+msgid "JOYMNU_CONFIG"
+msgstr "Konfigurasi kontroler:"
+
+msgid "JOYMNU_DISABLED1"
+msgstr "Dukungan kontroler harus"
+
+# Supposed to be empty in Russian and Serbian.
+msgid "JOYMNU_DISABLED2"
+msgstr "diaktifkan untuk mendeteksi apa pun"
+
+msgid "JOYMNU_INVALID"
+msgstr "Kontroler tidak valid untuk menu"
+
+msgid "JOYMNU_OVRSENS"
+msgstr "Sensitivitas keseluruhan"
+
+msgid "JOYMNU_AXIS"
+msgstr "Konfigurasi Sumbu"
+
+msgid "JOYMNU_INVERT"
+msgstr "Balikkan"
+
+msgid "JOYMNU_DEADZONE"
+msgstr "Zona mati"
+
+msgid "JOYMNU_NOAXES"
+msgstr "Tidak ada sumbu yang dapat dikonfigurasi"
+
+msgid "OPTVAL_NONE"
+msgstr "Tidak ada"
+
+msgid "OPTVAL_TURNING"
+msgstr "Melihat Kiri/Kanan"
+
+msgid "OPTVAL_LOOKINGUPDOWN"
+msgstr "Melihat Atas/Bawah"
+
+msgid "OPTVAL_MOVINGFORWARD"
+msgstr "Bergerak Maju/Mundur"
+
+msgid "OPTVAL_STRAFING"
+msgstr "Bergerak Kiri/Kanan"
+
+msgid "OPTVAL_MOVINGUPDOWN"
+msgstr "Bergerak Naik/Turun"
+
+msgid "OPTVAL_INVERTED"
+msgstr "Dibalik"
+
+msgid "OPTVAL_NOTINVERTED"
+msgstr "Tidak Dibalik"
+
+msgid "TXT_COLOR_BLUE"
+msgstr "Biru"
+
+msgid "TXT_COLOR_RED"
+msgstr "Merah"
+
+msgid "TXT_COLOR_GREEN"
+msgstr "Hijau"
+
+msgid "TXT_COLOR_GRAY"
+msgstr "Abu-abu"
+
+msgid "TXT_COLOR_DARKGRAY"
+msgstr "Abu-abu tua"
+
+msgid "TXT_COLOR_DARKGREEN"
+msgstr "Hijau Tua"
+
+msgid "TXT_COLOR_BROWN"
+msgstr "Cokelat"
+
+msgid "TXT_COLOR_DARKBLUE"
+msgstr "Biru Tua"
+
+msgid "TXT_COLOR_LIGHTRED"
+msgstr "Merah Muda"
+
+msgid "TXT_COLOR_YELLOW"
+msgstr "Kuning"
+
+msgid "TXT_COLOR_PURPLE"
+msgstr "Ungu"
+
+msgid "TXT_COLOR_DULLGREEN"
+msgstr "Zaitun"
+
+msgid "TXT_COLOR_BEIGE"
+msgstr "Beige"
+
+msgid "TXT_COLOR_LIGHTBLUE"
+msgstr "Biru Muda"
+
+msgid "TXT_COLOR_LIGHTGRAY"
+msgstr "Abu-abu Muda"
+
+msgid "TXT_COLOR_LIGHTBROWN"
+msgstr "Cokelat Muda"
+
+msgid "TXT_COLOR_GOLD"
+msgstr "Emas"
+
+msgid "TXT_COLOR_BRIGHTGREEN"
+msgstr "Hijau Terang"
+
+msgid "TXT_COLOR_RUST"
+msgstr "Karat"
+
+msgid "PLYRMNU_NAME"
+msgstr "Nama"
+
+msgid "PLYRMNU_TEAM"
+msgstr "Tim"
+
+msgid "PLYRMNU_PLAYERCOLOR"
+msgstr "Warna"
+
+msgid "PLYRMNU_PLAYERGENDER"
+msgstr "Jenis Kelamin"
+
+msgid "OPTVAL_MALE"
+msgstr "Pria"
+
+msgid "OPTVAL_FEMALE"
+msgstr "Wanita"
+
+msgid "OPTVAL_NEUTRAL"
+msgstr "Netral"
+
+msgid "OPTVAL_OTHER"
+msgstr "Objek"
+
+msgid "GMPLYMNU_TITLE"
+msgstr "Opsi Gameplay"
+
+msgid "OPTVAL_ALWAYS"
+msgstr "Selalu"
+
+msgid "OPTVAL_NEVER"
+msgstr "Tidak Pernah"
+
+msgid "PLYRMNU_AUTOAIM"
+msgstr "Autobidik"
+
+msgid "PLYRMNU_ALWAYSRUN"
+msgstr "Selalu Lari"
+
+msgid "DSPLYMNU_SCREENSIZE"
+msgstr "Ukuran layar"
+
+msgid "DSPLYMNU_VSYNC"
+msgstr "Sinkronisasi vertikal"
+
+msgid "DSPLYMNU_MODELS"
+msgstr "Model"
+
+msgid "MSGMNU_CENTERMESSAGES"
+msgstr "Pesan di tengah"
+
+msgid "MSGMNU_PULSEMESSAGES"
+msgstr "Tampilan pesan berdenyut"
+
+msgid "MNU_COLORPICKER"
+msgstr "Pilih Warna"
+
+msgid "AUTOMAPMNU_ROTATE"
+msgstr "Putar automap"
+
+msgid "AUTOMAPMNU_FOLLOW"
+msgstr "Ikuti pemain"
+
+msgid "AUTOMAPMNU_LINEALPHA"
+msgstr "Transparansi garis"
+
+msgid "AUTOMAPMNU_LINETHICKNESS"
+msgstr "Ketebalan garis"
+
+msgid "MAPCOLORMNU_TITLE"
+msgstr "Sesuaikan Warna Peta"
+
+msgid "MAPCOLORMNU_DEFAULTMAPCOLORS"
+msgstr "Pulihkan warna kustom default"
+
+msgid "OPTVAL_8000HZ"
+msgstr "8000 Hz"
+
+msgid "OPTVAL_11025HZ"
+msgstr "11025 Hz"
+
+msgid "OPTVAL_22050HZ"
+msgstr "22050 Hz"
+
+msgid "OPTVAL_32000HZ"
+msgstr "32000 Hz"
+
+msgid "OPTVAL_44100HZ"
+msgstr "44100 Hz"
+
+msgid "OPTVAL_48000HZ"
+msgstr "48000 Hz"
+
+msgid "OPTVAL_64SAMPLES"
+msgstr "64 sampel"
+
+msgid "OPTVAL_128SAMPLES"
+msgstr "128 sampel"
+
+msgid "OPTVAL_256SAMPLES"
+msgstr "256 sampel"
+
+msgid "OPTVAL_512SAMPLES"
+msgstr "512 sampel"
+
+msgid "OPTVAL_1024SAMPLES"
+msgstr "1024 sampel"
+
+msgid "OPTVAL_2048SAMPLES"
+msgstr "2048 sampel"
+
+msgid "OPTVAL_4096SAMPLES"
+msgstr "4096 sampel"
+
+msgid "OPTSTR_AUTO"
+msgstr "Otomatis"
+
+msgid "OPTSTR_MONO"
+msgstr "Mono"
+
+msgid "OPTSTR_STEREO"
+msgstr "Stereo"
+
+msgid "OPTSTR_PROLOGIC"
+msgstr "Dekoder Dolby Pro Logic"
+
+msgid "OPTSTR_QUAD"
+msgstr "Quad"
+
+msgid "OPTSTR_SURROUND"
+msgstr "5 speaker"
+
+msgid "OPTSTR_5POINT1"
+msgstr "Speaker 5.1"
+
+msgid "OPTSTR_7POINT1"
+msgstr "Speaker 7.1"
+
+msgid "OPENALMNU_PLAYBACKDEVICE"
+msgstr "Perangkat pemutaran"
+
+msgid "OPENALMNU_ENABLEEFX"
+msgstr "Aktifkan EFX"
+
+msgid "OPENALMNU_RESAMPLER"
+msgstr "Resampler"
+
+msgid "SNDMNU_SFXVOLUME"
+msgstr "Volume suara"
+
+msgid "SNDMNU_MENUVOLUME"
+msgstr "Volume menu"
+
+msgid "SNDMNU_MUSICVOLUME"
+msgstr "Volume musik"
+
+msgid "SNDMNU_MIDIDEVICE"
+msgstr "Perangkat MIDI"
+
+msgid "SNDMNU_BACKGROUND"
+msgstr "Suara di Latar Belakang"
+
+msgid "SNDMNU_UNDERWATERREVERB"
+msgstr "Reverb di bawah air"
+
+msgid "SNDMNU_RANDOMIZEPITCHES"
+msgstr "Acak nada"
+
+msgid "SNDMNU_CHANNELS"
+msgstr "Kanal suara"
+
+msgid "SNDMNU_OPENAL"
+msgstr "Opsi OpenAL"
+
+msgid "SNDMNU_RESTART"
+msgstr "Mulai ulang suara"
+
+msgid "SNDMNU_ADVANCED"
+msgstr "Opsi lanjutan"
+
+msgid "SNDMNU_MODREPLAYER"
+msgstr "Opsi pemutar modul"
+
+msgid "SNDMNU_MIDIPLAYER"
+msgstr "Opsi perangkat MIDI"
+
+msgid "ADVSNDMNU_TITLE"
+msgstr "Opsi Suara Lanjutan"
+
+msgid "ADVSNDMNU_SAMPLERATE"
+msgstr "Laju sampel"
+
+msgid "ADVSNDMNU_HRTF"
+msgstr "HRTF"
+
+msgid "ADVSNDMNU_OPLSYNTHESIS"
+msgstr "Sintesis OPL"
+
+msgid "ADVSNDMNU_OPLNUMCHIPS"
+msgstr "Jumlah chip OPL yang diemulasi"
+
+msgid "ADVSNDMNU_OPLGAIN"
+msgstr "Gain"
+
+msgid "ADVSNDMNU_OPLFULLPAN"
+msgstr "Panning stereo MIDI penuh"
+
+msgid "ADVSNDMNU_OPLCORES"
+msgstr "Inti Emulator OPL"
+
+msgid "ADVSNDMNU_MIDIVOICES"
+msgstr "Suara MIDI"
+
+msgid "ADVSNDMNU_FLUIDSYNTH"
+msgstr "FluidSynth"
+
+msgid "ADVSNDMNU_GLOBAL"
+msgstr "Global"
+
+msgid "ADVSNDMNU_FREEVERB"
+msgstr "Freeverb"
+
+msgid "ADVSNDMNU_GLOBAL_FREEVERB"
+msgstr "Freeverb Global"
+
+msgid "ADVSNDMNU_FLUIDGAIN"
+msgstr "Gain"
+
+msgid "ADVSNDMNU_REVERB"
+msgstr "Reverb"
+
+msgid "ADVSNDMNU_REVERB_LEVEL"
+msgstr "Tingkat Reverb"
+
+msgid "ADVSNDMNU_CHORUS"
+msgstr "Chorus"
+
+msgid "ADVSNDMNU_TIMIDITY"
+msgstr "Timidity++"
+
+msgid "ADVSNDMNU_ADLMIDI"
+msgstr "ADLMidi"
+
+msgid "ADVSNDMNU_OPNMIDI"
+msgstr "OPNMidi"
+
+msgid "ADVSNDMNU_WILDMIDI"
+msgstr "WildMidi"
+
+msgid "ADVSNDMNU_SELCONFIG"
+msgstr "Pilih konfigurasi"
+
+msgid "ADVSNDMNU_ADVRESAMPLING"
+msgstr "Resampling Lanjutan"
+
+msgid "ADVSNDMNU_OPLBANK"
+msgstr "Bank OPL"
+
+msgid "ADVSNDMNU_RUNPCMRATE"
+msgstr "Jalankan emulator pada laju PCM"
+
+msgid "ADVSNDMNU_ADLNUMCHIPS"
+msgstr "Jumlah chip OPL yang diemulasi"
+
+msgid "ADVSNDMNU_ADLGAIN"
+msgstr "Gain"
+
+msgid "ADVSNDMNU_VLMODEL"
+msgstr "Model volume"
+
+msgid "ADVSNDMNU_CHANALLOC"
+msgstr "Metode alokasi kanal"
+
+msgid "ADVSNDMNU_AUTOARPEGGIO"
+msgstr "Arpeggio otomatis"
+
+msgid "ADVSNDMNU_OPNCORES"
+msgstr "Inti Emulator OPN2"
+
+msgid "ADVSNDMNU_GUSEMULATION"
+msgstr "Emulasi GUS"
+
+msgid "ADVSNDMNU_DMXGUS"
+msgstr "Baca potongan DMXGUS"
+
+msgid "ADVSNDMNU_GUSMEMSIZE"
+msgstr "Ukuran memori GUS"
+
+msgid "ADVSNDMNU_OPNNUMCHIPS"
+msgstr "Jumlah chip OPN yang diemulasi"
+
+msgid "ADVSNDMNU_OPNGAIN"
+msgstr "Gain"
+
+msgid "ADVSNDMNU_ADLCUSTOMBANK"
+msgstr "Gunakan bank WOPL kustom"
+
+msgid "ADVSNDMNU_ADLUSEWADBANK"
+msgstr "Gunakan bank GENMIDI dari WAD sebagai bank kustom"
+
+msgid "ADVSNDMNU_OPLBANKFILE"
+msgstr "File Bank WOPL"
+
+msgid "ADVSNDMNU_OPNCUSTOMBANK"
+msgstr "Gunakan bank WOPN kustom"
+
+msgid "ADVSNDMNU_OPNBANKFILE"
+msgstr "File Bank WOPN"
+
+msgid "OPTVAL_ALIASING"
+msgstr "Aliasing"
+
+# This setting is duplicated threefold in order to allow for different
+# grammatical gender endings
+msgid "OPTVAL_LINEAR_1"
+msgstr "Linear"
+
+msgid "OPTVAL_LINEAR_2"
+msgstr "Linear"
+
+msgid "OPTVAL_LINEAR_3"
+msgstr "Linear"
+
+msgid "OPTVAL_NEAREST"
+msgstr "Terdekat"
+
+msgid "OPTVAL_PCF_LOW"
+msgstr "PCF (Rendah)"
+
+msgid "OPTVAL_PCF_MEDIUM"
+msgstr "PCF (Sedang)"
+
+msgid "OPTVAL_PCF_HIGH"
+msgstr "PCF (Tinggi)"
+
+msgid "OPTVAL_CUBIC"
+msgstr "Kubik"
+
+msgid "OPTVAL_BLEP"
+msgstr "Langkah terbatas pita"
+
+msgid "OPTVAL_LINEARSLOW"
+msgstr "Linear (Lebih Lambat)"
+
+msgid "OPTVAL_BLAM"
+msgstr "Linear terbatas pita"
+
+msgid "OPTVAL_CUBICSLOW"
+msgstr "Kubik (Lebih Lambat)"
+
+msgid "OPTVAL_SINC"
+msgstr "Sinc"
+
+msgid "OPTVAL_NOTEONOFFONLY"
+msgstr "Hanya catatan hidup/mati"
+
+msgid "OPTVAL_FULLRAMPING"
+msgstr "Peralihan penuh"
+
+msgid "MODMNU_MASTERVOLUME"
+msgstr "Volume utama"
+
+msgid "MODMNU_QUALITY"
+msgstr "Kualitas"
+
+msgid "MODMNU_VOLUMERAMPING"
+msgstr "Peralihan volume"
+
+msgid "OPTVAL_LIBXMP"
+msgstr "libXMP"
+
+msgid "OPTVAL_DUMB"
+msgstr "Dumb"
+
+msgid "MODMNU_CHIPOMATIC"
+msgstr "Chip-o-matic"
+
+msgid "OPTVAL_MAMEOPL2"
+msgstr "MAME OPL2"
+
+msgid "OPTVAL_DOSBOXOPL3"
+msgstr "DOSBox OPL3"
+
+msgid "OPTVAL_JAVAOPL3"
+msgstr "Java OPL3"
+
+msgid "OPTVAL_ESFMu"
+msgstr "ESFMu OPL3"
+
+msgid "OPTVAL_YMFMOPL2"
+msgstr "YMFM OPL2"
+
+msgid "OPTVAL_YMFMOPL3"
+msgstr "YMFM OPL3"
+
+msgid "OPTVAL_NUKEDOPL3"
+msgstr "Nuked OPL3"
+
+msgid "OPTVAL_LLENUKEDOPL2"
+msgstr "OPL2-LLE (intensif performa)"
+
+msgid "OPTVAL_LLENUKEDOPL3"
+msgstr "OPL3-LLE (intensif performa)"
+
+msgid "OPTVAL_MAMEOPN2"
+msgstr "MAME OPN2 (YM2612)"
+
+msgid "OPTVAL_NP2OPNA"
+msgstr "Neko Project II Kai OPNA"
+
+msgid "OPTVAL_MAMEOPNA"
+msgstr "MAME YM2608"
+
+msgid "OPTVAL_OPALOPL3"
+msgstr "Opal OPL3"
+
+msgid "OPTVAL_NUKEDOPL3174"
+msgstr "Nuked OPL3 v1.7.4"
+
+msgid "OPTVAL_NUKEDOPN2YM3438"
+msgstr "Nuked OPN2 (YM3438)"
+
+msgid "OPTVAL_NUKEDOPN2YM2612"
+msgstr "Nuked OPN2 (YM2612)"
+
+msgid "OPTVAL_OPN2YM2612LLE"
+msgstr "OPN2-LLE (YM2612) (intensif performa)"
+
+msgid "OPTVAL_OPN2YM3438LLE"
+msgstr "OPN2-LLE (YM3438) (intensif performa)"
+
+msgid "OPTVAL_OPN2YMF276LLE"
+msgstr "OPN2-LLE (YMF276) (intensif performa)"
+
+msgid "OPTVAL_GENSOPN2"
+msgstr "GENS OPN2 (YM2612)"
+
+msgid "OPTVAL_YMFMOPN2"
+msgstr "YMFM OPN2"
+
+msgid "OPTVAL_YMFMOPNA"
+msgstr "YMFM OPNA"
+
+msgid "ADLVLMODEL_AUTO"
+msgstr "Otomatis (Gunakan pengaturan dari bank)"
+
+msgid "OPNVLMODEL_AUTO"
+msgstr "Otomatis (Gunakan pengaturan dari bank)"
+
+msgid "ADLVLMODEL_GENERIC"
+msgstr "Generik"
+
+msgid "OPNVLMODEL_GENERIC"
+msgstr "Generik"
+
+msgid "ADLVLMODEL_NATIVE"
+msgstr "OPL Asli"
+
+msgid "OPNVLMODEL_NATIVE"
+msgstr "OPN Asli"
+
+msgid "ADLVLMODEL_DMX"
+msgstr "DMX (Akurat, dengan bug AM)"
+
+msgid "OPNVLMODEL_DMX"
+msgstr "Seperti di DMX"
+
+msgid "ADLVLMODEL_APOGEE"
+msgstr "Apogee (Akurat, dengan bug AM)"
+
+msgid "OPNVLMODEL_APOGEE"
+msgstr "Seperti di Apogee Sound System"
+
+msgid "OPNVLMODEL_WIN9X"
+msgstr "Mirip Win9X"
+
+msgid "ADLVLMODEL_WIN9X"
+msgstr "Mirip Win9X (SB16)"
+
+msgid "ADLVLMODEL_WIN9XGENERIC"
+msgstr "Mirip Win9X (FM Generik)"
+
+msgid "ADLVLMODEL_DMX_FIXED"
+msgstr "DMX (Tanpa bug suara AM)"
+
+msgid "ADLVLMODEL_APOGEE_FIXED"
+msgstr "Apogee (Tanpa bug suara AM)"
+
+msgid "ADLVLMODEL_AIL"
+msgstr "Antarmuka Pustaka Audio IBM"
+
+msgid "ADLVLMODEL_HMI"
+msgstr "Sistem Operasi Suara HMI"
+
+msgid "ADLVLMODEL_HMIOLD"
+msgstr "HMI SOS (Lama, dengan bug)"
+
+msgid "ADLCHANALLOC_AUTO"
+msgstr "Otomatis"
+
+msgid "ADLCHANALLOC_OFFDELAY"
+msgstr "Penundaan suara mati terukur"
+
+msgid "ADLCHANALLOC_SAMEINST"
+msgstr "Gunakan kembali rilis pertama dari instrumen yang sama"
+
+msgid "ADLCHANALLOC_ANYREL"
+msgstr "Gunakan kembali catatan dilepaskan pertama mana pun"
+
+msgid "OPTVAL_UNLIMITED"
+msgstr "Tak terbatas"
+
+msgid "OPTVAL_256K"
+msgstr "256K"
+
+msgid "OPTVAL_512K"
+msgstr "512K"
+
+msgid "OPTVAL_768K"
+msgstr "768K"
+
+msgid "OPTVAL_1024K"
+msgstr "1024K"
+
+msgid "OPTVAL_UNCHARTED2"
+msgstr "Uncharted 2"
+
+msgid "OPTVAL_HEJLDAWSON"
+msgstr "Hejl-Dawson"
+
+msgid "OPTVAL_REINHARD"
+msgstr "Reinhard"
+
+msgid "OPTVAL_PALETTE"
+msgstr "Palet"
+
+msgid "OPTVAL_LOW"
+msgstr "Rendah"
+
+msgid "OPTVAL_MEDIUM"
+msgstr "Sedang"
+
+msgid "OPTVAL_HIGH"
+msgstr "Tinggi"
+
+msgid "OPTVAL_EXTREME"
+msgstr "Ekstrem"
+
+msgid "OPTVAL_OBVERSEFIRST"
+msgstr "Depan"
+
+msgid "OPTVAL_REVERSEFIRST"
+msgstr "Belakang"
+
+msgid "GLMNU_POSTPROCESS"
+msgstr "Pasca-pemrosesan"
+
+msgid "GLPREFMNU_TONEMAP"
+msgstr "Mode Tonemap"
+
+msgid "GLPREFMNU_LENS"
+msgstr "Efek distorsi lensa"
+
+msgid "GLPREFMNU_FXAA"
+msgstr "Kualitas FXAA"
+
+msgid "GLPREFMNU_DITHER"
+msgstr "Keluaran dithering"
+
+msgid "GLPREFMNU_PALTONEMAPORDER"
+msgstr "Urutan Palet Tonemap"
+
+msgid "GLPREFMNU_PALTONEMAPPOWER"
+msgstr "Eksponen Palet Tonemap"
+
+msgid "GLPREFMNU_MULTISAMPLE"
+msgstr "Multisampling"
+
+msgid "GLPREFMNU_BLOOM"
+msgstr "Efek Bloom"
+
+msgid "GLPREFMNU_SSAO"
+msgstr "Kualitas oklusi ambien"
+
+msgid "GLPREFMNU_SSAO_PORTALS"
+msgstr "Portal dengan AO"
+
+msgid "GLPREFMNU_MENUBLUR"
+msgstr "Buram Menu"
+
+msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
+msgstr "Peta lingkungan pada cermin"
+
+msgid "GLPREFMNU_RENDERQUALITY"
+msgstr "Kualitas rendering"
+
+msgid "OPTVAL_SPEED"
+msgstr "Kecepatan"
+
+msgid "OPTVAL_QUALITY"
+msgstr "Kualitas"
+
+msgid "GLPREFMNU_SECLIGHTMODE"
+msgstr "Mode cahaya sektor"
+
+msgid "GLPREFMNU_FOGMODE"
+msgstr "Mode kabut"
+
+msgid "OPTVAL_RADIAL"
+msgstr "Radial"
+
+msgid "OPTVAL_STANDARD"
+msgstr "Standar"
+
+msgid "GLTEXMNU_TEXFILTER"
+msgstr "Mode Filter Tekstur"
+
+msgid "GLTEXMNU_ANISOTROPIC"
+msgstr "Filter Anisotropik"
+
+msgid "OPTVAL_NONENEARESTMIPMAP"
+msgstr "Tidak ada (mipmap terdekat)"
+
+msgid "OPTVAL_NONELINEARMIPMAP"
+msgstr "Tidak ada (mipmap linear)"
+
+msgid "OPTVAL_NONETRILINEAR"
+msgstr "Tidak ada (trilinear)"
+
+msgid "OPTVAL_BILINEAR"
+msgstr "Bilinear"
+
+msgid "OPTVAL_TRILINEAR"
+msgstr "Trilinear"
+
+msgid "OPTVAL_2X"
+msgstr "2×"
+
+msgid "OPTVAL_4X"
+msgstr "4×"
+
+msgid "OPTVAL_8X"
+msgstr "8×"
+
+msgid "OPTVAL_16X"
+msgstr "16×"
+
+msgid "OPTVAL_32X"
+msgstr "32×"
+
+msgid "GLTEXMNU_TITLE"
+msgstr "Opsi Tekstur"
+
+msgid "GLTEXMNU_HQRESIZE"
+msgstr "Mode Ubah Ukuran Kualitas Tinggi"
+
+msgid "GLTEXMNU_HQRESIZEMULT"
+msgstr "Pengali Ubah Ukuran Kualitas Tinggi"
+
+msgid "GLTEXMNU_HQRESIZEWARN"
+msgstr "Mode ini memerlukan %d kali lebih banyak memori video"
+
+msgid "GLTEXMNU_RESIZETEX"
+msgstr "Ubah ukuran tekstur"
+
+msgid "GLTEXMNU_RESIZESPR"
+msgstr "Ubah ukuran sprite"
+
+msgid "GLTEXMNU_RESIZEFNT"
+msgstr "Ubah ukuran font"
+
+msgid "GLTEXMNU_RESIZESKN"
+msgstr "Ubah ukuran kulit model"
+
+msgid "GLTEXMNU_PRECACHETEX"
+msgstr "Pramuat tekstur GL"
+
+msgid "VIDMNU_TITLE"
+msgstr "Mode Video"
+
+msgid "OPTVAL_LETTERBOX"
+msgstr "Kotak surat (garis hitam)"
+
+msgid "OPTVAL_STRETCH"
+msgstr "Bentang"
+
+msgid "VIDMNU_RENDERMODE"
+msgstr "Mode Render"
+
+msgid "VIDMNU_FULLSCREEN"
+msgstr "Layar penuh"
+
+msgid "VIDMNU_HIDPI"
+msgstr "Dukungan Retina/HiDPI"
+
+msgid "VIDMNU_FORCEASPECT"
+msgstr "Paksa rasio aspek"
+
+msgid "VIDMNU_CROPASPECT"
+msgstr "Gaya rasio paksa"
+
+msgid "VIDMNU_SCALEMODE"
+msgstr "Skala resolusi"
+
+msgid "VIDMNU_SCALEFACTOR"
+msgstr "Faktor skala"
+
+msgid "VIDMNU_USELINEAR"
+msgstr "Gunakan skala linier (Layar penuh)"
+
+msgid "VIDMNU_CUSTOMRES"
+msgstr "Skala piksel kustom"
+
+msgid "VIDMNU_CUSTOMX"
+msgstr "Lebar kustom"
+
+msgid "VIDMNU_CUSTOMY"
+msgstr "Tinggi kustom"
+
+msgid "VIDMNU_APPLYW"
+msgstr "Terapkan perubahan (Jendela)"
+
+msgid "VIDMNU_APPLYFS"
+msgstr "Terapkan perubahan (Layar penuh)"
+
+msgid "VIDMNU_RESPRESET"
+msgstr "Pilih preset resolusi"
+
+msgid "VIDMNU_RESPRESETTTL"
+msgstr "Preset resolusi kustom"
+
+msgid "VIDMNU_RESPRESETHEAD"
+msgstr "Mode resolusi preset"
+
+msgid "VIDMNU_ASPECT43"
+msgstr "Aspek 4:3"
+
+msgid "VIDMNU_ASPECT54"
+msgstr "Aspek 5:4"
+
+msgid "VIDMNU_ASPECT169"
+msgstr "Aspek 16:9"
+
+msgid "VIDMNU_ASPECT1610"
+msgstr "Aspek 16:10"
+
+msgid "VIDMNU_ASPECT219"
+msgstr "Aspek 21:9"
+
+msgid "OPTVAL_NORMAL"
+msgstr "Normal"
+
+# This describes vid_scalemode 1, which represents the lowest possible scaling
+# to fill the allocated screen area
+msgid "OPTVAL_LOWEST"
+msgstr "Skala serendah mungkin"
+
+msgid "OPTVAL_CUSTOM"
+msgstr "Kustom"
+
+msgid "VIDMNU_MAXFPS"
+msgstr "FPS maksimum"
+
+msgid "OPTVAL_60FPS"
+msgstr "60 fps"
+
+msgid "OPTVAL_75FPS"
+msgstr "75 fps"
+
+msgid "OPTVAL_90FPS"
+msgstr "90 fps"
+
+msgid "OPTVAL_120FPS"
+msgstr "120 fps"
+
+msgid "OPTVAL_144FPS"
+msgstr "144 fps"
+
+msgid "OPTVAL_200FPS"
+msgstr "200 fps"
+
+msgid "VIDMNU_PREFERBACKEND"
+msgstr "API rendering pilihan"
+
+msgid "OPTVAL_OPENGL"
+msgstr "OpenGL"
+
+msgid "OPTVAL_VULKAN"
+msgstr "Vulkan"
+
+# Rendering backend
+msgid "OPTVAL_OPENGLES"
+msgstr "OpenGL ES"
+
+msgid "MISCMNU_MERGEKEYS"
+msgstr "Gabungkan Alt/Ctrl/Shift kiri+kanan"
+
+msgid "MISCMNU_WINFULLSCREENTOGGLE"
+msgstr "Alt-Enter beralih ke layar penuh"
+
+msgid "MISCMNU_MACFULLSCREENTOGGLE"
+msgstr "Command-F beralih ke layar penuh"
+
+msgid "MISCMNU_ENABLEAUTOSAVES"
+msgstr "Aktifkan penyimpanan otomatis"
+
+msgid "MISCMNU_AUTOSAVECOUNT"
+msgstr "Jumlah penyimpanan otomatis"
+
+msgid "MISCMNU_SAVELOADCONFIRMATION"
+msgstr "Konfirmasi simpan/muat"
+
+msgid "MISCMNU_NOCHEATS"
+msgstr "Nonaktifkan cheat keyboard"
+
+msgid "MISCMNU_QUICKSAVEROTATION"
+msgstr "Rotasi simpan cepat"
+
+msgid "MISCMNU_QUICKSAVECOUNT"
+msgstr "Jumlah simpan cepat dalam rotasi"
+
+msgid "MISCMNU_CLEANMENU"
+msgstr "Skala menu ZDoom klasik"
+
+msgid "MISCMNU_PAUSEINBACKGROUND"
+msgstr "Jeda permainan di latar belakang"
+
+msgid "HUDMNU_CROSSHAIR"
+msgstr "Bidikan bawaan"
+
+msgid "HUDMNU_CROSSHAIRCOLOR"
+msgstr "Warna bidikan"
+
+msgid "HUDMNU_CROSSHAIRSCALE"
+msgstr "Skala bidikan"
+
+# copied from elsewhere
+msgid "OPTVAL_YES_STANDARD"
+msgstr "Standar"
+
+msgid "OPTVAL_YES_ENHANCED"
+msgstr "Ditingkatkan"
+
+msgid "OPTMNU_LANGUAGE"
+msgstr "Bahasa"
+
+msgid "TXT_UNDOCHANGES"
+msgstr "Batalkan perubahan"
+
+msgid "REVMNU_SELECT"
+msgstr "Pilih lingkungan"
+
+msgid "REVMNU_TEST"
+msgstr "Uji lingkungan"
+
+msgid "REVMNU_EDIT"
+msgstr "Edit lingkungan"
+
+msgid "REVMNU_NEW"
+msgstr "Lingkungan baru"
+
+msgid "REVMNU_Reflections_Scale"
+msgstr "Skala refleksi"
+
+msgid "REVMNU_Reflections_Delay_Scale"
+msgstr "Skala penundaan refleksi"
+
+msgid "REVMNU_Decay_Time_Scale"
+msgstr "Skala waktu peluruhan"
+
+msgid "REVMNU_Decay_HF_Limit"
+msgstr "Batas HF peluruhan"
+
+msgid "REVMNU_Reverb_Scale"
+msgstr "Skala gema"
+
+msgid "REVMNU_Reverb_Delay_Scale"
+msgstr "Skala penundaan gema"
+
+msgid "REVMNU_Echo_Time_Scale"
+msgstr "Skala waktu gema"
+
+msgid "REVMNU_Modulation_Time_Scale"
+msgstr "Skala waktu modulasi"
+
+msgid "REVMNU_Based_on"
+msgstr "Berdasarkan"
+
+msgid "REVMNU_Name"
+msgstr "Nama"
+
+msgid "REVMNU_ID_1"
+msgstr "ID #1"
+
+msgid "REVMNU_ID_2"
+msgstr "ID #2"
+
+msgid "REVMNU_Create"
+msgstr "Buat"
+
+msgid "REVMNU_Save"
+msgstr "Simpan…"
+
+msgid "REVMNU_File_name"
+msgstr "Nama file"
+
+msgid "REVMNU_Environments_to_save"
+msgstr "Lingkungan untuk disimpan"
+
+msgid "DSPLYMNU_VKOPT"
+msgstr "Opsi Vulkan (Eksperimental)"
+
+msgid "VK_TITLE"
+msgstr "Opsi Vulkan"
+
+msgid "VKMNU_DEVICE"
+msgstr "ID perangkat Vulkan"
+
+msgid "VKMNU_HDR"
+msgstr "Rentang Dinamis Tinggi (HDR)"
+
+msgid "VK_WARNING"
+msgstr "Peringatan: Renderer Vulkan sangat eksperimental!"
+
+msgid "VK_RESTART"
+msgstr "Opsi ini memerlukan restart untuk diterapkan."
+
+msgid "OPTVAL_SCALENX"
+msgstr "ScaleNx"
+
+msgid "OPTVAL_NORMALNX"
+msgstr "NormalNx"
+
+msgid "OPTVAL_HQNX"
+msgstr "hqNx"
+
+msgid "OPTVAL_HQNXMMX"
+msgstr "hqNx MMX"
+
+msgid "OPTVAL_NXBRZ"
+msgstr "xBRZ"
+
+msgid "OPTVAL_OLD_NXBRZ"
+msgstr "xBRZ Lama"
+
+msgid "OS_TITLE"
+msgstr "Pencarian opsi"
+
+msgid "OS_ANY"
+msgstr "Cari satu istilah apa pun"
+
+msgid "OS_ALL"
+msgstr "Cari semua istilah"
+
+msgid "OS_NO_RESULTS"
+msgstr "Tidak ada hasil yang ditemukan."
+
+msgid "OS_LABEL"
+msgstr "Cari:"
+
+msgid "OPTMNU_FULLOPTIONS"
+msgstr "Menu opsi lengkap"
+
+msgid "OPTMNU_SIMPLEON"
+msgstr "Menu opsi sederhana"
+
+msgid "OPTMNU_OPENCONFIG"
+msgstr "Telusuri konfigurasi game"
+
+msgid "OPTMNU_OPENSCREENSHOTS"
+msgstr "Telusuri tangkapan layar"
+
+msgid "OPTMNU_OPENSAVES"
+msgstr "Telusuri file permainan tersimpan"
+
+msgid "MOUSEMNU_SWAPBUTTONS"
+msgstr "Tukar tombol mouse"
+
+msgid "OPTVAL_ONLYMODIFIED"
+msgstr "Hanya yang dimodifikasi"
+
+msgid "TXT_UNKNOWN"
+msgstr "Tidak diketahui"
+
+msgid "TXT_SAVEGAMENEEDS"
+msgstr "Simpan permainan ini memerlukan file berikut"
+
+msgid "GLPREFMNU_CORONAS"
+msgstr "Korona"
+
+msgid "PICKER_SELECT"
+msgstr "Pilih file game yang akan dijalankan."
+
+msgid "PICKER_PLAY"
+msgstr "Mainkan game"
+
+msgid "PICKER_EXIT"
+msgstr "Keluar"
+
+msgid "PICKER_GENERAL"
+msgstr "Umum"
+
+msgid "PICKER_EXTRA"
+msgstr "Grafis tambahan"
+
+msgid "PICKER_FULLSCREEN"
+msgstr "Layar penuh"
+
+msgid "PICKER_NOAUTOLOAD"
+msgstr "Nonaktifkan pemuatan otomatis"
+
+msgid "PICKER_DONTASK"
+msgstr "Jangan tanya lagi"
+
+msgid "PICKER_LIGHTS"
+msgstr "Cahaya"
+
+msgid "PICKER_BRIGHTMAPS"
+msgstr "Peta kecerahan"
+
+msgid "PICKER_WIDESCREEN"
+msgstr "Layar lebar"
+
+msgid "PICKER_ADDPARM"
+msgstr "Parameter tambahan:"
+
+msgid "PICKER_WELCOME"
+msgstr "Selamat datang di %s!"
+
+msgid "PICKER_VERSION"
+msgstr "Versi %s"
+
+msgid "PICKER_PREFERBACKEND"
+msgstr "API rendering"
+
+msgid "PICKER_TAB_PLAY"
+msgstr "Game"
+
+# Option to enable or disable individual controllers/joysticks when
+# configuring it in the Controller Options menu
+msgid "JOYMNU_JOYENABLE"
+msgstr "Aktifkan pengendali ini"
+
+msgid "CNTRLMNU_OPEN_MAIN"
+msgstr "Buka menu utama"
+
+msgid "MODMNU_REPLAYER"
+msgstr "Pemutar modul"
+
+# This is enabled per-controller, it means to enable "this" controller in the
+# background when GZDoom is not in focus.
+msgid "JOYMNU_JOYENABLEINBACKGROUND"
+msgstr "Izinkan input pengendali di latar belakang"
+
+# Order to sort the list of saved games in the save and load game menu. This
+# used to only be alphabetical.
+msgid "MISCMNU_SAVEORDER"
+msgstr "Urutan pengurutan file simpan"
+
+msgid "OPTVAL_ALPHABETICAL"
+msgstr "Alfabetis"
+
+msgid "OPTVAL_LASTSAVEDTIME"
+msgstr "Waktu terakhir disimpan"
+
+msgid "PICKER_PLAYHOST"
+msgstr "Host permainan"
+
+msgid "PICKER_PLAYJOIN"
+msgstr "Gabung permainan"
+
+msgid "PICKER_REMPARM"
+msgstr "Ingat parameter"
+
+# For stuff like id24.
+msgid "PICKER_SUPPORTWADS"
+msgstr "Muat WAD dukungan"
+
+msgid "PICKER_TAB_MULTI"
+msgstr "Multipemain"
+
+msgid "PICKER_LOADSAVE"
+msgstr "Muat file simpan:"
+
+msgid "PICKER_REMSAVE"
+msgstr "Ingat file simpan"
+
+# As in, to host a game.
+msgid "PICKER_HOST"
+msgstr "Host"
+
+msgid "PICKER_JOIN"
+msgstr "Gabung"
+
+msgid "PICKER_NETRATE"
+msgstr "Tingkat paket:"
+
+# Sends out duplicate copies of packets to help with spotty connections e.g.
+# wifi.
+msgid "PICKER_NETBACKUP"
+msgstr "Kirim paket cadangan"
+
+msgid "PICKER_GAMEMODE"
+msgstr "Mode permainan:"
+
+msgid "PICKER_COOP"
+msgstr "Ko-op"
+
+msgid "PICKER_DM"
+msgstr "Deathmatch"
+
+msgid "PICKER_TDM"
+msgstr "Deathmatch tim"
+
+# Which team the player wants to be assigned to.
+msgid "PICKER_TEAM"
+msgstr "Tim #:"
+
+msgid "PICKER_ALTDM"
+msgstr "Gunakan aturan Deathmatch alternatif"
+
+msgid "PICKER_PLAYERS"
+msgstr "Pemain maksimum:"
+
+msgid "PICKER_PORT"
+msgstr "Port host:"
+
+# Max number of players.
+msgid "PICKER_PLAYERHINT"
+msgstr "Maksimal 64"
+
+# GZDoom's default port.
+msgid "PICKER_PORTHINT"
+msgstr "Default 5029"
+
+# Team 255 randomizes which team the player gets put on.
+msgid "PICKER_TEAMHINT"
+msgstr "255 = Acak"
+
+msgid "PICKER_IP"
+msgstr "IP host:"
+
+msgid "PICKER_TDMLABEL"
+msgstr "Deathmatch tim:"
+
+# Same context as TXT_SAY.
+msgid "TXT_SAYTEAM"
+msgstr "Katakan (Tim):"
+
+msgid "MISCMNU_DISCORDRPC"
+msgstr "Discord Rich Presence"
+
+msgid "JOYMNU_TURNSPEED"
+msgstr "Kecepatan berputar"
+
+msgid "JOYMNU_LOOKSPEED"
+msgstr "Kecepatan melihat"
+
+msgid "JOYMNU_ANALOGSTRAFERUN"
+msgstr "Lari menyamping analog"
+
+msgid "PICKER_TAB_RELEASE"
+msgstr "Catatan Rilis"
+
+msgid "ACCMNU_TITLE"
+msgstr "Opsi Aksesibilitas"
+
+msgid "MSGMNU_MESSAGEQUEUE"
+msgstr "Ukuran antrean pesan"
+
+msgid "MSGMNU_STACKIDENTICAL"
+msgstr "Tumpuk pesan berulang"
+
+msgid "NOTES_FAIL"
+msgstr "Tidak dapat membaca catatan rilis"
+
+msgid "NOTES_UNKNOWN"
+msgstr "Tidak diketahui"
+
+msgid "NOTES_RELEASED"
+msgstr "%s versi %s, dirilis %s"
+
+msgid "NOTES_EMPTY"
+msgstr "Tidak ada deskripsi yang diberikan."
+
+msgid "NOTES_DETAILS"
+msgstr "Untuk detail lebih lanjut lihat: %s"
+
+msgid "PICKER_SHOWTHIS"
+msgstr "Tampilkan halaman ini setelah pembaruan"
+
+msgid "PICKER_SHOWNOTES"
+msgstr "Tampilkan catatan rilis"
+
+msgid "PICKER_TAB_ABOUT"
+msgstr "Tentang"

@@ -1,0 +1,343 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-02-24 05:38+0000\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-memory@weblate.org>\n"
+"Language-Team: Hebrew <https://hosted.weblate.org/projects/uzdoom/unused/he/>\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && n % 10 == 0) ? 2 : 3));\n"
+"X-Generator: Weblate 5.16.1-dev\n"
+
+msgid "ADVSNDMNU_ADLOPLCORES"
+msgstr ""
+
+msgid "ADVSNDMNU_FLUIDPATCHSET"
+msgstr ""
+
+msgid "ADVSNDMNU_GUSCONFIG"
+msgstr ""
+
+# Jargon.
+msgid "ADVSNDMNU_TIMIDITYCONFIG"
+msgstr ""
+
+msgid "ADVSNDMNU_TIMIDITYVOLUME"
+msgstr ""
+
+# Jargon.
+msgid "ADVSNDMNU_WILDMIDICONFIG"
+msgstr ""
+
+msgid "CNTRLMNU_ADJUST_GAMMA"
+msgstr ""
+
+msgid "CNTRLMNU_CHAT"
+msgstr "שיחה"
+
+msgid "CNTRLMNU_CHAT_TITLE"
+msgstr "התאמה אישית של פעולות הצ'יטים"
+
+msgid "DSPLYMNU_ADVANCED"
+msgstr ""
+
+msgid "DSPLYMNU_APPEARANCE"
+msgstr "מראה"
+
+msgid "DSPLYMNU_CROSSHAIRSCALE"
+msgstr ""
+
+msgid "DSPLYMNU_MESSAGES"
+msgstr "הודעות"
+
+msgid "DSPLYMNU_SBSCALE"
+msgstr ""
+
+msgid "GLTEXMNU_ENABLEHIRES"
+msgstr ""
+
+msgid "GLTEXMNU_TEXENABLED"
+msgstr ""
+
+msgid "MOUSEMNU_SMOOTHMOUSE"
+msgstr ""
+
+msgid "MSGMNU_MESSAGESCALE"
+msgstr ""
+
+msgid "NOTSET"
+msgstr "לא נתון"
+
+msgid "OPTMNU_INPUT"
+msgstr ""
+
+msgid "OPTMNU_LIGHT"
+msgstr ""
+
+msgid "OPTMNU_MULTIPLAYER"
+msgstr ""
+
+msgid "OPTMNU_SPRITE"
+msgstr ""
+
+msgid "OPTMNU_SYSTEM"
+msgstr ""
+
+msgid "OPTVAL_4000HZ"
+msgstr ""
+
+msgid "OPTVAL_AUTOMAP"
+msgstr ""
+
+msgid "OPTVAL_HUD"
+msgstr ""
+
+msgid "OPTVAL_HUDANDMAP"
+msgstr ""
+
+msgid "OPTVAL_PMDWINOPNA"
+msgstr ""
+
+msgid "OPTVAL_SCALENEAREST"
+msgstr ""
+
+msgid "OPTVAL_SCALELINEAR"
+msgstr ""
+
+msgid "PICKER_NETAUTO"
+msgstr ""
+
+msgid "PICKER_NETMODE"
+msgstr ""
+
+# Players connect to each other individually.
+msgid "PICKER_NETPEER"
+msgstr ""
+
+# Connections are routed through the host instead of all players connecting to
+# each other individually.
+msgid "PICKER_NETSERVER"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_AIR_ABSORPTION_HF"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DECAY_HF_RATIO"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DECAY_LF_RATIO"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DECAY_TIME"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DENSITY"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DIFFUSION"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ECHO_DEPTH"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ECHO_TIME"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_DIFFUSION"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_SIZE"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_HF_REFERENCE"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_LF_REFERENCE"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_MODULATION_DEPTH"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_MODULATION_TIME"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_DELAY"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_X"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Y"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Z"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB"
+msgstr "רוורב"
+
+# Jargon.
+msgid "REVMNU_REVERB_DELAY"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_X"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Y"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Z"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ROOM"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ROOM_HF"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ROOM_LF"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
+msgstr ""
+
+msgid "SNDMNU_BACKEND"
+msgstr ""
+
+msgid "SNDMNU_MENUSOUND"
+msgstr ""
+
+msgid "SNDMNU_MUSENABLED"
+msgstr ""
+
+msgid "SNDMNU_SNDENABLED"
+msgstr ""
+
+msgid "VIDMNU_5X4ASPECTRATIO"
+msgstr ""
+
+msgid "VIDMNU_ASPECTRATIO"
+msgstr "יחס רוחב -גובה"
+
+msgid "VKMNU_DEVICESELECT"
+msgstr ""
+
+msgid "VKMNU_ENABLE"
+msgstr ""
+
+msgid "CMPTMNU_SOUNDCUTOFF"
+msgstr ""
+
+msgid "DSPLYMNU_TOOLTIP_WHITEPOINT"
+msgstr ""
+
+msgid "DSPLYMNU_TRANSSOUL"
+msgstr ""
+
+msgid "DSPLYMNU_WHITEPOINT"
+msgstr ""
+
+msgid "GLLIGHTMNU_LIGHTDEFS"
+msgstr ""
+
+msgid "GLMNU_PREFS"
+msgstr "העדפות"
+
+msgid "GLPREFMNU_PALTONENOGREY"
+msgstr ""
+
+msgid "GLTEXMNU_TRIMSPREDGE"
+msgstr ""
+
+msgid "JOYMNU_HAPTRIGGERS"
+msgstr ""
+
+msgid "NETMNU_MOVEPREDICTION"
+msgstr ""
+
+msgid "NETMNU_TICBALANCE"
+msgstr ""
+
+msgid "OPTSTR_NOSOUND"
+msgstr ""
+
+msgid "OPTSTR_OPENAL"
+msgstr ""
+
+msgid "OPTVAL_ALLUNACKNOWLEDGED"
+msgstr ""
+
+msgid "OPTVAL_DEDICATED"
+msgstr ""
+
+msgid "OPTVAL_DOUBLE"
+msgstr "כפול"
+
+msgid "OPTVAL_INTEGRATED"
+msgstr ""
+
+msgid "OPTVAL_OPTIMAL"
+msgstr "מיטבי"
+
+msgid "OPTVAL_OPTIMIZED"
+msgstr ""
+
+msgid "OPTVAL_ORIGINAL"
+msgstr "מְקוֹרִי"
+
+msgid "OPTVAL_PIXELDOUBLE"
+msgstr ""
+
+msgid "OPTVAL_PIXELQUADRUPLE"
+msgstr ""
+
+msgid "OPTVAL_QUADRUPLE"
+msgstr ""
+
+msgid "OPTVAL_SCALETO640X400"
+msgstr ""
+
+msgid "OPTVAL_TRIPLE"
+msgstr ""
+
+msgid "OPTVAL_VTAVANILLA"
+msgstr ""
+
+msgid "OPTVAL_VTAZDOOM"
+msgstr ""
+
+msgid "TCMNU_TRUECOLOR"
+msgstr ""

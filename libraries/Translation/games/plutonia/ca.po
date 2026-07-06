@@ -1,0 +1,185 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-06-07 01:01+0000\n"
+"Last-Translator: Júlia Rosell Saldaña <contacte@juliars.cat>\n"
+"Language-Team: Catalan <https://hosted.weblate.org/projects/doom-engine-games/the-plutonia-experiment/ca/>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6\n"
+
+msgid "TXT_PLUT_EP"
+msgstr "L'experiment Plutonia"
+
+msgid "PHUSTR_1"
+msgstr "Nivell 1: Congo"
+
+msgid "PHUSTR_2"
+msgstr "Nivell 2: Pou de les ànimes"
+
+msgid "PHUSTR_3"
+msgstr "Nivell 3: asteca"
+
+msgid "PHUSTR_4"
+msgstr "Nivell 4: Engabiat"
+
+msgid "PHUSTR_5"
+msgstr "Nivell 5: Poble Fantasma"
+
+msgid "PHUSTR_6"
+msgstr "Nivell 6: Cau del Baró"
+
+msgid "PHUSTR_7"
+msgstr "Nivell 7: Caughtyard"
+
+msgid "PHUSTR_8"
+msgstr "Nivell 8: Regne"
+
+msgid "PHUSTR_9"
+msgstr "Nivell 9: Abattori"
+
+msgid "PHUSTR_10"
+msgstr "Nivell 10: Embassament"
+
+msgid "PHUSTR_11"
+msgstr "Nivell 11: Caçat"
+
+msgid "PHUSTR_12"
+msgstr "Nivell 12: Velocitat"
+
+msgid "PHUSTR_13"
+msgstr "Nivell 13: La cripta"
+
+msgid "PHUSTR_14"
+msgstr "Nivell 14: Gènesi"
+
+msgid "PHUSTR_15"
+msgstr "Nivell 15: El Crepuscle"
+
+msgid "PHUSTR_16"
+msgstr "Nivell 16: El presagi"
+
+msgid "PHUSTR_17"
+msgstr "Nivell 17: compost"
+
+msgid "PHUSTR_18"
+msgstr "Nivell 18: Neurosfera"
+
+# “NME” read out loud means “enemy”, so translators should consider the
+# translation of “enemy” into their language.
+msgid "PHUSTR_19"
+msgstr "Nivell 19: NME"
+
+msgid "PHUSTR_20"
+msgstr "Nivell 20: El domini de la mort"
+
+msgid "PHUSTR_21"
+msgstr "Nivell 21: Slayer"
+
+msgid "PHUSTR_22"
+msgstr "Nivell 22: Missió impossible"
+
+msgid "PHUSTR_23"
+msgstr "Nivell 23: Làpida"
+
+msgid "PHUSTR_24"
+msgstr "Nivell 24: L'última frontera"
+
+msgid "PHUSTR_25"
+msgstr "Nivell 25: El temple de la foscor"
+
+msgid "PHUSTR_26"
+msgstr "Nivell 26: Búnquer"
+
+msgid "PHUSTR_27"
+msgstr "Nivell 27: Anticrist"
+
+msgid "PHUSTR_28"
+msgstr "Nivell 28: Les clavegueres"
+
+msgid "PHUSTR_29"
+msgstr "Nivell 29: Odissea dels sorolls"
+
+msgid "PHUSTR_30"
+msgstr "Nivell 30: La porta de l'infern"
+
+msgid "PHUSTR_31"
+msgstr "Nivell 31: Cyberden"
+
+msgid "PHUSTR_32"
+msgstr "Nivell 32: Go 2 It"
+
+# Plutonia after MAP06
+msgid "P1TEXT"
+msgstr ""
+"Et regoles amb la carcassa fumant del\n"
+"Guardià. Amb la seva mort, l'has arrencat\n"
+"l'accelerador de les urpes pudents\n"
+"de l'infern. Et relaxes i mires al voltant\n"
+"habitació. Maleït! Se suposava que hi havia a\n"
+"almenys un prototip que funcioni, però no pots\n"
+"veure-ho. Els dimonis l'han d'haver pres.\n"
+"\n"
+"Heu de trobar el prototip, o tots els vostres\n"
+"les lluites s'hauran perdut. Mantenir\n"
+"moure's, seguir lluitant, seguir matant.\n"
+"Ah, sí, segueix vivint també."
+
+# Plutonia after MAP11
+msgid "P2TEXT"
+msgstr ""
+"Fins i tot el mortal laberint Arch-Vile podria\n"
+"no t'atura, i has arribat al\n"
+"prototip Accelerator que serà aviat\n"
+"desactivat de manera eficient i permanent.\n"
+"\n"
+"Ets bo en aquest tipus de coses."
+
+# Plutonia after MAP20
+msgid "P3TEXT"
+msgstr ""
+"T'has colpejat i maltractat\n"
+"el cor del rusc de diables. Temps per a\n"
+"Missió Search-and-Destroy, dirigida a\n"
+"Gatekeeper, la descendència del qual és mala\n"
+"en cascada a la Terra. Sí, és dolent. Però\n"
+"ja saps qui és pitjor!\n"
+"\n"
+"Somrient malament, comproveu el vostre equipament i\n"
+"prepara't per donar-li una mica d'infern al bastard\n"
+"de la teva pròpia creació!"
+
+# Plutonia victory
+msgid "P4TEXT"
+msgstr ""
+"La cara malvada del Guardià està esquitxada\n"
+"per tot arreu. Mentre el seu cadàver esquinçat\n"
+"s'esfondra, es forma una Porta invertida i\n"
+"xucla els fragments de l'últim\n"
+"prototip d'Accelerador, sense oblidar els\n"
+"pocs dimonis que queden. Ja està. L'infern\n"
+"ha tornat a colpejar els morts dolents\n"
+"en lloc dels bons vius. Recordeu de\n"
+"dir als vostres néts que posin un llançador de coets\n"
+"al vostre taüt. Si aneu a l'infern\n"
+"quan moriu, el necessitareu per a una\n"
+"neteja final…"
+
+# Plutonia before MAP31
+msgid "P5TEXT"
+msgstr ""
+"Heu trobat el segon nivell més difícil nosaltres\n"
+"obtingut. Espero que tinguis una partida guardada d'un nivell o\n"
+"dos anteriors. Si no, estigueu preparats per morir\n"
+"abundant. Només per als marines mestres."
+
+# Plutonia before MAP32
+msgid "P6TEXT"
+msgstr ""
+"Betcha es va preguntar què era el més difícil\n"
+"nivell que teníem preparat per a tu? Ara ja ho saps.\n"
+"Ningú en surt viu."

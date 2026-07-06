@@ -1,0 +1,185 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-06-09 04:01+0000\n"
+"Last-Translator: Júlia Rosell Saldaña <contacte@juliars.cat>\n"
+"Language-Team: Latin <https://hosted.weblate.org/projects/doom-engine-games/the-plutonia-experiment/la/>\n"
+"Language: la\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6\n"
+
+msgid "TXT_PLUT_EP"
+msgstr "Plutonia Experimentum"
+
+msgid "PHUSTR_1"
+msgstr "Gradus I: Congo"
+
+msgid "PHUSTR_2"
+msgstr "Gradus II: Bene Animarum"
+
+msgid "PHUSTR_3"
+msgstr "Gradus 3: Aztec"
+
+msgid "PHUSTR_4"
+msgstr "Gradus 4: Caged"
+
+msgid "PHUSTR_5"
+msgstr "Gradus V: Spectrum Oppidum"
+
+msgid "PHUSTR_6"
+msgstr "Gradus VI: Latibulum Baronis"
+
+msgid "PHUSTR_7"
+msgstr "Gradus VII: Area Piscatoria"
+
+msgid "PHUSTR_8"
+msgstr "Gradus VIII: Regnum"
+
+msgid "PHUSTR_9"
+msgstr "Gradus 9: Abattoire"
+
+msgid "PHUSTR_10"
+msgstr "Gradus X: Inslaught"
+
+msgid "PHUSTR_11"
+msgstr "Gradus 11 : Venatio"
+
+msgid "PHUSTR_12"
+msgstr "Gradus XII: Celeritas"
+
+msgid "PHUSTR_13"
+msgstr "Gradus XIII: Crypta"
+
+msgid "PHUSTR_14"
+msgstr "Gradus 14: Genesis"
+
+msgid "PHUSTR_15"
+msgstr "Gradus XV: Crepusculum"
+
+msgid "PHUSTR_16"
+msgstr "Gradus 16: Omen"
+
+msgid "PHUSTR_17"
+msgstr "Gradus XVII: Compositum"
+
+msgid "PHUSTR_18"
+msgstr "Gradus 18: Neurosphere"
+
+# “NME” read out loud means “enemy”, so translators should consider the
+# translation of “enemy” into their language.
+msgid "PHUSTR_19"
+msgstr "Gradus 19: NME"
+
+msgid "PHUSTR_20"
+msgstr "Gradus 20: Mors Domain"
+
+msgid "PHUSTR_21"
+msgstr "Gradus 21: Slayer"
+
+msgid "PHUSTR_22"
+msgstr "Gradus 22: Impossibile Missio"
+
+msgid "PHUSTR_23"
+msgstr "Gradus XXIII: Sepulchrum"
+
+msgid "PHUSTR_24"
+msgstr "Gradus XXIV: Fines finales"
+
+msgid "PHUSTR_25"
+msgstr "Gradus XXV: De Templum tenebrarum"
+
+msgid "PHUSTR_26"
+msgstr "Gradus 26: munimentum"
+
+msgid "PHUSTR_27"
+msgstr "Gradus XXVII: Antichristus"
+
+msgid "PHUSTR_28"
+msgstr "Gradus XXVIII: Cloacae"
+
+msgid "PHUSTR_29"
+msgstr "Gradus 29: Odyssea Noises"
+
+msgid "PHUSTR_30"
+msgstr "Gradus 30: Portus inferni"
+
+msgid "PHUSTR_31"
+msgstr "Gradus 31: Cyberden"
+
+msgid "PHUSTR_32"
+msgstr "Gradus 32: Ite 2 It"
+
+# Plutonia after MAP06
+msgid "P1TEXT"
+msgstr ""
+"Gaudes super pandis fumantia reddimus cadaver\n"
+"Custos. Cum morte sua extorsisti\n"
+"Accelerator de unguis foetidis\n"
+"ad Inferos. Te relaxat et circumspicias\n"
+"cubiculum. Perduint! Putabatur esse ad\n"
+"saltem unum opus exemplar, sed non potes\n"
+"viderit. Daemones necesse est illud cepisse.\n"
+"\n"
+"Prototypum invenire debes, vel omnia tua\n"
+"certamina vastata erunt. Serva\n"
+"movere, servare pugnam, custodiam occidere.\n"
+"Immo vivam etiam serva."
+
+# Plutonia after MAP11
+msgid "P2TEXT"
+msgstr ""
+"Etiam funestus Archi-Vile labyrinthus poterat\n"
+"non te prohibere, et adquisivisti\n"
+"exemplar Accelerator quod est primum\n"
+"efficaciter et in perpetuum deactivated.\n"
+"\n"
+"Tu es bonus eo genere."
+
+# Plutonia after MAP20
+msgid "P3TEXT"
+msgstr ""
+"Tu bashed et contusa in viam tuam\n"
+"cor diaboli alvearium. Tempus a\n"
+"Inquire et dele missio, quod petisti\n"
+"ostiarius, cuius foetida proles est\n"
+"lapsus est ad Terram. Yeah, malus est. Sed\n"
+"scis quis peius!\n"
+"\n"
+"Male renidens, calces cohibes, et\n"
+"compararim bastardis paulo inferno\n"
+"de tuo facto!"
+
+# Plutonia victory
+msgid "P4TEXT"
+msgstr ""
+"Janitor mali facies aspersa est\n"
+"toto loco. Ut scissa gaudens vadit corpus\n"
+"corruit, inversae portae formae et\n"
+"sugit shards de ultimo\n"
+"exemplar Accelerator nedum the\n"
+"pauci reliqui daemones. factum es. gehenna\n"
+"abiit ad tritis malis mortuis folks \n"
+"pro bonis vivunt. memento to\n"
+"dico tibi grandkids posuit eruca\n"
+"Launcher in loculo. Si ad inferos\n"
+"cum morieris, aliquot opust\n"
+"ultima purgatio-sursum …"
+
+# Plutonia before MAP31
+msgid "P5TEXT"
+msgstr ""
+"Incidisti secundum gradus-durissimam nos\n"
+"obtinuit. Spero te habere ludum salvus gradus or\n"
+"duobus prioribus. Sin minus, paratus ad mortem\n"
+"opulentiam. Ad dominum classiariorum tantum."
+
+# Plutonia before MAP32
+msgid "P6TEXT"
+msgstr ""
+"Betcha admirati sunt quae durissima\n"
+"gradus paravimus ya? iam scis.\n"
+"Non ALTERA VIVAT."

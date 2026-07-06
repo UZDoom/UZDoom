@@ -1,0 +1,1763 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-06-15 16:01+0000\n"
+"Last-Translator: Júlia Rosell Saldaña <contacte@juliars.cat>\n"
+"Language-Team: Latin <https://hosted.weblate.org/projects/uzdoom/common/la/>\n"
+"Language: la\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.7.dev0\n"
+
+msgid "PRESSYN"
+msgstr "Preme Y vel N."
+
+msgid "TXT_YES"
+msgstr "Ita"
+
+msgid "TXT_NO"
+msgstr "Non"
+
+msgid "SAVEDEAD"
+msgstr ""
+"Servare non potes si ludere non potes!\n"
+"\n"
+"Preme clavem."
+
+msgid "SAFEMESSAGE"
+msgstr "Visne hoc facere?"
+
+msgid "QSPROMPT"
+msgstr ""
+"Servare cito super ludum tuum nomine\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Preme Y vel N."
+
+msgid "QLPROMPT"
+msgstr ""
+"Visne ludum nomine \n"
+"\n"
+"'%s' celeriter onerare?\n"
+"\n"
+"Preme Y vel N."
+
+msgid "TXT_X_CHEATS"
+msgstr "%s defraudat"
+
+msgid "MSGOFF"
+msgstr "Mandata: OFF"
+
+msgid "MSGON"
+msgstr "Mandata: ON"
+
+msgid "TXT_SAY"
+msgstr "Dic:"
+
+msgid "TXT_QUITENDOOM"
+msgstr "Preme quamlibet clavem vel deprime usquam in fenestra relicto."
+
+msgid "NEWSAVE"
+msgstr "<Novus Ludus Servatus>"
+
+msgid "GGSAVED"
+msgstr "Ludus servavit."
+
+msgid "SAVECOMMENT_TIME"
+msgstr "Tempus"
+
+msgid "MNU_LOADGAME"
+msgstr "Ludum Onus"
+
+msgid "MNU_SAVEGAME"
+msgstr "Serva Ludum"
+
+msgid "MNU_NOPICTURE"
+msgstr "Non Picture"
+
+msgid "MNU_DIFFVERSION"
+msgstr "Versio Diversa"
+
+msgid "MNU_NOFILES"
+msgstr "Nulli fasciculi"
+
+msgid "MNU_DELETESG"
+msgstr "Visne vere ludum servatum delere?"
+
+msgid "OPTVAL_OFF"
+msgstr "Inactivum"
+
+msgid "OPTVAL_ON"
+msgstr "Activum"
+
+msgid "OPTVAL_AUTO"
+msgstr "Automatice"
+
+msgid "OPTMNU_TITLE"
+msgstr "Optiones"
+
+msgid "OPTMNU_CONTROLS"
+msgstr "Imperia configura"
+
+msgid "OPTMNU_MOUSE"
+msgstr "Optiones muris"
+
+msgid "OPTMNU_JOYSTICK"
+msgstr "Optiones moderaculi"
+
+msgid "OPTMNU_PLAYER"
+msgstr "Configuratio lusoris"
+
+msgid "OPTMNU_GAMEPLAY"
+msgstr "Optiones lusionis"
+
+msgid "OPTMNU_AUTOMAP"
+msgstr "Optiones tabulae automaticae"
+
+msgid "OPTMNU_HUD"
+msgstr "Optiones HUD"
+
+msgid "OPTMNU_MISCELLANEOUS"
+msgstr "Optiones variae"
+
+msgid "OPTMNU_SOUND"
+msgstr "Optiones sonorum"
+
+msgid "ACCMNU_TITLE"
+msgstr "Optiones accessibilitatis"
+
+msgid "OPTMNU_DISPLAY"
+msgstr "Optiones ostensionis"
+
+msgid "OPTMNU_VIDEO"
+msgstr "Modum visivum constitue"
+
+msgid "OPTMNU_DEFAULTS"
+msgstr "Reset ad defaltis"
+
+msgid "OPTMNU_RESETTOSAVED"
+msgstr "Reset ad ultimum salvus erit"
+
+msgid "OPTMNU_WRITEINI"
+msgstr "Serva occasus current"
+
+msgid "OPTMNU_CONSOLE"
+msgstr "Ite ad consolandum"
+
+msgid "OPTMNU_NETWORK"
+msgstr "Optiones retis"
+
+msgid "OPTMNU_REVERB"
+msgstr "Editor ambitus reverberationis"
+
+msgid "CNTRLMNU_SWITCHTEXT1"
+msgstr "MODO VENIAT, BACKSPACE ut purgare"
+
+msgid "CNTRLMNU_SWITCHTEXT2"
+msgstr "Preme novam clavem pro imperio; ESC ad remittendum"
+
+msgid "CNTRLMNU_CONTROLS"
+msgstr "Imperia"
+
+msgid "CNTRLMNU_ATTACK"
+msgstr "Ignis"
+
+msgid "CNTRLMNU_ALTATTACK"
+msgstr "Ignis secundarius"
+
+msgid "CNTRLMNU_RELOAD"
+msgstr "Arma reonera"
+
+msgid "CNTRLMNU_USE"
+msgstr "Usus / Open"
+
+msgid "CNTRLMNU_FORWARD"
+msgstr "Progredere"
+
+msgid "CNTRLMNU_BACK"
+msgstr "Regredere"
+
+msgid "CNTRLMNU_MOVELEFT"
+msgstr "Transversim sinistrorsum"
+
+msgid "CNTRLMNU_MOVERIGHT"
+msgstr "Transversim dextrorsum"
+
+msgid "CNTRLMNU_TURNLEFT"
+msgstr "Verte sinistrorsum"
+
+msgid "CNTRLMNU_TURNRIGHT"
+msgstr "Verte dextrorsum"
+
+msgid "CNTRLMNU_TURN180"
+msgstr "Conversio celeris"
+
+msgid "CNTRLMNU_JUMP"
+msgstr "Sali"
+
+msgid "CNTRLMNU_CROUCH"
+msgstr "Procumbe"
+
+msgid "CNTRLMNU_TOGGLECROUCH"
+msgstr "Procubitum alterna"
+
+msgid "CNTRLMNU_MOUSELOOK"
+msgstr "Aspectus mure"
+
+msgid "CNTRLMNU_LOOKUP"
+msgstr "Respice sursum"
+
+msgid "CNTRLMNU_LOOKDOWN"
+msgstr "Respice deorsum"
+
+msgid "CNTRLMNU_CENTERVIEW"
+msgstr "Visum centra"
+
+msgid "CNTRLMNU_RUN"
+msgstr "Curre"
+
+msgid "CNTRLMNU_TOGGLERUN"
+msgstr "Cursum alterna"
+
+msgid "CNTRLMNU_STRAFE"
+msgstr "Transversim ire"
+
+msgid "CNTRLMNU_SCOREBOARD"
+msgstr "Tabulam punctorum monstra"
+
+msgid "CNTRLMNU_ACTION"
+msgstr "Actio"
+
+msgid "CNTRLMNU_ACTION_TITLE"
+msgstr "Imperium actionum configura"
+
+msgid "MNU_MULTIPLAYER"
+msgstr "Plures lusores"
+
+msgid "CNTRLMNU_SAY"
+msgstr "Dic"
+
+msgid "CNTRLMNU_WEAPONS_TITLE"
+msgstr "Imperium armorum configura"
+
+msgid "CNTRLMNU_INVENTORY_TITLE"
+msgstr "Customize Scrinium Imperium"
+
+msgid "CNTRLMNU_OTHER_TITLE"
+msgstr "Alia imperia configura"
+
+msgid "CNTRLMNU_WEAPONS"
+msgstr "Arma"
+
+msgid "CNTRLMNU_NEXTWEAPON"
+msgstr "Arma proxima"
+
+msgid "CNTRLMNU_PREVIOUSWEAPON"
+msgstr "Arma priora"
+
+msgid "CNTRLMNU_SLOT1"
+msgstr "Telum 1"
+
+msgid "CNTRLMNU_SLOT2"
+msgstr "Telum 2"
+
+msgid "CNTRLMNU_SLOT3"
+msgstr "Telum 3"
+
+msgid "CNTRLMNU_SLOT4"
+msgstr "Telum 4"
+
+msgid "CNTRLMNU_SLOT5"
+msgstr "Telum 5"
+
+msgid "CNTRLMNU_SLOT6"
+msgstr "Telum VI"
+
+msgid "CNTRLMNU_SLOT7"
+msgstr "Telum 7"
+
+msgid "CNTRLMNU_SLOT8"
+msgstr "Telum 8"
+
+msgid "CNTRLMNU_SLOT9"
+msgstr "Telum 9"
+
+msgid "CNTRLMNU_SLOT0"
+msgstr "Telum 10"
+
+msgid "CNTRLMNU_INVENTORY"
+msgstr "Inventarium"
+
+msgid "CNTRLMNU_USEITEM"
+msgstr "Item activate"
+
+msgid "CNTRLMNU_USEALLITEMS"
+msgstr "Eu omnia items"
+
+msgid "CNTRLMNU_NEXTITEM"
+msgstr "Res proxima"
+
+msgid "CNTRLMNU_PREVIOUSITEM"
+msgstr "Res prior"
+
+msgid "MAPCNTRLMNU_TITLE"
+msgstr "Imperia tabulae"
+
+msgid "MAPCNTRLMNU_CONTROLS"
+msgstr "Imperia tabulae"
+
+msgid "MAPCNTRLMNU_PANLEFT"
+msgstr "Pan sinistram"
+
+msgid "MAPCNTRLMNU_PANRIGHT"
+msgstr "Pan ius"
+
+msgid "MAPCNTRLMNU_PANUP"
+msgstr "Trahe sursum"
+
+msgid "MAPCNTRLMNU_PANDOWN"
+msgstr "Trahe deorsum"
+
+msgid "MAPCNTRLMNU_ZOOMIN"
+msgstr "Appropria"
+
+msgid "MAPCNTRLMNU_ZOOMOUT"
+msgstr "Remove"
+
+msgid "MAPCNTRLMNU_TOGGLEZOOM"
+msgstr "Magnificationem alterna"
+
+msgid "MAPCNTRLMNU_TOGGLEFOLLOW"
+msgstr "Toggle sequitur"
+
+msgid "MAPCNTRLMNU_TOGGLEGRID"
+msgstr "Toggle malesuada euismod"
+
+msgid "MAPCNTRLMNU_ROTATE"
+msgstr "Rotationem alterna"
+
+msgid "MAPCNTRLMNU_TOGGLETEXTURE"
+msgstr "Toggle textura"
+
+msgid "CNTRLMNU_AUTOMAP"
+msgstr "Automappam alterna"
+
+msgid "CNTRLMNU_CHASECAM"
+msgstr "Camera sequens"
+
+msgid "CNTRLMNU_SCREENSHOT"
+msgstr "Imago tegumenti"
+
+msgid "CNTRLMNU_PAUSE"
+msgstr "Intermissio"
+
+msgid "CNTRLMNU_DISPLAY_INC"
+msgstr "Propono Location crescat"
+
+msgid "CNTRLMNU_DISPLAY_DEC"
+msgstr "Minor Display Size"
+
+msgid "CNTRLMNU_OPEN_HELP"
+msgstr "Auxilium aperi"
+
+msgid "CNTRLMNU_OPEN_SAVE"
+msgstr "Indicem servandi aperi"
+
+msgid "CNTRLMNU_OPEN_LOAD"
+msgstr "Indicem onerandi aperi"
+
+msgid "CNTRLMNU_OPEN_OPTIONS"
+msgstr "Indicem optionum aperi"
+
+msgid "CNTRLMNU_OPEN_DISPLAY"
+msgstr "Indicem ostensionis aperi"
+
+msgid "CNTRLMNU_QUICKSAVE"
+msgstr "Servare cito"
+
+msgid "CNTRLMNU_QUICKLOAD"
+msgstr "Onerare cito"
+
+msgid "CNTRLMNU_EXIT_TO_MAIN"
+msgstr "Exitus Ad Tabula Principalis"
+
+msgid "CNTRLMNU_TOGGLE_MESSAGES"
+msgstr "Nuntios alterna"
+
+msgid "CNTRLMNU_MENU_QUIT"
+msgstr "Ludo exi"
+
+msgid "MOUSEMNU_ENABLEMOUSE"
+msgstr "Admitte mus"
+
+msgid "MOUSEMNU_MOUSEINMENU"
+msgstr "Admitte mus in menus"
+
+msgid "MOUSEMNU_SHOWBACKBUTTON"
+msgstr "Monstrare tergum puga"
+
+msgid "MOUSEMNU_CURSOR"
+msgstr "Cursor"
+
+msgid "MOUSEMNU_SENSITIVITY_X"
+msgstr "Horizontalis sensus"
+
+msgid "MOUSEMNU_SENSITIVITY_Y"
+msgstr "Sensus verticalis"
+
+msgid "MOUSEMNU_SMOOTHMOUSE"
+msgstr "Motus lenis mus"
+
+msgid "MOUSEMNU_TURNSPEED"
+msgstr "Conversus celeritas"
+
+msgid "MOUSEMNU_MOUSELOOKSPEED"
+msgstr "Mus celeritas"
+
+msgid "MOUSEMNU_FORWBACKSPEED"
+msgstr "Retro/celeritas"
+
+msgid "MOUSEMNU_STRAFESPEED"
+msgstr "Strafing celeritas"
+
+msgid "MOUSEMNU_ALWAYSMOUSELOOK"
+msgstr "Aspectus mure semper"
+
+msgid "MOUSEMNU_INVERTMOUSE"
+msgstr "Mus invertat Y"
+
+msgid "MOUSEMNU_INVERTMOUSEX"
+msgstr "Mus X invertere"
+
+msgid "OPTVAL_UPPERLEFT"
+msgstr "Superiorem sinistram"
+
+msgid "OPTVAL_UPPERRIGHT"
+msgstr "Superior ius"
+
+msgid "OPTVAL_LOWERLEFT"
+msgstr "Infra sinistram"
+
+msgid "OPTVAL_LOWERRIGHT"
+msgstr "Infra ius"
+
+msgid "OPTVAL_TOUCHSCREENLIKE"
+msgstr "Ut tegumentum tactilis"
+
+msgid "OPTSTR_SIMPLEARROW"
+msgstr "Simple sagitta"
+
+msgid "OPTSTR_SYSTEMCURSOR"
+msgstr "Systema cursorium"
+
+msgid "OPTVAL_DEFAULT"
+msgstr "Praedefinitum"
+
+msgid "JOYMNU_TITLE"
+msgstr "Moderaculum configura"
+
+msgid "JOYMNU_OPTIONS"
+msgstr "Optiones moderaculi"
+
+msgid "JOYMNU_NOMENU"
+msgstr "Inputum moderaculi in indice bloca"
+
+msgid "JOYMNU_ENABLE"
+msgstr "Admitte auxilium moderatoris"
+
+msgid "JOYMNU_DINPUT"
+msgstr "Admitte DirectInput moderatoris"
+
+msgid "JOYMNU_XINPUT"
+msgstr "Admitte XInput moderatoris"
+
+msgid "JOYMNU_PS2"
+msgstr "Admitte rudis PlayStation 2 adaptors"
+
+msgid "JOYMNU_NOCON"
+msgstr "Non moderatoris detecti"
+
+msgid "JOYMNU_CONFIG"
+msgstr "Configurare moderatoris:"
+
+msgid "JOYMNU_DISABLED1"
+msgstr "Controller auxilium debet esse"
+
+msgid "JOYMNU_DISABLED2"
+msgstr "activatum ad quodlibet deprehendendum"
+
+msgid "JOYMNU_INVALID"
+msgstr "Moderaculum invalidum pro indice definitum est"
+
+msgid "JOYMNU_OVRSENS"
+msgstr "Sensus altiore"
+
+msgid "JOYMNU_AXIS"
+msgstr "Configuratio axium"
+
+msgid "JOYMNU_INVERT"
+msgstr "Inverte"
+
+msgid "JOYMNU_DEADZONE"
+msgstr "Mortuus zona"
+
+msgid "JOYMNU_NOAXES"
+msgstr "Non axes configurabiles"
+
+msgid "OPTVAL_NONE"
+msgstr "Nullum"
+
+msgid "OPTVAL_TURNING"
+msgstr "Vultus Left / Vox"
+
+msgid "OPTVAL_LOOKINGUPDOWN"
+msgstr "Vultus Sursum / Est"
+
+msgid "OPTVAL_MOVINGFORWARD"
+msgstr "Movere / Retrorsum"
+
+msgid "OPTVAL_STRAFING"
+msgstr "Movere Left / Vox"
+
+msgid "OPTVAL_MOVINGUPDOWN"
+msgstr "Movere / Est"
+
+msgid "OPTVAL_INVERTED"
+msgstr "Inversum"
+
+msgid "OPTVAL_NOTINVERTED"
+msgstr "Non inversum"
+
+msgid "TXT_COLOR_BLUE"
+msgstr "Caeruleus"
+
+msgid "TXT_COLOR_RED"
+msgstr "Ruber"
+
+msgid "TXT_COLOR_GREEN"
+msgstr "Viridis"
+
+msgid "TXT_COLOR_GRAY"
+msgstr "Cinereus"
+
+msgid "TXT_COLOR_DARKGRAY"
+msgstr "Griseo"
+
+msgid "TXT_COLOR_DARKGREEN"
+msgstr "Viridis obscurus"
+
+msgid "TXT_COLOR_BROWN"
+msgstr "Brunneus"
+
+msgid "TXT_COLOR_DARKBLUE"
+msgstr "Caeruleus obscurus"
+
+msgid "TXT_COLOR_LIGHTRED"
+msgstr "Ruber clarus"
+
+msgid "TXT_COLOR_YELLOW"
+msgstr "Flavus"
+
+msgid "TXT_COLOR_PURPLE"
+msgstr "Purpureus"
+
+msgid "TXT_COLOR_DULLGREEN"
+msgstr "Olivaceus"
+
+msgid "TXT_COLOR_BEIGE"
+msgstr "Beige"
+
+msgid "TXT_COLOR_LIGHTBLUE"
+msgstr "Caeruleus clarus"
+
+msgid "TXT_COLOR_LIGHTGRAY"
+msgstr "Cinereus clarus"
+
+msgid "TXT_COLOR_LIGHTBROWN"
+msgstr "Brunneus clarus"
+
+msgid "TXT_COLOR_GOLD"
+msgstr "Aureus"
+
+msgid "TXT_COLOR_BRIGHTGREEN"
+msgstr "Viridis nitidus"
+
+msgid "TXT_COLOR_RUST"
+msgstr "Rubigo"
+
+msgid "PLYRMNU_NAME"
+msgstr "Nomen"
+
+msgid "PLYRMNU_TEAM"
+msgstr "Grex"
+
+msgid "PLYRMNU_PLAYERCOLOR"
+msgstr "Color"
+
+msgid "PLYRMNU_PLAYERGENDER"
+msgstr "Genus"
+
+msgid "OPTVAL_MALE"
+msgstr "Masculinum"
+
+msgid "OPTVAL_FEMALE"
+msgstr "Femininum"
+
+msgid "OPTVAL_NEUTRAL"
+msgstr "Neutrum"
+
+msgid "OPTVAL_OTHER"
+msgstr "Obiectum"
+
+msgid "GMPLYMNU_TITLE"
+msgstr "Optiones lusionis"
+
+msgid "OPTVAL_ALWAYS"
+msgstr "Semper"
+
+msgid "OPTVAL_NEVER"
+msgstr "Numquam"
+
+msgid "PLYRMNU_AUTOAIM"
+msgstr "Petitio automatica"
+
+msgid "PLYRMNU_ALWAYSRUN"
+msgstr "Semper curre"
+
+msgid "DSPLYMNU_SCREENSIZE"
+msgstr "Screen magnitudine"
+
+msgid "DSPLYMNU_VSYNC"
+msgstr "Synchronizatio verticalis"
+
+msgid "DSPLYMNU_MODELS"
+msgstr "Exemplaria"
+
+msgid "MSGMNU_CENTERMESSAGES"
+msgstr "Centrum epistulae"
+
+msgid "MSGMNU_MESSAGEQUEUE"
+msgstr "Nuntius queue magnitudine"
+
+msgid "MSGMNU_STACKIDENTICAL"
+msgstr "Rare crebris nuntiis"
+
+msgid "MSGMNU_PULSEMESSAGES"
+msgstr "Pulsans nuntius Display"
+
+msgid "MNU_COLORPICKER"
+msgstr "Colorem elige"
+
+msgid "AUTOMAPMNU_ROTATE"
+msgstr "Automappam rota"
+
+msgid "AUTOMAPMNU_FOLLOW"
+msgstr "Sequere ludio"
+
+msgid "AUTOMAPMNU_LINEALPHA"
+msgstr "Linea alpha"
+
+msgid "AUTOMAPMNU_LINETHICKNESS"
+msgstr "Linea crassitudine"
+
+msgid "MAPCOLORMNU_TITLE"
+msgstr "Customize Map Colorum"
+
+msgid "MAPCOLORMNU_DEFAULTMAPCOLORS"
+msgstr "Colores proprios praedefinitos restitue"
+
+msgid "OPTVAL_8000HZ"
+msgstr "8000 Hz"
+
+msgid "OPTVAL_11025HZ"
+msgstr "11025 Hz"
+
+msgid "OPTVAL_22050HZ"
+msgstr "22050 Hz"
+
+msgid "OPTVAL_32000HZ"
+msgstr "32000 Hz"
+
+msgid "OPTVAL_44100HZ"
+msgstr "44100 Hz"
+
+msgid "OPTVAL_48000HZ"
+msgstr "48000 Hz"
+
+msgid "OPTVAL_64SAMPLES"
+msgstr "64 sample"
+
+msgid "OPTVAL_128SAMPLES"
+msgstr "128 samples"
+
+msgid "OPTVAL_256SAMPLES"
+msgstr "256 exempla"
+
+msgid "OPTVAL_512SAMPLES"
+msgstr "512 exempla"
+
+msgid "OPTVAL_1024SAMPLES"
+msgstr "1024 exemplaria"
+
+msgid "OPTVAL_2048SAMPLES"
+msgstr "2048 exempla"
+
+msgid "OPTVAL_4096SAMPLES"
+msgstr "4096 exemplaria"
+
+msgid "OPTSTR_AUTO"
+msgstr "Automatice"
+
+msgid "OPTSTR_MONO"
+msgstr "Mono"
+
+msgid "OPTSTR_STEREO"
+msgstr "Stereo"
+
+msgid "OPTSTR_PROLOGIC"
+msgstr "Dolby Pro Logica Decoder"
+
+msgid "OPTSTR_QUAD"
+msgstr "Quad"
+
+msgid "OPTSTR_SURROUND"
+msgstr "5 loquentium"
+
+msgid "OPTSTR_5POINT1"
+msgstr "5.1 loquentium"
+
+msgid "OPTSTR_7POINT1"
+msgstr "7.1 loquentium"
+
+msgid "OPENALMNU_PLAYBACKDEVICE"
+msgstr "Playback fabrica"
+
+msgid "OPENALMNU_ENABLEEFX"
+msgstr "EFX activa"
+
+msgid "OPENALMNU_RESAMPLER"
+msgstr "Resamplificator"
+
+msgid "SNDMNU_SFXVOLUME"
+msgstr "Sonat volumen"
+
+msgid "SNDMNU_MENUVOLUME"
+msgstr "Menu volumen"
+
+msgid "SNDMNU_MUSICVOLUME"
+msgstr "Volumen musicae"
+
+msgid "SNDMNU_MIDIDEVICE"
+msgstr "MIDI fabrica"
+
+msgid "SNDMNU_BACKGROUND"
+msgstr "Sonus in background"
+
+msgid "SNDMNU_UNDERWATERREVERB"
+msgstr "Reverberatio sub aqua"
+
+msgid "SNDMNU_RANDOMIZEPITCHES"
+msgstr "Randomize vocum"
+
+msgid "SNDMNU_CHANNELS"
+msgstr "Integer cursus"
+
+msgid "SNDMNU_OPENAL"
+msgstr "OpenAL optiones"
+
+msgid "SNDMNU_RESTART"
+msgstr "Redi sonus"
+
+msgid "SNDMNU_ADVANCED"
+msgstr "Provectus optiones"
+
+msgid "SNDMNU_MODREPLAYER"
+msgstr "Module replayer optiones"
+
+msgid "SNDMNU_MIDIPLAYER"
+msgstr "MIDI fabrica optiones"
+
+msgid "ADVSNDMNU_TITLE"
+msgstr "Provectus Sonus Optiones"
+
+msgid "ADVSNDMNU_SAMPLERATE"
+msgstr "Frequentia exemplorum"
+
+msgid "ADVSNDMNU_HRTF"
+msgstr "HRTF"
+
+msgid "ADVSNDMNU_OPLSYNTHESIS"
+msgstr "Synthesis OPL"
+
+msgid "ADVSNDMNU_OPLNUMCHIPS"
+msgstr "Numerus aemulatorum OPL eu"
+
+msgid "ADVSNDMNU_OPLGAIN"
+msgstr "Amplificatio"
+
+msgid "ADVSNDMNU_OPLFULLPAN"
+msgstr "Panoramatio plena MIDI stereo"
+
+msgid "ADVSNDMNU_OPLCORES"
+msgstr "Nucleus emulatoris OPL"
+
+msgid "ADVSNDMNU_MIDIVOICES"
+msgstr "MIDI voces"
+
+msgid "ADVSNDMNU_FLUIDSYNTH"
+msgstr "FluidSynth"
+
+msgid "ADVSNDMNU_GLOBAL"
+msgstr "Universale"
+
+msgid "ADVSNDMNU_FREEVERB"
+msgstr "Freeverb"
+
+msgid "ADVSNDMNU_GLOBAL_FREEVERB"
+msgstr "Freeverb universale"
+
+msgid "ADVSNDMNU_FLUIDGAIN"
+msgstr "Amplificatio"
+
+msgid "ADVSNDMNU_REVERB"
+msgstr "Reverberatio"
+
+msgid "ADVSNDMNU_REVERB_LEVEL"
+msgstr "Gradus reverberationis"
+
+msgid "ADVSNDMNU_CHORUS"
+msgstr "Chorus"
+
+msgid "ADVSNDMNU_TIMIDITY"
+msgstr "Timiditas++"
+
+msgid "ADVSNDMNU_ADLMIDI"
+msgstr "ADLMidi"
+
+msgid "ADVSNDMNU_OPNMIDI"
+msgstr "OPNMidi"
+
+msgid "ADVSNDMNU_WILDMIDI"
+msgstr "WildMidi"
+
+msgid "ADVSNDMNU_SELCONFIG"
+msgstr "Configuratione Select"
+
+msgid "ADVSNDMNU_ADVRESAMPLING"
+msgstr "Resamplificatio provecta"
+
+msgid "ADVSNDMNU_OPLBANK"
+msgstr "Banca OPL"
+
+msgid "ADVSNDMNU_RUNPCMRATE"
+msgstr "Aemulator currite ad PCM rate"
+
+msgid "ADVSNDMNU_ADLNUMCHIPS"
+msgstr "Numerus aemulatorum OPL eu"
+
+msgid "ADVSNDMNU_ADLGAIN"
+msgstr "Amplificatio"
+
+msgid "ADVSNDMNU_VLMODEL"
+msgstr "Exemplar Volumen"
+
+msgid "ADVSNDMNU_CHANALLOC"
+msgstr "Channel destinatio modum"
+
+msgid "ADVSNDMNU_AUTOARPEGGIO"
+msgstr "Arpeggium automaticum"
+
+msgid "ADVSNDMNU_OPNCORES"
+msgstr "Nucleus emulatoris OPN2"
+
+msgid "ADVSNDMNU_GUSEMULATION"
+msgstr "Emulatio GUS"
+
+msgid "ADVSNDMNU_DMXGUS"
+msgstr "Legere DMXGUS massas"
+
+msgid "ADVSNDMNU_GUSMEMSIZE"
+msgstr "GUS memoria magnitudine"
+
+msgid "ADVSNDMNU_OPNNUMCHIPS"
+msgstr "Numerus aemulatorum OPN eu"
+
+msgid "ADVSNDMNU_OPNGAIN"
+msgstr "Amplificatio"
+
+msgid "ADVSNDMNU_ADLCUSTOMBANK"
+msgstr "Utere consuetudine WOPL ripam"
+
+msgid "ADVSNDMNU_ADLUSEWADBANK"
+msgstr "Usus WAD scriptor GENMIDI ripam morem ripam"
+
+msgid "ADVSNDMNU_OPLBANKFILE"
+msgstr "Fasciculus bancae WOPL"
+
+msgid "ADVSNDMNU_OPNCUSTOMBANK"
+msgstr "Utere consuetudine WOPN ripam"
+
+msgid "ADVSNDMNU_OPNBANKFILE"
+msgstr "Fasciculus bancae WOPN"
+
+msgid "OPTVAL_ALIASING"
+msgstr "Aliasing"
+
+msgid "OPTVAL_LINEAR_1"
+msgstr "Linear"
+
+msgid "OPTVAL_LINEAR_2"
+msgstr "Linear"
+
+msgid "OPTVAL_LINEAR_3"
+msgstr "Linear"
+
+msgid "OPTVAL_NEAREST"
+msgstr "Proximum"
+
+msgid "OPTVAL_PCF_LOW"
+msgstr "PCF (Humile)"
+
+msgid "OPTVAL_PCF_MEDIUM"
+msgstr "PCF (Medium)"
+
+msgid "OPTVAL_PCF_HIGH"
+msgstr "PCF (Altum)"
+
+msgid "OPTVAL_CUBIC"
+msgstr "Cubicum"
+
+msgid "OPTVAL_BLEP"
+msgstr "Cohors-limited gradus"
+
+msgid "OPTVAL_LINEARSLOW"
+msgstr "Linearibus (Tardior)"
+
+msgid "OPTVAL_BLAM"
+msgstr "Cohors linearibus stricto"
+
+msgid "OPTVAL_CUBICSLOW"
+msgstr "Cubicus (Slower)"
+
+msgid "OPTVAL_SINC"
+msgstr "Sinc"
+
+msgid "OPTVAL_NOTEONOFFONLY"
+msgstr "Nota in / off only"
+
+msgid "OPTVAL_FULLRAMPING"
+msgstr "Plena rapiens"
+
+msgid "MODMNU_MASTERVOLUME"
+msgstr "Magister volumen"
+
+msgid "MODMNU_QUALITY"
+msgstr "Qualitas"
+
+msgid "MODMNU_VOLUMERAMPING"
+msgstr "Ascensus voluminis"
+
+msgid "OPTVAL_LIBXMP"
+msgstr "libXMP"
+
+msgid "OPTVAL_DUMB"
+msgstr "Dumb"
+
+msgid "MODMNU_CHIPOMATIC"
+msgstr "Chip-o-matic"
+
+msgid "OPTVAL_MAMEOPL2"
+msgstr "MAME OPL2"
+
+msgid "OPTVAL_DOSBOXOPL3"
+msgstr "DOSBox OPL3"
+
+msgid "OPTVAL_JAVAOPL3"
+msgstr "Java OPL3"
+
+msgid "OPTVAL_ESFMu"
+msgstr "ESFMu OPL3"
+
+msgid "OPTVAL_YMFMOPL2"
+msgstr "YMFM OPL2"
+
+msgid "OPTVAL_YMFMOPL3"
+msgstr "YMFM OPL3"
+
+msgid "OPTVAL_NUKEDOPL3"
+msgstr "Nuked OPL3"
+
+msgid "OPTVAL_LLENUKEDOPL2"
+msgstr "OPL2-LLE (perficiendi intensive)"
+
+msgid "OPTVAL_LLENUKEDOPL3"
+msgstr "OPL3-LLE (perficiendi intensive)"
+
+msgid "OPTVAL_MAMEOPN2"
+msgstr "MAME OPN2 (YM2612)"
+
+msgid "OPTVAL_NP2OPNA"
+msgstr "Neko Project II Kai OPNA"
+
+msgid "OPTVAL_MAMEOPNA"
+msgstr "MAME YM2608"
+
+msgid "OPTVAL_OPALOPL3"
+msgstr "Opal OPL3"
+
+msgid "OPTVAL_NUKEDOPL3174"
+msgstr "Nudum OPL3 v1.7.4"
+
+msgid "OPTVAL_NUKEDOPN2YM3438"
+msgstr "Nuked OPN2 (YM3438)"
+
+msgid "OPTVAL_NUKEDOPN2YM2612"
+msgstr "Nuked OPN2 (YM2612)"
+
+msgid "OPTVAL_OPN2YM2612LLE"
+msgstr "OPN2-LLE (YM2612) (perficiendi intensive)"
+
+msgid "OPTVAL_OPN2YM3438LLE"
+msgstr "OPN2-LLE (YM3438) (perficiendi intensive)"
+
+msgid "OPTVAL_OPN2YMF276LLE"
+msgstr "OPN2-LLE (YMF276) (perficiendi intensive)"
+
+msgid "OPTVAL_GENSOPN2"
+msgstr "GENS OPN2 (YM2612)"
+
+msgid "OPTVAL_YMFMOPN2"
+msgstr "YMFM OPN2"
+
+msgid "OPTVAL_YMFMOPNA"
+msgstr "YMFM OPNA"
+
+msgid "ADLVLMODEL_AUTO"
+msgstr "Auto (Usus setup de ripae)"
+
+msgid "OPNVLMODEL_AUTO"
+msgstr "Auto (Usus setup de ripae)"
+
+msgid "ADLVLMODEL_GENERIC"
+msgstr "Generale"
+
+msgid "OPNVLMODEL_GENERIC"
+msgstr "Generale"
+
+msgid "ADLVLMODEL_NATIVE"
+msgstr "OPL nativum"
+
+msgid "OPNVLMODEL_NATIVE"
+msgstr "OPN nativum"
+
+msgid "ADLVLMODEL_DMX"
+msgstr "DMX (accuratum, cum vitio AM)"
+
+msgid "OPNVLMODEL_DMX"
+msgstr "Sicut in DMX"
+
+msgid "ADLVLMODEL_APOGEE"
+msgstr "Apogee (accuratum, cum vitio AM)"
+
+msgid "OPNVLMODEL_APOGEE"
+msgstr "Sicut in Apogee Sana Ratio"
+
+msgid "OPNVLMODEL_WIN9X"
+msgstr "Win9X-sicut"
+
+msgid "ADLVLMODEL_WIN9X"
+msgstr "Win9X-simile (SB16)"
+
+msgid "ADLVLMODEL_WIN9XGENERIC"
+msgstr "Win9X-sicut (Generic FM)"
+
+msgid "ADLVLMODEL_DMX_FIXED"
+msgstr "DMX (Sine AM vox bug)"
+
+msgid "ADLVLMODEL_APOGEE_FIXED"
+msgstr "Apogee (Sine AM voce bug)"
+
+msgid "ADLVLMODEL_AIL"
+msgstr "Interfacies Bibliothecae Sonorum IBM"
+
+msgid "ADLVLMODEL_HMI"
+msgstr "HMI Operating System"
+
+msgid "ADLVLMODEL_HMIOLD"
+msgstr "HMI SOS (Vetus, bugs)"
+
+msgid "ADLCHANALLOC_AUTO"
+msgstr "Automatice"
+
+msgid "ADLCHANALLOC_OFFDELAY"
+msgstr "Sana procul mora metiri"
+
+msgid "ADLCHANALLOC_SAMEINST"
+msgstr "Reuse primo dimisit eiusdem instrumenti"
+
+msgid "ADLCHANALLOC_ANYREL"
+msgstr "I reuse quis primo nota dimisit"
+
+msgid "OPTVAL_UNLIMITED"
+msgstr "Illimitatum"
+
+msgid "OPTVAL_256K"
+msgstr "256K"
+
+msgid "OPTVAL_512K"
+msgstr "512K"
+
+msgid "OPTVAL_768K"
+msgstr "768K"
+
+msgid "OPTVAL_1024K"
+msgstr "1024K"
+
+msgid "OPTVAL_UNCHARTED2"
+msgstr "Ignotumque 2"
+
+msgid "OPTVAL_HEJLDAWSON"
+msgstr "Hejl-Dawson"
+
+msgid "OPTVAL_REINHARD"
+msgstr "Reinhard"
+
+msgid "OPTVAL_PALETTE"
+msgstr "Palette"
+
+msgid "OPTVAL_LOW"
+msgstr "Humile"
+
+msgid "OPTVAL_MEDIUM"
+msgstr "Medium"
+
+msgid "OPTVAL_HIGH"
+msgstr "Altum"
+
+msgid "OPTVAL_EXTREME"
+msgstr "Extremum"
+
+msgid "OPTVAL_OBVERSEFIRST"
+msgstr "Rectum"
+
+msgid "OPTVAL_REVERSEFIRST"
+msgstr "Inversum"
+
+msgid "GLMNU_POSTPROCESS"
+msgstr "Post-processio"
+
+msgid "GLPREFMNU_TONEMAP"
+msgstr "Modus tabulae tonorum"
+
+msgid "GLPREFMNU_LENS"
+msgstr "Lens pravitatis effectus"
+
+msgid "GLPREFMNU_FXAA"
+msgstr "Qualitas FXAA"
+
+msgid "GLPREFMNU_DITHER"
+msgstr "Exitum dithering"
+
+msgid "GLPREFMNU_PALTONEMAPORDER"
+msgstr "Tonemap Palette Ordinis"
+
+msgid "GLPREFMNU_PALTONEMAPPOWER"
+msgstr "Tonemap Palette Exponentes"
+
+msgid "GLPREFMNU_MULTISAMPLE"
+msgstr "Multisample"
+
+msgid "GLPREFMNU_BLOOM"
+msgstr "Flosculus effectus"
+
+msgid "GLPREFMNU_SSAO"
+msgstr "Ambiens LAQUEUS qualis"
+
+msgid "GLPREFMNU_SSAO_PORTALS"
+msgstr "Portals cum AO"
+
+msgid "GLPREFMNU_MENUBLUR"
+msgstr "Caligo indicis"
+
+msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
+msgstr "Tabula ambitus in speculis"
+
+msgid "GLPREFMNU_RENDERQUALITY"
+msgstr "Reddens qualitatem"
+
+msgid "OPTVAL_SPEED"
+msgstr "Celeritas"
+
+msgid "OPTVAL_QUALITY"
+msgstr "Qualitas"
+
+msgid "GLPREFMNU_SECLIGHTMODE"
+msgstr "Sector lux modus"
+
+msgid "GLPREFMNU_FOGMODE"
+msgstr "Modus nebula"
+
+msgid "OPTVAL_RADIAL"
+msgstr "Radiale"
+
+msgid "OPTVAL_STANDARD"
+msgstr "Standard"
+
+msgid "GLTEXMNU_TEXFILTER"
+msgstr "Modus filtri textura"
+
+msgid "GLTEXMNU_ANISOTROPIC"
+msgstr "Filtrum anisotropicum"
+
+msgid "OPTVAL_NONENEARESTMIPMAP"
+msgstr "Nulla (mipmap proxima)"
+
+msgid "OPTVAL_NONELINEARMIPMAP"
+msgstr "Nulla (mipmap lineari)"
+
+msgid "OPTVAL_NONETRILINEAR"
+msgstr "Nulla (trilinearis)"
+
+msgid "OPTVAL_BILINEAR"
+msgstr "Bilinear"
+
+msgid "OPTVAL_TRILINEAR"
+msgstr "Trilinear"
+
+msgid "OPTVAL_2X"
+msgstr "2×"
+
+msgid "OPTVAL_4X"
+msgstr "4×"
+
+msgid "OPTVAL_8X"
+msgstr "8×"
+
+msgid "OPTVAL_16X"
+msgstr "16×"
+
+msgid "OPTVAL_32X"
+msgstr "32×"
+
+msgid "GLTEXMNU_TITLE"
+msgstr "Optiones texturarum"
+
+msgid "GLTEXMNU_HQRESIZE"
+msgstr "High Quality Resize modus"
+
+msgid "GLTEXMNU_HQRESIZEMULT"
+msgstr "High Quality Resize multiplicator"
+
+msgid "GLTEXMNU_HQRESIZEWARN"
+msgstr "Hic modus memoriam imaginum %d vicibus maiorem requirit"
+
+msgid "GLTEXMNU_RESIZETEX"
+msgstr "Resize texturas"
+
+msgid "GLTEXMNU_RESIZESPR"
+msgstr "Sedeo mente"
+
+msgid "GLTEXMNU_RESIZEFNT"
+msgstr "Fontes redimensiona"
+
+msgid "GLTEXMNU_RESIZESKN"
+msgstr "Sedeo exemplum pellibus"
+
+msgid "GLTEXMNU_PRECACHETEX"
+msgstr "Precache GL texturas"
+
+msgid "VIDMNU_TITLE"
+msgstr "Modus visivus"
+
+msgid "OPTVAL_LETTERBOX"
+msgstr "Letterbox"
+
+msgid "OPTVAL_STRETCH"
+msgstr "Extende"
+
+msgid "VIDMNU_RENDERMODE"
+msgstr "Modus reddendi"
+
+msgid "VIDMNU_FULLSCREEN"
+msgstr "Plenum tegumentum"
+
+msgid "VIDMNU_HIDPI"
+msgstr "Retina / HiDPI firmamentum"
+
+msgid "VIDMNU_FORCEASPECT"
+msgstr "Vis aspect ratio"
+
+msgid "VIDMNU_CROPASPECT"
+msgstr "Ratio coactus style"
+
+msgid "VIDMNU_SCALEMODE"
+msgstr "Consilium scalae"
+
+msgid "VIDMNU_SCALEFACTOR"
+msgstr "Factor scalae"
+
+msgid "VIDMNU_USELINEAR"
+msgstr "Linearibus Scaling usus (Fullscreen)"
+
+msgid "VIDMNU_CUSTOMRES"
+msgstr "Scala pixelorum propria"
+
+msgid "VIDMNU_CUSTOMX"
+msgstr "Latitudo propria"
+
+msgid "VIDMNU_CUSTOMY"
+msgstr "Altitudo propria"
+
+msgid "VIDMNU_APPLYW"
+msgstr "Applica Mutationes (Windowed)"
+
+msgid "VIDMNU_APPLYFS"
+msgstr "Applica Mutationes (Fullscreen)"
+
+msgid "VIDMNU_RESPRESET"
+msgstr "Elige Consilium consectetur"
+
+msgid "VIDMNU_RESPRESETTTL"
+msgstr "Custom Consilium Presets"
+
+msgid "VIDMNU_RESPRESETHEAD"
+msgstr "Resolutio Modos"
+
+msgid "VIDMNU_ASPECT43"
+msgstr "Aspectus 4:3"
+
+msgid "VIDMNU_ASPECT54"
+msgstr "Aspectus 5:4"
+
+msgid "VIDMNU_ASPECT169"
+msgstr "Aspectus 16:9"
+
+msgid "VIDMNU_ASPECT1610"
+msgstr "Aspectus 16:10"
+
+msgid "VIDMNU_ASPECT219"
+msgstr "Aspectus 21:9"
+
+msgid "OPTVAL_NORMAL"
+msgstr "Normale"
+
+msgid "OPTVAL_LOWEST"
+msgstr "Lowest Ascendite"
+
+msgid "OPTVAL_CUSTOM"
+msgstr "Proprium"
+
+msgid "VIDMNU_MAXFPS"
+msgstr "FPS maximum"
+
+msgid "OPTVAL_60FPS"
+msgstr "60 fps"
+
+msgid "OPTVAL_75FPS"
+msgstr "75 fps"
+
+msgid "OPTVAL_90FPS"
+msgstr "90 fps"
+
+msgid "OPTVAL_120FPS"
+msgstr "120 fps"
+
+msgid "OPTVAL_144FPS"
+msgstr "144 fps"
+
+msgid "OPTVAL_200FPS"
+msgstr "200 fps"
+
+msgid "VIDMNU_PREFERBACKEND"
+msgstr "Maluit Reddendo API"
+
+msgid "OPTVAL_OPENGL"
+msgstr "OpenGL"
+
+msgid "OPTVAL_VULKAN"
+msgstr "Vulkan"
+
+msgid "OPTVAL_OPENGLES"
+msgstr "OpenGL ES"
+
+msgid "MISCMNU_MERGEKEYS"
+msgstr "Merge left + ius Alt / Ctrl/ Shift"
+
+msgid "MISCMNU_WINFULLSCREENTOGGLE"
+msgstr "Alt-Intra toggles fullscreen"
+
+msgid "MISCMNU_MACFULLSCREENTOGGLE"
+msgstr "Imperium-F toggles fullscreen"
+
+msgid "MISCMNU_ENABLEAUTOSAVES"
+msgstr "Admitte autosaves"
+
+msgid "MISCMNU_AUTOSAVECOUNT"
+msgstr "Numerus autosaves"
+
+msgid "MISCMNU_SAVELOADCONFIRMATION"
+msgstr "Serva/Aperi confirmatio"
+
+msgid "MISCMNU_NOCHEATS"
+msgstr "Inactivare tincidunt defraudat"
+
+msgid "MISCMNU_QUICKSAVEROTATION"
+msgstr "Rotatio servationum celerium"
+
+msgid "MISCMNU_QUICKSAVECOUNT"
+msgstr "Multis quicksaves in rotatione"
+
+msgid "MISCMNU_CLEANMENU"
+msgstr "Scala indicis ZDoom classici"
+
+msgid "MISCMNU_PAUSEINBACKGROUND"
+msgstr "Intermissio ludum in background"
+
+msgid "HUDMNU_CROSSHAIR"
+msgstr "Collineator praedefinitus"
+
+msgid "HUDMNU_CROSSHAIRCOLOR"
+msgstr "Color collineatoris"
+
+msgid "HUDMNU_CROSSHAIRSCALE"
+msgstr "Collineatorem scala"
+
+msgid "OPTVAL_YES_STANDARD"
+msgstr "Standard"
+
+msgid "OPTVAL_YES_ENHANCED"
+msgstr "Auctum"
+
+msgid "OPTMNU_LANGUAGE"
+msgstr "Lingua"
+
+msgid "TXT_UNDOCHANGES"
+msgstr "Mutationes solve"
+
+msgid "REVMNU_SELECT"
+msgstr "Ambitum elige"
+
+msgid "REVMNU_TEST"
+msgstr "Ambitum experire"
+
+msgid "REVMNU_EDIT"
+msgstr "Ambitum edita"
+
+msgid "REVMNU_NEW"
+msgstr "Novus ambitus"
+
+msgid "REVMNU_Reflections_Scale"
+msgstr "Scala reflexionum"
+
+msgid "REVMNU_Reflections_Delay_Scale"
+msgstr "Reflexiones mora Scale"
+
+msgid "REVMNU_Decay_Time_Scale"
+msgstr "Labe Tempus Scale"
+
+msgid "REVMNU_Decay_HF_Limit"
+msgstr "Labe HF Limit"
+
+msgid "REVMNU_Reverb_Scale"
+msgstr "Scala reverberationis"
+
+msgid "REVMNU_Reverb_Delay_Scale"
+msgstr "Ascendite mora Reverb"
+
+msgid "REVMNU_Echo_Time_Scale"
+msgstr "Tempus Echo Scale"
+
+msgid "REVMNU_Modulation_Time_Scale"
+msgstr "Scala temporis modulationis"
+
+msgid "REVMNU_Based_on"
+msgstr "Ex"
+
+msgid "REVMNU_Name"
+msgstr "Nomen"
+
+msgid "REVMNU_ID_1"
+msgstr "ID # I \""
+
+msgid "REVMNU_ID_2"
+msgstr "ID #2"
+
+msgid "REVMNU_Create"
+msgstr "Crea"
+
+msgid "REVMNU_Save"
+msgstr "Serva…"
+
+msgid "REVMNU_File_name"
+msgstr "Nomen fasciculi"
+
+msgid "REVMNU_Environments_to_save"
+msgstr "Environments servare"
+
+msgid "DSPLYMNU_VKOPT"
+msgstr "Vulkan Optiones (Experimentalis)"
+
+msgid "VK_TITLE"
+msgstr "Vulkan Options"
+
+msgid "VKMNU_DEVICE"
+msgstr "Vulkan Fabrica ID"
+
+msgid "VKMNU_HDR"
+msgstr "Princeps Dynamic Iactus"
+
+msgid "VK_WARNING"
+msgstr "Monitum: Vulkan redditor valde experimentalis!"
+
+msgid "VK_RESTART"
+msgstr "Haec optiones sileo ut effectum requiret."
+
+msgid "OPTVAL_SCALENX"
+msgstr "ScaleNx"
+
+msgid "OPTVAL_NORMALNX"
+msgstr "NormalNx"
+
+msgid "OPTVAL_HQNX"
+msgstr "hqNx"
+
+msgid "OPTVAL_HQNXMMX"
+msgstr "hqNx MMX"
+
+msgid "OPTVAL_NXBRZ"
+msgstr "xBRZ"
+
+msgid "OPTVAL_OLD_NXBRZ"
+msgstr "Vetus xBRZ"
+
+msgid "OS_TITLE"
+msgstr "Quaestio optionum"
+
+msgid "OS_ANY"
+msgstr "Quaerere aliquem terminum"
+
+msgid "OS_ALL"
+msgstr "Quaere omnia verba"
+
+msgid "OS_NO_RESULTS"
+msgstr "Non eventus inventus est."
+
+msgid "OS_LABEL"
+msgstr "Quaerere:"
+
+msgid "OPTMNU_FULLOPTIONS"
+msgstr "Plenus index optionum"
+
+msgid "OPTMNU_SIMPLEON"
+msgstr "Simplex index optionum"
+
+msgid "OPTMNU_OPENCONFIG"
+msgstr "Browse Ludus Mando"
+
+msgid "OPTMNU_OPENSCREENSHOTS"
+msgstr "Imagines tegumenti perlustra"
+
+msgid "OPTMNU_OPENSAVES"
+msgstr "Pasco Servo Ludi"
+
+msgid "MOUSEMNU_SWAPBUTTONS"
+msgstr "Mus Swap Bullae"
+
+msgid "OPTVAL_ONLYMODIFIED"
+msgstr "Tantum mutatio:"
+
+msgid "TXT_UNKNOWN"
+msgstr "Ignotum"
+
+msgid "TXT_SAVEGAMENEEDS"
+msgstr "Huic ludo servato hi fasciculi necessarii sunt"
+
+msgid "GLPREFMNU_CORONAS"
+msgstr "Coronas"
+
+msgid "PICKER_SELECT"
+msgstr "Elige quod file ad ludum currere."
+
+msgid "PICKER_PLAY"
+msgstr "Lude"
+
+msgid "PICKER_EXIT"
+msgstr "Exi"
+
+msgid "PICKER_GENERAL"
+msgstr "Generale"
+
+msgid "PICKER_EXTRA"
+msgstr "Graphica addita"
+
+msgid "PICKER_FULLSCREEN"
+msgstr "Plenum tegumentum"
+
+msgid "PICKER_NOAUTOLOAD"
+msgstr "Inactivare autoload"
+
+msgid "PICKER_DONTASK"
+msgstr "Noli quaerere iterum me"
+
+msgid "PICKER_LIGHTS"
+msgstr "Lumina"
+
+msgid "PICKER_BRIGHTMAPS"
+msgstr "Tabulae clarae"
+
+msgid "PICKER_WIDESCREEN"
+msgstr "Tegumentum latum"
+
+msgid "PICKER_ADDPARM"
+msgstr "Parametri additi:"
+
+msgid "PICKER_WELCOME"
+msgstr "Salve in %s!"
+
+msgid "PICKER_VERSION"
+msgstr "Versionem %s"
+
+msgid "PICKER_PREFERBACKEND"
+msgstr "API reddendi"
+
+msgid "PICKER_TAB_PLAY"
+msgstr "Ludus"
+
+msgid "JOYMNU_JOYENABLE"
+msgstr "Admitte hoc moderatoris"
+
+msgid "CNTRLMNU_OPEN_MAIN"
+msgstr "Indicem principalem aperi"
+
+msgid "MODMNU_REPLAYER"
+msgstr "OMNIBUS replayer"
+
+msgid "JOYMNU_JOYENABLEINBACKGROUND"
+msgstr "Patitur Maecenas vitae Controller input"
+
+msgid "MISCMNU_SAVEORDER"
+msgstr "Ludum Servare Sorting Ordinis"
+
+msgid "OPTVAL_ALPHABETICAL"
+msgstr "Alphabeticum"
+
+msgid "OPTVAL_LASTSAVEDTIME"
+msgstr "Last Servo Tempus"
+
+msgid "PICKER_PLAYHOST"
+msgstr "Ludum hospitare"
+
+msgid "PICKER_PLAYJOIN"
+msgstr "Ludo iungere"
+
+msgid "PICKER_REMPARM"
+msgstr "Parametrorum memento"
+
+msgid "PICKER_SUPPORTWADS"
+msgstr "Aperi Support WADs"
+
+msgid "PICKER_TAB_MULTI"
+msgstr "Plures lusores"
+
+msgid "PICKER_LOADSAVE"
+msgstr "Aperi Serva Tabularium:"
+
+msgid "PICKER_REMSAVE"
+msgstr "Serva Tabularii memento"
+
+msgid "PICKER_HOST"
+msgstr "Hospes"
+
+msgid "PICKER_JOIN"
+msgstr "Iungere"
+
+msgid "PICKER_NETRATE"
+msgstr "Conletum Ticrate:"
+
+msgid "PICKER_NETBACKUP"
+msgstr "Mitte Tergum Packets"
+
+msgid "PICKER_GAMEMODE"
+msgstr "Ludus modus:"
+
+msgid "PICKER_COOP"
+msgstr "Cooperativum"
+
+msgid "PICKER_DM"
+msgstr "Certamen mortis"
+
+msgid "PICKER_TDM"
+msgstr "Certamen mortis gregale"
+
+msgid "PICKER_TEAM"
+msgstr "Quadrigis #:"
+
+msgid "PICKER_ALTDM"
+msgstr "Usus Alternis Deathmatch Rules"
+
+msgid "PICKER_PLAYERS"
+msgstr "Max Vestibulum:"
+
+msgid "PICKER_PORT"
+msgstr "Host Portus:"
+
+msgid "PICKER_PLAYERHINT"
+msgstr "Max. 64"
+
+msgid "PICKER_PORTHINT"
+msgstr "Praedefinitum 5029"
+
+msgid "PICKER_TEAMHINT"
+msgstr "255 = Fortuitum"
+
+msgid "PICKER_IP"
+msgstr "Hostia IP:"
+
+msgid "PICKER_TDMLABEL"
+msgstr "Bigas Deathmatch:"
+
+msgid "TXT_SAYTEAM"
+msgstr "Dic (Team);"
+
+msgid "MISCMNU_DISCORDRPC"
+msgstr "Discordia Rich praesentia"
+
+msgid "JOYMNU_TURNSPEED"
+msgstr "Conversus celeritas"
+
+msgid "JOYMNU_LOOKSPEED"
+msgstr "Vultus celeritas"
+
+msgid "JOYMNU_ANALOGSTRAFERUN"
+msgstr "Cursus transversus analogicus"
+
+msgid "NOTES_FAIL"
+msgstr "'Non release parse notas"
+
+msgid "NOTES_UNKNOWN"
+msgstr "Ignotum"
+
+msgid "NOTES_RELEASED"
+msgstr "%s versio %s, dimissa %s"
+
+msgid "NOTES_EMPTY"
+msgstr "Non descriptio praebita."
+
+msgid "NOTES_DETAILS"
+msgstr "Plura vide in: %s"
+
+msgid "PICKER_SHOWTHIS"
+msgstr "Ostende hanc paginam post updates"
+
+msgid "PICKER_SHOWNOTES"
+msgstr "Notas release ostende"
+
+msgid "PICKER_TAB_ABOUT"
+msgstr "De hoc"
+
+msgid "PICKER_TAB_RELEASE"
+msgstr "Notae editionis"

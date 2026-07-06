@@ -1,0 +1,1793 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-05-05 22:16-0400\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/projects/uzdoom/common/zh_Hant/>\n"
+"Language: zh_Hant\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: python 3.14.4 polib 1.2.0\n"
+
+msgid "PRESSYN"
+msgstr "按下 Y 或 N 。"
+
+msgid "TXT_YES"
+msgstr "是"
+
+msgid "TXT_NO"
+msgstr "否"
+
+msgid "SAVEDEAD"
+msgstr ""
+"不在遊戲之中是無法存檔的！\n"
+"\n"
+"按下任何鍵。"
+
+msgid "SAFEMESSAGE"
+msgstr "你真的要這樣做嗎？"
+
+msgid "QSPROMPT"
+msgstr ""
+"進行快速儲存於\n"
+"\n"
+"「%s」？\n"
+"\n"
+"按下 Y 或 N。"
+
+msgid "QLPROMPT"
+msgstr ""
+"進行快速讀取於\n"
+"\n"
+"「%s」？\n"
+"\n"
+"按下 Y 或 N。"
+
+# This is a gender sensitive message where %s represents the player
+msgid "TXT_X_CHEATS"
+msgstr "%s 作弊了"
+
+msgid "MSGOFF"
+msgstr "訊息：關"
+
+msgid "MSGON"
+msgstr "訊息：開"
+
+msgid "TXT_SAY"
+msgstr "說話："
+
+msgid "TXT_QUITENDOOM"
+msgstr "按下任意鍵或點擊視窗內任一處來離開。"
+
+msgid "NEWSAVE"
+msgstr "＜新的存檔＞"
+
+msgid "GGSAVED"
+msgstr "遊戲已儲存。"
+
+msgid "SAVECOMMENT_TIME"
+msgstr "時間"
+
+msgid "MNU_LOADGAME"
+msgstr "讀取遊戲存檔"
+
+msgid "MNU_SAVEGAME"
+msgstr "儲存遊戲存檔"
+
+msgid "MNU_NOPICTURE"
+msgstr "無圖像"
+
+msgid "MNU_DIFFVERSION"
+msgstr "不同的版本"
+
+msgid "MNU_NOFILES"
+msgstr "無遊戲存檔"
+
+msgid "MNU_DELETESG"
+msgstr "你真的想要刪除這個遊戲存檔？"
+
+msgid "OPTVAL_OFF"
+msgstr "關"
+
+msgid "OPTVAL_ON"
+msgstr "開"
+
+msgid "OPTVAL_AUTO"
+msgstr "自動"
+
+msgid "OPTMNU_TITLE"
+msgstr "選項"
+
+msgid "OPTMNU_CONTROLS"
+msgstr "自訂控制"
+
+msgid "OPTMNU_MOUSE"
+msgstr "滑鼠選項"
+
+msgid "OPTMNU_JOYSTICK"
+msgstr "控制器選項"
+
+msgid "OPTMNU_PLAYER"
+msgstr "玩家設定"
+
+msgid "OPTMNU_GAMEPLAY"
+msgstr "遊戲性選項"
+
+msgid "OPTMNU_AUTOMAP"
+msgstr "自動地圖選項"
+
+msgid "OPTMNU_HUD"
+msgstr "抬頭顯示器選項"
+
+msgid "OPTMNU_MISCELLANEOUS"
+msgstr "雜項選項"
+
+msgid "OPTMNU_SOUND"
+msgstr "音效選項"
+
+msgid "OPTMNU_DISPLAY"
+msgstr "顯示選項"
+
+msgid "OPTMNU_VIDEO"
+msgstr "設定影像模式"
+
+msgid "OPTMNU_DEFAULTS"
+msgstr "重置為預設值"
+
+msgid "OPTMNU_RESETTOSAVED"
+msgstr "重置到前次的值"
+
+msgid "OPTMNU_WRITEINI"
+msgstr "儲存目前的設定值"
+
+msgid "OPTMNU_CONSOLE"
+msgstr "前往控制台"
+
+msgid "OPTMNU_NETWORK"
+msgstr "網路選項"
+
+msgid "OPTMNU_REVERB"
+msgstr "殘響環境編輯器"
+
+msgid "CNTRLMNU_SWITCHTEXT1"
+msgstr "按Enter來改變，按倒退鍵來消除"
+
+msgid "CNTRLMNU_SWITCHTEXT2"
+msgstr "按下新的按鍵，按ESC來取消"
+
+msgid "CNTRLMNU_CONTROLS"
+msgstr "控制"
+
+msgid "CNTRLMNU_ATTACK"
+msgstr "主攻擊"
+
+msgid "CNTRLMNU_ALTATTACK"
+msgstr "次攻擊"
+
+msgid "CNTRLMNU_RELOAD"
+msgstr "武器換彈"
+
+msgid "CNTRLMNU_USE"
+msgstr "使用／打開"
+
+msgid "CNTRLMNU_FORWARD"
+msgstr "往前移動"
+
+msgid "CNTRLMNU_BACK"
+msgstr "往後移動"
+
+msgid "CNTRLMNU_MOVELEFT"
+msgstr "往左橫移"
+
+msgid "CNTRLMNU_MOVERIGHT"
+msgstr "往右橫移"
+
+msgid "CNTRLMNU_TURNLEFT"
+msgstr "往左轉"
+
+msgid "CNTRLMNU_TURNRIGHT"
+msgstr "往右轉"
+
+msgid "CNTRLMNU_TURN180"
+msgstr "快速轉向半圈"
+
+msgid "CNTRLMNU_JUMP"
+msgstr "跳躍"
+
+msgid "CNTRLMNU_CROUCH"
+msgstr "蹲下"
+
+msgid "CNTRLMNU_TOGGLECROUCH"
+msgstr "蹲下切換"
+
+msgid "CNTRLMNU_MOUSELOOK"
+msgstr "滑鼠環視"
+
+# Look doesn't change the aim! It only alters the view pitch
+msgid "CNTRLMNU_LOOKUP"
+msgstr "往上看"
+
+msgid "CNTRLMNU_LOOKDOWN"
+msgstr "往下看"
+
+msgid "CNTRLMNU_CENTERVIEW"
+msgstr "中心視點"
+
+msgid "CNTRLMNU_RUN"
+msgstr "跑"
+
+msgid "CNTRLMNU_TOGGLERUN"
+msgstr "切換跑"
+
+msgid "CNTRLMNU_STRAFE"
+msgstr "平移"
+
+msgid "CNTRLMNU_SCOREBOARD"
+msgstr "顯示計分板"
+
+msgid "CNTRLMNU_ACTION"
+msgstr "動作"
+
+msgid "CNTRLMNU_ACTION_TITLE"
+msgstr "自訂動作控制"
+
+msgid "MNU_MULTIPLAYER"
+msgstr "多人遊戲"
+
+msgid "CNTRLMNU_SAY"
+msgstr "說話"
+
+msgid "CNTRLMNU_WEAPONS_TITLE"
+msgstr "自訂武器控制"
+
+msgid "CNTRLMNU_INVENTORY_TITLE"
+msgstr "自訂物品欄控制"
+
+msgid "CNTRLMNU_OTHER_TITLE"
+msgstr "自訂其他控制"
+
+msgid "CNTRLMNU_WEAPONS"
+msgstr "武器"
+
+msgid "CNTRLMNU_NEXTWEAPON"
+msgstr "下一武器"
+
+msgid "CNTRLMNU_PREVIOUSWEAPON"
+msgstr "前一武器"
+
+# Todo - make game specific
+msgid "CNTRLMNU_SLOT1"
+msgstr "１號武器"
+
+# only show appropriate slots per game
+# 
+msgid "CNTRLMNU_SLOT2"
+msgstr "２號武器"
+
+msgid "CNTRLMNU_SLOT3"
+msgstr "３號武器"
+
+msgid "CNTRLMNU_SLOT4"
+msgstr "４號武器"
+
+msgid "CNTRLMNU_SLOT5"
+msgstr "５號武器"
+
+msgid "CNTRLMNU_SLOT6"
+msgstr "６號武器"
+
+msgid "CNTRLMNU_SLOT7"
+msgstr "７號武器"
+
+msgid "CNTRLMNU_SLOT8"
+msgstr "８號武器"
+
+msgid "CNTRLMNU_SLOT9"
+msgstr "９號武器"
+
+msgid "CNTRLMNU_SLOT0"
+msgstr "１０號武器"
+
+msgid "CNTRLMNU_INVENTORY"
+msgstr "物品欄"
+
+msgid "CNTRLMNU_USEITEM"
+msgstr "啟用物品"
+
+msgid "CNTRLMNU_USEALLITEMS"
+msgstr "啟用所有物品"
+
+msgid "CNTRLMNU_NEXTITEM"
+msgstr "下一物品"
+
+msgid "CNTRLMNU_PREVIOUSITEM"
+msgstr "前一物品"
+
+# most are not used yet but will be
+#, fuzzy
+msgid "MAPCNTRLMNU_TITLE"
+msgstr "自訂地圖控制"
+
+msgid "MAPCNTRLMNU_CONTROLS"
+msgstr "地圖控制"
+
+msgid "MAPCNTRLMNU_PANLEFT"
+msgstr "向左平移"
+
+msgid "MAPCNTRLMNU_PANRIGHT"
+msgstr "向右平移"
+
+msgid "MAPCNTRLMNU_PANUP"
+msgstr "向上平移"
+
+msgid "MAPCNTRLMNU_PANDOWN"
+msgstr "向下平移"
+
+msgid "MAPCNTRLMNU_ZOOMIN"
+msgstr "放大"
+
+msgid "MAPCNTRLMNU_ZOOMOUT"
+msgstr "縮小"
+
+msgid "MAPCNTRLMNU_TOGGLEZOOM"
+msgstr "切換縮放"
+
+msgid "MAPCNTRLMNU_TOGGLEFOLLOW"
+msgstr "切換跟隨"
+
+msgid "MAPCNTRLMNU_TOGGLEGRID"
+msgstr "切換格網顯示"
+
+msgid "MAPCNTRLMNU_ROTATE"
+msgstr "切換旋轉"
+
+msgid "MAPCNTRLMNU_TOGGLETEXTURE"
+msgstr "切換材質顯示"
+
+msgid "CNTRLMNU_AUTOMAP"
+msgstr "切換自動地圖"
+
+msgid "CNTRLMNU_CHASECAM"
+msgstr "追蹤鏡頭"
+
+msgid "CNTRLMNU_SCREENSHOT"
+msgstr "螢幕擷圖"
+
+msgid "CNTRLMNU_PAUSE"
+msgstr "暫停"
+
+msgid "CNTRLMNU_DISPLAY_INC"
+msgstr "增加顯示大小"
+
+msgid "CNTRLMNU_DISPLAY_DEC"
+msgstr "減少顯示大小"
+
+msgid "CNTRLMNU_OPEN_HELP"
+msgstr "打開求助"
+
+msgid "CNTRLMNU_OPEN_SAVE"
+msgstr "打開存檔選單"
+
+msgid "CNTRLMNU_OPEN_LOAD"
+msgstr "打開讀檔選單"
+
+msgid "CNTRLMNU_OPEN_OPTIONS"
+msgstr "打開選項選單"
+
+msgid "CNTRLMNU_OPEN_DISPLAY"
+msgstr "打開顯示選單"
+
+msgid "CNTRLMNU_QUICKSAVE"
+msgstr "快速存檔"
+
+msgid "CNTRLMNU_QUICKLOAD"
+msgstr "快速讀檔"
+
+msgid "CNTRLMNU_EXIT_TO_MAIN"
+msgstr "退到主選單"
+
+msgid "CNTRLMNU_TOGGLE_MESSAGES"
+msgstr "切換訊息開關"
+
+msgid "CNTRLMNU_MENU_QUIT"
+msgstr "離開遊戲"
+
+msgid "MOUSEMNU_ENABLEMOUSE"
+msgstr "啟用滑鼠"
+
+msgid "MOUSEMNU_MOUSEINMENU"
+msgstr "在選單中啟用滑鼠"
+
+msgid "MOUSEMNU_SHOWBACKBUTTON"
+msgstr "顯示後退按鈕"
+
+msgid "MOUSEMNU_CURSOR"
+msgstr "游標"
+
+msgid "MOUSEMNU_SENSITIVITY_X"
+msgstr "水平靈敏度"
+
+msgid "MOUSEMNU_SENSITIVITY_Y"
+msgstr "垂直靈敏度"
+
+msgid "MOUSEMNU_SMOOTHMOUSE"
+msgstr "平滑化滑鼠移動"
+
+msgid "MOUSEMNU_TURNSPEED"
+msgstr "轉向速度"
+
+msgid "MOUSEMNU_MOUSELOOKSPEED"
+msgstr "滑鼠視角速度"
+
+msgid "MOUSEMNU_FORWBACKSPEED"
+msgstr "前／後移動速度"
+
+msgid "MOUSEMNU_STRAFESPEED"
+msgstr "橫移速度"
+
+msgid "MOUSEMNU_ALWAYSMOUSELOOK"
+msgstr "總是使用滑鼠視角"
+
+msgid "MOUSEMNU_INVERTMOUSE"
+msgstr "反轉滑鼠Ｙ軸"
+
+msgid "MOUSEMNU_INVERTMOUSEX"
+msgstr "反轉滑鼠Ｘ軸"
+
+msgid "OPTVAL_UPPERLEFT"
+msgstr "左上"
+
+msgid "OPTVAL_UPPERRIGHT"
+msgstr "右上"
+
+msgid "OPTVAL_LOWERLEFT"
+msgstr "左下"
+
+msgid "OPTVAL_LOWERRIGHT"
+msgstr "右下"
+
+msgid "OPTVAL_TOUCHSCREENLIKE"
+msgstr "類觸控"
+
+msgid "OPTSTR_SIMPLEARROW"
+msgstr "簡單箭頭"
+
+msgid "OPTSTR_SYSTEMCURSOR"
+msgstr "系統游標"
+
+msgid "OPTVAL_DEFAULT"
+msgstr "預設值"
+
+msgid "JOYMNU_TITLE"
+msgstr "控制器配置"
+
+msgid "JOYMNU_OPTIONS"
+msgstr "控制器選項"
+
+msgid "JOYMNU_NOMENU"
+msgstr "在選單中阻擋控制器輸入"
+
+msgid "JOYMNU_ENABLE"
+msgstr "啟用控制器支援"
+
+msgid "JOYMNU_DINPUT"
+msgstr "啟用 DirectInput 控制器"
+
+msgid "JOYMNU_XINPUT"
+msgstr "啟用 XInput 控制器"
+
+msgid "JOYMNU_PS2"
+msgstr "啟用原生 PlayStation 2 轉接器"
+
+msgid "JOYMNU_NOCON"
+msgstr "未偵測到任何控制器"
+
+msgid "JOYMNU_CONFIG"
+msgstr "設置控制器："
+
+msgid "JOYMNU_DISABLED1"
+msgstr "控制器支援必須"
+
+# Supposed to be empty in Russian and Serbian.
+msgid "JOYMNU_DISABLED2"
+msgstr "啟用已偵測任何"
+
+msgid "JOYMNU_INVALID"
+msgstr "在選單指定了無效的控制器"
+
+msgid "JOYMNU_OVRSENS"
+msgstr "整體靈敏度"
+
+msgid "JOYMNU_AXIS"
+msgstr "軸設置"
+
+msgid "JOYMNU_INVERT"
+msgstr "反轉"
+
+msgid "JOYMNU_DEADZONE"
+msgstr "死區"
+
+msgid "JOYMNU_NOAXES"
+msgstr "沒有可設置的軸"
+
+msgid "OPTVAL_NONE"
+msgstr "無"
+
+msgid "OPTVAL_TURNING"
+msgstr "往左／右看"
+
+msgid "OPTVAL_LOOKINGUPDOWN"
+msgstr "往上／下看"
+
+msgid "OPTVAL_MOVINGFORWARD"
+msgstr "往前／後移動"
+
+msgid "OPTVAL_STRAFING"
+msgstr "往左／右橫移"
+
+msgid "OPTVAL_MOVINGUPDOWN"
+msgstr "往上／下移動"
+
+msgid "OPTVAL_INVERTED"
+msgstr "已反轉"
+
+msgid "OPTVAL_NOTINVERTED"
+msgstr "尚未反轉"
+
+msgid "TXT_COLOR_BLUE"
+msgstr "藍"
+
+msgid "TXT_COLOR_RED"
+msgstr "紅"
+
+msgid "TXT_COLOR_GREEN"
+msgstr "綠"
+
+msgid "TXT_COLOR_GRAY"
+msgstr "灰"
+
+msgid "TXT_COLOR_DARKGRAY"
+msgstr "深灰"
+
+msgid "TXT_COLOR_DARKGREEN"
+msgstr "深綠"
+
+msgid "TXT_COLOR_BROWN"
+msgstr "棕"
+
+msgid "TXT_COLOR_DARKBLUE"
+msgstr "深藍"
+
+msgid "TXT_COLOR_LIGHTRED"
+msgstr "淺紅"
+
+msgid "TXT_COLOR_YELLOW"
+msgstr "黃"
+
+msgid "TXT_COLOR_PURPLE"
+msgstr "紫"
+
+msgid "TXT_COLOR_DULLGREEN"
+msgstr "橄欖綠"
+
+msgid "TXT_COLOR_BEIGE"
+msgstr "淺褐"
+
+msgid "TXT_COLOR_LIGHTBLUE"
+msgstr "淺藍"
+
+msgid "TXT_COLOR_LIGHTGRAY"
+msgstr "淺灰"
+
+msgid "TXT_COLOR_LIGHTBROWN"
+msgstr "淺棕"
+
+msgid "TXT_COLOR_GOLD"
+msgstr "金"
+
+msgid "TXT_COLOR_BRIGHTGREEN"
+msgstr "亮綠"
+
+msgid "TXT_COLOR_RUST"
+msgstr "紅褐"
+
+msgid "PLYRMNU_NAME"
+msgstr "名字"
+
+msgid "PLYRMNU_TEAM"
+msgstr "團隊"
+
+msgid "PLYRMNU_PLAYERCOLOR"
+msgstr "顏色"
+
+msgid "PLYRMNU_PLAYERGENDER"
+msgstr "性別"
+
+msgid "OPTVAL_MALE"
+msgstr "男"
+
+msgid "OPTVAL_FEMALE"
+msgstr "女"
+
+msgid "OPTVAL_NEUTRAL"
+msgstr "中性"
+
+msgid "OPTVAL_OTHER"
+msgstr "物件"
+
+msgid "GMPLYMNU_TITLE"
+msgstr "遊戲性選項"
+
+msgid "OPTVAL_ALWAYS"
+msgstr "總是"
+
+msgid "OPTVAL_NEVER"
+msgstr "從不"
+
+msgid "PLYRMNU_AUTOAIM"
+msgstr "自動瞄準"
+
+msgid "PLYRMNU_ALWAYSRUN"
+msgstr "總是跑"
+
+msgid "DSPLYMNU_SCREENSIZE"
+msgstr "畫面大小"
+
+msgid "DSPLYMNU_VSYNC"
+msgstr "垂直同步"
+
+msgid "DSPLYMNU_MODELS"
+msgstr "模型"
+
+msgid "MSGMNU_CENTERMESSAGES"
+msgstr "訊息置中"
+
+msgid "MSGMNU_PULSEMESSAGES"
+msgstr "閃爍地顯示訊息"
+
+msgid "MNU_COLORPICKER"
+msgstr "選擇顏色"
+
+msgid "AUTOMAPMNU_ROTATE"
+msgstr "旋轉自動地圖"
+
+msgid "AUTOMAPMNU_FOLLOW"
+msgstr "跟隨玩家"
+
+msgid "AUTOMAPMNU_LINEALPHA"
+msgstr "線條不透明度"
+
+msgid "AUTOMAPMNU_LINETHICKNESS"
+msgstr "線條粗細度"
+
+msgid "MAPCOLORMNU_TITLE"
+msgstr "自訂地圖色彩"
+
+msgid "MAPCOLORMNU_DEFAULTMAPCOLORS"
+msgstr "回復到自訂色彩預設值"
+
+msgid "OPTVAL_8000HZ"
+msgstr "8000 赫茲"
+
+msgid "OPTVAL_11025HZ"
+msgstr "11025 赫茲"
+
+msgid "OPTVAL_22050HZ"
+msgstr "22050 赫茲"
+
+msgid "OPTVAL_32000HZ"
+msgstr "32000 赫茲"
+
+msgid "OPTVAL_44100HZ"
+msgstr "44100 赫茲"
+
+msgid "OPTVAL_48000HZ"
+msgstr "48000 赫茲"
+
+msgid "OPTVAL_64SAMPLES"
+msgstr "64 採樣量"
+
+msgid "OPTVAL_128SAMPLES"
+msgstr "128 採樣量"
+
+msgid "OPTVAL_256SAMPLES"
+msgstr "256 採樣量"
+
+msgid "OPTVAL_512SAMPLES"
+msgstr "512 採樣量"
+
+msgid "OPTVAL_1024SAMPLES"
+msgstr "1024 採樣量"
+
+msgid "OPTVAL_2048SAMPLES"
+msgstr "2048 採樣量"
+
+msgid "OPTVAL_4096SAMPLES"
+msgstr "4096 採樣量"
+
+msgid "OPTSTR_AUTO"
+msgstr "自動"
+
+msgid "OPTSTR_MONO"
+msgstr "單音"
+
+msgid "OPTSTR_STEREO"
+msgstr "立體音"
+
+msgid "OPTSTR_PROLOGIC"
+msgstr "杜比定向邏輯解碼器"
+
+msgid "OPTSTR_QUAD"
+msgstr "四聲道"
+
+msgid "OPTSTR_SURROUND"
+msgstr "五聲道"
+
+msgid "OPTSTR_5POINT1"
+msgstr "5.1 聲道"
+
+msgid "OPTSTR_7POINT1"
+msgstr "7.1 聲道"
+
+msgid "OPENALMNU_PLAYBACKDEVICE"
+msgstr "播放裝置"
+
+msgid "OPENALMNU_ENABLEEFX"
+msgstr "啟用 EFX"
+
+msgid "OPENALMNU_RESAMPLER"
+msgstr "重新取樣器"
+
+msgid "SNDMNU_SFXVOLUME"
+msgstr "音效音量"
+
+msgid "SNDMNU_MENUVOLUME"
+msgstr "選單音量"
+
+msgid "SNDMNU_MUSICVOLUME"
+msgstr "音樂音量"
+
+msgid "SNDMNU_MIDIDEVICE"
+msgstr "MIDI 裝置"
+
+msgid "SNDMNU_BACKGROUND"
+msgstr "背景時發出音效"
+
+msgid "SNDMNU_UNDERWATERREVERB"
+msgstr "水中殘響"
+
+msgid "SNDMNU_RANDOMIZEPITCHES"
+msgstr "隨機音高"
+
+msgid "SNDMNU_CHANNELS"
+msgstr "音效頻道數"
+
+msgid "SNDMNU_OPENAL"
+msgstr "OpenAL 選項"
+
+msgid "SNDMNU_RESTART"
+msgstr "重啟音效"
+
+msgid "SNDMNU_ADVANCED"
+msgstr "進階選項"
+
+msgid "SNDMNU_MODREPLAYER"
+msgstr "模組化重播器選項"
+
+msgid "SNDMNU_MIDIPLAYER"
+msgstr "MIDI 裝置選項"
+
+msgid "ADVSNDMNU_TITLE"
+msgstr "進階音效選項"
+
+msgid "ADVSNDMNU_SAMPLERATE"
+msgstr "取樣率"
+
+msgid "ADVSNDMNU_HRTF"
+msgstr "頭部相關傳輸函數(HRTF)"
+
+msgid "ADVSNDMNU_OPLSYNTHESIS"
+msgstr "OPL 合成器"
+
+msgid "ADVSNDMNU_OPLNUMCHIPS"
+msgstr "已模擬的 OPL 晶片數量"
+
+msgid "ADVSNDMNU_OPLGAIN"
+msgstr "增益"
+
+msgid "ADVSNDMNU_OPLFULLPAN"
+msgstr "完整 MIDI 立體音聲相定位"
+
+msgid "ADVSNDMNU_OPLCORES"
+msgstr "OPL 模擬器核心"
+
+msgid "ADVSNDMNU_MIDIVOICES"
+msgstr "MIDI 音色數"
+
+msgid "ADVSNDMNU_FLUIDSYNTH"
+msgstr "FluidSynth"
+
+msgid "ADVSNDMNU_GLOBAL"
+msgstr "全域"
+
+msgid "ADVSNDMNU_FREEVERB"
+msgstr "Freeverb"
+
+msgid "ADVSNDMNU_GLOBAL_FREEVERB"
+msgstr "全域 Freeverb"
+
+msgid "ADVSNDMNU_FLUIDGAIN"
+msgstr "增益"
+
+msgid "ADVSNDMNU_REVERB"
+msgstr "殘響"
+
+msgid "ADVSNDMNU_REVERB_LEVEL"
+msgstr "殘響等級"
+
+msgid "ADVSNDMNU_CHORUS"
+msgstr "和聲"
+
+msgid "ADVSNDMNU_TIMIDITY"
+msgstr "Timidity++"
+
+msgid "ADVSNDMNU_ADLMIDI"
+msgstr "ADLMidi"
+
+msgid "ADVSNDMNU_OPNMIDI"
+msgstr "OPNMidi"
+
+msgid "ADVSNDMNU_WILDMIDI"
+msgstr "WildMidi"
+
+msgid "ADVSNDMNU_SELCONFIG"
+msgstr "選擇配置"
+
+msgid "ADVSNDMNU_ADVRESAMPLING"
+msgstr "進階重新取樣"
+
+msgid "ADVSNDMNU_OPLBANK"
+msgstr "OPL 音色庫"
+
+msgid "ADVSNDMNU_RUNPCMRATE"
+msgstr "令模擬器執行於 PCM 取樣率"
+
+msgid "ADVSNDMNU_ADLNUMCHIPS"
+msgstr "已模擬的 OPL 晶片數量"
+
+msgid "ADVSNDMNU_ADLGAIN"
+msgstr "增益"
+
+msgid "ADVSNDMNU_VLMODEL"
+msgstr "音量模型"
+
+msgid "ADVSNDMNU_CHANALLOC"
+msgstr "頻道分配方式"
+
+msgid "ADVSNDMNU_AUTOARPEGGIO"
+msgstr "自動琶音（分解和弦）"
+
+msgid "ADVSNDMNU_OPNCORES"
+msgstr "OPN2 模擬器核心"
+
+msgid "ADVSNDMNU_GUSEMULATION"
+msgstr "GUS 模擬"
+
+msgid "ADVSNDMNU_DMXGUS"
+msgstr "讀取 DMXGUS 資料塊"
+
+msgid "ADVSNDMNU_GUSMEMSIZE"
+msgstr "GUS 記憶體大小"
+
+msgid "ADVSNDMNU_OPNNUMCHIPS"
+msgstr "已模擬的 OPN 晶片數量"
+
+msgid "ADVSNDMNU_OPNGAIN"
+msgstr "增益"
+
+msgid "ADVSNDMNU_ADLCUSTOMBANK"
+msgstr "使用自訂 WOPL 音色庫"
+
+msgid "ADVSNDMNU_ADLUSEWADBANK"
+msgstr "使用 WAD 中的 GENMIDI 音色庫作為自訂音色庫"
+
+msgid "ADVSNDMNU_OPLBANKFILE"
+msgstr "WOPL 音色庫檔案"
+
+msgid "ADVSNDMNU_OPNCUSTOMBANK"
+msgstr "使用自訂 WOPN 音色庫"
+
+msgid "ADVSNDMNU_OPNBANKFILE"
+msgstr "WOPN 音色庫檔案"
+
+msgid "OPTVAL_ALIASING"
+msgstr "混疊"
+
+# This setting is duplicated threefold in order to allow for different
+# grammatical gender endings
+msgid "OPTVAL_LINEAR_1"
+msgstr "線性"
+
+msgid "OPTVAL_LINEAR_2"
+msgstr "線性"
+
+msgid "OPTVAL_LINEAR_3"
+msgstr "線性"
+
+msgid "OPTVAL_NEAREST"
+msgstr "最近點"
+
+msgid "OPTVAL_PCF_LOW"
+msgstr "PCF（低）"
+
+msgid "OPTVAL_PCF_MEDIUM"
+msgstr "PCF（中）"
+
+msgid "OPTVAL_PCF_HIGH"
+msgstr "PCF（高）"
+
+msgid "OPTVAL_CUBIC"
+msgstr "立方"
+
+msgid "OPTVAL_BLEP"
+msgstr "頻帶限制階躍"
+
+msgid "OPTVAL_LINEARSLOW"
+msgstr "線性（較慢）"
+
+msgid "OPTVAL_BLAM"
+msgstr "頻帶限制線性"
+
+msgid "OPTVAL_CUBICSLOW"
+msgstr "立方（較慢）"
+
+msgid "OPTVAL_SINC"
+msgstr "Sinc函數"
+
+msgid "OPTVAL_NOTEONOFFONLY"
+msgstr "在音符開／關時"
+
+msgid "OPTVAL_FULLRAMPING"
+msgstr "從零到最高狀態"
+
+msgid "MODMNU_MASTERVOLUME"
+msgstr "主音量"
+
+msgid "MODMNU_QUALITY"
+msgstr "品質"
+
+msgid "MODMNU_VOLUMERAMPING"
+msgstr "音量漸變"
+
+msgid "OPTVAL_LIBXMP"
+msgstr "libXMP"
+
+msgid "OPTVAL_DUMB"
+msgstr "Dumb庫"
+
+msgid "MODMNU_CHIPOMATIC"
+msgstr "Chip-o-matic"
+
+msgid "OPTVAL_MAMEOPL2"
+msgstr "MAME OPL2"
+
+msgid "OPTVAL_DOSBOXOPL3"
+msgstr "DOSBox OPL3"
+
+msgid "OPTVAL_JAVAOPL3"
+msgstr "Java OPL3"
+
+msgid "OPTVAL_ESFMu"
+msgstr "ESFMu OPL3"
+
+msgid "OPTVAL_YMFMOPL2"
+msgstr "YMFM OPL2"
+
+msgid "OPTVAL_YMFMOPL3"
+msgstr "YMFM OPL3"
+
+msgid "OPTVAL_NUKEDOPL3"
+msgstr "Nuked OPL3"
+
+msgid "OPTVAL_LLENUKEDOPL2"
+msgstr "OPL2-LLE（效能密集型）"
+
+msgid "OPTVAL_LLENUKEDOPL3"
+msgstr "OPL3-LLE（效能密集型）"
+
+msgid "OPTVAL_MAMEOPN2"
+msgstr "MAME OPN2 (YM2612)"
+
+msgid "OPTVAL_NP2OPNA"
+msgstr "Neko Project II Kai OPNA"
+
+msgid "OPTVAL_MAMEOPNA"
+msgstr "MAME YM2608"
+
+msgid "OPTVAL_OPALOPL3"
+msgstr "Opal OPL3"
+
+msgid "OPTVAL_NUKEDOPL3174"
+msgstr "Nuked OPL3 v1.7.4"
+
+msgid "OPTVAL_NUKEDOPN2YM3438"
+msgstr "Nuked OPN2 (YM3438)"
+
+msgid "OPTVAL_NUKEDOPN2YM2612"
+msgstr "Nuked OPN2 (YM2612)"
+
+msgid "OPTVAL_OPN2YM2612LLE"
+msgstr "OPN2-LLE (YM2612)（效能密集型）"
+
+msgid "OPTVAL_OPN2YM3438LLE"
+msgstr "OPN2-LLE (YM3438)（效能密集型）"
+
+msgid "OPTVAL_OPN2YMF276LLE"
+msgstr "OPN2-LLE (YMF276)（效能密集型）"
+
+msgid "OPTVAL_GENSOPN2"
+msgstr "GENS OPN2 (YM2612)"
+
+msgid "OPTVAL_YMFMOPN2"
+msgstr "YMFM OPN2"
+
+msgid "OPTVAL_YMFMOPNA"
+msgstr "YMFM OPNA"
+
+msgid "ADLVLMODEL_AUTO"
+msgstr "自動（使用音色庫設定）"
+
+msgid "OPNVLMODEL_AUTO"
+msgstr "自動（使用音色庫設定）"
+
+msgid "ADLVLMODEL_GENERIC"
+msgstr "通用"
+
+msgid "OPNVLMODEL_GENERIC"
+msgstr "通用"
+
+msgid "ADLVLMODEL_NATIVE"
+msgstr "OPL 原生"
+
+msgid "OPNVLMODEL_NATIVE"
+msgstr "OPN 原生"
+
+msgid "ADLVLMODEL_DMX"
+msgstr "DMX（精確，有 AM bug）"
+
+msgid "OPNVLMODEL_DMX"
+msgstr "像在 DMX"
+
+msgid "ADLVLMODEL_APOGEE"
+msgstr "Apogee（精確，有AM bug）"
+
+msgid "OPNVLMODEL_APOGEE"
+msgstr "像在 Apogee Sound System"
+
+msgid "OPNVLMODEL_WIN9X"
+msgstr "像在Win9x"
+
+msgid "ADLVLMODEL_WIN9X"
+msgstr "像在Win9x（聲霸卡１６）"
+
+msgid "ADLVLMODEL_WIN9XGENERIC"
+msgstr "像在Win9x（一般ＦＭ）"
+
+msgid "ADLVLMODEL_DMX_FIXED"
+msgstr "DMX（沒有 AM voice bug）"
+
+msgid "ADLVLMODEL_APOGEE_FIXED"
+msgstr "Apogee（沒有AM voice bug）"
+
+msgid "ADLVLMODEL_AIL"
+msgstr "IBM 聲音庫介面"
+
+msgid "ADLVLMODEL_HMI"
+msgstr "HMI 音效作業系統"
+
+msgid "ADLVLMODEL_HMIOLD"
+msgstr "HMI 音效作業系統（舊版含bugs）"
+
+msgid "ADLCHANALLOC_AUTO"
+msgstr "自動"
+
+msgid "ADLCHANALLOC_OFFDELAY"
+msgstr "聲音終止延遲測量"
+
+msgid "ADLCHANALLOC_SAMEINST"
+msgstr "再使用與最初釋出音符的相同樂器"
+
+msgid "ADLCHANALLOC_ANYREL"
+msgstr "再使用任何第一次釋出的音符"
+
+msgid "OPTVAL_UNLIMITED"
+msgstr "無限制"
+
+msgid "OPTVAL_256K"
+msgstr "256K"
+
+msgid "OPTVAL_512K"
+msgstr "512K"
+
+msgid "OPTVAL_768K"
+msgstr "768K"
+
+msgid "OPTVAL_1024K"
+msgstr "1024K"
+
+msgid "OPTVAL_UNCHARTED2"
+msgstr "Uncharted 2"
+
+msgid "OPTVAL_HEJLDAWSON"
+msgstr "Hejl-Dawson 演算法"
+
+msgid "OPTVAL_REINHARD"
+msgstr "Reinhard 演算法"
+
+msgid "OPTVAL_PALETTE"
+msgstr "色盤"
+
+msgid "OPTVAL_LOW"
+msgstr "低"
+
+msgid "OPTVAL_MEDIUM"
+msgstr "中"
+
+msgid "OPTVAL_HIGH"
+msgstr "高"
+
+msgid "OPTVAL_EXTREME"
+msgstr "極端"
+
+msgid "OPTVAL_OBVERSEFIRST"
+msgstr "正面"
+
+msgid "OPTVAL_REVERSEFIRST"
+msgstr "反面"
+
+#, fuzzy
+msgid "GLMNU_POSTPROCESS"
+msgstr "後製處理"
+
+msgid "GLPREFMNU_TONEMAP"
+msgstr "色調映射模式"
+
+msgid "GLPREFMNU_LENS"
+msgstr "透鏡失真效果"
+
+msgid "GLPREFMNU_FXAA"
+msgstr "FXAA 品質"
+
+msgid "GLPREFMNU_DITHER"
+msgstr "遞色輸出"
+
+msgid "GLPREFMNU_PALTONEMAPORDER"
+msgstr "色調映射色盤順序"
+
+msgid "GLPREFMNU_PALTONEMAPPOWER"
+msgstr "色調映射色盤指數"
+
+msgid "GLPREFMNU_MULTISAMPLE"
+msgstr "多重採樣"
+
+msgid "GLPREFMNU_BLOOM"
+msgstr "泛光（Bloom）效果"
+
+msgid "GLPREFMNU_SSAO"
+msgstr "環境光遮蔽品質"
+
+msgid "GLPREFMNU_SSAO_PORTALS"
+msgstr "有環境光遮蔽的 Portals"
+
+msgid "GLPREFMNU_MENUBLUR"
+msgstr "選單模糊"
+
+msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
+msgstr "在鏡子上實行環境貼圖"
+
+msgid "GLPREFMNU_RENDERQUALITY"
+msgstr "渲染品質"
+
+msgid "OPTVAL_SPEED"
+msgstr "速度"
+
+msgid "OPTVAL_QUALITY"
+msgstr "品質"
+
+msgid "GLPREFMNU_SECLIGHTMODE"
+msgstr "Sector 光線模式"
+
+msgid "GLPREFMNU_FOGMODE"
+msgstr "霧模式"
+
+msgid "OPTVAL_RADIAL"
+msgstr "放射狀"
+
+msgid "OPTVAL_STANDARD"
+msgstr "標準"
+
+msgid "GLTEXMNU_TEXFILTER"
+msgstr "材質過濾模式"
+
+msgid "GLTEXMNU_ANISOTROPIC"
+msgstr "非均向性過濾"
+
+msgid "OPTVAL_NONENEARESTMIPMAP"
+msgstr "無（最近 mipmap 篩選）"
+
+msgid "OPTVAL_NONELINEARMIPMAP"
+msgstr "無（線性 mipmap 篩選）"
+
+msgid "OPTVAL_NONETRILINEAR"
+msgstr "無（三線性）"
+
+msgid "OPTVAL_BILINEAR"
+msgstr "雙線性"
+
+msgid "OPTVAL_TRILINEAR"
+msgstr "三線性"
+
+msgid "OPTVAL_2X"
+msgstr "２倍"
+
+msgid "OPTVAL_4X"
+msgstr "４倍"
+
+msgid "OPTVAL_8X"
+msgstr "８倍"
+
+msgid "OPTVAL_16X"
+msgstr "１６倍"
+
+msgid "OPTVAL_32X"
+msgstr "３２倍"
+
+msgid "GLTEXMNU_TITLE"
+msgstr "材質選項"
+
+msgid "GLTEXMNU_HQRESIZE"
+msgstr "高品質尺寸調整模式"
+
+msgid "GLTEXMNU_HQRESIZEMULT"
+msgstr "高品質尺寸調整倍率"
+
+msgid "GLTEXMNU_HQRESIZEWARN"
+msgstr "此模式需要 %d 倍多的顯示記憶體"
+
+msgid "GLTEXMNU_RESIZETEX"
+msgstr "材質尺寸調整"
+
+msgid "GLTEXMNU_RESIZESPR"
+msgstr "Sprites 尺寸調整"
+
+msgid "GLTEXMNU_RESIZEFNT"
+msgstr "字型尺寸調整"
+
+msgid "GLTEXMNU_RESIZESKN"
+msgstr "模型皮膚貼圖尺寸調整"
+
+msgid "GLTEXMNU_PRECACHETEX"
+msgstr "預先快取 GL 材質"
+
+msgid "VIDMNU_TITLE"
+msgstr "影像模式"
+
+msgid "OPTVAL_LETTERBOX"
+msgstr "影像黑邊"
+
+msgid "OPTVAL_STRETCH"
+msgstr "拉伸"
+
+msgid "VIDMNU_RENDERMODE"
+msgstr "渲染模式"
+
+msgid "VIDMNU_FULLSCREEN"
+msgstr "全螢幕"
+
+msgid "VIDMNU_HIDPI"
+msgstr "Retina/HiDPI 支援"
+
+msgid "VIDMNU_FORCEASPECT"
+msgstr "強制長寬比"
+
+msgid "VIDMNU_CROPASPECT"
+msgstr "強制比例樣式"
+
+msgid "VIDMNU_SCALEMODE"
+msgstr "解析度比例"
+
+msgid "VIDMNU_SCALEFACTOR"
+msgstr "比例因子"
+
+msgid "VIDMNU_USELINEAR"
+msgstr "使用線性比例（全螢幕）"
+
+msgid "VIDMNU_CUSTOMRES"
+msgstr "自訂像素比例"
+
+msgid "VIDMNU_CUSTOMX"
+msgstr "自訂寬度"
+
+msgid "VIDMNU_CUSTOMY"
+msgstr "自訂高度"
+
+msgid "VIDMNU_APPLYW"
+msgstr "套用改變（視窗化）"
+
+msgid "VIDMNU_APPLYFS"
+msgstr "套用改變（全螢幕）"
+
+msgid "VIDMNU_RESPRESET"
+msgstr "選擇預先設定的解析度"
+
+msgid "VIDMNU_RESPRESETTTL"
+msgstr "自訂預先設定的解析度"
+
+msgid "VIDMNU_RESPRESETHEAD"
+msgstr "預先設定的解析度模式"
+
+msgid "VIDMNU_ASPECT43"
+msgstr "４：３ 長寬比"
+
+msgid "VIDMNU_ASPECT54"
+msgstr "５：４長寬比"
+
+msgid "VIDMNU_ASPECT169"
+msgstr "１６：９長寬比"
+
+msgid "VIDMNU_ASPECT1610"
+msgstr "１６：１０長寬比"
+
+msgid "VIDMNU_ASPECT219"
+msgstr "２１：９長寬比"
+
+msgid "OPTVAL_NORMAL"
+msgstr "一般"
+
+# This describes vid_scalemode 1, which represents the lowest possible scaling
+# to fill the allocated screen area
+msgid "OPTVAL_LOWEST"
+msgstr "最低可能比例"
+
+msgid "OPTVAL_CUSTOM"
+msgstr "自訂"
+
+msgid "VIDMNU_MAXFPS"
+msgstr "最大幀率"
+
+msgid "OPTVAL_60FPS"
+msgstr "６０幀"
+
+msgid "OPTVAL_75FPS"
+msgstr "７５幀"
+
+msgid "OPTVAL_90FPS"
+msgstr "９０幀"
+
+msgid "OPTVAL_120FPS"
+msgstr "１２０幀"
+
+msgid "OPTVAL_144FPS"
+msgstr "１４４幀"
+
+msgid "OPTVAL_200FPS"
+msgstr "２００幀"
+
+msgid "VIDMNU_PREFERBACKEND"
+msgstr "偏好的渲染ＡＰＩ"
+
+msgid "OPTVAL_OPENGL"
+msgstr "OpenGL"
+
+msgid "OPTVAL_VULKAN"
+msgstr "Vulkan"
+
+# Rendering backend
+msgid "OPTVAL_OPENGLES"
+msgstr "OpenGL ES"
+
+msgid "MISCMNU_MERGEKEYS"
+msgstr "合併左右兩側的 Alt、Ctrl、Shift"
+
+msgid "MISCMNU_WINFULLSCREENTOGGLE"
+msgstr "Alt+Enter 切換全螢幕"
+
+msgid "MISCMNU_MACFULLSCREENTOGGLE"
+msgstr "Command-F 切換全螢幕"
+
+msgid "MISCMNU_ENABLEAUTOSAVES"
+msgstr "啟用自動存檔"
+
+msgid "MISCMNU_AUTOSAVECOUNT"
+msgstr "自動存檔數量"
+
+msgid "MISCMNU_SAVELOADCONFIRMATION"
+msgstr "存／讀檔確認"
+
+msgid "MISCMNU_NOCHEATS"
+msgstr "關閉鍵盤作弊碼"
+
+msgid "MISCMNU_QUICKSAVEROTATION"
+msgstr "快速存檔輪流"
+
+msgid "MISCMNU_QUICKSAVECOUNT"
+msgstr "快速存檔輪流的數量"
+
+msgid "MISCMNU_CLEANMENU"
+msgstr "經典 ZDoom 選單比例"
+
+msgid "MISCMNU_PAUSEINBACKGROUND"
+msgstr "在背景時暫停遊戲"
+
+msgid "HUDMNU_CROSSHAIR"
+msgstr "預設準星樣式"
+
+msgid "HUDMNU_CROSSHAIRCOLOR"
+msgstr "準星顏色"
+
+msgid "HUDMNU_CROSSHAIRSCALE"
+msgstr "準星比例"
+
+# copied from elsewhere
+msgid "OPTVAL_YES_STANDARD"
+msgstr "標準"
+
+msgid "OPTVAL_YES_ENHANCED"
+msgstr "增強"
+
+msgid "OPTMNU_LANGUAGE"
+msgstr "語言"
+
+msgid "TXT_UNDOCHANGES"
+msgstr "撤銷改變"
+
+msgid "REVMNU_SELECT"
+msgstr "選擇環境"
+
+msgid "REVMNU_TEST"
+msgstr "測試環境"
+
+msgid "REVMNU_EDIT"
+msgstr "編輯環境"
+
+msgid "REVMNU_NEW"
+msgstr "新的環境"
+
+msgid "REVMNU_Reflections_Scale"
+msgstr "反射比例"
+
+msgid "REVMNU_Reflections_Delay_Scale"
+msgstr "反射延遲比例"
+
+msgid "REVMNU_Decay_Time_Scale"
+msgstr "衰變時間比例"
+
+msgid "REVMNU_Decay_HF_Limit"
+msgstr "衰變 Hi-Fi 限制"
+
+msgid "REVMNU_Reverb_Scale"
+msgstr "殘響比例"
+
+msgid "REVMNU_Reverb_Delay_Scale"
+msgstr "殘響延遲比例"
+
+msgid "REVMNU_Echo_Time_Scale"
+msgstr "回音時間比例"
+
+msgid "REVMNU_Modulation_Time_Scale"
+msgstr "調變時間比例"
+
+msgid "REVMNU_Based_on"
+msgstr "基於"
+
+msgid "REVMNU_Name"
+msgstr "名稱"
+
+msgid "REVMNU_ID_1"
+msgstr "ID #1"
+
+msgid "REVMNU_ID_2"
+msgstr "ID #2"
+
+msgid "REVMNU_Create"
+msgstr "建立"
+
+msgid "REVMNU_Save"
+msgstr "儲存…"
+
+msgid "REVMNU_File_name"
+msgstr "檔案名稱"
+
+msgid "REVMNU_Environments_to_save"
+msgstr "要儲存的環境"
+
+msgid "DSPLYMNU_VKOPT"
+msgstr "Vulkan 選項（實驗性）"
+
+msgid "VK_TITLE"
+msgstr "Vulkan 選項"
+
+msgid "VKMNU_DEVICE"
+msgstr "Vulkan 裝置 ID"
+
+msgid "VKMNU_HDR"
+msgstr "高動態範圍"
+
+msgid "VK_WARNING"
+msgstr "警告：Vulkan 渲染器仍處於高度實驗性階段！"
+
+msgid "VK_RESTART"
+msgstr "這些選項將需要一次重啟動方可生效。"
+
+msgid "OPTVAL_SCALENX"
+msgstr "ScaleNx"
+
+msgid "OPTVAL_NORMALNX"
+msgstr "NormalNx"
+
+msgid "OPTVAL_HQNX"
+msgstr "hqNx"
+
+msgid "OPTVAL_HQNXMMX"
+msgstr "hqNx MMX"
+
+msgid "OPTVAL_NXBRZ"
+msgstr "xBRZ"
+
+msgid "OPTVAL_OLD_NXBRZ"
+msgstr "Old xBRZ"
+
+msgid "OS_TITLE"
+msgstr "選項搜尋"
+
+msgid "OS_ANY"
+msgstr "搜尋任何詞語"
+
+msgid "OS_ALL"
+msgstr "搜尋所有詞語"
+
+msgid "OS_NO_RESULTS"
+msgstr "沒有找到結果。"
+
+msgid "OS_LABEL"
+msgstr "搜尋："
+
+msgid "OPTMNU_FULLOPTIONS"
+msgstr "完整選項選單"
+
+msgid "OPTMNU_SIMPLEON"
+msgstr "簡易選項選單"
+
+msgid "OPTMNU_OPENCONFIG"
+msgstr "瀏覽遊戲配置"
+
+msgid "OPTMNU_OPENSCREENSHOTS"
+msgstr "瀏覽畫面截圖"
+
+msgid "OPTMNU_OPENSAVES"
+msgstr "瀏覽遊戲存檔"
+
+msgid "MOUSEMNU_SWAPBUTTONS"
+msgstr "交換滑鼠按鍵"
+
+msgid "OPTVAL_ONLYMODIFIED"
+msgstr "只有已修改的"
+
+msgid "TXT_UNKNOWN"
+msgstr "未知"
+
+msgid "TXT_SAVEGAMENEEDS"
+msgstr "此存檔需要這些檔案"
+
+msgid "GLPREFMNU_CORONAS"
+msgstr "Coronas"
+
+msgid "PICKER_SELECT"
+msgstr "選擇要執行的遊戲檔案："
+
+msgid "PICKER_PLAY"
+msgstr "開始遊戲"
+
+msgid "PICKER_EXIT"
+msgstr "離開"
+
+msgid "PICKER_GENERAL"
+msgstr "一般"
+
+msgid "PICKER_EXTRA"
+msgstr "額外的圖像"
+
+msgid "PICKER_FULLSCREEN"
+msgstr "全螢幕"
+
+msgid "PICKER_NOAUTOLOAD"
+msgstr "關閉 autoload"
+
+msgid "PICKER_DONTASK"
+msgstr "別再次問我"
+
+msgid "PICKER_LIGHTS"
+msgstr "燈光(Lights)"
+
+msgid "PICKER_BRIGHTMAPS"
+msgstr "輝度圖(Brightmaps)"
+
+msgid "PICKER_WIDESCREEN"
+msgstr "寬螢幕"
+
+msgid "PICKER_ADDPARM"
+msgstr "額外參數："
+
+msgid "PICKER_WELCOME"
+msgstr "歡迎來到 %s ！"
+
+msgid "PICKER_VERSION"
+msgstr "版本 %s"
+
+msgid "PICKER_PREFERBACKEND"
+msgstr "渲染器 API"
+
+msgid "PICKER_TAB_PLAY"
+msgstr "遊戲"
+
+# Option to enable or disable individual controllers/joysticks when
+# configuring it in the Controller Options menu
+msgid "JOYMNU_JOYENABLE"
+msgstr "啟用這個控制器"
+
+msgid "CNTRLMNU_OPEN_MAIN"
+msgstr "開啟主選單"
+
+msgid "MODMNU_REPLAYER"
+msgstr "模組化重播放器"
+
+# This is enabled per-controller, it means to enable "this" controller in the
+# background when GZDoom is not in focus.
+msgid "JOYMNU_JOYENABLEINBACKGROUND"
+msgstr "在背景時允許控制器輸入"
+
+# Order to sort the list of saved games in the save and load game menu. This
+# used to only be alphabetical.
+msgid "MISCMNU_SAVEORDER"
+msgstr "遊戲存檔排序方式"
+
+msgid "OPTVAL_ALPHABETICAL"
+msgstr "按字母順序"
+
+msgid "OPTVAL_LASTSAVEDTIME"
+msgstr "按最後存檔時間"
+
+msgid "PICKER_PLAYHOST"
+msgstr "架設遊戲"
+
+msgid "PICKER_PLAYJOIN"
+msgstr "加入遊戲"
+
+msgid "PICKER_REMPARM"
+msgstr "記住參數"
+
+# For stuff like id24.
+msgid "PICKER_SUPPORTWADS"
+msgstr "載入支援 WADs"
+
+msgid "PICKER_TAB_MULTI"
+msgstr "多人遊戲"
+
+msgid "PICKER_LOADSAVE"
+msgstr "載入記錄檔："
+
+msgid "PICKER_REMSAVE"
+msgstr "記住記錄檔"
+
+# As in, to host a game.
+msgid "PICKER_HOST"
+msgstr "架設"
+
+msgid "PICKER_JOIN"
+msgstr "加入"
+
+msgid "PICKER_NETRATE"
+msgstr "封包 Ticrate ："
+
+# Sends out duplicate copies of packets to help with spotty connections e.g.
+# wifi.
+msgid "PICKER_NETBACKUP"
+msgstr "送出備用封包來增強連線穩定性"
+
+msgid "PICKER_GAMEMODE"
+msgstr "遊戲模式："
+
+msgid "PICKER_COOP"
+msgstr "合作"
+
+msgid "PICKER_DM"
+msgstr "死鬥"
+
+msgid "PICKER_TDM"
+msgstr "團隊死鬥"
+
+# Which team the player wants to be assigned to.
+msgid "PICKER_TEAM"
+msgstr "團隊＃："
+
+msgid "PICKER_ALTDM"
+msgstr "使用替代死鬥規則"
+
+msgid "PICKER_PLAYERS"
+msgstr "最大玩家數："
+
+msgid "PICKER_PORT"
+msgstr "主機 Port 號："
+
+# Max number of players.
+msgid "PICKER_PLAYERHINT"
+msgstr "最大６４"
+
+# GZDoom's default port.
+msgid "PICKER_PORTHINT"
+msgstr "預設為 5029"
+
+# Team 255 randomizes which team the player gets put on.
+msgid "PICKER_TEAMHINT"
+msgstr "255 ＝隨機"
+
+msgid "PICKER_IP"
+msgstr "主機 IP ："
+
+msgid "PICKER_TDMLABEL"
+msgstr "團隊死鬥："
+
+# Same context as TXT_SAY.
+msgid "TXT_SAYTEAM"
+msgstr "說（團隊）："
+
+msgid "MISCMNU_DISCORDRPC"
+msgstr "Discord 遊戲狀態"
+
+msgid "JOYMNU_TURNSPEED"
+msgstr "轉向速度"
+
+msgid "JOYMNU_LOOKSPEED"
+msgstr "視角速度"
+
+msgid "JOYMNU_ANALOGSTRAFERUN"
+msgstr "類比橫移跑"
+
+msgid "ACCMNU_TITLE"
+msgstr "無障礙輔助選項"
+
+msgid "MSGMNU_MESSAGEQUEUE"
+msgstr "訊息佇列大小"
+
+msgid "MSGMNU_STACKIDENTICAL"
+msgstr "堆疊已重複訊息"
+
+msgid "NOTES_FAIL"
+msgstr "無法解析發佈版本通知"
+
+msgid "NOTES_UNKNOWN"
+msgstr "未知"
+
+msgid "NOTES_RELEASED"
+msgstr "%s 版本 %s，釋出於 %s"
+
+msgid "NOTES_EMPTY"
+msgstr "未提供描述。"
+
+msgid "NOTES_DETAILS"
+msgstr "更多資訊請看：%s"
+
+msgid "PICKER_SHOWTHIS"
+msgstr "更新後顯示此頁面"
+
+msgid "PICKER_SHOWNOTES"
+msgstr "顯示發佈版本通知"
+
+msgid "PICKER_TAB_ABOUT"
+msgstr "關於"
+
+msgid "PICKER_TAB_RELEASE"
+msgstr "發佈版本通知"

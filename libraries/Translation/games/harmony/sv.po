@@ -1,0 +1,251 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-05-11 03:43+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Swedish <https://hosted.weblate.org/projects/doom-engine-games/harmony-filter/sv/>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.5-dev\n"
+
+#, fuzzy
+msgctxt "doom harmony"
+msgid "NIGHTMARE"
+msgstr ""
+"Tror du verkligen att du klarar av det?\n"
+"Tryck på \"Y\" eller \"N\"..."
+
+msgctxt "doom harmony"
+msgid "AMSTR_MARKEDSPOT"
+msgstr "Markerad punkt"
+
+msgctxt "doom harmony"
+msgid "PD_BLUEO"
+msgstr "Kräver det GRÖNA nyckelkortet."
+
+msgctxt "doom harmony"
+msgid "PD_REDO"
+msgstr "Kräver det LILA nyckelkortet"
+
+msgctxt "doom harmony"
+msgid "PD_YELLOWO"
+msgstr "Kräver det GULLA nyckelkortet"
+
+msgctxt "doom harmony"
+msgid "PD_BLUEK"
+msgstr "Kräver det GRÖNA nyckeln"
+
+msgctxt "doom harmony"
+msgid "PD_YELLOWK"
+msgstr "Kräver den GULLA nyckeln"
+
+msgctxt "doom harmony"
+msgid "PD_REDK"
+msgstr "Kräver den LILA nyckeln"
+
+msgctxt "doom harmony"
+msgid "GOTARMOR"
+msgstr "Plockade upp en rustning."
+
+msgctxt "doom harmony"
+msgid "GOTMEGA"
+msgstr "Plockade upp kampen rustning."
+
+msgctxt "doom harmony"
+msgid "GOTMSPHERE"
+msgstr "Supersundhet"
+
+msgctxt "doom harmony"
+msgid "GOTBLUECARD"
+msgstr "Skaffade det GRÖNA nyckelkortet."
+
+msgctxt "doom harmony"
+msgid "GOTYELWCARD"
+msgstr "Skaffade det GULLA nyckelkortet."
+
+msgctxt "doom harmony"
+msgid "GOTREDCARD"
+msgstr "Skaffade det LILA nyckelkortet."
+
+msgctxt "doom harmony"
+msgid "GOTBLUESKUL"
+msgstr "Skaffade den GRÖNA nyckeln."
+
+msgctxt "doom harmony"
+msgid "GOTYELWSKUL"
+msgstr "Skaffade den GULLA nyckeln."
+
+msgctxt "doom harmony"
+msgid "GOTREDSKUL"
+msgstr "Skaffade den LILA nyckeln."
+
+msgctxt "doom harmony"
+msgid "GOTSTIM"
+msgstr "Helande svamp"
+
+msgctxt "doom harmony"
+msgid "GOTMEDIKIT"
+msgstr "Förvärvad: medicinsk utrustning."
+
+msgctxt "doom harmony"
+msgid "GOTMEDINEED"
+msgstr "Förvärvad: medicinsk utrustning som du verkligen behöver."
+
+msgctxt "doom harmony"
+msgid "GOTMAP"
+msgstr "Karta"
+
+msgctxt "doom harmony"
+msgid "GOTCLIPBOX"
+msgstr "Förvärvad: väska med kulor."
+
+msgctxt "doom harmony"
+msgid "GOTROCKET"
+msgstr "Förvärvad: Granat."
+
+msgctxt "doom harmony"
+msgid "GOTROCKBOX"
+msgstr "Förvärvad: Granater."
+
+msgctxt "doom harmony"
+msgid "GOTSHELLBOX"
+msgstr "Förvärvad: låda med hagelpatroner."
+
+msgctxt "doom harmony"
+msgid "GOTBACKPACK"
+msgstr "Förvärvad: Ammunitionsryggsäck."
+
+msgctxt "doom harmony"
+msgid "GOTBFG9000"
+msgstr "Förvärvad: Granat."
+
+msgctxt "doom harmony"
+msgid "GOTCHAINGUN"
+msgstr "Förvärvad: Minigun."
+
+msgctxt "doom harmony"
+msgid "GOTLAUNCHER"
+msgstr "Förvärvad: Granatkastare."
+
+msgctxt "doom harmony"
+msgid "GOTPLASMA"
+msgstr ""
+
+msgctxt "doom harmony"
+msgid "GOTSHOTGUN"
+msgstr "Förvärvad: Hagelgevär"
+
+msgctxt "doom harmony"
+msgid "STSTR_DQDON"
+msgstr "Gud läge PÅ"
+
+msgctxt "doom harmony"
+msgid "STSTR_DQDOFF"
+msgstr "Gud läge AV"
+
+msgctxt "doom harmony"
+msgid "STSTR_KFAADDED"
+msgstr "Alla vapen/ammunition/nycklar"
+
+msgctxt "doom harmony"
+msgid "STSTR_FAADDED"
+msgstr "Alla vapen och all ammunition"
+
+msgid "TXT_HARMMAP01"
+msgstr "Bortförande"
+
+msgid "TXT_HARMMAP02"
+msgstr "Harms väg"
+
+msgid "TXT_HARMMAP03"
+msgstr "Dåligt stämning"
+
+msgid "TXT_HARMMAP04"
+msgstr ""
+
+msgid "TXT_HARMMAP05"
+msgstr "Sjukhuset"
+
+msgid "TXT_HARMMAP06"
+msgstr "Vapenfabriken"
+
+msgid "TXT_HARMMAP07"
+msgstr "Undervattenslaboratoriet"
+
+msgid "TXT_HARMMAP08"
+msgstr "Landningsbana ett"
+
+msgid "TXT_HARMMAP09"
+msgstr "Avfyrningsbasen"
+
+msgid "TXT_HARMMAP10"
+msgstr "Den radioaktiva zonen"
+
+msgid "TXT_HARMMAP11"
+msgstr ""
+
+#, fuzzy
+msgid "CLUSTEREXIT1"
+msgstr ""
+"Du mår illa i magen...\n"
+"När du ser mutantdrottningen i ansiktet... \n"
+"Den där saken... Som brukade vara... \n"
+"Din vän... Amira!\n"
+"\n"
+"De där monstren måste ha hittat ett\n"
+"sätt att mutera henne och förvandla\n"
+"henne till den här avskyvärda\n"
+"varelsen för att föda sin avkomma.\n"
+"\n"
+"-suck-\n"
+"\n"
+"Ta dig samman... \n"
+"De kommer att få betala för att de\n"
+"tvingade dig att döda din vän...\n"
+"\n"
+"\"Helvetet har ingen vrede som\n"
+"en kvinna som är föraktad!\"\n"
+"\n"
+"\n"
+"   = S L U T E T ="
+
+# This text is deliberately empty
+msgctxt "doom harmony"
+msgid "WI_FINISHED"
+msgstr ""
+
+# Yellow needs retranslation
+msgctxt "doom harmony"
+msgid "WI_ENTERING"
+msgstr "Laddar"
+
+msgctxt "doom harmony"
+msgid "SKILL_BABY"
+msgstr "Mycket lätt"
+
+msgctxt "doom harmony"
+msgid "SKILL_EASY"
+msgstr "Lätt"
+
+msgctxt "doom harmony"
+msgid "SKILL_NORMAL"
+msgstr "Medel"
+
+msgctxt "doom harmony"
+msgid "SKILL_HARD"
+msgstr "Svårt"
+
+msgctxt "doom harmony"
+msgid "SKILL_NIGHTMARE"
+msgstr "Mycket svårt"
+
+msgid "HARMQUITMSG"
+msgstr "Tack för att du spelar"
+
+msgctxt "doom harmony"
+msgid "TXT_D2E1"
+msgstr ""

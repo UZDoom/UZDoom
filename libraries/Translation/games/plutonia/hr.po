@@ -1,0 +1,178 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-05-11 03:43+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Croatian <https://hosted.weblate.org/projects/doom-engine-games/the-plutonia-experiment/hr/>\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 2026.5-dev\n"
+
+msgid "TXT_PLUT_EP"
+msgstr "Plutonijski Eksperiment"
+
+msgid "PHUSTR_1"
+msgstr "Razina 1: Kongo"
+
+msgid "PHUSTR_2"
+msgstr "Razina 2: Studenica duša"
+
+msgid "PHUSTR_3"
+msgstr "Razina 3: Azteka"
+
+msgid "PHUSTR_4"
+msgstr "Razina 4: U kavezu"
+
+msgid "PHUSTR_5"
+msgstr "Razina 5: Duhovski grad"
+
+msgid "PHUSTR_6"
+msgstr "Razina 6: Barunovo skrovište"
+
+msgid "PHUSTR_7"
+msgstr "Razina 7: Caughtyard"
+
+msgid "PHUSTR_8"
+msgstr "Razina 8: Kraljevstvo"
+
+msgid "PHUSTR_9"
+msgstr "Razina 9: Klanica"
+
+msgid "PHUSTR_10"
+msgstr "Razina 10: Napad"
+
+msgid "PHUSTR_11"
+msgstr "Razina 11: Proganjani"
+
+msgid "PHUSTR_12"
+msgstr "Razina 12: Brzina"
+
+msgid "PHUSTR_13"
+msgstr "Razina 13: Kripta"
+
+msgid "PHUSTR_14"
+msgstr "Razina 14: Postanak"
+
+msgid "PHUSTR_15"
+msgstr "Razina 15: Sumrak"
+
+msgid "PHUSTR_16"
+msgstr "Razina 16: Znak"
+
+msgid "PHUSTR_17"
+msgstr "Razina 17: Složeni"
+
+msgid "PHUSTR_18"
+msgstr "Razina 18: Neurosfera"
+
+msgid "PHUSTR_19"
+msgstr "Razina 19: NME"
+
+msgid "PHUSTR_20"
+msgstr "Razina 20: Područje smrti"
+
+msgid "PHUSTR_21"
+msgstr "Razina 21: Ubijač"
+
+msgid "PHUSTR_22"
+msgstr "Razina 22: Nemoguća misija"
+
+msgid "PHUSTR_23"
+msgstr "Razina 23: Nadgrobni spomenik"
+
+msgid "PHUSTR_24"
+msgstr "Razina 24: Krajnja granica"
+
+msgid "PHUSTR_25"
+msgstr "Razina 25: Hram tame"
+
+msgid "PHUSTR_26"
+msgstr "Razina 26: Bunker"
+
+msgid "PHUSTR_27"
+msgstr "Razina 27: Antikrist"
+
+msgid "PHUSTR_28"
+msgstr "Razina 28: Kanalizacija"
+
+msgid "PHUSTR_29"
+msgstr "Razina 29: Odiseja zvukova"
+
+msgid "PHUSTR_30"
+msgstr "Razina 30: Vrata pakla"
+
+msgid "PHUSTR_31"
+msgstr "Razina 31: Roboposjed"
+
+msgid "PHUSTR_32"
+msgstr "Razina 32: Samo naprijed"
+
+msgid "P1TEXT"
+msgstr ""
+"Zadovoljavaš se nad dimom koji\n"
+"izlazi iz leša Čuvara. Njegovom smrću\n"
+"otela si Akcelerator iz smrdljivih kandži\n"
+"Pakla. Opuštaš se i pogledaš po sobi.\n"
+"Kvragu! Trebao je biti barem jedan\n"
+"ispravan prototip, ali ga ne vidiš.\n"
+"Demoni su ga sigurno uzeli.\n"
+"\n"
+"Moraš pronaći prototip, inače će sav\n"
+"tvoj trud biti uzaludan. Nastavi se\n"
+"kretati, nastavi se boriti, nastavi ubijati.\n"
+"Oh da, i nastavi živjeti."
+
+msgid "P2TEXT"
+msgstr ""
+"Čak ni smrtonosni labirint Arh-Zla\n"
+"te nije mogao zaustaviti, i stigao si \n"
+"do prototipa Akceleratora koji će\n"
+"uskoro biti učinkovito i trajno deaktiviran.\n"
+"\n"
+"Dobar si u takvim stvarima."
+
+msgid "P3TEXT"
+msgstr ""
+"Probio si se udarcima i udarcima do srca\n"
+"legla đavola. Vrijeme je za misiju potrag\n"
+" i uništenja, usmjerenu na Čuvara Vrata,\n"
+"čije odvratno potomstvo se obrušava na\n"
+"Zemlju. Da, on je zločest.\n"
+"Ali znaš tko je gori!\n"
+"\n"
+"Zločesto se smiješeći, provjeravaš opremu\n"
+"i spremaš se dati tom gadu malo pakla\n"
+"koji si sam stvorio!"
+
+#, fuzzy
+msgid "P4TEXT"
+msgstr ""
+"Zločesto lice Čuvara vrata prska\n"
+"se posvuda. Dok se njegovo\n"
+"poderano tijelo ruši, stvara se\n"
+"preokrenuti Prolaz i usisava\n"
+"krhotine posljednjeg prototipa\n"
+"Akceleratora, da ne spominjemo\n"
+"i preostale demone. Gotov si.\n"
+"Pakao se vratio tucanju loših\n"
+"mrtvaca umjesto dobrih živih.\n"
+"Ne zaboravi reći svojim unucima\n"
+"da ti stave raketni bacač u lijes. Ako odeš\n"
+"u Pakao kad umreš, trebat će ti za konačno čišćenje..."
+
+msgid "P5TEXT"
+msgstr ""
+"Pronašli ste drugu najtežu razinu koju imamo.\n"
+"Nadamo se da imate spremljenu igru s razine\n"
+"ili dvije ranije. Ako ne, budite spremni umrijeti \n"
+"u izobilju. Samo za majstore marince."
+
+msgid "P6TEXT"
+msgstr ""
+"Kladim se da si se pitao koja je najteža\n"
+"razina koju smo ti pripremili?Sad znaš.\n"
+"Nitko ne izlazi živ."

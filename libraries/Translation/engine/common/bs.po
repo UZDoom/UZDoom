@@ -1,0 +1,1765 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-05-05 22:16-0400\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Bosnian <https://hosted.weblate.org/projects/uzdoom/common/bs/>\n"
+"Language: bs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: python 3.14.4 polib 1.2.0\n"
+
+msgid "PRESSYN"
+msgstr "Pritisnite Y ili N."
+
+msgid "TXT_YES"
+msgstr "Da"
+
+msgid "TXT_NO"
+msgstr "Ne"
+
+msgid "SAVEDEAD"
+msgstr ""
+"Ne možete sačuvati ako ne igrate!\n"
+"\n"
+"Pritisnite tipku."
+
+msgid "SAFEMESSAGE"
+msgstr "Želiš li zaista ovo uraditi?"
+
+msgid "QSPROMPT"
+msgstr ""
+"Brzo spremanje nad vašom igrom pod nazivom\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Pritisnite Y ili N."
+
+msgid "QLPROMPT"
+msgstr ""
+"Želite li brzo učitati igru pod nazivom\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Pritisnite Y ili N."
+
+msgid "TXT_X_CHEATS"
+msgstr "%s varala"
+
+msgid "MSGOFF"
+msgstr "Poruke: ISKLJUČENO"
+
+msgid "MSGON"
+msgstr "Poruke: UKLJUČENO"
+
+msgid "TXT_SAY"
+msgstr "Recite:"
+
+msgid "TXT_QUITENDOOM"
+msgstr ""
+"Pritisnite bilo koju tipku ili kliknite bilo gdje u prozoru da biste izašli."
+
+msgid "NEWSAVE"
+msgstr "<New Save Game>"
+
+msgid "GGSAVED"
+msgstr "Igra sačuvana."
+
+msgid "SAVECOMMENT_TIME"
+msgstr "Vrijeme"
+
+msgid "MNU_LOADGAME"
+msgstr "Učitaj igru"
+
+msgid "MNU_SAVEGAME"
+msgstr "Sačuvaj igru"
+
+msgid "MNU_NOPICTURE"
+msgstr "Nema slike"
+
+msgid "MNU_DIFFVERSION"
+msgstr "Druga verzija"
+
+msgid "MNU_NOFILES"
+msgstr "Nema datoteka"
+
+msgid "MNU_DELETESG"
+msgstr "Želite li zaista izbrisati spremljenu igru?"
+
+msgid "OPTVAL_OFF"
+msgstr "Ugašeno"
+
+msgid "OPTVAL_ON"
+msgstr "Da"
+
+msgid "OPTVAL_AUTO"
+msgstr "Auto"
+
+msgid "OPTMNU_TITLE"
+msgstr "Opcije"
+
+msgid "OPTMNU_CONTROLS"
+msgstr "Prilagodi kontrole"
+
+msgid "OPTMNU_MOUSE"
+msgstr "Opcije miša"
+
+msgid "OPTMNU_JOYSTICK"
+msgstr "Opcije kontrolora"
+
+msgid "OPTMNU_PLAYER"
+msgstr "Postavke igrača"
+
+msgid "OPTMNU_GAMEPLAY"
+msgstr "Opcije igre"
+
+msgid "OPTMNU_AUTOMAP"
+msgstr "Opcije Automapa"
+
+msgid "OPTMNU_HUD"
+msgstr "HUD opcije"
+
+msgid "OPTMNU_MISCELLANEOUS"
+msgstr "Raznorazne Opcije"
+
+msgid "OPTMNU_SOUND"
+msgstr "Zvučne opcije"
+
+msgid "ACCMNU_TITLE"
+msgstr "Opcije pristupačnosti"
+
+msgid "OPTMNU_DISPLAY"
+msgstr "Opcije prikaza"
+
+msgid "OPTMNU_VIDEO"
+msgstr "Postavi video režim"
+
+msgid "OPTMNU_DEFAULTS"
+msgstr "Vrati na zadano"
+
+msgid "OPTMNU_RESETTOSAVED"
+msgstr "Ponovo na posljednje sačuvano"
+
+msgid "OPTMNU_WRITEINI"
+msgstr "Sačuvaj trenutne postavke"
+
+msgid "OPTMNU_CONSOLE"
+msgstr "Idite na konzolu"
+
+msgid "OPTMNU_NETWORK"
+msgstr "Mrežne opcije"
+
+msgid "OPTMNU_REVERB"
+msgstr "Uređivač reverb okruženja"
+
+msgid "CNTRLMNU_SWITCHTEXT1"
+msgstr "ENTER za promjenu, BACKSPACE za brisanje"
+
+msgid "CNTRLMNU_SWITCHTEXT2"
+msgstr "Pritisnite novu tipku za kontrolu, ESC za otkazivanje"
+
+msgid "CNTRLMNU_CONTROLS"
+msgstr "Kontrole"
+
+msgid "CNTRLMNU_ATTACK"
+msgstr "Vatra"
+
+msgid "CNTRLMNU_ALTATTACK"
+msgstr "Sekundarni požar"
+
+msgid "CNTRLMNU_RELOAD"
+msgstr "Punjenje oružja"
+
+msgid "CNTRLMNU_USE"
+msgstr "Upotrijebi / Otvori"
+
+msgid "CNTRLMNU_FORWARD"
+msgstr "Kreni naprijed"
+
+msgid "CNTRLMNU_BACK"
+msgstr "Pomaknuti se unazad"
+
+msgid "CNTRLMNU_MOVELEFT"
+msgstr "Strafe lijevo"
+
+msgid "CNTRLMNU_MOVERIGHT"
+msgstr "Strafe desno"
+
+msgid "CNTRLMNU_TURNLEFT"
+msgstr "Skrenite lijevo"
+
+msgid "CNTRLMNU_TURNRIGHT"
+msgstr "Skrenite desno"
+
+msgid "CNTRLMNU_TURN180"
+msgstr "Brzi zaokret"
+
+msgid "CNTRLMNU_JUMP"
+msgstr "Skoči"
+
+msgid "CNTRLMNU_CROUCH"
+msgstr "Čučanj"
+
+msgid "CNTRLMNU_TOGGLECROUCH"
+msgstr "Okidač čučnja"
+
+msgid "CNTRLMNU_MOUSELOOK"
+msgstr "Pogled miša"
+
+msgid "CNTRLMNU_LOOKUP"
+msgstr "Pogledaj gore"
+
+msgid "CNTRLMNU_LOOKDOWN"
+msgstr "Pogledaj dolje"
+
+msgid "CNTRLMNU_CENTERVIEW"
+msgstr "Pogled iz centra"
+
+msgid "CNTRLMNU_RUN"
+msgstr "Trči"
+
+msgid "CNTRLMNU_TOGGLERUN"
+msgstr "Pretvori u pokretanje"
+
+msgid "CNTRLMNU_STRAFE"
+msgstr "Kazna"
+
+msgid "CNTRLMNU_SCOREBOARD"
+msgstr "Prikaži rezultatsku tabelu"
+
+msgid "CNTRLMNU_ACTION"
+msgstr "Akcija"
+
+msgid "CNTRLMNU_ACTION_TITLE"
+msgstr "Prilagodi kontrole akcije"
+
+msgid "MNU_MULTIPLAYER"
+msgstr "Više igrača"
+
+msgid "CNTRLMNU_SAY"
+msgstr "Reci"
+
+msgid "CNTRLMNU_WEAPONS_TITLE"
+msgstr "Prilagodi kontrole oružja"
+
+msgid "CNTRLMNU_INVENTORY_TITLE"
+msgstr "Prilagodite kontrole zaliha"
+
+msgid "CNTRLMNU_OTHER_TITLE"
+msgstr "Prilagodi ostale kontrole"
+
+msgid "CNTRLMNU_WEAPONS"
+msgstr "Oružje"
+
+msgid "CNTRLMNU_NEXTWEAPON"
+msgstr "Sljedeće oružje"
+
+msgid "CNTRLMNU_PREVIOUSWEAPON"
+msgstr "Prethodno oružje"
+
+msgid "CNTRLMNU_SLOT1"
+msgstr "Oružje 1"
+
+msgid "CNTRLMNU_SLOT2"
+msgstr "Oružje 2"
+
+msgid "CNTRLMNU_SLOT3"
+msgstr "Oružje 3"
+
+msgid "CNTRLMNU_SLOT4"
+msgstr "Oružje 4"
+
+msgid "CNTRLMNU_SLOT5"
+msgstr "Oružje 5"
+
+msgid "CNTRLMNU_SLOT6"
+msgstr "Oružje 6"
+
+msgid "CNTRLMNU_SLOT7"
+msgstr "Oružje 7"
+
+msgid "CNTRLMNU_SLOT8"
+msgstr "Oružje 8"
+
+msgid "CNTRLMNU_SLOT9"
+msgstr "Oružje 9"
+
+msgid "CNTRLMNU_SLOT0"
+msgstr "Oružje 10"
+
+msgid "CNTRLMNU_INVENTORY"
+msgstr "Inventar"
+
+msgid "CNTRLMNU_USEITEM"
+msgstr "Aktiviraj stavku"
+
+msgid "CNTRLMNU_USEALLITEMS"
+msgstr "Aktivirajte sve stavke"
+
+msgid "CNTRLMNU_NEXTITEM"
+msgstr "Sledeća stavka"
+
+msgid "CNTRLMNU_PREVIOUSITEM"
+msgstr "Prethodna stavka"
+
+msgid "MAPCNTRLMNU_TITLE"
+msgstr "Kontrole mape"
+
+msgid "MAPCNTRLMNU_CONTROLS"
+msgstr "Kontrole mape"
+
+msgid "MAPCNTRLMNU_PANLEFT"
+msgstr "Ploča lijevo"
+
+msgid "MAPCNTRLMNU_PANRIGHT"
+msgstr "Pan desno"
+
+msgid "MAPCNTRLMNU_PANUP"
+msgstr "Pan gore"
+
+msgid "MAPCNTRLMNU_PANDOWN"
+msgstr "Pomaknite se dolje"
+
+msgid "MAPCNTRLMNU_ZOOMIN"
+msgstr "Uvećaj"
+
+msgid "MAPCNTRLMNU_ZOOMOUT"
+msgstr "Odzoomiti"
+
+msgid "MAPCNTRLMNU_TOGGLEZOOM"
+msgstr "Prekini zumiranje"
+
+msgid "MAPCNTRLMNU_TOGGLEFOLLOW"
+msgstr "Pretplati se / Otkaži pretplatu"
+
+msgid "MAPCNTRLMNU_TOGGLEGRID"
+msgstr "Pokaži/sakrij mrežu"
+
+msgid "MAPCNTRLMNU_ROTATE"
+msgstr "Preokreni"
+
+msgid "MAPCNTRLMNU_TOGGLETEXTURE"
+msgstr "Pretvori teksturu"
+
+msgid "CNTRLMNU_AUTOMAP"
+msgstr "Prekini automapu"
+
+msgid "CNTRLMNU_CHASECAM"
+msgstr "Čejs-kam"
+
+msgid "CNTRLMNU_SCREENSHOT"
+msgstr "Snimak ekrana"
+
+msgid "CNTRLMNU_PAUSE"
+msgstr "Pauziraj"
+
+msgid "CNTRLMNU_DISPLAY_INC"
+msgstr "Povećaj veličinu prikaza"
+
+msgid "CNTRLMNU_DISPLAY_DEC"
+msgstr "Smanji veličinu prikaza"
+
+msgid "CNTRLMNU_OPEN_HELP"
+msgstr "Otvori pomoć"
+
+msgid "CNTRLMNU_OPEN_SAVE"
+msgstr "Otvori meni za spremanje"
+
+msgid "CNTRLMNU_OPEN_LOAD"
+msgstr "Otvori meni za teret"
+
+msgid "CNTRLMNU_OPEN_OPTIONS"
+msgstr "Otvori izbornik opcija"
+
+msgid "CNTRLMNU_OPEN_DISPLAY"
+msgstr "Otvori izbornik prikaza"
+
+msgid "CNTRLMNU_QUICKSAVE"
+msgstr "Brzo spremanje"
+
+msgid "CNTRLMNU_QUICKLOAD"
+msgstr "Brzo učitavanje"
+
+msgid "CNTRLMNU_EXIT_TO_MAIN"
+msgstr "Izlazak na glavni meni"
+
+msgid "CNTRLMNU_TOGGLE_MESSAGES"
+msgstr "Prekini poruke"
+
+msgid "CNTRLMNU_MENU_QUIT"
+msgstr "Izađi iz igre"
+
+msgid "MOUSEMNU_ENABLEMOUSE"
+msgstr "Omogući miša"
+
+msgid "MOUSEMNU_MOUSEINMENU"
+msgstr "Omogući miš u izbornicima"
+
+msgid "MOUSEMNU_SHOWBACKBUTTON"
+msgstr "Prikaži dugme za povratak"
+
+msgid "MOUSEMNU_CURSOR"
+msgstr "Kursor"
+
+msgid "MOUSEMNU_SENSITIVITY_X"
+msgstr "Horizontalna osjetljivost"
+
+msgid "MOUSEMNU_SENSITIVITY_Y"
+msgstr "Vertikalna osjetljivost"
+
+msgid "MOUSEMNU_SMOOTHMOUSE"
+msgstr "Glatko kretanje miša"
+
+msgid "MOUSEMNU_TURNSPEED"
+msgstr "Brzina okretanja"
+
+msgid "MOUSEMNU_MOUSELOOKSPEED"
+msgstr "Brzina kretanja miša"
+
+msgid "MOUSEMNU_FORWBACKSPEED"
+msgstr "Brzina naprijed/nazad"
+
+msgid "MOUSEMNU_STRAFESPEED"
+msgstr "Brzina mitraljezanja"
+
+msgid "MOUSEMNU_ALWAYSMOUSELOOK"
+msgstr "Uvijek Mouselook"
+
+msgid "MOUSEMNU_INVERTMOUSE"
+msgstr "Okreni miša Y"
+
+msgid "MOUSEMNU_INVERTMOUSEX"
+msgstr "Okreni miša X"
+
+msgid "OPTVAL_UPPERLEFT"
+msgstr "Gornji lijevi"
+
+msgid "OPTVAL_UPPERRIGHT"
+msgstr "Gornji desni"
+
+msgid "OPTVAL_LOWERLEFT"
+msgstr "Donje lijevo"
+
+msgid "OPTVAL_LOWERRIGHT"
+msgstr "Donji desni"
+
+msgid "OPTVAL_TOUCHSCREENLIKE"
+msgstr "Poput ekrana osjetljivog na dodir"
+
+msgid "OPTSTR_SIMPLEARROW"
+msgstr "Jednostavna strelica"
+
+msgid "OPTSTR_SYSTEMCURSOR"
+msgstr "Sistemski kursor"
+
+msgid "OPTVAL_DEFAULT"
+msgstr "Zadano"
+
+msgid "JOYMNU_TITLE"
+msgstr "Konfigurišite kontroler"
+
+msgid "JOYMNU_OPTIONS"
+msgstr "Opcije kontrolora"
+
+msgid "JOYMNU_NOMENU"
+msgstr "Blokiraj unos kontrolera u meniju"
+
+msgid "JOYMNU_ENABLE"
+msgstr "Omogući podršku za kontroler"
+
+msgid "JOYMNU_DINPUT"
+msgstr "Omogući DirectInput kontrolere"
+
+msgid "JOYMNU_XINPUT"
+msgstr "Omogući XInput kontrolere"
+
+msgid "JOYMNU_PS2"
+msgstr "Omogućite sirove PlayStation 2 adaptere"
+
+msgid "JOYMNU_NOCON"
+msgstr "Nijedan kontroler nije detektovan"
+
+msgid "JOYMNU_CONFIG"
+msgstr "Konfigurišite kontrolere:"
+
+msgid "JOYMNU_DISABLED1"
+msgstr "Podrška za kontroler mora biti"
+
+msgid "JOYMNU_DISABLED2"
+msgstr "omogućeno otkrivanje bilo kojeg"
+
+msgid "JOYMNU_INVALID"
+msgstr "Neispravan kontroler specificiran za meni"
+
+msgid "JOYMNU_OVRSENS"
+msgstr "Ukupna osjetljivost"
+
+msgid "JOYMNU_AXIS"
+msgstr "Konfiguracija osi"
+
+msgid "JOYMNU_INVERT"
+msgstr "Obrni"
+
+msgid "JOYMNU_DEADZONE"
+msgstr "Mrtva zona"
+
+msgid "JOYMNU_NOAXES"
+msgstr "Nema podesivih osi"
+
+msgid "OPTVAL_NONE"
+msgstr "Nema"
+
+msgid "OPTVAL_TURNING"
+msgstr "Gledati lijevo/desno"
+
+msgid "OPTVAL_LOOKINGUPDOWN"
+msgstr "Gledanje gore/dolje"
+
+msgid "OPTVAL_MOVINGFORWARD"
+msgstr "Kretanje naprijed/nazad"
+
+msgid "OPTVAL_STRAFING"
+msgstr "Pomicanje lijevo/desno"
+
+msgid "OPTVAL_MOVINGUPDOWN"
+msgstr "Pomicanje gore/dolje"
+
+msgid "OPTVAL_INVERTED"
+msgstr "Obrnuto"
+
+msgid "OPTVAL_NOTINVERTED"
+msgstr "Nije obrnuto"
+
+msgid "TXT_COLOR_BLUE"
+msgstr "Plava"
+
+msgid "TXT_COLOR_RED"
+msgstr "Crvena"
+
+msgid "TXT_COLOR_GREEN"
+msgstr "Zelena"
+
+msgid "TXT_COLOR_GRAY"
+msgstr "Sivo"
+
+msgid "TXT_COLOR_DARKGRAY"
+msgstr "Tamno sivo"
+
+msgid "TXT_COLOR_DARKGREEN"
+msgstr "Tamno zelena"
+
+msgid "TXT_COLOR_BROWN"
+msgstr "Smeđi"
+
+msgid "TXT_COLOR_DARKBLUE"
+msgstr "Tamnoplava"
+
+msgid "TXT_COLOR_LIGHTRED"
+msgstr "Svijetlo crvena"
+
+msgid "TXT_COLOR_YELLOW"
+msgstr "Žuta"
+
+msgid "TXT_COLOR_PURPLE"
+msgstr "Ljubičasta"
+
+msgid "TXT_COLOR_DULLGREEN"
+msgstr "Maslina"
+
+msgid "TXT_COLOR_BEIGE"
+msgstr "Bejž"
+
+msgid "TXT_COLOR_LIGHTBLUE"
+msgstr "Svijetloplav"
+
+msgid "TXT_COLOR_LIGHTGRAY"
+msgstr "Svijetlo siva"
+
+msgid "TXT_COLOR_LIGHTBROWN"
+msgstr "Svijetlosmeđa"
+
+msgid "TXT_COLOR_GOLD"
+msgstr "Zlato"
+
+msgid "TXT_COLOR_BRIGHTGREEN"
+msgstr "Jarko zelena"
+
+msgid "TXT_COLOR_RUST"
+msgstr "Rđa"
+
+msgid "PLYRMNU_NAME"
+msgstr "Ime"
+
+msgid "PLYRMNU_TEAM"
+msgstr "Tim"
+
+msgid "PLYRMNU_PLAYERCOLOR"
+msgstr "Boja"
+
+msgid "PLYRMNU_PLAYERGENDER"
+msgstr "Spol"
+
+msgid "OPTVAL_MALE"
+msgstr "Muški"
+
+msgid "OPTVAL_FEMALE"
+msgstr "Ženski"
+
+msgid "OPTVAL_NEUTRAL"
+msgstr "Neutralno"
+
+msgid "OPTVAL_OTHER"
+msgstr "Predmet"
+
+msgid "GMPLYMNU_TITLE"
+msgstr "Opcije igre"
+
+msgid "OPTVAL_ALWAYS"
+msgstr "Uvijek"
+
+msgid "OPTVAL_NEVER"
+msgstr "Nikad"
+
+msgid "PLYRMNU_AUTOAIM"
+msgstr "Automatsko ciljanje"
+
+msgid "PLYRMNU_ALWAYSRUN"
+msgstr "Uvijek trči"
+
+msgid "DSPLYMNU_SCREENSIZE"
+msgstr "Veličina ekrana"
+
+msgid "DSPLYMNU_VSYNC"
+msgstr "Vertikalni sinhronizacijski"
+
+msgid "DSPLYMNU_MODELS"
+msgstr "Modeli"
+
+msgid "MSGMNU_CENTERMESSAGES"
+msgstr "Poruke centra"
+
+msgid "MSGMNU_MESSAGEQUEUE"
+msgstr "Veličina poručnog reda"
+
+msgid "MSGMNU_STACKIDENTICAL"
+msgstr "Nagradi ponovljene poruke"
+
+msgid "MSGMNU_PULSEMESSAGES"
+msgstr "Pulsirajući prikaz poruke"
+
+msgid "MNU_COLORPICKER"
+msgstr "Odabir boje"
+
+msgid "AUTOMAPMNU_ROTATE"
+msgstr "Okreni automapu"
+
+msgid "AUTOMAPMNU_FOLLOW"
+msgstr "Pratite igrača"
+
+msgid "AUTOMAPMNU_LINEALPHA"
+msgstr "Linija alfa"
+
+msgid "AUTOMAPMNU_LINETHICKNESS"
+msgstr "Debljina linije"
+
+msgid "MAPCOLORMNU_TITLE"
+msgstr "Prilagodi boje mape"
+
+msgid "MAPCOLORMNU_DEFAULTMAPCOLORS"
+msgstr "Vraćanje zadatih prilagođenih boja"
+
+msgid "OPTVAL_8000HZ"
+msgstr "8000 Hz"
+
+msgid "OPTVAL_11025HZ"
+msgstr "11025 Hz"
+
+msgid "OPTVAL_22050HZ"
+msgstr "22050 Hz"
+
+msgid "OPTVAL_32000HZ"
+msgstr "32000 Hz"
+
+msgid "OPTVAL_44100HZ"
+msgstr "44100 Hz"
+
+msgid "OPTVAL_48000HZ"
+msgstr "48000 Hz"
+
+msgid "OPTVAL_64SAMPLES"
+msgstr "64 uzoraka"
+
+msgid "OPTVAL_128SAMPLES"
+msgstr "128 uzoraka"
+
+msgid "OPTVAL_256SAMPLES"
+msgstr "256 uzoraka"
+
+msgid "OPTVAL_512SAMPLES"
+msgstr "512 uzoraka"
+
+msgid "OPTVAL_1024SAMPLES"
+msgstr "1024 uzoraka"
+
+msgid "OPTVAL_2048SAMPLES"
+msgstr "2048 uzoraka"
+
+msgid "OPTVAL_4096SAMPLES"
+msgstr "4096 uzoraka"
+
+msgid "OPTSTR_AUTO"
+msgstr "Auto"
+
+msgid "OPTSTR_MONO"
+msgstr "Mono"
+
+msgid "OPTSTR_STEREO"
+msgstr "Stereo"
+
+msgid "OPTSTR_PROLOGIC"
+msgstr "Dolby Pro Logic dekoder"
+
+msgid "OPTSTR_QUAD"
+msgstr "Četverak"
+
+msgid "OPTSTR_SURROUND"
+msgstr "5 govornika"
+
+msgid "OPTSTR_5POINT1"
+msgstr "5.1 zvučnici"
+
+msgid "OPTSTR_7POINT1"
+msgstr "7.1 zvučnici"
+
+msgid "OPENALMNU_PLAYBACKDEVICE"
+msgstr "Reproduktivni uređaj"
+
+msgid "OPENALMNU_ENABLEEFX"
+msgstr "Omogući EFX"
+
+msgid "OPENALMNU_RESAMPLER"
+msgstr "Ponovni uzorkivač"
+
+msgid "SNDMNU_SFXVOLUME"
+msgstr "Jačina zvuka"
+
+msgid "SNDMNU_MENUVOLUME"
+msgstr "Količina menija"
+
+msgid "SNDMNU_MUSICVOLUME"
+msgstr "Jačina zvuka"
+
+msgid "SNDMNU_MIDIDEVICE"
+msgstr "MIDI uređaj"
+
+msgid "SNDMNU_BACKGROUND"
+msgstr "Zvuk u pozadini"
+
+msgid "SNDMNU_UNDERWATERREVERB"
+msgstr "Podvodni reverb"
+
+msgid "SNDMNU_RANDOMIZEPITCHES"
+msgstr "Nasumično poredaj"
+
+msgid "SNDMNU_CHANNELS"
+msgstr "Zvučni kanali"
+
+msgid "SNDMNU_OPENAL"
+msgstr "OpenAL opcije"
+
+msgid "SNDMNU_RESTART"
+msgstr "Ponovo pokreni zvuk"
+
+msgid "SNDMNU_ADVANCED"
+msgstr "Napredne opcije"
+
+msgid "SNDMNU_MODREPLAYER"
+msgstr "Opcije ponovnog reproduciranja modula"
+
+msgid "SNDMNU_MIDIPLAYER"
+msgstr "Opcije MIDI uređaja"
+
+msgid "ADVSNDMNU_TITLE"
+msgstr "Napredne opcije zvuka"
+
+msgid "ADVSNDMNU_SAMPLERATE"
+msgstr "Uzorak brzine"
+
+msgid "ADVSNDMNU_HRTF"
+msgstr "HRTF"
+
+msgid "ADVSNDMNU_OPLSYNTHESIS"
+msgstr "OPL sinteza"
+
+msgid "ADVSNDMNU_OPLNUMCHIPS"
+msgstr "Broj emuliranih OPL čipova"
+
+msgid "ADVSNDMNU_OPLGAIN"
+msgstr "Dobit"
+
+msgid "ADVSNDMNU_OPLFULLPAN"
+msgstr "Potpuno MIDI stereo panovanje"
+
+msgid "ADVSNDMNU_OPLCORES"
+msgstr "OPL emulator jezgro"
+
+msgid "ADVSNDMNU_MIDIVOICES"
+msgstr "MIDI glasovi"
+
+msgid "ADVSNDMNU_FLUIDSYNTH"
+msgstr "FluidSynth"
+
+msgid "ADVSNDMNU_GLOBAL"
+msgstr "Globalno"
+
+msgid "ADVSNDMNU_FREEVERB"
+msgstr "Besplatni odjek"
+
+msgid "ADVSNDMNU_GLOBAL_FREEVERB"
+msgstr "Globalni odjek"
+
+msgid "ADVSNDMNU_FLUIDGAIN"
+msgstr "Dobit"
+
+msgid "ADVSNDMNU_REVERB"
+msgstr "Odjek"
+
+msgid "ADVSNDMNU_REVERB_LEVEL"
+msgstr "Nivo reverb-a"
+
+msgid "ADVSNDMNU_CHORUS"
+msgstr "Refren"
+
+msgid "ADVSNDMNU_TIMIDITY"
+msgstr "Stidljivost++"
+
+msgid "ADVSNDMNU_ADLMIDI"
+msgstr "ADLMidi"
+
+msgid "ADVSNDMNU_OPNMIDI"
+msgstr "OPNMidi"
+
+msgid "ADVSNDMNU_WILDMIDI"
+msgstr "WildMidi"
+
+msgid "ADVSNDMNU_SELCONFIG"
+msgstr "Odaberite konfiguraciju"
+
+msgid "ADVSNDMNU_ADVRESAMPLING"
+msgstr "Napredno ponovno uzorkovanje"
+
+msgid "ADVSNDMNU_OPLBANK"
+msgstr "OPL Banka"
+
+msgid "ADVSNDMNU_RUNPCMRATE"
+msgstr "Pokrenite emulator na PCM brzini"
+
+msgid "ADVSNDMNU_ADLNUMCHIPS"
+msgstr "Broj emuliranih OPL čipova"
+
+msgid "ADVSNDMNU_ADLGAIN"
+msgstr "Dobit"
+
+msgid "ADVSNDMNU_VLMODEL"
+msgstr "Volumski model"
+
+msgid "ADVSNDMNU_CHANALLOC"
+msgstr "Metoda raspodjele kanala"
+
+msgid "ADVSNDMNU_AUTOARPEGGIO"
+msgstr "Automatsko arpeggio"
+
+msgid "ADVSNDMNU_OPNCORES"
+msgstr "OPN2 jezgro emulatora"
+
+msgid "ADVSNDMNU_GUSEMULATION"
+msgstr "GUS emulacija"
+
+msgid "ADVSNDMNU_DMXGUS"
+msgstr "Pročitajte DMXGUS izbočine"
+
+msgid "ADVSNDMNU_GUSMEMSIZE"
+msgstr "Veličina GUS memorije"
+
+msgid "ADVSNDMNU_OPNNUMCHIPS"
+msgstr "Broj emuliranih OPN čipova"
+
+msgid "ADVSNDMNU_OPNGAIN"
+msgstr "Dobit"
+
+msgid "ADVSNDMNU_ADLCUSTOMBANK"
+msgstr "Koristite prilagođenu WOPL banku"
+
+msgid "ADVSNDMNU_ADLUSEWADBANK"
+msgstr "Koristite GENMIDI banku WAD-a kao prilagođenu banku"
+
+msgid "ADVSNDMNU_OPLBANKFILE"
+msgstr "Datoteka WOPL Banke"
+
+msgid "ADVSNDMNU_OPNCUSTOMBANK"
+msgstr "Koristite prilagođenu WOPN banku"
+
+msgid "ADVSNDMNU_OPNBANKFILE"
+msgstr "Datoteka WOPN Bank"
+
+msgid "OPTVAL_ALIASING"
+msgstr "Aliasing"
+
+msgid "OPTVAL_LINEAR_1"
+msgstr "Linearan"
+
+msgid "OPTVAL_LINEAR_2"
+msgstr "Linearan"
+
+msgid "OPTVAL_LINEAR_3"
+msgstr "Linearan"
+
+msgid "OPTVAL_NEAREST"
+msgstr "Najbliži"
+
+msgid "OPTVAL_PCF_LOW"
+msgstr "PCF (nisko)"
+
+msgid "OPTVAL_PCF_MEDIUM"
+msgstr "PCF (Srednji)"
+
+msgid "OPTVAL_PCF_HIGH"
+msgstr "PCF (Visoki)"
+
+msgid "OPTVAL_CUBIC"
+msgstr "Kubično"
+
+msgid "OPTVAL_BLEP"
+msgstr "Korak ograničen pojasa"
+
+msgid "OPTVAL_LINEARSLOW"
+msgstr "Linearan (sporiji)"
+
+msgid "OPTVAL_BLAM"
+msgstr "Linearan s ograničenom pojastom"
+
+msgid "OPTVAL_CUBICSLOW"
+msgstr "Kubični (sporije)"
+
+msgid "OPTVAL_SINC"
+msgstr "Sinc"
+
+msgid "OPTVAL_NOTEONOFFONLY"
+msgstr "Napomena: samo uključeno/isključeno"
+
+msgid "OPTVAL_FULLRAMPING"
+msgstr "Potpuno uzbrdo"
+
+msgid "MODMNU_MASTERVOLUME"
+msgstr "Glavni volumen"
+
+msgid "MODMNU_QUALITY"
+msgstr "Kvalitet"
+
+msgid "MODMNU_VOLUMERAMPING"
+msgstr "Pojačavanje zvuka"
+
+msgid "OPTVAL_LIBXMP"
+msgstr "libXMP"
+
+msgid "OPTVAL_DUMB"
+msgstr "Gluho"
+
+msgid "MODMNU_CHIPOMATIC"
+msgstr "Čip-o-matski"
+
+msgid "OPTVAL_MAMEOPL2"
+msgstr "MAME OPL2"
+
+msgid "OPTVAL_DOSBOXOPL3"
+msgstr "DOSBox OPL3"
+
+msgid "OPTVAL_JAVAOPL3"
+msgstr "Java OPL3"
+
+msgid "OPTVAL_ESFMu"
+msgstr "ESFMu OPL3"
+
+msgid "OPTVAL_YMFMOPL2"
+msgstr "YMFM OPL2"
+
+msgid "OPTVAL_YMFMOPL3"
+msgstr "YMFM OPL3"
+
+msgid "OPTVAL_NUKEDOPL3"
+msgstr "Nuked OPL3"
+
+msgid "OPTVAL_LLENUKEDOPL2"
+msgstr "OPL2-LLE (intenzivno opterećenje)"
+
+msgid "OPTVAL_LLENUKEDOPL3"
+msgstr "OPL3-LLE (intenzivno opterećenje)"
+
+msgid "OPTVAL_MAMEOPN2"
+msgstr "MAME OPN2 (YM2612)"
+
+msgid "OPTVAL_NP2OPNA"
+msgstr "Neko Project II Kai OPNA"
+
+msgid "OPTVAL_MAMEOPNA"
+msgstr "MAME YM2608"
+
+msgid "OPTVAL_OPALOPL3"
+msgstr "Opal OPL3"
+
+msgid "OPTVAL_NUKEDOPL3174"
+msgstr "Nuked OPL3 v1.7.4"
+
+msgid "OPTVAL_NUKEDOPN2YM3438"
+msgstr "Nuked OPN2 (YM3438)"
+
+msgid "OPTVAL_NUKEDOPN2YM2612"
+msgstr "Nuked OPN2 (YM2612)"
+
+msgid "OPTVAL_OPN2YM2612LLE"
+msgstr "OPN2-LLE (YM2612) (zahtjevno za performanse)"
+
+msgid "OPTVAL_OPN2YM3438LLE"
+msgstr "OPN2-LLE (YM3438) (zahtjevno po performansama)"
+
+msgid "OPTVAL_OPN2YMF276LLE"
+msgstr "OPN2-LLE (YMF276) (zahtjevno za izvođenje)"
+
+msgid "OPTVAL_GENSOPN2"
+msgstr "GENS OPN2 (YM2612)"
+
+msgid "OPTVAL_YMFMOPN2"
+msgstr "YMFM OPN2"
+
+msgid "OPTVAL_YMFMOPNA"
+msgstr "YMFM OPNA"
+
+msgid "ADLVLMODEL_AUTO"
+msgstr "Automatski (Koristiti postavke banke)"
+
+msgid "OPNVLMODEL_AUTO"
+msgstr "Automatski (Koristiti postavke banke)"
+
+msgid "ADLVLMODEL_GENERIC"
+msgstr "Općenito"
+
+msgid "OPNVLMODEL_GENERIC"
+msgstr "Općenito"
+
+msgid "ADLVLMODEL_NATIVE"
+msgstr "OPL nativno"
+
+msgid "OPNVLMODEL_NATIVE"
+msgstr "OPN nativno"
+
+msgid "ADLVLMODEL_DMX"
+msgstr "DMX (Precizan, sa AM greškom)"
+
+msgid "OPNVLMODEL_DMX"
+msgstr "Kao u DMX-u"
+
+msgid "ADLVLMODEL_APOGEE"
+msgstr "Apogee (Precizan, sa AM greškom)"
+
+msgid "OPNVLMODEL_APOGEE"
+msgstr "Kao u Apogee Sound Systemu"
+
+msgid "OPNVLMODEL_WIN9X"
+msgstr "Poput Win9X-a"
+
+msgid "ADLVLMODEL_WIN9X"
+msgstr "Win9X-lično (SB16)"
+
+msgid "ADLVLMODEL_WIN9XGENERIC"
+msgstr "Slično Win9X (generički FM)"
+
+msgid "ADLVLMODEL_DMX_FIXED"
+msgstr "DMX (bez AM-glasovne smetnje)"
+
+msgid "ADLVLMODEL_APOGEE_FIXED"
+msgstr "Apogee (bez greške u AM glasu)"
+
+msgid "ADLVLMODEL_AIL"
+msgstr "IBM sučelje audio biblioteke"
+
+msgid "ADLVLMODEL_HMI"
+msgstr "HMI zvučni operativni sistem"
+
+msgid "ADLVLMODEL_HMIOLD"
+msgstr "HMI SOS (Stari, s greškama)"
+
+msgid "ADLCHANALLOC_AUTO"
+msgstr "Auto"
+
+msgid "ADLCHANALLOC_OFFDELAY"
+msgstr "Mjereno kašnjenje odjeka"
+
+msgid "ADLCHANALLOC_SAMEINST"
+msgstr "Ponovo upotrijebite prvi izlaz istog instrumenta"
+
+msgid "ADLCHANALLOC_ANYREL"
+msgstr "Ponovo upotrijebite bilo koju prvobitno objavljenu notu"
+
+msgid "OPTVAL_UNLIMITED"
+msgstr "Neograničeno"
+
+msgid "OPTVAL_256K"
+msgstr "256K"
+
+msgid "OPTVAL_512K"
+msgstr "512K"
+
+msgid "OPTVAL_768K"
+msgstr "768K"
+
+msgid "OPTVAL_1024K"
+msgstr "1024K"
+
+msgid "OPTVAL_UNCHARTED2"
+msgstr "Neistraženo 2"
+
+msgid "OPTVAL_HEJLDAWSON"
+msgstr "Hejl-Dawson"
+
+msgid "OPTVAL_REINHARD"
+msgstr "Reinhard"
+
+msgid "OPTVAL_PALETTE"
+msgstr "Paleta"
+
+msgid "OPTVAL_LOW"
+msgstr "Nisko"
+
+msgid "OPTVAL_MEDIUM"
+msgstr "Umjereno"
+
+msgid "OPTVAL_HIGH"
+msgstr "Visoko"
+
+msgid "OPTVAL_EXTREME"
+msgstr "Ekstremni"
+
+msgid "OPTVAL_OBVERSEFIRST"
+msgstr "Prednja strana"
+
+msgid "OPTVAL_REVERSEFIRST"
+msgstr "Nazad"
+
+#, fuzzy
+msgid "GLMNU_POSTPROCESS"
+msgstr "Postobrada"
+
+msgid "GLPREFMNU_TONEMAP"
+msgstr "Tonemap način"
+
+msgid "GLPREFMNU_LENS"
+msgstr "Efekt distorzije leće"
+
+msgid "GLPREFMNU_FXAA"
+msgstr "Kvalitet FXAA"
+
+msgid "GLPREFMNU_DITHER"
+msgstr "Izlazak kolebanja"
+
+msgid "GLPREFMNU_PALTONEMAPORDER"
+msgstr "Redoslijed paleta tonemapa"
+
+msgid "GLPREFMNU_PALTONEMAPPOWER"
+msgstr "Paleta tonemapa eksponent"
+
+msgid "GLPREFMNU_MULTISAMPLE"
+msgstr "Višesampelski"
+
+msgid "GLPREFMNU_BLOOM"
+msgstr "Bloomov efekt"
+
+msgid "GLPREFMNU_SSAO"
+msgstr "Kvalitet ambijentalne okluzije"
+
+msgid "GLPREFMNU_SSAO_PORTALS"
+msgstr "Portali sa AO"
+
+msgid "GLPREFMNU_MENUBLUR"
+msgstr "Zamagljivanje menija"
+
+msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
+msgstr "Okolišna mapa na ogledalima"
+
+msgid "GLPREFMNU_RENDERQUALITY"
+msgstr "Kvalitet renderiranja"
+
+msgid "OPTVAL_SPEED"
+msgstr "Brzina"
+
+msgid "OPTVAL_QUALITY"
+msgstr "Kvalitet"
+
+msgid "GLPREFMNU_SECLIGHTMODE"
+msgstr "Sektorni način rada sa svjetlom"
+
+msgid "GLPREFMNU_FOGMODE"
+msgstr "Mod magle"
+
+msgid "OPTVAL_RADIAL"
+msgstr "Radijalni"
+
+msgid "OPTVAL_STANDARD"
+msgstr "Standardna"
+
+msgid "GLTEXMNU_TEXFILTER"
+msgstr "Način filtera teksture"
+
+msgid "GLTEXMNU_ANISOTROPIC"
+msgstr "Anizotropni filter"
+
+msgid "OPTVAL_NONENEARESTMIPMAP"
+msgstr "Nema (najbliži mipmap)"
+
+msgid "OPTVAL_NONELINEARMIPMAP"
+msgstr "Nema (linearni mipmap)"
+
+msgid "OPTVAL_NONETRILINEAR"
+msgstr "Nijedan (triliniaran)"
+
+msgid "OPTVAL_BILINEAR"
+msgstr "Bilinearan"
+
+msgid "OPTVAL_TRILINEAR"
+msgstr "Trilinijarni"
+
+msgid "OPTVAL_2X"
+msgstr "2×"
+
+msgid "OPTVAL_4X"
+msgstr "4×"
+
+msgid "OPTVAL_8X"
+msgstr "8×"
+
+msgid "OPTVAL_16X"
+msgstr "16×"
+
+msgid "OPTVAL_32X"
+msgstr "32×"
+
+msgid "GLTEXMNU_TITLE"
+msgstr "Opcije teksture"
+
+msgid "GLTEXMNU_HQRESIZE"
+msgstr "Visokokvalitetni režim promjene veličine"
+
+msgid "GLTEXMNU_HQRESIZEMULT"
+msgstr "Visokokvalitetni multiplikator promjene veličine"
+
+msgid "GLTEXMNU_HQRESIZEWARN"
+msgstr "Ovaj način zahtijeva %d puta više video memorije"
+
+msgid "GLTEXMNU_RESIZETEX"
+msgstr "Promijeni veličinu tekstura"
+
+msgid "GLTEXMNU_RESIZESPR"
+msgstr "Promijeni veličinu spriteova"
+
+msgid "GLTEXMNU_RESIZEFNT"
+msgstr "Promijeni veličinu fonta"
+
+msgid "GLTEXMNU_RESIZESKN"
+msgstr "Promijeni veličinu modela"
+
+msgid "GLTEXMNU_PRECACHETEX"
+msgstr "Predmemoriraj GL teksture"
+
+msgid "VIDMNU_TITLE"
+msgstr "Video mod"
+
+msgid "OPTVAL_LETTERBOX"
+msgstr "Poštanski sandučić"
+
+msgid "OPTVAL_STRETCH"
+msgstr "Rastezanje"
+
+msgid "VIDMNU_RENDERMODE"
+msgstr "Način renderiranja"
+
+msgid "VIDMNU_FULLSCREEN"
+msgstr "Cijeli Ekran"
+
+msgid "VIDMNU_HIDPI"
+msgstr "Podrška za Retinu/HiDPI"
+
+msgid "VIDMNU_FORCEASPECT"
+msgstr "Nametni omjer stranica"
+
+msgid "VIDMNU_CROPASPECT"
+msgstr "Stil prisilnog omjera"
+
+msgid "VIDMNU_SCALEMODE"
+msgstr "Skala rezolucije"
+
+msgid "VIDMNU_SCALEFACTOR"
+msgstr "Faktor mjerila"
+
+msgid "VIDMNU_USELINEAR"
+msgstr "Koristite linearno skaliranje (puni ekran)"
+
+msgid "VIDMNU_CUSTOMRES"
+msgstr "Prilagođeno skaliranje piksela"
+
+msgid "VIDMNU_CUSTOMX"
+msgstr "Prilagođena širina"
+
+msgid "VIDMNU_CUSTOMY"
+msgstr "Prilagođena visina"
+
+msgid "VIDMNU_APPLYW"
+msgstr "Primijeni promjene (u prozoru)"
+
+msgid "VIDMNU_APPLYFS"
+msgstr "Primijeni promjene (puni ekran)"
+
+msgid "VIDMNU_RESPRESET"
+msgstr "Odaberite unaprijed podešenu rezoluciju"
+
+msgid "VIDMNU_RESPRESETTTL"
+msgstr "Prilagođene postavke rezolucije"
+
+msgid "VIDMNU_RESPRESETHEAD"
+msgstr "Unaprijed postavljeni načini rezolucije"
+
+msgid "VIDMNU_ASPECT43"
+msgstr "4:3 omjer"
+
+msgid "VIDMNU_ASPECT54"
+msgstr "5:4 omjer"
+
+msgid "VIDMNU_ASPECT169"
+msgstr "Omjer 16:9"
+
+msgid "VIDMNU_ASPECT1610"
+msgstr "16:10 Omjer"
+
+msgid "VIDMNU_ASPECT219"
+msgstr "Omjer 21:9"
+
+msgid "OPTVAL_NORMAL"
+msgstr "Normalno"
+
+msgid "OPTVAL_LOWEST"
+msgstr "Najniža moguća skala"
+
+msgid "OPTVAL_CUSTOM"
+msgstr "Prilagođeno"
+
+msgid "VIDMNU_MAXFPS"
+msgstr "Maksimalni FPS"
+
+msgid "OPTVAL_60FPS"
+msgstr "60 fps"
+
+msgid "OPTVAL_75FPS"
+msgstr "75 fps"
+
+msgid "OPTVAL_90FPS"
+msgstr "90 fps"
+
+msgid "OPTVAL_120FPS"
+msgstr "120 fps"
+
+msgid "OPTVAL_144FPS"
+msgstr "144 fps"
+
+msgid "OPTVAL_200FPS"
+msgstr "200 fps"
+
+msgid "VIDMNU_PREFERBACKEND"
+msgstr "Preferirani API za renderiranje"
+
+msgid "OPTVAL_OPENGL"
+msgstr "OpenGL"
+
+msgid "OPTVAL_VULKAN"
+msgstr "Vulkan"
+
+msgid "OPTVAL_OPENGLES"
+msgstr "OpenGL ES"
+
+msgid "MISCMNU_MERGEKEYS"
+msgstr "Spajanje lijevog+desnog Alt/Ctrl/Shift"
+
+msgid "MISCMNU_WINFULLSCREENTOGGLE"
+msgstr "Alt-Enter prebacuje u puni ekran"
+
+msgid "MISCMNU_MACFULLSCREENTOGGLE"
+msgstr "Command-F uključuje/isključuje puni ekran"
+
+msgid "MISCMNU_ENABLEAUTOSAVES"
+msgstr "Omogući automatsko spremanje"
+
+msgid "MISCMNU_AUTOSAVECOUNT"
+msgstr "Broj automatskih spremanja"
+
+msgid "MISCMNU_SAVELOADCONFIRMATION"
+msgstr "Potvrda za spremanje/čitanje"
+
+msgid "MISCMNU_NOCHEATS"
+msgstr "Onemogućite varanje tipkovnicom"
+
+msgid "MISCMNU_QUICKSAVEROTATION"
+msgstr "Quicksave rotacija"
+
+msgid "MISCMNU_QUICKSAVECOUNT"
+msgstr "Broj brzih snimanja u rotaciji"
+
+msgid "MISCMNU_CLEANMENU"
+msgstr "Klasično skaliranje ZDoom menija"
+
+msgid "MISCMNU_PAUSEINBACKGROUND"
+msgstr "Pauziraj igru u pozadini"
+
+msgid "HUDMNU_CROSSHAIR"
+msgstr "Zadani nišan"
+
+msgid "HUDMNU_CROSSHAIRCOLOR"
+msgstr "Boja nišana"
+
+msgid "HUDMNU_CROSSHAIRSCALE"
+msgstr "Skala nišana"
+
+msgid "OPTVAL_YES_STANDARD"
+msgstr "Standardna"
+
+msgid "OPTVAL_YES_ENHANCED"
+msgstr "Poboljšano"
+
+msgid "OPTMNU_LANGUAGE"
+msgstr "Jezik"
+
+msgid "TXT_UNDOCHANGES"
+msgstr "Poništi izmjene"
+
+msgid "REVMNU_SELECT"
+msgstr "Odabir okruženja"
+
+msgid "REVMNU_TEST"
+msgstr "Testno okruženje"
+
+msgid "REVMNU_EDIT"
+msgstr "Uredi okruženje"
+
+msgid "REVMNU_NEW"
+msgstr "Novo okruženje"
+
+msgid "REVMNU_Reflections_Scale"
+msgstr "Skala refleksija"
+
+msgid "REVMNU_Reflections_Delay_Scale"
+msgstr "Skala odgađanja refleksija"
+
+msgid "REVMNU_Decay_Time_Scale"
+msgstr "Vremenska skala raspadanja"
+
+msgid "REVMNU_Decay_HF_Limit"
+msgstr "Granica HF raspadanja"
+
+msgid "REVMNU_Reverb_Scale"
+msgstr "Skala odjeka"
+
+msgid "REVMNU_Reverb_Delay_Scale"
+msgstr "Skala odgode reverb-a"
+
+msgid "REVMNU_Echo_Time_Scale"
+msgstr "Vrijeme odjeka"
+
+msgid "REVMNU_Modulation_Time_Scale"
+msgstr "Vremenska skala modulacije"
+
+msgid "REVMNU_Based_on"
+msgstr "Na osnovu"
+
+msgid "REVMNU_Name"
+msgstr "Ime"
+
+msgid "REVMNU_ID_1"
+msgstr "ID br. 1"
+
+msgid "REVMNU_ID_2"
+msgstr "ID br. 2"
+
+msgid "REVMNU_Create"
+msgstr "Napravi"
+
+msgid "REVMNU_Save"
+msgstr "Sačuvaj…"
+
+msgid "REVMNU_File_name"
+msgstr "Naziv datoteke"
+
+msgid "REVMNU_Environments_to_save"
+msgstr "Okruženja za spremanje"
+
+msgid "DSPLYMNU_VKOPT"
+msgstr "Vulkan opcije (eksperimentalno)"
+
+msgid "VK_TITLE"
+msgstr "Vulkan Opcije"
+
+msgid "VKMNU_DEVICE"
+msgstr "ID Vulkan uređaja"
+
+msgid "VKMNU_HDR"
+msgstr "Visoki dinamički raspon"
+
+msgid "VK_WARNING"
+msgstr "Upozorenje: Vulkan renderer je veoma eksperimentalni!"
+
+msgid "VK_RESTART"
+msgstr "Ove opcije će zahtijevati ponovno pokretanje da bi stupile na snagu."
+
+msgid "OPTVAL_SCALENX"
+msgstr "ScaleNx"
+
+msgid "OPTVAL_NORMALNX"
+msgstr "NormalNx"
+
+msgid "OPTVAL_HQNX"
+msgstr "hqNx"
+
+msgid "OPTVAL_HQNXMMX"
+msgstr "hqNx MMX"
+
+msgid "OPTVAL_NXBRZ"
+msgstr "xBRZ"
+
+msgid "OPTVAL_OLD_NXBRZ"
+msgstr "Stari xBRZ"
+
+msgid "OS_TITLE"
+msgstr "Pretraga opcija"
+
+msgid "OS_ANY"
+msgstr "Pretraži bilo koji pojam"
+
+msgid "OS_ALL"
+msgstr "Pretraži sve pojmove"
+
+msgid "OS_NO_RESULTS"
+msgstr "Nisu pronađeni rezultati."
+
+msgid "OS_LABEL"
+msgstr "Pretraga:"
+
+msgid "OPTMNU_FULLOPTIONS"
+msgstr "Kompletan meni opcija"
+
+msgid "OPTMNU_SIMPLEON"
+msgstr "Jednostavan meni opcija"
+
+msgid "OPTMNU_OPENCONFIG"
+msgstr "Pregledaj konfiguraciju igre"
+
+msgid "OPTMNU_OPENSCREENSHOTS"
+msgstr "Pregledaj snimke ekrana"
+
+msgid "OPTMNU_OPENSAVES"
+msgstr "Pregledaj sačuvane igre"
+
+msgid "MOUSEMNU_SWAPBUTTONS"
+msgstr "Zamijeni tipke miša"
+
+msgid "OPTVAL_ONLYMODIFIED"
+msgstr "Samo izmijenjeno"
+
+msgid "TXT_UNKNOWN"
+msgstr "Neprijatelj"
+
+msgid "TXT_SAVEGAMENEEDS"
+msgstr "Ova sačuvana igra zahtijeva ove datoteke"
+
+msgid "GLPREFMNU_CORONAS"
+msgstr "Korone"
+
+msgid "PICKER_SELECT"
+msgstr "Odaberite koju datoteku igre želite pokrenuti."
+
+msgid "PICKER_PLAY"
+msgstr "Igraj igru"
+
+msgid "PICKER_EXIT"
+msgstr "Izlaz"
+
+msgid "PICKER_GENERAL"
+msgstr "Općenito"
+
+msgid "PICKER_EXTRA"
+msgstr "Dodatna grafika"
+
+msgid "PICKER_FULLSCREEN"
+msgstr "Cijeli Ekran"
+
+msgid "PICKER_NOAUTOLOAD"
+msgstr "Onemogućite automatsko učitavanje"
+
+msgid "PICKER_DONTASK"
+msgstr "Nemoj me više pitati"
+
+msgid "PICKER_LIGHTS"
+msgstr "Svjetla"
+
+msgid "PICKER_BRIGHTMAPS"
+msgstr "Svijetlokarte"
+
+msgid "PICKER_WIDESCREEN"
+msgstr "Široki ekran"
+
+msgid "PICKER_ADDPARM"
+msgstr "Dodatni parametri:"
+
+msgid "PICKER_WELCOME"
+msgstr "Dobrodošli u %s!"
+
+msgid "PICKER_VERSION"
+msgstr "Verzija %s"
+
+msgid "PICKER_PREFERBACKEND"
+msgstr "API za renderiranje"
+
+msgid "PICKER_TAB_PLAY"
+msgstr "Igra"
+
+msgid "JOYMNU_JOYENABLE"
+msgstr "Omogući ovaj kontroler"
+
+msgid "CNTRLMNU_OPEN_MAIN"
+msgstr "Otvori glavni meni"
+
+msgid "MODMNU_REPLAYER"
+msgstr "Ponavljač modula"
+
+msgid "JOYMNU_JOYENABLEINBACKGROUND"
+msgstr "Omogući unos pozadinskog kontrolera"
+
+msgid "MISCMNU_SAVEORDER"
+msgstr "Redoslijed sortiranja pri spremanju igre"
+
+msgid "OPTVAL_ALPHABETICAL"
+msgstr "Abecedno"
+
+msgid "OPTVAL_LASTSAVEDTIME"
+msgstr "Posljednje sačuvano vrijeme"
+
+msgid "PICKER_PLAYHOST"
+msgstr "Domaća utakmica"
+
+msgid "PICKER_PLAYJOIN"
+msgstr "Pridruži se igri"
+
+msgid "PICKER_REMPARM"
+msgstr "Zapamti parametre"
+
+msgid "PICKER_SUPPORTWADS"
+msgstr "Učitaj WAD datoteke"
+
+msgid "PICKER_TAB_MULTI"
+msgstr "Više igrača"
+
+msgid "PICKER_LOADSAVE"
+msgstr "Učitaj spremljenu datoteku:"
+
+msgid "PICKER_REMSAVE"
+msgstr "Zapamti spremi datoteku"
+
+msgid "PICKER_HOST"
+msgstr "Domaćin"
+
+msgid "PICKER_JOIN"
+msgstr "Pridružite se"
+
+msgid "PICKER_NETRATE"
+msgstr "Paket Ticrate:"
+
+msgid "PICKER_NETBACKUP"
+msgstr "Pošalji pakete za rezervnu kopiju"
+
+msgid "PICKER_GAMEMODE"
+msgstr "Način igre:"
+
+msgid "PICKER_COOP"
+msgstr "Zadružno"
+
+msgid "PICKER_DM"
+msgstr "Smrtni okršaj"
+
+msgid "PICKER_TDM"
+msgstr "Timski meč smrti"
+
+msgid "PICKER_TEAM"
+msgstr "Tim br.:"
+
+msgid "PICKER_ALTDM"
+msgstr "Koristite alternativna pravila deathmatcha"
+
+msgid "PICKER_PLAYERS"
+msgstr "Najviše igrača:"
+
+msgid "PICKER_PORT"
+msgstr "Prijemni port:"
+
+msgid "PICKER_PLAYERHINT"
+msgstr "Max 64"
+
+msgid "PICKER_PORTHINT"
+msgstr "Zadano 5029"
+
+msgid "PICKER_TEAMHINT"
+msgstr "255 = nasumičan"
+
+msgid "PICKER_IP"
+msgstr "IP domaćina:"
+
+msgid "PICKER_TDMLABEL"
+msgstr "Timski meč smrti:"
+
+msgid "TXT_SAYTEAM"
+msgstr "Recite (Tim):"
+
+msgid "MISCMNU_DISCORDRPC"
+msgstr "Discord bogata prisutnost"
+
+msgid "JOYMNU_TURNSPEED"
+msgstr "Brzina okretanja"
+
+msgid "JOYMNU_LOOKSPEED"
+msgstr "Traženje brzine"
+
+msgid "JOYMNU_ANALOGSTRAFERUN"
+msgstr "Analogni trčanje bočno"
+
+msgid "NOTES_FAIL"
+msgstr "Nije moguće obraditi bilješke o izdanju"
+
+msgid "NOTES_UNKNOWN"
+msgstr "Neprijatelj"
+
+msgid "NOTES_RELEASED"
+msgstr "%s verzija %s, objavljeno %s"
+
+msgid "NOTES_EMPTY"
+msgstr "Nije naveden opis."
+
+msgid "NOTES_DETAILS"
+msgstr "Za više detalja pogledajte: %s"
+
+msgid "PICKER_SHOWTHIS"
+msgstr "Prikaži ovu stranicu nakon ažuriranja"
+
+msgid "PICKER_SHOWNOTES"
+msgstr "Prikaži bilješke o izdanju"
+
+msgid "PICKER_TAB_ABOUT"
+msgstr "O tome"
+
+msgid "PICKER_TAB_RELEASE"
+msgstr "Bilješke o izdanju"

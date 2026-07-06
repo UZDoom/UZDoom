@@ -1,0 +1,247 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-06-30 18:01+0000\n"
+"Last-Translator: தமிழ்நேரம் <tamilneram247@gmail.com>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/doom-engine-games/harmony/ta/>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.7.dev0\n"
+
+msgctxt "doom harmony"
+msgid "NIGHTMARE"
+msgstr ""
+"நீங்கள் உண்மையில் அதை சமாளிக்க முடியும் என்று நினைக்கிறீர்களா?\n"
+"\n"
+"'Y' அல்லது 'N' அழுத்தவும்…"
+
+msgctxt "doom harmony"
+msgid "AMSTR_MARKEDSPOT"
+msgstr "புள்ளி குறிக்கப்பட்டது"
+
+msgctxt "doom harmony"
+msgid "PD_BLUEO"
+msgstr "பச்சை திறவுஅட்டை தேவை"
+
+msgctxt "doom harmony"
+msgid "PD_REDO"
+msgstr "ஊதா நிற திறவுஅட்டை தேவை"
+
+msgctxt "doom harmony"
+msgid "PD_YELLOWO"
+msgstr "மஞ்சள் திறவுஅட்டை தேவை"
+
+msgctxt "doom harmony"
+msgid "PD_BLUEK"
+msgstr "பச்சை திறவு தேவை"
+
+msgctxt "doom harmony"
+msgid "PD_YELLOWK"
+msgstr "மஞ்சள் திறவு தேவை"
+
+msgctxt "doom harmony"
+msgid "PD_REDK"
+msgstr "ஊதா திறவு தேவை"
+
+msgctxt "doom harmony"
+msgid "GOTARMOR"
+msgstr "கவசத்தை எடுத்தார்."
+
+msgctxt "doom harmony"
+msgid "GOTMEGA"
+msgstr "போர் கவசத்தை எடுத்தார்."
+
+msgctxt "doom harmony"
+msgid "GOTMSPHERE"
+msgstr "சூப்பர்எல்த்"
+
+msgctxt "doom harmony"
+msgid "GOTBLUECARD"
+msgstr "பச்சை திறவுஅட்டை கிடைத்தது."
+
+msgctxt "doom harmony"
+msgid "GOTYELWCARD"
+msgstr "மஞ்சள் திறவுஅட்டை கிடைத்தது."
+
+msgctxt "doom harmony"
+msgid "GOTREDCARD"
+msgstr "ஊதா நிற திறவுஅட்டை கிடைத்தது."
+
+msgctxt "doom harmony"
+msgid "GOTBLUESKUL"
+msgstr "பச்சை விசை கிடைத்தது."
+
+msgctxt "doom harmony"
+msgid "GOTYELWSKUL"
+msgstr "மஞ்சள் விசை கிடைத்தது."
+
+msgctxt "doom harmony"
+msgid "GOTREDSKUL"
+msgstr "ஊதா விசை கிடைத்தது."
+
+msgctxt "doom harmony"
+msgid "GOTSTIM"
+msgstr "குணப்படுத்தும் காளான்"
+
+msgctxt "doom harmony"
+msgid "GOTMEDIKIT"
+msgstr "வாங்கியது: மருத்துவ தொகுப்பு."
+
+msgctxt "doom harmony"
+msgid "GOTMEDINEED"
+msgstr "வாங்கியது: உங்களுக்கு உண்மையிலேயே தேவைப்படும் மருத்துவ அறிவிலி."
+
+msgctxt "doom harmony"
+msgid "GOTMAP"
+msgstr "வரைபடம்"
+
+msgctxt "doom harmony"
+msgid "GOTCLIPBOX"
+msgstr "வாங்கியது: தோட்டாக்களின் வழக்கு."
+
+msgctxt "doom harmony"
+msgid "GOTROCKET"
+msgstr "வாங்கியது: கையெறி குண்டு."
+
+msgctxt "doom harmony"
+msgid "GOTROCKBOX"
+msgstr "வாங்கியது: கையெறி குண்டுகள்."
+
+msgctxt "doom harmony"
+msgid "GOTSHELLBOX"
+msgstr "வாங்கியது: துப்பாக்கி குண்டுகளின் பெட்டி."
+
+msgctxt "doom harmony"
+msgid "GOTBACKPACK"
+msgstr "வாங்கியது: வெடிமருந்து பையுடனும்."
+
+msgctxt "doom harmony"
+msgid "GOTBFG9000"
+msgstr "வாங்கியது: கையெறி குண்டு."
+
+msgctxt "doom harmony"
+msgid "GOTCHAINGUN"
+msgstr "வாங்கியது: மினிகன்."
+
+msgctxt "doom harmony"
+msgid "GOTLAUNCHER"
+msgstr "வாங்கியது: கிரெனேட் லாஞ்சர்."
+
+msgctxt "doom harmony"
+msgid "GOTPLASMA"
+msgstr "என்ட்ரோபி எறிபவர்!"
+
+msgctxt "doom harmony"
+msgid "GOTSHOTGUN"
+msgstr "வாங்கியது: துப்பாக்கி."
+
+msgctxt "doom harmony"
+msgid "STSTR_DQDON"
+msgstr "கடவுள் பயன்முறை இயக்கப்பட்டது"
+
+msgctxt "doom harmony"
+msgid "STSTR_DQDOFF"
+msgstr "கடவுள் பயன்முறை முடக்கப்பட்டுள்ளது"
+
+msgctxt "doom harmony"
+msgid "STSTR_KFAADDED"
+msgstr "அனைத்து ஆயுதங்கள் / வெடிமருந்துகள் / சாவிகள்"
+
+msgctxt "doom harmony"
+msgid "STSTR_FAADDED"
+msgstr "அனைத்து ஆயுதங்கள் மற்றும் வெடிமருந்துகள்"
+
+msgid "TXT_HARMMAP01"
+msgstr "கடத்தல்"
+
+msgid "TXT_HARMMAP02"
+msgstr "தீங்கு வழி"
+
+msgid "TXT_HARMMAP03"
+msgstr "ஓட் மனநிலை"
+
+msgid "TXT_HARMMAP04"
+msgstr "மெகாலோபோலிச்"
+
+msgid "TXT_HARMMAP05"
+msgstr "மருத்துவமனை"
+
+msgid "TXT_HARMMAP06"
+msgstr "ஆயுத தொழிற்சாலை"
+
+msgid "TXT_HARMMAP07"
+msgstr "நீருக்கடியில் ஆய்வகம்"
+
+msgid "TXT_HARMMAP08"
+msgstr "ஏர்ச்ட்ரிப் ஒன்று"
+
+msgid "TXT_HARMMAP09"
+msgstr "ஏவுதளம்"
+
+msgid "TXT_HARMMAP10"
+msgstr "கதிரியக்க மண்டலம்"
+
+msgid "TXT_HARMMAP11"
+msgstr "சொண்டெய்"
+
+msgid "CLUSTEREXIT1"
+msgstr ""
+"உங்களுக்கு வயிறு வலிக்கிறது... \n"
+"விகாரமான ராணியின் முகத்தைப் பார்த்து... \n"
+"அந்த விசயம்... முன்பு இருந்தது... \n"
+"உங்கள் தோழி... அமைரா! \n"
+"\n"
+"அந்த அசுரர்கள் ஒரு வழியைக் கண்டுபிடித்திருக்க வேண்டும் \n"
+"அவளை மாற்றவும் மற்றும் அவளை மாற்றவும் \n"
+"அருவருப்பான உயிரினம் தங்கள் சந்ததிகளை தாங்க. \n"
+"\n"
+"-பெருமூச்சு- \n"
+"\n"
+"நீங்கள் உங்களை ஒன்றாக இணைத்துக் கொள்ளுங்கள்... \n"
+"உன்னைக் கொல்ல வைத்ததற்கு அவர்கள் பணம் கொடுக்கப் போகிறார்கள் \n"
+"உங்கள் நண்பர்… \n"
+"\n"
+"\"ஒரு பெண் இகழ்வது போல் நரகத்திற்கு சினம் இல்லை!\" \n"
+"\n"
+"= டி எச் இ இ என் டி ="
+
+# This text is deliberately empty
+msgctxt "doom harmony"
+msgid "WI_FINISHED"
+msgstr "அழிவு இணக்கம்"
+
+# Yellow needs retranslation
+msgctxt "doom harmony"
+msgid "WI_ENTERING"
+msgstr "ஏற்றுகிறது"
+
+msgctxt "doom harmony"
+msgid "SKILL_BABY"
+msgstr "மிகவும் எளிதானது"
+
+msgctxt "doom harmony"
+msgid "SKILL_EASY"
+msgstr "எளிதானது"
+
+msgctxt "doom harmony"
+msgid "SKILL_NORMAL"
+msgstr "நடுத்தர"
+
+msgctxt "doom harmony"
+msgid "SKILL_HARD"
+msgstr "கடினமான"
+
+msgctxt "doom harmony"
+msgid "SKILL_NIGHTMARE"
+msgstr "மிகவும் கடினமானது"
+
+msgid "HARMQUITMSG"
+msgstr "விளையாடியதற்கு நன்றி"
+
+msgctxt "doom harmony"
+msgid "TXT_D2E1"
+msgstr "இணக்கம்"

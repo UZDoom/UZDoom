@@ -1,0 +1,264 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-05-11 03:43+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Croatian <https://hosted.weblate.org/projects/doom-engine-games/heretic/hr/>\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 2026.5-dev\n"
+
+msgid "HHUSTR_E1M1"
+msgstr "Dokovi"
+
+msgid "HHUSTR_E1M2"
+msgstr "Tamnice"
+
+msgid "HHUSTR_E1M3"
+msgstr "Vrata"
+
+msgid "HHUSTR_E1M4"
+msgstr "Stražarska kula"
+
+msgid "HHUSTR_E1M5"
+msgstr "Citadela"
+
+msgid "HHUSTR_E1M6"
+msgstr "Katedrala"
+
+msgid "HHUSTR_E1M7"
+msgstr "Kripte"
+
+msgid "HHUSTR_E1M8"
+msgstr "Paklino grlo"
+
+msgid "HHUSTR_E1M9"
+msgstr "Groblje"
+
+msgid "HHUSTR_E2M1"
+msgstr "Kratar"
+
+msgid "HHUSTR_E2M2"
+msgstr "Lava Pits"
+
+msgid "HHUSTR_E2M3"
+msgstr "Rijeka vatre"
+
+msgid "HHUSTR_E2M4"
+msgstr "Ledeni špilj"
+
+msgid "HHUSTR_E2M5"
+msgstr "Katakombe"
+
+msgid "HHUSTR_E2M6"
+msgstr "Labirint"
+
+msgid "HHUSTR_E2M7"
+msgstr "Velika dvorana"
+
+msgid "HHUSTR_E2M8"
+msgstr "Portali kaosa"
+
+msgid "HHUSTR_E2M9"
+msgstr "Lednik"
+
+msgid "HHUSTR_E3M1"
+msgstr "Spremnik"
+
+msgid "HHUSTR_E3M2"
+msgstr "Smetlište"
+
+msgid "HHUSTR_E3M3"
+msgstr "Slijevanje"
+
+msgid "HHUSTR_E3M4"
+msgstr "Azurni grad"
+
+msgid "HHUSTR_E3M5"
+msgstr "Zmajeva jazbina"
+
+msgid "HHUSTR_E3M6"
+msgstr "Dvorane straha"
+
+msgid "HHUSTR_E3M7"
+msgstr "Provalija"
+
+msgid "HHUSTR_E3M8"
+msgstr "D'Sparilova tvrđava"
+
+msgid "HHUSTR_E3M9"
+msgstr "Akvifer"
+
+msgid "HHUSTR_E4M1"
+msgstr "Katafalk"
+
+msgid "HHUSTR_E4M2"
+msgstr "Blok-kuća"
+
+msgid "HHUSTR_E4M3"
+msgstr "Ambulantni"
+
+msgid "HHUSTR_E4M4"
+msgstr "Grobnica"
+
+msgid "HHUSTR_E4M5"
+msgstr "Veliko stubište"
+
+msgid "HHUSTR_E4M6"
+msgstr "Dvorane apostate"
+
+msgid "HHUSTR_E4M7"
+msgstr "Bedemi Propasti"
+
+msgid "HHUSTR_E4M8"
+msgstr "Srušeni most"
+
+msgid "HHUSTR_E4M9"
+msgstr "Mauzolej"
+
+msgid "HHUSTR_E5M1"
+msgstr "Okerne litice"
+
+msgid "HHUSTR_E5M2"
+msgstr "Brzaci"
+
+msgid "HHUSTR_E5M3"
+msgstr "Pristanište"
+
+msgid "HHUSTR_E5M4"
+msgstr "Dvorište"
+
+msgid "HHUSTR_E5M5"
+msgstr "Kanalizacija"
+
+msgid "HHUSTR_E5M6"
+msgstr "Kolona"
+
+msgid "HHUSTR_E5M7"
+msgstr "Smrdljiva župna kuća"
+
+msgid "HHUSTR_E5M8"
+msgstr "Područje prosuđivanja"
+
+msgid "HHUSTR_E5M9"
+msgstr "Pređa D'sparila"
+
+msgid "HE1TEXT"
+msgstr ""
+"Uništenjem Željeznih Ličeva\n"
+"i njihovih slugu, posljednji\n"
+"od nemrtvih očišćeni su s\n"
+"ove ravni postojanja.\n"
+"\n"
+"Ta su stvorenja, međutim,\n"
+"morala negdje doći, a vi imate\n"
+"podlu sumnju da se vatrometni\n"
+"portal paklenih usta otvara na\n"
+"njihovu matičnu dimenziju.\n"
+"\n"
+"Kako biste osigurali da ne\n"
+"prođu još nemrtvi (ili još gore\n"
+"stvari), morat ćete zapečatiti\n"
+"pakao s druge strane. Naravno,\n"
+"to znači da biste mogli ostati zaglavljeni\n"
+"u vrlo neprijateljskom svijetu, ali nitko\n"
+"nikada nije rekao da je biti heretik lako!"
+
+#, fuzzy
+msgid "HE2TEXT"
+msgstr ""
+"Moćni maulotaurovi pokazali\n"
+"su se nedostojnima tebe, i\n"
+"dok njihovi krčajući leševi\n"
+"klize na tlo, osjećaš\n"
+"mračno zadovoljstvo\n"
+"što su uništeni.\n"
+"\n"
+"Kapije koje su čuvali su se\n"
+"otvorile, otkrivajući ono što\n"
+"se nadate da je put kući. Ali\n"
+"dok prolazite kroz njih,podsmjehujuće\n"
+"se smijeh odzvanja u vašim ušima.\n"
+"\n"
+"Je li neka druga sila kontrolirala\n"
+"maulotaure? Mogu li se kroz ovu\n"
+"kapiju nalaziti još strašnija bića?\n"
+"Prostranstvo kristalne kupole iznad\n"
+"vas, tamo gdje bi trebalo biti nebo,\n"
+"zasigurno nije dobar znak...."
+
+msgid "HE3TEXT"
+msgstr ""
+"Smrću D'Sparila oslobođene\n"
+"su čarobne veze koje su držale\n"
+"njegova stvorenja na ovom planu,\n"
+"a njihovi smrtni krikovi nadjačali\n"
+"su njegove vlastite krikove agonije.\n"
+"\n"
+"Kad si ispunio svoju zakletvu osvete,\n"
+"ulaziš u portal prema vlastitom svijetu,\n"
+"tek nekoliko trenutaka prije nego što\n"
+"se kupola razbije na milijun komada.\n"
+"\n"
+"Ali ako je D'Sparilova moć zauvijek\n"
+"slomljena, zašto se ne osjećaš sigurno?\n"
+"Je li to bio onaj posljednji krik neposredno\n"
+"prije njegove smrti, onaj koji je zvučao\n"
+"kao kletva? Ili prizivanje? Ne možeš\n"
+"biti posve siguran, ali možda\n"
+"je to bio samo krik.\n"
+"\n"
+"S druge strane, što je s ostalim\n"
+"Zmajevim jahačima?"
+
+#, fuzzy
+msgid "HE4TEXT"
+msgstr ""
+"Mislili ste da ćete se\n"
+"vratiti u svoj svijet nakon\n"
+"što je D'Sparil umro, ali\n"
+"njegov je posljednji čin\n"
+"protjerao vas na njegov\n"
+"vlastiti plan. Ovdje ste ušli u razbijene\n"
+"ostatkezemalja koje je D'Sparil\n"
+"osvojio. Pobijedili ste posljednje\n"
+"čuvare ovih zemalja,\n"
+"ali sada stojite pred vratima\n"
+"d'Sparilove tvrđave. Do ovog\n"
+"trenutka niste sumnjali u svoju\n"
+"sposobnost da se suočite sa svime\n"
+"što biste mogli susresti, ali iza ovog\n"
+"portala leži samo srce zla koje je napalo\n"
+"vaš svijet. D'Sparil možda jest mrtav,\n"
+"ali ponor u kojem je stvoren ostaje.\n"
+"Sada morate ući u taj ponor u nadi\n"
+"da ćete pronaći izlaz. I negdje, u najmračnijem\n"
+"kutu D'Sparilovog posjeda, njegovi\n"
+"osobni tjelohranitelji čekaju vaš dolazak ..."
+
+msgid "HE5TEXT"
+msgstr ""
+"Dok posljednji maulotaur urla\n"
+"u svojoj smrtnoj agoniji, shvaćaš\n"
+"da nikada nisi bio bliži vlastitoj\n"
+"propasti. Čak ni borba s D'Sparilom\n"
+"i njegovim učenicima nije bila ovako\n"
+"očajna. Mrko zuriš u vrata koja su ti\n"
+"pred tobom, pitajući se vode li kući \n"
+"li se otvaraju na neki\n"
+"nedosanjani užas. Pitaš se imaš \n"
+"i snage da nastaviš, ako\n"
+"te čeka samo smrt i bol. Ali\n"
+"što drugo možeš učiniti ako\n"
+"je volja za borbu nestala?\n"
+"Možeš li se natjerati\n"
+"da nastaviš suočen s \n"
+"akvim očajem? Imaš li hrabrosti?\n"
+"Na kraju shvaćaš da u tebi nema\n"
+"duha da se predaš bez borbe.\n"
+"S raširenim očima krećeš\n"
+"se ususret svojoj sudbini."

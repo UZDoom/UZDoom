@@ -1,0 +1,4515 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-06-28 17:03+0000\n"
+"Last-Translator: தமிழ்நேரம் <tamilneram247@gmail.com>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/doom-engine-games/strife/ta/>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.7.dev0\n"
+
+msgid "TXT_STRIFE_MAP01"
+msgstr "பகுதி 1: சரணாலயம்"
+
+msgid "TXT_STRIFE_MAP02"
+msgstr "பகுதி 2: நகரம்"
+
+msgid "TXT_STRIFE_MAP03"
+msgstr "பகுதி 3: முன் தளம்"
+
+msgid "TXT_STRIFE_MAP04"
+msgstr "பகுதி 4: மின் நிலையம்"
+
+msgid "TXT_STRIFE_MAP05"
+msgstr "பகுதி 5: சிறை"
+
+msgid "TXT_STRIFE_MAP06"
+msgstr "பகுதி 6: சாக்கடைகள்"
+
+msgid "TXT_STRIFE_MAP07"
+msgstr "பகுதி 7: கோட்டை"
+
+msgid "TXT_STRIFE_MAP08"
+msgstr "பகுதி 8: ஆடியன்ச் சேம்பர்"
+
+msgid "TXT_STRIFE_MAP09"
+msgstr "பகுதி 9: கோட்டை: புரோகிராமர்ச் கீப்"
+
+msgid "TXT_STRIFE_MAP10"
+msgstr "பகுதி 10: புதிய முன் தளம்"
+
+msgid "TXT_STRIFE_MAP11"
+msgstr "பகுதி 11: பார்டர்லேண்ட்ச்"
+
+msgid "TXT_STRIFE_MAP12"
+msgstr "பகுதி 12: ஆரக்கிள் கோயில்"
+
+msgid "TXT_STRIFE_MAP13"
+msgstr "பகுதி 13: கேடாகம்ப்ச்"
+
+msgid "TXT_STRIFE_MAP14"
+msgstr "பகுதி 14: சுரங்கங்கள்"
+
+msgid "TXT_STRIFE_MAP15"
+msgstr "பகுதி 15: கோட்டை: நிர்வாகம்"
+
+msgid "TXT_STRIFE_MAP16"
+msgstr "பகுதி 16: கோட்டை: பிசப் கோபுரம்"
+
+msgid "TXT_STRIFE_MAP17"
+msgstr "பகுதி 17: கோட்டை: பெய்லி"
+
+msgid "TXT_STRIFE_MAP18"
+msgstr "பகுதி 18: கோட்டை: கடைகள்"
+
+msgid "TXT_STRIFE_MAP19"
+msgstr "பகுதி 19: கோட்டை: பாதுகாப்பு வளாகம்"
+
+msgid "TXT_STRIFE_MAP20"
+msgstr "பகுதி 20: தொழிற்சாலை: பெறுதல்"
+
+msgid "TXT_STRIFE_MAP21"
+msgstr "பகுதி 21: தொழிற்சாலை: விளைவாக்கம்"
+
+msgid "TXT_STRIFE_MAP22"
+msgstr "பகுதி 22: தொழிற்சாலை: ஃபோர்ச்"
+
+msgid "TXT_STRIFE_MAP23"
+msgstr "பகுதி 23: ஆர்டர் காமன்ச்"
+
+msgid "TXT_STRIFE_MAP24"
+msgstr "பகுதி 24: தொழிற்சாலை: கன்வெர்சன் சேப்பல்"
+
+msgid "TXT_STRIFE_MAP25"
+msgstr "பகுதி 25: கேடாகம்ப்ச்: பாழடைந்த கோயில்"
+
+msgid "TXT_STRIFE_MAP26"
+msgstr "பகுதி 26: சான்று"
+
+msgid "TXT_STRIFE_MAP27"
+msgstr "பகுதி 27: ஆய்வகம்"
+
+msgid "TXT_STRIFE_MAP28"
+msgstr "பகுதி 28: ஏலியன் கப்பல்"
+
+msgid "TXT_STRIFE_MAP29"
+msgstr "பகுதி 29: நிறுவனத்தின் லாயர்"
+
+msgid "TXT_STRIFE_MAP30"
+msgstr "பகுதி 30: கைவிடப்பட்ட முன் தளம்"
+
+msgid "TXT_STRIFE_MAP31"
+msgstr "பகுதி 31: பயிற்சி வசதி"
+
+msgid "TXT_STRIFE_MAP32"
+msgstr "பகுதி 1: சரணாலயம்"
+
+msgid "TXT_STRIFE_MAP33"
+msgstr "பகுதி 2: நகரம்"
+
+msgid "TXT_STRIFE_MAP34"
+msgstr "பகுதி 3: இயக்கத் தளம்"
+
+msgid "TXT_STRIFE_MAP35"
+msgstr "பகுதி 35: தொழிற்சாலை: தயாரிப்பு"
+
+msgid "TXT_STRIFE_MAP36"
+msgstr "பகுதி 36: கோட்டை மோதல்"
+
+msgid "TXT_STRIFE_MAP37"
+msgstr "பகுதி 37: கொலைக்களம்"
+
+msgid "TXT_STRIFE_MAP38"
+msgstr "பகுதி 38: கேயாச் ஆர்டர்"
+
+# MAP01: Beldin.
+msgid "TXT_DLG_SCRIPT01_D0_IDONT"
+msgstr "எனக்கு எந்த பிரச்சனையும் வேண்டாம், என்னை விட்டு விலகி இரு. அந்த பாச்டர்ட் ஆரிச் என்னை என்ன செய்தான் என்பதில் எனக்கு போதுமான தொல்லை இருந்தது. அவர் எனக்கு பணம் உறுதியளித்தார், அதற்கு பதிலாக நான் புரோகிராமரால் விசாரிக்கப்படுவதை எதிர்நோக்குகிறேன்."
+
+# MAP02: Guy next to Norwall Prison.
+msgid "TXT_DLG_SCRIPT02_D0_ILLHE"
+msgstr "நீங்கள் எனக்கு உதவி செய்தால் நான் உங்களுக்கு உதவுவேன். ஐந்து தங்கக் காசுகள், எனக்குத் தெரிந்ததைச் சொல்கிறேன்."
+
+msgid "TXT_RPLY0_SCRIPT02_D0_HERES"
+msgstr "இதோ தங்கம்."
+
+# (This text is only four seconds on screen)
+msgid "TXT_RYES0_SCRIPT02_D0_BESTE"
+msgstr "நீங்கள் கொல்லும்போது திருட்டுத்தனமாக இருங்கள், நீங்கள் அலாரங்களை அமைக்க மாட்டீர்கள்."
+
+# (Four seconds)
+msgid "TXT_RNO0_SCRIPT02_D0_WELLI"
+msgstr "சரி, நான் உங்களுக்கு எதுவும் இலவசமாகச் சொல்ல மாட்டேன்!"
+
+msgid "TXT_DLG_SCRIPT02_D1516_HAVEY"
+msgstr "உங்களுக்கு இன்னும் 5 நல்ல வாய்ப்புகள் உள்ளதா?"
+
+msgid "TXT_RPLY0_SCRIPT02_D1516_5GOLD"
+msgstr "5 தங்கம்."
+
+# (Four seconds)
+msgid "TXT_RYES0_SCRIPT02_D1516_WELLP"
+msgstr "நஞ்சு போல்ட்கள் காவலர்களை உடனடியாகக் கொல்லலாம் மற்றும் அலாரங்களை அமைக்காது."
+
+# (Four seconds)
+msgid "TXT_RNO0_SCRIPT02_D1516_NOSIR"
+msgstr "இல்லை சார், நான் உங்களுக்கு எதுவும் இலவசமாக சொல்ல மாட்டேன்!"
+
+msgid "TXT_DLG_SCRIPT02_D3032_YOUVE"
+msgstr "நீங்கள் ஏற்கனவே என்னிடமிருந்து கிசுகிசுக்களின் கடைசி பகுதியை அகற்றிவிட்டீர்கள்!"
+
+# MAP02: Irale.
+msgid "TXT_DLG_SCRIPT02_D4548_WHATC"
+msgstr "நான் உங்களுக்காக என்ன பெற முடியும்?"
+
+msgid "TXT_RPLY0_SCRIPT02_D4548_ASSAU"
+msgstr "தாக்குதல் துப்பாக்கி"
+
+msgid "TXT_RYES0_SCRIPT02_D4548_HEREY"
+msgstr "இதோ போ."
+
+msgid "TXT_RNO0_SCRIPT02_D4548_YOUCA"
+msgstr "உங்களால் இப்போது அதை வாங்க முடியாது."
+
+msgid "TXT_RPLY1_SCRIPT02_D4548_CLIPO"
+msgstr "தோட்டாக்களின் கிளிப்"
+
+msgid "TXT_RYES1_SCRIPT02_D4548_THANK"
+msgstr "நன்றி."
+
+msgid "TXT_RNO1_SCRIPT02_D4548_COMEO"
+msgstr "வாருங்கள், 10 தங்கம்."
+
+msgid "TXT_RPLY2_SCRIPT02_D4548_AMMOB"
+msgstr "வெடிமருந்து பெட்டி"
+
+msgid "TXT_RYES2_SCRIPT02_D4548_HERES"
+msgstr "இதோ உங்கள் வெடிமருந்து."
+
+msgid "TXT_RNO2_SCRIPT02_D4548_MAYBE"
+msgstr "வேறு சில சமயம் இருக்கலாம்."
+
+# (After destroying the crystal in the Power Station)
+msgid "TXT_DLG_SCRIPT02_D6064_GOODN"
+msgstr "ஒரு மாற்றத்திற்கு முன்னணியில் இருந்து நல்ல செய்தி. மேசில் உங்களை வெகுமதி மற்றும் பயிற்சிக்காக அனுப்பியுள்ளார். அவற்றை உங்களுக்குக் கொடுக்கும்படி அவர் எனக்கு அறிவுறுத்தினார்."
+
+msgid "TXT_RPLY0_SCRIPT02_D6064_THANK"
+msgstr "நன்றி."
+
+msgid "TXT_RYES0_SCRIPT02_D6064_GLADT"
+msgstr "பணி செய்வதில் மகிழ்ச்சி."
+
+msgid "TXT_DLG_SCRIPT02_D7580_ALLRI"
+msgstr "சரி, என்ன செய்ய வேண்டும் என்பதற்கான சில குறிப்புகள் இங்கே உள்ளன: சிலுவைப்போர்களின் வழியில் வராதீர்கள்: உங்கள் தாக்குதல் துப்பாக்கியிலிருந்து சிறிய வெடிப்புகளை சுடுவது அதை இலக்கில் வைத்திருக்கும்."
+
+msgid "TXT_RPLY0_SCRIPT02_D7580_ISTHA"
+msgstr "அதுவா?"
+
+msgid "TXT_RYES0_SCRIPT02_D7580_LOOKY"
+msgstr "பாருங்கள், நீங்கள் பின்னர் மேலும் அறிந்து கொள்வீர்கள்."
+
+msgid "TXT_DLG_SCRIPT02_D9096_ITHIN"
+msgstr "க்ரூசேடர்களில் ஒன்றிலிருந்து ஒரு ஃபிளமேத்ரோவரை ஒரு மனிதனின் உபயோகத்திற்காக மாற்ற முடியும் என்று நினைக்கிறேன். ஓ, நான் உங்களுக்கு வேறு ஏதாவது கிடைக்குமா?"
+
+msgid "TXT_RPLY0_SCRIPT02_D9096_FLAME"
+msgstr "ஃபிளமேத்ரோவர்."
+
+msgid "TXT_RYES0_SCRIPT02_D9096_IKNEW"
+msgstr "அது வேலை செய்யும் என்று எனக்குத் தெரியும்! இதோ, அவளை ஒரு சுற்றுக்கு அழைத்துச் செல்லுங்கள்!"
+
+msgid "TXT_RNO0_SCRIPT02_D9096_LISTE"
+msgstr "கேளுங்கள், சரியான பாகங்கள் இல்லாமல் என்னால் எதையும் செய்ய முடியாது!"
+
+msgid "TXT_RPLY1_SCRIPT02_D9096_ASSAU"
+msgstr "தாக்குதல் துப்பாக்கி"
+
+msgid "TXT_RYES1_SCRIPT02_D9096_WELLH"
+msgstr "சரி, இதோ ஐயா!"
+
+msgid "TXT_RNO1_SCRIPT02_D9096_OBVIO"
+msgstr "வெளிப்படையாக, நீங்கள் இப்போது அதை வாங்க முடியாது."
+
+msgid "TXT_RPLY2_SCRIPT02_D9096_CLIPO"
+msgstr "தோட்டாக்களின் கிளிப்"
+
+msgid "TXT_RYES2_SCRIPT02_D9096_THANK"
+msgstr "நன்றி."
+
+msgid "TXT_RNO2_SCRIPT02_D9096_COMEO"
+msgstr "வாருங்கள், 10 தங்கம்."
+
+msgid "TXT_RPLY3_SCRIPT02_D9096_AMMOB"
+msgstr "வெடிமருந்து பெட்டி"
+
+msgid "TXT_RYES3_SCRIPT02_D9096_HERES"
+msgstr "இதோ உங்கள் வெடிமருந்து."
+
+msgid "TXT_RNO3_SCRIPT02_D9096_MAYBE"
+msgstr "வேறு சில சமயம் இருக்கலாம். குட்பை!"
+
+# (With flamethrower)
+msgid "TXT_DLG_SCRIPT02_D10612_NOWTH"
+msgstr "இப்போது உன்னிடம் ஃபிளமேத்ரோவர் இருப்பதால், நான் உங்களிடம் வேறு ஏதாவது கிடைக்குமா?"
+
+msgid "TXT_RPLY0_SCRIPT02_D10612_ASSAU"
+msgstr "தாக்குதல் துப்பாக்கி"
+
+msgid "TXT_RYES0_SCRIPT02_D10612_HEREY"
+msgstr "இதோ போ."
+
+msgid "TXT_RNO0_SCRIPT02_D10612_YOUCA"
+msgstr "உங்களால் இப்போது அதை வாங்க முடியாது."
+
+msgid "TXT_RPLY1_SCRIPT02_D10612_CLIPO"
+msgstr "தோட்டாக்களின் கிளிப்"
+
+msgid "TXT_RYES1_SCRIPT02_D10612_THANK"
+msgstr "நன்றி."
+
+msgid "TXT_RNO1_SCRIPT02_D10612_COMEO"
+msgstr "வாருங்கள், 10 தங்கம்."
+
+msgid "TXT_RPLY2_SCRIPT02_D10612_AMMOB"
+msgstr "வெடிமருந்து பெட்டி"
+
+msgid "TXT_RYES2_SCRIPT02_D10612_HERES"
+msgstr "இதோ உங்கள் வெடிமருந்து."
+
+msgid "TXT_RNO2_SCRIPT02_D10612_MAYBE"
+msgstr "வேறு சில சமயம் இருக்கலாம்."
+
+msgid "TXT_DLG_SCRIPT02_D12128_NOWTH"
+msgstr "இப்போது உன்னிடம் ஃபிளமேத்ரோவர் இருப்பதால், நான் உங்களிடம் வேறு ஏதாவது கிடைக்குமா?"
+
+msgid "TXT_RPLY0_SCRIPT02_D12128_CLIPO"
+msgstr "தோட்டாக்களின் கிளிப்"
+
+msgid "TXT_RYES0_SCRIPT02_D12128_THANK"
+msgstr "நன்றி."
+
+msgid "TXT_RNO0_SCRIPT02_D12128_COMEO"
+msgstr "வாருங்கள், 10 தங்கம்."
+
+msgid "TXT_RPLY1_SCRIPT02_D12128_AMMOB"
+msgstr "வெடிமருந்து பெட்டி"
+
+msgid "TXT_RYES1_SCRIPT02_D12128_HERES"
+msgstr "இதோ உங்கள் வெடிமருந்து."
+
+msgid "TXT_RNO1_SCRIPT02_D12128_MAYBE"
+msgstr "வேறு சில சமயம் இருக்கலாம்."
+
+msgid "TXT_RPLY2_SCRIPT02_D12128_PHOSP"
+msgstr "பாச்பர் கையெறி குண்டுகள்"
+
+msgid "TXT_RYES2_SCRIPT02_D12128_THANK"
+msgstr "நன்றி."
+
+msgid "TXT_RNO2_SCRIPT02_D12128_YOUDO"
+msgstr "உனக்கு போதாது"
+
+msgid "TXT_RPLY3_SCRIPT02_D12128_POISO"
+msgstr "நஞ்சு போல்ட்"
+
+msgid "TXT_RYES3_SCRIPT02_D12128_WORTH"
+msgstr "ஒவ்வொரு தங்கத்திற்கும் மதிப்பு!"
+
+msgid "TXT_RNO3_SCRIPT02_D12128_COMEO"
+msgstr "வாருங்கள், 200 தங்கம்!"
+
+# MAP02: Between governor's mansion and town hall.
+msgid "TXT_DLG_SCRIPT02_D13644_ICANT"
+msgstr "இந்தக் கடமையில் நான் சிக்கிக்கொண்டதை என்னால் நம்ப முடியவில்லை. இந்த சாக்கடை வாயிலில் இருந்து ஏதோ தீமை வந்தது என்று சொல்கிறார்கள்... இப்போது அது மீண்டும் மேலே வரும் வரை நான் இங்கே நிற்கிறேன்!"
+
+msgid "TXT_RPLY0_SCRIPT02_D13644_WHATG"
+msgstr "என்ன வாசல்?"
+
+msgid "TXT_RYES0_SCRIPT02_D13644_THESE"
+msgstr "சாக்கடை நிரம்பி வழியும் கேட்."
+
+# MAP02: Weapons.
+msgid "TXT_DLG_SCRIPT02_D15160_HELLO"
+msgstr "வணக்கம் நண்பரே. நான் உங்களுக்காக என்ன பெற முடியும்?"
+
+msgid "TXT_RPLY0_SCRIPT02_D15160_ELECT"
+msgstr "மின்சார போல்ட்கள்"
+
+msgid "TXT_RYES0_SCRIPT02_D15160_YOUGO"
+msgstr "நீங்கள் மின்சார போல்ட்களைப் பெற்றுள்ளீர்கள்."
+
+msgid "TXT_RPLY1_SCRIPT02_D15160_AMMOS"
+msgstr "வெடிமருந்து சாட்செல்"
+
+msgid "TXT_RNO0_SCRIPT02_D15160_NOYOU"
+msgstr "இல்லை. மின்சார போல்ட்களுக்கு நான் விரும்புவது உங்களிடம் இல்லை!"
+
+msgid "TXT_RNO0_SCRIPT02_D16676_NOYOU"
+msgstr "இல்லை. மின்சார போல்ட்களுக்கு நான் விரும்புவது உங்களிடம் இல்லை!"
+
+msgid "TXT_RYES1_SCRIPT02_D15160_THANK"
+msgstr "நன்றி. வேறு ஏதாவது?"
+
+msgid "TXT_RNO1_SCRIPT02_D15160_YOUCA"
+msgstr "நீங்கள் அதை வாங்க முடியாது, நல்ல நாள்."
+
+msgid "TXT_DLG_SCRIPT02_D16676_WHATC"
+msgstr "நான் உங்களுக்காக என்ன பெற முடியும்?"
+
+msgid "TXT_RPLY0_SCRIPT02_D16676_ELECT"
+msgstr "மின்சார போல்ட்கள்"
+
+msgid "TXT_RYES0_SCRIPT02_D16676_YOUGO"
+msgstr "நீங்கள் மின்சார போல்ட்களைப் பெற்றுள்ளீர்கள்."
+
+msgid "TXT_RPLY1_SCRIPT02_D16676_AMMOS"
+msgstr "வெடிமருந்து சாட்செல்"
+
+msgid "TXT_RYES1_SCRIPT02_D16676_THANK"
+msgstr "நன்றி, வேறு ஏதாவது?"
+
+msgid "TXT_RNO1_SCRIPT02_D16676_YOUCA"
+msgstr "உங்களால் அதை வாங்க முடியாது, உங்களுக்கு நல்ல நாள்!"
+
+# MAP02: Armory.
+msgid "TXT_DLG_SCRIPT02_D18192_WELCO"
+msgstr "வரவேற்கிறோம். நான் உங்களுக்கு என்ன காட்ட முடியும்?"
+
+msgid "TXT_RPLY0_SCRIPT02_D18192_ENVIR"
+msgstr "சுற்றுச்சூழல் வழக்கு"
+
+msgid "TXT_RYES0_SCRIPT02_D18192_WELLH"
+msgstr "சரி, இங்கே நீங்கள் இருக்கிறீர்கள்."
+
+msgid "TXT_RNO0_SCRIPT02_D18192_IMSOR"
+msgstr "மன்னிக்கவும், அதற்கு போதுமான பணம் உங்களிடம் இல்லை."
+
+msgid "TXT_RPLY1_SCRIPT02_D18192_LEATH"
+msgstr "தோல் கவசம்"
+
+msgid "TXT_RYES1_SCRIPT02_D18192_HEREY"
+msgstr "இங்கே நீங்கள் இருக்கிறீர்கள்."
+
+msgid "TXT_RNO1_SCRIPT02_D18192_PERHA"
+msgstr "ஒருவேளை வேறு நேரமா?"
+
+msgid "TXT_RPLY2_SCRIPT02_D18192_METAL"
+msgstr "உலோக கவசம்"
+
+# (in good health = enjoy)
+msgid "TXT_RYES2_SCRIPT02_D18192_WEARI"
+msgstr "நல்ல ஆரோக்கியத்துடன் அணியுங்கள்."
+
+msgid "TXT_RNO2_SCRIPT02_D18192_COMEB"
+msgstr "நீங்கள் விரும்பி வாங்கும் போது திரும்பி வாருங்கள்!"
+
+msgid "TXT_DLG_SCRIPT02_D19708_WELCO"
+msgstr "வரவேற்கிறோம். நான் உங்களுக்கு என்ன காட்ட முடியும்?"
+
+msgid "TXT_RPLY0_SCRIPT02_D19708_ENVIR"
+msgstr "சுற்றுச்சூழல் வழக்கு"
+
+msgid "TXT_RYES0_SCRIPT02_D19708_WELLH"
+msgstr "சரி, இங்கே நீங்கள் இருக்கிறீர்கள்."
+
+msgid "TXT_RNO0_SCRIPT02_D19708_IMSOR"
+msgstr "மன்னிக்கவும், அதற்கு போதுமான பணம் உங்களிடம் இல்லை."
+
+msgid "TXT_RPLY1_SCRIPT02_D19708_LEATH"
+msgstr "தோல் கவசம்"
+
+msgid "TXT_RYES1_SCRIPT02_D19708_HEREY"
+msgstr "இங்கே நீங்கள் இருக்கிறீர்கள்."
+
+msgid "TXT_RNO1_SCRIPT02_D19708_PERHA"
+msgstr "ஒருவேளை வேறு நேரமா?"
+
+msgid "TXT_RPLY2_SCRIPT02_D19708_METAL"
+msgstr "உலோக கவசம்"
+
+# (in good health = enjoy)
+msgid "TXT_RYES2_SCRIPT02_D19708_WEARI"
+msgstr "நல்ல ஆரோக்கியத்துடன் அணியுங்கள்."
+
+msgid "TXT_RNO2_SCRIPT02_D19708_COMEB"
+msgstr "நீங்கள் விரும்பி வாங்கும் போது திரும்பி வாருங்கள்!"
+
+# MAP02: Hospital.
+msgid "TXT_DLG_SCRIPT02_D21224_HOWMA"
+msgstr "நான் உங்களுக்கு எப்படி உதவ முடியும்?"
+
+msgid "TXT_RPLY0_SCRIPT02_D21224_MEDPA"
+msgstr "மெட் ஒட்டு"
+
+msgid "TXT_RYES0_SCRIPT02_D21224_HERES"
+msgstr "இதோ உங்கள் இணைப்பு."
+
+msgid "TXT_RNO0_SCRIPT02_D21224_YOUNE"
+msgstr "அதற்கு 10 தங்கம் வேண்டும்."
+
+msgid "TXT_RPLY1_SCRIPT02_D21224_MEDIC"
+msgstr "மருத்துவ தொகுப்பு"
+
+msgid "TXT_RYES1_SCRIPT02_D21224_THANK"
+msgstr "நன்றி."
+
+msgid "TXT_RNO1_SCRIPT02_D21224_IWISH"
+msgstr "நான் அவற்றைக் கொடுக்க விரும்புகிறேன், ஆனால் அவற்றின் விலை 25 தங்கம்."
+
+msgid "TXT_RPLY2_SCRIPT02_D21224_FIELD"
+msgstr "கள அறுவை மருத்தீடு அறிவிலி"
+
+msgid "TXT_RYES2_SCRIPT02_D21224_THERE"
+msgstr "அங்கே போ. இப்போது பார்த்துக்கொள்ளுங்கள்."
+
+msgid "TXT_RNO2_SCRIPT02_D21224_WELLM"
+msgstr "சரி, ஒருவேளை நீங்கள் சில மெட் பேட்ச்களை வாங்க முடியுமா?"
+
+# (After destroying the crystal in the Power Station)
+msgid "TXT_DLG_SCRIPT02_D22740_IHOPE"
+msgstr "அவர் என்ன செய்கிறார் என்பதை மாசில் அறிந்திருப்பார் என்று நம்புகிறேன். நான் முன்னணிக்கு உதவுகிறேன் என்று ஆணையில் தெரியவந்தால், நான் இறந்தது போல் நல்லவன்... இது உங்களுக்கு முக்கியமில்லை. முன்னணியின் மருத்துவர் உங்களுக்காக ஒரு மேம்படுத்தல் சிப்பைக் கொடுத்தார், நீங்கள் தயாரா?"
+
+msgid "TXT_RPLY0_SCRIPT02_D22740_YESIM"
+msgstr "ஆம், நான் தயாராக இருக்கிறேன்."
+
+msgid "TXT_RYES0_SCRIPT02_D22740_WELLT"
+msgstr "சரி, இதற்கு ஒரு நொடி மட்டும் ஆகாது. அங்கே, ஏற்கனவே முடிந்தது."
+
+msgid "TXT_DLG_SCRIPT02_D24256_HOWMA"
+msgstr "நான் உங்களுக்கு எப்படி உதவ முடியும்?"
+
+msgid "TXT_RPLY0_SCRIPT02_D24256_MEDPA"
+msgstr "மெட் ஒட்டு"
+
+msgid "TXT_RYES0_SCRIPT02_D24256_HERES"
+msgstr "இதோ உங்கள் இணைப்பு."
+
+msgid "TXT_RNO0_SCRIPT02_D24256_YOUNE"
+msgstr "அதற்கு 10 தங்கம் வேண்டும்."
+
+msgid "TXT_RPLY1_SCRIPT02_D24256_MEDIC"
+msgstr "மருத்துவ தொகுப்பு"
+
+msgid "TXT_RYES1_SCRIPT02_D24256_THANK"
+msgstr "நன்றி."
+
+msgid "TXT_RNO1_SCRIPT02_D24256_IWISH"
+msgstr "நான் அவற்றைக் கொடுக்க விரும்புகிறேன், ஆனால் அவற்றின் விலை 25 தங்கம்."
+
+msgid "TXT_RPLY2_SCRIPT02_D24256_FIELD"
+msgstr "கள அறுவை மருத்தீடு அறிவிலி"
+
+msgid "TXT_RYES2_SCRIPT02_D24256_THERE"
+msgstr "அங்கே போ. இப்போது பார்த்துக்கொள்ளுங்கள்."
+
+msgid "TXT_RNO2_SCRIPT02_D24256_WELLM"
+msgstr "சரி, ஒருவேளை நீங்கள் சில மெட் பேட்ச்களை வாங்க முடியுமா?"
+
+# MAP02: Barkeep.
+msgid "TXT_DLG_SCRIPT02_D25772_HELLO"
+msgstr "வணக்கம் அந்நியன், நான் உன்னை இதுவரை இங்கு பார்த்ததில்லை. நான் உங்களுக்கு ஒரு இலவச அறிவுரை கூறுகிறேன். நான் நீயாக இருந்தால் கவனமாக இருப்பேன். ஆணை சுதந்திர விருப்பத்தை பொறுத்துக்கொள்ளாது, அவர்களின் அறம் விரைவானது."
+
+msgid "TXT_RPLY0_SCRIPT02_D25772_WHATS"
+msgstr "என்ன வார்த்தை?"
+
+# (This text is only four seconds on screen)
+msgid "TXT_RYES0_SCRIPT02_D25772_THEWO"
+msgstr "வார்த்தை… எலிகள் மற்றும் ரோபோக்களை விட சாக்கடைகள் அதிகம் வைத்திருக்கின்றன."
+
+msgid "TXT_DLG_SCRIPT02_D27288_WHATC"
+msgstr "நான் இப்போது உனக்கு என்ன செய்ய முடியும்?"
+
+msgid "TXT_RPLY0_SCRIPT02_D27288_MOREI"
+msgstr "மேலும் செய்தி."
+
+# (Four seconds)
+msgid "TXT_RYES0_SCRIPT02_D27288_THEGO"
+msgstr "நாங்கள் இனி சுதந்திரமானவர்கள் அல்ல என்பதை ஆளுநர் நமக்கு நினைவூட்டுகிறார்."
+
+msgid "TXT_RNO0_SCRIPT02_D27288_COMEB"
+msgstr "தங்கம் கிடைத்தவுடன் திரும்பி வா."
+
+msgid "TXT_DLG_SCRIPT02_D28804_WELLY"
+msgstr "சரி, இறக்க முயற்சிக்காத ஒருவரிடம் நீங்கள் நிறைய கேள்விகளைக் கேட்கிறீர்கள். நீங்கள் சென்று உங்களைக் கொன்றுவிடாதீர்கள், அல்லது மோசமாக இருக்காதீர்கள் என்பதை உறுதிப்படுத்திக் கொள்ளுங்கள்."
+
+msgid "TXT_RPLY0_SCRIPT02_D28804_MOREI"
+msgstr "மேலும் செய்தி."
+
+# (Four seconds)
+msgid "TXT_RYES0_SCRIPT02_D28804_THERE"
+msgstr "கண்ணை சந்திப்பதை விட ஆர்டரில் இன்னும் நிறைய இருக்கிறது."
+
+msgid "TXT_RNO0_SCRIPT02_D28804_WELLT"
+msgstr "தங்கம் கிடைத்தவுடன் பேசுவோம்!"
+
+msgid "TXT_DLG_SCRIPT02_D30320_THATS"
+msgstr "அதுதான் நண்பா, அறிவுக் கிணறு வற்றி விட்டது. எவ்வாறாயினும் நான் உங்களிடம் இருக்க வேண்டியதை விட அதிகமாகச் சொல்லிவிட்டேன். நல்ல அதிர்ச்டம்… திரும்பி வராதே."
+
+# MAP02: Power Station guard.
+msgid "TXT_DLG_SCRIPT02_D31836_HEYIM"
+msgstr "ஏய், நான் எமர்சென்சியின் போது மட்டும் இங்கே இருக்கிறேன். மையத்தை மீறினால், யாரும் உள்ளே வரக்கூடாது... வெளியே வரக்கூடாது."
+
+# MAP02: Rust guards.
+msgid "TXT_DLG_SCRIPT02_D33352_WATCH"
+msgstr "உன் அடியை கவனி, விவசாயி!"
+
+# MAP02: Gray guards.
+msgid "TXT_DLG_SCRIPT02_D34868_WEREG"
+msgstr "உன்னைக் கொல்லப் போகிறோம்! "
+
+# MAP02: Green guard.
+msgid "TXT_DLG_SCRIPT02_D36384_WHOIN"
+msgstr "தீப்பிடித்ததில் நீங்கள் யார்? இந்தப் பகுதியில் யாரும் நடமாடக் கூடாது!"
+
+# MAP02: Golden guards.
+msgid "TXT_DLG_SCRIPT02_D37900_YOUTH"
+msgstr "நீங்கள் இருக்கிறீர்கள், இங்கு யாருக்கும் இசைவு இல்லை. உடன் செல்லுங்கள்!"
+
+# MAP02: Irale's shop.
+msgid "TXT_DLG_SCRIPT02_D39416_IRALE"
+msgstr "இரலே உன்னைச் சரியாக அமைக்கும்!"
+
+# MAP02: Harris.
+msgid "TXT_DLG_SCRIPT02_D40932_IMKIN"
+msgstr "நான் கிளர்ச்சியாளர்களுக்கு ஒரு திறமையான தரகர். உங்களைப் போலவே நல்ல ஒரு பையன் நிறைய தங்கத்தை உருவாக்க முடியும்… நீங்கள் சரியான நபர்களுடன் இணைந்திருந்தால்."
+
+msgid "TXT_RPLY0_SCRIPT02_D40932_IMINT"
+msgstr "நான் ஆர்வமாக உள்ளேன்."
+
+msgid "TXT_RPLY1_SCRIPT02_D40932_SCREW"
+msgstr "கிளர்ச்சியாளர்களை திருக!"
+
+msgid "TXT_DLG_SCRIPT02_D42448_NONOS"
+msgstr "இல்லை, இரண்டாவது வாய்ப்பு இல்லை. காவலர்களே, அவரைக் கொல்லுங்கள்."
+
+msgid "TXT_DLG_SCRIPT02_D43964_GOODC"
+msgstr "நல்ல தேர்வு. ஆற்றங்கரையில் உள்ள ஆணையின் சரணாலயம் அவர்களின் அதிகாரப்பூர்வமற்ற சித்திரவதை அறை. உள்ளே ஒரு தங்கக் திருக்குடம் உள்ளது. நீங்கள் அதை ச்வைப் செய்து உங்கள் வெகுமதியைப் பெறுவீர்கள்."
+
+msgid "TXT_RPLY0_SCRIPT02_D43964_HOWAM"
+msgstr "நான் அதை எப்படி செய்ய வேண்டும்?"
+
+msgid "TXT_DLG_SCRIPT02_D45480_HERES"
+msgstr "இங்கே ஒரு குறுக்கு வில் உள்ளது, நேராக குறிவைத்து --ச்பிளாட்--. நினைவில் வைத்து கொள்ளுங்கள், ஆடம்பரமான கோப்பையைப் பிடித்து, உணவகத்திற்குச் செல்லுங்கள்."
+
+msgid "TXT_RPLY0_SCRIPT02_D45480_COOLI"
+msgstr "குளிர். நான் பெற்றுக் கொள்கிறேன்."
+
+msgid "TXT_DLG_SCRIPT02_D46996_WHATA"
+msgstr "நீங்கள் எதற்காக காத்திருக்கிறீர்கள்? அந்த கிண்ணத்தை என்னிடம் கொண்டு வா."
+
+msgid "TXT_DLG_SCRIPT02_D48512_HEYIK"
+msgstr "ஏய், எனக்குத் தெரியும், இது ஒரு செட்-அப் போல் தெரிகிறது. இவ்வளவு பெரிய கொலை இயந்திரத்தை நான் ஒருபோதும் செய்ய மாட்டேன். பொருள் கிடைத்ததா? அருமை! இப்போது தயாராகுங்கள், நான் உறுதியளித்ததைப் போலவே பொன்னும் பெருமையும். இந்த சாவியை எடுத்துக் கொள்ளுங்கள், கவர்னர் உங்களுக்கு வெகுமதி அளிப்பார்."
+
+msgid "TXT_RPLY0_SCRIPT02_D48512_HEDBE"
+msgstr "அவர் நன்றாக இருப்பார். உன் பொருட்டு!"
+
+msgid "TXT_RPLY1_SCRIPT02_D48512_WHATW"
+msgstr "என்ன! என் பணம் எங்கே?"
+
+msgid "TXT_DLG_SCRIPT02_D50028_GETLO"
+msgstr "தொலைந்து போ, நீ என்னை தொந்தரவு செய்கிறாய்."
+
+msgid "TXT_DLG_SCRIPT02_D51544_NOSEC"
+msgstr "இரண்டாவது வாய்ப்பு இல்லை. காவலர்களே, அவரைக் கொல்லுங்கள்."
+
+# MAP02: Mourel.
+msgid "TXT_DLG_SCRIPT02_D53060_FIRST"
+msgstr "முதலில் ஆயிரக் கணக்கானவர்களைக் கொன்று குவித்தார்கள், இப்போது அவர்கள் அனைத்துத் திறனுள்ள விவசாயிகளையும் குறிப்பிடப்படாத 'சோதனைகளுக்கு' விரும்புகிறார்கள். நான் எப்படி அமைதி காக்க வேண்டும் என்று கட்டளை எதிர்பார்க்கிறது? உனக்கு என்ன வேணும்?"
+
+msgid "TXT_RPLY0_SCRIPT02_D53060_APRIS"
+msgstr "ஒரு செயில் பாச், சமாளிப்போம்."
+
+msgid "TXT_DLG_SCRIPT02_D54576_ILIKE"
+msgstr "எனக்கு உன்னை ஏற்கனவே பிடிக்கும். நான் செய்ய விரும்பாத இரண்டு வேலைகள் என்னிடம் உள்ளன. ஒன்று குழப்பமானது, மற்றொன்று இரத்தக்களரி."
+
+msgid "TXT_RPLY0_SCRIPT02_D54576_CALLM"
+msgstr "என்னை துப்புரவாளர் என்று அழைக்கவும்"
+
+msgid "TXT_RPLY1_SCRIPT02_D54576_IMNOT"
+msgstr "நான் கசக்கவில்லை"
+
+# ("messy" chore)
+msgid "TXT_DLG_SCRIPT02_D56092_ONEOF"
+msgstr "என் கூட்டாளிகளில் ஒருவர் எங்காவது மின்கம்பத்தில் தட்டி மின்சாரத்தை திருடுகிறார். அதைக் கண்டுபிடித்து, அவனுடைய சப்ளையை துண்டிக்கவும், உனக்கு வேண்டியதை நான் தருகிறேன். டோக்கனாக ஏதாவது கொண்டு வா."
+
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D56092_WHERE"
+msgstr "இந்தத் தட்டலை நான் எங்கே கண்டுபிடிப்பது?"
+
+# (〃)
+msgid "TXT_DLG_SCRIPT02_D57608_IFIKN"
+msgstr "எனக்குத் தெரிந்திருந்தால், இப்போது அது ஒரு வேலையாக இருக்காது அல்லவா? உங்கள் அழகைப் பயன்படுத்துங்கள், ஆனால் அவரது விநியோகத்தை நிறுத்துங்கள்."
+
+# ("bloody" chore)
+msgid "TXT_DLG_SCRIPT02_D59124_TELLY"
+msgstr "உங்களுக்கு என்ன சொல்லுங்கள், டெர்வின் என்ற பொய்யான சாக்குப்பையில் குழந்தைகளை ஆர்டருக்கு விற்கிறார். அந்த மாதிரியான அவலத்தை நான் பொறுத்துக்கொள்ள மாட்டேன். என் வெட்டு இல்லாமல் இல்லை. டெர்வின் கிடங்கில் வேலை செய்கிறார். அவனைக் கொன்று அவனுடைய காதை என்னிடம் கொண்டு வா, நான் என்ன செய்ய முடியும் என்று பார்க்கிறேன்."
+
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D59124_HOWDO"
+msgstr "நான் எப்படி உள்ளே செல்வது?"
+
+# (〃)
+msgid "TXT_DLG_SCRIPT02_D60640_THISK"
+msgstr "இந்த விசை உங்களை மின் நிலையத்திற்குள் கொண்டு செல்லும். இரண்டாவது சிந்தனையில், காதை அறுத்து, பின்னர் அவரைக் கொல்லுங்கள். மிகவும் சிறந்தது."
+
+# (after completing "messy" chore)
+msgid "TXT_DLG_SCRIPT02_D62156_OHIJU"
+msgstr "ஓ, நான் நினைவு பரிசுகளை விரும்புகிறேன். இதோ, இது உங்களை சிறையில் அடைக்கும். வார்டன் மாண்டேக்கிடம் பேசுங்கள். அதன் பிறகு நீங்கள் என்ன செய்தாலும், நான் அதை அறிய விரும்பவில்லை."
+
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D62156_THANK"
+msgstr "நன்றி."
+
+msgid "TXT_DLG_SCRIPT02_D63672_GIVEY"
+msgstr "உங்களுக்கு ஒரு குறிப்பு கொடுங்கள். நான் உன்னிடம் பேசுவதை நிறுத்தியதும் நீ கிளம்பு."
+
+# (after completing "bloody" chore)
+msgid "TXT_DLG_SCRIPT02_D65188_DOYOU"
+msgstr "என்னிடம் நல்ல செய்தி இருக்கிறதா? நான் எல்லாம் காதுகள்."
+
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D65188_THEDE"
+msgstr "செயல் முடிந்தது!"
+
+# (〃)
+msgid "TXT_DLG_SCRIPT02_D66704_OHIJU"
+msgstr "ஓ, நான் நினைவு பரிசுகளை விரும்புகிறேன். இதோ, இது உங்களை சிறையில் அடைக்கும். வார்டன் மாண்டேக்கிடம் பேசுங்கள். அதன் பிறகு நீங்கள் என்ன செய்தாலும், நான் அதை அறிய விரும்பவில்லை."
+
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D66704_FINEB"
+msgstr "என்னால் நன்றாக இருக்கிறது."
+
+msgid "TXT_DLG_SCRIPT02_D68220_SOYOU"
+msgstr "அப்படியென்றால், கலசத்தைத் திருடிய முட்டாள் நீயா? நான் உன்னை ஒரு கிளர்ச்சி திருடன் என்று கைது செய்யப் போகிறேன்… இதன் மூலம் என் பதவியை ஆணை மூலம் மேம்படுத்துகிறேன். அறியாத சிப்பாயாக இருப்பது எப்படி? நான் உங்களுக்கு ஒரு குறிப்பு தருகிறேன், அது வலிக்கும்."
+
+msgid "TXT_RPLY0_SCRIPT02_D68220_ITSUC"
+msgstr "அசிங்கமானது!"
+
+msgid "TXT_RYES0_SCRIPT02_D68220_FORYO"
+msgstr "உங்களுக்கு அது செய்கிறது."
+
+msgid "TXT_RPLY1_SCRIPT02_D68220_HARRI"
+msgstr "ஆரிச் எனக்கு பணம் தருவதாக உறுதியளித்தார்!"
+
+msgid "TXT_RYES1_SCRIPT02_D68220_TOOBA"
+msgstr "மிகவும் மோசமானது. நீங்கள் பெறுவது இறப்பு மட்டுமே!"
+
+# MAP02: Rowan.
+msgid "TXT_DLG_SCRIPT02_D69736_INASM"
+msgstr "ஒரு சிறிய உலகில், சொல் வேகமாக பயணிக்கிறது. உங்கள் பாதையில் இருந்து சில தடைகளை நீக்கிவிட்டீர்கள் என்று கேள்விப்பட்டேன். நல்ல வேலை. நீங்கள் இன்னும் சில இலாபகரமான திட்டங்களில் ஆர்வமாக உள்ளீர்களா?"
+
+msgid "TXT_RPLY0_SCRIPT02_D69736_SUREW"
+msgstr "நிச்சயமாக, ஏன் இல்லை."
+
+msgid "TXT_RPLY1_SCRIPT02_D69736_NOTHA"
+msgstr "இல்லை நன்றி."
+
+msgid "TXT_RYES1_SCRIPT02_D69736_THENG"
+msgstr "பின்னர் தொலைந்து போ!"
+
+# Rowan.
+msgid "TXT_DLG_SCRIPT02_D71252_FOOLG"
+msgstr "முட்டாள்! காவலர்களே, இந்த இடையூறு செய்யும் பியூனிலிருந்து என்னை விடுவிக்கவும்."
+
+msgid "TXT_DLG_SCRIPT02_D72768_GOODS"
+msgstr "நல்லது. சில ஓ, என்னுடைய நண்பர்கள் யாராவது அமைதியாக இருக்க வேண்டும். பெல்டின் அவர்களின் சரணாலயத்தில் ஆணை நடத்தப்படுகிறது. ஆற்றில் இருந்து ஒரு சிறிய கப்பல் மூலம் அரிதாகப் பயன்படுத்தப்படும் நுழைவாயில் உள்ளது, அது பாதுகாப்பற்றது. உள்ளே நுழைந்து, அவனை வாயை மூடிக்கொண்டு, அவனுடைய மோதிரத்தை ஆதாரமாக என்னிடம் கொண்டு வா."
+
+msgid "TXT_RPLY0_SCRIPT02_D72768_WILLI"
+msgstr "முயற்சிக்கு மதிப்பு கிடைக்குமா?"
+
+msgid "TXT_DLG_SCRIPT02_D74284_ILLGU"
+msgstr "50 தங்கத்திற்கு நான் பொறுப்பு தருகிறேன், நீங்கள் ஊரில் உள்ள ஒவ்வொரு அலாரத்தையும் அமைக்காமல் திரும்பினால், நிறைய சம்பாதிக்க வாய்ப்பு உள்ளது, மேலும் இதோ ஒரு சிறிய உதவியாளர்."
+
+msgid "TXT_RPLY0_SCRIPT02_D74284_THANK"
+msgstr "நன்றி, எனக்கு இது தேவைப்படும்."
+
+msgid "TXT_DLG_SCRIPT02_D75800_GOODR"
+msgstr "நல்லது. நினைவில் கொள்ளுங்கள், அவரது பேசாமை பொன்னானது."
+
+msgid "TXT_RPLY0_SCRIPT02_D75800_ILLGE"
+msgstr "நான் அவனைப் பெற்றுக் கொள்கிறேன்."
+
+msgid "TXT_DLG_SCRIPT02_D77316_MISSI"
+msgstr "பணி நிறைவேற்றப்பட்டதா? உங்களிடம் துரோகியின் மோதிரம் இருக்கிறதா?"
+
+msgid "TXT_RPLY0_SCRIPT02_D77316_HESDE"
+msgstr "அவர் இறந்துவிட்டார், என் பணம் எங்கே?"
+
+msgid "TXT_RNO0_SCRIPT02_D77316_LIARG"
+msgstr "பொய்யர்! போய் மோதிரத்தை எடு!"
+
+msgid "TXT_DLG_SCRIPT02_D78832_HEREY"
+msgstr "இதோ, நீங்கள் சம்பாதித்தீர்கள். நீங்கள் கொன்ற துரோகி முன்னணியின் இருப்பிடத்தை வெளிப்படுத்தவிருந்தார். உயிர்களைக் காப்பாற்றினாய். அதிக தங்கத்தையும், கொடுங்கோன்மை இல்லாத எதிர்காலத்தையும் எப்படி சம்பாதிக்க விரும்புகிறீர்கள்?"
+
+msgid "TXT_RPLY0_SCRIPT02_D78832_TELLM"
+msgstr "இன்னும் சொல்லுங்க."
+
+msgid "TXT_RPLY1_SCRIPT02_D78832_NOTMY"
+msgstr "என் பாணி அல்ல."
+
+msgid "TXT_DLG_SCRIPT02_D80348_IHAVE"
+msgstr "முன்னணியின் தலைவரான மாசிலுடன் எனக்கு வர்த்தக உறவு உள்ளது. அவருக்கு உங்களைப் போன்ற ஒரு தீவிரமான நபர் தேவை என்று எனக்குத் தெரியும், அவர் நன்றாகச் செலுத்துகிறார். இந்த மீட்டெடுக்கப்பட்ட காம் யூனிட்டை எடுத்துக் கொள்ளுங்கள், உங்களுக்கு வாய்ப்புகள் கிடைக்கும்."
+
+msgid "TXT_RPLY0_SCRIPT02_D80348_THANK"
+msgstr "நன்றி."
+
+msgid "TXT_DLG_SCRIPT02_D81864_GETGO"
+msgstr "செல்லுங்கள். நீங்கள் இங்கே சுற்றிக்கொண்டிருந்தால், நாங்கள் இருவரும் இறந்துவிட்டோம்."
+
+msgid "TXT_DLG_SCRIPT02_D83380_APITY"
+msgstr "ஒரு பரிதாபம், ஆனால் இப்போது என் நண்பர்களைப் பற்றி உனக்குத் தெரியும், நான் உன்னைக் கொல்ல வேண்டும். காவலர்களே, இந்தக் குப்பையை வெளியே எடுங்கள்!"
+
+msgid "TXT_DLG_SCRIPT02_D84896_FOOLG"
+msgstr "முட்டாள். காவலர்களே! தலையிடும் பியூனிலிருந்து என்னை விடுவிக்கவும்."
+
+# Geoff.
+msgid "TXT_DLG_SCRIPT02_D86412_WALKA"
+msgstr "விலகிச் செல்லுங்கள், பையன், விலகிச் செல்லுங்கள்."
+
+msgid "TXT_DLG_SCRIPT02_D87928_WHATA"
+msgstr "நீங்கள் இங்கே என்ன செய்கிறீர்கள்?"
+
+msgid "TXT_RPLY0_SCRIPT02_D87928_HEYIN"
+msgstr "ஏய், எனக்கு தங்கம் வேண்டும்!"
+
+msgid "TXT_DLG_SCRIPT02_D89444_BLACK"
+msgstr "பிளாக்பேர்ட் உங்களுக்கு குறியீட்டைச் சொன்னது, இல்லையா? அலாரத்தை அணைக்கிறேன். Macil ஒரு வானூர்தி கீழே உள்ளது."
+
+msgid "TXT_RPLY0_SCRIPT02_D89444_THANK"
+msgstr "நன்றி."
+
+msgid "TXT_DLG_SCRIPT02_D90960_WALKA"
+msgstr "விலகிச் செல்லுங்கள், பையன், விலகிச் செல்லுங்கள்."
+
+# Arion.
+msgid "TXT_DLG_SCRIPT02_D92476_DOYOU"
+msgstr "கவர்னருடன் சந்திப்பு இருக்கிறதா? "
+
+msgid "TXT_RPLY0_SCRIPT02_D92476_OFCOU"
+msgstr "நிச்சயமாக!"
+
+msgid "TXT_RPLY1_SCRIPT02_D92476_NOAND"
+msgstr "இல்லை, எனக்கு ஒன்று தேவையில்லை!"
+
+msgid "TXT_DLG_SCRIPT02_D93992_SORRY"
+msgstr "மன்னிக்கவும்! நான் சொல்லவில்லை... தயவுசெய்து மேலே செல்லுங்கள்."
+
+msgid "TXT_RPLY0_SCRIPT02_D93992_IKNEW"
+msgstr "நீங்கள் அப்படிச் சொல்வீர்கள் என்று எனக்குத் தெரியும்."
+
+msgid "TXT_DLG_SCRIPT02_D95508_IFYOU"
+msgstr "உங்களுக்கு இவ்வளவு விரைவு என்றால் என்னுடன் நேரத்தை வீணாக்காதீர்கள்."
+
+# MAP02: MacGuffin
+msgid "TXT_DLG_SCRIPT02_D97024_RELEA"
+msgstr "என்னை விடுவிக்கவும், ஒரு முதியவரை தனியாக விடுங்கள்."
+
+# (after accepting "messy" chore)
+msgid "TXT_DLG_SCRIPT02_D98540_YOUSE"
+msgstr "நீ ஞானத்தைத் தேடுகிறாயா மகனே? ‘ஏன்?’ என்ற ஒரே ஒரு கேள்வியை மட்டும் கேட்கும்படி கட்டளை பார்த்திருக்கிறது."
+
+msgid "TXT_RPLY0_SCRIPT02_D98540_WHERE"
+msgstr "மின் இணைப்பு எங்கே?"
+
+msgid "TXT_RPLY1_SCRIPT02_D98540_WHERE"
+msgstr "ஆர்டரின் முக்கிய இடம் எங்கே?"
+
+msgid "TXT_RPLY2_SCRIPT02_D98540_WHERE"
+msgstr "சட்டவிரோத குழாய் எங்கே?"
+
+msgid "TXT_DLG_SCRIPT02_D100056_ILLTE"
+msgstr "அது எங்கே என்று நான் உங்களுக்குச் சொல்கிறேன், ஆனால் நீங்கள் யாருடைய இணைப்பைச் சிதைப்பீர்கள் என்று எனக்குத் தெரியவில்லை. இங்கேயே கழிவுநீர் ஆலையில் உள்ளது."
+
+msgid "TXT_RPLY0_SCRIPT02_D100056_THANK"
+msgstr "நன்றி"
+
+msgid "TXT_DLG_SCRIPT02_D101572_THATS"
+msgstr "இங்கேயே கழிவுநீர் ஆலையில் உள்ளது. ஆனால் இது முன்னணியின் இணைப்பு. ஆர்டர் என்று யார் சொன்னாலும் அது தவறு."
+
+msgid "TXT_RPLY0_SCRIPT02_D101572_THANK"
+msgstr "நன்றி"
+
+msgid "TXT_DLG_SCRIPT02_D103088_IFYOU"
+msgstr "இது சட்டவிரோதமானது என்று நீங்கள் கூறினால், நான் உங்களை ஒன்றும் செய்ய விரும்பவில்லை. எனக்கு போதுமான தொல்லை உள்ளது."
+
+msgid "TXT_RPLY0_SCRIPT02_D103088_THANK"
+msgstr "நன்றி"
+
+msgid "TXT_DLG_SCRIPT02_D104604_RELEA"
+msgstr "என்னை விடுவிக்கவும், ஒரு முதியவரை தனியாக விடுங்கள்."
+
+# MAP03: Macil.
+msgid "TXT_DLG_SCRIPT03_D0_WELCO"
+msgstr "நம்பிக்கையின் கடைசி மின்னலுக்கு வரவேற்கிறோம். உத்தரவை எதிர்க்கும் விடுதலை எங்களுக்கு மட்டுமே உள்ளது. எங்களிடம் கூர்மையான அறிவியல் மனங்களும், பல திறமையான உடல்களும் உள்ளன, ஆனால் நம்மிடம் உண்மையான ஒன்று இல்லை, ஐயோ... பிரச்சனைத் தீர்ப்பவர், நமக்குத் தேவையானதை யார் தருவார்கள். எங்களுக்கு உதவுங்கள்."
+
+msgid "TXT_RPLY0_SCRIPT03_D0_ALLRI"
+msgstr "சரி, நான் ஏற்றுக்கொள்கிறேன்."
+
+msgid "TXT_RPLY1_SCRIPT03_D0_NOTHA"
+msgstr "இல்லை நன்றி!"
+
+msgid "TXT_DLG_SCRIPT03_D1516_YOUMI"
+msgstr "நீங்கள் கருவி ஏந்திய கோபமான கிளர்ச்சியாளர்களால் சூழப்பட்டிருப்பதைக் கண்டு நீங்கள் மறுபரிசீலனை செய்ய விரும்பலாம்."
+
+msgid "TXT_RPLY0_SCRIPT03_D1516_ALLRI"
+msgstr "சரி, நான் உள்ளே இருக்கிறேன்!"
+
+msgid "TXT_RPLY1_SCRIPT03_D1516_NOTHA"
+msgstr "இல்லை நன்றி."
+
+msgid "TXT_DLG_SCRIPT03_D3032_THEND"
+msgstr "பின்னர் அவமானத்திலும் அவமானத்திலும் இறந்துவிடுவார்கள்."
+
+msgid "TXT_DLG_SCRIPT03_D4548_GOODB"
+msgstr "நல்லது, பிளாக்பேர்ட் தொடர்ந்து உங்கள் வழிகாட்டியாக இருக்கும். அவள் உங்களுக்கு மிகவும் பிரகாசமாக இருந்தாள். நீங்கள் ஒன்றாக ஆணை மற்றும் அவர்களின் மனிதாபிமானமற்ற ஊழியர்களின் இரகசியங்களை திறக்க வேண்டும். உள்ளே சென்று அவர்களை கீழே இறக்கவும்."
+
+msgid "TXT_RPLY0_SCRIPT03_D4548_WHERE"
+msgstr "நான் எங்கு தொடங்குவது?"
+
+# (Prison mission)
+msgid "TXT_DLG_SCRIPT03_D6064_FRANK"
+msgstr "வெளிப்படையாகச் சொன்னால், நிலைமை குழப்பமாக இருக்கிறது. ஆர்டரின் மீது அதிக தாக்குதல்களுக்கு வழியைத் தயாரிக்க நீங்கள் பல பணிகளைச் செய்ய வேண்டும். எங்கள் கடைசி தாக்குதல் ஒரு பேரழிவு மற்றும் எங்கள் துருப்புக்களில் பெரும்பாலோர் கைப்பற்றப்பட்டனர். இந்தக் கைதிகளை நீங்கள் விடுவிக்க வேண்டும்."
+
+msgid "TXT_RPLY0_SCRIPT03_D6064_ITHIN"
+msgstr "என்னால் சமாளிக்க முடியும் என்று நினைக்கிறேன்."
+
+msgid "TXT_DLG_SCRIPT03_D7580_TAKET"
+msgstr "இந்தப் பணத்தை எடுத்துக்கொண்டு எங்கள் ஆயுதங்களை சப்ளை செய்யும் ஈரேலைப் பார்க்கவும். பின்னர், இந்த திறவுகோல் கவர்னரைப் பார்க்க உங்களை அழைத்துச் செல்லும். அவர் ஒழுங்கின் ஊழல் கைப்பாவை, ஆனால் அவர் ஒப்பந்தங்களைச் செய்ய விரும்புகிறார். எங்கள் சகோதரர்களை விடுவிக்க உங்களுக்கு தேவையான அனைத்தையும் செய்யுங்கள்."
+
+msgid "TXT_RPLY0_SCRIPT03_D7580_ILLSE"
+msgstr "நான் பார்த்துக் கொள்கிறேன்."
+
+msgid "TXT_DLG_SCRIPT03_D9096_FIGHT"
+msgstr "முன்னணி மற்றும் சுதந்திரத்திற்காக போராடுங்கள். வெளியே செல்லவும்."
+
+# (Crystal mission)
+msgid "TXT_DLG_SCRIPT03_D10612_THEPR"
+msgstr "கைதிகள் மீண்டும் வரவேற்கப்பட்டனர், உங்களுக்கு நன்றி. இதோ கொஞ்சம் தங்கம், மருத்துவம் மற்றும் ஆயுதப் பயிற்சியாளரிடம் சென்று வாருங்கள், பிறகு, உங்களுக்காக எனக்கு அதிக இலக்குகள் உள்ளன."
+
+msgid "TXT_RPLY0_SCRIPT03_D10612_IWILL"
+msgstr "நான் செய்வேன். அடுத்து என்ன?"
+
+msgid "TXT_DLG_SCRIPT03_D12128_ASING"
+msgstr "ஒரு படிகமானது ஆர்டரின் கவசங்களை இயக்கும் மின் கட்டத்தை இயக்குகிறது. அந்த படிகத்தை அழிக்கவும், நீங்கள் ஆர்டரின் பாதுகாப்பில் பெரிய துளைகளை குத்துவீர்கள். பிளாக்பேர்ட் உங்களை ஒரு உளவாளிக்கு அழைத்துச் செல்லும், அவருக்கு நல்ல அதிர்ச்டம்."
+
+msgid "TXT_RPLY0_SCRIPT03_D12128_WELLG"
+msgstr "நாங்கள் அதைப் பெறுவோம்."
+
+msgid "TXT_DLG_SCRIPT03_D13644_FIGHT"
+msgstr "முன்னணி மற்றும் சுதந்திரத்திற்காக போராடுங்கள். வெளியே செல்லவும்."
+
+# (Progammer mission)
+msgid "TXT_DLG_SCRIPT03_D15160_YOUVE"
+msgstr "எங்கள் எதிர்பார்ப்புகளை எல்லாம் தாண்டிவிட்டீர்கள். உங்கள் துணிச்சலால் எங்கள் படைகள் நகர்ந்து கொண்டிருக்கின்றன. ஒரு குறிப்பிட்ட இலக்குடன் நீங்கள் இருவரும் தாக்குதலில் சேர வேண்டும் என்று நான் விரும்புகிறேன். புரோகிராமரை வெளியே எடு. ஆர்டரின் இந்த அடுக்கைப் பற்றி நாங்கள் கண்டுபிடித்ததை வெளிப்படுத்த வேண்டிய நேரம் இது."
+
+msgid "TXT_RPLY0_SCRIPT03_D15160_TELLM"
+msgstr "எங்களுக்குத் தெரிந்ததைச் சொல்லுங்கள்."
+
+msgid "TXT_DLG_SCRIPT03_D16676_THEPR"
+msgstr "புரோகிராமர்களின் குகை கோட்டையில் உள்ளது. இப்போது, மருத்துவரைப் பார்த்து, கொஞ்சம் வெடிமருந்துகளை எடுத்துக்கொண்டு போய் அவரைக் கொண்டு வாருங்கள்."
+
+msgid "TXT_RPLY0_SCRIPT03_D16676_LETME"
+msgstr "என்னை அங்கே அனுமதியுங்கள்!"
+
+msgid "TXT_DLG_SCRIPT03_D18192_FIGHT"
+msgstr "முன்னணி மற்றும் சுதந்திரத்திற்காக போராடுங்கள். வெளியே செல்லவும்."
+
+# MAP03: Barracks.
+msgid "TXT_DLG_SCRIPT03_D19708_REMEM"
+msgstr "டவுன்ஆல் எப்படி இருந்தது என்பதை நினைவில் கொள்க? அவர்கள் எங்களிடம் என்ன செய்யத் தயாராக இருக்கிறார்கள் என்பதற்கான மென்மையான நினைவூட்டல். கவனமாக இருங்கள்."
+
+# MAP03: Upstairs, corridor.
+msgid "TXT_DLG_SCRIPT03_D21224_TALKT"
+msgstr "மாசிலுடன் பேசுங்கள். அவர் உங்களுக்கு உதவ முடியும்."
+
+# MAP03: Barracks.
+# (dead meat = corpse)
+msgid "TXT_DLG_SCRIPT03_D22740_IVEHE"
+msgstr "இந்த உத்தரவைத் தகர்க்க Macil ஒரு திட்டம் வகுத்திருப்பதாகக் கேள்விப்பட்டேன். நன்றாக இருப்பது நல்லது. இன்னும் ஒரு தோல்வி மற்றும் நாம் அனைவரும் இறந்த இறைச்சி."
+
+msgid "TXT_DLG_SCRIPT03_D24256_AFEWO"
+msgstr "இவற்றில் சில பீப்பாய்கள் அவற்றின் நீர் விநியோகத்தில் கொட்டப்படுகின்றன, முரண்பாடுகள் கொஞ்சம் கூட இருக்க வேண்டும்."
+
+msgid "TXT_DLG_SCRIPT03_D25772_SOYOU"
+msgstr "அப்படியென்றால் நீங்கள் புதிய செயலாளரா? நன்றி, நீங்கள் இல்லாமல், நாங்கள் அனைவரும் இப்போது இறந்துவிடுவோம்."
+
+# MAP03: Gerald (no implant)
+msgid "TXT_DLG_SCRIPT03_D27288_IMWOR"
+msgstr "நான் ஏதாவது செய்துகொண்டிருக்கிறேன், அது நமக்கு ஒரு நன்மையைத் தரும். இது உங்கள் சகிப்புத்தன்மையை அதிகரிக்கும் மற்றும் உங்களை முழுமையாக உற்சாகப்படுத்தும். நான் கிட்டத்தட்ட எல்லா பிழைகளையும் தீர்த்துவிட்டேன். நான் உங்களுக்காக ஏதாவது செய்யலாமா?"
+
+msgid "TXT_RPLY0_SCRIPT03_D27288_PATCH"
+msgstr "என்னை ஒட்டவும்."
+
+msgid "TXT_RYES0_SCRIPT03_D27288_BOYYO"
+msgstr "பையன், நீங்கள் ஒரு உண்மையான குழப்பம். நான் என்ன செய்ய முடியும் என்று பார்க்கிறேன்."
+
+msgid "TXT_RPLY1_SCRIPT03_D27288_STAMI"
+msgstr "ச்டாமினா உள்வைப்பு?"
+
+msgid "TXT_RYES1_SCRIPT03_D27288_ALLRI"
+msgstr "சரி, இதற்கு சிறிது நேரம் ஆகாது."
+
+msgid "TXT_RNO1_SCRIPT03_D27288_ITSNO"
+msgstr "அது இன்னும் முடியவில்லை."
+
+# (one upgrade)
+msgid "TXT_DLG_SCRIPT03_D28804_HEYIM"
+msgstr "ஏய், நான் உங்கள் உள்வைப்பின் புதுப்பிக்கப்பட்ட பதிப்பில் வேலை செய்து வருகிறேன். என்னால் வேறு ஏதாவது செய்ய முடியுமா?"
+
+msgid "TXT_RPLY0_SCRIPT03_D28804_PATCH"
+msgstr "என்னை ஒட்டவும்."
+
+msgid "TXT_RYES0_SCRIPT03_D28804_WELLA"
+msgstr "குறைந்தபட்சம் உங்கள் செயலையாவது பார்க்கிறீர்கள்."
+
+msgid "TXT_RPLY1_SCRIPT03_D28804_IMPLA"
+msgstr "உள்வைப்பு மேம்படுத்தவா?"
+
+msgid "TXT_RYES1_SCRIPT03_D28804_GOODT"
+msgstr "நல்ல சேதி, மிகவும் பாதுகாப்பாக இருக்க முடியாது."
+
+msgid "TXT_RNO1_SCRIPT03_D28804_IMALM"
+msgstr "நான் கிட்டத்தட்ட முடித்துவிட்டேன், ஆனால் முழுமையாக இல்லை."
+
+# (two upgrades)
+msgid "TXT_DLG_SCRIPT03_D30320_ALLRI"
+msgstr "சரி, கிட்டத்தட்ட எல்லாவற்றையும் சரியாகச் செய்துவிட்டேன். விடுபட சில பிரச்சனைகள் மீதம் இருந்தன. உங்களுக்கு வேறு ஏதாவது தேவையா? "
+
+msgid "TXT_RPLY0_SCRIPT03_D30320_PATCH"
+msgstr "என்னை ஒட்டவும்."
+
+msgid "TXT_RYES0_SCRIPT03_D30320_WHATH"
+msgstr "நீங்கள் என்ன செய்ய முயற்சித்தீர்கள்? ஒரு சிலுவைப்போருடன் நேருக்கு நேர் செல்லவா?"
+
+msgid "TXT_RPLY1_SCRIPT03_D30320_IMPLA"
+msgstr "உள்வைப்பு மேம்படுத்தல்?."
+
+msgid "TXT_RYES1_SCRIPT03_D30320_THATS"
+msgstr "அது உங்களுக்காக செய்ய வேண்டும்."
+
+msgid "TXT_RNO1_SCRIPT03_D30320_LETME"
+msgstr "முதலில் இன்னும் சில சோதனைகளை நடத்துகிறேன்."
+
+# (?)
+msgid "TXT_DLG_SCRIPT03_D31836_THATS"
+msgstr "நான் இப்போது உள்வைப்பில் செய்யக்கூடியது அவ்வளவுதான். ஒருவேளை ஏதாவது குணமாகுமா?"
+
+msgid "TXT_RPLY0_SCRIPT03_D31836_YEAH"
+msgstr "ஆம்."
+
+msgid "TXT_RYES0_SCRIPT03_D31836_BOYYO"
+msgstr "பையன், நீங்கள் ஒரு உண்மையான குழப்பம். நான் என்ன செய்ய முடியும் என்று பார்க்கிறேன்."
+
+# MAP03: Feris (no training).
+msgid "TXT_DLG_SCRIPT03_D33352_WHATC"
+msgstr "நான் உனக்கு என்ன செய்ய முடியும்?"
+
+msgid "TXT_RPLY0_SCRIPT03_D33352_IMOUT"
+msgstr "எனக்கு குண்டுகள் தீர்ந்துவிட்டது."
+
+msgid "TXT_RYES0_SCRIPT03_D33352_HERES"
+msgstr "இதோ உங்களுக்காக சில வெடிமருந்துகள். அதை வீணாக்காதீர்கள்."
+
+msgid "TXT_RPLY1_SCRIPT03_D33352_TEACH"
+msgstr "எனக்கு கற்றுக்கொடுங்கள்."
+
+msgid "TXT_RYES1_SCRIPT03_D33352_ALLRI"
+msgstr "சரி, நான் உங்களுக்கு சில சிறிய குறிப்புகளைக் காட்டுகிறேன்."
+
+msgid "TXT_RNO1_SCRIPT03_D33352_YOURE"
+msgstr "நீங்கள் இன்னும் தயாராகவில்லை."
+
+# (one training)
+msgid "TXT_DLG_SCRIPT03_D34868_BACKA"
+msgstr "மீண்டும்? உனக்கு என்ன வேண்டும்?"
+
+msgid "TXT_RPLY0_SCRIPT03_D34868_IMOUT"
+msgstr "எனக்கு குண்டுகள் தீர்ந்துவிட்டது."
+
+msgid "TXT_RYES0_SCRIPT03_D34868_HERES"
+msgstr "இதோ உங்களுக்காக சில வெடிமருந்துகள். அதை வீணாக்காதீர்கள்."
+
+msgid "TXT_RNO0_SCRIPT03_D34868_YOUVE"
+msgstr "உங்களிடம் போதுமான வெடிமருந்துகள் உள்ளன."
+
+msgid "TXT_RPLY1_SCRIPT03_D34868_TEACH"
+msgstr "எனக்கு கற்றுக்கொடுங்கள்."
+
+msgid "TXT_RYES1_SCRIPT03_D34868_ALLRI"
+msgstr "சரி, இது உங்களை சிறிது நேரம் வைத்திருக்க வேண்டும்."
+
+msgid "TXT_RNO1_SCRIPT03_D34868_SORRY"
+msgstr "மன்னிக்கவும், முடியாது. நான் மாசிலின் உத்தரவுகளை பின்பற்றுகிறேன்."
+
+# (two trainings)
+msgid "TXT_DLG_SCRIPT03_D36384_WELLW"
+msgstr "அது எது, தோட்டாக்கள் அல்லது பயிற்சி? நாங்கள் கைப்பற்றிய அந்த புதிய ஆயுதங்களில் என் கைகளைப் பெற நான் காத்திருக்க முடியாது. கொஞ்சம் பயிற்சி, பிறகு நிறைய பழிவாங்கல்."
+
+msgid "TXT_RPLY0_SCRIPT03_D36384_IMOUT"
+msgstr "நான் வெடிமருந்து தீர்ந்துவிட்டேன்."
+
+msgid "TXT_RYES0_SCRIPT03_D36384_HERES"
+msgstr "இதோ உங்களுக்காக சில வெடிமருந்துகள். அதை வீணாக்காதீர்கள்."
+
+msgid "TXT_RNO0_SCRIPT03_D36384_YOUVE"
+msgstr "உங்களிடம் போதுமான வெடிமருந்துகள் உள்ளன."
+
+msgid "TXT_RPLY1_SCRIPT03_D36384_TEACH"
+msgstr "எனக்கு கற்றுக்கொடுங்கள்."
+
+msgid "TXT_RYES1_SCRIPT03_D36384_OKTAK"
+msgstr "ஓ.கே. நீங்கள் இங்கே கற்றுக்கொண்டதை எடுத்து, அந்த ஆணைக் கட்டிகளை நரகத்திற்கு வழி காட்டுங்கள்."
+
+msgid "TXT_RNO1_SCRIPT03_D36384_COMEB"
+msgstr "நேரம் ஆகிவிட்டது என்று Macil கூறும்போது, பிறகு வாருங்கள்."
+
+# (three trainings)
+msgid "TXT_DLG_SCRIPT03_D37900_IVETA"
+msgstr "என்னால் முடிந்த அனைத்தையும் இப்போது உங்களுக்குக் கற்றுக் கொடுத்தேன். புதிய ஆயுதங்களை அவற்றின் வேகத்தில் வைக்க எனக்கு சிறிது நேரம் கொடுங்கள். நீங்கள் தோட்டாக்கள் தீர்ந்துவிட்டால் தவிர."
+
+msgid "TXT_RPLY0_SCRIPT03_D37900_YESIA"
+msgstr "ஆம் நான் தான்."
+
+msgid "TXT_RYES0_SCRIPT03_D37900_HEREY"
+msgstr "இதோ போ."
+
+# MAP03: Upstairs.
+msgid "TXT_DLG_SCRIPT03_D39416_DONTG"
+msgstr "ஊரில் மகிழ்ச்சியாக இருக்க வேண்டாம். நீங்கள் அலாரத்தை இயக்குவீர்கள், அவர்கள் கோட்டையிலிருந்து காவலர்களை அனுப்பத் தொடங்குவார்கள். "
+
+# MAP03: Near Macil.
+msgid "TXT_DLG_SCRIPT03_D40932_WELCO"
+msgstr "வரவேற்கிறோம், நாங்கள் எப்போதும் கூடுதல் உதவியைப் பயன்படுத்தலாம்."
+
+msgid "TXT_DLG_SCRIPT03_D42448_WHENI"
+msgstr "நான் இன்னும் நடவடிக்கையில் இருந்தபோது, வலுவூட்டல்கள் வருவதற்கு முன்பு ஒரு உதவியாளரை பரிசோதிக்கும் வாய்ப்பு எங்களுக்கு கிடைத்தது. கேளுங்கள், அவர்கள் மனிதர்கள் அல்ல."
+
+# MAP03: Downstairs.
+msgid "TXT_DLG_SCRIPT03_D43964_WERET"
+msgstr "கோட்டை வாயில் பொறிமுறைகள் எங்கு உள்ளன என்பதை நாங்கள் கண்டுபிடிக்க முயற்சிக்கிறோம், ஆனால் இதுவரை எங்களுக்கு அதிர்ச்டம் இல்லை."
+
+msgid "TXT_DLG_SCRIPT03_D45480_DONTG"
+msgstr "பிடிபடாதே. அவர்கள் சிறையில் அடைக்கப்பட்ட பிறகு நம் மக்களுக்கு என்ன செய்கிறார்கள் என்பது பற்றிய அதிர்ச்சி கதைகளை நான் கேள்விப்பட்டிருக்கிறேன். அவர்கள் ஒரு தடயமும் இல்லாமல் மறைந்து விடுகிறார்கள்."
+
+msgid "TXT_DLG_SCRIPT03_D46996_HERES"
+msgstr "ஆர்டரின் டின்சோல்டியர்கள் வேறு திசையில் செல்வதை நீங்கள் எப்போதாவது பார்த்தால், இதோ சில அறிவுரைகள். அவர்கள் வேகமான மற்றும் கொடூரமானவர்கள்."
+
+msgid "TXT_DLG_SCRIPT03_D48512_LEAVE"
+msgstr "என்னை இருக்க விடு. நான் மாசிலுக்காக ஏதாவது செய்கிறேன்."
+
+# MAP04: Reactor Core red guard.
+msgid "TXT_DLG_SCRIPT04_D0_SORRY"
+msgstr "மன்னிக்கவும், இல்லை. உங்களுக்கு இசைவு இல்லை."
+
+msgid "TXT_DLG_SCRIPT04_D1516_STOPS"
+msgstr "நிறுத்து! உங்கள் அடையாளம் பேட்சைக் காட்டு."
+
+msgid "TXT_RPLY0_SCRIPT04_D1516_HERES"
+msgstr "இதோ எனது ஐ.டி."
+
+msgid "TXT_DLG_SCRIPT04_D3032_OHOKS"
+msgstr "ஓ, சரி. நிச்சயமாக மேலே செல்லுங்கள். இனிய நாள்."
+
+# MAP04: Warehouse red guard.
+msgid "TXT_DLG_SCRIPT04_D4548_DERWI"
+msgstr "டெர்வின்? ஆம், அவர் கிடங்கில் இருக்கிறார், ஆனால் நீங்கள் அழிக்கப்படும் வரை நீங்கள் உள்ளே வரமாட்டீர்கள்."
+
+msgid "TXT_RPLY0_SCRIPT04_D4548_IVEGO"
+msgstr "எனக்கு இசைவு கிடைத்துள்ளது."
+
+msgid "TXT_DLG_SCRIPT04_D6064_GOON"
+msgstr "தொடருங்கள்."
+
+msgid "TXT_RPLY0_SCRIPT04_D6064_DOYOU"
+msgstr "அவர் எங்கே இருக்கிறார் தெரியுமா?"
+
+msgid "TXT_DLG_SCRIPT04_D7580_IDONT"
+msgstr "யாரும் எங்கே இருக்கிறார்கள் என்று தெரியவில்லை. நான் எலிப்பொறியை மூடி வைத்திருக்கிறேன்."
+
+msgid "TXT_DLG_SCRIPT04_D9096_YOUAR"
+msgstr "நீங்கள் விரும்பத்தகாத கவனச்சிதறல்."
+
+# MAP04: Reactor Core gray guard.
+msgid "TXT_DLG_SCRIPT04_D10612_MOVEA"
+msgstr "உலோகத்தை எடுத்துச் செல்லவும் அல்லது சுவைக்கவும்."
+
+msgid "TXT_DLG_SCRIPT04_D12128_PASSY"
+msgstr "அணுகலுக்கு உங்கள் ஐடியை இங்கே அனுப்பவும்."
+
+# MAP04: Green guard.
+msgid "TXT_DLG_SCRIPT04_D13644_GETBA"
+msgstr "இப்போது வேலைக்குத் திரும்பு!"
+
+msgid "TXT_DLG_SCRIPT04_D15160_GETBA"
+msgstr "இப்போது வேலைக்குத் திரும்பு!"
+
+# MAP04: Warehouse → Northeast (worker in red)
+msgid "TXT_DLG_SCRIPT04_D16676_WEVEB"
+msgstr "வாரக்கணக்கில் நேரம் இல்லாமல் கடிகாரத்தைச் சுற்றி ஓடிக்கொண்டிருக்கிறோம். முன்னனியில் ஒரு அடக்குமுறை சோதனைக்கு ஆணை திட்டமிடுகிறது என்று நான் கூறுவேன்."
+
+# MAP04: Derwin.
+msgid "TXT_DLG_SCRIPT04_D18192_OHDAM"
+msgstr "அடடா. கவர்னர் உங்களை அனுப்பினார். நான் அவருக்கு வெட்டப் போகிறேன், உண்மையில் நான்தான். சரி, கேள். நான் ஒரு மூட்டை பதுக்கி வைத்துள்ளேன். நீங்கள் வேறு வழியில் பார்த்தால் அது உங்களுடையது."
+
+msgid "TXT_RPLY0_SCRIPT04_D18192_ALLRI"
+msgstr "சரி, நான் உன்னை போக விடுகிறேன்."
+
+msgid "TXT_RPLY1_SCRIPT04_D18192_SORRY"
+msgstr "மன்னிக்கவும், தனிப்பட்ட எதுவும் இல்லை."
+
+msgid "TXT_DLG_SCRIPT04_D19708_NUTSI"
+msgstr "நட்ச், நான் கீழே போகிறேன் என்றால், நீங்களும் அப்படித்தான். காவலர்களே!!"
+
+msgid "TXT_DLG_SCRIPT04_D21224_BUSIN"
+msgstr "வணிகம் என் கழுதை. உதவி, காவலர்களே, எனக்கு நேரலை உள்ளது."
+
+# MAP04: Worner.
+msgid "TXT_DLG_SCRIPT04_D22740_AHIGO"
+msgstr "ஆ, நீங்கள் வருவீர்கள் என்று மசிலிடமிருந்து எனக்கு செய்தி கிடைத்தது. உங்களை மின் நிலையத்திற்குள் அழைத்துச் செல்ல என்னிடம் ஒரு வழி உள்ளது, ஆனால் அது ஆபத்தான பக்கத்தில் உள்ளது."
+
+msgid "TXT_RPLY0_SCRIPT04_D22740_ILLTA"
+msgstr "நான் என் வாய்ப்புகளை எடுத்துக்கொள்கிறேன்."
+
+msgid "TXT_DLG_SCRIPT04_D24256_ALLRI"
+msgstr "சரி, நான் ஒரு ஐ.டி. அணுஉலையின் குளிரூட்டும் குழியில் விழுந்த சில முட்டாள்களின் சடலத்திலிருந்து. --blat-- உடனடி ஆழமான வறுக்கவும்."
+
+msgid "TXT_RPLY0_SCRIPT04_D24256_WHATS"
+msgstr "உள்ளே நுழைந்தவுடன் நான் என்ன செய்ய வேண்டும்?"
+
+msgid "TXT_DLG_SCRIPT04_D25772_TELLW"
+msgstr "மிச்டர் கிரிச்பிக்கு நீங்கள்தான் மாற்றுத் தொழிலாளி என்று யார் கேட்டாலும் சொல்லுங்கள். வேலை செய்யும் அளவுக்கு ஊமையாக இருக்கிறது. ஓ, எங்களுக்கு மேலே இருக்கும் ச்டோர்ரூமை நீங்கள் பார்க்க விரும்பலாம்."
+
+msgid "TXT_RPLY0_SCRIPT04_D25772_BOYIH"
+msgstr "பையன் இந்த ஐ.டி. வேலை செய்கிறது."
+
+msgid "TXT_DLG_SCRIPT04_D27288_GETOU"
+msgstr "இங்கிருந்து வெளியேறுங்கள், நீங்கள் மிச்டர் டெட் ஆக விரும்பாதவரை."
+
+# MAP04: Warehouse → Dock Worker.
+msgid "TXT_DLG_SCRIPT04_D28804_HEYLE"
+msgstr "ஏய், என்னை விட்டுவிடு. நேரத்தை வீணடிப்பதாக அவர்கள் பிடித்தால் நாம் இறந்துவிடுவோம், அல்லது கூடுதல் வேலை."
+
+# MAP04: Reactor Core → Northern alarm green door → Level 2 door
+msgid "TXT_DLG_SCRIPT04_D30320_SUCHP"
+msgstr "இத்தகைய அழுத்தம், இந்த விகிதத்தில் நாம் விரைவில் சாதாரண மாற்றங்களுக்கு திரும்புவோம். நாங்கள் கோட்டைக்கு டன் சக்தியை செலுத்துகிறோம், நான் அந்த புதிய ஆயுதங்களை பதிவு செய்து முடித்துவிட்டேன்."
+
+msgid "TXT_RPLY0_SCRIPT04_D30320_WEAPO"
+msgstr "ஆயுதங்களா?"
+
+msgid "TXT_DLG_SCRIPT04_D31836_WHATD"
+msgstr "நீங்கள் என்ன நினைக்கிறீர்கள், நாங்கள் சாக்சில் காப்புப் பிரதி எடுத்துள்ளோம்?"
+
+msgid "TXT_RPLY0_SCRIPT04_D31836_WHATK"
+msgstr "என்ன வகையான ஆயுதங்கள்?"
+
+msgid "TXT_DLG_SCRIPT04_D33352_AREYO"
+msgstr "நீங்கள் காது கேளாதவரா? நான் எவ்வளவு பிசியாக இருக்கிறேன் என்று தான் சொன்னேன். வேலைக்குத் திரும்பு."
+
+# MAP04: Reactor Core → Southern alarm green door
+msgid "TXT_DLG_SCRIPT04_D34868_WHOAR"
+msgstr "நீங்கள் யார்? இந்த பகுதியில் இசைவு நிலை இரண்டு பணியாளர்கள் மட்டுமே அனுமதிக்கப்படுகிறார்கள்."
+
+msgid "TXT_RPLY0_SCRIPT04_D34868_IMTHE"
+msgstr "நான் மாற்றுத் தொழிலாளி."
+
+msgid "TXT_DLG_SCRIPT04_D36384_ABOUT"
+msgstr "நீங்கள் வந்த நேரம். கெட்ரிக் உடன் பேசுங்கள். ஓ, இந்த கீ கார்டை எடு. உங்கள் முதல் நாளில் நீங்கள் சுட விரும்பவில்லை, இல்லையா?"
+
+msgid "TXT_RPLY0_SCRIPT04_D36384_WHERE"
+msgstr "ஆற்றல் படிகம் எங்கே?"
+
+msgid "TXT_DLG_SCRIPT04_D37900_IFYOU"
+msgstr "நீங்கள் வேலைக்குச் செல்லவில்லை என்றால், நீங்கள் எப்படியும் சுடப்படுவீர்கள். உங்கள் ஆடையை நகர்த்தவும்."
+
+# MAP04: Reactor Core → Northern alarm green door
+msgid "TXT_DLG_SCRIPT04_D39416_IDONT"
+msgstr "அலாரம் ஒலிக்க வேண்டும் என்று நான் நினைக்கவில்லை, ஆனால் அவர்கள் ஆற்றல் படிகத்தை இவ்வளவு கடினமாகத் தள்ளினால், அது குறைபாடாகிவிடும், பின்னர் சிதைந்துவிடும், பின்னர் *பூம்*! …ஒரு சிந்தனை."
+
+# MAP04: Reactor Core → Southern alarm green door
+msgid "TXT_DLG_SCRIPT04_D40932_LETME"
+msgstr "நான் தெளிவாக இருக்கட்டும். இந்த முனையம் மீண்டும் பூட்டப்பட்டால், குளிரூட்டும் நிலை குறையும், மேலும் நாம் அனைவரும் புரோகிராமரிடம் பதிலளிக்க வேண்டும். நாம் பிழைத்தால்."
+
+# MAP04: Ketrick.
+msgid "TXT_DLG_SCRIPT04_D42448_YOUYE"
+msgstr "நீ! ஆமாம், நீங்கள். இந்தப் பகுதிக்கு நீங்கள் அனுமதிக்கப்படவில்லை. சீக்கிரம் உங்கள் திறவுகோல் அட்டையை என்னிடம் கொடுங்கள். நான் மிகவும் மோசமான மனநிலையில் இருக்கிறேன்!"
+
+msgid "TXT_RPLY0_SCRIPT04_D42448_HEREH"
+msgstr "இதோ, இதோ என் அட்டை."
+
+msgid "TXT_DLG_SCRIPT04_D43964_THISI"
+msgstr "இது குப்பை! இங்கே காத்திருங்கள். ஓ திருக்குறள். இந்த ஊடுருவும் நபரை காவலர்கள் கொன்றனர்!"
+
+# MAP04: Reactor Core → Sammis
+msgid "TXT_DLG_SCRIPT04_D45480_WORKS"
+msgstr "வேலை, தூக்கம், சித்திரவதை, என்ன வாழ்க்கை. கவனக்குறைவான குழி மூழ்குபவருக்கு நீங்கள் மாற்று என்று சொல்லுங்கள்?"
+
+msgid "TXT_RPLY0_SCRIPT04_D45480_YEAHC"
+msgstr "ஆம், தொடங்குவதற்கு காத்திருக்க முடியாது."
+
+msgid "TXT_DLG_SCRIPT04_D46996_YEAHR"
+msgstr "ஆமாம், சரி. சரி, உங்கள் கழுதையை வேலைக்குச் செல்லுங்கள்."
+
+msgid "TXT_RPLY0_SCRIPT04_D46996_WHERE"
+msgstr "ச்படிகம் எங்கே?"
+
+msgid "TXT_DLG_SCRIPT04_D48512_GOTAL"
+msgstr "கெட்ரிக்கிடம் பேசுங்கள். சுவிட்சுகளைப் பயன்படுத்தி நடைபாதையை மேலே கொண்டு வாருங்கள், பிறகு இந்த ஐடியைப் பயன்படுத்தவும். லிஃப்ட்டுக்கு."
+
+msgid "TXT_RPLY0_SCRIPT04_D48512_WHERE"
+msgstr "மீண்டும் படிகம் எங்கே?"
+
+msgid "TXT_DLG_SCRIPT04_D50028_NONEO"
+msgstr "உங்கள் வேலை எதுவும் இல்லை, கெட்ரிக் உடன் பேசுங்கள்."
+
+msgid "TXT_RPLY0_SCRIPT04_D50028_OK"
+msgstr "சரி"
+
+# (bored to tears = extremely bored)
+msgid "TXT_DLG_SCRIPT04_D51544_IFITS"
+msgstr "நீங்கள் விரும்பும் வேலையில் பிசியாக இருந்தால், அந்தத் திரையை சிறிது நேரம் உற்றுப் பாருங்கள், அது உங்களை அலுத்துவிடும்."
+
+# MAP04: Reactor Core → Southern alarm green door
+msgid "TXT_DLG_SCRIPT04_D53060_THEAL"
+msgstr "சர்வவல்லமையுள்ள ப்ரோக்ராமர், கணினியின் மையப் பகுதியைப் பூட்டி விட்டார். எனது வேலையை நான் எப்படிச் செய்ய வேண்டும்? தற்கொலை ஓட்டம்தான் ஒரே வழி."
+
+msgid "TXT_RPLY0_SCRIPT04_D53060_SUICI"
+msgstr "தற்கொலை ஓட்டமா? அது என்ன?"
+
+msgid "TXT_DLG_SCRIPT04_D54576_ITSAS"
+msgstr "கொல்லப்படுவதற்கு இது ஒரு உறுதியான வழி, ஆனால் அது இப்போது முக்கியமில்லை. நீங்கள் மிகவும் சாய்ந்திருந்தால் லிப்டில் கீழே செல்லுங்கள்."
+
+# MAP05: Door Guard.
+msgid "TXT_DLG_SCRIPT05_D0_HALTN"
+msgstr "நிறுத்து. வார்டன் அல்லது கவர்னர் அனுமதியின்றி யாரும் இங்கு வருவதில்லை."
+
+msgid "TXT_RPLY0_SCRIPT05_D0_HERES"
+msgstr "இதோ என் பாச், என்னை உள்ளே விடு."
+
+msgid "TXT_DLG_SCRIPT05_D1516_OKBUT"
+msgstr "சரி, ஆனால் வார்டனிடம் மட்டும் பேசுங்கள்."
+
+# (After killing Montag)
+msgid "TXT_DLG_SCRIPT05_D3032_DOILO"
+msgstr "நான் உங்களுக்கு வார்டன் போல் இருக்கிறேனா? தொடர்ந்து நகரவும், இந்தப் பகுதி வரம்பற்றது."
+
+# MAP05: Prison Guard.
+msgid "TXT_DLG_SCRIPT05_D4548_THEOR"
+msgstr "ஆணைக் சினம் இந்த அடியார்கள் மீது சாவை வேண்டி நிற்கும் வரை பொழியும்."
+
+# MAP05: Montag.
+msgid "TXT_DLG_SCRIPT05_D6064_IDONT"
+msgstr "மோரல் உங்களுக்கு பாச் கொடுத்தாலும் எனக்கு கவலையில்லை. இது என் சிறை. எனது திறவுகோல் உள்ளே அல்லது வெளியே செல்லும் ஒரே வழி, நான் எந்த வாய்ப்புகளையும் எடுக்கவில்லை. ஆணை தவறுகளை பொறுத்துக்கொள்ளாது."
+
+msgid "TXT_RPLY0_SCRIPT05_D6064_GIVEM"
+msgstr "அட சாவியைக் கொடு!"
+
+msgid "TXT_DLG_SCRIPT05_D7580_OVERM"
+msgstr "என் இறந்த உடலின் மேல்!"
+
+msgid "TXT_RPLY0_SCRIPT05_D7580_GREAT"
+msgstr "அருமையான யோசனை!"
+
+msgid "TXT_DLG_SCRIPT05_D9096_SHACK"
+msgstr "சங்கிலிகள் அல்லது சங்கிலிகள், நீங்கள் சுற்றித் தொங்க வேண்டும் என்று நான் விரும்புகிறேன்."
+
+# MAP05: Wolenick.
+msgid "TXT_DLG_SCRIPT05_D10612_IDONT"
+msgstr "காவலர்களையும் வார்டனையும் நீங்கள் எவ்வாறு கடந்து சென்றீர்கள் என்று எனக்குத் தெரியவில்லை, ஆனால் நீங்கள் இப்போது உள்ளே சென்றதால் அலங்காரத்தை நீங்கள் விரும்புவீர்கள் என்று நம்புகிறேன்."
+
+msgid "TXT_RPLY0_SCRIPT05_D10612_FREEM"
+msgstr "என் தோழர்களை விடுவிக்கவும் அல்லது இறக்கவும்!"
+
+msgid "TXT_DLG_SCRIPT05_D12128_KILLM"
+msgstr "என்னைக் கொல்லுங்கள், நீங்கள் யாரையும் விடுவிக்க மாட்டீர்கள். கலங்களைத் திறக்கும் ஒரே மாதிரி விசை என்னிடம் உள்ளது."
+
+msgid "TXT_RPLY0_SCRIPT05_D12128_CANYO"
+msgstr "அப்படியானால் எனக்கு ஒரு கை கொடுக்க முடியுமா?"
+
+msgid "TXT_DLG_SCRIPT05_D13644_MOVEA"
+msgstr "உடன் செல்லுங்கள் அல்லது உங்கள் நண்பர்களுடன் சேருங்கள்."
+
+# MAP05: Prisoner.
+msgid "TXT_DLG_SCRIPT05_D15160_DONTJ"
+msgstr "அங்கே நிற்காதே, எங்களை இங்கிருந்து வெளியேற்று!"
+
+msgid "TXT_DLG_SCRIPT05_D16676_THESK"
+msgstr "வானம், நான் வானத்தைப் பார்க்க விரும்புகிறேன்."
+
+msgid "TXT_DLG_SCRIPT05_D18192_FIVEF"
+msgstr "ஐந்தடி நான்கு அடி, ஐந்தடி நான்கு அடி, ஐந்தடி நான்கு அடி."
+
+msgid "TXT_DLG_SCRIPT05_D19708_DONTR"
+msgstr "கட்டளை இன்னும் பொறுப்பில் இருந்தால் என்னை விடுவிக்க வேண்டாம். என்னால் பயங்கரத்தை தாங்க முடியவில்லை."
+
+msgid "TXT_DLG_SCRIPT05_D21224_IDONT"
+msgstr "நான் பிட்ச் செய்ய விரும்பவில்லை, ஆனால் எங்களை வெளியேற்றுவதற்கு Macil ஒருவரை அனுப்பிய நேரம் இது."
+
+msgid "TXT_DLG_SCRIPT05_D22740_IDGIV"
+msgstr "நான் ஒரு ரொட்டிக்கு எதையும் கொடுப்பேன். எனக்கு மிகவும் பசியாக இருக்கிறது."
+
+# MAP06: Weran.
+msgid "TXT_DLG_SCRIPT06_D0_AHASU"
+msgstr "ஆ, ஒரு உதவி தேவைப்படுபவர். இங்கே கீழே நீங்கள் ஒரு உதவியைப் பெற ஒரு உதவி செய்கிறீர்கள், எனக்கு நகர நுழைவாயில் தேவை, அது எங்கள் உணவுக்கான பாதையாகும். கட்டளை சீல் வைக்கப்பட்டு பாதுகாக்கப்பட்டுள்ளது."
+
+msgid "TXT_RPLY0_SCRIPT06_D0_WHERE"
+msgstr "வாயில் பொறிமுறை எங்கே?"
+
+msgid "TXT_DLG_SCRIPT06_D1516_DOMYF"
+msgstr "முதலில் எனக்கு உதவி செய், இல்லையேல் என்னிடமிருந்து நீ குந்தியிருப்பாய்."
+
+msgid "TXT_RPLY0_SCRIPT06_D1516_HOWWI"
+msgstr "அது திறந்திருப்பது உங்களுக்கு எப்படித் தெரியும்?"
+
+msgid "TXT_DLG_SCRIPT06_D3032_BRING"
+msgstr "காவலாளியின் சீருடையை என்னிடம் கொண்டு வா. அந்த வகையில் எனது ராட்ஃபெலோக்களில் ஒருவர் அதை அணியலாம், யாரும் மீண்டும் கதவை மூட முயற்சிக்க மாட்டார்கள்."
+
+msgid "TXT_RPLY0_SCRIPT06_D3032_YOUWA"
+msgstr "அவனுடைய சீருடை உனக்கு வேண்டுமா?"
+
+msgid "TXT_DLG_SCRIPT06_D4548_OPENT"
+msgstr "கதவைத் திற, எனக்கு சீருடை கொண்டு வாருங்கள், நாங்கள் வணிகம் செய்கிறோம். இல்லையெனில், சினம்."
+
+msgid "TXT_DLG_SCRIPT06_D6064_HAVEY"
+msgstr "எனக்கு வேண்டியதை நீங்கள் கொண்டு வந்தீர்களா?"
+
+msgid "TXT_RPLY0_SCRIPT06_D6064_HOWAB"
+msgstr "இந்த சீருடை எப்படி இருக்கும்?"
+
+msgid "TXT_RNO0_SCRIPT06_D6064_BRING"
+msgstr "எனக்கு சீருடை கொண்டு வா."
+
+# MAP06: Weran.
+msgid "TXT_DLG_SCRIPT06_D7580_GOODH"
+msgstr "நல்லது. இங்கே கூடுதல் ஒன்று உள்ளது. வீழ்ந்த சிலுவைப்போரின் இதை என் தோழர்கள் கிழித்து எறிந்தனர், இது ஒரு ஃபிளமேத்ரோவரை உருவாக்கும் பாகங்கள். இப்போது இரலே உங்களுக்காக ஒன்றை உருவாக்க முடியும். நீங்கள் அத்தகைய வேடிக்கையாக இருக்க முடியும்."
+
+msgid "TXT_RPLY0_SCRIPT06_D7580_WHERE"
+msgstr "கேட் மெக்கானிசம் எங்கே?"
+
+#
+# https://en.wikipedia.org/wiki/Reclaimed_water
+msgid "TXT_DLG_SCRIPT06_D9096_YOUHA"
+msgstr "சாக்கடையின் மற்றொரு பகுதிக்குள் நுழைய வேண்டும். அங்கு செல்ல, நீங்கள் ஒரு கழிவுநீர் பராமரிப்பு கதவில் இருந்து கோட்டைக்குள் நுழைந்து திரவ மீட்பு தொட்டியை வடிகட்ட வேண்டும். கீழே சாக்கடைக்கான மறைக்கப்பட்ட நுழைவாயில் உள்ளது, அதற்கு அப்பால் கையேடு கேட் கட்டுப்பாடு உள்ளது."
+
+msgid "TXT_RPLY0_SCRIPT06_D9096_ANYTH"
+msgstr "நீங்கள் வேறு ஏதாவது செய்ய முடியுமா?"
+
+msgid "TXT_DLG_SCRIPT06_D10612_GOODL"
+msgstr "நல்ல அதிர்ச்டம். உங்களுக்காக எங்களின் பல சுரங்கப்பாதைகளைத் திறந்துவிட்டேன். இது உங்கள் பணியை எளிதாக்க வேண்டும். ஓ, அளவு பத்து, சரியானது! ஆனால் பயங்கரமான நிறங்கள்."
+
+msgid "TXT_RPLY0_SCRIPT06_D10612_THANK"
+msgstr "உங்கள் உதவிக்கு நன்றி."
+
+msgid "TXT_DLG_SCRIPT06_D12128_YOUGI"
+msgstr "நீங்கள் எனக்கு எதுவும் கொடுக்கவில்லை, உங்களுக்கு எதுவும் கிடைக்காது."
+
+# MAP06: Beggar.
+msgid "TXT_DLG_SCRIPT06_D13644_WERAN"
+msgstr "வேரன் நம்மைக் காப்பாற்றுவான். அவர் இதுவரை எங்களைத் தவறவிட்டதில்லை."
+
+msgid "TXT_DLG_SCRIPT06_D15160_IFYOU"
+msgstr "உங்கள் பிரச்சனைக்கு விடை தேடினால், வேரானைக் கண்டுபிடி. "
+
+msgid "TXT_DLG_SCRIPT06_D16676_LONGL"
+msgstr "முன்னணி வாழ்வா? அதெல்லாம் அபத்தம். நாம் அனைவரும் இறக்க காத்திருக்கிறோம். "
+
+msgid "TXT_DLG_SCRIPT06_D18192_WITHO"
+msgstr "மேற்பரப்பிற்கு நாம் செல்லும் பாதை சீல் வைக்கப்பட்டதால், நமக்கு நாமே உணவளிக்கக் கூட முடியாது."
+
+msgid "TXT_DLG_SCRIPT06_D19708_FOODD"
+msgstr "உணவு, உங்களிடம் உணவு இருக்கிறதா? தயவுசெய்து எங்களுக்கு உதவுங்கள்."
+
+# MAP06: Gray acolyte.
+msgid "TXT_DLG_SCRIPT06_D21224_THISI"
+msgstr "கைதிகளை தப்பியோட அனுமதித்ததற்கும், சாக்கடைகளை காத்ததற்கும் இதுவே எனது வெகுமதி. அவர்களை உடைத்த ஒருவரை நான் எப்போதாவது கண்டுபிடித்தால், நான் அவரை படுகொலை செய்வேன்."
+
+# MAP06: Red acolyte.
+msgid "TXT_DLG_SCRIPT06_D22740_WEVEG"
+msgstr "அந்த சிறிய பிச்சைக்காரர்களை நாம் விரும்பும் இடத்தில் நாங்கள் பெற்றுள்ளோம். இன்னும் சில நாட்கள், அவர்கள் மறதிக்குள் பட்டினி கிடப்பார்கள்."
+
+# MAP06: Near storage.
+msgid "TXT_DLG_SCRIPT06_D24256_WHATS"
+msgstr "உங்கள் இசைவு என்ன? இங்கு அங்கீகரிக்கப்படாத பணியாளர்கள் யாரும் அனுமதிக்கப்படுவதில்லை."
+
+# MAP07: Red acolyte at the main entrance.
+msgid "TXT_DLG_SCRIPT07_D0_WHATT"
+msgstr "என்ன ஆச்சு? கதவுகளைத் திறந்தது யார்? முன்னறிவிப்பு ஒலி!!!"
+
+# MAP07
+msgid "TXT_DLG_SCRIPT07_D1516_THERE"
+msgstr "சாக்கடைக்குள் மற்றொரு வழி இருக்கிறது, அந்த சுவிட்சை எறிந்துவிட்டு, மேலே சென்று மறுசீரமைப்பு தொட்டியை தூய்மை செய்யுங்கள்."
+
+# MAP07: Hospital.
+msgid "TXT_DLG_SCRIPT07_D3032_WHATT"
+msgstr "என்ன ஆச்சு உன் சிக்கல். புரோகிராமர் தனது பார்வையாளர் அறையிலிருந்து வந்தால், நீங்கள் இறந்துவிட்டீர்கள்."
+
+msgid "TXT_DLG_SCRIPT07_D4548_HEYYO"
+msgstr "ஏய், நீங்கள் அங்கு செல்ல இசைவு இல்லை."
+
+# MAP07: Computer room (northwest building).
+msgid "TXT_DLG_SCRIPT07_D6064_PROGR"
+msgstr "புரோகிராமர்? உனக்கு யார் சொன்னது? புரோகிராமர் இல்லை. அந்தக் கதை பல வருடங்களுக்கு முன்பே பரப்பப்பட்டது. முன்னணி உண்மையில் அந்த முட்டாள்தனத்தை நம்பியது என்று என்னிடம் சொல்லாதீர்கள். முட்டாள்கள்."
+
+msgid "TXT_RPLY0_SCRIPT07_D6064_WELLW"
+msgstr "சரி, உண்மை என்ன?"
+
+msgid "TXT_DLG_SCRIPT07_D7580_ITOLD"
+msgstr "எனக்குத் தெரிந்ததைச் சொன்னேன். நீங்கள் உங்கள் நேரத்தை வீணடிக்கிறீர்கள்."
+
+# MAP07: Font soldier.
+msgid "TXT_DLG_SCRIPT07_D9096_FIGHT"
+msgstr "போராடுங்கள், செய் பெறுவோம். இந்த நாள் நமக்கு சொந்தமானதாக இருக்கும்!"
+
+msgid "TXT_DLG_SCRIPT07_D10612_FIGHT"
+msgstr "போராடுங்கள், செய் பெறுவோம். இந்த நாள் நமக்கு சொந்தமானதாக இருக்கும்!"
+
+msgid "TXT_DLG_SCRIPT07_D12128_FIGHT"
+msgstr "போராடுங்கள், செய் பெறுவோம். இந்த நாள் நமக்கு சொந்தமானதாக இருக்கும்!"
+
+msgid "TXT_DLG_SCRIPT07_D13644_FIGHT"
+msgstr "போராடுங்கள், செய் பெறுவோம். இந்த நாள் நமக்கு சொந்தமானதாக இருக்கும்!"
+
+msgid "TXT_DLG_SCRIPT07_D15160_FIGHT"
+msgstr "போராடுங்கள், செய் பெறுவோம். இந்த நாள் நமக்கு சொந்தமானதாக இருக்கும்!"
+
+msgid "TXT_DLG_SCRIPT07_D16676_FIGHT"
+msgstr "போராடுங்கள், செய் பெறுவோம். இந்த நாள் நமக்கு சொந்தமானதாக இருக்கும்!"
+
+# MAP08: Northeast room.
+msgid "TXT_DLG_SCRIPT08_D0_YOUKI"
+msgstr "எல்லா காவலர்களையும் கொன்றாய். என்னை காயப்படுத்தாதே. இது ஒரு முட்டாள்தனமான சிந்தனை என்று நான் அவரிடம் சொன்னேன். உண்மையான ப்ரோக்ராமர் காப்பகத்தில் இருக்கிறார். இதோ, இந்த சாவியை எடு."
+
+msgid "TXT_RPLY0_SCRIPT08_D0_YOURE"
+msgstr "நீங்கள் தான் புரோகிராமர்!"
+
+msgid "TXT_DLG_SCRIPT08_D1516_DOILO"
+msgstr "நான் இறுதி அதிகாரத்தைப் பயன்படுத்துவதைப் போல் இருக்கிறேனா? ஆணை நம் அனைவரையும் பயன்படுத்துகிறது. இப்போது போ, நான் ஏற்கனவே இறந்துவிட்டேன்."
+
+msgid "TXT_DLG_SCRIPT08_D3032_POWER"
+msgstr "சக்திதான் முக்கியம்!"
+
+# MAP10: Macil.
+msgid "TXT_DLG_SCRIPT10_D0_GOODY"
+msgstr "நல்லது, நீங்கள் மீண்டும் விழிப்புடன் இருக்கிறீர்கள். புரோகிராமர் கைவிடப்பட்ட அந்த உருப்படியை நீங்கள் கைப்பற்றியபோது, சில பயங்கரமான ரகசியங்களை நீங்கள் விடுவித்தீர்கள்."
+
+msgid "TXT_RPLY0_SCRIPT10_D0_WHATK"
+msgstr "என்ன மாதிரியான ரகசியங்கள். "
+
+msgid "TXT_DLG_SCRIPT10_D1516_WEHAV"
+msgstr "இந்த கருவி எங்கிருந்து வந்தது என்று எங்களுக்குத் தெரியாது, ஆனால் நாம் கண்டுபிடிக்க வேண்டும். நீங்கள் ஆர்டரில் இருந்து ஒன்றைப் பறித்துவிட்டீர்கள், ஆனால் எங்களிடம் ஐந்தும் இருக்க வேண்டும். எனது அறிவின் எல்லையை நாங்கள் அடைந்துவிட்டோம். ஆரக்கிளைத் தேடி, உதவி கேட்கவும்."
+
+msgid "TXT_RPLY0_SCRIPT10_D1516_IMGON"
+msgstr "எனக்கு மேலும் பொருட்கள் தேவைப்படும்."
+
+msgid "TXT_DLG_SCRIPT10_D3032_HERES"
+msgstr "இதோ கொஞ்சம் தங்கம். மருத்துவரையும் ஆயுதப் பயிற்சியாளரையும் சென்று பார்த்துவிட்டு, வெளியே செல்லுங்கள்!"
+
+msgid "TXT_RPLY0_SCRIPT10_D3032_RIGHT"
+msgstr "சரி!"
+
+msgid "TXT_DLG_SCRIPT10_D4548_FIGHT"
+msgstr "முன்னணி மற்றும் சுதந்திரத்திற்காக போராடுங்கள். வெளியே செல்லவும்."
+
+# MAP10: Macil → The Oracle said to kill him
+msgid "TXT_DLG_SCRIPT10_D6064_WHATP"
+msgstr "நீங்கள் திரும்புவதற்கு எது தூண்டுகிறது? நீங்கள் காயப்பட்டீர்களா? இழக்க நேரமில்லை, உங்கள் பணியைத் தொடருங்கள். சிகில் முடிக்கவும்."
+
+msgid "TXT_RPLY0_SCRIPT10_D6064_THEOR"
+msgstr "நீங்கள் இறக்க வேண்டும் என்று ஆரக்கிள் சொல்கிறது!"
+
+msgid "TXT_DLG_SCRIPT10_D7580_IHAVE"
+msgstr "நான் சுதந்திரத்திற்கு வாய்மை செய்தேன். மூன்றாவது பாகத்தை வைத்திருப்பது ஆரக்கிள்தான். உன் துரோகி இருக்கிறான்."
+
+msgid "TXT_RPLY0_SCRIPT10_D7580_THEOR"
+msgstr "அப்போது ஆரக்கிள் இறந்துவிடும்!"
+
+msgid "TXT_RPLY1_SCRIPT10_D7580_ITHIN"
+msgstr "நீங்கள் துரோகி என்று நினைக்கிறேன்!"
+
+# MAP10: Macil → You chose to kill Macil
+msgid "TXT_DLG_SCRIPT10_D9096_SPIRI"
+msgstr "ஒரே கடவுளின் ஆவி என்னைப் பழிவாங்கும் மற்றும் இந்த உலகத்தை மண்ணாக மாற்றும்."
+
+# MAP10: Macil → You chose to kill the Oracle
+msgid "TXT_DLG_SCRIPT10_D10612_YOUHA"
+msgstr "சரியான முடிவை எடுத்துள்ளீர்கள். ஆரக்கிள் ஒழுங்கை இயக்கும் எந்த தீமையால் கட்டுப்படுத்தப்படுகிறது என்பது தெளிவாகிறது. அதற்குத் திரும்பி, சிகிலின் மூன்றாவது பகுதியைக் கோருங்கள்."
+
+# MAP10: Macil → After killing the Oracle
+msgid "TXT_DLG_SCRIPT10_D12128_THERE"
+msgstr "நாம் எதிர்கொள்ளும் பயங்கரத்திற்கு முடிவே இல்லை. ஆணை எங்கள் மக்களைக் கொல்லவில்லை என்பதை நாங்கள் கண்டுபிடித்துள்ளோம். அது அவர்களை உயிரி இயந்திர வீரர்களாக மாற்றுகிறது. இது செய்யப்படும் வசதியைக் கண்டறிந்து நிரந்தரமாக மூடவும்."
+
+msgid "TXT_RPLY0_SCRIPT10_D12128_WHERE"
+msgstr "இது எங்கே அமைந்துள்ளது?"
+
+msgid "TXT_DLG_SCRIPT10_D13644_ONEOF"
+msgstr "எங்கள் கேப்டன்களில் ஒருவரான ரிக்டர், காமன்சில் உள்ள நீர்வீழ்ச்சியில் உங்களுக்காகக் காத்திருக்கிறார். அவர் வசதியைப் பார்த்தார், உங்களை உள்ளே வழிநடத்துவார். இனியாவது இந்தக் கொடுமையை நிறுத்துங்கள்."
+
+msgid "TXT_RPLY0_SCRIPT10_D13644_THEYL"
+msgstr "இதற்கு அவர்கள் பணம் கொடுப்பார்கள்!"
+
+msgid "TXT_DLG_SCRIPT10_D15160_FIGHT"
+msgstr "முன்னணி மற்றும் சுதந்திரத்திற்காக போராடுங்கள். வெளியே செல்லவும்."
+
+# MAP10: Macil → After destroying the converter in MAP24.
+msgid "TXT_DLG_SCRIPT10_D16676_IAMTH"
+msgstr "நான் ஒரு கடவுள்... நான் என் உடலை விட்டு வெளியேறி, அவருடன் சேர்ந்து பறப்பதற்கு அவருடைய ஆவி சுதந்திரமாக இருக்க வேண்டும். உங்களிடம் என்ன இருக்கிறது என்று உங்களுக்குத் தெரியாது... மேலும் நீங்கள் என்ன பயங்கரத்தை எதிர்கொள்கிறீர்கள்... ஒரே கடவுள் சுதந்திரமாக இருக்க வேண்டும்... அவர் எனக்கு வெகுமதி அளிப்பார்... நான் ஒருவனாக இருப்பேன்."
+
+msgid "TXT_RPLY0_SCRIPT10_D16676_IWILL"
+msgstr "நான் உன்னை அழிப்பேன்!"
+
+# MAP10: Gerald (no upgrade).
+msgid "TXT_DLG_SCRIPT10_D18192_GLADT"
+msgstr "நீங்கள் செய்து பார்த்ததில் மகிழ்ச்சி. உனக்கு என்ன வேண்டும்? "
+
+msgid "TXT_RPLY0_SCRIPT10_D18192_HEALM"
+msgstr "என்னை குணமாக்குங்கள்."
+
+msgid "TXT_RYES0_SCRIPT10_D18192_WELLL"
+msgstr "சரி, உங்களை சரிசெய்வோம்."
+
+msgid "TXT_RNO0_SCRIPT10_D18192_YOURE"
+msgstr "நீங்கள் நலமாக இருக்கிறீர்கள்."
+
+msgid "TXT_RPLY1_SCRIPT10_D18192_ANYTH"
+msgstr "ஏதாவது புதியதா?"
+
+msgid "TXT_RYES1_SCRIPT10_D18192_YESIV"
+msgstr "ஆம், உங்களுக்காக சில புதிய ஆர்டுவேர் வைத்துள்ளேன்."
+
+msgid "TXT_RNO1_SCRIPT10_D18192_NOPEI"
+msgstr "இல்லை, நான் அதில் வேலை செய்கிறேன்."
+
+# (one upgrade: Mission to talk to the Oracle)
+msgid "TXT_DLG_SCRIPT10_D19708_WHATC"
+msgstr "நான் இப்போது உனக்கு என்ன செய்ய முடியும்? ஃபெரிச் சில சிக்கலான கோப்புகளை டிக்ரிப்ட் செய்கிறார், ஆனால் அது மதிப்புக்குரியது. ச்டாமினா இம்ப்லான்ட்டின் அடுத்த பதிப்பிற்கு நான் விண்ணப்பிக்கக்கூடிய சில தகவல்கள் ஏற்கனவே உள்ளன."
+
+msgid "TXT_RPLY0_SCRIPT10_D19708_HEALM"
+msgstr "என்னை குணமாக்குங்கள்."
+
+msgid "TXT_RYES0_SCRIPT10_D19708_YOUSH"
+msgstr "நீங்கள் கொஞ்சம் கவனமாக இருக்க கற்றுக்கொள்ள வேண்டும்."
+
+msgid "TXT_RPLY1_SCRIPT10_D19708_WHENW"
+msgstr "அது எப்போது தயாராகும்?"
+
+msgid "TXT_RYES1_SCRIPT10_D19708_ITSRE"
+msgstr "அது இப்போது தயாராக உள்ளது. இதற்கு ஒரு கணம் மட்டுமே ஆகாது."
+
+msgid "TXT_RNO1_SCRIPT10_D19708_SOON"
+msgstr "விரைவில்."
+
+# (two upgrades: Mission to decide between Macil or the Oracle)
+msgid "TXT_DLG_SCRIPT10_D21224_ITHIN"
+msgstr "உங்கள் உள்வைப்பு வன்பொருளில் ஒரு கோளாறைக் கண்டேன் என்று நினைக்கிறேன். ஃபெரிச் எனக்கு ஒரு ரெட்ரோஃபிட்டை வடிவமைக்க உதவுகிறார், அது அதை கவனித்து உங்கள் வன்பொருளின் வேகத்தை சிறிது அதிகரிக்கும். உங்களுக்காக நான் ஏதாவது செய்ய முடியுமா?"
+
+msgid "TXT_RPLY0_SCRIPT10_D21224_PATCH"
+msgstr "என்னை ஒட்டவும்."
+
+msgid "TXT_RYES0_SCRIPT10_D21224_THERE"
+msgstr "அங்கு, புதியது போல் நல்லது என்று நான் நினைக்கிறேன்."
+
+msgid "TXT_RPLY1_SCRIPT10_D21224_RETRO"
+msgstr "ரெட்ரோஃபிட்டா?"
+
+# (during sad/bad ending)
+msgid "TXT_RYES1_SCRIPT10_D21224_AHNOW"
+msgstr "ஆ, இப்போது நாங்கள் சமைக்கிறோம்."
+
+msgid "TXT_RNO1_SCRIPT10_D21224_ILLHA"
+msgstr "ஃபெரிச் முடிச்சதும் வாங்கிடறேன்."
+
+# (three upgrades: Mission to kill the Loremaster with the Oracle alive).
+msgid "TXT_DLG_SCRIPT10_D22740_HOWSI"
+msgstr "எப்படி போகிறது? மனிதனே, இந்த புதிய தொழில்நுட்பத்தில் சில வெறுமனே ஆச்சரியமாக இருக்கிறது. இது உங்கள் உள்வைப்புக்கு உதவ வேண்டும். நான் சில யோசனைகளை உருவாக்கிக்கொண்டிருக்கிறேன், விரைவில் அவற்றை ஆயத்தம் செய்வேன். நான் உங்களுக்காக என்ன செய்ய முடியும், ஒருவேளை ஏதாவது குணப்படுத்த முடியுமா?"
+
+msgid "TXT_RPLY0_SCRIPT10_D22740_YESHE"
+msgstr "ஆம், என்னை குணமாக்குங்கள்."
+
+msgid "TXT_RYES0_SCRIPT10_D22740_ALLRI"
+msgstr "சரி, இதோ."
+
+msgid "TXT_RPLY1_SCRIPT10_D22740_HOWAB"
+msgstr "அந்த புதிய தொழில்நுட்பம் எப்படி இருக்கும்?"
+
+msgid "TXT_RYES1_SCRIPT10_D22740_LETME"
+msgstr "இது எப்படி வேலை செய்கிறது என்பதை எனக்குத் தெரியப்படுத்துங்கள்."
+
+msgid "TXT_RNO1_SCRIPT10_D22740_IMNOT"
+msgstr "நான் இன்னும் அதை வடிவமைத்து முடிக்கவில்லை."
+
+# (four upgrades).
+msgid "TXT_DLG_SCRIPT10_D24256_BACKA"
+msgstr "மீண்டும், நீங்கள் இதை ஒருபோதும் சோர்வடையவில்லையா? எனக்கு சில நல்ல செய்திகள் கிடைத்துள்ளன, உங்கள் உள்வைப்பின் வெளியீட்டை அதிகரிக்க ஃபெரிச் ஒரு வழியைக் கண்டுபிடித்தார். அவர் விவரக்குறிப்புகளை என்னிடம் கொடுத்தார், நான் அதை உங்கள் உடலியலுடன் கலக்க முயற்சிக்கிறேன். நான் சில திசுவை வலுக்கட்டாயமாக வளர்த்து வருகிறேன், முற்றிலும் புதிய விசயங்கள், அது எடுக்கும் என்று நம்புகிறேன். உங்களுக்கு மருத்தீடு தேவையா?"
+
+msgid "TXT_RPLY0_SCRIPT10_D24256_YESHE"
+msgstr "ஆம், என்னை குணமாக்குங்கள்."
+
+msgid "TXT_RYES0_SCRIPT10_D24256_DONEN"
+msgstr "முடிந்தது, இப்போது உங்களை கவனித்துக் கொள்ளுங்கள்."
+
+msgid "TXT_RPLY1_SCRIPT10_D24256_WHENW"
+msgstr "நீங்கள் எப்போது முடிப்பீர்கள்?"
+
+msgid "TXT_RYES1_SCRIPT10_D24256_NOWHE"
+msgstr "இப்போது. ஏய், அது வேலை செய்தது!"
+
+msgid "TXT_RNO1_SCRIPT10_D24256_IMWAI"
+msgstr "திசுக்களின் வளர்ச்சி சுழற்சியை முடிக்க நான் காத்திருக்கிறேன்."
+
+# (five upgrades).
+msgid "TXT_DLG_SCRIPT10_D25772_WELLI"
+msgstr "சரி, நான் மீண்டும் எனது பழைய தந்திரங்களுக்கு திரும்பினேன், நான் இன்னும் உங்கள் உள்வைப்புகளில் வேலை செய்து வருகிறேன். Macil இப்போது அனைவருக்கும் அவற்றை அங்கீகரித்துள்ளது என்பது உங்களுக்குத் தெரியுமா? இல்லை, இல்லையா? ஏனென்றால் நீங்கள் நன்றாக வந்தீர்கள். உங்களுக்காக நான் ஏதாவது செய்ய முடியுமா?"
+
+msgid "TXT_RPLY0_SCRIPT10_D25772_HELPM"
+msgstr "இங்கே எனக்கு உதவுங்கள்."
+
+msgid "TXT_RYES0_SCRIPT10_D25772_THATS"
+msgstr "என்னால் முடியும் அவ்வளவுதான்."
+
+msgid "TXT_RPLY1_SCRIPT10_D25772_NEWIM"
+msgstr "புதிய உள்வைப்பு?"
+
+msgid "TXT_RYES1_SCRIPT10_D25772_YEPMY"
+msgstr "ஆம், இன்னும் என்னுடைய சிறந்த ஒன்று."
+
+msgid "TXT_RNO1_SCRIPT10_D25772_SORRY"
+msgstr "மன்னிக்கவும், ஆனால் நீங்கள் காத்திருக்க வேண்டும்."
+
+# (six upgrades).
+msgid "TXT_DLG_SCRIPT10_D27288_THISI"
+msgstr "இதுதான், ஃபெரிச் எங்களிடம் உள்ள எல்லா தரவுகளிலிருந்தும் தன்னால் முடிந்த அனைத்தையும் வெளியேற்ற முடிந்தது, இது சிறந்த மற்றும் கடைசி உள்வைப்பு மேம்படுத்தலாக இருக்கும். எனது சிறந்த படைப்பு அதன் உச்சத்தை எட்டுவதைப் பார்க்கும்போது அது ஒருவித மனச்சோர்வை ஏற்படுத்தும். சரி, குறைந்த பட்சம் இந்த குழுவினர் என்னை ஆக்கிரமித்து வைத்திருப்பார்கள்."
+
+msgid "TXT_RPLY0_SCRIPT10_D27288_COULD"
+msgstr "நீங்கள் என்னை குணப்படுத்த முடியுமா?"
+
+msgid "TXT_RYES0_SCRIPT10_D27288_THERE"
+msgstr "அங்கே, நீங்கள் இப்போது தயாராகிவிட்டீர்கள்."
+
+# MAP10: Feris (no training).
+msgid "TXT_DLG_SCRIPT10_D28804_ITSTH"
+msgstr "அது ஈரோ. பெரிய வேலை! நான் உங்களுக்காக என்ன பெற முடியும்? எங்களிடம் கோட்டையிலிருந்து அனைத்து ஒழுங்குமுறைகளும் இருப்பதால் இப்போது கொஞ்சம் பெரிய தேர்வைப் பெற்றுள்ளோம். நீங்கள் வெடிமருந்து வாங்க வேண்டும் என்றால் சச்டினிடம் பேசுங்கள். அவர் உங்களை கவனித்துக் கொள்வார். "
+
+msgid "TXT_RPLY0_SCRIPT10_D28804_IMOUT"
+msgstr "எனக்கு குண்டுகள் தீர்ந்துவிட்டது."
+
+msgid "TXT_RYES0_SCRIPT10_D28804_HERES"
+msgstr "இதோ உங்களுக்காக சில வெடிமருந்துகள். அதை வீணாக்காதீர்கள்."
+
+msgid "TXT_RPLY1_SCRIPT10_D28804_TEACH"
+msgstr "எனக்கு கற்றுக்கொடுங்கள்."
+
+msgid "TXT_RYES1_SCRIPT10_D28804_NOWAF"
+msgstr "இப்போது, பெரிய துப்பாக்கிகள் பற்றிய சில குறிப்புகள்."
+
+msgid "TXT_RNO1_SCRIPT10_D28804_YOURE"
+msgstr "நீங்கள் இன்னும் தயாராகவில்லை."
+
+# (one training)
+msgid "TXT_DLG_SCRIPT10_D30320_HOWST"
+msgstr "போர் முயற்சி எப்படி இருக்கிறது? பரவாயில்லை, நாங்கள் இன்னும் இங்கே இருந்தால், அது நன்றாக இருக்கும். நான் உனக்கு என்ன செய்ய முடியும்?"
+
+msgid "TXT_RPLY0_SCRIPT10_D30320_IRANO"
+msgstr "எனக்கு தோட்டாக்கள் தீர்ந்தன."
+
+msgid "TXT_RYES0_SCRIPT10_D30320_THATS"
+msgstr "அது உதவ வேண்டும்."
+
+msgid "TXT_RNO0_SCRIPT10_D30320_YOUVE"
+msgstr "உங்களிடம் போதுமான வெடிமருந்துகள் உள்ளன."
+
+msgid "TXT_RPLY1_SCRIPT10_D30320_TEACH"
+msgstr "எனக்கு கற்றுக்கொடுங்கள்."
+
+msgid "TXT_RYES1_SCRIPT10_D30320_HEREI"
+msgstr "இங்கே, நான் வர்த்தகத்தின் சில தந்திரங்களைக் காட்டுகிறேன்."
+
+msgid "TXT_RNO1_SCRIPT10_D30320_YOURE"
+msgstr "நீங்கள் இன்னும் தயாராகவில்லை."
+
+# (two trainings)
+msgid "TXT_DLG_SCRIPT10_D31836_WELLH"
+msgstr "நீங்கள் பயிற்சிக்காக வந்திருக்கிறீர்களா அல்லது நீங்கள் தேடும் வெடிமருந்துகளா? நான் உன்னை இன்னும் முடித்துவிட்டேன் என்று நினைக்காதே. நான் இன்னும் சில தந்திரங்களை வைத்திருக்கிறேன்."
+
+msgid "TXT_RPLY0_SCRIPT10_D31836_ITSAM"
+msgstr "இது இப்போதைக்கு வெடிமருந்து."
+
+msgid "TXT_RYES0_SCRIPT10_D31836_HERES"
+msgstr "இதோ உங்களுக்காக சில வெடிமருந்துகள். அதை வீணாக்காதீர்கள்."
+
+msgid "TXT_RNO0_SCRIPT10_D31836_YOUVE"
+msgstr "உங்களிடம் போதுமான வெடிமருந்துகள் உள்ளன."
+
+msgid "TXT_RPLY1_SCRIPT10_D31836_TEACH"
+msgstr "எனக்கு கற்றுக்கொடுங்கள்."
+
+msgid "TXT_RYES1_SCRIPT10_D31836_TIMEF"
+msgstr "மேம்பட்ட பாடங்களுக்கான நேரம்."
+
+msgid "TXT_RNO1_SCRIPT10_D31836_YOURE"
+msgstr "நீங்கள் இன்னும் தயாராகவில்லை."
+
+# (three trainings)
+msgid "TXT_DLG_SCRIPT10_D33352_WELLW"
+msgstr "சரி, இப்போது அது என்ன? நீங்கள் எப்போதாவது ஓய்வு எடுக்கவேண்டாமா? நீங்கள் இன்னும் சுவாசிப்பதில் மகிழ்ச்சி அடைகிறேன். எனக்குப் பிடித்த மாணவன் உடல் பையின் உள்ளே இருந்து வெளியே திரும்பி வருவதை நான் வெறுக்கிறேன்."
+
+msgid "TXT_RPLY0_SCRIPT10_D33352_INEED"
+msgstr "எனக்கு இன்னும் சில தோட்டாக்கள் தேவை."
+
+msgid "TXT_RYES0_SCRIPT10_D33352_THERE"
+msgstr "அங்கே, அதை வீணாக்காதீர்கள்."
+
+msgid "TXT_RNO0_SCRIPT10_D33352_YOUHA"
+msgstr "உன்னிடம் போதும்."
+
+msgid "TXT_RPLY1_SCRIPT10_D33352_WHATC"
+msgstr "நீங்கள் எனக்கு என்ன கற்பிக்க முடியும்?"
+
+msgid "TXT_RYES1_SCRIPT10_D33352_DONTG"
+msgstr "சுறுசுறுப்பாக இருக்க வேண்டாம், நீங்கள் வளர இன்னும் சிறிது இடம் உள்ளது."
+
+msgid "TXT_RNO1_SCRIPT10_D33352_NOTHI"
+msgstr "நீங்கள் தயாராகும் வரை எதுவும் இல்லை."
+
+# (four trainings)
+msgid "TXT_DLG_SCRIPT10_D34868_LOOKW"
+msgstr "திரும்பி வந்தவர் யார் என்று பாருங்கள், உங்கள் மனதில் என்ன இருக்கிறது? இது கடினமாக இருந்தது என்று எனக்குத் தெரியும், ஆனால் உங்கள் முயற்சிகளை நாங்கள் அனைவரும் பாராட்டுகிறோம், என்னை நம்புங்கள்."
+
+msgid "TXT_RPLY0_SCRIPT10_D34868_IVERU"
+msgstr "என்னிடம் தோட்டாக்கள் தீர்ந்துவிட்டன."
+
+msgid "TXT_RYES0_SCRIPT10_D34868_WHATE"
+msgstr "வேறு என்ன புதியது, இதோ."
+
+msgid "TXT_RNO0_SCRIPT10_D34868_YOUHA"
+msgstr "நான் உங்களுக்கு கொடுக்கக்கூடியதை விட அதிகமாக உங்களிடம் உள்ளது."
+
+msgid "TXT_RPLY1_SCRIPT10_D34868_TEACH"
+msgstr "உன்னால் முடிந்ததை எனக்குக் கற்றுக் கொடு."
+
+msgid "TXT_RYES1_SCRIPT10_D34868_ALLRI"
+msgstr "சரி, இதோ சில குறிப்புகள்."
+
+msgid "TXT_RNO1_SCRIPT10_D34868_NOTRI"
+msgstr "இப்போது இல்லை."
+
+# (five trainings)
+msgid "TXT_DLG_SCRIPT10_D36384_WHATI"
+msgstr "உங்களுக்கு என்ன தேவை? பல ஆண்டுகளாக நாங்கள் அனுபவித்து வரும் வலியை நீங்கள் ஆர்டருக்கு வழங்குகிறீர்கள் என்று நம்புகிறேன்."
+
+msgid "TXT_RPLY0_SCRIPT10_D36384_SOMEA"
+msgstr "சில வெடிமருந்துகள்."
+
+msgid "TXT_RYES0_SCRIPT10_D36384_THERE"
+msgstr "இதோ, அதை வீணாக்காதீர்கள்."
+
+msgid "TXT_RNO0_SCRIPT10_D36384_YOUVE"
+msgstr "உங்களிடம் போதுமான வெடிமருந்துகள் உள்ளன."
+
+msgid "TXT_RPLY1_SCRIPT10_D36384_TEACH"
+msgstr "எனக்கு கற்றுக்கொடுங்கள்."
+
+msgid "TXT_RYES1_SCRIPT10_D36384_AFEWM"
+msgstr "இன்னும் சில பாடங்கள் மற்றும் நான் கற்பிக்கக்கூடிய அனைத்தையும் நீங்கள் அறிவீர்கள்."
+
+msgid "TXT_RNO1_SCRIPT10_D36384_YOURE"
+msgstr "நீங்கள் இன்னும் தயாராகவில்லை."
+
+# (six trainings)
+msgid "TXT_DLG_SCRIPT10_D37900_ICANT"
+msgstr "நாங்கள் இன்னும் சுற்றி இருக்கிறோம் என்று என்னால் நம்ப முடியவில்லை, நீங்களும் நானும். ஆரம்பத்தில் இருந்தே கடந்து வந்தவர்கள் நம்மில் அதிகம். நண்பரே உனக்காக நான் என்ன செய்ய முடியும்?"
+
+msgid "TXT_RPLY0_SCRIPT10_D37900_IMOUT"
+msgstr "எனக்கு குண்டுகள் தீர்ந்துவிட்டது."
+
+# (in good health = enjoy)
+msgid "TXT_RYES0_SCRIPT10_D37900_HEREU"
+msgstr "இங்கே, உங்களை நல்ல ஆரோக்கியத்துடன் வைத்திருக்க அவற்றைப் பயன்படுத்தவும்."
+
+msgid "TXT_RNO0_SCRIPT10_D37900_YOUHA"
+msgstr "உன்னிடம் போதும்."
+
+msgid "TXT_RPLY1_SCRIPT10_D37900_TEACH"
+msgstr "எனக்கு கற்றுக்கொடுங்கள்."
+
+msgid "TXT_RYES1_SCRIPT10_D37900_WELLT"
+msgstr "சரி, அவ்வளவுதான், நீங்கள் முடித்துவிட்டீர்கள். என்னால் இனி கற்பிக்க முடியாது."
+
+msgid "TXT_RNO1_SCRIPT10_D37900_RETUR"
+msgstr "Macil உங்களுக்கு நேரம் என்று சொன்ன பிறகு திரும்பவும்."
+
+# (seven trainings)
+msgid "TXT_DLG_SCRIPT10_D39416_IVETA"
+msgstr "என்னால் முடிந்த அனைத்தையும் இப்போது உங்களுக்குக் கற்றுக் கொடுத்தேன். நீங்கள் தோட்டாக்கள் தீர்ந்துவிட்டால் தவிர, உங்களுக்குத் தேவையான அனைத்தையும் நான் உங்களுக்குக் கொடுத்துள்ளேன். நான் இன்னும் உங்களுக்கு உதவக்கூடியவர்கள்."
+
+msgid "TXT_RPLY0_SCRIPT10_D39416_YESIA"
+msgstr "ஆம் நான் தான்."
+
+msgid "TXT_RYES0_SCRIPT10_D39416_HEREY"
+msgstr "இதோ போ. "
+
+# MAP10: Justin.
+msgid "TXT_DLG_SCRIPT10_D40932_CHECK"
+msgstr "டெலிபோர்ட்டர் பெக்கான் என்ன புதியது என்று பாருங்கள். நீங்கள் பீக்கனைப் பயன்படுத்தும்போது, சிக்னலைக் கண்காணித்து உதவியை அனுப்புவோம். நான் உங்களிடம் ஏதாவது கிடைக்குமா?"
+
+msgid "TXT_RPLY0_SCRIPT10_D40932_BOXOF"
+msgstr "ராக்கெட் பெட்டி"
+
+msgid "TXT_RYES0_SCRIPT10_D40932_THERE"
+msgstr "அங்கே போ."
+
+msgid "TXT_RNO0_SCRIPT10_D40932_YOUCA"
+msgstr "நீங்கள் அதை வாங்க முடியாது!"
+
+msgid "TXT_RPLY1_SCRIPT10_D40932_HEGRE"
+msgstr "எச்-இ கையெறி குண்டுகள்."
+
+msgid "TXT_RYES1_SCRIPT10_D40932_HEREY"
+msgstr "இதோ போ."
+
+msgid "TXT_RNO1_SCRIPT10_D40932_COMEB"
+msgstr "உங்களிடம் போதுமான பணம் இருக்கும்போது திரும்பி வாருங்கள்."
+
+msgid "TXT_RPLY2_SCRIPT10_D40932_ENERG"
+msgstr "ஆற்றல் பாட்"
+
+msgid "TXT_RYES2_SCRIPT10_D40932_HERES"
+msgstr "இதோ உங்கள் ஆற்றல் பாட்"
+
+msgid "TXT_RNO2_SCRIPT10_D40932_YOUDO"
+msgstr "அதுக்கு உன்னிடம் போதாது."
+
+msgid "TXT_RPLY3_SCRIPT10_D40932_TELEP"
+msgstr "டெலிபோர்ட்டர் பெக்கான்"
+
+msgid "TXT_RYES3_SCRIPT10_D40932_HELPW"
+msgstr "உதவி, எப்போது, எங்கு உங்களுக்குத் தேவை."
+
+msgid "TXT_RNO3_SCRIPT10_D40932_SORRY"
+msgstr "மன்னிக்கவும், தொண்டு இல்லை."
+
+# MAP10: Rebels in Macil's room.
+msgid "TXT_DLG_SCRIPT10_D42448_NOWTH"
+msgstr "இப்போது நாம் உண்மையில் கோட்டையை கட்டுப்பாட்டில் வைத்திருக்கிறோம், அதை வைத்திருக்க நாம் கூடுதல் விழிப்புடன் இருக்க வேண்டும். ஆர்டர் இப்போது மீண்டும் வேலைநிறுத்தம் செய்ய தயாராகி வருகிறது."
+
+# MAP10: Castle's entrance.
+msgid "TXT_DLG_SCRIPT10_D43964_BECAR"
+msgstr "அங்கே கவனமாக இருங்கள்."
+
+# MAP10: Rebel in Hospital.
+msgid "TXT_DLG_SCRIPT10_D45480_KEEPU"
+msgstr "சிறந்த வேலையைத் தொடருங்கள், நீங்கள் இல்லாமல் எங்களால் இதைச் செய்திருக்க முடியாது."
+
+# MAP11: Commons (no token).
+msgid "TXT_DLG_SCRIPT11_D0_IMTHE"
+msgstr "நான் தான் கீமாச்டர்."
+
+# (Oracle's token)
+msgid "TXT_DLG_SCRIPT11_D1516_ALOTO"
+msgstr "இது ஒரு நன்றியற்ற மற்றும் முக்கியமற்ற வேலை என்று நிறைய பேர் கூறுவார்கள். ஆனால் அது உண்மையில் இல்லை…"
+
+msgid "TXT_RPLY0_SCRIPT11_D1516_GIVEM"
+msgstr "சாவியைக் கொடு!"
+
+msgid "TXT_DLG_SCRIPT11_D3032_OKBUT"
+msgstr "சரி, ஆனால் ஞாபகம் வைத்துக்கொள், நான் தான் கீமாச்டர்."
+
+msgid "TXT_RPLY0_SCRIPT11_D3032_OKPAL"
+msgstr "சரி நண்பரே, எதுவாக இருந்தாலும்."
+
+msgid "TXT_DLG_SCRIPT11_D4548_IMTHE"
+msgstr "நான் தான் கீமாச்டர்."
+
+# MAP11: Red acolyte at temple's entrance.
+msgid "TXT_DLG_SCRIPT11_D6064_DIETR"
+msgstr "துரோகியை இறக்கு!"
+
+msgid "TXT_DLG_SCRIPT11_D7580_DIETR"
+msgstr "துரோகியை இறக்கு!"
+
+# MAP11: Prisoner.
+msgid "TXT_DLG_SCRIPT11_D9096_HAVEY"
+msgstr "நீங்கள் குதூகலிக்க வந்தீர்களா? நாங்கள் இந்த கம்பிகளுக்குப் பின்னால் இருந்தாலும், நாங்கள் வைத்திருக்கும் வரை, நீங்கள் இன்னும் இழக்கிறீர்கள்."
+
+msgid "TXT_DLG_SCRIPT11_D10612_LETUS"
+msgstr "எங்களை இங்கிருந்து விடுங்கள்!"
+
+msgid "TXT_DLG_SCRIPT11_D12128_LEAVE"
+msgstr "என்னை விட்டுவிடு!"
+
+# MAP12: Oracle.
+msgid "TXT_DLG_SCRIPT12_D0_WHATI"
+msgstr "எளியவனே நீ தேடும் ஞானம் என்ன?"
+
+msgid "TXT_RPLY0_SCRIPT12_D0_THESI"
+msgstr "ஒரே கடவுளின் சிகில்."
+
+msgid "TXT_DLG_SCRIPT12_D1516_IFEEL"
+msgstr "ஒரு துண்டு உங்களுக்குள் எதிரொலிப்பதை உணர்கிறேன். இரண்டாவது கிரிம்சன் மற்றும் அப்சிடியன் கோபுரத்தின் மையத்தில் உள்ளது. அங்கு நீங்கள் பிசப்பை எதிர்த்துப் போராட வேண்டும், அவர் அறிந்தவர், உங்களுக்காகக் காத்திருக்கிறார். அவருடைய சக்தியின் அடையாளத்தைப் பின்பற்றுவதன் மூலம் நீங்கள் அவரைக் கண்டுபிடிப்பீர்கள். இந்த கிள்ளாக்கை கீமாச்டரிடம் எடுத்துச் செல்லுங்கள். மிருகத்தைக் கொன்ற பிறகு என்னிடம் திரும்பு."
+
+msgid "TXT_RPLY0_SCRIPT12_D1516_ILLBE"
+msgstr "நான் திரும்பி வருகிறேன்."
+
+msgid "TXT_DLG_SCRIPT12_D3032_ALTHO"
+msgstr "பிசப் வலிமையானவர் என்றாலும், இந்த தேடுதல் சிறியது. அடுத்த துண்டு உங்களிடம் இருக்கும்போது என்னிடம் திரும்பவும்."
+
+# MAP12: Oracle → After killing the Bishop
+msgid "TXT_DLG_SCRIPT12_D4548_YOURN"
+msgstr "உங்கள் அடுத்த அறைகூவல் உங்கள் ஆன்மாவை சோதிக்கும். மூன்றாவது துண்டு உங்கள் சொந்த தலைவரால் நடத்தப்படுகிறது. அவர் உங்களைக் கொல்ல அனுப்புவது போலவே இருக்கிறார்."
+
+msgid "TXT_RPLY0_SCRIPT12_D4548_MACIL"
+msgstr "மாசில்? துரோகியா?"
+
+msgid "TXT_DLG_SCRIPT12_D6064_YOURB"
+msgstr "உங்கள் குருட்டு நம்பிக்கை, நீங்கள் பெறும் ஒவ்வொரு துண்டிலும் அவர் தனது இலக்குகளை நோக்கி முன்னேற அனுமதித்துள்ளது. அவரை எதிர்த்து உங்கள் தலைவிதியை தீர்த்துக் கொள்ளுங்கள்."
+
+msgid "TXT_RPLY0_SCRIPT12_D6064_ALLRI"
+msgstr "சரி, அது மேசில்."
+
+msgid "TXT_RPLY1_SCRIPT12_D6064_ITSYO"
+msgstr "உன்னைத்தான் நான் நம்பவில்லை."
+
+msgid "TXT_DLG_SCRIPT12_D7580_WHATE"
+msgstr "நீங்கள் செய்யும் எந்தத் தேர்வும் ஒரே கடவுளின் விருப்பத்தின் கீழ் அழிந்துவிடும்."
+
+# MAP12: Choose to kill Macil.
+msgid "TXT_RPLY0_SCRIPT12_D7580_ILLBE"
+msgstr "மாசில் இறந்தவுடன் நான் திரும்பி வருவேன்."
+
+# MAP12: Choose to not kill Macil.
+msgid "TXT_RPLY1_SCRIPT12_D7580_ICANT"
+msgstr "அதை நான் அனுமதிக்க முடியாது."
+
+# MAP12: You chose to kill Macil.
+msgid "TXT_DLG_SCRIPT12_D9096_THERI"
+msgstr "நீங்கள் அசையாமல் நிற்கும்போது கால நதி என்றென்றும் முன்னோக்கி நகர்கிறது."
+
+# MAP12: Oracle → After killing Macil
+msgid "TXT_DLG_SCRIPT12_D10612_YOUHA"
+msgstr "நீங்கள் உங்கள் உடலில் இருந்து புற்றுநோயை வெட்டிவிட்டீர்கள், ஆனால் உங்கள் இதயம் இன்னும் துடிக்கிறது. அடுத்து உங்கள் மக்களை கசாப்பு செய்து கட்டுப்படுத்தும் அறுவை மருத்தீடு நிபுணரான லோரேமாச்டரை நீங்கள் கண்டுபிடிக்க வேண்டும். அவரை நிறுத்துங்கள், அடுத்த பகுதி உங்களுடையதாக இருக்கும்."
+
+msgid "TXT_RPLY0_SCRIPT12_D10612_WHERE"
+msgstr "நான் அவரை எங்கே கண்டுபிடிப்பது?"
+
+msgid "TXT_DLG_SCRIPT12_D12128_USETH"
+msgstr "லோர்மாச்டரை அடைய நான் இப்போது திறந்த கதவுக்குப் பின்னால் உள்ள டெலிபோர்ட்டரைப் பயன்படுத்தவும். அவர் இறந்தவுடன், என்னிடம் திரும்ப அதே சாதனத்தைப் பயன்படுத்தவும்."
+
+msgid "TXT_RPLY0_SCRIPT12_D12128_ILLBE"
+msgstr "நான் மீண்டும் வருவேன், அவருடைய துண்டுடன்!"
+
+msgid "TXT_DLG_SCRIPT12_D13644_THERI"
+msgstr "நீங்கள் அசையாமல் நிற்கும்போது கால நதி என்றென்றும் முன்னோக்கி நகர்கிறது."
+
+# MAP12: Oracle → After killing the Loremaster with Macil dead.
+msgid "TXT_DLG_SCRIPT12_D15160_PITIF"
+msgstr "பரிதாபகரமான மனிதனே, ஆயிரக்கணக்கானோர் செய்யத் தவறியதை நீ செய்துவிட்டாய்... ஒரே கடவுளின் குரலான சிகிலின் சக்தியை எனக்குக் கொண்டு வந்தாய்."
+
+msgid "TXT_RPLY0_SCRIPT12_D15160_IDONT"
+msgstr "எனக்கு புரியவில்லை."
+
+msgid "TXT_DLG_SCRIPT12_D16676_THESI"
+msgstr "சிகில் கதவைத் திறந்து, இந்த கிரகத்தை சுத்தப்படுத்தும் மற்றும் என்னை என்றென்றும் வாழ அனுமதிக்கும் ஆவியை விடுவிக்கும். நான் இந்த உலகத்தை அதன் ஆற்றல்களை அகற்றிவிட்டு புதிய உலகங்களைக் கண்டுபிடிப்பேன்."
+
+msgid "TXT_RPLY0_SCRIPT12_D16676_ICANT"
+msgstr "நான் அதை செய்ய அனுமதிக்க முடியாது."
+
+# MAP12: Oracle → Fight with the Oracle.
+msgid "TXT_DLG_SCRIPT12_D18192_YOUCA"
+msgstr "நீங்கள் இறந்துவிட்டால் உங்களால் முடியும்."
+
+# MAP14: James
+msgid "TXT_DLG_SCRIPT14_D0_AREYO"
+msgstr "எங்களை விடுவிக்க வந்தீர்களா? நான் நன்றாக இருந்ததால், அவர்கள் என் உள்வைப்பை வெளியே எடுத்தார்கள். நான் இன்னும் இங்கேயே இருக்க வேண்டும் மற்றும் எச்சில் துடைக்க வேண்டும்."
+
+msgid "TXT_RPLY0_SCRIPT14_D0_YESIM"
+msgstr "ஆம், உங்களை விடுவிக்க நான் வந்துள்ளேன்."
+
+msgid "TXT_RYES0_SCRIPT14_D0_YOUME"
+msgstr "நீங்கள் சொல்கிறீர்களா?"
+
+# (conveyors = conveyor belts)
+msgid "TXT_DLG_SCRIPT14_D1516_ICANT"
+msgstr "என்னால் வேறு யாருக்கும் உதவ முடியாது. நீங்கள் டிரான்ச்மிட்டரை வெடிக்கும் வரை அல்ல. அதுதான் மேலே ஃபோர்ச்ஃபீல்ட் பின்னால் இருக்கிறது. என் வேலை கன்வேயர்களில் நெரிசல் இல்லை என்பதை உறுதிப்படுத்துவது. இனி இல்லை!"
+
+msgid "TXT_RPLY0_SCRIPT14_D1516_THATS"
+msgstr "அது சரி, நீங்கள் காப்பாற்றப்பட்டீர்கள்!"
+
+msgid "TXT_RYES0_SCRIPT14_D1516_OHTHA"
+msgstr "ஓ, நன்றி!"
+
+msgid "TXT_DLG_SCRIPT14_D3032_WEREF"
+msgstr "நாங்கள் சுதந்திரமாக இருக்கிறோம்!! நாங்கள் சுதந்திரமாக இருக்கிறோம்!! நாங்கள் சுதந்திரமாக இருக்கிறோம்!!"
+
+# MAP14: Drone
+msgid "TXT_DLG_SCRIPT14_D4548_MUSTM"
+msgstr "மேலும் தாதுவை சுரங்கப்படுத்த வேண்டும்!"
+
+# MAP14: Peasant (ex-drone)
+msgid "TXT_DLG_SCRIPT14_D6064_WEREF"
+msgstr "நாங்கள் சுதந்திரமாக இருக்கிறோம்!! நாங்கள் சுதந்திரமாக இருக்கிறோம்!! நாங்கள் சுதந்திரமாக இருக்கிறோம்!!"
+
+msgid "TXT_DLG_SCRIPT14_D7580_MUSTM"
+msgstr "மேலும் தாதுவை சுரங்கப்படுத்த வேண்டும்!"
+
+msgid "TXT_DLG_SCRIPT14_D9096_WEREF"
+msgstr "நாங்கள் சுதந்திரமாக இருக்கிறோம்!! நாங்கள் சுதந்திரமாக இருக்கிறோம்!! நாங்கள் சுதந்திரமாக இருக்கிறோம்!!"
+
+msgid "TXT_DLG_SCRIPT14_D10612_MUSTM"
+msgstr "மேலும் தாதுவை சுரங்கப்படுத்த வேண்டும்!"
+
+msgid "TXT_DLG_SCRIPT14_D12128_WEREF"
+msgstr "நாங்கள் சுதந்திரமாக இருக்கிறோம்!! நாங்கள் சுதந்திரமாக இருக்கிறோம்!! நாங்கள் சுதந்திரமாக இருக்கிறோம்!!"
+
+# MAP15: Red acolytes.
+msgid "TXT_DLG_SCRIPT15_D0_WHATA"
+msgstr "நீங்கள் இங்கே என்ன செய்கிறீர்கள்?"
+
+msgid "TXT_RPLY0_SCRIPT15_D0_ROUTI"
+msgstr "வழக்கமான ஆய்வு."
+
+msgid "TXT_RYES0_SCRIPT15_D0_ALLRI"
+msgstr "சரி, தொடரவும்."
+
+# MAP15: Red acolytes + Technician at the beginning.
+msgid "TXT_DLG_SCRIPT15_D1516_NOTHI"
+msgstr "இங்கே புகாரளிக்க எதுவும் இல்லை. எல்லாம் நன்றாக வேலை செய்கிறது. ஏதேனும் தவறு நடந்தால், நான் நிச்சயமாக புகாரளிப்பேன்."
+
+# MAP15: Technician at the beginning.
+msgid "TXT_DLG_SCRIPT15_D3032_SIRTH"
+msgstr "சார் முன்னாடியே ஒரு சிக்கல் இருந்துச்சு."
+
+# MAP17: Bailey (if you don't have Order's key)
+msgid "TXT_DLG_SCRIPT17_D0_MOVEA"
+msgstr "உலோகத்தை எடுத்துச் செல்லவும் அல்லது சுவைக்கவும்."
+
+# (if you have it)
+msgid "TXT_DLG_SCRIPT17_D1516_IDCHE"
+msgstr "ஐ.டி. சரிபார்க்கவும்."
+
+msgid "TXT_RPLY0_SCRIPT17_D1516_HEREI"
+msgstr "இதோ, நான் அவசரமாக இருக்கிறேன்."
+
+msgid "TXT_DLG_SCRIPT17_D3032_STOPW"
+msgstr "உங்கள் ஐடியை என் முகத்தில் அசைப்பதை நிறுத்திவிட்டு உள்ளே செல்லுங்கள்."
+
+# MAP17: Green guards.
+msgid "TXT_DLG_SCRIPT17_D4548_NOTHI"
+msgstr "இங்கே பார்க்க எதுவும் இல்லை. உடன் செல்லுங்கள்."
+
+# MAP17: Hospital → Quincy
+msgid "TXT_DLG_SCRIPT17_D6064_WHATA"
+msgstr "என்ன ஒரு ஆரோக்கியமான மாதிரி. உனக்கு என் உதவி தேவையில்லை, இல்லையா?"
+
+msgid "TXT_RPLY0_SCRIPT17_D6064_WELLY"
+msgstr "சரி, ஆம். மாசில் என்னை அனுப்பினார்."
+
+msgid "TXT_DLG_SCRIPT17_D7580_SHHHH"
+msgstr "ச்ச்ச்... நாங்கள் இருவரும் கொல்லப்பட வேண்டும் என்று நீங்கள் விரும்பாதவரை அமைதியாக இருங்கள். இப்போது, நான் உங்களுக்கு என்ன செய்ய முடியும்?"
+
+msgid "TXT_RPLY0_SCRIPT17_D7580_TELLM"
+msgstr "பிசப்பை எப்படி கண்டுபிடிப்பது என்று சொல்லுங்கள்."
+
+msgid "TXT_DLG_SCRIPT17_D9096_OHHHI"
+msgstr "ஓஓ, நீங்கள் அதை என்னிடம் கேட்பீர்கள் என்று எனக்குத் தெரியும். பின்னால் பார். அதுதான் பிசப் கோட்டையின் நுழைவாயில். இது உத்தியோகபூர்வ பார்வையாளர்களுக்காக மட்டுமே நிறுத்தப்படும் ஒரு படைப் புலத்தால் பாதுகாக்கப்படுகிறது, நீங்கள் அல்ல."
+
+msgid "TXT_RPLY0_SCRIPT17_D9096_IMUST"
+msgstr "நான் பிசப்பைக் கொல்ல வேண்டும்."
+
+msgid "TXT_DLG_SCRIPT17_D10612_OHSUR"
+msgstr "ஓ, உறுதி செய்வாய். முதலில், பாதுகாப்பு வளாகத்திற்குள் சென்று டெலிபோர்ட்டரைப் பயன்படுத்தவும். இது உங்கள் விருப்பத்திற்கு அதிகமாக இருக்கலாம், நடு நிர்வாகத்தில் உள்ள கணினியை அழிக்கவும். கணினி இல்லை, ஆற்றல் புலம் இல்லை."
+
+msgid "TXT_RPLY0_SCRIPT17_D10612_GREAT"
+msgstr "நன்றாக இருக்கிறது, அது எளிதானது."
+
+# (five-finger discount = theft)
+msgid "TXT_DLG_SCRIPT17_D12128_THERE"
+msgstr "கணினியை அழிப்பதில் ஒரு நன்மை இருக்கிறது, அங்குதான் கோபுரத்திற்கான திட்டங்கள் வைக்கப்பட்டுள்ளன. ஐந்து விரல் தள்ளுபடி என்று சொல்ல முடியுமா? ஏ ஏ!"
+
+msgid "TXT_RPLY0_SCRIPT17_D12128_ANYTH"
+msgstr "வேறு ஏதாவது?"
+
+msgid "TXT_DLG_SCRIPT17_D13644_OHWEL"
+msgstr "சரி, பெய்லியின் கிடங்கிற்கு மவுலர்களின் கப்பலைப் பெற்றதாக சொல் உள்ளது, அதுதான் ஆவியாகும் கருவி."
+
+msgid "TXT_RPLY0_SCRIPT17_D13644_ISTHA"
+msgstr "அதுவா, இப்போது?"
+
+msgid "TXT_DLG_SCRIPT17_D15160_DONTY"
+msgstr "தொலைந்து போ என்ற வார்த்தைகளுக்கு பொருள் தெரியாதா?"
+
+# MAP17: Hospital → Assistant
+msgid "TXT_DLG_SCRIPT17_D16676_TALKT"
+msgstr "முதலில் குயின்சியிடம் பேசுங்கள். அவர் சரி என்று சொல்லும் வரை யாருக்கும் உதவ எனக்கு இசைவு இல்லை."
+
+msgid "TXT_DLG_SCRIPT17_D18192_HOWHO"
+msgstr "இன்று நான் உங்களுக்கு எப்படி உதவுவது?"
+
+msgid "TXT_RPLY0_SCRIPT17_D18192_MEDPA"
+msgstr "மெட் ஒட்டு"
+
+msgid "TXT_RYES0_SCRIPT17_D18192_HERES"
+msgstr "இதோ உங்கள் இணைப்பு."
+
+msgid "TXT_RNO0_SCRIPT17_D18192_THATI"
+msgstr "அது 15 தங்கம் நண்பரே."
+
+msgid "TXT_RPLY1_SCRIPT17_D18192_MEDIC"
+msgstr "மருத்துவ தொகுப்பு"
+
+msgid "TXT_RYES1_SCRIPT17_D18192_HERES"
+msgstr "இதோ உங்கள் மருத்துவப் பெட்டி."
+
+msgid "TXT_RNO1_SCRIPT17_D18192_YOURE"
+msgstr "அதற்கான நிதியில் நீங்கள் சற்று குறைவாக உள்ளீர்கள்."
+
+msgid "TXT_RPLY2_SCRIPT17_D18192_FIELD"
+msgstr "கள அறுவை மருத்தீடு அறிவிலி"
+
+msgid "TXT_RYES2_SCRIPT17_D18192_ONEFI"
+msgstr "ஒரு கள அறுவை மருத்தீடு அறிவிலி, முடிந்தது."
+
+msgid "TXT_RNO2_SCRIPT17_D18192_COMEB"
+msgstr "பணம் இருக்கும்போது திரும்பி வா!"
+
+# MAP18: Yellow guard
+msgid "TXT_DLG_SCRIPT18_D0_WHATI"
+msgstr "அது என்ன?"
+
+msgid "TXT_RPLY0_SCRIPT18_D0_JUSTL"
+msgstr "சும்மா சுற்றிப் பார்க்கிறேன்."
+
+msgid "TXT_RYES0_SCRIPT18_D0_JUSTK"
+msgstr "வழியைத் தவிர்த்து விடுங்கள்."
+
+msgid "TXT_DLG_SCRIPT18_D1516_THETE"
+msgstr "டெம்ப்லர்கள் தங்களின் புதிய மவுலர்களை எடுப்பதற்கு விரைவில் இங்கு வருவார்கள். நீங்கள் அவர்களின் வழியில் சென்றால் நீங்கள் இறந்தவர்."
+
+msgid "TXT_RPLY0_SCRIPT18_D1516_MAULE"
+msgstr "மவுலர்களா?"
+
+msgid "TXT_RYES0_SCRIPT18_D1516_THETE"
+msgstr "டெம்ப்ளரின் விருப்பமான கருவி."
+
+msgid "TXT_DLG_SCRIPT18_D3032_THEYC"
+msgstr "முன்னதாகவே உள்ளே வந்தார்கள். அதுதான் எல்லா பாதுகாப்பும். நான் பூட்டும்போது அவர்களைப் பார்க்கும் வாய்ப்பு கிடைத்தது. மீதமுள்ள படைப்பிரிவுகள் தங்கள் ஆயுதங்களைக் கோருவதற்கு வரும் வரை யாரும் உள்ளே அல்லது வெளியே செல்லக்கூடாது."
+
+# Appears in MAP19 and is supposed to be spoken by the Peasant1 actor (named
+# “Security Comple”). However, no such actor is spawned in the map, rendering
+# this line unused.
+msgid "TXT_DLG_SCRIPT19_D0_THISI"
+msgstr "இங்குதான் நடு நிர்வாகத்திற்கான திட்டங்களைப் பெறுகிறீர்கள்."
+
+# SVE.WAD
+# MAP22: C-shaped building → Master Smithy.
+msgid "TXT_DLG_SCRIPT22_D0_IRUNT"
+msgstr "நான் இந்த இடத்தை நடத்துகிறேன். லோர்மாச்டரின் ரோபோ வடிவமைப்புகளுக்குத் தேவையான மூலப் பாகங்களை உருவாக்குவதே எனது வேலை. உத்தியோகபூர்வ விசயமாக நீங்கள் இங்கு வரவில்லை என்றால், பேசுவதற்கு எனக்கு நேரமில்லை என்று நான் பயப்படுகிறேன்."
+
+msgid "TXT_RPLY0_SCRIPT22_D0_IAMON"
+msgstr "நான் உத்தியோகபூர்வ வேலையில் இருக்கிறேன்."
+
+# (After giving the blue chalice to Timothy).
+msgid "TXT_DLG_SCRIPT22_D1516_SOYOU"
+msgstr "எனவே நீங்கள் தீமோத்தேயுவிடம் பேசினீர்கள், நான் பார்க்கிறேன். எங்கள் அனைவருக்கும் மிகவும் தாமதமாகிவிடும் முன், ஆணையின் மர்மங்களை அவிழ்க்க அவரும் நானும் ஒன்றாக உழைத்தோம். ஒருவேளை நீங்கள் எங்களுக்கு உதவலாம். உற்பத்தித் துறைக்கான கதவைத் திறந்துவிட்டேன்."
+
+msgid "TXT_RPLY0_SCRIPT22_D1516_DOYOU"
+msgstr "உள்ளே என்ன இருக்கிறது தெரியுமா?"
+
+msgid "TXT_DLG_SCRIPT22_D3032_ITSAT"
+msgstr "இது மிக ரகசியமான பகுதி. அங்குள்ள ஆணை சில வகையான... உயிரினங்களை இனப்பெருக்கம் செய்வது மட்டுமல்லாமல், தாயத்து என்ற விசித்திரமான கலைப்பொருளையும் என் கண்களால் பார்த்திருக்கிறேன். அதன் அருகில் யாரும் அனுமதிக்கப்படவில்லை. புரளி என்னவென்றால், அது மற்ற இரண்டு வகைகளுடன் இணைந்தால் அது பெரும் சக்தியைக் கொண்டுள்ளது."
+
+msgid "TXT_RPLY0_SCRIPT22_D3032_ISUPP"
+msgstr "உங்களுக்கு இந்த சேதி வேண்டும் என்று நினைக்கிறேன்?"
+
+msgid "TXT_DLG_SCRIPT22_D4548_NOIFY"
+msgstr "இல்லை! நீங்கள் அதைக் கண்டுபிடிக்க முடிந்தால், அதை வைத்திருப்பது உங்களுடையது. எங்கள் அடக்குமுறையிலிருந்து எங்களை விடுவிக்க நீங்கள் இதைப் பயன்படுத்தலாம். நான் உங்களுக்கு அதிர்ச்டத்தை விரும்புகிறேன், ஆனால் நீங்கள் அங்கு சென்றால் அதை விட உங்களுக்கு நிறைய தேவைப்படும்…"
+
+msgid "TXT_RPLY0_SCRIPT22_D4548_WHATS"
+msgstr "கடந்த காலத்தைப் பற்றி இதெல்லாம் என்ன?"
+
+msgid "TXT_DLG_SCRIPT22_D6064_YOUVE"
+msgstr "அருகிலுள்ள மற்ற இடிபாடுகளை நீங்கள் நிச்சயமாகப் பார்த்திருப்பீர்கள். நமது கிரகத்தில் மோதிய வால்மீன் உண்மையில் ஒரு விண்வெளிக் கப்பல் என்று தெரிகிறது, நம்பினாலும் நம்பாவிட்டாலும், அது நீண்ட காலத்திற்கு முன்பு இந்த உலகில் தோன்றியது."
+
+msgid "TXT_RPLY0_SCRIPT22_D6064_SOTHE"
+msgstr "எனவே ச்பெக்டர்கள், ஒரே கடவுள்…"
+
+msgid "TXT_DLG_SCRIPT22_D7580_THEYA"
+msgstr "அவர்கள் ஒரு காலத்தில் இந்த உலகத்தை ஆண்ட உயிரினங்கள் மற்றும் அதன் வாழ்க்கையை நுகர்வதில் குறியாக உள்ளனர். முன்னோர்கள் அவற்றை முத்திரையிட முடிந்தது, ஆனால் செயல்பாட்டில் தங்கள் உயிரைக் கொடுத்தனர். எனக்குத் தெரிந்தது அவ்வளவுதான் என்று நான் பயப்படுகிறேன்."
+
+msgid "TXT_RPLY0_SCRIPT22_D7580_THANK"
+msgstr "நன்றி... என்னால் முடிந்ததைச் செய்வேன்."
+
+msgid "TXT_DLG_SCRIPT22_D9096_GODSP"
+msgstr "கடவுளே, நண்பரே."
+
+# SVE.WAD
+# MAP22: C-shaped building → Apprentice.
+msgid "TXT_DLG_SCRIPT22_D10612_TALKT"
+msgstr "உங்களுக்கு ஏதேனும் கேள்விகள் இருந்தால் மாச்டர் ச்மிதியிடம் பேசுங்கள். நான் செய்வது எல்லாம் பெட்டிகளில் லேபிள்களை வைப்பதுதான்."
+
+# MAP23: Weapons
+msgid "TXT_DLG_SCRIPT23_D0_WHATC"
+msgstr "குடிமகனே, நான் உங்களுக்கு என்ன பெற முடியும்?"
+
+msgid "TXT_RPLY0_SCRIPT23_D0_AMMOB"
+msgstr "வெடிமருந்து பெட்டி"
+
+msgid "TXT_RYES0_SCRIPT23_D0_HERES"
+msgstr "இதோ உங்கள் வெடிமருந்து."
+
+msgid "TXT_RNO0_SCRIPT23_D0_YOUDO"
+msgstr "அதுக்கு உன்னிடம் போதாது!"
+
+msgid "TXT_RPLY1_SCRIPT23_D0_CRATE"
+msgstr "ஏவுகணைகளின் பெட்டி"
+
+msgid "TXT_RYES1_SCRIPT23_D0_HEREC"
+msgstr "இங்கே, குடிமகன்."
+
+msgid "TXT_RNO1_SCRIPT23_D0_ITS85"
+msgstr "இது 85 தங்கம், குடிமகன்!"
+
+msgid "TXT_RPLY2_SCRIPT23_D0_HEGRE"
+msgstr "எச்-இ கையெறி குண்டுகள்"
+
+msgid "TXT_RYES2_SCRIPT23_D0_HEREA"
+msgstr "இதோ உங்கள் கையெறி குண்டுகள்."
+
+msgid "TXT_RNO2_SCRIPT23_D0_THEYA"
+msgstr "அவர்கள் 100 பொன், நண்பரே."
+
+msgid "TXT_RPLY3_SCRIPT23_D0_ENERG"
+msgstr "ஆற்றல் பாட்"
+
+msgid "TXT_RYES3_SCRIPT23_D0_HEREY"
+msgstr "இங்கே நீங்கள் இருக்கிறீர்கள்."
+
+msgid "TXT_RNO3_SCRIPT23_D0_THATS"
+msgstr "அது 135 தங்கம், மன்னிக்கவும்."
+
+# MAP23: Armory (with Tevick locked).
+msgid "TXT_DLG_SCRIPT23_D1516_WHATC"
+msgstr "நான் உங்களுக்கு என்ன உதவ முடியும்?"
+
+msgid "TXT_RPLY0_SCRIPT23_D1516_LEATH"
+msgstr "தோல் கவசம்"
+
+msgid "TXT_RYES0_SCRIPT23_D1516_HEREI"
+msgstr "இங்கே அது குடிமகன்."
+
+msgid "TXT_RNO0_SCRIPT23_D1516_THERE"
+msgstr "இங்கே கொடுக்கப்பட்ட தொண்டு இல்லை!"
+
+msgid "TXT_RPLY1_SCRIPT23_D1516_METAL"
+msgstr "உலோக கவசம்"
+
+msgid "TXT_RYES1_SCRIPT23_D1516_ANEXC"
+msgstr "ஒரு சிறந்த தேர்வு குடிமகன்."
+
+msgid "TXT_RNO1_SCRIPT23_D1516_YOUDO"
+msgstr "இதற்கு உங்களிடம் போதாது!"
+
+msgid "TXT_RPLY2_SCRIPT23_D1516_ENVIR"
+msgstr "சுற்றுச்சூழல் வழக்கு"
+
+msgid "TXT_RYES2_SCRIPT23_D1516_HEREY"
+msgstr "இங்கே நீங்கள் இருக்கிறீர்கள்."
+
+msgid "TXT_RNO2_SCRIPT23_D1516_NOMON"
+msgstr "பணம் இல்லை, சூட் இல்லை."
+
+msgid "TXT_RPLY3_SCRIPT23_D1516_SOMET"
+msgstr "வேறு ஏதாவது?"
+
+msgid "TXT_RYES3_SCRIPT23_D1516_GOTHR"
+msgstr "மண்டபத்தின் கதவு வழியாகச் செல்லுங்கள்."
+
+msgid "TXT_RNO3_SCRIPT23_D1516_YOUMU"
+msgstr "நீங்கள் விளையாட விரும்பினால் நீங்கள் செலுத்த வேண்டும்."
+
+# MAP23: Armory (with Tevick unlocked).
+msgid "TXT_DLG_SCRIPT23_D3032_WHATC"
+msgstr "நான் உனக்கு என்ன கிடைக்கும்?"
+
+msgid "TXT_RPLY0_SCRIPT23_D3032_LEATH"
+msgstr "தோல் கவசம்"
+
+msgid "TXT_RYES0_SCRIPT23_D3032_HEREI"
+msgstr "இதோ, குடிமகன்."
+
+msgid "TXT_RNO0_SCRIPT23_D3032_THERE"
+msgstr "இங்கே கொடுக்கப்பட்ட தொண்டு இல்லை!"
+
+msgid "TXT_RPLY1_SCRIPT23_D3032_METAL"
+msgstr "உலோக கவசம்"
+
+msgid "TXT_RYES1_SCRIPT23_D3032_ANEXC"
+msgstr "ஒரு சிறந்த தேர்வு குடிமகன்."
+
+msgid "TXT_RNO1_SCRIPT23_D3032_YOUDO"
+msgstr "இதற்கு உங்களிடம் போதாது!"
+
+msgid "TXT_RPLY2_SCRIPT23_D3032_ENVIR"
+msgstr "சுற்றுச்சூழல் வழக்கு"
+
+msgid "TXT_RYES2_SCRIPT23_D3032_HEREY"
+msgstr "இங்கே நீங்கள் இருக்கிறீர்கள்."
+
+msgid "TXT_RNO2_SCRIPT23_D3032_NOMON"
+msgstr "பணம் இல்லை, சூட் இல்லை."
+
+# MAP23: Hospital
+msgid "TXT_DLG_SCRIPT23_D4548_HOWCA"
+msgstr "இன்று நான் உங்களுக்கு எப்படி உதவ முடியும்?"
+
+msgid "TXT_RPLY0_SCRIPT23_D4548_MEDPA"
+msgstr "மெட் ஒட்டு"
+
+msgid "TXT_RYES0_SCRIPT23_D4548_HERES"
+msgstr "இதோ உங்கள் இணைப்பு."
+
+msgid "TXT_RNO0_SCRIPT23_D4548_THATI"
+msgstr "அது 15 தங்கம் நண்பரே."
+
+msgid "TXT_RPLY1_SCRIPT23_D4548_MEDIC"
+msgstr "மருத்துவ தொகுப்பு"
+
+msgid "TXT_RYES1_SCRIPT23_D4548_HERES"
+msgstr "இதோ உங்கள் மருத்துவப் பெட்டி."
+
+msgid "TXT_RNO1_SCRIPT23_D4548_YOURA"
+msgstr "அதற்கான பொருள் உங்களுக்கு சற்று குறைவு."
+
+msgid "TXT_RPLY2_SCRIPT23_D4548_FIELD"
+msgstr "கள அறுவை மருத்தீடு அறிவிலி"
+
+msgid "TXT_RYES2_SCRIPT23_D4548_ONEFI"
+msgstr "ஒரு கள அறுவை மருத்தீடு அறிவிலி."
+
+msgid "TXT_RNO2_SCRIPT23_D4548_COMEB"
+msgstr "பணம் இருக்கும்போது திரும்பி வா!"
+
+# MAP23: Barkeep.
+msgid "TXT_DLG_SCRIPT23_D6064_HELLO"
+msgstr "வணக்கம் நண்பரே, நான் உங்களுக்கு என்ன கிடைக்கும்?"
+
+msgid "TXT_RPLY0_SCRIPT23_D6064_INFOR"
+msgstr "தகவல்"
+
+msgid "TXT_RYES0_SCRIPT23_D6064_IVENE"
+msgstr "ஃபேக்டரிக்கு உள்ளேயோ வெளியேயோ யாரும் செல்வதை நான் பார்த்ததில்லை, ஃபோர்ஃபீல்ட் எப்போதும் மேலே இருக்கும்."
+
+msgid "TXT_RNO0_SCRIPT23_D6064_NOMON"
+msgstr "பணம் இல்லை, செய்தி இல்லை."
+
+msgid "TXT_DLG_SCRIPT23_D7580_YESWH"
+msgstr "ஆம், நீங்கள் எதை விரும்புகிறீர்கள்?"
+
+# (dot not recommended)
+msgid "TXT_RPLY0_SCRIPT23_D7580_MOREI"
+msgstr "மேலும் செய்தி."
+
+msgid "TXT_RYES0_SCRIPT23_D7580_THEFA"
+msgstr "வால்மீன் தாக்கம் ஏற்பட்ட இடத்தில் தொழிற்சாலை கட்டப்பட்டுள்ளது. இது தற்செயலானது என்று நான் நினைக்கவில்லை."
+
+msgid "TXT_RNO0_SCRIPT23_D7580_COMEO"
+msgstr "வாருங்கள், இது 5 தங்கம்."
+
+msgid "TXT_DLG_SCRIPT23_D9096_HELLO"
+msgstr "மீண்டும் வணக்கம், அது என்னவாக இருக்கும்?"
+
+# (dot not recommended)
+msgid "TXT_RPLY0_SCRIPT23_D9096_MOREI"
+msgstr "மேலும் செய்தி."
+
+msgid "TXT_RYES0_SCRIPT23_D9096_THEFA"
+msgstr "ஆணை அதன் புதிய திகிலை வெளிப்படுத்தியபோது தொழிற்சாலை மூடப்பட்டது: விசாரணையாளர்."
+
+msgid "TXT_RNO0_SCRIPT23_D9096_5GOLD"
+msgstr "தயவுசெய்து 5 தங்கம்."
+
+# STRIFE1.WAD
+# MAP23: Barkeep
+msgid "TXT_DLG_SCRIPT23_D10612_THATS"
+msgstr "எனக்கு அவ்வளவுதான் தெரியும். பார்டெண்டர்கள் கூட, மன்னிக்கவும், சொல்ல வேண்டிய பொருட்கள் தீர்ந்துவிட்டன."
+
+# STRIFE1.WAD
+# MAP23: Timothy
+msgid "TXT_DLG_SCRIPT23_D12128_HELLO"
+msgstr "வணக்கம்."
+
+msgid "TXT_RPLY0_SCRIPT23_D12128_WHATA"
+msgstr "என்ன செய்கிறாய்?"
+
+msgid "TXT_RYES0_SCRIPT23_D12128_IMDOI"
+msgstr "நான் காரியம் செய்கிறேன், போ!"
+
+# STRIFE1.WAD
+# MAP23: Tevick.
+msgid "TXT_DLG_SCRIPT23_D13644_NOWWH"
+msgstr "இப்போது, நான் உங்களுக்கு என்ன உதவ முடியும்?"
+
+msgid "TXT_RPLY0_SCRIPT23_D13644_SHADO"
+msgstr "Shadow armor?"
+
+msgid "TXT_RYES0_SCRIPT23_D13644_AHHTO"
+msgstr "ஆஆ, கேட்க வேண்டும், ஆனால் பார்க்கவில்லை!"
+
+msgid "TXT_RNO0_SCRIPT23_D13644_GETOU"
+msgstr "இங்கிருந்து வெளியேறு, உங்களிடம் கொஞ்சம் பணம் இருக்கும்போது திரும்பி வாருங்கள்."
+
+# STRIFE1.WAD
+# MAP23: Richter.
+msgid "TXT_DLG_SCRIPT23_D15160_THANK"
+msgstr "நீங்கள் இங்கு வந்ததற்கு நன்றி டியூச். தொழிற்சாலைக்குள் நுழைய உங்களுக்கு ஒரு திறவுகோல் தேவை. நாங்கள் அதைத் திருடினோம், ஆனால் ஆர்டரின் கோட்டையின் கீழ் உள்ள கேடாகம்ப்களின் வலையில் எங்கள் முகவர் காணவில்லை. அவரைக் கண்டுபிடிக்க பத்து நல்ல மனிதர்களை அந்தச் சுரங்கங்களுக்குள் அனுப்பினேன், யாரும் திரும்பி வரவில்லை. கீழே ஏதோ இருக்கிறது!"
+
+msgid "TXT_RPLY0_SCRIPT23_D15160_WHATI"
+msgstr "அது என்ன? மனிதனா அல்லது…?"
+
+msgid "TXT_DLG_SCRIPT23_D16676_NOTDE"
+msgstr "இல்லை. கண்டிப்பாக இல்லை. அது எதுவாக இருந்தாலும், சாவியை மீட்டெடுக்க நீங்கள் போராட வேண்டும். நான் கேடாகம்ப்ச் நுழைவாயிலைத் திறப்பேன். நீங்கள் அதைப் பெற்றவுடன், தொழிற்சாலை சுரங்கங்களுக்கு அடுத்ததாக உள்ளது. சீக்கிரம், ஒவ்வொரு நொடியும் கணக்கிடப்படும்."
+
+msgid "TXT_RPLY0_SCRIPT23_D16676_SOMET"
+msgstr "ஏதோ மனிதாபிமானமற்ற சேதி, இல்லையா?, பெரியது."
+
+msgid "TXT_DLG_SCRIPT23_D18192_YOURE"
+msgstr "நீங்கள் நேரத்தையும் வாழ்க்கையையும் வீணடிக்கிறீர்கள்! நகர்த்தவும்!"
+
+# SVE.WAD
+# MAP23: Barkeep.
+msgid "TXT_DLG_SCRIPT23_D10612_CANIB"
+msgstr "நான் மேலும் உதவி செய்ய முடியுமா?"
+
+# (dot not recommended)
+msgid "TXT_RPLY0_SCRIPT23_D10612_MOREI"
+msgstr "மேலும் செய்தி."
+
+msgid "TXT_RYES0_SCRIPT23_D10612_LOOKF"
+msgstr "தீமோத்தேயுவைத் தேடுங்கள். உத்தரவின் சில ரகசியங்கள் அவருக்குத் தெரியும் என்று கேள்விப்பட்டிருக்கிறேன்."
+
+msgid "TXT_RNO0_SCRIPT23_D10612_JUSTA"
+msgstr "இன்னும் 5 தங்கம்."
+
+msgid "TXT_DLG_SCRIPT23_D12128_THATS"
+msgstr "எனக்கு அவ்வளவுதான் தெரியும். பார்டெண்டர்கள் கூட, மன்னிக்கவும், சொல்ல வேண்டிய பொருட்கள் தீர்ந்துவிட்டன."
+
+# SVE.WAD
+# MAP23: Timothy (Talking with him for the very first time without the
+# chalice).
+msgid "TXT_DLG_SCRIPT23_D13644_HELLO"
+msgstr "வணக்கம்."
+
+msgid "TXT_RPLY0_SCRIPT23_D13644_WHATA"
+msgstr "என்ன செய்கிறாய்?"
+
+msgid "TXT_RYES0_SCRIPT23_D13644_IMDOI"
+msgstr "நான் காரியம் செய்கிறேன், போ!"
+
+msgid "TXT_DLG_SCRIPT23_D15160_IFYOU"
+msgstr "வீணடிக்க உங்களுக்கு இவ்வளவு நேரம் இருந்தால், நீல கலசத்தை நீங்கள் கண்டுபிடிக்க முடியுமா என்று பாருங்கள். ஆர்டரைப் பற்றிய எனது ஆய்வுகள் அவர்கள் அதை தொழிற்சாலையின் உற்பத்தித் துறையில் எங்காவது மறைத்து வைத்திருப்பதாகக் கூறுகின்றன. இந்த கலைப்பொருள் எனக்கு மிகவும் மதிப்புமிக்கதாக இருக்கும், எனவே, அதை என்னிடம் கொண்டு வாருங்கள், நான் உங்களுக்கு உதவுவேன்."
+
+msgid "TXT_DLG_SCRIPT23_D16676_YOUFO"
+msgstr "நீலக் கலசத்தைக் கண்டுபிடித்தாய்! சரி, முதலில் அதை என்னிடம் கொடு, நாங்கள் வணிகம் செய்வோம்."
+
+msgid "TXT_RPLY0_SCRIPT23_D16676_TAKEI"
+msgstr "அதை எடுத்துக் கொள்ளுங்கள், அது எப்படியும் துரதிர்ச்டம்."
+
+msgid "TXT_RPLY1_SCRIPT23_D16676_SCREW"
+msgstr "திருகு, நான் அதை வைத்திருக்கிறேன்."
+
+# (If you keep the chalice)
+msgid "TXT_RYES1_SCRIPT23_D16676_THENI"
+msgstr "அப்புறம் நான் உனக்கு எதுவும் தரமாட்டேன். தொலைந்து போ!"
+
+# (If you give the chalice away)
+msgid "TXT_DLG_SCRIPT23_D18192_LOCAT"
+msgstr "ஃபோர்சைக் கண்டறியவும். நான் உங்களுக்கு வழங்கிய செய்தி தொழிற்சாலையின் இரகசியத் துறையில் நுழைவதற்கு உங்களுக்கு உதவும். ஃபோர்ச் தொழிலாளி ஒருவர் கதவைத் திறக்கலாம்."
+
+msgid "TXT_RPLY0_SCRIPT23_D18192_WHATC"
+msgstr "நான் அங்கு என்ன காணலாம்?"
+
+msgid "TXT_DLG_SCRIPT23_D19708_MYRES"
+msgstr "பண்டைய கடந்த காலத்தின் சில இருண்ட ஆற்றல் அங்கு மறைந்திருப்பதாக எனது ஆராய்ச்சி கூறுகிறது. கவனமாக இரு!"
+
+# SVE.WAD
+# MAP23: Timothy (Talking with him for the very first time with the chalice).
+msgid "TXT_DLG_SCRIPT23_D21224_THATB"
+msgstr "அந்த நீல திருக்குடம், உனக்கு எப்படி வந்தது? நான் ஆர்டர் மற்றும் தொலைதூர கடந்த காலத்திற்கான அவற்றின் இணைப்புகளை ஆராய்ச்சி செய்து வருகிறேன், அந்த கலைப்பொருள் எனக்கு உதவும். ஒப்பந்தம் செய்வோம். எனக்கு கோப்பை கொடுங்கள், நான் உங்களுக்கு சில தகவல்களை தருகிறேன்."
+
+msgid "TXT_RPLY0_SCRIPT23_D21224_TAKEI"
+msgstr "அதை எடுத்துக் கொள்ளுங்கள், அது எப்படியும் துரதிர்ச்டம்."
+
+msgid "TXT_RPLY1_SCRIPT23_D21224_SCREW"
+msgstr "திருகு, நான் அதை வைத்திருக்கிறேன்."
+
+msgid "TXT_RYES1_SCRIPT23_D21224_THENI"
+msgstr "அப்புறம் நான் உனக்கு எதுவும் தரமாட்டேன். தொலைந்து போ!"
+
+# SVE.WAD
+# MAP23: Tevick.
+msgid "TXT_DLG_SCRIPT23_D22740_NOWWH"
+msgstr "இப்போது, நான் உங்களுக்கு என்ன உதவ முடியும்?"
+
+msgid "TXT_RPLY0_SCRIPT23_D22740_SHADO"
+msgstr "நிழல் கவசமா?"
+
+msgid "TXT_RYES0_SCRIPT23_D22740_AHHTO"
+msgstr "ஆஆ, கேட்க வேண்டும், ஆனால் பார்க்கவில்லை!"
+
+msgid "TXT_RNO0_SCRIPT23_D22740_GETOU"
+msgstr "இங்கிருந்து வெளியேறு, உங்களிடம் கொஞ்சம் பணம் இருக்கும்போது திரும்பி வாருங்கள்."
+
+# SVE.WAD
+# MAP23: Richter.
+msgid "TXT_DLG_SCRIPT23_D24256_THANK"
+msgstr "நீங்கள் இங்கு வந்ததற்கு நன்றி டியூச். தொழிற்சாலைக்குள் நுழைய உங்களுக்கு ஒரு திறவுகோல் தேவை. நாங்கள் அதைத் திருடினோம், ஆனால் ஆர்டரின் கோட்டையின் கீழ் உள்ள கேடாகம்ப்களின் வலையில் எங்கள் முகவர் காணவில்லை. அவரைக் கண்டுபிடிக்க பத்து நல்ல மனிதர்களை அந்தச் சுரங்கங்களுக்குள் அனுப்பினேன், யாரும் திரும்பி வரவில்லை. கீழே ஏதோ இருக்கிறது!"
+
+msgid "TXT_RPLY0_SCRIPT23_D24256_WHATI"
+msgstr "அது என்ன? மனிதனா அல்லது…?"
+
+msgid "TXT_DLG_SCRIPT23_D25772_NOTDE"
+msgstr "இல்லை. கண்டிப்பாக இல்லை. அது எதுவாக இருந்தாலும், சாவியை மீட்டெடுக்க நீங்கள் போராட வேண்டும். நான் கேடாகம்ப்ச் நுழைவாயிலைத் திறப்பேன். நீங்கள் அதைப் பெற்றவுடன், தொழிற்சாலை சுரங்கங்களுக்கு அடுத்ததாக உள்ளது. சீக்கிரம், ஒவ்வொரு நொடியும் கணக்கிடப்படும்."
+
+msgid "TXT_RPLY0_SCRIPT23_D25772_SOMET"
+msgstr "ஏதோ மனிதாபிமானமற்ற சேதி, இல்லையா?, பெரியது."
+
+msgid "TXT_DLG_SCRIPT23_D27288_YOURE"
+msgstr "நீங்கள் நேரத்தையும் வாழ்க்கையையும் வீணடிக்கிறீர்கள்! நகர்த்தவும்!"
+
+# MAP27: Peasant → Northeastern room (after the lift).
+msgid "TXT_DLG_SCRIPT27_D0_THEMA"
+msgstr "மாச்டர் பார்வையாளர்களை விரும்புவதில்லை. அவர் தனது அனைத்து வேலைகளையும் தொந்தரவு இல்லாமல் இருக்க விரும்புகிறார். நான் ச்டோரேச் ரூமிலிருந்து புதிய உதிரிபாகங்களைப் பெற வேண்டும். அவர் ஒரு கால் மற்றும் ஒரு கை என்று நினைக்கிறேன். ஓ, இனி பேச நேரமில்லை. அவன் உன்னைக் கண்டுபிடிப்பதற்குள் நான் போய்விடுவேன்."
+
+msgid "TXT_RPLY0_SCRIPT27_D0_WHYST"
+msgstr "அது ஏன்."
+
+msgid "TXT_RYES0_SCRIPT27_D0_BECAU"
+msgstr "ஏனென்றால், அவருக்கு பார்வையாளர்களை பிடிக்காது என்று நான் சொன்னேன்!"
+
+msgid "TXT_DLG_SCRIPT27_D1516_YOUKN"
+msgstr "உங்களுக்குத் தெரியும், நீங்கள் ஒரு அகோலிட்டின் சீருடைக்கு சரியான அளவில் இருக்கிறீர்கள்."
+
+# MAP31: Programmer.
+msgid "TXT_DLG_SCRIPT31_D0_OHNOI"
+msgstr "இல்லை, நான் உண்மையான ப்ரோக்ராமர் இல்லை, அவர் மறைந்திருக்கிறார். காவலர் பயிற்சிப் பகுதியைத் தாண்டிச் செல்லுங்கள், மிகவும் கடினமானது. நீங்கள் உயிர் பிழைத்தால், நீங்கள் அவருடன் பேசலாம். அல்லது அவரைக் கொல்லுங்கள்."
+
+msgid "TXT_RPLY0_SCRIPT31_D0_WHOAR"
+msgstr "நீங்கள் யார்?"
+
+msgid "TXT_DLG_SCRIPT31_D1516_YOULL"
+msgstr "நீங்கள் இங்கே சுற்றித் திரிந்தால் நீங்கள் எதையும் கண்டுபிடிக்க முடியாது."
+
+# MAP32: Red acolyte.
+msgid "TXT_DLG_SCRIPT32_D0_PISSO"
+msgstr "பிச் ஆஃப் விவசாயி!"
+
+# Appears in MAP32 and is supposed to be spoken by the AcolyteRust actor
+# (named “Interrogator”). However, no such actor is spawned in the map,
+# rendering this line unused.
+msgid "TXT_DLG_SCRIPT32_D1516_DIELI"
+msgstr "சிறிய மனிதனே செத்துவிடு!"
+
+# MAP32: Cell.
+msgid "TXT_DLG_SCRIPT32_D3032_FINAL"
+msgstr "இறுதியாக நான் இந்த செல்லிலிருந்து வெளியேற முடியும்."
+
+msgid "TXT_RPLY0_SCRIPT32_D3032_WHYAR"
+msgstr "நீங்கள் ஏன் இங்கே இருக்கிறீர்கள்?"
+
+msgid "TXT_RYES0_SCRIPT32_D3032_IWASF"
+msgstr "நான் கட்டமைக்கப்பட்டேன்."
+
+msgid "TXT_DLG_SCRIPT32_D4548_HARRI"
+msgstr "நான் ஆளுநரை கொல்ல சதித்திட்டம் தீட்டுகிறேன் என அரீச் தெரிவித்துள்ளார். நான் ஒருபோதும் ஒரு ஆன்மாவுக்கு தீங்கு செய்ய மாட்டேன்."
+
+msgid "TXT_DLG_SCRIPT33_D0_BECAR"
+msgstr "அங்கே கவனமாக இருங்கள்."
+
+# MAP33: Guy next to Norwall Prison.
+msgid "TXT_DLG_SCRIPT33_D1516_SAYFR"
+msgstr "Say friend, I'll உதவி you, if you help me. Give me 5 தங்கம் and I'll tell you what I know."
+
+msgid "TXT_RPLY0_SCRIPT33_D1516_HERES"
+msgstr "இதோ தங்கம்."
+
+msgid "TXT_RYES0_SCRIPT33_D1516_IFYOU"
+msgstr "நீங்கள் யாரையாவது குத்தினால், அலாரங்களை அமைக்க மாட்டீர்கள்."
+
+msgid "TXT_RNO0_SCRIPT33_D1516_IWONT"
+msgstr "நான் உங்களுக்கு எதுவும் இலவசமாக சொல்ல மாட்டேன்!"
+
+msgid "TXT_DLG_SCRIPT33_D3032_IVEAL"
+msgstr "எனக்கு தெரிந்ததை ஏற்கனவே சொல்லிவிட்டேன்."
+
+# MAP33: Weapons.
+msgid "TXT_DLG_SCRIPT33_D4548_HELLO"
+msgstr "வணக்கம் நண்பரே. நான் உங்களுக்காக என்ன பெற முடியும்?"
+
+msgid "TXT_RPLY0_SCRIPT33_D4548_ELECT"
+msgstr "மின்சார போல்ட்கள்"
+
+msgid "TXT_RYES0_SCRIPT33_D4548_ONEQU"
+msgstr "அது ஒரு சண்டை."
+
+msgid "TXT_RNO0_SCRIPT33_D4548_YOURE"
+msgstr "நீங்கள் உடைந்துவிட்டீர்கள்!"
+
+msgid "TXT_RPLY1_SCRIPT33_D4548_10ROU"
+msgstr "தோட்டாக்களின் கிளிப்"
+
+msgid "TXT_RYES1_SCRIPT33_D4548_HERES"
+msgstr "இதோ உங்கள் வெடிமருந்து"
+
+msgid "TXT_RNO1_SCRIPT33_D4548_SORRY"
+msgstr "மன்னிக்கவும், பணம் இல்லை, தோட்டாக்கள் இல்லை."
+
+msgid "TXT_RPLY2_SCRIPT33_D4548_50ROU"
+msgstr "வெடிமருந்து பெட்டி"
+
+msgid "TXT_RYES2_SCRIPT33_D4548_HEREY"
+msgstr "இதோ போ"
+
+msgid "TXT_RNO2_SCRIPT33_D4548_YOUDO"
+msgstr "உங்களிடம் போதுமான தங்கம் இல்லை!"
+
+msgid "TXT_RPLY3_SCRIPT33_D4548_AMMOS"
+msgstr "வெடிமருந்து சாட்செல்"
+
+msgid "TXT_RYES3_SCRIPT33_D4548_THANK"
+msgstr "நன்றி, வேறு ஏதாவது?"
+
+msgid "TXT_RNO3_SCRIPT33_D4548_YOUCA"
+msgstr "நீங்கள் அதை வாங்க முடியாது, நல்ல நாள்."
+
+# MAP33: Armory
+msgid "TXT_DLG_SCRIPT33_D6064_WELCO"
+msgstr "வரவேற்கிறோம். நான் உங்களுக்கு என்ன காட்ட முடியும்?"
+
+msgid "TXT_RPLY0_SCRIPT33_D6064_ENVIR"
+msgstr "சுற்றுச்சூழல் வழக்கு"
+
+msgid "TXT_RYES0_SCRIPT33_D6064_HEREY"
+msgstr "இங்கே நீங்கள் இருக்கிறீர்கள்."
+
+msgid "TXT_RNO0_SCRIPT33_D6064_YOUDO"
+msgstr "அதற்கு உங்களிடம் போதுமான பணம் இல்லை."
+
+msgid "TXT_RPLY1_SCRIPT33_D6064_LEATH"
+msgstr "தோல் கவசம்."
+
+msgid "TXT_RYES1_SCRIPT33_D6064_HEREY"
+msgstr "இங்கே நீங்கள் இருக்கிறீர்கள்."
+
+msgid "TXT_RNO1_SCRIPT33_D6064_PERHA"
+msgstr "ஒருவேளை வேறு நேரமா?"
+
+msgid "TXT_RPLY2_SCRIPT33_D6064_METAL"
+msgstr "உலோக கவசம்"
+
+msgid "TXT_RYES2_SCRIPT33_D6064_WEARI"
+msgstr "நல்ல ஆரோக்கியத்துடன் அணியுங்கள்."
+
+msgid "TXT_RNO2_SCRIPT33_D6064_COMEB"
+msgstr "உங்களால் முடியும் போது திரும்பி வாருங்கள்."
+
+# MAP33: Hospital
+msgid "TXT_DLG_SCRIPT33_D7580_HOWMA"
+msgstr "நான் உங்களுக்கு எப்படி உதவ முடியும்?"
+
+msgid "TXT_RPLY0_SCRIPT33_D7580_MEDPA"
+msgstr "மெட் ஒட்டு"
+
+msgid "TXT_RYES0_SCRIPT33_D7580_HERES"
+msgstr "இதோ உங்கள் ஒட்டு அறிவிலி."
+
+msgid "TXT_RNO0_SCRIPT33_D7580_YOUNE"
+msgstr "அதற்கு 10 தங்கம் வேண்டும்."
+
+msgid "TXT_RPLY1_SCRIPT33_D7580_FIELD"
+msgstr "கள அறுவை மருத்தீடு அறிவிலி"
+
+msgid "TXT_RYES1_SCRIPT33_D7580_THANK"
+msgstr "நன்றி."
+
+msgid "TXT_RNO1_SCRIPT33_D7580_IWISH"
+msgstr "நான் அவற்றைக் கொடுக்க விரும்புகிறேன், ஆனால் அவற்றின் விலை 25 தங்கம்."
+
+msgid "TXT_RPLY2_SCRIPT33_D7580_HEALI"
+msgstr "குணப்படுத்துதல்"
+
+msgid "TXT_RYES2_SCRIPT33_D7580_THERE"
+msgstr "அங்கே போ. இப்போது பார்த்துக்கொள்ளுங்கள்."
+
+msgid "TXT_RNO2_SCRIPT33_D7580_WELLM"
+msgstr "சரி, ஒருவேளை நீங்கள் சில மெட் பேட்ச்களை வாங்க முடியுமா?"
+
+# MAP33: Barkeep.
+msgid "TXT_DLG_SCRIPT33_D9096_HELLO"
+msgstr "வணக்கம் நண்பரே, உங்களை நான் இதுவரை இங்கு பார்த்ததில்லை. நான் நீயாக இருந்திருந்தால் நான் கவனமாக இருப்பேன் என்று என்னால் சொல்ல முடியும், நிறைய நடக்கிறது, நீங்கள் வழிக்கு வராமல் இருந்தால் நல்லது."
+
+msgid "TXT_RPLY0_SCRIPT33_D9096_INFOR"
+msgstr "தகவல்"
+
+msgid "TXT_RYES0_SCRIPT33_D9096_THESE"
+msgstr "சாக்கடைகள் எலிகள் மற்றும் ரோபோக்களை விட அதிகமானவை."
+
+msgid "TXT_RNO0_SCRIPT33_D9096_HEYAG"
+msgstr "ஏய் ஒரு பையன் கொஞ்சம் பணம் சம்பாதிக்க வேண்டும். இந்த சோக்கர்கள் நன்றாக பேசுகிறார்கள் என்று நினைக்கிறீர்களா?"
+
+msgid "TXT_DLG_SCRIPT33_D10612_BACKA"
+msgstr "மறுநிகழ்வு இல்லையா? சரி, குறைந்தபட்சம் உங்கள் சொந்த சருமத்தை அப்படியே வைத்திருக்க உங்களுக்கு போதுமான அளவு தெரியும். நான் இப்போது உனக்கு என்ன செய்ய முடியும்?"
+
+msgid "TXT_RPLY0_SCRIPT33_D10612_MOREI"
+msgstr "மேலும் செய்தி"
+
+msgid "TXT_RYES0_SCRIPT33_D10612_THEGO"
+msgstr "கவர்னர் உத்தரவின் தாக்கத்தை எளிமையாக நினைவூட்டுகிறார்."
+
+msgid "TXT_RNO0_SCRIPT33_D10612_COMEB"
+msgstr "மனம் மாறினால் திரும்பி வா."
+
+msgid "TXT_DLG_SCRIPT33_D12128_WELLY"
+msgstr "சரி, இவ்வளவு காலம் வாழ்ந்த ஒருவரிடம் நீங்கள் நிச்சயமாக நிறைய கேள்விகளைக் கேட்கிறீர்கள். அது பரவாயில்லை, நான் இந்த நிறைய விசயங்களை விட உங்களை போன்ற ஒருவருடன் பேச விரும்புகிறேன்."
+
+msgid "TXT_RPLY0_SCRIPT33_D12128_MOREI"
+msgstr "மேலும் செய்தி."
+
+msgid "TXT_RYES0_SCRIPT33_D12128_THERE"
+msgstr "இங்கு நடப்பதை விட ஆர்டரில் அதிகம் உள்ளது."
+
+msgid "TXT_RNO0_SCRIPT33_D12128_COMEB"
+msgstr "மனம் மாறினால் திரும்பி வா."
+
+msgid "TXT_DLG_SCRIPT33_D13644_THATS"
+msgstr "அதுதான் நண்பரே, அறிவுக் கிணறு தட்டப்பட்டது. எவ்வாறாயினும் நான் உங்களிடம் இருக்க வேண்டியதை விட அதிகமாகச் சொல்லிவிட்டேன்."
+
+# MAP33: Harris (beginning).
+msgid "TXT_DLG_SCRIPT33_D15160_HARDT"
+msgstr "புதிய பொம்மைகளை வாங்குவது கடினம்… நீங்கள் உடைந்திருக்கும் போது. எனக்காக கொஞ்சம் வேலை செய்யுங்கள், நீங்கள் செலவழிக்க முடியாததை விட அதிகமாகப் பெறுவீர்கள். நான் உன்னை பணக்காரனாக்குவேன்."
+
+msgid "TXT_RPLY0_SCRIPT33_D15160_IGOTN"
+msgstr "நான் செய்ய எதுவும் இல்லை."
+
+msgid "TXT_RPLY1_SCRIPT33_D15160_NOTHA"
+msgstr "இல்லை நன்றி."
+
+msgid "TXT_RYES1_SCRIPT33_D15160_NOBOD"
+msgstr "யாரும் என்னை விட்டு விலகுவதில்லை!"
+
+msgid "TXT_DLG_SCRIPT33_D16676_GOODC"
+msgstr "நல்ல தேர்வு. ஆற்றங்கரையில் உள்ள ஆணையின் சரணாலயம் அவர்களின் அதிகாரப்பூர்வமற்ற சித்திரவதை அறை. உள்ளே ஒரு தங்கக் திருக்குடம் உள்ளது. நீங்கள் அதை ச்வைப் செய்து, நீங்கள் என்னை உணவகத்தில் சந்தித்து, உங்கள் வெகுமதியை அறுவடை செய்கிறீர்கள்."
+
+msgid "TXT_RPLY0_SCRIPT33_D16676_HOWAM"
+msgstr "நான் அதை எப்படி செய்ய வேண்டும்?"
+
+msgid "TXT_RPLY1_SCRIPT33_D16676_LETME"
+msgstr "நான் யோசிக்கிறேன்."
+
+msgid "TXT_RYES1_SCRIPT33_D16676_SORRY"
+msgstr "மன்னிக்கவும், இரண்டாவது வாய்ப்பு இல்லை. ஓ, காவலர்களே, அவரைக் கொல்லுங்கள்!"
+
+msgid "TXT_DLG_SCRIPT33_D18192_HERES"
+msgstr "இதோ ஒரு குறுக்கு வில், நேராக குறிவைத்து -- ச்ப்ளாட்!--. நினைவில் வைத்து கொள்ளுங்கள், ஆடம்பரமான கோப்பையை எடுத்து, என்னை உணவகத்தில் சந்திக்கவும்."
+
+msgid "TXT_RPLY0_SCRIPT33_D18192_ILLSE"
+msgstr "நான் உன்னை அங்கே பார்க்கிறேன்."
+
+msgid "TXT_DLG_SCRIPT33_D19708_WHATA"
+msgstr "நீங்கள் எதற்காக காத்திருக்கிறீர்கள்? கவலைப்படாதே, நான் உடலை தூய்மை செய்வேன், அந்த கிண்ணத்தை என்னிடம் கொண்டுவா!"
+
+msgid "TXT_DLG_SCRIPT33_D21224_GUARD"
+msgstr "காவலர்களே! துரோகியைக் கொல்லுங்கள்!"
+
+# MAP33: Harris (tavern).
+msgid "TXT_DLG_SCRIPT33_D22740_HEYIK"
+msgstr "ஏய், நீங்கள் என்ன நினைக்கிறீர்கள் என்று எனக்குத் தெரியும், இது ஒரு அமைப்பு போல் தெரிகிறது, அத்தகைய கொலை இயந்திரத்தில் நான் அதை ஒருபோதும் செய்ய மாட்டேன், அதாவது. அடடா, ஒரு கோப்பையில் இந்த வம்பு, வித்தியாசமானது. நான் உறுதியளித்தபடி, இப்போது தயாராகுங்கள், பொன்னும் மகிமையும். இந்த சாவியை எடுத்துக் கொள்ளுங்கள், கவர்னர் உங்களுக்கு வெகுமதி அளிப்பார்."
+
+msgid "TXT_RPLY0_SCRIPT33_D22740_GREAT"
+msgstr "அருமை, என்னால் காத்திருக்க முடியாது!"
+
+# (if accepting without having the chalice)
+msgid "TXT_RNO0_SCRIPT33_D22740_NOCHA"
+msgstr "கிண்ணமும் இல்லை, பணமும் இல்லை!"
+
+msgid "TXT_RPLY1_SCRIPT33_D22740_ILLKE"
+msgstr "நான் கோப்பையை வைத்திருப்பேன், நன்றி."
+
+msgid "TXT_RYES1_SCRIPT33_D22740_KEEPI"
+msgstr "வைக்கவா? இல்லை என்று நினைக்கிறேன்!"
+
+msgid "TXT_DLG_SCRIPT33_D24256_WHATA"
+msgstr "நீங்கள் எதற்காக காத்திருக்கிறீர்கள்? கவர்னரே உங்களுக்கு வெகுமதி அளிப்பார்."
+
+msgid "TXT_DLG_SCRIPT33_D25772_DIETR"
+msgstr "துரோகியை இறக்கு! "
+
+# MAP33: Mourel.
+msgid "TXT_DLG_SCRIPT33_D27288_SOYOU"
+msgstr "அப்படியென்றால், கலசத்தைத் திருடிய முட்டாள் நீயா? நான் உன்னை ஒரு கிளர்ச்சி திருடன் என்று கைது செய்யப் போகிறேன்… இதன் மூலம் என் பதவியை ஆணை மூலம் மேம்படுத்துகிறேன். அறியாத சிப்பாயாக இருப்பது எப்படி?"
+
+msgid "TXT_RPLY0_SCRIPT33_D27288_ITSUC"
+msgstr "அசிங்கமானது!"
+
+msgid "TXT_RYES0_SCRIPT33_D27288_FORYO"
+msgstr "உங்களுக்கு அது செய்கிறது."
+
+msgid "TXT_RPLY1_SCRIPT33_D27288_HARRI"
+msgstr "ஆரிச் எனக்கு பணம் தருவதாக உறுதியளித்தார்!"
+
+msgid "TXT_RYES1_SCRIPT33_D27288_TOOBA"
+msgstr "மிகவும் மோசமானது. நீங்கள் பெறுவது இறப்பு மட்டுமே!"
+
+msgid "TXT_DLG_SCRIPT33_D28804_WEREG"
+msgstr "உன்னைக் கொல்லப் போகிறோம்!"
+
+msgid "TXT_DLG_SCRIPT33_D30320_GETOU"
+msgstr "இங்கிருந்து வெளியேறு!"
+
+# MAP33: Green acolytes (beginning).
+msgid "TXT_DLG_SCRIPT33_D31836_WEREG"
+msgstr "உன்னைக் கொல்லப் போகிறோம்!"
+
+# MAP33: Yellow acolytes.
+msgid "TXT_DLG_SCRIPT33_D33352_GETOU"
+msgstr "இங்கிருந்து வெளியேறு!"
+
+# MAP34: Barracks.
+msgid "TXT_DLG_SCRIPT34_D0_WHATA"
+msgstr "பழைய பேரூர் ஆலின் கீழ் எங்களுக்கு என்ன சரியான இடம். அவர்கள் எங்களை அழித்துவிட்டார்கள் என்று ஆர்டர் நினைக்கிறது, ஆனால் நீங்கள் கவனக்குறைவாக இருக்கும்போது என்ன நடக்கும் என்பதை எங்களுக்கு நினைவூட்டுகிறது. "
+
+# MAP34
+msgid "TXT_DLG_SCRIPT34_D1516_TALKT"
+msgstr "மேசிலிடம் பேசுங்கள், அவர் உங்களுக்கு உதவுவார்."
+
+# MAP34: Barracks.
+msgid "TXT_DLG_SCRIPT34_D3032_IVEHE"
+msgstr "Macil விரைவில் மீண்டும் ஏதாவது தொடங்கப் போகிறது என்று கேள்விப்பட்டேன். கடைசி தோல்விக்குப் பிறகு எங்களுக்கு ஒரு பெரிய செய் தேவை. இது போன்ற இன்னும் ஒன்று மற்றும் நாங்கள் தொடர முடியாத அளவுக்கு பலவீனமாக இருப்போம்."
+
+msgid "TXT_DLG_SCRIPT34_D4548_AFEWO"
+msgstr "இவற்றில் சில பீப்பாய்கள் அவற்றின் நீர் விநியோகத்தில் கொட்டப்படுகின்றன, முரண்பாடுகள் கொஞ்சம் கூட இருக்க வேண்டும். "
+
+# MAP34: Gerald.
+# (Except for row 1335, everything in rows 1323-1343 is identical to 725-745)
+msgid "TXT_DLG_SCRIPT34_D6064_IMWOR"
+msgstr "நான் ஏதாவது செய்துகொண்டிருக்கிறேன், அது நமக்கு ஒரு நன்மையைத் தரும். இது உங்கள் சகிப்புத்தன்மையை அதிகரிக்கும் மற்றும் உங்களை முழுமையாக உற்சாகப்படுத்தும். நான் கிட்டத்தட்ட எல்லா பிழைகளையும் தீர்த்துவிட்டேன். நான் உங்களுக்காக ஏதாவது செய்யலாமா? "
+
+msgid "TXT_RPLY0_SCRIPT34_D6064_PATCH"
+msgstr "என்னை ஒட்டவும்."
+
+msgid "TXT_RYES0_SCRIPT34_D6064_BOYYO"
+msgstr "பையன், நீங்கள் ஒரு உண்மையான குழப்பம். நான் என்ன செய்ய முடியும் என்று பார்க்கிறேன்."
+
+msgid "TXT_RPLY1_SCRIPT34_D6064_STAMI"
+msgstr "ச்டாமினா உள்வைப்பு?"
+
+msgid "TXT_RYES1_SCRIPT34_D6064_ALLRI"
+msgstr "சரி, இதற்கு சிறிது நேரம் ஆகாது."
+
+msgid "TXT_RNO1_SCRIPT34_D6064_ITSNO"
+msgstr "அது இன்னும் முடியவில்லை."
+
+msgid "TXT_DLG_SCRIPT34_D7580_HEYIM"
+msgstr "ஏய், நான் உங்கள் உள்வைப்பின் புதுப்பிக்கப்பட்ட பதிப்பில் வேலை செய்து வருகிறேன். என்னால் வேறு ஏதாவது செய்ய முடியுமா?"
+
+msgid "TXT_RPLY0_SCRIPT34_D7580_PATCH"
+msgstr "என்னை ஒட்டவும்."
+
+msgid "TXT_RYES0_SCRIPT34_D7580_WELLA"
+msgstr "குறைந்தது நீங்கள் நடவடிக்கை பார்க்கிறீர்கள்."
+
+msgid "TXT_RPLY1_SCRIPT34_D7580_IMPLA"
+msgstr "உள்வைப்பு மேம்படுத்தவா?"
+
+msgid "TXT_RYES1_SCRIPT34_D7580_GOODT"
+msgstr "நல்ல சேதி, மிகவும் பாதுகாப்பாக இருக்க முடியாது."
+
+msgid "TXT_RNO1_SCRIPT34_D7580_IMALM"
+msgstr "நான் கிட்டத்தட்ட முடித்துவிட்டேன், ஆனால் முழுமையாக இல்லை."
+
+msgid "TXT_DLG_SCRIPT34_D9096_ALLRI"
+msgstr "சரி, இதுதான். நான் கிட்டத்தட்ட எல்லாவற்றையும் சரியாகச் செய்துவிட்டேன். இன்னும் சில பிரச்சனைகளை சரி செய்ய வேண்டியுள்ளது, வேறு ஏதாவது தேவையா? "
+
+msgid "TXT_RPLY0_SCRIPT34_D9096_PATCH"
+msgstr "என்னை ஒட்டவும்."
+
+msgid "TXT_RYES0_SCRIPT34_D9096_WHATH"
+msgstr "நீங்கள் என்ன செய்ய முயற்சித்தீர்கள்? ஒரு சிலுவைப்போருடன் நேருக்கு நேர் செல்லவா?"
+
+msgid "TXT_RPLY1_SCRIPT34_D9096_IMPLA"
+msgstr "உள்வைப்பு மேம்படுத்தவா?"
+
+msgid "TXT_RYES1_SCRIPT34_D9096_THATS"
+msgstr "அது உங்களுக்காக செய்ய வேண்டும்."
+
+msgid "TXT_RNO1_SCRIPT34_D9096_LETME"
+msgstr "முதலில் இன்னும் சில சோதனைகளை நடத்துகிறேன்."
+
+msgid "TXT_DLG_SCRIPT34_D10612_THATS"
+msgstr "நான் இப்போது உள்வைப்பில் செய்யக்கூடியது அவ்வளவுதான். ஒருவேளை ஏதாவது குணமாகுமா?"
+
+msgid "TXT_RPLY0_SCRIPT34_D10612_YEAH"
+msgstr "ஆம்."
+
+msgid "TXT_RYES0_SCRIPT34_D10612_BOYYO"
+msgstr "பையன், நீங்கள் ஒரு உண்மையான குழப்பம். நான் என்ன செய்ய முடியும் என்று பார்க்கிறேன்."
+
+# MAP34: Feris (identical to rows 746-768, except for row 1357).
+msgid "TXT_DLG_SCRIPT34_D12128_WHATC"
+msgstr "நான் உனக்கு என்ன செய்ய முடியும்?"
+
+msgid "TXT_RPLY0_SCRIPT34_D12128_IMOUT"
+msgstr "எனக்கு குண்டுகள் தீர்ந்துவிட்டது."
+
+msgid "TXT_RYES0_SCRIPT34_D12128_HERES"
+msgstr "இதோ உங்களுக்காக சில வெடிமருந்துகள். அதை வீணாக்காதீர்கள்."
+
+msgid "TXT_RPLY1_SCRIPT34_D12128_TEACH"
+msgstr "எனக்கு கற்றுக்கொடுங்கள்."
+
+msgid "TXT_RYES1_SCRIPT34_D12128_ALLRI"
+msgstr "சரி, நான் உங்களுக்கு சில சிறிய குறிப்புகளைக் காட்டுகிறேன்."
+
+msgid "TXT_RNO1_SCRIPT34_D12128_YOURE"
+msgstr "நீங்கள் இன்னும் தயாராகவில்லை."
+
+msgid "TXT_DLG_SCRIPT34_D13644_BACKA"
+msgstr "மீண்டும்? உனக்கு என்ன வேண்டும்?"
+
+msgid "TXT_RPLY0_SCRIPT34_D13644_IMOUT"
+msgstr "எனக்கு குண்டுகள் தீர்ந்துவிட்டது."
+
+msgid "TXT_RYES0_SCRIPT34_D13644_HERES"
+msgstr "இதோ உங்களுக்காக சில வெடிமருந்துகள். அதை வீணாக்காதீர்கள்."
+
+msgid "TXT_RNO0_SCRIPT34_D13644_YOUVE"
+msgstr "உங்களிடம் போதுமான வெடிமருந்துகள் உள்ளன."
+
+msgid "TXT_RPLY1_SCRIPT34_D13644_TEACH"
+msgstr "எனக்கு கற்றுக்கொடுங்கள்."
+
+msgid "TXT_RYES1_SCRIPT34_D13644_ALLRI"
+msgstr "சரி, இது உங்களை சிறிது நேரம் வைத்திருக்க வேண்டும்."
+
+msgid "TXT_RNO1_SCRIPT34_D13644_SORRY"
+msgstr "மன்னிக்கவும், முடியாது. நான் மாசிலின் உத்தரவுகளை பின்பற்றுகிறேன்."
+
+msgid "TXT_DLG_SCRIPT34_D15160_WELLW"
+msgstr "அது எது, தோட்டாக்கள் அல்லது பயிற்சி? நாங்கள் கைப்பற்றிய அந்த புதிய ஆயுதங்களில் என் கைகளைப் பெற நான் காத்திருக்க முடியாது. நான் அவர்களுடன் முடிந்ததும், மற்ற அனைவருக்கும் பயிற்சி அளிக்கத் தொடங்குவேன்."
+
+msgid "TXT_RPLY0_SCRIPT34_D15160_IMOUT"
+msgstr "நான் வெடிமருந்து தீர்ந்துவிட்டேன்."
+
+msgid "TXT_RYES0_SCRIPT34_D15160_HERES"
+msgstr "இதோ உங்களுக்காக சில வெடிமருந்துகள். அதை வீணாக்காதீர்கள்."
+
+msgid "TXT_RNO0_SCRIPT34_D15160_YOUVE"
+msgstr "உங்களிடம் போதுமான வெடிமருந்துகள் உள்ளன."
+
+msgid "TXT_RPLY1_SCRIPT34_D15160_TEACH"
+msgstr "எனக்கு கற்றுக்கொடுங்கள்."
+
+msgid "TXT_RYES1_SCRIPT34_D15160_OKTAK"
+msgstr "ஓ.கே. நீங்கள் கற்றுக்கொண்டதை எடுத்து, அந்த ஆணைப் பாச்டர்களுக்கு நரகத்திற்கு வழி காட்டுங்கள்."
+
+msgid "TXT_RNO1_SCRIPT34_D15160_COMEB"
+msgstr "நேரம் ஆகிவிட்டது என்று Macil கூறும்போது, பிறகு வாருங்கள்."
+
+msgid "TXT_DLG_SCRIPT34_D16676_IVETA"
+msgstr "என்னால் முடிந்த அனைத்தையும் இப்போது உங்களுக்குக் கற்றுக் கொடுத்தேன். புதிய ஆயுதங்களை அவற்றின் வேகத்தில் வைக்க எனக்கு சிறிது நேரம் கொடுங்கள். நீங்கள் தோட்டாக்கள் தீர்ந்துவிட்டால் தவிர."
+
+msgid "TXT_RPLY0_SCRIPT34_D16676_YESIA"
+msgstr "ஆம் நான் தான்."
+
+msgid "TXT_RYES0_SCRIPT34_D16676_HEREY"
+msgstr "இதோ போ."
+
+# MAP34: Upstairs.
+# (Identical to row 769)
+msgid "TXT_DLG_SCRIPT34_D18192_DONTG"
+msgstr "ஊரில் சந்தோசமாக இருக்க வேண்டாம், நீங்கள் அலாரத்தை இயக்குவீர்கள், அவர்கள் கோட்டையிலிருந்து காவலர்களை அனுப்பத் தொடங்குவார்கள்."
+
+# (Identical to row 770)
+msgid "TXT_DLG_SCRIPT34_D19708_WELCO"
+msgstr "வரவேற்கிறோம், நாங்கள் எப்போதும் கூடுதல் உதவியைப் பயன்படுத்தலாம்."
+
+# (Similar to row 771)
+msgid "TXT_DLG_SCRIPT34_D21224_WHENI"
+msgstr "நான் இன்னும் செயலில் இருந்தபோது, வலுவூட்டல்கள் வருவதற்கு முன்பு ஒரு உதவியாளரை பரிசோதிக்க எங்களுக்கு வாய்ப்பு கிடைத்தது, அவர்கள் மனிதர்கள் அல்ல, நான் உங்களுக்கு சொல்கிறேன்."
+
+# MAP34: Downstairs.
+# (Identical to row 772)
+msgid "TXT_DLG_SCRIPT34_D22740_WERET"
+msgstr "கோட்டை வாயில் பொறிமுறைகள் எங்கு உள்ளன என்பதை நாங்கள் கண்டுபிடிக்க முயற்சிக்கிறோம், ஆனால் இதுவரை எங்களுக்கு அதிர்ச்டம் இல்லை."
+
+# (Similar to row 773)
+msgid "TXT_DLG_SCRIPT34_D24256_DONTG"
+msgstr "பிடிபடாதே. அவர்கள் சிறையில் அடைக்கப்பட்ட பிறகு நம் மக்களுக்கு என்ன செய்கிறார்கள் என்பது பற்றிய அதிர்ச்சி கதைகளை நான் கேள்விப்பட்டிருக்கிறேன். அவை மறைந்துவிடும், தடயங்கள் இல்லை, எதுவும் இல்லை. "
+
+# (Similar to row 774)
+msgid "TXT_DLG_SCRIPT34_D25772_HERES"
+msgstr "இங்கே சில ஆலோசனைகள் உள்ளன, நீங்கள் எப்போதாவது ஆர்டரின் டின் சிப்பாய்களை பார்த்தால், வேறு வழியில் ஓடுங்கள். எனக்கு குறிப்பாக ரீவர்ச் பிடிக்கவில்லை, அந்த விசயங்கள் வேகமாக அழிக்கப்படுகின்றன!"
+
+# MAP34: Macil.
+msgid "TXT_DLG_SCRIPT34_D27288_WELCO"
+msgstr "நம்பிக்கையின் கடைசி மின்னலுக்கு வரவேற்கிறோம். உத்தரவை எதிர்க்கும் விடுதலை எங்களுக்கு மட்டுமே உள்ளது. எங்களிடம் கூர்மையான அறிவியல் மனங்களும், பல திறமையான உடல்களும் உள்ளன. ஆனால் ஒரு உண்மையான சிக்கல் தீர்பவர் இல்லை, அவர் நமக்குத் தேவையான விளிம்பைத் தருவார்."
+
+msgid "TXT_RPLY0_SCRIPT34_D27288_WHATW"
+msgstr "நான் என்ன செய்ய வேண்டும்? "
+
+msgid "TXT_DLG_SCRIPT34_D28804_HELPU"
+msgstr "எங்களுக்கு உதவுங்கள். அவர்களின் தொழில்நுட்பத்தை திருட எங்களுக்கு உதவுங்கள். எங்கள் தோழர்களை விடுவிக்கவும். இந்த முறுக்கப்பட்ட மனநோயாளிகளை இறப்பு வரை எதிர்த்துப் போராடுங்கள். உண்மைக்காக உங்கள் உயிரைப் பணயம் வைக்குமாறு கேட்டுக் கொள்கிறேன்."
+
+msgid "TXT_RPLY0_SCRIPT34_D28804_IMWIT"
+msgstr "நான் உன்னுடன் இருக்கிறேன்!"
+
+msgid "TXT_DLG_SCRIPT34_D30320_GOODB"
+msgstr "நல்லது. பிளாக்பேர்ட் தொடர்ந்து உங்கள் வழிகாட்டியாக இருக்கும். அவள் உங்களுக்கு மிகவும் பிரகாசமாக இருந்தாள். ஒன்றாக, நீங்கள் ஆணை மற்றும் அவர்களின் மனிதாபிமானமற்ற ஊழியர்களின் இரகசியங்களை திறக்க வேண்டும். அவர்களின் பயங்கரவாதத்தை வழிநடத்தும் நமது புரிதலுக்கு வெளியே ஒரு இருப்பு உள்ளது. உள்ளே சென்று அவர்களை கீழே இறக்கவும். "
+
+msgid "TXT_RPLY0_SCRIPT34_D30320_LETME"
+msgstr "என்னை அங்கே அனுமதியுங்கள்!"
+
+msgid "TXT_RYES0_SCRIPT34_D30320_THATS"
+msgstr "அதுதான் ஆவி."
+
+msgid "TXT_DLG_SCRIPT34_D31836_WELCO"
+msgstr "வருக நண்பரே!"
+
+msgid "TXT_RANDOM_PEASANT_01"
+msgstr "தயவு செய்து என்னை காயப்படுத்தாதீர்கள்."
+
+msgid "TXT_RANDOM_PEASANT_02"
+msgstr "நீங்கள் என்னை காயப்படுத்த நினைத்தால், அந்த முயற்சிக்கு நான் தகுதியானவன் அல்ல."
+
+msgid "TXT_RANDOM_PEASANT_03"
+msgstr "எனக்கு எதுவும் தெரியாது."
+
+msgid "TXT_RANDOM_PEASANT_04"
+msgstr "போய்விடு அல்லது நான் காவலர்களை அழைப்பேன்!"
+
+msgid "TXT_RANDOM_PEASANT_05"
+msgstr "இந்த கிளர்ச்சியாளர்கள் அனைவரும் தங்கள் இடத்தைக் கற்றுக்கொண்டு இந்த முட்டாள்தனத்தை நிறுத்த வேண்டும் என்று நான் சில நேரங்களில் விரும்புகிறேன்."
+
+msgid "TXT_RANDOM_PEASANT_06"
+msgstr "என்னை சும்மா விடு, சரியா?"
+
+msgid "TXT_RANDOM_PEASANT_07"
+msgstr "எனக்கு உறுதியாக தெரியவில்லை, ஆனால் சில சமயங்களில் எனக்கு சில அகோலிட்களை தெரியும் என்று நினைக்கிறேன்."
+
+msgid "TXT_RANDOM_PEASANT_08"
+msgstr "ஆர்டர் இங்குள்ள அனைத்தையும் நன்றாக இறுக்கமாகப் பூட்டியுள்ளது."
+
+msgid "TXT_RANDOM_PEASANT_09"
+msgstr "இது வெறும் பாதுகாப்புப் படை என்று சொல்ல முடியாது."
+
+msgid "TXT_RANDOM_PEASANT_10"
+msgstr "இங்குள்ள முன்னணியின் நடவடிக்கைகள் குறித்து ஆணை மிகவும் பதட்டமாக இருப்பதாக நான் கேள்விப்பட்டிருக்கிறேன்."
+
+msgid "TXT_RANDOM_REBEL_01"
+msgstr "ஆணை எங்களுக்கு எதிராக நிற்க வழியில்லை."
+
+msgid "TXT_RANDOM_REBEL_02"
+msgstr "நாங்கள் வேலைநிறுத்தத்திற்கு கிட்டத்தட்ட தயாராகிவிட்டோம். மசிலின் திட்டங்கள் செயலிழந்து வருகின்றன."
+
+msgid "TXT_RANDOM_REBEL_03"
+msgstr "நாங்கள் அனைவரும் உங்கள் பின்னால் இருக்கிறோம், கவலைப்பட வேண்டாம்."
+
+msgid "TXT_RANDOM_REBEL_04"
+msgstr "பெரிய ரோபோக்கள் எதையும் நெருங்க வேண்டாம். அவர்கள் ச்கிராப்புக்காக உங்களை உருக்கி விடுவார்கள்!"
+
+msgid "TXT_RANDOM_REBEL_05"
+msgstr "நம் மகிமையின் நாள் விரைவில் வரும், நம்மை எதிர்ப்பவர்கள் நசுக்கப்படுவார்கள்!"
+
+msgid "TXT_RANDOM_REBEL_06"
+msgstr "மிகவும் வசதியாக இருக்க வேண்டாம். எங்களுக்காக இன்னும் எங்கள் வேலைகள் உள்ளன."
+
+msgid "TXT_RANDOM_REBEL_07"
+msgstr "நீங்கள் தான் புதிய நம்பிக்கை என்று மாசில் கூறுகிறார். அதை மனதில் கொள்ளுங்கள்."
+
+msgid "TXT_RANDOM_REBEL_08"
+msgstr "இந்த சார்லட்டன்களை நாம் வீழ்த்தியவுடன், இந்த உலகத்தை எப்படி இருக்க வேண்டும் என்பதை மீண்டும் உருவாக்க முடியும்."
+
+msgid "TXT_RANDOM_REBEL_09"
+msgstr "நீங்கள் உங்களுக்காக மட்டும் போராடவில்லை, இங்கும் வெளியேயும் உள்ள அனைவருக்காகவும் போராடுகிறீர்கள் என்பதை நினைவில் கொள்ளுங்கள்."
+
+msgid "TXT_RANDOM_REBEL_10"
+msgstr "நம்மில் ஒருவர் நிற்கும் வரை நாம் செய் பெறுவோம்."
+
+msgid "TXT_RANDOM_AGUARD_01"
+msgstr "செல்லுங்கள், விவசாயிகளே."
+
+msgid "TXT_RANDOM_AGUARD_02"
+msgstr "உண்மையான நம்பிக்கையைப் பின்பற்றுங்கள், அப்போதுதான் நீங்கள் புரிந்துகொள்ளத் தொடங்குவீர்கள்."
+
+msgid "TXT_RANDOM_AGUARD_03"
+msgstr "மரணத்தின் மூலம் மட்டுமே ஒருவர் உண்மையில் மீண்டும் பிறக்க முடியும்."
+
+msgid "TXT_RANDOM_AGUARD_04"
+msgstr "உங்கள் பயனற்ற இயக்கத்தில் எனக்கு ஆர்வம் இல்லை."
+
+msgid "TXT_RANDOM_AGUARD_05"
+msgstr "நான் உன்னிடம் பேச நினைத்திருந்தால் உன்னிடம் சொல்லியிருப்பேன்."
+
+msgid "TXT_RANDOM_AGUARD_06"
+msgstr "போய் வேறொருவரை தொந்தரவு செய்!"
+
+msgid "TXT_RANDOM_AGUARD_07"
+msgstr "நகர்ந்து கொண்டே இரு!"
+
+msgid "TXT_RANDOM_AGUARD_08"
+msgstr "அலாரம் அடித்தால், எங்கள் வழியை விட்டு விலகி இருங்கள்!"
+
+msgid "TXT_RANDOM_AGUARD_09"
+msgstr "ஆணை உலகை தூய்மைப்படுத்தி புதிய சகாப்தத்திற்கு கொண்டு செல்லும்."
+
+msgid "TXT_RANDOM_AGUARD_10"
+msgstr "பிரச்சனையா? இல்லை, இல்லை என்று நினைத்தேன்."
+
+msgid "TXT_RANDOM_BEGGAR_01"
+msgstr "ஏழைகளுக்கு அன்னதானம்?"
+
+msgid "TXT_RANDOM_BEGGAR_02"
+msgstr "நீங்கள் என்ன பார்க்கிறீர்கள், மேற்பரப்பாளர்?"
+
+msgid "TXT_RANDOM_BEGGAR_03"
+msgstr "உங்களிடம் கூடுதல் உணவு எதுவும் இருக்காது, இல்லையா?"
+
+msgid "TXT_RANDOM_BEGGAR_04"
+msgstr "நீங்கள் மேலோட்டமான மக்கள் எங்களை ஒருபோதும் புரிந்து கொள்ள மாட்டீர்கள்."
+
+msgid "TXT_RANDOM_BEGGAR_05"
+msgstr "ஆ, காவலர்களால் எங்களைக் கண்டுபிடிக்க முடியவில்லை. அந்த முட்டாள்களுக்கு நாம் இருப்பது கூட தெரியாது."
+
+msgid "TXT_RANDOM_BEGGAR_06"
+msgstr "ஒரு நாள் ஆர்டர் பணி செய்பவர்கள் தவிர அனைவரும் எங்களுடன் சேர வேண்டிய கட்டாயம் ஏற்படும்."
+
+msgid "TXT_RANDOM_BEGGAR_07"
+msgstr "இப்போது உற்றுப் பாருங்கள், ஆனால் இது ஒரு நாள் உங்கள் சொந்த முகமாக இருக்கும் என்பது உங்களுக்குத் தெரியும்."
+
+msgid "TXT_RANDOM_BEGGAR_08"
+msgstr "ஒரு மனப்பான்மையுடன் ஒரு மேலோட்டத்தை விட எரிச்சலூட்டும் எதுவும் இல்லை!"
+
+msgid "TXT_RANDOM_BEGGAR_09"
+msgstr "ஆர்டர் உங்கள் பரிதாபகரமான முன்னணியில் குறுகிய வேலை செய்யும்."
+
+msgid "TXT_RANDOM_BEGGAR_10"
+msgstr "உங்களைப் பாருங்கள், மேற்பரப்பாளர். எங்கள் எதிரிகளை நாங்கள் அறிவோம்!"
+
+msgid "TXT_RANDOM_PGUARD_01"
+msgstr "நாம் விதியின் கைகள். நம் கோபத்தைச் சம்பாதிப்பது மறதியைக் கண்டடைவது!"
+
+msgid "TXT_RANDOM_PGUARD_02"
+msgstr "ஆணை பலவீனமான மற்றும் ஊழல் உலகத்தை தூய்மைப்படுத்தும்!"
+
+msgid "TXT_RANDOM_PGUARD_03"
+msgstr "எசமானர்களின் விருப்பத்திற்கு அடிபணியுங்கள்!"
+
+msgid "TXT_RANDOM_PGUARD_04"
+msgstr "ஆணை சகோதரர்களுக்கு நீண்ட ஆயுள்!"
+
+msgid "TXT_RANDOM_PGUARD_05"
+msgstr "விடுதலை என்பது பலவீனமான மனதைக் கட்டிப்போடும் ஒரு மாயை."
+
+msgid "TXT_RANDOM_PGUARD_06"
+msgstr "அதிகாரமே புகழுக்கான பாதை. கட்டளையைப் பின்பற்றுவது என்பது அந்த வழியில் நடப்பதாகும்!"
+
+msgid "TXT_RANDOM_PGUARD_07"
+msgstr "நீதிமான்கள் மத்தியில் உங்கள் இடத்தைப் பெறுங்கள், எங்களுடன் சேருங்கள்!"
+
+msgid "TXT_RANDOM_PGUARD_08"
+msgstr "ஆணை அதன் சொந்தத்தைப் பாதுகாக்கிறது."
+
+msgid "TXT_RANDOM_PGUARD_09"
+msgstr "அகோலிட்ச்? அவர்கள் ஆணையின் முழு மகிமையை இன்னும் பார்க்கவில்லை."
+
+msgid "TXT_RANDOM_PGUARD_10"
+msgstr "ஒரு உடலின் அந்த பரிதாபகரமான ஓடுக்குள் ஏதேனும் மரியாதை இருந்தால், நீங்கள் ஆணையின் கரங்களில் நுழைவீர்கள்."
+
+msgid "TXT_RANDOMGOODBYE_1"
+msgstr "விடைபெறுகிறேன்!"
+
+msgid "TXT_RANDOMGOODBYE_2"
+msgstr "நன்றி, விடைபெறுகிறேன்!"
+
+msgid "TXT_RANDOMGOODBYE_3"
+msgstr "பிறகு சந்திப்போம்!"
+
+# MAP33: After getting the hidden com unit in the tavern.
+msgid "TXT_ILOG1"
+msgstr "வணக்கம்? கட்டளை, ஒரு காம் யூனிட் இப்போதுதான் செயல்படுத்தப்பட்டது... யாரிடமிருந்தோ காட்சிகள் மற்றும் ஒலியைப் பெறுகிறேன்... ஏய், இப்போது அங்கிருந்து வெளியேறு... மற்றும் சாலசை விடுங்கள்!"
+
+# MAP02: After getting the com unit from Rowan and leaving his room.
+msgid "TXT_ILOG2"
+msgstr "கேளுங்கள், நீங்கள் 100% மனிதர் என்று இந்த காம் யூனிட் சொல்கிறது. உங்களை அழைத்து வரும்படி எனக்கு உத்தரவிடப்பட்டுள்ளது, நாங்கள் இங்கே நம்பிக்கையுடன் பேசுகிறோம். எனக்கு வஞ்சனை செய்து பணம் கொடுங்கள். ஓ, நீங்கள் என்னை பிளாக்பேர்ட் என்று அழைக்கலாம்."
+
+# MAP33: After getting the hidden com unit in the tavern.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG2"
+msgstr "கேளுங்கள், நீங்கள் 100% மனிதர் என்று இந்தக் கூட்டுப் பிரிவு சொல்கிறது. நீங்கள் எங்களில் ஒருவராக இருக்கலாம், ஒருவேளை நாங்கள் முயற்சி செய்து ஒருவரையொருவர் நம்பலாம். இந்த சோதனையை கவனியுங்கள், கவர்னர் மாளிகையில் ஒரு சுடர் எரியும் கருவி உள்ளது. அதைப் பெறுங்கள், நான் உங்களை எங்களிடம் அழைத்துச் செல்கிறேன்."
+
+# MAP02: On the bridge with the com unit.
+msgid "TXT_ILOG3"
+msgstr "பழைய பேரூர் ஆலுக்குச் செல்லுங்கள். மாசில் ஒரு சுரங்கப்பாதையைக் கட்டினார், அது அகோலிட்டுகளுக்குத் தெரியாமல் உள்ளே செல்லவும் வெளியேறவும் அனுமதிக்கிறது."
+
+# MAP02: In town hall with the com unit.
+msgid "TXT_ILOG4"
+msgstr "உங்கள் இடதுபுறத்தில் உள்ள கதவு வழியாகச் செல்லவும், பின்னர் வலதுபுறம். காவலரின் பெயர் செஃப். தங்கம் வேண்டும் என்று சொல்லுங்கள்."
+
+msgctxt "strifeteaser"
+msgid "TXT_ILOG5"
+msgstr "நகர மண்டபத்திற்குள் நுழைய வேண்டாம். இது இனி பாதுகாப்பானது அல்ல, எங்கள் அட்டை உடைக்கப்பட்டது. எல்லா பெரிய ரோபோக்களையும் கொல்லுங்கள், \"குருசேடர்கள்\", நான் உங்களை எங்களிடம் வழிநடத்துவேன்."
+
+# MAP33: In front of "Irale's shop" with the com unit and the Crusaders dead.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG6"
+msgstr "அனைத்து சிலுவைப்போர்களும் இறந்தவுடன் ஆயுதக் கடைக்கு அடுத்த கதவு திறக்கப்படும். கடை ரூமுக்குள் ஒரு டெலிபோர்ட்டர் உள்ளது, அதைப் பயன்படுத்துங்கள், அது உங்களை எங்களிடம் கொண்டு வரும்"
+
+# MAP33: In front of "Irale's shop" with the com unit and the Crusaders alive.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG7"
+msgstr "அனைத்து சிலுவைப்போர்களும் இறந்தவுடன் ஆயுதக் கடைக்கு அடுத்த கதவு திறக்கப்படும். கடை ரூமுக்குள் ஒரு டெலிபோர்ட்டர் உள்ளது, அதைப் பயன்படுத்துங்கள், அது உங்களை எங்களிடம் கொண்டு வரும்."
+
+# MAP33: Room with the flamethrower.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG8"
+msgstr "உங்களால் முடிந்த அளவு பெரிய ரோபோக்கள், க்ரூசேடர்களை கொல்லுங்கள். நீங்கள் முடித்ததும், நான் உங்களை மாசிலுக்கு வழிகாட்டுகிறேன்"
+
+# MAP34: After leaving the teleporter.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG9"
+msgstr "கதவு வழியாக சென்று, மசிலிடம் பேசுங்கள்."
+
+# MAP02: After accepting "messy" chore and leaving Mourel's room.
+msgid "TXT_ILOG10"
+msgstr "மெயின்களில் பவர் டேப்பைக் கண்டுபிடித்து, அதை அணைக்கவும். ஆதாரமாக ஆளுநரிடம் ஏதாவது கொண்டு வாருங்கள். MacGuffin ஐ கண்டுபிடித்து அவருடன் பேசுங்கள்."
+
+# MAP02: After accepting "messy" chore and leaving Mourel's mansion.
+msgid "TXT_ILOG11"
+msgstr "மெயின்களில் பவர் டேப்பைக் கண்டுபிடித்து, அதை அணைக்கவும். ஆதாரமாக ஆளுநரிடம் ஏதாவது கொண்டு வாருங்கள். MacGuffin ஐ கண்டுபிடித்து அவருடன் பேசுங்கள். அவர் கழிவுநீர் சுத்திகரிப்பு ஆலையில், \"பம் ஓல்\" இல், படிக்கட்டுகளின் கீழே இருக்கிறார்."
+
+# MAP02: After destroying Front's power coupling.
+msgid "TXT_ILOG13"
+msgstr "முட்டாள்! ஆர்டரில் இருந்து எங்கள் தளத்தை மறைக்க நாங்கள் பயன்படுத்தும் சாம்மிங் சர்க்யூட்களுக்கான மின்சாரத்தை நிறுத்திவிட்டீர்கள். டவுன்ஆலுக்குச் சென்று ச்கேனிங் குழுவினரை வெளியே அழைத்துச் செல்லுங்கள், இப்போது! பின்னர், மீண்டும் ஆளுநரிடம் சென்று உடைந்த இணைப்பை அவருக்குக் கொடுங்கள்."
+
+# MAP02: After destroying Front's power coupling and killing all blue acolytes
+# in the town hall.
+msgid "TXT_ILOG14"
+msgstr "சரி, \"யாரையும் நம்பாதே\" என்பது விளையாட்டின் பெயர்! அந்த சிறைச்சாலையை ஆளுநரிடம் பெற்றுக்கொள்வோம். உடைந்த இணைப்பை அவரிடம் எடுத்துச் செல்லுங்கள்."
+
+# MAP02: After finding the broken power coupling.
+msgid "TXT_ILOG15"
+msgstr "நல்ல நகர்வு! கவர்னர் ஒரு பொய்யர். அதுதான் நமது ஆற்றல் இணைப்பு. ஆர்டரில் இருந்து அடிப்படையை மறைக்க இதைப் பயன்படுத்துகிறோம். இந்த உடைந்த கப்ளிங்கை அவரிடம் எடுத்துச் செல்லுங்கள், அந்த பாசைப் பெறுவோம்."
+
+# MAP05: After crossing the alarm green door.
+msgid "TXT_ILOG18"
+msgstr "வார்டனின் சாவியைப் பயன்படுத்தி சிறை அறைத் தொகுதிகளுக்குள் நுழைந்து கைதிகளை விடுவிப்பதற்கான வழியைக் கண்டறியவும்."
+
+# MAP05: After getting to Main Control.
+msgid "TXT_ILOG19"
+msgstr "கைதிகளை விடுவிக்க வழி தேடுங்கள். ஏண்ட் ச்கேனர் சுவிட்சைத் திறப்பதற்கான வழியைக் கண்டறியவும்."
+
+# MAP05: After cutting Wolenick's hand off.
+msgid "TXT_ILOG20"
+msgstr "கைதிகளை விடுவிக்க வழி தேடுங்கள். ஏண்ட் ச்கேனர் சுவிட்சை இயக்க நீதிபதியின் கையைப் பயன்படுத்தவும்."
+
+# MAP05: After setting the prisoners free.
+msgid "TXT_ILOG21"
+msgstr "செல்ல வழி நண்பரே. கைதிகளை விடுதலை செய்வது நல்ல செயல். டெலிபோர்ட்டர்களில் ஒன்றில் குதிக்கவும், அது உங்களை மீண்டும் தளத்திற்கு கொண்டு வரும்."
+
+msgid "TXT_ILOG22"
+msgstr "ஆர்டரின் கவசங்களை இயக்கும் மின் கட்டத்தை இயக்கும் பவர் கிரிச்டலை அழிக்கவும். மின் நிலையத்தின் கிடங்கில் நாங்கள் பணியமர்த்தப்பட்ட உளவாளியான வோர்னரைப் பார்வையிடவும்."
+
+# MAP04: After leaving Reactor Core.
+msgid "TXT_ILOG24"
+msgstr "தொலைந்து போவோம். இன்னும் வேடிக்கையாக இருக்கிறது."
+
+# MAP02: After destroying the crystal in the Power Station.
+msgid "TXT_ILOG25"
+msgstr "கட்டளைக்கு முன் இன்னும் ஒரு துணிவு கோட்டையைத் தாக்குவது பாதுகாப்பானது. இரலே உனக்கு தங்கம் மற்றும் சில பயிற்சிகளை வழங்க மாசில் ஏற்பாடு செய்துள்ளார். நீங்கள் அவரைச் சந்தித்த பிறகு, வலிமைக்காக நகரத்தில் உள்ள மருத்துவரைப் பாருங்கள்."
+
+msgid "TXT_ILOG26"
+msgstr "தங்கம் மற்றும் பயிற்சிக்காக நகரத்தில் ஈரலே மற்றும் மருத்துவரிடம் சென்று, பின்னர் சாக்கடைகளைக் கண்டறியவும். கவர்னர் மாளிகைக்கு எதிரே உள்ள ஆற்றின் குறுக்கே செல்லுங்கள்."
+
+# MAP06: Entrance.
+msgid "TXT_ILOG28"
+msgstr "எலி மன்னன் என்று தன்னை அழைத்துக் கொள்ளும் வீரானைத் தேடி வருகிறோம். இது விளக்கமாகவும் வண்ணமயமாகவும் இருக்கும் என்று நான் நம்புகிறேன்."
+
+# MAP06: After giving the guard's uniform to Weran.
+msgid "TXT_ILOG33"
+msgstr "ஃபிளமேத்ரோவர் பாகங்களை ஈரலேக்கு எடுத்துச் செல்லுங்கள். மீட்பு தொட்டியை வடிகட்டவும். கீழே சாக்கடைக்கு ஒரு மறைக்கப்பட்ட நுழைவாயில் உள்ளது. கேட் கட்டுப்பாடுகள் கீழே, எங்கோ உள்ளன. அவற்றை அழிக்கவும்."
+
+# MAP06: After destroying the gate controls.
+msgid "TXT_ILOG37"
+msgstr "கட்டளை, அவர் அதை செய்துவிட்டார்! வாயில்கள் திறந்திருக்கும். அதிர்ச்சிப் படைகளை அனுப்பி, நாங்கள் உள்ளே வருகிறோம் என்று மசிலுக்குச் சொல்லுங்கள்! மீண்டும் முன்னணி தளத்திற்கு வருவோம்."
+
+# MAP07: Entrace.
+msgid "TXT_ILOG38"
+msgstr "கோட்டையின் மீதான தாக்குதலில் சேரவும். புரோகிராமரைக் கண்டுபிடித்து வெளியே எடுக்கவும். அவரது இருப்பிடம் குறித்து முரண்பட்ட அறிக்கைகள் எங்களிடம் உள்ளன. ஒருவர் கணினி அறையில் இருப்பதாகவும், மற்றொருவர் துணை நிலை கோவிலில் மறைந்திருப்பதாகவும், மற்றொருவர் நீண்ட நடைபாதையின் முடிவில் இருப்பதாகவும் கூறுகிறார்."
+
+# MAP09: Entrance.
+msgid "TXT_ILOG45"
+msgstr "புரோகிராமரைக் கண்டுபிடித்து அவரைக் கொல்லுங்கள்."
+
+msgid "TXT_ILOG46"
+msgstr "ஆரக்கிளைத் தேடி, மற்ற சிகில் துண்டுகளைப் பற்றி கேளுங்கள். ஆரக்கிள் நகரத்திற்கு வெளியே உள்ள எல்லைப் பகுதிகளில் வசிக்கிறது. ஆற்றைக் கடந்து, கோட்டையை நோக்கிச் சென்று, வளைவு வழியாக இடதுபுறம் செல்லவும்."
+
+msgid "TXT_ILOG47"
+msgstr "ஆரக்கிளைத் தேடி, மற்ற சிகில் துண்டுகளைப் பற்றி கேளுங்கள். ஆரக்கிள் கோவில் எல்லைப் பகுதியில், நகரின் புறநகரில் உள்ளது."
+
+# MAP10: After killing the Programmer, talking to Macil and moving a bit.
+msgid "TXT_ILOG48"
+msgstr "ஆரக்கிளைத் தேடி, மற்ற சிகில் துண்டுகளைப் பற்றி கேளுங்கள். உங்கள் வெகுமதியைப் பெற்று, உடல்நலம் மற்றும் பயிற்சிக்காக மருத்துவ மற்றும் ஆயுதப் பயிற்சியாளரிடம் செல்லுங்கள். ஆரக்கிள் கோவில் எல்லைப் பகுதியில், நகரின் புறநகரில் உள்ளது."
+
+# MAP11: Entrance to cave.
+msgid "TXT_ILOG50"
+msgstr "ஆரக்கிள் கோயிலைத் தேடி, மற்ற சிகில் துண்டுகளைப் பற்றி கேளுங்கள். இதோ. நான் எல்லாவற்றையும் பதிவு செய்கிறேன். நீங்கள் பிழைப்பீர்கள் என்ற நம்பிக்கை எனக்கு இல்லை என்பதல்ல. சிகிலைக் கட்டுப்படுத்த உத்தரவை அனுமதிக்க முடியாது."
+
+# MAP12: After talking to the Oracle.
+msgid "TXT_ILOG56"
+msgstr "இரண்டாவது பகுதி கருஞ்சிவப்பு மற்றும் அப்சிடியன் கோபுரத்தின் மையத்தில் உள்ளது. அங்கே நீங்கள் பிசப்பைக் காண்பீர்கள். ஆணைக்குழுவின் இராணுவத் தலைவர் பிசப் ஆவார். நாங்கள் அவரை வீழ்த்தி இரண்டு முறை அடித்தோம். ஆரக்கிளின் கிள்ளாக்கை எல்லைப் பகுதிகளில் உள்ள முக்கிய மாச்டரிடம் எடுத்துச் செல்லுங்கள்."
+
+# MAP11: Officer's uniform room.
+msgid "TXT_ILOG57"
+msgstr "பிசப் பலத்த பாதுகாப்புடன் இருக்க போகிறார், நாம் ஏன் சீருடையை ச்வைப் செய்து கலக்கக்கூடாது? பிசப்பைக் கண்டுபிடி. நீங்கள் அவரை அழித்தவுடன், ஆரக்கிளுக்குத் திரும்புங்கள்."
+
+# MAP17: Bailey → Upstairs.
+msgid "TXT_ILOG59"
+msgstr "கோட்டைக்குள் ஒரு செய்தி தருபவர் இருப்பதாக எனக்கு இப்போதுதான் செய்தி கிடைத்தது. மருத்துவமனைக்குச் செல்வோம். அங்கு வேலை செய்கிறார். அதன் பிறகு, பிசப்பைக் கண்டுபிடித்து அழிக்கவும். அவர் இறந்தவுடன் ஆரக்கிளுக்குத் திரும்பு."
+
+# MAP19: Last room (southwestern).
+msgid "TXT_ILOG64"
+msgstr "விட்டுவிடாதே. இதுதான். நேராக முன்னால். நடு நிர்வாகத்திற்கு டெலிபோர்ட்டரில் சென்று கணினி மையத்தை அழிக்கவும். இது பிசப் கோபுரத்தின் நுழைவாயிலில் உள்ள படை களத்தை கொல்லும். அவர் இறந்தவுடன், ஆரக்கிளுக்கு திரும்பவும்."
+
+# MAP15: After pressing the switch to reveal the computer.
+msgid "TXT_ILOG70"
+msgstr "மிகவும் ஈர்க்கக்கூடியது. அதை வெடிக்க வைக்கலாம். அது படை களத்தை கவனித்துக் கொள்ள வேண்டும். மீண்டும் பெய்லிக்கு வருவோம், பிறகு கோபுரத்திற்கும் பிசப்பிற்கும் செல்வோம்."
+
+# MAP16: After killing the Bishop.
+msgid "TXT_ILOG74"
+msgstr "பிராவோ, சிகிலின் மற்றொரு பகுதி! பிசப்பின் உடலில் இருந்து வெளியே வந்த அந்த விசித்திரமான பேதை பார்த்தீர்களா? நான் இதற்கு முன் எங்கே பார்த்தேன்? மீண்டும் ஆரக்கிளுக்கு வருவோம்."
+
+# MAP11: After killing the Bishop and going to MAP12's entrance.
+msgid "TXT_ILOG76"
+msgstr "பிசப் அருகில் கிடைத்த ச்பெக்ட்ரல் எனர்சியும் ஆரக்கிள் மூலம் இருப்பதாக என்னிடம் ஒரு அறிக்கை உள்ளது, கவனமாக இருங்கள்."
+
+# MAP10: After killing Macil (Spectre) without having destroyed the converter
+# in MAP24.
+msgid "TXT_ILOG79"
+msgstr "ரிக்டர் நமது படைகளின் தலைமைப் பொறுப்பை ஏற்றுள்ளார். மாசில் நம்மை ஏமாற்றிக்கொண்டே இருப்பது போல் தெரிகிறது. அவரது உண்மையான நம்பிக்கை ஆணைக்கு இருந்தது. என்ன பாம்பு. மீண்டும் ஆரக்கிளுக்கு வருவோம்."
+
+# MAP27: After killing the Loremaster with either Macil or the Oracle alive.
+msgid "TXT_ILOG83"
+msgstr "மற்றொரு சிகில் துண்டு. நாம் சுதந்திரத்திற்கு ஒரு படி நெருக்கமாக இருக்கிறோம். மேலும் நீங்கள் எனக்கு ஒரு படி நெருக்கமாக இருக்கிறீர்கள். மீண்டும் ஆரக்கிளுக்கு வருவோம்!"
+
+# MAP27/MAP12: Remark at TXT_SUB_LOG85
+msgid "TXT_ILOG85"
+msgstr "நீங்கள் முழுமையான சிகிலின் சக்தியைப் பயன்படுத்துகிறீர்கள். நாங்கள் சில மூடல்களைப் பெறுகிறோம் என்று நீங்கள் என்ன சொல்கிறீர்கள். லோர்மாச்டர் என்ன பாதுகாக்கிறார் என்று பார்ப்போம்."
+
+# MAP12: After killing the Oracle with Macil alive.
+msgid "TXT_ILOG87"
+msgstr "சரி, முன்னறிவிப்புக்கு இவ்வளவு. பிடி, மேசில் எங்களை மீண்டும் அழைக்கிறார். ஒரு துண்டாக இங்கிருந்து வெளியேறுவோம்."
+
+# MAP23: After talking with Richter and leaving his room.
+msgid "TXT_ILOG89"
+msgstr "சுரங்கங்களுக்கு அடுத்தபடியாக தொழிற்சாலை உள்ளது. ரிக்டர் என்பது டெக்னின் சுரங்கங்களைக் குறிக்க வேண்டும். டெக்னின் தாது காந்தமானது மற்றும் வெடிக்கும் தன்மை கொண்டது, இது ஆற்றல் புலங்களை மூடுவதற்கான ஒரு சேதி. கேடாகம்ப்களில் இருந்து அந்த சாவியைப் பெறுவோம், பின்னர் சில தாதுக்களுக்காக சுரங்கங்களுக்குச் செல்வோம்."
+
+# MAP25: Entrance.
+msgid "TXT_ILOG93"
+msgstr "சுரங்கங்களுக்கு அடுத்தபடியாக தொழிற்சாலை உள்ளது. டெக்னின் தாது காந்தமானது மற்றும் வெடிக்கும் தன்மை கொண்டது, இது ஆற்றல் புலங்களை மூடுவதற்கான ஒரு சேதி. அந்த சாவியை கேடாகம்ப்களில் இருந்து பெறுவோம், பின்னர் சில தாதுக்களுக்காக இறங்குவோம். இது ரிக்டரின் முகவர்கள் தேடிக்கொண்டிருந்த இடிபாடுகளாக இருக்க வேண்டும், கவனமாக இருங்கள்."
+
+# MAP25: After killing the Spectre.
+msgid "TXT_ILOG95"
+msgstr "சுரங்கங்களுக்கு அடுத்தபடியாக தொழிற்சாலை உள்ளது. டெக்னின் தாது காந்தமானது மற்றும் வெடிக்கும் தன்மை கொண்டது, இது ஆற்றல் புலங்களை மூடுவதற்கான ஒரு சேதி. என் நண்பரே, நாங்கள் சண்டையிடுவது எதுவாக இருந்தாலும், அது கட்டளையை விட அதிகம். மீண்டும் காமன்சுக்கு பிறகு சுரங்கங்களுக்குச் செல்லுங்கள். எங்களுக்கு தாது வேண்டும்."
+
+# MAP14: Entrance.
+msgid "TXT_ILOG96"
+msgstr "சுரங்கங்களுக்கு அடுத்தபடியாக தொழிற்சாலை உள்ளது. டெக்னின் தாது காந்தமானது மற்றும் வெடிக்கும் தன்மை கொண்டது, இது விசை புலங்களை மூடுவதற்கான ஒரு சேதி. உங்கள் பாதுகாப்பைக் குறைக்காமல், தாது வைப்புகளைத் தேடுங்கள்."
+
+# MAP14: After crossing the entrance yard.
+# (drone ≈ slave)
+msgid "TXT_ILOG97"
+msgstr "உங்கள் பாதுகாப்பைக் குறைக்காமல், தாது வைப்புகளைத் தேடுங்கள். இந்த ஏழை ஆத்மாக்கள் ட்ரோன்கள். அவற்றின் சினாப்டிக் செயல்பாடுகள் RC உள்வைப்புகளால் நெரிசல் செய்யப்படுகின்றன. நாங்கள் டிரான்ச்மிட்டரை அழிக்கிறோம், அவை இலவசம்."
+
+# MAP14: After James's room.
+msgid "TXT_ILOG99"
+msgstr "சுரங்கங்களுக்கு அடுத்தபடியாக தொழிற்சாலை உள்ளது. உங்கள் பாதுகாப்பைக் குறைக்காமல், தாது வைப்புகளைத் தேடுங்கள். எனது பரிந்துரை என்னவென்றால், தாதுவை விசைப் புலத்தில் தூக்கி எறிந்து பின்னர் அதை வெடிக்கச் செய்யுங்கள், இதன் விளைவாக வரும் சுருக்கமானது ஒரு காந்தப் போர்வையை உருவாக்கி விளக்குகளை அணைக்க வேண்டும்."
+
+# MAP14: After destroying the transmitter.
+msgid "TXT_ILOG100"
+msgstr "இப்போது தொழிற்சாலைக்குச் செல்லுங்கள். சுரங்கத்திலிருந்து வெளியேறவும், அதை நீங்கள் தவறவிட முடியாது. அந்த இயந்திரத்தைக் கண்டுபிடித்து மூடுவோம்!"
+
+# MAP20: Path to Conversion Chapel (MAP24).
+# ("neural oscillation" or "brainwave")
+msgid "TXT_ILOG102"
+msgstr "நான் நேராக முன்னால் இருந்து பாரிய நரம்பு அலை சிதைவுகளைப் படிக்கிறேன். கண்டுபிடித்துவிட்டோம் என்று நினைக்கிறேன். உள்ளே நுழைந்து அதை மூடுவோம்!"
+
+# MAP24: Converter room.
+msgid "TXT_ILOG103"
+msgstr "எல்லாவற்றையும் பார்த்தோம் என்று நான் நினைக்கும் போது! அவர்கள் மனிதர்களாகச் சென்று வெளியே வருகிறார்கள்... நான் அதைப் பற்றி சிந்திக்கக்கூட விரும்பவில்லை. இந்த பயங்கரத்தை அழிக்கவும்!"
+
+# MAP24: After destroying the converter.
+msgid "TXT_ILOG104"
+msgstr "மசிலுக்கு இழப்பு வந்து விட்டது. அவர் தெரிந்தே 200 பேரை மரணத்திற்கு அனுப்பினார். எனக்கு பழிவாங்க வேண்டும்! இறந்தவர்களுக்காகவும், இறந்தவர்களுக்காகவும்! திரும்பி வந்து என்ன நடக்கிறது என்பதைக் கண்டுபிடிப்போம்."
+
+# MAP10: After killing Macil while having destroyed the converter in MAP24.
+msgid "TXT_ILOG106"
+msgstr "தொழிற்சாலை ஒரு \"ஆய்வகத்திற்கு\" செல்கிறது, மேலும் அவர்கள் உள்ளே இருந்து ஒரு சிகில் துண்டு ஆற்றல் கையொப்பத்தைப் பெறுகிறார்கள். தொழிற்சாலைக்குத் திரும்பி, சுதந்திரத்திற்கான நமது அடுத்த படி."
+
+# MAP16: Entrance → Central door.
+msgid "TXT_ILOG120"
+msgstr "பிசப்பை கண்டுபிடித்து அழிக்கவும்! அவர் இறந்தவுடன், ஆரக்கிளுக்கு திரும்பவும்."
+
+# MAP12?
+msgid "TXT_ILOG122"
+msgstr "லோர்மாச்டரின் ஆய்வகம் இப்போது திறக்கப்பட்ட டெலிபோர்ட்டருக்கு அப்பால் உள்ளது. அவர் எதைப் பற்றிப் பேசுகிறார் என்பதைக் கண்டுபிடிப்போம். சுதந்திரத்திற்கான நமது அடுத்த படி."
+
+# MAP15: Computer destroyed + Room 1
+msgid "TXT_ILOG211"
+msgstr "வாருங்கள், இங்கிருந்து வெளியேறுவோம். படை களம் கீழே உள்ளது, பிசப் கோபுரம். அவர் இறந்துவிட்டால், மீண்டும் ஆரக்கிளுக்குச் செல்லுங்கள்."
+
+# MAP33?
+msgid "TXT_ILOG1001"
+msgstr "ஆற்றங்கரையில் உள்ள சரணாலயத்தைக் கண்டுபிடி. உள்ளே இருந்து கோப்பையை திருடவும். அதை ஆரிசுக்கு உணவகத்தில் கொண்டு வாருங்கள்."
+
+# MAP33?
+msgid "TXT_ILOG1002"
+msgstr "ஆளுநரைக் கண்டுபிடி. உங்கள் வெகுமதியைப் பற்றி அவரிடம் பேசுங்கள்."
+
+# MAP02: After accepting Rowan's chore.
+msgid "TXT_ILOG1003"
+msgstr "ஆற்றங்கரையில் உள்ள சரணாலயத்தைக் கண்டுபிடி. உள்ளே பெல்டின் என்று ஒருவர் தடுத்து வைக்கப்பட்டுள்ளார். அவரை வாயை மூடி, ஆதாரமாக அவரது மோதிரத்தை ரோவனிடம் கொண்டு வாருங்கள்."
+
+# MAP02: After getting the com unit from Rowan.
+msgid "TXT_ILOG1004"
+msgstr "முன்னணியின் இருப்பிடத்தைக் கண்டுபிடித்து மசிலுடன் பேசுங்கள்."
+
+# MAP02?
+msgid "TXT_ILOG1005"
+msgstr "படிக்கட்டுகளில் இறங்கி, மாசிலைக் கண்டுபிடித்து பேசுங்கள்."
+
+# MAP03: After joining the Front.
+msgid "TXT_ILOG1006"
+msgstr "நகரத்தில் முன்னணியின் ஆயுத சப்ளையர் ஈரேலைப் பார்வையிடவும். அவர் ஆயுதக் கடைக்கு அடுத்த கதவுக்குப் பின்னால் இருக்கிறார். பிறகு, கவர்னரிடம் பேசுவதற்கு Macil கொடுத்த சாவியைப் பயன்படுத்தவும்."
+
+# MAP02: After accepting "messy" chore.
+msgid "TXT_ILOG1007"
+msgstr "மெயின்களில் பவர் டேப்பைக் கண்டுபிடித்து, அதை அணைக்கவும். ஆதாரமாக ஆளுநரிடம் ஏதாவது கொண்டு வாருங்கள்."
+
+# MAP02: After accepting "bloody" chore.
+msgid "TXT_ILOG1008"
+msgstr "மின் நிலையத்தின் கிடங்கில் டெர்வினைக் கண்டுபிடி. அவனைக் கொன்று, மௌரலை அவன் காதில் கொண்டு வா."
+
+# MAP03: After completing Mourel's chore.
+msgid "TXT_ILOG1009"
+msgstr "சிறைக்குள் செல்ல மொரல் கொடுத்த பாசைப் பயன்படுத்தவும். உள்ளே வந்ததும், வார்டன் மாண்டேக்கிடம் பேசுங்கள். கைதிகளை விடுவிக்க வழி தேடுங்கள்."
+
+# MAP05
+msgid "TXT_ILOG1010"
+msgstr "வார்டனின் சாவியைப் பயன்படுத்தி சிறை அறைத் தொகுதிகளுக்குள் நுழைந்து கைதிகளை விடுவிப்பதற்கான வழியைக் கண்டறியவும்."
+
+# MAP03: After accepting Macil's second mission.
+msgid "TXT_ILOG1011"
+msgstr "ஆர்டரின் கவசங்களை இயக்கும் மின் கட்டத்தை இயக்கும் பவர் கிரிச்டலை அழிக்கவும். மின் நிலையத்தின் கிடங்கில் நாங்கள் பணியமர்த்தப்பட்ட உளவாளியான வோர்னரைப் பார்வையிடவும். நீங்கள் செல்வதற்கு முன் மருத்துவர் மற்றும் ஆயுதப் பயிற்சியாளரை சந்திக்க மறக்காதீர்கள்."
+
+# MAP04: After talking to Worner.
+msgid "TXT_ILOG1012"
+msgstr "ஆர்டரின் கவசங்களை இயக்கும் மின் கட்டத்தை இயக்கும் பவர் கிரிச்டலை அழிக்கவும். ஐடியைப் பயன்படுத்தவும் மின் நிலையத்திற்குள் செல்ல. வோர்னருக்கு மேலே உள்ள ச்டோர்ரூமை நீங்கள் பார்க்க விரும்பலாம்."
+
+# MAP04: After talking to "Mr. Crispy".
+msgid "TXT_ILOG1013"
+msgstr "ஆர்டரின் கவசங்களை இயக்கும் மின் கட்டத்தை இயக்கும் பவர் கிரிச்டலை அழிக்கவும். முக்கிய பகுதியில் கெட்ரிக் உடன் பேசுங்கள்."
+
+# MAP04: After talking to Sammis.
+msgid "TXT_ILOG1014"
+msgstr "ஆற்றல் படிகத்தை அழிக்கவும். கெட்ரிக் உடன் பேசுங்கள், சுவிட்சுகளைப் பயன்படுத்தி நடைபாதையை மேலே கொண்டு வாருங்கள், பின்னர் இந்த ஐடியை உயர்த்திக்கு பயன்படுத்தவும்."
+
+msgid "TXT_ILOG1015"
+msgstr "ஆர்டர் பாதுகாக்கப்பட்ட நகர நுழைவாயிலைக் கண்டறியவும். கதவைத் திறந்து காவலாளியின் சீருடையை மீண்டும் வேரனிடம் கொண்டு வா."
+
+msgid "TXT_ILOG1016"
+msgstr "ஃபிளமேத்ரோவர் பாகங்களை ஈரலேக்கு எடுத்துச் செல்லுங்கள். கழிவுநீர் பராமரிப்பு கதவைக் கண்டறியவும். கோட்டைக்குள் உள்ள மீட்பு தொட்டியைக் கண்டுபிடித்து வடிகட்டவும். கீழே சாக்கடைக்கு ஒரு மறைக்கப்பட்ட நுழைவாயில் உள்ளது. அந்த நுழைவாயிலின் கீழே, கேட் கட்டுப்பாடுகள் எங்காவது உள்ளன."
+
+# MAP03: After destroying the gate controls and talking to Macil.
+msgid "TXT_ILOG1017"
+msgstr "கோட்டையின் மீதான தாக்குதலில் சேரவும். புரோகிராமரைக் கண்டுபிடித்து வெளியே எடுக்கவும். மருத்துவர் மற்றும் ஆயுதப் பயிற்சியாளரைப் பார்க்கவும். உங்களிடம் உள்ள அனைத்தையும் செலவிடுங்கள். இது ஒரு நரக சண்டையாக இருக்கும்."
+
+msgid "TXT_ILOG1018"
+msgstr "ப்ரோக்ராமர் காப்பகத்திற்கான நுழைவாயிலைத் திறக்க, தவறான புரோகிராமர் கொடுத்த சாவியைப் பயன்படுத்தவும். அவர் மறைந்திருக்கும் இடத்தில் இருக்க வேண்டும். புரோகிராமரைக் கண்டுபிடித்து அவரைக் கொல்லுங்கள்."
+
+# MAP10: After killing the Programmer and talking to Macil.
+msgid "TXT_ILOG1019"
+msgstr "ஆரக்கிளைத் தேடி, மற்ற சிகில் துண்டுகளைப் பற்றி கேளுங்கள். உங்கள் வெகுமதியைப் பெற்று, உடல்நலம் மற்றும் பயிற்சிக்காக மருத்துவ மற்றும் ஆயுதப் பயிற்சியாளரிடம் செல்லுங்கள்."
+
+msgid "TXT_ILOG1020"
+msgstr "இரண்டாவது பகுதி கருஞ்சிவப்பு மற்றும் அப்சிடியன் கோபுரத்தின் மையத்தில் உள்ளது. அங்கே உங்களுக்காகக் காத்திருக்கும் பிசப்பை நீங்கள் கண்டுபிடிக்க வேண்டும். ஆரக்கிளின் கிள்ளாக்கை எல்லைப் பகுதிகளில் உள்ள முக்கிய மாச்டரிடம் எடுத்துச் செல்லுங்கள். நீங்கள் பிசப்பை அழித்தவுடன், ஆரக்கிளுக்குத் திரும்புங்கள்."
+
+# MAP11: After getting the Military ID from the keymaster.
+msgid "TXT_ILOG1021"
+msgstr "கிரிம்சன் மற்றும் அப்சிடியன் கோபுரத்தைக் கண்டறியவும். கோபுரத்திற்குள் நுழைய, முக்கிய மாச்டர் கொடுத்த அடையாளம் விசையைப் பயன்படுத்தவும். உள்ளே சென்றதும் நீங்கள் பிசப்பைக் கண்டுபிடிக்க வேண்டும். நீங்கள் பிசப்பை அழித்தவுடன், ஆரக்கிளுக்குத் திரும்புங்கள்."
+
+# MAP17: After talking to Quincy.
+msgid "TXT_ILOG1022"
+msgstr "பாதுகாப்பு வளாகத்தைக் கண்டுபிடித்து, அங்கு போராடி, நடு நிர்வாகத்திற்கு டெலிபோர்ட்டரைப் பயன்படுத்தவும். நடு நிர்வாகத்தில் கணினி மையத்தை அழிக்கவும். இது பிசப் கோபுரத்தின் மீது படைக் களத்தைக் கொல்லும். பிசப் இறந்தவுடன், ஆரக்கிளுக்குத் திரும்பு."
+
+msgid "TXT_ILOG1023"
+msgstr "உங்கள் அடுத்த அறைகூவல் உங்கள் ஆன்மாவை சோதிக்கும். மூன்றாவது துண்டு உங்கள் சொந்த தலைவரால் நடத்தப்படுகிறது. அவர் உங்களைக் கொல்ல அனுப்புவது போலவே இருக்கிறார். அவரை எதிர்த்து உங்கள் தலைவிதியை தீர்த்துக் கொள்ளுங்கள்."
+
+# MAP10: You chose to kill the Oracle.
+msgid "TXT_ILOG1024"
+msgstr "மூன்றாவது பாகத்தை வைத்திருப்பது ஆரக்கிள்தான். உன் துரோகி இருக்கிறான். ஆரக்கிளுக்குத் திரும்பி, அவரை கீழே இறக்கவும். அது இறந்தவுடன் என்னிடம் திரும்பு."
+
+msgid "TXT_ILOG1025"
+msgstr "நீங்கள் உங்கள் உடலில் இருந்து புற்றுநோயை வெட்டிவிட்டீர்கள், ஆனால் உங்கள் இதயம் இன்னும் துடிக்கிறது. அடுத்து உங்கள் மக்களை கசாப்பு செய்து கட்டுப்படுத்தும் அறுவை மருத்தீடு நிபுணரை நீங்கள் கண்டுபிடிக்க வேண்டும்... தி லோர்மாச்டர். அவரை நிறுத்துங்கள், அடுத்த பகுதி உங்களுடையதாக இருக்கும்."
+
+msgid "TXT_ILOG1026"
+msgstr "அடுத்து உங்கள் மக்களை கசாப்பு செய்து கட்டுப்படுத்தும் அறுவை மருத்தீடு நிபுணரை நீங்கள் கண்டுபிடிக்க வேண்டும்... தி லோர்மாச்டர். அவரை நிறுத்துங்கள், அடுத்த பகுதி உங்களுடையதாக இருக்கும். அவரை அடைய நான் திறந்த டெலிபோர்ட்டரைப் பயன்படுத்தவும். அவர் இறந்த பிறகு, என்னிடம் திரும்ப அதே சாதனத்தைப் பயன்படுத்தவும்."
+
+# MAP12: You chose to kill Macil.
+msgid "TXT_ILOG1027"
+msgstr "புத்திசாலித்தனமாகத் தேர்ந்தெடுத்துள்ளீர்கள். மூன்றாவது துண்டு உங்கள் சொந்த தலைவரால் நடத்தப்படுகிறது. உங்கள் இதயத்தில் மறைந்திருப்பதை அழித்துவிட்டு என்னிடம் திரும்புங்கள்."
+
+# MAP10: After killing the Oracle and talking to Macil.
+msgid "TXT_ILOG1028"
+msgstr "இந்த கட்டளை நம் மக்களை உயிரி இயந்திர வீரர்களாக மாற்றுகிறது என்பதை நாங்கள் கண்டுபிடித்துள்ளோம். இது செய்யப்படும் வசதியைக் கண்டுபிடித்து நிரந்தரமாக மூடவும்! நீர்வீழ்ச்சிக்கு அருகில் உள்ள காமன்சில் ரிக்டரைக் கண்டுபிடி, இந்த அட்டூழியத்தை எப்படி நிறுத்துவது என்று அவர் உங்களுக்குச் சொல்வார்."
+
+# MAP23: After talking with Richter.
+msgid "TXT_ILOG1029"
+msgstr "தொழிற்சாலைக்குள் நுழைய, உங்களுக்கு ஒரு விசை தேவை. நாங்கள் ஒன்றைத் திருடினோம், ஆனால் அதை வைத்திருந்த ஏசென்ட் காமன்சின் அடியில் உள்ள கேடாகம்ப்சில் இல்லை. அங்கே ஏதோ எங்கள் ஆட்களை அழைத்துச் செல்கிறது. எதுவாக இருந்தாலும், அதைக் கண்டுபிடித்து சாவியை மீட்டெடுக்க வேண்டும். நீங்கள் அதைப் பெற்றவுடன், தொழிற்சாலை சுரங்கங்களுக்கு அடுத்ததாக உள்ளது."
+
+msgid "TXT_ILOG1101"
+msgstr "சரணாலய தேவாலயத்தில் உள்ள சாலசைக் கண்டுபிடித்து, அதை உணவகத்தில் உள்ள ஆரிசுக்கு மேலே கொண்டு வாருங்கள்."
+
+msgid "TXT_ILOG1102"
+msgstr "கவர்னர் மாளிகையைக் கண்டுபிடித்து, கவர்னரிடம் பேசி உங்கள் வெகுமதியைப் பெறுங்கள்"
+
+msgid "TXT_ILOG1201"
+msgstr "வாழ்த்துகள்! நீங்கள் எங்கள் நன்றியைப் பெற்றுள்ளீர்கள். மருத்துவர் மற்றும் ஆயுதப் பயிற்சியாளரைப் பார்வையிடவும், அவர்கள் உங்களைத் தயார்படுத்துவார்கள். தளத்திற்குள்ளேயே சுற்றித் திரியலாம்."
+
+msgid "TXT_SPEAKER_ORDER_SERGEANT"
+msgstr "ஆர்டர் சார்சென்ட்"
+
+msgid "TXT_SPEAKER_ROWAN"
+msgstr "ரோவன்"
+
+msgid "TXT_SPEAKER_FERIS"
+msgstr "காட்டு"
+
+msgid "TXT_SPEAKER_PRISON_GUARD"
+msgstr "சிறைக்காவலர்"
+
+msgid "TXT_SPEAKER_JUSTIN"
+msgstr "சச்டின்"
+
+msgid "TXT_SPEAKER_MACIL"
+msgstr "மாசில்"
+
+msgid "TXT_SPEAKER_ASSISTANT"
+msgstr "உதவியாளர்"
+
+msgid "TXT_SPEAKER_KEY_MASTER"
+msgstr "முக்கிய மாச்டர்"
+
+msgid "TXT_SPEAKER_BODYGUARD"
+msgstr "மெய்க்காப்பாளர்"
+
+# Intended to appear in MAP01 of the Strife teaser, but does not spawn.
+msgid "TXT_SPEAKER_INTERROGATOR"
+msgstr "விசாரிப்பவர்"
+
+msgid "TXT_SPEAKER_WARDEN_MONTAG"
+msgstr "வார்டன் திங்கள்"
+
+msgid "TXT_SPEAKER_RICHTER"
+msgstr "ரிக்டர்"
+
+msgid "TXT_SPEAKER_MACIL_S_ADVISOR"
+msgstr "மாசிலின் ஆலோசகர்"
+
+msgid "TXT_SPEAKER_JUDGE_WOLENICK"
+msgstr "நீதிபதி வோலெனிக்"
+
+msgid "TXT_SPEAKER_TEVICK"
+msgstr "டெவிக்"
+
+msgid "TXT_SPEAKER_HARRIS"
+msgstr "ஆரிச்"
+
+msgid "TXT_SPEAKER_FOREMAN"
+msgstr "போர்மேன்"
+
+msgid "TXT_SPEAKER_PRISONER"
+msgstr "கைதி"
+
+msgid "TXT_SPEAKER_SAMMIS"
+msgstr "சாமிச்"
+
+msgid "TXT_SPEAKER_WEAPON_SMITH"
+msgstr "கருவி ச்மித்"
+
+msgid "TXT_SPEAKER_REACTOR_GUARD"
+msgstr "அணு உலை காவலர்"
+
+msgid "TXT_SPEAKER_APPRENTICE"
+msgstr "பயில்வான்"
+
+msgid "TXT_SPEAKER_DOOR_GUARD"
+msgstr "கதவு காவலர்"
+
+msgid "TXT_SPEAKER_MASTER_SMITHY"
+msgstr "மாச்டர் ச்மிதி"
+
+msgid "TXT_SPEAKER_WAREHOUSE_GUARD"
+msgstr "கிடங்கு காவலர்"
+
+msgid "TXT_SPEAKER_BARKEEP"
+msgstr "பார்கீப்"
+
+msgid "TXT_SPEAKER_TIMOTHY"
+msgstr "திமோதி"
+
+msgid "TXT_SPEAKER_JAMES"
+msgstr "சேம்ச்"
+
+msgid "TXT_SPEAKER_WORNER"
+msgstr "அணிந்தவர்"
+
+msgid "TXT_SPEAKER_BAILEY_GUARD"
+msgstr "பெய்லி காவலர்"
+
+# drone ≈ slave
+msgid "TXT_SPEAKER_DRONE"
+msgstr "ட்ரோன்"
+
+msgid "TXT_SPEAKER_FRONT_GUARD"
+msgstr "முன் காவலர்"
+
+msgid "TXT_SPEAKER_QUINCY"
+msgstr "குயின்சி"
+
+msgid "TXT_SPEAKER_SERGEANT"
+msgstr "சார்சென்ட்"
+
+msgid "TXT_SPEAKER_TEMPLE_GUARD"
+msgstr "கோவில் காவலர்"
+
+msgid "TXT_SPEAKER_ORACLE"
+msgstr "ஆரக்கிள்"
+
+msgid "TXT_SPEAKER_ULAINE"
+msgstr "யூலைன்"
+
+msgid "TXT_SPEAKER_FRONT_SOLDIER"
+msgstr "முன் சிப்பாய்"
+
+msgid "TXT_SPEAKER_PROGRAMMER"
+msgstr "நிரலி (device), நிரலர் (person)"
+
+msgid "TXT_SPEAKER_MEDIC"
+msgstr "மருத்துவம்"
+
+msgid "TXT_SPEAKER_WATCHMAN"
+msgstr "காவலாளி"
+
+msgid "TXT_SPEAKER_KETRICK"
+msgstr "கெட்ரிக்"
+
+msgid "TXT_SPEAKER_WERAN"
+msgstr "அவர்கள் இருந்தனர்"
+
+msgid "TXT_SPEAKER_ADVISOR"
+msgstr "ஆலோசகர்"
+
+msgid "TXT_SPEAKER_GEOFF"
+msgstr "செஃப்"
+
+msgid "TXT_SPEAKER_OVERSEER"
+msgstr "மேற்பார்வையாளர்"
+
+# Intended to appear in MAP19, but does not spawn.
+#
+msgid "TXT_SPEAKER_SECURITY_COMPLE"
+msgstr "பாதுகாப்பு வளாகம்"
+
+msgid "TXT_SPEAKER_COMPUTER_TECH"
+msgstr "கணினி தொழில்நுட்பம்"
+
+msgid "TXT_SPEAKER_MACGUFFIN"
+msgstr "MacGuffin"
+
+msgid "TXT_SPEAKER_ARION"
+msgstr "அரியன்"
+
+# This is a compound word. Some languages express this in one word.
+msgid "TXT_SPEAKER_DOCK_WORKER"
+msgstr "கப்பல்துறை தொழிலாளி"
+
+msgid "TXT_SPEAKER_IRALE"
+msgstr "ஏப்ரல்"
+
+msgid "TXT_SPEAKER_CORE_GUARD"
+msgstr "முக்கிய காவலர்"
+
+msgid "TXT_SPEAKER_SEWER_GUARD"
+msgstr "கழிவுநீர் காவலர்"
+
+msgid "TXT_SPEAKER_TECHNICIAN"
+msgstr "தொழில்நுட்ப வல்லுநர்"
+
+msgid "TXT_SPEAKER_GUARD"
+msgstr "காவலர்"
+
+msgid "TXT_SPEAKER_PEASANT"
+msgstr "உழவர்"
+
+msgid "TXT_SPEAKER_ARMORER"
+msgstr "கவசம் அணிபவர்"
+
+msgid "TXT_SPEAKER_BELDIN"
+msgstr "பெல்டின்"
+
+msgid "TXT_SPEAKER_GERARD"
+msgstr "செரார்ட்"
+
+msgid "TXT_SPEAKER_GOVERNOR_MOUREL"
+msgstr "கவர்னர் மோரல்"
+
+msgid "TXT_SPEAKER_BOWYER"
+msgstr "போயர்"
+
+msgid "TXT_SPEAKER_DERWIN"
+msgstr "டெர்வின்"
+
+# Menu's intro.
+msgid "TXT_SUB_INTRO1"
+msgstr "வால் விண்மீன் முன்னறிவிப்பு இல்லாமல் நமது கிரகத்தைத் தாக்கியது. ஒரே ஒரு வன்முறைத் தாக்குதலால் எங்கள் சொர்க்கத்தை இழந்தோம்."
+
+msgid "TXT_SUB_INTRO2"
+msgstr "இதன் தாக்கம் ஒரு வைரசை வெளியிட்டது, அது நிலம் முழுவதும் பரவி மில்லியன் கணக்கானவர்களைக் கொன்றது. அவர்கள் அதிர்ச்டசாலிகளாக மாறினர்."
+
+msgid "TXT_SUB_INTRO3"
+msgstr "இறக்காதவர்களுக்கு மனிதகுலத்தின் பிறழ்வுகள் ஆயின. சிலர் தங்கள் தலையில் ஒரு கொடிய கடவுளின் குரலைக் கேட்டு தங்களை \"ஆணை\" என்று அழைக்கும் வெறியர்களாக மாறினர்."
+
+msgid "TXT_SUB_INTRO4"
+msgstr "இந்தக் குரலுக்குச் செவிடாகிய நம்மில் உள்ளவர்கள் மிகக் கடுமையாகப் பாதிக்கப்பட்டு, நம்மால் திரட்டக்கூடிய எதையும் விட சக்திவாய்ந்த ஆயுதங்களைக் கையாளும் இந்த இரக்கமற்ற மனநோயாளிகளுக்குச் பணி செய்ய வேண்டிய கட்டாயத்தில் இருக்கிறோம்."
+
+msgid "TXT_SUB_INTRO5"
+msgstr "அவர்கள் நம் பெண்களையும் குழந்தைகளையும் அழிக்கிறார்கள், அதனால் நாம் அவர்களை நிலத்தடியில் மறைத்து, நம் உயிருக்கு பயந்து விலங்குகளைப் போல வாழ வேண்டும்."
+
+msgid "TXT_SUB_INTRO6"
+msgstr "ஆனால் அதிருப்தியின் கிசுகிசுக்கள் உள்ளன. நாம் ஒழுங்கமைத்தால், நம் எசமானர்களை தோற்கடிக்க முடியுமா? ஆயுதங்கள் திருடப்படுகின்றன, ராணுவ வீரர்களுக்கு பயிற்சி அளிக்கப்படுகிறது. ஒரு இயக்கம் பிறக்கிறது: வாழ்நாள் சண்டையில் பிறந்தது!"
+
+# Best ending.
+msgid "TXT_SUB_GOOD1"
+msgstr "கவனம், முன்னணியின் அனைத்து துருப்புக்களும்: அவர் அதைச் செய்துவிட்டார்! முடிந்துவிட்டது. பிளாக்பேர்டின் சிப்பாய் தீமையைக் கொன்றார். ஆர்டர் இனி இல்லை. கருங்குருவி, நீங்கள் என்னைப் படிக்கிறீர்களா?"
+
+msgid "TXT_SUB_GOOD2"
+msgstr "நீ வெல்வாய் என்று எனக்குத் தெரியும், என் வீரம். அனைத்து சண்டைகளும் நின்றுவிட்டன. உங்கள் செய் எங்கள் உடலில் இருந்து வைரசை அகற்ற தடுப்பூசியை உருவாக்க அனுமதிக்கும்."
+
+msgid "TXT_SUB_GOOD3"
+msgstr "நீங்கள் எங்கள் கிரகத்தைக் காப்பாற்றி எங்களை விடுவித்தீர்கள். இப்போது நான் உங்களுக்கு தனிப்பட்ட முறையில் நன்றி சொல்ல விரும்புகிறேன். ஓ, மற்றும் மூலம்: பெயர் சௌனா."
+
+# Sad ending.
+msgid "TXT_SUB_SAD1"
+msgstr "ஆம், தீமை போய்விட்டது, ஆனால் எங்கள் எதிர்காலம் நிச்சயமற்றது மற்றும் சந்தேகத்தால் மேகமூட்டமாக இருந்தது."
+
+msgid "TXT_SUB_SAD2"
+msgstr "நம் மக்களிடமிருந்து வைரசை அகற்ற பல தலைமுறைகள் தேவைப்படும். இவ்வளவு காலம் உயிர் பிழைத்திருந்தால்."
+
+msgid "TXT_SUB_SAD3"
+msgstr "தீமை எதை விரும்பினாலும், அது நமக்குத் தேவையான ஒன்றை நம்மிடமிருந்து வடிகட்டியது: அது நம்மை நம்பிக்கையின்றி விட்டுச் சென்றது."
+
+# Worst ending.
+msgid "TXT_SUB_BAD1"
+msgstr "உணர்வுள்ள வைரச் ஒரு அலை அலையாக நம்மைத் தாக்கியது, நம் அனைவரையும் பைத்தியமாக்கியது. மரணத்தின் சைரன் பாடலைக் கேட்டு நடனமாடினோம்."
+
+msgid "TXT_SUB_BAD2"
+msgstr "இந்தத் தீமை எல்லா மனித உயிர்களையும் வடிகட்டியது, மேலும் இனப்பெருக்கம் செய்வதை ஏளனப்படுத்தியது, எங்கள் குடும்பங்களை மறுசுழற்சி செய்தது."
+
+msgid "TXT_SUB_BAD3"
+msgstr "பின்னர் ஒரு நாள், தீமை வெளியேறியது. அதற்கு உணவளிக்க எதுவும் இல்லை. நாங்கள் அழிந்து போனோம்."
+
+# MAP03: After destroying the gate controls.
+msgid "TXT_SUB_MAP03_1"
+msgstr "வைரசால் ஏற்படும் மரபணு மாற்றங்கள் ஒழுங்கின் ஆன்மாக்களை திசைதிருப்பியது மட்டுமல்லாமல், அவர்களின் உடல்களை சிதைக்கச் செய்தது."
+
+msgid "TXT_SUB_MAP03_2"
+msgstr "இனப்பெருக்கம் இல்லாமல், பயோமெக்கானிக்கல் மேம்பாடுகள் மட்டுமே அவற்றின் வலிமை மற்றும் எண்களைப் பராமரிக்க ஒரே வழி என்று ஆர்டர் கண்டறிந்தது."
+
+msgid "TXT_SUB_MAP03_3"
+msgstr "சிதைவு முன்னேறியுள்ளது, அதனால் நாம் எதிர்கொள்ளும் பெரும்பாலான துருப்புக்கள் மனிதனை விட இயந்திரம், ஆனால் அவர்களின் கூட்டு உணர்வு ஒரு மூலத்தால் கட்டுப்படுத்தப்படுகிறது என்று நாங்கள் நம்புகிறோம்."
+
+msgid "TXT_SUB_MAP03_4"
+msgstr "…புரோகிராமர்: அகோலைட்டுகளைக் கட்டுப்படுத்தும் AIயை உருவாக்கியவர். புரோகிராமரை அழித்துவிடுங்கள், ஒரே அடியால் ஆர்டர் படைகளை முடக்கலாம். ஆனால் எச்சரிக்கையாக இருங்கள்: அவர் தாக்குபவர்களை ஆவியாக மாற்ற முடியும் என்று எங்களிடம் அறிக்கைகள் உள்ளன."
+
+# MAP10: Macil.
+msgid "TXT_SUB_MAP10_1"
+msgstr "புரோகிராமர்ச் கோப்புகளிலிருந்து சேகரிக்கப்பட்ட துண்டுகள், ஆர்டர் ஒரு அறிவார்ந்த ஆயுதத்தை வணங்குவதாகக் கூறுகின்றன. அவர்கள் அதை \"சிகில்\" என்று அழைக்கிறார்கள்."
+
+msgid "TXT_SUB_MAP10_2"
+msgstr "நீங்கள் தொட்டு மீட்ட துண்டு ஐந்தில் ஒன்று. இது பயனரின் சொந்த உயிர் சக்தியிலிருந்து பெறப்பட்ட சக்தியைப் பயன்படுத்துகிறது. நீங்கள் வாழும் போது, நீங்கள் அதன் சக்தியைக் கட்டுப்படுத்துகிறீர்கள்."
+
+msgid "TXT_SUB_MAP10_3"
+msgstr "உங்களைத் தட்டிச் சென்ற அதிர்ச்சி என்னவென்றால், சிகில் துண்டு உங்களை, உங்கள் துடிப்பு மற்றும் மூளை அலைகளை ட்யூனிங் செய்தது. நீங்கள் அதை பயன்படுத்த முடியும், ஆனால் ஒரு செலவில்: அது உங்களை உலர்த்தும்."
+
+msgid "TXT_SUB_MAP10_4"
+msgstr "ஒரு துண்டு அற்புதமான சக்தியை உருவாக்குகிறது. ஐந்து துண்டுகளையும் வைத்திருப்பது பேரழிவை ஏற்படுத்தும் மற்றும் பயனருக்கு கிரகத்தின் மொத்த கட்டுப்பாட்டைக் கொடுக்கும்."
+
+# MAP02: After getting the com unit from Rowan and leaving his room.
+msgid "TXT_SUB_LOG2"
+msgstr "கேளுங்கள், நீங்கள் 100% மனிதர் என்று இந்த காம் யூனிட் சொல்கிறது. உங்களை அழைத்து வரும்படி எனக்கு உத்தரவிடப்பட்டுள்ளது, நாங்கள் இங்கே நம்பிக்கையுடன் பேசுகிறோம். எனக்கு வஞ்சனை செய்து பணம் கொடுங்கள். ஓ, நீங்கள் என்னை பிளாக்பேர்ட் என்று அழைக்கலாம்."
+
+# MAP02: On the bridge with the com unit.
+msgid "TXT_SUB_LOG3"
+msgstr "பழைய பேரூர் ஆலுக்குச் செல்லுங்கள். ஆர்டர் வெடிகுண்டு வீசிய பிறகு, மாசில் ஒரு சுரங்கப்பாதையை உருவாக்கினார், அது அகோலிட்டுகளுக்குத் தெரியாமல் உள்ளே செல்லவும் வெளியேறவும் அனுமதிக்கிறது."
+
+# MAP02: In hall town with the com unit.
+msgid "TXT_SUB_LOG4"
+msgstr "உங்கள் இடதுபுறத்தில் உள்ள கதவு வழியாகச் செல்லவும், பின்னர் வலதுபுறம். காவலரின் பெயர் செஃப். தங்கம் வேண்டும் என்று சொல்லுங்கள்."
+
+# MAP03: After joining the Front.
+msgid "TXT_SUB_LOG5"
+msgstr "இரலே முன்னணியின் \"ஃபிக்சர்\". அவர் ஆயுதக் கடைக்கு அடுத்துள்ள குறிக்கப்படாத கதவுக்குப் பின்னால் இருக்கிறார்."
+
+# MAP02
+msgid "TXT_SUB_LOG6"
+msgstr "நினைவில் கொள்ளுங்கள்: சக்திக்கு பதிலாக திருட்டுத்தனமாக கொல்லுங்கள். நீங்கள் அலாரங்களை அமைக்க மாட்டீர்கள்."
+
+# MAP03: After joining the Front and going to Mourel's mansion.
+msgid "TXT_SUB_LOG7"
+msgstr "ஆளுநரைப் பற்றி எனக்குத் தெரியும், அவர் இரண்டு பக்கமும் நடுவில் விளையாடுகிறார். இங்கே அவரது \"மாளிகை\" என்று அழைக்கப்படுபவை."
+
+msgid "TXT_SUB_LOG8"
+msgstr "அச்சச்சோ. மனிதகுலத்தின் குப்பைகள் நிச்சயமாக ஒரு வீட்டைக் கண்டுபிடித்துள்ளன."
+
+# MAP02: After accepting "bloody" chore.
+msgid "TXT_SUB_LOG9"
+msgstr "மௌரலை ச்லீசி என்று அழைப்பது அவருக்கு ஒரு பாராட்டுக்குரியது. அவர் ஒரு குச்சியில் மாங்கல் டர்ட்."
+
+# MAP02: After accepting "messy" chore and leaving Mourel's room.
+msgid "TXT_SUB_LOG10"
+msgstr "பழைய நகரம் மற்றும் இந்த இணைப்பு எங்கே என்று தெரிந்த ஒருவருடன் நாம் பேச வேண்டும். கட்டளை கூறுகிறது: MacGuffin ஐ கண்டுபிடி. "
+
+# MAP02: After accepting "messy" chore and leaving Mourel's mansion.
+msgid "TXT_SUB_LOG11"
+msgstr "அவர் பணிவாக \"பம் ஓல்\" என்று அழைக்கப்படுகிறார். கழிவுநீர் ஆலை வழியாக நடைபாதையில் சென்று படிக்கட்டுகளில் இறங்கவும்."
+
+# MAP02: During "messy" chore.
+msgid "TXT_SUB_LOG12"
+msgstr "இந்த பணியுடன் உங்கள் நேரத்தை எடுத்துக் கொள்ளுங்கள். கட்டளையிலிருந்து இதைப் பற்றி என்னால் அறிய முடியவில்லை."
+
+# MAP02: After destroying Front's power coupling.
+msgid "TXT_SUB_LOG13"
+msgstr "முட்டாள்! ஆர்டரில் இருந்து எங்கள் தளத்தை மறைக்க நாங்கள் பயன்படுத்தும் சாம்மிங் சர்க்யூட்களுக்கான மின்சாரத்தை நிறுத்திவிட்டீர்கள். டவுன்ஆலுக்குச் சென்று ச்கேனிங் குழுவினரை வெளியே அழைத்துச் செல்லுங்கள், இப்போது!"
+
+# MAP02: After destroying Front's power coupling and killing all blue acolytes
+# in the town hall.
+msgid "TXT_SUB_LOG14"
+msgstr "சரி, \"யாரையும் நம்பாதே\" என்பது விளையாட்டின் பெயர்! ஆளுநரிடம் அந்த அனுமதியை பெற்று அந்த கைதிகளை விடுவிப்போம்."
+
+# MAP02: After finding the broken power coupling.
+msgid "TXT_SUB_LOG15"
+msgstr "நல்ல நகர்வு! கவர்னர் ஒரு அசிங்கமான பொய்யர். அதுதான் நமது ஆற்றல் இணைப்பு. இப்போது அந்த பாசைப் பெறுவோம்."
+
+# MAP02: After accepting "bloody" chore.
+msgid "TXT_SUB_LOG16"
+msgstr "கிடங்கு மின் நிலையத்தில் உள்ளது. இதை சுருக்கமாகவும் இனிப்பாகவும் செய்யலாம்."
+
+# MAP02: About to enter Norwall Prison.
+msgid "TXT_SUB_LOG17"
+msgstr "நான் சிறைக்குள் நுழைவேன் என்று நினைக்கவே இல்லை…"
+
+# MAP05: After crossing the alarm green door.
+msgid "TXT_SUB_LOG18"
+msgstr "இலவச மதிய உணவு இல்லை என்று நினைக்கிறேன். பூட்டி ஏற்றுவதற்கான நேரம்."
+
+# MAP05: After getting to Main Control.
+msgid "TXT_SUB_LOG19"
+msgstr "சரி. நீங்கள் கவர்னரை மகிழ்வித்தீர்கள், வார்டனைத் திட்டிவிட்டீர்கள்... இப்போது நாம் ஒரு சிறிய அறுவை மருத்தீடு செய்ய வேண்டும் போல் தெரிகிறது."
+
+# MAP05: After cutting Wolenick's hand off.
+msgid "TXT_SUB_LOG20"
+msgstr "அய்யோ அவன் கையை வெட்டி விட்டாய்! நீங்கள் ஒரு நல்ல பையன் என்று நான் நினைத்தேன். போகலாம்."
+
+# MAP05: After setting the prisoners free.
+msgid "TXT_SUB_LOG21"
+msgstr "செல்ல வழி, நண்பரே. டெலிபோர்ட்டர்களில் ஒன்றில் குதிக்கவும், அது உங்களை மீண்டும் தளத்திற்கு கொண்டு வரும்."
+
+msgid "TXT_SUB_LOG22"
+msgstr "வோர்னர் ஒரு உளவாளி, நாங்கள் மின் நிலையத்தின் கிடங்கில் பணியமர்த்தினோம்."
+
+# MAP04: After entering Ketrick's room.
+msgid "TXT_SUB_LOG23"
+msgstr "முதலாளியின் சொல் என்னவென்றால், நீங்கள் படிகத்தைத் தாக்கும்போது பின்வாங்க வேண்டும், இல்லையெனில் நீங்களும் மெச்கிட்-சுவையாக இருப்பீர்கள்."
+
+# MAP02: After destroying the crystal in the Power Station.
+msgid "TXT_SUB_LOG25"
+msgstr "கட்டளைக்கு முன் இன்னும் ஒரு துணிவு தாக்குவது பாதுகாப்பானது. இரலே உனக்கு தங்கம் மற்றும் சில பயிற்சிகளை வழங்க மாசில் ஏற்பாடு செய்துள்ளார். மேலும் வலிமைக்காக மருத்துவரிடம் செல்லுங்கள்."
+
+msgid "TXT_SUB_LOG26"
+msgstr "ஆணை தனது கோட்டையில் பாதுகாப்பாக இருப்பதாக நினைக்கிறது. தவறு! நீங்கள் கதவுகளைத் திறந்தால், அவை எளிதாகத் தேர்ந்தெடுக்கப்படும். அதற்கு, சாக்கடையில் இறங்க வேண்டும். ஆளுநரின் மாளிகையின் குறுக்கே ஆற்றின் குறுக்கே செல்லுங்கள். "
+
+msgid "TXT_SUB_LOG27"
+msgstr "சரி, இங்கே வாத்து. சாக்கடை குடியிருப்பாளர்கள் கொடூரமான மரபுபிறழ்ந்தவர்கள், ஆனால் அவர்களின் சுரங்கப்பாதைகளின் பிணையம் அவர்களுக்கு ரகசியங்களை அணுக உதவுகிறது. உங்கள் மூக்கைப் பிடித்துக் கொள்ளுங்கள்... நாங்கள் கீழே செல்கிறோம்."
+
+# MAP06: Entrance.
+msgid "TXT_SUB_LOG28"
+msgstr "எலி மன்னன் என்று தன்னை அழைத்துக் கொள்ளும் வீரானைத் தேடி வருகிறோம். இது விளக்கமாகவும் வண்ணமயமாகவும் இருக்கும் என்று நான் நம்புகிறேன்."
+
+# MAP06: Down → Left.
+msgid "TXT_SUB_LOG29"
+msgstr "அடடா. நீங்கள் என்ன அடியெடுத்து வைக்கிறீர்கள் என்பதைப் பற்றி நான் சிந்திக்க விரும்பவில்லை!"
+
+# MAP06: Down → Left → Upstairs → Left.
+msgid "TXT_SUB_LOG30"
+msgstr "எனக்கு என்ன தேவை. மேலும் பழுப்பு கூ!"
+
+msgid "TXT_SUB_LOG31"
+msgstr "ஏய், பார்! அந்த கதவுதான் வேரன் வேணும் என்று நினைக்கிறேன்!"
+
+msgid "TXT_SUB_LOG32"
+msgstr "கண்ணை மூடு! நான் பார்க்க விரும்பவில்லை! ஓ, மிகவும் தாமதமாகி விட்டது... ஆமாம். இது மனித உடலைப் போல் இல்லை. கட்டளை என்ன செய்தது? இதை நான் கட்டளைக்கு தெரிவிக்க வேண்டும்."
+
+# MAP06: After giving the guard's uniform.
+msgid "TXT_SUB_LOG33"
+msgstr "ஏன் ஒருமுறையாவது பூக்களுக்குள் ஒரு பணியைச் செய்ய முடியாது?"
+
+# MAP06: Weran's hideout.
+msgid "TXT_SUB_LOG34"
+msgstr "நான் அதை சொல்ல வெறுக்கிறேன் ஆனால் இது எனக்கு வீட்டை நினைவூட்டுகிறது. நான் இங்கிருந்து வெகு தொலைவில் நிலத்தடியில் இருக்கிறேன்."
+
+# MAP06: Exit of the secret entrance.
+msgid "TXT_SUB_LOG35"
+msgstr "நாங்கள் எங்கே இருக்கிறோம் என்று என்னிடம் கேட்காதீர்கள். நானும் தொலைந்துவிட்டேன். மன்னிக்கவும்."
+
+# MAP06: Secret entrance from the castle.
+msgid "TXT_SUB_LOG36"
+msgstr "அந்த செங்கல்... அந்த செங்கலை நாம் கடக்கவில்லையா? இல்லை…"
+
+# MAP06: After destroying the gate controls.
+msgid "TXT_SUB_LOG37"
+msgstr "கட்டளை, அவர் அதை செய்துவிட்டார்! வாயில்கள் திறந்திருக்கும். அதிர்ச்சிப் படைகளை அனுப்பி, நாங்கள் உள்ளே வருகிறோம் என்று மசிலுக்குச் சொல்லுங்கள்! "
+
+# MAP07: Entrace.
+msgid "TXT_SUB_LOG38"
+msgstr "புரோகிராமரின் இருப்பிடம் குறித்து முரண்பட்ட அறிக்கைகள் எங்களிடம் உள்ளன. அவர் ஒரு கணினி அறையில் இருப்பதாக ஒருவர் கூறுகிறார், அவர் ஒரு காப்பகத்தில் இருக்கிறார் என்று மற்றொருவர் கூறுகிறார், மற்றொருவர் நீண்ட நடைபாதையைக் குறிப்பிடுகிறார். மன்னிக்கவும். "
+
+# MAP07: Near the crusaders.
+msgid "TXT_SUB_LOG39"
+msgstr "ஆஆ, மீண்டும் தாக்குதலுக்கு வருவது நல்லது. அவர்களுக்கு நரகத்தைக் கொடுங்கள், தோழர்களே!"
+
+# MAP07: Computer room.
+msgid "TXT_SUB_LOG40"
+msgstr "இது நன்றாக தெரிகிறது. கணினிகள்... புரோகிராமர்... நீங்கள் என்ன நினைக்கிறீர்கள்?"
+
+# MAP07: Building before the brigde.
+msgid "TXT_SUB_LOG41"
+msgstr "இது நீண்ட நடைபாதையாக இருக்க வேண்டும். ஒன்று அல்லது என் அளவு உணர்வு நரகத்திற்குச் சுடப்பட்டது."
+
+# MAP07: Northeast bulding.
+msgid "TXT_SUB_LOG42"
+msgstr "தீய கோவிலின் அனைத்து அடையாளங்களும் இதுதான். கடுமையான கட்டிடக்கலை, பெரிய பேனர்... பிங்கோ என்று சொல்வேன்!"
+
+msgid "TXT_SUB_LOG43"
+msgstr "இவர்தான் எல்லாம் வல்லமை படைத்த புரோகிராமர்? வழி இல்லை!"
+
+msgid "TXT_SUB_LOG44"
+msgstr "இனி எதை நம்புவது என்று தெரியவில்லை. எனக்கு \"வைத்து\" என்று சொல்லும் ஒரே சேதி, இடதுபுறத்தில் உள்ள அந்த பெரிய அசுரத்தனம். ஆனால் எப்படி உள்ளே செல்வது என்று தெரியவில்லை. "
+
+# MAP09: Entrance.
+# (Probably a reference to Hunter S. Thompson’s quote, “When the going gets
+# weird, the weird turn pro.”)
+msgid "TXT_SUB_LOG45"
+msgstr "செல்வது விசித்திரமாக இருக்கும்போது, வித்தியாசமானது போகிறது. உங்களை கவனித்துக் கொள்ளுங்கள்."
+
+msgid "TXT_SUB_LOG46"
+msgstr "ஆரக்கிள் நகரத்திற்கு வெளியே உள்ள எல்லைப் பகுதிகளில் வசிக்கிறது. ஆற்றைக் கடந்து, கோட்டையை நோக்கிச் சென்று, வளைவு வழியாக இடதுபுறம் செல்லவும்."
+
+# MAP02: Castle's entrance (MAP10).
+msgid "TXT_SUB_LOG47"
+msgstr "ஆரக்கிள் ஒரு இரக்கம் கொண்ட முதன்மையான பாதிரியார், அவர் ஆணைக்கு வெளியே செயல்படுகிறார்."
+
+# MAP10: After talking to Macil and moving a bit.
+msgid "TXT_SUB_LOG48"
+msgstr "ஆரக்கிள் கோவில், நகரின் புறநகரில் உள்ள பார்டர்லேண்டில் உள்ளது."
+
+# MAP11: Entrance.
+msgid "TXT_SUB_LOG49"
+msgstr "ஆர்டர் நமது அழகான கிரகத்தை எடுத்து ஒரு குப்பைத்தொட்டியாக மாற்றியுள்ளது."
+
+# MAP11: Entrance to cave.
+msgid "TXT_SUB_LOG50"
+msgstr "இதோ. நான் எல்லாவற்றையும் பதிவு செய்கிறேன், நீங்கள் பிழைப்பீர்கள் என்ற நம்பிக்கை எனக்கு இல்லை என்பதற்காக அல்ல, நாங்கள் ஆர்டர் சிகில் கட்டுப்படுத்த அனுமதிக்க முடியாது."
+
+# MAP12: Bridge to sanctum's normal entrance.
+msgid "TXT_SUB_LOG51"
+msgstr "நீங்கள் தைரியமானவர், என் தோழரே. சவாரிக்கு உடன் இருப்பதில் பெருமைப்படுகிறேன்."
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG52"
+msgstr "ஒரு நொடி இடைநிறுத்த முடியுமா? எனக்கு கொஞ்சம் உடம்பு சரியில்லை."
+
+# MAP12: Downstairs.
+msgid "TXT_SUB_LOG53"
+msgstr "நாம் ஏன் பூமிக்கு அடியில் அதிக நேரம் செலவிட வேண்டும்? நான் நிலத்தடி பார்த்திருக்கிறேன்."
+
+# MAP12: Sanctum's normal entrance.
+msgid "TXT_SUB_LOG54"
+msgstr "கருவறை பச்சையாக இருக்கும் ஒரு பையனை நாம் உண்மையில் நம்ப வேண்டுமா?"
+
+# MAP12: After talking to the Oracle.
+msgid "TXT_SUB_LOG55"
+msgstr "கிரிம்சன் மற்றும் அப்சிடியன்? அவர் ஏன் சிவப்பு மற்றும் கருப்பு என்று சொல்ல முடியாது."
+
+# MAP11: Afther talking to the Oracle and leaving the cave.
+msgid "TXT_SUB_LOG56"
+msgstr "ஆணைக்குழுவின் இராணுவத் தலைவர் பிசப் ஆவார். அவர் அவர்களின் தந்திரோபாயங்களைத் திட்டமிடுகிறார், அவர்களின் உளவாளிகளை இயக்குகிறார் மற்றும் நம்மைக் கட்டுப்படுத்துவதாகக் குற்றம் சாட்டப்பட்டார். நாங்கள் அவரை வீழ்த்தி இரண்டு முறை அடித்தோம்."
+
+# MAP11: Officer's uniform room.
+msgid "TXT_SUB_LOG57"
+msgstr "பிசப் பலத்த பாதுகாப்புடன் இருக்கப்போகிறார், நாம் ஏன் சீருடையை ச்வைப் செய்து கலக்கக்கூடாது?"
+
+msgid "TXT_SUB_LOG58"
+msgstr "எனக்கு நினைவூட்டுங்கள், நாங்கள் இந்த விசயத்தை வெல்வோம், நான் ஒரு அலங்காரக்காரரை அழைக்கிறேன்."
+
+# MAP17: Bailey → Upstairs.
+msgid "TXT_SUB_LOG59"
+msgstr "கோட்டைக்குள் ஒரு செய்தி தருபவரைப் பெற்றுள்ளோம் என்ற செய்தி எனக்கு வந்தது. அவர்கள் மருத்துவமனை என்று அழைப்பதை நோக்கி செல்வோம், அவர் அங்கு வேலை செய்கிறார்."
+
+# MAP17: Security Complex
+msgid "TXT_SUB_LOG60"
+msgstr "திட்டங்களைப் பிடித்து கணினியைத் தட்டவும், சரியா?"
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG61"
+msgstr "சரி, நான் குறை சொல்லவில்லை, ஆனால் அடுத்த முறை இரத்த வாளிகள் இல்லாத வழியை முயற்சி செய்யலாம்."
+
+# MAP19: Cross-shaped room at the beginning.
+msgid "TXT_SUB_LOG62"
+msgstr "நாங்கள் இதற்கு முன்பு முடிவற்ற ஆல்வேகளில் இருந்தோம், ஆனால் நான் வாய்மை செய்கிறேன், நாம் கடந்து செல்லும்போது இந்த சுவர்கள் நகர்கின்றன."
+
+# MAP16
+msgid "TXT_SUB_LOG63"
+msgstr "சரி, நீங்கள் கண்டுபிடிக்க வேண்டும். இராணுவத் தலைவர் பல கெட்டவர்களுக்கு சமம்."
+
+# MAP19: Last room (southwestern).
+msgid "TXT_SUB_LOG64"
+msgstr "விட்டுவிடாதே. இதுதான். நேராக முன்னால்."
+
+msgid "TXT_SUB_LOG65"
+msgstr "அடுத்த முறை, ஒரு எரிவாயு நிலையத்தில் நின்று வழி கேட்கிறோம்."
+
+# MAP19: After coming across an alarm green door.
+msgid "TXT_SUB_LOG66"
+msgstr "அடடா! மேலும் மணிகள் மற்றும் விசில்கள் மற்றும் மோசமான தோழர்கள் எங்களை துரத்துகிறார்கள்."
+
+# MAP15: After using a big lift next to a Reaver.
+msgid "TXT_SUB_LOG67"
+msgstr "உங்களுக்கு தெரியும், வெளியில் இருந்து பார்த்தால், இந்த இடம் சிறியதாக தெரிகிறது."
+
+msgid "TXT_SUB_LOG68"
+msgstr "நான் ஒரு புதிய எதிரியைப் படிக்கிறேன். நின்று உற்றுப் பார்க்காதீர்கள், அவற்றை வீணாக்குங்கள்."
+
+# STRIFE1.WAD: MAP15
+msgid "TXT_SUB_LOG69"
+msgstr "நான் இந்த படைகளங்களை வெறுக்கிறேன். அணைக்கும் சுவிட்சைப் பார்க்கவும், அது அருகில் இருக்க வேண்டும்."
+
+# MAP15: Pressing the switch to reveal the PC.
+msgid "TXT_SUB_LOG70"
+msgstr "ஓ, மிகவும் ஈர்க்கக்கூடியது. தகர்ப்போம்!"
+
+msgid "TXT_SUB_LOG71"
+msgstr "டெலிபோர்ட்டரில் குதிக்கவும், இந்த பாப் ச்டாண்டை ஊதுவோம்."
+
+# MAP16: Entrance.
+msgid "TXT_SUB_LOG72"
+msgstr "காத்திருங்கள், அவருடைய சக்தியின் அடையாளத்தால் நாம் அவரை அறிவோம் என்று ஆரக்கிள் கூறியது. நான் நினைப்பதை நீ நினைக்கிறாயா?"
+
+msgid "TXT_SUB_LOG73"
+msgstr "இந்த பையன்களுக்கு வேலை செய்யும் ஒரு அலங்கார சிந்தனை கிடைத்தது, அவர்கள் அதை அடித்து கொன்றனர்."
+
+# MAP16: After killing the Bishop
+msgid "TXT_SUB_LOG74"
+msgstr "பிசப்பின் உடலில் இருந்து வெளியே வந்த அந்த விசித்திரமான பேதை பார்த்தீர்களா? நான் இதற்கு முன் எங்கே பார்த்தேன்?"
+
+msgid "TXT_SUB_LOG75"
+msgstr "தீர்ப்பு அழைப்பு நேரம். இப்போது எங்களுக்கு இரண்டு துண்டுகள் கிடைத்துள்ளன, நாங்கள் தளத்திற்குத் திரும்ப விரும்பலாம். உங்கள் உள்ளுணர்வு உங்களுக்கு என்ன சொல்கிறது?"
+
+# MAP11: After killing the Bishop and going to MAP12's entrance
+msgid "TXT_SUB_LOG76"
+msgstr "பிசப் அருகில் கிடைத்த ச்பெக்ட்ரல் எனர்சியும் ஆரக்கிள் மூலம் இருப்பதாக என்னிடம் ஒரு அறிக்கை உள்ளது, கவனமாக இருங்கள்."
+
+msgid "TXT_SUB_LOG77"
+msgstr "மாசில்? இந்த குழப்பத்தின் ஒரு பகுதியா? என்ன நினைப்பது என்று தெரியவில்லை. நீங்கள் சரியான முடிவை எடுப்பீர்கள் என்று நம்புகிறேன்."
+
+msgid "TXT_SUB_LOG78"
+msgstr "முன்னணிக்காக தனது உயிரைப் பணயம் வைத்துள்ள மசிலை நான் நம்புகிறேனா அல்லது ஏதேனும் அசிங்கமான முட்டாள்தனத்தை நம்புகிறேனா? எனக்கு தெரியாது. ஆனால் நான் உன்னை நம்புகிறேன்."
+
+# MAP10: After killing Macil (Spectre) without having destroyed the converter
+# in MAP24.
+msgid "TXT_SUB_LOG79"
+msgstr "ரிக்டர் நமது படைகளின் தலைமைப் பொறுப்பை ஏற்றுள்ளார். மாசில் நம்மை ஏமாற்றிக்கொண்டே இருப்பது போல் தெரிகிறது. அவரது உண்மையான நம்பிக்கை ஆணைக்கு இருந்தது. என்ன பாம்பு."
+
+# MAP26: Entrance.
+msgid "TXT_SUB_LOG80"
+msgstr "மிகவும் கவர்ச்சிகரமான நுழைவாயில். ஆனால் நாம் தேடுவது வேறு லெவல். தலை கீழே."
+
+# MAP24: Hall to converter room.
+msgid "TXT_SUB_LOG81"
+msgstr "என்ன அவமானம். வாழ்க்கைக்குப் பதிலாக சித்திரவதையில் நமது தொழில்நுட்பம் வீணடிக்கப்படுகிறது."
+
+# MAP21: Entrance to MAP26 near to an Inquisitor's banner.
+msgid "TXT_SUB_LOG82"
+msgstr "நரகத்தைப் போல வீணாக இருப்பதால், அவர்கள் தங்கள் கோவில்களை பெரிய பதாகைகளால் குறிக்கிறார்கள்."
+
+# MAP27: After killing the Loremaster with either Macil or the Oracle alive.
+msgid "TXT_SUB_LOG83"
+msgstr "மற்றொரு சிகில் துண்டு. நாம் சுதந்திரத்திற்கு ஒரு படி நெருக்கமாக இருக்கிறோம். மேலும் நீங்கள் எனக்கு ஒரு படி நெருக்கமாக இருக்கிறீர்கள்."
+
+# MAP27: Button to MAP28.
+msgid "TXT_SUB_LOG84"
+msgstr "அதன் தோற்றத்திலிருந்து, இந்த நாய்க்குட்டியைத் திறக்க முழு சிகில் தேவை. இது வானவில்லின் முடிவு என்று ஏதோ சொல்கிறது."
+
+# STRIFE1.WAD: MAP12
+#
+# (After killing the Oracle and collecting the final Sigil piece with both
+# Macil and the Loremaster dead)
+#
+# OR
+#
+# MAP27
+#
+# (After defeating the Loremaster and collecting the final Sigil piece with
+# Macil and the Oracle dead)
+msgid "TXT_SUB_LOG85"
+msgstr "நீங்கள் முழுமையான சிகிலின் சக்தியைப் பயன்படுத்துகிறீர்கள். நாங்கள் கொஞ்சம் மூடுவோம் என்று நீங்கள் என்ன சொல்கிறீர்கள்."
+
+msgid "TXT_SUB_LOG86"
+msgstr "மதியம், என் ஈரோ. மகிமையைத் தழுவத் தயாராகுங்கள்."
+
+# MAP12: After killing the Oracle with Macil alive.
+msgid "TXT_SUB_LOG87"
+msgstr "சரி, முன்னறிவிப்புக்கு இவ்வளவு. பிடி, மேசில் எங்களை மீண்டும் அழைக்கிறார். ஒரு துண்டாக இங்கிருந்து வெளியேறுவோம்."
+
+msgid "TXT_SUB_LOG88"
+msgstr "மன்னிக்கவும், என் இடுப்பு வரை இரத்தத்தில் இருந்த பிறகு இப்போது நகைச்சுவையாக எதுவும் சொல்ல முடியாது. மீண்டும் மாசிலுக்கு வருவோம்."
+
+# MAP23: After talking with Richter and leaving his room.
+msgid "TXT_SUB_LOG89"
+msgstr "சுரங்கங்களுக்கு அடுத்தபடியாக தொழிற்சாலை உள்ளது. ரிக்டர் என்பது டெக்னின் சுரங்கங்களைக் குறிக்க வேண்டும். டெக்னின் தாது காந்தமானது மற்றும் வெடிக்கும் தன்மை கொண்டது, இது ஆற்றல் புலங்களை மூடுவதற்கான ஒரு சேதி."
+
+# MAP13: Entrance.
+msgid "TXT_SUB_LOG90"
+msgstr "சுரங்கங்கள், கேடாகம்ப்கள், சாக்கடைகள்... என்ன ஒரு முதல் தேதி!"
+
+# MAP13: West (entrance with parkour to the northwest).
+msgid "TXT_SUB_LOG91"
+msgstr "ரிக்டர் இன்னும் குறிப்பிட்டதாக இருந்திருக்க வேண்டும் என்று நான் விரும்புகிறேன். ம்ம், இங்கே முயற்சிப்போம்."
+
+# MAP13: Northwest (hall to the parkour room).
+msgid "TXT_SUB_LOG92"
+msgstr "நான் நினைக்கிறேன்... ஓ, முட்டாள். எங்கே இருக்கிறோம் என்று தெரியவில்லை."
+
+# MAP25: Entrance.
+msgid "TXT_SUB_LOG93"
+msgstr "இது ரிக்டரின் முகவர்கள் தேடிக்கொண்டிருந்த இடிபாடுகளாக இருக்க வேண்டும். ஓ, கவனி! சிலுவைப்போர்!"
+
+msgid "TXT_SUB_LOG94"
+msgstr "அச்சச்சோ, அது மீண்டும் உருவாக்க முயற்சிக்கிறது. நான் தூக்கி எறிவதற்கு முன் அதை வெடி!"
+
+# MAP25: After killing the Spectre.
+msgid "TXT_SUB_LOG95"
+msgstr "நண்பரே, நாங்கள் சண்டையிடுவது எதுவாக இருந்தாலும், அது ஆணையை விட அதிகம். சுரங்கங்களுக்குச் செல்லுங்கள்!"
+
+# MAP14: Entrance.
+msgid "TXT_SUB_LOG96"
+msgstr "உங்கள் பாதுகாப்பைக் குறைக்காமல், தாது வைப்புகளைத் தேடுங்கள்."
+
+# MAP14: After crossing the entrance's yard.
+msgid "TXT_SUB_LOG97"
+msgstr "இந்த ஏழை ஆன்மாக்கள் ட்ரோன்கள், அவற்றின் சினாப்டிக் செயல்பாடுகள் RC உள்வைப்புகளால் நெரிசல் செய்யப்படுகின்றன. நாங்கள் டிரான்ச்மிட்டரை அழிக்கிறோம், அவை இலவசம்!"
+
+# MAP14: After the entrance's yard and before going down.
+msgid "TXT_SUB_LOG98"
+msgstr "டிரான்ச்மிட்டர் ஒரு ஆற்றல் புலத்தால் பாதுகாக்கப்படுகிறது என்று கட்டளை கூறுகிறது. எனவே இரண்டு பறவைகள், ஒரு கல், ட்ரோன்களை விடுவித்து, தாதுவுடன் பயிற்சி செய்யுங்கள்."
+
+# MAP14: After James's room.
+msgid "TXT_SUB_LOG99"
+msgstr "எனது பரிந்துரை என்னவென்றால், தாதுவை ஃபோர்ஃபீல்டில் தூக்கி எறிந்துவிட்டு அதை வெடிக்கச் செய்யுங்கள். இதன் விளைவாக சுருக்கமானது ஒரு காந்தப் போர்வையை உருவாக்கி விளக்குகளை அணைக்க வேண்டும்."
+
+# MAP14: After destroying the transmitter.
+msgid "TXT_SUB_LOG100"
+msgstr "இப்போது தொழிற்சாலைக்குச் செல்லுங்கள். சுரங்கத்திலிருந்து வெளியேறவும், அதை நீங்கள் தவறவிட முடியாது!"
+
+# MAP20: Exit to Commons (MAP23).
+msgid "TXT_SUB_LOG101"
+msgstr "மன்னிக்கவும், ஈரோ, இது எனக்கு புதியது."
+
+# MAP20: Path to Conversion Chapel (MAP24).
+msgid "TXT_SUB_LOG102"
+msgstr "நான் நேராக முன்னால் இருந்து பாரிய நரம்பு அலை சிதைவுகளைப் படிக்கிறேன். கண்டுபிடித்துவிட்டோம் என்று நினைக்கிறேன்."
+
+# MAP24: Converter room.
+msgid "TXT_SUB_LOG103"
+msgstr "எல்லாவற்றையும் பார்த்தோம் என்று நான் நினைக்கும் போது! அவர்கள் மனிதர்களாகச் சென்று வெளியே வருகிறார்கள்... நான் அதைப் பற்றி சிந்திக்கக்கூட விரும்பவில்லை."
+
+# MAP24: After destroying the converter.
+msgid "TXT_SUB_LOG104"
+msgstr "ஆரக்கிள் சொன்னது சரிதான். மசிலுக்கு இழப்பு வந்து விட்டது. அவர் தெரிந்தே 200 பேரை மரணத்திற்கு அனுப்பினார். எனக்கு பழிவாங்க வேண்டும். இறந்தவர்களுக்காகவும், இறந்தவர்களுக்காகவும்!"
+
+msgid "TXT_SUB_LOG105"
+msgstr "மாசில்? நோய்த்தொற்று மற்றும் ஒரு சிகில் துண்டுடன். இத்தனை வருடங்கள் அவரை நம்பி, காரணம். மற்றும் எதற்காக?"
+
+# MAP10: After killing Macil while having destroyed the converter in MAP24.
+msgid "TXT_SUB_LOG106"
+msgstr "நாங்கள் அழித்த தொழிற்சாலை ஒரு \"ஆய்வகத்திற்கு\" இட்டுச் செல்கிறது, மேலும் அவர்கள் உள்ளே இருந்து சிகில் பவர் கையொப்பத்தைப் பெறுகிறார்கள் என்று ரிக்டர் தெரிவிக்கிறது. தொழிற்சாலைக்குத் திரும்பி, சுதந்திரத்திற்கான நமது அடுத்த படி."
+
+# MAP16: Entrance → Central door.
+msgid "TXT_SUB_LOG120"
+msgstr "என்னை எதிர்த்து என் கோட்டைக்குள் நுழையத் துணிந்தவன் யார்? மதிப்பற்ற மனிதனா? என்னை எதிர்கொண்டு இறக்கவும்!"
+
+# MAP16: Boss room unlocked → Bishop
+msgid "TXT_SUB_LOG121"
+msgstr "உன்னால் என்னைக் கொல்ல முடியாது. நீங்கள் வெறும் மனிதர். மேலும் நான் மனிதனை விட மேலானவன்."
+
+# SVE.WAD
+# MAP12: If the player first kills Macil and then the Oracle's spectre before
+# killing the Loremaster with Classic Mode turned off. It talks the Loremaster
+# and BlackBird.
+msgid "TXT_SUB_LOG122"
+msgstr ""
+"இறப்பு இல்லை, நாள் வாழ்க்கை மற்றும் பல. இன்னும் அதிகம்! இது எனது பணி: சைபோர்க்ச், பாதி சதை, பாதி எஃகு, அனைத்தும் ஒரே கடவுளுக்கு பணி செய்வது. நீங்கள் பணி செய்யவில்லையா? நீ சாவாய்! \n"
+"இந்த புட்சில் சிகிலின் மற்றொரு பகுதி உள்ளது."
+
+# MAP29: Entity (If the player is progressing through the mediocre ending)
+msgid "TXT_SUB_LOG128"
+msgstr "ஆ ஆ! வரவேற்கிறோம். இந்த தருணத்திற்காக நான் காத்திருந்தேன். உன்னைப் போன்ற ஒரு முட்டாள் எனக்கு விடுதலை தருவார் என்று நான் காத்திருந்தேன். உங்கள் சிறிய கோள் என்னுடையது, நீங்கள் ஒருபோதும் பிறக்கவில்லை என்று நீங்கள் விரும்புவீர்கள்! "
+
+# MAP27: Entrance (It talks the Loremaster and BlackBird).
+msgid "TXT_SUB_LOG129"
+msgstr ""
+"உலகளாவிய விருப்பத்தில் மட்டுமே உண்மையைக் கண்டறிய முடியும். ஒரே ஒளியாகிய உண்மையான கடவுளின் முன் நீங்கள் முழங்காலில் விழுவீர்கள். என்னுடன் சேருங்கள், நான் சிகில் முடிக்கிறேன். \n"
+"இந்த மர்மமான இரட்டைப் பேச்சால் நான் வியப்படைகிறேன்."
+
+# MAP29: Entity (If the player is progressing through the good ending)
+msgid "TXT_SUB_LOG130"
+msgstr "நீ... என் ஆணையை நசுக்கிவிட்டாய், என் சூழ்ச்சிகளால் கிழித்து, பல நூற்றாண்டுகளின் ஆசையை அச்சுறுத்தினாய். ஆனால் நான் செய் பெறுவேன், நான் உன்னை தொற்றுவேன், என் விருப்பத்திற்கு உன்னை திருப்புவேன் …"
+
+msgid "TXT_SUB_LOG200"
+msgstr "ஒரு கனவு வேலை போல் தெரிகிறது, இல்லையா?"
+
+msgid "TXT_SUB_LOG201"
+msgstr "நீங்கள் அதிகம் பார்த்திருக்கிறீர்கள். ஐச் அவரை, மாசில்!"
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG202"
+msgstr "அடுத்த முறை நான் சொல்வதைக் கேட்பீர்கள்."
+
+msgid "TXT_SUB_LOG203"
+msgstr "அச்சச்சோ, இந்த அபோகாலிப்டிக் விலைகள்…"
+
+msgid "TXT_SUB_LOG204"
+msgstr "பெரியதை எடுத்துக் கொள்ளுங்கள். அவர் உங்களைத் தடுக்க மாட்டார்."
+
+msgid "TXT_SUB_LOG205"
+msgstr "திகைக்காதே. நேராக முன்னே!"
+
+msgid "TXT_SUB_LOG206"
+msgstr "இந்த தாழ்வாரங்கள் எப்படி ஒரே மாதிரியாக இருக்கின்றன என்பதை நீங்கள் எப்போதாவது கவனித்தீர்களா?"
+
+msgid "TXT_SUB_LOG207"
+msgstr "ஏய், சில நேரங்களில் நானும் யூகிக்க வேண்டும்!"
+
+msgid "TXT_SUB_LOG208"
+msgstr "ஓ, மற்றும் அலாரத்தைக் கவனியுங்கள்."
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG209"
+msgstr "ஓ, சீச். இப்போது நீங்கள் என்ன செய்தீர்கள் என்று பாருங்கள்!"
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG210"
+msgstr "மலம். இப்போது நீங்கள் அதை ஊதிவிட்டீர்கள்!"
+
+# MAP15: Computer destroyed + Room 1
+msgid "TXT_SUB_LOG211"
+msgstr "வாருங்கள்! நரகத்தை விட்டு வெளியேறுவோம்."
+
+msgid "TXT_SUB_LOG212"
+msgstr "ஓ. நீங்கள் குழப்ப வேண்டாம்."
+
+msgid "TXT_SUB_LOG213"
+msgstr "நீங்கள் அவற்றை சுவரில் ஏற்றப் போகிறீர்கள்! தொடருங்கள்!"
+
+msgid "TXT_SUB_LOG214"
+msgstr "எம்.எம். நீ ஒரு விலங்கு."
+
+msgid "TXT_SUB_LOG215"
+msgstr "இங்கே ஒரு நல்ல ரிதம் உள்ளது."
+
+msgid "TXT_SUB_LOG216"
+msgstr "ஓ. அந்த பூம்-பூம் குச்சியை விரும்புகிறேன்."
+
+msgid "TXT_SUB_LOG217"
+msgstr "எம்.எம். நீங்கள் உங்களை சுமக்கும் விதம் எனக்குப் பிடிக்கும்."
+
+msgid "TXT_SUB_LOG218"
+msgstr "வெடித்துச் செல்லுங்கள்! அவர்கள் மனிதர்கள் அல்ல!"
+
+# (Strife: Veteran Edition)
+# When obtaining the “Spontaneous Combustion” achievement
+msgid "TXT_SUB_LOG219"
+msgstr "ஆஆ! கருப்பாயிற்றே! புதிய சுவை உணர்வு…"
+
+msgid "TXT_SUB_LOG220"
+msgstr "அதைத் தொடர்ந்து செய்யுங்கள், நீங்கள் கண்மூடித்தனமாக இருப்பீர்கள்… ஆனால் எனக்கு அது பிடிக்கும்."
+
+msgid "TXT_SUB_LOG221"
+msgstr "அவர்கள் எங்களை மீண்டும் விருந்துக்கு அழைக்க மாட்டார்கள் என்று நினைக்கிறேன்!"
+
+msgid "TXT_SUB_LOG222"
+msgstr "நாம் மேல் தளத்திற்குச் செல்ல வேண்டும்."
+
+msgid "TXT_SUB_LOG223"
+msgstr "காத்திருங்கள்... இது சுவாரச்யமானது. அதைப் பாருங்கள்."
+
+msgid "TXT_SUB_LOG224"
+msgstr "அச்சச்சோ. அந்த பையன் எனக்கு க்ரீப்ச் கொடுக்கிறான். தெளிவாக வழிநடத்துவோம்."
+
+msgid "TXT_SUB_LOG225"
+msgstr "விட்டு! இடதுபுறம் திரும்பு!... ஓ, மற்றது இடது!"
+
+msgid "TXT_SUB_LOG226"
+msgstr "வழக்கமான பிடிவாதமான பன்றித் தலை கொண்ட ஆண்!... நீங்கள் ஒரு பெண்ணாக இல்லாவிட்டால்."
+
+msgid "TXT_SUB_LOG227"
+msgstr "வலுவான, கொடூரமான மற்றும் அமைதியான. என் வகையான பங்குதாரர்."
+
+msgid "TXT_SUB_LOG228"
+msgstr "சரி! நான் தவறு செய்தேன்!"
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG229"
+msgstr "நாங்கள் சந்தித்ததே இல்லை... நேருக்கு நேர்."
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG230"
+msgstr "நான் உனக்காக கனவுகள் கண்டேன்... கடினமான சேதி."
+
+msgid "TXT_SUB_LOG231"
+msgstr "இல்லை. பேரூர் ஆலுக்குள் நுழைய வேண்டாம். இது இனி பாதுகாப்பாக இல்லை. எங்களின் கவர் உடைக்கப்பட்டது. அதனால்தான் கனமழை பெய்கிறது. உங்களால் முடிந்தவரை அந்த பெரிய பையன்களைக் கொல்லுங்கள். அவர்கள் \"குருசேடர்கள்\" என்று அழைக்கப்படுகிறார்கள். நீங்கள் முடித்ததும், நான் உங்களை மாசிலுக்கு வழிகாட்டுகிறேன்."
+
+msgid "TXT_SUB_LOG232"
+msgstr "நல்ல வேலை, நண்பரே! உங்களை உள்ளே அழைத்துச் செல்லும் நேரம் இது."
+
+msgid "TXT_SUB_LOG233"
+msgstr "அந்த சிலுவைப்போர்களைக் கவனியுங்கள். அவை பெரியவை, தொங்கும் ரோபோக்கள் மற்றும் நரகத்தைப் போன்றது. பலா அவர்களின் ஆயுதங்களைப் பற்றி எங்களுக்குத் தெரியாது, ஆனால் முரண்பாடுகள் உள்ளன… நீங்கள் ஒப்பிடமுடியாது. கவனமாக."
+
+msgid "TXT_SUB_LOG234"
+msgstr "பெரிய வேலை. நீங்கள் ஒரு நல்ல நேரம் என் சிந்தனை. இப்போது, யாரும் உங்களைப் பார்க்காமல், வலதுபுறம் உள்ள கதவு வழியாகச் சென்று, மாடிக்குச் சென்று அந்த மனிதனைச் சந்திக்கவும்."
+
+msgid "TXT_SUB_LOG235"
+msgstr "நீங்கள் யாரையும் பார்க்க அனுமதிக்கிறீர்கள், நாங்கள் உங்கள் தலையைப் பெறுவோம்."
+
+msgid "TXT_SUB_LOG236"
+msgstr "நீங்கள் முட்டாள், தடுமாறி, கிளப்-ஃபுட் அன்ச்பேக் முட்டாள்! நீங்கள் எங்களுக்குக் கொடுத்தீர்கள்!"
+
+msgid "TXT_SUB_LOG237"
+msgstr "அந்தக் கதவுக்குப் பின்னால் நான் உனக்காகக் காத்திருந்தேன்... ஆனால் நான் நிலத்தடியில் இருக்க வேண்டும். நீங்கள் எங்கள் தலைவர் மாசிலை சந்திக்க வேண்டிய நேரம் இது."
+
+# MAP02: Mourel.
+msgid "TXT_BBSUB_SCRIPT02_D57608_IFIKN"
+msgstr "வீங்கிய பன்றி. இந்த பவர் கப்ளிங் என்று சொல்லப்படுவது பற்றி எனக்கு எதுவும் தெரியாது, எனவே மெதுவாக செல்லலாம்."
+
+# MAP03: Macil.
+msgid "TXT_BBSUB_SCRIPT03_D4548_GOODB"
+msgstr "ஒரு கனவு வேலை போல் தெரிகிறது, இல்லையா?"
+
+msgid "TXT_BBSUB_SCRIPT03_D7580_TAKET"
+msgstr "மேலும் நான் உங்களுடன் இருப்பேன்."
+
+msgid "TXT_BBSUB_SCRIPT03_D12128_ASING"
+msgstr "வோர்னர் ஒரு உளவாளி, நாங்கள் மின் நிலையத்தின் கிடங்கில் பணியமர்த்தினோம்."
+
+msgid "TXT_BBSUB_SCRIPT03_D16676_THEPR"
+msgstr "உங்கள் வாழ்க்கைப் போராட்டத்திற்கு நீங்கள் தயாராக இருக்கிறீர்கள் என்பதை உறுதிப்படுத்திக் கொள்ளுங்கள். ச்க்ரிம்பிங் இல்லை. உங்களிடம் உள்ள அனைத்தையும் செலவிடுங்கள்."
+
+# MAP04: Derwin.
+msgid "TXT_BBSUB_SCRIPT04_D21224_BUSIN"
+msgstr "மன்னிக்கவும், எனக்கு உடம்பு சரியில்லை."
+
+# MAP04: Worner.
+msgid "TXT_BBSUB_SCRIPT04_D25772_TELLW"
+msgstr "ம்ம்ம். ஆயுதங்கள் போலும். நாம் எப்போதும் அதிக ஃபயர்பவரை பயன்படுத்தலாம்."
+
+# MAP04: Reactor Core → Northern alarm door
+msgid "TXT_BBSUB_SCRIPT04_D31836_WHATD"
+msgstr "இது மிகவும் சுலபமாகத் தெரிகிறது, ஆனால் இதைப் பார்ப்போம்."
+
+# MAP04: Reactor Core → Southern alarm door
+msgid "TXT_BBSUB_SCRIPT04_D40932_LETME"
+msgstr "யார் கவலைப்படுகிறார்கள். புரோகிராமர்கள் சொல்வதை யாரும் கேட்பதில்லை."
+
+msgid "TXT_BBSUB_SCRIPT04_D54576_ITSAS"
+msgstr "ஓ. நான் என்ன சொல்கிறேன் என்று உங்களுக்குத் தெரிந்தால், நான் மறைந்திருப்பதில் மகிழ்ச்சி."
+
+# MAP05: Door Guard.
+msgid "TXT_BBSUB_SCRIPT05_D1516_OKBUT"
+msgstr "என்ன ஒரு குழப்பம். நீங்கள் அவரை பின்னர் கொல்லலாம் என்று நம்புகிறேன்."
+
+msgid "TXT_BBSUB_SCRIPT05_D3032_DOILO"
+msgstr "\"இந்தப் பகுதி வரம்பற்றது!\" ஆடம்பரம் அப்படித்தான்."
+
+# MAP05: Prison Guard.
+msgid "TXT_BBSUB_SCRIPT05_D4548_THEOR"
+msgstr "என்ன ஒரு பையன்."
+
+# MAP05: Montag.
+msgid "TXT_BBSUB_SCRIPT05_D7580_OVERM"
+msgstr "ஒருவேளை நீங்கள் \"தயவுசெய்து\" என்று சொல்லாததால் இருக்கலாம்."
+
+# MAP06: Weran.
+msgid "TXT_BBSUB_SCRIPT06_D1516_DOMYF"
+msgstr "எல்லாரும் மிகவும் தேவையுள்ளவர்கள்.\n"
+
+msgid "TXT_BBSUB_SCRIPT06_D3032_BRING"
+msgstr "பெரிய. இப்போது நாங்கள் எலி ராசாவை வாங்குகிறோம்."
+
+msgid "TXT_BBSUB_SCRIPT06_D4548_OPENT"
+msgstr "இந்த பையனுக்கும் மிகவும் மோசமான வாசனை இருப்பதாக நான் பந்தயம் கட்டுகிறேன்."
+
+msgid "TXT_BBSUB_SCRIPT06_D9096_YOUHA"
+msgstr "மேலும் சாக்கடைகள்... அருமை. அங்கே என்ன வாழ்கிறது என்று ஆச்சரியமாக இருக்கிறது."
+
+# MAP07: Computer room.
+msgid "TXT_BBSUB_SCRIPT07_D6064_PROGR"
+msgstr "இங்கே முட்டுச்சந்தில். நாம் தொடர்ந்து பார்ப்பது நல்லது."
+
+# MAP10: Macil (Possible reference to a song of The Beatles).
+msgid "TXT_BBSUB_SCRIPT10_D10612_YOUHA"
+msgstr "அடுத்து, என் சாம்பியன். மிச்டர் அசிங்கத்தை முறுக்கி கத்துக்கலாம்.\n"
+
+msgid "TXT_BBSUB_SCRIPT10_D12128_THERE"
+msgstr "பயோமெக்கானிக்கலா? சரி, இது அவர்களின் முடிவில்லாத துருப்புக்களை விளக்குகிறது! மற்றும் அவர்களின் மோசமான அணுகுமுறை.\n"
+
+msgid "TXT_BBSUB_SCRIPT10_D16676_IAMTH"
+msgstr "உடம்பு சரியில்லை... அவரை வீணாக்குங்கள்!"
+
+msgid "TXT_BBSUB_SCRIPT12_D12128_USETH"
+msgstr "அவர் அசிங்கமாக இருக்கலாம், ஆனால் அவர் நம் பக்கம் இருப்பது போல் தெரிகிறது."
+
+msgid "TXT_BBSUB_SCRIPT17_D10612_OHSUR"
+msgstr "அண்மைக் கால வரலாற்றின் மூலம் ஆராயும்போது, திருட்டுத்தனம் வெளியேறிவிட்டது என்று நினைக்கிறேன்."
+
+# This remark is for information about the maulers in the warehouse.
+msgid "TXT_BBSUB_SCRIPT17_D13644_OHWEL"
+msgstr "ம்ம். எந்த வம்பும் இல்லை, மச்சும் இல்லை, அம்மா தூய்மை செய்ய எதுவும் இல்லை… தயவுசெய்து எனக்கு ஒன்றைக் கொடுங்கள்.\n"
+
+# MAP31
+msgid "TXT_BBSUB_SCRIPT31_D0_OHNOI"
+msgstr "எல்லா பொருட்களையும் கொல்வதில் நான் சோர்வடைவேன் என்று நீங்கள் நினைக்கிறீர்கள், ஆனால் அது முடிந்ததும் நான் அதை இழக்கப் போகிறேன் என்று எனக்குத் தெரியும்.\n"

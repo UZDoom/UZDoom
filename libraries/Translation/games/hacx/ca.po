@@ -1,0 +1,642 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-06-07 01:01+0000\n"
+"Last-Translator: Júlia Rosell Saldaña <contacte@juliars.cat>\n"
+"Language-Team: Catalan <https://hosted.weblate.org/projects/doom-engine-games/hacx-filter/ca/>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6\n"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG1"
+msgstr "Aquests errors són massa durs per a tu?"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG"
+msgstr ""
+"Esteu segur que voleu\n"
+"sortir de l'acció?"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG2"
+msgstr "Intentes marxar? I et dius hacker a tu mateix?"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG3"
+msgstr "Torna aquí abans que t'enviï un virus pel teu tub d'escapament!"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG4"
+msgstr "Els pirates informàtics reals mai no surten de l'acció."
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG5"
+msgstr "Vinga! Encara no has vist la millor part!"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG6"
+msgstr "Renuncia ara, i el ciberespai acabarà torrat!"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG7"
+msgstr "GENIE envia les seves millors salutacions, canalla!"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG8"
+msgstr "Hmm. Tant per ser un heroi, Hacker."
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG9"
+msgstr "Què? Preferiries tornar a la ploma?"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG10"
+msgstr "Hauria de prendre la píndola blava."
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG11"
+msgstr "El nom del joc no és Twitch n' Run!"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG12"
+msgstr "No et preocupis. Salvar el món pot esperar, oi?"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG13"
+msgstr "Suposo que és hora de fer com la xarxa i dividir!"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG14"
+msgstr "No vagis i t'oblidis de HacX, ara!"
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_SUICIDE"
+msgstr "%o s'ha esborrat %hself de l'univers."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_FALLING"
+msgstr "%o va formar un cràter de la mida de Kansas."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_CRUSH"
+msgstr "%o es va convertir en un pancake humà."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_EXIT"
+msgstr "%o ha intentat sortir."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_WATER"
+msgstr "%o nedava com un maó."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_SLIME"
+msgstr "%o es va nuclear."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_LAVA"
+msgstr "%o es va banyar en calent."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_BARREL"
+msgstr "%o ha patit una sobredosi de nitroglicerina."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_SPLASH"
+msgstr "%o s'escorxa en trossos petits."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_R_SPLASH"
+msgstr "%o volia veure com era %g de dins cap a fora."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_ROCKET"
+msgstr "%o volia veure com era %g de dins cap a fora."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_KILLEDSELF"
+msgstr "%o s'ha esborrat %hself de l'univers."
+
+msgid "OB_THUG"
+msgstr "%o ja no és l'espècie dominant."
+
+msgid "OB_ANDROID"
+msgstr "%o s'ha connectat a la màquina errònia."
+
+msgid "OB_MONSTRUCT"
+msgstr "%o es va convertir en un monstre d'un ciber-jockey-derriere-kicking."
+
+msgid "OB_ICE"
+msgstr "%o va tenir ICEd."
+
+msgid "OB_BUZZER"
+msgstr "%o se sent una mica brunzit."
+
+msgid "OB_STEALTH"
+msgstr "%o descobreix un desenvolupament força impactant."
+
+msgid "OB_DMAN"
+msgstr "%o s'ha esborrat del ciberespai."
+
+msgid "OB_GLASS"
+msgstr "%o es va donar %hself una mandíbula de vidre."
+
+msgid "OB_MANIAC"
+msgstr "S'ha cancel·lat la subscripció vitalícia de %o."
+
+msgid "OB_MANIACHIT"
+msgstr "%o va morir amb algun mètode aleatori que no puc entendre."
+
+msgid "OB_TERMIN"
+msgstr "%o va ser fregit per un monstre femme fatale."
+
+# This text is not gender neutral, obviously...
+msgid "OB_TERMINHIT"
+msgstr "%o es va acostar una mica al sexe oposat."
+
+msgid "OB_REPLI"
+msgstr "%o es va acomiadar d'un vell amic."
+
+msgid "OB_REPLIHIT"
+msgstr "%o va ser apunyalat per l'esquena per un vell amic."
+
+msgid "OB_PHAGE"
+msgstr "%o va ser eliminat per selecció natural."
+
+msgid "OB_THORN"
+msgstr "%o no va poder escapar d'una mort espinosa."
+
+msgid "OB_SUMATIC"
+msgstr "%o va donar un cop de sumo a l'engonal."
+
+msgid "OB_GENIE"
+msgstr "%o no va rebre %p tres desitjos."
+
+msgid "OB_MINE"
+msgstr "%o va intentar acariciar una mina."
+
+msgid "OB_MPKICK"
+msgstr "%o va agafar la fu-kick de Bruce Lee de %k a la cara."
+
+msgid "OB_MPREZNATOR"
+msgstr "%o es va ensorrar gràcies a la revelació impactant de %k."
+
+msgid "OB_MPXPISTOL"
+msgstr "%o va prendre una dosi doble del càstig de %k."
+
+msgid "OB_MPTAZER"
+msgstr "%o s'ha tancat amb la palanca de xoc de %k."
+
+msgid "OB_MPCRYOGUN"
+msgstr "%o va tenir la cara plena de la ira gelada de %k."
+
+msgid "OB_MPUZI"
+msgstr "%o va ser perforat ple de forats per %k, a l'estil gangsta."
+
+msgid "OB_MPZOOKA"
+msgstr "%o es va menjar la bomba de fotons de %k."
+
+msgid "OB_MPZ_SPLASH"
+msgstr "%o es va reduir a un munt net de fotons per %k."
+
+# Physically this is utter nonsense, of course.
+msgid "OB_MPANTIGUN"
+msgstr "%o es va reduir a antimatèria en %k."
+
+msgid "OB_MPNUKE"
+msgstr "%o s'ha empasat la bomba nuclear de %k."
+
+msgid "OB_MPNUKESPLASH"
+msgstr "%o es va nuclear a partir de la destrucció massiva de %k."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_MPTELEFRAG"
+msgstr "%o va ser capgirat per %k."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_MONTELEFRAG"
+msgstr "L'estructura atòmica de %o es va dividir."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_DEFAULT"
+msgstr "%o caducat espontàniament."
+
+msgid "GOTNUKER"
+msgstr "Agafeu un NUKER! xucla això!"
+
+msgid "GOTUZI"
+msgstr "Tens un UZI!!"
+
+msgid "GOTREZNATOR"
+msgstr "A HOIG Reznator - FREGIR una mica de cul"
+
+msgid "GOTPHOTONZOOKA"
+msgstr "Tens un Photon 'Zooka!"
+
+msgid "GOTBIGSTICK"
+msgstr "Portes un gran pal!"
+
+msgid "GOTTAZER"
+msgstr "Tens un Tazer!!"
+
+msgid "GOTCRYOGUN"
+msgstr "Agafeu un Cryogun! CONGELA!"
+
+msgid "GOTROUNDS"
+msgstr "Agafeu algunes rondes!"
+
+msgid "GOTROUNDSCASE"
+msgstr "Agafeu un cas de rondes!"
+
+# Was "grap" for some reason.
+msgid "GOTTORPEDO"
+msgstr "Agafeu un torpede!"
+
+msgid "GOTTORPEDOS"
+msgstr "Agafeu una caixa de torpedes!"
+
+msgid "GOTMOLECULES"
+msgstr "Agafeu un mòdul de molècules!"
+
+msgid "GOTMOLECULESTANK"
+msgstr "Agafes un dipòsit ple de molècules!"
+
+msgid "GOTCARTRIDGES"
+msgstr "Agafeu uns cartutxos!"
+
+msgid "GOTCARTRIDGESCASE"
+msgstr "Agafeu una caixa de cartutxos!"
+
+msgid "GOTVALISE"
+msgstr "Agafeu un Valise farcit de mercaderies!"
+
+msgid "GOTFORCEFIELD"
+msgstr "Camp de força!"
+
+msgid "GOTMICROTEL"
+msgstr "007 Microtel"
+
+msgid "GOTENKBLIND"
+msgstr "Ets EnK Blind!"
+
+msgid "GOTRUBBERBOOTS"
+msgstr "Botes de goma vulcana!"
+
+msgid "GOTSIARRAY"
+msgstr "Mapeig SI Array!"
+
+msgid "GOTINFRARED"
+msgstr "Visera d'infrarojos!"
+
+msgid "GOTINHALER"
+msgstr "Respira profundament, inhalador!"
+
+msgid "GOTHYPONEED"
+msgstr "Una dosi d'Hydergine d'un Hypo us salva!"
+
+msgid "GOTHYPO"
+msgstr "Agafeu un hipo!"
+
+msgid "GOTKEYCARD"
+msgstr "Has trobat una KeyCard!"
+
+msgid "GOTCKEY"
+msgstr "Has trobat una clau C!"
+
+msgid "GOTPASSWORD"
+msgstr "Has trobat una contrasenya!"
+
+msgid "GOTBLUEZKEY"
+msgstr "Has trobat una clau Z blava!"
+
+msgid "GOTYELWZKEY"
+msgstr "Has trobat una clau Z groga!"
+
+msgid "GOTREDZKEY"
+msgstr "Has trobat una clau Z vermella!"
+
+msgid "GOTBODYARMOR"
+msgstr "Armadura corporal!"
+
+msgid "GOTCENTROPHENOXINE"
+msgstr "Centrefexina"
+
+msgid "GOTKEVLARVEST"
+msgstr "Agafeu una armilla de Kevlar!"
+
+msgid "GOTSKEVLARVEST"
+msgstr "Agafes una armilla de Super Kevlar!"
+
+msgid "GOTMICROKIT"
+msgstr "Agafes un MicroKit!"
+
+msgid "GOTDAMPENER"
+msgstr "Agafes un amortidor!"
+
+msgid "PD_CKEY"
+msgstr "Necessites una clau C per accedir a aquest element!"
+
+msgid "PD_KEYCARD"
+msgstr "Necessites una KeyCard per accedir a aquest article!"
+
+msgid "PD_PASSWORD"
+msgstr "Necessites una contrasenya per accedir a aquest element!"
+
+msgid "PD_BLUEZKEY"
+msgstr "Necessites una clau Z blava per fer-ho funcionar"
+
+msgid "PD_REDZKEY"
+msgstr "Necessites una clau Z vermella perquè això funcioni!"
+
+msgid "PD_YELWZKEY"
+msgstr "Necessites una clau Z groga per fer-ho funcionar!"
+
+msgid "X1TEXT"
+msgstr ""
+"Vint molí d'or no sembla que valgui tot\n"
+"aquest agreujament, oi, pirata informàtic? Fa\n"
+"el bolígraf sembla un pícnic monstruós!\n"
+"\n"
+"Biomutacions lletjos i els teus companys\n"
+"Els humans penjaven d'un sostre com\n"
+"sacs de menjar.\n"
+"\n"
+"Què dimonis és aquest GENI? Com no\n"
+"ordinador que hagis piratejat mai!\n"
+"\n"
+"Millor que trobeu el següent terminal, slice\n"
+"un passeig per l'espai c, dau a algun mutant\n"
+"a cul, i surt de Dodge!\n"
+"\n"
+
+msgid "X2TEXT"
+msgstr ""
+"On és tota la gent?!\n"
+"\n"
+"París és una ciutat fantasma, tret que ho considereu\n"
+"errors mutants ciutadans destacats.\n"
+"\n"
+"Has colpejat una resistència sagnant. Home, pot\n"
+"aquests insectes lluiten! Per sort per a tu no ho són\n"
+"les llums del porxo més brillants del bloc.\n"
+"\n"
+"Però tens part de la informàtica\n"
+"la subcomissió vol. I és desagradable!\n"
+"\n"
+"Els fluids neuronals humans alimenten aquests insectes! No\n"
+"em pregunto que el barri s'està fent una mica\n"
+"escassa. Informar a la subcomissió. I\n"
+"vigila l'esquena...\n"
+
+msgid "X3TEXT"
+msgstr ""
+"La civilització tal com la coneixeu és res!\n"
+"\n"
+"Ni amics, ni família. No més gent.\n"
+"No gent normal, de totes maneres.\n"
+"\n"
+"Només queda una cosa... GENIE!\n"
+"I si has d'anar al final de la\n"
+"univers trobareu el seu cul mutant!\n"
+"perquè ara estàs enfadat!\n"
+"\n"
+"I l'or? Dia, això és gratis.\n"
+"\n"
+"……¦(continuarà)……"
+
+msgid "X5TEXT"
+msgstr ""
+"Estàs viu!\n"
+"\n"
+"Quines són aquestes probabilitats, pirata informàtic?!\n"
+"perquè està ple d'errors.\n"
+"\n"
+"No pots arribar al subcomitè, que\n"
+"vol dir que s'ha compromès.\n"
+"\n"
+"\n"
+"Tu... estàs sol."
+
+msgid "TXT_HACXMAP01"
+msgstr "GenEmp SA."
+
+msgid "TXT_HACXMAP02"
+msgstr "Poble del túnel"
+
+msgid "TXT_HACXMAP03"
+msgstr "Annex de lava"
+
+msgid "TXT_HACXMAP04"
+msgstr "Alcatras"
+
+msgid "TXT_HACXMAP05"
+msgstr "Ciber-circ"
+
+msgid "TXT_HACXMAP06"
+msgstr "Digiota"
+
+msgid "TXT_HACXMAP07"
+msgstr "La Gran Muralla"
+
+msgid "TXT_HACXMAP08"
+msgstr "Jardí de les delícies"
+
+msgid "TXT_HACXMAP09"
+msgstr "Fortalesa amagada"
+
+msgid "TXT_HACXMAP10"
+msgstr "Somni anarquista"
+
+msgid "TXT_HACXMAP11"
+msgstr "No ens coneixem!"
+
+msgid "TXT_HACXMAP12"
+msgstr "El guant de Gothik"
+
+msgid "TXT_HACXMAP13"
+msgstr "Les clavegueres"
+
+msgid "TXT_HACXMAP14"
+msgstr "Guerres de Trode"
+
+msgid "TXT_HACXMAP15"
+msgstr "Crepuscle d'Enk"
+
+msgid "TXT_HACXMAP16"
+msgstr "Cibex proteà"
+
+msgid "TXT_HACXMAP17"
+msgstr "Riu de Sang"
+
+msgid "TXT_HACXMAP18"
+msgstr "Bizarre"
+
+msgid "TXT_HACXMAP19"
+msgstr "Les sales de guerra"
+
+msgid "TXT_HACXMAP20"
+msgstr "Alerta d'intrus!"
+
+msgid "TXT_HACXMAP31"
+msgstr "Sala dessecant"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_CLEV"
+msgstr "Ara arribant a…"
+
+# Printed when entering the idchoppers cheat, which gives the player a
+# chainsaw
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_CHOPPERS"
+msgstr "â¦ et fregirà el cul!"
+
+# Hacx's content here was totally useless so it got removed. However, this
+# string has to be defined and minimally altered so that the Dehacked
+# replacement is not being triggered.
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_BEHOLD"
+msgstr "inVuln, Str, Inviso, Rad, Allmap o Lite-amp?"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_BEHOLDX"
+msgstr "Posem-nos seriosos!"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_NCON"
+msgstr "Mode Cyberslicer ACTIVAT"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_NCOFF"
+msgstr "Mode Cyberslicer DESACTIVAT"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_NOMUS"
+msgstr "Selecció: impossible "
+
+# Should probably not be translated...
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_MUS"
+msgstr "Puja el volum\n"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_KFAADDED"
+msgstr "INIT-Mode Twitch n'Kill"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_FAADDED"
+msgstr "Així sigui, Hacker."
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_DQDON"
+msgstr "Mode de ciberpotència activat"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_DQDOFF"
+msgstr "Mode ciberpotència desactivat"
+
+msgctxt "doom hacx.hacx1"
+msgid "AMSTR_FOLLOWON"
+msgstr "Seguiment activat"
+
+msgctxt "doom hacx.hacx1"
+msgid "AMSTR_FOLLOWOFF"
+msgstr "Seguiment DESACTIVAT"
+
+msgctxt "doom hacx.hacx1"
+msgid "DOSY"
+msgstr "- premeu Y per fugir! -"
+
+msgctxt "doom hacx.hacx1"
+msgid "ENDGAME"
+msgstr ""
+"Estàs boig o inadaptat?\n"
+"Bé? Sí o No!"
+
+msgctxt "doom hacx.hacx1"
+msgid "NIGHTMARE"
+msgstr ""
+"N'estàs segur? No pots manejar\n"
+"aquesta habilitat, hacker!\n"
+"\n"
+"Premeu Y per morir. \n"
+
+# For most languages the original Doom text should suffice.
+msgctxt "doom hacx.hacx1"
+msgid "QSPROMPT"
+msgstr ""
+"Quicksave sobre les vostres dades anomenades\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Premeu Y o N."
+
+msgctxt "doom hacx.hacx1"
+msgid "QLPROMPT"
+msgstr ""
+"Voleu carregar ràpidament les dades anomenades\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Premeu Y o N."
+
+msgid "CC_THUG"
+msgstr "Brètol"
+
+msgid "CC_ANDROID"
+msgstr "Androide"
+
+msgid "CC_ICE"
+msgstr "ICE"
+
+msgid "CC_BUZZER"
+msgstr "Brunzidor"
+
+msgid "CC_DMAN"
+msgstr "Home-D"
+
+msgid "CC_PHAGE"
+msgstr "Fag"
+
+msgid "CC_MONSTRUCT"
+msgstr "Monstructe"
+
+msgid "CC_MECH"
+msgstr "Meca Maníac"
+
+msgid "CC_TERMI"
+msgstr "Terminàtrix"
+
+msgid "CC_THORN"
+msgstr "Cosa punxeguda"
+
+msgid "CC_MAJONG"
+msgstr "Mahjong 7"
+
+msgctxt "doom hacx.hacx1"
+msgid "CC_HERO"
+msgstr "Dan Evanger"
+
+msgctxt "doom hacx.hacx1"
+msgid "SKILL_BABY"
+msgstr "Si us plau, no disparis!"
+
+msgctxt "doom hacx.hacx1"
+msgid "SKILL_EASY"
+msgstr "Aargh, necessito salut!"
+
+msgctxt "doom hacx.hacx1"
+msgid "SKILL_NORMAL"
+msgstr "Destrossem-los!"
+
+msgctxt "doom hacx.hacx1"
+msgid "SKILL_HARD"
+msgstr "Sóc immortal!"
+
+msgctxt "doom hacx.hacx1"
+msgid "SKILL_NIGHTMARE"
+msgstr "bogeria!"

@@ -1,0 +1,344 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-02-24 05:20+0000\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-memory@weblate.org>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/uzdoom/unused/ru/>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.16.1-dev\n"
+
+msgid "ADVSNDMNU_ADLOPLCORES"
+msgstr "Ядро эмуляции OPL"
+
+msgid "ADVSNDMNU_FLUIDPATCHSET"
+msgstr "Патч-набор"
+
+msgid "ADVSNDMNU_GUSCONFIG"
+msgstr "Файл конфигурации для GUS"
+
+# Jargon.
+msgid "ADVSNDMNU_TIMIDITYCONFIG"
+msgstr "Файл конфигурации Timidity"
+
+msgid "ADVSNDMNU_TIMIDITYVOLUME"
+msgstr "Относительная громкость"
+
+# Jargon.
+msgid "ADVSNDMNU_WILDMIDICONFIG"
+msgstr "Файл конфигурации WildMidi"
+
+msgid "CNTRLMNU_ADJUST_GAMMA"
+msgstr "Настройка гаммы"
+
+msgid "CNTRLMNU_CHAT"
+msgstr "Чат"
+
+msgid "CNTRLMNU_CHAT_TITLE"
+msgstr "Клавиши управления чатом"
+
+msgid "DSPLYMNU_ADVANCED"
+msgstr "Расширенные настройки экрана"
+
+msgid "DSPLYMNU_APPEARANCE"
+msgstr "Внешний вид"
+
+msgid "DSPLYMNU_CROSSHAIRSCALE"
+msgstr "Размер прицела"
+
+msgid "DSPLYMNU_MESSAGES"
+msgstr "Сообщения"
+
+msgid "DSPLYMNU_SBSCALE"
+msgstr "Размер строки состояния"
+
+msgid "GLTEXMNU_ENABLEHIRES"
+msgstr "Текстуры высокого разрешения"
+
+msgid "GLTEXMNU_TEXENABLED"
+msgstr "Включить текстуры"
+
+msgid "MOUSEMNU_SMOOTHMOUSE"
+msgstr "Плавное перемещение"
+
+msgid "MSGMNU_MESSAGESCALE"
+msgstr "Размер сообщений"
+
+msgid "NOTSET"
+msgstr "Не задан"
+
+msgid "OPTMNU_INPUT"
+msgstr "Настройки ввода"
+
+msgid "OPTMNU_LIGHT"
+msgstr "Настройки освещения"
+
+msgid "OPTMNU_MULTIPLAYER"
+msgstr "Настройки сетевой игры"
+
+msgid "OPTMNU_SPRITE"
+msgstr "Настройки спрайтов"
+
+msgid "OPTMNU_SYSTEM"
+msgstr "Настройки системы"
+
+msgid "OPTVAL_4000HZ"
+msgstr "4000 Гц"
+
+msgid "OPTVAL_AUTOMAP"
+msgstr "Автокарта"
+
+msgid "OPTVAL_HUD"
+msgstr "Отображение информации"
+
+msgid "OPTVAL_HUDANDMAP"
+msgstr "Интерфейс + автокарта"
+
+msgid "OPTVAL_PMDWINOPNA"
+msgstr ""
+
+msgid "OPTVAL_SCALENEAREST"
+msgstr "Масштабировать (ближайшее)"
+
+msgid "OPTVAL_SCALELINEAR"
+msgstr "Масштабировать (линейное)"
+
+msgid "PICKER_NETAUTO"
+msgstr "Авто (рекомендуется)"
+
+msgid "PICKER_NETMODE"
+msgstr "Режим сети:"
+
+# Players connect to each other individually.
+msgid "PICKER_NETPEER"
+msgstr "Пиринговая"
+
+# Connections are routed through the host instead of all players connecting to
+# each other individually.
+msgid "PICKER_NETSERVER"
+msgstr "Пакетный сервер"
+
+# Jargon.
+msgid "REVMNU_AIR_ABSORPTION_HF"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DECAY_HF_RATIO"
+msgstr "Коэффициент Высокой Частоты Спада"
+
+# Jargon.
+msgid "REVMNU_DECAY_LF_RATIO"
+msgstr "Коэффициент Низкой Частоты Спада"
+
+# Jargon.
+msgid "REVMNU_DECAY_TIME"
+msgstr "Время Спада"
+
+# Jargon.
+msgid "REVMNU_DENSITY"
+msgstr "Плотность"
+
+# Jargon.
+msgid "REVMNU_DIFFUSION"
+msgstr "Рассеивание"
+
+# Jargon.
+msgid "REVMNU_ECHO_DEPTH"
+msgstr "Глубина Эхо"
+
+# Jargon.
+msgid "REVMNU_ECHO_TIME"
+msgstr "Время Эхо"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_DIFFUSION"
+msgstr "Рассеивание Окружения"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_SIZE"
+msgstr "Размер Окружения"
+
+# Jargon.
+msgid "REVMNU_HF_REFERENCE"
+msgstr "HF Референс"
+
+# Jargon.
+msgid "REVMNU_LF_REFERENCE"
+msgstr "LF Референс"
+
+# Jargon.
+msgid "REVMNU_MODULATION_DEPTH"
+msgstr "Глубина Модуляции"
+
+# Jargon.
+msgid "REVMNU_MODULATION_TIME"
+msgstr "Время Модуляции"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS"
+msgstr "Отражения"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_DELAY"
+msgstr "Задержка Отражений"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_X"
+msgstr "Панорамирование Отражений X"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Y"
+msgstr "Панорамирование Отражений Y"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Z"
+msgstr "Панорамирование Отражений Z"
+
+# Jargon.
+msgid "REVMNU_REVERB"
+msgstr "Реверберация"
+
+# Jargon.
+msgid "REVMNU_REVERB_DELAY"
+msgstr "Задержка Реверберации"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_X"
+msgstr "Панорамирование Реверберации X"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Y"
+msgstr "Панорамирование Реверберации Y"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Z"
+msgstr "Панорамирование Реверберации Z"
+
+# Jargon.
+msgid "REVMNU_ROOM"
+msgstr "Комната"
+
+# Jargon.
+msgid "REVMNU_ROOM_HF"
+msgstr "Комната Высокая Частота"
+
+# Jargon.
+msgid "REVMNU_ROOM_LF"
+msgstr "Комната Низкая Частота"
+
+# Jargon.
+msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
+msgstr "Фактор затихания отраженного звука"
+
+msgid "SNDMNU_BACKEND"
+msgstr "Звуковая подсистема"
+
+msgid "SNDMNU_MENUSOUND"
+msgstr "Звук в меню"
+
+msgid "SNDMNU_MUSENABLED"
+msgstr "Музыка включена"
+
+msgid "SNDMNU_SNDENABLED"
+msgstr "Звук включён"
+
+msgid "VIDMNU_5X4ASPECTRATIO"
+msgstr "Включить соотношение сторон 5:4"
+
+msgid "VIDMNU_ASPECTRATIO"
+msgstr "Соотношение сторон"
+
+msgid "VKMNU_DEVICESELECT"
+msgstr "Выбрать устройство Vulkan"
+
+msgid "VKMNU_ENABLE"
+msgstr "Использовать Vulkan"
+
+msgid "CMPTMNU_SOUNDCUTOFF"
+msgstr "Останавливать звуки при исчезновении агента"
+
+msgid "DSPLYMNU_TOOLTIP_WHITEPOINT"
+msgstr ""
+"Компенсирует проблемы с мониторами, которые некорректно отображают яркие пиксели. Настраивайте до тех пор, пока диагональные черные блоки не исчезнут. Не используйте эту функцию для увеличения яркости игры, только для калибровки изображения под вашу конфигурацию."
+
+msgid "DSPLYMNU_TRANSSOUL"
+msgstr "Прозрачность потерянных душ"
+
+msgid "DSPLYMNU_WHITEPOINT"
+msgstr "Компенсация точки белого"
+
+msgid "GLLIGHTMNU_LIGHTDEFS"
+msgstr "Включить определения света"
+
+msgid "GLMNU_PREFS"
+msgstr "Параметры"
+
+msgid "GLPREFMNU_PALTONENOGREY"
+msgstr "Убрать серые тени"
+
+msgid "GLTEXMNU_TRIMSPREDGE"
+msgstr "Обрезание краёв спрайтов"
+
+msgid "JOYMNU_HAPTRIGGERS"
+msgstr "Включить тактильные триггеры"
+
+msgid "NETMNU_MOVEPREDICTION"
+msgstr "Предсказание движения"
+
+msgid "NETMNU_TICBALANCE"
+msgstr "Балансировка задержки"
+
+msgid "OPTSTR_NOSOUND"
+msgstr "Без звука"
+
+msgid "OPTSTR_OPENAL"
+msgstr ""
+
+msgid "OPTVAL_ALLUNACKNOWLEDGED"
+msgstr "Всё неопознанное"
+
+msgid "OPTVAL_DEDICATED"
+msgstr "Высокая производительность"
+
+msgid "OPTVAL_DOUBLE"
+msgstr "Двойной"
+
+msgid "OPTVAL_INTEGRATED"
+msgstr "Энергосбережение"
+
+msgid "OPTVAL_OPTIMAL"
+msgstr "Оптимальный"
+
+msgid "OPTVAL_OPTIMIZED"
+msgstr "Оптимизированный"
+
+msgid "OPTVAL_ORIGINAL"
+msgstr "Изначальный"
+
+msgid "OPTVAL_PIXELDOUBLE"
+msgstr "Двойные пиксели"
+
+msgid "OPTVAL_PIXELQUADRUPLE"
+msgstr "Учетверённые пиксели"
+
+msgid "OPTVAL_QUADRUPLE"
+msgstr "Четырёхкратный"
+
+msgid "OPTVAL_SCALETO640X400"
+msgstr "Масштабировать до 640x400"
+
+msgid "OPTVAL_TRIPLE"
+msgstr "Тройной"
+
+msgid "OPTVAL_VTAVANILLA"
+msgstr "Автоматически (предпочитать Ванильный)"
+
+msgid "OPTVAL_VTAZDOOM"
+msgstr "Автоматически (предпочитать ZDoom)"
+
+msgid "TCMNU_TRUECOLOR"
+msgstr "Полноцветный вывод"

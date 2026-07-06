@@ -1,0 +1,344 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-02-24 05:20+0000\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-memory@weblate.org>\n"
+"Language-Team: Esperanto <https://hosted.weblate.org/projects/uzdoom/unused/eo/>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.16.1-dev\n"
+
+msgid "ADVSNDMNU_ADLOPLCORES"
+msgstr "Imitil-kerno de OPL"
+
+msgid "ADVSNDMNU_FLUIDPATCHSET"
+msgstr "Flikaro"
+
+msgid "ADVSNDMNU_GUSCONFIG"
+msgstr "Agorda dosiero de GUS"
+
+# Jargon.
+msgid "ADVSNDMNU_TIMIDITYCONFIG"
+msgstr "Agorda dosiero de Timidity"
+
+msgid "ADVSNDMNU_TIMIDITYVOLUME"
+msgstr "Relativa laŭteco"
+
+# Jargon.
+msgid "ADVSNDMNU_WILDMIDICONFIG"
+msgstr "Agorda dosiero de WildMidi"
+
+msgid "CNTRLMNU_ADJUST_GAMMA"
+msgstr "Agordi gamaon"
+
+msgid "CNTRLMNU_CHAT"
+msgstr "Babili"
+
+msgid "CNTRLMNU_CHAT_TITLE"
+msgstr "Adapti regilojn de babilado"
+
+msgid "DSPLYMNU_ADVANCED"
+msgstr "Altnivelaj ekran-agordoj"
+
+msgid "DSPLYMNU_APPEARANCE"
+msgstr "Aspekto"
+
+msgid "DSPLYMNU_CROSSHAIRSCALE"
+msgstr "Skali reteton"
+
+msgid "DSPLYMNU_MESSAGES"
+msgstr "Mesaĝoj"
+
+msgid "DSPLYMNU_SBSCALE"
+msgstr "Skalo de statobreto"
+
+msgid "GLTEXMNU_ENABLEHIRES"
+msgstr "Ŝalti Altdistingivajn Teksturojn"
+
+msgid "GLTEXMNU_TEXENABLED"
+msgstr "Teksturoj ŝaltitaj"
+
+msgid "MOUSEMNU_SMOOTHMOUSE"
+msgstr "Glata musmovo"
+
+msgid "MSGMNU_MESSAGESCALE"
+msgstr "Skalo de mesaĝoj"
+
+msgid "NOTSET"
+msgstr "Ne agordita"
+
+msgid "OPTMNU_INPUT"
+msgstr "Enig-agordoj"
+
+msgid "OPTMNU_LIGHT"
+msgstr "Lum-agordoj"
+
+msgid "OPTMNU_MULTIPLAYER"
+msgstr "Agordoj de la plurludanta reĝimo"
+
+msgid "OPTMNU_SPRITE"
+msgstr "Agordoj de la mov-rastrumoj"
+
+msgid "OPTMNU_SYSTEM"
+msgstr "Agordoj de la sistemo"
+
+msgid "OPTVAL_4000HZ"
+msgstr ""
+
+msgid "OPTVAL_AUTOMAP"
+msgstr "Aŭtomata mapo"
+
+msgid "OPTVAL_HUD"
+msgstr ""
+
+msgid "OPTVAL_HUDANDMAP"
+msgstr "HUD + Aŭtomata mapo"
+
+msgid "OPTVAL_PMDWINOPNA"
+msgstr ""
+
+msgid "OPTVAL_SCALENEAREST"
+msgstr "Skalita (Plej proksime)"
+
+msgid "OPTVAL_SCALELINEAR"
+msgstr "Skalita (Linie)"
+
+msgid "PICKER_NETAUTO"
+msgstr "Aŭtomata (rekomendita)"
+
+msgid "PICKER_NETMODE"
+msgstr "Reĝimo de rekonektado:"
+
+# Players connect to each other individually.
+msgid "PICKER_NETPEER"
+msgstr "Samtavola komunikada"
+
+# Connections are routed through the host instead of all players connecting to
+# each other individually.
+msgid "PICKER_NETSERVER"
+msgstr "Datumpacketo-servilo"
+
+# Jargon.
+msgid "REVMNU_AIR_ABSORPTION_HF"
+msgstr "Aer-absorbo AF"
+
+# Jargon.
+msgid "REVMNU_DECAY_HF_RATIO"
+msgstr "Putriĝo-proporcio (AF)"
+
+# Jargon.
+msgid "REVMNU_DECAY_LF_RATIO"
+msgstr "Putriĝo-proporcio (MaF)"
+
+# Jargon.
+msgid "REVMNU_DECAY_TIME"
+msgstr "Putriĝo-tempo"
+
+# Jargon.
+msgid "REVMNU_DENSITY"
+msgstr "Denseco"
+
+# Jargon.
+msgid "REVMNU_DIFFUSION"
+msgstr "Difuzo"
+
+# Jargon.
+msgid "REVMNU_ECHO_DEPTH"
+msgstr "Produndo de eĥo"
+
+# Jargon.
+msgid "REVMNU_ECHO_TIME"
+msgstr "Tempo de eĥo"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_DIFFUSION"
+msgstr "Medidifuzo"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_SIZE"
+msgstr "Mediamplekso"
+
+# Jargon.
+msgid "REVMNU_HF_REFERENCE"
+msgstr "AF referenco"
+
+# Jargon.
+msgid "REVMNU_LF_REFERENCE"
+msgstr "MaF referenco"
+
+# Jargon.
+msgid "REVMNU_MODULATION_DEPTH"
+msgstr "Produndo de modulado"
+
+# Jargon.
+msgid "REVMNU_MODULATION_TIME"
+msgstr "Tempo de modulado"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS"
+msgstr "Reflektoj"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_DELAY"
+msgstr "Prokrasto de reflektoj"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_X"
+msgstr "Reflektoj alturnas tra X"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Y"
+msgstr "Reflektoj alturnas tra Y"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Z"
+msgstr "Reflektoj alturnas tra Z"
+
+# Jargon.
+msgid "REVMNU_REVERB"
+msgstr "Resono"
+
+# Jargon.
+msgid "REVMNU_REVERB_DELAY"
+msgstr "Prokrasto de resono"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_X"
+msgstr "Resono alturnas tra X"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Y"
+msgstr "Resono alturnas tra Y"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Z"
+msgstr "Resono alturnas tra Z"
+
+# Jargon.
+msgid "REVMNU_ROOM"
+msgstr "Ĉambro"
+
+# Jargon.
+msgid "REVMNU_ROOM_HF"
+msgstr "Ĉambro (AF)"
+
+# Jargon.
+msgid "REVMNU_ROOM_LF"
+msgstr "Ĉambro (MaF)"
+
+# Jargon.
+msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
+msgstr "Ĉambro-Rolloff-faktoro"
+
+msgid "SNDMNU_BACKEND"
+msgstr "Sonservilo"
+
+msgid "SNDMNU_MENUSOUND"
+msgstr "Sono en menuoj"
+
+msgid "SNDMNU_MUSENABLED"
+msgstr "Muziko ebligita"
+
+msgid "SNDMNU_SNDENABLED"
+msgstr "Sono ebligita"
+
+msgid "VIDMNU_5X4ASPECTRATIO"
+msgstr "Ŝalti 5:4 ekran-proporcion"
+
+msgid "VIDMNU_ASPECTRATIO"
+msgstr "Proporcio"
+
+msgid "VKMNU_DEVICESELECT"
+msgstr "Elekti Vulkan-aparaton"
+
+msgid "VKMNU_ENABLE"
+msgstr "Ŝalti Vulkan"
+
+msgid "CMPTMNU_SOUNDCUTOFF"
+msgstr "Sonoj ĉesas, kiam aktoro malaperas"
+
+msgid "DSPLYMNU_TOOLTIP_WHITEPOINT"
+msgstr ""
+"Kompensas por ekranoj, kiuj ne vidigas helajn bilderojn ĝuste. Agordu ĝis la diagonalaj nigraj blokoj dissolvas. Ne uzu ĉi tiun por briligi la ludon, nur uzi ĝin certigi, ke la bildo estas kalibrita por via agordaĵo."
+
+msgid "DSPLYMNU_TRANSSOUL"
+msgstr "Diafaneco de Perdita Animo"
+
+msgid "DSPLYMNU_WHITEPOINT"
+msgstr "Kompenso de blankopunkto"
+
+msgid "GLLIGHTMNU_LIGHTDEFS"
+msgstr "Ŝalti lumdifinojn"
+
+msgid "GLMNU_PREFS"
+msgstr "Preferoj"
+
+msgid "GLPREFMNU_PALTONENOGREY"
+msgstr "Preventi grizajn ombrojn"
+
+msgid "GLTEXMNU_TRIMSPREDGE"
+msgstr "Ĉirkaŭtranĉi randojn de mov-rastrumoj"
+
+msgid "JOYMNU_HAPTRIGGERS"
+msgstr "Ŝalti tuŝ-ekagilojn"
+
+msgid "NETMNU_MOVEPREDICTION"
+msgstr "Movprognozado"
+
+msgid "NETMNU_TICBALANCE"
+msgstr "Respondotempo-balancado"
+
+msgid "OPTSTR_NOSOUND"
+msgstr "Neniu sono"
+
+msgid "OPTSTR_OPENAL"
+msgstr "OpenAL"
+
+msgid "OPTVAL_ALLUNACKNOWLEDGED"
+msgstr "Ĉiuj neagnoskitaj"
+
+msgid "OPTVAL_DEDICATED"
+msgstr "Alta rendimento"
+
+msgid "OPTVAL_DOUBLE"
+msgstr "Duobligi"
+
+msgid "OPTVAL_INTEGRATED"
+msgstr "Energikonservo"
+
+msgid "OPTVAL_OPTIMAL"
+msgstr "Optima"
+
+msgid "OPTVAL_OPTIMIZED"
+msgstr "Optimumigita"
+
+msgid "OPTVAL_ORIGINAL"
+msgstr "Originala"
+
+msgid "OPTVAL_PIXELDOUBLE"
+msgstr "Bilderon duobligi"
+
+msgid "OPTVAL_PIXELQUADRUPLE"
+msgstr "Bilderon kvarobligi"
+
+msgid "OPTVAL_QUADRUPLE"
+msgstr "Kvarobligi"
+
+msgid "OPTVAL_SCALETO640X400"
+msgstr "Skali al 640x400"
+
+msgid "OPTVAL_TRIPLE"
+msgstr "Triobligi"
+
+msgid "OPTVAL_VTAVANILLA"
+msgstr "Aŭtomata (preferata de la originala)"
+
+msgid "OPTVAL_VTAZDOOM"
+msgstr "Aŭtomata (preferata de ZDoom)"
+
+msgid "TCMNU_TRUECOLOR"
+msgstr "Plenkolora eligo"

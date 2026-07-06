@@ -1,0 +1,37 @@
+name: Continuous Integration
+
+on: push
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v6
+
+    - name: validate
+      run: |
+        sudo apt-get -qq update
+        sudo apt-get -qq install gettext
+        pipx install --quiet vermin pylint autopep8 csvkit
+
+        bash scripts/validate.sh
+        mkdir files
+
+    - name: build
+      run: |
+        rm -rf temp
+        build() {
+          mkdir -p "$(dirname "$2")"
+          scripts/compile.py --recipe "$1" --output "$2" --threshold 0
+        }
+        build ENGINE        temp/language.csv
+        build GAMES         temp/language.games
+        build GAMES_CHEX3   temp/filter/chex.chex3/language.csv
+        build GAMES_HARMONY temp/filter/harmony/language.csv
+        build GAMES_HACX    temp/filter/hacx.hacx1/after_iwad/language.csv
+        ( cd temp && zip -rm ../files/uzdoom-translation.pk3 * )
+
+    - name: upload
+      uses: actions/upload-artifact@v7
+      with:
+        path: files

@@ -1,0 +1,364 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-05-11 03:43+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/doom-engine-games/hexen/id/>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2026.5-dev\n"
+
+msgid "TXT_HEXEN_MAP36"
+msgstr "Makam Zedek"
+
+msgid "TXT_HEXEN_MAP37"
+msgstr "Makam Menelkir"
+
+msgid "TXT_HEXEN_MAP38"
+msgstr "Makam Traductus"
+
+msgid "TXT_HEXEN_MAP01"
+msgstr "Aula Penampi"
+
+msgid "TXT_HEXEN_MAP02"
+msgstr "Tujuh Portal"
+
+msgid "TXT_HEXEN_MAP03"
+msgstr "Penjaga Es"
+
+msgid "TXT_HEXEN_MAP04"
+msgstr "Penjaga Api"
+
+msgid "TXT_HEXEN_MAP05"
+msgstr "Penjaga Baja"
+
+msgid "TXT_HEXEN_MAP06"
+msgstr "Perapian Terang"
+
+msgid "TXT_HEXEN_MAP13"
+msgstr "Hutan Bayangan"
+
+msgid "TXT_HEXEN_MAP08"
+msgstr "Darkmere"
+
+msgid "TXT_HEXEN_MAP09"
+msgstr "Gua-Gua Circe"
+
+msgid "TXT_HEXEN_MAP10"
+msgstr "Tanah Terbuang"
+
+msgid "TXT_HEXEN_MAP11"
+msgstr "Taman Suci"
+
+msgid "TXT_HEXEN_MAP12"
+msgstr "Hypostyle"
+
+msgid "TXT_HEXEN_MAP27"
+msgstr "Seminari Sang Heresiarki"
+
+msgid "TXT_HEXEN_MAP28"
+msgstr "Kapel Naga"
+
+msgid "TXT_HEXEN_MAP30"
+msgstr "Kapel Griffin"
+
+msgid "TXT_HEXEN_MAP31"
+msgstr "Kapel Angin Kematian"
+
+msgid "TXT_HEXEN_MAP32"
+msgstr "Kebun Ratapan"
+
+msgid "TXT_HEXEN_MAP33"
+msgstr "Ruang Makan Sunyi"
+
+msgid "TXT_HEXEN_MAP34"
+msgstr "Kapel Serigala"
+
+msgid "TXT_HEXEN_MAP21"
+msgstr "Pos Terdampar"
+
+msgid "TXT_HEXEN_MAP22"
+msgstr "Kastil Kesedihan"
+
+msgid "TXT_HEXEN_MAP23"
+msgstr "Tiang Gantungan"
+
+msgid "TXT_HEXEN_MAP24"
+msgstr "Effluvium"
+
+msgid "TXT_HEXEN_MAP25"
+msgstr "Penjara Bawah Tanah"
+
+msgid "TXT_HEXEN_MAP26"
+msgstr "Taman Sunyi"
+
+msgid "TXT_HEXEN_MAP35"
+msgstr "Nekropolis"
+
+msgid "TXT_HEXEN_MAP39"
+msgstr "Vivarium"
+
+msgid "TXT_HEXEN_MAP40"
+msgstr "Perapian Gelap"
+
+msgid "TXT_HEXEN_CLUS1MSG"
+msgstr ""
+"Setelah melewati tujuh portal\n"
+"yang menyegel alam ini, hamparan wilayah\n"
+"liar yang luas terbentang\n"
+"di hadapanmu. Api, es, dan baja telah\n"
+"mengujimu, namun tantangan yang lebih besar\n"
+"masih menanti di depan. Rimbunan hutan yang rapat\n"
+"pasti menyembunyikan mata-mata yang bermusuhan,\n"
+"namun apa yang ada di baliknya akan jauh lebih buruk.\n"
+"\n"
+"Gurun tandus, rawa-rawa lembap, dan\n"
+"gua-gua pengap menghadang jalanmu, namun kamu\n"
+"tidak boleh membiarkan apapun menghalangimu dari\n"
+"takdirmu, meski kamu mungkin akan datang\n"
+"untuk berharap itu bisa.\n"
+"\n"
+"Dan di kejauhan, berkedip-kedip,\n"
+"tembok-tembok hypostyle yang terus bergeser\n"
+"seolah mengejek setiap upayamu."
+
+#, fuzzy
+msgid "TXT_HEXEN_CLUS2MSG"
+msgstr ""
+"Pikiranmu masih terasa pusing akibat\n"
+"pertemuanmu di dalam hypostyle, kamu\n"
+"tersaruk menuju apa yang kamu harapkan adalah\n"
+"jalan keluar. Segalanya terasa bergerak semakin cepat\n"
+"dan cepat, pandanganmu mengabur dan\n"
+"mulai memudar...\n"
+"Saat dunia runtuh di sekelilingmu,\n"
+"cahaya sebuah teleportal\n"
+"menyelimutimu. Sekilas cahaya, lalu\n"
+"kau bangkit dengan susah payah ke kakimu.\n"
+"\n"
+"Kau berdiri di puncak menara tinggi, dan\n"
+"dari bawah terdengar jeritan orang-orang\n"
+"terkutuk. Kau melangkah maju, dan\n"
+"seketika suara nyanyian iblis\n"
+"membekukan darahmu.\n"
+"Demi semua dewa kematian! tempat apa\n"
+"yang telah kamu datangi? Demi semua dewa\n"
+"kesakitan, bagaimana kamu akan menemukan\n"
+"jalan keluarmu?"
+
+#, fuzzy
+msgid "TXT_HEXEN_CLUS3MSG"
+msgstr ""
+"Senjata dan artefak para leluhur yang paling\n"
+"perkasa hampir tidak cukup untuk\n"
+"mengalahkan sang heresiarki dan para\n"
+"pengikutnya, namun kini sisa-sisa busuk mereka\n"
+"berserakan di kakimu. Mengumpulkan\n"
+"sisa kekuatanmu, kamu\n"
+"bersiap memasuki portal yang\n"
+"mengarah dari ruang suci terdalam sang heresiarki.\n"
+"\n"
+"Di atasmu, tembok-tembok sebuah\n"
+"kastil besar menjulang. Menara-menara sunyi\n"
+"dan dinding-dinding kosong mengelilingi sebuah\n"
+"menara tunggal dari batu hitam, yang berjongkok\n"
+"di tengah kastil seperti\n"
+"raksasa yang termenung. Api dan bayangan\n"
+"berputar di balik jendela-jendela menganga, lusinan\n"
+"mata jahat menatap tajam ke bawah kepadamu.\n"
+"Di suatu tempat di dalamnya, musuh-musuhmu sedang\n"
+"menunggu..."
+
+#, fuzzy
+msgid "TXT_HEXEN_CLUS4MSG"
+msgstr ""
+"\"... dan ia akan melakukan perjalanan ke\n"
+"alam orang mati, dan bersaing dengan\n"
+"kekuatan-kekuatan di dalamnya, hingga ke pintu\n"
+"gerbang keputusasaan. Namun apakah ia\n"
+"akan kembali lagi ke dunia\n"
+"cahaya, tidak ada yang tahu.\"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Sial."
+
+msgid "TXT_HEXEN_WIN1MSG"
+msgstr ""
+"Dengan jeritan kesakitan kamu\n"
+"tercerabut dari dunia ini ke\n"
+"dunia lain, setiap bagian tubuhmu\n"
+"diselimuti api mistis. Saat pandanganmu\n"
+"kembali jernih, kamu mendapati dirimu\n"
+"berdiri di sebuah aula besar, dipenuhi\n"
+"gema-gema seperti hantu dan bayangan\n"
+"yang mengancam. Di kejauhan kamu bisa\n"
+"melihat sebuah podium yang ditinggikan, dan di atasnya\n"
+"satu-satunya sumber cahaya di dunia ini."
+
+#, fuzzy
+msgid "TXT_HEXEN_WIN2MSG"
+msgstr ""
+"Ini pasti lingkaran kekacauan,\n"
+"sumber kekuatan korax. dengan\n"
+"ini, kamu bisa menciptakan dunia... atau\n"
+"menghancurkannya. Berdasarkan hak pertempuran\n"
+"dan penaklukan itu milikmu, dan dengan\n"
+"tangan gemetar kamu meraih untuk\n"
+"menggenggamnya. Mungkin, kini, seorang pemain baru akan\n"
+"bergabung dalam permainan kosmis kekuasaan. Seperti\n"
+"pion yang dipromosikan menjadi ratu,\n"
+"tiba-tiba seluruh penjuru papan\n"
+"seolah berada dalam jangkauanmu."
+
+msgid "TXT_HEXEN_WIN3MSG"
+msgstr ""
+"\\n"
+"namun ada pemain-pemain lain yang lebih perkasa\n"
+"darimu, dan siapa yang bisa mengetahui langkah\n"
+"mereka berikutnya?"
+
+msgid "TXT_ACS_MAP01_5_THEDO"
+msgstr "Pintu terkunci"
+
+msgid "TXT_ACS_MAP02_9_GREET"
+msgstr "Salam, makhluk fana"
+
+msgid "TXT_ACS_MAP02_11_AREYO"
+msgstr "Apakah kamu siap untuk mati?"
+
+msgid "TXT_ACS_MAP02_20_ADOOR"
+msgstr "Sebuah pintu terbuka di Penjaga Es"
+
+msgid "TXT_ACS_MAP03_12_THISP"
+msgstr "Jalan ini terhalang"
+
+msgid "TXT_ACS_MAP04_9_ONEHA"
+msgstr "Setengah dari teka-teki telah terpecahkan"
+
+msgid "TXT_ACS_MAP04_10_ONTHE"
+msgstr "di Tujuh Portal"
+
+msgid "TXT_ACS_MAP04_11_ONETH"
+msgstr "Sepertiga dari teka-teki telah terpecahkan"
+
+msgid "TXT_ACS_MAP04_12_STAIR"
+msgstr "Tangga telah muncul di Tujuh Portal"
+
+msgid "TXT_ACS_MAP05_6_ONETH"
+msgstr "Sepertiga dari teka-teki telah terpecahkan"
+
+msgid "TXT_ACS_MAP05_7_ONTHE"
+msgstr "di Tujuh Portal"
+
+msgid "TXT_ACS_MAP05_8_STAIR"
+msgstr "Tangga telah muncul di Tujuh Portal"
+
+#, fuzzy
+msgid "TXT_ACS_MAP05_9_YOUHA"
+msgstr "Kamu harus menemukan sakelar lain..."
+
+msgid "TXT_ACS_MAP05_10_STONE"
+msgstr "Batu-batu bergesekan di Tujuh Portal"
+
+msgid "TXT_ACS_MAP08_6_ONESI"
+msgstr "Seperenam dari teka-teki telah terpecahkan"
+
+msgid "TXT_ACS_MAP08_7_ONTHE"
+msgstr "di Hutan Bayangan"
+
+msgid "TXT_ACS_MAP08_10_THEDO"
+msgstr "Pintu dipalang dari dalam"
+
+msgid "TXT_ACS_MAP08_11_YOUHE"
+msgstr "Kamu mendengar sebuah pintu terbuka di kejauhan"
+
+msgid "TXT_ACS_MAP09_6_ONESI"
+msgstr "Seperenam dari teka-teki telah terpecahkan"
+
+msgid "TXT_ACS_MAP09_7_ONTHE"
+msgstr "di Hutan Bayangan"
+
+msgid "TXT_ACS_MAP10_6_ONESI"
+msgstr "Seperenam dari teka-teki telah terpecahkan"
+
+msgid "TXT_ACS_MAP10_7_ONTHE"
+msgstr "di Hutan Bayangan"
+
+msgid "TXT_ACS_MAP11_0_ETTIN"
+msgstr "\\ ettin tersisa"
+
+msgid "TXT_ACS_MAP11_1_YOUWA"
+msgstr "Kamu terlalu lama menunggu, sekarang kamu mati!"
+
+msgid "TXT_ACS_MAP11_7_ADOOR"
+msgstr "Sebuah pintu terbuka di Pos Terdampar"
+
+msgid "TXT_ACS_MAP12_9_THISD"
+msgstr "Pintu ini belum bisa dibuka"
+
+msgid "TXT_ACS_MAP13_11_MYSER"
+msgstr "Para pelayanku bisa mencium darahmu, manusia"
+
+msgid "TXT_ACS_MAP21_0_ADOOR"
+msgstr "Sebuah pintu terbuka di Tiang Gantungan"
+
+msgid "TXT_ACS_MAP21_2_THEDO"
+msgstr "Pintu dipalang dari dalam"
+
+msgid "TXT_ACS_MAP22_3_APLAT"
+msgstr "Sebuah platform telah turun di menara"
+
+#, fuzzy
+msgid "TXT_ACS_MAP22_27_YOUHA"
+msgstr "Kamu sudah terlalu lama memainkan permainan ini, makhluk fana..."
+
+msgid "TXT_ACS_MAP22_29_ITHIN"
+msgstr "Kurasa aku akan menyingkirkanmu dari papan ini"
+
+msgid "TXT_ACS_MAP23_10_YOUHE"
+msgstr "Kamu mendengar sebuah pintu terbuka di lantai atas"
+
+msgid "TXT_ACS_MAP27_8_WORSH"
+msgstr "Sembahlah aku, dan mungkin aku masih bisa berbelas kasih"
+
+msgid "TXT_ACS_MAP27_10_THENA"
+msgstr "Tapi mungkin juga tidak"
+
+msgid "TXT_ACS_MAP28_6_ONENI"
+msgstr "Sepersembilan dari teka-teki telah terpecahkan"
+
+msgid "TXT_ACS_MAP28_7_ONTHE"
+msgstr "Di Biara"
+
+msgid "TXT_ACS_MAP30_6_ONENI"
+msgstr "Sepersembilan dari teka-teki telah terpecahkan"
+
+msgid "TXT_ACS_MAP30_7_ONTHE"
+msgstr "Di Biara"
+
+msgid "TXT_ACS_MAP34_1_ONENI"
+msgstr "Sepersembilan dari teka-teki telah terpecahkan"
+
+msgid "TXT_ACS_MAP34_2_ONTHE"
+msgstr "Di Biara"
+
+msgid "TXT_ACS_MAP35_0_THEPO"
+msgstr "Portal telah disegel"
+
+msgid "TXT_ACS_MAP35_1_CHOOS"
+msgstr "Pilih takdirmu"
+
+msgid "TXT_ACS_MAP35_3_THEDO"
+msgstr "Pintu dipalang dari dalam"
+
+msgid "TXT_ACS_MAP35_12_AREYO"
+msgstr "Apakah kamu cukup kuat"
+
+msgid "TXT_ACS_MAP35_14_TOFAC"
+msgstr "Untuk menghadapi tuanmu sendiri?"

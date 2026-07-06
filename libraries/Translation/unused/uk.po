@@ -1,0 +1,343 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-02-24 05:22+0000\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-memory@weblate.org>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/uzdoom/unused/uk/>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 5.16.1-dev\n"
+
+msgid "ADVSNDMNU_ADLOPLCORES"
+msgstr "Тип OPL"
+
+msgid "ADVSNDMNU_FLUIDPATCHSET"
+msgstr "Патч-набір"
+
+msgid "ADVSNDMNU_GUSCONFIG"
+msgstr "Файл конфігурації для GUS"
+
+# Jargon.
+msgid "ADVSNDMNU_TIMIDITYCONFIG"
+msgstr "Файл конфігурації Timidity"
+
+msgid "ADVSNDMNU_TIMIDITYVOLUME"
+msgstr "Відносна гучність"
+
+# Jargon.
+msgid "ADVSNDMNU_WILDMIDICONFIG"
+msgstr "Файл конфігурації WildMidi"
+
+msgid "CNTRLMNU_ADJUST_GAMMA"
+msgstr "Налаштування гамми"
+
+msgid "CNTRLMNU_CHAT"
+msgstr "Чат"
+
+msgid "CNTRLMNU_CHAT_TITLE"
+msgstr "Клавіші керування чатом"
+
+msgid "DSPLYMNU_ADVANCED"
+msgstr "Додаткові параметри відображення"
+
+msgid "DSPLYMNU_APPEARANCE"
+msgstr "Зовнішній вигляд"
+
+msgid "DSPLYMNU_CROSSHAIRSCALE"
+msgstr "Розмір прицілу"
+
+msgid "DSPLYMNU_MESSAGES"
+msgstr "Повідомлення"
+
+msgid "DSPLYMNU_SBSCALE"
+msgstr "Розмір строки стану"
+
+msgid "GLTEXMNU_ENABLEHIRES"
+msgstr "Увімкнути текстури високого розширення"
+
+msgid "GLTEXMNU_TEXENABLED"
+msgstr "Увімкнути текстури"
+
+msgid "MOUSEMNU_SMOOTHMOUSE"
+msgstr "Плавний рух миші"
+
+msgid "MSGMNU_MESSAGESCALE"
+msgstr "Розмір повідомлень"
+
+msgid "NOTSET"
+msgstr "Не встановлено"
+
+msgid "OPTMNU_INPUT"
+msgstr "Параметри введення"
+
+msgid "OPTMNU_LIGHT"
+msgstr "Параметри освітлення"
+
+msgid "OPTMNU_MULTIPLAYER"
+msgstr "Параметри багатокористувацької гри"
+
+msgid "OPTMNU_SPRITE"
+msgstr "Параметри спрайтів"
+
+msgid "OPTMNU_SYSTEM"
+msgstr "Системні налаштування"
+
+msgid "OPTVAL_4000HZ"
+msgstr "4000 Гц"
+
+msgid "OPTVAL_AUTOMAP"
+msgstr "Автокарта"
+
+msgid "OPTVAL_HUD"
+msgstr "Інтерфейс"
+
+msgid "OPTVAL_HUDANDMAP"
+msgstr "Інтерфейс + Автокарта"
+
+msgid "OPTVAL_PMDWINOPNA"
+msgstr "PMDWin OPNA"
+
+msgid "OPTVAL_SCALENEAREST"
+msgstr "Збільшення (ближнє)"
+
+msgid "OPTVAL_SCALELINEAR"
+msgstr "Збільшення (лінійне)"
+
+msgid "PICKER_NETAUTO"
+msgstr "Автоматичний (рекомендовано)"
+
+msgid "PICKER_NETMODE"
+msgstr "Режим мережі:"
+
+# Players connect to each other individually.
+msgid "PICKER_NETPEER"
+msgstr "Однорангова мережа (Р2Р)"
+
+# Connections are routed through the host instead of all players connecting to
+# each other individually.
+msgid "PICKER_NETSERVER"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_AIR_ABSORPTION_HF"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DECAY_HF_RATIO"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DECAY_LF_RATIO"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DECAY_TIME"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DENSITY"
+msgstr "Щільність"
+
+# Jargon.
+msgid "REVMNU_DIFFUSION"
+msgstr "Дифузія"
+
+# Jargon.
+msgid "REVMNU_ECHO_DEPTH"
+msgstr "Глибина ехо"
+
+# Jargon.
+msgid "REVMNU_ECHO_TIME"
+msgstr "Час ехо"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_DIFFUSION"
+msgstr "Дифузія оточення"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_SIZE"
+msgstr "Розмір оточення"
+
+# Jargon.
+msgid "REVMNU_HF_REFERENCE"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_LF_REFERENCE"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_MODULATION_DEPTH"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_MODULATION_TIME"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS"
+msgstr "Відображення"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_DELAY"
+msgstr "Відставання відображень"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_X"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Y"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Z"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB"
+msgstr "Реверберація"
+
+# Jargon.
+msgid "REVMNU_REVERB_DELAY"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_X"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Y"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Z"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ROOM"
+msgstr "Кімната"
+
+# Jargon.
+msgid "REVMNU_ROOM_HF"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ROOM_LF"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
+msgstr ""
+
+msgid "SNDMNU_BACKEND"
+msgstr "Звукова система"
+
+msgid "SNDMNU_MENUSOUND"
+msgstr "Звук в меню"
+
+msgid "SNDMNU_MUSENABLED"
+msgstr "Музику увімкнено"
+
+msgid "SNDMNU_SNDENABLED"
+msgstr "Звук увімкнено"
+
+msgid "VIDMNU_5X4ASPECTRATIO"
+msgstr "Увімкнути співвідношення сторін 5:4"
+
+msgid "VIDMNU_ASPECTRATIO"
+msgstr "Співвідношення сторін"
+
+msgid "VKMNU_DEVICESELECT"
+msgstr "Виберіть пристрій Vulkan"
+
+msgid "VKMNU_ENABLE"
+msgstr "Увімкнути Vulkan"
+
+msgid "CMPTMNU_SOUNDCUTOFF"
+msgstr "Зупиняти звуки при зникненні об'єкту"
+
+msgid "DSPLYMNU_TOOLTIP_WHITEPOINT"
+msgstr ""
+
+msgid "DSPLYMNU_TRANSSOUL"
+msgstr "Прозорість втрачених душ"
+
+msgid "DSPLYMNU_WHITEPOINT"
+msgstr ""
+
+msgid "GLLIGHTMNU_LIGHTDEFS"
+msgstr "Дозволити визначення світла"
+
+msgid "GLMNU_PREFS"
+msgstr "Налаштування"
+
+msgid "GLPREFMNU_PALTONENOGREY"
+msgstr "Прибрати сірі тіні"
+
+msgid "GLTEXMNU_TRIMSPREDGE"
+msgstr "Обрізати краї спрайтів"
+
+msgid "JOYMNU_HAPTRIGGERS"
+msgstr "Увімкнути тактильні курки"
+
+msgid "NETMNU_MOVEPREDICTION"
+msgstr "Прогнозування руху"
+
+msgid "NETMNU_TICBALANCE"
+msgstr "Балансування затримки"
+
+msgid "OPTSTR_NOSOUND"
+msgstr "Без звуку"
+
+msgid "OPTSTR_OPENAL"
+msgstr "OpenAL"
+
+msgid "OPTVAL_ALLUNACKNOWLEDGED"
+msgstr "Всі невідомі"
+
+msgid "OPTVAL_DEDICATED"
+msgstr "Високопродуктивний"
+
+msgid "OPTVAL_DOUBLE"
+msgstr "Подвійний"
+
+msgid "OPTVAL_INTEGRATED"
+msgstr "Енергозбереження"
+
+msgid "OPTVAL_OPTIMAL"
+msgstr "Оптимально"
+
+msgid "OPTVAL_OPTIMIZED"
+msgstr "Оптимізований"
+
+msgid "OPTVAL_ORIGINAL"
+msgstr "Початковий"
+
+msgid "OPTVAL_PIXELDOUBLE"
+msgstr "Подвійні пікселі"
+
+msgid "OPTVAL_PIXELQUADRUPLE"
+msgstr "Четверні пікселі"
+
+msgid "OPTVAL_QUADRUPLE"
+msgstr "Четверний"
+
+msgid "OPTVAL_SCALETO640X400"
+msgstr "Масштабувати до 640x400"
+
+msgid "OPTVAL_TRIPLE"
+msgstr "Потрійний"
+
+msgid "OPTVAL_VTAVANILLA"
+msgstr "Автоматично (переважно Vanilla)"
+
+msgid "OPTVAL_VTAZDOOM"
+msgstr "Автоматично (переважно ZDoom)"
+
+msgid "TCMNU_TRUECOLOR"
+msgstr "Вивід TrueColor"

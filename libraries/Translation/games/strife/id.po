@@ -1,0 +1,4459 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-05-18 05:11+0000\n"
+"Last-Translator: hawkwind3 <hawkwinds_messages@hotmail.com>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/doom-engine-games/strife/id/>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2026.6.dev0\n"
+
+msgid "TXT_STRIFE_MAP01"
+msgstr "AREA 1: Tempat Suci"
+
+msgid "TXT_STRIFE_MAP02"
+msgstr "AREA 2: Kota"
+
+msgid "TXT_STRIFE_MAP03"
+msgstr "AREA 3: Markas Depan"
+
+msgid "TXT_STRIFE_MAP04"
+msgstr "AREA 4: Stasiun Tenaga"
+
+msgid "TXT_STRIFE_MAP05"
+msgstr "AREA 5: Penjara"
+
+msgid "TXT_STRIFE_MAP06"
+msgstr "AREA 6: Saluran Pembuangan"
+
+msgid "TXT_STRIFE_MAP07"
+msgstr "AREA 7: Kastil"
+
+msgid "TXT_STRIFE_MAP08"
+msgstr "AREA 8: Ruang Audiensi"
+
+msgid "TXT_STRIFE_MAP09"
+msgstr "AREA 9: Kastil: Benteng Programmer"
+
+msgid "TXT_STRIFE_MAP10"
+msgstr "AREA 10: Markas Depan Baru"
+
+msgid "TXT_STRIFE_MAP11"
+msgstr "AREA 11: Perbatasan"
+
+msgid "TXT_STRIFE_MAP12"
+msgstr "AREA 12: Kuil Sang Oracle"
+
+msgid "TXT_STRIFE_MAP13"
+msgstr "AREA 13: Katakombe"
+
+msgid "TXT_STRIFE_MAP14"
+msgstr "AREA 14: Tambang"
+
+msgid "TXT_STRIFE_MAP15"
+msgstr "AREA 15: Benteng: Administrasi"
+
+msgid "TXT_STRIFE_MAP16"
+msgstr "AREA 16: Benteng: Menara Uskup"
+
+msgid "TXT_STRIFE_MAP17"
+msgstr "AREA 17: Benteng: Halaman Dalam"
+
+msgid "TXT_STRIFE_MAP18"
+msgstr "AREA 18: Benteng: Gudang"
+
+msgid "TXT_STRIFE_MAP19"
+msgstr "AREA 19: Benteng: Kompleks Keamanan"
+
+msgid "TXT_STRIFE_MAP20"
+msgstr "AREA 20: Pabrik: Penerimaan"
+
+msgid "TXT_STRIFE_MAP21"
+msgstr "AREA 21: Pabrik: Manufaktur"
+
+msgid "TXT_STRIFE_MAP22"
+msgstr "AREA 22: Pabrik: Tempaan"
+
+msgid "TXT_STRIFE_MAP23"
+msgstr "AREA 23: Area Bersama Ordo"
+
+msgid "TXT_STRIFE_MAP24"
+msgstr "AREA 24: Pabrik: Kapel Konversi"
+
+msgid "TXT_STRIFE_MAP25"
+msgstr "AREA 25: Katakombe: Kuil Runtuh"
+
+msgid "TXT_STRIFE_MAP26"
+msgstr "AREA 26: Medan Pembuktian"
+
+msgid "TXT_STRIFE_MAP27"
+msgstr "AREA 27: Laboratorium"
+
+msgid "TXT_STRIFE_MAP28"
+msgstr "AREA 28: Kapal Alien"
+
+msgid "TXT_STRIFE_MAP29"
+msgstr "AREA 29: Sarang Entitas"
+
+msgid "TXT_STRIFE_MAP30"
+msgstr "AREA 30: Markas Depan Terbengkalai"
+
+msgid "TXT_STRIFE_MAP31"
+msgstr "AREA 31: Fasilitas Pelatihan"
+
+msgid "TXT_STRIFE_MAP32"
+msgstr "AREA 1: Tempat Suci"
+
+msgid "TXT_STRIFE_MAP33"
+msgstr "AREA 2: Kota"
+
+msgid "TXT_STRIFE_MAP34"
+msgstr "AREA 3: Markas Pergerakan"
+
+msgid "TXT_STRIFE_MAP35"
+msgstr "AREA 35: Pabrik: Produksi"
+
+msgid "TXT_STRIFE_MAP36"
+msgstr "AREA 36: Bentrokan Kastil"
+
+msgid "TXT_STRIFE_MAP37"
+msgstr "AREA 37: Medan Pembantaian"
+
+msgid "TXT_STRIFE_MAP38"
+msgstr "AREA 38: Kekacauan Teratur"
+
+#, fuzzy
+msgid "TXT_DLG_SCRIPT01_D0_IDONT"
+msgstr "Aku tidak mau masalah, jauhi aku. Aku sudah cukup menderita akibat perbuatan bajingan Harris itu. Dia menjanjikanku uang, tapi yang kudapat malah harus siap-siap diinterogasi oleh Programmer."
+
+msgid "TXT_DLG_SCRIPT02_D0_ILLHE"
+msgstr ""
+"Aku akan membantumu kalau kamu membantuku. Lima keping emas dan aku akan ceritakan semua yang aku tahu."
+
+msgid "TXT_RPLY0_SCRIPT02_D0_HERES"
+msgstr "Ini emasnya."
+
+msgid "TXT_RYES0_SCRIPT02_D0_BESTE"
+msgstr ""
+"Bergeraklah secara diam-diam saat membunuh, kamu tidak akan memicu alarm."
+
+msgid "TXT_RNO0_SCRIPT02_D0_WELLI"
+msgstr "Huh, aku tidak akan menceritakan apa pun secara gratis!"
+
+msgid "TXT_DLG_SCRIPT02_D1516_HAVEY"
+msgstr "Kebetulan, kamu punya 5 emas lagi?"
+
+msgid "TXT_RPLY0_SCRIPT02_D1516_5GOLD"
+msgstr "5 emas."
+
+msgid "TXT_RYES0_SCRIPT02_D1516_WELLP"
+msgstr ""
+"Anak panah beracun bisa membunuh para penjaga secara instan dan tidak akan memicu alarm."
+
+msgid "TXT_RNO0_SCRIPT02_D1516_NOSIR"
+msgstr "Tidak, aku tidak akan menceritakan apa pun secara gratis!"
+
+msgid "TXT_DLG_SCRIPT02_D3032_YOUVE"
+msgstr "Kamu sudah menguras semua gosip dariku!"
+
+msgid "TXT_DLG_SCRIPT02_D4548_WHATC"
+msgstr "Apa yang bisa kuberikan untukmu?"
+
+msgid "TXT_RPLY0_SCRIPT02_D4548_ASSAU"
+msgstr "Senapan serbu"
+
+msgid "TXT_RYES0_SCRIPT02_D4548_HEREY"
+msgstr "Ini dia."
+
+msgid "TXT_RNO0_SCRIPT02_D4548_YOUCA"
+msgstr "Kamu tidak mampu membelinya sekarang."
+
+msgid "TXT_RPLY1_SCRIPT02_D4548_CLIPO"
+msgstr "Klip peluru"
+
+msgid "TXT_RYES1_SCRIPT02_D4548_THANK"
+msgstr "Terima kasih."
+
+msgid "TXT_RNO1_SCRIPT02_D4548_COMEO"
+msgstr "Ayolah, 10 emas."
+
+msgid "TXT_RPLY2_SCRIPT02_D4548_AMMOB"
+msgstr "Kotak amunisi"
+
+msgid "TXT_RYES2_SCRIPT02_D4548_HERES"
+msgstr "Ini amunisimu."
+
+msgid "TXT_RNO2_SCRIPT02_D4548_MAYBE"
+msgstr "Mungkin lain kali."
+
+msgid "TXT_DLG_SCRIPT02_D6064_GOODN"
+msgstr ""
+"Ada kabar baik dari Garis Depan untuk sekali ini. Macil mengutusmu untuk mendapat hadiah dan pelatihan. Dia memerintahkanku untuk memberikannya kepadamu."
+
+msgid "TXT_RPLY0_SCRIPT02_D6064_THANK"
+msgstr "Terima kasih."
+
+msgid "TXT_RYES0_SCRIPT02_D6064_GLADT"
+msgstr "Senang bisa membantu."
+
+msgid "TXT_DLG_SCRIPT02_D7580_ALLRI"
+msgstr ""
+"Baiklah, ini beberapa petunjuk tentang apa yang harus dilakukan: jangan menghalangi para Crusader; menembak dalam semburan pendek dari senapan serbu akan menjaga bidikanmu tetap akurat."
+
+msgid "TXT_RPLY0_SCRIPT02_D7580_ISTHA"
+msgstr "Hanya itu saja?"
+
+msgid "TXT_RYES0_SCRIPT02_D7580_LOOKY"
+msgstr "Dengar, kamu akan belajar lebih banyak nanti."
+
+msgid "TXT_DLG_SCRIPT02_D9096_ITHIN"
+msgstr ""
+"Aku rasa aku bisa mengonversi sebuah penyembur api dari salah satu Crusader agar bisa digunakan oleh manusia. Oh, ada hal lain yang bisa kuberikan untukmu?"
+
+msgid "TXT_RPLY0_SCRIPT02_D9096_FLAME"
+msgstr "Penyembur api."
+
+msgid "TXT_RYES0_SCRIPT02_D9096_IKNEW"
+msgstr "Aku tahu itu berhasil! Ini dia, coba gunakan!"
+
+msgid "TXT_RNO0_SCRIPT02_D9096_LISTE"
+msgstr "Dengar, aku tidak bisa membuat apa pun tanpa bahan yang tepat!"
+
+msgid "TXT_RPLY1_SCRIPT02_D9096_ASSAU"
+msgstr "Senapan serbu"
+
+msgid "TXT_RYES1_SCRIPT02_D9096_WELLH"
+msgstr "Baiklah, ini dia!"
+
+msgid "TXT_RNO1_SCRIPT02_D9096_OBVIO"
+msgstr "Jelas, kamu tidak mampu membelinya sekarang."
+
+msgid "TXT_RPLY2_SCRIPT02_D9096_CLIPO"
+msgstr "Klip peluru"
+
+msgid "TXT_RYES2_SCRIPT02_D9096_THANK"
+msgstr "Terima kasih."
+
+msgid "TXT_RNO2_SCRIPT02_D9096_COMEO"
+msgstr "Ayolah, 10 emas."
+
+msgid "TXT_RPLY3_SCRIPT02_D9096_AMMOB"
+msgstr "Kotak amunisi"
+
+msgid "TXT_RYES3_SCRIPT02_D9096_HERES"
+msgstr "Ini amunisimu."
+
+msgid "TXT_RNO3_SCRIPT02_D9096_MAYBE"
+msgstr "Mungkin lain kali. Sampai jumpa!"
+
+msgid "TXT_DLG_SCRIPT02_D10612_NOWTH"
+msgstr ""
+"Sekarang kamu sudah punya penyembur api, ada hal lain yang bisa kuberikan untukmu?"
+
+msgid "TXT_RPLY0_SCRIPT02_D10612_ASSAU"
+msgstr "Senapan serbu"
+
+msgid "TXT_RYES0_SCRIPT02_D10612_HEREY"
+msgstr "Ini dia."
+
+msgid "TXT_RNO0_SCRIPT02_D10612_YOUCA"
+msgstr "Kamu tidak mampu membelinya sekarang."
+
+msgid "TXT_RPLY1_SCRIPT02_D10612_CLIPO"
+msgstr "Klip peluru"
+
+msgid "TXT_RYES1_SCRIPT02_D10612_THANK"
+msgstr "Terima kasih."
+
+msgid "TXT_RNO1_SCRIPT02_D10612_COMEO"
+msgstr "Ayolah, 10 emas."
+
+msgid "TXT_RPLY2_SCRIPT02_D10612_AMMOB"
+msgstr "Kotak amunisi"
+
+msgid "TXT_RYES2_SCRIPT02_D10612_HERES"
+msgstr "Ini amunisimu."
+
+msgid "TXT_RNO2_SCRIPT02_D10612_MAYBE"
+msgstr "Mungkin lain kali."
+
+msgid "TXT_DLG_SCRIPT02_D12128_NOWTH"
+msgstr ""
+"Sekarang kamu sudah punya penyembur api, ada hal lain yang bisa kuberikan untukmu?"
+
+msgid "TXT_RPLY0_SCRIPT02_D12128_CLIPO"
+msgstr "Klip peluru"
+
+msgid "TXT_RYES0_SCRIPT02_D12128_THANK"
+msgstr "Terima kasih."
+
+msgid "TXT_RNO0_SCRIPT02_D12128_COMEO"
+msgstr "Ayolah, 10 emas."
+
+msgid "TXT_RPLY1_SCRIPT02_D12128_AMMOB"
+msgstr "Kotak amunisi"
+
+msgid "TXT_RYES1_SCRIPT02_D12128_HERES"
+msgstr "Ini amunisimu."
+
+msgid "TXT_RNO1_SCRIPT02_D12128_MAYBE"
+msgstr "Mungkin lain kali."
+
+msgid "TXT_RPLY2_SCRIPT02_D12128_PHOSP"
+msgstr "Granat fosfor"
+
+msgid "TXT_RYES2_SCRIPT02_D12128_THANK"
+msgstr "Terima kasih."
+
+msgid "TXT_RNO2_SCRIPT02_D12128_YOUDO"
+msgstr "Emasmu tidak cukup"
+
+msgid "TXT_RPLY3_SCRIPT02_D12128_POISO"
+msgstr "Anak panah beracun"
+
+msgid "TXT_RYES3_SCRIPT02_D12128_WORTH"
+msgstr "Sepadan dengan setiap emasnya!"
+
+msgid "TXT_RNO3_SCRIPT02_D12128_COMEO"
+msgstr "Ayolah, 200 emas!"
+
+#, fuzzy
+msgid "TXT_DLG_SCRIPT02_D13644_ICANT"
+msgstr "Tidak percaya aku terjebak dengan tugas ini. Mereka bilang ada sesuatu yang jahat keluar dari pintu got ini... Sekarang aku harus berdiri di sini sampai ia muncul lagi!"
+
+msgid "TXT_RPLY0_SCRIPT02_D13644_WHATG"
+msgstr "Pintu yang mana?"
+
+msgid "TXT_RYES0_SCRIPT02_D13644_THESE"
+msgstr "Pintu luapan saluran pembuangan."
+
+msgid "TXT_DLG_SCRIPT02_D15160_HELLO"
+msgstr "Halo kawan. Apa yang bisa kuberikan untukmu?"
+
+msgid "TXT_RPLY0_SCRIPT02_D15160_ELECT"
+msgstr "Anak panah listrik"
+
+msgid "TXT_RYES0_SCRIPT02_D15160_YOUGO"
+msgstr "Kamu mendapat anak panah listriknya."
+
+msgid "TXT_RPLY1_SCRIPT02_D15160_AMMOS"
+msgstr "Kantong amunisi"
+
+msgid "TXT_RNO0_SCRIPT02_D15160_NOYOU"
+msgstr ""
+"Tidak. Kamu tidak punya apa yang kuinginkan untuk anak panah listrik itu!"
+
+msgid "TXT_RNO0_SCRIPT02_D16676_NOYOU"
+msgstr ""
+"Tidak. Kamu tidak punya apa yang kuinginkan untuk anak panah listrik itu!"
+
+msgid "TXT_RYES1_SCRIPT02_D15160_THANK"
+msgstr "Terima kasih. Ada lagi?"
+
+msgid "TXT_RNO1_SCRIPT02_D15160_YOUCA"
+msgstr "Kamu tidak mampu membelinya, selamat tinggal."
+
+msgid "TXT_DLG_SCRIPT02_D16676_WHATC"
+msgstr "Apa yang bisa kuberikan untukmu?"
+
+msgid "TXT_RPLY0_SCRIPT02_D16676_ELECT"
+msgstr "Anak panah listrik"
+
+msgid "TXT_RYES0_SCRIPT02_D16676_YOUGO"
+msgstr "Kamu mendapat anak panah listriknya."
+
+msgid "TXT_RPLY1_SCRIPT02_D16676_AMMOS"
+msgstr "Kantong amunisi"
+
+msgid "TXT_RYES1_SCRIPT02_D16676_THANK"
+msgstr "Terima kasih, ada lagi?"
+
+msgid "TXT_RNO1_SCRIPT02_D16676_YOUCA"
+msgstr "Kamu tidak mampu membelinya, selamat tinggal!"
+
+msgid "TXT_DLG_SCRIPT02_D18192_WELCO"
+msgstr "Selamat datang. Apa yang ingin kuperlihatkan untukmu?"
+
+msgid "TXT_RPLY0_SCRIPT02_D18192_ENVIR"
+msgstr "Pakaian pelindung lingkungan"
+
+msgid "TXT_RYES0_SCRIPT02_D18192_WELLH"
+msgstr "Nah, ini dia untukmu."
+
+msgid "TXT_RNO0_SCRIPT02_D18192_IMSOR"
+msgstr "Maaf, uangmu tidak cukup untuk itu."
+
+msgid "TXT_RPLY1_SCRIPT02_D18192_LEATH"
+msgstr "Baju zirah kulit"
+
+msgid "TXT_RYES1_SCRIPT02_D18192_HEREY"
+msgstr "Ini untukmu."
+
+msgid "TXT_RNO1_SCRIPT02_D18192_PERHA"
+msgstr "Mungkin lain kali?"
+
+msgid "TXT_RPLY2_SCRIPT02_D18192_METAL"
+msgstr "Baju zirah logam"
+
+msgid "TXT_RYES2_SCRIPT02_D18192_WEARI"
+msgstr "Semoga cocok dipakai."
+
+msgid "TXT_RNO2_SCRIPT02_D18192_COMEB"
+msgstr "Kembalilah kalau kamu sudah mampu membeli sesuatu, dasar orang kasar!"
+
+msgid "TXT_DLG_SCRIPT02_D19708_WELCO"
+msgstr "Selamat datang. Apa yang ingin kuperlihatkan untukmu?"
+
+msgid "TXT_RPLY0_SCRIPT02_D19708_ENVIR"
+msgstr "Pakaian pelindung lingkungan"
+
+msgid "TXT_RYES0_SCRIPT02_D19708_WELLH"
+msgstr "Nah, ini dia untukmu."
+
+msgid "TXT_RNO0_SCRIPT02_D19708_IMSOR"
+msgstr "Maaf, uangmu tidak cukup untuk itu."
+
+msgid "TXT_RPLY1_SCRIPT02_D19708_LEATH"
+msgstr "Baju zirah kulit"
+
+msgid "TXT_RYES1_SCRIPT02_D19708_HEREY"
+msgstr "Ini untukmu."
+
+msgid "TXT_RNO1_SCRIPT02_D19708_PERHA"
+msgstr "Mungkin lain kali?"
+
+msgid "TXT_RPLY2_SCRIPT02_D19708_METAL"
+msgstr "Baju zirah logam"
+
+msgid "TXT_RYES2_SCRIPT02_D19708_WEARI"
+msgstr "Semoga cocok dipakai."
+
+msgid "TXT_RNO2_SCRIPT02_D19708_COMEB"
+msgstr "Kembalilah kalau kamu sudah mampu membeli sesuatu, dasar orang kasar!"
+
+msgid "TXT_DLG_SCRIPT02_D21224_HOWMA"
+msgstr "Ada yang bisa kubantu?"
+
+msgid "TXT_RPLY0_SCRIPT02_D21224_MEDPA"
+msgstr "Tambalan medis"
+
+msgid "TXT_RYES0_SCRIPT02_D21224_HERES"
+msgstr "Ini tambalanmu."
+
+msgid "TXT_RNO0_SCRIPT02_D21224_YOUNE"
+msgstr "Kamu butuh 10 emas untuk itu."
+
+msgid "TXT_RPLY1_SCRIPT02_D21224_MEDIC"
+msgstr "Kotak medis"
+
+msgid "TXT_RYES1_SCRIPT02_D21224_THANK"
+msgstr "Terima kasih."
+
+msgid "TXT_RNO1_SCRIPT02_D21224_IWISH"
+msgstr "Seandainya bisa kuberi gratis, tapi harganya 25 emas."
+
+msgid "TXT_RPLY2_SCRIPT02_D21224_FIELD"
+msgstr "Kit bedah lapangan"
+
+msgid "TXT_RYES2_SCRIPT02_D21224_THERE"
+msgstr "Ini dia. Jaga diri baik-baik."
+
+msgid "TXT_RNO2_SCRIPT02_D21224_WELLM"
+msgstr "Mungkin kamu mampu membeli beberapa tambalan medis?"
+
+#, fuzzy
+msgid "TXT_DLG_SCRIPT02_D22740_IHOPE"
+msgstr "Semoga Macil tahu apa yang dia lakukan. Kalau Ordo tahu aku membantu Front, aku sama saja sudah mati... Tapi itu tidak urusanmu. Medis Front memberi aku chip peningkatan untukmu, siap? "
+
+msgid "TXT_RPLY0_SCRIPT02_D22740_YESIM"
+msgstr "Ya, aku siap."
+
+msgid "TXT_RYES0_SCRIPT02_D22740_WELLT"
+msgstr "Kalau begitu, ini tidak butuh waktu lama. Nah, sudah selesai."
+
+msgid "TXT_DLG_SCRIPT02_D24256_HOWMA"
+msgstr "Ada yang bisa kubantu?"
+
+msgid "TXT_RPLY0_SCRIPT02_D24256_MEDPA"
+msgstr "Tambalan medis"
+
+msgid "TXT_RYES0_SCRIPT02_D24256_HERES"
+msgstr "Ini tambalanmu."
+
+msgid "TXT_RNO0_SCRIPT02_D24256_YOUNE"
+msgstr "Kamu butuh 10 emas untuk itu."
+
+msgid "TXT_RPLY1_SCRIPT02_D24256_MEDIC"
+msgstr "Kotak medis"
+
+msgid "TXT_RYES1_SCRIPT02_D24256_THANK"
+msgstr "Terima kasih."
+
+msgid "TXT_RNO1_SCRIPT02_D24256_IWISH"
+msgstr "Seandainya bisa kuberi gratis, tapi harganya 25 emas."
+
+msgid "TXT_RPLY2_SCRIPT02_D24256_FIELD"
+msgstr "Kit bedah lapangan"
+
+msgid "TXT_RYES2_SCRIPT02_D24256_THERE"
+msgstr "Ini dia. Jaga diri baik-baik."
+
+msgid "TXT_RNO2_SCRIPT02_D24256_WELLM"
+msgstr "Mungkin kamu mampu membeli beberapa tambalan medis?"
+
+msgid "TXT_DLG_SCRIPT02_D25772_HELLO"
+msgstr ""
+"Halo orang asing, aku belum pernah melihatmu di sini sebelumnya. Biar kuberi sedikit saran gratis. Berhati-hatilah kalau jadi kamu. Ordo tidak mentolerir kehendak bebas, dan hukuman mereka sangat cepat."
+
+msgid "TXT_RPLY0_SCRIPT02_D25772_WHATS"
+msgstr "Ada kabar apa?"
+
+msgid "TXT_RYES0_SCRIPT02_D25772_THEWO"
+msgstr "Katanya… Selokan menyimpan lebih dari sekadar tikus dan robot."
+
+msgid "TXT_DLG_SCRIPT02_D27288_WHATC"
+msgstr "Apa yang bisa kulakukan untukmu sekarang?"
+
+msgid "TXT_RPLY0_SCRIPT02_D27288_MOREI"
+msgstr "Info lebih lanjut."
+
+msgid "TXT_RYES0_SCRIPT02_D27288_THEGO"
+msgstr ""
+"Sang Gubernur adalah pengingat sederhana bagi kita bahwa kita bukan lagi orang-orang yang merdeka."
+
+msgid "TXT_RNO0_SCRIPT02_D27288_COMEB"
+msgstr "Kembalilah kalau kamu sudah punya emas."
+
+msgid "TXT_DLG_SCRIPT02_D28804_WELLY"
+msgstr ""
+"Hm, kamu banyak bertanya untuk seseorang yang tidak ingin mati. Pastikan kamu tidak sampai terbunuh, atau lebih buruk dari itu."
+
+msgid "TXT_RPLY0_SCRIPT02_D28804_MOREI"
+msgstr "Info lebih lanjut."
+
+msgid "TXT_RYES0_SCRIPT02_D28804_THERE"
+msgstr "Ordo itu lebih dari sekadar apa yang tampak di permukaan."
+
+msgid "TXT_RNO0_SCRIPT02_D28804_WELLT"
+msgstr "Kita bicara lagi kalau kamu sudah punya emas!"
+
+msgid "TXT_DLG_SCRIPT02_D30320_THATS"
+msgstr "Sudah cukup, kawan, sumur pengetahuan ini telah kering. Aku sudah bilang lebih dari yang seharusnya. Semoga berhasil… Dan jangan kembali lagi."
+
+msgid "TXT_DLG_SCRIPT02_D31836_HEYIM"
+msgstr "Hei, aku hanya ada di sini untuk keadaan darurat. Jika inti bocor, aku memastikan tidak ada yang masuk… atau keluar."
+
+msgid "TXT_DLG_SCRIPT02_D33352_WATCH"
+msgstr "Awas jalanmu, rakyat jelata!"
+
+msgid "TXT_DLG_SCRIPT02_D34868_WEREG"
+msgstr "Kami akan membunuhmu! "
+
+msgid "TXT_DLG_SCRIPT02_D36384_WHOIN"
+msgstr ""
+"Siapa kamu sebenarnya? Tidak ada yang seharusnya berkeliaran di area ini!"
+
+msgid "TXT_DLG_SCRIPT02_D37900_YOUTH"
+msgstr "Hei kamu, tidak ada yang boleh masuk ke sini. Pergi sana!"
+
+msgid "TXT_DLG_SCRIPT02_D39416_IRALE"
+msgstr "Irale akan membereskan semuanya untukmu!"
+
+msgid "TXT_DLG_SCRIPT02_D40932_IMKIN"
+msgstr "Aku semacam perantara bakat untuk para pemberontak. Seseorang sehebat kamu bisa menghasilkan banyak emas… jika terhubung dengan orang yang tepat."
+
+msgid "TXT_RPLY0_SCRIPT02_D40932_IMINT"
+msgstr "Aku tertarik."
+
+msgid "TXT_RPLY1_SCRIPT02_D40932_SCREW"
+msgstr "Persetan dengan para pemberontak!"
+
+msgid "TXT_DLG_SCRIPT02_D42448_NONOS"
+msgstr "Tidak ada kesempatan kedua. Oh para penjaga, bunuh dia."
+
+msgid "TXT_DLG_SCRIPT02_D43964_GOODC"
+msgstr ""
+"Pilihan yang bagus. Tempat perlindungan Ordo di tepi sungai itu adalah ruang penyiksaan tidak resmi mereka. Tersembunyi di dalamnya ada sebuah piala emas. Curi itu dan kamu akan mendapat imbalannya."
+
+msgid "TXT_RPLY0_SCRIPT02_D43964_HOWAM"
+msgstr "Bagaimana caranya aku melakukan itu?"
+
+msgid "TXT_DLG_SCRIPT02_D45480_HERES"
+msgstr ""
+"Ini busur silang, tinggal bidik lurus dan --splat--. Ingat, ambil cangkir mewah itu dan pergi ke kedai."
+
+msgid "TXT_RPLY0_SCRIPT02_D45480_COOLI"
+msgstr "Keren. Akan kuambil."
+
+msgid "TXT_DLG_SCRIPT02_D46996_WHATA"
+msgstr "Apa yang kamu tunggu? Bawakan aku piala itu."
+
+msgid "TXT_DLG_SCRIPT02_D48512_HEYIK"
+msgstr ""
+"Hei, aku tahu, kelihatannya seperti jebakan. Aku tidak akan melakukan itu pada mesin pembunuh sehebat ini. Sudah dapat barangnya? Bagus! Sekarang bersiaplah, emas dan kejayaan seperti yang kujanjikan. Ambil kunci ini dan Gubernur akan memberimu hadiah."
+
+msgid "TXT_RPLY0_SCRIPT02_D48512_HEDBE"
+msgstr "Lebih baik begitu. Demi keselamatanmu!"
+
+msgid "TXT_RPLY1_SCRIPT02_D48512_WHATW"
+msgstr "Apa! Mana uangku?"
+
+msgid "TXT_DLG_SCRIPT02_D50028_GETLO"
+msgstr "Pergi sana anak kecil, kamu menggangguku."
+
+msgid "TXT_DLG_SCRIPT02_D51544_NOSEC"
+msgstr "Tidak ada kesempatan kedua. Oh para penjaga, bunuh dia."
+
+msgid "TXT_DLG_SCRIPT02_D53060_FIRST"
+msgstr ""
+"Pertama mereka membantai ribuan orang, sekarang mereka menginginkan semua rakyat jelata yang sehat untuk 'pengujian' yang tidak jelas. Bagaimana Ordo mengharapkanku menjaga ketertiban? Apa yang kamu mau?"
+
+msgid "TXT_RPLY0_SCRIPT02_D53060_APRIS"
+msgstr "Izin masuk penjara, mari kita berunding."
+
+msgid "TXT_DLG_SCRIPT02_D54576_ILIKE"
+msgstr ""
+"Aku sudah menyukaimu. Aku punya dua pekerjaan yang tidak ingin kulakukan sendiri. Satu kotor, yang lainnya berdarah."
+
+msgid "TXT_RPLY0_SCRIPT02_D54576_CALLM"
+msgstr "Panggil aku sang pembersih"
+
+msgid "TXT_RPLY1_SCRIPT02_D54576_IMNOT"
+msgstr "Aku tidak mudah jijik"
+
+msgid "TXT_DLG_SCRIPT02_D56092_ONEOF"
+msgstr ""
+"Salah satu anak buahku mencuri daya dengan menyambung ke jalur utama di suatu tempat. Temukan dan putus pasokannya, dan aku akan memberimu apa yang kamu inginkan. Bawakan aku sesuatu sebagai bukti."
+
+msgid "TXT_RPLY0_SCRIPT02_D56092_WHERE"
+msgstr "Di mana aku menemukan sambungan itu?"
+
+msgid "TXT_DLG_SCRIPT02_D57608_IFIKN"
+msgstr ""
+"Kalau aku tahu, itu bukan pekerjaan bagiku sekarang, bukan? Gunakan kepintaranmu, tapi putus pasokannya."
+
+msgid "TXT_DLG_SCRIPT02_D59124_TELLY"
+msgstr ""
+"Begini, ada seorang pembohong bernama Derwin yang telah menjual anak-anak ke Ordo. Aku tidak bisa mentolerir kebejatan semacam itu. Tidak tanpa bagianku. Derwin bekerja di gudang. Bunuh dia dan bawakan aku telinganya, dan akan kulihat apa yang bisa kulakukan."
+
+msgid "TXT_RPLY0_SCRIPT02_D59124_HOWDO"
+msgstr "Bagaimana caraku masuk?"
+
+msgid "TXT_DLG_SCRIPT02_D60640_THISK"
+msgstr ""
+"Kunci ini akan membawamu masuk ke stasiun tenaga. Dipikir-pikir lagi, potong telinganya dulu baru bunuh dia. Jauh lebih baik."
+
+msgid "TXT_DLG_SCRIPT02_D62156_OHIJU"
+msgstr ""
+"Oh, aku sangat suka oleh-oleh. Ini, ini akan membawamu masuk ke penjara. Bicara dengan Sipir Montag. Apa pun yang kamu lakukan setelah itu, aku tidak ingin tahu."
+
+msgid "TXT_RPLY0_SCRIPT02_D62156_THANK"
+msgstr "Terima kasih."
+
+msgid "TXT_DLG_SCRIPT02_D63672_GIVEY"
+msgstr "Kuberi petunjuk. Kalau aku berhenti bicara denganmu, kamu pergi."
+
+msgid "TXT_DLG_SCRIPT02_D65188_DOYOU"
+msgstr "Kamu punya kabar baik untukku? Aku siap mendengar."
+
+msgid "TXT_RPLY0_SCRIPT02_D65188_THEDE"
+msgstr "Tugas sudah beres!"
+
+msgid "TXT_DLG_SCRIPT02_D66704_OHIJU"
+msgstr ""
+"Oh, aku sangat suka oleh-oleh. Ini, ini akan membawamu masuk ke penjara. Bicara dengan Sipir Montag. Apa pun yang kamu lakukan setelah itu, aku tidak ingin tahu."
+
+msgid "TXT_RPLY0_SCRIPT02_D66704_FINEB"
+msgstr "Tidak masalah bagiku."
+
+msgid "TXT_DLG_SCRIPT02_D68220_SOYOU"
+msgstr "Jadi kamu si bodoh yang mencuri piala itu? Aku akan menangkapmu sebagai pencuri pemberontak… sehingga meningkatkan posisiku di Ordo. Bagaimana rasanya menjadi bidak yang tidak sadar? Kuberi petunjuk, itu akan menyakitkan."
+
+msgid "TXT_RPLY0_SCRIPT02_D68220_ITSUC"
+msgstr "Menyebalkan!"
+
+msgid "TXT_RYES0_SCRIPT02_D68220_FORYO"
+msgstr "Bagimu memang begitu."
+
+msgid "TXT_RPLY1_SCRIPT02_D68220_HARRI"
+msgstr "Harris menjanjikanku uang!"
+
+msgid "TXT_RYES1_SCRIPT02_D68220_TOOBA"
+msgstr "Sayang sekali. Satu-satunya yang akan kamu dapat adalah kematian!"
+
+msgid "TXT_DLG_SCRIPT02_D69736_INASM"
+msgstr ""
+"Di dunia yang kecil, berita cepat menyebar. Kudengar kamu baru saja menyingkirkan beberapa rintangan di jalanmu. Kerja bagus. Tertarik dengan proyek yang lebih menggiurkan?"
+
+msgid "TXT_RPLY0_SCRIPT02_D69736_SUREW"
+msgstr "Tentu, kenapa tidak."
+
+msgid "TXT_RPLY1_SCRIPT02_D69736_NOTHA"
+msgstr "Tidak, terima kasih."
+
+msgid "TXT_RYES1_SCRIPT02_D69736_THENG"
+msgstr "Kalau begitu pergi sana!"
+
+msgid "TXT_DLG_SCRIPT02_D71252_FOOLG"
+msgstr "Bodoh! Para penjaga, singkirkan rakyat jelata yang ikut campur ini."
+
+msgid "TXT_DLG_SCRIPT02_D72768_GOODS"
+msgstr ""
+"Bagus. Beberapa, ehm, temanku butuh seseorang untuk dibungkam. Beldin ditahan oleh Ordo di tempat perlindungan mereka. Ada pintu masuk yang jarang digunakan di dekat dermaga kecil di tepi sungai yang tidak dijaga. Masuk, bungkam dia, dan bawakan cincinnya kepadaku sebagai bukti."
+
+msgid "TXT_RPLY0_SCRIPT02_D72768_WILLI"
+msgstr "Apakah itu sepadan dengan usahanya?"
+
+msgid "TXT_DLG_SCRIPT02_D74284_ILLGU"
+msgstr ""
+"Aku jamin 50 emas, dan kalau kamu kembali tanpa memicu semua alarm di kota, ada kesempatan untuk mendapatkan lebih banyak lagi, dan ini sedikit bantuan yang seharusnya memberimu keunggulan."
+
+msgid "TXT_RPLY0_SCRIPT02_D74284_THANK"
+msgstr "Terima kasih, aku akan membutuhkannya."
+
+msgid "TXT_DLG_SCRIPT02_D75800_GOODR"
+msgstr "Bagus. Ingat, kebungkamannya adalah emas."
+
+msgid "TXT_RPLY0_SCRIPT02_D75800_ILLGE"
+msgstr "Akan kuhabisi dia."
+
+msgid "TXT_DLG_SCRIPT02_D77316_MISSI"
+msgstr "Misi selesai? Kamu punya cincin si pengkhianat?"
+
+msgid "TXT_RPLY0_SCRIPT02_D77316_HESDE"
+msgstr "Dia sudah mati, mana uangku?"
+
+msgid "TXT_RNO0_SCRIPT02_D77316_LIARG"
+msgstr "Pembohong! Pergi ambil cincinnya!"
+
+msgid "TXT_DLG_SCRIPT02_D78832_HEREY"
+msgstr ""
+"Ini, kamu sudah mendapatkannya. Pengkhianat yang kamu bunuh itu hampir mengungkap lokasi Front. Kamu menyelamatkan nyawa. Mau tidak mendapatkan lebih banyak emas, dan masa depan yang bebas dari tirani?"
+
+msgid "TXT_RPLY0_SCRIPT02_D78832_TELLM"
+msgstr "Ceritakan lebih lanjut."
+
+msgid "TXT_RPLY1_SCRIPT02_D78832_NOTMY"
+msgstr "Bukan gayaku."
+
+msgid "TXT_DLG_SCRIPT02_D80348_IHAVE"
+msgstr ""
+"Aku punya hubungan bisnis dengan pemimpin Front, Macil. Aku tahu dia membutuhkan orang yang cerdas sepertimu, dan dia membayar dengan baik. Ambil unit komunikasi yang telah dipulihkan ini dan kamu akan diarahkan ke, katakanlah, peluang-peluang."
+
+msgid "TXT_RPLY0_SCRIPT02_D80348_THANK"
+msgstr "Terima kasih."
+
+msgid "TXT_DLG_SCRIPT02_D81864_GETGO"
+msgstr "Cepat pergi. Kalau kamu masih di sini, kita berdua akan mati."
+
+msgid "TXT_DLG_SCRIPT02_D83380_APITY"
+msgstr ""
+"Sayang sekali, tapi sekarang kamu sudah tahu tentang teman-temanku, aku harus membunuhmu. Para penjaga, buang sampah ini!"
+
+msgid "TXT_DLG_SCRIPT02_D84896_FOOLG"
+msgstr "Bodoh. Para penjaga! Singkirkan rakyat jelata yang ikut campur ini."
+
+msgid "TXT_DLG_SCRIPT02_D86412_WALKA"
+msgstr "Pergi sana anak muda, pergi saja."
+
+msgid "TXT_DLG_SCRIPT02_D87928_WHATA"
+msgstr "Apa yang kamu lakukan di sini?"
+
+msgid "TXT_RPLY0_SCRIPT02_D87928_HEYIN"
+msgstr "Hei, aku butuh emas!"
+
+msgid "TXT_DLG_SCRIPT02_D89444_BLACK"
+msgstr ""
+"Blackbird memberitahumu kodenya, ya? Biar kumatikan alarmnya. Macil ada satu lantai di bawah."
+
+msgid "TXT_RPLY0_SCRIPT02_D89444_THANK"
+msgstr "Terima kasih."
+
+msgid "TXT_DLG_SCRIPT02_D90960_WALKA"
+msgstr "Pergi sana anak muda, pergi saja."
+
+msgid "TXT_DLG_SCRIPT02_D92476_DOYOU"
+msgstr "Apakah kamu punya janji dengan Gubernur? "
+
+msgid "TXT_RPLY0_SCRIPT02_D92476_OFCOU"
+msgstr "Tentu saja!"
+
+msgid "TXT_RPLY1_SCRIPT02_D92476_NOAND"
+msgstr "Tidak, dan aku tidak memerlukannya!"
+
+msgid "TXT_DLG_SCRIPT02_D93992_SORRY"
+msgstr "Maaf! Aku tidak bermaksud… Silakan langsung masuk."
+
+msgid "TXT_RPLY0_SCRIPT02_D93992_IKNEW"
+msgstr "Aku sudah mendugamu akan berkata begitu."
+
+msgid "TXT_DLG_SCRIPT02_D95508_IFYOU"
+msgstr "Kalau kamu terburu-buru, jangan buang waktumu denganku."
+
+msgid "TXT_DLG_SCRIPT02_D97024_RELEA"
+msgstr "Lepaskan aku, biarkan orang tua ini sendirian."
+
+msgid "TXT_DLG_SCRIPT02_D98540_YOUSE"
+msgstr ""
+"Kamu mencari kebijaksanaan, anakku? Ordo telah memastikan kita hanya boleh mengajukan satu pertanyaan, 'Mengapa?'"
+
+msgid "TXT_RPLY0_SCRIPT02_D98540_WHERE"
+msgstr "Di mana kopling tenaganya?"
+
+msgid "TXT_RPLY1_SCRIPT02_D98540_WHERE"
+msgstr "Di mana jalur utama Ordo?"
+
+msgid "TXT_RPLY2_SCRIPT02_D98540_WHERE"
+msgstr "Di mana sambungan ilegalnya?"
+
+msgid "TXT_DLG_SCRIPT02_D100056_ILLTE"
+msgstr ""
+"Akan kuberitahu di mana itu, tapi aku tidak tahu koplingnya milik siapa yang akan kamu ganggu. Letaknya tepat di sini di instalasi pengolahan limbah."
+
+msgid "TXT_RPLY0_SCRIPT02_D100056_THANK"
+msgstr "Terima kasih"
+
+msgid "TXT_DLG_SCRIPT02_D101572_THATS"
+msgstr ""
+"Letaknya tepat di sini di instalasi pengolahan limbah. Tapi itu adalah kopling milik Front. Siapa pun yang memberitahumu bahwa itu milik Ordo, salah."
+
+msgid "TXT_RPLY0_SCRIPT02_D101572_THANK"
+msgstr "Terima kasih"
+
+msgid "TXT_DLG_SCRIPT02_D103088_IFYOU"
+msgstr ""
+"Kalau kamu bilang itu ilegal, aku tidak mau berurusan denganmu. Aku sudah cukup banyak masalah."
+
+msgid "TXT_RPLY0_SCRIPT02_D103088_THANK"
+msgstr "Terima kasih"
+
+msgid "TXT_DLG_SCRIPT02_D104604_RELEA"
+msgstr "Lepaskan aku, biarkan orang tua ini sendirian."
+
+msgid "TXT_DLG_SCRIPT03_D0_WELCO"
+msgstr "Selamat datang di nyala harapan terakhir. Hanya kamilah yang memiliki kehendak bebas untuk melawan Ordo. Kami punya pikiran ilmiah terbaik dan banyak tenaga, tapi kami kekurangan satu… pemecah masalah sejati yang akan memberi kami keunggulan. Bantulah kami."
+
+msgid "TXT_RPLY0_SCRIPT03_D0_ALLRI"
+msgstr "Baiklah, aku terima."
+
+msgid "TXT_RPLY1_SCRIPT03_D0_NOTHA"
+msgstr "Tidak, terima kasih!"
+
+msgid "TXT_DLG_SCRIPT03_D1516_YOUMI"
+msgstr ""
+"Mungkin kamu perlu mempertimbangkan ulang, mengingat kamu dikelilingi oleh pemberontak marah yang bersenjata lengkap."
+
+msgid "TXT_RPLY0_SCRIPT03_D1516_ALLRI"
+msgstr "Baiklah, aku ikut!"
+
+msgid "TXT_RPLY1_SCRIPT03_D1516_NOTHA"
+msgstr "Tidak, terima kasih."
+
+msgid "TXT_DLG_SCRIPT03_D3032_THEND"
+msgstr "Kalau begitu matilah dalam kehinaan dan ketidakmuliaan."
+
+msgid "TXT_DLG_SCRIPT03_D4548_GOODB"
+msgstr ""
+"Bagus, Blackbird akan terus menjadi pemandumu. Dia cukup menyukaimu. Bersama-sama kalian harus mengungkap rahasia Ordo dan para pelayan tak manusiawi mereka. Masuk dan hancurkan mereka."
+
+msgid "TXT_RPLY0_SCRIPT03_D4548_WHERE"
+msgstr "Dari mana aku mulai?"
+
+msgid "TXT_DLG_SCRIPT03_D6064_FRANK"
+msgstr ""
+"Terus terang situasinya kacau. Kamu harus menyelesaikan beberapa misi untuk membuka jalan bagi serangan lebih lanjut terhadap Ordo. Serangan terakhir kami adalah bencana dan sebagian besar pasukan kami ditangkap. Aku butuhmu untuk membebaskan para tawanan ini."
+
+msgid "TXT_RPLY0_SCRIPT03_D6064_ITHIN"
+msgstr "Kurasa aku bisa menanganinya."
+
+msgid "TXT_DLG_SCRIPT03_D7580_TAKET"
+msgstr ""
+"Ambil uang ini dan kunjungi Irale yang menyediakan senjata kita. Kemudian, kunci ini akan membawamu menemui Gubernur. Dia adalah boneka korup Ordo, tapi dia suka membuat kesepakatan. Lakukan apa pun yang perlu kamu lakukan untuk membebaskan saudara-saudara seperjuangan kita."
+
+msgid "TXT_RPLY0_SCRIPT03_D7580_ILLSE"
+msgstr "Akan kuurus."
+
+msgid "TXT_DLG_SCRIPT03_D9096_FIGHT"
+msgstr "Berjuanglah untuk Front dan kebebasan. Bergerak."
+
+msgid "TXT_DLG_SCRIPT03_D10612_THEPR"
+msgstr ""
+"Para tawanan telah disambut kembali, berkat kamu. Ini emas, pergi temui dokter dan pelatih senjata, lalu aku punya tujuan yang lebih tinggi untukmu."
+
+msgid "TXT_RPLY0_SCRIPT03_D10612_IWILL"
+msgstr "Akan kulakukan. Apa berikutnya?"
+
+msgid "TXT_DLG_SCRIPT03_D12128_ASING"
+msgstr ""
+"Sebuah kristal tunggal menjalankan jaringan tenaga yang menggerakkan perisai Ordo. Hancurkan kristal itu dan kamu akan membuat lubang besar di pertahanan Ordo. Blackbird akan memandumu ke seorang mata-mata yang punya jalan masuk, semoga beruntung."
+
+msgid "TXT_RPLY0_SCRIPT03_D12128_WELLG"
+msgstr "Kami akan mendapatkannya."
+
+msgid "TXT_DLG_SCRIPT03_D13644_FIGHT"
+msgstr "Berjuanglah untuk Front dan kebebasan. Bergerak."
+
+msgid "TXT_DLG_SCRIPT03_D15160_YOUVE"
+msgstr ""
+"Kamu telah melampaui semua harapan kami. Berkat keberanian kalian, pasukan kita sedang bergerak. Aku ingin kalian berdua bergabung dalam serangan ini, dengan target yang spesifik. Habisi sang Programmer. Sudah saatnya mengungkap apa yang telah kita temukan tentang lapisan Ordo ini."
+
+msgid "TXT_RPLY0_SCRIPT03_D15160_TELLM"
+msgstr "Ceritakan apa yang kita ketahui."
+
+msgid "TXT_DLG_SCRIPT03_D16676_THEPR"
+msgstr ""
+"Sarang Programmer ada di kastil. Sekarang, temui dokter, ambil amunisi dan pergi habisi dia."
+
+msgid "TXT_RPLY0_SCRIPT03_D16676_LETME"
+msgstr "Biarkan aku menghadapinya!"
+
+msgid "TXT_DLG_SCRIPT03_D18192_FIGHT"
+msgstr "Berjuanglah untuk Front dan kebebasan. Bergerak."
+
+msgid "TXT_DLG_SCRIPT03_D19708_REMEM"
+msgstr ""
+"Ingat seperti apa balai kota itu? Itu pengingat ringan tentang apa yang mereka rela lakukan untuk mengincar kita. Hati-hati."
+
+msgid "TXT_DLG_SCRIPT03_D21224_TALKT"
+msgstr "Bicara dengan Macil. Dia akan bisa membantumu."
+
+msgid "TXT_DLG_SCRIPT03_D22740_IVEHE"
+msgstr ""
+"Aku dengar Macil punya rencana untuk menggulingkan Ordo. Lebih baik rencana itu bagus. Satu kegagalan lagi dan kita semua hanya akan menjadi daging busuk."
+
+msgid "TXT_DLG_SCRIPT03_D24256_AFEWO"
+msgstr ""
+"Beberapa tong ini yang dibuang ke persediaan air mereka seharusnya sedikit menyeimbangkan keadaan."
+
+msgid "TXT_DLG_SCRIPT03_D25772_SOYOU"
+msgstr ""
+"Jadi kamu agen baru itu? Terima kasih, tanpamu, kita semua sudah mati sekarang."
+
+msgid "TXT_DLG_SCRIPT03_D27288_IMWOR"
+msgstr ""
+"Aku sedang mengerjakan sesuatu yang akan memberi kita keunggulan. Ini akan meningkatkan staminamu dan benar-benar membuatmu lebih kuat. Aku hampir menyelesaikan semua kendalanya. Ada yang bisa kulakukan untukmu?"
+
+msgid "TXT_RPLY0_SCRIPT03_D27288_PATCH"
+msgstr "Obati aku."
+
+msgid "TXT_RYES0_SCRIPT03_D27288_BOYYO"
+msgstr "Wah, kondisimu benar-benar parah. Akan kulihat apa yang bisa kulakukan."
+
+msgid "TXT_RPLY1_SCRIPT03_D27288_STAMI"
+msgstr "Implan stamina?"
+
+msgid "TXT_RYES1_SCRIPT03_D27288_ALLRI"
+msgstr "Baiklah, ini tidak butuh waktu lama."
+
+msgid "TXT_RNO1_SCRIPT03_D27288_ITSNO"
+msgstr "Belum selesai."
+
+msgid "TXT_DLG_SCRIPT03_D28804_HEYIM"
+msgstr ""
+"Hei, aku sedang mengerjakan versi terbaru implantmu. Ada hal lain yang bisa kulakukan?"
+
+msgid "TXT_RPLY0_SCRIPT03_D28804_PATCH"
+msgstr "Obati aku."
+
+msgid "TXT_RYES0_SCRIPT03_D28804_WELLA"
+msgstr "Setidaknya kamu sudah beraksi."
+
+msgid "TXT_RPLY1_SCRIPT03_D28804_IMPLA"
+msgstr "Peningkatan implan?"
+
+msgid "TXT_RYES1_SCRIPT03_D28804_GOODT"
+msgstr "Bagus, tidak ada salahnya lebih aman."
+
+msgid "TXT_RNO1_SCRIPT03_D28804_IMALM"
+msgstr "Hampir selesai, tapi belum."
+
+msgid "TXT_DLG_SCRIPT03_D30320_ALLRI"
+msgstr ""
+"Baiklah, aku hampir membuat semuanya bekerja dengan sempurna. Masih ada beberapa masalah yang perlu dibereskan. Kamu butuh sesuatu lagi? "
+
+msgid "TXT_RPLY0_SCRIPT03_D30320_PATCH"
+msgstr "Obati aku."
+
+msgid "TXT_RYES0_SCRIPT03_D30320_WHATH"
+msgstr "Apa yang coba kamu lakukan? Berhadapan langsung dengan Crusader?"
+
+msgid "TXT_RPLY1_SCRIPT03_D30320_IMPLA"
+msgstr "Peningkatan implan?."
+
+msgid "TXT_RYES1_SCRIPT03_D30320_THATS"
+msgstr "Itu seharusnya sudah cukup untukmu."
+
+msgid "TXT_RNO1_SCRIPT03_D30320_LETME"
+msgstr "Biarkan aku menjalankan beberapa tes dulu."
+
+msgid "TXT_DLG_SCRIPT03_D31836_THATS"
+msgstr ""
+"Itu semua yang bisa kulakukan pada implan untuk sekarang. Mungkin perlu penyembuhan?"
+
+msgid "TXT_RPLY0_SCRIPT03_D31836_YEAH"
+msgstr "Ya."
+
+msgid "TXT_RYES0_SCRIPT03_D31836_BOYYO"
+msgstr "Wah, kondisimu benar-benar parah. Akan kulihat apa yang bisa kulakukan."
+
+msgid "TXT_DLG_SCRIPT03_D33352_WHATC"
+msgstr "Apa yang bisa kulakukan untukmu?"
+
+msgid "TXT_RPLY0_SCRIPT03_D33352_IMOUT"
+msgstr "Peluruku habis."
+
+msgid "TXT_RYES0_SCRIPT03_D33352_HERES"
+msgstr "Ini amunisi untukmu. Jangan disia-siakan."
+
+msgid "TXT_RPLY1_SCRIPT03_D33352_TEACH"
+msgstr "Latih aku."
+
+msgid "TXT_RYES1_SCRIPT03_D33352_ALLRI"
+msgstr "Baiklah, akan kutunjukkan beberapa petunjuk kecil."
+
+msgid "TXT_RNO1_SCRIPT03_D33352_YOURE"
+msgstr "Kamu belum siap."
+
+msgid "TXT_DLG_SCRIPT03_D34868_BACKA"
+msgstr "Kembali lagi? Apa yang kamu butuhkan?"
+
+msgid "TXT_RPLY0_SCRIPT03_D34868_IMOUT"
+msgstr "Peluruku habis."
+
+msgid "TXT_RYES0_SCRIPT03_D34868_HERES"
+msgstr "Ini amunisi untukmu. Jangan disia-siakan."
+
+msgid "TXT_RNO0_SCRIPT03_D34868_YOUVE"
+msgstr "Amunisimu sudah cukup."
+
+msgid "TXT_RPLY1_SCRIPT03_D34868_TEACH"
+msgstr "Latih aku."
+
+msgid "TXT_RYES1_SCRIPT03_D34868_ALLRI"
+msgstr "Baiklah, ini seharusnya cukup membuatmu bertahan untuk sementara."
+
+msgid "TXT_RNO1_SCRIPT03_D34868_SORRY"
+msgstr "Maaf, tidak bisa. Aku hanya mengikuti perintah Macil."
+
+msgid "TXT_DLG_SCRIPT03_D36384_WELLW"
+msgstr ""
+"Jadi mana yang kamu pilih, peluru atau pelatihan? Aku tidak sabar untuk menggunakan senjata-senjata baru yang kita rampas itu. Sedikit pelatihan lalu banyak balas dendam."
+
+msgid "TXT_RPLY0_SCRIPT03_D36384_IMOUT"
+msgstr "Amunisiku habis."
+
+msgid "TXT_RYES0_SCRIPT03_D36384_HERES"
+msgstr "Ini amunisi untukmu. Jangan disia-siakan."
+
+msgid "TXT_RNO0_SCRIPT03_D36384_YOUVE"
+msgstr "Amunisimu sudah cukup."
+
+msgid "TXT_RPLY1_SCRIPT03_D36384_TEACH"
+msgstr "Latih aku."
+
+msgid "TXT_RYES1_SCRIPT03_D36384_OKTAK"
+msgstr ""
+"Oke. Ambil semua yang telah kamu pelajari di sini dan tunjukkan kepada para anggota Ordo yang bodoh itu jalan menuju neraka."
+
+msgid "TXT_RNO1_SCRIPT03_D36384_COMEB"
+msgstr "Kembalilah nanti, kalau Macil sudah bilang waktunya tiba."
+
+msgid "TXT_DLG_SCRIPT03_D37900_IVETA"
+msgstr ""
+"Aku sudah mengajarimu semua yang bisa kulakukan sekarang. Beri aku waktu untuk menguji senjata-senjata baru itu. Kecuali kalau pelurumu habis."
+
+msgid "TXT_RPLY0_SCRIPT03_D37900_YESIA"
+msgstr "Ya, habis."
+
+msgid "TXT_RYES0_SCRIPT03_D37900_HEREY"
+msgstr "Ini dia."
+
+msgid "TXT_DLG_SCRIPT03_D39416_DONTG"
+msgstr ""
+"Jangan terlalu gampang menarik pelatuk di kota. Kamu akan memicu alarm dan mereka akan mulai mengirim penjaga dari kastil. "
+
+msgid "TXT_DLG_SCRIPT03_D40932_WELCO"
+msgstr "Selamat datang, kita selalu bisa menggunakan lebih banyak bantuan."
+
+msgid "TXT_DLG_SCRIPT03_D42448_WHENI"
+msgstr ""
+"Waktu aku masih bertugas, kita sempat memeriksa seorang akolit sebelum bala bantuan tiba. Dengar, mereka bukan manusia."
+
+msgid "TXT_DLG_SCRIPT03_D43964_WERET"
+msgstr ""
+"Kita mencoba mencari di mana mekanisme gerbang kastil berada, tapi sejauh ini kita belum berhasil."
+
+msgid "TXT_DLG_SCRIPT03_D45480_DONTG"
+msgstr "Jangan sampai tertangkap. Aku sudah mendengar kisah mengerikan tentang apa yang mereka lakukan pada orang-orang kita setelah dipenjara. Mereka hanya menghilang… tanpa jejak."
+
+msgid "TXT_DLG_SCRIPT03_D46996_HERES"
+msgstr ""
+"Ini sarannya, kalau kamu pernah melihat salah satu Tentara Kaleng milik Ordo, pergi ke arah yang berlawanan. Mereka cepat dan brutal."
+
+msgid "TXT_DLG_SCRIPT03_D48512_LEAVE"
+msgstr "Biarkan aku. Aku sedang mengerjakan sesuatu untuk Macil."
+
+msgid "TXT_DLG_SCRIPT04_D0_SORRY"
+msgstr "Maaf, tidak bisa. Kamu tidak punya izin akses."
+
+msgid "TXT_DLG_SCRIPT04_D1516_STOPS"
+msgstr "Berhenti! Tunjukkan lencana ID-mu."
+
+msgid "TXT_RPLY0_SCRIPT04_D1516_HERES"
+msgstr "Ini ID-ku."
+
+msgid "TXT_DLG_SCRIPT04_D3032_OHOKS"
+msgstr "Oh, oke. Silakan masuk. Selamat bertugas."
+
+msgid "TXT_DLG_SCRIPT04_D4548_DERWI"
+msgstr ""
+"Derwin? Ya, dia ada di gudang, tapi kamu tidak bisa masuk kecuali sudah mendapat izin akses."
+
+msgid "TXT_RPLY0_SCRIPT04_D4548_IVEGO"
+msgstr "Aku sudah punya izin akses."
+
+msgid "TXT_DLG_SCRIPT04_D6064_GOON"
+msgstr "Silakan masuk."
+
+msgid "TXT_RPLY0_SCRIPT04_D6064_DOYOU"
+msgstr "Apakah kamu tahu di mana dia berada?"
+
+msgid "TXT_DLG_SCRIPT04_D7580_IDONT"
+msgstr ""
+"Aku tidak tahu di mana siapa pun berada. Aku hanya menjaga kandang tikus ini tetap tertutup."
+
+msgid "TXT_DLG_SCRIPT04_D9096_YOUAR"
+msgstr "Kamu adalah gangguan yang tidak menyenangkan."
+
+msgid "TXT_DLG_SCRIPT04_D10612_MOVEA"
+msgstr "Minggir atau rasakan logam."
+
+msgid "TXT_DLG_SCRIPT04_D12128_PASSY"
+msgstr "Masukkan ID-mu ke sini untuk akses."
+
+msgid "TXT_DLG_SCRIPT04_D13644_GETBA"
+msgstr "Kembali bekerja, sekarang!"
+
+msgid "TXT_DLG_SCRIPT04_D15160_GETBA"
+msgstr "Kembali bekerja, sekarang!"
+
+msgid "TXT_DLG_SCRIPT04_D16676_WEVEB"
+msgstr ""
+"Kita sudah bekerja tanpa henti selama berminggu-minggu tanpa istirahat. Kurasa Ordo sedang merencanakan serangan penumpasan terhadap Front."
+
+msgid "TXT_DLG_SCRIPT04_D18192_OHDAM"
+msgstr ""
+"Sial. Gubernur yang mengutusmu. Aku memang akan memberinya bagiannya, sungguh. Oke, dengar. Aku punya simpanan tersembunyi. Itu untukmu kalau kamu berpura-pura tidak melihat apa-apa."
+
+msgid "TXT_RPLY0_SCRIPT04_D18192_ALLRI"
+msgstr "Baiklah, akan kulepaskan kamu."
+
+msgid "TXT_RPLY1_SCRIPT04_D18192_SORRY"
+msgstr "Maaf, ini bukan urusan pribadi."
+
+msgid "TXT_DLG_SCRIPT04_D19708_NUTSI"
+msgstr "Sialan, kalau aku harus jatuh, kamu juga ikut jatuh. Para penjaga!!"
+
+msgid "TXT_DLG_SCRIPT04_D21224_BUSIN"
+msgstr ""
+"Urusan bisnis kurang ajar. Tolong, para penjaga, ada yang bermasalah di sini."
+
+msgid "TXT_DLG_SCRIPT04_D22740_AHIGO"
+msgstr ""
+"Ah, aku dapat kabar dari Macil bahwa kamu akan datang. Aku punya cara untuk memasukkanmu ke dalam stasiun tenaga, tapi caranya agak berisiko."
+
+msgid "TXT_RPLY0_SCRIPT04_D22740_ILLTA"
+msgstr "Aku akan mencoba peruntunganku."
+
+msgid "TXT_DLG_SCRIPT04_D24256_ALLRI"
+msgstr ""
+"Baiklah, aku mencuri sebuah ID dari mayat seorang bodoh yang jatuh ke dalam kolam pendingin reaktor. --blat-- langsung goreng seketika."
+
+msgid "TXT_RPLY0_SCRIPT04_D24256_WHATS"
+msgstr "Apa yang harus kulakukan begitu aku masuk?"
+
+msgid "TXT_DLG_SCRIPT04_D25772_TELLW"
+msgstr ""
+"Bilang kepada siapa pun yang bertanya bahwa kamu adalah pekerja pengganti si Gosong. Cara itu cukup bodoh untuk berhasil. Oh, dan mungkin kamu mau memeriksa ruang penyimpanan yang ada tepat di atas kita."
+
+msgid "TXT_RPLY0_SCRIPT04_D25772_BOYIH"
+msgstr "Semoga ID ini berhasil."
+
+msgid "TXT_DLG_SCRIPT04_D27288_GETOU"
+msgstr "Pergi dari sini, kecuali kamu mau berakhir sebagai Tuan Mayat."
+
+msgid "TXT_DLG_SCRIPT04_D28804_HEYLE"
+msgstr ""
+"Hei, biarkan aku. Kalau mereka mendapati kita membuang-buang waktu, kita mati, atau kena kerja tambahan."
+
+msgid "TXT_DLG_SCRIPT04_D30320_SUCHP"
+msgstr ""
+"Tekanan seperti ini, dengan begini kita akan segera kembali ke shift normal. Kita memompa begitu banyak daya ke kastil dan aku hampir selesai mencatat senjata-senjata baru itu."
+
+msgid "TXT_RPLY0_SCRIPT04_D30320_WEAPO"
+msgstr "Senjata?"
+
+msgid "TXT_DLG_SCRIPT04_D31836_WHATD"
+msgstr "Kamu pikir apa, kita kekurangan kamus kaki?"
+
+msgid "TXT_RPLY0_SCRIPT04_D31836_WHATK"
+msgstr "Senjata jenis apa?"
+
+msgid "TXT_DLG_SCRIPT04_D33352_AREYO"
+msgstr "Kamu tuli? Aku baru saja bilang betapa sibuknya aku. Kembali bekerja."
+
+msgid "TXT_DLG_SCRIPT04_D34868_WHOAR"
+msgstr ""
+"Kamu siapa? Hanya personel dengan izin akses level dua yang diizinkan di area ini."
+
+msgid "TXT_RPLY0_SCRIPT04_D34868_IMTHE"
+msgstr "Aku pekerja penggantinya."
+
+msgid "TXT_DLG_SCRIPT04_D36384_ABOUT"
+msgstr ""
+"Akhirnya kamu datang juga. Pergi bicara dengan Ketrick di inti reaktor. Oh, dan ambil kartu kunci ini. Tidak mau kamu tertembak di hari pertama, kan?"
+
+msgid "TXT_RPLY0_SCRIPT04_D36384_WHERE"
+msgstr "Di mana kristal tenaganya?"
+
+msgid "TXT_DLG_SCRIPT04_D37900_IFYOU"
+msgstr ""
+"Kalau kamu tidak segera bekerja, kamu akan ditembak juga. Gerakkan dirimu."
+
+msgid "TXT_DLG_SCRIPT04_D39416_IDONT"
+msgstr "Aku tidak ingin terdengar mengkhawatirkan, tapi jika mereka terus memaksa kristal daya ini sekeras ini, ia akan retak, lalu pecah, lalu *boom*! …Sekadar pikiran."
+
+msgid "TXT_DLG_SCRIPT04_D40932_LETME"
+msgstr ""
+"Biar kujelaskan dengan tegas. Kalau terminal ini macet lagi, level pendingin akan turun dan kita semua harus mempertanggungjawabkannya kepada Programmer. Kalau kita selamat."
+
+msgid "TXT_DLG_SCRIPT04_D42448_YOUYE"
+msgstr ""
+"Kamu! Ya, kamu. Kamu tidak punya izin untuk area ini. Berikan kartu kuncimu, cepat. Aku sedang dalam suasana hati yang sangat buruk!"
+
+msgid "TXT_RPLY0_SCRIPT04_D42448_HEREH"
+msgstr "Ini, ini kartuku."
+
+msgid "TXT_DLG_SCRIPT04_D43964_THISI"
+msgstr ""
+"Ini sampah! Tunggu di sini. Ah persetan. Para penjaga bunuh penyusup ini!"
+
+msgid "TXT_DLG_SCRIPT04_D45480_WORKS"
+msgstr ""
+"Kerja, tidur, disiksa, sungguh kehidupan yang indah. Eh, kamu pengganti si penyelam kolam ceroboh itu?"
+
+msgid "TXT_RPLY0_SCRIPT04_D45480_YEAHC"
+msgstr "Ya, tidak sabar untuk mulai."
+
+msgid "TXT_DLG_SCRIPT04_D46996_YEAHR"
+msgstr "Ya, tentu. Oke, segera bekerja."
+
+msgid "TXT_RPLY0_SCRIPT04_D46996_WHERE"
+msgstr "Di mana kristalnya?"
+
+msgid "TXT_DLG_SCRIPT04_D48512_GOTAL"
+msgstr ""
+"Pergi bicara dengan Ketrick. Naikkan jalur pejalan kaki menggunakan sakelar, lalu gunakan ID ini untuk liftnya."
+
+msgid "TXT_RPLY0_SCRIPT04_D48512_WHERE"
+msgstr "Di mana kristalnya tadi?"
+
+msgid "TXT_DLG_SCRIPT04_D50028_NONEO"
+msgstr "Bukan urusanmu, pergi bicara dengan Ketrick."
+
+msgid "TXT_RPLY0_SCRIPT04_D50028_OK"
+msgstr "Oke."
+
+msgid "TXT_DLG_SCRIPT04_D51544_IFITS"
+msgstr ""
+"Kalau kamu mau pekerjaan sia-sia, pergi tatap layar itu sebentar, itu akan membuatmu menangis kebosanan."
+
+msgid "TXT_DLG_SCRIPT04_D53060_THEAL"
+msgstr ""
+"Programmer yang maha agung itu begitu paranoid terhadap infiltrasi sampai dia mengunci inti komputer. Bagaimana aku seharusnya menyelesaikan pekerjaanku? Satu-satunya jalan masuk adalah jalur bunuh diri."
+
+msgid "TXT_RPLY0_SCRIPT04_D53060_SUICI"
+msgstr "Jalur bunuh diri? Apa itu?"
+
+msgid "TXT_DLG_SCRIPT04_D54576_ITSAS"
+msgstr ""
+"Itu cara pasti untuk terbunuh, tapi itu tidak penting sekarang. Turunlah lewat lift kalau kamu mau."
+
+msgid "TXT_DLG_SCRIPT05_D0_HALTN"
+msgstr ""
+"Berhenti. Tidak ada yang boleh lewat sini tanpa otorisasi dari Sipir atau Gubernur."
+
+msgid "TXT_RPLY0_SCRIPT05_D0_HERES"
+msgstr "Ini izin masukku, biarkan aku masuk."
+
+msgid "TXT_DLG_SCRIPT05_D1516_OKBUT"
+msgstr "Oke, tapi hanya bicara dengan Sipir."
+
+msgid "TXT_DLG_SCRIPT05_D3032_DOILO"
+msgstr ""
+"Apakah aku terlihat seperti Sipir bagimu? Teruslah berjalan, area ini terlarang."
+
+msgid "TXT_DLG_SCRIPT05_D4548_THEOR"
+msgstr ""
+"Murka Ordo akan menghujani para hamba ini sampai mereka memohon kematian."
+
+msgid "TXT_DLG_SCRIPT05_D6064_IDONT"
+msgstr ""
+"Aku tidak peduli kalau Mourel memberimu izin. Ini penjaraku. Kunciku adalah satu-satunya jalan masuk atau keluar, dan aku tidak mau mengambil risiko apa pun. Ordo tidak mentolerir kesalahan."
+
+msgid "TXT_RPLY0_SCRIPT05_D6064_GIVEM"
+msgstr "Berikan kuncinya padaku!"
+
+msgid "TXT_DLG_SCRIPT05_D7580_OVERM"
+msgstr "Hanya kalau aku sudah mati!"
+
+msgid "TXT_RPLY0_SCRIPT05_D7580_GREAT"
+msgstr "Ide yang bagus!"
+
+msgid "TXT_DLG_SCRIPT05_D9096_SHACK"
+msgstr "Belenggu atau rantai, aku ingin kamu tetap di sini."
+
+msgid "TXT_DLG_SCRIPT05_D10612_IDONT"
+msgstr ""
+"Aku tidak tahu bagaimana caramu melewati para penjaga dan Sipir, tapi semoga kamu menyukai dekorasinya, karena kamu baru saja pindah ke sini."
+
+msgid "TXT_RPLY0_SCRIPT05_D10612_FREEM"
+msgstr "Bebaskan rekan-rekanku atau mati!"
+
+msgid "TXT_DLG_SCRIPT05_D12128_KILLM"
+msgstr ""
+"Bunuh aku dan kamu tidak akan pernah membebaskan siapa pun. Aku memiliki satu-satunya kunci pola yang bisa membuka sel-sel itu."
+
+msgid "TXT_RPLY0_SCRIPT05_D12128_CANYO"
+msgstr "Kalau begitu bisakah kamu membantuku?"
+
+msgid "TXT_DLG_SCRIPT05_D13644_MOVEA"
+msgstr "Teruslah berjalan atau bergabunglah dengan teman-temanmu."
+
+msgid "TXT_DLG_SCRIPT05_D15160_DONTJ"
+msgstr "Jangan hanya berdiri di sana, keluarkan kami dari sini!"
+
+msgid "TXT_DLG_SCRIPT05_D16676_THESK"
+msgstr "Langit, aku ingin melihat langit."
+
+msgid "TXT_DLG_SCRIPT05_D18192_FIVEF"
+msgstr ""
+"Lima kaki kali empat kaki, lima kaki kali empat kaki, lima kaki kali empat kaki."
+
+msgid "TXT_DLG_SCRIPT05_D19708_DONTR"
+msgstr ""
+"Jangan bebaskan aku kalau Ordo masih berkuasa. Aku tidak tahan dengan teror itu."
+
+msgid "TXT_DLG_SCRIPT05_D21224_IDONT"
+msgstr ""
+"Tidak mau mengeluh, tapi sudah waktunya Macil mengirim seseorang untuk mengeluarkan kita."
+
+msgid "TXT_DLG_SCRIPT05_D22740_IDGIV"
+msgstr ""
+"Aku mau memberikan apa saja hanya untuk sepotong roti. Aku sangat lapar."
+
+msgid "TXT_DLG_SCRIPT06_D0_AHASU"
+msgstr ""
+"Ah, seorang penghuni permukaan yang butuh bantuan. Di sini kamu melakukan kebaikan untuk mendapat kebaikan, dan aku butuh pintu masuk kota yang merupakan jalur makanan kita dibuka. Ordo telah menutup dan menjaganya."
+
+msgid "TXT_RPLY0_SCRIPT06_D0_WHERE"
+msgstr "Di mana mekanisme gerbangnya?"
+
+msgid "TXT_DLG_SCRIPT06_D1516_DOMYF"
+msgstr "Lakukan kebaikanku dulu, atau kamu tidak akan mendapat apa-apa dariku."
+
+msgid "TXT_RPLY0_SCRIPT06_D1516_HOWWI"
+msgstr "Bagaimana kamu akan tahu kalau pintu itu sudah terbuka?"
+
+msgid "TXT_DLG_SCRIPT06_D3032_BRING"
+msgstr ""
+"Bawakan aku seragam penjaganya. Dengan begitu salah satu temanku bisa memakainya dan tidak ada yang akan mencoba menutup pintu itu lagi."
+
+msgid "TXT_RPLY0_SCRIPT06_D3032_YOUWA"
+msgstr "Kamu mau seragamnya?"
+
+msgid "TXT_DLG_SCRIPT06_D4548_OPENT"
+msgstr ""
+"Buka pintunya, bawakan aku seragamnya dan kita berdagang. Kalau tidak, minggir."
+
+msgid "TXT_DLG_SCRIPT06_D6064_HAVEY"
+msgstr "Apakah kamu sudah membawakan apa yang kuinginkan?"
+
+msgid "TXT_RPLY0_SCRIPT06_D6064_HOWAB"
+msgstr "Bagaimana dengan seragam ini?"
+
+msgid "TXT_RNO0_SCRIPT06_D6064_BRING"
+msgstr "Bawakan aku seragamnya."
+
+msgid "TXT_DLG_SCRIPT06_D7580_GOODH"
+msgstr ""
+"Bagus. Ini ada sedikit bonus. Teman-temanku merobek ini dari seorang Crusader yang jatuh, ini adalah bagian-bagian yang membentuk penyembur api. Sekarang Irale bisa membuatnya untukmu. Kamu pasti akan bersenang-senang."
+
+msgid "TXT_RPLY0_SCRIPT06_D7580_WHERE"
+msgstr "Di mana mekanisme gerbangnya?"
+
+msgid "TXT_DLG_SCRIPT06_D9096_YOUHA"
+msgstr ""
+"Kamu harus masuk ke bagian lain dari saluran pembuangan. Untuk sampai ke sana kamu harus memasuki kastil melalui pintu perawatan saluran pembuangan dan menguras tangki pemulihan cairan. Di bagian bawahnya ada pintu masuk tersembunyi ke saluran pembuangan, dan tepat di baliknya adalah kendali gerbang manual."
+
+msgid "TXT_RPLY0_SCRIPT06_D9096_ANYTH"
+msgstr "Ada hal lain yang bisa kamu lakukan?"
+
+msgid "TXT_DLG_SCRIPT06_D10612_GOODL"
+msgstr "Semoga berhasil. Aku telah membuka beberapa terowongan untuk kamu. Itu seharusnya mempermudah tugasmu. Oh, ukuran sepuluh, pas! …Tapi warnanya mengerikan."
+
+msgid "TXT_RPLY0_SCRIPT06_D10612_THANK"
+msgstr "Terima kasih atas bantuanmu."
+
+msgid "TXT_DLG_SCRIPT06_D12128_YOUGI"
+msgstr "Kamu tidak memberi apa-apa, kamu tidak dapat apa-apa."
+
+msgid "TXT_DLG_SCRIPT06_D13644_WERAN"
+msgstr "Weran akan menyelamatkan kita. Dia belum pernah mengecewakan kita."
+
+msgid "TXT_DLG_SCRIPT06_D15160_IFYOU"
+msgstr "Kalau kamu mencari jawaban atas masalahmu, temukan Weran. "
+
+msgid "TXT_DLG_SCRIPT06_D16676_LONGL"
+msgstr ""
+"Hidup Front? Itu semua omong kosong. Kita semua hanya menunggu kematian. "
+
+msgid "TXT_DLG_SCRIPT06_D18192_WITHO"
+msgstr ""
+"Dengan jalur kami ke permukaan yang tersegel, kami bahkan tidak bisa memberi makan diri sendiri."
+
+msgid "TXT_DLG_SCRIPT06_D19708_FOODD"
+msgstr "Makanan, apakah kamu punya makanan? Tolong bantu kami."
+
+msgid "TXT_DLG_SCRIPT06_D21224_THISI"
+msgstr ""
+"Ini hadiah bagiku karena membiarkan para tawanan kabur, berjaga di saluran pembuangan. Kalau aku pernah menemukan orang yang membebaskan mereka, aku akan membantainya."
+
+msgid "TXT_DLG_SCRIPT06_D22740_WEVEG"
+msgstr ""
+"Kita sudah menjepit para pengemis kecil itu di tempat yang kita inginkan. Beberapa hari lagi begini, dan mereka akan kelaparan sampai punah."
+
+msgid "TXT_DLG_SCRIPT06_D24256_WHATS"
+msgstr "Apa izin aksesmu? Tidak ada personel tidak sah yang diizinkan di sini."
+
+msgid "TXT_DLG_SCRIPT07_D0_WHATT"
+msgstr "Apa-apaan ini? Siapa yang membuka gerbangnya? Bunyikan alarm!!!"
+
+msgid "TXT_DLG_SCRIPT07_D1516_THERE"
+msgstr ""
+"Ada jalan lain masuk ke saluran pembuangan, tekan sakelar itu lalu naik dan kuras tangki pemulihan."
+
+msgid "TXT_DLG_SCRIPT07_D3032_WHATT"
+msgstr "Apa masalahmu. Kalau Programmer naik dari ruang audiensinya, kamu mati."
+
+msgid "TXT_DLG_SCRIPT07_D4548_HEYYO"
+msgstr "Hei, kamu tidak punya izin untuk turun ke sana."
+
+msgid "TXT_DLG_SCRIPT07_D6064_PROGR"
+msgstr ""
+"Programmer? Siapa yang memberitahumu itu? Tidak ada Programmer. Cerita itu sudah tersebar sejak lama. Jangan bilang Front benar-benar percaya omong kosong itu. Orang-orang bodoh."
+
+msgid "TXT_RPLY0_SCRIPT07_D6064_WELLW"
+msgstr "Lalu, apa kebenarannya?"
+
+msgid "TXT_DLG_SCRIPT07_D7580_ITOLD"
+msgstr ""
+"Aku sudah memberitahumu semua yang aku tahu. Kamu membuang-buang waktumu."
+
+msgid "TXT_DLG_SCRIPT07_D9096_FIGHT"
+msgstr "Teruslah berjuang, kita akan menang. Hari ini milik kita!"
+
+msgid "TXT_DLG_SCRIPT07_D10612_FIGHT"
+msgstr "Teruslah berjuang, kita akan menang. Hari ini milik kita!"
+
+msgid "TXT_DLG_SCRIPT07_D12128_FIGHT"
+msgstr "Teruslah berjuang, kita akan menang. Hari ini milik kita!"
+
+msgid "TXT_DLG_SCRIPT07_D13644_FIGHT"
+msgstr "Teruslah berjuang, kita akan menang. Hari ini milik kita!"
+
+msgid "TXT_DLG_SCRIPT07_D15160_FIGHT"
+msgstr "Teruslah berjuang, kita akan menang. Hari ini milik kita!"
+
+msgid "TXT_DLG_SCRIPT07_D16676_FIGHT"
+msgstr "Teruslah berjuang, kita akan menang. Hari ini milik kita!"
+
+msgid "TXT_DLG_SCRIPT08_D0_YOUKI"
+msgstr ""
+"Kamu membunuh semua penjaganya. Jangan sakiti aku. Aku sudah bilang ini ide bodoh. Programmer yang sebenarnya ada di benteng. Ini, ambil kunci ini."
+
+msgid "TXT_RPLY0_SCRIPT08_D0_YOURE"
+msgstr "Kamu adalah Programmer!"
+
+msgid "TXT_DLG_SCRIPT08_D1516_DOILO"
+msgstr ""
+"Apakah aku terlihat seperti pemegang kekuasaan tertinggi? Ordo menggunakan kita semua. Sekarang pergi, aku sudah mati bagaimanapun juga."
+
+msgid "TXT_DLG_SCRIPT08_D3032_POWER"
+msgstr "Kekuatan adalah kuncinya!"
+
+msgid "TXT_DLG_SCRIPT10_D0_GOODY"
+msgstr ""
+"Bagus, kamu sudah sadar kembali. Ketika kamu mengambil benda yang dijatuhkan Programmer itu, kamu membebaskan beberapa rahasia yang mengerikan."
+
+msgid "TXT_RPLY0_SCRIPT10_D0_WHATK"
+msgstr "Rahasia jenis apa. "
+
+msgid "TXT_DLG_SCRIPT10_D1516_WEHAV"
+msgstr ""
+"Kami tidak tahu dari mana senjata ini berasal, tapi kita harus mencari tahu. Kamu telah merebut satu dari Ordo, tapi kita harus memiliki semua lima. Kita telah mencapai batas pengetahuanku. Carilah Oracle dan minta bantuannya."
+
+msgid "TXT_RPLY0_SCRIPT10_D1516_IMGON"
+msgstr "Aku akan butuh lebih banyak perbekalan."
+
+msgid "TXT_DLG_SCRIPT10_D3032_HERES"
+msgstr "Ini emas. Pergi temui dokter dan pelatih senjata, lalu bergerak!"
+
+msgid "TXT_RPLY0_SCRIPT10_D3032_RIGHT"
+msgstr "Siap!"
+
+msgid "TXT_DLG_SCRIPT10_D4548_FIGHT"
+msgstr "Berjuanglah untuk Front dan kebebasan. Bergerak."
+
+msgid "TXT_DLG_SCRIPT10_D6064_WHATP"
+msgstr ""
+"Apa yang membuatmu kembali? Apakah kamu terluka? Tidak ada waktu yang terbuang, lanjutkan misimu. Lengkapi Sigil."
+
+msgid "TXT_RPLY0_SCRIPT10_D6064_THEOR"
+msgstr "Oracle mengatakan kamu harus mati!"
+
+msgid "TXT_DLG_SCRIPT10_D7580_IHAVE"
+msgstr ""
+"Aku telah bersumpah untuk kebebasan. Oracle-lah yang memegang bagian ketiga. Di sanalah pengkhianatmu."
+
+msgid "TXT_RPLY0_SCRIPT10_D7580_THEOR"
+msgstr "Kalau begitu Oracle harus mati!"
+
+msgid "TXT_RPLY1_SCRIPT10_D7580_ITHIN"
+msgstr "Kurasa kamulah pengkhianatnya!"
+
+msgid "TXT_DLG_SCRIPT10_D9096_SPIRI"
+msgstr "Roh Tuhan Yang Esa balaslah aku dan jadikan dunia ini debu."
+
+msgid "TXT_DLG_SCRIPT10_D10612_YOUHA"
+msgstr ""
+"Kamu telah membuat keputusan yang tepat. Jelas bahwa Oracle dikendalikan oleh kejahatan apa pun yang menggerakkan Ordo. Kembalilah ke sana dan ambil bagian ketiga dari Sigil."
+
+msgid "TXT_DLG_SCRIPT10_D12128_THERE"
+msgstr ""
+"Tampaknya tidak ada habisnya horor yang kita hadapi. Kita telah menemukan bahwa Ordo tidak membunuh orang-orang kita. Mereka mengubah mereka, menjadi prajurit bio-mekanikal. Temukan fasilitas tempat ini dilakukan dan tutup, secara permanen."
+
+msgid "TXT_RPLY0_SCRIPT10_D12128_WHERE"
+msgstr "Di mana lokasinya?"
+
+msgid "TXT_DLG_SCRIPT10_D13644_ONEOF"
+msgstr ""
+"Salah satu kapten kita, Richter, menunggumu di dekat air terjun di area bersama. Dia pernah melihat fasilitas itu dan bisa memandumu masuk. Hentikan kekejian ini, sekarang."
+
+msgid "TXT_RPLY0_SCRIPT10_D13644_THEYL"
+msgstr "Mereka akan membayar untuk ini!"
+
+msgid "TXT_DLG_SCRIPT10_D15160_FIGHT"
+msgstr "Berjuanglah untuk Front dan kebebasan. Bergerak."
+
+msgid "TXT_DLG_SCRIPT10_D16676_IAMTH"
+msgstr "Aku adalah Satu Tuhan… Aku butuh rohnya bebas agar aku bisa meninggalkan tubuhku dan bergabung dengannya dalam penerbangan. Kamu tidak tahu apa yang kamu miliki… dan teror apa yang kamu hadapi… Satu Tuhan harus bebas… Dan dia akan memberiku hadiah… Aku akan menjadi satu…"
+
+msgid "TXT_RPLY0_SCRIPT10_D16676_IWILL"
+msgstr "Aku akan menghancurkanmu!"
+
+msgid "TXT_DLG_SCRIPT10_D18192_GLADT"
+msgstr "Senang melihatmu berhasil. Apa yang kamu butuhkan? "
+
+msgid "TXT_RPLY0_SCRIPT10_D18192_HEALM"
+msgstr "Obati aku."
+
+msgid "TXT_RYES0_SCRIPT10_D18192_WELLL"
+msgstr "Baiklah, mari kita perbaiki kondisimu."
+
+msgid "TXT_RNO0_SCRIPT10_D18192_YOURE"
+msgstr "Kondisimu baik-baik saja."
+
+msgid "TXT_RPLY1_SCRIPT10_D18192_ANYTH"
+msgstr "Ada yang baru?"
+
+msgid "TXT_RYES1_SCRIPT10_D18192_YESIV"
+msgstr "Ya, aku punya beberapa perangkat keras baru untukmu."
+
+msgid "TXT_RNO1_SCRIPT10_D18192_NOPEI"
+msgstr "Belum, tapi aku sedang mengerjakannya."
+
+msgid "TXT_DLG_SCRIPT10_D19708_WHATC"
+msgstr ""
+"Apa yang bisa kulakukan untukmu sekarang? Feris sedang mendekripsi beberapa file yang sangat kompleks, tapi semuanya sepadan. Sudah ada beberapa informasi yang bisa kuterapkan pada versi berikutnya dari implan stamina."
+
+msgid "TXT_RPLY0_SCRIPT10_D19708_HEALM"
+msgstr "Obati aku."
+
+msgid "TXT_RYES0_SCRIPT10_D19708_YOUSH"
+msgstr "Kamu seharusnya belajar lebih berhati-hati."
+
+msgid "TXT_RPLY1_SCRIPT10_D19708_WHENW"
+msgstr "Kapan itu akan siap?"
+
+msgid "TXT_RYES1_SCRIPT10_D19708_ITSRE"
+msgstr "Sudah siap sekarang. Ini tidak butuh waktu lama."
+
+msgid "TXT_RNO1_SCRIPT10_D19708_SOON"
+msgstr "Sebentar lagi."
+
+msgid "TXT_DLG_SCRIPT10_D21224_ITHIN"
+msgstr ""
+"Kurasa aku menemukan kesalahan pada perangkat keras implanmu. Feris membantuku merancang retrofit yang akan memperbaikinya dan sedikit meningkatkan kecepatan perangkat kerasmu. Ada sesuatu yang bisa kulakukan untukmu?"
+
+msgid "TXT_RPLY0_SCRIPT10_D21224_PATCH"
+msgstr "Obati aku."
+
+msgid "TXT_RYES0_SCRIPT10_D21224_THERE"
+msgstr "Nah, seperti baru lagi kurasa."
+
+msgid "TXT_RPLY1_SCRIPT10_D21224_RETRO"
+msgstr "Retrofit?"
+
+msgid "TXT_RYES1_SCRIPT10_D21224_AHNOW"
+msgstr "Ah, sekarang kita bicara."
+
+msgid "TXT_RNO1_SCRIPT10_D21224_ILLHA"
+msgstr "Akan kuselesaikan segera setelah Feris menyelesaikannya."
+
+msgid "TXT_DLG_SCRIPT10_D22740_HOWSI"
+msgstr ""
+"Bagaimana keadaannya? Astaga, beberapa teknologi baru ini sungguh menakjubkan. Ini juga seharusnya membantu implanmu. Aku punya beberapa ide yang sedang kusketsakan dan akan siap sebentar lagi. Apa yang bisa kulakukan untukmu, mungkin penyembuhan?"
+
+msgid "TXT_RPLY0_SCRIPT10_D22740_YESHE"
+msgstr "Ya, obati aku."
+
+msgid "TXT_RYES0_SCRIPT10_D22740_ALLRI"
+msgstr "Baiklah, ini dia."
+
+msgid "TXT_RPLY1_SCRIPT10_D22740_HOWAB"
+msgstr "Bagaimana dengan teknologi baru itu?"
+
+msgid "TXT_RYES1_SCRIPT10_D22740_LETME"
+msgstr "Beritahu aku bagaimana hasilnya."
+
+msgid "TXT_RNO1_SCRIPT10_D22740_IMNOT"
+msgstr "Aku belum selesai merancangnya."
+
+msgid "TXT_DLG_SCRIPT10_D24256_BACKA"
+msgstr ""
+"Kembali lagi, apakah kamu tidak pernah bosan? Aku punya kabar baik, Feris menemukan cara untuk meningkatkan output implanmu. Dia memberikan spesifikasinya kepadaku dan aku mencoba membuatnya menyatu dengan fisiologimu. Aku sedang menumbuhkan jaringan secara paksa, ini benar-benar hal baru, semoga berhasil. Kamu butuh penyembuhan?"
+
+msgid "TXT_RPLY0_SCRIPT10_D24256_YESHE"
+msgstr "Ya, obati aku."
+
+msgid "TXT_RYES0_SCRIPT10_D24256_DONEN"
+msgstr "Selesai, sekarang jaga dirimu baik-baik."
+
+msgid "TXT_RPLY1_SCRIPT10_D24256_WHENW"
+msgstr "Kapan kamu akan selesai?"
+
+msgid "TXT_RYES1_SCRIPT10_D24256_NOWHE"
+msgstr "Sekarang. Hei bagus, berhasil!"
+
+msgid "TXT_RNO1_SCRIPT10_D24256_IMWAI"
+msgstr "Aku menunggu jaringan itu menyelesaikan siklus pertumbuhannya."
+
+msgid "TXT_DLG_SCRIPT10_D25772_WELLI"
+msgstr ""
+"Baiklah, aku kembali ke kebiasaan lamaku, aku masih mengerjakan implan-implanmu. Tahukah kamu bahwa Macil sekarang sudah mengizinkannya untuk semua orang? Tidak, ya? Itu karena kamu berhasil dengan sangat baik. Ada yang bisa kulakukan untukmu?"
+
+msgid "TXT_RPLY0_SCRIPT10_D25772_HELPM"
+msgstr "Bantu aku."
+
+msgid "TXT_RYES0_SCRIPT10_D25772_THATS"
+msgstr "Itu semua yang bisa kulakukan."
+
+msgid "TXT_RPLY1_SCRIPT10_D25772_NEWIM"
+msgstr "Implan baru?"
+
+msgid "TXT_RYES1_SCRIPT10_D25772_YEPMY"
+msgstr "Ya, yang terbaik yang pernah kubuat."
+
+msgid "TXT_RNO1_SCRIPT10_D25772_SORRY"
+msgstr "Maaf, tapi kamu harus menunggu dulu."
+
+msgid "TXT_DLG_SCRIPT10_D27288_THISI"
+msgstr ""
+"Inilah saatnya, Feris berhasil menguras semua yang bisa dia dapatkan dari semua data yang kita miliki, ini akan menjadi peningkatan implan yang terbaik dan terakhir. Akan terasa sedikit menyedihkan, melihat ciptaan terbaikku mencapai puncaknya. Yah, setidaknya sisa kru ini akan membuat aku tetap sibuk."
+
+msgid "TXT_RPLY0_SCRIPT10_D27288_COULD"
+msgstr "Bisakah kamu mengobatiku?"
+
+msgid "TXT_RYES0_SCRIPT10_D27288_THERE"
+msgstr "Nah, sekarang kamu sudah siap."
+
+msgid "TXT_DLG_SCRIPT10_D28804_ITSTH"
+msgstr ""
+"Sang pahlawan. Kerja bagus! Apa yang bisa kuberikan untukmu? Kita sekarang punya pilihan yang sedikit lebih banyak setelah mendapatkan semua amunisi dari kastil. Kalau kamu perlu membeli amunisi bicara dengan Justin. Dia akan membereskannya untukmu. "
+
+msgid "TXT_RPLY0_SCRIPT10_D28804_IMOUT"
+msgstr "Peluruku habis."
+
+msgid "TXT_RYES0_SCRIPT10_D28804_HERES"
+msgstr "Ini amunisi untukmu. Jangan disia-siakan."
+
+msgid "TXT_RPLY1_SCRIPT10_D28804_TEACH"
+msgstr "Latih aku."
+
+msgid "TXT_RYES1_SCRIPT10_D28804_NOWAF"
+msgstr "Baiklah, beberapa tips tentang senjata-senjata besar."
+
+msgid "TXT_RNO1_SCRIPT10_D28804_YOURE"
+msgstr "Kamu belum siap."
+
+msgid "TXT_DLG_SCRIPT10_D30320_HOWST"
+msgstr ""
+"Bagaimana upaya perangnya? Sudahlah, kalau kita masih di sini, berarti semuanya berjalan baik. Apa yang bisa kulakukan untukmu?"
+
+msgid "TXT_RPLY0_SCRIPT10_D30320_IRANO"
+msgstr "Peluruku habis."
+
+msgid "TXT_RYES0_SCRIPT10_D30320_THATS"
+msgstr "Ini seharusnya membantu."
+
+msgid "TXT_RNO0_SCRIPT10_D30320_YOUVE"
+msgstr "Amunisimu sudah cukup."
+
+msgid "TXT_RPLY1_SCRIPT10_D30320_TEACH"
+msgstr "Latih aku."
+
+msgid "TXT_RYES1_SCRIPT10_D30320_HEREI"
+msgstr "Ini, akan kutunjukkan beberapa trik dalam pekerjaan ini."
+
+msgid "TXT_RNO1_SCRIPT10_D30320_YOURE"
+msgstr "Kamu belum siap."
+
+msgid "TXT_DLG_SCRIPT10_D31836_WELLH"
+msgstr ""
+"Apakah kamu datang untuk belajar atau mencari amunisi? Jangan pikir aku sudah selesai denganmu. Aku masih punya beberapa trik di lengan bajuku."
+
+msgid "TXT_RPLY0_SCRIPT10_D31836_ITSAM"
+msgstr "Amunisi untuk sekarang."
+
+msgid "TXT_RYES0_SCRIPT10_D31836_HERES"
+msgstr "Ini amunisi untukmu. Jangan disia-siakan."
+
+msgid "TXT_RNO0_SCRIPT10_D31836_YOUVE"
+msgstr "Amunisimu sudah cukup."
+
+msgid "TXT_RPLY1_SCRIPT10_D31836_TEACH"
+msgstr "Latih aku."
+
+msgid "TXT_RYES1_SCRIPT10_D31836_TIMEF"
+msgstr "Waktunya pelajaran tingkat lanjut."
+
+msgid "TXT_RNO1_SCRIPT10_D31836_YOURE"
+msgstr "Kamu belum siap."
+
+msgid "TXT_DLG_SCRIPT10_D33352_WELLW"
+msgstr ""
+"Nah, ada apa sekarang? Apakah kamu tidak pernah istirahat? Senang melihatmu masih bernapas. Aku tidak mau murid favoritku kembali terbungkus kantong mayat."
+
+msgid "TXT_RPLY0_SCRIPT10_D33352_INEED"
+msgstr "Aku butuh lebih banyak peluru."
+
+msgid "TXT_RYES0_SCRIPT10_D33352_THERE"
+msgstr "Ini, jangan disia-siakan."
+
+msgid "TXT_RNO0_SCRIPT10_D33352_YOUHA"
+msgstr "Amunisimu sudah cukup."
+
+msgid "TXT_RPLY1_SCRIPT10_D33352_WHATC"
+msgstr "Apa yang bisa kamu ajarkan padaku?"
+
+msgid "TXT_RYES1_SCRIPT10_D33352_DONTG"
+msgstr "Jangan ketus, kamu masih punya ruang untuk berkembang."
+
+msgid "TXT_RNO1_SCRIPT10_D33352_NOTHI"
+msgstr "Tidak ada sampai kamu siap."
+
+msgid "TXT_DLG_SCRIPT10_D34868_LOOKW"
+msgstr ""
+"Lihat siapa yang kembali, ada apa? Aku tahu ini berat, tapi semua dari kita menghargai usahamu, percayalah."
+
+msgid "TXT_RPLY0_SCRIPT10_D34868_IVERU"
+msgstr "Peluruku habis."
+
+msgid "TXT_RYES0_SCRIPT10_D34868_WHATE"
+msgstr "Apa lagi yang baru, ini dia."
+
+msgid "TXT_RNO0_SCRIPT10_D34868_YOUHA"
+msgstr "Kamu sudah punya lebih dari yang bisa kuberikan."
+
+msgid "TXT_RPLY1_SCRIPT10_D34868_TEACH"
+msgstr "Ajari aku semampu kamu."
+
+msgid "TXT_RYES1_SCRIPT10_D34868_ALLRI"
+msgstr "Baiklah, ini beberapa petunjuk."
+
+msgid "TXT_RNO1_SCRIPT10_D34868_NOTRI"
+msgstr "Tidak sekarang."
+
+msgid "TXT_DLG_SCRIPT10_D36384_WHATI"
+msgstr ""
+"Apa yang kamu butuhkan? Semoga kamu memberi Ordo merasakan rasa sakit yang telah kita rasakan selama bertahun-tahun."
+
+msgid "TXT_RPLY0_SCRIPT10_D36384_SOMEA"
+msgstr "Amunisi."
+
+msgid "TXT_RYES0_SCRIPT10_D36384_THERE"
+msgstr "Ini dia, jangan disia-siakan."
+
+msgid "TXT_RNO0_SCRIPT10_D36384_YOUVE"
+msgstr "Amunisimu sudah cukup."
+
+msgid "TXT_RPLY1_SCRIPT10_D36384_TEACH"
+msgstr "Latih aku."
+
+msgid "TXT_RYES1_SCRIPT10_D36384_AFEWM"
+msgstr "Beberapa pelajaran lagi dan kamu akan tahu semua yang bisa kuajarkan."
+
+msgid "TXT_RNO1_SCRIPT10_D36384_YOURE"
+msgstr "Kamu belum siap."
+
+msgid "TXT_DLG_SCRIPT10_D37900_ICANT"
+msgstr ""
+"Tidak percaya kita masih ada, kamu dan aku. Sudah terlalu banyak dari kita yang pergi sejak awal. Apa yang bisa kulakukan untukmu kawan?"
+
+msgid "TXT_RPLY0_SCRIPT10_D37900_IMOUT"
+msgstr "Peluruku habis."
+
+msgid "TXT_RYES0_SCRIPT10_D37900_HEREU"
+msgstr "Ini, gunakan untuk menjaga keselamatanmu."
+
+msgid "TXT_RNO0_SCRIPT10_D37900_YOUHA"
+msgstr "Amunisimu sudah cukup."
+
+msgid "TXT_RPLY1_SCRIPT10_D37900_TEACH"
+msgstr "Latih aku."
+
+msgid "TXT_RYES1_SCRIPT10_D37900_WELLT"
+msgstr ""
+"Nah, sudah selesai, kamu lulus. Aku tidak bisa mengajarkan lebih banyak lagi."
+
+msgid "TXT_RNO1_SCRIPT10_D37900_RETUR"
+msgstr "Kembalilah setelah Macil bilang sudah waktunya."
+
+msgid "TXT_DLG_SCRIPT10_D39416_IVETA"
+msgstr ""
+"Aku sudah mengajarimu semua yang bisa kulakukan sekarang. Aku sudah memberimu semua yang seharusnya kamu butuhkan, kecuali kalau pelurumu habis. Itu masih bisa kubantu."
+
+msgid "TXT_RPLY0_SCRIPT10_D39416_YESIA"
+msgstr "Ya, habis."
+
+msgid "TXT_RYES0_SCRIPT10_D39416_HEREY"
+msgstr "Ini dia. "
+
+msgid "TXT_DLG_SCRIPT10_D40932_CHECK"
+msgstr ""
+"Lihat yang baru ini, suar teleporter. Kalau kamu menggunakan saur itu, kita akan melacak sinyalnya dan mengirim bantuan. Ada yang bisa kuberikan untukmu?"
+
+msgid "TXT_RPLY0_SCRIPT10_D40932_BOXOF"
+msgstr "Kotak roket"
+
+msgid "TXT_RYES0_SCRIPT10_D40932_THERE"
+msgstr "Ini dia."
+
+msgid "TXT_RNO0_SCRIPT10_D40932_YOUCA"
+msgstr "Kamu tidak mampu membelinya!"
+
+msgid "TXT_RPLY1_SCRIPT10_D40932_HEGRE"
+msgstr "Granat H-E."
+
+msgid "TXT_RYES1_SCRIPT10_D40932_HEREY"
+msgstr "Ini dia."
+
+msgid "TXT_RNO1_SCRIPT10_D40932_COMEB"
+msgstr "Kembalilah kalau kamu sudah punya cukup uang."
+
+msgid "TXT_RPLY2_SCRIPT10_D40932_ENERG"
+msgstr "Pod energi"
+
+msgid "TXT_RYES2_SCRIPT10_D40932_HERES"
+msgstr "Ini pod energimu"
+
+msgid "TXT_RNO2_SCRIPT10_D40932_YOUDO"
+msgstr "Uangmu tidak cukup untuk itu."
+
+msgid "TXT_RPLY3_SCRIPT10_D40932_TELEP"
+msgstr "Suar teleporter"
+
+msgid "TXT_RYES3_SCRIPT10_D40932_HELPW"
+msgstr "Bantuan, kapan pun dan di mana pun kamu butuhkan."
+
+msgid "TXT_RNO3_SCRIPT10_D40932_SORRY"
+msgstr "Maaf, tidak ada yang gratis."
+
+msgid "TXT_DLG_SCRIPT10_D42448_NOWTH"
+msgstr ""
+"Sekarang kita benar-benar sudah menguasai kastil, kita harus ekstra waspada untuk mempertahankannya. Ordo mungkin sedang bersiap untuk membalas sekarang."
+
+msgid "TXT_DLG_SCRIPT10_D43964_BECAR"
+msgstr "Hati-hati di luar sana."
+
+msgid "TXT_DLG_SCRIPT10_D45480_KEEPU"
+msgstr "Teruskan kerja bagusnya, kita tidak akan bisa melakukannya tanpamu."
+
+msgid "TXT_DLG_SCRIPT11_D0_IMTHE"
+msgstr "Akulah sang penjaga kunci."
+
+msgid "TXT_DLG_SCRIPT11_D1516_ALOTO"
+msgstr "Banyak orang akan berkata ini adalah pekerjaan yang tidak dihargai dan tidak penting. Tapi sebenarnya tidak…"
+
+msgid "TXT_RPLY0_SCRIPT11_D1516_GIVEM"
+msgstr "Berikan kuncinya padaku!"
+
+msgid "TXT_DLG_SCRIPT11_D3032_OKBUT"
+msgstr "Oke, tapi ingat, akulah sang penjaga kunci."
+
+msgid "TXT_RPLY0_SCRIPT11_D3032_OKPAL"
+msgstr "Oke kawan, terserah."
+
+msgid "TXT_DLG_SCRIPT11_D4548_IMTHE"
+msgstr "Akulah sang penjaga kunci."
+
+msgid "TXT_DLG_SCRIPT11_D6064_DIETR"
+msgstr "Mati pengkhianat!"
+
+msgid "TXT_DLG_SCRIPT11_D7580_DIETR"
+msgstr "Mati pengkhianat!"
+
+msgid "TXT_DLG_SCRIPT11_D9096_HAVEY"
+msgstr ""
+"Apakah kamu datang untuk mengejek? Meskipun kita di balik jeruji ini, selama kita bertahan, kamu tetap kalah."
+
+msgid "TXT_DLG_SCRIPT11_D10612_LETUS"
+msgstr "Keluarkan kami dari sini!"
+
+msgid "TXT_DLG_SCRIPT11_D12128_LEAVE"
+msgstr "Biarkan aku sendirian!"
+
+msgid "TXT_DLG_SCRIPT12_D0_WHATI"
+msgstr "Kebijaksanaan apa yang kamu cari, wahai orang sederhana?"
+
+msgid "TXT_RPLY0_SCRIPT12_D0_THESI"
+msgstr "Sigil Tuhan Yang Esa."
+
+msgid "TXT_DLG_SCRIPT12_D1516_IFEEL"
+msgstr ""
+"Aku merasakan satu fragmen beresonansi di dalam dirimu. Yang kedua terletak di jantung menara merah tua dan obsidian. Di sana kamu harus menghadapi Uskup, yang sudah sadar, dan menunggumu. Kamu akan menemukannya dengan mengikuti simbol kekuatannya. Bawa token ini kepada sang penjaga kunci. Kembalilah kepadaku setelah kamu membunuh sang monster."
+
+msgid "TXT_RPLY0_SCRIPT12_D1516_ILLBE"
+msgstr "Aku akan kembali."
+
+msgid "TXT_DLG_SCRIPT12_D3032_ALTHO"
+msgstr ""
+"Meskipun Uskup itu tangguh, misi ini tidak seberapa. Kembalilah kepadaku ketika kamu memiliki fragmen berikutnya."
+
+msgid "TXT_DLG_SCRIPT12_D4548_YOURN"
+msgstr ""
+"Tantangan berikutmu akan menguji jiwamu. Bagian ketiga dipegang oleh pemimpinmu sendiri. Dia sama seperti yang kamu dikirim untuk membunuh."
+
+msgid "TXT_RPLY0_SCRIPT12_D4548_MACIL"
+msgstr "Macil? Seorang pengkhianat?"
+
+msgid "TXT_DLG_SCRIPT12_D6064_YOURB"
+msgstr ""
+"Kepercayaan butamu telah membiarkannya maju menuju tujuannya dengan setiap bagian yang kamu dapatkan. Hadapi dia dan tentukan nasibmu."
+
+msgid "TXT_RPLY0_SCRIPT12_D6064_ALLRI"
+msgstr "Baiklah, memang Macil."
+
+msgid "TXT_RPLY1_SCRIPT12_D6064_ITSYO"
+msgstr "Kamulah yang tidak kupercaya."
+
+msgid "TXT_DLG_SCRIPT12_D7580_WHATE"
+msgstr ""
+"Pilihan apa pun yang kamu buat, jenismu akan binasa di bawah kehendak Tuhan Yang Esa."
+
+msgid "TXT_RPLY0_SCRIPT12_D7580_ILLBE"
+msgstr "Aku akan kembali setelah Macil mati."
+
+msgid "TXT_RPLY1_SCRIPT12_D7580_ICANT"
+msgstr "Aku tidak bisa membiarkan itu terjadi."
+
+msgid "TXT_DLG_SCRIPT12_D9096_THERI"
+msgstr "Sungai waktu terus mengalir maju, sementara kamu berdiam diri."
+
+msgid "TXT_DLG_SCRIPT12_D10612_YOUHA"
+msgstr ""
+"Kamu telah memotong kanker dari tubuhmu, tapi jantungmu masih berdetak. Selanjutnya kamu harus menemukan sang ahli bedah yang menyembelih dan mengendalikan orang-orang kamu, sang Loremaster. Hentikan dia, dan bagian berikutnya akan menjadi milikmu."
+
+msgid "TXT_RPLY0_SCRIPT12_D10612_WHERE"
+msgstr "Di mana aku menemukannya?"
+
+msgid "TXT_DLG_SCRIPT12_D12128_USETH"
+msgstr ""
+"Gunakan teleporter di balik pintu yang baru saja kubuka untuk mencapai Loremaster. Ketika dia sudah mati, gunakan perangkat yang sama untuk kembali kepadaku."
+
+msgid "TXT_RPLY0_SCRIPT12_D12128_ILLBE"
+msgstr "Aku akan kembali, dengan bagiannya!"
+
+msgid "TXT_DLG_SCRIPT12_D13644_THERI"
+msgstr "Sungai waktu terus mengalir maju, sementara kamu berdiam diri."
+
+msgid "TXT_DLG_SCRIPT12_D15160_PITIF"
+msgstr "Manusia menyedihkan, kamu telah melakukan apa yang ribuan orang gagal lakukan… Kamu membawaku kekuatan Sigil, suara Satu Tuhan."
+
+msgid "TXT_RPLY0_SCRIPT12_D15160_IDONT"
+msgstr "Aku tidak mengerti."
+
+msgid "TXT_DLG_SCRIPT12_D16676_THESI"
+msgstr ""
+"Sigil akan membuka pintu dan membebaskan roh yang akan membersihkan planet ini dan membuatku hidup selamanya. Aku akan menguras energi dunia ini dan menemukan dunia-dunia baru untuk ditaklukkan."
+
+msgid "TXT_RPLY0_SCRIPT12_D16676_ICANT"
+msgstr "Aku tidak bisa membiarkanmu melakukan itu."
+
+msgid "TXT_DLG_SCRIPT12_D18192_YOUCA"
+msgstr "Kamu bisa kalau kamu sudah mati."
+
+msgid "TXT_DLG_SCRIPT14_D0_AREYO"
+msgstr ""
+"Apakah kamu di sini untuk membebaskan kami? Karena aku sudah berlaku baik, mereka mencabut implanku. Tapi aku masih harus tinggal di sini dan membersihkan air liur."
+
+msgid "TXT_RPLY0_SCRIPT14_D0_YESIM"
+msgstr "Ya, aku di sini untuk membebaskanmu."
+
+msgid "TXT_RYES0_SCRIPT14_D0_YOUME"
+msgstr "Serius?"
+
+msgid "TXT_DLG_SCRIPT14_D1516_ICANT"
+msgstr ""
+"Aku tidak bisa membantu siapa pun lagi. Tidak sampai kamu menghancurkan pemancarnya. Itulah yang ada di balik medan gaya di lantai atas. Tugasku adalah memeriksa konveyor untuk memastikannya tidak macet. Tidak lagi sekarang!"
+
+msgid "TXT_RPLY0_SCRIPT14_D1516_THATS"
+msgstr "Benar, kamu sudah bebas!"
+
+msgid "TXT_RYES0_SCRIPT14_D1516_OHTHA"
+msgstr "Oh, terima kasih!"
+
+msgid "TXT_DLG_SCRIPT14_D3032_WEREF"
+msgstr "Kami bebas!! Kami bebas!! Kami bebas!!"
+
+msgid "TXT_DLG_SCRIPT14_D4548_MUSTM"
+msgstr "Harus menambang lebih banyak bijih!"
+
+msgid "TXT_DLG_SCRIPT14_D6064_WEREF"
+msgstr "Kami bebas!! Kami bebas!! Kami bebas!!"
+
+msgid "TXT_DLG_SCRIPT14_D7580_MUSTM"
+msgstr "Harus menambang lebih banyak bijih!"
+
+msgid "TXT_DLG_SCRIPT14_D9096_WEREF"
+msgstr "Kami bebas!! Kami bebas!! Kami bebas!!"
+
+msgid "TXT_DLG_SCRIPT14_D10612_MUSTM"
+msgstr "Harus menambang lebih banyak bijih!"
+
+msgid "TXT_DLG_SCRIPT14_D12128_WEREF"
+msgstr "Kami bebas!! Kami bebas!! Kami bebas!!"
+
+msgid "TXT_DLG_SCRIPT15_D0_WHATA"
+msgstr "Apa yang kamu lakukan di sini?"
+
+msgid "TXT_RPLY0_SCRIPT15_D0_ROUTI"
+msgstr "Inspeksi rutin."
+
+msgid "TXT_RYES0_SCRIPT15_D0_ALLRI"
+msgstr "Baiklah, lanjutkan."
+
+msgid "TXT_DLG_SCRIPT15_D1516_NOTHI"
+msgstr ""
+"Tidak ada yang perlu dilaporkan di sini. Semuanya berjalan baik. Kalau ada yang salah, aku pasti akan melaporkannya."
+
+msgid "TXT_DLG_SCRIPT15_D3032_SIRTH"
+msgstr "Tuan, tadi ada masalah, tapi sudah diatasi."
+
+msgid "TXT_DLG_SCRIPT17_D0_MOVEA"
+msgstr "Minggir atau rasakan logam."
+
+msgid "TXT_DLG_SCRIPT17_D1516_IDCHE"
+msgstr "Pemeriksaan ID."
+
+msgid "TXT_RPLY0_SCRIPT17_D1516_HEREI"
+msgstr "Ini, aku sedang terburu-buru."
+
+msgid "TXT_DLG_SCRIPT17_D3032_STOPW"
+msgstr "Jangan kibaskan ID-mu di depan mukaku dan masuklah."
+
+msgid "TXT_DLG_SCRIPT17_D4548_NOTHI"
+msgstr "Tidak ada yang perlu dilihat di sini. Teruslah berjalan."
+
+msgid "TXT_DLG_SCRIPT17_D6064_WHATA"
+msgstr "Sungguh sosok yang sehat. Kamu tidak butuh bantuanku, bukan?"
+
+msgid "TXT_RPLY0_SCRIPT17_D6064_WELLY"
+msgstr "Yah, iya. Macil mengutusku."
+
+msgid "TXT_DLG_SCRIPT17_D7580_SHHHH"
+msgstr "Ssshh… Diam, kecuali kamu ingin kita berdua terbunuh. Sekarang, apa yang bisa kulakukan untukmu?"
+
+msgid "TXT_RPLY0_SCRIPT17_D7580_TELLM"
+msgstr "Ceritakan cara menemukan Uskup."
+
+msgid "TXT_DLG_SCRIPT17_D9096_OHHHI"
+msgstr ""
+"Ohh, aku tahu kamu akan menanyakan itu. Lihat ke belakangmu. Itulah pintu masuk ke benteng Uskup. Dijaga oleh medan gaya yang hanya dimatikan untuk tamu resmi, bukan untukmu."
+
+msgid "TXT_RPLY0_SCRIPT17_D9096_IMUST"
+msgstr "Aku harus membunuh Uskup."
+
+msgid "TXT_DLG_SCRIPT17_D10612_OHSUR"
+msgstr ""
+"Oh, tentu saja. Pertama, terobos masuk ke kompleks keamanan dan gunakan teleporternya. Dan ini mungkin lebih cocok bagimu, hancurkan komputer di administrasi pusat. Tidak ada komputer, tidak ada medan gaya."
+
+msgid "TXT_RPLY0_SCRIPT17_D10612_GREAT"
+msgstr "Bagus, kedengarannya mudah."
+
+msgid "TXT_DLG_SCRIPT17_D12128_THERE"
+msgstr ""
+"Ada keuntungan dari menghancurkan komputernya, di situlah rencana menara disimpan. Bisa dibilang, diskon lima jari? Heh heh!"
+
+msgid "TXT_RPLY0_SCRIPT17_D12128_ANYTH"
+msgstr "Ada yang lain?"
+
+msgid "TXT_DLG_SCRIPT17_D13644_OHWEL"
+msgstr ""
+"Oh ya, kabarnya gudang di halaman dalam menerima kiriman mauler, itulah senjata yang menguapkan target."
+
+msgid "TXT_RPLY0_SCRIPT17_D13644_ISTHA"
+msgstr "Hanya itu sekarang?"
+
+msgid "TXT_DLG_SCRIPT17_D15160_DONTY"
+msgstr "Apakah kamu tidak tahu arti kata \"pergi sana\"?"
+
+msgid "TXT_DLG_SCRIPT17_D16676_TALKT"
+msgstr ""
+"Bicara dengan Quincy dulu. Aku tidak boleh membantu siapa pun kecuali dia bilang oke."
+
+msgid "TXT_DLG_SCRIPT17_D18192_HOWHO"
+msgstr "Bagaimana aku bisa membantumu hari ini?"
+
+msgid "TXT_RPLY0_SCRIPT17_D18192_MEDPA"
+msgstr "Tambalan medis"
+
+msgid "TXT_RYES0_SCRIPT17_D18192_HERES"
+msgstr "Ini tambalanmu."
+
+msgid "TXT_RNO0_SCRIPT17_D18192_THATI"
+msgstr "Itu 15 emas, kawan."
+
+msgid "TXT_RPLY1_SCRIPT17_D18192_MEDIC"
+msgstr "Kotak medis"
+
+msgid "TXT_RYES1_SCRIPT17_D18192_HERES"
+msgstr "Ini kotak medismu."
+
+msgid "TXT_RNO1_SCRIPT17_D18192_YOURE"
+msgstr "Danamu agak kurang untuk itu."
+
+msgid "TXT_RPLY2_SCRIPT17_D18192_FIELD"
+msgstr "Kit bedah lapangan"
+
+msgid "TXT_RYES2_SCRIPT17_D18192_ONEFI"
+msgstr "Satu kit bedah lapangan, selesai."
+
+msgid "TXT_RNO2_SCRIPT17_D18192_COMEB"
+msgstr "Kembalilah kalau kamu sudah punya uang!"
+
+msgid "TXT_DLG_SCRIPT18_D0_WHATI"
+msgstr "Ada apa?"
+
+msgid "TXT_RPLY0_SCRIPT18_D0_JUSTL"
+msgstr "Hanya melihat-lihat."
+
+msgid "TXT_RYES0_SCRIPT18_D0_JUSTK"
+msgstr "Jangan menghalangi saja."
+
+msgid "TXT_DLG_SCRIPT18_D1516_THETE"
+msgstr ""
+"Para Templar akan segera datang untuk mengambil mauler baru mereka. Kalau kamu menghalangi mereka, kamu orang mati."
+
+msgid "TXT_RPLY0_SCRIPT18_D1516_MAULE"
+msgstr "Mauler?"
+
+msgid "TXT_RYES0_SCRIPT18_D1516_THETE"
+msgstr "Senjata favorit para Templar."
+
+msgid "TXT_DLG_SCRIPT18_D3032_THEYC"
+msgstr ""
+"Mereka datang tadi. Itulah alasan semua pengamanan ini. Aku sempat melihatnya ketika mengunci gudang. Tidak ada yang boleh masuk atau keluar dari sana sampai sisa pasukan datang untuk mengambil senjata mereka."
+
+msgid "TXT_DLG_SCRIPT19_D0_THISI"
+msgstr "Di sinilah kamu mendapatkan rencana untuk administrasi pusat."
+
+msgid "TXT_DLG_SCRIPT22_D0_IRUNT"
+msgstr ""
+"Akulah yang mengelola tempat ini. Tugasku adalah membuat bagian-bagian mentah yang dibutuhkan untuk desain robot sang Loremaster. Kalau kamu tidak datang untuk urusan resmi, aku takut tidak punya waktu untuk bicara."
+
+msgid "TXT_RPLY0_SCRIPT22_D0_IAMON"
+msgstr "Aku memang datang untuk urusan resmi."
+
+msgid "TXT_DLG_SCRIPT22_D1516_SOYOU"
+msgstr ""
+"Jadi kamu sudah bicara dengan Timothy, kurasa. Dia dan aku telah bekerja sama untuk mencoba mengungkap misteri Ordo, sebelum semuanya terlambat bagi kita semua. Mungkin kamu bisa membantu kita. Aku sudah membuka pintu ke sektor produksi."
+
+msgid "TXT_RPLY0_SCRIPT22_D1516_DOYOU"
+msgstr "Apakah kamu tahu apa yang ada di dalamnya?"
+
+msgid "TXT_DLG_SCRIPT22_D3032_ITSAT"
+msgstr "Itu area rahasia tingkat tinggi. Bukan hanya Ordo yang membiakkan semacam… makhluk di sana, aku juga telah melihat dengan mata kepalaku sendiri sebuah artefak aneh bernama Talisman. Tidak ada yang boleh mendekatinya. Kabarnya ia menyimpan kekuatan besar jika disatukan dengan dua lainnya yang sejenis."
+
+msgid "TXT_RPLY0_SCRIPT22_D3032_ISUPP"
+msgstr "Kurasa kamu menginginkan benda itu?"
+
+msgid "TXT_DLG_SCRIPT22_D4548_NOIFY"
+msgstr "Tidak! Jika kamu bisa menemukannya, itu milikmu. Mungkin kamu bisa menggunakannya untuk membantu membebaskan kami dari penindasan ini. Aku ingin mendoakan keberuntunganmu, tapi kamu butuh jauh lebih dari itu jika masuk ke sana…"
+
+msgid "TXT_RPLY0_SCRIPT22_D4548_WHATS"
+msgstr "Apa maksud semua ini tentang masa lalu?"
+
+msgid "TXT_DLG_SCRIPT22_D6064_YOUVE"
+msgstr ""
+"Pasti kamu sudah melihat reruntuhan lain di sekitar sini. Tampaknya komet yang jatuh di planet kita ini sebenarnya adalah sebuah kapal luar angkasa, dan percaya atau tidak, ia berasal dari dunia ini sendiri, jauh di masa lampau."
+
+msgid "TXT_RPLY0_SCRIPT22_D6064_SOTHE"
+msgstr "Jadi para hantu, Satu Tuhan…"
+
+msgid "TXT_DLG_SCRIPT22_D7580_THEYA"
+msgstr ""
+"Mereka adalah makhluk yang pernah menguasai dunia ini dan bertekad untuk menguras kehidupannya. Para leluhur berhasil mengurung mereka, tapi harus mengorbankan nyawa mereka dalam prosesnya. Sayangnya hanya itu yang aku tahu."
+
+msgid "TXT_RPLY0_SCRIPT22_D7580_THANK"
+msgstr "Terima kasih… Aku akan lakukan apa yang bisa kulakukan."
+
+msgid "TXT_DLG_SCRIPT22_D9096_GODSP"
+msgstr "Semoga Tuhan menyertaimu, kawan."
+
+msgid "TXT_DLG_SCRIPT22_D10612_TALKT"
+msgstr ""
+"Bicara dengan kepala pandai besi kalau kamu punya pertanyaan. Yang kulakukan hanyalah menempelkan label pada peti-peti ini."
+
+msgid "TXT_DLG_SCRIPT23_D0_WHATC"
+msgstr "Apa yang bisa kuberikan untukmu, warga?"
+
+msgid "TXT_RPLY0_SCRIPT23_D0_AMMOB"
+msgstr "Kotak amunisi"
+
+msgid "TXT_RYES0_SCRIPT23_D0_HERES"
+msgstr "Ini amunisimu."
+
+msgid "TXT_RNO0_SCRIPT23_D0_YOUDO"
+msgstr "Uangmu tidak cukup untuk itu!"
+
+msgid "TXT_RPLY1_SCRIPT23_D0_CRATE"
+msgstr "Peti rudal"
+
+msgid "TXT_RYES1_SCRIPT23_D0_HEREC"
+msgstr "Ini, warga."
+
+msgid "TXT_RNO1_SCRIPT23_D0_ITS85"
+msgstr "Harganya 85 emas, warga!"
+
+msgid "TXT_RPLY2_SCRIPT23_D0_HEGRE"
+msgstr "Granat H-E"
+
+msgid "TXT_RYES2_SCRIPT23_D0_HEREA"
+msgstr "Ini granatmu."
+
+msgid "TXT_RNO2_SCRIPT23_D0_THEYA"
+msgstr "Harganya 100 emas, kawan."
+
+msgid "TXT_RPLY3_SCRIPT23_D0_ENERG"
+msgstr "Pod energi"
+
+msgid "TXT_RYES3_SCRIPT23_D0_HEREY"
+msgstr "Ini untukmu."
+
+msgid "TXT_RNO3_SCRIPT23_D0_THATS"
+msgstr "Harganya 135 emas, maaf."
+
+msgid "TXT_DLG_SCRIPT23_D1516_WHATC"
+msgstr "Ada yang bisa kubantu?"
+
+msgid "TXT_RPLY0_SCRIPT23_D1516_LEATH"
+msgstr "Baju zirah kulit"
+
+msgid "TXT_RYES0_SCRIPT23_D1516_HEREI"
+msgstr "Ini dia, warga."
+
+msgid "TXT_RNO0_SCRIPT23_D1516_THERE"
+msgstr "Tidak ada yang gratis di sini!"
+
+msgid "TXT_RPLY1_SCRIPT23_D1516_METAL"
+msgstr "Baju zirah logam"
+
+msgid "TXT_RYES1_SCRIPT23_D1516_ANEXC"
+msgstr "Pilihan yang sangat baik, warga."
+
+msgid "TXT_RNO1_SCRIPT23_D1516_YOUDO"
+msgstr "Uangmu tidak cukup untuk ini!"
+
+msgid "TXT_RPLY2_SCRIPT23_D1516_ENVIR"
+msgstr "Pakaian pelindung lingkungan"
+
+msgid "TXT_RYES2_SCRIPT23_D1516_HEREY"
+msgstr "Ini untukmu."
+
+msgid "TXT_RNO2_SCRIPT23_D1516_NOMON"
+msgstr "Tidak ada uang, tidak ada pakaian."
+
+msgid "TXT_RPLY3_SCRIPT23_D1516_SOMET"
+msgstr "Ada yang lain?"
+
+msgid "TXT_RYES3_SCRIPT23_D1516_GOTHR"
+msgstr "Lewati pintu di ujung lorong."
+
+msgid "TXT_RNO3_SCRIPT23_D1516_YOUMU"
+msgstr "Kamu harus membayar kalau mau bermain."
+
+msgid "TXT_DLG_SCRIPT23_D3032_WHATC"
+msgstr "Apa yang bisa kuberikan untukmu?"
+
+msgid "TXT_RPLY0_SCRIPT23_D3032_LEATH"
+msgstr "Baju zirah kulit"
+
+msgid "TXT_RYES0_SCRIPT23_D3032_HEREI"
+msgstr "Ini dia, warga."
+
+msgid "TXT_RNO0_SCRIPT23_D3032_THERE"
+msgstr "Tidak ada yang gratis di sini!"
+
+msgid "TXT_RPLY1_SCRIPT23_D3032_METAL"
+msgstr "Baju zirah logam"
+
+msgid "TXT_RYES1_SCRIPT23_D3032_ANEXC"
+msgstr "Pilihan yang sangat baik, warga."
+
+msgid "TXT_RNO1_SCRIPT23_D3032_YOUDO"
+msgstr "Uangmu tidak cukup untuk ini!"
+
+msgid "TXT_RPLY2_SCRIPT23_D3032_ENVIR"
+msgstr "Pakaian pelindung lingkungan"
+
+msgid "TXT_RYES2_SCRIPT23_D3032_HEREY"
+msgstr "Ini untukmu."
+
+msgid "TXT_RNO2_SCRIPT23_D3032_NOMON"
+msgstr "Tidak ada uang, tidak ada pakaian."
+
+msgid "TXT_DLG_SCRIPT23_D4548_HOWCA"
+msgstr "Bagaimana aku bisa membantumu hari ini?"
+
+msgid "TXT_RPLY0_SCRIPT23_D4548_MEDPA"
+msgstr "Tambalan medis"
+
+msgid "TXT_RYES0_SCRIPT23_D4548_HERES"
+msgstr "Ini tambalanmu."
+
+msgid "TXT_RNO0_SCRIPT23_D4548_THATI"
+msgstr "Itu 15 emas, kawan."
+
+msgid "TXT_RPLY1_SCRIPT23_D4548_MEDIC"
+msgstr "Kotak medis"
+
+msgid "TXT_RYES1_SCRIPT23_D4548_HERES"
+msgstr "Ini kotak medismu."
+
+msgid "TXT_RNO1_SCRIPT23_D4548_YOURA"
+msgstr "Danamu agak kurang untuk itu."
+
+msgid "TXT_RPLY2_SCRIPT23_D4548_FIELD"
+msgstr "Kit bedah lapangan"
+
+msgid "TXT_RYES2_SCRIPT23_D4548_ONEFI"
+msgstr "Satu kit bedah lapangan."
+
+msgid "TXT_RNO2_SCRIPT23_D4548_COMEB"
+msgstr "Kembalilah kalau kamu sudah punya uang!"
+
+msgid "TXT_DLG_SCRIPT23_D6064_HELLO"
+msgstr "Halo kawan, apa yang bisa kuberikan untukmu?"
+
+msgid "TXT_RPLY0_SCRIPT23_D6064_INFOR"
+msgstr "Informasi"
+
+msgid "TXT_RYES0_SCRIPT23_D6064_IVENE"
+msgstr ""
+"Aku tidak pernah melihat siapa pun masuk atau keluar dari pabrik itu, medan gayanya selalu aktif."
+
+msgid "TXT_RNO0_SCRIPT23_D6064_NOMON"
+msgstr "Tidak ada uang, tidak ada info."
+
+msgid "TXT_DLG_SCRIPT23_D7580_YESWH"
+msgstr "Ya, apa yang kamu inginkan?"
+
+msgid "TXT_RPLY0_SCRIPT23_D7580_MOREI"
+msgstr "Info lebih lanjut."
+
+msgid "TXT_RYES0_SCRIPT23_D7580_THEFA"
+msgstr ""
+"Pabrik itu dibangun di atas lokasi tumbukan komet. Kurasa itu bukan kebetulan."
+
+msgid "TXT_RNO0_SCRIPT23_D7580_COMEO"
+msgstr "Ayolah, hanya 5 emas."
+
+msgid "TXT_DLG_SCRIPT23_D9096_HELLO"
+msgstr "Halo lagi, mau apa sekarang?"
+
+msgid "TXT_RPLY0_SCRIPT23_D9096_MOREI"
+msgstr "Info lebih lanjut."
+
+msgid "TXT_RYES0_SCRIPT23_D9096_THEFA"
+msgstr ""
+"Pabrik itu ditutup ketika Ordo memperkenalkan kengerian barunya: sang Inquisitor."
+
+msgid "TXT_RNO0_SCRIPT23_D9096_5GOLD"
+msgstr "5 emas tolong."
+
+msgid "TXT_DLG_SCRIPT23_D10612_THATS"
+msgstr "Itu semua yang aku tahu. Bahkan bartender kehabisan bahan cerita, maaf."
+
+msgid "TXT_DLG_SCRIPT23_D12128_HELLO"
+msgstr "Halo."
+
+msgid "TXT_RPLY0_SCRIPT23_D12128_WHATA"
+msgstr "Apa yang sedang kamu lakukan?"
+
+msgid "TXT_RYES0_SCRIPT23_D12128_IMDOI"
+msgstr "Aku sedang sibuk, pergi sana!"
+
+msgid "TXT_DLG_SCRIPT23_D13644_NOWWH"
+msgstr "Nah, ada yang bisa kubantu?"
+
+msgid "TXT_RPLY0_SCRIPT23_D13644_SHADO"
+msgstr "Baju zirah bayangan?"
+
+msgid "TXT_RYES0_SCRIPT23_D13644_AHHTO"
+msgstr "Ahh, terdengar tapi tidak terlihat!"
+
+msgid "TXT_RNO0_SCRIPT23_D13644_GETOU"
+msgstr "Pergi sana, kembalilah kalau kamu sudah punya uang."
+
+msgid "TXT_DLG_SCRIPT23_D15160_THANK"
+msgstr ""
+"Syukurlah kamu akhirnya sampai di sini. Untuk masuk ke pabrik kamu butuh sebuah kunci. Kita sudah mencurinya tapi agen kita hilang di labirin katakombe di bawah benteng Ordo. Aku sudah mengirim sepuluh orang terbaik ke terowongan itu untuk menemukannya, dan tidak satu pun yang kembali. Ada sesuatu di bawah sana!"
+
+msgid "TXT_RPLY0_SCRIPT23_D15160_WHATI"
+msgstr "Apa itu? Manusia atau… ?"
+
+msgid "TXT_DLG_SCRIPT23_D16676_NOTDE"
+msgstr ""
+"Bukan. Pasti bukan. Apa pun itu, kamu harus melawannya untuk mengambil kuncinya. Aku akan membuka pintu masuk katakombe. Setelah kamu mendapatkannya, pabriknya ada di sebelah tambang. Cepat, setiap detik sangat berharga."
+
+msgid "TXT_RPLY0_SCRIPT23_D16676_SOMET"
+msgstr "Sesuatu yang bukan manusia, ya? Luar biasa."
+
+msgid "TXT_DLG_SCRIPT23_D18192_YOURE"
+msgstr "Kamu membuang-buang waktu dan nyawa! Bergerak!"
+
+msgid "TXT_DLG_SCRIPT23_D10612_CANIB"
+msgstr "Ada lagi yang bisa kubantu?"
+
+msgid "TXT_RPLY0_SCRIPT23_D10612_MOREI"
+msgstr "Info lebih lanjut."
+
+msgid "TXT_RYES0_SCRIPT23_D10612_LOOKF"
+msgstr "Cari Timothy. Kudengar dia tahu beberapa rahasia Ordo."
+
+msgid "TXT_RNO0_SCRIPT23_D10612_JUSTA"
+msgstr "Hanya 5 emas lagi."
+
+msgid "TXT_DLG_SCRIPT23_D12128_THATS"
+msgstr "Itu semua yang aku tahu. Bahkan bartender kehabisan bahan cerita, maaf."
+
+msgid "TXT_DLG_SCRIPT23_D13644_HELLO"
+msgstr "Halo."
+
+msgid "TXT_RPLY0_SCRIPT23_D13644_WHATA"
+msgstr "Apa yang sedang kamu lakukan?"
+
+msgid "TXT_RYES0_SCRIPT23_D13644_IMDOI"
+msgstr "Aku sedang sibuk, pergi sana!"
+
+msgid "TXT_DLG_SCRIPT23_D15160_IFYOU"
+msgstr ""
+"Kalau kamu punya waktu sebanyak ini untuk dihabiskan, coba cari piala biru. Penelitianku tentang Ordo menunjukkan bahwa mereka menyembunyikannya di suatu tempat di sektor manufaktur pabrik. Artefak ini sangat berharga bagiku, jadi, bawakan kepadaku, dan aku akan membantumu."
+
+msgid "TXT_DLG_SCRIPT23_D16676_YOUFO"
+msgstr ""
+"Kamu menemukan piala biru! Oke, berikan dulu kepadaku, dan kita akan berdagang."
+
+msgid "TXT_RPLY0_SCRIPT23_D16676_TAKEI"
+msgstr "Ambillah, itu membawa sial bagaimanapun juga."
+
+msgid "TXT_RPLY1_SCRIPT23_D16676_SCREW"
+msgstr "Persetan, aku menyimpannya."
+
+msgid "TXT_RYES1_SCRIPT23_D16676_THENI"
+msgstr "Kalau begitu aku tidak akan memberikanmu apa-apa. Pergi sana!"
+
+msgid "TXT_DLG_SCRIPT23_D18192_LOCAT"
+msgstr ""
+"Temukan tempaan itu. Informasi yang baru kuberikan seharusnya membantumu masuk ke sektor rahasia pabrik. Salah satu pekerja tempaan bisa membuka pintunya."
+
+msgid "TXT_RPLY0_SCRIPT23_D18192_WHATC"
+msgstr "Apa yang bisa kutemukan di sana?"
+
+msgid "TXT_DLG_SCRIPT23_D19708_MYRES"
+msgstr ""
+"Penelitianku menunjukkan bahwa ada kekuatan gelap dari masa lampau yang tersembunyi di sana. Hati-hati!"
+
+msgid "TXT_DLG_SCRIPT23_D21224_THATB"
+msgstr ""
+"Piala biru itu, dari mana kamu mendapatkannya? Aku sudah meneliti Ordo dan hubungan mereka dengan masa lampau yang jauh, dan artefak itu akan membantuku. Mari kita buat kesepakatan. Berikan piala itu kepadaku, dan aku akan memberikanmu beberapa informasi."
+
+msgid "TXT_RPLY0_SCRIPT23_D21224_TAKEI"
+msgstr "Ambillah, itu membawa sial bagaimanapun juga."
+
+msgid "TXT_RPLY1_SCRIPT23_D21224_SCREW"
+msgstr "Persetan, aku menyimpannya."
+
+msgid "TXT_RYES1_SCRIPT23_D21224_THENI"
+msgstr "Kalau begitu aku tidak akan memberikanmu apa-apa. Pergi sana!"
+
+msgid "TXT_DLG_SCRIPT23_D22740_NOWWH"
+msgstr "Nah, ada yang bisa kubantu?"
+
+msgid "TXT_RPLY0_SCRIPT23_D22740_SHADO"
+msgstr "Baju zirah bayangan?"
+
+msgid "TXT_RYES0_SCRIPT23_D22740_AHHTO"
+msgstr "Ahh, terdengar tapi tidak terlihat!"
+
+msgid "TXT_RNO0_SCRIPT23_D22740_GETOU"
+msgstr "Pergi sana, kembalilah kalau kamu sudah punya uang."
+
+msgid "TXT_DLG_SCRIPT23_D24256_THANK"
+msgstr ""
+"Syukurlah kamu akhirnya sampai di sini. Untuk masuk ke pabrik kamu butuh sebuah kunci. Kita sudah mencurinya tapi agen kita hilang di labirin katakombe di bawah benteng Ordo. Aku sudah mengirim sepuluh orang terbaik ke terowongan itu untuk menemukannya, dan tidak satu pun yang kembali. Ada sesuatu di bawah sana!"
+
+msgid "TXT_RPLY0_SCRIPT23_D24256_WHATI"
+msgstr "Apa itu? Manusia atau… ?"
+
+msgid "TXT_DLG_SCRIPT23_D25772_NOTDE"
+msgstr ""
+"Bukan. Pasti bukan. Apa pun itu, kamu harus melawannya untuk mengambil kuncinya. Aku akan membuka pintu masuk katakombe. Setelah kamu mendapatkannya, pabriknya ada di sebelah tambang. Cepat, setiap detik sangat berharga."
+
+msgid "TXT_RPLY0_SCRIPT23_D25772_SOMET"
+msgstr "Sesuatu yang bukan manusia, ya? Luar biasa."
+
+msgid "TXT_DLG_SCRIPT23_D27288_YOURE"
+msgstr "Kamu membuang-buang waktu dan nyawa! Bergerak!"
+
+msgid "TXT_DLG_SCRIPT27_D0_THEMA"
+msgstr ""
+"Sang tuan tidak menyukai tamu. Dia ingin semua pekerjaannya tidak terganggu. Aku harus pergi mengambil bagian segar dari ruang penyimpanan. Kurasa dia bilang sebuah kaki dan sebuah lengan. Oh, tidak ada waktu lagi untuk bicara. Lebih baik pergi sebelum dia menemukanmu."
+
+msgid "TXT_RPLY0_SCRIPT27_D0_WHYST"
+msgstr "Mengapa begitu."
+
+msgid "TXT_RYES0_SCRIPT27_D0_BECAU"
+msgstr "Karena, sudah kubilang dia tidak menyukai tamu!"
+
+msgid "TXT_DLG_SCRIPT27_D1516_YOUKN"
+msgstr "Tahukah kamu, tubuhmu kira-kira seukuran seragam para akolit."
+
+msgid "TXT_DLG_SCRIPT31_D0_OHNOI"
+msgstr ""
+"Oh tidak, aku bukan Programmer yang sebenarnya, dia sedang bersembunyi. Lanjutkan melewati area latihan penjaga, sangat berbahaya. Kalau kamu selamat, mungkin kamu bisa bicara dengannya. Atau membunuhnya."
+
+msgid "TXT_RPLY0_SCRIPT31_D0_WHOAR"
+msgstr "Siapa kamu?"
+
+msgid "TXT_DLG_SCRIPT31_D1516_YOULL"
+msgstr "Kamu tidak akan menemukan apa pun kalau terus berada di sini."
+
+msgid "TXT_DLG_SCRIPT32_D0_PISSO"
+msgstr "Minggir rakyat jelata!"
+
+msgid "TXT_DLG_SCRIPT32_D1516_DIELI"
+msgstr "Mati kamu orang kecil!"
+
+msgid "TXT_DLG_SCRIPT32_D3032_FINAL"
+msgstr "Akhirnya aku bisa keluar dari sel ini."
+
+msgid "TXT_RPLY0_SCRIPT32_D3032_WHYAR"
+msgstr "Mengapa kamu di sini?"
+
+msgid "TXT_RYES0_SCRIPT32_D3032_IWASF"
+msgstr "Aku dijebak."
+
+msgid "TXT_DLG_SCRIPT32_D4548_HARRI"
+msgstr ""
+"Harris mengatakan bahwa aku sedang merencanakan pembunuhan Gubernur. Aku tidak akan pernah menyakiti siapa pun."
+
+msgid "TXT_DLG_SCRIPT33_D0_BECAR"
+msgstr "Hati-hati di luar sana."
+
+msgid "TXT_DLG_SCRIPT33_D1516_SAYFR"
+msgstr ""
+"Hei kawan, aku akan membantumu kalau kamu membantuku. Berikan 5 emas dan aku akan memberitahumu apa yang aku tahu."
+
+msgid "TXT_RPLY0_SCRIPT33_D1516_HERES"
+msgstr "Ini emasnya."
+
+msgid "TXT_RYES0_SCRIPT33_D1516_IFYOU"
+msgstr "Kalau kamu memukul seseorang, itu tidak akan memicu alarm."
+
+msgid "TXT_RNO0_SCRIPT33_D1516_IWONT"
+msgstr "Aku tidak akan memberitahumu apa-apa secara gratis!"
+
+msgid "TXT_DLG_SCRIPT33_D3032_IVEAL"
+msgstr "Aku sudah memberitahumu semua yang aku tahu."
+
+msgid "TXT_DLG_SCRIPT33_D4548_HELLO"
+msgstr "Halo kawan. Apa yang bisa kuberikan untukmu?"
+
+msgid "TXT_RPLY0_SCRIPT33_D4548_ELECT"
+msgstr "Anak panah listrik"
+
+msgid "TXT_RYES0_SCRIPT33_D4548_ONEQU"
+msgstr "Satu anak panah, beres."
+
+msgid "TXT_RNO0_SCRIPT33_D4548_YOURE"
+msgstr "Kamu tidak punya uang!"
+
+msgid "TXT_RPLY1_SCRIPT33_D4548_10ROU"
+msgstr "Klip peluru"
+
+msgid "TXT_RYES1_SCRIPT33_D4548_HERES"
+msgstr "Ini amunisimu"
+
+msgid "TXT_RNO1_SCRIPT33_D4548_SORRY"
+msgstr "Maaf, tidak ada uang, tidak ada peluru."
+
+msgid "TXT_RPLY2_SCRIPT33_D4548_50ROU"
+msgstr "Kotak amunisi"
+
+msgid "TXT_RYES2_SCRIPT33_D4548_HEREY"
+msgstr "Ini dia"
+
+msgid "TXT_RNO2_SCRIPT33_D4548_YOUDO"
+msgstr "Emasmu tidak cukup!"
+
+msgid "TXT_RPLY3_SCRIPT33_D4548_AMMOS"
+msgstr "Kantong amunisi"
+
+msgid "TXT_RYES3_SCRIPT33_D4548_THANK"
+msgstr "Terima kasih, ada lagi?"
+
+msgid "TXT_RNO3_SCRIPT33_D4548_YOUCA"
+msgstr "Kamu tidak mampu membelinya, selamat tinggal."
+
+msgid "TXT_DLG_SCRIPT33_D6064_WELCO"
+msgstr "Selamat datang. Apa yang ingin kuperlihatkan untukmu?"
+
+msgid "TXT_RPLY0_SCRIPT33_D6064_ENVIR"
+msgstr "Pakaian pelindung lingkungan"
+
+msgid "TXT_RYES0_SCRIPT33_D6064_HEREY"
+msgstr "Ini untukmu."
+
+msgid "TXT_RNO0_SCRIPT33_D6064_YOUDO"
+msgstr "Uangmu tidak cukup untuk itu."
+
+msgid "TXT_RPLY1_SCRIPT33_D6064_LEATH"
+msgstr "Baju zirah kulit."
+
+msgid "TXT_RYES1_SCRIPT33_D6064_HEREY"
+msgstr "Ini untukmu."
+
+msgid "TXT_RNO1_SCRIPT33_D6064_PERHA"
+msgstr "Mungkin lain kali?"
+
+msgid "TXT_RPLY2_SCRIPT33_D6064_METAL"
+msgstr "Baju zirah logam"
+
+msgid "TXT_RYES2_SCRIPT33_D6064_WEARI"
+msgstr "Semoga cocok dipakai."
+
+msgid "TXT_RNO2_SCRIPT33_D6064_COMEB"
+msgstr "Kembalilah kalau kamu sudah mampu membelinya."
+
+msgid "TXT_DLG_SCRIPT33_D7580_HOWMA"
+msgstr "Ada yang bisa kubantu?"
+
+msgid "TXT_RPLY0_SCRIPT33_D7580_MEDPA"
+msgstr "Tambalan medis"
+
+msgid "TXT_RYES0_SCRIPT33_D7580_HERES"
+msgstr "Ini kit tambalanmu."
+
+msgid "TXT_RNO0_SCRIPT33_D7580_YOUNE"
+msgstr "Kamu butuh 10 emas untuk itu."
+
+msgid "TXT_RPLY1_SCRIPT33_D7580_FIELD"
+msgstr "Kit bedah lapangan"
+
+msgid "TXT_RYES1_SCRIPT33_D7580_THANK"
+msgstr "Terima kasih."
+
+msgid "TXT_RNO1_SCRIPT33_D7580_IWISH"
+msgstr "Seandainya bisa kuberi gratis, tapi harganya 25 emas."
+
+msgid "TXT_RPLY2_SCRIPT33_D7580_HEALI"
+msgstr "Penyembuhan"
+
+msgid "TXT_RYES2_SCRIPT33_D7580_THERE"
+msgstr "Ini dia. Jaga diri baik-baik."
+
+msgid "TXT_RNO2_SCRIPT33_D7580_WELLM"
+msgstr "Mungkin kamu mampu membeli beberapa tambalan medis?"
+
+msgid "TXT_DLG_SCRIPT33_D9096_HELLO"
+msgstr ""
+"Halo kawan, aku belum pernah melihatmu di sini sebelumnya. Yang bisa kukatakan adalah berhati-hatilah kalau jadi kamu, banyak hal yang sedang terjadi dan lebih baik kamu tidak menghalangi."
+
+msgid "TXT_RPLY0_SCRIPT33_D9096_INFOR"
+msgstr "Informasi"
+
+msgid "TXT_RYES0_SCRIPT33_D9096_THESE"
+msgstr "Saluran pembuangan menyimpan lebih dari sekadar tikus dan robot."
+
+msgid "TXT_RNO0_SCRIPT33_D9096_HEYAG"
+msgstr ""
+"Hei, orang harus cari uang. Kamu pikir para pelanggan ini memberi tip yang bagus?"
+
+msgid "TXT_DLG_SCRIPT33_D10612_BACKA"
+msgstr ""
+"Kembali lagi ya? Yah, setidaknya kamu cukup pintar untuk menjaga kulitmu tetap utuh. Apa yang bisa kulakukan untukmu sekarang?"
+
+msgid "TXT_RPLY0_SCRIPT33_D10612_MOREI"
+msgstr "Info lebih lanjut"
+
+msgid "TXT_RYES0_SCRIPT33_D10612_THEGO"
+msgstr "Gubernur adalah pengingat sederhana tentang pengaruh Ordo."
+
+msgid "TXT_RNO0_SCRIPT33_D10612_COMEB"
+msgstr "Kembalilah kalau kamu berubah pikiran."
+
+msgid "TXT_DLG_SCRIPT33_D12128_WELLY"
+msgstr ""
+"Wah, kamu banyak bertanya untuk seseorang yang sudah hidup selama ini. Tapi tidak apa-apa, aku lebih suka bicara dengan seseorang sepertimu daripada kebanyakan orang di sini."
+
+msgid "TXT_RPLY0_SCRIPT33_D12128_MOREI"
+msgstr "Info lebih lanjut."
+
+msgid "TXT_RYES0_SCRIPT33_D12128_THERE"
+msgstr "Ordo itu lebih dari sekadar apa yang terjadi di sekitar sini."
+
+msgid "TXT_RNO0_SCRIPT33_D12128_COMEB"
+msgstr "Kembalilah kalau kamu berubah pikiran."
+
+msgid "TXT_DLG_SCRIPT33_D13644_THATS"
+msgstr ""
+"Sudah ya kawan, sumur pengetahuan sudah terkuras. Aku sudah menceritakan lebih banyak dari yang seharusnya bagaimanapun juga."
+
+msgid "TXT_DLG_SCRIPT33_D15160_HARDT"
+msgstr "Sulit membeli mainan baru… kalau kantong kosong. Lakukan sedikit urusan untukku dan kamu akan mendapat lebih dari yang bisa kamu habiskan. Aku akan membuatmu kaya."
+
+msgid "TXT_RPLY0_SCRIPT33_D15160_IGOTN"
+msgstr "Tidak ada yang lebih baik untuk kulakukan."
+
+msgid "TXT_RPLY1_SCRIPT33_D15160_NOTHA"
+msgstr "Tidak, terima kasih."
+
+msgid "TXT_RYES1_SCRIPT33_D15160_NOBOD"
+msgstr "Tidak ada yang pergi begitu saja dariku!"
+
+msgid "TXT_DLG_SCRIPT33_D16676_GOODC"
+msgstr ""
+"Pilihan yang bagus. Tempat perlindungan Ordo di tepi sungai itu adalah ruang penyiksaan tidak resmi mereka. Tersembunyi di dalamnya ada sebuah piala emas. Kamu mencurinya, temui aku di kedai, dan kamu akan mendapat imbalannya."
+
+msgid "TXT_RPLY0_SCRIPT33_D16676_HOWAM"
+msgstr "Bagaimana caranya aku melakukan itu?"
+
+msgid "TXT_RPLY1_SCRIPT33_D16676_LETME"
+msgstr "Biarkan aku memikirkannya."
+
+msgid "TXT_RYES1_SCRIPT33_D16676_SORRY"
+msgstr "Maaf, tidak ada kesempatan kedua. Oh, para penjaga, bunuh dia!"
+
+msgid "TXT_DLG_SCRIPT33_D18192_HERES"
+msgstr ""
+"Ini busur silang, tinggal bidik lurus dan -- splat! --. Ingat, ambil cangkir mewah itu dan temui aku di kedai."
+
+msgid "TXT_RPLY0_SCRIPT33_D18192_ILLSE"
+msgstr "Sampai jumpa di sana."
+
+msgid "TXT_DLG_SCRIPT33_D19708_WHATA"
+msgstr ""
+"Apa yang kamu tunggu? Jangan khawatir, aku akan membereskan mayat-mayatnya, cukup bawakan aku piala itu!"
+
+msgid "TXT_DLG_SCRIPT33_D21224_GUARD"
+msgstr "Para penjaga! Bunuh pengkhianat itu!"
+
+msgid "TXT_DLG_SCRIPT33_D22740_HEYIK"
+msgstr ""
+"Hei, aku tahu apa yang kamu pikirkan, kelihatannya seperti jebakan, aku tidak akan melakukan itu pada mesin pembunuh sehebat ini, sungguh. Fuh, semua kehebohan ini hanya karena sebuah cangkir, aneh. Sekarang bersiaplah, emas dan kejayaan, seperti yang kujanjikan. Ambil kunci ini dan Gubernur sendiri yang akan memberimu hadiah."
+
+msgid "TXT_RPLY0_SCRIPT33_D22740_GREAT"
+msgstr "Bagus, tidak sabar!"
+
+msgid "TXT_RNO0_SCRIPT33_D22740_NOCHA"
+msgstr "Tidak ada piala, tidak ada uang!"
+
+msgid "TXT_RPLY1_SCRIPT33_D22740_ILLKE"
+msgstr "Aku akan menyimpan pialanya, terima kasih."
+
+msgid "TXT_RYES1_SCRIPT33_D22740_KEEPI"
+msgstr "Menyimpannya? Kurasa tidak!"
+
+msgid "TXT_DLG_SCRIPT33_D24256_WHATA"
+msgstr "Apa yang kamu tunggu? Gubernur sendiri yang akan memberimu hadiah."
+
+msgid "TXT_DLG_SCRIPT33_D25772_DIETR"
+msgstr "Mati pengkhianat! "
+
+msgid "TXT_DLG_SCRIPT33_D27288_SOYOU"
+msgstr "Jadi kamu si bodoh yang mencuri piala itu? Aku akan menangkapmu sebagai pencuri pemberontak… sehingga meningkatkan posisiku di Ordo. Bagaimana rasanya menjadi bidak yang tidak sadar?"
+
+msgid "TXT_RPLY0_SCRIPT33_D27288_ITSUC"
+msgstr "Menyebalkan!"
+
+msgid "TXT_RYES0_SCRIPT33_D27288_FORYO"
+msgstr "Bagimu memang begitu."
+
+msgid "TXT_RPLY1_SCRIPT33_D27288_HARRI"
+msgstr "Harris menjanjikanku uang!"
+
+msgid "TXT_RYES1_SCRIPT33_D27288_TOOBA"
+msgstr "Sayang sekali. Satu-satunya yang akan kamu dapat adalah kematian!"
+
+msgid "TXT_DLG_SCRIPT33_D28804_WEREG"
+msgstr "Kami akan membunuhmu!"
+
+msgid "TXT_DLG_SCRIPT33_D30320_GETOU"
+msgstr "Pergi dari sini!"
+
+msgid "TXT_DLG_SCRIPT33_D31836_WEREG"
+msgstr "Kami akan membunuhmu!"
+
+msgid "TXT_DLG_SCRIPT33_D33352_GETOU"
+msgstr "Pergi dari sini!"
+
+msgid "TXT_DLG_SCRIPT34_D0_WHATA"
+msgstr ""
+"Tempat yang sempurna bagi kita, di bawah balai kota lama. Ordo mengira mereka sudah memusnahkan kita, tapi itu hanyalah pengingat bagi kita tentang apa yang bisa terjadi kalau kamu lengah. "
+
+msgid "TXT_DLG_SCRIPT34_D1516_TALKT"
+msgstr "Bicara dengan Macil, dia akan bisa membantumu."
+
+msgid "TXT_DLG_SCRIPT34_D3032_IVEHE"
+msgstr ""
+"Kudengar Macil akan segera memulai sesuatu lagi. Kita butuh pukulan besar setelah kekacauan terakhir. Satu lagi seperti itu dan kita akan terlalu lemah untuk melanjutkan."
+
+msgid "TXT_DLG_SCRIPT34_D4548_AFEWO"
+msgstr ""
+"Beberapa tong ini yang dibuang ke persediaan air mereka seharusnya sedikit menyeimbangkan keadaan. "
+
+msgid "TXT_DLG_SCRIPT34_D6064_IMWOR"
+msgstr ""
+"Aku sedang mengerjakan sesuatu yang akan memberi kita keunggulan. Ini akan meningkatkan staminamu dan benar-benar membuatmu lebih kuat. Aku hampir menyelesaikan semua kendalanya. Ada yang bisa kulakukan untukmu? "
+
+msgid "TXT_RPLY0_SCRIPT34_D6064_PATCH"
+msgstr "Obati aku."
+
+msgid "TXT_RYES0_SCRIPT34_D6064_BOYYO"
+msgstr "Wah, kondisimu benar-benar parah. Akan kulihat apa yang bisa kulakukan."
+
+msgid "TXT_RPLY1_SCRIPT34_D6064_STAMI"
+msgstr "Implan stamina?"
+
+msgid "TXT_RYES1_SCRIPT34_D6064_ALLRI"
+msgstr "Baiklah, ini tidak butuh waktu lama."
+
+msgid "TXT_RNO1_SCRIPT34_D6064_ITSNO"
+msgstr "Belum selesai."
+
+msgid "TXT_DLG_SCRIPT34_D7580_HEYIM"
+msgstr ""
+"Hei, aku sedang mengerjakan versi terbaru implantmu. Ada hal lain yang bisa kulakukan?"
+
+msgid "TXT_RPLY0_SCRIPT34_D7580_PATCH"
+msgstr "Obati aku."
+
+msgid "TXT_RYES0_SCRIPT34_D7580_WELLA"
+msgstr "Setidaknya kamu sudah beraksi."
+
+msgid "TXT_RPLY1_SCRIPT34_D7580_IMPLA"
+msgstr "Peningkatan implan?"
+
+msgid "TXT_RYES1_SCRIPT34_D7580_GOODT"
+msgstr "Bagus, tidak ada salahnya lebih aman."
+
+msgid "TXT_RNO1_SCRIPT34_D7580_IMALM"
+msgstr "Hampir selesai, tapi belum."
+
+msgid "TXT_DLG_SCRIPT34_D9096_ALLRI"
+msgstr ""
+"Baiklah, inilah saatnya. Aku hampir membuat semuanya bekerja dengan sempurna. Masih ada beberapa masalah yang perlu diperbaiki, kamu butuh sesuatu lagi? "
+
+msgid "TXT_RPLY0_SCRIPT34_D9096_PATCH"
+msgstr "Obati aku."
+
+msgid "TXT_RYES0_SCRIPT34_D9096_WHATH"
+msgstr "Apa yang coba kamu lakukan? Berhadapan langsung dengan Crusader?"
+
+msgid "TXT_RPLY1_SCRIPT34_D9096_IMPLA"
+msgstr "Peningkatan implan?"
+
+msgid "TXT_RYES1_SCRIPT34_D9096_THATS"
+msgstr "Itu seharusnya sudah cukup untukmu."
+
+msgid "TXT_RNO1_SCRIPT34_D9096_LETME"
+msgstr "Biarkan aku menjalankan beberapa tes dulu."
+
+msgid "TXT_DLG_SCRIPT34_D10612_THATS"
+msgstr ""
+"Itu semua yang bisa kulakukan pada implan untuk sekarang. Mungkin perlu penyembuhan?"
+
+msgid "TXT_RPLY0_SCRIPT34_D10612_YEAH"
+msgstr "Ya."
+
+msgid "TXT_RYES0_SCRIPT34_D10612_BOYYO"
+msgstr "Wah, kondisimu benar-benar parah. Akan kulihat apa yang bisa kulakukan."
+
+msgid "TXT_DLG_SCRIPT34_D12128_WHATC"
+msgstr "Apa yang bisa kulakukan untukmu?"
+
+msgid "TXT_RPLY0_SCRIPT34_D12128_IMOUT"
+msgstr "Peluruku habis."
+
+msgid "TXT_RYES0_SCRIPT34_D12128_HERES"
+msgstr "Ini amunisi untukmu. Jangan disia-siakan."
+
+msgid "TXT_RPLY1_SCRIPT34_D12128_TEACH"
+msgstr "Latih aku."
+
+msgid "TXT_RYES1_SCRIPT34_D12128_ALLRI"
+msgstr "Baiklah, akan kutunjukkan beberapa petunjuk kecil."
+
+msgid "TXT_RNO1_SCRIPT34_D12128_YOURE"
+msgstr "Kamu belum siap."
+
+msgid "TXT_DLG_SCRIPT34_D13644_BACKA"
+msgstr "Kembali lagi? Apa yang kamu butuhkan?"
+
+msgid "TXT_RPLY0_SCRIPT34_D13644_IMOUT"
+msgstr "Peluruku habis."
+
+msgid "TXT_RYES0_SCRIPT34_D13644_HERES"
+msgstr "Ini amunisi untukmu. Jangan disia-siakan."
+
+msgid "TXT_RNO0_SCRIPT34_D13644_YOUVE"
+msgstr "Amunisimu sudah cukup."
+
+msgid "TXT_RPLY1_SCRIPT34_D13644_TEACH"
+msgstr "Latih aku."
+
+msgid "TXT_RYES1_SCRIPT34_D13644_ALLRI"
+msgstr "Baiklah, ini seharusnya cukup membuatmu bertahan untuk sementara."
+
+msgid "TXT_RNO1_SCRIPT34_D13644_SORRY"
+msgstr "Maaf, tidak bisa. Aku hanya mengikuti perintah Macil."
+
+msgid "TXT_DLG_SCRIPT34_D15160_WELLW"
+msgstr ""
+"Jadi mana yang kamu pilih, peluru atau pelatihan? Aku tidak sabar untuk menggunakan senjata-senjata baru yang kita rampas itu. Setelah aku selesai dengan mereka, aku bisa mulai melatih semua orang lainnya."
+
+msgid "TXT_RPLY0_SCRIPT34_D15160_IMOUT"
+msgstr "Amunisiku habis."
+
+msgid "TXT_RYES0_SCRIPT34_D15160_HERES"
+msgstr "Ini amunisi untukmu. Jangan disia-siakan."
+
+msgid "TXT_RNO0_SCRIPT34_D15160_YOUVE"
+msgstr "Amunisimu sudah cukup."
+
+msgid "TXT_RPLY1_SCRIPT34_D15160_TEACH"
+msgstr "Latih aku."
+
+msgid "TXT_RYES1_SCRIPT34_D15160_OKTAK"
+msgstr ""
+"Oke. Ambil semua yang telah kamu pelajari dan tunjukkan kepada para bajingan Ordo itu jalan menuju neraka."
+
+msgid "TXT_RNO1_SCRIPT34_D15160_COMEB"
+msgstr "Kembalilah nanti, kalau Macil sudah bilang waktunya tiba."
+
+msgid "TXT_DLG_SCRIPT34_D16676_IVETA"
+msgstr ""
+"Aku sudah mengajarimu semua yang bisa kulakukan sekarang. Beri aku waktu untuk menguji senjata-senjata baru itu. Kecuali kalau pelurumu habis."
+
+msgid "TXT_RPLY0_SCRIPT34_D16676_YESIA"
+msgstr "Ya, habis."
+
+msgid "TXT_RYES0_SCRIPT34_D16676_HEREY"
+msgstr "Ini dia."
+
+msgid "TXT_DLG_SCRIPT34_D18192_DONTG"
+msgstr ""
+"Jangan terlalu gampang menarik pelatuk di kota, kamu akan memicu alarm dan mereka akan mulai mengirim penjaga dari kastil."
+
+msgid "TXT_DLG_SCRIPT34_D19708_WELCO"
+msgstr "Selamat datang, kita selalu bisa menggunakan lebih banyak bantuan."
+
+msgid "TXT_DLG_SCRIPT34_D21224_WHENI"
+msgstr ""
+"Waktu aku masih bertugas, kita sempat memeriksa seorang akolit sebelum bala bantuan tiba, mereka bukan manusia, kuberitahu kamu."
+
+msgid "TXT_DLG_SCRIPT34_D22740_WERET"
+msgstr ""
+"Kita mencoba mencari di mana mekanisme gerbang kastil berada, tapi sejauh ini kita belum berhasil."
+
+msgid "TXT_DLG_SCRIPT34_D24256_DONTG"
+msgstr ""
+"Jangan sampai tertangkap. Aku sudah mendengar kisah-kisah mengerikan tentang apa yang mereka lakukan pada orang-orang kita setelah dipenjara. Mereka begitu saja menghilang, tanpa jejak, tidak ada apa-apa. "
+
+msgid "TXT_DLG_SCRIPT34_D25772_HERES"
+msgstr ""
+"Ini sarannya, kalau kamu pernah melihat salah satu tentara kaleng milik Ordo, lari ke arah yang berlawanan. Aku terutama tidak menyukai para Reaver, makhluk-makhluk itu sungguh terkutuk cepatnya!"
+
+msgid "TXT_DLG_SCRIPT34_D27288_WELCO"
+msgstr ""
+"Selamat datang di secercah harapan terakhir. Hanya kita yang memiliki kehendak bebas untuk menentang Ordo. Kita memiliki pikiran-pikiran ilmiah paling tajam, dan banyak tenaga. Tapi kita kekurangan satu orang yang benar-benar bisa memecahkan masalah, yang akan memberi kita keunggulan yang kita butuhkan."
+
+msgid "TXT_RPLY0_SCRIPT34_D27288_WHATW"
+msgstr "Apa yang perlu kulakukan? "
+
+msgid "TXT_DLG_SCRIPT34_D28804_HELPU"
+msgstr ""
+"Bantulah kami. Bantu kami mencuri teknologi mereka. Bebaskan rekan-rekan kami. Lawan para psikopat bengkok ini sampai mati. Aku memintamu untuk mempertaruhkan nyawamu demi kebenaran."
+
+msgid "TXT_RPLY0_SCRIPT34_D28804_IMWIT"
+msgstr "Aku ikut bersama kalian!"
+
+msgid "TXT_DLG_SCRIPT34_D30320_GOODB"
+msgstr ""
+"Bagus. Blackbird akan terus menjadi pemandumu. Dia cukup menyukaimu. Bersama-sama, kalian harus mengungkap rahasia Ordo dan para pelayan tak manusiawi mereka. Ada kehadiran yang mengintai tepat di luar pemahaman kita yang memandu teror mereka. Masuk dan hancurkan mereka. "
+
+msgid "TXT_RPLY0_SCRIPT34_D30320_LETME"
+msgstr "Biarkan aku menghadapi mereka!"
+
+msgid "TXT_RYES0_SCRIPT34_D30320_THATS"
+msgstr "Itulah semangatnya."
+
+msgid "TXT_DLG_SCRIPT34_D31836_WELCO"
+msgstr "Selamat datang kawan!"
+
+msgid "TXT_RANDOM_PEASANT_01"
+msgstr "Tolong jangan sakiti aku."
+
+msgid "TXT_RANDOM_PEASANT_02"
+msgstr ""
+"Kalau kamu mau menyakitiku, aku sebenarnya tidak sepadan dengan usahanya."
+
+msgid "TXT_RANDOM_PEASANT_03"
+msgstr "Aku tidak tahu apa-apa."
+
+msgid "TXT_RANDOM_PEASANT_04"
+msgstr "Pergi atau aku akan memanggil para penjaga!"
+
+msgid "TXT_RANDOM_PEASANT_05"
+msgstr ""
+"Kadang aku berharap semua pemberontak ini mau tahu diri dan menghentikan omong kosong ini."
+
+msgid "TXT_RANDOM_PEASANT_06"
+msgstr "Biarkan aku sendiri, oke?"
+
+msgid "TXT_RANDOM_PEASANT_07"
+msgstr ""
+"Aku tidak yakin, tapi kadang aku merasa mengenal beberapa dari para akolit itu."
+
+msgid "TXT_RANDOM_PEASANT_08"
+msgstr "Ordo mengunci segalanya di sekitar sini dengan cukup ketat."
+
+msgid "TXT_RANDOM_PEASANT_09"
+msgstr "Tidak mungkin ini hanya pasukan keamanan biasa."
+
+msgid "TXT_RANDOM_PEASANT_10"
+msgstr ""
+"Kudengar Ordo sangat gugup dengan tindakan-tindakan Front di sekitar sini."
+
+msgid "TXT_RANDOM_REBEL_01"
+msgstr "Tidak mungkin Ordo bisa bertahan melawan kita."
+
+msgid "TXT_RANDOM_REBEL_02"
+msgstr ""
+"Kita hampir siap untuk menyerang. Rencana Macil sedang berjalan dengan baik."
+
+msgid "TXT_RANDOM_REBEL_03"
+msgstr "Kita semua mendukungmu, jangan khawatir."
+
+msgid "TXT_RANDOM_REBEL_04"
+msgstr ""
+"Jangan terlalu dekat dengan robot-robot besar itu. Mereka akan meleburmu menjadi besi tua!"
+
+msgid "TXT_RANDOM_REBEL_05"
+msgstr ""
+"Hari kejayaan kita akan segera tiba, dan mereka yang menentang kita akan dihancurkan!"
+
+msgid "TXT_RANDOM_REBEL_06"
+msgstr ""
+"Jangan terlalu nyaman. Kita masih punya banyak pekerjaan yang harus diselesaikan."
+
+msgid "TXT_RANDOM_REBEL_07"
+msgstr "Macil bilang bahwa kamulah harapan baru. Ingat itu."
+
+msgid "TXT_RANDOM_REBEL_08"
+msgstr ""
+"Setelah kita menggulingkan para penipu ini, kita akan bisa membangun kembali dunia ini sebagaimana mestinya."
+
+msgid "TXT_RANDOM_REBEL_09"
+msgstr ""
+"Ingat bahwa kamu tidak berjuang hanya untuk dirimu sendiri, tapi untuk semua orang di sini dan di luar sana."
+
+msgid "TXT_RANDOM_REBEL_10"
+msgstr "Selama salah satu dari kita masih berdiri, kita akan menang."
+
+msgid "TXT_RANDOM_AGUARD_01"
+msgstr "Minggir, rakyat jelata."
+
+msgid "TXT_RANDOM_AGUARD_02"
+msgstr "Ikuti iman yang benar, hanya dengan begitu kamu akan mulai memahami."
+
+msgid "TXT_RANDOM_AGUARD_03"
+msgstr "Hanya melalui kematian seseorang bisa benar-benar terlahir kembali."
+
+msgid "TXT_RANDOM_AGUARD_04"
+msgstr "Aku tidak tertarik dengan omong kosongmu yang tidak berguna."
+
+msgid "TXT_RANDOM_AGUARD_05"
+msgstr "Kalau aku mau bicara denganmu, aku sudah memberitahumu."
+
+msgid "TXT_RANDOM_AGUARD_06"
+msgstr "Pergi ganggu orang lain!"
+
+msgid "TXT_RANDOM_AGUARD_07"
+msgstr "Teruslah berjalan!"
+
+msgid "TXT_RANDOM_AGUARD_08"
+msgstr "Kalau alarm berbunyi, jangan menghalangi kami!"
+
+msgid "TXT_RANDOM_AGUARD_09"
+msgstr "Ordo akan membersihkan dunia dan membawanya ke era baru."
+
+msgid "TXT_RANDOM_AGUARD_10"
+msgstr "Ada masalah? Tidak, kurasa tidak."
+
+msgid "TXT_RANDOM_BEGGAR_01"
+msgstr "Sedekah untuk si miskin?"
+
+msgid "TXT_RANDOM_BEGGAR_02"
+msgstr "Apa yang kamu lihat, penghuni permukaan?"
+
+msgid "TXT_RANDOM_BEGGAR_03"
+msgstr "Kamu tidak punya makanan lebih, bukan?"
+
+msgid "TXT_RANDOM_BEGGAR_04"
+msgstr "Kalian orang permukaan tidak akan pernah mengerti kami."
+
+msgid "TXT_RANDOM_BEGGAR_05"
+msgstr ""
+"Ha, para penjaga tidak bisa menemukan kami. Orang-orang bodoh itu bahkan tidak tahu kami ada."
+
+msgid "TXT_RANDOM_BEGGAR_06"
+msgstr ""
+"Suatu hari semua orang kecuali mereka yang melayani Ordo akan terpaksa bergabung dengan kami."
+
+msgid "TXT_RANDOM_BEGGAR_07"
+msgstr ""
+"Tataplah sekarang, tapi kamu tahu bahwa ini akan menjadi wajahmu sendiri suatu hari nanti."
+
+msgid "TXT_RANDOM_BEGGAR_08"
+msgstr ""
+"Tidak ada yang lebih menjengkelkan daripada penghuni permukaan yang sombong!"
+
+msgid "TXT_RANDOM_BEGGAR_09"
+msgstr "Ordo akan dengan mudah membereskan Front kamu yang menyedihkan itu."
+
+msgid "TXT_RANDOM_BEGGAR_10"
+msgstr "Hati-hati, penghuni permukaan. Kami mengenal musuh-musuh kami!"
+
+msgid "TXT_RANDOM_PGUARD_01"
+msgstr ""
+"Kami adalah tangan takdir. Membangkitkan murka kami berarti menemukan kehancuran!"
+
+msgid "TXT_RANDOM_PGUARD_02"
+msgstr "Ordo akan membersihkan dunia dari yang lemah dan korup!"
+
+msgid "TXT_RANDOM_PGUARD_03"
+msgstr "Patuhi kehendak para penguasa!"
+
+msgid "TXT_RANDOM_PGUARD_04"
+msgstr "Panjang umur para saudara Ordo!"
+
+msgid "TXT_RANDOM_PGUARD_05"
+msgstr "Kehendak bebas adalah ilusi yang membelenggu pikiran yang lemah."
+
+msgid "TXT_RANDOM_PGUARD_06"
+msgstr ""
+"Kekuatan adalah jalan menuju kejayaan. Mengikuti Ordo berarti berjalan di jalan itu!"
+
+msgid "TXT_RANDOM_PGUARD_07"
+msgstr ""
+"Ambillah tempatmu di antara orang-orang yang benar, bergabunglah dengan kami!"
+
+msgid "TXT_RANDOM_PGUARD_08"
+msgstr "Ordo melindungi miliknya sendiri."
+
+msgid "TXT_RANDOM_PGUARD_09"
+msgstr "Para akolit? Mereka belum melihat kejayaan penuh Ordo."
+
+msgid "TXT_RANDOM_PGUARD_10"
+msgstr ""
+"Kalau ada kehormatan di dalam cangkang tubuh yang menyedihkan itu, kamu akan masuk ke dalam pelukan Ordo."
+
+msgid "TXT_RANDOMGOODBYE_1"
+msgstr "Sampai jumpa!"
+
+msgid "TXT_RANDOMGOODBYE_2"
+msgstr "Terima kasih, sampai jumpa!"
+
+msgid "TXT_RANDOMGOODBYE_3"
+msgstr "Sampai nanti!"
+
+msgid "TXT_ILOG1"
+msgstr "Halo? Komando, sebuah unit komunikasi baru saja diaktifkan… Menerima visual dan suara dari… seseorang… Hei kamu, segera keluar dari sana… dan letakkan pialanya!"
+
+msgid "TXT_ILOG2"
+msgstr ""
+"Dengar, unit komunikasi ini memberitahuku bahwa kamu 100% manusia. Aku diperintahkan untuk membawamu masuk, ini soal kepercayaan. Khianati aku dan kamu akan membayarnya. Oh, dan omong-omong, kamu bisa memanggilku Blackbird."
+
+msgctxt "strifeteaser"
+msgid "TXT_ILOG2"
+msgstr ""
+"Dengar, unit komunikasi ini memberitahuku bahwa kamu 100% manusia. Kamu mungkin salah satu dari kita, dan mungkin kita bisa saling mencoba untuk mempercayai satu sama lain. Anggap ini sebagai ujian, ada penyembur api di kediaman Gubernur. Ambil itu, dan aku akan memandumu ke tempat kami."
+
+msgid "TXT_ILOG3"
+msgstr ""
+"Pergi ke balai kota lama. Macil membangun sebuah terowongan yang memungkinkan kita masuk dan keluar tanpa sepengetahuan para akolit."
+
+msgid "TXT_ILOG4"
+msgstr ""
+"Lewati pintu di sebelah kirimu, lalu yang di sebelah kanan. Nama penjaganya adalah Geoff. Beritahu dia bahwa kamu butuh emas."
+
+msgctxt "strifeteaser"
+msgid "TXT_ILOG5"
+msgstr ""
+"Jangan masuk ke balai kota. Sudah tidak aman lagi, penyamaran kita sudah terbongkar. Bunuh semua robot besar, para \"Crusader\" dan aku akan memandumu ke tempat kami."
+
+msgctxt "strifeteaser"
+msgid "TXT_ILOG6"
+msgstr ""
+"Pintu di sebelah toko senjata akan terbuka setelah semua Crusader mati. Di dalam ruang penyimpanan ada sebuah teleporter, gunakan itu, dan itu akan membawamu ke tempat kami"
+
+msgctxt "strifeteaser"
+msgid "TXT_ILOG7"
+msgstr ""
+"Pintu di sebelah toko senjata akan terbuka setelah semua Crusader mati. Di dalam ruang penyimpanan ada sebuah teleporter, gunakan itu, dan itu akan membawamu ke tempat kami."
+
+msgctxt "strifeteaser"
+msgid "TXT_ILOG8"
+msgstr ""
+"Bunuh sebanyak mungkin robot besar, para Crusader. Kalau sudah selesai, aku akan memandumu ke Macil"
+
+msgctxt "strifeteaser"
+msgid "TXT_ILOG9"
+msgstr "Lewati pintunya, dan bicara dengan Macil."
+
+msgid "TXT_ILOG10"
+msgstr ""
+"Temukan sambungan daya pada jalur utama, dan matikan. Bawa sesuatu kembali ke Gubernur sebagai bukti. Temukan MacGuffin, dan bicara dengannya."
+
+msgid "TXT_ILOG11"
+msgstr ""
+"Temukan sambungan daya pada jalur utama, dan matikan. Bawa sesuatu kembali ke Gubernur sebagai bukti. Temukan MacGuffin, dan bicara dengannya. Dia ada di dekat instalasi pengolahan limbah, di \"lubang got\", turun melalui tangga."
+
+msgid "TXT_ILOG13"
+msgstr ""
+"Kamu bodoh! Kamu telah mematikan daya ke sirkuit pengacak yang kita gunakan untuk menyembunyikan markas kita dari Ordo. Pergi ke balai kota dan habisi tim pemindai itu, sekarang! Lalu, kembali ke Gubernur dan berikan kopling yang rusak itu kepadanya."
+
+msgid "TXT_ILOG14"
+msgstr ""
+"Oke, \"Jangan percaya siapa pun\" adalah aturan mainnya! Mari kita dapatkan izin masuk penjara dari Gubernur. Bawa kopling yang rusak itu kepadanya."
+
+msgid "TXT_ILOG15"
+msgstr ""
+"Langkah yang bagus! Gubernur itu pembohong. Itu adalah kopling daya milik kita. Kita menggunakannya untuk menyembunyikan markas dari Ordo. Bawa kopling yang rusak ini kembali kepadanya dan mari kita dapatkan izin itu."
+
+msgid "TXT_ILOG18"
+msgstr ""
+"Gunakan kunci Sipir untuk masuk ke blok sel penjara dan temukan cara untuk membebaskan para tawanan."
+
+msgid "TXT_ILOG19"
+msgstr ""
+"Temukan cara untuk membebaskan para tawanan. Temukan cara untuk mengoperasikan sakelar pemindai tangan."
+
+msgid "TXT_ILOG20"
+msgstr ""
+"Temukan cara untuk membebaskan para tawanan. Gunakan tangan sang hakim untuk mengoperasikan sakelar pemindai tangan."
+
+msgid "TXT_ILOG21"
+msgstr ""
+"Kerja bagus kawanku. Bagus sekali membebaskan para tawanan. Naiki salah satu teleporter dan itu akan membawamu kembali ke markas."
+
+msgid "TXT_ILOG22"
+msgstr ""
+"Hancurkan kristal tenaga yang menjalankan jaringan daya penggerak perisai Ordo. Pergi temui Worner, seorang mata-mata yang kita rekrut di gudang stasiun tenaga."
+
+msgid "TXT_ILOG24"
+msgstr "Mari kita pergi. Masih banyak keseruan yang akan datang."
+
+msgid "TXT_ILOG25"
+msgstr ""
+"Satu petualangan lagi sebelum komando merasa aman untuk menyerang kastil. Macil mengatur agar Irale memberimu emas dan pelatihan. Setelah mengunjunginya, temui dokter di kota untuk menambah kekuatan."
+
+msgid "TXT_ILOG26"
+msgstr ""
+"Kunjungi Irale dan dokter di kota untuk mendapat emas dan pelatihan, lalu temukan saluran pembuangan. Ikuti sungai di seberang kediaman Gubernur."
+
+msgid "TXT_ILOG28"
+msgstr ""
+"Kita mencari Weran, yang menyebut dirinya Raja Tikus. Aku yakin itu deskriptif sekaligus penuh warna."
+
+msgid "TXT_ILOG33"
+msgstr ""
+"Bawa bagian-bagian penyembur api itu ke Irale. Kuras tangki pemulihan. Di bagian bawahnya ada pintu masuk tersembunyi ke saluran pembuangan. Kendali gerbang ada di bawah sana, di suatu tempat. Hancurkan mereka."
+
+msgid "TXT_ILOG37"
+msgstr ""
+"Komando, dia berhasil! Gerbang sudah terbuka. Kirimkan pasukan kejut dan beritahu Macil kita akan masuk! Mari kita kembali ke markas Front."
+
+msgid "TXT_ILOG38"
+msgstr ""
+"Bergabunglah dalam penyerangan kastil. Temukan dan habisi Programmer. Kita punya laporan yang bertentangan tentang lokasinya. Satu mengatakan dia ada di ruang komputer, yang lain bersembunyi di kuil sub-lantai, dan yang lainnya lagi di ujung lorong panjang."
+
+msgid "TXT_ILOG45"
+msgstr "Temukan Programmer dan bunuh dia."
+
+msgid "TXT_ILOG46"
+msgstr ""
+"Carilah Oracle dan tanyakan tentang bagian-bagian Sigil lainnya. Oracle berada di perbatasan, tepat di luar kota. Seberangi sungai, menuju kastil dan belok kiri melalui lengkungan."
+
+msgid "TXT_ILOG47"
+msgstr ""
+"Carilah Oracle dan tanyakan tentang bagian-bagian Sigil lainnya. Kuil Oracle berada di perbatasan, di pinggiran kota."
+
+msgid "TXT_ILOG48"
+msgstr ""
+"Carilah Oracle dan tanyakan tentang bagian-bagian Sigil lainnya. Ambil hadiahmu dan pergi ke dokter dan pelatih senjata untuk kesehatan dan pelatihan. Kuil Oracle berada di perbatasan, di pinggiran kota."
+
+msgid "TXT_ILOG50"
+msgstr ""
+"Carilah kuil Oracle dan tanyakan tentang bagian-bagian Sigil lainnya. Ini dia. Aku merekam segalanya. Bukan karena aku tidak percaya bahwa kamu akan selamat. Hanya saja kita tidak boleh membiarkan Ordo mengendalikan Sigil."
+
+msgid "TXT_ILOG56"
+msgstr ""
+"Bagian kedua terletak di jantung menara merah tua dan obsidian. Di sana kamu akan menemukan Uskup. Uskup adalah pemimpin militer Ordo. Kita habisi dia dan kita dapat dua keuntungan sekaligus. Bawa token Oracle ke sang penjaga kunci di perbatasan."
+
+msgid "TXT_ILOG57"
+msgstr ""
+"Uskup itu akan dijaga dengan ketat, jadi kenapa tidak kita curi sebuah seragam dan menyamar? Temukan Uskup. Setelah kamu menghancurkannya, kembalilah ke Oracle."
+
+msgid "TXT_ILOG59"
+msgstr ""
+"Aku baru mendapat kabar bahwa kita punya informan di dalam benteng. Mari menuju rumah sakit. Dia bekerja di sana. Setelah itu, temukan Uskup dan hancurkan dia. Setelah dia mati, kembalilah ke Oracle."
+
+msgid "TXT_ILOG64"
+msgstr ""
+"Jangan menyerah. Inilah saatnya. Lurus ke depan. Naiki teleporter ke administrasi pusat dan hancurkan inti komputer. Ini akan mematikan medan gaya di pintu masuk menara Uskup. Setelah dia mati, kembalilah ke Oracle."
+
+msgid "TXT_ILOG70"
+msgstr ""
+"Sangat mengesankan. Mari kita ledakkan. Itu seharusnya membereskan medan gayanya. Mari kembali ke halaman dalam, lalu menuju menara dan Uskup."
+
+msgid "TXT_ILOG74"
+msgstr ""
+"Bravo, satu lagi bagian Sigil! Apakah kamu melihat hantu aneh yang keluar dari tubuh Uskup itu? Di mana aku pernah melihat itu sebelumnya? Mari kembali ke Oracle."
+
+msgid "TXT_ILOG76"
+msgstr ""
+"Aku mendapat laporan bahwa energi spektral yang kita temukan di dekat Uskup juga ada di dekat Oracle, mari kita berhati-hati."
+
+msgid "TXT_ILOG79"
+msgstr ""
+"Richter telah mengambil alih komando pasukan kita. Tampaknya Macil sudah menipu kita sepanjang waktu. Kesetiaan sebenarnya adalah kepada Ordo. Sungguh ular berbisa. Mari kembali ke Oracle."
+
+msgid "TXT_ILOG83"
+msgstr ""
+"Satu lagi bagian Sigil. Kita selangkah lebih dekat menuju kebebasan. Dan kamu selangkah lebih dekat kepadaku. Mari kembali ke Oracle!"
+
+msgid "TXT_ILOG85"
+msgstr ""
+"Kamu memegang kekuatan Sigil yang lengkap. Bagaimana kalau kita selesaikan ini. Mari kita lihat apa yang selama ini dilindungi oleh Loremaster."
+
+msgid "TXT_ILOG87"
+msgstr ""
+"Yah, selesai sudah urusan ramalannya. Tunggu, Macil memanggil kita kembali. Mari kita keluar dari sini dalam keadaan utuh."
+
+msgid "TXT_ILOG89"
+msgstr ""
+"Pabrik ada di sebelah tambang. Richter pasti maksudnya tambang Degnin. Bijih Degnin itu magnetis dan eksplosif, cocok untuk mematikan medan gaya. Mari kita ambil kunci dari katakombe, lalu ke tambang untuk mendapat bijih."
+
+msgid "TXT_ILOG93"
+msgstr ""
+"Pabrik ada di sebelah tambang. Bijih Degnin itu magnetis dan eksplosif, cocok untuk mematikan medan gaya. Mari kita ambil kunci dari katakombe, lalu kita turun untuk mendapat bijih. Ini pasti reruntuhan yang dicari agen-agen Richter, hati-hati."
+
+msgid "TXT_ILOG95"
+msgstr ""
+"Pabrik ada di sebelah tambang. Bijih Degnin itu magnetis dan eksplosif, cocok untuk mematikan medan gaya. Kawanku, apa pun yang sedang kita lawan, ini lebih dari sekadar Ordo. Kembali ke area bersama lalu ke tambang. Kita butuh bijih."
+
+msgid "TXT_ILOG96"
+msgstr ""
+"Pabrik ada di sebelah tambang. Bijih Degnin itu magnetis dan eksplosif, cocok untuk mematikan medan gaya. Tanpa menurunkan kewaspadaan, cari deposit bijih."
+
+msgid "TXT_ILOG97"
+msgstr ""
+"Tanpa menurunkan kewaspadaan, cari deposit bijih. Jiwa-jiwa malang ini adalah drone. Fungsi sinaptik mereka dijam oleh implan kendali jarak jauh. Kita hancurkan pemancarnya, dan mereka bebas."
+
+msgid "TXT_ILOG99"
+msgstr ""
+"Pabrik ada di sebelah tambang. Tanpa menurunkan kewaspadaan, cari deposit bijih. Saranku, lemparkan bijih ke medan gaya lalu tembak, kompresi yang dihasilkan seharusnya menciptakan selimut magnetis dan mematikan segalanya."
+
+msgid "TXT_ILOG100"
+msgstr ""
+"Sekarang menuju pabrik. Keluar dari tambang dan kamu tidak akan melewatkannya. Mari temukan mesin itu dan matikan!"
+
+msgid "TXT_ILOG102"
+msgstr ""
+"Aku mendeteksi distorsi gelombang saraf yang masif tepat di depan. Kurasa kita sudah menemukannya. Mari masuk ke sana dan matikan!"
+
+msgid "TXT_ILOG103"
+msgstr "Tepat saat kukira kita sudah melihat segalanya! Mereka masuk sebagai manusia dan keluar sebagai… Aku bahkan tidak mau memikirkannya. Hancurkan kengerian ini!"
+
+msgid "TXT_ILOG104"
+msgstr ""
+"Macil sudah gila. Dia baru saja dengan sadar mengirim 200 orang ke kematian mereka. Aku ingin balas dendam! Untuk yang sudah mati dan yang hidup seperti mati! Mari kembali dan cari tahu apa yang sedang terjadi."
+
+msgid "TXT_ILOG106"
+msgstr ""
+"Pabrik mengarah ke sebuah \"laboratorium\", dan mereka mendeteksi tanda kekuatan bagian Sigil dari dalamnya. Kembali ke pabrik dan langkah kita berikutnya menuju kebebasan."
+
+msgid "TXT_ILOG120"
+msgstr ""
+"Temukan Uskup dan hancurkan dia! Setelah dia mati, kembalilah ke Oracle."
+
+msgid "TXT_ILOG122"
+msgstr ""
+"Laboratorium Loremaster ada di balik teleporter yang baru saja terbuka. Mari kita cari tahu apa yang baru saja dia ocehkan. Dan langkah kita berikutnya menuju kebebasan."
+
+msgid "TXT_ILOG211"
+msgstr ""
+"Ayo, mari kita segera pergi dari sini. Medan gaya sudah mati, menuju menara Uskup. Setelah dia mati, kembali ke Oracle."
+
+msgid "TXT_ILOG1001"
+msgstr ""
+"Temukan tempat perlindungan di tepi sungai. Curi piala dari dalamnya. Bawa ke Harris di kedai."
+
+msgid "TXT_ILOG1002"
+msgstr "Temukan Gubernur. Bicarakan tentang hadiahmu dengannya."
+
+msgid "TXT_ILOG1003"
+msgstr ""
+"Temukan tempat perlindungan di tepi sungai. Di dalamnya seseorang bernama Beldin sedang ditahan. Bungkam dia, dan bawa cincinnya kembali ke Rowan sebagai bukti."
+
+msgid "TXT_ILOG1004"
+msgstr "Temukan lokasi Front dan bicara dengan Macil."
+
+msgid "TXT_ILOG1005"
+msgstr "Turun melalui tangga, temukan dan bicara dengan Macil."
+
+msgid "TXT_ILOG1006"
+msgstr ""
+"Kunjungi Irale, pemasok senjata Front di kota. Dia ada di balik pintu di sebelah toko senjata. Kemudian, gunakan kunci yang diberikan Macil untuk berbicara dengan Gubernur."
+
+msgid "TXT_ILOG1007"
+msgstr ""
+"Temukan sambungan daya pada jalur utama, dan matikan. Bawa sesuatu kembali ke Gubernur sebagai bukti."
+
+msgid "TXT_ILOG1008"
+msgstr ""
+"Temukan Derwin di gudang stasiun tenaga. Bunuh dia, dan bawa telinganya ke Mourel."
+
+msgid "TXT_ILOG1009"
+msgstr ""
+"Gunakan izin yang diberikan Mourel untuk masuk ke penjara. Setelah masuk, bicara dengan Sipir Montag. Temukan cara untuk membebaskan para tawanan."
+
+msgid "TXT_ILOG1010"
+msgstr ""
+"Gunakan kunci Sipir untuk masuk ke blok sel penjara dan temukan cara untuk membebaskan para tawanan."
+
+msgid "TXT_ILOG1011"
+msgstr ""
+"Hancurkan kristal tenaga yang menjalankan jaringan daya penggerak perisai Ordo. Pergi temui Worner, seorang mata-mata yang kita rekrut di gudang stasiun tenaga. Jangan lupa kunjungi dokter dan pelatih senjata sebelum berangkat."
+
+msgid "TXT_ILOG1012"
+msgstr ""
+"Hancurkan kristal tenaga yang menjalankan jaringan daya penggerak perisai Ordo. Gunakan ID untuk masuk ke stasiun tenaga. Mungkin kamu mau memeriksa ruang penyimpanan di atas Worner."
+
+msgid "TXT_ILOG1013"
+msgstr ""
+"Hancurkan kristal tenaga yang menjalankan jaringan daya penggerak perisai Ordo. Pergi bicara dengan Ketrick di area inti reaktor."
+
+msgid "TXT_ILOG1014"
+msgstr ""
+"Hancurkan kristal tenaga. Pergi bicara dengan Ketrick, naikkan jalur pejalan kaki menggunakan sakelar, lalu gunakan ID ini untuk liftnya."
+
+msgid "TXT_ILOG1015"
+msgstr ""
+"Temukan pintu masuk kota yang dijaga Ordo. Buka pintunya dan bawa seragam penjaga kembali ke Weran."
+
+msgid "TXT_ILOG1016"
+msgstr ""
+"Bawa bagian-bagian penyembur api ke Irale. Temukan pintu perawatan saluran pembuangan. Temukan dan kuras tangki pemulihan di dalam kastil. Di bagian bawahnya ada pintu masuk tersembunyi ke saluran pembuangan. Di bawah pintu masuk itulah kendali gerbang berada, di suatu tempat."
+
+msgid "TXT_ILOG1017"
+msgstr ""
+"Bergabunglah dalam penyerangan kastil. Temukan dan habisi Programmer. Temui dokter dan pelatih senjata. Habiskan semua yang kamu punya. Ini akan menjadi pertarungan yang sangat berat."
+
+msgid "TXT_ILOG1018"
+msgstr ""
+"Gunakan kunci yang diberikan Programmer palsu itu untuk membuka pintu masuk ke benteng Programmer. Di situlah dia pasti bersembunyi. Temukan Programmer dan bunuh dia."
+
+msgid "TXT_ILOG1019"
+msgstr ""
+"Carilah Oracle dan tanyakan tentang bagian-bagian Sigil lainnya. Ambil hadiahmu dan pergi ke dokter dan pelatih senjata untuk kesehatan dan pelatihan."
+
+msgid "TXT_ILOG1020"
+msgstr ""
+"Bagian kedua terletak di jantung menara merah tua dan obsidian. Di sana kamu harus menemukan Uskup, yang menunggumu. Bawa token Oracle ke sang penjaga kunci di perbatasan. Setelah kamu menghancurkan Uskup, kembalilah ke Oracle."
+
+msgid "TXT_ILOG1021"
+msgstr ""
+"Temukan menara merah tua dan obsidian. Gunakan kunci ID yang diberikan sang penjaga kunci untuk masuk ke menara. Setelah masuk, kamu harus menemukan Uskup. Setelah kamu menghancurkannya, kembalilah ke Oracle."
+
+msgid "TXT_ILOG1022"
+msgstr ""
+"Temukan kompleks keamanan, terobos masuk ke sana dan gunakan teleporter ke administrasi pusat. Hancurkan inti komputer di administrasi pusat. Ini akan mematikan medan gaya di menara Uskup. Setelah Uskup mati, kembalilah ke Oracle."
+
+msgid "TXT_ILOG1023"
+msgstr ""
+"Tantangan berikutmu akan menguji jiwamu. Bagian ketiga dipegang oleh pemimpinmu sendiri. Dia sama seperti yang kamu dikirim untuk membunuh. Hadapi dia dan tentukan nasibmu."
+
+msgid "TXT_ILOG1024"
+msgstr ""
+"Oracle-lah yang memegang bagian ketiga. Di sanalah pengkhianatmu. Kembalilah ke Oracle, dan habisi dia. Kembalilah kepadaku setelah dia mati."
+
+msgid "TXT_ILOG1025"
+msgstr "Kamu telah memotong kanker dari tubuhmu, tapi jantungmu masih berdetak. Selanjutnya kamu harus menemukan sang ahli bedah yang menyiksa dan mengendalikan rakyatmu… Sang Loremaster. Hentikan dia, dan potongan berikutnya akan menjadi milikmu."
+
+msgid "TXT_ILOG1026"
+msgstr "Selanjutnya kamu harus menemukan sang ahli bedah yang menyiksa dan mengendalikan rakyatmu… Sang Loremaster. Hentikan dia, dan potongan berikutnya akan menjadi milikmu. Gunakan teleporter yang kubuka untuk mencapainya. Setelah dia mati, gunakan perangkat yang sama untuk kembali kepadaku."
+
+msgid "TXT_ILOG1027"
+msgstr ""
+"Kamu telah memilih dengan bijak. Bagian ketiga dipegang oleh pemimpinmu sendiri. Hancurkan apa yang bersembunyi di dalam hatimu dan kembalilah kepadaku."
+
+msgid "TXT_ILOG1028"
+msgstr ""
+"Kita telah menemukan bahwa Ordo mengubah orang-orang kita menjadi prajurit bio-mekanikal. Temukan fasilitas tempat ini dilakukan dan tutup, secara permanen! Temukan Richter di area bersama, dekat air terjun dan dia akan memberitahumu cara menghentikan kekejian ini."
+
+msgid "TXT_ILOG1029"
+msgstr ""
+"Untuk masuk ke pabrik, kamu butuh sebuah kunci. Kita sudah mencuri satu, tapi agen yang membawanya hilang di katakombe di bawah area bersama. Ada sesuatu di bawah sana yang mengincar orang-orang kita. Apa pun itu, kamu harus menemukannya dan mengambil kuncinya. Setelah kamu mendapatkannya, pabriknya ada di sebelah tambang."
+
+msgid "TXT_ILOG1101"
+msgstr ""
+"Temukan piala di kapel tempat perlindungan dan bawa ke Harris di lantai atas kedai."
+
+msgid "TXT_ILOG1102"
+msgstr ""
+"Temukan kediaman Gubernur dan bicara dengan Gubernur untuk mendapat hadiahmu"
+
+msgid "TXT_ILOG1201"
+msgstr ""
+"Selamat! Kamu telah mendapat rasa terima kasih kami. Kunjungi dokter dan pelatih senjata dan mereka akan mempersiapkanmu untuk apa yang ada di depan. Silakan berkeliling di dalam markas."
+
+msgid "TXT_SPEAKER_ORDER_SERGEANT"
+msgstr "Sersan Ordo"
+
+msgid "TXT_SPEAKER_ROWAN"
+msgstr "Rowan"
+
+msgid "TXT_SPEAKER_FERIS"
+msgstr "Feris"
+
+msgid "TXT_SPEAKER_PRISON_GUARD"
+msgstr "Penjaga Penjara"
+
+msgid "TXT_SPEAKER_JUSTIN"
+msgstr "Justin"
+
+msgid "TXT_SPEAKER_MACIL"
+msgstr "Macil"
+
+msgid "TXT_SPEAKER_ASSISTANT"
+msgstr "Asisten"
+
+msgid "TXT_SPEAKER_KEY_MASTER"
+msgstr "Penjaga Kunci"
+
+msgid "TXT_SPEAKER_BODYGUARD"
+msgstr "Pengawal Pribadi"
+
+msgid "TXT_SPEAKER_INTERROGATOR"
+msgstr "Interogator"
+
+msgid "TXT_SPEAKER_WARDEN_MONTAG"
+msgstr "Sipir Montag"
+
+msgid "TXT_SPEAKER_RICHTER"
+msgstr "Richter"
+
+msgid "TXT_SPEAKER_MACIL_S_ADVISOR"
+msgstr "Penasihat Macil"
+
+msgid "TXT_SPEAKER_JUDGE_WOLENICK"
+msgstr "Hakim Wolenick"
+
+msgid "TXT_SPEAKER_TEVICK"
+msgstr "Tevick"
+
+msgid "TXT_SPEAKER_HARRIS"
+msgstr "Harris"
+
+msgid "TXT_SPEAKER_FOREMAN"
+msgstr "Mandor"
+
+msgid "TXT_SPEAKER_PRISONER"
+msgstr "Tawanan"
+
+msgid "TXT_SPEAKER_SAMMIS"
+msgstr "Sammis"
+
+msgid "TXT_SPEAKER_WEAPON_SMITH"
+msgstr "Pandai Senjata"
+
+msgid "TXT_SPEAKER_REACTOR_GUARD"
+msgstr "Penjaga Reaktor"
+
+msgid "TXT_SPEAKER_APPRENTICE"
+msgstr "Magang"
+
+msgid "TXT_SPEAKER_DOOR_GUARD"
+msgstr "Penjaga Pintu"
+
+msgid "TXT_SPEAKER_MASTER_SMITHY"
+msgstr "Kepala Pandai Besi"
+
+msgid "TXT_SPEAKER_WAREHOUSE_GUARD"
+msgstr "Penjaga Gudang"
+
+msgid "TXT_SPEAKER_BARKEEP"
+msgstr "Penjaga Kedai"
+
+msgid "TXT_SPEAKER_TIMOTHY"
+msgstr "Timothy"
+
+msgid "TXT_SPEAKER_JAMES"
+msgstr "James"
+
+msgid "TXT_SPEAKER_WORNER"
+msgstr "Worner"
+
+msgid "TXT_SPEAKER_BAILEY_GUARD"
+msgstr "Penjaga Halaman Dalam"
+
+msgid "TXT_SPEAKER_DRONE"
+msgstr "Drone"
+
+msgid "TXT_SPEAKER_FRONT_GUARD"
+msgstr "Penjaga Front"
+
+msgid "TXT_SPEAKER_QUINCY"
+msgstr "Quincy"
+
+msgid "TXT_SPEAKER_SERGEANT"
+msgstr "Sersan"
+
+msgid "TXT_SPEAKER_TEMPLE_GUARD"
+msgstr "Penjaga Kuil"
+
+msgid "TXT_SPEAKER_ORACLE"
+msgstr "Oracle"
+
+msgid "TXT_SPEAKER_ULAINE"
+msgstr "Ulaine"
+
+msgid "TXT_SPEAKER_FRONT_SOLDIER"
+msgstr "Prajurit Front"
+
+msgid "TXT_SPEAKER_PROGRAMMER"
+msgstr "Programmer"
+
+msgid "TXT_SPEAKER_MEDIC"
+msgstr "Dokter"
+
+msgid "TXT_SPEAKER_WATCHMAN"
+msgstr "Pengawas"
+
+msgid "TXT_SPEAKER_KETRICK"
+msgstr "Ketrick"
+
+msgid "TXT_SPEAKER_WERAN"
+msgstr "Weran"
+
+msgid "TXT_SPEAKER_ADVISOR"
+msgstr "Penasihat"
+
+msgid "TXT_SPEAKER_GEOFF"
+msgstr "Geoff"
+
+msgid "TXT_SPEAKER_OVERSEER"
+msgstr "Pengawas"
+
+msgid "TXT_SPEAKER_SECURITY_COMPLE"
+msgstr "Kompleks Keamanan"
+
+msgid "TXT_SPEAKER_COMPUTER_TECH"
+msgstr "Teknisi Komputer"
+
+msgid "TXT_SPEAKER_MACGUFFIN"
+msgstr "MacGuffin"
+
+msgid "TXT_SPEAKER_ARION"
+msgstr "Arion"
+
+msgid "TXT_SPEAKER_DOCK_WORKER"
+msgstr "Pekerja Dermaga"
+
+msgid "TXT_SPEAKER_IRALE"
+msgstr "Irale"
+
+msgid "TXT_SPEAKER_CORE_GUARD"
+msgstr "Penjaga Inti"
+
+msgid "TXT_SPEAKER_SEWER_GUARD"
+msgstr "Penjaga Saluran Pembuangan"
+
+msgid "TXT_SPEAKER_TECHNICIAN"
+msgstr "Teknisi"
+
+msgid "TXT_SPEAKER_GUARD"
+msgstr "Penjaga"
+
+msgid "TXT_SPEAKER_PEASANT"
+msgstr "Rakyat Jelata"
+
+msgid "TXT_SPEAKER_ARMORER"
+msgstr "Pembuat Baju Zirah"
+
+msgid "TXT_SPEAKER_BELDIN"
+msgstr "Beldin"
+
+msgid "TXT_SPEAKER_GERARD"
+msgstr "Gerard"
+
+msgid "TXT_SPEAKER_GOVERNOR_MOUREL"
+msgstr "Gubernur Mourel"
+
+msgid "TXT_SPEAKER_BOWYER"
+msgstr "Pembuat Busur"
+
+msgid "TXT_SPEAKER_DERWIN"
+msgstr "Derwin"
+
+msgid "TXT_SUB_INTRO1"
+msgstr ""
+"Komet itu menghantam planet kami tanpa peringatan. Kami kehilangan surga kami dalam satu pukulan yang menghancurkan."
+
+msgid "TXT_SUB_INTRO2"
+msgstr ""
+"Tumbukan itu melepaskan sebuah virus, yang menyapu seluruh penjuru negeri dan membunuh jutaan orang. Mereka ternyata adalah yang beruntung."
+
+msgid "TXT_SUB_INTRO3"
+msgstr ""
+"Karena mereka yang tidak mati menjadi mutasi dari kemanusiaan. Sebagian menjadi fanatik yang mendengar suara tuhan jahat di kepala mereka dan menyebut diri mereka \"Ordo\"."
+
+msgid "TXT_SUB_INTRO4"
+msgstr ""
+"Mereka yang tuli terhadap suara ini menderita dengan luar biasa dan dipaksa untuk melayani para psikotik kejam ini yang menggunakan senjata jauh lebih kuat dari apa pun yang bisa kami kumpulkan."
+
+msgid "TXT_SUB_INTRO5"
+msgstr ""
+"Mereka menghancurkan wanita dan anak-anak kami sehingga kami terpaksa menyembunyikan mereka di bawah tanah dan hidup seperti binatang dalam ketakutan yang terus-menerus akan nyawa kami."
+
+msgid "TXT_SUB_INTRO6"
+msgstr ""
+"Tapi ada bisikan-bisikan ketidakpuasan. Kalau kita berorganisasi, bisakah kita mengalahkan para penguasa kita? Senjata sedang dicuri, prajurit sedang dilatih. Sebuah gerakan lahir: lahir dari perjuangan seumur hidup!"
+
+msgid "TXT_SUB_GOOD1"
+msgstr ""
+"Perhatian, semua pasukan Front: dia berhasil! Ini sudah berakhir. Prajurit Blackbird telah membunuh Kejahatan itu. Ordo sudah tidak ada lagi. Blackbird, apakah kamu mendengarku?"
+
+msgid "TXT_SUB_GOOD2"
+msgstr ""
+"Aku tahu kamu akan menang, pahlawanku yang gagah berani. Semua pertempuran telah berhenti. Kemenanganmu akan memungkinkan kita menciptakan vaksin untuk membersihkan virus dari tubuh kita."
+
+msgid "TXT_SUB_GOOD3"
+msgstr "Kamu telah menyelamatkan planet kita dan membebaskan kami. Sekarang aku ingin berterima kasih… secara pribadi. Oh, dan omong-omong: namaku Shauna."
+
+msgid "TXT_SUB_SAD1"
+msgstr ""
+"Ya, kejahatan itu sudah pergi, tapi masa depan kami tidak pasti dan diselimuti keraguan."
+
+msgid "TXT_SUB_SAD2"
+msgstr ""
+"Akan butuh beberapa generasi untuk membersihkan virus dari orang-orang kami. Kalau kami bisa bertahan selama itu."
+
+msgid "TXT_SUB_SAD3"
+msgstr ""
+"Apa pun yang diinginkan kejahatan itu, ia menguras dari kita satu hal yang paling kita butuhkan: ia meninggalkan kita tanpa harapan."
+
+msgid "TXT_SUB_BAD1"
+msgstr ""
+"Virus yang memiliki kesadaran itu menghantam kami seperti gelombang pasang, membuat kami semua menjadi gila. Kami mendengar nyanyian siren kematian dan kami menari."
+
+msgid "TXT_SUB_BAD2"
+msgstr ""
+"Kejahatan ini menguras semua kehidupan manusia dari kami dan, dengan menghina reproduksi, mendaur ulang keluarga-keluarga kami."
+
+msgid "TXT_SUB_BAD3"
+msgstr ""
+"Kemudian suatu hari, kejahatan itu pergi. Sederhana saja karena tidak ada lagi yang bisa dimakannya. Kami sudah punah."
+
+msgid "TXT_SUB_MAP03_1"
+msgstr ""
+"Mutasi genetik yang disebabkan oleh virus tidak hanya membelokkan jiwa para anggota Ordo, tetapi juga menyebabkan tubuh mereka membusuk."
+
+msgid "TXT_SUB_MAP03_2"
+msgstr ""
+"Tanpa reproduksi, Ordo menemukan bahwa peningkatan bio-mekanikal adalah satu-satunya cara untuk mempertahankan kekuatan dan jumlah mereka."
+
+msgid "TXT_SUB_MAP03_3"
+msgstr "Pembusukan telah sedemikian jauh sehingga sebagian besar pasukan yang kita hadapi lebih banyak mesin daripada manusia, tapi kami percaya kesadaran kolektif mereka dikendalikan oleh satu sumber…"
+
+msgid "TXT_SUB_MAP03_4"
+msgstr "…sang Programmer: pencipta AI yang mengendalikan para Akolit. Hancurkan sang Programmer, dan kita mungkin bisa melumpuhkan pasukan Ordo dengan satu pukulan. Tapi berhati-hatilah: kami mendapat laporan bahwa dia bisa menguapkan penyerang."
+
+msgid "TXT_SUB_MAP10_1"
+msgstr ""
+"Fragmen-fragmen yang dirakit dari file-file Programmer memberitahu kita bahwa Ordo menyembah sebuah senjata yang cerdas. Mereka menyebutnya \"Sigil\"."
+
+msgid "TXT_SUB_MAP10_2"
+msgstr ""
+"Bagian yang kamu sentuh dan ambil adalah satu dari lima. Ia menggunakan kekuatan yang ditarik dari kekuatan hidup penggunanya sendiri. Selama kamu hidup, kamu mengendalikan kekuatannya."
+
+msgid "TXT_SUB_MAP10_3"
+msgstr ""
+"Kejutan yang membuatmu pingsan adalah bagian Sigil yang sedang menyesuaikan dirinya kepadamu, denyut nadimu dan gelombang otakmu. Kamu bisa menggunakannya, tapi ada harganya: ia akan mengurasmu sampai habis."
+
+msgid "TXT_SUB_MAP10_4"
+msgstr ""
+"Satu bagian saja sudah merupakan kekuatan yang luar biasa. Memiliki semua lima bagian akan sangat menghancurkan dan akan memberi penggunanya kendali penuh atas planet ini."
+
+msgid "TXT_SUB_LOG2"
+msgstr ""
+"Dengar, unit komunikasi ini memberitahuku bahwa kamu 100% manusia. Aku diperintahkan untuk membawamu masuk, ini soal kepercayaan. Khianati aku dan kamu akan membayarnya. Oh, dan omong-omong, kamu bisa memanggilku Blackbird."
+
+msgid "TXT_SUB_LOG3"
+msgstr ""
+"Pergi ke balai kota lama. Setelah Ordo mengebomnya, Macil membangun sebuah terowongan yang memungkinkan kita masuk dan keluar tanpa sepengetahuan para akolit."
+
+msgid "TXT_SUB_LOG4"
+msgstr ""
+"Lewati pintu di sebelah kirimu, lalu yang di sebelah kanan. Nama penjaganya adalah Geoff. Beritahu dia bahwa kamu butuh emas."
+
+msgid "TXT_SUB_LOG5"
+msgstr ""
+"Irale adalah \"penyelesai masalah\" Front. Dia ada di balik pintu tanpa nama di sebelah toko senjata."
+
+msgid "TXT_SUB_LOG6"
+msgstr ""
+"Ingat: bunuhlah dengan diam-diam daripada dengan kekerasan. Kamu tidak akan memicu alarm."
+
+msgid "TXT_SUB_LOG7"
+msgstr ""
+"Yang aku tahu tentang gubernur adalah dia bermain di dua sisi sekaligus. Ini dia \"kediamannya\" yang katanya mewah."
+
+msgid "TXT_SUB_LOG8"
+msgstr "Ugh. Sampah-sampah manusia memang sudah menemukan tempat tinggalnya."
+
+msgid "TXT_SUB_LOG9"
+msgstr ""
+"Menyebut Mourel licik itu sudah memujinya. Dia lebih rendah dari kotoran."
+
+msgid "TXT_SUB_LOG10"
+msgstr ""
+"Kita perlu bicara dengan seseorang yang mengenal kota lama dan di mana kopling ini berada. Komando bilang: temukan MacGuffin. "
+
+msgid "TXT_SUB_LOG11"
+msgstr ""
+"Dia ada di tempat yang dengan sopan disebut \"lubang got\". Ikuti jalur pejalan kaki di dekat instalasi pengolahan limbah dan turun melalui tangga."
+
+msgid "TXT_SUB_LOG12"
+msgstr ""
+"Ambil waktu yang kamu butuhkan untuk misi ini. Aku tidak bisa mendapat intelijen tentang ini dari Komando."
+
+msgid "TXT_SUB_LOG13"
+msgstr ""
+"Kamu bodoh! Kamu telah mematikan daya ke sirkuit pengacak yang kita gunakan untuk menyembunyikan markas kita dari Ordo. Pergi ke balai kota dan habisi tim pemindai itu, sekarang!"
+
+msgid "TXT_SUB_LOG14"
+msgstr ""
+"Oke, \"Jangan percaya siapa pun\" adalah aturan mainnya! Mari kita dapatkan izin dari Gubernur dan bebaskan para tawanan itu."
+
+msgid "TXT_SUB_LOG15"
+msgstr ""
+"Langkah yang bagus! Gubernur itu pembohong ulung. Itu adalah kopling daya milik kita. Sekarang mari kita dapatkan izin itu."
+
+msgid "TXT_SUB_LOG16"
+msgstr "Gudangnya ada di stasiun tenaga. Mari kita selesaikan ini dengan cepat."
+
+msgid "TXT_SUB_LOG17"
+msgstr "Aku tidak pernah menyangka akan masuk ke dalam penjara…"
+
+msgid "TXT_SUB_LOG18"
+msgstr "Rupanya tidak ada yang gratis. Waktunya bersiap tempur."
+
+msgid "TXT_SUB_LOG19"
+msgstr "Oke. Kamu sudah menyenangkan Gubernur, melenyapkan Penjaga… Sekarang sepertinya kita harus melakukan sedikit operasi."
+
+msgid "TXT_SUB_LOG20"
+msgstr "Oh kamu memotong tangannya! Dan aku kira kamu orang yang baik… lumayan. Ayo pergi."
+
+msgid "TXT_SUB_LOG21"
+msgstr ""
+"Kerja bagus kawanku. Naiki salah satu teleporter dan itu akan membawamu kembali ke markas."
+
+msgid "TXT_SUB_LOG22"
+msgstr "Worner adalah mata-mata yang kita rekrut di gudang stasiun tenaga."
+
+msgid "TXT_SUB_LOG23"
+msgstr ""
+"Pesan dari bos adalah mundur ketika kamu menghancurkan kristal itu, kalau tidak kamu juga akan berakhir gosong."
+
+msgid "TXT_SUB_LOG25"
+msgstr ""
+"Satu petualangan lagi sebelum komando merasa aman untuk menyerang. Macil mengatur agar Irale memberimu emas dan pelatihan. Dan kunjungi dokter untuk menambah kekuatan."
+
+msgid "TXT_SUB_LOG26"
+msgstr ""
+"Ordo mengira kastilnya sudah aman. Salah! Kalau kamu membuka gerbangnya, mereka akan mudah dikalahkan. Dan untuk itu, kamu harus turun ke saluran pembuangan. Ikuti sungai di seberang kediaman Gubernur. "
+
+msgid "TXT_SUB_LOG27"
+msgstr "Oke, masuk ke sini. Penghuni selokan adalah mutan mengerikan, tapi jaringan terowongan mereka memberi akses ke rahasia-rahasia. Tutup hidungmu… Kita turun."
+
+msgid "TXT_SUB_LOG28"
+msgstr ""
+"Kita mencari Weran, yang menyebut dirinya Raja Tikus. Aku yakin itu deskriptif sekaligus penuh warna."
+
+msgid "TXT_SUB_LOG29"
+msgstr ""
+"Oh, menjijikkan. Aku bahkan tidak mau memikirkan apa yang sedang kamu injak!"
+
+msgid "TXT_SUB_LOG30"
+msgstr "Tepat seperti yang kubutuhkan. Lebih banyak cairan cokelat!"
+
+msgid "TXT_SUB_LOG31"
+msgstr "Hei, lihat! Kurasa itulah pintu yang ingin Weran buka!"
+
+msgid "TXT_SUB_LOG32"
+msgstr "Tutup matamu! Aku tidak mau melihat! Oh, terlambat… Menjijikkan. Itu tidak terlihat seperti tubuh manusia. Apa yang telah dilakukan Ordo? Aku harus melaporkan ini ke komando."
+
+msgid "TXT_SUB_LOG33"
+msgstr "Kenapa kita tidak bisa sekali saja menjalankan misi di padang bunga?"
+
+msgid "TXT_SUB_LOG34"
+msgstr ""
+"Terpaksa harus kuakui tapi ini mengingatkanku pada rumah. Aku tinggal di bawah tanah tidak jauh dari sini."
+
+msgid "TXT_SUB_LOG35"
+msgstr "Jangan tanya aku di mana kita berada. Aku juga tersesat. Maaf."
+
+msgid "TXT_SUB_LOG36"
+msgstr "Bata itu… Bukankah kita sudah melewati bata itu? Tidak…"
+
+msgid "TXT_SUB_LOG37"
+msgstr ""
+"Komando, dia berhasil! Gerbang sudah terbuka. Kirimkan pasukan kejut dan beritahu Macil kita akan masuk! "
+
+msgid "TXT_SUB_LOG38"
+msgstr ""
+"Kita punya laporan yang bertentangan tentang lokasi Programmer. Satu mengatakan dia ada di ruang komputer, yang lain di sebuah benteng dan yang lainnya lagi menyebut sebuah lorong panjang. Maaf. "
+
+msgid "TXT_SUB_LOG39"
+msgstr "Ah, senang rasanya kembali menyerang. Hajar mereka habis-habisan!"
+
+msgid "TXT_SUB_LOG40"
+msgstr "Ini terlihat bagus. Komputer… Programmer… Menurutmu bagaimana?"
+
+msgid "TXT_SUB_LOG41"
+msgstr "Ini pasti lorong panjangnya. Atau mungkin indera skalaku sudah kacau."
+
+msgid "TXT_SUB_LOG42"
+msgstr "Ini semua ciri khas kuil kejahatan. Arsitektur yang seram, spanduk besar… Aku rasa tepat sekali!"
+
+msgid "TXT_SUB_LOG43"
+msgstr "Ini Programmer yang maha agung itu? Tidak mungkin!"
+
+msgid "TXT_SUB_LOG44"
+msgstr ""
+"Aku tidak tahu lagi apa yang harus kupercaya. Satu-satunya yang terkesan sebagai \"benteng\" bagiku adalah monster besar di sebelah kiri. Tapi aku tidak tahu bagaimana cara masuk ke sana. "
+
+msgid "TXT_SUB_LOG45"
+msgstr "Ketika keadaan menjadi aneh, yang aneh terus melaju. Jaga dirimu."
+
+msgid "TXT_SUB_LOG46"
+msgstr ""
+"Oracle berada di perbatasan, tepat di luar kota. Seberangi sungai, menuju kastil dan belok kiri melalui lengkungan."
+
+msgid "TXT_SUB_LOG47"
+msgstr ""
+"Oracle adalah seorang imam besar yang konon bersimpati dan beroperasi di luar Ordo."
+
+msgid "TXT_SUB_LOG48"
+msgstr "Kuil Oracle berada di Perbatasan, di pinggiran kota."
+
+msgid "TXT_SUB_LOG49"
+msgstr ""
+"Ordo telah mengambil planet indah kita dan mengubahnya menjadi tempat pembuangan sampah."
+
+msgid "TXT_SUB_LOG50"
+msgstr ""
+"Ini dia. Aku merekam segalanya, bukan karena aku tidak percaya bahwa kamu akan selamat, hanya saja kita tidak boleh membiarkan Ordo mengendalikan Sigil."
+
+msgid "TXT_SUB_LOG51"
+msgstr "Kamu berani, kawanku. Aku bangga bisa ikut serta dalam perjalanan ini."
+
+msgid "TXT_SUB_LOG52"
+msgstr "Bisakah kamu berhenti sebentar? Aku sedikit mual."
+
+msgid "TXT_SUB_LOG53"
+msgstr ""
+"Kenapa kita harus menghabiskan begitu banyak waktu di bawah tanah? Aku sudah cukup melihat bawah tanah."
+
+msgid "TXT_SUB_LOG54"
+msgstr ""
+"Apakah kita benar-benar harus mempercayai seseorang yang ruang sucinya berwarna hijau?"
+
+msgid "TXT_SUB_LOG55"
+msgstr "Merah tua dan obsidian? Kenapa dia tidak bilang saja merah dan hitam."
+
+msgid "TXT_SUB_LOG56"
+msgstr ""
+"Uskup adalah pemimpin militer Ordo. Dia merancang taktik mereka, menjalankan mata-mata mereka dan bertugas mengendalikan kita. Kita habisi dia dan kita dapat dua keuntungan sekaligus."
+
+msgid "TXT_SUB_LOG57"
+msgstr ""
+"Uskup itu akan dijaga dengan ketat jadi kenapa tidak kita curi sebuah seragam dan menyamar?"
+
+msgid "TXT_SUB_LOG58"
+msgstr ""
+"Ingatkan aku, kalau kita menang ini aku akan memanggil seorang dekorator."
+
+msgid "TXT_SUB_LOG59"
+msgstr ""
+"Aku baru mendapat kabar bahwa kita punya informan di dalam benteng. Mari menuju ke apa yang mereka sebut rumah sakit, dia bekerja di sana."
+
+msgid "TXT_SUB_LOG60"
+msgstr "Ambil rencananya dan matikan komputernya, oke?"
+
+msgid "TXT_SUB_LOG61"
+msgstr ""
+"Baiklah, aku tidak mengeluh, tapi lain kali mungkin kita bisa mencoba jalan yang tidak penuh darah."
+
+msgid "TXT_SUB_LOG62"
+msgstr ""
+"Kita sudah melewati lorong-lorong tanpa akhir sebelumnya, tapi aku bersumpah, dinding-dinding ini bergerak saat kita lewat."
+
+msgid "TXT_SUB_LOG63"
+msgstr ""
+"Yah, sudah bisa ditebak. Pemimpin militer berarti banyak musuh berbahaya."
+
+msgid "TXT_SUB_LOG64"
+msgstr "Jangan menyerah. Inilah saatnya. Lurus ke depan."
+
+msgid "TXT_SUB_LOG65"
+msgstr "Lain kali, kita berhenti di pom bensin dan minta petunjuk arah."
+
+msgid "TXT_SUB_LOG66"
+msgstr "Tidak! Lebih banyak kegaduhan dan orang-orang jahat yang mengejar kita."
+
+msgid "TXT_SUB_LOG67"
+msgstr "Tahu tidak, dari luar, tempat ini terlihat sangat kecil."
+
+msgid "TXT_SUB_LOG68"
+msgstr ""
+"Aku mendeteksi musuh baru. Jangan berhenti dan melongo, langsung habisi mereka."
+
+msgid "TXT_SUB_LOG69"
+msgstr ""
+"Aku benci medan gaya ini. Cari sakelar pematinya, pasti ada di dekat sini."
+
+msgid "TXT_SUB_LOG70"
+msgstr "Ooh, sangat mengesankan. Mari kita ledakkan!"
+
+msgid "TXT_SUB_LOG71"
+msgstr "Naiki teleporternya, mari kita segera pergi dari sini."
+
+msgid "TXT_SUB_LOG72"
+msgstr ""
+"Tunggu, Oracle bilang kita akan mengenalnya dari simbol kekuatannya. Apakah kamu memikirkan hal yang sama denganku?"
+
+msgid "TXT_SUB_LOG73"
+msgstr ""
+"Orang-orang ini punya ide dekorasi yang berhasil, lalu mereka memakainya sampai mati."
+
+msgid "TXT_SUB_LOG74"
+msgstr ""
+"Apakah kamu melihat hantu aneh yang keluar dari tubuh Uskup itu? Di mana aku pernah melihat itu sebelumnya?"
+
+msgid "TXT_SUB_LOG75"
+msgstr ""
+"Waktunya mengambil keputusan. Sekarang kita sudah punya dua bagian, mungkin kita mau kembali ke markas. Apa kata instingmu?"
+
+msgid "TXT_SUB_LOG76"
+msgstr ""
+"Aku mendapat laporan bahwa energi spektral yang kita temukan di dekat Uskup juga ada di dekat Oracle, mari kita berhati-hati."
+
+msgid "TXT_SUB_LOG77"
+msgstr ""
+"Macil? Bagian dari kekacauan ini? Aku tidak tahu harus berpikir apa. Aku harap kamu membuat keputusan yang tepat."
+
+msgid "TXT_SUB_LOG78"
+msgstr ""
+"Apakah aku mempercayai Macil, yang telah mempertaruhkan nyawanya untuk Front, atau hantu yang jelek itu? Aku tidak tahu. Tapi kamulah yang kupercaya."
+
+msgid "TXT_SUB_LOG79"
+msgstr ""
+"Richter telah mengambil alih komando pasukan kita. Tampaknya Macil sudah menipu kita sepanjang waktu. Kesetiaan sebenarnya adalah kepada Ordo. Sungguh ular berbisa."
+
+msgid "TXT_SUB_LOG80"
+msgstr ""
+"Pintu masuk yang sangat mengesankan. Tapi apa yang kita cari ada di level lain. Turun ke bawah."
+
+msgid "TXT_SUB_LOG81"
+msgstr ""
+"Sungguh disayangkan. Teknologi kita sedang disia-siakan untuk penyiksaan, bukan untuk kehidupan."
+
+msgid "TXT_SUB_LOG82"
+msgstr ""
+"Karena sangat sombong, mereka menandai kuil-kuil mereka dengan spanduk-spanduk besar."
+
+msgid "TXT_SUB_LOG83"
+msgstr ""
+"Satu lagi bagian Sigil. Kita selangkah lebih dekat menuju kebebasan. Dan kamu selangkah lebih dekat kepadaku."
+
+msgid "TXT_SUB_LOG84"
+msgstr ""
+"Dari penampilannya, kita butuh Sigil yang lengkap untuk membuka ini. Ada sesuatu yang memberitahuku bahwa inilah ujung pelangi."
+
+msgid "TXT_SUB_LOG85"
+msgstr ""
+"Kamu memegang kekuatan Sigil yang lengkap. Bagaimana kalau kita pergi menyelesaikan ini."
+
+msgid "TXT_SUB_LOG86"
+msgstr "Inilah saatnya, pahlawanku. Bersiaplah untuk meraih kejayaan."
+
+msgid "TXT_SUB_LOG87"
+msgstr ""
+"Yah, selesai sudah urusan ramalannya. Tunggu, Macil memanggil kita kembali. Mari kita keluar dari sini dalam keadaan utuh."
+
+msgid "TXT_SUB_LOG88"
+msgstr ""
+"Maaf, setelah berlumuran darah sampai setinggi pinggang, aku tidak bisa memikirkan sesuatu yang cerdas untuk dikatakan sekarang. Mari kembali ke Macil."
+
+msgid "TXT_SUB_LOG89"
+msgstr ""
+"Pabrik ada di sebelah tambang. Richter pasti maksudnya tambang Degnin. Bijih Degnin itu magnetis dan eksplosif, cocok untuk mematikan medan gaya."
+
+msgid "TXT_SUB_LOG90"
+msgstr "Tambang, katakombe, selokan… Kencan pertama yang luar biasa!"
+
+msgid "TXT_SUB_LOG91"
+msgstr "Seandainya Richter sedikit lebih spesifik. Hm, mari kita coba ke sana."
+
+msgid "TXT_SUB_LOG92"
+msgstr "Menurutku kita… Oh, sialan. Aku tidak tahu sama sekali di mana kita berada."
+
+msgid "TXT_SUB_LOG93"
+msgstr ""
+"Ini pasti reruntuhan yang dicari agen-agen Richter. Oh, hati-hati! Para Crusader!"
+
+msgid "TXT_SUB_LOG94"
+msgstr "Ugh, ia mencoba untuk beregenerasi. Tembak sebelum aku muntah!"
+
+msgid "TXT_SUB_LOG95"
+msgstr ""
+"Kawanku, apa pun yang sedang kita lawan, ini lebih dari sekadar Ordo. Ke tambang sekarang!"
+
+msgid "TXT_SUB_LOG96"
+msgstr "Tanpa menurunkan kewaspadaan, cari deposit bijih."
+
+msgid "TXT_SUB_LOG97"
+msgstr ""
+"Jiwa-jiwa malang ini adalah drone, fungsi sinaptik mereka dijam oleh implan kendali jarak jauh. Kita hancurkan pemancarnya dan mereka bebas!"
+
+msgid "TXT_SUB_LOG98"
+msgstr ""
+"Komando bilang pemancarnya dilindungi oleh medan gaya. Jadi dua burung satu batu, bebaskan para drone dan berlatih dengan bijihnya."
+
+msgid "TXT_SUB_LOG99"
+msgstr ""
+"Saranku, lemparkan bijih ke medan gaya lalu tembak. Kompresi yang dihasilkan seharusnya menciptakan selimut magnetis dan mematikan segalanya."
+
+msgid "TXT_SUB_LOG100"
+msgstr ""
+"Sekarang menuju pabrik. Keluar dari tambang dan kamu tidak akan melewatkannya!"
+
+msgid "TXT_SUB_LOG101"
+msgstr "Maaf, pahlawan, ini semua baru bagiku."
+
+msgid "TXT_SUB_LOG102"
+msgstr ""
+"Aku mendeteksi distorsi gelombang saraf yang masif tepat di depan. Kurasa kita sudah menemukannya."
+
+msgid "TXT_SUB_LOG103"
+msgstr "Tepat saat kukira kita sudah melihat segalanya! Mereka masuk sebagai manusia dan keluar sebagai… Aku bahkan tidak mau memikirkannya."
+
+msgid "TXT_SUB_LOG104"
+msgstr ""
+"Oracle benar. Macil sudah gila. Dia baru saja dengan sadar mengirim 200 orang ke kematian mereka. Aku ingin balas dendam. Untuk yang sudah mati dan yang hidup seperti mati!"
+
+msgid "TXT_SUB_LOG105"
+msgstr ""
+"Macil? Terinfeksi dan memiliki bagian Sigil. Semua tahun-tahun ini percaya padanya, pada perjuangan. Dan untuk apa?"
+
+msgid "TXT_SUB_LOG106"
+msgstr ""
+"Richter melaporkan bahwa pabrik yang kita hancurkan mengarah ke sebuah \"laboratorium\", dan mereka mendeteksi tanda kekuatan Sigil dari dalamnya. Kembali ke pabrik dan langkah kita berikutnya menuju kebebasan."
+
+msgid "TXT_SUB_LOG120"
+msgstr ""
+"Siapa yang berani menentangku dan masuk ke bentengku? Manusia tak berguna? Hadapi aku dan mati!"
+
+msgid "TXT_SUB_LOG121"
+msgstr ""
+"Kamu tidak bisa membunuhku. Kamu hanyalah manusia. Dan aku lebih dari sekadar manusia."
+
+msgid "TXT_SUB_LOG122"
+msgstr ""
+"Tidak ada kematian, kehidupan abadi dan lebih banyak lagi. Jauh lebih banyak! Inilah tugasku: cyborg, setengah daging, setengah baja, semua untuk melayani Tuhan Yang Esa. Kamu tidak mau melayani? Kamu mati!\n"
+"Orang ini punya satu lagi bagian Sigil."
+
+msgid "TXT_SUB_LOG128"
+msgstr ""
+"Ha ha! Selamat datang. Aku sudah menunggu momen ini. Aku sudah menunggu orang bodoh sepertimu untuk membawakan kebebasanku. Planet kecilmu ini milikku, dan kamu akan menyesali kelahiranmu! "
+
+msgid "TXT_SUB_LOG129"
+msgstr ""
+"Kebenaran hanya bisa ditemukan dalam kehendak universal. Kamu akan berlutut di hadapan Tuhan Sejati, Cahaya Yang Esa. Bergabunglah denganku dan aku akan melengkapi Sigil.\n"
+"Aku sudah muak dengan omong kosong mistis ini."
+
+msgid "TXT_SUB_LOG130"
+msgstr "Kamu… Kamu telah menghancurkan Ordoku, menembus tipu dayaku dan mengancam hasrat berabad-abad. Tapi aku akan menang, aku akan menginfeksimu dan membelokkanmu sesuai kehendakku…"
+
+msgid "TXT_SUB_LOG200"
+msgstr "Kedengarannya seperti pekerjaan impian, bukan?"
+
+msgid "TXT_SUB_LOG201"
+msgstr "Kamu sudah tahu terlalu banyak. Habisi dia, Macil!"
+
+msgid "TXT_SUB_LOG202"
+msgstr "Lain kali, kamu akan mendengarkanku."
+
+msgid "TXT_SUB_LOG203"
+msgstr "Ugh, harga-harga pasca-apokalipsis ini…"
+
+msgid "TXT_SUB_LOG204"
+msgstr "Ambil yang besar. Dia tidak akan menghentikanmu."
+
+msgid "TXT_SUB_LOG205"
+msgstr "Jangan berlambat-lambat. Lurus ke depan!"
+
+msgid "TXT_SUB_LOG206"
+msgstr "Pernah memperhatikan betapa miripnya lorong-lorong ini?"
+
+msgid "TXT_SUB_LOG207"
+msgstr "Hei, kadang aku juga harus menebak!"
+
+msgid "TXT_SUB_LOG208"
+msgstr "Oh, dan hati-hati dengan alarmnya."
+
+msgid "TXT_SUB_LOG209"
+msgstr "Oh, astaga. Lihat apa yang sudah kamu lakukan!"
+
+msgid "TXT_SUB_LOG210"
+msgstr "Sial. Sekarang kamu sudah merusak segalanya!"
+
+msgid "TXT_SUB_LOG211"
+msgstr "Ayo! Mari kita segera pergi dari sini."
+
+msgid "TXT_SUB_LOG212"
+msgstr "Ooh. Kamu tidak main-main."
+
+msgid "TXT_SUB_LOG213"
+msgstr "Kamu akan memajangnya di dinding! Terus maju!"
+
+msgid "TXT_SUB_LOG214"
+msgstr "Mm. Kamu memang brutal."
+
+msgid "TXT_SUB_LOG215"
+msgstr "Ritme yang bagus di sini."
+
+msgid "TXT_SUB_LOG216"
+msgstr "Ooh. Suka sekali dengan tongkat boom-boom itu."
+
+msgid "TXT_SUB_LOG217"
+msgstr "Mm. Aku suka cara kamu membawa dirimu."
+
+msgid "TXT_SUB_LOG218"
+msgstr "Tembak saja! Mereka bukan manusia!"
+
+msgid "TXT_SUB_LOG219"
+msgstr "Wow! Akolit Hangus! Sensasi rasa baru…"
+
+msgid "TXT_SUB_LOG220"
+msgstr "Terus lakukan itu dan kamu akan buta… tapi aku suka."
+
+msgid "TXT_SUB_LOG221"
+msgstr "Kurasa mereka tidak akan mengundang kita makan malam lagi!"
+
+msgid "TXT_SUB_LOG222"
+msgstr "Kita perlu ke lantai paling atas."
+
+msgid "TXT_SUB_LOG223"
+msgstr "Tunggu… Ini terlihat menarik. Lihat ini."
+
+msgid "TXT_SUB_LOG224"
+msgstr "Ugh. Orang itu membuat merinding. Mari kita hindari."
+
+msgid "TXT_SUB_LOG225"
+msgstr "Kiri! Belok kiri!… Oh, kiri yang satunya!"
+
+msgid "TXT_SUB_LOG226"
+msgstr "Laki-laki keras kepala yang tipikal!… Kecuali kalau kamu perempuan."
+
+msgid "TXT_SUB_LOG227"
+msgstr "Kuat, brutal dan pendiam. Mitra yang kusukai."
+
+msgid "TXT_SUB_LOG228"
+msgstr "Oke! Aku salah!"
+
+msgid "TXT_SUB_LOG229"
+msgstr "Sayang sekali kita tidak pernah bertemu… langsung bertatap muka."
+
+msgid "TXT_SUB_LOG230"
+msgstr "Aku punya impian untukmu… Sayang sekali."
+
+msgid "TXT_SUB_LOG231"
+msgstr ""
+"Tidak. Jangan masuk ke balai kota. Sudah tidak aman lagi. Penyamaran kita sudah terbongkar. Itulah mengapa hujan peluru di sana. Bunuh sebanyak mungkin orang-orang besar itu. Mereka disebut \"Crusader\". Kalau sudah selesai, aku akan memandumu ke Macil."
+
+msgid "TXT_SUB_LOG232"
+msgstr "Kerja bagus, kawan! Saatnya membawamu masuk."
+
+msgid "TXT_SUB_LOG233"
+msgstr "Waspadai para Crusader itu. Mereka adalah robot besar dan berotot, serta kejam setengah mati. Kami tidak tahu apa-apa tentang senjata mereka, tapi kemungkinannya… kamu kalah. Hati-hati."
+
+msgid "TXT_SUB_LOG234"
+msgstr ""
+"Kerja bagus. Kamu adalah ideku tentang kesenangan. Sekarang, tanpa ada yang melihatmu, lewati pintu di sebelah kanan, naik ke atas dan temui orangnya."
+
+msgid "TXT_SUB_LOG235"
+msgstr "Kalau ada yang melihatmu, kami akan memenggal kepalamu."
+
+msgid "TXT_SUB_LOG236"
+msgstr "Kamu idiot, kikuk, dan tolol! Kamu telah membongkar kita!"
+
+msgid "TXT_SUB_LOG237"
+msgstr "Aku berharap bisa menunggumu di balik pintu itu… tapi aku harus tetap di bawah tanah. Saatnya kamu bertemu pemimpin kita, Macil."
+
+msgid "TXT_BBSUB_SCRIPT02_D57608_IFIKN"
+msgstr ""
+"Babi gembul. Aku tidak tahu apa-apa tentang kopling daya yang katanya itu, jadi mari kita pelan-pelan."
+
+msgid "TXT_BBSUB_SCRIPT03_D4548_GOODB"
+msgstr "Kedengarannya seperti pekerjaan impian, bukan?"
+
+msgid "TXT_BBSUB_SCRIPT03_D7580_TAKET"
+msgstr "Dan aku akan selalu bersamamu."
+
+msgid "TXT_BBSUB_SCRIPT03_D12128_ASING"
+msgstr "Worner adalah mata-mata yang kita rekrut di gudang stasiun tenaga."
+
+msgid "TXT_BBSUB_SCRIPT03_D16676_THEPR"
+msgstr ""
+"Pastikan kamu siap untuk pertarungan terberat dalam hidupmu. Jangan berhemat. Habiskan semua yang kamu punya."
+
+msgid "TXT_BBSUB_SCRIPT04_D21224_BUSIN"
+msgstr "Permisi, aku mau muntah."
+
+msgid "TXT_BBSUB_SCRIPT04_D25772_TELLW"
+msgstr ""
+"Mmm. Kedengarannya seperti senjata. Kita selalu bisa menggunakan lebih banyak daya tembak."
+
+msgid "TXT_BBSUB_SCRIPT04_D31836_WHATD"
+msgstr "Kedengarannya terlalu mudah, tapi mari kita coba."
+
+msgid "TXT_BBSUB_SCRIPT04_D40932_LETME"
+msgstr ""
+"Peduli apa. Tidak ada yang pernah mendengarkan para programmer bagaimanapun juga."
+
+msgid "TXT_BBSUB_SCRIPT04_D54576_ITSAS"
+msgstr "Ooh. Senang aku sedang bersembunyi, kalau kamu tahu maksudku."
+
+msgid "TXT_BBSUB_SCRIPT05_D1516_OKBUT"
+msgstr "Dasar pemarah. Semoga kamu bisa membunuhnya nanti."
+
+msgid "TXT_BBSUB_SCRIPT05_D3032_DOILO"
+msgstr "\"Area ini terlarang!\" Orang sombong."
+
+msgid "TXT_BBSUB_SCRIPT05_D4548_THEOR"
+msgstr "Orang yang menyenangkan sekali."
+
+msgid "TXT_BBSUB_SCRIPT05_D7580_OVERM"
+msgstr "Mungkin karena kamu tidak bilang \"tolong\"."
+
+msgid "TXT_BBSUB_SCRIPT06_D1516_DOMYF"
+msgstr "Semua orang sangat butuh perhatian.\n"
+
+msgid "TXT_BBSUB_SCRIPT06_D3032_BRING"
+msgstr "Bagus. Sekarang kita belanja untuk Raja Tikus."
+
+msgid "TXT_BBSUB_SCRIPT06_D4548_OPENT"
+msgstr "Aku yakin orang ini juga sangat bau."
+
+msgid "TXT_BBSUB_SCRIPT06_D9096_YOUHA"
+msgstr "Lebih banyak selokan… Luar biasa. Penasaran apa yang hidup di sana."
+
+msgid "TXT_BBSUB_SCRIPT07_D6064_PROGR"
+msgstr "Jalan buntu di sini. Kita harus terus mencari."
+
+msgid "TXT_BBSUB_SCRIPT10_D10612_YOUHA"
+msgstr "Maju terus, jagoanku. Mari buat Si Jelek itu kelojotan.\n"
+
+msgid "TXT_BBSUB_SCRIPT10_D12128_THERE"
+msgstr ""
+"Bio-mekanikal? Yah, itu menjelaskan pasokan pasukan mereka yang tampaknya tidak ada habisnya! Dan sikap buruk mereka.\n"
+
+msgid "TXT_BBSUB_SCRIPT10_D16676_IAMTH"
+msgstr "Orang gila… Habisi dia!"
+
+msgid "TXT_BBSUB_SCRIPT12_D12128_USETH"
+msgstr "Mungkin dia jelek, tapi sepertinya dia ada di pihak kita."
+
+msgid "TXT_BBSUB_SCRIPT17_D10612_OHSUR"
+msgstr ""
+"Menilai dari kejadian belakangan ini, kurasa menyamar sudah tidak relevan."
+
+msgid "TXT_BBSUB_SCRIPT17_D13644_OHWEL"
+msgstr "Hmm. Tidak berantakan, tidak merepotkan, tidak ada yang perlu dibersihkan ibu… Tolong carikan satu untukku.\n"
+
+msgid "TXT_BBSUB_SCRIPT31_D0_OHNOI"
+msgstr ""
+"Kupikir aku akan bosan dengan semua urusan membunuh orang ini, tapi aku tahu aku akan merindukannya kalau sudah selesai.\n"

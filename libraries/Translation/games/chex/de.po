@@ -1,0 +1,301 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-06-16 12:06+0000\n"
+"Last-Translator: heiko123abc <heiko1234aaa@gmail.com>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/doom-engine-games/chex-quest/de/>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.7.dev0\n"
+
+msgid "TXT_CHEX_EP"
+msgstr "Chex Quest"
+
+# Flem = phlegm
+msgid "GOTBLUEFLEM"
+msgstr "Blauen Flemschlüssel genommen."
+
+msgid "GOTYELLOWFLEM"
+msgstr "Gelben Flemschlüssel genommen."
+
+msgid "GOTREDFLEM"
+msgstr "Roten Flemschlüssel genommen."
+
+msgid "GOTGOGGLES"
+msgstr "Ultrasichtbrille gefunden"
+
+msgctxt "chex"
+msgid "PD_BLUECO"
+msgstr "Du brauchst einen blauen Schlüssel, um dieses Objekt zu aktivieren"
+
+msgctxt "chex"
+msgid "PD_REDCO"
+msgstr "Du brauchst einen roten Schlüssel, um dieses Objekt zu aktivieren"
+
+msgctxt "chex"
+msgid "PD_YELLOWCO"
+msgstr "Du brauchst einen gelben Schlüssel, um dieses Objekt zu aktivieren"
+
+msgid "PD_BLUEFO"
+msgstr ""
+"Du brauchst einen blauen Flemschlüssel, um dieses Objekt zu aktivieren"
+
+msgid "PD_REDFO"
+msgstr "Du brauchst einen roten Flemschlüssel, um dieses Objekt zu aktivieren"
+
+msgid "PD_YELLOWFO"
+msgstr ""
+"Du brauchst einen gelben Flemschlüssel, um dieses Objekt zu aktivieren"
+
+msgctxt "chex"
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "Zorcher genommen."
+
+msgctxt "chex"
+msgid "HUSTR_E1M1"
+msgstr "E1M1: Landezone"
+
+msgctxt "chex"
+msgid "HUSTR_E1M2"
+msgstr "E1M2: Lagerhalle"
+
+msgctxt "chex"
+msgid "HUSTR_E1M3"
+msgstr "E1M3: Labor"
+
+msgctxt "chex"
+msgid "HUSTR_E1M4"
+msgstr "E1M4: Baumgarten"
+
+msgctxt "chex"
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Die Höhlen von Bazoik"
+
+msgctxt "chex"
+msgid "HUSTR_E2M1"
+msgstr "E2M1: Raumhafen"
+
+msgctxt "chex"
+msgid "HUSTR_E2M2"
+msgstr "E2M2: Kino"
+
+msgctxt "chex"
+msgid "HUSTR_E2M3"
+msgstr "E2M3: Museum von Chex"
+
+msgctxt "chex"
+msgid "HUSTR_E2M4"
+msgstr "E2M4: städtische Straßen"
+
+msgctxt "chex"
+msgid "HUSTR_E2M5"
+msgstr "E2M5: Kanalisation"
+
+msgctxt "chex"
+msgid "HUSTR_E3M1"
+msgstr "E3M1: Kommandozentrale"
+
+msgctxt "chex"
+msgid "HUSTR_E3M2"
+msgstr "E3M2: Vereinigte Zerealien"
+
+msgctxt "chex"
+msgid "HUSTR_E3M3"
+msgstr "E3M3: Villa Chex"
+
+msgctxt "chex"
+msgid "HUSTR_E3M4"
+msgstr "E3M4: Provinzpark"
+
+msgctxt "chex"
+msgid "HUSTR_E3M5"
+msgstr "E3M5: Meteor-Raumschiff"
+
+msgctxt "chex"
+msgid "CC_ZOMBIE"
+msgstr "Commonus"
+
+msgctxt "chex"
+msgid "CC_SHOTGUN"
+msgstr "Bipedicus"
+
+msgctxt "chex"
+msgid "CC_IMP"
+msgstr "Bipedicus mit Panzerung"
+
+msgctxt "chex"
+msgid "CC_DEMON"
+msgstr "Stridicus"
+
+msgctxt "chex"
+msgid "CC_LOST"
+msgstr "Flem-Mine"
+
+msgctxt "chex"
+msgid "CC_CACO"
+msgstr "Super Cycloptis"
+
+msgctxt "chex"
+msgid "CC_BARON"
+msgstr "Maximus"
+
+msgctxt "chex"
+msgid "CC_SPIDER"
+msgstr "Die Flembomination"
+
+msgctxt "chex"
+msgid "CC_CYBER"
+msgstr "Lord Snotfolus"
+
+msgctxt "chex"
+msgid "CC_HERO"
+msgstr "Chex Krieger"
+
+msgctxt "chex"
+msgid "PD_BLUEC"
+msgstr "Du brauchst einen blauen Schlüssel, um diese Tür zu öffnen"
+
+msgctxt "chex"
+msgid "PD_REDC"
+msgstr "Du brauchst einen roten Schlüssel, um diese Tür zu öffnen"
+
+msgctxt "chex"
+msgid "PD_YELLOWC"
+msgstr "Du brauchst einen gelben Schlüssel, um diese Tür zu öffnen"
+
+msgid "PD_BLUEF"
+msgstr "Du brauchst einen blauen Flemschlüssel, um diese Tür zu öffnen"
+
+msgid "PD_REDF"
+msgstr "Du brauchst einen roten Flemschlüssel, um diese Tür zu öffnen"
+
+msgid "PD_YELLOWF"
+msgstr "Du brauchst einen gelben Flemschlüssel, um diese Tür zu öffnen"
+
+msgctxt "chex"
+msgid "OB_SLIME"
+msgstr "%o versank im Schleim."
+
+msgctxt "chex"
+msgid "OB_LAVA"
+msgstr "%o versank im Schleim."
+
+msgid "OB_POWERSTRAND"
+msgstr "%o wurde von interdimensionalem Schleim getroffen!"
+
+msgctxt "chex"
+msgid "OB_KILLEDSELF"
+msgstr "%o wurde von interdimensionalem Schleim getroffen!"
+
+msgid "OB_STRIDICUS"
+msgstr "%o wurde von einem Stridicus bepopelt."
+
+msgid "OB_FLEMMINE"
+msgstr "%o wurde von einer Flem-Mine beschmiert."
+
+msgid "OB_SUPERCYCLOPTIS"
+msgstr "%o wurde von einem Super Cycloptis vollgeschleimt."
+
+msgid "OB_MAXIMUS"
+msgstr "%o wurde von einem Maximus besiegt."
+
+msgid "OB_LARVA"
+msgstr "%o wurde von einer Larve beschmiert."
+
+msgid "OB_QUADRUMPUS"
+msgstr "%o wurde von einem Quadrumpus vollgeschleimt."
+
+msgid "OB_FLEMBOMINATION"
+msgstr "%o wurde von der Flembomination besiegt."
+
+msgid "OB_SNOTFOLUS"
+msgstr "%o wurde von Lord Snotfolus besiegt."
+
+msgctxt "chex"
+msgid "OB_MPR_SPLASH"
+msgstr "%o wurde von %ks Propeller getroffen."
+
+msgctxt "chex"
+msgid "E1TEXT"
+msgstr ""
+"Nachdem du die monströse Flembrane\n"
+"in ihre eigene Dimension zurückgeschickt\n"
+"hast, befreist du die Gefangenen.\n"
+"Und dennoch sind die Flemoiden\n"
+"überall! Du kämpfst dich mit den\n"
+"Gefangenen zu deinem Raumschiff.\n"
+"Die Flemoiden schleimen dein Schiff, aber\n"
+"du entkommst mit knapper Not.\n"
+"Du wirst für deine gewagte Rettung gelobt,\n"
+"schickst aber eine Warnung ab, dass wir\n"
+"die Flemoiden noch nicht los sind …\n"
+"\n"
+"Unglückicherweise hast du Recht.\n"
+"Denn als du nach Hause kommst,\n"
+"erkennst du, dass dir die Flemoiden\n"
+"gefolgt sind. Bereite dich auf Chex\n"
+"Quest 2: Terror in Chex-City vor!"
+
+msgctxt "chex"
+msgid "E2TEXT"
+msgstr ""
+"Du zorchst die verbleibenden\n"
+"Flemoiden, die sich noch in der\n"
+"Kanalisation aufhielten, weg. Chex\n"
+"City ist gerettet. Es sieht aus, als ob die Flemoidenbedrohung beendet ist.\n"
+"\n"
+"\n"
+"Zehn Jahre vergehen in Frieden und\n"
+"Wohlstand. Aber die Flemoiden waren\n"
+"nicht besiegt und ihr Verlangen, die\n"
+"Zerealiendimension zu kontollieren, hat\n"
+"nicht abgenommen. Sie haben all ihre\n"
+"Truppen zusammengezogen und ein gigantisches interdimensionales Portal\n"
+"erschaffen, und nun macht sich ein gigantischer Ball intergalaktischen\n"
+"Schleims auf den Weg zum Zerealienplaneten.\n"
+"\n"
+"Mach dich bereit für\n"
+"Chex Quest 3: Invasion!"
+
+msgctxt "chex"
+msgid "E3TEXT"
+msgstr ""
+"Mit einem letzten Schuss zorchst du\n"
+"Lord Snotfolus zurück in seine eigene\n"
+"Dimension! Gegen alle Widerstände\n"
+"hast du eigenhändiig die Invasion\n"
+"scheitern lassen!\n"
+"\n"
+"Du hoffst wirklich, dass die Flemoiden\n"
+"ihre Lektion gelernt haben und nie wieder in die Zerealiendimension\n"
+"zurückkehren.\n"
+"\n"
+"\n"
+"\n"
+"Aber falls sie das doch tun, wirst du\n"
+"bereit sein!"
+
+msgid "M_EPI1"
+msgstr "Rettung auf Bazoik"
+
+msgid "M_EPI2"
+msgstr "Terror in Chex Stadt"
+
+msgid "M_EPI3"
+msgstr "Invasion!"
+
+msgid "TAG_GOGGLES"
+msgstr "Ultrabrille"
+
+msgid "TAG_BLUEFLEMKEY"
+msgstr "Blauer Flemschlüssel"
+
+msgid "TAG_YELLOWFLEMKEY"
+msgstr "Gelber Flemschlüssel"
+
+msgid "TAG_REDFLEMKEY"
+msgstr "Roter Flemschlüssel"
