@@ -5,7 +5,7 @@
 class Win32DisplayBackend : public DisplayBackend
 {
 public:
-	std::unique_ptr<DisplayWindow> Create(DisplayWindowHost* windowHost, bool popupWindow, DisplayWindow* owner, RenderAPI renderAPI, bool resizable, bool utility) override;
+	std::unique_ptr<DisplayWindow> Create(DisplayWindowHost* windowHost, DisplayWindow* owner, RenderAPI renderAPI, struct WindowParams) override;
 	void ProcessEvents() override;
 	void RunLoop() override;
 	void ExitLoop() override;

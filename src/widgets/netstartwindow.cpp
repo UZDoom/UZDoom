@@ -29,14 +29,10 @@ NetStartWindow* NetStartWindow::Instance = nullptr;
 
 void NetStartWindow::NetInit(const char* message, bool host)
 {
-	Size screenSize = GetScreenSize();
-	double windowWidth = 450.0;
-	double windowHeight = 600.0;
-
 	if (!Instance)
 	{
 		Instance = new NetStartWindow(host);
-		Instance->SetFrameGeometry((screenSize.width - windowWidth) * 0.5, (screenSize.height - windowHeight) * 0.5, windowWidth, windowHeight);
+		// Instance->SetFrameGeometry((screenSize.width - windowWidth) * 0.5, (screenSize.height - windowHeight) * 0.5, windowWidth, windowHeight);
 		Instance->Show();
 	}
 
@@ -170,7 +166,10 @@ bool NetStartWindow::NetLoop(bool (*loopCallback)(void*), void* data)
 	return Instance->exitreason;
 }
 
-NetStartWindow::NetStartWindow(bool host) : Widget(nullptr, WidgetType::Window)
+NetStartWindow::NetStartWindow(bool host) : Widget(nullptr, WidgetType::Window, RenderAPI::Unspecified, WindowParams{
+	.size = { 450, 600 },
+	.minSize = { 300, 300 },
+})
 {
 	SetWindowTitle(GAMENAME);
 

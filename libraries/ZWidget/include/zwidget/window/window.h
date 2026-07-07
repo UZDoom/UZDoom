@@ -149,10 +149,20 @@ public:
 	virtual bool OnFileDrop(std::string path) = 0;
 };
 
+struct WindowParams {
+	bool utility = false;
+	bool popup = false;
+	struct { unsigned width = 320; unsigned height = 200; } size;
+	bool resizable = true;
+	struct { unsigned width = 0; unsigned height = 0; } minSize;
+	struct { unsigned width = 0; unsigned height = 0; } maxSize;
+	bool centered = true;
+};
+
 class DisplayWindow
 {
 public:
-	static std::unique_ptr<DisplayWindow> Create(DisplayWindowHost* windowHost, bool popupWindow, DisplayWindow* owner, RenderAPI renderAPI, bool resizable, bool utility);
+	static std::unique_ptr<DisplayWindow> Create(DisplayWindowHost* windowHost, DisplayWindow* owner, RenderAPI renderAPI, struct WindowParams params);
 
 	static void ProcessEvents();
 	static void RunLoop();
@@ -230,7 +240,7 @@ public:
 	virtual bool IsWin32() { return false; }
 	virtual bool IsSDL2() { return false; }
 
-	virtual std::unique_ptr<DisplayWindow> Create(DisplayWindowHost* windowHost, bool popupWindow, DisplayWindow* owner, RenderAPI renderAPI, bool resizable, bool utility) = 0;
+	virtual std::unique_ptr<DisplayWindow> Create(DisplayWindowHost* windowHost, DisplayWindow* owner, RenderAPI renderAPI, struct WindowParams) = 0;
 	virtual void ProcessEvents() = 0;
 	virtual void RunLoop() = 0;
 	virtual void ExitLoop() = 0;

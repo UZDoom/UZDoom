@@ -10,7 +10,7 @@
 class Win32DisplayWindow : public DisplayWindow
 {
 public:
-	Win32DisplayWindow(DisplayWindowHost* windowHost, bool popupWindow, Win32DisplayWindow* owner, RenderAPI renderAPI, bool resizable, bool utility);
+	Win32DisplayWindow(DisplayWindowHost* windowHost, Win32DisplayWindow* owner, RenderAPI renderAPI, struct WindowParams params);
 	~Win32DisplayWindow();
 
 	void SetWindowTitle(const std::string& text) override;
@@ -98,4 +98,7 @@ public:
 	HICON LargeIcon = {};
 
 	StandardCursor CurrentCursor = StandardCursor::arrow;
+private:
+	bool resizable;
+	int minW, maxW, minH, maxH, padW, padH;
 };

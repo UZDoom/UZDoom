@@ -2004,11 +2004,7 @@ bool FBehaviorContainer::CheckAllGood ()
 
 void FBehaviorContainer::UnloadModules ()
 {
-	for (unsigned int i = StaticModules.Size(); i-- > 0; )
-	{
-		delete StaticModules[i];
-	}
-	StaticModules.Clear ();
+	StaticModules.DeleteAndClear();
 }
 
 FBehavior *FBehaviorContainer::GetModule (int lib)

@@ -58,6 +58,10 @@ CVARD(Bool, i_searchdistributors, true, CVAR_ARCHIVE|CVAR_GLOBALCONFIG, "Search 
 // Show release notes upon update 0:no, 1: yes, 2: always for testing
 CVARD(Int, i_display_new_release, 1, CVAR_ARCHIVE|CVAR_GLOBALCONFIG, "Show release notes upon update");
 
+CVARD(Bool, ui_remember_size, true,  CVAR_ARCHIVE|CVAR_GLOBALCONFIG, "Launcher retains size between launches");
+CVARD(Int, ui_launcher_width, 0,  CVAR_ARCHIVE|CVAR_GLOBALCONFIG, "Launcher width");
+CVARD(Int, ui_launcher_height, 0,  CVAR_ARCHIVE|CVAR_GLOBALCONFIG, "Launcher height");
+
 EXTERN_FARG(iwad);
 EXTERN_FARG(host);
 EXTERN_FARG(join);
@@ -849,6 +853,12 @@ int FIWadManager::IdentifyVersion (std::vector<FileSys::ResourceName>&wadfiles, 
 		info.isNewRelease = (i_display_new_release>1) || i_is_new_release;
 		info.notifyNewRelease = !!i_display_new_release;
 
+		if (ui_remember_size)
+		{
+			info.LauncherWidth = ui_launcher_width;
+			info.LauncherHeight = ui_launcher_height;
+		}
+
 		if (I_PickIWad((queryiwad || showlauncher) || HoldingQueryKey(queryiwad_key), info))
 		{
 			pick = info.SaveInfo();
@@ -860,6 +870,11 @@ int FIWadManager::IdentifyVersion (std::vector<FileSys::ResourceName>&wadfiles, 
 			i_exit_on_not_found = info.DefaultFileLoadBehaviour;
 			if (!info.notifyNewRelease)
 				i_display_new_release = 0; // don't change truthy values
+			if (ui_remember_size)
+			{
+				ui_launcher_width = info.LauncherWidth;
+				ui_launcher_height = info.LauncherHeight;
+			}
 		}
 		else
 		{

@@ -84,6 +84,13 @@ struct FStartupSelectionInfo
 	const TArray<WadStuff>* Wads = nullptr;
 	FArgs* Args = nullptr;
 
+	// Launcher settings
+	bool notifyNewRelease = true;
+	FName prideColors = {};
+	float prideMix = 0;
+	unsigned LauncherWidth = 0;
+	unsigned LauncherHeight = 0;
+
 	// Local game info
 	int DefaultIWAD = 0;
 	FString DefaultArgs = {};
@@ -97,9 +104,6 @@ struct FStartupSelectionInfo
 	int DefaultBackend = 1;
 	bool DefaultFullscreen = true;
 	int DefaultFileLoadBehaviour = 0;
-	bool notifyNewRelease = true;
-	FName prideColors = {};
-	float prideMix = 0;
 
 	// Net game info
 	int DefaultNetIWAD = 0;

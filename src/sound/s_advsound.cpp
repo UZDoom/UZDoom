@@ -407,11 +407,11 @@ DEFINE_ACTION_FUNCTION(DObject,S_GetLength)
 // lump. Otherwise, adds the new mapping by using S_AddSoundLump().
 //==========================================================================
 
-FSoundID S_AddSound (const char *logicalname, const char *lumpname, FScanner *sc)
+FSoundID S_AddSound (const char *logicalname, const char *lumpname, FScanner *sc, bool warnMissing)
 {
 	int lump = fileSystem.CheckNumForFullName (lumpname, true, ns_sounds);
 
-	if (developer >= DMSG_WARNING && lump <= -1)
+	if (warnMissing && developer >= DMSG_WARNING && lump <= -1)
 	{
 		if (sc)
 		{
@@ -482,7 +482,7 @@ static FSoundID S_AddSound (const char *logicalname, int lumpnum, FScanner *sc)
 // Adds the given sound lump to the player sound lists.
 //==========================================================================
 
-FSoundID S_AddPlayerSound (const char *pclass, int gender, FSoundID refid, const char *lumpname)
+FSoundID S_AddPlayerSound (const char *pclass, int gender, FSoundID refid, const char *lumpname, bool warnMissing)
 {
 	int lump = -1;
 
@@ -490,7 +490,7 @@ FSoundID S_AddPlayerSound (const char *pclass, int gender, FSoundID refid, const
 	{
 		lump = fileSystem.CheckNumForFullName (lumpname, true, ns_sounds);
 
-		if (developer >= DMSG_WARNING && lump <= -1)
+		if (warnMissing && developer >= DMSG_WARNING && lump <= -1)
 		{
 			Printf(PRINT_NONOTIFY,
 			       TEXTCOLOR_ORANGE "Player sound " TEXTCOLOR_WHITE "%s, %s" TEXTCOLOR_ORANGE " - Lump doesn't exist: " TEXTCOLOR_WHITE "%s\n",
@@ -767,6 +767,8 @@ static void S_AddSNDINFO (int lump)
 	FScanner sc(lump);
 	skipToEndIf = false;
 
+	// Ignore missing entries from the internal pk3 only.
+	const bool warnMissing = fileSystem.GetFileContainer(lump) > 0;
 	while (sc.GetString ())
 	{
 		if (skipToEndIf)
@@ -916,7 +918,7 @@ static void S_AddSNDINFO (int lump)
 				FSoundID refid, sfxnum;
 
 				S_ParsePlayerSoundCommon(sc, pclass, gender, refid);
-				sfxnum = S_AddPlayerSound(pclass.GetChars(), gender, refid, sc.String);
+				sfxnum = S_AddPlayerSound(pclass.GetChars(), gender, refid, sc.String, warnMissing);
 				if (0 == stricmp(sc.String, "dsempty"))
 				{
 					soundEngine->GetWritableSfx(sfxnum)->UserData[0] |= SND_PlayerSilent;
@@ -1334,7 +1336,7 @@ static void S_AddSNDINFO (int lump)
 			}
 
 			sc.MustGetString ();
-			S_AddSound (name.GetChars(), sc.String, &sc);
+			S_AddSound (name.GetChars(), sc.String, &sc, warnMissing);
 		}
 	}
 }

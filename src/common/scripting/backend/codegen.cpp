@@ -2949,6 +2949,7 @@ ExpEmit FxAssign::Emit(VMFunctionBuilder *build)
 		emitters.AddParameter(build, Base);
 		emitters.AddParameter(build, Right);
 		emitters.AddParameterIntConst(IsBitWrite - 64);
+		emitters.AddReturn(REGT_INT);
 		return emitters.EmitCall(build);
 	}
 }
@@ -7735,6 +7736,7 @@ FxExpression *FxStructMember::Resolve(FCompileContext &ctx)
 			// [ZZ] call ChangeSideInFlags to ensure that we don't get ui+play
 			auto newfield = Create<PField>(NAME_None, membervar->Type, FScopeBarrier::ChangeSideInFlags(membervar->Flags | parentfield->Flags, BarrierSide), membervar->Offset + parentfield->Offset);
 			newfield->BitValue = membervar->BitValue;
+			newfield->mDefFileNo = membervar->mDefFileNo;
 			static_cast<FxMemberBase *>(classx)->membervar = newfield;
 			classx->isresolved = false;	// re-resolve the parent so it can also check if it can be optimized away.
 			auto x = classx->Resolve(ctx);
@@ -8025,6 +8027,7 @@ FxExpression *FxArrayElement::Resolve(FCompileContext &ctx)
 			auto parentfield = static_cast<FxMemberBase *>(Array)->membervar;
 			// PFields are garbage collected so this will be automatically taken care of later.
 			auto newfield = Create<PField>(NAME_None, elementtype, parentfield->Flags, indexval * arraytype->ElementSize + parentfield->Offset);
+			newfield->mDefFileNo = parentfield->mDefFileNo;
 			static_cast<FxMemberBase *>(Array)->membervar = newfield;
 			Array->isresolved = false;	// re-resolve the parent so it can also check if it can be optimized away.
 			auto x = Array->Resolve(ctx);
@@ -9256,6 +9259,7 @@ FxExpression *FxMemberFunctionCall::Resolve(FCompileContext& ctx)
 					{
 						auto member = static_cast<FxMemberBase*>(Self);
 						auto newfield = Create<PField>(NAME_None, backingtype, 0, member->membervar->Offset);
+						newfield->mDefFileNo = member->membervar->mDefFileNo;
 						member->membervar = newfield;
 					}
 				}
@@ -9301,6 +9305,7 @@ FxExpression *FxMemberFunctionCall::Resolve(FCompileContext& ctx)
 				{
 					auto member = static_cast<FxMemberBase*>(Self);
 					auto newfield = Create<PField>(NAME_None, TypeUInt32, VARF_ReadOnly, member->membervar->Offset + sizeof(void*));	// the size is stored right behind the pointer.
+					newfield->mDefFileNo = member->membervar->mDefFileNo;
 					member->membervar = newfield;
 					Self = nullptr;
 					delete this;
@@ -9392,6 +9397,7 @@ FxExpression *FxMemberFunctionCall::Resolve(FCompileContext& ctx)
 				{
 					auto member = static_cast<FxMemberBase*>(Self);
 					auto newfield = Create<PField>(NAME_None, backingtype, 0, member->membervar->Offset);
+					newfield->mDefFileNo = member->membervar->mDefFileNo;
 					member->membervar = newfield;
 				}
 			}
@@ -9486,6 +9492,7 @@ FxExpression *FxMemberFunctionCall::Resolve(FCompileContext& ctx)
 				{
 					auto member = static_cast<FxMemberBase*>(Self);
 					auto newfield = Create<PField>(NAME_None, backingtype, 0, member->membervar->Offset);
+					newfield->mDefFileNo = member->membervar->mDefFileNo;
 					member->membervar = newfield;
 				}
 			}

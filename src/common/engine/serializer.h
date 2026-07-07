@@ -327,8 +327,8 @@ FSerializer &Serialize(FSerializer &arc, const char *key, std::pair<A, B> &value
 	return arc;
 }
 
-template<class T, class TT>
-FSerializer &Serialize(FSerializer &arc, const char *key, TArray<T, TT> &value, TArray<T, TT> *def)
+template<class T>
+FSerializer &Serialize(FSerializer &arc, const char *key, TArray<T> &value, TArray<T> *def)
 {
 	if (arc.isWriting())
 	{

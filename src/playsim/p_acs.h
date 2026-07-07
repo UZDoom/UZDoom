@@ -421,7 +421,7 @@ private:
 struct FBehaviorContainer
 {
 	FLevelLocals *Level;
-	TArray<FBehavior *> StaticModules;
+	TDeletingArray<FBehavior *, /*reverseOrderDelete =*/ true> StaticModules;
 
 	FBehaviorContainer(FLevelLocals *l) : Level(l) {}
 

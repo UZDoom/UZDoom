@@ -172,7 +172,7 @@ protected:
 	std::vector<TextLabel *> text;
 public:
 	ChoicePopup(Widget * parent, const std::string &title, const std::vector<std::string> &text, const PopupBase::ActionListType &actions, double _windowWidth, int flags)
-		: PopupBase(parent->Window(), WidgetType::Utility, RenderAPI::Unspecified, false)
+		: PopupBase(parent->Window(), WidgetType::Utility, RenderAPI::Unspecified, { .resizable = false })
 	{
 		allowCloseButton = !(flags & POPUPF_DISALLOW_CLOSE);
 

@@ -955,6 +955,9 @@ void TransferSpecial(sector_t *sector, sector_t *model)
 	sector->damageinterval = model->damageinterval;
 	sector->leakydamage = model->leakydamage;
 	sector->Flags = (sector->Flags&~SECF_SPECIALFLAGS) | (model->Flags & SECF_SPECIALFLAGS);
+	// According to https://forum.zdoom.org/viewtopic.php?style=21&t=80227 this probably should be only for Doom
+	if ((compatflags2 & COMPATF2_TRANSFERSECRET || sv_autocompat) && gameinfo.gametype == GAME_Doom && model->isSecret())
+		sector->Flags |= SECF_SECRET;
 }
 
 //=====================================================================================

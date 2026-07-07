@@ -2,16 +2,19 @@
 #include "core/timer.h"
 #include "core/colorf.h"
 #include "core/theme.h"
+#include "window/window.h"
 #include <stdexcept>
 #include <cmath>
 #include <algorithm>
 
-Widget::Widget(Widget* parent, WidgetType type, RenderAPI renderAPI, bool windowResizable) : Type(type)
+Widget::Widget(Widget* parent, WidgetType type, RenderAPI renderAPI, struct WindowParams params) : Type(type)
 {
 	if (type != WidgetType::Child)
 	{
 		Widget* owner = parent ? parent->Window() : nullptr;
-		DispWindow = DisplayWindow::Create(this, type == WidgetType::Popup, owner ? owner->DispWindow.get() : nullptr, renderAPI, windowResizable, type == WidgetType::Utility);
+		params.popup = type == WidgetType::Popup;
+		params.utility = type == WidgetType::Utility;
+		DispWindow = DisplayWindow::Create(this, owner ? owner->DispWindow.get() : nullptr, renderAPI, params);
 		if (renderAPI == RenderAPI::Unspecified || renderAPI == RenderAPI::Bitmap)
 		{
 			DispCanvas = Canvas::create();

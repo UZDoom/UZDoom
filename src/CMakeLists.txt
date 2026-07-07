@@ -1279,7 +1279,7 @@ set( GAME_SOURCES
 set( GAME_NONPCH_SOURCES ${GAME_SOURCES} )
 list( REMOVE_ITEM GAME_NONPCH_SOURCES ${PCH_SOURCES} )
 
-add_executable( zdoom WIN32 MACOSX_BUNDLE ${GAME_SOURCES} )
+add_executable( zdoom MACOSX_BUNDLE ${GAME_SOURCES} )
 
 target_include_directories( zdoom PRIVATE ${CMAKE_BINARY_DIR} )
 
@@ -1448,9 +1448,11 @@ endif()
 if( MSVC )
 	option ( CONSOLE_MODE "Compile as a console application" OFF )
 	if ( CONSOLE_MODE )
-		set ( CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SUBSYSTEM:CONSOLE /ENTRY:wmainCRTStartup" )
+		set_target_properties( zdoom PROPERTIES WIN32_EXECUTABLE FALSE )
+		target_link_options( zdoom PRIVATE "/ENTRY:wmainCRTStartup" )
 	else()
-		set ( CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} /SUBSYSTEM:WINDOWS /ENTRY:wWinMainCRTStartup" )
+		set_target_properties( zdoom PROPERTIES WIN32_EXECUTABLE TRUE )
+		target_link_options( zdoom PRIVATE "/ENTRY:wWinMainCRTStartup" )
 	endif()
 
 	option( ZDOOM_GENERATE_MAPFILE "Generate .map file for debugging." OFF )

@@ -1,5 +1,6 @@
 #include "sdl2_display_backend.h"
 #include "sdl2_display_window.h"
+#include "window/window.h"
 #include <stdexcept>
 #include <SDL2/SDL_video.h>
 #ifndef WIN32
@@ -61,9 +62,9 @@ SDL2DisplayBackend::SDL2DisplayBackend()
 	}
 }
 
-std::unique_ptr<DisplayWindow> SDL2DisplayBackend::Create(DisplayWindowHost* windowHost, bool popupWindow, DisplayWindow* owner, RenderAPI renderAPI, bool resizable, bool utility)
+std::unique_ptr<DisplayWindow> SDL2DisplayBackend::Create(DisplayWindowHost* windowHost, DisplayWindow* owner, RenderAPI renderAPI, struct WindowParams params)
 {
-	return std::make_unique<SDL2DisplayWindow>(windowHost, popupWindow, static_cast<SDL2DisplayWindow*>(owner), renderAPI, UIScale, resizable, utility);
+	return std::make_unique<SDL2DisplayWindow>(windowHost, static_cast<SDL2DisplayWindow*>(owner), renderAPI, UIScale, params);
 }
 
 void SDL2DisplayBackend::ProcessEvents()

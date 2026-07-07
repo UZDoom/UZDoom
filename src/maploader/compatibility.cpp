@@ -167,6 +167,7 @@ static FCompatOption Options[] =
 	{ "noacsargcheck",			COMPATF2_NOACSARGCHECK, SLOT_COMPAT2 },
 	{ "novdolllockmsg",			COMPATF2_NOVDOLLLOCKMSG, SLOT_COMPAT2 },
 	{ "emulatemikoportals",		COMPATF2_EMULATEMIKOPORTALS, SLOT_COMPAT2 },
+	{ "transfersecret",			COMPATF2_TRANSFERSECRET, SLOT_COMPAT2},
 
 	{ NULL, 0, 0 }
 };

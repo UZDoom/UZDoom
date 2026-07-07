@@ -41,7 +41,7 @@ class LauncherWindow : public Widget
 public:
 	static bool ExecModal(FStartupSelectionInfo& info);
 
-	LauncherWindow(FStartupSelectionInfo& info);
+	LauncherWindow(FStartupSelectionInfo& info, struct WindowParams params);
 	void UpdateLanguage();
 
 	void UpdateSize();
@@ -57,6 +57,7 @@ private:
 	void OnClose() override;
 	void OnGeometryChanged() override;
 	void OnWindowClose() override;
+	void Notify(Widget* source, const WidgetEvent type) override;
 
 	LauncherBanner* Banner = nullptr;
 	TabWidget* Pages = nullptr;

@@ -8,7 +8,7 @@
 class SDL2DisplayWindow : public DisplayWindow
 {
 public:
-	SDL2DisplayWindow(DisplayWindowHost* windowHost, bool popupWindow, SDL2DisplayWindow* owner, RenderAPI renderAPI, double uiscale, bool resizable, bool utility);
+	SDL2DisplayWindow(DisplayWindowHost* windowHost, SDL2DisplayWindow* owner, RenderAPI renderAPI, double uiscale, struct WindowParams);
 	~SDL2DisplayWindow();
 
 	void SetWindowTitle(const std::string& text) override;

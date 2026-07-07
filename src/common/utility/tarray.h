@@ -38,19 +38,20 @@
 
 #pragma once
 
-#include <stdlib.h>
-#include <assert.h>
-#include <string.h>
+#include <cstdlib>
+#include <cassert>
+#include <cstring>
 #include <new>
 #include <utility>
 #include <iterator>
 #include <algorithm>
 #include <functional>
+#include <type_traits>
 
 #if !defined(_WIN32)
-#include <inttypes.h>		// for intptr_t
+#include <cinttypes>		// for intptr_t
 #else
-#include <stdint.h>			// for mingw
+#include <cstdint>			// for mingw
 #endif
 
 #if __has_include("m_alloc.h")
@@ -126,8 +127,7 @@ struct FArray
 };
 
 // T is the type stored in the array.
-// TT is the type returned by operator().
-template <class T, class TT=T>
+template <class T>
 class TArray
 {
 public:
@@ -244,17 +244,17 @@ public:
 		}
 	}
 
-	TArray (const TArray<T,TT> &other)
+	TArray (const TArray<T> &other)
 	{
 		DoCopy (other);
 	}
-	TArray (TArray<T,TT> &&other) noexcept
+	TArray (TArray<T> &&other) noexcept
 	{
 		Array = other.Array; other.Array = NULL;
 		Most = other.Most; other.Most = 0;
 		Count = other.Count; other.Count = 0;
 	}
-	TArray<T,TT> &operator= (const TArray<T,TT> &other)
+	TArray<T> &operator= (const TArray<T> &other)
 	{
 		if (&other != this)
 		{
@@ -270,7 +270,7 @@ public:
 		}
 		return *this;
 	}
-	TArray<T,TT> &operator= (TArray<T,TT> &&other) noexcept
+	TArray<T> &operator= (TArray<T> &&other) noexcept
 	{
 		if (Array)
 		{
@@ -322,12 +322,7 @@ public:
 		assert(index <= Count);
 		return Array[index];
 	}
-	// Returns the value of an element
-	TT operator() (size_t index) const
-	{
-		assert(index <= Count);
-		return Array[index];
-	}
+
 	// Returns a reference to the last element
 	T &Last() const
 	{
@@ -773,6 +768,10 @@ public:
 	{
 		return (int)Count;
 	}
+	int64_t SSize64() const
+	{
+		return (int)Count;
+	}
 	unsigned int Max () const
 	{
 		return Most;
@@ -796,7 +795,7 @@ public:
 		}
 	}
 
-	void Swap(TArray<T, TT> &other)
+	void Swap(TArray<T> &other)
 	{
 		std::swap(Array, other.Array);
 		std::swap(Count, other.Count);
@@ -888,37 +887,62 @@ private:
 	}
 };
 
+template<typename T>
+concept IsPointer = std::is_pointer<T>::value;
+
 // TDeletingArray -----------------------------------------------------------
 // An array that deletes its elements when it gets deleted.
-template<class T, class TT=T>
-class TDeletingArray : public TArray<T, TT>
+template<IsPointer T, bool reverseOrderDelete = false>
+class TDeletingArray : public TArray<T>
 {
 public:
-	TDeletingArray() : TArray<T,TT>() {}
-	TDeletingArray(TDeletingArray<T,TT> &&other) : TArray<T,TT>(std::move(other)) {}
-	TDeletingArray<T,TT> &operator=(TDeletingArray<T,TT> &&other)
+	TDeletingArray() : TArray<T>() {}
+	TDeletingArray(TDeletingArray<T> &&other) : TArray<T>(std::move(other)) {}
+	TDeletingArray<T> &operator=(TDeletingArray<T> &&other)
 	{
 		DeleteAndClear();
-		TArray<T,TT>::operator=(std::move(other));
+		TArray<T>::operator=(std::move(other));
 		return *this;
 	}
 
 	~TDeletingArray()
 	{
-		for (unsigned int i = 0; i < TArray<T,TT>::Size(); ++i)
+		if constexpr(reverseOrderDelete)
 		{
-			if ((*this)[i] != NULL)
-				delete (*this)[i];
+			for (int64_t i = (TArray<T>::SSize64() - 1); i >= 0; i--)
+			{
+				if ((*this)[i])
+					delete (*this)[i];
+			}
+		}
+		else
+		{
+			for (unsigned int i = 0; i < TArray<T>::Size(); ++i)
+			{
+				if ((*this)[i])
+					delete (*this)[i];
+			}
 		}
 	}
 	void DeleteAndClear()
 	{
-		for (unsigned int i = 0; i < TArray<T,TT>::Size(); ++i)
+		if constexpr(reverseOrderDelete)
 		{
-			if ((*this)[i] != NULL)
-				delete (*this)[i];
+			for (int64_t i = (TArray<T>::SSize64() - 1); i >= 0; i--)
+			{
+				if ((*this)[i])
+					delete (*this)[i];
+			}
 		}
-		this->Clear();
+		else
+		{
+			for (unsigned int i = 0; i < TArray<T>::Size(); ++i)
+			{
+				if ((*this)[i])
+					delete (*this)[i];
+			}
+		}
+		TArray<T>::Clear();
 	}
 };
 
@@ -1016,8 +1040,8 @@ public:
 // It can still be used as a normal TArray if needed. ACS uses this for
 // world and global arrays.
 
-template <class T, class TT=T>
-class TAutoGrowArray : public TArray<T, TT>
+template <class T>
+class TAutoGrowArray : public TArray<T>
 {
 public:
 	T GetVal (unsigned int index)

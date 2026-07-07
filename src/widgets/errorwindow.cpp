@@ -31,13 +31,8 @@
 
 bool ErrorWindow::ExecModal(const std::string& text, const std::string& log, std::vector<uint8_t> minidump)
 {
-	Size screenSize = GetScreenSize();
-	double windowWidth = 1200.0;
-	double windowHeight = 700.0;
-
 	auto window = std::make_unique<ErrorWindow>(std::move(minidump));
 	window->SetText(text, log);
-	window->SetFrameGeometry((screenSize.width - windowWidth) * 0.5, (screenSize.height - windowHeight) * 0.5, windowWidth, windowHeight);
 	window->Show();
 
 	DisplayWindow::RunLoop();
@@ -45,7 +40,12 @@ bool ErrorWindow::ExecModal(const std::string& text, const std::string& log, std
 	return window->Restart;
 }
 
-ErrorWindow::ErrorWindow(std::vector<uint8_t> initminidump) : Widget(nullptr, WidgetType::Window), minidump(std::move(initminidump))
+ErrorWindow::ErrorWindow(std::vector<uint8_t> initminidump) : Widget(nullptr, WidgetType::Window, RenderAPI::Unspecified, WindowParams{
+	.size={ 1200, 700 },
+	.resizable=true,
+	.minSize={ 640, 480 },
+	.centered=true
+}), minidump(std::move(initminidump))
 {
 	GetCanvas()->setLanguage(GStrings.GetLangScript().GetChars());
 

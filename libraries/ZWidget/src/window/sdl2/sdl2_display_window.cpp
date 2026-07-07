@@ -11,7 +11,7 @@ Uint32 SDL2DisplayWindow::PaintEventNumber = 0xffffffff;
 bool SDL2DisplayWindow::ExitRunLoop;
 std::unordered_map<int, SDL2DisplayWindow*> SDL2DisplayWindow::WindowList;
 
-SDL2DisplayWindow::SDL2DisplayWindow(DisplayWindowHost* windowHost, bool popupWindow, SDL2DisplayWindow* owner, RenderAPI renderAPI, double uiscale, bool resizable, bool utility) : WindowHost(windowHost), UIScale(uiscale)
+SDL2DisplayWindow::SDL2DisplayWindow(DisplayWindowHost* windowHost, SDL2DisplayWindow* owner, RenderAPI renderAPI, double uiscale, struct WindowParams params) : WindowHost(windowHost), UIScale(uiscale)
 {
 	unsigned int flags = SDL_WINDOW_HIDDEN /*| SDL_WINDOW_ALLOW_HIGHDPI*/;
 	if (renderAPI == RenderAPI::Vulkan)
@@ -23,19 +23,31 @@ SDL2DisplayWindow::SDL2DisplayWindow(DisplayWindowHost* windowHost, bool popupWi
 		flags |= SDL_WINDOW_METAL;
 #endif
 
-	if (resizable)
+	auto pos = params.centered? SDL_WINDOWPOS_CENTERED: SDL_WINDOWPOS_UNDEFINED;
+	if (params.resizable)
+	{
 		flags |= SDL_WINDOW_RESIZABLE;
-	if (popupWindow)
+	}
+	if (params.popup)
 		flags |= SDL_WINDOW_BORDERLESS;
-	if (utility)
+	if (params.utility)
 	{
 		Owner = owner;
 		flags |= (SDL_WINDOW_UTILITY | SDL_WINDOW_ALWAYS_ON_TOP | SDL_WINDOW_SKIP_TASKBAR);
 	}
 
-	Handle.window = SDL_CreateWindow("", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 320, 200, flags);
+	Handle.window = SDL_CreateWindow("", pos, pos, params.size.width*uiscale, params.size.height*uiscale, flags);
 	if (!Handle.window)
 		throw std::runtime_error(std::string("Unable to create SDL window:") + SDL_GetError());
+
+	if (params.resizable)
+	{
+		SDL_SetWindowMinimumSize(Handle.window, params.minSize.width*uiscale, params.minSize.height*uiscale);
+		if (params.maxSize.width >= params.minSize.width && params.maxSize.height >= params.minSize.height)
+		{
+			SDL_SetWindowMinimumSize(Handle.window, params.maxSize.width*uiscale, params.maxSize.height*uiscale);
+		}
+	}
 
 	switch (renderAPI)
 	{
