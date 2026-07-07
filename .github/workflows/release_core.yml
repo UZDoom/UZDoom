@@ -26,6 +26,9 @@ on:
       message:
         required: true
         type: string
+      preview:
+        required: true
+        type: boolean
     secrets:
       GPG_PRIVATE_KEY:
         required: false
@@ -45,6 +48,7 @@ jobs:
           fetch-depth: 0
 
       - name: Update Tag
+        if: ${{ inputs.preview }}
         run: |
           git tag -d ${{ inputs.tag-name }} || true
           git push origin :refs/tags/${{ inputs.tag-name }} || true
@@ -160,9 +164,9 @@ jobs:
         with:
           name: UZDoom ${{ inputs.title }}
           tag_name: ${{ inputs.tag-name }}
-          draft: false
-          prerelease: true
-          make_latest: false
+          draft: ${{ ! inputs.preview }}
+          prerelease: ${{ inputs.preview }}
+          make_latest: ${{ ! inputs.preview }}
           generate_release_notes: false
           files: release/**
           body: ${{ steps.notes.outputs.message }}

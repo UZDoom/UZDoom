@@ -3,14 +3,81 @@ name: Continuous Integration
 on: [push, pull_request]
 
 permissions:
+  contents: write
   actions: write
 
 jobs:
+  ci-init:
+    if: ${{ ! startsWith(github.event.ref, 'refs/tags/x-') }}
+    runs-on: ubuntu-latest
+    name: CI Init
+    outputs:
+      url: ${{ steps.details.outputs.url }}
+      tag: ${{ steps.tag.outputs.tag }}
+      mode: ${{ steps.emit.outputs.mode }}
+      branch: ${{ steps.branch.outputs.branch || steps.tag.outputs.branch }}
+    steps:
+      - id: details
+        shell: bash
+        env:
+          EVENT: ${{ toJson(github) }}
+        run: |
+          echo "${EVENT}"
+          echo "url=${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" | tee -a "$GITHUB_OUTPUT"
+
+      - name: Branch
+        id: branch
+        if: ${{ vars.PUBLISH_RELEASES && github.ref_type == 'branch' }}
+        run: |
+          branch="${{ github.ref_name }}"
+          case "$branch" in
+            trunk) mode=preview ;;
+            experimental) mode=experimental ;;
+          esac
+          echo "mode=$mode" | tee -a "$GITHUB_OUTPUT"
+          echo "branch=$branch" | tee -a "$GITHUB_OUTPUT"
+
+      - name: Checkout
+        if: ${{ github.ref_type == 'tag' }}
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Tag
+        id: tag
+        if: ${{ github.ref_type == 'tag' }}
+        run: |
+          tag="${{ github.ref_name }}"
+          if [[ "$tag" =~ ^[0-9]+\.[0-9]+\.[0-9]+[^.]*$ ]]; then
+            branch="${tag%.*}"
+            if git merge-base --is-ancestor "$tag" "origin/$branch"; then
+              mode=stable
+            fi
+          fi
+          echo "tag=$tag" | tee -a "$GITHUB_OUTPUT"
+          echo "mode=$mode" | tee -a "$GITHUB_OUTPUT"
+          echo "branch=$branch" | tee -a "$GITHUB_OUTPUT"
+
+      - name: Ready
+        id: emit
+        run: |
+          mode=${{ steps.branch.outputs.mode || steps.tag.outputs.mode }}
+          if [[ "${{ vars.PUBLISH_RELEASES }}" ]]; then
+            if [[ -n "$mode" ]]; then
+              echo "::notice::This build will be a '$mode' release"
+              echo "mode=$mode" | tee -a "$GITHUB_OUTPUT"
+            else
+              echo "::notice::No release will be created for this build"
+            fi
+          else
+            echo "::notice::This repos has PUBLISH_RELEASES disabled"
+          fi
+
   ci-success:
     needs:
       - debinfo
       - extra
-    if: always()
+      - ci-init
     runs-on: ubuntu-latest
     name: CI Success
     steps:
@@ -19,7 +86,71 @@ jobs:
           [[ "${{ contains(needs.*.result, 'failure') }}" == "false" ]] || exit 1
           [[ "${{ contains(needs.*.result, 'cancelled') }}" == "false" ]] || exit 1
 
+# ======================
+# Release Configuration
+# ======================
+
+  ci-release-preview:
+    name: Preview
+    needs:
+      - release
+      - ci-init
+    if: ${{ needs.ci-init.outputs.mode == 'preview' }}
+    uses: ./.github/workflows/release_core.yml
+    secrets: inherit
+    with:
+      title: Preview
+      run-id: ${{ github.run_id }}
+      run-url: ${{ needs.ci-init.outputs.url }}
+      commit: ${{ github.sha }}
+      branch: ${{ needs.ci-init.outputs.branch }}
+      tag-name: x-preview
+      message: They are development builds, so they may be unstable and have issues. Please report any problems you find.
+      preview: true
+
+  ci-release-experimental:
+    name: Experimental
+    needs:
+      - release
+      - ci-init
+    if: ${{ needs.ci-init.outputs.mode == 'experimental' }}
+    uses: ./.github/workflows/release_core.yml
+    secrets: inherit
+    with:
+      title: Experimental
+      run-id: ${{ github.run_id }}
+      run-url: ${{ needs.ci-init.outputs.url }}
+      commit: ${{ github.sha }}
+      branch: ${{ needs.ci-init.outputs.branch }}
+      tag-name: x-testing
+      message: ⚠️ They are experimental development builds, specifically to test upcoming features. **Use at your own risk**.
+      label-name: experimental
+      preview: true
+
+  ci-release-stable:
+    name: Stable
+    needs:
+      - release
+      - ci-init
+    if: ${{ needs.ci-init.outputs.mode == 'stable' }}
+    uses: ./.github/workflows/release_core.yml
+    secrets: inherit
+    with:
+      title: Release
+      run-id: ${{ github.run_id }}
+      run-url: ${{ needs.ci-init.outputs.url }}
+      commit: ${{ github.sha }}
+      branch: ${{ needs.ci-init.outputs.branch }}
+      tag-name: ${{ needs.ci-init.outputs.tag }}
+      message: Release Draft for ${{ needs.ci-init.outputs.tag }}
+      preview: false
+
+# ======================
+# Primary Build Configuration
+# ======================
+
   debinfo:
+    needs: ci-init
     name: ${{ matrix.config.name }} ${{ matrix.config.build_type }}
     uses: ./.github/workflows/build_core.yml
     secrets: inherit
@@ -105,6 +236,7 @@ jobs:
                 https://github.com/AppImage/type2-runtime/releases/download/20251108/runtime-x86_64
 
   extra:
+    needs: ci-init
     name: ${{ matrix.config.name }}
     uses: ./.github/workflows/build_core.yml
     secrets: inherit
@@ -198,10 +330,12 @@ jobs:
             build_type: RelWithDebInfo
 
 # ======================
+# Secondary Build Configuration
+# ======================
 
   release:
-    name: ${{ matrix.config.name }} ${{ matrix.config.build_type }}
     needs: ci-success
+    name: ${{ matrix.config.name }} ${{ matrix.config.build_type }}
     uses: ./.github/workflows/build_core.yml
     secrets: inherit
     with:
@@ -218,8 +352,8 @@ jobs:
         config: *common_config
 
   debug:
-    name: ${{ matrix.config.name }} ${{ matrix.config.build_type }}
     needs: ci-success
+    name: ${{ matrix.config.name }} ${{ matrix.config.build_type }}
     uses: ./.github/workflows/build_core.yml
     secrets: inherit
     with:
