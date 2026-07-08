@@ -1062,11 +1062,13 @@ bool G_Responder (event_t *ev)
 	if (ev->type != EV_Mouse && primaryLevel->localEventManager->Responder(ev)) // [ZZ] ZScript ate the event // update 07.03.17: mouse events are handled directly
 		return true;
 
+	if (CT_Responder(ev))
+		return true; // chat ate the event
+
 	if (gamestate == GS_INTRO || gamestate == GS_CUTSCENE)
 	{
 		return ScreenJobResponder(ev);
 	}
-
 	// any other key pops up menu if in demos
 	// [RH] But only if the key isn't bound to a "special" command
 	if (gameaction == ga_nothing &&
@@ -1106,9 +1108,6 @@ bool G_Responder (event_t *ev)
 
 		return false;
 	}
-
-	if (CT_Responder (ev))
-		return true; // chat ate the event
 
 	if (gamestate == GS_LEVEL)
 	{

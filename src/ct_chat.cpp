@@ -536,7 +536,7 @@ static bool DoSubstitution (FString &out, const char *in)
 
 CCMD (messagemode)
 {
-	if (menuactive != MENU_Off)
+	if (gamestate != GS_LEVEL || demoplayback || menuactive != MENU_Off)
 		return;
 
 	const uint64_t time = I_msTime();
@@ -612,7 +612,7 @@ CCMD (say)
 
 CCMD (messagemode2)
 {
-	if (menuactive != MENU_Off)
+	if (gamestate != GS_LEVEL || demoplayback || menuactive != MENU_Off)
 		return;
 
 	const uint64_t time = I_msTime();
