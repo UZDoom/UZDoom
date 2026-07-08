@@ -1624,8 +1624,9 @@ static void WriteArrayVars (FSerializer &file, FWorldGlobalArray *vars, unsigned
 
 						while (it.NextPair(pair))
 						{
-							arraykey.Format("%d", pair->Key);
 							int v = pair->Value;
+							if (v == 0) continue;
+							arraykey.Format("%d", pair->Key);
 							file(arraykey.GetChars(), v);
 						}
 						file.EndObject();
