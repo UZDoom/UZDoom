@@ -120,28 +120,26 @@ void AboutPage::OnGeometryChanged()
 	double y = 0.0;
 	double w = GetWidth();
 	double h = GetHeight();
-	double tw, th;
+	double tw = 0, th, tx;
 
 	th = Notes->GetPreferredHeight();
 	Text->SetFrameGeometry(0.0, y, w, h - th - 8.0);
 	y += h - th;
 
+	tw += Notes->GetPreferredWidth();
+#ifdef HAS_UPDATER
+	if(IsCurlLoaded()) tw += ForceUpdate->GetPreferredWidth() + 8;
+#endif
+	tx = round((w-tw)/2);
+	tw = Notes->GetPreferredWidth();
+	Notes->SetFrameGeometry(tx, y, tw, th);
+	tx += tw + 8;
 #ifdef HAS_UPDATER
 	if(IsCurlLoaded())
 	{
 		tw = ForceUpdate->GetPreferredWidth();
-		ForceUpdate->SetFrameGeometry(w - (tw + 10), y, tw, th);
-		tw = Notes->GetPreferredWidth();
-		Notes->SetFrameGeometry(10, y, tw, th);
+		ForceUpdate->SetFrameGeometry(tx, y, tw, th);
 	}
-	else
-	{
-		tw = Notes->GetPreferredWidth();
-		Notes->SetFrameGeometry(round((w-tw)/2), y, tw, th);
-	}
-#else
-	tw = Notes->GetPreferredWidth();
-	Notes->SetFrameGeometry(round((w-tw)/2), y, tw, th);
 #endif
 	y += h;
 

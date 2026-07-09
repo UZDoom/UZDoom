@@ -387,7 +387,7 @@ void SettingsPage::OnGeometryChanged()
 		y += UpdaterSettingsLabel->GetPreferredHeight();
 
 		UpdaterSettingsDropdown->SetFrameGeometry(w - panelWidth, y, panelWidth, UpdaterSettingsDropdown->GetPreferredHeight());
-		y += UpdaterSettingsDropdown->GetPreferredHeight();
+		y += UpdaterSettingsDropdown->GetPreferredHeight() + 10.0;
 
 		UpdaterIntervalLabel->SetFrameGeometry(w - panelWidth, y, panelWidth, UpdaterIntervalLabel->GetPreferredHeight());
 		y += UpdaterIntervalLabel->GetPreferredHeight();
