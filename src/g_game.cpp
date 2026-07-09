@@ -2416,7 +2416,7 @@ void G_DoSaveGame (bool okForQuicksave, bool forceQuicksave, FString filename, c
 
 	if (!(primaryLevel->IsSavingAllowed () || saveFromScript))
 	{
-		Printf (PRINT_HIGH, "Saving is not allowed.\n");
+		Printf (PRINT_HIGH, "%s\n", GStrings.GetString("TXT_CANNOTSAVE"));
 		return;
 	}
 	
