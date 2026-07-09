@@ -2400,15 +2400,6 @@ static void PutSavePic (FileWriter *file, int width, int height)
 	}
 }
 
-static bool IsSavingAllowed ()
-{
-	if (dmflags3 & DF3_NO_SAVE)
-		return false;
-	if (dmflags3 & DF3_YES_SAVE)
-		return true;
-	return !(level.flags3 & LEVEL3_SAVE_NO);
-}
-
 void G_DoSaveGame (bool okForQuicksave, bool forceQuicksave, FString filename, const char *description, bool saveFromScript)
 {
 	TArray<FCompressedBuffer> savegame_content;
@@ -2423,7 +2414,7 @@ void G_DoSaveGame (bool okForQuicksave, bool forceQuicksave, FString filename, c
 		return;
 	}
 
-	if (!(IsSavingAllowed () || saveFromScript))
+	if (!(primaryLevel->IsSavingAllowed () || saveFromScript))
 	{
 		Printf (PRINT_HIGH, "Saving is not allowed.\n");
 		return;
