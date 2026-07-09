@@ -323,6 +323,8 @@ FARG(bots, "", "", "",
 FARG(debug, "", "", "",
 	"");
 
+FARG(complevel, "", "", "", "");
+
 EXTERN_FARG(join);
 EXTERN_FARG(host);
 
