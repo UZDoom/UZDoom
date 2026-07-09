@@ -2715,17 +2715,18 @@ void G_ParseMapInfo(FString basemapinfo)
 
 		if (!data.CompareNoCase("vanilla", 7) || data.Compare("2") || data.Compare("3") || data.Compare("4"))
 		{
+			Printf("Applied Vanilla compatibility level.\n");
 			flags1 =
 				COMPATF_SHORTTEX | COMPATF_STAIRINDEX | COMPATF_USEBLOCKING | COMPATF_NODOORLIGHT | COMPATF_SPRITESORT |
 				COMPATF_TRACE | COMPATF_MISSILECLIP | COMPATF_SOUNDTARGET | COMPATF_DEHHEALTH | COMPATF_CROSSDROPOFF |
-				COMPATF_LIGHT | COMPATF_MASKEDMIDTEX |
-				COMPATF_LIMITPAIN | COMPATF_INVISIBILITY | COMPATF_VILEGHOSTS;
+				COMPATF_LIGHT | COMPATF_MASKEDMIDTEX | COMPATF_LIMITPAIN | COMPATF_INVISIBILITY | COMPATF_VILEGHOSTS;
 
 			flags2 =
 				COMPATF2_FLOORMOVE | COMPATF2_EXPLODE1 | COMPATF2_POINTONLINE | COMPATF2_EMULATEMIKOPORTALS | COMPATF2_RESERVEDLINEFLAG;
 		}
-		else if (!data.CompareNoCase("boom", 4) || data.Compare("9"))
+		else if (!data.CompareNoCase("boom", 4) || !data.Compare("9"))
 		{
+			Printf("Applied Boom compatibility level.\n");
 			flags1 =
 				COMPATF_TRACE | COMPATF_SOUNDTARGET | COMPATF_BOOMSCROLL | COMPATF_MISSILECLIP | COMPATF_MASKEDMIDTEX |
 				COMPATF_INVISIBILITY;
@@ -2733,8 +2734,9 @@ void G_ParseMapInfo(FString basemapinfo)
 			flags2 =
 				COMPATF2_EXPLODE1 | COMPATF2_POINTONLINE | COMPATF2_EMULATEMIKOPORTALS | COMPATF2_TRANSFERSECRET | COMPATF2_RESERVEDLINEFLAG;
 		}
-		else if (!data.CompareNoCase("mbf", 3) || data.Compare("11"))
+		else if (!data.CompareNoCase("mbf", 3) || !data.Compare("11"))
 		{
+			Printf("Applied MBF compatibility level.\n");
 			flags1 =
 				COMPATF_TRACE | COMPATF_SOUNDTARGET | COMPATF_BOOMSCROLL | COMPATF_MISSILECLIP | COMPATF_MUSHROOM |
 				COMPATF_MBFMONSTERMOVE | COMPATF_NOBLOCKFRIENDS | COMPATF_MASKEDMIDTEX | COMPATF_INVISIBILITY;
@@ -2743,8 +2745,9 @@ void G_ParseMapInfo(FString basemapinfo)
 				COMPATF2_EXPLODE1 | COMPATF2_AVOID_HAZARDS | COMPATF2_STAYONLIFT | COMPATF2_POINTONLINE |
 				COMPATF2_TRANSFERSECRET | COMPATF2_RESERVEDLINEFLAG;
 		}
-		else if (!data.CompareNoCase("mbf21", 5) || data.Compare("21"))
+		else if (!data.CompareNoCase("mbf21", 5) || !data.Compare("21"))
 		{
+			Printf("Applied MBF21 compatibility level.\n");
 			flags1 =
 				COMPATF_TRACE | COMPATF_SOUNDTARGET | COMPATF_BOOMSCROLL | COMPATF_MISSILECLIP | COMPATF_MUSHROOM |
 				COMPATF_MASKEDMIDTEX | COMPATF_INVISIBILITY;
