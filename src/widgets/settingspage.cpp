@@ -96,15 +96,15 @@ SettingsPage::SettingsPage(LauncherWindow* launcher, const FStartupSelectionInfo
 
 		UpdaterSettingsDropdown = new Dropdown(this);
 		UpdaterSettingsDropdown->SetMaxDisplayItems(3);
-		UpdaterSettingsDropdown->AddItem("Disable");
-		UpdaterSettingsDropdown->AddItem("Notify");
-		UpdaterSettingsDropdown->AddItem("Prompt to install");
+		UpdaterSettingsDropdown->AddItem(GStrings.GetString("OPTVAL_DISABLE"));
+		UpdaterSettingsDropdown->AddItem(GStrings.GetString("OPTVAL_NOTIFY"));
+		UpdaterSettingsDropdown->AddItem(GStrings.GetString("UPDATER_PROMPT_TO_INSTALL"));
 
 		UpdaterIntervalDropdown = new Dropdown(this);
 		UpdaterIntervalDropdown->SetMaxDisplayItems(3);
-		UpdaterIntervalDropdown->AddItem("Daily");
-		UpdaterIntervalDropdown->AddItem("Weekly");
-		UpdaterIntervalDropdown->AddItem("Monthly");
+		UpdaterIntervalDropdown->AddItem(GStrings.GetString("OPTVAL_DAILY"));
+		UpdaterIntervalDropdown->AddItem(GStrings.GetString("OPTVAL_WEEKLY"));
+		UpdaterIntervalDropdown->AddItem(GStrings.GetString("OPTVAL_MONTHLY"));
 
 		UpdateUpdaterValues(info.bAutoUpdate, info.bCheckUpdate, info.DefaultUpdateInterval);
 	}
@@ -264,16 +264,15 @@ void SettingsPage::UpdateLanguage()
 #ifdef HAS_UPDATER
 	if(IsCurlLoaded())
 	{
-		// TODO: Add localization support
-		UpdaterSettingsLabel->SetText("Updater Settings");
-		UpdaterIntervalLabel->SetText("Check every:");
+		UpdaterSettingsLabel->SetText(GStrings.GetString("UPDATER_SETTINGS"));
+		UpdaterIntervalLabel->SetText(GStrings.GetString("UPDATER_INTERVAL"));
 
-		UpdaterSettingsDropdown->UpdateItem("Disable", 0);
-		UpdaterSettingsDropdown->UpdateItem("Notify", 1);
-		UpdaterSettingsDropdown->UpdateItem("Prompt to install", 2);
-		UpdaterIntervalDropdown->UpdateItem("Daily", 0);
-		UpdaterIntervalDropdown->UpdateItem("Weekly", 1);
-		UpdaterIntervalDropdown->UpdateItem("Monthly", 2);
+		UpdaterSettingsDropdown->UpdateItem(GStrings.GetString("OPTVAL_DISABLE"), 0);
+		UpdaterSettingsDropdown->UpdateItem(GStrings.GetString("OPTVAL_NOTIFY"), 1);
+		UpdaterSettingsDropdown->UpdateItem(GStrings.GetString("UPDATER_PROMPT_TO_INSTALL"), 2);
+		UpdaterIntervalDropdown->UpdateItem(GStrings.GetString("OPTVAL_DAILY"), 0);
+		UpdaterIntervalDropdown->UpdateItem(GStrings.GetString("OPTVAL_WEEKLY"), 1);
+		UpdaterIntervalDropdown->UpdateItem(GStrings.GetString("OPTVAL_MONTHLY"), 2);
 	}
 #endif
 }

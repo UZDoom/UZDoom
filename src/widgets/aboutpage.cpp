@@ -96,7 +96,7 @@ AboutPage::AboutPage(LauncherWindow* launcher, const FStartupSelectionInfo& info
 	if(IsCurlLoaded())
 	{
 		ForceUpdate = new PushButton(this);
-		ForceUpdate->SetText("Check for Updates");
+		ForceUpdate->SetText(GStrings.GetString("UPDATER_CHECK_FOR_UPDATES"));
 
 		ForceUpdate->OnClick = [=,this]()
 		{

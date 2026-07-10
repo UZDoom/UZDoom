@@ -207,7 +207,7 @@ public:
 
 		SetFrameGeometry((screenSize.width - windowWidth) * 0.5, (screenSize.height - windowHeight) * 0.5, windowWidth, windowHeight);
 
-		SetWindowTitle(title);
+		SetWindowTitle(GStrings.GetString(title));
 
 		if(text.size() > 0)
 		{
@@ -249,7 +249,7 @@ public:
 
 				PushButton * btn = new PushButton(this);
 
-				btn->SetText(act.text);
+				btn->SetText(GStrings.GetString(act.text));
 
 				btn->OnClick = [this, act]()
 				{
@@ -474,7 +474,7 @@ FString UpdateButtonBar::UpdateToString()
 		str.Format("%u.%u.%u-pre-%u", update.major, update.minor, update.revision, update.distance);
 		break;
 	case UpdateChannel::TESTING:
-		str.Format("%u.%u.%u-pre-%u (experimental)", update.major, update.minor, update.revision, update.distance); // TODO: localize
+		str.Format("%u.%u.%u-pre-%u (%s)", update.major, update.minor, update.revision, update.distance, GStrings.GetString("TXT_EXPERIMENTAL"));
 		break;
 	case UpdateChannel::RELEASE_CANDIDATE:
 		if(update.distance != 0 && update.distance != RC_REVISION_NOTRC)
@@ -494,7 +494,7 @@ void UpdateButtonBar::UpdateLanguage()
 {
 	if(currentUpdate.has_value())
 	{
-		text = "New Update Available: " + UpdateToString(); // TODO: localize
+		text = FStringf("%s: %s", GStrings.GetString("UPDATER_UPDATE_AVAILABLE"), UpdateToString());
 	}
 	else
 	{
@@ -573,7 +573,7 @@ bool UpdateButtonBar::OnMouseDown(const Point& pos, InputKey key)
 void UpdateButtonBar::OpenDismissUpdateMenu()
 {
 	PopupBase::ActionListType actions = {
-		{"Skip Update", [=, this](auto &self){ // TODO: localize
+		{"UPDATER_UPDATE_SKIP", [=, this](auto &self){
 			updater_skipped_update = FString(currentUpdate->version);
 			M_SaveDefaults(NULL); // save settings
 			Hide();
@@ -581,21 +581,21 @@ void UpdateButtonBar::OpenDismissUpdateMenu()
 		}},
 	};
 
-	actions.push_back({"Back", [=, this](auto &self){ // TODO: localize
+	actions.push_back({"TXT_BACK", [=, this](auto &self){
 		self.Close();
 	}});
 
-	OpenPopup(this, "Dismiss Update?", {}, actions, 550.0, 0); // TODO: localize
+	OpenPopup(this, "UPDATER_DISMISS_UPDATE", {}, actions, 550.0, 0);
 }
 
 void UpdateButtonBar::OpenFailedUpdateMenu(const std::string &err, bool checker)
 {
 	PopupBase::ActionListType actions = {
-		{"Dismiss", [=, this](auto &self){ // TODO: localize
+		{"TXT_DISMISS", [=, this](auto &self){
 			Hide();
 			self.Close();
 		}},
-		{"Disable Update Checker", [=, this](auto &self){ // TODO: localize
+		{"UPDATER_DISABLE", [=, this](auto &self){
 			updater_check_updates = false;
 			M_SaveDefaults(NULL); // save settings
 			Hide();
@@ -603,35 +603,46 @@ void UpdateButtonBar::OpenFailedUpdateMenu(const std::string &err, bool checker)
 		}}
 	};
 
-	OpenPopup(this, checker ? "Checking for Update Failed" : "Update Failed", SplitNewLines((checker ? "Checking for Update Failed\n" : "Update Failed\n") + err), actions, 550.0, POPUPF_DISALLOW_CLOSE); // TODO: localize
+	std::string title = checker
+		? "UPDATER_CHECK_FAILED"
+		: "UPDATER_UPDATE_FAILED";
+
+	OpenPopup(
+		this,
+		title,
+		SplitNewLines(GStrings.GetString(title) + ("\n" + err)),
+		actions,
+		550.0,
+		POPUPF_DISALLOW_CLOSE
+	);
 }
 
 void UpdateButtonBar::OpenUpdateMenu(bool isAutoUpdate)
 {
 	PopupBase::ActionListType actions = {
-		{"View Release Notes", [this, isAutoUpdate](auto &self){
-			OpenPopup(this, "Release Notes", this->currentUpdate->release_notes, // TODO: localize
+		{"PICKER_SHOWNOTES", [this, isAutoUpdate](auto &self){
+			OpenPopup(this, "PICKER_TAB_RELEASE", this->currentUpdate->release_notes,
 			{
-				{"Back", [this, isAutoUpdate](auto &self){ // TODO: localize
+				{"TXT_BACK", [this, isAutoUpdate](auto &self){
 					OpenUpdateMenu(isAutoUpdate);
 				}}
 			});
 		}},
-		{"Update", [this](auto &currentPopup){ // TODO: localize
+		{"TXT_UPDATE", [this](auto &currentPopup){
 			StartUpdate();
 		}}
 	};
 
 	if(isAutoUpdate)
 	{
-		actions.push_back({"Skip", [this](auto &self){ // TODO: localize
+		actions.push_back({"TXT_SKIP", [this](auto &self){
 			updater_skipped_update = FString(currentUpdate->version);
 			M_SaveDefaults(NULL); // save settings
 			Hide();
 			self.Close();
 		}, ACTIONF_FLOAT_RIGHT});
 
-		actions.push_back({"Dismiss", [this](auto &self){ // TODO: localize
+		actions.push_back({"TXT_DISMISS", [this](auto &self){
 			UpdateLanguage();
 			Show();
 			self.Close();
@@ -653,7 +664,7 @@ void UpdateButtonBar::OpenUpdateMenu(bool isAutoUpdate)
 
 	updateInfo.push_back((GAMENAME + (" " + UpdateToString())).GetChars());
 
-	OpenPopup(this, isAutoUpdate ? "New Update Available" : "Update", updateInfo, actions, 500.0/*, isAutoUpdate ? POPUPF_DISALLOW_CLOSE : 0*/); // TODO: localize
+	OpenPopup(this, isAutoUpdate ? "UPDATER_UPDATE_AVAILABLE" : "TXT_UPDATE", updateInfo, actions, 500.0/*, isAutoUpdate ? POPUPF_DISALLOW_CLOSE : 0*/);
 }
 
 bool UpdateButtonBar::OnMouseUp(const Point& pos, InputKey key)
@@ -677,19 +688,19 @@ bool UpdateButtonBar::OnMouseUp(const Point& pos, InputKey key)
 		{
 			if(close_pressed)
 			{
-				OpenPopup(this, "Dismiss Update?", {}, // TODO: localize
+				OpenPopup(this, "UPDATER_DISMISS_UPDATE", {},
 				{
-					{"Dismiss", [this](auto &self){ // TODO: localize
+					{"TXT_DISMISS", [this](auto &self){
 						this->Hide();
 						self.Close();
 					}},
-					{"Skip Update", [this](auto &self){ // TODO: localize
+					{"UPDATER_UPDATE_SKIP", [this](auto &self){
 						updater_skipped_update = FString(currentUpdate->version);
 						M_SaveDefaults(NULL); // save settings
 						this->Hide();
 						self.Close();
 					}},
-					{"Disable Update Checker", [this](auto &self){ // TODO: localize
+					{"UPDATER_DISABLE", [this](auto &self){
 						updater_check_updates = false;
 						M_SaveDefaults(NULL); // save settings
 						this->Hide();
@@ -731,23 +742,24 @@ LauncherWindow* UpdateButtonBar::GetLauncher() const
 
 void UpdateButtonBar::OpenUpdateInitChoice()
 {
-	OpenPopup(this, "Update Checker", {"Would you like to automatically check for updates?", "(this can be changed later in the options tab)"}, // TODO: localize
+
+	OpenPopup(this, "UPDATER_TITLE", SplitNewLines(GStrings.GetString("UPDATER_ASK_AUTO")),
 	{
 		{
-			"Yes", [this](auto &self) // TODO: localize
+			"TXT_YES", [this](auto &self)
 			{
 				updater_auto_updates = false;
 				OpenUpdateIntervalChoice();
 			},
 		},{
-			"Yes, and prompt to install updates", [this](auto &self) // TODO: localize
+			"UPDATER_YES_PROMPT", [this](auto &self)
 			{
 				updater_auto_updates = true;
 				OpenUpdateIntervalChoice();
 			},
 			//ACTIONF_FLOAT_RIGHT
 		},{
-			"No", [this](auto &self) // TODO: localize
+			"TXT_NO", [this](auto &self)
 			{
 				updater_check_updates = false;
 				updater_check_updates_initialized = true;
@@ -763,10 +775,10 @@ void UpdateButtonBar::OpenUpdateInitChoice()
 
 void UpdateButtonBar::OpenUpdateIntervalChoice()
 {
-	OpenPopup(this, "Update Checker", {"How often would you like to check for updates?", "(this can be changed later in the options tab)"}, // TODO: localize
+	OpenPopup(this, "UPDATER_TITLE", SplitNewLines(GStrings.GetString("UPDATER_ASK_INTERVAL")),
 	{
 		{
-			"Daily", [this](auto &self) // TODO: localize
+			"OPTVAL_DAILY", [this](auto &self)
 			{
 				updater_check_updates = true;
 				updater_update_interval = 1;
@@ -777,7 +789,7 @@ void UpdateButtonBar::OpenUpdateIntervalChoice()
 				self.Close();
 			}
 		},{
-			"Weekly", [this](auto &self) // TODO: localize
+			"OPTVAL_WEEKLY", [this](auto &self)
 			{
 				updater_check_updates = true;
 				updater_update_interval = 7;
@@ -788,7 +800,7 @@ void UpdateButtonBar::OpenUpdateIntervalChoice()
 				self.Close();
 			}
 		},{
-			"Monthly", [this](auto &self) // TODO: localize
+			"OPTVAL_MONTHLY", [this](auto &self)
 			{
 				updater_check_updates = true;
 				updater_update_interval = 30;
@@ -799,7 +811,7 @@ void UpdateButtonBar::OpenUpdateIntervalChoice()
 				self.Close();
 			}
 		},{
-			"Back", [this](auto &self) // TODO: localize
+			"TXT_BACK", [this](auto &self)
 			{
 				updater_auto_updates = false;
 				OpenUpdateInitChoice();
@@ -1022,7 +1034,7 @@ public:
 
 		if(!ok)
 		{
-			buttonBar->OpenFailedUpdateMenu("Invalid Update JSON", true); // TODO: localize
+			buttonBar->OpenFailedUpdateMenu(GStrings.GetString("UPDATER_INVALID_JSON"), true);
 			return std::nullopt;
 		}
 
@@ -1063,7 +1075,7 @@ public:
 
 		if(!ok)
 		{
-			buttonBar->OpenFailedUpdateMenu("Invalid Update JSON", true); // TODO: localize
+			buttonBar->OpenFailedUpdateMenu(GStrings.GetString("UPDATER_INVALID_JSON"), true);
 			return std::nullopt;
 		}
 
@@ -1137,7 +1149,7 @@ protected:
 	{
 		progress_lock.lock();
 		updateBarPercentage = std::min(1.0, std::max(0.0, ((double)current_download) / ((double)total_download)));
-		text[0]->SetText( std::format("Downloading, {} / {}", shortenByteSize(current_download), shortenByteSize(total_download))); // TODO: localize
+		text[0]->SetText( std::format("{}, {} / {}", GStrings.GetString("TXT_DOWNLOADING"), shortenByteSize(current_download), shortenByteSize(total_download)));
 		progress_lock.unlock();
 		ProgressPopup::RefreshBar();
 	}
@@ -1152,7 +1164,7 @@ protected:
 public:
 	ProgressDownloader(Widget * parent, const std::string &title, const std::vector<std::string> &text, const PopupBase::ActionListType &actions, double _windowWidth, int flags)
 		:	CurlEasy(GAMENAME " Updater", true, false),
-		ProgressPopup(parent, title, ConcatText({"Starting Download..."}, text), actions, _windowWidth, flags) // TODO: localize
+		ProgressPopup(parent, title, ConcatText({GStrings.GetString("UPDATER_STARTING")}, text), actions, _windowWidth, flags)
 	{}
 
 	static void DownloaderThread(ProgressDownloader * self, const std::string &url)
@@ -1205,9 +1217,9 @@ public:
 
 			if(!zip)
 			{
-				OpenPopup(buttonBar, "Failed to open zip file", {"Update was cancelled"}, // TODO: localize
+				OpenPopup(buttonBar, "UPDATER_ZIP_FAIL", {GStrings.GetString("UPDATER_CANCELLED")},
 				{
-					{"Back", [](auto &self){
+					{"TXT_BACK", [](auto &self){
 						self.Close();
 					}}
 				});
@@ -1232,7 +1244,9 @@ public:
 						}
 						else
 						{
-							buttonBar->OpenFailedUpdateMenu("'"+progdir + "update' is not a directory", false); // TODO: localize
+							std::string dirstr = progdir + "update";
+							auto errstr = std::vformat(GStrings.GetString("UPDATER_NOT_A_DIR"), std::make_format_args(dirstr));
+							buttonBar->OpenFailedUpdateMenu(errstr, false);
 							return;
 						}
 					}
@@ -1250,7 +1264,9 @@ public:
 						}
 						else
 						{
-							buttonBar->OpenFailedUpdateMenu("'"+progdir + "update_backup' is not a directory", false); // TODO: localize
+							std::string dirstr = progdir + "update_backup";
+							auto errstr = std::vformat(GStrings.GetString("UPDATER_NOT_A_DIR"), std::make_format_args(dirstr));
+							buttonBar->OpenFailedUpdateMenu(errstr, false);
 							return;
 						}
 					}
@@ -1306,7 +1322,8 @@ public:
 							}
 							catch(...) {} // try to remove created files, but if it fails, only show the main error, not the one from the removal
 
-							buttonBar->OpenFailedUpdateMenu("Failed to extract zip, error: '" + err + "' while writing file '"+newpath+"'", false); // TODO: localize
+							auto errstr = std::vformat(GStrings.GetString("UPDATER_ZIP_ERROR"), std::make_format_args(err, newpath));
+							buttonBar->OpenFailedUpdateMenu(errstr, false);
 							return;
 						}
 						else
@@ -1324,7 +1341,8 @@ public:
 								}
 								catch(...) {} // try to remove created files, but if it fails, only show the main error, not the one from the removal
 
-								buttonBar->OpenFailedUpdateMenu("Failed to extract zip, error: '" + err + "' while writing file '"+newpath+"'", false); // TODO: localize
+							auto errstr = std::vformat(GStrings.GetString("UPDATER_ZIP_ERROR"), std::make_format_args(err, newpath));
+								buttonBar->OpenFailedUpdateMenu(errstr, false);
 								return;
 							}
 							fclose(f);
@@ -1346,9 +1364,9 @@ public:
 					return;
 				}
 
-				OpenPopup(buttonBar, "Updated", {"Update was successful, the launcher will now restart."}, // TODO: localize
+				OpenPopup(buttonBar, "TXT_UPDATED", {GStrings.GetString("UPDATER_SUCCESS")},
 				{
-					{"Confirm", [progdir](auto &self){
+					{"TXT_CONFIRM", [progdir](auto &self){
 						updater_cached_update = "";
 						updater_last_update_check = std::to_string(getCurrentDate()).c_str();
 
@@ -1401,9 +1419,9 @@ public:
 			downloader_thread->join();
 			downloader_thread = nullptr;
 
-			OpenPopup(buttonBar, "Cancelled", {"Download was cancelled"}, // TODO: localize
+			OpenPopup(buttonBar, "TXT_CANCELLED", {GStrings.GetString("UPDATER_CANCELLED")},
 			{
-				{"Back", [](auto &self){
+				{"TXT_BACK", [](auto &self){
 					self.Close();
 				}}
 			});
@@ -1638,7 +1656,7 @@ bool isVersionInvalid(VersionInfo ver)
 
 void UpdateButtonBar::StartUpdate()
 {
-	OpenPopup<ProgressDownloader>(this, "Updating...").Perform(this, GetDownloadURL()); // TODO: localize
+	OpenPopup<ProgressDownloader>(this, "UPDATER_UPDATING").Perform(this, GetDownloadURL());
 }
 
 void UpdateButtonBar::CheckForUpdate(bool force)
@@ -1749,9 +1767,9 @@ void UpdateButtonBar::CheckForUpdate(bool force)
 				}
 				else if(force)
 				{
-					OpenPopup(this, "Up to Date!", {"No updates were found"}, // TODO: localize
+					OpenPopup(this, "UPDATER_UP_TO_DATE", {GStrings.GetString("UPDATER_UP_TO_DATE")},
 					{
-						{"Ok", [](auto &self){
+						{"TXT_OK", [](auto &self){
 							self.Close();
 						}}
 					});
@@ -1759,9 +1777,9 @@ void UpdateButtonBar::CheckForUpdate(bool force)
 			}
 			else if(force)
 			{
-				OpenPopup(this, "Up to Date!", {"No updates were found"}, // TODO: localize
+				OpenPopup(this, "UPDATER_UP_TO_DATE", {GStrings.GetString("UPDATER_UP_TO_DATE")},
 				{
-					{"Ok", [](auto &self){
+					{"TXT_OK", [](auto &self){
 						self.Close();
 					}}
 				});
