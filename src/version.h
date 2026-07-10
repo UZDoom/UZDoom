@@ -45,7 +45,7 @@
 // Version stored in the ini's [LastRun] section.
 // Bump it if you made some configuration change that you want to
 // be able to migrate in FGameConfigFile::DoGlobalSetup().
-#define ENGINELASTRUNVERSION "231"
+#define ENGINELASTRUNVERSION "232"
 #define GAMELASTRUNVERSION "1"
 
 // Protocol version used in demos.

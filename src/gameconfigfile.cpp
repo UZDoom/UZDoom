@@ -76,6 +76,9 @@ EXTERN_CVAR (Bool, i_pauseinbackground)
 EXTERN_CVAR (Bool, i_soundinbackground)
 EXTERN_CVAR (Bool, i_is_new_release)
 EXTERN_CVAR (String, language)
+#ifdef HAS_UPDATER
+EXTERN_CVAR(Int, updater_update_interval)
+#endif
 
 FARG(config, "Configuration", "Specifies an alternative configuration file to use.", "configfile",
 	"Causes " GAMENAME " to use an alternative configuration file. If configfile does not exist,"
@@ -699,6 +702,12 @@ void FGameConfigFile::DoGlobalSetup ()
 		{
 			language = "auto";
 		}
+#ifdef HAS_UPDATER
+		if (EngineLastRunVer < 232) // UZDoom 5.0
+		{
+			if (updater_update_interval == 2) updater_update_interval == 1;
+		}
+#endif
 	}
 
 	OkayToWrite = true;

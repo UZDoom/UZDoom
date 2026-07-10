@@ -102,9 +102,9 @@ SettingsPage::SettingsPage(LauncherWindow* launcher, const FStartupSelectionInfo
 
 		UpdaterIntervalDropdown = new Dropdown(this);
 		UpdaterIntervalDropdown->SetMaxDisplayItems(3);
-		UpdaterIntervalDropdown->AddItem("Other day");
-		UpdaterIntervalDropdown->AddItem("Week");
-		UpdaterIntervalDropdown->AddItem("Month");
+		UpdaterIntervalDropdown->AddItem("Daily");
+		UpdaterIntervalDropdown->AddItem("Weekly");
+		UpdaterIntervalDropdown->AddItem("Monthly");
 
 		UpdateUpdaterValues(info.bAutoUpdate, info.bCheckUpdate, info.DefaultUpdateInterval);
 	}
@@ -222,7 +222,7 @@ void SettingsPage::SetValues(FStartupSelectionInfo& info) const
 			info.DefaultUpdateInterval = 30;
 			break;
 		case 0:
-			info.DefaultUpdateInterval = 2;
+			info.DefaultUpdateInterval = 1;
 			break;
 		default:
 			info.DefaultUpdateInterval = 7;
@@ -271,9 +271,9 @@ void SettingsPage::UpdateLanguage()
 		UpdaterSettingsDropdown->UpdateItem("Disable", 0);
 		UpdaterSettingsDropdown->UpdateItem("Notify", 1);
 		UpdaterSettingsDropdown->UpdateItem("Prompt to install", 2);
-		UpdaterIntervalDropdown->UpdateItem("Other day", 0);
-		UpdaterIntervalDropdown->UpdateItem("Week", 1);
-		UpdaterIntervalDropdown->UpdateItem("Month", 2);
+		UpdaterIntervalDropdown->UpdateItem("Daily", 0);
+		UpdaterIntervalDropdown->UpdateItem("Weekly", 1);
+		UpdaterIntervalDropdown->UpdateItem("Monthly", 2);
 	}
 #endif
 }

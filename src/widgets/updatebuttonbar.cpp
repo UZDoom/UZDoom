@@ -766,10 +766,10 @@ void UpdateButtonBar::OpenUpdateIntervalChoice()
 	OpenPopup(this, "Update Checker", {"How often would you like to check for updates?", "(this can be changed later in the options tab)"}, // TODO: localize
 	{
 		{
-			"Every other day", [this](auto &self) // TODO: localize
+			"Daily", [this](auto &self) // TODO: localize
 			{
 				updater_check_updates = true;
-				updater_update_interval = 2;
+				updater_update_interval = 1;
 				updater_check_updates_initialized = true;
 				updater_last_update_check = std::to_string(getCurrentDate()).c_str();
 				M_SaveDefaults(NULL); // save settings
@@ -777,7 +777,7 @@ void UpdateButtonBar::OpenUpdateIntervalChoice()
 				self.Close();
 			}
 		},{
-			"Every week", [this](auto &self) // TODO: localize
+			"Weekly", [this](auto &self) // TODO: localize
 			{
 				updater_check_updates = true;
 				updater_update_interval = 7;
@@ -788,7 +788,7 @@ void UpdateButtonBar::OpenUpdateIntervalChoice()
 				self.Close();
 			}
 		},{
-			"Every month", [this](auto &self) // TODO: localize
+			"Monthly", [this](auto &self) // TODO: localize
 			{
 				updater_check_updates = true;
 				updater_update_interval = 30;
