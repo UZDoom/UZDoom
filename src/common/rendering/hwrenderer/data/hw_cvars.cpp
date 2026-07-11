@@ -54,9 +54,9 @@ CUSTOM_CVAR(Bool, gl_plane_reflection, true, CVAR_GLOBALCONFIG|CVAR_ARCHIVE)
 	gl_plane_reflection_i = self;
 }
 
-constexpr float GAMMA_DEFAULT = 2.2;
-constexpr float GAMMA_HIGH = 3.0;
-constexpr float GAMMA_LOW = 0.1;
+constexpr float GAMMA_DEFAULT = 2.2f;
+constexpr float GAMMA_HIGH = 3.0f;
+constexpr float GAMMA_LOW = 0.1f;
 
 constexpr float GAMMA_LOW_FIX = (GAMMA_LOW-GAMMA_DEFAULT) / (GAMMA_HIGH-GAMMA_DEFAULT);
 
@@ -84,7 +84,7 @@ CUSTOM_CVARD(Float, vid_saturation, 1.f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "adju
 }
 
 #ifndef BW_GAP
-#define BW_GAP 0.2
+#define BW_GAP 0.2f
 #endif
 
 CVAR(Float, vid_i_blackpoint, 1.f, CVAR_VIRTUAL | CVAR_NOINITCALL | CVAR_SYSTEM_ONLY);

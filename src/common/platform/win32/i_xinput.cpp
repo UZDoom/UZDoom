@@ -1081,6 +1081,6 @@ void I_Rumble(double high_freq, double low_freq, double _left_trig, double _righ
 	FXInputManager* XInputManager = & static_cast<FXInputManager&> (*JoyDevices[INPUT_XInput]);
 	if (XInputManager != NULL)
 	{
-		XInputManager->Rumble(high_freq, low_freq);
+		XInputManager->Rumble(static_cast<float>(high_freq), static_cast<float>(low_freq));
 	}
 }

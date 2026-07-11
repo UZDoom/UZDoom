@@ -173,15 +173,15 @@ void ST_DrawCrosshair(int phealth, double xpos, double ypos, double scale, DAngl
 			{
 				lo = hi;
 				hi = crosshaircolorMax;
-				mix = (health-100)/100.0;
+				mix = (health-100)/100.0f;
 			}
 			else if (health <= 85)
 			{
-				mix = health/85.0;
+				mix = health/85.0f;
 			}
 
-			auto a = Color::rgb((lo>>16&0xff)/255., (lo>>8&0xff)/255., (lo&0xff)/255.);
-			auto b = Color::rgb((hi>>16&0xff)/255., (hi>>8&0xff)/255., (hi&0xff)/255.);
+			auto a = Color::rgb((lo>>16&0xff)/255.0f, (lo>>8&0xff)/255.0f, (lo&0xff)/255.0f);
+			auto b = Color::rgb((hi>>16&0xff)/255.0f, (hi>>8&0xff)/255.0f, (hi&0xff)/255.0f);
 			auto c = Color::mix(a, b, mix);
 
 			lastHealth = health;
