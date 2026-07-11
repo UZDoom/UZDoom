@@ -217,6 +217,12 @@ public:
 		return *this;
 	}
 
+	template<class T, size_t count>
+	FSerializer &Array(const char *key, std::array<T, count> &obj, bool fullcompare = false)
+	{
+		return Array(key, obj.data(), static_cast<int>(count), fullcompare);
+	}
+
 	template<class T>
 	FSerializer &Array(const char *key, T *obj, T *def, int count, bool fullcompare = false)
 	{
