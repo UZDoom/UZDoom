@@ -65,9 +65,16 @@ public:
 		// this is the PCG-XSH-RR RNG algorithm
 		uint64_t oldstate = s;
 		s = oldstate * 6364136223846793005ULL + 0xda3e39cb94b95bdbULL;
-		uint32_t xorshifted = ((oldstate >> 18u) ^ oldstate) >> 27u;
+		uint32_t xorshifted = static_cast<uint32_t>(((oldstate >> 18u) ^ oldstate) >> 27u);
 		uint32_t rot = oldstate >> 59u;
+#ifdef _MSC_VER
+#pragma warning( push )
+#pragma warning( disable : 4146 )
+#endif
 		return (xorshifted >> rot) | (xorshifted << ((-rot) & 31));
+#ifdef _MSC_VER
+#pragma warning( pop )
+#endif
 	}
 
 	// Returns a random number in the range [0,255]
@@ -92,7 +99,14 @@ public:
 		// 32-bit arithmetic, `-bound == 2^32 - bound`. subtracting `bound`
 		// doesn't change the result modulo `bound` so this is the same number
 		// as `2^32 % bound`.
+#ifdef _MSC_VER
+#pragma warning( push )
+#pragma warning( disable : 4146 )
+#endif
 		auto threshold = -bound % bound;
+#ifdef _MSC_VER
+#pragma warning( pop )
+#endif
 
 		// then sample an integer until it's in the range `[2^32 % bound,
 		// 2^32)`. this range has size `2^32 - (2^32 % bound)`. this number
