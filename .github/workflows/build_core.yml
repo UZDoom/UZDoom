@@ -25,6 +25,9 @@ on:
       build_type:
         required: true
         type: string
+      environment:
+        required: true
+        type: string
     secrets:
       GPG_PRIVATE_KEY:
         required: false
@@ -36,37 +39,10 @@ on:
         required: false
 
 jobs:
-  setup_build:
-    name: Setup
-    runs-on: ubuntu-latest
-    outputs:
-      env_name: ${{ steps.set-env.outputs.environment }}
-      rel_name: ${{ steps.set-env.outputs.stream }}
-    steps:
-    - name: Set Environment
-      id: set-env
-      env:
-        REPO: ${{ github.repository }}
-        REF: ${{ github.ref }}
-      run: |
-        environment=""
-        stream="rolling"
-        if [[ "$REPO" == UZDoom/UZDoom ]]; then
-          if [[ "$REF" == refs/heads/trunk ]]; then
-            environment="production"
-          elif [[ "$REF" =~ refs/heads/\d+\.\d+.* ]]; then
-            environment="production"
-            stream="versioned"
-          fi
-        fi
-        echo "environment=$environment" | tee -a "$GITHUB_OUTPUT"
-        echo "stream=$stream" | tee -a "$GITHUB_OUTPUT"
-
   run_build:
     name: ${{ inputs.name }} ${{ inputs.build_type }}
     runs-on: ${{ inputs.os }}
-    needs: setup_build
-    environment: ${{ needs.setup_build.outputs.env_name }}
+    environment: ${{ inputs.environment != '' && 'production' || '' }}
     container:
       image: ${{ inputs.os_image }}
       options: --device /dev/fuse --cap-add SYS_ADMIN --security-opt apparmor:unconfined
@@ -416,7 +392,7 @@ jobs:
         NAME: ${{ steps.package.outputs.name }}
         OWNER: ${{ github.repository_owner }}
         REPO: ${{ github.event.repository.name }}
-        TAG: ${{ needs.setup_build.outputs.rel_name == 'rolling' && 'latest-pre' || 'latest' }}
+        TAG: ${{ inputs.environment == 'stable' && 'latest' || 'latest-pre' }}
       run: |
         ldd uzdoom
 

@@ -12,8 +12,7 @@ permissions:
 
 jobs:
   trigger_pages:
-    # i assume that random UZDoom forks probably don't want pages made for them by default
-    if: ${{ github.repository == 'UZDoom/UZDoom' || github.repository == 'Gutawer/UZDoom' }}
+    if: ${{ vars.PUBLISH_PAGES }}
     runs-on: ubuntu-latest
     name: Trigger a Pages deployment
     env:

@@ -96,13 +96,14 @@ jobs:
           MESSAGE: ${{ inputs.message }}
           RUN: ${{ inputs.run-url }}
           LABEL: ${{ inputs.label-name }}
+          PREVIEW: ${{ inputs.preview && 'true' || '' }}
         run: |
           version=$(git describe --tags --exclude x-\* ${COMMIT})
           tag=$(git describe --tags --abbrev=0 --exclude x-\* ${COMMIT})
           distance=$(git rev-list "${tag}..${COMMIT}" --count)
           commit=$(git log --format=%s -n 1 ${COMMIT})
           timestamp=$(date -uIseconds)
-          if [ ${BRANCH} != 'trunk' ]; then
+          if [[ -n "${PREVIEW}" && ${BRANCH} != 'trunk' ]]; then
                base=$(git merge-base origin/trunk ${COMMIT})
                basetext=$(git log --format=%s -n 1 ${base})
                base=$(git describe --tags --exclude x-\* ${base})
@@ -110,23 +111,22 @@ jobs:
           if [ -n "${LABEL}" ]; then
               prs=$(gh pr list --json url,title --label "${LABEL}" --jq '[.[] | "[\(.title)](\(.url))"] | join(" - ")' || true)
           fi
+          function emit() {
+            if [ -n "$1" ]; then printf "${@:2}"; fi
+          }
 
           {
               echo 'message<<EOF'
-              printf 'These builds are automatically generated based on the latest commit to `%s`.\n' "${BRANCH}"
-              printf '\n'
-              printf '%s\n' "${MESSAGE}"
-              printf '\n'
-              printf '**Version:** `%s`\n' "${version}"
-              printf '**Message:** %s\n' "${commit}"
-              if [ -n "${base}" ]; then
-                  printf '**Base:** `%s`\n' "${base}"
-                  printf '**Base message:** %s\n' "${basetext}"
-              fi
-              printf '**Workflow:** [Logs](%s) - [Artifacts](%s)\n' "${RUN}" "https://nightly.link/?url=${RUN}"
-              if [ -n "${prs}" ]; then
-                  printf '**Pull requests being tested**: %s\n' "$prs"
-              fi
+              emit "${PREVIEW}" 'These builds are automatically generated based on the latest commit to `%s`.\n' "${BRANCH}"
+              emit "${PREVIEW}" '\n'
+              emit 1            '%s\n' "${MESSAGE}"
+              emit 1            '\n'
+              emit 1            '**Version:** `%s`\n' "${version}"
+              emit "${PREVIEW}" '**Message:** %s\n' "${commit}"
+              emit "${base}"    '**Base:** `%s`\n' "${base}"
+              emit "${base}"    '**Base message:** %s\n' "${basetext}"
+              emit 1            '**Workflow:** [Logs](%s) - [Artifacts](%s)\n' "${RUN}" "https://nightly.link/?url=${RUN}"
+              emit "${prs}"     '**Pull requests being tested**: %s\n' "$prs"
               echo 'EOF'
           } >> $GITHUB_OUTPUT
 
