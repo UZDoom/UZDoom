@@ -112,12 +112,12 @@ Win32DisplayWindow::Win32DisplayWindow(DisplayWindowHost* windowHost, Win32Displ
 
 	float scale = GetDpiForSystem()/96.0;
 	resizable = params.resizable;
-	minW = scale * params.minSize.width;
-	minH = scale * params.minSize.height;
-	maxW = scale * params.maxSize.width;
-	maxH = scale * params.maxSize.height;
-	LONG width = params.size.width * scale;
-	LONG height = params.size.height * scale;
+	minW = static_cast<int>(std::floor(scale * params.minSize.width));
+	minH = static_cast<int>(std::floor(scale * params.minSize.height));
+	maxW = static_cast<int>(std::ceil(scale * params.maxSize.width));
+	maxH = static_cast<int>(std::ceil(scale * params.maxSize.height));
+	LONG width =  static_cast<int>(std::ceil(params.size.width * scale));
+	LONG height =  static_cast<int>(std::ceil(params.size.height * scale));
 	if (width < minW) width = minW;
 	if (height < minH) height = minH;
 	RECT wr = { 0, 0, width, height };
@@ -135,8 +135,8 @@ Win32DisplayWindow::Win32DisplayWindow(DisplayWindowHost* windowHost, Win32Displ
 	if (params.centered)
 	{
 		auto s = GetScreenSize() * scale;
-		x = std::max(0.0, s.width - width) / 2;
-		y = std::max(0.0, s.height - height) / 2;
+		x = static_cast<int>(std::max(0.0, s.width - width) / 2);
+		y =  static_cast<int>(std::max(0.0, s.height - height) / 2);
 	}
 
 	CreateWindowEx(exstyle, L"ZWidgetWindow", L"", style, x, y, width, height,
