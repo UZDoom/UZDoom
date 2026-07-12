@@ -2219,7 +2219,7 @@ yy332:
 	++YYCURSOR;
 #line 615 "../src/parse/lex.re"
 	{
-			warn.useless_escape(tline, tok - pos, tok[1]);
+			warn.useless_escape(tline, static_cast<uint32_t>(tok - pos), tok[1]);
 			return static_cast<uint8_t>(tok[1]);
 		}
 #line 2226 "src/parse/lex.cc"
@@ -2512,7 +2512,7 @@ yy382:
 #line 646 "../src/parse/lex.re"
 	{
 			if (tok[1] != quote) {
-				warn.useless_escape(tline, tok - pos, tok[1]);
+				warn.useless_escape(tline, static_cast<uint32_t>(tok - pos), tok[1]);
 			}
 			return static_cast<uint8_t>(tok[1]);
 		}
