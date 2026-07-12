@@ -133,12 +133,7 @@ jobs:
             }
 
             // notify about subtree edits in quibbles section
-            const subtrees = [
-              "libraries/Translation/",
-              "libraries/ZMusic/",
-              "libraries/ZWidget/",
-              "libraries/ZVulkan/",
-            ];
+            const subtrees = [ ];
             for (const subtree of subtrees)
             {
               if (updated.some(file => file.startsWith(subtree)))

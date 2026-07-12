@@ -1,0 +1,8 @@
+[submodule "libraries/ZMusic"]
+	path = libraries/ZMusic
+	url = git@github.com:UZDoom/ZMusic
+	branch = trunk
+[submodule "libraries/Translation"]
+	path = libraries/Translation
+	url = git@github.com:UZDoom/Translation
+	branch = main
