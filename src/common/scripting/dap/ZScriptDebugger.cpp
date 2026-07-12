@@ -661,7 +661,7 @@ dap::ResponseOrError<dap::EvaluateResponse> ZScriptDebugger::Evaluate(const dap:
 		int64_t frameId = request.frameId.value(0);
 		int64_t evalLineNumber = request.line.value(-1);
 		std::shared_ptr<StateNodeBase> _frameNode;
-		if( m_runtimeState->ResolveStateById(frameId, _frameNode)){
+		if( m_runtimeState->ResolveStateById(static_cast<int32_t>(frameId), _frameNode)){
 			auto frameNode = std::dynamic_pointer_cast<StackFrameStateNode>(_frameNode);
 			if (!frameNode){
 				RETURN_DAP_ERROR(StringFormat("Could not find frameId %lld", frameId).c_str());

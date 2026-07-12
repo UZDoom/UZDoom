@@ -471,7 +471,7 @@ int PexCache::FindFunctionDeclaration(const std::shared_ptr<Binary> &source, con
 
 	if (start_line_from_1 == 0)
 	{
-		start_line_from_1 = lines.size() - 1;
+		start_line_from_1 = static_cast<int>(lines.size() - 1);
 	}
 	else
 	{
