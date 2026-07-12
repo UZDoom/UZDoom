@@ -49,7 +49,7 @@ bool LauncherWindow::ExecModal(FStartupSelectionInfo& info)
 			info.LauncherHeight>0? info.LauncherHeight: 800,
 		},
 		.resizable = true,
-		.minSize = { 550, 450 },
+		.minSize = { 550, 485 },
 		.centered = true,
 	});
 
@@ -215,7 +215,7 @@ void LauncherWindow::OnGeometryChanged()
 	double top = Banner->GetPreferredHeight();
 	double bottom = GetHeight();
 
-	if (top > bottom/3) top = 0;
+	if (top > bottom*0.29) top = 0;
 
 	Banner->SetFrameGeometry(0, 0, GetWidth(), top);
 
