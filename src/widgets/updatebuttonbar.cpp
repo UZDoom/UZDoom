@@ -269,16 +269,16 @@ public:
 
 			if(flags & POPUPF_JUSTIFY_BUTTONS)
 			{
-				int left = 5;
+				double left = 5;
 				int count = 0;
 
-				int padding = ((GetWidth() - 10) - totalwidth)/btns.size();
+				double padding = ((GetWidth() - 10) - totalwidth)/btns.size();
 
 				for(auto &btn : btns)
 				{
 					count++;
 
-					int len = btn->GetPreferredWidth();
+					double len = btn->GetPreferredWidth();
 
 					if(count == btns.size())
 					{
@@ -294,7 +294,7 @@ public:
 			}
 			else
 			{
-				int left = (flags & POPUPF_CENTER_BUTTONS) ? (GetWidth() - (totalwidth + 5 * btns.size())) / 2 : 5;
+				double left = (flags & POPUPF_CENTER_BUTTONS) ? (GetWidth() - (totalwidth + 5 * btns.size())) / 2 : 5;
 				int count = 0;
 
 				bool ignore_right_align = (flags & POPUPF_CENTER_BUTTONS);
@@ -305,7 +305,7 @@ public:
 				{
 					bool align_right = !ignore_right_align && ((actions[count].flags & ACTIONF_FLOAT_RIGHT) || ((count + 1) == btns.size() && float_last_right));
 
-					int len = btn->GetPreferredWidth();
+					double len = btn->GetPreferredWidth();
 
 					if(!align_right)
 					{
@@ -319,8 +319,8 @@ public:
 
 				if(!ignore_right_align)
 				{
-					count = btns.size();
-					int right = GetWidth();
+					count = static_cast<int>(btns.size());
+					double right = GetWidth();
 
 					for(auto &btn : btns | std::views::reverse)
 					{
@@ -328,7 +328,7 @@ public:
 
 						bool align_right = (actions[count].flags & ACTIONF_FLOAT_RIGHT) || ((count + 1) == btns.size() && float_last_right);
 
-						int len = btn->GetPreferredWidth();
+						double len = btn->GetPreferredWidth();
 
 						if(align_right)
 						{

@@ -700,7 +700,7 @@ void G_BuildTiccmd (usercmd_t *cmd)
 		// This is inaccurate to how Doom had originally handled analog input, but
 		// that's why it's an option, after all.
 
-		const float sqrtOf2Frac = 0.41421356237309504880; // sqrt(2)'s fractional value
+		const float sqrtOf2Frac = 0.41421356237309504880f; // sqrt(2)'s fractional value
 
 		float move_min = min<float>(fabs(axis_side), fabs(axis_forward));
 		float move_max = max<float>(fabs(axis_side), fabs(axis_forward));

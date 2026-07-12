@@ -37,9 +37,9 @@ Color rgb(ColorP r, ColorP g, ColorP b)
 
 Color rgb(uint32_t rgb24)
 {
-	ColorP r = ((rgb24>>16)&0xff)/255.0;
-	ColorP g = ((rgb24>>8 )&0xff)/255.0;
-	ColorP b = ((rgb24    )&0xff)/255.0;
+	ColorP r = ((rgb24>>16)&0xff)/255.0f;
+	ColorP g = ((rgb24>>8 )&0xff)/255.0f;
+	ColorP b = ((rgb24    )&0xff)/255.0f;
 	return rgb(r, g, b);
 }
 
@@ -48,7 +48,9 @@ uint32_t rgb24(const Color& c)
 	Color C {c};
 	memcpy(&C, &c, sizeof(c));
 	_2rgb(C);
-	uint8_t r = C.rgb.r*255, g = C.rgb.g*255, b = C.rgb.b*255;
+	uint8_t r = static_cast<uint8_t>(C.rgb.r*255);
+	uint8_t g = static_cast<uint8_t>(C.rgb.g*255);
+	uint8_t b = static_cast<uint8_t>(C.rgb.b*255);
 	return r<<16 | g<<8 | b;
 };
 
@@ -70,7 +72,7 @@ void _2rgb(Color& c)
 	}
 }
 
-inline ColorP linear(ColorP c) { return c >= 0.04045 ? pow((c + 0.055) / 1.055, 2.4) : c / 12.92; };
+inline ColorP linear(ColorP c) { return static_cast<ColorP>(c >= 0.04045 ? pow((c + 0.055) / 1.055, 2.4) : c / 12.92); };
 void rgb2oklab(Color& rgb)
 {
 	CONVERT(rgb, SRGB, OKLAB);
@@ -78,9 +80,9 @@ void rgb2oklab(Color& rgb)
 	auto l = cbrt(0.4122214708 * r + 0.5363325363 * g + 0.0514459929 * b);
 	auto m = cbrt(0.2119034982 * r + 0.6806995451 * g + 0.1073969566 * b);
 	auto s = cbrt(0.0883024619 * r + 0.2817188376 * g + 0.6299787005 * b);
-	rgb.lab.L = l * +0.2104542553 + m * +0.7936177850 + s * -0.0040720468;
-	rgb.lab.a = l * +1.9779984951 + m * -2.4285922050 + s * +0.4505937099;
-	rgb.lab.b = l * +0.0259040371 + m * +0.7827717662 + s * -0.8086757660;
+	rgb.lab.L = static_cast<ColorP>(l * +0.2104542553 + m * +0.7936177850 + s * -0.0040720468);
+	rgb.lab.a = static_cast<ColorP>(l * +1.9779984951 + m * -2.4285922050 + s * +0.4505937099);
+	rgb.lab.b = static_cast<ColorP>(l * +0.0259040371 + m * +0.7827717662 + s * -0.8086757660);
 }
 
 void rgb2oklch(Color& rgb)
@@ -149,7 +151,7 @@ void _2oklab(Color& c)
 	}
 }
 
-inline ColorP gamma(ColorP c) { return std::clamp((c >= 0.0031308 ? 1.055 * pow(c, 1 / 2.4) - 0.055 : 12.92 * c), 0.0, 1.0); }
+inline ColorP gamma(ColorP c) { return static_cast<ColorP>(std::clamp((c >= 0.0031308 ? 1.055 * pow(c, 1 / 2.4) - 0.055 : 12.92 * c), 0.0, 1.0)); }
 void oklab2rgb(Color& lab)
 {
 	CONVERT(lab, OKLAB, SRGB);
@@ -157,9 +159,9 @@ void oklab2rgb(Color& lab)
 	auto l = pow((L + a * +0.3963377774 + b * +0.2158037573), 3);
 	auto m = pow((L + a * -0.1055613458 + b * -0.0638541728), 3);
 	auto s = pow((L + a * -0.0894841775 + b * -1.2914855480), 3);
-	lab.rgb.r = gamma(l * +4.0767416621 + m * -3.3077115913 + s * +0.2309699292);
-	lab.rgb.g = gamma(l * -1.2684380046 + m * +2.6097574011 + s * -0.3413193965);
-	lab.rgb.b = gamma(l * -0.0041960863 + m * -0.7034186147 + s * +1.7076147010);
+	lab.rgb.r = gamma(static_cast<ColorP>(l * +4.0767416621 + m * -3.3077115913 + s * +0.2309699292));
+	lab.rgb.g = gamma(static_cast<ColorP>(l * -1.2684380046 + m * +2.6097574011 + s * -0.3413193965));
+	lab.rgb.b = gamma(static_cast<ColorP>(l * -0.0041960863 + m * -0.7034186147 + s * +1.7076147010));
 }
 
 void oklab2oklch(Color& lab)
