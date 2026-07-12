@@ -103,7 +103,7 @@ void NetStartWindow::NetProgress(int cur, int limit)
 
 	Instance->maxpos = limit;
 	Instance->SetProgress(cur);
-	for (int start = Instance->LobbyWindow->GetItemAmount(); start < Instance->maxpos; ++start)
+	for (size_t start = Instance->LobbyWindow->GetItemAmount(); start < Instance->maxpos; ++start)
 		Instance->LobbyWindow->AddItem(std::to_string(start));
 }
 
