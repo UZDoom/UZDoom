@@ -1669,7 +1669,7 @@ void FLevelLocals::StartTravel()
 
 	if (!deathmatch)
 	{
-		for (size_t i = 0u; i < MAXPLAYERS; ++i)
+		for (int i = 0; i < SMAXPLAYERS; ++i)
 		{
 			if (PlayerInGame(i) && Players[i]->health > 0)
 				AddToTravellingList(Players[i]->mo);
@@ -1695,7 +1695,7 @@ void FLevelLocals::StartTravel()
 // the actual STAT_TRAVELLING list when snapshotting.
 void FLevelLocals::MoveTravellers()
 {
-	for (size_t i = 0u; i < MAXPLAYERS; ++i)
+	for (int i = 0; i < SMAXPLAYERS; ++i)
 	{
 		if (PlayerInGame(i))
 			Players[i]->camera = nullptr;
@@ -1864,7 +1864,7 @@ int FLevelLocals::FinishTravel()
 	ClientSideThinkers.CleanUpTravellers(savegamerestore);
 
 	// Some ZScript will be called here so we have to do this last.
-	for (size_t i = 0u; i < MAXPLAYERS; ++i)
+	for (int i = 0; i < SMAXPLAYERS; ++i)
 	{
 		if (PlayerInGame(i) && Players[i]->mo != nullptr && !(Players[i]->mo->ObjectFlags & OF_EuthanizeMe) && toCallBack.Find(Players[i]->mo) < toCallBack.Size())
 		{
