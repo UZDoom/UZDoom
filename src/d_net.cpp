@@ -1692,7 +1692,7 @@ void NetUpdate(int tics)
 
 				// Client commands.
 
-				TArrayView<uint8_t> cmd = TArrayView(&NetBuffer[size], MAX_MSGLEN - size);
+				TArrayView<uint8_t> cmd = TArrayView(&NetBuffer[size], static_cast<uint32_t>(MAX_MSGLEN - size));
 				for (int i = 0; i < playerCount; ++i)
 				{
 					WriteInt8(playerNums[i], cmd);
@@ -1723,7 +1723,7 @@ void NetUpdate(int tics)
 							// Write out the net events before the user commands so inputs can
 							// be used as a marker for when the given command ends.
 							auto& stream = NetEvents.Streams[curTic % BACKUPTICS];
-							WriteBytes(TArrayView(stream.Stream, stream.Used), cmd);
+							WriteBytes(TArrayView(stream.Stream, static_cast<uint32_t>(stream.Used)), cmd);
 
 							WriteUserCmdMessage(LocalCmds[realTic],
 								realLastTic >= 0 ? &LocalCmds[realLastTic] : nullptr, cmd);
@@ -1782,10 +1782,10 @@ size_t Net_SetEngineInfo(uint8_t*& stream)
 		bufferIndex += crc.Len() + 1u;
 	}
 
-	stream[3] = (numWads >> 24);
-	stream[4] = (numWads >> 16);
-	stream[5] = (numWads >> 8);
-	stream[6] = numWads;
+	stream[3] = static_cast<uint8_t>((numWads >> 24) & 0xff);
+	stream[4] = static_cast<uint8_t>((numWads >> 16) & 0xff);
+	stream[5] = static_cast<uint8_t>((numWads >> 8) & 0xff);
+	stream[6] = static_cast<uint8_t>(numWads & 0xff);
 
 	return bufferIndex;
 }

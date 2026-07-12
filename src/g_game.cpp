@@ -2658,7 +2658,8 @@ void G_WriteDemoTiccmd (usercmd_t *cmd, int player, int buf)
 		ptrdiff_t body = demobodyspot - demobuffer.Data();
 		// [RH] Allocate more space for the demo
 		maxdemosize += 0x20000;
-		demobuffer.Resize(maxdemosize);
+		assert(maxdemosize < UINT_MAX);
+		demobuffer.Resize(static_cast<unsigned>(maxdemosize));
 		demo_p = TArrayView(demobuffer.Data() + pos, demobuffer.Size() - pos);
 		streamPos = demobuffer.Data() + spot;
 		democompspot = demobuffer.Data() + comp;
@@ -2678,7 +2679,7 @@ void G_RecordDemo (const char* name)
 	FixPathSeperator (demoname);
 	DefaultExtension (demoname, ".lmp");
 	maxdemosize = 0x20000;
-	demobuffer.Resize(maxdemosize);
+	demobuffer.Resize(0x20000);
 	demorecording = true;
 }
 
@@ -2960,7 +2961,7 @@ void G_DoPlayDemo (void)
 	if (demolump >= 0)
 	{
 		size_t demolen = fileSystem.FileLength (demolump);
-		demobuffer.Resize(demolen);
+		demobuffer.Resize(static_cast<int>(demolen));
 		fileSystem.ReadFile (demolump, demobuffer.Data());
 	}
 	else
@@ -2973,7 +2974,7 @@ void G_DoPlayDemo (void)
 			I_Error("Unable to open demo '%s'", defdemoname.GetChars());
 		}
 		size_t demolen = fr.GetLength();
-		demobuffer.Resize(demolen);
+		demobuffer.Resize(static_cast<int>(demolen));
 		if (static_cast<size_t>(fr.Read(demobuffer.Data(), demolen)) != demolen)
 		{
 			I_Error("Unable to read demo '%s'", defdemoname.GetChars());

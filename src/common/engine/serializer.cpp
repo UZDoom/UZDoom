@@ -1376,7 +1376,7 @@ FSerializer &Serialize(FSerializer &arc, const char *key, FTextureID &value, FTe
 		if (val != nullptr)
 		{
 			if (arc.IsRollback()) {
-				value.SetIndex(val->GetUint64());
+				value.SetIndex(static_cast<int>(val->GetUint64()));
 			} else {
 				if (val->IsArray())
 				{
@@ -1613,7 +1613,7 @@ FSerializer &Serialize(FSerializer &arc, const char *key, FSoundID &sid, FSoundI
 		if (val != nullptr)
 		{
 			if (arc.IsRollback()) {
-				sid = FSoundID::fromInt(val->GetInt64());
+				sid = FSoundID::fromInt(static_cast<int>(val->GetInt64()));
 			} else {
 				assert(val->IsString() || val->IsNull());
 				if (val->IsString())
