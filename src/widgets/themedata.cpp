@@ -122,8 +122,7 @@ void Theme::initilize(Mode mode, bool contrast)
 	if (Theme::theme) return;
 
 	setMode(mode);
-	ThemeData *t;
-
+	
 	auto simple = [](ThemeData &t, uint32_t b1, uint32_t f1, uint32_t b2, uint32_t f2)
 	{
 		t.main.bg = t.header.bg = t.button.bg = Colorf::fromRgb(b1);

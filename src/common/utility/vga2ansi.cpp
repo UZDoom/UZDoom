@@ -21,7 +21,6 @@
 **
 */
 
-#include <cstdbool>
 #include <cstdint>
 #include <cstdio>
 #include <cstdlib>
