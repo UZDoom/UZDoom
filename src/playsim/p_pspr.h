@@ -155,13 +155,13 @@ struct FPlayerBob
 
 	FVector2 Interpolate2D(double ticFrac) const
 	{
-		return PrevBobInfo.Bob2D * (1.0 - ticFrac) + BobInfo.Bob2D * ticFrac;
+		return PrevBobInfo.Bob2D * static_cast<float>(1.0 - ticFrac) + BobInfo.Bob2D * static_cast<float>(ticFrac);
 	}
 
 	void Interpolate3D(FVector3& t, FVector3& r, double ticFrac) const
 	{
-		t = PrevBobInfo.Translation * (1.0 - ticFrac) + BobInfo.Translation * ticFrac;
-		r = PrevBobInfo.Rotation * (1.0 - ticFrac) + BobInfo.Rotation * ticFrac;
+		t = PrevBobInfo.Translation * static_cast<float>(1.0 - ticFrac) + BobInfo.Translation * static_cast<float>(ticFrac);
+		r = PrevBobInfo.Rotation * static_cast<float>(1.0 - ticFrac) + BobInfo.Rotation * static_cast<float>(ticFrac);
 	}
 };
 

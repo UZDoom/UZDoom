@@ -146,8 +146,8 @@ void ST_DrawCrosshair(int phealth, double xpos, double ypos, double scale, DAngl
 
 	if (crosshairgrow) size *= scale;
 
-	w = round(CrosshairImage->GetDisplayWidth() * size);
-	h = round(CrosshairImage->GetDisplayHeight() * size);
+	w = static_cast<int>(std::round(CrosshairImage->GetDisplayWidth() * size));
+	h = static_cast<int>(std::round(CrosshairImage->GetDisplayHeight() * size));
 
 	if (crosshaircolors == 0)
 	{

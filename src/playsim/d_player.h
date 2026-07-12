@@ -193,7 +193,7 @@ struct userinfo_t : TMap<FName,FBaseCVar *>
 		}
 
 		float aim = *static_cast<FFloatCVar *>(*CheckKey(NAME_Autoaim));
-		float bound = (dmflags & DF_NO_FREELOOK)? 35: 70;
+		float bound = (dmflags & DF_NO_FREELOOK)? 35.0f: 70.0f;
 		if (aim > bound || aim < 0)
 		{
 			return bound;

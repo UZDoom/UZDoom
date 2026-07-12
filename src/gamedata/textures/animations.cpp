@@ -733,8 +733,8 @@ void FTextureAnimator::ParseCameraTexture(FScanner &sc)
 		auto oldtex = TexMan.GameTexture(picnum);
 		fitwidth = oldtex->GetDisplayWidth ();
 		fitheight = oldtex->GetDisplayHeight ();
-		offsetx = oldtex->GetDisplayLeftOffset();
-		offsety = oldtex->GetDisplayTopOffset();
+		offsetx = static_cast<int>(oldtex->GetDisplayLeftOffset());
+		offsety = static_cast<int>(oldtex->GetDisplayTopOffset());
 		viewer->SetUseType(oldtex->GetUseType());
 		TexMan.ReplaceTexture (picnum, viewer, true);
 	}
