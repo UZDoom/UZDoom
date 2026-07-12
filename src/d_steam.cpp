@@ -131,7 +131,7 @@ TArray<FString> D_GetSteamGamePaths()
 		FString RegPath = SteamPath + "/config/libraryfolders.vdf";
 		SteamLibraryFolders = D_ParseSteamRegistry(RegPath.GetChars());
 	}
-	catch (const CRecoverableError &error)
+	catch (const CRecoverableError &)
 	{
 		// If we can't parse for some reason just pretend we can't find anything.
 		return result;
