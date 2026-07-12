@@ -3467,7 +3467,7 @@ CCMD(kick)
 	for (int i = 1; i < argv.argc(); ++i)
 	{
 		int cNum = -1;
-		if (!C_IsValidInt(argv[i], cNum) || cNum < 0 || cNum >= MAXPLAYERS)
+		if (!C_IsValidInt(argv[i], cNum) || cNum < 0 || cNum >= SMAXPLAYERS)
 			Printf("Bad client number %s\n", argv[i]);
 		else if (cNum != consoleplayer && cNums.Find(cNum) >= cNums.Size())
 			cNums.Push(cNum);
@@ -3505,7 +3505,7 @@ CCMD(mute)
 	for (int i = 1; i < argv.argc(); ++i)
 	{
 		int pNum = -1;
-		if (!C_IsValidInt(argv[i], pNum) || pNum < 0 || pNum >= MAXPLAYERS)
+		if (!C_IsValidInt(argv[i], pNum) || pNum < 0 || pNum >= SMAXPLAYERS)
 			Printf("Bad player number %s\n", argv[i]);
 		else if (pNum != consoleplayer && pNums.Find(pNum) >= pNums.Size())
 			pNums.Push(pNum);
@@ -3580,7 +3580,7 @@ CCMD(unmute)
 	for (int i = 1; i < argv.argc(); ++i)
 	{
 		int pNum = -1;
-		if (!C_IsValidInt(argv[i], pNum) || pNum < 0 || pNum >= MAXPLAYERS)
+		if (!C_IsValidInt(argv[i], pNum) || pNum < 0 || pNum >= SMAXPLAYERS)
 			Printf("Bad player number %s\n", argv[i]);
 		else if (pNum != consoleplayer && pNums.Find(pNum) >= pNums.Size())
 			pNums.Push(pNum);
@@ -3678,7 +3678,7 @@ CCMD(addsettingscontrollers)
 	for (int i = 1; i < argv.argc(); ++i)
 	{
 		int cNum = -1;
-		if (!C_IsValidInt(argv[i], cNum) || cNum < 0 || cNum >= MAXPLAYERS)
+		if (!C_IsValidInt(argv[i], cNum) || cNum < 0 || cNum >= SMAXPLAYERS)
 			Printf("Bad client number %s\n", argv[i]);
 		else if (cNum != Net_Arbitrator && cNums.Find(cNum) >= cNums.Size())
 			cNums.Push(cNum);
@@ -3705,7 +3705,7 @@ CCMD(removesettingscontrollers)
 	for (int i = 1; i < argv.argc(); ++i)
 	{
 		int cNum = -1;
-		if (!C_IsValidInt(argv[i], cNum) || cNum < 0 || cNum >= MAXPLAYERS)
+		if (!C_IsValidInt(argv[i], cNum) || cNum < 0 || cNum >= SMAXPLAYERS)
 			Printf("Bad player number %s\n", argv[i]);
 		else if (cNum != Net_Arbitrator && cNums.Find(cNum) >= cNums.Size())
 			cNums.Push(cNum);
