@@ -1208,7 +1208,7 @@ void FTextureAnimator::ResetTimers()
 		}
 		else
 		{
-			for (size_t i = 0u; i < anim.NumFrames; ++i)
+			for (int i = 0; i < anim.NumFrames; ++i)
 				TexMan.SetTranslation(anim.BasePic + i, anim.BasePic + (i + anim.CurFrame) % anim.NumFrames);
 		}
 	}

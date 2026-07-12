@@ -1771,7 +1771,7 @@ size_t Net_SetEngineInfo(uint8_t*& stream)
 	// Send over any loaded files to ensure their checksum is correct.
 	size_t numWads = 0u;
 	size_t bufferIndex = 7u;
-	for (size_t i = 0u; i < fileSystem.GetNumWads(); ++i)
+	for (int i = 0; i < fileSystem.GetNumWads(); ++i)
 	{
 		if (fileSystem.IsOptionalResource(i))
 			continue;
@@ -1796,7 +1796,7 @@ FVerificationError Net_VerifyEngine(uint8_t*& stream, size_t& offset)
 
 	TArray<FString> crcs = {};
 	TArray<FString> names = {};
-	for (size_t i = 0u; i < fileSystem.GetNumWads(); ++i)
+	for (int i = 0; i < fileSystem.GetNumWads(); ++i)
 	{
 		if (!fileSystem.IsOptionalResource(i))
 		{
@@ -3464,7 +3464,7 @@ CCMD(kick)
 	}
 
 	TArray<int> cNums = {};
-	for (size_t i = 1u; i < argv.argc(); ++i)
+	for (int i = 1; i < argv.argc(); ++i)
 	{
 		int cNum = -1;
 		if (!C_IsValidInt(argv[i], cNum) || cNum < 0 || cNum >= MAXPLAYERS)
@@ -3502,7 +3502,7 @@ CCMD(mute)
 	}
 
 	TArray<int> pNums = {};
-	for (size_t i = 1u; i < argv.argc(); ++i)
+	for (int i = 1; i < argv.argc(); ++i)
 	{
 		int pNum = -1;
 		if (!C_IsValidInt(argv[i], pNum) || pNum < 0 || pNum >= MAXPLAYERS)
@@ -3577,7 +3577,7 @@ CCMD(unmute)
 	}
 
 	TArray<int> pNums = {};
-	for (size_t i = 1u; i < argv.argc(); ++i)
+	for (int i = 1; i < argv.argc(); ++i)
 	{
 		int pNum = -1;
 		if (!C_IsValidInt(argv[i], pNum) || pNum < 0 || pNum >= MAXPLAYERS)
@@ -3675,7 +3675,7 @@ CCMD(addsettingscontrollers)
 	}
 
 	TArray<int> cNums = {};
-	for (size_t i = 1u; i < argv.argc(); ++i)
+	for (int i = 1; i < argv.argc(); ++i)
 	{
 		int cNum = -1;
 		if (!C_IsValidInt(argv[i], cNum) || cNum < 0 || cNum >= MAXPLAYERS)
@@ -3702,7 +3702,7 @@ CCMD(removesettingscontrollers)
 	}
 
 	TArray<int> cNums = {};
-	for (size_t i = 1u; i < argv.argc(); ++i)
+	for (int i = 1; i < argv.argc(); ++i)
 	{
 		int cNum = -1;
 		if (!C_IsValidInt(argv[i], cNum) || cNum < 0 || cNum >= MAXPLAYERS)
