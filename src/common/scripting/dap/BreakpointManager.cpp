@@ -38,7 +38,7 @@ int64_t BreakpointManager::GetBreakpointID()
 }
 
 
-int BreakpointManager::AddInvalidBreakpoint(
+int64_t BreakpointManager::AddInvalidBreakpoint(
 	std::vector<dap::Breakpoint> &breakpoints, int line, void *address, const std::string &reason, const dap::optional<dap::Source> &source = {})
 {
 	auto breakpointId = GetBreakpointID();
@@ -182,7 +182,7 @@ dap::ResponseOrError<dap::SetBreakpointsResponse> BreakpointManager::SetBreakpoi
 																									 : StringFormat("%s: Could not find script in loaded sources!", scriptPath.c_str());
 		for (const auto &srcBreakpoint : srcBreakpoints)
 		{
-			addInvalidBreakpoint(srcBreakpoint.line, error_message);
+			addInvalidBreakpoint(static_cast<int>(srcBreakpoint.line), error_message);
 		}
 		return response;
 	}
@@ -190,7 +190,7 @@ dap::ResponseOrError<dap::SetBreakpointsResponse> BreakpointManager::SetBreakpoi
 	{
 		for (const auto &srcBreakpoint : srcBreakpoints)
 		{
-			addInvalidBreakpoint(srcBreakpoint.line, StringFormat("Script %s is present but not loaded", scriptPath.c_str()));
+			addInvalidBreakpoint(static_cast<int>(srcBreakpoint.line), StringFormat("Script %s is present but not loaded", scriptPath.c_str()));
 		}
 		return response;
 	}
@@ -198,7 +198,7 @@ dap::ResponseOrError<dap::SetBreakpointsResponse> BreakpointManager::SetBreakpoi
 	{
 		for (const auto &srcBreakpoint : srcBreakpoints)
 		{
-			addInvalidBreakpoint(srcBreakpoint.line, StringFormat("No debug info found for script %s", scriptPath.c_str()));
+			addInvalidBreakpoint(static_cast<int>(srcBreakpoint.line), StringFormat("No debug info found for script %s", scriptPath.c_str()));
 		}
 	}
 	int srcRef = binary->GetScriptRef();
