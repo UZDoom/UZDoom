@@ -183,7 +183,7 @@ bool FCommandBuffer::CursorStart()
 
 bool FCommandBuffer::CursorEnd()
 {
-	unsigned len = Text.length();
+	unsigned len = static_cast<unsigned>(Text.length());
 	bool moved = CursorPos != len;
 	CursorPos = len;
 	MakeStartPosGood();

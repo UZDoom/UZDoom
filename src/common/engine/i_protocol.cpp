@@ -167,7 +167,7 @@ void UncheckedWriteDouble(double v, uint8_t** stream)
 void AdvanceStream(TArrayView<uint8_t>& stream, size_t bytes)
 {
 	assert(bytes <= stream.Size());
-	stream = TArrayView(stream.Data() + bytes, stream.Size() - bytes);
+	stream = TArrayView(stream.Data() + bytes, static_cast<unsigned>(stream.Size() - bytes));
 }
 
 // Checked stream functions

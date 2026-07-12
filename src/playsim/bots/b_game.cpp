@@ -324,7 +324,7 @@ void FCajunMaster::TryAddBot (FLevelLocals *Level, TArrayView<uint8_t>& stream, 
 		}
 	}
 
-	if (DoAddBot (Level, TArrayView((uint8_t*)info, strlen(info)+1), skill))
+	if (DoAddBot (Level, TArrayView((uint8_t*)info, static_cast<uint32_t>(strlen(info)+1)), skill))
 	{
 		//Increment this.
 		botnum++;

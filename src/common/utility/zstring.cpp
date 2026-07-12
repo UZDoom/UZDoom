@@ -349,7 +349,7 @@ FString &FString::operator = (const char *copyStr)
 
 TArrayView<uint8_t> FString::GetTArrayView()
 {
-	return TArrayView((uint8_t*)Chars, Len() + 1);
+	return TArrayView((uint8_t*)Chars, static_cast<uint32_t>(Len() + 1));
 }
 
 void FString::Format (const char *fmt, ...)
@@ -1444,7 +1444,7 @@ void FString::SplitNewLines(TArray<FString>& tokens, int minWrapLen, int maxLine
 	while (lastPos <= selfLen)
 	{
 		int delimLen = 1;
-		int pos = lastPos;
+		ptrdiff_t pos = lastPos;
 		bool isMidwordWrap = false;
 
 
