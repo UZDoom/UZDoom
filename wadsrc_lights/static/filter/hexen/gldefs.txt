@@ -204,6 +204,21 @@ object FSwordMissile
 	frame FSFXL { light SWORDSHOT_X5 }
 }
 
+// Fighter's flechette explosion
+object ThrowingBomb
+{
+	frame CFCFQ { light CFLAME1 }
+	frame CFCFR { light CFLAME2 }
+	frame CFCFS { light CFLAME2 }
+	frame CFCFT { light CFLAME2 }
+	frame CFCFU { light CFLAME2 }
+	frame CFCFV { light CFLAME2 }
+	frame CFCFW { light CFLAME3 }
+	frame CFCFX { light CFLAME3 }
+	frame CFCFY { light CFLAME4 }
+	frame CFCFZ { light CFLAME5 }
+}
+
 // Cleric Serpent Staff ball
 pointlight CSTAFFBALL
 {
@@ -314,6 +329,36 @@ flickerlight CFLAME5
 	chance 0.4
 }
 
+object CFlameMissile
+{
+	frame CFFXB { light CFLAME1 }
+	frame CFFXC { light CFLAME2 }
+	frame CFFXD { light CFLAME2 }
+	frame CFFXE { light CFLAME2 }
+	frame CFFXF { light CFLAME2 }
+	frame CFFXG { light CFLAME2 }
+	frame CFFXH { light CFLAME2 }
+	frame CFFXI { light CFLAME2 }
+	frame CFFXJ { light CFLAME3 }
+	frame CFFXK { light CFLAME4 }
+	frame CFFXL { light CFLAME5 }
+}
+
+object FlamePuff
+{
+	frame CFFXB { light CFLAME1 }
+	frame CFFXC { light CFLAME2 }
+	frame CFFXD { light CFLAME2 }
+	frame CFFXE { light CFLAME2 }
+	frame CFFXF { light CFLAME2 }
+	frame CFFXG { light CFLAME2 }
+	frame CFFXH { light CFLAME2 }
+	frame CFFXI { light CFLAME2 }
+	frame CFFXJ { light CFLAME3 }
+	frame CFFXK { light CFLAME4 }
+	frame CFFXL { light CFLAME5 }
+}
+
 object FlamePuff2
 {
 	frame CFFXB { light CFLAME1 }
@@ -332,6 +377,36 @@ object FlamePuff2
 object CFlameFloor
 {
 	frame CFFX { light CFLAMETRAIL }
+}
+
+object CircleFlame
+{
+	frame CFCFA { light CFLAME1 }
+	frame CFCFB { light CFLAME2 }
+	frame CFCFC { light CFLAME2 }
+	frame CFCFD { light CFLAME2 }
+	frame CFCFE { light CFLAME2 }
+	frame CFCFF { light CFLAME2 }
+	frame CFCFG { light CFLAME2 }
+	frame CFCFH { light CFLAME2 }
+	frame CFCFI { light CFLAME2 }
+	frame CFCFJ { light CFLAME3 }
+	frame CFCFK { light CFLAME3 }
+	frame CFCFL { light CFLAME3 }
+	frame CFCFM { light CFLAME3 }
+	frame CFCFN { light CFLAME3 }
+	frame CFCFO { light CFLAME4 }
+	frame CFCFP { light CFLAME5 }
+	frame CFCFQ { light CFLAME1 }
+	frame CFCFR { light CFLAME2 }
+	frame CFCFS { light CFLAME2 }
+	frame CFCFT { light CFLAME2 }
+	frame CFCFU { light CFLAME2 }
+	frame CFCFV { light CFLAME2 }
+	frame CFCFW { light CFLAME3 }
+	frame CFCFX { light CFLAME3 }
+	frame CFCFY { light CFLAME4 }
+	frame CFCFZ { light CFLAME5 }
 }
 
 // Wraithverge
@@ -535,9 +610,20 @@ object MageStaffFX2
 	frame MSP2H { light BSBALL_X4 }
 }
 
-// -------------------
-// -- Hexen Weapons --
-// -------------------
+// Mage flechette explosion
+object FireBomb
+{
+	frame XPL1A { light BSBALL_X1 }
+	frame XPL1B { light BSBALL_X1 }
+	frame XPL1C { light BSBALL_X2 }
+	frame XPL1D { light BSBALL_X3 }
+	frame XPL1E { light BSBALL_X3 }
+	frame XPL1F { light BSBALL_X4 }
+}
+
+// --------------------
+// -- Hexen Monsters --
+// --------------------
 
 // Stalker slimeball
 pointlight STALKERSLIME
@@ -1529,6 +1615,13 @@ object FireBall
 {
 	frame FBL1A { light HFIREBALL }
 	frame FBL1B { light HFIREBALL }
+
+	frame XPL1A { light BSBALL_X1 }
+	frame XPL1B { light BSBALL_X1 }
+	frame XPL1C { light BSBALL_X2 }
+	frame XPL1D { light BSBALL_X3 }
+	frame XPL1E { light BSBALL_X3 }
+	frame XPL1F { light BSBALL_X4 }
 }
 
 // -----------------
@@ -1716,4 +1809,208 @@ object TreeDestructible
 	frame TRDTN { light TDESTRUCT4 }
 	frame TRDTO { light TDESTRUCT4 }
 	frame TRDTP { light TDESTRUCT5 }
+}
+
+// ---------------------
+// -- Hexen Artifacts --
+// ---------------------
+
+// Porkalator explosion
+object PorkFX
+{
+	frame FHFXI { light THROWHAMMER_X1 }
+	frame FHFXJ { light THROWHAMMER_X2 }
+	frame FHFXK { light THROWHAMMER_X3 }
+	frame FHFXL { light THROWHAMMER_X4 }
+	frame FHFXM { light THROWHAMMER_X4 }
+	frame FHFXN { light THROWHAMMER_X4 }
+	frame FHFXO { light THROWHAMMER_X4 }
+	frame FHFXP { light THROWHAMMER_X4 }
+	frame FHFXQ { light THROWHAMMER_X5 }
+	frame FHFXR { light THROWHAMMER_X6 }
+}
+
+// Banishment Device projectile
+flickerlight BANISH1
+{
+	attenuate 1
+	color 1.0 0.4 0.4
+	size 72
+	secondarysize 64
+	chance 0.4
+}
+
+flickerlight BANISH2
+{
+	attenuate 1
+	color 1.0 0.4 0.4
+	size 48
+	secondarysize 56
+	chance 0.4
+}
+
+flickerlight BANISH3
+{
+	attenuate 1
+	color 1.0 0.4 0.4
+	size 16
+	secondarysize 24
+	chance 0.4
+}
+
+object TelOtherFX1
+{
+	frame TRNGA { light BANISH1 }
+	frame TRNGB { light BANISH1 }
+	frame TRNGC { light BANISH2 }
+	frame TRNGD { light BANISH2 }
+	frame TRNGE { light BANISH3 }
+}
+
+object TelOtherFX2
+{
+	frame TRNGA { light BANISH1 }
+	frame TRNGB { light BANISH1 }
+	frame TRNGC { light BANISH2 }
+	frame TRNGD { light BANISH2 }
+	frame TRNGE { light BANISH3 }
+}
+
+object TelOtherFX3
+{
+	frame TRNGA { light BANISH1 }
+	frame TRNGB { light BANISH1 }
+	frame TRNGC { light BANISH2 }
+	frame TRNGD { light BANISH2 }
+	frame TRNGE { light BANISH3 }
+}
+
+object TelOtherFX4
+{
+	frame TRNGA { light BANISH1 }
+	frame TRNGB { light BANISH1 }
+	frame TRNGC { light BANISH2 }
+	frame TRNGD { light BANISH2 }
+	frame TRNGE { light BANISH3 }
+}
+
+object TelOtherFX5
+{
+	frame TRNGA { light BANISH1 }
+	frame TRNGB { light BANISH1 }
+	frame TRNGC { light BANISH2 }
+	frame TRNGD { light BANISH2 }
+	frame TRNGE { light BANISH3 }
+}
+
+// Disc of Repulsion blast effect
+flickerlight DISCFX1
+{
+	attenuate 1
+	color 0.4 0.4 1.0
+	size 30
+	secondarysize 40
+	chance 0.5
+}
+
+flickerlight DISCFX2
+{
+	attenuate 1
+	color 0.4 0.4 1.0
+	size 60
+	secondarysize 75
+	chance 0.5
+}
+
+flickerlight DISCFX3
+{
+	attenuate 1
+	color 0.4 0.4 1.0
+	size 24
+	secondarysize 28
+	chance 0.5
+}
+
+flickerlight DISCFX4
+{
+	attenuate 1
+	color 0.4 0.4 1.0
+	size 16
+	secondarysize 20
+	chance 0.5
+}
+
+flickerlight DISCFX5
+{
+	attenuate 1
+	color 0.4 0.4 1.0
+	size 10
+	secondarysize 12
+	chance 0.5
+}
+
+object BlastEffect
+{
+	frame RADEA { light DISCFX1 }
+	frame RADEB { light DISCFX2 }
+	frame RADEC { light DISCFX2 }
+	frame RADED { light DISCFX2 }
+	frame RADEE { light DISCFX1 }
+	frame RADEF { light DISCFX3 }
+	frame RADEG { light DISCFX3 }
+	frame RADEH { light DISCFX4 }
+	frame RADEI { light DISCFX5 }
+}
+
+// -------------------
+// -- Hexen Effects --
+// -------------------
+
+// Hexen Teleport fog
+flickerlight HXTFOG1
+{
+	color 1.0 0.4 0.4
+	size 84
+	secondarySize 96
+	chance 0.4
+	attenuate 1
+}
+
+flickerlight HXTFOG2
+{
+	color 1.0 0.4 0.4
+	size 60
+	secondarySize 72
+	chance 0.4
+	attenuate 1
+}
+
+flickerlight HXTFOG3
+{
+	color 1.0 0.4 0.4
+	size 36
+	secondarySize 48
+	chance 0.4
+	attenuate 1
+}
+
+flickerlight HXTFOG4
+{
+	color 1.0 0.4 0.4
+	size 15
+	secondarySize 24
+	chance 0.4
+	attenuate 1
+}
+
+object TeleportFog
+{
+	frame TELEA { light HXTFOG1 }
+	frame TELEB { light HXTFOG3 }
+	frame TELEC { light HXTFOG4 }
+	frame TELED { light HXTFOG2 }
+	frame TELEE { light HXTFOG3 }
+	frame TELEF { light HXTFOG2 }
+	frame TELEG { light HXTFOG1 }
+	frame TELEH { light HXTFOG1 }
 }
