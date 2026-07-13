@@ -84,7 +84,7 @@ def fill_dict(path):
             if meta["valid"]:
                 print(f"in: {path}")
             meta["valid"] = False
-            print(f"redefining: {entry['msgid']}")
+            print(f"redefining: {specific_id} as '{e.msgstr}'")
             continue
 
         data[specific_id] = entry

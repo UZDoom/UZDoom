@@ -2,12 +2,429 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-19 13:07+0000\n"
+"PO-Revision-Date: 2026-07-12 16:01+0000\n"
 "Last-Translator: Ron Dallas <Lot_bohdan@ukr.net>\n"
-"Language-Team: Ukrainian <https://hosted.weblate.org/projects/uzdoom/zdoom-game-strings/uk/>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/doom-engine-games/strife/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 2026.7.1.dev0\n"
+
+msgid "TXT_STRIFE_MAP01"
+msgstr "ЗОНА 1: Укриття"
+
+msgid "TXT_STRIFE_MAP02"
+msgstr "ЗОНА 2: Місто"
+
+msgid "TXT_STRIFE_MAP03"
+msgstr "ЗОНА 3: Передова база"
+
+msgid "TXT_STRIFE_MAP04"
+msgstr "ЗОНА 4: Електростанція"
+
+msgid "TXT_STRIFE_MAP05"
+msgstr "ЗОНА 5: Тюрма"
+
+msgid "TXT_STRIFE_MAP06"
+msgstr "ЗОНА 6: Каналізації"
+
+msgid "TXT_STRIFE_MAP07"
+msgstr "ЗОНА 7: Замок"
+
+msgid "TXT_STRIFE_MAP08"
+msgstr "ЗОНА 8: Зала аудієнцій"
+
+msgid "TXT_STRIFE_MAP09"
+msgstr "ЗОНА 9: Замок: Вежа Програміста"
+
+msgid "TXT_STRIFE_MAP10"
+msgstr "ЗОНА 10: Нова передова база"
+
+msgid "TXT_STRIFE_MAP11"
+msgstr "ЗОНА 11: Прикордоння"
+
+msgid "TXT_STRIFE_MAP12"
+msgstr "ЗОНА 12: Храм Оракула"
+
+msgid "TXT_STRIFE_MAP13"
+msgstr "ЗОНА 13: Катакомби"
+
+msgid "TXT_STRIFE_MAP14"
+msgstr "ЗОНА 14: Шахти"
+
+msgid "TXT_STRIFE_MAP15"
+msgstr "ЗОНА 15: Фортеця: Адміністрація"
+
+msgid "TXT_STRIFE_MAP16"
+msgstr "ЗОНА 16: Фортеця: Вежа Єпископа"
+
+#, fuzzy
+msgid "TXT_STRIFE_MAP17"
+msgstr "ЗОНА 17: Фортеця: Подвір'я"
+
+msgid "TXT_STRIFE_MAP18"
+msgstr "ЗОНА 18: Фортеця: Склади"
+
+#, fuzzy
+msgid "TXT_STRIFE_MAP19"
+msgstr "ЗОНА 19: Фортеця: Комплекс охорони"
+
+msgid "TXT_STRIFE_MAP20"
+msgstr "ЗОНА 20: Завод: Приймальний цех"
+
+msgid "TXT_STRIFE_MAP21"
+msgstr "ЗОНА 21: Завод: Збірний цех"
+
+msgid "TXT_STRIFE_MAP22"
+msgstr "ЗОНА 22: Завод: Кузня"
+
+msgid "TXT_STRIFE_MAP23"
+msgstr "ЗОНА 23: Обитель Ордену"
+
+#, fuzzy
+msgid "TXT_STRIFE_MAP24"
+msgstr "ЗОНА 24: Завод: Каплиця Навернення"
+
+msgid "TXT_STRIFE_MAP25"
+msgstr "ЗОНА 25: Катакомби: Зруйнований храм"
+
+msgid "TXT_STRIFE_MAP26"
+msgstr "ЗОНА 26: Випробувальний полігон"
+
+msgid "TXT_STRIFE_MAP27"
+msgstr "ЗОНА 27: Лабораторія"
+
+msgid "TXT_STRIFE_MAP28"
+msgstr "ЗОНА 28: Інопланетний корабель"
+
+msgid "TXT_STRIFE_MAP29"
+msgstr "ЗОНА 29: Обитель Сотворіння"
+
+msgid "TXT_STRIFE_MAP30"
+msgstr "ЗОНА 30: Покинута передова база"
+
+msgid "TXT_STRIFE_MAP31"
+msgstr "ЗОНА 31: Навчальний центр"
+
+msgid "TXT_STRIFE_MAP32"
+msgstr "ЗОНА 1: Укриття"
+
+msgid "TXT_STRIFE_MAP33"
+msgstr "ЗОНА 2: Місто"
+
+msgid "TXT_STRIFE_MAP34"
+msgstr "ЗОНА 3: База Повстанців"
+
+msgid "TXT_STRIFE_MAP35"
+msgstr "ЗОНА 35: Завод: Виробничий цех"
+
+#, fuzzy
+msgid "TXT_STRIFE_MAP36"
+msgstr "ЗОНА 36: Замкова сутичка"
+
+msgid "TXT_STRIFE_MAP37"
+msgstr "ЗОНА 37: Полігон смерті"
+
+msgid "TXT_STRIFE_MAP38"
+msgstr "ЗОНА 38: Упорядкований хаос"
+
+msgid "TXT_DLG_SCRIPT01_D0_IDONT"
+msgstr "Відійди, я не шукаю проблем. Цей виродок Гарріс вже довів мене до ручки. Обіцяв платити, а тепер мені світить допит у Програміста."
+
+msgid "TXT_DLG_SCRIPT02_D0_ILLHE"
+msgstr "Якщо ти допоможеш мені — я допоможу тобі. П'ять золотих і я розкажу усе, що знаю."
+
+msgid "TXT_RPLY0_SCRIPT02_D0_HERES"
+msgstr "Ось золото."
+
+msgid "TXT_RYES0_SCRIPT02_D0_BESTE"
+msgstr "Убивай непомітно, так ти не піднімеш тривоги."
+
+msgid "TXT_RNO0_SCRIPT02_D0_WELLI"
+msgstr "Ну, безкоштовно я тобі нічого не скажу!"
+
+msgid "TXT_DLG_SCRIPT02_D1516_HAVEY"
+msgstr "У тебе, бува, не знайдеться ще 5 золотих?"
+
+msgid "TXT_RPLY0_SCRIPT02_D1516_5GOLD"
+msgstr "5 золотих."
+
+msgid "TXT_RYES0_SCRIPT02_D1516_WELLP"
+msgstr "Ну, отруйні болти вбивають охоронців миттєво і не піднімають тривоги."
+
+msgid "TXT_RNO0_SCRIPT02_D1516_NOSIR"
+msgstr "Ні пане, я не скажу тобі нічого безплатно!"
+
+msgid "TXT_DLG_SCRIPT02_D3032_YOUVE"
+msgstr "Та ти з мене вже всі чутки до останньої витяг!"
+
+msgid "TXT_DLG_SCRIPT02_D4548_WHATC"
+msgstr "Чого бажаєте?"
+
+msgid "TXT_RPLY0_SCRIPT02_D4548_ASSAU"
+msgstr "Штурмова гвинтівка"
+
+msgid "TXT_RYES0_SCRIPT02_D4548_HEREY"
+msgstr "Ось."
+
+msgid "TXT_RNO0_SCRIPT02_D4548_YOUCA"
+msgstr "Ви не можете дозволити собі це зараз."
+
+msgid "TXT_RPLY1_SCRIPT02_D4548_CLIPO"
+msgstr "Набійниця"
+
+msgid "TXT_RYES1_SCRIPT02_D4548_THANK"
+msgstr "Дякую."
+
+msgid "TXT_RNO1_SCRIPT02_D4548_COMEO"
+msgstr "Давай 10 золотих."
+
+msgid "TXT_RPLY2_SCRIPT02_D4548_AMMOB"
+msgstr "Коробка патронів"
+
+msgid "TXT_RYES2_SCRIPT02_D4548_HERES"
+msgstr "Ось твої патрони."
+
+msgid "TXT_RNO2_SCRIPT02_D4548_MAYBE"
+msgstr "Може, іншим разом."
+
+msgid "TXT_DLG_SCRIPT02_D6064_GOODN"
+msgstr "Хоч якісь хороші новини з фронту для різноманітності. Масіл направив тебе по нагороду та інструктаж. Він доручив мені зайнятися цим."
+
+msgid "TXT_RPLY0_SCRIPT02_D6064_THANK"
+msgstr "Дякую."
+
+msgid "TXT_RYES0_SCRIPT02_D6064_GLADT"
+msgstr "Радий бути корисним."
+
+#, fuzzy
+msgid "TXT_DLG_SCRIPT02_D7580_ALLRI"
+msgstr "Гаразд, ось тобі кілька порад: не ставай на шляху в Хрестоносців — стрільба короткими чергами з твоєї штурмової гвинтівки допомагає утримувати ціль."
+
+msgid "TXT_RPLY0_SCRIPT02_D7580_ISTHA"
+msgstr "Це все?"
+
+msgid "TXT_RYES0_SCRIPT02_D7580_LOOKY"
+msgstr "Дивись, згодом ти дізнаєшся більше."
+
+msgid "TXT_DLG_SCRIPT02_D9096_ITHIN"
+msgstr "Думаю, я зможу модифікувати вогнемет Хрестоносців під людську руку. А, бажаєш ще чогось?"
+
+msgid "TXT_RPLY0_SCRIPT02_D9096_FLAME"
+msgstr "Вогнемет."
+
+msgid "TXT_RYES0_SCRIPT02_D9096_IKNEW"
+msgstr "Знав, що все вдасться! Ось, тримай, обкатай красеня!"
+
+msgid "TXT_RNO0_SCRIPT02_D9096_LISTE"
+msgstr "Слухай, я не можу нічого зробити без потрібних деталей!"
+
+msgid "TXT_RPLY1_SCRIPT02_D9096_ASSAU"
+msgstr "Штурмова гвинтівка"
+
+msgid "TXT_RYES1_SCRIPT02_D9096_WELLH"
+msgstr "Що ж, ось тримайте, пане!"
+
+msgid "TXT_RNO1_SCRIPT02_D9096_OBVIO"
+msgstr "Вочевидь, зараз тобі це не по кишені."
+
+msgid "TXT_RPLY2_SCRIPT02_D9096_CLIPO"
+msgstr "Набійниця"
+
+msgid "TXT_RYES2_SCRIPT02_D9096_THANK"
+msgstr "Дякую."
+
+msgid "TXT_RNO2_SCRIPT02_D9096_COMEO"
+msgstr "Давай 10 золотих."
+
+msgid "TXT_RPLY3_SCRIPT02_D9096_AMMOB"
+msgstr "Коробка патронів"
+
+msgid "TXT_RYES3_SCRIPT02_D9096_HERES"
+msgstr "Ось твої патрони."
+
+msgid "TXT_RNO3_SCRIPT02_D9096_MAYBE"
+msgstr "Можливо, іншим разом. Бувай!"
+
+msgid "TXT_DLG_SCRIPT02_D10612_NOWTH"
+msgstr "Тепер, коли у тебе є вогнемет, чи можу я запропонувати щось іще?"
+
+msgid "TXT_RPLY0_SCRIPT02_D10612_ASSAU"
+msgstr "Штурмова гвинтівка"
+
+msgid "TXT_RYES0_SCRIPT02_D10612_HEREY"
+msgstr "Ось."
+
+msgid "TXT_RNO0_SCRIPT02_D10612_YOUCA"
+msgstr "Ви не можете дозволити собі це зараз."
+
+msgid "TXT_RPLY1_SCRIPT02_D10612_CLIPO"
+msgstr "Набійниця"
+
+msgid "TXT_RYES1_SCRIPT02_D10612_THANK"
+msgstr "Дякую."
+
+msgid "TXT_RNO1_SCRIPT02_D10612_COMEO"
+msgstr "Давай 10 золотих."
+
+msgid "TXT_RPLY2_SCRIPT02_D10612_AMMOB"
+msgstr "Коробка патронів"
+
+msgid "TXT_RYES2_SCRIPT02_D10612_HERES"
+msgstr "Ось твої патрони."
+
+msgid "TXT_RNO2_SCRIPT02_D10612_MAYBE"
+msgstr "Можливо, іншим разом."
+
+msgid "TXT_DLG_SCRIPT02_D12128_NOWTH"
+msgstr "Тепер, коли у тебе є вогнемет, чи можу я запропонувати щось іще?"
+
+msgid "TXT_RPLY0_SCRIPT02_D12128_CLIPO"
+msgstr "Набійниця"
+
+msgid "TXT_RYES0_SCRIPT02_D12128_THANK"
+msgstr "Дякую."
+
+msgid "TXT_RNO0_SCRIPT02_D12128_COMEO"
+msgstr "Давай 10 золотих."
+
+msgid "TXT_RPLY1_SCRIPT02_D12128_AMMOB"
+msgstr "Коробка патронів"
+
+msgid "TXT_RPLY0_SCRIPT23_D0_AMMOB"
+msgstr "Коробка патронів"
+
+msgid "TXT_RPLY2_SCRIPT33_D4548_50ROU"
+msgstr "Коробка патронів"
+
+msgid "TXT_RYES1_SCRIPT02_D12128_HERES"
+msgstr "Ось твої патрони."
+
+msgid "TXT_RYES0_SCRIPT23_D0_HERES"
+msgstr "Ось твої патрони."
+
+msgid "TXT_RNO1_SCRIPT02_D12128_MAYBE"
+msgstr "Можливо, іншим разом."
+
+msgid "TXT_RYES2_SCRIPT02_D12128_THANK"
+msgstr "Дякую."
+
+msgid "TXT_RPLY0_SCRIPT02_D62156_THANK"
+msgstr "Дякую."
+
+msgid "TXT_RPLY1_SCRIPT02_D69736_NOTHA"
+msgstr "Ні, дякую."
+
+msgid "TXT_RPLY0_SCRIPT02_D80348_THANK"
+msgstr "Дякую."
+
+msgid "TXT_RPLY0_SCRIPT02_D89444_THANK"
+msgstr "Дякую."
+
+msgid "TXT_RPLY1_SCRIPT03_D1516_NOTHA"
+msgstr "Ні, дякую."
+
+msgid "TXT_RPLY1_SCRIPT33_D15160_NOTHA"
+msgstr "Ні, дякую."
+
+msgid "TXT_RPLY1_SCRIPT33_D22740_ILLKE"
+msgstr "Я притримаю чашу у себе, дякую."
+
+msgid "TXT_RPLY2_SCRIPT02_D12128_PHOSP"
+msgstr "Фосфорні гранати"
+
+msgid "TXT_RNO2_SCRIPT02_D12128_YOUDO"
+msgstr "Трохи не вистачає"
+
+msgid "TXT_RNO0_SCRIPT02_D18192_IMSOR"
+msgstr "Вибач, але у тебе не вистачить на це грошей."
+
+msgid "TXT_RNO0_SCRIPT02_D19708_IMSOR"
+msgstr "Вибач, але у тебе не вистачить на це грошей."
+
+msgid "TXT_RNO2_SCRIPT10_D40932_YOUDO"
+msgstr "Тобі це не по кишені."
+
+msgid "TXT_RNO0_SCRIPT23_D0_YOUDO"
+msgstr "Тобі це не по кишені!"
+
+msgid "TXT_RNO1_SCRIPT23_D1516_YOUDO"
+msgstr "Тобі це не по кишені!"
+
+msgid "TXT_RNO1_SCRIPT23_D3032_YOUDO"
+msgstr "Тобі не вистачає на це!"
+
+msgid "TXT_RNO2_SCRIPT33_D4548_YOUDO"
+msgstr "У тебе недостатньо золота!"
+
+msgid "TXT_RNO0_SCRIPT33_D6064_YOUDO"
+msgstr "Тобі бракує грошей на це."
+
+msgid "TXT_RPLY3_SCRIPT02_D12128_POISO"
+msgstr "Отруйні болти"
+
+msgid "TXT_RYES3_SCRIPT02_D12128_WORTH"
+msgstr "Вартує кожного золотого!"
+
+msgid "TXT_RNO3_SCRIPT02_D12128_COMEO"
+msgstr "Давай 200 золота!"
+
+msgid "TXT_RPLY1_SCRIPT02_D15160_AMMOS"
+msgstr "Сумка для набоїв"
+
+msgid "TXT_RPLY1_SCRIPT02_D16676_AMMOS"
+msgstr "Сумка для набоїв"
+
+msgid "TXT_RPLY3_SCRIPT33_D4548_AMMOS"
+msgstr "Сумка для набоїв"
+
+msgid "TXT_RPLY0_SCRIPT02_D15160_ELECT"
+msgstr "Електричні болти"
+
+msgid "TXT_RYES0_SCRIPT02_D15160_YOUGO"
+msgstr "Взято електричні болти."
+
+msgid "TXT_RNO0_SCRIPT02_D15160_NOYOU"
+msgstr "Ні. У тебе немає того, що мені потрібно для електричних болтів!"
+
+msgid "TXT_RNO0_SCRIPT02_D16676_NOYOU"
+msgstr "Ні. У тебе немає того, що мені потрібно для електричних болтів!"
+
+msgid "TXT_RPLY0_SCRIPT02_D16676_ELECT"
+msgstr "Електричні болти"
+
+msgid "TXT_RYES0_SCRIPT02_D16676_YOUGO"
+msgstr "Взято електричні болти."
+
+msgid "TXT_RPLY0_SCRIPT33_D4548_ELECT"
+msgstr "Електричні болти"
+
+msgid "TXT_DLG_SCRIPT02_D13644_ICANT"
+msgstr "Яка ж паршива мені дісталася служба. Кажуть, із цих стічних воріт лізло якесь поріддя зла… І тепер я маю стирчати тут, поки воно знову не вилізе!"
+
+msgid "TXT_RPLY0_SCRIPT02_D13644_WHATG"
+msgstr "Які ворота?"
+
+msgid "TXT_RYES0_SCRIPT02_D13644_THESE"
+msgstr "Переливні ворота каналізації."
+
+msgid "TXT_DLG_SCRIPT02_D15160_HELLO"
+msgstr "Привіт друже. Що я можу для тебе зробити?"
+
+msgid "TXT_RYES1_SCRIPT02_D15160_THANK"
+msgstr "Дякую. Щось іще?"
+
+msgid "TXT_RNO1_SCRIPT02_D15160_YOUCA"
+msgstr "Тобі це не по кишені. Гарного дня."
+
+msgid "TXT_DLG_SCRIPT02_D16676_WHATC"
+msgstr "Чого бажаєш?"
+
+msgid "TXT_RYES1_SCRIPT02_D16676_THANK"
+msgstr "Дякую, щось ще?"
+
+#, fuzzy
+msgid "TXT_RNO1_SCRIPT02_D16676_YOUCA"
+msgstr "Тобі це не по кишені, приємного дня!"

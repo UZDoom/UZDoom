@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-06-08 23:01+0000\n"
+"PO-Revision-Date: 2026-06-14 21:01+0000\n"
 "Last-Translator: Júlia Rosell Saldaña <contacte@juliars.cat>\n"
 "Language-Team: Latin <https://hosted.weblate.org/projects/uzdoom/glossary/la/>\n"
 "Language: la\n"
@@ -10,145 +10,145 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.6\n"
+"X-Generator: Weblate 2026.7.dev0\n"
 
 msgid "ON"
-msgstr ""
+msgstr "ACTIVATUS"
 
 msgid "OFF"
-msgstr ""
+msgstr "INACTIVATUS"
 
 msgid "MIDI"
-msgstr ""
+msgstr "MIDI"
 
 msgid "FluidSynth"
-msgstr ""
+msgstr "FluidSynth"
 
 msgid "Freeverb"
-msgstr ""
+msgstr "Freeverb"
 
 msgid "ADLMidi"
-msgstr ""
+msgstr "ADLMidi"
 
 msgid "OPNMidi"
-msgstr ""
+msgstr "OPNMidi"
 
 msgid "WildMidi"
-msgstr ""
+msgstr "WildMidi"
 
 msgid "Timidity"
-msgstr ""
+msgstr "Timidity"
 
 msgid "libXMP"
-msgstr ""
+msgstr "libXMP"
 
 msgid "Dumb"
-msgstr ""
+msgstr "Dumb"
 
 msgid "Chip-o-matic"
-msgstr ""
+msgstr "Chip-o-matic"
 
 msgid "MAME"
-msgstr ""
+msgstr "MAME"
 
 msgid "OPL2"
-msgstr ""
+msgstr "OPL2"
 
 msgid "DOSBox"
-msgstr ""
+msgstr "DOSBox"
 
 msgid "OPL3"
-msgstr ""
+msgstr "OPL3"
 
 msgid "Java"
-msgstr ""
+msgstr "Java"
 
 msgid "ESFMu"
-msgstr ""
+msgstr "ESFMu"
 
 msgid "YMFM"
-msgstr ""
+msgstr "YMFM"
 
 msgid "Nuked"
-msgstr ""
+msgstr "Nuked"
 
 msgid "YM2612"
-msgstr ""
+msgstr "YM2612"
 
 msgid "Neko Project II Kai"
-msgstr ""
+msgstr "Neko Project II Kai"
 
 msgid "OPNA"
-msgstr ""
+msgstr "OPNA"
 
 msgid "YM2608"
-msgstr ""
+msgstr "YM2608"
 
 msgid "Opal"
-msgstr ""
+msgstr "Opal"
 
 msgid "YM3438"
-msgstr ""
+msgstr "YM3438"
 
 msgid "OPN2"
-msgstr ""
+msgstr "OPN2"
 
 msgid "YMF276"
-msgstr ""
+msgstr "YMF276"
 
 msgid "GENS"
-msgstr ""
+msgstr "GENS"
 
 msgid "Uncharted 2"
 msgstr "Ignotumque 2"
 
 msgid "Reinhard"
-msgstr ""
+msgstr "Reinhard"
 
 msgid "Hejl-Dawson"
-msgstr ""
+msgstr "Hejl-Dawson"
 
 msgid "OpenGL"
-msgstr ""
+msgstr "OpenGL"
 
 msgid "Vulkan"
-msgstr ""
+msgstr "Vulkan"
 
 msgid "OpenGL ES"
-msgstr ""
+msgstr "OpenGL ES"
 
 msgid "ScaleNx"
-msgstr ""
+msgstr "ScaleNx"
 
 msgid "ZDoom"
-msgstr ""
+msgstr "ZDoom"
 
 msgid "NormalNx"
-msgstr ""
+msgstr "NormalNx"
 
 msgid "hqNx"
-msgstr ""
+msgstr "hqNx"
 
 msgid "xBRZ"
-msgstr ""
+msgstr "xBRZ"
 
 msgid "Doom"
-msgstr ""
+msgstr "Doom"
 
 msgid "Boom"
-msgstr ""
+msgstr "Boom"
 
 msgid "Strife"
-msgstr ""
+msgstr "Strife"
 
 msgid "Hexen"
-msgstr ""
+msgstr "Hexen"
 
 msgid "Heretic"
-msgstr ""
+msgstr "Heretic"
 
 msgid "Chex"
-msgstr ""
+msgstr "Chex"
 
 msgid "Press Y or N"
 msgstr "Preme Y vel N"
@@ -157,25 +157,25 @@ msgid "Press a key"
 msgstr "Preme clavis"
 
 msgid "WOPN"
-msgstr ""
+msgstr "WOPN"
 
 msgid "WOPL"
-msgstr ""
+msgstr "WOPL"
 
 msgid "LLE"
-msgstr ""
+msgstr "LLE"
 
 msgid "DMX"
-msgstr ""
+msgstr "DMX"
 
 msgid "MMX"
-msgstr ""
+msgstr "MMX"
 
 msgid "Discord"
-msgstr ""
+msgstr "Discord"
 
 msgid "MBF"
-msgstr ""
+msgstr "MBF"
 
 msgid "MBF21"
-msgstr ""
+msgstr "MBF21"

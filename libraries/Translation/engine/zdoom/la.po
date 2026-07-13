@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-06-12 16:57+0000\n"
-"Last-Translator: Júlia Rosell Saldaña <contacte@juliars.cat>\n"
+"PO-Revision-Date: 2026-07-06 15:02+0000\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Latin <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/la/>\n"
 "Language: la\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.7.dev0\n"
+"X-Generator: Weblate 2026.7.1.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "Preme clavem."
@@ -2755,6 +2755,7 @@ msgstr "Mirum Iob!"
 msgid "CE4TEXT"
 msgstr "Mirabile"
 
+#, fuzzy
 msgid "CLOADNET"
 msgstr ""
 "Quaestio onerare non potes!\n"
@@ -5075,12 +5076,12 @@ msgstr "Latitudinem indicii limita"
 msgid "ACCMNU_TOOLTIP_SCALE"
 msgstr "Textus indicii magnus"
 
-#, fuzzy
 msgid "ACCMNU_TOOLTIP_EXAMPLE"
 msgstr ""
-"\n"
-"\n"
-"\n"
+"Hoc exemplum est indicationis instrumenti.\n"
+"Ecce textus supplementarius.\n"
+"...\n"
+"Ecce longissima linea textus quae pergere videtur sine ulla re umquam interessante dicenda, tantum longa esse videtur quia artifices difficultatem habent explicandi quid optio faciat."
 
 msgid "ACCMNU_TOOLTIP"
 msgstr "Indicia"
@@ -5309,3 +5310,9 @@ msgstr "Limen duplicis pressionis"
 
 msgid "ACCMNU_TOOLTIP_DOUBLECLICK_THRESHOLD"
 msgstr "Tempus inter subsequens clavem urget ut felis geminus-click eventum"
+
+msgid "OPTVAL_VTAZDOOM"
+msgstr "Automaticus (ZDoom Praefertur)"
+
+msgid "OPTVAL_VTAVANILLA"
+msgstr "Automaticum (Vanilla Praefertur)"

@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-05-05 22:16-0400\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2026-07-02 16:01+0000\n"
+"Last-Translator: Gustavo Rehermann <gr.wallabra@proton.me>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/uzdoom/common/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: python 3.14.4 polib 1.2.0\n"
+"X-Generator: Weblate 2026.7.dev0\n"
 
 msgid "PRESSYN"
 msgstr "Aperte Y ou N."
@@ -1022,37 +1022,37 @@ msgid "OPTVAL_NP2OPNA"
 msgstr "Neko Project II Kai OPNA"
 
 msgid "OPTVAL_MAMEOPNA"
-msgstr ""
+msgstr "MAME YM2608"
 
 msgid "OPTVAL_OPALOPL3"
-msgstr ""
+msgstr "Opal OPL3"
 
 msgid "OPTVAL_NUKEDOPL3174"
-msgstr ""
+msgstr "Nuked OPL3 v1.7.4"
 
 msgid "OPTVAL_NUKEDOPN2YM3438"
-msgstr ""
+msgstr "Nuked OPN2 (YM3438)"
 
 msgid "OPTVAL_NUKEDOPN2YM2612"
-msgstr ""
+msgstr "Nuked OPN2 (YM2612)"
 
 msgid "OPTVAL_OPN2YM2612LLE"
-msgstr ""
+msgstr "OPN2-LLE (YM2612) (pesado)"
 
 msgid "OPTVAL_OPN2YM3438LLE"
-msgstr ""
+msgstr "OPN2-LLE (YM3438) (pesado)"
 
 msgid "OPTVAL_OPN2YMF276LLE"
-msgstr ""
+msgstr "OPN2-LLE (YMF276) (pesado)"
 
 msgid "OPTVAL_GENSOPN2"
-msgstr ""
+msgstr "GENS OPN2 (YM2612)"
 
 msgid "OPTVAL_YMFMOPN2"
-msgstr ""
+msgstr "YMFM OPN2"
 
 msgid "OPTVAL_YMFMOPNA"
-msgstr ""
+msgstr "YMFM OPNA"
 
 msgid "ADLVLMODEL_AUTO"
 msgstr "Automático (usar definições de banco)"
@@ -1076,13 +1076,13 @@ msgid "ADLVLMODEL_DMX"
 msgstr "DMX (preciso, com bug de AM)"
 
 msgid "OPNVLMODEL_DMX"
-msgstr ""
+msgstr "Como DMX"
 
 msgid "ADLVLMODEL_APOGEE"
 msgstr "Apogee (preciso, com bug de AM)"
 
 msgid "OPNVLMODEL_APOGEE"
-msgstr ""
+msgstr "Como Apogee Sound System"
 
 msgid "OPNVLMODEL_WIN9X"
 msgstr "Estilo Win9X"
@@ -1109,31 +1109,31 @@ msgid "ADLVLMODEL_HMIOLD"
 msgstr "SOS HMI (antigo, com bugs)"
 
 msgid "ADLCHANALLOC_AUTO"
-msgstr ""
+msgstr "Automático"
 
 msgid "ADLCHANALLOC_OFFDELAY"
-msgstr ""
+msgstr "Atraso medido após som"
 
 msgid "ADLCHANALLOC_SAMEINST"
-msgstr ""
+msgstr "Reusar primeiro liberado do mesmo instrumento"
 
 msgid "ADLCHANALLOC_ANYREL"
-msgstr ""
+msgstr "Reusar qualquer primeira nota liberada"
 
 msgid "OPTVAL_UNLIMITED"
 msgstr "Sem limites"
 
 msgid "OPTVAL_256K"
-msgstr ""
+msgstr "256K"
 
 msgid "OPTVAL_512K"
-msgstr ""
+msgstr "512K"
 
 msgid "OPTVAL_768K"
-msgstr ""
+msgstr "768K"
 
 msgid "OPTVAL_1024K"
-msgstr ""
+msgstr "1024K"
 
 msgid "OPTVAL_UNCHARTED2"
 msgstr "Uncharted 2"
@@ -1221,7 +1221,7 @@ msgid "GLPREFMNU_FOGMODE"
 msgstr "Modo de neblina"
 
 msgid "OPTVAL_RADIAL"
-msgstr ""
+msgstr "Radial"
 
 msgid "OPTVAL_STANDARD"
 msgstr "Padrão"
@@ -1242,25 +1242,25 @@ msgid "OPTVAL_NONETRILINEAR"
 msgstr "Nenhum (trilinear)"
 
 msgid "OPTVAL_BILINEAR"
-msgstr ""
+msgstr "Bilinear"
 
 msgid "OPTVAL_TRILINEAR"
-msgstr ""
+msgstr "Trilinear"
 
 msgid "OPTVAL_2X"
-msgstr ""
+msgstr "2×"
 
 msgid "OPTVAL_4X"
-msgstr ""
+msgstr "4×"
 
 msgid "OPTVAL_8X"
-msgstr ""
+msgstr "8×"
 
 msgid "OPTVAL_16X"
-msgstr ""
+msgstr "16×"
 
 msgid "OPTVAL_32X"
-msgstr ""
+msgstr "32×"
 
 msgid "GLTEXMNU_TITLE"
 msgstr "Opções de Textura"
@@ -1362,7 +1362,7 @@ msgid "VIDMNU_ASPECT219"
 msgstr "Proporção 21:9"
 
 msgid "OPTVAL_NORMAL"
-msgstr ""
+msgstr "Normal"
 
 # This describes vid_scalemode 1, which represents the lowest possible scaling
 # to fill the allocated screen area
@@ -1505,10 +1505,10 @@ msgid "REVMNU_Name"
 msgstr "Nome"
 
 msgid "REVMNU_ID_1"
-msgstr ""
+msgstr "ID #1"
 
 msgid "REVMNU_ID_2"
-msgstr ""
+msgstr "ID #2"
 
 msgid "REVMNU_Create"
 msgstr "Criar"
@@ -1550,7 +1550,7 @@ msgid "OPTVAL_HQNX"
 msgstr "hqNx"
 
 msgid "OPTVAL_HQNXMMX"
-msgstr ""
+msgstr "hqNx MMX"
 
 msgid "OPTVAL_NXBRZ"
 msgstr "xBRZ"
@@ -1601,7 +1601,7 @@ msgid "TXT_SAVEGAMENEEDS"
 msgstr "Este jogo salvo precisa destes arquivos"
 
 msgid "GLPREFMNU_CORONAS"
-msgstr ""
+msgstr "Coronas"
 
 msgid "PICKER_SELECT"
 msgstr "Selecione qual arquivo de jogo rodar."
@@ -1631,10 +1631,10 @@ msgid "PICKER_LIGHTS"
 msgstr "Luzes"
 
 msgid "PICKER_BRIGHTMAPS"
-msgstr ""
+msgstr "Brightmaps"
 
 msgid "PICKER_WIDESCREEN"
-msgstr ""
+msgstr "Tela larga"
 
 msgid "PICKER_ADDPARM"
 msgstr "Parâmetros adicionais:"
@@ -1766,7 +1766,7 @@ msgid "MISCMNU_DISCORDRPC"
 msgstr "Status de atividade no Discord"
 
 msgid "JOYMNU_TURNSPEED"
-msgstr ""
+msgstr "Velocidade de giro"
 
 msgid "JOYMNU_LOOKSPEED"
 msgstr "Sensibilidade do o­lhar­­­­­"
@@ -1811,3 +1811,6 @@ msgstr "Quantidade de Mensagens"
 
 msgid "MSGMNU_STACKIDENTICAL"
 msgstr "Combinar mensagens repetidas"
+
+msgid "$MSGMNU_MESSAGEFADE"
+msgstr "Duração de fadeout das mensagens"

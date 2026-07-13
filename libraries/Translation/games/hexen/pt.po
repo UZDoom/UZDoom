@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-30 06:54+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2026-06-27 08:01+0000\n"
+"Last-Translator: ssantos <ssantos@web.de>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/doom-engine-games/hexen/pt/>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 2026.7.dev0\n"
 
 msgid "TXT_HEXEN_MAP36"
 msgstr "Túmulo de Zedek"
@@ -20,3 +20,223 @@ msgstr "Túmulo de Menelkir"
 
 msgid "TXT_HEXEN_MAP38"
 msgstr "Túmulo de Traductus"
+
+msgid "TXT_HEXEN_MAP01"
+msgstr "Sala de Separação"
+
+msgid "TXT_HEXEN_MAP02"
+msgstr "Sete Portais"
+
+msgid "TXT_HEXEN_MAP03"
+msgstr "Guardião de Gelo"
+
+msgid "TXT_HEXEN_MAP04"
+msgstr "Guardião de Fogo"
+
+msgid "TXT_HEXEN_MAP05"
+msgstr "Guardião de Aço"
+
+msgid "TXT_HEXEN_MAP06"
+msgstr "Crisol de Luz"
+
+msgid "TXT_HEXEN_MAP13"
+msgstr "Floresta das Sombras"
+
+msgid "TXT_HEXEN_MAP08"
+msgstr "Pantâno Negro"
+
+msgid "TXT_HEXEN_MAP09"
+msgstr "Cavernas de Circe"
+
+msgid "TXT_HEXEN_MAP10"
+msgstr "Terras Desoladas"
+
+msgid "TXT_HEXEN_MAP11"
+msgstr "Bosque Sagrado"
+
+msgid "TXT_HEXEN_MAP12"
+msgstr "Hipostilo"
+
+msgid "TXT_HEXEN_MAP27"
+msgstr "Seminário do Heresiarca"
+
+msgid "TXT_HEXEN_MAP28"
+msgstr "Capela do Dragão"
+
+msgid "TXT_HEXEN_MAP30"
+msgstr "Capela do Grifo"
+
+msgid "TXT_HEXEN_MAP31"
+msgstr "Capela do Vento da Morte"
+
+msgid "TXT_HEXEN_MAP32"
+msgstr "Pomar das Lamentações"
+
+msgid "TXT_HEXEN_MAP33"
+msgstr "Refeitório Silencioso"
+
+msgid "TXT_HEXEN_MAP34"
+msgstr "Capela do Lobo"
+
+msgid "TXT_HEXEN_MAP21"
+msgstr "Posto Abandonado"
+
+msgid "TXT_HEXEN_MAP22"
+msgstr "Castelo da Aflição"
+
+msgid "TXT_HEXEN_MAP23"
+msgstr "Forca"
+
+msgid "TXT_HEXEN_MAP24"
+msgstr "Eflúvio"
+
+msgid "TXT_HEXEN_MAP25"
+msgstr "Masmorras"
+
+msgid "TXT_HEXEN_MAP26"
+msgstr "Jardim Desolado"
+
+msgid "TXT_HEXEN_MAP35"
+msgstr "Necrópole"
+
+msgid "TXT_HEXEN_MAP39"
+msgstr "Viveiro"
+
+msgid "TXT_HEXEN_MAP40"
+msgstr "Crisol das Trevas"
+
+msgid "TXT_HEXEN_WIN3MSG"
+msgstr ""
+"\\n"
+"Mas existem outros jogadores mais\n"
+"poderosos do que você. E quem sabe\n"
+"quais são os seus próximos movimentos?"
+
+msgid "TXT_ACS_MAP01_5_THEDO"
+msgstr "A porta está trancada"
+
+msgid "TXT_ACS_MAP02_11_AREYO"
+msgstr "Está pronto para morrer?"
+
+msgid "TXT_ACS_MAP02_20_ADOOR"
+msgstr "Uma porta abriu-se no Guardião de Gelo"
+
+msgid "TXT_ACS_MAP03_12_THISP"
+msgstr "Este caminho está bloqueado"
+
+msgid "TXT_ACS_MAP04_9_ONEHA"
+msgstr "Metade do puzzle foi resolvido"
+
+msgid "TXT_ACS_MAP04_10_ONTHE"
+msgstr "nos Sete Portais"
+
+msgid "TXT_ACS_MAP04_11_ONETH"
+msgstr "Um terço do puzzle foi resolvido"
+
+msgid "TXT_ACS_MAP04_12_STAIR"
+msgstr "Escadas ergueram-se nos Sete Portais"
+
+msgid "TXT_ACS_MAP05_6_ONETH"
+msgstr "Um terço do puzzle foi resolvido"
+
+msgid "TXT_ACS_MAP05_7_ONTHE"
+msgstr "nos Sete Portais"
+
+msgid "TXT_ACS_MAP05_8_STAIR"
+msgstr "Escadas ergueram-se nos Sete Portais"
+
+msgid "TXT_ACS_MAP05_10_STONE"
+msgstr "As pedras giram nos Sete Portais"
+
+msgid "TXT_ACS_MAP08_6_ONESI"
+msgstr "Um sexto do puzzle foi resolvido"
+
+msgid "TXT_ACS_MAP08_7_ONTHE"
+msgstr "na Floresta das Sombras"
+
+msgid "TXT_ACS_MAP08_10_THEDO"
+msgstr "A porta está barrada por dentro"
+
+msgid "TXT_ACS_MAP08_11_YOUHE"
+msgstr "Ouve de longe uma porta abrir-se"
+
+msgid "TXT_ACS_MAP09_6_ONESI"
+msgstr "Um sexto do puzzle foi resolvido"
+
+msgid "TXT_ACS_MAP09_7_ONTHE"
+msgstr "na Floresta das Sombras"
+
+msgid "TXT_ACS_MAP10_6_ONESI"
+msgstr "Um sexto do puzzle foi resolvido"
+
+msgid "TXT_ACS_MAP10_7_ONTHE"
+msgstr "na Floresta das Sombras"
+
+msgid "TXT_ACS_MAP11_0_ETTIN"
+msgstr "\\ ettins restantes"
+
+msgid "TXT_ACS_MAP11_1_YOUWA"
+msgstr "Esperou demais. Agora morrerá!"
+
+msgid "TXT_ACS_MAP11_7_ADOOR"
+msgstr "Uma porta abriu-se no Posto Abandonado"
+
+msgid "TXT_ACS_MAP12_9_THISD"
+msgstr "Esta porta não se abrirá ainda"
+
+msgid "TXT_ACS_MAP13_11_MYSER"
+msgstr "Os meus servos sentem o cheiro do seu sangue, humano"
+
+msgid "TXT_ACS_MAP21_0_ADOOR"
+msgstr "Uma porta abriu-se na Forca"
+
+msgid "TXT_ACS_MAP21_2_THEDO"
+msgstr "A porta está barrada por dentro"
+
+msgid "TXT_ACS_MAP22_3_APLAT"
+msgstr "Uma plataforma desceu na torre"
+
+msgid "TXT_ACS_MAP22_29_ITHIN"
+msgstr "Acho que irei removê-lo do tabuleiro"
+
+msgid "TXT_ACS_MAP23_10_YOUHE"
+msgstr "Ouve uma porta abrir-se lá em cima"
+
+msgid "TXT_ACS_MAP27_8_WORSH"
+msgstr "Venere-me e poderei ser piedoso"
+
+msgid "TXT_ACS_MAP27_10_THENA"
+msgstr "A pensar melhor, talvez não"
+
+msgid "TXT_ACS_MAP28_6_ONENI"
+msgstr "Um nono do puzzle foi resolvido"
+
+msgid "TXT_ACS_MAP28_7_ONTHE"
+msgstr "No Mosteiro"
+
+msgid "TXT_ACS_MAP30_6_ONENI"
+msgstr "Um nono do puzzle foi resolvido"
+
+msgid "TXT_ACS_MAP30_7_ONTHE"
+msgstr "No Mosteiro"
+
+msgid "TXT_ACS_MAP34_1_ONENI"
+msgstr "Um nono do puzzle foi resolvido"
+
+msgid "TXT_ACS_MAP34_2_ONTHE"
+msgstr "No Mosteiro"
+
+msgid "TXT_ACS_MAP35_0_THEPO"
+msgstr "O portal foi selado"
+
+msgid "TXT_ACS_MAP35_1_CHOOS"
+msgstr "Escolha o seu destino"
+
+msgid "TXT_ACS_MAP35_3_THEDO"
+msgstr "A porta está barrada por dentro"
+
+msgid "TXT_ACS_MAP35_12_AREYO"
+msgstr "É forte o suficiente"
+
+msgid "TXT_ACS_MAP35_14_TOFAC"
+msgstr "Para enfrentar os seus próprios mestres?"

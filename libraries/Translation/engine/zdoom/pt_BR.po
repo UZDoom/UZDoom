@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-06-13 16:30+0000\n"
+"PO-Revision-Date: 2026-07-06 15:02+0000\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2026.7.dev0\n"
+"X-Generator: Weblate 2026.7.1.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "Pressione qualquer tecla."
@@ -1217,7 +1217,7 @@ msgid "FN_CLINK"
 msgstr "Unhas-de-sabre"
 
 msgid "FN_DSPARIL"
-msgstr ""
+msgstr "D'Sparil"
 
 msgid "FN_HERETICIMP"
 msgstr "Gárgula"
@@ -1232,10 +1232,10 @@ msgid "FN_MINOTAUR"
 msgstr "Marretauro"
 
 msgid "FN_MUMMY"
-msgstr ""
+msgstr "Golem"
 
 msgid "FN_MUMMYLEADER"
-msgstr ""
+msgstr "Nitrogolem"
 
 msgid "FN_SNAKE"
 msgstr "Ofídio"
@@ -1427,7 +1427,7 @@ msgid "TXT_ARTIEGG2"
 msgstr "Porquificador"
 
 msgid "TXT_ARTIPOISONBAG"
-msgstr ""
+msgstr "Flechete"
 
 msgid "TXT_ARTITELEPORTOTHER"
 msgstr "Dispositivo do Banimento"
@@ -1472,7 +1472,7 @@ msgid "TXT_ARTIPUZZBOOK1"
 msgstr "Códice Demoníaco"
 
 msgid "TXT_ARTIPUZZBOOK2"
-msgstr ""
+msgstr "Liber Oscura"
 
 msgid "TXT_ARTIPUZZSKULL2"
 msgstr "Máscara das Chamas"
@@ -1577,13 +1577,13 @@ msgid "TXT_NEED_KEY_CASTLE"
 msgstr "Você precisa da Chave do Castelo"
 
 msgid "FN_FIREDEMON"
-msgstr ""
+msgstr "Ifrite"
 
 msgid "FN_DEMON1"
 msgstr "Serpente"
 
 msgid "FN_ETTIN"
-msgstr ""
+msgstr "Jotun"
 
 msgid "FN_CENTAUR"
 msgstr "Centauro"
@@ -1595,7 +1595,7 @@ msgid "FN_BISHOP"
 msgstr "Bispo"
 
 msgid "FN_ICEGUY"
-msgstr ""
+msgstr "Wendigo"
 
 msgid "FN_SERPENT"
 msgstr "Caçador"
@@ -1607,16 +1607,16 @@ msgid "FN_DRAGON"
 msgstr "Serpe da Morte"
 
 msgid "FN_KORAX"
-msgstr ""
+msgstr "Kórax"
 
 msgid "FN_FBOSS"
-msgstr ""
+msgstr "Zedek"
 
 msgid "FN_MBOSS"
-msgstr ""
+msgstr "Menelkir"
 
 msgid "FN_CBOSS"
-msgstr ""
+msgstr "Traductus"
 
 msgid "FN_HERESIARCH"
 msgstr "Heresiarca"
@@ -1649,7 +1649,7 @@ msgid "TAG_FWEAPHAMMER"
 msgstr "Martelo da Retribuição"
 
 msgid "TAG_FWEAPQUIETUS"
-msgstr ""
+msgstr "Quietus"
 
 msgid "TAG_MWEAPWAND"
 msgstr "Cetro de Safira"
@@ -1673,7 +1673,7 @@ msgid "TAG_ARTIBOOSTMANA"
 msgstr "Cálice do Poder"
 
 msgid "TAG_ARTIPOISONBAG"
-msgstr ""
+msgstr "Flechete"
 
 msgid "TAG_ARTIPOISONBAG1"
 msgstr "Flechette de Nuvem Venenosa"
@@ -1727,7 +1727,7 @@ msgid "TAG_ARTIPUZZBOOK1"
 msgstr "Códice Demoníaco"
 
 msgid "TAG_ARTIPUZZBOOK2"
-msgstr ""
+msgstr "Liber Oscura"
 
 msgid "TAG_ARTIPUZZSKULL2"
 msgstr "Máscara das Chamas"
@@ -2400,10 +2400,10 @@ msgid "TAG_BEGGAR"
 msgstr "Mendigo"
 
 msgid "TAG_MACIL1"
-msgstr ""
+msgstr "Macil"
 
 msgid "TAG_MACIL2"
-msgstr ""
+msgstr "Macil"
 
 msgid "TAG_MEDIC"
 msgstr "Médico"
@@ -2783,6 +2783,7 @@ msgstr "Ótimo trabalho!"
 msgid "CE4TEXT"
 msgstr "Fantástico"
 
+#, fuzzy
 msgid "CLOADNET"
 msgstr ""
 "Não é possível carregar durante uma aventura em rede!\n"
@@ -2945,7 +2946,7 @@ msgid "SSKILL_NORMAL"
 msgstr "Veterano"
 
 msgid "SSKILL_HARD"
-msgstr ""
+msgstr "Elite"
 
 msgid "SSKILL_NIGHTMARE"
 msgstr "Banho de sangue"
@@ -2975,7 +2976,7 @@ msgid "MNU_WARRIOR"
 msgstr "Guerreiro"
 
 msgid "MNU_BERSERKER"
-msgstr ""
+msgstr "Berserker"
 
 msgid "MNU_TITAN"
 msgstr "Titã"
@@ -3007,7 +3008,6 @@ msgstr "Feiticeiro"
 msgid "MNU_WARLOCK"
 msgstr "Mago"
 
-#, fuzzy
 msgid "MNU_ARCHMAGE"
 msgstr "Arquimago"
 
@@ -3880,7 +3880,7 @@ msgid "SCALEMNU_MESSAGES"
 msgstr "Mensagens"
 
 msgid "SCALEMNU_CONSOLE"
-msgstr ""
+msgstr "Console"
 
 msgid "SCALEMNU_STATBAR"
 msgstr "Barra de status"
@@ -4003,7 +4003,7 @@ msgid "OPTVAL_PARTICLES"
 msgstr "Partículas"
 
 msgid "OPTVAL_SPRITES"
-msgstr ""
+msgstr "Sprites"
 
 msgid "OPTVAL_SPRITESPARTICLES"
 msgstr "Sprites & Partículas"
@@ -4079,13 +4079,13 @@ msgid "OPTVAL_HUBSECONDS"
 msgstr "Hub, segundos"
 
 msgid "OPTVAL_HUB"
-msgstr ""
+msgstr "Hub"
 
 msgid "OPTVAL_TOTALSECONDS"
 msgstr "Total, segundos"
 
 msgid "OPTVAL_TOTAL"
-msgstr ""
+msgstr "Total"
 
 msgid "OPTVAL_SYSTEMSECONDS"
 msgstr "Sistema, segundos"
@@ -4196,7 +4196,7 @@ msgid "OPTVAL_MBF21STRICT"
 msgstr "MBF21 (estritamente)"
 
 msgid "OPTVAL_ZDOOM2063"
-msgstr ""
+msgstr "ZDoom 2.0.63"
 
 msgid "OPTVAL_ERRORS"
 msgstr "Erros"
@@ -4220,7 +4220,7 @@ msgid "OPTVAL_SWDOOMTC"
 msgstr "Renderizador Software True Color"
 
 msgid "OPTVAL_VANILLA"
-msgstr ""
+msgstr "Vanilla"
 
 msgid "OPTVAL_VTFZDOOM"
 msgstr "ZDoom (Forçar)"
@@ -4235,7 +4235,7 @@ msgid "OPTVAL_LARGE"
 msgstr "Grande"
 
 msgid "OPTVAL_CONSOLE"
-msgstr ""
+msgstr "Console"
 
 msgid "C_BRICK"
 msgstr "\\catijolo"
@@ -4325,7 +4325,7 @@ msgid "OPTSTR_NOINTERPOLATION"
 msgstr "Sem interpolação"
 
 msgid "OPTSTR_SPLINE"
-msgstr ""
+msgstr "Spline"
 
 msgid "DSPLYMNU_GLOPT"
 msgstr "Renderizador Hardware"
@@ -4437,10 +4437,10 @@ msgstr "Escuro"
 
 # This refers to the Doom Legacy port, not a legacy lighting style!
 msgid "OPTVAL_LEGACY"
-msgstr ""
+msgstr "Doom Legacy"
 
 msgid "OPTVAL_SOFTWARE"
-msgstr ""
+msgstr "Software"
 
 msgid "OPTVAL_YAXIS"
 msgstr "Eixo Y"
@@ -4682,9 +4682,8 @@ msgstr "ZDoom Clássico"
 msgid "OPTVAL_MODERN"
 msgstr "Moderno (WASD)"
 
-#, fuzzy
 msgid "OPTVAL_MODERNLEFT"
-msgstr "Moderno (Teclado numérico)"
+msgstr "Moderno (Canhoto / Teclado numérico)"
 
 msgid "MISCMNU_SETSLOTSTRICT"
 msgstr "Armas/Jogadores estritamente de acordo com KEYCONF"
@@ -4809,14 +4808,12 @@ msgid "GMPLYMNU_NOLOCALDROP"
 msgstr "Jogadores não podem pegar itens largados"
 
 # Disables autoloading save on death
-#, fuzzy
 msgid "MISCMNU_RESTARTONDEATH"
-msgstr "Reiniciar fase após morte"
+msgstr "Reinício com apenas pistola após morte"
 
 # Resets inventory on every map
-#, fuzzy
 msgid "GMPLYMNU_PISTOLSTART"
-msgstr "Iniciar com a pistola"
+msgstr "Reinício com apenas pistola em todos os mapas"
 
 msgid "CMPTMNU_VOODOOZOMBIES"
 msgstr "Permitir criação de jogadores zumbi"
@@ -4862,7 +4859,7 @@ msgid "ID24_CC_GHOUL"
 msgstr "Necrótico"
 
 msgid "ID24_CC_BANSHEE"
-msgstr ""
+msgstr "Banshee"
 
 # Also known as Plasmaguy.
 msgid "ID24_CC_SHOCKTROOPER"
@@ -4872,7 +4869,7 @@ msgid "ID24_CC_MINDWEAVER"
 msgstr "Tecementes"
 
 msgid "ID24_CC_VASSAGO"
-msgstr ""
+msgstr "Vassago"
 
 msgid "ID24_CC_TYRANT"
 msgstr "Tirano"
@@ -5157,17 +5154,14 @@ msgstr "Contraste"
 msgid "DSPLYMNU_SATURATION"
 msgstr "Saturação"
 
-#, fuzzy
 msgid "OPTVAL_SMOOTH"
 msgstr "Suavizado"
 
-#, fuzzy
 msgid "TAG_MAULER"
 msgstr "Desintegrador"
 
-#, fuzzy
 msgid "TAG_GLAUNCHER"
-msgstr "Lança-granadas"
+msgstr "Lança-Granadas"
 
 msgid "ACTION_STARTGAME"
 msgstr "Começar Jogo"
@@ -5200,13 +5194,13 @@ msgid "PICKER_PLAYERCLASS"
 msgstr "Classe do Jogador"
 
 msgid "OPTMNU_OPENWADS"
-msgstr "Pasta de IWADs"
+msgstr "Navegar Pasta de IWADs"
 
 msgid "ACTION_OPENCONFIGDIR"
-msgstr "Pasta de Configurações"
+msgstr "Navegar Pasta de Configurações"
 
 msgid "ACTION_OPENWADDIR"
-msgstr "Pasta de WADs"
+msgstr "Navegar Pasta de WADs"
 
 msgid "ACTION_RESTART"
 msgstr "Reiniciar"
@@ -5252,7 +5246,7 @@ msgid "HAPMNU_TITLE"
 msgstr "Opções de Vibração"
 
 msgid "ACCMNU_TOOLTIP_LIGHT_EXTRA"
-msgstr ""
+msgstr "Quantidade de iluminação de setor para adicionar em cima dos níveis de iluminação existentes, à medida que se preserva o modo de iluminação atual."
 
 msgid "DSPLYMNU_ROCKETEXPSTYLE"
 msgstr "Estilo Visual da Explosão"
@@ -5260,10 +5254,152 @@ msgstr "Estilo Visual da Explosão"
 msgid "ACCMNU_LIGHT"
 msgstr "Iluminação"
 
-#, fuzzy
 msgid "OPTVAL_VTAVANILLA"
-msgstr "Automático (De preferência Vanilla)"
+msgstr "Automático (Preferência ao modo Vanilla)"
 
-#, fuzzy
 msgid "OPTVAL_VTAZDOOM"
-msgstr "Automático (De preferência ZDoom)"
+msgstr "Automático (Preferência ao modo ZDoom)"
+
+msgid "VALFORMAT_MSECOND"
+msgstr "%s ms"
+
+msgid "VALFORMAT_MULTIPLIER"
+msgstr "%s ×"
+
+msgid "VALFORMAT_PERCENT"
+msgstr "%s %%"
+
+msgid "VALFORMAT_SECOND"
+msgstr "%s s"
+
+msgid "MAPCOLORMNU_SECTORFILLALPHA"
+msgstr "Transparência de Preenchimento"
+
+msgid "MAPCOLORMNU_SECTORFILLCOLOR"
+msgstr "Cor de Preenchimento"
+
+msgid "ACCMNU_DOUBLECLICK_THRESHOLD"
+msgstr "Limiar de Duplo Clique"
+
+msgid "ACCMNU_TOOLTIP_DOUBLECLICK_THRESHOLD"
+msgstr "Tempo entre tecladas subsequentes para acionar um evento de duplo clique"
+
+msgid "ACCMNU_TOOLTIP_ALPHA"
+msgstr "Transparência do Fundo da Dica de Contexto"
+
+msgid "ACCMNU_TOOLTIP_CAP"
+msgstr "Limite da Largura da Dica de Contexto"
+
+msgid "ACCMNU_TOOLTIP_SCALE"
+msgstr "Texto Grande na Dica de Contexto"
+
+msgid "ACCMNU_TOOLTIP"
+msgstr "Dicas de Contexto"
+
+msgid "ACCMNU_TOOLTIP_LIGHT_RADIUS"
+msgstr "Controla a extensão do raio de luz ao redor do jogador em unidades de mapa. Valores maiores aumentam o brilho da cena."
+
+msgid "DSPLYMNU_BLACKPOINT"
+msgstr "Compensação de ponto preto"
+
+msgid "DSPLYMNU_TOOLTIP_BLACKPOINT"
+msgstr "Compensa por monitores que não conseguem mostrar pixels escuros apropriadamente. Ajuste até os blocos brancos diagonais sumirem. Não use isto para aumentar o brilho do jogo, use somente para garantir que a imagem está calibrada para sua configuração."
+
+msgid "DSPLYMNU_TOOLTIP_IMAGEADJUST_RESET"
+msgstr "Redefine todas as opções neste menu para o padrão."
+
+msgid "DSPLYMNU_TOOLTIP_BRIGHTNESS"
+msgstr "Aplica ajuste linear de brilho. Ajuste a gosto, ou para enxergar melhor no escuro."
+
+msgid "DSPLYMNU_TOOLTIP_CONTRAST"
+msgstr "Ajusta a diferença perceptiva entre cores semelhantes. Controla o quão nítida/desbotada a imagem parece. Ajuste a gosto."
+
+msgid "DSPLYMNU_TOOLTIP_SATURATION"
+msgstr "Ajusta a intensidade das cores, tornando a imagem mais vívida ou suave. Ajuste a gosto."
+
+msgid "DSPLYMNU_IMAGEADJUST_BOTTOM"
+msgstr "Ajuste até isso parecer uma cor uniformemente Cinza."
+
+msgid "DSPLYMNU_POWERUPFADE"
+msgstr "Intensidade de tingimento por powerup"
+
+msgid "OPTVAL_SBSLETTERBOX"
+msgstr "Tela com faixas pretas (laterais)"
+
+msgid "OPTVAL_DIRECTMIX"
+msgstr "Mix Direto"
+
+msgid "OPTVAL_SUPERSTEREO"
+msgstr "Super Stereo"
+
+msgid "OPENALMNU_MUSICMODE"
+msgstr "Modo Música"
+
+msgid "OPENALMNU_SUPERSTEREOWIDTH"
+msgstr "Largura estéreo do Super Stereo"
+
+msgid "TAG_MACIL"
+msgstr "Macil"
+
+msgid "JOYMNU_ANALOGRUN"
+msgstr "Correr no Analógico"
+
+msgid "ACCMNU_TOOLTIP_LINES"
+msgstr "Linhas da Dica de Contexto"
+
+msgid "ACCMNU_TOOLTIP_SPEED"
+msgstr "Velocidade de Rolagem da Dica de Contexto"
+
+msgid "ACCMNU_TOOLTIP_DELAY"
+msgstr "Atraso de Rolagem da Dica de Contexto"
+
+msgid "ACCMNU_LIGHT_RADIUS"
+msgstr "Raio de Luz do Jogador"
+
+msgid "PICKER_FILELOADING"
+msgstr "Carregamento de Arquivo"
+
+msgid "DSPLYMNU_IMAGEADJUST_TOP2"
+msgstr "Upscaling/Superamostragem pode produzir resultados incorretos."
+
+msgid "DSPLYMNU_IMAGEADJUST_TOP3"
+msgstr "Por favor desabilite-os antes de ajustar."
+
+msgid "DSPLYMNU_TOOLTIP_GAMMA"
+msgstr "Compensa pelos limites de seu monitor. Ajuste até os blocos cinzas sumirem. Não use para aumentar o brilho do jogo, use apenas para calibrar a imagem para sua configuração."
+
+msgid "SNDMNU_NOMIDIOPTIONS"
+msgstr "Dispositivo MIDI não expõe quaisquer opções."
+
+msgid "CMPTMNU_EMULATEMIKOPORTALS"
+msgstr "Emular Mikoportais"
+
+msgid "HUDMNU_CROSSHAIRCOLORFULL"
+msgstr "Cor da retícula em saúde plena"
+
+msgid "HUDMNU_CROSSHAIRCOLORMAX"
+msgstr "Cor da retícula em saúde máxima"
+
+msgid "HUDMNU_CROSSHAIRCOLORS"
+msgstr "Cores dinâmicas da retícula"
+
+msgid "HUDMNU_CROSSHAIRYOFFSET"
+msgstr "Deslocamento vertical da retícula"
+
+msgid "VALFORMAT_DB"
+msgstr "%s dB"
+
+msgid "VALFORMAT_DB_P_METER"
+msgstr "%s dB/m"
+
+msgid "VALFORMAT_DEGREES"
+msgstr "%s deg"
+
+msgid "VALFORMAT_FPS"
+msgstr "%s fps"
+
+msgid "VALFORMAT_HZ"
+msgstr "%s Hz"
+
+msgid "VALFORMAT_METER"
+msgstr "%s m"
