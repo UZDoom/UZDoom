@@ -190,8 +190,8 @@ class BlastEffect : Actor
 	Default
 	{
 		+NOBLOCKMAP +NOGRAVITY +NOCLIP
-		+NOTELEPORT
-		RenderStyle "Translucent";
+		+NOTELEPORT +ZDOOMTRANS
+		RenderStyle "Add";
 		Alpha 0.666;
 	}
 	States
