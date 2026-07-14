@@ -42,6 +42,10 @@
 #define ENG_MINOR 0
 #define ENG_REVISION 0
 
+#define RC_REVISION 999999
+
+#define CURRENT_UPDATE_CHANNEL UpdateChannel::PREVIEW
+
 // Version stored in the ini's [LastRun] section.
 // Bump it if you made some configuration change that you want to
 // be able to migrate in FGameConfigFile::DoGlobalSetup().
@@ -136,94 +140,5 @@ int GetGitDistance();
 
 #include <compare>
 #include <cstdint>
-
-class FString;
-
-enum class UpdateChannel
-{
-	STABLE,
-	PREVIEW,
-	TESTING,
-	RELEASE_CANDIDATE,
-};
-
-#define CURRENT_UPDATE_CHANNEL UpdateChannel::PREVIEW
-
-#define RC_REVISION 999999
-
-struct VersionInfo
-{
-	uint16_t major;
-	uint16_t minor;
-	uint32_t revision;
-	uint32_t distance;
-
-	constexpr VersionInfo() = default;
-	constexpr VersionInfo(uint16_t _major, uint16_t _minor, uint32_t _revision = 0, uint32_t _distance = 0)
-		: major(_major), minor(_minor), revision(_revision), distance(_distance)
-	{
-	}
-	explicit VersionInfo(const char *);
-
-	constexpr bool operator <=(const VersionInfo& o) const
-	{
-		return operator<=>(o) != std::strong_ordering::greater;
-	}
-	constexpr bool operator >=(const VersionInfo& o) const
-	{
-		return operator<=>(o) != std::strong_ordering::less;
-	}
-	constexpr bool operator > (const VersionInfo& o) const
-	{
-		return operator<=>(o) == std::strong_ordering::greater;
-	}
-	constexpr bool operator < (const VersionInfo& o) const
-	{
-		return operator<=>(o) == std::strong_ordering::less;
-	}
-	constexpr bool operator == (const VersionInfo& o) const
-	{
-		return operator<=>(o) == std::strong_ordering::equal;
-	}
-	constexpr bool operator != (const VersionInfo& o) const
-	{
-		return operator<=>(o) != std::strong_ordering::equal;
-	}
-
-	constexpr std::strong_ordering operator <=> (const VersionInfo& o) const
-	{
-		if(major != o.major)
-		{
-			return major <=> o.major;
-		}
-		else if(minor != o.minor)
-		{
-			return minor <=> o.minor;
-		}
-		else if(revision != o.revision)
-		{
-			return revision <=> o.revision;
-		}
-		else //if(distance != o.distance)
-		{
-			return distance <=> o.distance;
-		}
-	}
-
-	void operator=(const char* string);
-	explicit operator FString();
-};
-
-// Cannot be a constructor because Lemon would puke on it.
-constexpr VersionInfo MakeVersion(unsigned int ma, unsigned int mi, unsigned int re = 0)
-{
-	return{ (uint16_t)ma, (uint16_t)mi, (uint32_t)re };
-}
-
-VersionInfo GetCurrentVersion();
-
-VersionInfo GetCurrentVersionForUpdate(UpdateChannel channel);
-
-VersionInfo GetCurrentEngineVersion();
 
 #endif // __cplusplus

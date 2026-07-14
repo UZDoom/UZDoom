@@ -669,6 +669,7 @@ OptionMenu "InventoryControlsMenu" protected
 		Control		"$CNTRLMNU_ARTI_BOOTS",		"use ArtiSpeedboots"
 		Control		"$CNTRLMNU_ARTI_CHAOS",		"use ArtiTeleport"
 		Control		"$CNTRLMNU_ARTI_SERVANT",	"use ArtiDarkServant"
+		Control		"$CNTRLMNU_ARTI_BLAST",		"use ArtiBlastRadius"
 		Control		"$CNTRLMNU_ARTI_BRACERS",	"use ArtiBoostArmor"
 		Control		"$CNTRLMNU_ARTI_FLECHETTE",	"useflechette"
 		Control		"$CNTRLMNU_ARTI_ICON",		"use ArtiInvulnerability2"

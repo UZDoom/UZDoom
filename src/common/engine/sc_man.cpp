@@ -38,6 +38,7 @@
 #include "name.h"
 #include <inttypes.h>
 #include "filesystem.h"
+#include "version.h"
 
 // MACROS ------------------------------------------------------------------
 
