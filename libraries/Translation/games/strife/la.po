@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-06-09 21:01+0000\n"
+"PO-Revision-Date: 2026-06-15 16:01+0000\n"
 "Last-Translator: Júlia Rosell Saldaña <contacte@juliars.cat>\n"
 "Language-Team: Latin <https://hosted.weblate.org/projects/doom-engine-games/strife/la/>\n"
 "Language: la\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.6\n"
+"X-Generator: Weblate 2026.7.dev0\n"
 
 msgid "TXT_STRIFE_MAP01"
 msgstr "AREA I: Sanctuarium"
@@ -827,7 +827,7 @@ msgid "TXT_RPLY0_SCRIPT02_D100056_THANK"
 msgstr "Gratias"
 
 msgid "TXT_DLG_SCRIPT02_D101572_THATS"
-msgstr "SIC planta purgamentorum hic est. Sed id felis ante. Quicumque dixerit, erravisse Ordinis scriptor."
+msgstr "Hic in statione cloacarum est. Sed nexus Frontis est. Quicumque tibi dixit id Ordinis esse, erravit."
 
 msgid "TXT_RPLY0_SCRIPT02_D101572_THANK"
 msgstr "Gratias"
@@ -843,7 +843,7 @@ msgstr "Dimitte me, relinque senem solum."
 
 # MAP03: Macil.
 msgid "TXT_DLG_SCRIPT03_D0_WELCO"
-msgstr "Grata novissima spe micantem. Solummodo liberum arbitrium habemus Ordini obsistere. Mentes scientias acutissimas habemus et corpora valida multa, sed caremus uno reali, uh… Problemsolver, qui nobis dabit extremam necessitatem. Auxilium NOBIS."
+msgstr "Grata novissima spe micantem. Solummodo liberum arbitrium habemus Ordini obsistere. Mentes scientias acutissimas habemus et corpora valida multa, sed caremus uno reali, uh… Problemsolver, qui nobis dabit extremam necessitatem. Auxilium nobis."
 
 msgid "TXT_RPLY0_SCRIPT03_D0_ALLRI"
 msgstr "Recte, accipio."
@@ -1397,7 +1397,7 @@ msgid "TXT_RPLY0_SCRIPT06_D9096_ANYTH"
 msgstr "Quid aliud facere potes?"
 
 msgid "TXT_DLG_SCRIPT06_D10612_GOODL"
-msgstr "BONUM fortuna. Plures e nostris cuniculis aperui tibi. Faciliorem redderet negotium tuum. O magnitudinem decem, perfectam! …Sed colores horrendos."
+msgstr "Bene sit tibi. Plures cuniculos nostros tibi aperui. Hoc tibi negotium faciliorem reddere debet. Oh, magnitudo decem, perfecta! ...Sed colores pessimi."
 
 msgid "TXT_RPLY0_SCRIPT06_D10612_THANK"
 msgstr "Gratias pro auxilio tuo."
@@ -1663,7 +1663,7 @@ msgid "TXT_DLG_SCRIPT10_D25772_WELLI"
 msgstr "Bene, iterum ad veteres dolis revertor, adhuc laboro in tuis insitis. Scisne Macilum nunc illis omnibus dedisse? Non, huh? Est quod bene evasit. Quid tibi possum facere?"
 
 msgid "TXT_RPLY0_SCRIPT10_D25772_HELPM"
-msgstr "Auxilium HIC MIHI EX."
+msgstr "Auxilium hic mihi ex."
 
 msgid "TXT_RYES0_SCRIPT10_D25772_THATS"
 msgstr "Id possum facere omnia."
@@ -1689,7 +1689,7 @@ msgstr "Ibi, nunc omnia pone."
 
 # MAP10: Feris (no training).
 msgid "TXT_DLG_SCRIPT10_D28804_ITSTH"
-msgstr "S AD heros. Magni officium! Quid possum tibi? Aliquantum maior lectio nunc tenemus quod omnem ordinationem ex castellum habemus. Si opus est aliquo ammo emere cum Justino loqui. Ipse te curabo. "
+msgstr "Heros est. Optime factum! Quid tibi afferre possum? Paulo maiorem delectum habemus nunc, cum omnia instrumenta ex castello habeamus. Si tibi opus est tormenta emere, cum Iustino loquere. Ille te curabit. "
 
 msgid "TXT_RPLY0_SCRIPT10_D28804_IMOUT"
 msgstr "Im e glandibus."
@@ -2231,7 +2231,7 @@ msgid "TXT_DLG_SCRIPT22_D6064_YOUVE"
 msgstr "Certe alterum ruinae prope vidisti. Videtur quod Cometa, quae in nostram planetam ingruat, actu spatium navis sit, et credas vel non, iam olim in hoc ipso mundo ortam esse."
 
 msgid "TXT_RPLY0_SCRIPT22_D6064_SOTHE"
-msgstr "Ita spectra, Deus unus."
+msgstr "Ita spectra, Deus Unus…"
 
 msgid "TXT_DLG_SCRIPT22_D7580_THEYA"
 msgstr "Creaturae sunt quae hunc mundum olim regebant et vitam eius consumunt. Antiqui curaverunt obsignare, sed in processu vitam dederunt. Vereor ne id scio."
@@ -2630,7 +2630,7 @@ msgid "TXT_DLG_SCRIPT33_D1516_SAYFR"
 msgstr "Dic amice, te adiuvabo, si me adiuvas. Da mihi V aurum ac dicam quod scio."
 
 msgid "TXT_RPLY0_SCRIPT33_D1516_HERES"
-msgstr "HIC EST aurum."
+msgstr "Hic est aurum."
 
 msgid "TXT_RYES0_SCRIPT33_D1516_IFYOU"
 msgstr "Si aliquem pertundis, terrores non pones."
@@ -2695,7 +2695,7 @@ msgid "TXT_RNO0_SCRIPT33_D6064_YOUDO"
 msgstr "Satis pecuniae non habes."
 
 msgid "TXT_RPLY1_SCRIPT33_D6064_LEATH"
-msgstr "CORIUM lorica."
+msgstr "Corium lorica."
 
 msgid "TXT_RYES1_SCRIPT33_D6064_HEREY"
 msgstr "Hic es tu."
@@ -3026,7 +3026,7 @@ msgstr "Hic tu."
 # MAP34: Upstairs.
 # (Identical to row 769)
 msgid "TXT_DLG_SCRIPT34_D18192_DONTG"
-msgstr "Ne felices felices in oppido accipias, terrorem pones et custodes ab castellum mittere incipient."
+msgstr "Noli in oppido laetus sclopeti esse, nam signum excitabis et custodes ex arce immittentur."
 
 # (Identical to row 770)
 msgid "TXT_DLG_SCRIPT34_D19708_WELCO"
@@ -3057,7 +3057,7 @@ msgid "TXT_RPLY0_SCRIPT34_D27288_WHATW"
 msgstr "Quid opus est facere? "
 
 msgid "TXT_DLG_SCRIPT34_D28804_HELPU"
-msgstr "Auxilium NOBIS. Auxilium NOBIS FU- ars. Sodales nostros liberate. Certa haec perversa psychopathia usque ad mortem. Rogo te pro veritate vitam tuam periclitari."
+msgstr "Adiuvate nos. Adiuvate nos ut eorum technologiam furemur. Liberate socios nostros. Contra hos psychopathas perversos usque ad mortem pugnate. Vos rogo ut vitam vestram pro veritate periclitetis."
 
 msgid "TXT_RPLY0_SCRIPT34_D28804_IMWIT"
 msgstr "Sum apud te!"
@@ -3213,7 +3213,7 @@ msgid "TXT_RANDOM_PGUARD_06"
 msgstr "Virtus via ad gloriam est. Ordinem sequi est illud iter ingredi!"
 
 msgid "TXT_RANDOM_PGUARD_07"
-msgstr "Tecum constitue inter justos, iunge nos."
+msgstr "Tecum constitue inter justos, iunge nos!"
 
 msgid "TXT_RANDOM_PGUARD_08"
 msgstr "Ordo suum tuetur."
@@ -3448,11 +3448,11 @@ msgstr "Quemadmodum cum cogito, omnia te vidimus! Hominem eunt et exeunt… Ne q
 
 # MAP24: After destroying the converter.
 msgid "TXT_ILOG104"
-msgstr "Macil' Abiit nuces. Sciens mox CC viros misit ad necem eorum. Vindictam volo! pro mortuis ac pro vivis mortuis. Let's get back and find out what's going on."
+msgstr "Macil insanit. Sciens modo ducentos viros ad mortem misit. Ultionem volo! Pro mortuis et pro viventibus mortuis! Revertamur et inveniamus quid agatur."
 
 # MAP10: After killing Macil while having destroyed the converter in MAP24.
 msgid "TXT_ILOG106"
-msgstr "Officinas ad \"lab\" ducit, et sigilium nummum ab intra signaturam habent. Retro AD OFFICINAS ET NOSTRA LIBERTATIS."
+msgstr "Officina ad \"laboratorium\" ducit, et signum potentiae Sigil ab intus accipiunt. Reditus ad officinam et gradus noster proximus ad libertatem."
 
 # MAP16: Entrance → Central door.
 msgid "TXT_ILOG120"
@@ -3464,7 +3464,7 @@ msgstr "Labium loremasterii est extra teleportarium quod modo aperitur. Eamus, e
 
 # MAP15: Computer destroyed + Room 1
 msgid "TXT_ILOG211"
-msgstr "Age, abeamus hinc infernum. Vis campi descendit ad EPISCOPUM turris. Postquam mortuus est, ad oraculum redi."
+msgstr "Agite, hinc celerrime abeamus. Campus virium deiectus est, ad turrim Episcopi. Ubi mortuus erit, ad Oraculum revertemini."
 
 # MAP33?
 msgid "TXT_ILOG1001"
@@ -3795,7 +3795,7 @@ msgid "TXT_SUB_INTRO5"
 msgstr "Nostras mulieres et parvulos destruunt ut eas sub terra abscondamus et sicut animalia in timore pro animabus nostris semper vivamus."
 
 msgid "TXT_SUB_INTRO6"
-msgstr "Sed susurra sunt tristitiae. Si ordinamus, possumusne domini nostri clades? Arma rapiuntur, milites exercentur. Nascitur motus: natus ex lite perpetua."
+msgstr "Sed murmura malcontentiae audiuntur. Si nos ordinamus, dominos nostros vincere possumus? Arma furantur, milites exercentur. Motus nascitur: natus ex certamine perenni!"
 
 # Best ending.
 msgid "TXT_SUB_GOOD1"
@@ -3835,7 +3835,7 @@ msgid "TXT_SUB_MAP03_2"
 msgstr "Sine procreatione, Ordo amplificationes biomechanicae inuenit una via ad suas vires et numeros conservandas."
 
 msgid "TXT_SUB_MAP03_3"
-msgstr "Defectus progressus est ut pleraeque copiae quas in facie habemus magis machinae quam homo sunt sed eorum sensus collectivos uno fonte contineri credamus."
+msgstr "Ruina ita progressa est ut pleraeque copiae quibus obviam imus magis machinae quam homines sint, sed credimus eorum conscientiam collectivam ab una fonte regi…"
 
 msgid "TXT_SUB_MAP03_4"
 msgstr "programmator: creator AI qui Acolythi moderatur. Programmatorem dissolve et uno ictu copias ordinis debilitare possumus. Sed cautio est: nos rumores adiuuare possumus oppugnatores."
@@ -3911,7 +3911,7 @@ msgstr "Bene move! Praefectus est pessima mendax. Potestas nostra est coniunctio
 
 # MAP02: After accepting "bloody" chore.
 msgid "TXT_SUB_LOG16"
-msgstr "CELLA in statione virtutis. Hoc breve et dulce faciamus."
+msgstr "Horreum in statione electrica est. Breviter et iucunde dicamus."
 
 # MAP02: About to enter Norwall Prison.
 msgid "TXT_SUB_LOG17"

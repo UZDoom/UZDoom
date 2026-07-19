@@ -669,6 +669,7 @@ OptionMenu "InventoryControlsMenu" protected
 		Control		"$CNTRLMNU_ARTI_BOOTS",		"use ArtiSpeedboots"
 		Control		"$CNTRLMNU_ARTI_CHAOS",		"use ArtiTeleport"
 		Control		"$CNTRLMNU_ARTI_SERVANT",	"use ArtiDarkServant"
+		Control		"$CNTRLMNU_ARTI_BLAST",		"use ArtiBlastRadius"
 		Control		"$CNTRLMNU_ARTI_BRACERS",	"use ArtiBoostArmor"
 		Control		"$CNTRLMNU_ARTI_FLECHETTE",	"useflechette"
 		Control		"$CNTRLMNU_ARTI_ICON",		"use ArtiInvulnerability2"
@@ -1382,8 +1383,7 @@ OptionMenu "GLLightOptions" protected
 {
 	Title "$GLLIGHTMNU_TITLE"
 
-	Option "$TCMNU_DYNLIGHTS",                  r_dynlights,          OnOff
-	Option "$GLLIGHTMNU_LIGHTSENABLED",         gl_lights,            OnOff
+	Option "$GLLIGHTMNU_LIGHTSENABLED",         r_dynlights,          OnOff
 	Option "$GLLIGHTMNU_LIGHTSPRITES",          gl_light_sprites,     YesNo
 	Option "$GLLIGHTMNU_LIGHTPARTICLES",        gl_light_particles,   YesNo
 	Option "$GLLIGHTMNU_LIGHTSHADOWMAP",        gl_light_shadowmap,   YesNo

@@ -606,7 +606,7 @@ void D_Render(std::function<void()> action, bool interpolate)
 	for (auto Level : AllLevels())
 	{
 		// Check for the presence of dynamic lights at the start of the frame once.
-		if ((gl_lights && vid_rendermode == 4) || (r_dynlights && vid_rendermode != 4) || Level->LightProbes.Size() > 0)
+		if (r_dynlights || Level->LightProbes.Size() > 0)
 		{
 			Level->HasDynamicLights = Level->lights || Level->LightProbes.Size() > 0;
 		}

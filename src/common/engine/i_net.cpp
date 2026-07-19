@@ -83,6 +83,8 @@ const char* neterror(void);
 #define neterror() strerror(errno)
 #endif
 
+// TODO: Remove noverification after optfile allows properly handling unverified files.
+FARG(noverification, "Multiplayer", "Allows files over netgames to be mismatched; use with caution. Can only be set by the host.", "", "");
 FARG(host, "Multiplayer", "Designates the machine as the host for a multiplayer game.", "x",
 	"This machine will function as a host for a multiplayer game with x players (including this"
 	" machine). It will wait for other machines to connect using the -join. parameter and then"
@@ -96,7 +98,7 @@ FARG(dup, "Multiplayer", "Send less player movement commands over the network.",
 FARG(port, "Multiplayer", "Specifies an alternative IP port for a network game.", "x",
 	"Specifies an alternate IP port for this machine to use during a network game. By default,"
 	" port 5029 is used.");
-FARG(password, "", "", "",
+FARG(password, "Multiplayer", "Sets a password to be able to join the lobby. Can be up to 255 characters long.", "Password123!@#",
 	"");
 
 // As per http://support.microsoft.com/kb/q192599/ the standard
@@ -758,6 +760,7 @@ void HandleIncomingConnection()
 	}
 }
 
+static bool SkipFileVerification = false;
 static bool Host_CheckForConnections(void* connected)
 {
 	const bool forceStarting = I_ShouldStartNetGame();
@@ -833,7 +836,8 @@ static bool Host_CheckForConnections(void* connected)
 			{
 				RejectConnection(from, PRE_BANNED);
 			}
-			else if ((error = Net_VerifyEngine(engineInfo, passwordOffset)).Error != FVerificationError::VE_NONE)
+			else if ((error = Net_VerifyEngine(engineInfo, passwordOffset)).Error != FVerificationError::VE_NONE
+					&& (error.Error == FVerificationError::VE_ENGINE || !SkipFileVerification))
 			{
 				SendVerificationError(from, error);
 			}
@@ -1023,6 +1027,9 @@ static bool HostGame(int arg)
 
 	// Wait for the lobby to be full.
 	int connectedPlayers = 1;
+	// TODO: This is a really bad solution, but this will be getting removed after -optfile
+	// can properly handle unverified files, so it will do for now.
+	SkipFileVerification = Args->CheckParm(FArg_noverification);
 	if (!I_NetLoop(Host_CheckForConnections, (void*)&connectedPlayers))
 	{
 		SendAbort();

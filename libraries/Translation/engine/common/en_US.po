@@ -676,6 +676,9 @@ msgstr "Center messages"
 msgid "MSGMNU_MESSAGEQUEUE"
 msgstr "Message queue size"
 
+msgid "$MSGMNU_MESSAGEFADE"
+msgstr "Message fadeout duration"
+
 msgid "MSGMNU_STACKIDENTICAL"
 msgstr "Stack repeated messages"
 

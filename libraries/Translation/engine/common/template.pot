@@ -639,6 +639,9 @@ msgstr ""
 msgid "MSGMNU_MESSAGEQUEUE"
 msgstr ""
 
+msgid "$MSGMNU_MESSAGEFADE"
+msgstr ""
+
 msgid "MSGMNU_STACKIDENTICAL"
 msgstr ""
 

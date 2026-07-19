@@ -5243,3 +5243,117 @@ msgstr ""
 
 msgid "OPTVAL_VTAVANILLA"
 msgstr ""
+
+msgid "UPDATER_CHECK_FOR_UPDATES"
+msgstr ""
+
+msgid "UPDATER_PROMPT_TO_INSTALL"
+msgstr ""
+
+msgid "UPDATER_SETTINGS"
+msgstr ""
+
+msgid "UPDATER_INTERVAL"
+msgstr ""
+
+msgid "UPDATER_UPDATE_AVAILABLE"
+msgstr ""
+
+msgid "UPDATER_UPDATE_SKIP"
+msgstr ""
+
+msgid "UPDATER_TITLE"
+msgstr ""
+
+msgid "UPDATER_DISABLE"
+msgstr ""
+
+msgid "UPDATER_CHECK_FAILED"
+msgstr ""
+
+msgid "UPDATER_UPDATE_FAILED"
+msgstr ""
+
+msgid "UPDATER_YES_PROMPT"
+msgstr ""
+
+msgid "UPDATER_DISMISS_UPDATE"
+msgstr ""
+
+msgid "UPDATER_ASK_AUTO"
+msgstr "\n"
+
+msgid "UPDATER_ASK_INTERVAL"
+msgstr "\n"
+
+msgid "UPDATER_ZIP_FAIL"
+msgstr ""
+
+msgid "UPDATER_ZIP_ERROR"
+msgstr ""
+
+msgid "UPDATER_UPDATING"
+msgstr ""
+
+msgid "UPDATER_STARTING"
+msgstr ""
+
+msgid "UPDATER_SUCCESS"
+msgstr ""
+
+msgid "UPDATER_UP_TO_DATE"
+msgstr ""
+
+msgid "UPDATER_CANCELLED"
+msgstr ""
+
+msgid "UPDATER_INVALID_JSON"
+msgstr ""
+
+msgid "UPDATER_NOT_A_DIR"
+msgstr ""
+
+msgid "OPTVAL_DISABLE"
+msgstr ""
+
+msgid "OPTVAL_NOTIFY"
+msgstr ""
+
+msgid "OPTVAL_DAILY"
+msgstr ""
+
+msgid "OPTVAL_WEEKLY"
+msgstr ""
+
+msgid "OPTVAL_MONTHLY"
+msgstr ""
+
+msgid "TXT_DOWNLOADING"
+msgstr ""
+
+msgid "TXT_EXPERIMENTAL"
+msgstr ""
+
+msgid "TXT_UPDATE"
+msgstr ""
+
+msgid "TXT_UPDATED"
+msgstr ""
+
+msgid "TXT_CANCELLED"
+msgstr ""
+
+msgid "TXT_BACK"
+msgstr ""
+
+msgid "TXT_DISMISS"
+msgstr ""
+
+msgid "TXT_SKIP"
+msgstr ""
+
+msgid "TXT_CONFIRM"
+msgstr ""
+
+msgid "TXT_OK"
+msgstr ""

@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-06-13 16:30+0000\n"
-"Last-Translator: OldCactusCN <huchenyi_2019@qq.com>\n"
+"PO-Revision-Date: 2026-07-12 05:01+0000\n"
+"Last-Translator: dwing <12104745@qq.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2026.7.dev0\n"
+"X-Generator: Weblate 2026.7.1.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "按下任意键。"
@@ -1100,7 +1100,7 @@ msgid "TXT_ARTIFLY"
 msgstr "愤怒之翼"
 
 msgid "TXT_ARTIINVULNERABILITY"
-msgstr "无敌戒指"
+msgstr "无敌之戒"
 
 msgid "TXT_ARTITOMEOFPOWER"
 msgstr "力量宝典"
@@ -1261,7 +1261,7 @@ msgid "AMMO_PHOENIXROD"
 msgstr "火焰宝珠"
 
 msgid "TAG_STAFF"
-msgstr "铁头杖"
+msgstr "法杖"
 
 msgid "TAG_GOLDWAND"
 msgstr "精灵魔杖"
@@ -2785,7 +2785,7 @@ msgstr "好极了"
 
 msgid "CLOADNET"
 msgstr ""
-"在网络任务中你不能执行加载！\n"
+"在网络任务中你不能加载存档！\n"
 "\n"
 "按下任意键。"
 
@@ -5399,10 +5399,126 @@ msgstr "%s 分贝"
 msgid "ACCMNU_TOOLTIP_DOUBLECLICK_THRESHOLD"
 msgstr "触发双击事件所需的连续按键间隔"
 
-#, fuzzy
 msgid "OPTVAL_VTAVANILLA"
 msgstr "自动(原版优先)"
 
-#, fuzzy
 msgid "OPTVAL_VTAZDOOM"
 msgstr "自动(ZDoom优先)"
+
+msgid "UPDATER_CHECK_FOR_UPDATES"
+msgstr "检查更新"
+
+msgid "UPDATER_SETTINGS"
+msgstr "更新设置"
+
+msgid "UPDATER_UPDATE_AVAILABLE"
+msgstr "有新的更新可用"
+
+msgid "UPDATER_UPDATE_SKIP"
+msgstr "跳过更新"
+
+msgid "UPDATER_TITLE"
+msgstr "更新检查器"
+
+msgid "UPDATER_DISABLE"
+msgstr "禁用更新检查器"
+
+msgid "UPDATER_CHECK_FAILED"
+msgstr "检查更新失败"
+
+msgid "UPDATER_UPDATE_FAILED"
+msgstr "更新失败"
+
+msgid "UPDATER_PROMPT_TO_INSTALL"
+msgstr "立即安装"
+
+msgid "UPDATER_DISMISS_UPDATE"
+msgstr "无视更新？"
+
+msgid "UPDATER_YES_PROMPT"
+msgstr "是，并立即安装更新"
+
+msgid "UPDATER_ZIP_FAIL"
+msgstr "打开zip文件失败"
+
+msgid "UPDATER_UPDATING"
+msgstr "更新中…"
+
+msgid "UPDATER_STARTING"
+msgstr "开始下载…"
+
+msgid "UPDATER_SUCCESS"
+msgstr "更新成功，启动器即将重启。"
+
+msgid "UPDATER_CANCELLED"
+msgstr "更新被取消"
+
+msgid "UPDATER_INVALID_JSON"
+msgstr "无效的更新JSON"
+
+msgid "UPDATER_NOT_A_DIR"
+msgstr "'{}' 不是一个目录"
+
+msgid "OPTVAL_DISABLE"
+msgstr "禁用"
+
+msgid "OPTVAL_NOTIFY"
+msgstr "通知"
+
+msgid "OPTVAL_DAILY"
+msgstr "每日"
+
+msgid "OPTVAL_WEEKLY"
+msgstr "每周"
+
+msgid "OPTVAL_MONTHLY"
+msgstr "每月"
+
+msgid "TXT_DOWNLOADING"
+msgstr "下载中"
+
+msgid "TXT_EXPERIMENTAL"
+msgstr "实验性的"
+
+msgid "TXT_UPDATE"
+msgstr "更新"
+
+msgid "TXT_UPDATED"
+msgstr "已更新"
+
+msgid "TXT_CANCELLED"
+msgstr "已取消"
+
+msgid "TXT_BACK"
+msgstr "后退"
+
+msgid "TXT_SKIP"
+msgstr "跳过"
+
+msgid "TXT_CONFIRM"
+msgstr "确认"
+
+msgid "TXT_OK"
+msgstr "确定"
+
+msgid "UPDATER_ZIP_ERROR"
+msgstr "解压zip失败，错误：'{}'，发生在写入文件 '{}'"
+
+msgid "UPDATER_ASK_INTERVAL"
+msgstr ""
+"你希望多久检查一次更新？\n"
+"（可稍后在选项页中更改）"
+
+msgid "UPDATER_ASK_AUTO"
+msgstr ""
+"你希望自动检查更新吗？\n"
+"（可稍后在选项页中更改）"
+
+msgid "UPDATER_INTERVAL"
+msgstr "检查周期："
+
+msgid "TXT_DISMISS"
+msgstr "无视"
+
+msgid "UPDATER_UP_TO_DATE"
+msgstr "已是最新！"

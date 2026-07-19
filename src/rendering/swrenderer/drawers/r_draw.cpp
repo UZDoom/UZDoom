@@ -29,6 +29,7 @@
 #include "doomdef.h"
 
 #include "filesystem.h"
+#include "m_argv.h"
 #include "v_video.h"
 #include "doomstat.h"
 #include "st_stuff.h"
@@ -44,7 +45,7 @@
 #include "swrenderer/scene/r_light.h"
 #include "playsim/a_dynlight.h"
 
-CVAR(Bool, r_dynlights, true, CVAR_ARCHIVE | CVAR_GLOBALCONFIG);
+EXTERN_CVAR(Bool, r_dynlights);
 CVAR(Bool, r_fuzzscale, true, CVAR_ARCHIVE | CVAR_GLOBALCONFIG);
 
 namespace swrenderer

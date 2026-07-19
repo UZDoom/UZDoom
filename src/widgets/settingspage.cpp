@@ -47,14 +47,18 @@ SettingsPage::SettingsPage(LauncherWindow* launcher, const FStartupSelectionInfo
 	GeneralLabel = new TextLabel(this);
 	ExtrasLabel = new TextLabel(this);
 	FullscreenCheckbox = new CheckboxLabel(this);
+	VsyncCheckbox = new CheckboxLabel(this);
 	DisableAutoloadCheckbox = new CheckboxLabel(this);
 	DontAskAgainCheckbox = new CheckboxLabel(this);
 	LightsCheckbox = new CheckboxLabel(this);
 	BrightmapsCheckbox = new CheckboxLabel(this);
 	WidescreenCheckbox = new CheckboxLabel(this);
 	SupportWadsCheckbox = new CheckboxLabel(this);
+	DynLightsCheckbox = new CheckboxLabel(this);
+	ShadowmapCheckbox = new CheckboxLabel(this);
 
 	FullscreenCheckbox->SetChecked(info.DefaultFullscreen);
+	VsyncCheckbox->SetChecked(info.DefaultVsync);
 	DontAskAgainCheckbox->SetChecked(!info.DefaultQueryIWAD);
 
 	DisableAutoloadCheckbox->SetChecked(info.DefaultStartFlags & 1);
@@ -62,6 +66,9 @@ SettingsPage::SettingsPage(LauncherWindow* launcher, const FStartupSelectionInfo
 	BrightmapsCheckbox->SetChecked(info.DefaultStartFlags & 4);
 	WidescreenCheckbox->SetChecked(info.DefaultStartFlags & 8);
 	SupportWadsCheckbox->SetChecked(info.DefaultStartFlags & 16);
+
+	DynLightsCheckbox->SetChecked(info.DefaultDynLights);
+	ShadowmapCheckbox->SetChecked(info.DefaultShadowmaps);
 
 #ifdef RENDER_BACKENDS
 	BackendLabel = new TextLabel(this);
@@ -96,15 +103,15 @@ SettingsPage::SettingsPage(LauncherWindow* launcher, const FStartupSelectionInfo
 
 		UpdaterSettingsDropdown = new Dropdown(this);
 		UpdaterSettingsDropdown->SetMaxDisplayItems(3);
-		UpdaterSettingsDropdown->AddItem("Disable");
-		UpdaterSettingsDropdown->AddItem("Notify");
-		UpdaterSettingsDropdown->AddItem("Prompt to install");
+		UpdaterSettingsDropdown->AddItem(GStrings.GetString("OPTVAL_DISABLE"));
+		UpdaterSettingsDropdown->AddItem(GStrings.GetString("OPTVAL_NOTIFY"));
+		UpdaterSettingsDropdown->AddItem(GStrings.GetString("UPDATER_PROMPT_TO_INSTALL"));
 
 		UpdaterIntervalDropdown = new Dropdown(this);
 		UpdaterIntervalDropdown->SetMaxDisplayItems(3);
-		UpdaterIntervalDropdown->AddItem("Other day");
-		UpdaterIntervalDropdown->AddItem("Week");
-		UpdaterIntervalDropdown->AddItem("Month");
+		UpdaterIntervalDropdown->AddItem(GStrings.GetString("OPTVAL_DAILY"));
+		UpdaterIntervalDropdown->AddItem(GStrings.GetString("OPTVAL_WEEKLY"));
+		UpdaterIntervalDropdown->AddItem(GStrings.GetString("OPTVAL_MONTHLY"));
 
 		UpdateUpdaterValues(info.bAutoUpdate, info.bCheckUpdate, info.DefaultUpdateInterval);
 	}
@@ -178,6 +185,7 @@ SettingsPage::SettingsPage(LauncherWindow* launcher, const FStartupSelectionInfo
 void SettingsPage::SetValues(FStartupSelectionInfo& info) const
 {
 	info.DefaultFullscreen = FullscreenCheckbox->GetChecked();
+	info.DefaultVsync = VsyncCheckbox->GetChecked();
 	info.DefaultQueryIWAD = !DontAskAgainCheckbox->GetChecked();
 	info.DefaultLanguage = languages[LangList->GetSelectedItem()].first.GetChars();
 
@@ -188,6 +196,9 @@ void SettingsPage::SetValues(FStartupSelectionInfo& info) const
 	if (WidescreenCheckbox->GetChecked()) flags |= 8;
 	if (SupportWadsCheckbox->GetChecked()) flags |= 16;
 	info.DefaultStartFlags = flags;
+
+	info.DefaultDynLights = DynLightsCheckbox->GetChecked();
+	info.DefaultShadowmaps = ShadowmapCheckbox->GetChecked();
 
 	int flBehaviour = FILELOAD_OPTS[LoadList->GetSelectedItem()].flag;
 	if (flBehaviour != -1) info.DefaultFileLoadBehaviour = flBehaviour;
@@ -222,7 +233,7 @@ void SettingsPage::SetValues(FStartupSelectionInfo& info) const
 			info.DefaultUpdateInterval = 30;
 			break;
 		case 0:
-			info.DefaultUpdateInterval = 2;
+			info.DefaultUpdateInterval = 1;
 			break;
 		default:
 			info.DefaultUpdateInterval = 7;
@@ -240,13 +251,16 @@ void SettingsPage::UpdateLanguage()
 	LoadLabel->SetText(GStrings.GetString("PICKER_FILELOADING"));
 	GeneralLabel->SetText(GStrings.GetString("PICKER_GENERAL"));
 	ExtrasLabel->SetText(GStrings.GetString("PICKER_EXTRA"));
-	FullscreenCheckbox->SetText(GStrings.GetString("PICKER_FULLSCREEN"));
+	FullscreenCheckbox->SetText(GStrings.GetString("VIDMNU_FULLSCREEN"));
+	VsyncCheckbox->SetText(GStrings.GetString("DSPLYMNU_VSYNC"));
 	DisableAutoloadCheckbox->SetText(GStrings.GetString("PICKER_NOAUTOLOAD"));
 	DontAskAgainCheckbox->SetText(GStrings.GetString("PICKER_DONTASK"));
 	LightsCheckbox->SetText(GStrings.GetString("PICKER_LIGHTS"));
 	BrightmapsCheckbox->SetText(GStrings.GetString("PICKER_BRIGHTMAPS"));
 	WidescreenCheckbox->SetText(GStrings.GetString("PICKER_WIDESCREEN"));
 	SupportWadsCheckbox->SetText(GStrings.GetString("PICKER_SUPPORTWADS"));
+	DynLightsCheckbox->SetText(GStrings.GetString("GLLIGHTMNU_LIGHTSENABLED"));
+	ShadowmapCheckbox->SetText(GStrings.GetString("GLLIGHTMNU_LIGHTSHADOWMAP"));
 	{
 		int opts = sizeof(FILELOAD_OPTS) / sizeof(FILELOAD_OPTS[0]);
 		for (int i = 0; i < opts; i++)
@@ -264,16 +278,15 @@ void SettingsPage::UpdateLanguage()
 #ifdef HAS_UPDATER
 	if(IsCurlLoaded())
 	{
-		// TODO: Add localization support
-		UpdaterSettingsLabel->SetText("Updater Settings");
-		UpdaterIntervalLabel->SetText("Check every:");
+		UpdaterSettingsLabel->SetText(GStrings.GetString("UPDATER_SETTINGS"));
+		UpdaterIntervalLabel->SetText(GStrings.GetString("UPDATER_INTERVAL"));
 
-		UpdaterSettingsDropdown->UpdateItem("Disable", 0);
-		UpdaterSettingsDropdown->UpdateItem("Notify", 1);
-		UpdaterSettingsDropdown->UpdateItem("Prompt to install", 2);
-		UpdaterIntervalDropdown->UpdateItem("Other day", 0);
-		UpdaterIntervalDropdown->UpdateItem("Week", 1);
-		UpdaterIntervalDropdown->UpdateItem("Month", 2);
+		UpdaterSettingsDropdown->UpdateItem(GStrings.GetString("OPTVAL_DISABLE"), 0);
+		UpdaterSettingsDropdown->UpdateItem(GStrings.GetString("OPTVAL_NOTIFY"), 1);
+		UpdaterSettingsDropdown->UpdateItem(GStrings.GetString("UPDATER_PROMPT_TO_INSTALL"), 2);
+		UpdaterIntervalDropdown->UpdateItem(GStrings.GetString("OPTVAL_DAILY"), 0);
+		UpdaterIntervalDropdown->UpdateItem(GStrings.GetString("OPTVAL_WEEKLY"), 1);
+		UpdaterIntervalDropdown->UpdateItem(GStrings.GetString("OPTVAL_MONTHLY"), 2);
 	}
 #endif
 }
@@ -321,6 +334,9 @@ void SettingsPage::OnGeometryChanged()
 
 	FullscreenCheckbox->SetFrameGeometry(0.0, y, 190.0, FullscreenCheckbox->GetPreferredHeight());
 	y += FullscreenCheckbox->GetPreferredHeight();
+
+	VsyncCheckbox->SetFrameGeometry(0.0, y, 190.0, VsyncCheckbox->GetPreferredHeight());
+	y += VsyncCheckbox->GetPreferredHeight();
 
 	DisableAutoloadCheckbox->SetFrameGeometry(0.0, y, 190.0, DisableAutoloadCheckbox->GetPreferredHeight());
 	y += DisableAutoloadCheckbox->GetPreferredHeight();
@@ -376,6 +392,10 @@ void SettingsPage::OnGeometryChanged()
 			y += WidescreenCheckbox->GetPreferredHeight();
 		}
 	}
+	DynLightsCheckbox->SetFrameGeometry(w - panelWidth, y, panelWidth, DynLightsCheckbox->GetPreferredHeight());
+	y += DynLightsCheckbox->GetPreferredHeight();
+	ShadowmapCheckbox->SetFrameGeometry(w - panelWidth, y, panelWidth, ShadowmapCheckbox->GetPreferredHeight());
+	y += ShadowmapCheckbox->GetPreferredHeight();
 
 	const double bottomPanelTop = max<double>(y, max<double>(optionsBottom, backendsBottom)) + 10.0;
 	y = bottomPanelTop;
@@ -387,7 +407,7 @@ void SettingsPage::OnGeometryChanged()
 		y += UpdaterSettingsLabel->GetPreferredHeight();
 
 		UpdaterSettingsDropdown->SetFrameGeometry(w - panelWidth, y, panelWidth, UpdaterSettingsDropdown->GetPreferredHeight());
-		y += UpdaterSettingsDropdown->GetPreferredHeight();
+		y += UpdaterSettingsDropdown->GetPreferredHeight() + 10.0;
 
 		UpdaterIntervalLabel->SetFrameGeometry(w - panelWidth, y, panelWidth, UpdaterIntervalLabel->GetPreferredHeight());
 		y += UpdaterIntervalLabel->GetPreferredHeight();

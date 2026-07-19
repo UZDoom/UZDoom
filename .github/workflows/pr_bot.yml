@@ -10,9 +10,7 @@ jobs:
       pull-requests: write
       contents: read
       issues: write
-    if: >-
-      github.repository == 'UZDoom/UZDoom' ||
-      github.repository == 'the-phinet/UZDoom'
+    if: ${{ vars.USE_PR_BOT }}
     runs-on: ubuntu-latest
     steps:
       - name: Post Comment

@@ -2,12 +2,410 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-19 13:07+0000\n"
+"PO-Revision-Date: 2026-07-11 10:01+0000\n"
 "Last-Translator: Ron Dallas <Lot_bohdan@ukr.net>\n"
-"Language-Team: Ukrainian <https://hosted.weblate.org/projects/uzdoom/zdoom-game-strings/uk/>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/doom-engine-games/hexen-deathkings/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.15-dev\n"
+"X-Generator: Weblate 2026.7.1.dev0\n"
+
+msgid "TXT_HEXDD_MAP41"
+msgstr "Знищене село"
+
+msgid "TXT_HEXDD_MAP42"
+msgstr "Гниль"
+
+msgid "TXT_HEXDD_MAP43"
+msgstr "Відстійник"
+
+msgid "TXT_HEXDD_MAP44"
+msgstr "Катакомби"
+
+msgid "TXT_HEXDD_MAP45"
+msgstr "Пустка"
+
+#, fuzzy
+msgid "TXT_HEXDD_MAP46"
+msgstr "Орляковий ліс"
+
+#, fuzzy
+msgid "TXT_HEXDD_MAP47"
+msgstr "Жертовник"
+
+msgid "TXT_HEXDD_MAP48"
+msgstr "Ворота констебля"
+
+msgid "TXT_HEXDD_MAP49"
+msgstr "Скарбниця"
+
+msgid "TXT_HEXDD_MAP50"
+msgstr "Ринок"
+
+msgid "TXT_HEXDD_MAP51"
+msgstr "Місце спочинку"
+
+msgid "TXT_HEXDD_MAP52"
+msgstr "Випробування"
+
+msgid "TXT_HEXDD_MAP53"
+msgstr "Зброярня"
+
+msgid "TXT_HEXDD_MAP54"
+msgstr "Неф"
+
+msgid "TXT_HEXDD_MAP55"
+msgstr "Каплиця"
+
+msgid "TXT_HEXDD_MAP56"
+msgstr "Різниця"
+
+msgid "TXT_HEXDD_MAP57"
+msgstr "Темна варта"
+
+msgid "TXT_HEXDD_MAP58"
+msgstr "Клоака"
+
+msgid "TXT_HEXDD_MAP59"
+msgstr "Морозна твердиня"
+
+msgid "TXT_HEXDD_MAP60"
+msgstr "Темна Цитадель"
+
+msgid "TXT_HEXDD_MAP33"
+msgstr "Перехід"
+
+msgid "TXT_HEXDD_MAP34"
+msgstr "Над і Під"
+
+msgid "TXT_HEXDD_MAP35"
+msgstr "Смертельна мла"
+
+msgid "TXT_HEXDD_MAP36"
+msgstr "Фортеця болю"
+
+msgid "TXT_HEXDD_MAP37"
+msgstr "Стічна яма"
+
+msgid "TXT_HEXDD_MAP38"
+msgstr "Роза"
+
+msgid "TXT_ACS_MAP33_6_YOUDA"
+msgstr "Ти наважився на бій у залі очікування?"
+
+msgid "TXT_ACS_MAP33_7_FORTH"
+msgstr "За це ти помреш!"
+
+msgid "TXT_ACS_MAP41_6_THEWA"
+msgstr "Водоспад відкрився"
+
+msgid "TXT_ACS_MAP41_7_THEWA"
+msgstr "Водоспад заблоковано"
+
+msgid "TXT_ACS_MAP41_8_ADOOR"
+msgstr "Двері відкрились в каплиці"
+
+msgid "TXT_ACS_MAP42_4_NOWTH"
+msgstr "Хмм, а от це вже дивно…"
+
+msgid "TXT_ACS_MAP44_1_THREE"
+msgstr "Залишилось ще три частини пазла"
+
+msgid "TXT_ACS_MAP44_2_TWOMO"
+msgstr "Залишилось ще від частини пазла"
+
+msgid "TXT_ACS_MAP44_3_ONEMO"
+msgstr "Залишилась ще одна частина пазла"
+
+msgid "TXT_ACS_MAP44_4_THEPU"
+msgstr "Пазл зібрано"
+
+msgid "TXT_ACS_MAP44_6_YOUHA"
+msgstr "Тобою ще не завершено пазл"
+
+msgid "TXT_ACS_MAP44_8_THEFL"
+msgstr "Підлога небезпечна!"
+
+msgid "TXT_ACS_MAP44_10_ONETH"
+msgstr "Одна третя пазла вирішена"
+
+msgid "TXT_ACS_MAP44_11_TWOTH"
+msgstr "Дві третіх пазла вирішено"
+
+msgid "TXT_ACS_MAP45_1_YOUHE"
+msgstr "Ти чуєш, як десь удалині рухається платформа"
+
+msgid "TXT_ACS_MAP46_0_ITISD"
+msgstr "Готово…"
+
+msgid "TXT_ACS_MAP46_1_YOUHA"
+msgstr "Тобою ще не завершено пазл"
+
+msgid "TXT_ACS_MAP46_2_IMWAR"
+msgstr "Я попереджаю тебе…"
+
+msgid "TXT_ACS_MAP46_3_STUBB"
+msgstr "Які ми вперті, треба ж...?"
+
+msgid "TXT_ACS_MAP46_4_ANDST"
+msgstr "І дурні, також"
+
+msgid "TXT_ACS_MAP46_8_ONEFO"
+msgstr "Одна четверта пазла вирішена"
+
+msgid "TXT_ACS_MAP46_9_BADCH"
+msgstr "Поганий вибір…"
+
+msgid "TXT_ACS_MAP47_2_THESY"
+msgstr "Ці символи не вирівняні"
+
+msgid "TXT_ACS_MAP48_2_THEDO"
+msgstr "Ці двері не відкриються з цієї сторони"
+
+msgid "TXT_ACS_MAP50_1_THEDO"
+msgstr "Двері перекриті ззовні"
+
+msgid "TXT_ACS_MAP51_5_SACRI"
+msgstr "Святотатство !"
+
+msgid "TXT_ACS_MAP51_6_YOUHA"
+msgstr "Тобою осквернено гробницю Еріка !!"
+
+msgid "TXT_ACS_MAP51_7_ANDNO"
+msgstr "Тепер ти помреш !!!"
+
+msgid "TXT_ACS_MAP51_8_ONETH"
+msgstr "Одна третя пазла вирішена"
+
+msgid "TXT_ACS_MAP51_9_TWOTH"
+msgstr "Дві третіх пазла вирішено"
+
+msgid "TXT_ACS_MAP51_10_THECR"
+msgstr "Крипти відкриті"
+
+msgid "TXT_ACS_MAP51_11_BEWAR"
+msgstr "Стережися павучої гробниці"
+
+msgid "TXT_ACS_MAP51_13_YOUHE"
+msgstr "Назовні чути, як піднімається платформа"
+
+msgid "TXT_ACS_MAP51_14_DOYOU"
+msgstr "Сподіваєшся на удачу?"
+
+msgid "TXT_ACS_MAP51_15_YOUGU"
+msgstr "Провал!"
+
+msgid "TXT_ACS_MAP51_16_GOODG"
+msgstr "Гарна здогадка"
+
+msgid "TXT_ACS_MAP51_17_CANYO"
+msgstr "Чи можете ви повністю написати скрипти для моєї карти?"
+
+msgid "TXT_ACS_MAP51_18_DONTT"
+msgstr "Не чіпай мого смаколика"
+
+msgid "TXT_ACS_MAP51_19_VORPA"
+msgstr "Гостряцький ?!?!?!"
+
+msgid "TXT_ACS_MAP51_20_GIMME"
+msgstr "Дай-но мені солоденького, крихітко"
+
+msgid "TXT_ACS_MAP51_21_DUHUH"
+msgstr "Припустимо…"
+
+msgid "TXT_ACS_MAP51_22_FILMI"
+msgstr "Фільм за годину?"
+
+#, fuzzy
+msgid "TXT_ACS_MAP51_23_IDONT"
+msgstr "У мене навіть надгробка немає - К.Ф."
+
+msgid "TXT_ACS_MAP51_24_LETNO"
+msgstr "Не пролий крові"
+
+msgid "TXT_ACS_MAP51_25_LETNO"
+msgstr "Не підніми руки в гніві"
+
+msgid "TXT_ACS_MAP52_9_WHODA"
+msgstr "Хто сміє тривожити наш сон?"
+
+msgid "TXT_ACS_MAP52_10_THEWA"
+msgstr "Шлях відкритий"
+
+msgid "TXT_ACS_MAP53_2_YOUHA"
+msgstr "Залишилось "
+
+msgid "TXT_ACS_MAP53_3_SWITC"
+msgstr "\\x20перемикачів"
+
+msgid "TXT_ACS_MAP53_4_YOUHA"
+msgstr "Залишилось тільки "
+
+msgid "TXT_ACS_MAP53_5_SWITC"
+msgstr "\\x20перемикачів"
+
+msgid "TXT_ACS_MAP53_6_THEEX"
+msgstr "Вихід відкрито"
+
+msgid "TXT_ACS_MAP54_1_THEDO"
+msgstr "Двері не відкриються з цієї сторони"
+
+msgid "TXT_ACS_MAP54_4_THEDO"
+msgstr "Двері відчинено…"
+
+msgid "TXT_ACS_MAP54_5_IFYOU"
+msgstr "...якщо наважишся"
+
+msgid "TXT_ACS_MAP54_9_ADOOR"
+msgstr "Двері відкрились"
+
+msgid "TXT_ACS_MAP54_10_ONTHE"
+msgstr "в Каплиці"
+
+msgid "TXT_ACS_MAP54_11_ABRID"
+msgstr "Міст споруджено"
+
+msgid "TXT_ACS_MAP54_12_ONTHE"
+msgstr "на Різниці"
+
+msgid "TXT_ACS_MAP54_13_ASTAI"
+msgstr "Сходи зведено"
+
+msgid "TXT_ACS_MAP54_14_ONTHE"
+msgstr "на Темній варті"
+
+msgid "TXT_ACS_MAP54_15_ONEGE"
+msgstr "Вставлено одну шестерню"
+
+msgid "TXT_ACS_MAP54_16_GEARS"
+msgstr "Вставлено \\x20шестерень"
+
+msgid "TXT_ACS_MAP54_17_ABARR"
+msgstr "Барикаду відкрито"
+
+msgid "TXT_ACS_MAP54_18_ONTHE"
+msgstr "в Клоаці"
+
+msgid "TXT_ACS_MAP54_20_THEWA"
+msgstr "Шлях назад відкритий"
+
+msgid "TXT_ACS_MAP55_9_THEDO"
+msgstr "Двері перекриті зсередини"
+
+msgid "TXT_ACS_MAP56_0_YOUDA"
+msgstr "Чия зухвала рука паплюжить"
+
+msgid "TXT_ACS_MAP56_1_OFTHE"
+msgstr "гробницю ката?"
+
+msgid "TXT_ACS_MAP56_2_PREPA"
+msgstr "Приготуйся до смерті"
+
+msgid "TXT_ACS_MAP59_1_YOUHA"
+msgstr "Залишилось "
+
+msgid "TXT_ACS_MAP59_2_MORES"
+msgstr "знайти \\x20перемикачів"
+
+msgid "TXT_ACS_MAP59_3_YOUHA"
+msgstr "Залишилось тільки "
+
+msgid "TXT_ACS_MAP59_4_SWITC"
+msgstr "\\x20перемикачів"
+
+msgid "TXT_ACS_MAP59_5_THEWA"
+msgstr "Прохід до вежі відкрито"
+
+msgid "TXT_ACS_MAP60_3_THEWA"
+msgstr "Прохід відкрито"
+
+msgid "TXT_HEXDD_CLUS1MSG"
+msgstr ""
+"Проводячи тремтячою рукою по своєму\n"
+"зраненому обличчю, ти намагаєшся\n"
+"зібрати думки, для того, що чекає попереду…\n"
+"\n"
+"...та забути, що залишилось позаду.\n"
+"\n"
+"Вдалині, суворі вали\n"
+"великого замкового комплексу ніби\n"
+"розривають небо над собою, а сморід\n"
+"гниття доноситься з розграбованих\n"
+"могил незліченних померлих.\n"
+"\n"
+"Ретельно перераховуючи те,\n"
+"що залишилося від твоїх артефактів, ти намагаєшся\n"
+"заспокоїти себе, що цього\n"
+"вистачить. цього має\n"
+"вистачити, чи не так?\n"
+"\n"
+"\n"
+"має ж?"
+
+#, fuzzy
+msgid "TXT_HEXDD_CLUS2MSG"
+msgstr ""
+"Безперечно, душі проклятих мешкають\n"
+"у цьому світі, адже ніщо чесне чи добре\n"
+"не могло б тут довго вижити.\n"
+"\n"
+"Але те, що було раніше, може бути лише\n"
+"блідою тінню того, що зараз\n"
+"перекриває тобі шлях: сама темна цитадель.\n"
+"\n"
+"Похмура масивна споруда собору\n"
+"закриває від самої\n"
+"цитаделі лише уривки краєвиду,\n"
+"але те, що вдається побачити,\n"
+"шиплячим шепотом промовляє про холодну,\n"
+"затяжну смерть…\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"…для тих, кому пощастило."
+
+msgid "TXT_HEXDD_WIN1MSG"
+msgstr ""
+"Ти знову опиняєшся у\n"
+"великій залі сфери хаосу, ніби\n"
+"з того часу, як ти\n"
+"востаннє блукав серед цих тіней,\n"
+"не минуло жодної миті.\n"
+"\n"
+"Але щось тут моторошно змінилося:\n"
+"тиша там, де колись лунали\n"
+"тихі шепоти, відчуття, ніби за тобою\n"
+"спостерігають таємничі погляди…\n"
+"\n"
+"...погляди,\n"
+"що таять лихі наміри."
+
+msgid "TXT_HEXDD_WIN2MSG"
+msgstr ""
+"Колись у твоїх тремтячих руках\n"
+"була сферу хаосу. Зараз, твої руки\n"
+"тремтять від чогось більшого,\n"
+"ніж жадібність і\n"
+"страх переплітається з жадобою\n"
+"влади.\n"
+"\n"
+"Якщо навіть сила цієї сфери\n"
+"не здатна захистити тебе від\n"
+"сил темряви, то, можливо,\n"
+"краще залишити її неторканою,\n"
+"а її обіцянку — невиконаною.\n"
+"\n"
+"\n"
+"\n"
+"Зрештою, відступати перед викликом\n"
+"це не твоє…"
+
+msgid "TXT_HEXDD_WIN3MSG"
+msgstr ""
+"\\n…та інші гравці чекають.\n"
+"\n"

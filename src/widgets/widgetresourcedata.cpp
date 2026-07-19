@@ -27,10 +27,10 @@
 #include "tarray.h"
 #include "widgets/themedata.h"
 
-CUSTOM_CVARD(Int, ui_theme, 0, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "launcher theme. 0: auto, 1: dark, 2: light")
+CUSTOM_CVARD(Int, ui_theme, 0, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "launcher theme. 0: auto, 1: dark, 2: light, 3: high-contrast dark, 4: high-contrast light")
 {
 	if (self < 0) self = 0;
-	if (self > 2) self = 2;
+	if (self > 4) self = 4;
 }
 
 TDeletingArray<FResourceFile*>* WidgetResources = nullptr;
@@ -60,8 +60,26 @@ void InitWidgetResources(const char* filename)
 	for (int i = 0; i < argc; ++i)
 		open(args[i].GetChars());
 
-	auto theme = GetSystemTheme();
-	auto use_dark = ui_theme == 1 || (ui_theme == 0 && (theme & Dark));
+	auto theme = Dark;
+	switch(ui_theme)
+	{
+	case 0:
+		theme = GetSystemTheme(); // gdbus takes too long and/or hits timeout on some systems. Don't call if not needed
+		break;
+	case 1:
+		theme = Dark;
+		break;
+	case 2:
+		theme = Light;
+		break;
+	case 3:
+		theme = HighContrastDark;
+		break;
+	case 4:
+		theme = HighContrastLight;
+		break;
+	}		
+	auto use_dark = ui_theme == 1 || ui_theme == 3 || (ui_theme == 0 && (theme & Dark));
 
 	Theme::initilize(use_dark? DARK: LIGHT, theme & HighContrast);
 
