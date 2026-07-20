@@ -553,16 +553,14 @@ bool FShader::Load(const char * name, const char * vert_prog_lump, const char * 
 					{
 						// this looks like an even older custom hardware shader.
 						// We need to replace the ProcessTexel call to make it work.
-
-						fp_comb.Substitute("material.Base = ProcessTexel();", "material.Base = Process(vec4(1.0));");
+						placeholder << "#define NO_PROCESS_TEXEL\n";
 					}
 				}
 
 				if (pp_data.IndexOf("ProcessLight") >= 0)
 				{
 					// The ProcessLight signatured changed. Forward to the old one.
-					fp_comb << "\nvec4 ProcessLight(vec4 color);\n";
-					fp_comb << "\nvec4 ProcessLight(Material material, vec4 color) { return ProcessLight(color); }\n";
+					placeholder << "#define OLD_PROCESSLIGHT\n";
 				}
 			}
 

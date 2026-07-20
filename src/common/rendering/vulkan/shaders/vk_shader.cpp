@@ -435,15 +435,14 @@ std::unique_ptr<VulkanShader> VkShaderManager::LoadFragShader(FString shadername
 						// this looks like an even older custom hardware shader.
 						// We need to replace the ProcessTexel call to make it work.
 
-						code.Substitute("material.Base = ProcessTexel();", "material.Base = Process(vec4(1.0));");
+						placeholder << "#define NO_PROCESS_TEXEL\n";
 					}
 				}
 
 				if (pp_code.IndexOf("ProcessLight") >= 0)
 				{
 					// The ProcessLight signatured changed. Forward to the old one.
-					code << "\nvec4 ProcessLight(vec4 color);\n";
-					code << "\nvec4 ProcessLight(Material material, vec4 color) { return ProcessLight(color); }\n";
+					placeholder << "#define OLD_PROCESSLIGHT\n";
 				}
 			}
 
