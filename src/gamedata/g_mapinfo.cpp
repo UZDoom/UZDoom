@@ -2706,42 +2706,49 @@ void G_ParseMapInfo(FString basemapinfo)
 
 	if (gameinfo.gametype == GAME_Doom)
 	{
-		FString compcli = Args->CheckValue(FArg_complevel);
-		FString data = "";
+		FString wishlevel = Args->CheckValue(FArg_complevel);
+		CompatibilityLevels level = COMPLVL_NONE;
 
-		if (!compcli.IsEmpty()) data = compcli;
+		if (!wishlevel.IsEmpty())
+		{
+			wishlevel.ToLower();
+			const struct
+			{
+				CompatibilityLevels level;
+				TArray<FName>       names;
+			} complevels[] = {
+				{ COMPLVL_VANILLA, {"2", "3", "4", "1.9", "doom2", "ultimate", "udoom", "final", "tnt", "plutonia", "vanilla" }},
+				{ COMPLVL_BOOM,		{ "9", "boom" }},
+				{ COMPLVL_MBF,		{ "11", "mbf" }},
+				{ COMPLVL_MBF21,	{ "21", "mbf21" }}
+			};
+
+			for (auto &s : complevels)
+			{
+				if (s.names.Contains(wishlevel))
+				{
+					level = s.level;
+					break;
+				}
+			}
+		}
 		else
 		{
 			int comp = fileSystem.CheckNumForName("COMPLVL");
 			if (comp >= 0)
 			{
 				auto complvl = fileSystem.ReadFile(comp);
-				data = complvl.string();
+				wishlevel    = complvl.string();
+
+				if (wishlevel.CompareNoCase("vanilla"))	level = COMPLVL_VANILLA;
+				else if (wishlevel.CompareNoCase("boom"))	level = COMPLVL_BOOM;
+				else if (wishlevel.CompareNoCase("mbf"))	level = COMPLVL_MBF;
+				else if (wishlevel.CompareNoCase("mbf21"))	level = COMPLVL_MBF21;
 			}
 		}
 
-		if (!data.CompareNoCase("vanilla", 7) || data.Compare("2") || data.Compare("3") || data.Compare("4"))
+		switch (level)
 		{
-			CompatibilityLevels level = COMPLVL_NONE;
-
-			const struct { CompatibilityLevels level; TArray<FName> names; } complevels[] = {
-				{ COMPLVL_VANILLA,	{"2", "3", "4", "1.9", "doom2", "ultimate", "udoom", "final", "tnt", "plutonia", "vanilla"} },
-				{ COMPLVL_BOOM,		{"9", "boom"} },
-				{ COMPLVL_MBF,		{"11", "mbf"} },
-				{ COMPLVL_MBF21,	{"21", "mbf21"} }
-			};
-
-			for (auto &s : complevels)
-			{
-				if (s.names.Contains(data))
-				{
-					level = s.level;
-					break;
-				}
-			}
-
-			switch (level)
-			{
 			case COMPLVL_VANILLA:
 				Printf("Applied Vanilla compatibility level.\n");
 				flags1 = COMPATF_SHORTTEX | COMPATF_STAIRINDEX | COMPATF_USEBLOCKING | COMPATF_NODOORLIGHT |
@@ -2777,7 +2784,6 @@ void G_ParseMapInfo(FString basemapinfo)
 				flags2 = COMPATF2_EXPLODE1 | COMPATF2_AVOID_HAZARDS | COMPATF2_STAYONLIFT | COMPATF2_POINTONLINE |
 			             COMPATF2_TRANSFERSECRET | COMPATF2_RESERVEDLINEFLAG;
 				break;
-			}
 		}
 	}
 
