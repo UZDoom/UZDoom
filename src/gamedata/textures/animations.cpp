@@ -148,6 +148,27 @@ FAnimDef *FTextureAnimator::AddComplexAnim (FTextureID picnum, const TArray<FAni
 	return AddAnim (anim);
 }
 
+
+
+//==========================================================================
+//
+// Find and return an animation by base texture ID
+//
+//==========================================================================
+
+FAnimDef *FTextureAnimator::FindAnim(FTextureID picnum)
+{
+	unsigned int i;
+
+	for (i = 0; i < mAnimations.Size(); ++i)
+	{
+		if (picnum == mAnimations[i].BasePic)
+			return &mAnimations[i];
+	}
+
+	return NULL;
+}
+
 //==========================================================================
 //
 // FTextureAnimator :: Initanimated
@@ -1185,6 +1206,23 @@ void FTextureAnimator::UpdateAnimations (uint64_t mstime)
 	}
 }
 
+void FTextureAnimator::ResetTimer(FAnimDef &anim)
+{
+	anim.SwitchTime = 0u;
+	anim.CurFrame   = 0u;
+	if (anim.AnimType == FAnimDef::ANIM_OscillateDown)
+		anim.AnimType = FAnimDef::ANIM_OscillateUp;
+	if (anim.bDiscrete)
+	{
+		TexMan.SetTranslation(anim.BasePic, anim.Frames[anim.CurFrame].FramePic);
+	}
+	else
+	{
+		for (size_t i = 0u; i < anim.NumFrames; ++i)
+			TexMan.SetTranslation(anim.BasePic + i, anim.BasePic + (i + anim.CurFrame) % anim.NumFrames);
+	}
+}
+
 void FTextureAnimator::ResetTimers()
 {
 	for (auto& fire : mFireTextures)
@@ -1198,20 +1236,22 @@ void FTextureAnimator::ResetTimers()
 	}
 	for (auto& anim : mAnimations)
 	{
-		anim.SwitchTime = 0u;
-		anim.CurFrame   = 0u;
-		if (anim.AnimType == FAnimDef::ANIM_OscillateDown)
-			anim.AnimType = FAnimDef::ANIM_OscillateUp;
-		if (anim.bDiscrete)
+		ResetTimer(anim);
+	}
+}
+
+bool FTextureAnimator::ResetTimerForTexture(FTextureID texture)
+{
+	if (texture.isValid())
+	{
+		FAnimDef *anim = FindAnim(texture);
+		if (anim != nullptr)
 		{
-			TexMan.SetTranslation(anim.BasePic, anim.Frames[anim.CurFrame].FramePic);
-		}
-		else
-		{
-			for (size_t i = 0u; i < anim.NumFrames; ++i)
-				TexMan.SetTranslation(anim.BasePic + i, anim.BasePic + (i + anim.CurFrame) % anim.NumFrames);
+			ResetTimer(*anim);
+			return true;
 		}
 	}
+	return false;
 }
 
 //==========================================================================

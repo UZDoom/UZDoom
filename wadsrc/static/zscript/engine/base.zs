@@ -342,6 +342,7 @@ struct TexMan
 	native static bool OkForLocalization(TextureID patch, String textSubstitute);
 	native static bool UseGamePalette(TextureID tex);
 	native static Canvas GetCanvas(String texture, int usetype = Type_Wall, int flags = 0);
+	native static bool ResetAnimationTimer(TextureID tex);
 }
 
 /*

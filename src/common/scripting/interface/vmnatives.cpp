@@ -39,6 +39,7 @@
 #include "image.h"
 #include "s_soundinternal.h"
 #include "i_time.h"
+#include "animations.h"
 
 #include "maps.h"
 #include "types.h"
@@ -583,6 +584,15 @@ DEFINE_ACTION_FUNCTION(_TexMan, GetCanvas)
 	PARAM_INT(type);
 	PARAM_INT(flags);
 	ACTION_RETURN_POINTER(GetTextureCanvas(texturename, static_cast<ETextureType>(type), flags));
+}
+
+DEFINE_ACTION_FUNCTION(_TexMan, ResetAnimationTimer)
+{
+	PARAM_PROLOGUE;
+	PARAM_INT(texid);
+	FTextureID textureid;
+	textureid.SetIndex(texid);
+	ACTION_RETURN_BOOL(TexAnim.ResetTimerForTexture(textureid));
 }
 
 //=====================================================================================
