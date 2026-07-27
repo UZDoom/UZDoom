@@ -40,7 +40,7 @@
 #include "v_draw.h"
 
 CVAR(Float, underwater_fade_scalar, 1.0f, CVAR_ARCHIVE) // [Nash] user-settable underwater blend intensity
-CVAR( Float, blood_fade_scalar, 1.0f, CVAR_ARCHIVE )	// [SP] Pulled from Skulltag - changed default from 0.5 to 1.0
+CVAR( Float, blood_fade_scalar, 0.8f, CVAR_ARCHIVE )	// [SP] Pulled from Skulltag - changed default from 0.5 to 1.0 (changed again from 1.0 to 0.8)
 CVAR( Float, pickup_fade_scalar, 1.0f, CVAR_ARCHIVE )	// [SP] Uses same logic as blood_fade_scalar except for pickups
 CVAR(Float, powerup_fade_scalar, 1.0f, CVAR_ARCHIVE) // [Sal] Adjust screen fades for all inventory items
 
@@ -133,7 +133,7 @@ void V_AddPlayerBlend (player_t *CPlayer, float blend[4], float maxinvalpha, int
 
 	if (painFlash.a != 0)
 	{
-		cnt = DamageToAlpha[min (CPlayer->damagecount * painFlash.a / 255, (uint32_t)113)];
+		cnt = (DamageToAlpha[min (CPlayer->damagecount * painFlash.a / 255, (uint32_t)113)]) * 1.20; // "1.20" is here as a "20%" increase (default "blood_fade_scalar" 100% -> 80%, so 100% is now like the old-school red blend)
 
 		// [BC] Allow users to tone down the intensity of the blood on the screen.
 		cnt = (int)( cnt * blood_fade_scalar );
@@ -333,7 +333,7 @@ FVector4 V_CalcBlend(sector_t* viewsector, PalEntry* modulateColor)
 
 	if (player)
 	{
-		V_AddPlayerBlend(player, blend, 0.5, 175);
+		V_AddPlayerBlend(player, blend, 0.8, 225);
 	}
 
 	if (players[consoleplayer].camera != NULL)
