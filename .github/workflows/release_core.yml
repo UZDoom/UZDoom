@@ -101,6 +101,8 @@ jobs:
           version=$(git describe --tags --exclude x-\* ${COMMIT})
           tag=$(git describe --tags --abbrev=0 --exclude x-\* ${COMMIT})
           distance=$(git rev-list "${tag}..${COMMIT}" --count)
+          semver="$tag"
+          if [[ $distance != 0 ]]; then semver+=".${distance}+${COMMIT:0:7}"; fi
           commit=$(git log --format=%s -n 1 ${COMMIT})
           timestamp=$(date -uIseconds)
           if [[ -n "${PREVIEW}" && ${BRANCH} != 'trunk' ]]; then
@@ -121,7 +123,7 @@ jobs:
               emit "${PREVIEW}" '\n'
               emit 1            '%s\n' "${MESSAGE}"
               emit 1            '\n'
-              emit 1            '**Version:** `%s`\n' "${version}"
+              emit 1            '**Version:** `%s`\n' "${semver}"
               emit "${PREVIEW}" '**Message:** %s\n' "${commit}"
               emit "${base}"    '**Base:** `%s`\n' "${base}"
               emit "${base}"    '**Base message:** %s\n' "${basetext}"
@@ -136,7 +138,7 @@ jobs:
           platforms=$(jq -n --arg input "${{ steps.files.outputs.platforms }}" '$input | split(":") | map(split(",")) | map({key: .[0], value: .[1]}) | from_entries')
 
           jq -n '{ commit: $ARGS.named }'      \
-            --arg version  "${version}"        \
+            --arg version  "${semver}"         \
             --arg distance "${distance}"       \
             --arg message  "${commit}"         \
             --arg commit   "${COMMIT}"         \

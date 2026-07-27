@@ -6,7 +6,7 @@
 #ifdef __cplusplus
 constexpr const char *GIT_DESCRIPTION = "@Description@";
 constexpr const char *GIT_TAG = "@Tag@";
-constexpr unsigned GIT_DISTANCE = @Distance@;
+constexpr int GIT_DISTANCE = @Distance@;
 constexpr const char *GIT_HASH = "@Hash@";
 constexpr const char *GIT_TIME = "@Timestamp@";
 #else

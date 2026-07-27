@@ -38,7 +38,7 @@
 #include "name.h"
 #include <inttypes.h>
 #include "filesystem.h"
-#include "version.h"
+#include "versioninfo.h"
 
 // MACROS ------------------------------------------------------------------
 
@@ -57,53 +57,6 @@
 // PRIVATE DATA DEFINITIONS ------------------------------------------------
 
 // CODE --------------------------------------------------------------------
-
-VersionInfo::VersionInfo(const char *string)
-{
-	char *endp;
-
-	minor = revision = distance = 0;
-
-	major = (int16_t)clamp<unsigned long long>(strtoull(string, &endp, 10), 0, USHRT_MAX);
-	if (*endp == '.')
-	{
-		minor = (int16_t)clamp<unsigned long long>(strtoull(endp + 1, &endp, 10), 0, USHRT_MAX);
-		if (*endp == '.')
-		{
-			revision = (int16_t)clamp<unsigned long long>(strtoull(endp + 1, &endp, 10), 0, USHRT_MAX);
-
-			if (*endp == '-' && endp[1] >= '0' && endp[1] <= '9')
-			{
-				distance = (int16_t)clamp<unsigned long long>(strtoull(endp + 1, &endp, 10), 0, USHRT_MAX);
-			}
-		}
-	}
-
-	if (*endp != 0 && *endp != '-')
-	{
-		major = USHRT_MAX;
-	}
-}
-
-
-void VersionInfo::operator=(const char *string)
-{
-	(*this) = VersionInfo(string);
-}
-
-VersionInfo::operator FString()
-{
-	FString tmp;
-	if(distance != 0 && distance != RC_REVISION_NOTRC)
-	{
-		tmp.Format("%u.%u.%u-%u", major, minor, revision, distance);
-	}
-	else
-	{
-		tmp.Format("%u.%u.%u", major, minor, revision);
-	}
-	return tmp;
-}
 
 //==========================================================================
 //

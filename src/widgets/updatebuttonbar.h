@@ -21,6 +21,7 @@
 #include "basics.h"
 #include "version.h"
 #include "zstring.h"
+#include "versioninfo.h"
 
 class LauncherWindow;
 class PushButton;

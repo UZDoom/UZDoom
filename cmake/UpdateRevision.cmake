@@ -24,7 +24,7 @@ function(query_repo_info)
 
 	set(Description "unknown")
 	set(Tag "unknown")
-	set(Distance -1)
+	set(Distance 0)
 	set(Hash "0000000")
 	string(TIMESTAMP Timestamp "%Y-%m-%d %H:%M:%S %z")
 
@@ -44,7 +44,7 @@ function(query_repo_info)
 	elseif(is_git EQUAL "0")
 		# from git
 		execute_process(
-			COMMAND git describe --tags --dirty=-m --exclude x-* --always
+			COMMAND git describe --tags --abbrev=0 --exclude x-* --always
 			RESULT_VARIABLE Error
 			OUTPUT_VARIABLE Temp
 			ERROR_QUIET
@@ -55,22 +55,8 @@ function(query_repo_info)
 			message(STATUS "No git tags found! Using fallback '${Description}'")
 		else()
 			set(Description "${Temp}")
-		endif()
-
-		execute_process(
-			COMMAND git describe --tags --abbrev=0 --exclude x-* --always
-			RESULT_VARIABLE Error
-			OUTPUT_VARIABLE Temp
-			ERROR_QUIET
-			OUTPUT_STRIP_TRAILING_WHITESPACE
-		)
-
-		if(NOT "${Error}" STREQUAL "0")
-			message(STATUS "No git tags found! Using fallback '${Tag}'")
-		else()
-			set(Tag "${Temp}")
 			execute_process(
-				COMMAND git rev-list "${Tag}..HEAD" --count
+				COMMAND git rev-list "${Description}..HEAD" --count
 				RESULT_VARIABLE Error
 				OUTPUT_VARIABLE Temp
 				ERROR_QUIET
@@ -78,7 +64,33 @@ function(query_repo_info)
 			)
 			if("${Error}" STREQUAL "0")
 				set(Distance "${Temp}")
+
+				execute_process(
+					COMMAND git status --porcelain
+					OUTPUT_VARIABLE Temp
+					ERROR_QUIET
+					OUTPUT_STRIP_TRAILING_WHITESPACE
+				)
+
+				if(NOT "${Temp}" STREQUAL "")
+					math(EXPR Distance "(${Distance} * -1) - 1")
+				endif()
 			endif()
+		endif()
+
+		execute_process(
+			COMMAND git describe --tags --abbrev=0 --exclude x-flathub-beta --always
+			RESULT_VARIABLE Error
+			OUTPUT_VARIABLE Temp
+			ERROR_QUIET
+			OUTPUT_STRIP_TRAILING_WHITESPACE
+		)
+
+		if(NOT "${Error}" STREQUAL "0")
+			message(STATUS "No git tags found! Using fallback '${Description}'")
+			set(Tag "${Description}")
+		else()
+			set(Tag "${Temp}")
 		endif()
 
 		execute_process(
@@ -95,6 +107,20 @@ function(query_repo_info)
 			string(REPLACE ";" ";" CommitInfo "${Temp}")
 			list(GET CommitInfo 0 Timestamp)
 			list(GET CommitInfo 1 Hash)
+		endif()
+
+		if (NOT ${Distance} STREQUAL "0")
+			if ("${Distance}" LESS 0)
+				math(EXPR Temp "(${Distance} + 1) * -1")
+				set(Description "${Description}.${Temp}")
+			else()
+				set(Description "${Description}.${Distance}")
+			endif()
+			string(SUBSTRING ${Hash} 0 7 Temp)
+			set(Description "${Description}+${Temp}")
+			if ("${Distance}" LESS 0)
+				set(Description "${Description}-m")
+			endif()
 		endif()
 
 	else()
@@ -126,7 +152,8 @@ function(main)
 	configure_file("${ScriptDir}/gitinfo.h.in" "${OutputFile}" @ONLY)
 
 	file(RELATIVE_PATH RelativeFile "${ProjectDir}" "${OutputFile}")
-	message(STATUS "Revision ${RelativeFile}: ${Tag} | ${Distance} | ${Hash}")
+	message(STATUS "Revision ${RelativeFile}: ${Description}")
+	message(STATUS "Revision ${RelativeFile}: ${Tag} | ${Distance} | ${Hash} | ${Timestamp}")
 endfunction()
 
 main()

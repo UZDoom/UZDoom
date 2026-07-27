@@ -10,6 +10,8 @@ fmodapi*linux/
 gitinfo.h
 wadsrc*/**/language.csv
 wadsrc*/**/language.0
+wadsrc/static/contributors.txt
+wadsrc/static/meta.xml
 
 # editor/tooling/os files
 *~

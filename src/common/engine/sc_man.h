@@ -31,6 +31,7 @@
 #include "tarray.h"
 #include "name.h"
 #include "basics.h"
+#include "versioninfo.h"
 
 class FScanner
 {

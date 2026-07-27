@@ -42,10 +42,6 @@
 #define ENG_MINOR 0
 #define ENG_REVISION 0
 
-#define RC_REVISION 999999
-
-#define CURRENT_UPDATE_CHANNEL UpdateChannel::PREVIEW
-
 // Version stored in the ini's [LastRun] section.
 // Bump it if you made some configuration change that you want to
 // be able to migrate in FGameConfigFile::DoGlobalSetup().
@@ -100,17 +96,8 @@
 #define QUERYIWADDEFAULT true
 #define BUGS_URL "https://github.com/UZDoom/UZDoom/issues"
 
-#define UPDATER_URL_STABLE "https://zdoom.org/uzdoom-latest.php"
-#define UPDATER_URL_STABLE_BACKUP "https://api.github.com/repos/UZDoom/UZDoom/releases/latest"
-
-#define UPDATER_URL_PREVIEW "https://zdoom.org/uzdoom-preview.php"
-#define UPDATER_URL_PREVIEW_BACKUP "https://api.github.com/repos/UZDoom/UZDoom/releases/tags/x-preview"
-
-#define UPDATER_URL_TESTING "https://zdoom.org/uzdoom-testing.php"
-#define UPDATER_URL_TESTING_BACKUP "https://api.github.com/repos/UZDoom/UZDoom/releases/tags/x-testing"
-
-#define UPDATER_URL_ALL "https://zdoom.org/uzdoom-all.php"
-#define UPDATER_URL_ALL_BACKUP "https://api.github.com/repos/UZDoom/UZDoom/releases"
+#define UPDATER_URL "https://zdoom.org/uzdoom-updates.php?r={}&f={}"
+#define UPDATER_URL_BACKUP "https://github.com/UZDoom/UZDoom/releases/{}/{}/{}"
 
 // For QUERYIWADDEFAULT: Set to 'true' to always show dialog box on startup by default, 'false' to disable.
 // Should set to 'false' for standalone games, and set to 'true' for regular source port forks that are meant to run any game.
@@ -133,12 +120,3 @@ const char *GetGitHash();
 const char *GetGitTime();
 const char *GetGitTag();
 int GetGitDistance();
-
-#define RC_REVISION_NOTRC 999999
-
-#ifdef __cplusplus
-
-#include <compare>
-#include <cstdint>
-
-#endif // __cplusplus
