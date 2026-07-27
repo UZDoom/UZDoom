@@ -343,26 +343,30 @@ void S_CheckIntegrity()
 	}
 
 	// Checks for missing lumps in Sounds
-	for (unsigned i = 0; i < numsounds; i++)
+	if (developer >= DMSG_WARNING)
 	{
-		auto &sfx = *soundEngine->GetSfx(FSoundID::fromInt(i));
-		if (sfx.lumpnum <= -1 && sfx.link == sfxinfo_t::NO_LINK && !sfx.bRandomHeader)
+		for (unsigned i = 0; i < numsounds; i++)
 		{
-			const int sndinfolump = sfx.SndinfoLump;
-			const bool internal   = fileSystem.GetFileContainer(sndinfolump) <= 0; // Ignore missing entries from the internal pk3 only.
-
-			if (!internal && developer >= DMSG_WARNING)
+			auto &sfx = *soundEngine->GetSfx(FSoundID::fromInt(i));
+			if (sfx.lumpnum <= -1 && sfx.link == sfxinfo_t::NO_LINK && !sfx.bRandomHeader)
 			{
-				if (sndinfolump > 0)
+				const int  sndinfolump = sfx.SndinfoLump;
+				const bool internal    = fileSystem.GetFileContainer(sndinfolump) <= 0; // Ignore missing entries from the internal pk3 only.
+
+				if (!internal)
 				{
-					FString wadname = fileSystem.GetFileFullPath(sndinfolump);
-					Printf(PRINT_NONOTIFY, TEXTCOLOR_ORANGE "%s, Sound file doesn't exist for " TEXTCOLOR_WHITE "%s\n",
-					       wadname.GetChars(), sfx.name.GetChars());
-				}
-				else
-				{
-					Printf(PRINT_NONOTIFY, TEXTCOLOR_ORANGE "Sound file doesn't exist for " TEXTCOLOR_WHITE "%s\n",
-					       sfx.name.GetChars());
+					if (sndinfolump > 0)
+					{
+						FString wadname = fileSystem.GetFileFullPath(sndinfolump);
+						Printf(PRINT_NONOTIFY,
+						       TEXTCOLOR_ORANGE "%s, Sound file doesn't exist for " TEXTCOLOR_WHITE "%s\n",
+						       wadname.GetChars(), sfx.name.GetChars());
+					}
+					else
+					{
+						Printf(PRINT_NONOTIFY, TEXTCOLOR_ORANGE "Sound file doesn't exist for " TEXTCOLOR_WHITE "%s\n",
+						       sfx.name.GetChars());
+					}
 				}
 			}
 		}
