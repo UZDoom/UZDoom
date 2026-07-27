@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-06 15:01+0000\n"
+"PO-Revision-Date: 2026-07-13 23:20-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: English <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/en/>\n"
 "Language: en\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.7.1.dev0\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
 
 msgid "PRESSKEY"
 msgstr "Press a key."
@@ -5482,7 +5482,7 @@ msgstr "Dynamic Lights"
 
 #, fuzzy
 msgid "GLLIGHTMNU_LIGHTSENABLED"
-msgstr "Dynamic Lights (Hardware)"
+msgstr "Dynamic Lights"
 
 #, fuzzy
 msgid "GLLIGHTMNU_LIGHTSPRITES"
@@ -5720,10 +5720,6 @@ msgid "TCMNU_MIPMAP"
 msgstr "Use mipmapped textures"
 
 #, fuzzy
-msgid "TCMNU_DYNLIGHTS"
-msgstr "Dynamic lights (Software)"
-
-#, fuzzy
 msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
 msgstr "Always show keys"
 
@@ -5769,12 +5765,14 @@ msgstr "Savegame '%s' is from another ZDoom-based engine:"
 #, fuzzy
 msgid "TXT_TOOOLDSG"
 msgstr ""
-"Savegame '%s' is from an older version (%d). The oldest supported version is %e."
+"Savegame '%s' is from an older version (%d). The oldest supported version is"
+" %e."
 
 #, fuzzy
 msgid "TXT_TOONEWSG"
 msgstr ""
-"Savegame '%s' is from a newer version (%d). The highest supported version is %e."
+"Savegame '%s' is from a newer version (%d). The highest supported version is"
+" %e."
 
 #, fuzzy
 msgid "TXT_NOMAPSG"
@@ -6503,12 +6501,14 @@ msgstr "Extra Lighting"
 #, fuzzy
 msgid "ACCMNU_TOOLTIP_LIGHT_RADIUS"
 msgstr ""
-"Controls the light radius distance around the player in map units. Larger values make the scene brighter."
+"Controls the light radius distance around the player in map units. Larger "
+"values make the scene brighter."
 
 #, fuzzy
 msgid "ACCMNU_TOOLTIP_LIGHT_EXTRA"
 msgstr ""
-"Amount of sector lighting to add on top of existing sector light levels, while preserving the existing lighting mode."
+"Amount of sector lighting to add on top of existing sector light levels, "
+"while preserving the existing lighting mode."
 
 #, fuzzy
 msgid "ACCMNU_LIGHT_RADIUS"
@@ -6561,7 +6561,9 @@ msgstr "Please disable them before adjusting."
 #, fuzzy
 msgid "DSPLYMNU_TOOLTIP_GAMMA"
 msgstr ""
-"Compensates for your monitor's limitations. Adjust until vertical grey blocks fade. Do not use this to make the game brighter, only to ensure the image is calibrated for your setup."
+"Compensates for your monitor's limitations. Adjust until vertical grey "
+"blocks fade. Do not use this to make the game brighter, only to ensure the "
+"image is calibrated for your setup."
 
 #, fuzzy
 msgid "DSPLYMNU_BLACKPOINT"
@@ -6570,7 +6572,9 @@ msgstr "Blackpoint compensation"
 #, fuzzy
 msgid "DSPLYMNU_TOOLTIP_BLACKPOINT"
 msgstr ""
-"Compensates for monitors that fail to display dark pixels correctly. Adjust until diagonal white blocks fade. Do not use this to make the game brighter, only to ensure the image is calibrated for your setup."
+"Compensates for monitors that fail to display dark pixels correctly. Adjust "
+"until diagonal white blocks fade. Do not use this to make the game brighter,"
+" only to ensure the image is calibrated for your setup."
 
 #, fuzzy
 msgid "DSPLYMNU_TOOLTIP_IMAGEADJUST_RESET"
@@ -6585,12 +6589,14 @@ msgstr ""
 #, fuzzy
 msgid "DSPLYMNU_TOOLTIP_CONTRAST"
 msgstr ""
-"Adjusts perceived difference between similar colors. Controls how sharp/washed out the images looks. Adjust to personal taste."
+"Adjusts perceived difference between similar colors. Controls how "
+"sharp/washed out the images looks. Adjust to personal taste."
 
 #, fuzzy
 msgid "DSPLYMNU_TOOLTIP_SATURATION"
 msgstr ""
-"Adjusts the intensity of colors, making the image look more vivid or muted. Adjust to personal taste."
+"Adjusts the intensity of colors, making the image look more vivid or muted. "
+"Adjust to personal taste."
 
 #, fuzzy
 msgid "DSPLYMNU_IMAGEADJUST_BOTTOM"

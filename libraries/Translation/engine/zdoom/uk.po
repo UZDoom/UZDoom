@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-11 17:01+0000\n"
+"PO-Revision-Date: 2026-07-20 19:01+0000\n"
 "Last-Translator: Ron Dallas <Lot_bohdan@ukr.net>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/uk/>\n"
 "Language: uk\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 2026.7.1.dev0\n"
+"X-Generator: Weblate 2026.8.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "Натисніть будь яку клавішу."
@@ -2781,12 +2781,11 @@ msgstr "Чудова робота!"
 msgid "CE4TEXT"
 msgstr "Фантастика"
 
-#, fuzzy
 msgid "CLOADNET"
 msgstr ""
 "Ти не можеш завантажитись під час мережевого квесту!\n"
 "\n"
-"Натисніть будь яку клавішу."
+"Натисни будь яку клавішу."
 
 msgctxt "chex"
 msgid "QSPROMPT"
@@ -4344,7 +4343,7 @@ msgid "GLLIGHTMNU_TITLE"
 msgstr "Динамічне освітлення"
 
 msgid "GLLIGHTMNU_LIGHTSENABLED"
-msgstr "Динамічне освітлення (Апаратний)"
+msgstr "Динамічне освітлення"
 
 msgid "GLLIGHTMNU_LIGHTSPRITES"
 msgstr "Освітлення впливає на спрайти"
@@ -4524,9 +4523,6 @@ msgstr "Лінійний фільтр при збільшенні масштаб
 msgid "TCMNU_MIPMAP"
 msgstr "Міп-маппінг для текстур"
 
-msgid "TCMNU_DYNLIGHTS"
-msgstr "Динамічне освітлення (програмне)"
-
 msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
 msgstr "Завжди показувати ключі"
 
@@ -4565,9 +4561,9 @@ msgid "TXT_TOOOLDSG"
 msgstr "Збереження \"%s\" з старішої версії: %d (%e остання сумісна)."
 
 # Shouldn’t this say “%e is the newest supported”?
-#
+# 
 # — Undead
-#
+# 
 # Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
 msgstr "Збереження \"%s\" з новіщої версії: %d (%e остання сумісна)."
@@ -5191,11 +5187,13 @@ msgstr "Підказки"
 
 msgid "ACCMNU_TOOLTIP_LIGHT_RADIUS"
 msgstr ""
-"Контролює радіус світла навколо гравця в одиницях карти. Більші значення роблять оточення яскравішим."
+"Контролює радіус світла навколо гравця в одиницях карти. Більші значення "
+"роблять оточення яскравішим."
 
 msgid "ACCMNU_TOOLTIP_LIGHT_EXTRA"
 msgstr ""
-"Кількість секторного освітлення, яку потрібно додати до існуючих рівнів секторного освітлення, зберігаючи при цьому існуючий режим освітлення."
+"Кількість секторного освітлення, яку потрібно додати до існуючих рівнів "
+"секторного освітлення, зберігаючи при цьому існуючий режим освітлення."
 
 msgid "ACCMNU_LIGHT_RADIUS"
 msgstr "Радіус світла від гравця"
@@ -5207,7 +5205,7 @@ msgid "OPTVAL_ROCKETEXP_STYLE_TRANS"
 msgstr "Прозорий"
 
 msgid "PICKER_FILELOADING"
-msgstr "Завантаження файлу"
+msgstr "Завантаження файлів"
 
 msgid "DSPLYMNU_IMAGEADJUST"
 msgstr "Калібрування зображення"
@@ -5224,11 +5222,17 @@ msgstr "Будь ласка, вимкніть їх перед налаштува
 
 msgid "DSPLYMNU_TOOLTIP_GAMMA"
 msgstr ""
-"Компенсує обмеження вашого монітора. Налаштовуйте, доки вертикальні сірі блоки не зникнуть. Не використовуйте це для того, щоб зробити гру яскравішою, лише щоб переконатися, що зображення калібрується відповідно до вашого пристрою."
+"Компенсує обмеження вашого монітора. Налаштовуйте, доки вертикальні сірі "
+"блоки не зникнуть. Не використовуйте це для того, щоб зробити гру "
+"яскравішою, лише щоб переконатися, що зображення калібрується відповідно до "
+"вашого пристрою."
 
 msgid "DSPLYMNU_TOOLTIP_BLACKPOINT"
 msgstr ""
-"Компенсує монітори, які неправильно відображають темні пікселі. Налаштовуйте, доки діагональні білі блоки не зникнуть. Не використовуйте це для того, щоб зробити гру яскравішою, лише щоб переконатися, що зображення калібрується відповідно до вашого пристрою."
+"Компенсує монітори, які неправильно відображають темні пікселі. "
+"Налаштовуйте, доки діагональні білі блоки не зникнуть. Не використовуйте це "
+"для того, щоб зробити гру яскравішою, лише щоб переконатися, що зображення "
+"калібрується відповідно до вашого пристрою."
 
 #, fuzzy
 msgid "OPTVAL_SMOOTH"
@@ -5271,15 +5275,19 @@ msgstr "Скидає всі параметри в цьому меню до зн�
 
 msgid "DSPLYMNU_TOOLTIP_BRIGHTNESS"
 msgstr ""
-"Застосовує лінійне регулювання яскравості. Налаштуйте відповідно до власних уподобань або для того, щоб бачити в темряві."
+"Застосовує лінійне регулювання яскравості. Налаштуйте відповідно до власних "
+"уподобань або для того, щоб бачити в темряві."
 
 msgid "DSPLYMNU_TOOLTIP_CONTRAST"
 msgstr ""
-"Регулює сприйняття відмінностей між схожими кольорами. Контролює, наскільки чіткими/розмитими виглядатимуть зображення. Налаштуйте відповідно до власних уподобань."
+"Регулює сприйняття відмінностей між схожими кольорами. Контролює, наскільки "
+"чіткими/розмитими виглядатимуть зображення. Налаштуйте відповідно до власних"
+" уподобань."
 
 msgid "DSPLYMNU_TOOLTIP_SATURATION"
 msgstr ""
-"Регулює інтенсивність кольорів, роблячи зображення більш яскравим або приглушеним. Налаштуйте відповідно до власних уподобань."
+"Регулює інтенсивність кольорів, роблячи зображення більш яскравим або "
+"приглушеним. Налаштуйте відповідно до власних уподобань."
 
 msgid "DSPLYMNU_IMAGEADJUST_BOTTOM"
 msgstr "Регулюйте, поки колір не стане рівномірним сірим."
@@ -5359,13 +5367,11 @@ msgstr "Аналоговий запуск"
 msgid "OPTVAL_ROCKETEXP_STYLE_ADD"
 msgstr "Адаптивний"
 
-#, fuzzy
 msgid "OPTVAL_LAX"
-msgstr "Розслаблений"
+msgstr "Гнучкий"
 
-#, fuzzy
 msgid "OPTVAL_STRICT"
-msgstr "Суворий"
+msgstr "Точний"
 
 #, fuzzy
 msgid "DSPLYMNU_BLACKPOINT"
@@ -5441,3 +5447,125 @@ msgstr "Поріг подвійного кліку"
 #, fuzzy
 msgid "ACCMNU_TOOLTIP_DOUBLECLICK_THRESHOLD"
 msgstr "Час між послідовними натисканнями для реєстрації подвійного кліку"
+
+msgid "UPDATER_CHECK_FOR_UPDATES"
+msgstr "Перевірка оновлень"
+
+msgid "UPDATER_SETTINGS"
+msgstr "Налаштування оновлювача"
+
+msgid "UPDATER_PROMPT_TO_INSTALL"
+msgstr "Пропонувати встановлення"
+
+msgid "UPDATER_INTERVAL"
+msgstr "Перевіряти кожен:"
+
+msgid "UPDATER_UPDATE_AVAILABLE"
+msgstr "Доступно нове оновлення"
+
+msgid "UPDATER_UPDATE_SKIP"
+msgstr "Пропустити оновлення"
+
+msgid "UPDATER_TITLE"
+msgstr "Шукач оновлень"
+
+msgid "UPDATER_DISABLE"
+msgstr "Вимкнути шукач оновлень"
+
+msgid "UPDATER_CHECK_FAILED"
+msgstr "Не вдалось перевірити оновлення"
+
+msgid "UPDATER_UPDATE_FAILED"
+msgstr "Не вдалося оновити"
+
+msgid "UPDATER_YES_PROMPT"
+msgstr "Так і пропонувати встановлювати оновлення"
+
+msgid "UPDATER_DISMISS_UPDATE"
+msgstr "Відхилити оновлення?"
+
+msgid "UPDATER_ASK_AUTO"
+msgstr ""
+"Чи бажаєте ви автоматично перевіряти наявність оновлень?\n"
+"(це можна змінити пізніше на вкладці налаштувань)"
+
+msgid "UPDATER_ASK_INTERVAL"
+msgstr ""
+"Як часто ви хочете перевіряти наявність оновлень?\n"
+"(це можна змінити пізніше на вкладці налаштувань)"
+
+msgid "UPDATER_ZIP_FAIL"
+msgstr "Не вдалось відкрити zip-файл"
+
+msgid "UPDATER_ZIP_ERROR"
+msgstr "Не вдалось розпакувати zip, помилка: '{}' під час запису файлу '{}'"
+
+msgid "UPDATER_UPDATING"
+msgstr "Оновлення..."
+
+msgid "UPDATER_STARTING"
+msgstr "Початок завантаження..."
+
+#, fuzzy
+msgid "UPDATER_SUCCESS"
+msgstr "Оновлення успішне, перезапуск лаунчера."
+
+msgid "UPDATER_UP_TO_DATE"
+msgstr "Остання версія!"
+
+msgid "UPDATER_CANCELLED"
+msgstr "Оновлення було скасовано"
+
+#, fuzzy
+msgid "UPDATER_INVALID_JSON"
+msgstr "Помилка файлу оновлення (JSON)"
+
+#, fuzzy
+msgid "UPDATER_NOT_A_DIR"
+msgstr "Шлях '{}' не веде в папку"
+
+msgid "OPTVAL_DISABLE"
+msgstr "Вимкнути"
+
+msgid "OPTVAL_NOTIFY"
+msgstr "Повідомити"
+
+msgid "OPTVAL_DAILY"
+msgstr "Щодня"
+
+msgid "OPTVAL_WEEKLY"
+msgstr "Щотижня"
+
+msgid "OPTVAL_MONTHLY"
+msgstr "Щомісяця"
+
+msgid "TXT_DOWNLOADING"
+msgstr "Завантаження"
+
+#, fuzzy
+msgid "TXT_EXPERIMENTAL"
+msgstr "Експериментальне"
+
+msgid "TXT_UPDATE"
+msgstr "Оновлення"
+
+msgid "TXT_UPDATED"
+msgstr "Оновлено"
+
+msgid "TXT_CANCELLED"
+msgstr "Скасовано"
+
+msgid "TXT_BACK"
+msgstr "Назад"
+
+msgid "TXT_DISMISS"
+msgstr "Відхилити"
+
+msgid "TXT_SKIP"
+msgstr "Пропустити"
+
+msgid "TXT_CONFIRM"
+msgstr "Підтвердити"
+
+msgid "TXT_OK"
+msgstr "OK"

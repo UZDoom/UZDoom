@@ -1593,9 +1593,6 @@ msgstr ""
 msgid "PICKER_EXTRA"
 msgstr ""
 
-msgid "PICKER_FULLSCREEN"
-msgstr ""
-
 msgid "PICKER_NOAUTOLOAD"
 msgstr ""
 

@@ -340,3 +340,9 @@ msgstr ""
 
 msgid "TCMNU_TRUECOLOR"
 msgstr ""
+
+msgid "TCMNU_DYNLIGHTS"
+msgstr ""
+
+msgid "PICKER_FULLSCREEN"
+msgstr ""

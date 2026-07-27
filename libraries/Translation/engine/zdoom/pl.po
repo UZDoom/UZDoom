@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-06 15:02+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2026-07-14 05:01+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 2026.7.1.dev0\n"
+"X-Generator: Weblate 2026.8.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "Wciśnij dowolny klawisz."
@@ -322,7 +322,8 @@ msgstr "Drugy tryb no-clip: WYŁ"
 # “Lite-amp”: Light-amplification visor
 msgid "STSTR_BEHOLD"
 msgstr ""
-"niezniszczalność (V), siła (S), niewidzialność (I), kombinezon (R), mapa (A) lub gogle noktowizyjne (L)"
+"niezniszczalność (V), siła (S), niewidzialność (I), kombinezon (R), mapa (A)"
+" lub gogle noktowizyjne (L)"
 
 msgid "STSTR_BEHOLDX"
 msgstr "Wzmocnienie aktywowane"
@@ -4350,6 +4351,7 @@ msgstr "Sortowanie list renderowania wdług tekstur"
 msgid "GLLIGHTMNU_TITLE"
 msgstr "Dynamiczne Oświetlenie"
 
+#, fuzzy
 msgid "GLLIGHTMNU_LIGHTSENABLED"
 msgstr "Dynamiczne Oświetlenie (Sprzętowe)"
 
@@ -4531,9 +4533,6 @@ msgstr "Liniowy filtr podczas zwiększania rozmiaru"
 msgid "TCMNU_MIPMAP"
 msgstr "Użyj mipmapowane tekstury"
 
-msgid "TCMNU_DYNLIGHTS"
-msgstr "Dynamiczne Światło (Oprogramowanie)"
-
 msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
 msgstr "Zawsze pokazuj klucze"
 
@@ -4573,9 +4572,9 @@ msgstr ""
 "Zapis gry „%s” jest ze starszej wersji: %d (%e jest najstarszą wspieraną)."
 
 # Shouldn’t this say “%e is the newest supported”?
-#
+# 
 # — Undead
-#
+# 
 # Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
 msgstr ""
@@ -5228,7 +5227,9 @@ msgstr "Wyłącz je przed regulacją."
 
 msgid "DSPLYMNU_TOOLTIP_GAMMA"
 msgstr ""
-"Kompensuje ograniczenia twojego monitora. Reguluj, aż pionowe szare bloki znikną. Używaj tego wyłącznie w celu skalibrowania obrazu dla twojego sprzętu, nie do rozjaśniania gry."
+"Kompensuje ograniczenia twojego monitora. Reguluj, aż pionowe szare bloki "
+"znikną. Używaj tego wyłącznie w celu skalibrowania obrazu dla twojego "
+"sprzętu, nie do rozjaśniania gry."
 
 msgid "DSPLYMNU_BLACKPOINT"
 msgstr "Kompensacja czerni"
@@ -5238,22 +5239,27 @@ msgstr "Dopasuj, aż obszar będzie jednolicie szary."
 
 msgid "DSPLYMNU_TOOLTIP_BLACKPOINT"
 msgstr ""
-"Kompensuje monitory, które nieprawidłowo wyświetlają ciemne piksele. Reguluj, aż diagonalne białe bloki znikną. Używaj tego wyłącznie w celu skalibrowania obrazu dla Twojego sprzętu, nie do rozjaśniania gry."
+"Kompensuje monitory, które nieprawidłowo wyświetlają ciemne piksele. "
+"Reguluj, aż diagonalne białe bloki znikną. Używaj tego wyłącznie w celu "
+"skalibrowania obrazu dla Twojego sprzętu, nie do rozjaśniania gry."
 
 msgid "DSPLYMNU_TOOLTIP_IMAGEADJUST_RESET"
 msgstr "Przywraca wszystkie opcje w tym menu do ustawień domyślnych."
 
 msgid "DSPLYMNU_TOOLTIP_BRIGHTNESS"
 msgstr ""
-"Stosuje liniową regulację jasności. Dostosuj według własnych upodobań lub, aby lepiej widzieć w ciemności."
+"Stosuje liniową regulację jasności. Dostosuj według własnych upodobań lub, "
+"aby lepiej widzieć w ciemności."
 
 msgid "DSPLYMNU_TOOLTIP_CONTRAST"
 msgstr ""
-"Reguluje postrzeganą różnicę między podobnymi kolorami. Kontroluje, jak ostre/wyblakłe wydają się obrazy. Dostosuj według własnych upodobań."
+"Reguluje postrzeganą różnicę między podobnymi kolorami. Kontroluje, jak "
+"ostre/wyblakłe wydają się obrazy. Dostosuj według własnych upodobań."
 
 msgid "DSPLYMNU_TOOLTIP_SATURATION"
 msgstr ""
-"Reguluje intensywność kolorów, sprawiając, że obraz wygląda bardziej żywo lub stonowanie. Dostosuj według własnych upodobań."
+"Reguluje intensywność kolorów, sprawiając, że obraz wygląda bardziej żywo "
+"lub stonowanie. Dostosuj według własnych upodobań."
 
 msgid "ERRORMNU_SAVE"
 msgstr "Zapisz Raport"

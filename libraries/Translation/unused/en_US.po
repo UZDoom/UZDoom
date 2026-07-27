@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-02-17 23:09+0000\n"
+"PO-Revision-Date: 2026-07-13 23:20-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: English <https://hosted.weblate.org/projects/uzdoom/common/en/>\n"
 "Language: en\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.16.1-dev\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
 
 msgid "ADVSNDMNU_ADLOPLCORES"
 msgstr "OPL Emulator Core"
@@ -263,7 +263,9 @@ msgstr "Sounds stop when actor vanishes"
 
 msgid "DSPLYMNU_TOOLTIP_WHITEPOINT"
 msgstr ""
-"Compensates for monitors that fail to display bright pixels correctly. Adjust until diagonal black blocks fade. Do not use this to make the game brighter, only to ensure the image is calibrated for your setup."
+"Compensates for monitors that fail to display bright pixels correctly. "
+"Adjust until diagonal black blocks fade. Do not use this to make the game "
+"brighter, only to ensure the image is calibrated for your setup."
 
 msgid "DSPLYMNU_TRANSSOUL"
 msgstr "Lost Soul translucency"
@@ -342,3 +344,11 @@ msgstr "Auto (ZDoom Preferred)"
 
 msgid "TCMNU_TRUECOLOR"
 msgstr "True color output"
+
+#, fuzzy
+msgid "TCMNU_DYNLIGHTS"
+msgstr "Dynamic lights (Software)"
+
+#, fuzzy
+msgid "PICKER_FULLSCREEN"
+msgstr "Fullscreen"
