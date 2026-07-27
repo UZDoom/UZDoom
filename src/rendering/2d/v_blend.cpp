@@ -88,7 +88,7 @@ void V_AddBlend (float r, float g, float b, float a, float v_blend[4])
 
 void V_AddPlayerBlend (player_t *CPlayer, float blend[4], float maxinvalpha, int maxpainblend)
 {
-	int cnt;
+	int cnt, bloodcnt;
 	auto Level = CPlayer->mo->Level;
 
 	// [RH] All powerups can affect the screen blending now
@@ -133,17 +133,17 @@ void V_AddPlayerBlend (player_t *CPlayer, float blend[4], float maxinvalpha, int
 
 	if (painFlash.a != 0)
 	{
-		cnt = (DamageToAlpha[min (CPlayer->damagecount * painFlash.a / 255, (uint32_t)113)]) * 1.20; // "1.20" is here as a "20%" increase (default "blood_fade_scalar" 100% -> 80%, so 100% is now like the old-school red blend)
+		bloodcnt = (DamageToAlpha[min (CPlayer->damagecount * painFlash.a / 255, (uint32_t)113)]) * 1.20; // "1.20" is here as a "20%" increase (default "blood_fade_scalar" 100% -> 80%, so 100% is now like the old-school red blend)
 
 		// [BC] Allow users to tone down the intensity of the blood on the screen.
-		cnt = (int)( cnt * blood_fade_scalar );
+		bloodcnt = (int)( bloodcnt * blood_fade_scalar );
 
-		if (cnt)
+		if (bloodcnt)
 		{
-			if (cnt > maxpainblend)
-				cnt = maxpainblend;
+			if (bloodcnt > maxpainblend)
+				bloodcnt = maxpainblend;
 
-			V_AddBlend (painFlash.r / 255.f, painFlash.g / 255.f, painFlash.b / 255.f, cnt / 255.f, blend);
+			V_AddBlend (painFlash.r / 255.f, painFlash.g / 255.f, painFlash.b / 255.f, bloodcnt / 255.f, blend);
 		}
 	}
 
@@ -203,7 +203,7 @@ void V_AddPlayerBlend (player_t *CPlayer, float blend[4], float maxinvalpha, int
 	}
 
 	// cap opacity if desired
-	if (blend[3] > maxinvalpha) blend[3] = maxinvalpha;
+	if (blend[3] > maxinvalpha && bloodcnt < 160) blend[3] = maxinvalpha; // "bloodcnt < 160" allows an exception to the red pain flash effect
 }
 
 //==========================================================================
@@ -333,7 +333,7 @@ FVector4 V_CalcBlend(sector_t* viewsector, PalEntry* modulateColor)
 
 	if (player)
 	{
-		V_AddPlayerBlend(player, blend, 0.8, 225);
+		V_AddPlayerBlend(player, blend, 0.5, 225);
 	}
 
 	if (players[consoleplayer].camera != NULL)
