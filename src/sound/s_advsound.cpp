@@ -321,7 +321,7 @@ void S_CheckIntegrity()
 {
 	TArray<sfxinfo_t *> chain;
 	TArray<bool>        broken;
-	const unsigned int        numsounds = soundEngine->GetNumSounds();
+	const unsigned int  numsounds = soundEngine->GetNumSounds();
 
 	broken.Resize(numsounds);
 	memset(&broken[0], 0, sizeof(bool) * numsounds);
