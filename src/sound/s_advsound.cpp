@@ -349,7 +349,7 @@ void S_CheckIntegrity()
 		if (sfx.lumpnum <= -1 && sfx.link == sfxinfo_t::NO_LINK && !sfx.bRandomHeader)
 		{
 			const int sndinfolump = sfx.SndinfoLump;
-			const bool internal   = fileSystem.GetFileContainer(sndinfolump) > 0; // Ignore missing entries from the internal pk3 only.
+			const bool internal   = fileSystem.GetFileContainer(sndinfolump) <= 0; // Ignore missing entries from the internal pk3 only.
 
 			if (!internal && developer >= DMSG_WARNING)
 			{
