@@ -723,7 +723,8 @@ static ETraceStatus TraceCallbackForDitherTransparency(FTraceResults& res, void*
 	case TRACE_HitWall:
 		{
 			sector_t* linesec = res.Line->sidedef[res.Side]->sector;
-			if (linesec && linesec->subsectorcount > 0 && (*CurMapSections)[linesec->subsectors[0]->mapsection])
+			if (linesec && linesec->subsectorcount > 0 && (*CurMapSections)[linesec->subsectors[0]->mapsection]
+				&& res.HitVector.XY().dot(DVector2(res.Line->Delta().Y, -res.Line->Delta().X)) < 0.0)
 			{
 				bf = res.Line->sidedef[res.Side]->sector->floorplane.ZatPoint(res.HitPos.XY()) - EQUAL_EPSILON;
 				bc = res.Line->sidedef[res.Side]->sector->ceilingplane.ZatPoint(res.HitPos.XY()) + EQUAL_EPSILON;
