@@ -519,6 +519,10 @@ bool FStringTable::ParseLanguageCSV(int filenum, const char* buffer, size_t size
 			{
 				labelcol = column;
 			}
+			else if (entry.CompareNoCase("remarks") == 0)
+			{
+				continue;
+			}
 			else
 			{
 				auto languages = entry.Split(" ", FString::TOK_SKIPEMPTY);
