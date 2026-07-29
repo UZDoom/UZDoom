@@ -1522,7 +1522,6 @@ void D_Display ()
 				DrawTexture(twod, tex, 160 - tex->GetDisplayWidth()/2, 100 - tex->GetDisplayHeight()/2,
 					DTA_320x200, true, TAG_DONE);
 			}
-			NoWipe = 10;
 		}
 
 		if (snd_drawoutput)
