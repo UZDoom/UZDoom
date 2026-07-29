@@ -104,6 +104,312 @@
 
 	<releases>
 		<!-- Keep 5 full descriptions, and 2 years of releases with just urls -->
+		<release version="5.0.0" date="2026-06-01"> <!--TODO-->
+			<description>
+				<p>After an over year-long development cycle and a truckload of internal reworks, UZDoom 5.0 has finally arrived! Starring bone manipulations for IQM models, significantly improved controller support (including haptic feedback!), the overhauled multiplayer, ZScript debug support, and much more, we knew this version would need a full upgrade. We appreciate everyone being patient since we know it took a while, but we promise it was worth the wait. With the updater being added, we can now make smaller releases more often so long periods of development like this should be an issue of the past. Our focus going forward will be on making releases as big new features are added.</p>
+				<p>**General**</p>
+				<ul>
+				<li>Multiple security fixes. **This update is being deemed as critical.** If you’re using a version older than 5.0, it’s highly recommended you update to the latest.</li>
+				<li>Improved localization support. Added support for Босански, Català, Hrvatski, Bahasa, Latina, Svenska, Українська, and 简体中文.</li>
+				<li>Removed Discord RPC support. This allowed Discord to display information about the current UZDoom instance but was unfortunately causing crashes on launch. Since this library has been deprecated for over half a decade, its been removed until a new library can be found.</li>
+				<li>Controller support has been improved significantly. Missing buttons e.g. paddles can now be assigned properly and analog stick curves have been tweaked to feel much more natural. Binds for these have been cleared as a result in order to update all configurations to the new handling.</li>
+				<li>Added haptic feedback for controllers.</li>
+				<li>When auto-starting a game via e.g. <code>-skill #</code>, UZDoom will now use the first map in the first episode found. This should make starting games with unorthodox map setups more streamlined.</li>
+				<li>When auto-starting a game, the default skill set in MAPINFO will now be the skill it defaults to.</li>
+				<li>Alt tabbing while in fullscreen will now respect the relevant video cvars.</li>
+				<li>Improved the crosshair graphics.</li>
+				<li>Reworked double tap binds so they're now either/or instead of executing both.</li>
+				<li>Allowed quit sounds to be longer (up to 5 seconds).</li>
+				<li>Added the <code>-episode #</code> command-line argument for more easily starting from episodes rather than needing to know the map name.</li>
+				<li>Added the <code>-optfile</code> command-line argument. Files specified this way will ignore missing file errors by default.</li>
+				<li>Added the <code>-showlauncher</code> command-line argument. Forces the launcher to always show up.</li>
+				<li>Added the <code>-help</code> command-line argument (aliases: <code>-h</code>, <code>/?</code>). This will display a list of valid command-line arguments for UZDoom alongside a description of what they do. <code>-help-all</code> can be used to get fuller descriptions for each.</li>
+				<li>Added <code>RecursivePath=</code> to the config for IWAD and file look up that allows all subfolders in the given directory to be searched as well. This won’t work for subfolders that act as files.</li>
+				<li>Added support for Boom's multiple help screens.</li>
+				<li>Added support for the multiplayer lobby and error windows on Linux.</li>
+				<li>Improvements to serializing. This should make both saving and loading a little faster.</li>
+				<li>Fixed the auto language option not detecting the system language.</li>
+				<li>Fixed multiple splashes spawning when falling in liquids in certain cases.</li>
+				<li>Fixed explosions being able to damage outside of their radius in rare cases.</li>
+				<li>Fixed locks not properly checking the player's inventory if a voodoo doll triggered the check.</li>
+				<li>Fixed the <code>SMF_PRECISE</code> flag in <code>A_SeekerMissile</code> not tracking crouching players properly.</li>
+				<li>Fixed <code>A_LookEx</code> not respecting the <code>+LOOKALLAROUND</code> flag in all cases.</li>
+				<li>Fixed looping sound sequences not playing back correctly.</li>
+				<li>Fixed the death cam not working with players that called A_SkullPop (e.g. when the player is gibbed in Heretic).</li>
+				<li>Fixed a VM crash in Heretic when a player who fired a powered up Hellstaff leaves the game while it's active.</li>
+				<li>Fixed a crash when opening the scoreboard in niche scenarios.</li>
+				<li>Fixed a potential crash when saving.</li>
+				</ul>
+				<p>**Launcher**</p>
+				<ul>
+				<li>Added a new updater! This will now automatically check for updates periodically when launched with controls for it in the Options tab. Options include being prompted to install the latest update if one is found, merely notifying that a new update was found, or disabling entirely. Updates can be checked for manually in the About tab.</li>
+				<li>Added both light and dark mode themes alongside auto theme detection.</li>
+				<li>Added a Release Notes tab that contains the patch notes.</li>
+				<li>Added an About tab that contains a list of all contributors to the project. This will also allow the Release Notes tab to be reopened if needed.</li>
+				<li>Added an option to remember additional parameters between sessions.</li>
+				<li>Added an option to disable loading support WADs e.g. the Legacy of Rust assets if you have Doom + Doom II installed.</li>
+				<li>Added an option for whether or not UZDoom should throw an error if files specified by the <code>-file</code> command-line argument weren't found.</li>
+				<li>Added options for dynamic lights and v-sync.</li>
+				<li>Added a multiplayer tab for hosting and joining net games.</li>
+				<li>Added support for dragging and dropping files into the launcher window while open.</li>
+				<li>Holding shift will now also stop mods from auto-launching games. Now works on Linux.</li>
+				<li>The window size will now be saved between sessions.</li>
+				</ul>
+				<p>**Accessibility**</p>
+				<ul>
+				<li>Added a new accessibility menu. This will be the new home for all of UZDoom's accessibility features going forward, and will have other related accessibility options (like the HUD flashing) ported over to it at a later time.</li>
+				<li>Added Extra Light option. This modifies the light curve of all sectors, allowing brightness to be controlled via the actual game lighting.</li>
+				<li>Added Light Radius option. This controls the range of the radial light that emanates from the player.</li>
+				<li>Added Double-click Threshold option. Allows controlling the duration of time needed for a double tap bind to register.</li>
+				</ul>
+				<p>**Menu**</p>
+				<ul>
+				<li>Various improvements to the option menu handling.</li>
+				<li>Increased maximum shadowmap quality.</li>
+				<li>Increased maximum auto-aim range to 70 degrees vertically. This is still capped to 35 degrees if freelook is disabled.</li>
+				<li>Sliders can now set values directly by pressing enter on them.</li>
+				<li>Made the default dimming less harsh.</li>
+				<li>Reworked the brightness adjustment options. Gamma now has various sliders for adjusting general and black compensation levels. An image is provided to help best fit to your monitor's gamma. Brightness itself has been reworked to give better results.</li>
+				<li>Reworked the ZDoom transparency options to have improved heuristics when determining preferences. A new Auto mode has been included that'll turn transparency off only on vanilla entities while enabling it for modded ones.</li>
+				<li>Added tooltips to menus. In the future these will give better explanations of what each option does with hover tooltips being used to further explain the specifics of each value when necessary.</li>
+				<li>Added a bind for deleting saves with controllers.</li>
+				<li>Added the ability to reset options to their defaults by pressing backspace.</li>
+				<li>Added a sector fill color option for the automap, allowing sectors to be filled in with a generic color to differentiate them from the background.</li>
+				<li>Added an auto gameplay compatibility option. This enables certain non-intrusive compatibility options based on game and/or map type to better fit the author's original intent.</li>
+				<li>Added a compatibility option to emulate Mikoportals for vanilla maps that rely on them.</li>
+				<li>Added a compatibility option to transfer sector secrets in Boom maps.</li>
+				<li>Exposed controls for Heretic’s, Hexen’s, and Strife’s items.</li>
+				<li>Fixed a bug where using a mouse button to close a menu would cause Windows to lose track of which window is focused.</li>
+				<li>Fixed certain fonts rendering incorrectly compared to the vanilla Doom graphics.</li>
+				<li>Fixed the <code>+DONTTRANSLATE</code> flag being ignored in the player menu.</li>
+				</ul>
+				<p>**Console**</p>
+				<ul>
+				<li>The <code>turbo</code> cvar is now considered a cheat.</li>
+				<li>Added <code>changeepisode</code> command. Allows changing episodes via episode number instead of needing to know its starting map.</li>
+				<li>Added <code>profilecsthinkers</code> command. Allows profiling client-side Thinkers and dynamic lights. Dynamic lights will no longer show up under <code>profilethinkers</code>.</li>
+				<li>Added <code>acs</code> and <code>acsn</code> commands as alternatives to <code>puke</code> and <code>pukename</code> respectively.</li>
+				<li>Added <code>cl_debugprediction</code> cvar for testing latency within singleplayer games. The value is the number of ticks of lag to emulate.</li>
+				<li>Added <code>i_searchdistributors</code> cvar that, when set to false, disables lookup of IWADs from Steam, GOG, etc.</li>
+				<li>Added an option to stack duplicate messages. This can be changed via the <code>con_stackident</code> cvar.</li>
+				<li>Fixed a crash with the <code>setinv</code> command.</li>
+				<li>Fixed <code>stat velocity</code> displaying inaccurate values and made it multiplayer friendly.</li>
+				<li>Fixed the <code>nointerscrollabort</code> cvar not being respected.</li>
+				</ul>
+				<p>**Rendering**</p>
+				<ul>
+				<li>Restructured dynamic light linking. This should help moving dynamic lights from e.g. projectiles perform better in maps with complex level geometry.</li>
+				<li>Spotlights attached to cameras will now update their angles in real time to match the camera's view direction.</li>
+				<li>Rotating skies will now pause with the game.</li>
+				<li>Added <code>InputTime</code>, <code>InputTimeGame</code>, and <code>InputTimeDelta</code> uniforms for post-processing shaders. These store the total engine time, the current level's game time, and the frame delta respectively in seconds.</li>
+				<li>Added <code>LastInputTexture</code> for post-processing shaders that stores the image from the previous frame.</li>
+				<li>Fixed mirrored surfaces not rendering correctly through portals.</li>
+				<li>Fixed canvas textures being unable to support translucency.</li>
+				</ul>
+				<p>**Maps**</p>
+				<ul>
+				<li>Tweaked desaturation model to make colors look better at lower sector light levels.</li>
+				<li>Added ability to set alpha on sides.</li>
+				<li>Added a flag to sides to allow blocking rendering entirely, acting like an artificial one-sided line.</li>
+				<li>Miscellaneous fixes for level compatibility across various WADs.</li>
+				<li>Minor fixes for MBF21.</li>
+				<li>Minor fixes for id24.</li>
+				<li>Fixed UMAPINFO using the wrong finale music in intermissions.</li>
+				<li>Fixed the “no infighting” flag not working.</li>
+				<li>Fixed linked crushers not respecting the parent crusher's crush mode.</li>
+				</ul>
+				<p>**Lumps**</p>
+				<p>**MENUDEF**</p>
+				<ul>
+				<li>Added <code>DoubleTapControl</code> and <code>DoubleControl</code> option menu settings. <code>DoubleTapControl</code> bindings allow for double tapping a key to execute an action while <code>DoubleControl</code> bindings allow for both a single tap and double tap action to be bound to a key at the same time.</li>
+				<li>Added <code>Tooltip</code> keyword. This can be used with both list and option menus and binds a description to the widget defined before it. If a widget has a tooltip, it will be displayed at the bottom of the menu when selected. In addition, Option Values now accept a third optional parameter, a description, that is displayed next to the option when it's hovered over for a second. This allows for explanations of complex options that can't be handled by the basic tooltip.</li>
+				<li>Added a new gray check property to option menu widgets that allows determining how they should work. This includes <code>Gray</code> (current behavior), <code>Hide</code> (completely hide the element), <code>GrayInv</code> (gray if the element isn't the given gray check value), and <code>HideInv</code> (hide if the element isn't the given gray check value).</li>
+				<li>More option widgets now have access to gray checks.</li>
+				</ul>
+				<p>**MODELDEF**</p>
+				<ul>
+				<li>Added <code>ViewModelFOV</code>. When a model is being used as a PSprite, this will allow for directly setting its field of view. Positive values are fixed FOVs while negative values act as a scalar from the default 90 FOV.</li>
+				</ul>
+				<p>**ANIMDEFS**</p>
+				<ul>
+				<li>Canvas textures now support x and y offsets via the <code>offset</code> keyword. If used with no values, uses the texture's offsets.</li>
+				</ul>
+				<p>**GLDEFS**</p>
+				<ul>
+				<li>Added an option for stricter warnings on invalid materials via the <code>gl_strict_gldefs_errors</code> cvar.</li>
+				</ul>
+				<p>**MAPINFO**</p>
+				<ul>
+				<li>Added <code>Skymist</code> to map blocks. This allows setting a transparent overlay texture on skies that acts as a layer of fog. Supports animated textures and skyboxes.</li>
+				<li>Added <code>ThickFogDistance</code> and <code>ThickFogMultiplier</code> to map blocks for additive fog. <code>ThickFogDistance</code> controls what range it starts and <code>ThickFogMultiplier</code> controls the density of the fog.</li>
+				<li>Added <code>UsePauseString</code> to the gameinfo block. Allows displaying the PAUSED text as a string instead of a graphic.</li>
+				<li>Setting the status screen classes to <code>None</code> will now disable them entirely.</li>
+				</ul>
+				<p>**LANGUAGE**</p>
+				<ul>
+				<li>IETF BCP 47 language tags are now used instead of custom language codes</li>
+				<li>Error messages will now print the full file name to make it easier to differentiate which one is causing issues.</li>
+				<li>Added a warning if a missing translation was attempted to be used.</li>
+				</ul>
+				<p>**SNDINFO**</p>
+				<ul>
+				<li>Sounds with missing lumps will now give a warning when in <code>developer</code> 2 mode or greater.</li>
+				</ul>
+				<p>**ZScript**</p>
+				<ul>
+				<li>DAP debug servers will now work with ZScript. This can be used with e.g. VisualStudio Code in order to properly debug ZScript via stepping, pausing, etc. You can find UZDoom's own VSCode extension on GitHub at github.com/UZDoom/UZDoom-VSCode.</li>
+				<li>Added Behaviors. These pseudo-interfaces are meant to replace Inventory tokens, have a much simpler API, and can only have one of a given type at a time making it easier to manage. BehaviorIterators can be used to iterate across either all Behaviors on a given Actor or all Behaviors of a given type currently in the game. All Behaviors are guaranteed to have an Actor that owns them, allowing them to be passed around as a handle if behavior-based typing is needed.</li>
+				<li>Added client-side Thinkers. These are ran after the client has backed up any needed values, making them safer for multiplayer. They can be spawned via LevelLocals’ <code>SpawnClientSideThinker</code> function or by marking Actors with <code>+CLIENTSIDE</code>. These have heavy restrictions on what they can interact with as other clients in net games will not know about them, so caution should be used when modifying the world directly from them. Objects can be checked if they're client-side via the <code>IsClientSide</code> function. **Note:** These have their own Actor, Behavior, and Thinker iterators. A parameter to get client-side Thinkers has been provided for these when creating them. They will not appear in the blockmap or sector thing lists.</li>
+				<li>Reworked the level traveling system. All Actors can now be set to travel between levels similar to the player via their <code>AddToTravellingList</code> function. Note that this can only be done once traveling has been initiated. The <code>Travelling</code> and <code>PostTravelled</code> virtual functions have been moved to all Thinkers as a result.</li>
+				<li>Removed the ability to manually assign Actors to the <code>STAT_STATIC</code> statnum and all Thinkers to the <code>STAT_TRAVELLING</code> statnum. This was always unintended behavior that resulted in bugs.</li>
+				<li>Exposed the <code>Elevator</code>, <code>Door</code>, <code>Platform</code>, and <code>Ceiling</code> map thinkers. Allowing for reading of their states.</li>
+				<li><code>const</code> functions will now properly make <code>self</code> constant. To get the previous behavior back, use <code>unsafe(const)</code>.</li>
+				<li>Added <code>unsafe(clearscope)</code> scope for fields. This can be used to make fields that seamlessly interact between <code>play</code> and <code>ui</code> scopes. **Note:** This has a high chance to desync multiplayer, so use with caution.</li>
+				<li>Added the <code>norollback</code> keyword for <code>unsafe(clearscope)</code> fields. This will prevent them from being backed up while predicting, keeping their values untouched at all times. <code>ui</code> fields are automatically not rolled back.</li>
+				<li>Classes and structs can now be marked as deprecated.</li>
+				<li>The HUD will now tick again while the world is paused.</li>
+				<li>Added <code>MinRespawnTics</code> and <code>RespawnDice</code> properties to Actors to control their respawn logic when enabled.</li>
+				<li>Added <code>+INTERPOLATESCALE</code> and <code>+INTERPOLATEALPHA</code> flags to Actors.</li>
+				<li>Added the <code>+NODYNAMICLIGHTING</code> flag to Actors to allow disabling dynamic lighting on them.</li>
+				<li>Re-added the <code>+WEAPON.BFG</code> and <code>+WEAPON.EXPLOSIVE</code> flags. All Doom, Strife, and Raven weapons have been flagged appropriately.</li>
+				<li>Actors will now track how they were spawned in their <code>SpawnFlags</code> field. <code>MTF_MAPTHING</code> is for Actors placed in the map and <code>MTF_CONSOLETHING</code> is for Actors spawned via the console. All other Actors are considered manual spawns.</li>
+				<li>PlayerPawn's <code>FilterCoopRespawnInventory</code> function is now virtual and can be overridden.</li>
+				<li>Added <code>nailrange</code> parameter to A_Explode to control the range of nails shot from them.</li>
+				<li>Added <code>fadeoutstep</code> parameter to A_SpawnParticleEx, allowing particles to first fade in when spawned and then back out. This requires either <code>SPF_FADE_IN_OUT</code> or <code>SPF_FADE_IN_HOLD_OUT</code> to be set.</li>
+				<li>Added <code>gibtype</code> and <code>zOfs</code> parameters to A_TossGib. Now also returns the Actor that was spawned.</li>
+				<li>Added <code>flags</code> and <code>angle</code> parameters to DoSpecialDamage and TakeSpecialDamage.</li>
+				<li>Added <code>angle</code> parameter to <code>ModifyDamage</code>, <code>AbsorbDamage</code>, and <code>GetModifiedDamage</code>.</li>
+				<li>Added the <code>PRINT_NOCONSOLE</code> flag to PrintfEx.</li>
+				<li>Added the <code>SPF_NODYNAMICLIGHTING</code> flag to particles and Visual Thinkers to disable dynamic lighting on them.</li>
+				<li>Added <code>WorldPaused</code> function to LevelLocals for checking if the world is currently considered paused (menu open, console down, etc.).</li>
+				<li>Added <code>ChangeSkyMist</code> function to LevelLocals for changing the skymist texture.</li>
+				<li>Added <code>SetSkyFog</code> and <code>SetThickFog</code> functions to LevelLocals for controlling fog levels.</li>
+				<li>Added <code>SpawnThinker</code> and <code>SpawnClientSideThinker</code> functions to LevelLocals, allowing Thinkers to be created with a default stat num.</li>
+				<li>Added <code>SpawnClientSideVisualThinker</code> function to LevelLocals for spawning client-side Visual Thinkers.</li>
+				<li>Added <code>RemoveUUIDSaveSlots</code> function to SavegameManager. This allows all saves related to the current game session to be deleted at once.</li>
+				<li>Added <code>GetNextPlayer</code> and <code>GetNextPlayerNumber</code> static functions to PlayerInfo. Allows iterating through players more easily.</li>
+				<li>Added <code>SetFullbrightMode</code> function to PlayerInfo. Allows setting the type of fullbright mode (e.g. from the Infrared) manually. Can be either <code>FBMODE_DEFAULT</code> (choose between fullbright or night vision based on player preference), <code>FBMODE_FULLBRIGHT</code>, <code>FBMODE_NIGHTVISION</code>, or <code>FBMODE_TORCH</code> (emulates Heretic's Torch).</li>
+				<li>Added <code>GetDeltaTime</code> and <code>GetPhysicsTimeStep</code> functions. <code>current</code> in <code>GetDeltaTime</code> can be used to get exact measurements. Both return time in seconds.</li>
+				<li>Added <code>GetStatNum</code> function to Thinkers.</li>
+				<li>Added <code>GetSelfObituary</code> virtual function for overriding self inflicted death obituaries.</li>
+				<li>Added <code>OnRevive</code> virtual function for performing actions on Actors when they’re guaranteed to have been revived.</li>
+				<li>Added <code>DepleteBy</code> virtual function for Inventory items. This is called when attempting to remove an amount of an item from the inventory.</li>
+				<li>Added <code>OnSelect</code> and <code>OnDeselect</code> virtual functions for Weapons when they’re selected and deselected respectively.</li>
+				<li>Added the UFO operator (<code>&lt;=&gt;</code>).</li>
+				<li>Exported <code>CloseDialog</code> for StrifeDialogReplys.</li>
+				<li>Exported EpisodeInfo and SkillInfo structs. This will make it possible to create custom selection menus for these.</li>
+				<li>Exported <code>IsInt</code> and <code>IsDouble</code> functions for strings.</li>
+				<li>Exported the HUD’s <code>Draw</code> virtual function in its entirety, making full overrides possible.</li>
+				<li>Exported the scoreboard drawing logic to allow creating custom ones.</li>
+				<li>Exported <code>ReactToDamage</code> virtual for overriding pain logic in Actors. Returns true or false based on whether or not the Actor entered a pain state.</li>
+				<li>Fixed <code>MTF_NOINFIGHTING</code> doing nothing, it now turns on the <code>+NOINFIGHTING</code> flag on affected actors.</li>
+				<li>Fixed an error that would occur when chain assigning deprecated Actor flags.</li>
+				<li>Fixed a crash that could occur in <code>CheckSight</code>.</li>
+				<li>Fixed an instance where canvas textures couldn't be fetched if being used as a sprite replacement.</li>
+				<li>Fixed <code>static const</code> arrays not respecting the <code>internal</code> modifier.</li>
+				<li>Fixed <code>Pre/PostMorph</code> virtual functions being called twice for monsters.</li>
+				<li>Fixed <code>LookForEnemiesEx</code> function not detecting non-players correctly.</li>
+				<li>Fixed traveling Thinkers not getting restored back to their previous stat num.</li>
+				</ul>
+				<p>**IQM Bone Manipulation**</p>
+				<p>With 5.0 comes the ability to manipulate bones directly for IQM models. This has been a long requested feature and allows for things like spawning effects at specific positions, rotating an actor's head to look at its target, attaching one actor to another, etc. While blend-tree-based animation blending would require a more in-depth solution to handle properly, some functionality has been exposed that allows custom blends to be created programmatically. The Named variants of these functions allow a name to be used instead of a bone index.</p>
+				<p>**Bone Setters**</p>
+				<ul>
+				<li><code>Set(Named)BoneRotatation(Angles)</code></li>
+				<li><code>Set(Named)BoneTranslation</code></li>
+				<li><code>Set(Named)BoneScaling</code></li>
+				<li><code>Clear(Named)BoneRotation/Translation/Scaling</code></li>
+				<li><code>ClearBoneOffsets</code></li>
+				</ul>
+				<p>**Default Bone Getters**</p>
+				<ul>
+				<li><code>Get(Named)BoneOffset</code></li>
+				<li><code>GetRootBones</code></li>
+				<li><code>GetBoneIndex/Name</code></li>
+				<li><code>GetBoneCount</code></li>
+				<li><code>Get(Named)BoneParent</code></li>
+				<li><code>Get(Named)BoneChildren</code></li>
+				<li><code>Get(Named)BoneBaseTRS</code></li>
+				<li><code>Get(Named)BoneBasePosition</code></li>
+				<li><code>Get(Named)BoneBaseRotation</code></li>
+				<li><code>Get(Named)BoneFramePose</code></li>
+				<li><code>GetAnimStartFrame</code></li>
+				<li><code>GetAnimEndFrame</code></li>
+				<li><code>GetAnimFramerate</code></li>
+				</ul>
+				<p>**Bone Getters**</p>
+				<p>These require the <code>IQM_GET_BONE_INFO</code> model flag to be set on the Actor via the <code>SetModelFlag</code> function's second argument due to how expensive bones can be to passively update while animating. The <code>IQM_GET_BONE_INFO_RECALC</code> flag can be used if more precision is needed as this will instead update any time the bones change at the cost of more overhead on setters.</p>
+				<ul>
+				<li><code>Get(Named)BoneTRS</code></li>
+				<li><code>Get(Named)BoneEulerAngles</code></li>
+				<li><code>Get(Named)BonePosition</code></li>
+				<li><code>Get(Named)BoneMatrixRaw</code></li>
+				<li><code>TransformBy(Named)Bone</code></li>
+				<li><code>GetObjectToWorldMatrixRaw</code></li>
+				</ul>
+				<p>**Animation Blending**</p>
+				<ul>
+				<li><code>AnimateBones</code> (this is a new UI-scoped virtual function)</li>
+				<li><code>SetBones(UI)</code></li>
+				<li><code>SetBonesRange(UI)</code></li>
+				<li><code>SetBonesMask(UI)</code></li>
+				<li><code>OverwriteBones</code></li>
+				<li><code>OverwriteBonesRange</code></li>
+				<li><code>OverwriteBonesMask</code></li>
+				<li><code>SetAnimationLayerAnimation(UI)</code></li>
+				<li><code>SetAnimationLayerFrameRate(UI)</code></li>
+				<li><code>FindAnimationFrameAt</code></li>
+				<li><code>FindAnimationFrame(UI)</code></li>
+				<li><code>CalculateAnimationFrame</code></li>
+				<li><code>CalculateAnimation(UI)</code></li>
+				<li><code>BlendAnimationFrames</code></li>
+				<li><code>OffsetAnimationFrame</code></li>
+				<li><code>ForceRecalculateBones</code></li>
+				</ul>
+				<p>**Multiplayer**</p>
+				<p>Whether you're partaking in jolly cooperation or duking it out in deathmatch, multiplayer has always been a fundamental part of Doom's experience. Unfortunately the mainline ZDoom ports were never that good at it, and it's long been neglected in favor of ports designed for online play. While this was an acceptable solution back then, the lack of a good multiplayer experience only hurts more and more as UZDoom continues to grow its collection of exclusive mods and even games. While multiplayer will continue to rely on deterministic gameplay for the foreseeable future, 5.0 comes with some massive improvements to its networking stability. Packet-Server, a once forgotten networking mode, has been fixed up and is now the default. This works similar to client/server where everyone talks to the host directly, removing the peer-to-peer nature and getting rid of those nasty connection issues once and for all. There's still a lot to improve (in-game joining, weapon prediction, the list goes on), but this is a huge stepping stone towards adding these, and you can expect to see more features in the future.</p>
+				<ul>
+				<li>Increased the max player count to 64.</li>
+				<li>Overhauled the net game lobby. Everyone will now be able to see who has joined and hosts will be able to better manage guests. Hosts can now preemptively start the game instead of needing to wait for the lobby to fill fully, allowing for arbitrary max player counts. **Note:** Bans are IP-based and only temporary.</li>
+				<li>Networked the host’s <code>-loadgame</code> argument. This will still require everyone to have the save file with its given name, but should make reopening a playthrough easier since now only the host needs to specify it. Guests can still manually specify <code>-loadgame</code> to override this should they need a different file name.</li>
+				<li>Players can now only connect if they’re using the same engine and file versions. This will be improved in the future to allow files specified via <code>-optfile</code> to be ignored.</li>
+				<li>Significant improvements to connect rejection messages.</li>
+				<li>Auto loaded files and support WADs are now disabled when playing online. These must always be specified manually to avoid accidental desyncs.</li>
+				<li>Overhauled the scoreboard to be significantly more readable.</li>
+				<li>Hosts can now control who can pause the game including disabling it entirely.</li>
+				<li>Hosts can now control who’s able to initiate conversations with NPCs.</li>
+				<li>Passing -1 as the position in the <code>changemap</code> console command will now pistol start the following map (<code>changeepisode</code> automatically pistol starts).</li>
+				<li>More items have been marked with <code>+WEAPONSPAWN</code> to remove things like added ammo when playing with multiplayer weapons disabled.</li>
+				<li>Improved the last valid position logic when respawning in place is enabled.</li>
+				<li>Reworked save file management for net games. These will now have their own subfolder, <code>NetGame</code>, in order to prevent accidentally overriding singleplayer saves. Files saved also use their given name instead of the <code>save##</code> format to make them easier to load. Only hosts can save by default now (can be changed via the <code>net_limitsaves</code> cvar).</li>
+				<li>Reworked the connection stabilizer. When experiencing packet loss, the game will now attempt to smoothen out the gameplay at the cost of felt latency. This can be disabled if stuttering is preferred.</li>
+				<li>Renamed settings controllers console commands to <code>addsettingscontrollers</code>, <code>removesettingscontrollers</code>, <code>removeallsettingscontrollers</code>, and <code>listsettingscontrollers</code>. <code>addsettingscontrollers</code> and <code>removesettingscontrollers</code> can now take multiple player numbers as arguments. As a reminder, settings controllers are also capable of setting certain server options like gameplay variables.</li>
+				<li>Re-added intermission readying and unreadying. Alternative types of readying systems have been added including vote-based, host only, or anyone. If voting, a timer has been added when enough players are ready to force continue the game.</li>
+				<li>Added a cool down for repeatable actions e.g. opening doors.</li>
+				<li>Added new options for the chat including what messages to allow and disabling of certain properties e.g. the chat sound.</li>
+				<li>Added <code>mute</code>, <code>muteall</code>, <code>unmute</code>, <code>unmuteall</code>, and <code>listmuted</code> console commands. Messages from muted players will be ignored. <code>mute</code> and <code>unmute</code> can take multiple player numbers as arguments.</li>
+				<li>Added the <code>-coop</code> command-line argument for more easily setting up co-op friendly game sessions.</li>
+				<li>Added the <code>-password</code> command-line argument to let hosts require a password to enter the lobby. Guests must enter this same password when connecting.</li>
+				<li>Exposed controls for spy cam previous and clearing the spy cam.</li>
+				<li>Fixed the inventory bar closing faster than intended under high latencies.</li>
+				<li>Fixed certain things not predicting correctly during packet loss. This should help alleviate issues like interpolation not resetting and the camera not bobbing correctly during poor net conditions.</li>
+				<li>Fixed an issue with player data assignment when loading a save.</li>
+				<li>Fixed <code>+playerclass</code> not being respected for new players joining an existing save.</li>
+				<li>Fixed various potential crashes with the prediction.</li>
+				<li>Fixed the net game lobby having a black background taking up the entire screen behind it.</li>
+				<li>Fixed various potential desyncs related to items in the player's inventory.</li>
+				</ul>
+				<p>**Known Issues**</p>
+				<ul>
+				<li>Players disconnecting in net games can cause desyncs under poor net conditions.</li>
+				<li>Players crashing in net games can cause the game to softlock or VM abort.</li>
+				<li>Controllers continue to get haptic feedback when using mouse and keyboard.</li>
+				<li>The initial loading screen now takes longer to appear. This is purely visual and does not impact how long the engine takes to actually start.</li>
+				</ul>
+			</description>
+			<url>https://forum.zdoom.org/viewtopic.php?t=000000</url> <!--TODO-->
+		</release>
+
 		<release version="4.14.3" date="2025-11-28">
 			<description>
 				<p>Hello all, and welcome to UZDoom's first release! You've no doubt seen our new look courtesy of Cardboard Marty. With 4.14.3 marks the first official release of the port, a smaller update designed to hold the masses over until 5.0. While we wish we could include a bunch of goodies with it, those will still need some time to bake in the oven. Rest assured, 5.0 development is still moving along smoothly and we're now in "fix things" mode. For now, 4.14.3 will contain a bunch of bug fixes and security updates since we're intentionally keeping it smaller in scope.</p>
@@ -213,15 +519,6 @@
 		</release>
 		<release version="4.13.0" date="2024-10-12">
 			<url>https://forum.zdoom.org/viewtopic.php?t=79658</url>
-		</release>
-		<release version="4.12.2" date="2024-04-28">
-			<url>https://forum.zdoom.org/viewtopic.php?t=79053</url>
-		</release>
-		<release version="4.12.1" date="2024-04-21">
-			<url>https://forum.zdoom.org/viewtopic.php?t=79017</url>
-		</release>
-		<release version="4.12.0" date="2024-04-21">
-			<url>https://forum.zdoom.org/viewtopic.php?t=79013</url>
 		</release>
 	</releases>
 
