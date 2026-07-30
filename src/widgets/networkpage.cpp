@@ -34,6 +34,7 @@ constexpr double EditHeight = 24.0;
 
 NetworkPage::NetworkPage(LauncherWindow* launcher, const FStartupSelectionInfo& info) : Widget(nullptr), Launcher(launcher)
 {
+	SelectLabel = new TextLabel(this);
 	ParametersEdit = new LineEdit(this);
 	ParametersLabel = new TextLabel(this);
 	SaveFileEdit = new LineEdit(this);
@@ -160,8 +161,11 @@ void NetworkPage::OnGeometryChanged()
 	const double h = GetHeight();
 
 	double y = 0.0;
+	SelectLabel->SetFrameGeometry(0.0, y, w, SelectLabel->GetPreferredHeight());
+	y += SelectLabel->GetPreferredHeight();
+
 	IWADsDropdown->SetFrameGeometry(0.0, y, w, IWADsDropdown->GetPreferredHeight());
-	y += IWADsDropdown->GetPreferredHeight() + 7.0;
+	y += IWADsDropdown->GetPreferredHeight() + 12.0;
 	const double pageTop = y;
 
 	y = h - SaveFileCheckbox->GetPreferredHeight();
@@ -193,6 +197,7 @@ void NetworkPage::OnGeometryChanged()
 
 void NetworkPage::UpdateLanguage()
 {
+	SelectLabel->SetText(GStrings.GetString("PICKER_SELECT"));
 	ParametersLabel->SetText(GStrings.GetString("PICKER_ADDPARM"));
 	SaveFileLabel->SetText(GStrings.GetString("PICKER_LOADSAVE"));
 	SaveFileCheckbox->SetText(GStrings.GetString("PICKER_REMSAVE"));

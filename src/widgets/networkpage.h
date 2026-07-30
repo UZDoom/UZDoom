@@ -60,6 +60,7 @@ private:
 	JoinSubPage* JoinPage = nullptr;
 	TabWidget* StartPages = nullptr;
 
+	TextLabel* SelectLabel = nullptr;
 	TextLabel* ParametersLabel = nullptr;
 	LineEdit* ParametersEdit = nullptr;
 	CheckboxLabel* SaveParametersCheckbox = nullptr;
