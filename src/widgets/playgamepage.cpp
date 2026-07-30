@@ -100,9 +100,9 @@ bool PlayGamePage::OnFileDrop(std::string path)
 {
 	auto text = ParametersEdit->GetText();
 	if (!text.empty()) text += " ";
-	text += "-file '";
+	text += "-file \"";
 	text += path;
-	text += "'";
+	text += "\"";
 	ParametersEdit->SetText(text);
 	return true;
 }
