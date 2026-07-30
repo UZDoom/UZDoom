@@ -36,7 +36,7 @@ namespace DebugServer
 static void NormalizeArchivePath(std::string &path)
 {
 	auto it = path.find(':');
-	if (it != std::string::npos && (it == 1 && path.size() >= 2 && path[2] == '\\')) // make sure it's not a windows path
+	if (it != std::string::npos && (it == 1 && path.size() >= 2 && (path[2] == '\\' || path[2] == '/'))) // make sure it's not a windows path
 	{
 		it = path.find(':', 3);
 	}
