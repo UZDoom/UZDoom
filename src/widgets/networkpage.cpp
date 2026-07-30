@@ -105,6 +105,17 @@ void NetworkPage::OnSetFocus()
 	IWADsDropdown->SetFocus();
 }
 
+bool NetworkPage::OnFileDrop(std::string path)
+{
+	auto text = ParametersEdit->GetText();
+	if (!text.empty()) text += " ";
+	text += "-file \"";
+	text += path;
+	text += "\"";
+	ParametersEdit->SetText(text);
+	return true;
+}
+
 void NetworkPage::SetValues(FStartupSelectionInfo& info) const
 {
 	info.DefaultNetIWAD = IWADsDropdown->GetSelectedItem();

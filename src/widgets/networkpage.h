@@ -47,6 +47,7 @@ private:
 	void OnGeometryChanged() override;
 	void OnSetFocus() override;
 	void OnIWADsListActivated();
+	bool OnFileDrop(std::string) override;
 
 	LauncherWindow* Launcher = nullptr;
 
