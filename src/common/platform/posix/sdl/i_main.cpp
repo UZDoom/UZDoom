@@ -206,6 +206,8 @@ int main (int argc, char **argv)
 #endif
 */
 
+	// despite the name, this also sets the wayland app_id
+	SDL_SETENV("SDL_VIDEO_X11_WMCLASS", APPID);
 	if (SDL_Init (0) < 0)
 	{
 		fprintf (stderr, "Could not initialize SDL:\n%s\n", SDL_GetError());
