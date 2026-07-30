@@ -619,19 +619,12 @@ void FArgs::AppendRawArgsString(FString argv)
 			lastQuoteType = argv[i];
 			tmp += argv.Mid(lastSection, i - lastSection);
 			has_tmp = true;
-			bool wasSlash = false;
 
-			for(i++; (argv[i] != lastQuoteType || wasSlash) && i < argv.Len(); i++)
+			for(i++; argv[i] != lastQuoteType && i < argv.Len(); i++)
 			{
-				if(i == '\\' && !wasSlash)
-				{
-					wasSlash = true;
-				}
-				else
-				{
-					tmp += argv[i];
-					wasSlash = false;
-				}
+				// Previously this attempted to support \ but did so in such an erroneous
+				// way that fixing it breaks the current parsing.
+				tmp += argv[i];
 			}
 			lastSection = i + 1;
 		}
