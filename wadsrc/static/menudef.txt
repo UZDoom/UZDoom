@@ -2756,7 +2756,7 @@ OptionValue ADLOplCores
 	2,  "$OPTVAL_DOSBOXOPL3"
 	3,  "$OPTVAL_OPALOPL3"
 	4,  "$OPTVAL_JAVAOPL3"
-	5,  "$OPTVAL_ESFMu"
+	5,  "$OPTVAL_ESFMU"
 	6,  "$OPTVAL_MAMEOPL2"
 	7,  "$OPTVAL_YMFMOPL2"
 	8,  "$OPTVAL_YMFMOPL3"
@@ -2845,63 +2845,63 @@ OptionMenu "ReverbSettings" protected
 	Title "$REVMNU_EDIT"
 	SafeCommand "$OPTMNU_DEFAULTS", "revertenvironment"
 	StaticText " "
-	SliderReverbEditOption "$REVMNU_Environment_Size",        1,      100,    0.01,  2, 1,  1.0,    "$VALFORMAT_METER"
-	SliderReverbEditOption "$REVMNU_Environment_Diffusion",   0,      1,      0.01,  0, 2,  100.0,  "$VALFORMAT_PERCENT"
-	SliderReverbEditOption "$REVMNU_Room",                   -10000,  0,      10,    1, 3,  0.01,   "$VALFORMAT_DB"
-	SliderReverbEditOption "$REVMNU_Room_HF",                -10000,  0,      10,    1, 4,  0.01,   "$VALFORMAT_DB"
-	SliderReverbEditOption "$REVMNU_Room_LF",                -10000,  0,      10,    1, 5,  0.01,   "$VALFORMAT_DB"
-	SliderReverbEditOption "$REVMNU_Decay_Time",              0.1,    20.0,   0.01,  0, 6,  1000.0, "$VALFORMAT_MSECOND"
-	SliderReverbEditOption "$REVMNU_Decay_HF_Ratio",          0.1,    2.0,    0.01,  2, 7,  1.0,    "$VALFORMAT_MULTIPLIER"
-	SliderReverbEditOption "$REVMNU_Decay_LF_Ratio",          0.1,    2.0,    0.01,  2, 8,  1.0,    "$VALFORMAT_MULTIPLIER"
-	SliderReverbEditOption "$REVMNU_Reflections",            -10000,  1000,   10,    1, 9,  0.01,   "$VALFORMAT_DB"
-	SliderReverbEditOption "$REVMNU_Reflections_Delay",       0,      0.3,    0.001, 0, 10, 1000.0, "$VALFORMAT_MSECOND"
-	SliderReverbEditOption "$REVMNU_Reflections_Pan_X",      -2000,   2000,   1,     3, 11, 1.0,    ""
-	SliderReverbEditOption "$REVMNU_Reflections_Pan_Y",      -2000,   2000,   1,     3, 12, 1.0,    ""
-	SliderReverbEditOption "$REVMNU_Reflections_Pan_Z",      -2000,   2000,   1,     3, 13, 1.0,    ""
-	SliderReverbEditOption "$REVMNU_Reverb",                 -10000,  2000,   10,    1, 14, 0.01,   "$VALFORMAT_DB"
-	SliderReverbEditOption "$REVMNU_Reverb_Delay",            0,      0.1,    0.001, 0, 15, 1000.0, "$VALFORMAT_MSECOND"
-	SliderReverbEditOption "$REVMNU_Reverb_Pan_X",           -2000,   2000,   1,     3, 16, 1.0,    ""
-	SliderReverbEditOption "$REVMNU_Reverb_Pan_Y",           -2000,   2000,   1,     3, 17, 1.0,    ""
-	SliderReverbEditOption "$REVMNU_Reverb_Pan_Z",           -2000,   2000,   1,     3, 18, 1.0,    ""
-	SliderReverbEditOption "$REVMNU_Echo_Time",               0.075,  0.25,   0.005, 0, 19, 1000.0, "$VALFORMAT_MSECOND"
-	SliderReverbEditOption "$REVMNU_Echo_Depth",              0,      1,      0.01,  0, 20, 100.0,  "$VALFORMAT_PERCENT"
-	SliderReverbEditOption "$REVMNU_Modulation_Time",         0.04,   4,      0.01,  0, 21, 1000.0, "$VALFORMAT_MSECOND"
-	SliderReverbEditOption "$REVMNU_Modulation_Depth",        0,      1,      0.01,  0, 22, 100.0,  "$VALFORMAT_PERCENT"
-	SliderReverbEditOption "$REVMNU_Air_Absorption_HF",      -100,    0,      0.01,  2, 23, 1.0,    "$VALFORMAT_DB_P_METER"
-	SliderReverbEditOption "$REVMNU_HF_Reference",            1000,   20000,  1,     0, 24, 1.0,    "$VALFORMAT_HZ"
-	SliderReverbEditOption "$REVMNU_LF_Reference",            20,     1000,   0.1,   1, 25, 1.0,    "$VALFORMAT_HZ"
-	SliderReverbEditOption "$REVMNU_Room_Rolloff_Factor",     0,      10,     0.01,  2, 26, 1.0,    "$VALFORMAT_MULTIPLIER"
-	SliderReverbEditOption "$REVMNU_Diffusion",               0,      100,    0.01,  2, 27, 1.0,    "$VALFORMAT_PERCENT"
-	SliderReverbEditOption "$REVMNU_Density",                 0,      100,    0.01,  2, 28, 1.0,    "$VALFORMAT_PERCENT"
+	SliderReverbEditOption "$REVMNU_ENVIRONMENT_SIZE",        1,      100,    0.01,  2, 1,  1.0,    "$VALFORMAT_METER"
+	SliderReverbEditOption "$REVMNU_ENVIRONMENT_DIFFUSION",   0,      1,      0.01,  0, 2,  100.0,  "$VALFORMAT_PERCENT"
+	SliderReverbEditOption "$REVMNU_ROOM",                   -10000,  0,      10,    1, 3,  0.01,   "$VALFORMAT_DB"
+	SliderReverbEditOption "$REVMNU_ROOM_HF",                -10000,  0,      10,    1, 4,  0.01,   "$VALFORMAT_DB"
+	SliderReverbEditOption "$REVMNU_ROOM_LF",                -10000,  0,      10,    1, 5,  0.01,   "$VALFORMAT_DB"
+	SliderReverbEditOption "$REVMNU_DECAY_TIME",              0.1,    20.0,   0.01,  0, 6,  1000.0, "$VALFORMAT_MSECOND"
+	SliderReverbEditOption "$REVMNU_DECAY_HF_RATIO",          0.1,    2.0,    0.01,  2, 7,  1.0,    "$VALFORMAT_MULTIPLIER"
+	SliderReverbEditOption "$REVMNU_DECAY_LF_RATIO",          0.1,    2.0,    0.01,  2, 8,  1.0,    "$VALFORMAT_MULTIPLIER"
+	SliderReverbEditOption "$REVMNU_REFLECTIONS",            -10000,  1000,   10,    1, 9,  0.01,   "$VALFORMAT_DB"
+	SliderReverbEditOption "$REVMNU_REFLECTIONS_DELAY",       0,      0.3,    0.001, 0, 10, 1000.0, "$VALFORMAT_MSECOND"
+	SliderReverbEditOption "$REVMNU_REFLECTIONS_PAN_X",      -2000,   2000,   1,     3, 11, 1.0,    ""
+	SliderReverbEditOption "$REVMNU_REFLECTIONS_PAN_Y",      -2000,   2000,   1,     3, 12, 1.0,    ""
+	SliderReverbEditOption "$REVMNU_REFLECTIONS_PAN_Z",      -2000,   2000,   1,     3, 13, 1.0,    ""
+	SliderReverbEditOption "$REVMNU_REVERB",                 -10000,  2000,   10,    1, 14, 0.01,   "$VALFORMAT_DB"
+	SliderReverbEditOption "$REVMNU_REVERB_DELAY",            0,      0.1,    0.001, 0, 15, 1000.0, "$VALFORMAT_MSECOND"
+	SliderReverbEditOption "$REVMNU_REVERB_PAN_X",           -2000,   2000,   1,     3, 16, 1.0,    ""
+	SliderReverbEditOption "$REVMNU_REVERB_PAN_Y",           -2000,   2000,   1,     3, 17, 1.0,    ""
+	SliderReverbEditOption "$REVMNU_REVERB_PAN_Z",           -2000,   2000,   1,     3, 18, 1.0,    ""
+	SliderReverbEditOption "$REVMNU_ECHO_TIME",               0.075,  0.25,   0.005, 0, 19, 1000.0, "$VALFORMAT_MSECOND"
+	SliderReverbEditOption "$REVMNU_ECHO_DEPTH",              0,      1,      0.01,  0, 20, 100.0,  "$VALFORMAT_PERCENT"
+	SliderReverbEditOption "$REVMNU_MODULATION_TIME",         0.04,   4,      0.01,  0, 21, 1000.0, "$VALFORMAT_MSECOND"
+	SliderReverbEditOption "$REVMNU_MODULATION_DEPTH",        0,      1,      0.01,  0, 22, 100.0,  "$VALFORMAT_PERCENT"
+	SliderReverbEditOption "$REVMNU_AIR_ABSORPTION_HF",      -100,    0,      0.01,  2, 23, 1.0,    "$VALFORMAT_DB_P_METER"
+	SliderReverbEditOption "$REVMNU_HF_REFERENCE",            1000,   20000,  1,     0, 24, 1.0,    "$VALFORMAT_HZ"
+	SliderReverbEditOption "$REVMNU_LF_REFERENCE",            20,     1000,   0.1,   1, 25, 1.0,    "$VALFORMAT_HZ"
+	SliderReverbEditOption "$REVMNU_ROOM_ROLLOFF_FACTOR",     0,      10,     0.01,  2, 26, 1.0,    "$VALFORMAT_MULTIPLIER"
+	SliderReverbEditOption "$REVMNU_DIFFUSION",               0,      100,    0.01,  2, 27, 1.0,    "$VALFORMAT_PERCENT"
+	SliderReverbEditOption "$REVMNU_DENSITY",                 0,      100,    0.01,  2, 28, 1.0,    "$VALFORMAT_PERCENT"
 	StaticText " "
-	ReverbOption "$REVMNU_Reflections_Scale", 29, OnOff
-	ReverbOption "$REVMNU_Reflections_Delay_Scale", 30, OnOff
-	ReverbOption "$REVMNU_Decay_Time_Scale", 31, OnOff
-	ReverbOption "$REVMNU_Decay_HF_Limit", 32, OnOff
-	ReverbOption "$REVMNU_Reverb_Scale", 33, OnOff
-	ReverbOption "$REVMNU_Reverb_Delay_Scale", 34, OnOff
-	ReverbOption "$REVMNU_Echo_Time_Scale", 35, OnOff
-	ReverbOption "$REVMNU_Modulation_Time_Scale", 36, OnOff
+	ReverbOption "$REVMNU_REFLECTIONS_SCALE", 29, OnOff
+	ReverbOption "$REVMNU_REFLECTIONS_DELAY_SCALE", 30, OnOff
+	ReverbOption "$REVMNU_DECAY_TIME_SCALE", 31, OnOff
+	ReverbOption "$REVMNU_DECAY_HF_LIMIT", 32, OnOff
+	ReverbOption "$REVMNU_REVERB_SCALE", 33, OnOff
+	ReverbOption "$REVMNU_REVERB_DELAY_SCALE", 34, OnOff
+	ReverbOption "$REVMNU_ECHO_TIME_SCALE", 35, OnOff
+	ReverbOption "$REVMNU_MODULATION_TIME_SCALE", 36, OnOff
 }
 
 OptionMenu "ReverbNew" protected
 {
 	Title "$REVMNU_NEW"
-	ReverbSelect "$REVMNU_Based_on", "ReverbSelect"
-	TextField "$REVMNU_Name", "reverbedit_name"
+	ReverbSelect "$REVMNU_BASED_ON", "ReverbSelect"
+	TextField "$REVMNU_NAME", "reverbedit_name"
 	NumberField "$REVMNU_ID_1", "reverbedit_id1", 0, 255
 	NumberField "$REVMNU_ID_2", "reverbedit_id2", 0, 255
-	Command "$REVMNU_Create", "createenvironment", 0, 1
+	Command "$REVMNU_CREATE", "createenvironment", 0, 1
 }
 
 OptionMenu "ReverbSave" protected
 {
 	Class "ReverbSave"
 	Title "$REVMNU_SAVE"
-	Command "$REVMNU_Save", "savereverbs"
-	TextField "$REVMNU_File_name", "reverbsavename"
+	Command "$REVMNU_SAVE", "savereverbs"
+	TextField "$REVMNU_FILE_NAME", "reverbsavename"
 	StaticText ""
-	StaticText "$REVMNU_Environments_to_save"
+	StaticText "$REVMNU_ENVIRONMENTS_TO_SAVE"
 	// Rest is filled in by code.
 }
 
