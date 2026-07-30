@@ -94,6 +94,7 @@ void TabWidget::OnBarCurrentChanged()
 {
 	int pageIndex = Bar->GetCurrentIndex();
 	PageStack->SetCurrentWidget(Pages[pageIndex]);
+	GetCurrentWidget()->SetFocus();
 	if (OnCurrentChanged)
 		OnCurrentChanged();
 }
