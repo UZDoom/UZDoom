@@ -21,6 +21,8 @@
 */
 
 #include "DebugExecutionManager.h"
+#include "vmintern.h"
+
 #include <thread>
 // #include "Window.h"
 #include "GameInterfaces.h"
@@ -47,6 +49,58 @@ static_assert(
 	sizeof(exceptionFilterDescriptions) / sizeof(exceptionFilterDescriptions[0]) == (size_t)DebugExecutionManager::ExceptionFilter::kMAX,
 	"exceptionFilterDescriptions size mismatch");
 
+namespace {
+const VMOP * getJumpTarget(const VMOP *pc, const VMScriptFunction *func)
+{
+	const VMOP *end = func->Code + func->CodeSize;
+	if (!func || pc < func->Code || pc >= end){
+		return nullptr;
+	}
+	if (pc->op == OP_JMP){
+		return pc + 1 + pc->i24;
+	} else if (pc->op < NUM_OPS) {
+		auto mode = OpInfo[pc->op].Mode;
+		if (pc + 1 < end && (OpInfo[pc->op].Mode & MODE_ATYPE) == MODE_ACMP && (pc + 1)->op == OP_JMP){
+			return (pc + 1) + 1 + pc[1].i24;
+		} else if (pc->op == OP_IJMP) {
+			auto target = pc;
+			target = pc + (pc->a);
+			assert(target[1].op == OP_JMP);
+			target += 1 + 1 + target[1].i24;
+			return target;
+		}
+	}
+	return nullptr;
+}
+
+bool instructionIs8bytes(const VMOP *pc, const VMScriptFunction *func)
+{
+	if (pc < func->Code || pc + 1 >= func->Code + func->CodeSize){
+		return false;
+	}
+	VM_UBYTE opcode = pc->op;
+	VM_UBYTE nextOpcode = (pc + 1)->op;
+	if (nextOpcode == OP_RESULT && (opcode == OP_CALL || opcode == OP_CALL_K)) {
+		return true;
+	} else if (nextOpcode == OP_JMP && opcode < NUM_OPS && (OpInfo[opcode].Mode & MODE_ATYPE) == MODE_ACMP) {
+		return true;
+	}
+	return false;
+}
+} // namespace
+
+void DebugExecutionManager::_SetLastInstruction(const VMOP *pc, VMScriptFunction *func)
+{
+	if (m_granularity != kInstruction && func)
+	{
+		m_lastLine = func->PCToLine(pc);
+	}
+	else
+	{
+		m_lastLine = -1;
+	}
+	m_lastInstruction = pc;
+}
 
 DebugExecutionManager::pauseReason DebugExecutionManager::CheckState(VMFrameStack *stack, VMReturn *ret, int numret, const VMOP *pc)
 {
@@ -77,9 +131,9 @@ DebugExecutionManager::pauseReason DebugExecutionManager::CheckState(VMFrameStac
 		}
 		else if (m_currentStepStackFrame)
 		{
-			VMScriptFunction *func = nullptr;
+
 			auto lastInst = m_lastInstruction;
-			m_lastInstruction = pc;
+			const int lastLine = m_lastLine;
 			if (stack->HasFrames())
 			{
 				ptrdiff_t stepFrameIndex = RuntimeState::GetStackFrameIndex(stack, m_currentStepStackFrame);
@@ -95,12 +149,23 @@ DebugExecutionManager::pauseReason DebugExecutionManager::CheckState(VMFrameStac
 				// Only get the function if we're not stepping by instruction and the frame exists
 				if (m_granularity != kInstruction && stepFrameIndex != -1)
 				{
-					func = !IsFunctionNative(m_currentStepStackFrame->Func) ? dynamic_cast<VMScriptFunction *>(m_currentStepStackFrame->Func) : nullptr;
-					// if we're in the same frame, the last instruction was at the previous address, and the line is the same, we should continue
-					if (func && stepFrameIndex == 0 && lastInst == pc - 1 && m_lastLine == func->PCToLine(pc))
+					// if we're in the same frame...
+					if (stepFrameIndex == 0)
 					{
-						// NONE will cause the function to continue execution without resetting the step state
-						return pauseReason::NONE;
+						VMScriptFunction *func = !IsFunctionNative(m_currentStepStackFrame->Func) ? dynamic_cast<VMScriptFunction *>(m_currentStepStackFrame->Func) : nullptr;
+						_SetLastInstruction(pc, func);
+						// ...and the line is the same...
+						if (func && lastLine == func->PCToLine(pc) && lastInst)
+						{
+							if (lastInst == pc - 1 || // last instruction was at the previous address
+								(lastInst == pc - 2 && instructionIs8bytes(lastInst, func)) || // last instruction was at the previous address and the instruction is 8 bytes
+								getJumpTarget(lastInst, func) == pc)
+							{
+								// NONE will cause the function to continue execution without resetting the step state
+								return pauseReason::NONE;
+							}
+						}
+
 					}
 				}
 
@@ -124,14 +189,6 @@ DebugExecutionManager::pauseReason DebugExecutionManager::CheckState(VMFrameStac
 					break;
 				}
 			}
-			if (m_granularity != kInstruction && func)
-			{
-				m_lastLine = func->PCToLine(pc);
-			}
-			else
-			{
-				m_lastLine = -1;
-			}
 			// we deliberately don't set shouldContinue here in an else here, as we want to continue until we hit the next step point
 		}
 		else
@@ -153,7 +210,6 @@ void DebugExecutionManager::ResetStepState(DebuggerState state, VMFrameStack *st
 	std::lock_guard<std::mutex> lock(m_instructionMutex);
 	// `stack` is thread_local, we're currently on that thread,
 	// and the debugger will be running in a separate thread, so we need to set it here.
-	m_state = state;
 
 	m_currentStepStackId = 0;
 	m_currentStepStackFrame = nullptr;
@@ -167,6 +223,7 @@ void DebugExecutionManager::ResetStepState(DebuggerState state, VMFrameStack *st
 		m_lastLine = -1;
 		m_lastInstruction = nullptr;
 	}
+	m_state = state;
 }
 
 void DebugExecutionManager::WaitWhilePaused(pauseReason pauseReason, VMFrameStack *stack)
@@ -333,6 +390,10 @@ bool DebugExecutionManager::Step(uint32_t stackId, const StepType stepType, Step
 				m_currentVMFunction = m_currentStepStackFrame->Func;
 			}
 		}
+		else
+		{
+			m_currentStepStackFrame = nullptr;
+		}
 	}
 	else
 	{
@@ -341,18 +402,18 @@ bool DebugExecutionManager::Step(uint32_t stackId, const StepType stepType, Step
 
 	m_currentStepStackId = stackId;
 	m_currentStepType = stepType;
-	m_state = DebuggerState::kStepping;
 	m_granularity = stepGranularity;
-	m_lastInstruction = nullptr;
-	if (m_granularity != kInstruction)
+	if (m_granularity != kInstruction && m_currentStepStackFrame)
 	{
 		VMScriptFunction *func = !IsFunctionNative(m_currentStepStackFrame->Func) ? dynamic_cast<VMScriptFunction *>(m_currentStepStackFrame->Func) : nullptr;
-		if (func)
-		{
-			m_lastInstruction = m_currentStepStackFrame->PC;
-			m_lastLine = func->PCToLine(m_currentStepStackFrame->PC);
-		}
+		_SetLastInstruction(m_currentStepStackFrame->PC, func);
 	}
+	else
+	{
+		m_lastInstruction = nullptr;
+		m_lastLine = -1;
+	}
+	m_state = DebuggerState::kStepping;
 
 	return true;
 }
