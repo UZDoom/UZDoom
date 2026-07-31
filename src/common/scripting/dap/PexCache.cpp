@@ -504,19 +504,6 @@ PexCache::MakeInstruction(VMScriptFunction *func, int ref, const std::string &in
 	instruction->ref = ref;
 	instruction->line = func->PCToLine((const VMOP *)instruction->address);
 	instruction->is_valid_bp = true;
-	if (instruction->line < 0)
-	{
-		// find the max line number
-		int max_line = 0;
-		for (size_t li = 0; li < func->LineInfoCount; ++li)
-		{
-			if (func->LineInfo[li].LineNumber > max_line)
-			{
-				max_line = func->LineInfo[li].LineNumber;
-			}
-		}
-		instruction->line = max_line + 1;
-	}
 	instruction->endLine = instruction->line;
 	instruction->pointed_symbol = pointed_symbol;
 	return instruction;
