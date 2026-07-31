@@ -47,6 +47,7 @@ private:
 	void OnGeometryChanged() override;
 	void OnSetFocus() override;
 	void OnIWADsListActivated();
+	bool OnFileDrop(std::string) override;
 
 	LauncherWindow* Launcher = nullptr;
 
@@ -59,6 +60,7 @@ private:
 	JoinSubPage* JoinPage = nullptr;
 	TabWidget* StartPages = nullptr;
 
+	TextLabel* SelectLabel = nullptr;
 	TextLabel* ParametersLabel = nullptr;
 	LineEdit* ParametersEdit = nullptr;
 	CheckboxLabel* SaveParametersCheckbox = nullptr;
