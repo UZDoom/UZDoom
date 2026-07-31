@@ -859,27 +859,25 @@ int FIWadManager::IdentifyVersion (std::vector<FileSys::ResourceName>&wadfiles, 
 			info.LauncherHeight = ui_launcher_height;
 		}
 
-		if (I_PickIWad((queryiwad || showlauncher) || HoldingQueryKey(queryiwad_key), info))
+		const bool pickRes = I_PickIWad(queryiwad || showlauncher || HoldingQueryKey(queryiwad_key), info);
+		pick = info.SaveInfo();
+		disableautoload = !!(info.DefaultStartFlags & 1);
+		autoloadlights = !!(info.DefaultStartFlags & 2);
+		autoloadbrightmaps = !!(info.DefaultStartFlags & 4);
+		autoloadwidescreen = !!(info.DefaultStartFlags & 8);
+		i_loadsupportwad = !!(info.DefaultStartFlags & 16);
+		i_exit_on_not_found = info.DefaultFileLoadBehaviour;
+		if (!info.notifyNewRelease)
+			i_display_new_release = 0; // don't change truthy values
+		if (ui_remember_size)
 		{
-			pick = info.SaveInfo();
-			disableautoload = !!(info.DefaultStartFlags & 1);
-			autoloadlights = !!(info.DefaultStartFlags & 2);
-			autoloadbrightmaps = !!(info.DefaultStartFlags & 4);
-			autoloadwidescreen = !!(info.DefaultStartFlags & 8);
-			i_loadsupportwad = !!(info.DefaultStartFlags & 16);
-			i_exit_on_not_found = info.DefaultFileLoadBehaviour;
-			if (!info.notifyNewRelease)
-				i_display_new_release = 0; // don't change truthy values
-			if (ui_remember_size)
-			{
-				ui_launcher_width = info.LauncherWidth;
-				ui_launcher_height = info.LauncherHeight;
-			}
+			ui_launcher_width = info.LauncherWidth;
+			ui_launcher_height = info.LauncherHeight;
 		}
-		else
-		{
+
+		if (!pickRes)
 			return -1;
-		}
+
 		havepicked = true;
 	}
 

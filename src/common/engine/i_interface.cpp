@@ -197,33 +197,32 @@ int FStartupSelectionInfo::SaveInfo()
 	if (DefaultBackend != vid_preferbackend)
 		vid_preferbackend = DefaultBackend;
 
+	savenetfile = bSaveNetFile;
+	savenetargs = bSaveNetArgs;
+
+	defaultnetiwad = (*Wads)[DefaultNetIWAD].Name.GetChars();
+	defaultnetpage = DefaultNetPage;
+	defaultnetsavefile = savenetfile ? DefaultNetSaveFile.GetChars() : "";
+	defaultnetargs = savenetargs ? DefaultNetArgs.GetChars() : "";
+
+	defaultnetplayers = DefaultNetPlayers;
+	defaultnethostport = DefaultNetHostPort;
+	defaultnetticdup = DefaultNetTicDup;
+	defaultnetgamemode = DefaultNetGameMode;
+	defaultnetaltdm = DefaultNetAltDM;
+	defaultnethostteam = DefaultNetHostTeam;
+	defaultnetextratic = DefaultNetExtraTic;
+
+	defaultnetaddress = DefaultNetAddress.GetChars();
+	defaultnetjoinport = DefaultNetJoinPort;
+	defaultnetjointeam = DefaultNetJoinTeam;
+
+	defaultiwad = (*Wads)[DefaultIWAD].Name.GetChars();
+	saveargs = bSaveArgs;
+	defaultargs = saveargs ? DefaultArgs.GetChars() : "";
+
 	if (bNetStart)
 	{
-		savenetfile = bSaveNetFile;
-		savenetargs = bSaveNetArgs;
-
-		defaultnetiwad = (*Wads)[DefaultNetIWAD].Name.GetChars();
-		defaultnetpage = DefaultNetPage;
-		defaultnetsavefile = savenetfile ? DefaultNetSaveFile.GetChars() : "";
-		defaultnetargs = savenetargs ? DefaultNetArgs.GetChars() : "";
-
-		if (bHosting)
-		{
-			defaultnetplayers = DefaultNetPlayers;
-			defaultnethostport = DefaultNetHostPort;
-			defaultnetticdup = DefaultNetTicDup;
-			defaultnetgamemode = DefaultNetGameMode;
-			defaultnetaltdm = DefaultNetAltDM;
-			defaultnethostteam = DefaultNetHostTeam;
-			defaultnetextratic = DefaultNetExtraTic;
-		}
-		else
-		{
-			defaultnetaddress = DefaultNetAddress.GetChars();
-			defaultnetjoinport = DefaultNetJoinPort;
-			defaultnetjointeam = DefaultNetJoinTeam;
-		}
-
 		if (!DefaultNetArgs.IsEmpty())
 			Args->AppendRawArgsString(DefaultNetArgs);
 		if (!AdditionalNetArgs.IsEmpty())
@@ -231,10 +230,6 @@ int FStartupSelectionInfo::SaveInfo()
 
 		return DefaultNetIWAD;
 	}
-
-	defaultiwad = (*Wads)[DefaultIWAD].Name.GetChars();
-	saveargs = bSaveArgs;
-	defaultargs = saveargs ? DefaultArgs.GetChars() : "";
 
 	if (!DefaultArgs.IsEmpty())
 		Args->AppendRawArgsString(DefaultArgs);

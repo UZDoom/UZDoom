@@ -152,25 +152,27 @@ bool LauncherWindow::IsHosting() const
 	return IsInMultiplayer() && Network->IsInHost();
 }
 
-void LauncherWindow::Start()
+void LauncherWindow::SetValues()
 {
 	Info->bNetStart = IsInMultiplayer();
 
 	Settings->SetValues(*Info);
-	if (Info->bNetStart)
-		Network->SetValues(*Info);
-	else
-		PlayGame->SetValues(*Info);
-
+	Network->SetValues(*Info);
+	PlayGame->SetValues(*Info);
 	if (Release)
 		Release->SetValues(*Info);
+}
 
+void LauncherWindow::Start()
+{
+	SetValues();
 	ExecResult = true;
 	DisplayWindow::ExitLoop();
 }
 
 void LauncherWindow::Exit()
 {
+	SetValues();
 	ExecResult = false;
 	DisplayWindow::ExitLoop();
 }

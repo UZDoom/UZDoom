@@ -4116,12 +4116,12 @@ static int D_DoomMain_Internal (void)
 		std::vector<FileSys::ResourceName> allwads;
 
 		const FIWADInfo *iwad_info = iwad_man->FindIWAD(allwads, iwad.GetChars(), basewad.GetChars(), optionalwad.GetChars());
+		if (!iwad_info) return 0;	// user exited the selection popup via cancel button.
 
 		GetCmdLineFiles(pwads, false); // [RL0] Update with files passed on the launcher extra args
 		// For now these need to remain verifiable over the network.
 		GetCmdLineFiles(pwads, true);
 
-		if (!iwad_info) return 0;	// user exited the selection popup via cancel button.
 		if ((iwad_info->flags & GI_SHAREWARE) && pwads.size() > 0)
 		{
 			I_FatalError ("You cannot -file or -optfile with the shareware version. Register!");
