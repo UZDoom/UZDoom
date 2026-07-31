@@ -28,6 +28,7 @@
 #include "Utilities.h"
 
 #include "filesystem.h"
+#include "printf.h"
 #include "resourcefile.h"
 
 namespace DebugServer
@@ -80,7 +81,7 @@ void PexCache::PrintOutAllLoadedScripts()
 	scripts_lock scriptLock(m_scriptsMutex);
 	for (auto &script : m_scripts)
 	{
-		Printf("Loaded %zu functions from script: %s", script.second->GetFunctionCount(), script.second->GetQualifiedPath().c_str());
+		Printf(PRINT_NODAPEVENT, "Loaded %zu functions from script: %s", script.second->GetFunctionCount(), script.second->GetQualifiedPath().c_str());
 	}
 }
 
