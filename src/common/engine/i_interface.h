@@ -107,6 +107,7 @@ struct FStartupSelectionInfo
 	int DefaultFileLoadBehaviour = 0;
 	bool DefaultDynLights = true;
 	bool DefaultShadowmaps = false;
+	int DefaultPreferredTheme = 0;
 
 	// Net game info
 	int DefaultNetIWAD = 0;

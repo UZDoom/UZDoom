@@ -57,6 +57,14 @@ SettingsPage::SettingsPage(LauncherWindow* launcher, const FStartupSelectionInfo
 	DynLightsCheckbox = new CheckboxLabel(this);
 	ShadowmapCheckbox = new CheckboxLabel(this);
 
+	ThemeLabel = new TextLabel(this);
+	ThemeDropdown = new Dropdown(this);
+	ThemeDropdown->SetMaxDisplayItems(3);
+	ThemeDropdown->AddItem(GStrings.GetString("OPTVAL_AUTO"));
+	ThemeDropdown->AddItem(GStrings.GetString("OPTVAL_DARK"));
+	ThemeDropdown->AddItem(GStrings.GetString("OPTVAL_LIGHT"));
+	ThemeDropdown->SetSelectedItem(info.DefaultPreferredTheme);
+
 	FullscreenCheckbox->SetChecked(info.DefaultFullscreen);
 	VsyncCheckbox->SetChecked(info.DefaultVsync);
 	DontAskAgainCheckbox->SetChecked(!info.DefaultQueryIWAD);
@@ -189,6 +197,8 @@ void SettingsPage::SetValues(FStartupSelectionInfo& info) const
 	info.DefaultQueryIWAD = !DontAskAgainCheckbox->GetChecked();
 	info.DefaultLanguage = languages[LangList->GetSelectedItem()].first.GetChars();
 
+	info.DefaultPreferredTheme = ThemeDropdown->GetSelectedItem();
+
 	int flags = 0;
 	if (DisableAutoloadCheckbox->GetChecked()) flags |= 1;
 	if (LightsCheckbox->GetChecked()) flags |= 2;
@@ -246,6 +256,11 @@ void SettingsPage::SetValues(FStartupSelectionInfo& info) const
 void SettingsPage::UpdateLanguage()
 {
 	GetCanvas()->setLanguage(GStrings.GetLangName().GetChars());
+
+	ThemeLabel->SetText(GStrings.GetString("PICKER_THEME"));
+	ThemeDropdown->UpdateItem(GStrings.GetString("OPTVAL_AUTO"), 0);
+	ThemeDropdown->UpdateItem(GStrings.GetString("OPTVAL_DARK"), 1);
+	ThemeDropdown->UpdateItem(GStrings.GetString("OPTVAL_LIGHT"), 2);
 
 	LangLabel->SetText(GStrings.GetString("OPTMNU_LANGUAGE"));
 	LoadLabel->SetText(GStrings.GetString("PICKER_FILELOADING"));
@@ -421,7 +436,13 @@ void SettingsPage::OnGeometryChanged()
 	y += LoadLabel->GetPreferredHeight();
 
 	LoadList->SetFrameGeometry(w - panelWidth, y, panelWidth, LoadList->GetPreferredHeight());
-	y += LoadLabel->GetPreferredHeight();
+	y += LoadList->GetPreferredHeight() + 10.0;
+
+	ThemeLabel->SetFrameGeometry(w - panelWidth, y, panelWidth, ThemeLabel->GetPreferredHeight());
+	y += ThemeLabel->GetPreferredHeight();
+
+	ThemeDropdown->SetFrameGeometry(w - panelWidth, y, panelWidth, ThemeDropdown->GetPreferredHeight());
+	y += ThemeDropdown->GetPreferredHeight() + 10.0;
 
 	const double bottomPanelWidth = w - panelWidth - 10.0;
 	y = bottomPanelTop;
