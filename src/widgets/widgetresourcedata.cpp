@@ -33,6 +33,15 @@ CUSTOM_CVARD(Int, ui_theme, 0, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "launcher theme
 	if (self > 4) self = 4;
 }
 
+// This is the cvar exposed to the launcher to ensure that high-contrast themes don't break.
+CUSTOM_CVAR(Int, ui_preferred_theme, 0, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+{
+	if (self < 0)
+		self = 0;
+	else if (self > 2)
+		self = 2;
+}
+
 TDeletingArray<FResourceFile*>* WidgetResources = nullptr;
 
 bool IsZWidgetAvailable()
@@ -80,6 +89,13 @@ void InitWidgetResources(const char* filename)
 		break;
 	}		
 	auto use_dark = ui_theme == 1 || ui_theme == 3 || (ui_theme == 0 && (theme & Dark));
+	if (ui_theme == 0 && ui_preferred_theme > 0)
+	{
+		if (ui_preferred_theme == 1)
+			use_dark = true;
+		else if (ui_preferred_theme == 2)
+			use_dark = false;
+	}
 
 	Theme::initilize(use_dark? DARK: LIGHT, theme & HighContrast);
 
