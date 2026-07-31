@@ -34,14 +34,7 @@ namespace DebugServer
 
 int64_t BreakpointManager::GetBreakpointID()
 {
-	int64_t id = ++m_CurrentID;
-	if (id < 1)
-	{
-		// if it hasn't already been replaced, replace it with 1
-		std::atomic_compare_exchange_strong(&m_CurrentID, &id, 1);
-		id = ++m_CurrentID;
-	}
-	return id;
+	return ++m_CurrentID;
 }
 
 
