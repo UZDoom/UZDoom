@@ -98,18 +98,21 @@ PexCache::BinaryPtr PexCache::GetScript(const dap::Source &source)
 
 PexCache::BinaryPtr PexCache::makeEmptyBinary(const std::string &scriptPath, int lump)
 {
-	auto binary = std::make_shared<Binary>();
+	return std::make_shared<Binary>(scriptPath, lump);
+}
+
+Binary::Binary(const std::string &scriptPath, int p_lump)
+{
 	auto truncScriptPath = GetScriptPathNoQual(scriptPath);
-	binary->lump = lump;
-	int wadnum = fileSystem.GetFileContainer(binary->lump);
-	binary->scriptName = FileSys::ExtractBaseName(truncScriptPath.c_str(), true);
-	binary->unqualifiedScriptPath = truncScriptPath;
+	lump = p_lump;
+	int wadnum = fileSystem.GetFileContainer(lump);
+	scriptName = FileSys::ExtractBaseName(truncScriptPath.c_str(), true);
+	unqualifiedScriptPath = truncScriptPath;
 	// check for the archive name in the script path
-	binary->archivePath = wadnum >= 0 ? fileSystem.GetResourceFileFullName(wadnum) : GetArchiveNameFromPath(scriptPath);
-	binary->archiveName = wadnum >= 0 ? fileSystem.GetResourceFileName(wadnum) : binary->archivePath;
-	NormalizeArchivePath(binary->archivePath, binary->archiveName);
-	binary->scriptReference = GetScriptReference(binary->GetQualifiedPath());
-	return binary;
+	archivePath = wadnum >= 0 ? fileSystem.GetResourceFileFullName(wadnum) : GetArchiveNameFromPath(scriptPath);
+	archiveName = wadnum >= 0 ? fileSystem.GetResourceFileName(wadnum) : archivePath;
+	NormalizeArchivePath(archivePath, archiveName);
+	scriptReference = GetScriptReference(GetQualifiedPath());
 }
 
 void PexCache::PopulateCodeMap(PexCache::BinaryPtr binary, Binary::FunctionCodeMap &functionCodeMap)
