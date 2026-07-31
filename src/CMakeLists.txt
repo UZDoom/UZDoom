@@ -218,6 +218,8 @@ if( DEM_CMAKE_COMPILER_IS_GNUCXX_COMPATIBLE )
 		if( APPLE OR CMAKE_CXX_COMPILER_VERSION VERSION_GREATER "3.6" )
 			set( CMAKE_CXX_FLAGS "-Wno-inconsistent-missing-override ${CMAKE_CXX_FLAGS}" )
 		endif()
+		# for boost::concurrent_flat_map
+		set( CMAKE_CXX_FLAGS "-fexperimental-library ${CMAKE_CXX_FLAGS}" )
 	endif()
 	set( CMAKE_C_FLAGS "-Wall -Wextra -Wno-unused -Wno-unused-parameter -Wno-missing-field-initializers -ffp-contract=off ${CMAKE_C_FLAGS}" )
 	set( CMAKE_CXX_FLAGS "-Wall -Wextra -Wno-unused -Wno-unused-parameter -Wno-missing-field-initializers -ffp-contract=off ${CMAKE_CXX_FLAGS}" )
@@ -1393,6 +1395,7 @@ include_directories(
 	../libraries/ZWidget/include
 	../libraries/webp/include
 	../libraries/range_map/include
+	../libraries/boost
 	${SYSTEM_SOURCES_DIR}
 )
 
