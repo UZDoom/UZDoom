@@ -59,7 +59,6 @@ private:
 	friend class PexCache;
 	std::string archiveName;
 	std::string archivePath;
-	std::string scriptName;
 	std::string unqualifiedScriptPath;
 	std::string compiledPath;
 	std::string cachedSourceCode;

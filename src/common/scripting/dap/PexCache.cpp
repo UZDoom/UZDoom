@@ -106,7 +106,6 @@ Binary::Binary(const std::string &scriptPath, int p_lump)
 	auto truncScriptPath = GetScriptPathNoQual(scriptPath);
 	lump = p_lump;
 	int wadnum = fileSystem.GetFileContainer(lump);
-	scriptName = FileSys::ExtractBaseName(truncScriptPath.c_str(), true);
 	unqualifiedScriptPath = truncScriptPath;
 	// check for the archive name in the script path
 	archivePath = wadnum >= 0 ? fileSystem.GetResourceFileFullName(wadnum) : GetArchiveNameFromPath(scriptPath);
@@ -121,12 +120,9 @@ void PexCache::PopulateCodeMap(PexCache::BinaryPtr binary, Binary::FunctionCodeM
 	{
 		return;
 	}
-	auto qualPath = binary->GetQualifiedPath();
-	int i = 0;
-	for (auto &func : binary->functions)
+	for (const auto &func : binary->functions)
 	{
-		i++;
-		for (auto &variant : func.second->Variants)
+		for (const auto &variant : func.second->Variants)
 		{
 			auto scriptFunc = GetVMScriptFunction(variant.Implementation);
 			if (!scriptFunc || IsFunctionAbstract(scriptFunc)) continue;
@@ -134,7 +130,7 @@ void PexCache::PopulateCodeMap(PexCache::BinaryPtr binary, Binary::FunctionCodeM
 			functionCodeMap.insert(true, codeRange);
 		}
 	}
-	for (auto &pair : binary->stateFunctions)
+	for (const auto &pair : binary->stateFunctions)
 	{
 		auto scriptFunc = GetVMScriptFunction(pair.second);
 		if (!scriptFunc || IsFunctionAbstract(scriptFunc)) continue;
@@ -947,10 +943,8 @@ void DebugServer::Binary::PopulateFunctionMaps()
 	functionLineMap.clear();
 	functionCodeMap.clear();
 	auto qualPath = GetQualifiedPath();
-	int i = 0;
 	for (auto &func : functions)
 	{
-		i++;
 		for (auto &variant : func.second->Variants)
 		{
 
@@ -968,7 +962,7 @@ void DebugServer::Binary::PopulateFunctionMaps()
 dap::Source DebugServer::Binary::GetDapSource() const
 {
 	dap::Source source;
-	source.name = scriptName;
+	source.name = FileSys::ExtractBaseName(unqualifiedScriptPath.c_str(), true);
 	source.origin = archiveName;
 	source.path = unqualifiedScriptPath;
 	source.sourceReference = scriptReference;
