@@ -33,25 +33,31 @@
 namespace DebugServer
 {
 
-static void NormalizeArchivePath(std::string &path)
+static void NormalizeArchivePath(std::string &archivePath, const std::string &archiveName)
 {
-	auto it = path.find(':');
-	if (it != std::string::npos && (it == 1 && path.size() >= 2 && path[2] == '\\')) // make sure it's not a windows path
+	auto nameInPath = archivePath.find(archiveName);
+	if (nameInPath == std::string::npos)
 	{
-		it = path.find(':', 3);
+		nameInPath = 0;
+	}
+	// only normalize the part of the path that contains the archive name
+	auto it = archivePath.find(':', nameInPath);
+	if (it != std::string::npos && (it == 1 && archivePath.size() >= 2 && (archivePath[2] == '/' || archivePath[2] == '\\'))) // make sure it's not a windows path
+	{
+		it = archivePath.find(':', 3);
 	}
 	while (it != std::string::npos)
 	{
-		// check the character prior to this; if it's not a slash or a backslash, remove the colon
-		if (it > 0 && path[it - 1] == '/' && path[it - 1] == '\\')
+		// check the character prior to this; if it's a slash or a backslash, remove the colon
+		if (it > 0 && (archivePath[it - 1] == '/' || archivePath[it - 1] == '\\'))
 		{
-			path.erase(it, 1);
+			archivePath.erase(it, 1);
 		}
 		else
 		{
-			path[it] = '/';
+			archivePath[it] = '/';
 		}
-		it = path.find(':', it + 1);
+		it = archivePath.find(':', it + 1);
 	}
 }
 
@@ -100,7 +106,7 @@ PexCache::BinaryPtr PexCache::makeEmptyBinary(const std::string &scriptPath, int
 	// check for the archive name in the script path
 	binary->archivePath = wadnum >= 0 ? fileSystem.GetResourceFileFullName(wadnum) : GetArchiveNameFromPath(scriptPath);
 	binary->archiveName = wadnum >= 0 ? fileSystem.GetResourceFileName(wadnum) : binary->archivePath;
-	NormalizeArchivePath(binary->archivePath);
+	NormalizeArchivePath(binary->archivePath, binary->archiveName);
 	binary->scriptReference = GetScriptReference(binary->GetQualifiedPath());
 	return binary;
 }
@@ -526,7 +532,7 @@ std::vector<dap::Module> PexCache::GetModules()
 		module.id = dap::integer(i);
 		std::string name = fileSystem.GetResourceFileName(i);
 		std::string path = fileSystem.GetResourceFileFullName(i);
-		NormalizeArchivePath(path);
+		NormalizeArchivePath(path, name);
 		module.name = name;
 		module.path = path;
 		modules.push_back(module);
