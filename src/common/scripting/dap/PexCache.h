@@ -84,6 +84,8 @@ public:
 	bool HasFunctions() const;
 	bool HasFunctionLines() const;
 	void ProcessScriptFunction(const std::string &qualPath, VMFunction *vmfunc);
+
+	Binary(const std::string &scriptPath, int lump);
 };
 struct DisassemblyLine
 {
@@ -106,6 +108,7 @@ class PexCache
 {
 public:
 	using BinaryPtr = std::shared_ptr<Binary>;
+	using ConstBinaryPtr = std::shared_ptr<const Binary>;
 	using BinaryMap = std::map<int, BinaryPtr>;
 	using DisassemblyLinePtr = std::shared_ptr<DisassemblyLine>;
 	using DisassemblyMap = beneficii::range_map<void *, std::map<void *, DisassemblyLinePtr>>;
@@ -148,6 +151,8 @@ public:
 	static void ScanScriptsInContainer(int baselump, BinaryMap &m_scripts, const std::string &filter = "");
 	static BinaryPtr makeEmptyBinary(const std::string &scriptPath, int lump);
 
+
+	BinaryPtr _GetBinary(const std::string &scriptPath, int lump);
 	DisassemblyMap m_disassemblyMap;
 	Binary::FunctionCodeMap m_globalCodeMap;
 	std::recursive_mutex m_scriptsMutex;
