@@ -21,6 +21,7 @@
 */
 
 #include "BreakpointManager.h"
+#include <atomic>
 #include <cstdint>
 #include <regex>
 #include "Utilities.h"
@@ -33,12 +34,12 @@ namespace DebugServer
 
 int64_t BreakpointManager::GetBreakpointID()
 {
-	++m_CurrentID;
-	int64_t id = m_CurrentID;
-	if (id < 0)
+	int64_t id = ++m_CurrentID;
+	if (id < 1)
 	{
-		m_CurrentID = 1;
-		id = m_CurrentID;
+		// if it hasn't already been replaced, replace it with 1
+		std::atomic_compare_exchange_strong(&m_CurrentID, &id, 1);
+		id = ++m_CurrentID;
 	}
 	return id;
 }
