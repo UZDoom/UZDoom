@@ -80,16 +80,18 @@ DebugExecutionManager::pauseReason DebugExecutionManager::CheckState(VMFrameStac
 			VMScriptFunction *func = nullptr;
 			auto lastInst = m_lastInstruction;
 			m_lastInstruction = pc;
-			std::vector<VMFrame *> currentFrames;
-			RuntimeState::GetStackFrames(stack, currentFrames);
-			if (!currentFrames.empty())
+			if (stack->HasFrames())
 			{
-				ptrdiff_t stepFrameIndex = -1;
-				const auto stepFrameIter = std::find(currentFrames.begin(), currentFrames.end(), m_currentStepStackFrame);
-				if (stepFrameIter != currentFrames.end() && m_currentVMFunction && m_currentStepStackFrame->Func == m_currentVMFunction)
+				ptrdiff_t stepFrameIndex = RuntimeState::GetStackFrameIndex(stack, m_currentStepStackFrame);
+				if (stepFrameIndex == -1)
 				{
-					stepFrameIndex = std::distance(currentFrames.begin(), stepFrameIter);
+					m_currentStepStackFrame = nullptr;
 				}
+				else if (!(m_currentVMFunction && m_currentStepStackFrame->Func == m_currentVMFunction))
+				{
+					stepFrameIndex = -1;
+				}
+
 				// Only get the function if we're not stepping by instruction and the frame exists
 				if (m_granularity != kInstruction && stepFrameIndex != -1)
 				{
