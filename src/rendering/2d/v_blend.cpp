@@ -143,6 +143,9 @@ void V_AddPlayerBlend (player_t *CPlayer, float blend[4], float maxinvalpha, int
 			if (bloodcnt > maxpainblend)
 				bloodcnt = maxpainblend;
 
+			if (bloodcnt > maxinvalpha)
+				maxinvalpha = bloodcnt;
+
 			V_AddBlend (painFlash.r / 255.f, painFlash.g / 255.f, painFlash.b / 255.f, bloodcnt / 255.f, blend);
 		}
 	}
@@ -203,7 +206,7 @@ void V_AddPlayerBlend (player_t *CPlayer, float blend[4], float maxinvalpha, int
 	}
 
 	// cap opacity if desired
-	if (blend[3] > maxinvalpha && bloodcnt < 160) blend[3] = maxinvalpha; // "bloodcnt < 160" allows an exception to the red pain flash effect
+	if (blend[3] > maxinvalpha) blend[3] = maxinvalpha;
 }
 
 //==========================================================================
