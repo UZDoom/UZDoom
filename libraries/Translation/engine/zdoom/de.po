@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-06 15:01+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2026-07-20 07:01+0000\n"
+"Last-Translator: heiko123abc <heiko1234aaa@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.7.1.dev0\n"
+"X-Generator: Weblate 2026.8.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "Drücke eine Taste."
@@ -442,7 +442,8 @@ msgstr "%d Monster getötet"
 
 msgid "TXT_NO_RESURRECT"
 msgstr ""
-"Kann nicht wiederbeleben. Der Spieler ist nicht mehr mit seinem Körper verbunden."
+"Kann nicht wiederbeleben. Der Spieler ist nicht mehr mit seinem Körper "
+"verbunden."
 
 msgid "TXT_ALL_ARTIFACTS"
 msgstr "Alle Artefakte!"
@@ -2782,7 +2783,6 @@ msgstr "Großartige Arbeit!"
 msgid "CE4TEXT"
 msgstr "Fantastisch"
 
-#, fuzzy
 msgid "CLOADNET"
 msgstr ""
 "Du kannst während einer Netzwerkquest keinen Spielstand laden.\n"
@@ -4342,7 +4342,7 @@ msgid "GLLIGHTMNU_TITLE"
 msgstr "Dynamische Lichter"
 
 msgid "GLLIGHTMNU_LIGHTSENABLED"
-msgstr "Dynamische Lichter (Hardware)"
+msgstr "Dynamische Lichter"
 
 msgid "GLLIGHTMNU_LIGHTSPRITES"
 msgstr "Sprites werden beleuchtet"
@@ -4522,9 +4522,6 @@ msgstr "Linearer Filter beim Hochskalieren"
 msgid "TCMNU_MIPMAP"
 msgstr "Benutze Textur-Mipmaps"
 
-msgid "TCMNU_DYNLIGHTS"
-msgstr "Dynamisches Licht (Software)"
-
 msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
 msgstr "Zeige immer alle Schlüssel"
 
@@ -4561,16 +4558,18 @@ msgstr "Spielstand '%s' ist von einer anderen ZDoom-basierten Engine:"
 
 msgid "TXT_TOOOLDSG"
 msgstr ""
-"Spielstand '%s' ist von einer älteren Version: %s (%e ist die älteste noch unterstützte Version."
+"Spielstand '%s' ist von einer älteren Version: %s (%e ist die älteste noch "
+"unterstützte Version."
 
 # Shouldn’t this say “%e is the newest supported”?
-#
+# 
 # — Undead
-#
+# 
 # Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
 msgstr ""
-"Spielstand '%s' ist von einer neueren Version: %s (%e ist die neueste noch unterstützte Version."
+"Spielstand '%s' ist von einer neueren Version: %s (%e ist die neueste noch "
+"unterstützte Version."
 
 msgid "TXT_NOMAPSG"
 msgstr "Spielstand '%s' hat keine Information über den alktuellen Level."
@@ -5185,11 +5184,13 @@ msgstr "Zusätzliche Beleuchtung"
 
 msgid "ACCMNU_TOOLTIP_LIGHT_RADIUS"
 msgstr ""
-"Entfernung des Lichtradius um den Spieler, in Map-Units. Je größer, desto heller die Szene."
+"Entfernung des Lichtradius um den Spieler, in Map-Units. Je größer, desto "
+"heller die Szene."
 
 msgid "ACCMNU_TOOLTIP_LIGHT_EXTRA"
 msgstr ""
-"Menge der zusätzlichen Beleuchtung in vorhandenen Sektor-Lichtniveaus. Aktueller Beleuchtungsmodus wird beibehalten."
+"Menge der zusätzlichen Beleuchtung in vorhandenen Sektor-Lichtniveaus. "
+"Aktueller Beleuchtungsmodus wird beibehalten."
 
 msgid "ACCMNU_LIGHT_RADIUS"
 msgstr "Licht-Radius des Spielers"
@@ -5220,7 +5221,8 @@ msgstr "Display-Kalibrierung"
 
 msgid "DSPLYMNU_IMAGEADJUST_TOP1"
 msgstr ""
-"Passe diese optischen Einstellungen an. Nimm dabei eine natürliche Distanz zum Display ein."
+"Passe diese optischen Einstellungen an. Nimm dabei eine natürliche Distanz "
+"zum Display ein."
 
 msgid "DSPLYMNU_IMAGEADJUST_TOP2"
 msgstr "Upsampling/Supersampling kann die Darstellung verzerren."
@@ -5230,7 +5232,9 @@ msgstr "Bitte schalte diese vor den Anpassungen aus."
 
 msgid "DSPLYMNU_TOOLTIP_GAMMA"
 msgstr ""
-"Gleicht Schwächen des Monitors aus. Anpassen, bis keine vertikalen Blöcke mehr sichtbar sind. Dient nur der Kalibrierung, nicht der Regulierung der Bildhelligkeit."
+"Gleicht Schwächen des Monitors aus. Anpassen, bis keine vertikalen Blöcke "
+"mehr sichtbar sind. Dient nur der Kalibrierung, nicht der Regulierung der "
+"Bildhelligkeit."
 
 msgid "DSPLYMNU_BLACKPOINT"
 msgstr "Schwarzpunkt-Anpassung"
@@ -5249,7 +5253,11 @@ msgstr "Granatwerfer"
 
 msgid "DSPLYMNU_TOOLTIP_BLACKPOINT"
 msgstr ""
-"Passt Monitore an, die dunkle Pixel nicht korrekt darstellen können. Die Einstellung so lange anpassen, bis die diagonalen weißen Blöcke verblassen. Diese Funktion soll nicht verwendet werden, um das Spiel heller zu machen, sondern nur, um sicherzustellen, dass das Bild für die derzeitige Konfiguration kalibriert ist."
+"Passt Monitore an, die dunkle Pixel nicht korrekt darstellen können. Die "
+"Einstellung so lange anpassen, bis die diagonalen weißen Blöcke verblassen. "
+"Diese Funktion soll nicht verwendet werden, um das Spiel heller zu machen, "
+"sondern nur, um sicherzustellen, dass das Bild für die derzeitige "
+"Konfiguration kalibriert ist."
 
 msgid "DSPLYMNU_TOOLTIP_IMAGEADJUST_RESET"
 msgstr ""
@@ -5257,15 +5265,19 @@ msgstr ""
 
 msgid "DSPLYMNU_TOOLTIP_BRIGHTNESS"
 msgstr ""
-"Wendet eine lineare Helligkeitsanpassung an. Helligkeit nach persönlichen Geschmack anpassen oder um im Dunkeln besser sehen zu können."
+"Wendet eine lineare Helligkeitsanpassung an. Helligkeit nach persönlichen "
+"Geschmack anpassen oder um im Dunkeln besser sehen zu können."
 
 msgid "DSPLYMNU_TOOLTIP_CONTRAST"
 msgstr ""
-"Passt den wahrgenommenen Unterschied zwischen ähnlichen Farben an. Steuert wie scharf oder verwaschen die Bilder wirken. Nach persönlichem Geschmack anpassen."
+"Passt den wahrgenommenen Unterschied zwischen ähnlichen Farben an. Steuert "
+"wie scharf oder verwaschen die Bilder wirken. Nach persönlichem Geschmack "
+"anpassen."
 
 msgid "DSPLYMNU_TOOLTIP_SATURATION"
 msgstr ""
-"Passt die Farbintensität an, sodass das Bild lebendiger oder gedämpfter wirkt. Einstellungen nach persönlichen Geschmack anpassen."
+"Passt die Farbintensität an, sodass das Bild lebendiger oder gedämpfter "
+"wirkt. Einstellungen nach persönlichen Geschmack anpassen."
 
 msgid "DSPLYMNU_IMAGEADJUST_BOTTOM"
 msgstr "Einstellung anpassen bis der Farbton gleichmäßig grau erscheint."
@@ -5397,7 +5409,9 @@ msgid "ACCMNU_DOUBLECLICK_THRESHOLD"
 msgstr "Schwellenwert für Doppelklick"
 
 msgid "ACCMNU_TOOLTIP_DOUBLECLICK_THRESHOLD"
-msgstr "Zeit zwischen aufeinanderfolgenden Tastendrücken, um ein Doppelklick-Event auszulösen"
+msgstr ""
+"Zeit zwischen aufeinanderfolgenden Tastendrücken, um ein Doppelklick-Event "
+"auszulösen"
 
 msgid "MAPCOLORMNU_SECTORFILLALPHA"
 msgstr "Alpha der Füllung"
@@ -5410,3 +5424,121 @@ msgstr "Automatisch (ZDoom bevorzugt)"
 
 msgid "OPTVAL_VTAVANILLA"
 msgstr "Automatisch (Vanilla bevorzugt)"
+
+msgid "UPDATER_CHECK_FOR_UPDATES"
+msgstr "Nach Aktualisierung suchen"
+
+msgid "UPDATER_PROMPT_TO_INSTALL"
+msgstr "Installations-Aufforderung"
+
+msgid "UPDATER_SETTINGS"
+msgstr "Aktualisierungseinstellungen"
+
+msgid "UPDATER_INTERVAL"
+msgstr "Überprüfen alle:"
+
+msgid "UPDATER_UPDATE_AVAILABLE"
+msgstr "Aktualisierung verfügbar"
+
+msgid "UPDATER_UPDATE_SKIP"
+msgstr "Überspringen"
+
+msgid "UPDATER_TITLE"
+msgstr "Automatische Aktualisierung"
+
+msgid "UPDATER_DISABLE"
+msgstr "Automatische Aktualisierung deaktivieren"
+
+msgid "UPDATER_CHECK_FAILED"
+msgstr "Prüfung auf Aktualisierung fehlgeschlagen"
+
+msgid "UPDATER_UPDATE_FAILED"
+msgstr "Aktualisierung fehlgeschlagen"
+
+msgid "UPDATER_YES_PROMPT"
+msgstr "Ja, und vor Aktualisierung nachfragen"
+
+msgid "UPDATER_DISMISS_UPDATE"
+msgstr "Aktualisierung ablehnen?"
+
+msgid "UPDATER_ASK_AUTO"
+msgstr ""
+"Automatisch nach Aktualisierungen suchen?\n"
+"(kann später im Options-Reiter geändert werden)"
+
+msgid "UPDATER_ASK_INTERVAL"
+msgstr ""
+"Wie oft soll nach Aktualisierungen gesucht werden?\n"
+"(kann später im Options-Reiter geändert werden)"
+
+msgid "UPDATER_ZIP_FAIL"
+msgstr "Zip-Datei konnte nicht gelesen werden"
+
+msgid "UPDATER_ZIP_ERROR"
+msgstr "Fehler beim Entpacken der Zip-Datei: '{}' in Datei '{}'"
+
+msgid "UPDATER_UPDATING"
+msgstr "Aktualisierung..."
+
+msgid "UPDATER_STARTING"
+msgstr "Download wird gestartet..."
+
+msgid "UPDATER_SUCCESS"
+msgstr "Aktualisierung erfolgreich, der Launcher startet jetzt neu."
+
+msgid "UPDATER_UP_TO_DATE"
+msgstr "Aktuell!"
+
+msgid "UPDATER_CANCELLED"
+msgstr "Aktualisierung abgebrochen"
+
+msgid "UPDATER_INVALID_JSON"
+msgstr "Ungültiges Update-JSON"
+
+msgid "UPDATER_NOT_A_DIR"
+msgstr "'{}' ist kein Dateiordner"
+
+msgid "OPTVAL_DISABLE"
+msgstr "Deaktivieren"
+
+msgid "OPTVAL_NOTIFY"
+msgstr "Benachrichtigen"
+
+msgid "OPTVAL_DAILY"
+msgstr "Täglich"
+
+msgid "OPTVAL_WEEKLY"
+msgstr "Wöchentlich"
+
+msgid "OPTVAL_MONTHLY"
+msgstr "Monatlich"
+
+msgid "TXT_DOWNLOADING"
+msgstr "Herunterladen"
+
+msgid "TXT_EXPERIMENTAL"
+msgstr "Experimentell"
+
+msgid "TXT_UPDATE"
+msgstr "Aktualisierung"
+
+msgid "TXT_UPDATED"
+msgstr "Aktualisiert"
+
+msgid "TXT_CANCELLED"
+msgstr "Abgebrochen"
+
+msgid "TXT_BACK"
+msgstr "Zurück"
+
+msgid "TXT_DISMISS"
+msgstr "Ablehnen"
+
+msgid "TXT_SKIP"
+msgstr "Überspringen"
+
+msgid "TXT_CONFIRM"
+msgstr "Bestätigen"
+
+msgid "TXT_OK"
+msgstr "OK"

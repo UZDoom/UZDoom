@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-03-17 02:16+0000\n"
+"PO-Revision-Date: 2026-07-13 23:20-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Bashkir <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/ba/>\n"
 "Language: ba\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17-dev\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
 
 msgid "PRESSKEY"
 msgstr "Pritisnite tipku."
@@ -324,7 +324,9 @@ msgstr "Lebdoprozirni mod 2: ҺҮНДЕР"
 # “Lite-amp”: Light-amplification visor
 msgid "STSTR_BEHOLD"
 msgstr ""
-"Sfera neranjivosti (V), Način pomahnitalosti (S), Sfera zamućenja, Odijelo za zaštitu od zračenja (A), Računalna karta područja (A), Vizir za pojačanje svjetla"
+"Sfera neranjivosti (V), Način pomahnitalosti (S), Sfera zamućenja, Odijelo "
+"za zaštitu od zračenja (A), Računalna karta područja (A), Vizir za pojačanje"
+" svjetla"
 
 msgid "STSTR_BEHOLDX"
 msgstr "Prekidač pojačanja"
@@ -4484,9 +4486,6 @@ msgstr ""
 msgid "TCMNU_MIPMAP"
 msgstr ""
 
-msgid "TCMNU_DYNLIGHTS"
-msgstr ""
-
 msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
 msgstr ""
 
@@ -4525,9 +4524,9 @@ msgid "TXT_TOOOLDSG"
 msgstr ""
 
 # Shouldn’t this say “%e is the newest supported”?
-#
+# 
 # — Undead
-#
+# 
 # Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
 msgstr ""

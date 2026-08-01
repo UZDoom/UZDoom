@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-06 15:02+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2026-07-14 05:01+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 2026.7.1.dev0\n"
+"X-Generator: Weblate 2026.8.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "Нажмите любую клавишу."
@@ -4344,6 +4344,7 @@ msgstr "Сортировать списки текстур"
 msgid "GLLIGHTMNU_TITLE"
 msgstr "Динамическое освещение"
 
+#, fuzzy
 msgid "GLLIGHTMNU_LIGHTSENABLED"
 msgstr "Динамическое освещение (аппаратное)"
 
@@ -4525,9 +4526,6 @@ msgstr "Линейная фильтрация при увеличении"
 msgid "TCMNU_MIPMAP"
 msgstr "Применять MIP-текстурирование"
 
-msgid "TCMNU_DYNLIGHTS"
-msgstr "Динамическое освещение (программное)"
-
 msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
 msgstr "Всегда отображать ключи"
 
@@ -4566,9 +4564,9 @@ msgid "TXT_TOOOLDSG"
 msgstr "Сохранение «%s» из старой версии (%d). %e — последняя совместимая."
 
 # Shouldn’t this say “%e is the newest supported”?
-#
+# 
 # — Undead
-#
+# 
 # Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
 msgstr "Сохранение «%s» из новой версии (%d). %e — последняя совместимая."
@@ -5184,11 +5182,13 @@ msgstr "Дополнительное освещение"
 
 msgid "ACCMNU_TOOLTIP_LIGHT_RADIUS"
 msgstr ""
-"Управляет радиусом дальности света вокруг игрока в единицах карты. Большее значение сделает сцену ярче."
+"Управляет радиусом дальности света вокруг игрока в единицах карты. Большее "
+"значение сделает сцену ярче."
 
 msgid "ACCMNU_TOOLTIP_LIGHT_EXTRA"
 msgstr ""
-"Дополнительное освещение сектора уровня, добавленное к существующему уровню освещения сектора, сохраняя действующий режим освещения."
+"Дополнительное освещение сектора уровня, добавленное к существующему уровню "
+"освещения сектора, сохраняя действующий режим освещения."
 
 msgid "ACCMNU_LIGHT_RADIUS"
 msgstr "Радиус освещения игрока"
@@ -5229,33 +5229,43 @@ msgstr "Пожалуйста, отключите их перед настрой�
 
 msgid "DSPLYMNU_TOOLTIP_GAMMA"
 msgstr ""
-"Компенсирует ограничения вашего монитора. Настраивайте до тех пор, пока вертикальные серые блоки не исчезнут. Не используйте эту функцию для увеличения яркости игры, только для калибровки изображения под ваши настройки."
+"Компенсирует ограничения вашего монитора. Настраивайте до тех пор, пока "
+"вертикальные серые блоки не исчезнут. Не используйте эту функцию для "
+"увеличения яркости игры, только для калибровки изображения под ваши "
+"настройки."
 
 msgid "DSPLYMNU_BLACKPOINT"
 msgstr "Компенсация точки черного"
 
 msgid "DSPLYMNU_TOOLTIP_BLACKPOINT"
 msgstr ""
-"Компенсирует проблемы с мониторами, которые некорректно отображают темные пиксели. Настраивайте до тех пор, пока диагональные белые блоки не исчезнут. Не используйте эту функцию для увеличения яркости игры, только для калибровки изображения под вашу конфигурацию."
+"Компенсирует проблемы с мониторами, которые некорректно отображают темные "
+"пиксели. Настраивайте до тех пор, пока диагональные белые блоки не исчезнут."
+" Не используйте эту функцию для увеличения яркости игры, только для "
+"калибровки изображения под вашу конфигурацию."
 
 msgid "DSPLYMNU_TOOLTIP_IMAGEADJUST_RESET"
 msgstr "Сбросить все настройки в этом меню на значения по умолчанию."
 
 msgid "DSPLYMNU_TOOLTIP_BRIGHTNESS"
 msgstr ""
-"Применяет линейную регулировку яркости. Настройте под свои предпочтения или для лучшей видимости в темноте."
+"Применяет линейную регулировку яркости. Настройте под свои предпочтения или "
+"для лучшей видимости в темноте."
 
 msgid "DSPLYMNU_TOOLTIP_CONTRAST"
 msgstr ""
-"Регулирует воспринимаемую разницу между похожими цветами. Управляет резкостью/блеском изображений. Настраивается в соответствии с личным вкусом."
+"Регулирует воспринимаемую разницу между похожими цветами. Управляет "
+"резкостью/блеском изображений. Настраивается в соответствии с личным вкусом."
 
 msgid "DSPLYMNU_TOOLTIP_SATURATION"
 msgstr ""
-"Регулирует интенсивность цветов, делая изображение более ярким или приглушенным. Настройте по своему вкусу."
+"Регулирует интенсивность цветов, делая изображение более ярким или "
+"приглушенным. Настройте по своему вкусу."
 
 msgid "DSPLYMNU_IMAGEADJUST_BOTTOM"
 msgstr ""
-"Регулируйте настройки до тех пор, пока это изображение не приобретет однородный серый оттенок."
+"Регулируйте настройки до тех пор, пока это изображение не приобретет "
+"однородный серый оттенок."
 
 msgid "OPENALMNU_SUPERSTEREOWIDTH"
 msgstr "Длина суперстерео"
@@ -5364,3 +5374,121 @@ msgstr "Автоматически (Стандартный)"
 
 msgid "OPTVAL_VTAZDOOM"
 msgstr "Автоматически (ZDoom)"
+
+msgid "UPDATER_CHECK_FOR_UPDATES"
+msgstr "Проверить обновление"
+
+msgid "UPDATER_PROMPT_TO_INSTALL"
+msgstr "Предложить установить"
+
+msgid "UPDATER_SETTINGS"
+msgstr "Настройки обновления"
+
+msgid "UPDATER_INTERVAL"
+msgstr "Проверять каждый:"
+
+msgid "UPDATER_UPDATE_AVAILABLE"
+msgstr "Доступно новое обновление"
+
+msgid "UPDATER_UPDATE_SKIP"
+msgstr "Пропустить"
+
+msgid "UPDATER_TITLE"
+msgstr "Проверка обновлений"
+
+msgid "UPDATER_DISABLE"
+msgstr "Откл. проверку обновлений"
+
+msgid "UPDATER_CHECK_FAILED"
+msgstr "Проверка наличия обновлений завершилась неудачей"
+
+msgid "UPDATER_UPDATE_FAILED"
+msgstr "Обновление не установлено"
+
+msgid "UPDATER_YES_PROMPT"
+msgstr "Да и предложить установку"
+
+msgid "UPDATER_DISMISS_UPDATE"
+msgstr "Отклонить обновление?"
+
+msgid "UPDATER_ASK_AUTO"
+msgstr ""
+"Хотите проверять наличие обновлений автоматически ? \n"
+"(Это можно изменить во вкладке \"Параметры\")"
+
+msgid "UPDATER_ASK_INTERVAL"
+msgstr ""
+"Как часто вы хотели проверять наличие обновлений? \n"
+"(Это можно изменить во вкладке «Параметры»)"
+
+msgid "UPDATER_ZIP_FAIL"
+msgstr "Не удалось открыть zip-файл"
+
+msgid "UPDATER_ZIP_ERROR"
+msgstr "Не удалось распаковать zip-архив, ошибка: '{}' при записи файла '{}'"
+
+msgid "UPDATER_UPDATING"
+msgstr "Обновляем..."
+
+msgid "UPDATER_STARTING"
+msgstr "Начинаем скачивание..."
+
+msgid "UPDATER_SUCCESS"
+msgstr "Обновление прошло успешно, программа перезагружается."
+
+msgid "UPDATER_UP_TO_DATE"
+msgstr "Обновлено!"
+
+msgid "UPDATER_CANCELLED"
+msgstr "Обновление отменено"
+
+msgid "UPDATER_INVALID_JSON"
+msgstr "Неверное обновления JSON-файла"
+
+msgid "UPDATER_NOT_A_DIR"
+msgstr "'{}' не является директорией"
+
+msgid "OPTVAL_DISABLE"
+msgstr "Отключить"
+
+msgid "OPTVAL_NOTIFY"
+msgstr "Напомнить"
+
+msgid "OPTVAL_DAILY"
+msgstr "Ежедневно"
+
+msgid "OPTVAL_WEEKLY"
+msgstr "Еженедельно"
+
+msgid "OPTVAL_MONTHLY"
+msgstr "Ежемесячно"
+
+msgid "TXT_DOWNLOADING"
+msgstr "Скачиваем"
+
+msgid "TXT_EXPERIMENTAL"
+msgstr "Эксперементальный"
+
+msgid "TXT_UPDATE"
+msgstr "Обновление"
+
+msgid "TXT_UPDATED"
+msgstr "Обновлено"
+
+msgid "TXT_CANCELLED"
+msgstr "Отменено"
+
+msgid "TXT_BACK"
+msgstr "Назад"
+
+msgid "TXT_DISMISS"
+msgstr "Отклонить"
+
+msgid "TXT_SKIP"
+msgstr "Пропустить"
+
+msgid "TXT_CONFIRM"
+msgstr "Подтвердить"
+
+msgid "TXT_OK"
+msgstr "ОК"

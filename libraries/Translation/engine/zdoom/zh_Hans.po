@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-12 05:01+0000\n"
+"PO-Revision-Date: 2026-07-16 04:01+0000\n"
 "Last-Translator: dwing <12104745@qq.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2026.7.1.dev0\n"
+"X-Generator: Weblate 2026.8.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "按下任意键。"
@@ -4351,7 +4351,7 @@ msgid "GLLIGHTMNU_TITLE"
 msgstr "动态光源"
 
 msgid "GLLIGHTMNU_LIGHTSENABLED"
-msgstr "动态光源(硬件)"
+msgstr "动态光源"
 
 msgid "GLLIGHTMNU_LIGHTSPRITES"
 msgstr "光照影响精灵图"
@@ -4532,9 +4532,6 @@ msgstr "放大时用线性过滤"
 msgid "TCMNU_MIPMAP"
 msgstr "使用mipmap纹理"
 
-msgid "TCMNU_DYNLIGHTS"
-msgstr "动态光源(软件)"
-
 msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
 msgstr "总是显示钥匙"
 
@@ -4573,9 +4570,9 @@ msgid "TXT_TOOOLDSG"
 msgstr "存档“%s”来自旧版本(%d)。支持的最低版本是%e。"
 
 # Shouldn’t this say “%e is the newest supported”?
-#
+# 
 # — Undead
-#
+# 
 # Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
 msgstr "存档“%s”来自新版本(%d)。支持的最高版本是%e。"
@@ -5409,7 +5406,7 @@ msgid "UPDATER_CHECK_FOR_UPDATES"
 msgstr "检查更新"
 
 msgid "UPDATER_SETTINGS"
-msgstr "更新设置"
+msgstr "更新器设置"
 
 msgid "UPDATER_UPDATE_AVAILABLE"
 msgstr "有新的更新可用"
@@ -5430,13 +5427,14 @@ msgid "UPDATER_UPDATE_FAILED"
 msgstr "更新失败"
 
 msgid "UPDATER_PROMPT_TO_INSTALL"
-msgstr "立即安装"
+msgstr "提示安装"
 
 msgid "UPDATER_DISMISS_UPDATE"
 msgstr "无视更新？"
 
+#, fuzzy
 msgid "UPDATER_YES_PROMPT"
-msgstr "是，并立即安装更新"
+msgstr "是，并提示安装更新"
 
 msgid "UPDATER_ZIP_FAIL"
 msgstr "打开zip文件失败"

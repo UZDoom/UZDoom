@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-06 15:02+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2026-07-14 05:01+0000\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2026.7.1.dev0\n"
+"X-Generator: Weblate 2026.8.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "Pressione qualquer tecla."
@@ -320,7 +320,8 @@ msgstr "Modo sem colisão 3D: DESATIVADO"
 # “Lite-amp”: Light-amplification visor
 msgid "STSTR_BEHOLD"
 msgstr ""
-"Invulnerabilidade (V), Frenesi (S), Invisibilidade (I), Antirradiação (R), Mapa Completo (A) ou Amplificação de Luz (L)"
+"Invulnerabilidade (V), Frenesi (S), Invisibilidade (I), Antirradiação (R), "
+"Mapa Completo (A) ou Amplificação de Luz (L)"
 
 msgid "STSTR_BEHOLDX"
 msgstr "Potencializador ativado"
@@ -4345,6 +4346,7 @@ msgstr "Organizar listas de renderização por textura"
 msgid "GLLIGHTMNU_TITLE"
 msgstr "Luzes dinâmicas"
 
+#, fuzzy
 msgid "GLLIGHTMNU_LIGHTSENABLED"
 msgstr "Luzes dinâmicas (Hardware)"
 
@@ -4526,9 +4528,6 @@ msgstr "Filtro linear ao aumentar"
 msgid "TCMNU_MIPMAP"
 msgstr "Usar texturas com mipmapping"
 
-msgid "TCMNU_DYNLIGHTS"
-msgstr "Luzes Dinâmicas (Software)"
-
 msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
 msgstr "Sempre mostrar chaves"
 
@@ -4565,16 +4564,18 @@ msgstr "O jogo salvo \"%s\" é de outra engine baseada em ZDoom:"
 
 msgid "TXT_TOOOLDSG"
 msgstr ""
-"O jogo salvo \"%s\" é de uma versão mais antiga: %d (%e sendo a mais antiga suportada)."
+"O jogo salvo \"%s\" é de uma versão mais antiga: %d (%e sendo a mais antiga "
+"suportada)."
 
 # Shouldn’t this say “%e is the newest supported”?
-#
+# 
 # — Undead
-#
+# 
 # Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
 msgstr ""
-"O jogo salvo \"%s\" é de uma versão mais nova: %d (%e sendo a mais recente suportada)."
+"O jogo salvo \"%s\" é de uma versão mais nova: %d (%e sendo a mais recente "
+"suportada)."
 
 msgid "TXT_NOMAPSG"
 msgstr "O jogo salvo \"%s\" não possui o mapa atual."
@@ -5246,7 +5247,9 @@ msgid "HAPMNU_TITLE"
 msgstr "Opções de Vibração"
 
 msgid "ACCMNU_TOOLTIP_LIGHT_EXTRA"
-msgstr "Quantidade de iluminação de setor para adicionar em cima dos níveis de iluminação existentes, à medida que se preserva o modo de iluminação atual."
+msgstr ""
+"Quantidade de iluminação de setor para adicionar em cima dos níveis de "
+"iluminação existentes, à medida que se preserva o modo de iluminação atual."
 
 msgid "DSPLYMNU_ROCKETEXPSTYLE"
 msgstr "Estilo Visual da Explosão"
@@ -5282,7 +5285,8 @@ msgid "ACCMNU_DOUBLECLICK_THRESHOLD"
 msgstr "Limiar de Duplo Clique"
 
 msgid "ACCMNU_TOOLTIP_DOUBLECLICK_THRESHOLD"
-msgstr "Tempo entre tecladas subsequentes para acionar um evento de duplo clique"
+msgstr ""
+"Tempo entre tecladas subsequentes para acionar um evento de duplo clique"
 
 msgid "ACCMNU_TOOLTIP_ALPHA"
 msgstr "Transparência do Fundo da Dica de Contexto"
@@ -5297,25 +5301,37 @@ msgid "ACCMNU_TOOLTIP"
 msgstr "Dicas de Contexto"
 
 msgid "ACCMNU_TOOLTIP_LIGHT_RADIUS"
-msgstr "Controla a extensão do raio de luz ao redor do jogador em unidades de mapa. Valores maiores aumentam o brilho da cena."
+msgstr ""
+"Controla a extensão do raio de luz ao redor do jogador em unidades de mapa. "
+"Valores maiores aumentam o brilho da cena."
 
 msgid "DSPLYMNU_BLACKPOINT"
 msgstr "Compensação de ponto preto"
 
 msgid "DSPLYMNU_TOOLTIP_BLACKPOINT"
-msgstr "Compensa por monitores que não conseguem mostrar pixels escuros apropriadamente. Ajuste até os blocos brancos diagonais sumirem. Não use isto para aumentar o brilho do jogo, use somente para garantir que a imagem está calibrada para sua configuração."
+msgstr ""
+"Compensa por monitores que não conseguem mostrar pixels escuros "
+"apropriadamente. Ajuste até os blocos brancos diagonais sumirem. Não use "
+"isto para aumentar o brilho do jogo, use somente para garantir que a imagem "
+"está calibrada para sua configuração."
 
 msgid "DSPLYMNU_TOOLTIP_IMAGEADJUST_RESET"
 msgstr "Redefine todas as opções neste menu para o padrão."
 
 msgid "DSPLYMNU_TOOLTIP_BRIGHTNESS"
-msgstr "Aplica ajuste linear de brilho. Ajuste a gosto, ou para enxergar melhor no escuro."
+msgstr ""
+"Aplica ajuste linear de brilho. Ajuste a gosto, ou para enxergar melhor no "
+"escuro."
 
 msgid "DSPLYMNU_TOOLTIP_CONTRAST"
-msgstr "Ajusta a diferença perceptiva entre cores semelhantes. Controla o quão nítida/desbotada a imagem parece. Ajuste a gosto."
+msgstr ""
+"Ajusta a diferença perceptiva entre cores semelhantes. Controla o quão "
+"nítida/desbotada a imagem parece. Ajuste a gosto."
 
 msgid "DSPLYMNU_TOOLTIP_SATURATION"
-msgstr "Ajusta a intensidade das cores, tornando a imagem mais vívida ou suave. Ajuste a gosto."
+msgstr ""
+"Ajusta a intensidade das cores, tornando a imagem mais vívida ou suave. "
+"Ajuste a gosto."
 
 msgid "DSPLYMNU_IMAGEADJUST_BOTTOM"
 msgstr "Ajuste até isso parecer uma cor uniformemente Cinza."
@@ -5366,7 +5382,10 @@ msgid "DSPLYMNU_IMAGEADJUST_TOP3"
 msgstr "Por favor desabilite-os antes de ajustar."
 
 msgid "DSPLYMNU_TOOLTIP_GAMMA"
-msgstr "Compensa pelos limites de seu monitor. Ajuste até os blocos cinzas sumirem. Não use para aumentar o brilho do jogo, use apenas para calibrar a imagem para sua configuração."
+msgstr ""
+"Compensa pelos limites de seu monitor. Ajuste até os blocos cinzas sumirem. "
+"Não use para aumentar o brilho do jogo, use apenas para calibrar a imagem "
+"para sua configuração."
 
 msgid "SNDMNU_NOMIDIOPTIONS"
 msgstr "Dispositivo MIDI não expõe quaisquer opções."

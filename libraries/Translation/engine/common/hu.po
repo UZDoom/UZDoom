@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-05-07 15:11+0000\n"
-"Last-Translator: H Tamás <hovanszki@gmail.com>\n"
+"PO-Revision-Date: 2026-07-13 23:20-0400\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/uzdoom/common/hu/>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17.1\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
 
 msgid "PRESSYN"
 msgstr "Nyomj Y-t vagy N-t."
@@ -1597,9 +1597,6 @@ msgstr "Általános"
 
 msgid "PICKER_EXTRA"
 msgstr "Extra grafika"
-
-msgid "PICKER_FULLSCREEN"
-msgstr "Teljes képernyő"
 
 msgid "PICKER_NOAUTOLOAD"
 msgstr "Automatikus betöltés kikapcsolása"

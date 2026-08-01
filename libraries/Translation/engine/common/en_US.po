@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-05-06 22:11+0000\n"
+"PO-Revision-Date: 2026-07-13 23:20-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: English <https://hosted.weblate.org/projects/uzdoom/common/en/>\n"
 "Language: en\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17.1\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
 
 msgid "PRESSYN"
 msgstr "Press Y or N."
@@ -1731,10 +1731,6 @@ msgstr "General"
 #, fuzzy
 msgid "PICKER_EXTRA"
 msgstr "Extra Graphics"
-
-#, fuzzy
-msgid "PICKER_FULLSCREEN"
-msgstr "Fullscreen"
 
 #, fuzzy
 msgid "PICKER_NOAUTOLOAD"

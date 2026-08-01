@@ -28,30 +28,37 @@
 #include "Utilities.h"
 
 #include "filesystem.h"
+#include "printf.h"
 #include "resourcefile.h"
 
 namespace DebugServer
 {
 
-static void NormalizeArchivePath(std::string &path)
+static void NormalizeArchivePath(std::string &archivePath, const std::string &archiveName)
 {
-	auto it = path.find(':');
-	if (it != std::string::npos && (it == 1 && path.size() >= 2 && path[2] == '\\')) // make sure it's not a windows path
+	auto nameInPath = archivePath.find(archiveName);
+	if (nameInPath == std::string::npos)
 	{
-		it = path.find(':', 3);
+		nameInPath = 0;
+	}
+	// only normalize the part of the path that contains the archive name
+	auto it = archivePath.find(':', nameInPath);
+	if (it != std::string::npos && (it == 1 && archivePath.size() >= 2 && (archivePath[2] == '/' || archivePath[2] == '\\'))) // make sure it's not a windows path
+	{
+		it = archivePath.find(':', 3);
 	}
 	while (it != std::string::npos)
 	{
-		// check the character prior to this; if it's not a slash or a backslash, remove the colon
-		if (it > 0 && path[it - 1] == '/' && path[it - 1] == '\\')
+		// check the character prior to this; if it's a slash or a backslash, remove the colon
+		if (it > 0 && (archivePath[it - 1] == '/' || archivePath[it - 1] == '\\'))
 		{
-			path.erase(it, 1);
+			archivePath.erase(it, 1);
 		}
 		else
 		{
-			path[it] = '/';
+			archivePath[it] = '/';
 		}
-		it = path.find(':', it + 1);
+		it = archivePath.find(':', it + 1);
 	}
 }
 
@@ -74,7 +81,7 @@ void PexCache::PrintOutAllLoadedScripts()
 	scripts_lock scriptLock(m_scriptsMutex);
 	for (auto &script : m_scripts)
 	{
-		Printf("Loaded %zu functions from script: %s", script.second->GetFunctionCount(), script.second->GetQualifiedPath().c_str());
+		Printf(PRINT_NODAPEVENT, "Loaded %zu functions from script: %s", script.second->GetFunctionCount(), script.second->GetQualifiedPath().c_str());
 	}
 }
 
@@ -91,18 +98,20 @@ PexCache::BinaryPtr PexCache::GetScript(const dap::Source &source)
 
 PexCache::BinaryPtr PexCache::makeEmptyBinary(const std::string &scriptPath, int lump)
 {
-	auto binary = std::make_shared<Binary>();
+	return std::make_shared<Binary>(scriptPath, lump);
+}
+
+Binary::Binary(const std::string &scriptPath, int p_lump)
+{
 	auto truncScriptPath = GetScriptPathNoQual(scriptPath);
-	binary->lump = lump;
-	int wadnum = fileSystem.GetFileContainer(binary->lump);
-	binary->scriptName = FileSys::ExtractBaseName(truncScriptPath.c_str(), true);
-	binary->unqualifiedScriptPath = truncScriptPath;
+	lump = p_lump;
+	int wadnum = fileSystem.GetFileContainer(lump);
+	unqualifiedScriptPath = truncScriptPath;
 	// check for the archive name in the script path
-	binary->archivePath = wadnum >= 0 ? fileSystem.GetResourceFileFullName(wadnum) : GetArchiveNameFromPath(scriptPath);
-	binary->archiveName = wadnum >= 0 ? fileSystem.GetResourceFileName(wadnum) : binary->archivePath;
-	NormalizeArchivePath(binary->archivePath);
-	binary->scriptReference = GetScriptReference(binary->GetQualifiedPath());
-	return binary;
+	archivePath = wadnum >= 0 ? fileSystem.GetResourceFileFullName(wadnum) : GetArchiveNameFromPath(scriptPath);
+	archiveName = wadnum >= 0 ? fileSystem.GetResourceFileName(wadnum) : archivePath;
+	NormalizeArchivePath(archivePath, archiveName);
+	scriptReference = GetScriptReference(GetQualifiedPath());
 }
 
 void PexCache::PopulateCodeMap(PexCache::BinaryPtr binary, Binary::FunctionCodeMap &functionCodeMap)
@@ -111,12 +120,9 @@ void PexCache::PopulateCodeMap(PexCache::BinaryPtr binary, Binary::FunctionCodeM
 	{
 		return;
 	}
-	auto qualPath = binary->GetQualifiedPath();
-	int i = 0;
-	for (auto &func : binary->functions)
+	for (const auto &func : binary->functions)
 	{
-		i++;
-		for (auto &variant : func.second->Variants)
+		for (const auto &variant : func.second->Variants)
 		{
 			auto scriptFunc = GetVMScriptFunction(variant.Implementation);
 			if (!scriptFunc || IsFunctionAbstract(scriptFunc)) continue;
@@ -124,7 +130,7 @@ void PexCache::PopulateCodeMap(PexCache::BinaryPtr binary, Binary::FunctionCodeM
 			functionCodeMap.insert(true, codeRange);
 		}
 	}
-	for (auto &pair : binary->stateFunctions)
+	for (const auto &pair : binary->stateFunctions)
 	{
 		auto scriptFunc = GetVMScriptFunction(pair.second);
 		if (!scriptFunc || IsFunctionAbstract(scriptFunc)) continue;
@@ -498,19 +504,6 @@ PexCache::MakeInstruction(VMScriptFunction *func, int ref, const std::string &in
 	instruction->ref = ref;
 	instruction->line = func->PCToLine((const VMOP *)instruction->address);
 	instruction->is_valid_bp = true;
-	if (instruction->line < 0)
-	{
-		// find the max line number
-		int max_line = 0;
-		for (size_t li = 0; li < func->LineInfoCount; ++li)
-		{
-			if (func->LineInfo[li].LineNumber > max_line)
-			{
-				max_line = func->LineInfo[li].LineNumber;
-			}
-		}
-		instruction->line = max_line + 1;
-	}
 	instruction->endLine = instruction->line;
 	instruction->pointed_symbol = pointed_symbol;
 	return instruction;
@@ -526,7 +519,7 @@ std::vector<dap::Module> PexCache::GetModules()
 		module.id = dap::integer(i);
 		std::string name = fileSystem.GetResourceFileName(i);
 		std::string path = fileSystem.GetResourceFileFullName(i);
-		NormalizeArchivePath(path);
+		NormalizeArchivePath(path, name);
 		module.name = name;
 		module.path = path;
 		modules.push_back(module);
@@ -937,10 +930,8 @@ void DebugServer::Binary::PopulateFunctionMaps()
 	functionLineMap.clear();
 	functionCodeMap.clear();
 	auto qualPath = GetQualifiedPath();
-	int i = 0;
 	for (auto &func : functions)
 	{
-		i++;
 		for (auto &variant : func.second->Variants)
 		{
 
@@ -958,7 +949,7 @@ void DebugServer::Binary::PopulateFunctionMaps()
 dap::Source DebugServer::Binary::GetDapSource() const
 {
 	dap::Source source;
-	source.name = scriptName;
+	source.name = FileSys::ExtractBaseName(unqualifiedScriptPath.c_str(), true);
 	source.origin = archiveName;
 	source.path = unqualifiedScriptPath;
 	source.sourceReference = scriptReference;

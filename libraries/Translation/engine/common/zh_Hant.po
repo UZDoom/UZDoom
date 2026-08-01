@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-05-05 22:16-0400\n"
+"PO-Revision-Date: 2026-07-13 23:20-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/projects/uzdoom/common/zh_Hant/>\n"
 "Language: zh_Hant\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: python 3.14.4 polib 1.2.0\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
 
 msgid "PRESSYN"
 msgstr "按下 Y 或 N 。"
@@ -1599,9 +1599,6 @@ msgstr "一般"
 
 msgid "PICKER_EXTRA"
 msgstr "額外的圖像"
-
-msgid "PICKER_FULLSCREEN"
-msgstr "全螢幕"
 
 msgid "PICKER_NOAUTOLOAD"
 msgstr "關閉 autoload"

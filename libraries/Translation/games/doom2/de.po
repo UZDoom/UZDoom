@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-05-11 03:44+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2026-07-23 17:01+0000\n"
+"Last-Translator: Tim Richter <jank21976@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/doom-engine-games/doom-2/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.5-dev\n"
+"X-Generator: Weblate 2026.8.dev0\n"
 
 msgid "TXT_D2E1"
 msgstr "Hölle auf Erden"
@@ -55,10 +55,10 @@ msgid "HUSTR_12"
 msgstr "Level 12: Die Fabrik"
 
 msgid "HUSTR_13"
-msgstr "Level 13: Stadtzentrum"
+msgstr "Level 13: Innenstadt"
 
 msgid "HUSTR_14"
-msgstr "Level 14: Die innersten Bauten"
+msgstr "Level 14: Die Ghettos"
 
 msgid "HUSTR_15"
 msgstr "Level 15: Industriegebiet"
@@ -73,7 +73,7 @@ msgid "HUSTR_18"
 msgstr "Level 18: Der Innenhof"
 
 msgid "HUSTR_19"
-msgstr "Level 19: Die Zizadelle"
+msgstr "Level 19: Die Zitadelle"
 
 msgid "HUSTR_20"
 msgstr "Level 20: Erwischt!"
@@ -88,13 +88,13 @@ msgid "HUSTR_23"
 msgstr "Level 23: Lustige Fässer"
 
 msgid "HUSTR_24"
-msgstr "Level 24: Die Kluft"
+msgstr "Level 24: Die Schlucht"
 
 msgid "HUSTR_25"
 msgstr "Level 25: Blutfälle"
 
 msgid "HUSTR_26"
-msgstr "Level 26: Die aufgegebene Mine"
+msgstr "Level 26: Die verlassene Mine"
 
 msgid "HUSTR_27"
 msgstr "Level 27: Monsterbehausung"
@@ -124,7 +124,7 @@ msgid "HUSTR_33"
 msgstr "Level 33: Verrat"
 
 msgid "NHUSTR_1"
-msgstr "Level 1: Die Erd-Basis"
+msgstr "Level 1: Die Erdbasis"
 
 msgid "NHUSTR_2"
 msgstr "Level 2: Die Folterlabore"
@@ -145,7 +145,7 @@ msgid "NHUSTR_7"
 msgstr "Level 7: Das Bankett des Barons"
 
 msgid "NHUSTR_8"
-msgstr "Level 8: Feindselige Gruft"
+msgstr "Level 8: Gruft des Bösen"
 
 msgid "NHUSTR_9"
 msgstr "Level 9: Marsch der Dämonen"

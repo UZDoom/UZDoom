@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-06-01 23:01+0000\n"
-"Last-Translator: Júlia Rosell Saldaña <contacte@juliars.cat>\n"
+"PO-Revision-Date: 2026-07-13 23:20-0400\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/uzdoom/common/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.6\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
 
 msgid "PRESSYN"
 msgstr "Prem Y o N."
@@ -59,7 +59,8 @@ msgid "TXT_SAY"
 msgstr "Digues:"
 
 msgid "TXT_QUITENDOOM"
-msgstr "Prem qualsevol tecla o fes clic a qualsevol lloc de la finestra per sortir."
+msgstr ""
+"Prem qualsevol tecla o fes clic a qualsevol lloc de la finestra per sortir."
 
 msgid "NEWSAVE"
 msgstr "<Nova partida desada>"
@@ -1593,9 +1594,6 @@ msgstr "General"
 
 msgid "PICKER_EXTRA"
 msgstr "Gràfics extra"
-
-msgid "PICKER_FULLSCREEN"
-msgstr "Pantalla completa"
 
 msgid "PICKER_NOAUTOLOAD"
 msgstr "Desactiva la càrrega automàtica"

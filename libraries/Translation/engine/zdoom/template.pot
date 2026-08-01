@@ -4421,9 +4421,6 @@ msgstr ""
 msgid "TCMNU_MIPMAP"
 msgstr ""
 
-msgid "TCMNU_DYNLIGHTS"
-msgstr ""
-
 msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
 msgstr ""
 

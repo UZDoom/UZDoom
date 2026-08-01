@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-05-05 22:17-0400\n"
+"PO-Revision-Date: 2026-07-13 23:20-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Thai <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/th/>\n"
 "Language: th\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: python 3.14.4 polib 1.2.0\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
 
 msgid "PRESSKEY"
 msgstr "กดปุ่มใดก็ได้"
@@ -4444,9 +4444,6 @@ msgid "TCMNU_MAGFILTER"
 msgstr ""
 
 msgid "TCMNU_MIPMAP"
-msgstr ""
-
-msgid "TCMNU_DYNLIGHTS"
 msgstr ""
 
 msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"

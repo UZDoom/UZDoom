@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-05-05 22:16-0400\n"
+"PO-Revision-Date: 2026-07-13 23:20-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/uzdoom/common/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: python 3.14.4 polib 1.2.0\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
 
 msgid "PRESSYN"
 msgstr "Trykk på Y eller N."
@@ -62,7 +62,8 @@ msgstr "Si:"
 
 msgid "TXT_QUITENDOOM"
 msgstr ""
-"Trykk på en hvilken som helst tast eller klikk hvor som helst i vinduet for å avslutte."
+"Trykk på en hvilken som helst tast eller klikk hvor som helst i vinduet for "
+"å avslutte."
 
 msgid "NEWSAVE"
 msgstr "<Nytt lagret spill>"
@@ -265,7 +266,7 @@ msgid "CNTRLMNU_SLOT1"
 msgstr "Våpen 1"
 
 # only show appropriate slots per game
-#
+# 
 msgid "CNTRLMNU_SLOT2"
 msgstr "Våpen 2"
 
@@ -1606,9 +1607,6 @@ msgstr "Generelt"
 
 msgid "PICKER_EXTRA"
 msgstr "Ekstra grafikk"
-
-msgid "PICKER_FULLSCREEN"
-msgstr "Fullskjerm"
 
 msgid "PICKER_NOAUTOLOAD"
 msgstr "Deaktiver autolading"

@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-06 15:02+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2026-07-14 05:01+0000\n"
+"Last-Translator: Yu Ji Wan <z1wan@hanmail.net>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/ko/>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2026.7.1.dev0\n"
+"X-Generator: Weblate 2026.8.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "키를 누르시오."
@@ -4356,6 +4356,7 @@ msgstr "텍스처별로 생성 목록 정렬"
 msgid "GLLIGHTMNU_TITLE"
 msgstr "동적 조명"
 
+#, fuzzy
 msgid "GLLIGHTMNU_LIGHTSENABLED"
 msgstr "동적 조명 (하드웨어)"
 
@@ -4536,9 +4537,6 @@ msgstr "확대시 선형 필터링함"
 
 msgid "TCMNU_MIPMAP"
 msgstr "밉맵 텍스쳐 사용"
-
-msgid "TCMNU_DYNLIGHTS"
-msgstr "동적 조명 (소프트웨어)"
 
 msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
 msgstr "항상 키들을 표시"
@@ -5184,7 +5182,9 @@ msgid "DSPLYMNU_BLACKPOINT"
 msgstr "블랙포인트 보정"
 
 msgid "DSPLYMNU_TOOLTIP_BLACKPOINT"
-msgstr "모니터에서 어두운 픽셀이 제대로 표시되지 않는 문제를 보정합니다. 대각선으로 나타나는 흰색 블록이 사라질 때까지 조정하십시오. 이 기능은 게임 화면을 더 밝게 하려는 것이 아니라, 사용자의 모니터 환경에 맞게 이미지를 보정하는 용도로만 사용하십시오."
+msgstr ""
+"모니터에서 어두운 픽셀이 제대로 표시되지 않는 문제를 보정합니다. 대각선으로 나타나는 흰색 블록이 사라질 때까지 조정하십시오. 이 기능은"
+" 게임 화면을 더 밝게 하려는 것이 아니라, 사용자의 모니터 환경에 맞게 이미지를 보정하는 용도로만 사용하십시오."
 
 msgid "DSPLYMNU_TOOLTIP_SATURATION"
 msgstr "색상의 강도를 조절하여 이미지를 더욱 선명하게 또는 차분하게 만듭니다. 개인 취향에 맞게 조절하세요."
@@ -5199,7 +5199,9 @@ msgid "DSPLYMNU_TOOLTIP_BRIGHTNESS"
 msgstr "밝기 조절은 선형 방식 으로 이루어집니다 . 개인의 취향에 맞게 또는 어두운 곳에서 보기 위해 밝기를 조절하세요."
 
 msgid "DSPLYMNU_TOOLTIP_GAMMA"
-msgstr "모니터 의 한계를 보정합니다 . 세로 회색 블록이 사라질 때까지 조정하세요. 이 기능은 게임 화면을 밝게 하는 용도가 아니라, 사용 중인 모니터에 맞게 이미지를 보정하는 용도로만 사용하십시오."
+msgstr ""
+"모니터 의 한계를 보정합니다 . 세로 회색 블록이 사라질 때까지 조정하세요. 이 기능은 게임 화면을 밝게 하는 용도가 아니라, 사용 중인"
+" 모니터에 맞게 이미지를 보정하는 용도로만 사용하십시오."
 
 msgid "DSPLYMNU_TOOLTIP_IMAGEADJUST_RESET"
 msgstr "이 메뉴의 모든 옵션 을 기본 설정으로 초기화합니다."

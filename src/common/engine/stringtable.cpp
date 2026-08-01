@@ -519,6 +519,10 @@ bool FStringTable::ParseLanguageCSV(int filenum, const char* buffer, size_t size
 			{
 				labelcol = column;
 			}
+			else if (entry.CompareNoCase("remarks") == 0)
+			{
+				continue;
+			}
 			else
 			{
 				auto languages = entry.Split(" ", FString::TOK_SKIPEMPTY);
@@ -652,7 +656,14 @@ void FStringTable::LoadLanguage (int lumpnum, const char* buffer, size_t size)
 					errordone = true;
 					return;
 				}
+#if 0
+				// FIXME: the next line (and probably any of the other ScriptError calls) causes a crash right now
 				sc.ScriptError ("Found a string without a language specified.");
+#else
+				if (!errordone) Printf("Found a string without a language specified.\n");
+				errordone = true;
+				return;
+#endif
 			}
 
 			bool skip = false;

@@ -248,6 +248,7 @@ private:
 	Widget* CaptureWidget = nullptr;
 	Widget* HoverWidget = nullptr;
 	bool HiddenFlag = false;
+	bool Dropping = false;
 
 	StandardCursor CurrentCursor = StandardCursor::arrow;
 
