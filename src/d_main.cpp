@@ -132,6 +132,7 @@ EXTERN_CVAR(Bool, log_vgafont)
 EXTERN_CVAR(Bool, dlg_vgafont)
 EXTERN_CVAR(Bool, vm_jit)
 EXTERN_CVAR(Bool, vm_jit_aot)
+EXTERN_CVAR(Bool, nosaveconfig);
 CVAR(Int, vid_renderer, 1, 0)	// for some stupid mods which threw caution out of the window...
 
 FARG(nomonsters, "Play", "Prevents monsters from spawning in levels.", "",
@@ -169,6 +170,7 @@ FARG(iwad, "Configuration", "Specifies primary game file", "iwadfile[.wad]",
 FARG(savedir, "Configuration", "Sets an alternate directory for saving game files.", "path",
 	"Specifies an alternate directory to use for saved files. If this is not specified, " GAMENAME
 	" stores them in the directory indicated by the save_dir CVAR.");
+FARG(nosaveconfig, "Configuration", "Disables the saving to any config file.", "", "");
 
 FARG(norun, "Debug", "Quits the game early to check for script errors.", "",
 	"Quits the game just before video initialization. To be used to check for errors in scripts"
@@ -2343,6 +2345,11 @@ static void CheckCmdLine()
 	if (Args->CheckParm (FArg_fast))			flags |= DF_FAST_MONSTERS;
 
 	devparm = !!Args->CheckParm (FArg_devparm);
+
+	if (Args->CheckParm (FArg_nosaveconfig))
+	{
+		nosaveconfig = true;
+	}
 
 	if (Args->CheckParm (FArg_altdeath))
 	{
