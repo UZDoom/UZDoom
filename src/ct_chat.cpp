@@ -534,9 +534,14 @@ static bool DoSubstitution (FString &out, const char *in)
 	return true;
 }
 
+bool CanChat()
+{
+	return gamestate == GS_LEVEL && !demoplayback && menuactive == MENU_Off;
+}
+
 CCMD (messagemode)
 {
-	if (gamestate != GS_LEVEL || demoplayback || menuactive != MENU_Off)
+	if (!CanChat())
 		return;
 
 	const uint64_t time = I_msTime();
@@ -580,6 +585,12 @@ CCMD (say)
 		return;
 	}
 
+	if (!CanChat())
+	{
+		Printf("Game is not in a valid state to send messages.\n");
+		return;
+	}
+
 	const uint64_t time = I_msTime();
 	if (ChatCoolDown > time)
 	{
@@ -612,7 +623,7 @@ CCMD (say)
 
 CCMD (messagemode2)
 {
-	if (gamestate != GS_LEVEL || demoplayback || menuactive != MENU_Off)
+	if (!CanChat())
 		return;
 
 	const uint64_t time = I_msTime();
@@ -653,6 +664,12 @@ CCMD (say_team)
 	if (argv.argc() == 1)
 	{
 		Printf ("Usage: say_team <message>\n");
+		return;
+	}
+
+	if (!CanChat())
+	{
+		Printf("Game is not in a valid state to send messages.\n");
 		return;
 	}
 

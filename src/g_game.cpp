@@ -109,6 +109,9 @@ void G_DoWorldDone (void);
 
 void STAT_Serialize(FSerializer &file);
 
+bool CanChat();
+void CT_Stop();
+
 // PUBLIC FUNCTION PROTOTYPES ----------------------------------------------
 
 // PRIVATE FUNCTION PROTOTYPES ---------------------------------------------
@@ -1058,12 +1061,12 @@ CCMD (spycancel)
 //
 bool G_Responder (event_t *ev)
 {
+	if (!CanChat())
+		CT_Stop();
+
 	// check events
 	if (ev->type != EV_Mouse && primaryLevel->localEventManager->Responder(ev)) // [ZZ] ZScript ate the event // update 07.03.17: mouse events are handled directly
 		return true;
-
-	if (CT_Responder(ev))
-		return true; // chat ate the event
 
 	if (gamestate == GS_INTRO || gamestate == GS_CUTSCENE)
 	{
@@ -1074,8 +1077,6 @@ bool G_Responder (event_t *ev)
 	if (gameaction == ga_nothing &&
 		(demoplayback || gamestate == GS_DEMOSCREEN || gamestate == GS_TITLELEVEL))
 	{
-		if (chatmodeon) chatmodeon = 0;
-
 		const char *cmd = Bindings.GetBind (ev->data1);
 
 		if (ev->type == EV_KeyDown)
@@ -1108,6 +1109,9 @@ bool G_Responder (event_t *ev)
 
 		return false;
 	}
+
+	if (CT_Responder(ev))
+		return true; // chat ate the event
 
 	if (gamestate == GS_LEVEL)
 	{
