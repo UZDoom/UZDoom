@@ -442,6 +442,24 @@ class Weapon : StateProvider
 		}
 	}
 
+	action void A_OverlayMatNormal(int layer = PSP_WEAPON, double nx = 0.0, double ny = 0.707, double nz = -0.707, bool setusenorm = true)
+	{
+		let pspr = player.GetPSprite(layer);
+		if (pspr)
+		{
+			Vector3 matnorm = (nx, ny, nz);
+			if (matnorm.Length() > 0.0)
+			{
+				matnorm = matnorm.Unit();
+			}
+			pspr.materialnormal = matnorm;
+			if (setusenorm)
+			{
+				pspr.bUseMatNormal = true;
+			}
+		}
+	}
+
 	static int GetButtonStateFlags(int flags)
 	{
 		// Rewritten for efficiency and clarity

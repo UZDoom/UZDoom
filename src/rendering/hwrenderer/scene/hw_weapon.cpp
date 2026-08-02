@@ -777,14 +777,17 @@ void HWDrawInfo::PreparePlayerSprites2D(sector_t * viewsector, area_t in_area)
 		hudsprite.lightindex = -1;
 		// set the lighting parameters
 		if (!hudsprite.GetWeaponRect(this, psp, spos.X, spos.Y, player, min<double>(bobFrac, frac))) continue;
-		if (hudsprite.normspecsprite && hudsprite.RenderStyle.BlendOp != STYLEOP_Shadow && Level->HasDynamicLights && !isFullbrightScene() && gl_light_sprites)
+		if (hudsprite.RenderStyle.BlendOp != STYLEOP_Shadow && Level->HasDynamicLights && !isFullbrightScene() && gl_light_sprites)
 		{
-			hw_GetDynModelLight(playermo, lightdata);
-			hudsprite.lightindex = screen->mLights->UploadLights(lightdata);
-		}
-		else if (hudsprite.RenderStyle.BlendOp != STYLEOP_Shadow && Level->HasDynamicLights && !isFullbrightScene() && gl_light_sprites)
-		{
-			GetDynSpriteLight(playermo, nullptr, hudsprite.dynrgb);
+			if (hudsprite.normspecsprite)
+			{
+				hw_GetDynModelLight(playermo, lightdata);
+				hudsprite.lightindex = screen->mLights->UploadLights(lightdata);
+			}
+			else
+			{
+				GetDynSpriteLight(playermo, nullptr, hudsprite.dynrgb);
+			}
 		}
 
 		hudsprites.Push(hudsprite);

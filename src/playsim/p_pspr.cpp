@@ -899,41 +899,6 @@ DEFINE_ACTION_FUNCTION(AActor, A_OverlayPivot)
 
 //---------------------------------------------------------------------------
 //
-// PROC A_OverlayMatNormal
-//
-//---------------------------------------------------------------------------
-
-DEFINE_ACTION_FUNCTION(AActor, A_OverlayMatNormal)
-{
-	PARAM_ACTION_PROLOGUE(AActor);
-	PARAM_INT(layer)
-	PARAM_FLOAT(nx)
-	PARAM_FLOAT(ny)
-	PARAM_FLOAT(nz)
-	PARAM_BOOL(setusenorm)
-
-	DPSprite *pspr = self->player->FindPSprite(((layer != 0) ? layer : stateinfo->mPSPIndex));
-
-	if (pspr == nullptr)
-		return 0;
-
-	DVector3 matnorm = DVector3(double(nx), double(ny), double(nz));
-	if (matnorm.Length() > 0.0)
-	{
-		matnorm.MakeUnit();
-	}
-	pspr->materialnormal = matnorm;
-
-	if (setusenorm)
-	{
-		pspr->Flags |= PSPF_USEMATNORMAL;
-	}
-
-	return 0;
-}
-
-//---------------------------------------------------------------------------
-//
 // PROC A_OverlayOffset
 //
 //---------------------------------------------------------------------------

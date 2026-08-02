@@ -1435,7 +1435,6 @@ class Actor : Thinker native
 	action native void A_OverlayPivot(int layer, double wx = 0.5, double wy = 0.5, int flags = 0);
 	action native void A_OverlayPivotAlign(int layer, int halign, int valign);
 	action native void A_OverlayVertexOffset(int layer, int index, double x, double y, int flags = 0);
-	action native void A_OverlayMatNormal(int layer = PSP_WEAPON, double nx = 0, double ny = 0.707, double nz = -0.707, bool setusenorm = true);
 	action native void A_OverlayOffset(int layer = PSP_WEAPON, double wx = 0, double wy = 32, int flags = 0);
 	action native void A_OverlayFlags(int layer, int flags, bool set);
 	action native void A_OverlayAlpha(int layer, double alph);
