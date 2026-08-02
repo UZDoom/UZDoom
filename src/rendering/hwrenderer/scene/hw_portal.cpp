@@ -627,15 +627,35 @@ bool HWLineToLinePortal::Setup(HWDrawInfo *di, FRenderState &rstate, Clipper *cl
 	auto &state = mState;
 	if (state->renderdepth>r_portal_recursions)
 	{
-		if (lines[0].seg->linedef->frontsector->GetTexture(sector_t::ceiling) == skyflatnum ||
-			lines[0].seg->linedef->frontsector->GetTexture(sector_t::floor) == skyflatnum)
+		sector_t* mysector = lines[0].seg->linedef->frontsector;
+		if (mysector->GetTexture(sector_t::ceiling) == skyflatnum ||
+			mysector->GetTexture(sector_t::floor) == skyflatnum)
 		{
 			HWSkyInfo skyinfo;
-			skyinfo.init(di, lines[0].seg->linedef->frontsector, sector_t::ceiling,
-						 lines[0].seg->linedef->frontsector->skytransfer,
-						 lines[0].seg->linedef->frontsector->Colormap.FadeColor);
+			skyinfo.init(di, mysector, sector_t::ceiling, mysector->skytransfer, mysector->Colormap.FadeColor);
 			HWSkyPortal sky(screen->mSkyData, mState, &skyinfo, true);
 			sky.DrawContents(di, rstate);
+		}
+		else if (!mysector->Colormap.FadeColor.isBlack())
+		{
+			auto &vp = di->Viewpoint;
+			int fogd = GetFogDensity(di->Level, di->lightmode, mysector->lightlevel, mysector->Colormap.FadeColor,
+									 mysector->Colormap.FogDensity,
+									 mysector->Colormap.BlendFactor);
+			float dist = min((lines[0].seg->linedef->v1->fPos() - vp.Pos.XY()).Length(),
+							 (lines[0].seg->linedef->v2->fPos() - vp.Pos.XY()).Length());
+			if (di->VPUniforms.mThickFogDistance > 0.0 && dist > di->VPUniforms.mThickFogDistance)
+			{
+				dist = dist + di->VPUniforms.mThickFogMultiplier * (dist - di->VPUniforms.mThickFogDistance);
+			}
+			float factor = 1.05f - exp(-fogd * dist / 62500.f);
+			uint32_t alpha = uint32_t(255 * factor)<<24;
+			rstate.EnableTexture(false);
+			rstate.ClearScreen(mysector->Colormap.FadeColor | alpha);
+		}
+		else
+		{
+			rstate.ClearScreen();
 		}
 		return false;
 	}

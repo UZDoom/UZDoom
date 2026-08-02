@@ -268,6 +268,14 @@ public:
 	{
 		glport = ll;
 	}
+	virtual void DrawContents(HWDrawInfo *di, FRenderState &state)
+	{
+		if (Setup(di, state, (di->Viewpoint.bDoOob ? di->rClipper : di->mClipper)))
+		{
+			di->DrawScene(DM_PORTAL);
+			Shutdown(di, state);
+		}
+	} // Just removed redundant screenclear, since it happens inside Setup here
 };
 
 

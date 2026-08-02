@@ -564,12 +564,12 @@ void FGLRenderState::EnableLineSmooth(bool on)
 //
 //
 //==========================================================================
-void FGLRenderState::ClearScreen()
+void FGLRenderState::ClearScreen(PalEntry color)
 {
 	bool multi = !!glIsEnabled(GL_MULTISAMPLE);
 
 	screen->mViewpoints->Set2D(*this, SCREENWIDTH, SCREENHEIGHT);
-	SetColor(0, 0, 0);
+	SetColor(color);
 	Apply();
 
 	glDisable(GL_MULTISAMPLE);
