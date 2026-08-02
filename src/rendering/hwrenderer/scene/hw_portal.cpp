@@ -627,6 +627,16 @@ bool HWLineToLinePortal::Setup(HWDrawInfo *di, FRenderState &rstate, Clipper *cl
 	auto &state = mState;
 	if (state->renderdepth>r_portal_recursions)
 	{
+		if (lines[0].seg->linedef->frontsector->GetTexture(sector_t::ceiling) == skyflatnum ||
+			lines[0].seg->linedef->frontsector->GetTexture(sector_t::floor) == skyflatnum)
+		{
+			HWSkyInfo skyinfo;
+			skyinfo.init(di, lines[0].seg->linedef->frontsector, sector_t::ceiling,
+						 lines[0].seg->linedef->frontsector->skytransfer,
+						 lines[0].seg->linedef->frontsector->Colormap.FadeColor);
+			HWSkyPortal sky(screen->mSkyData, mState, &skyinfo, true);
+			sky.DrawContents(di, rstate);
+		}
 		return false;
 	}
 	auto &vp = di->Viewpoint;

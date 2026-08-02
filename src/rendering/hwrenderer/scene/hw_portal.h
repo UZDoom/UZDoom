@@ -395,6 +395,7 @@ struct HWSkyPortal : public HWPortal
 	HWSkyInfo * origin;
 	FSkyVertexBuffer *vertexBuffer;
 	friend struct HWEEHorizonPortal;
+	friend struct HWLineToLinePortal;
 
 protected:
 	virtual void DrawContents(HWDrawInfo *di, FRenderState &state);
