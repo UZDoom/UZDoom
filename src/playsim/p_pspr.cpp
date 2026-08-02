@@ -132,6 +132,7 @@ DEFINE_FIELD(DPSprite, baseScale)
 DEFINE_FIELD(DPSprite, pivot)
 DEFINE_FIELD(DPSprite, scale)
 DEFINE_FIELD(DPSprite, rotation)
+DEFINE_FIELD(DPSprite, materialnormal)
 DEFINE_FIELD_NAMED(DPSprite, Coord[0], Coord0)
 DEFINE_FIELD_NAMED(DPSprite, Coord[1], Coord1)
 DEFINE_FIELD_NAMED(DPSprite, Coord[2], Coord2)
@@ -152,6 +153,7 @@ DEFINE_FIELD_BIT(DPSprite, Flags, bMirror, PSPF_MIRROR)
 DEFINE_FIELD_BIT(DPSprite, Flags, bPlayerTranslated, PSPF_PLAYERTRANSLATED)
 DEFINE_FIELD_BIT(DPSprite, Flags, bPivotPercent, PSPF_PIVOTPERCENT)
 DEFINE_FIELD_BIT(DPSprite, Flags, bInterpolate, PSPF_INTERPOLATE)
+DEFINE_FIELD_BIT(DPSprite, Flags, bUseMatNormal, PSPF_USEMATNORMAL)
 
 //------------------------------------------------------------------------
 //
@@ -891,6 +893,41 @@ DEFINE_ACTION_FUNCTION(AActor, A_OverlayPivot)
 	if (!(flags & WOF_KEEPY))	pspr->pivot.Y = (flags & WOF_ADD) ? pspr->pivot.Y + wy : wy;
 
 	if (flags & (WOF_ADD | WOF_INTERPOLATE))	pspr->InterpolateTic = true;
+
+	return 0;
+}
+
+//---------------------------------------------------------------------------
+//
+// PROC A_OverlayPivot
+//
+//---------------------------------------------------------------------------
+
+DEFINE_ACTION_FUNCTION(AActor, A_OverlayMatNormal)
+{
+	PARAM_ACTION_PROLOGUE(AActor);
+	PARAM_INT(layer)
+	PARAM_FLOAT(nx)
+	PARAM_FLOAT(ny)
+	PARAM_FLOAT(nz)
+	PARAM_BOOL(setusenorm)
+
+	DPSprite *pspr = self->player->FindPSprite(((layer != 0) ? layer : stateinfo->mPSPIndex));
+
+	if (pspr == nullptr)
+		return 0;
+
+	DVector3 matnorm = DVector3(double(nx), double(ny), double(nz));
+	if (matnorm.Length() > 0.0)
+	{
+		matnorm.MakeUnit();
+	}
+	pspr->materialnormal = matnorm;
+
+	if (setusenorm)
+	{
+		pspr->Flags |= PSPF_USEMATNORMAL;
+	}
 
 	return 0;
 }

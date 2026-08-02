@@ -181,6 +181,10 @@ void HWFlat::SetupLights(HWDrawInfo *di, FDynLightData &lightdata, int portalgro
 	}
 
 	dynlightindex = screen->mLights->UploadLights(lightdata);
+	if (di->firstflatdynlightindex == -1)
+	{
+		di->firstflatdynlightindex = dynlightindex; // Save the first light index for PSprites normal mapping
+	}
 }
 
 //==========================================================================

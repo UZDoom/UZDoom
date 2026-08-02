@@ -32,6 +32,7 @@
 #include "hw_material.h"
 #include "hw_lighting.h"
 #include "hw_cvars.h"
+#include "hw_viewpointbuffer.h"
 #include "hwrenderer/scene/hw_drawinfo.h"
 #include "hwrenderer/scene/hw_drawstructs.h"
 #include "flatvertices.h"
@@ -93,8 +94,38 @@ void HWDrawInfo::DrawPSprite(HUDSprite *huds, FRenderState &state)
 		state.AlphaFunc(Alpha_GEqual, thresh);
 		FTranslationID trans = huds->weapon->GetTranslation();
 		if ((huds->weapon->Flags & PSPF_PLAYERTRANSLATED)) trans = huds->owner->Translation;
+		if (huds->normspecsprite) // PSprites with normalmap, specular, ... possibly PBR ...
+		{
+			screen->mViewpoints->SetViewpoint(state, &VPUniforms); // Restore non-orthographic projection and old ViewMatrix
+			if (huds->weapon->Flags & PSPF_USEMATNORMAL)
+			{
+				float nx = huds->weapon->materialnormal.X;
+				float ny = huds->weapon->materialnormal.Y;
+				float nz = huds->weapon->materialnormal.Z;
+				state.SetNormal( nx * Viewpoint.Angles.Roll.Cos() + ny * Viewpoint.Angles.Roll.Sin(), nz,
+								 ny * Viewpoint.Angles.Roll.Cos() - nx * Viewpoint.Angles.Roll.Sin() );
+			}
+			else
+			{
+				// tilt the normal up by 45-degrees, and roll it. [DVR] Negative z points out of the screen towards viewer
+				state.SetNormal(0.707f*Viewpoint.Angles.Roll.Sin(), -0.707f, 0.707f*Viewpoint.Angles.Roll.Cos());
+			}
+			VSMatrix objectToWorldMatrix;
+			VPUniforms.mViewMatrix.inverseMatrix(objectToWorldMatrix);
+			// Scaling model (y scale for a sprite means height, i.e. z in the world!).
+			objectToWorldMatrix.scale(0.01f, -0.01f, 1.0f); // [DVR] Why does y need to be inverted/negative?
+			// [DVR] where do these magic numbers come from? Trying to make on-screen size match the ortho projections
+			// About -10.f is sufficiently away in front of viewpoint. Scales well in windowed mode and arbitrary resolutions
+			objectToWorldMatrix.translate(-0.5*SCREENWIDTH, -0.75*SCREENHEIGHT,
+										  (AspectTallerThanWide(r_viewwindow.WidescreenRatio) ? -0.5*SCREENWIDTH*0.0098f
+										   : -0.5*SCREENHEIGHT*0.01296f));
+			state.mModelMatrix = objectToWorldMatrix;
+			state.EnableModelMatrix(true);
+		}
 		state.SetMaterial(huds->texture, UF_Sprite, CTF_Expand, CLAMP_XY_NOMIP, trans, huds->OverrideShader);
+		state.SetLightIndex(huds->lightindex);
 		state.Draw(DT_TriangleStrip, huds->mx, 4);
+		if (huds->normspecsprite) state.EnableModelMatrix(false);
 	}
 
 	state.SetTextureMode(TM_NORMAL);
@@ -504,6 +535,7 @@ bool HUDSprite::GetWeaponRect(HWDrawInfo *di, DPSprite *psp, float sx, float sy,
 
 	auto tex = TexMan.GetGameTexture(lump, false);
 	if (!tex || !tex->isValid()) return false;
+	normspecsprite = tex->GetNormalmap() && tex->GetSpecularmap();
 	auto& spi = tex->GetSpritePositioning(1);
 
 	float vw = (float)viewwidth;
@@ -513,6 +545,7 @@ bool HUDSprite::GetWeaponRect(HWDrawInfo *di, DPSprite *psp, float sx, float sy,
 
 	// calculate edges of the shape
 	scalex = psp->baseScale.X * (320.0f / (240.0f * r_viewwindow.WidescreenRatio)) * (vw / 320);
+	if (normspecsprite) scalex *= 1.5;
 
 	float x1, y1, x2, y2, u1, v1, u2, v2;
 
@@ -536,6 +569,7 @@ bool HUDSprite::GetWeaponRect(HWDrawInfo *di, DPSprite *psp, float sx, float sy,
 	// handled here by multiplying SCREENWIDTH by 200 instead of
 	// 240, but now the baseScale var defines this from now on.
 	scale = psp->baseScale.Y * (SCREENHEIGHT*vw) / (SCREENWIDTH * 240.0f);
+	if (normspecsprite) scale *= 1.5;
 
 	// Canvas textures are stored upside down
 	if (tex && tex->isHardwareCanvas()) scale *= -1;
@@ -747,6 +781,19 @@ void HWDrawInfo::PreparePlayerSprites2D(sector_t * viewsector, area_t in_area)
 		}
 
 		if (!hudsprite.GetWeaponRect(this, psp, spos.X, spos.Y, player, min<double>(bobFrac, frac))) continue;
+		if (hudsprite.normspecsprite && hudsprite.RenderStyle.BlendOp != STYLEOP_Shadow && Level->HasDynamicLights && !isFullbrightScene() && gl_light_sprites)
+		{
+			// hw_GetDynModelLight(playermo, lightdata);
+			// hudsprite.lightindex = screen->mLights->UploadLights(lightdata);
+			hudsprite.lightindex = firstflatdynlightindex; // [DVR] Faster than recomputing like for a model?
+			LightProbe* probe = FindLightProbe(playermo->Level, playermo->X()-weap.bobx, playermo->Y(), playermo->Center()+weap.boby);
+			if (probe)
+			{
+				hudsprite.dynrgb[0] = probe->Red;
+				hudsprite.dynrgb[1] = probe->Green;
+				hudsprite.dynrgb[2] = probe->Blue;
+			}
+		}
 		hudsprites.Push(hudsprite);
 	}
 	lightmode = oldlightmode;

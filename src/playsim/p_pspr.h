@@ -66,6 +66,7 @@ enum PSPFlags
 	PSPF_PLAYERTRANSLATED = 1 << 10,
 	PSPF_PIVOTPERCENT	= 1 << 11,
 	PSPF_INTERPOLATE	= 1 << 12,
+	PSPF_USEMATNORMAL	= 1 << 13,
 };
 
 enum PSPAlign
@@ -205,6 +206,7 @@ public:
 	FTranslationID Translation;
 	int Flags;
 	FRenderStyle Renderstyle;
+	DVector3 materialnormal;// Material normal override for normalmap/PBR (set PSPF_USEMATNORMAL to use)
 
 private:
 	DPSprite () {}
