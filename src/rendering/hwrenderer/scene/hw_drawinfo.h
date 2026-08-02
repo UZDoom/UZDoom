@@ -154,7 +154,6 @@ struct HWDrawInfo
 	HWDrawList drawlists[GLDL_TYPES];
 	int vpIndex;
 	ELightMode lightmode;
-	int firstflatdynlightindex = -1;
 
 	FLevelLocals *Level;
 	HWDrawInfo * outer = nullptr;

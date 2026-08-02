@@ -96,6 +96,7 @@ void HWDrawInfo::DrawPSprite(HUDSprite *huds, FRenderState &state)
 		if ((huds->weapon->Flags & PSPF_PLAYERTRANSLATED)) trans = huds->owner->Translation;
 		if (huds->normspecsprite) // PSprites with normalmap, specular, ... possibly PBR ...
 		{
+			state.SetDynLight(0, 0, 0);
 			screen->mViewpoints->SetViewpoint(state, &VPUniforms); // Restore non-orthographic projection and old ViewMatrix
 			if (huds->weapon->Flags & PSPF_USEMATNORMAL)
 			{
@@ -783,9 +784,8 @@ void HWDrawInfo::PreparePlayerSprites2D(sector_t * viewsector, area_t in_area)
 		if (!hudsprite.GetWeaponRect(this, psp, spos.X, spos.Y, player, min<double>(bobFrac, frac))) continue;
 		if (hudsprite.normspecsprite && hudsprite.RenderStyle.BlendOp != STYLEOP_Shadow && Level->HasDynamicLights && !isFullbrightScene() && gl_light_sprites)
 		{
-			// hw_GetDynModelLight(playermo, lightdata);
-			// hudsprite.lightindex = screen->mLights->UploadLights(lightdata);
-			hudsprite.lightindex = firstflatdynlightindex; // [DVR] Faster than recomputing like for a model?
+			hw_GetDynModelLight(playermo, lightdata);
+			hudsprite.lightindex = screen->mLights->UploadLights(lightdata);
 			LightProbe* probe = FindLightProbe(playermo->Level, playermo->X()-weap.bobx, playermo->Y(), playermo->Center()+weap.boby);
 			if (probe)
 			{
