@@ -170,7 +170,7 @@ void HWSprite::DrawSprite(HWDrawInfo *di, FRenderState &state, bool translucent)
 			{
 				float out[3] = {};
 				di->GetDynSpriteLight(gl_light_sprites ? actor : nullptr, gl_light_particles ? particle : nullptr, out);
-				state.SetDynLight(out[0], out[1], out[2]); // [DVR] PBR sprites will reach here.
+				state.SetDynLight(out[0], out[1], out[2]); // [DVR] PBR sprites will not reach here.
 			}
 		}
 		sector_t *cursec = actor ? actor->Sector : particle ? particle->subsector->sector : nullptr;
