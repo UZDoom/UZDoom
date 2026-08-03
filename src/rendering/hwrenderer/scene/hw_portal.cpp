@@ -30,6 +30,8 @@
 #include "texturemanager.h"
 #include "hw_viewpointbuffer.h"
 
+EXTERN_CVAR(Bool, gl_noskyboxes)
+
 void SetPlaneTextureRotation(FRenderState& state, HWSectorPlane* plane, FGameTexture* texture);
 
 //-----------------------------------------------------------------------------
@@ -631,10 +633,32 @@ bool HWLineToLinePortal::Setup(HWDrawInfo *di, FRenderState &rstate, Clipper *cl
 		if (mysector->GetTexture(sector_t::ceiling) == skyflatnum ||
 			mysector->GetTexture(sector_t::floor) == skyflatnum)
 		{
-			HWSkyInfo skyinfo;
-			skyinfo.init(di, mysector, sector_t::ceiling, mysector->skytransfer, mysector->Colormap.FadeColor);
-			HWSkyPortal sky(screen->mSkyData, mState, &skyinfo, true);
-			sky.DrawContents(di, rstate);
+			FSectorPortal *sportal = mysector->ValidatePortal(mysector->GetTexture(sector_t::ceiling) == skyflatnum ?
+															  sector_t::ceiling : sector_t::floor);
+			if (sportal && !(sportal->mFlags & PORTSF_INSKYBOX) && !gl_noskyboxes)
+			{
+				HWSkyboxPortal myportal(mState, sportal);
+				for (unsigned i = 0; i < lines.Size(); i++)
+				{
+					myportal.AddLine(&lines[i]);
+				}
+				myportal.DrawContents(di, rstate);
+			}
+			else
+			{
+				HWSkyInfo skyinfo;
+				skyinfo.init(di, mysector, mysector->GetTexture(sector_t::ceiling) == skyflatnum ?
+							 sector_t::ceiling : sector_t::floor,
+							 mysector->skytransfer, mysector->Colormap.FadeColor);
+				HWSkyPortal sky(screen->mSkyData, mState, &skyinfo, true);
+				sky.SetupStencil(di, rstate, false);
+				auto new_di = di->StartDrawInfo(di->Level, di, di->Viewpoint, &di->VPUniforms);
+				new_di->mCurrentPortal = di->mCurrentPortal;
+				rstate.SetLightIndex(-1);
+				sky.DrawContents(new_di, rstate);
+				new_di->EndDrawInfo();
+				sky.RemoveStencil(di, rstate, false);
+			}
 		}
 		else if (!mysector->Colormap.FadeColor.isBlack())
 		{
