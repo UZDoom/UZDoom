@@ -536,7 +536,9 @@ bool HUDSprite::GetWeaponRect(HWDrawInfo *di, DPSprite *psp, float sx, float sy,
 
 	auto tex = TexMan.GetGameTexture(lump, false);
 	if (!tex || !tex->isValid()) return false;
-	normspecsprite = tex->GetNormalmap() && tex->GetSpecularmap();
+	normspecsprite = tex->GetNormalmap() && (tex->GetSpecularmap() ||
+											 (tex->GetMetallic() && tex->GetRoughness()
+											  && tex->GetAmbientOcclusion()));
 	auto& spi = tex->GetSpritePositioning(1);
 
 	float vw = (float)viewwidth;
