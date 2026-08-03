@@ -288,7 +288,16 @@ option(BUILD_FLATPAK "Enable Flatpak-specific build options" OFF)
 
 # Update gitinfo.h
 
+# Older trees wrote gitinfo.h into src/. That path is obsolete (generation
+# now targets the build dir) but a leftover copy still gets picked up by the
+# HEADER_FILES glob below and breaks the build. Delete it if present.
+if( EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/gitinfo.h" )
+	file( REMOVE "${CMAKE_CURRENT_SOURCE_DIR}/gitinfo.h" )
+	message( STATUS "Removed leftover ${CMAKE_CURRENT_SOURCE_DIR}/gitinfo.h" )
+endif()
+
 add_custom_target( revision_check
+	COMMAND "${CMAKE_COMMAND}" -E rm -f "${CMAKE_CURRENT_SOURCE_DIR}/gitinfo.h"
 	COMMAND "${CMAKE_COMMAND}" -P "${CMAKE_SOURCE_DIR}/cmake/UpdateRevision.cmake" "${CMAKE_BINARY_DIR}/gitinfo.h"
 	BYPRODUCTS "${CMAKE_BINARY_DIR}/gitinfo.h"
 	WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
