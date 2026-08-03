@@ -101,7 +101,15 @@ UNSAFE_CCMD (exec)
 
 void execLogfile(const char *fn, bool append)
 {
-	if ((Logfile = fopen(fn, append? "a" : "w")))
+	FString file = "log";
+	if (fn != nullptr && strlen(fn) > 0)
+	{
+		file.AppendFormat("-%s", fn);
+		file.ReplaceChars('.', '-');
+	}
+	file.AppendFormat(".txt");
+
+	if ((Logfile = fopen(file.GetChars(), append ? "a" : "w")))
 	{
 		const char *timestr = myasctime();
 		Printf("Log started: %s\n", timestr);
