@@ -745,6 +745,7 @@ bool DHUDMessageTypeOnFadeOut::Tick ()
 			int linevis = LineVisible;
 			int linedrawcount = linevis;
 			FString text = Lines[CurrLine].Text;
+			LineLen = (int)text.Len();
 			// Advance LineVisible by 'step' *visible* characters
 			while (step > 0 && State == 3)
 			{
