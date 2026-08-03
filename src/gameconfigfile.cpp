@@ -708,6 +708,17 @@ void FGameConfigFile::DoGlobalSetup ()
 			if (updater_update_interval == 2) updater_update_interval = 1;
 		}
 #endif
+		if (EngineLastRunVer < 233) // UZDoom 5.0
+		{
+			var = FindCVar("ui_theme", NULL);
+			if (var != NULL)
+			{
+				if (var->GetGenericRep(CVAR_Int).Int == 2)
+				{ // for a while the engine defaulted to 2 (light), not auto
+					var->ResetToDefault();
+				}
+			}
+		}
 	}
 
 	OkayToWrite = true;

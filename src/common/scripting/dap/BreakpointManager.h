@@ -90,7 +90,7 @@ class BreakpointManager
 	// set of case-insensitive strings
 	std::map<std::string_view, BreakpointInfo, ci_less> m_nativeFunctionBreakpoints;
 	IdProvider m_idProvider;
-	int64_t m_CurrentID = 1;
+	std::atomic<int64_t> m_CurrentID = 0;
 	size_t times_seen = 0;
 
 	void ClearBreakpointsType(BreakpointInfo::Type type);

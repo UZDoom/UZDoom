@@ -921,7 +921,14 @@ void Widget::OnWindowDpiScaleChanged()
 
 bool Widget::OnFileDrop(std::string path)
 {
-	return (FocusWidget && FocusWidget->OnFileDrop(path)) || (ParentObj && ParentObj->OnFileDrop(path));
+	bool res = false;
+	if (!Dropping)
+	{
+		Dropping = true;
+		res = (FocusWidget && FocusWidget->OnFileDrop(path)) || (ParentObj && ParentObj->OnFileDrop(path));
+	}
+	Dropping = false;
+	return res;
 }
 
 double Widget::GetDpiScale() const

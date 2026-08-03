@@ -1376,8 +1376,8 @@ public:
 	int RipLevelMin;
 	int RipLevelMax;
 
-	int MinRespawnTics; // id24 Minimal Nightmare respawn time
-	int RespawnDice; // id24
+	int MinRespawnTics; // id24: Minimal Tics to Respawn the Actor in skills with respawning or with ALWAYSRESPAWN flag, negative values are seconds and 0 uses the Skill value
+	int RespawnDice; // id24: Chance for respawning
 
 	int ConversationRoot;				// THe root of the current dialogue
 	FStrifeDialogueNode* Conversation;	// [RH] The dialogue to show when this actor is "used."

@@ -89,20 +89,6 @@ bool StackFrameStateNode::SerializeToProtocol(dap::StackFrame &stackFrame, PexCa
 				stackFrame.line = lineNumber;
 				stackFrame.column = 1;
 			}
-			else if (lineNumber == -1 && scriptFunction->LineInfoCount > 0)
-			{
-				// end of the function, get the max line number
-				int max_line = 0;
-				for (unsigned int i = 0; i < scriptFunction->LineInfoCount; i++)
-				{
-					if (scriptFunction->LineInfo[i].LineNumber > max_line)
-					{
-						max_line = scriptFunction->LineInfo[i].LineNumber;
-					}
-				}
-				stackFrame.line = max_line + 1;
-				stackFrame.column = 1;
-			}
 			stackFrame.instructionPointerReference = StringFormat("%p", m_stackFrame->PC);
 		}
 	}

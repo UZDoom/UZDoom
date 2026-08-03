@@ -105,6 +105,7 @@ public:
 	static ExceptionFilter GetFilterID(const std::string &filter_string);
 	bool IsPaused() const { return m_state == DebuggerState::kPaused; }
 	private:
+	inline void _SetLastInstruction(const VMOP *pc, VMScriptFunction *func);
 	inline pauseReason CheckState(VMFrameStack *stack, VMReturn *ret, int numret, const VMOP *pc);
 			void ResetStepState(DebuggerState state, VMFrameStack *stack);
 			void WaitWhilePaused(pauseReason pauseReason, VMFrameStack *stack);

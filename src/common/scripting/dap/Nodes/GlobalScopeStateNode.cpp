@@ -26,70 +26,6 @@
 
 namespace DebugServer
 {
-// TODO: Do this dynamically?
-static const char *const GlobalNames[] = {
-	"NotifyFontScale",
-	"ConsoleState",
-	"menuactive",
-	"BackbuttonTime",
-	"BackbuttonAlpha",
-	"GameTicRate",
-	"menuDelegate",
-	"WP_NOCHANGE",
-	"SmallFont",
-	"SmallFont2",
-	"BigFont",
-	"ConFont",
-	"NewConsoleFont",
-	"NewSmallFont",
-	"AlternativeSmallFont",
-	"AlternativeBigFont",
-	"OriginalSmallFont",
-	"OriginalBigFont",
-	"IntermissionFont",
-	"CleanXfac",
-	"CleanYfac",
-	"CleanWidth",
-	"CleanHeight",
-	"CleanXfac_1",
-	"CleanYfac_1",
-	"CleanWidth_1",
-	"CleanHeight_1",
-	"AllServices",
-	"Bindings",
-	"AutomapBindings",
-	"generic_ui",
-	"deh",
-	"gameinfo",
-	"Teams",
-	"LocalViewPitch",
-	"StatusBar",
-	"players",
-	"playeringame",
-	"PlayerClasses",
-	"consoleplayer",
-	"validcount",
-	"multiplayer",
-	"gameaction",
-	"gamestate",
-	"skyflatnum",
-	"globalfreeze",
-	"gametic",
-	"demoplayback",
-	"automapactive",
-	"viewactive",
-	"Net_Arbitrator",
-	"netgame",
-	"paused",
-	"Terrains",
-	"OptionMenuSettings",
-	"musplaying",
-	"AllClasses",
-	"Level",
-	// "level", technically its own global, but only the VM one is accessible by the VM
-	"AllActorClasses",
-
-	nullptr};
 
 GlobalScopeStateNode::GlobalScopeStateNode() { }
 
@@ -111,10 +47,13 @@ bool GlobalScopeStateNode::SerializeToProtocol(dap::Scope &scope)
 
 bool GlobalScopeStateNode::GetChildNames(std::vector<std::string> &names)
 {
-	for (int i = 0; GlobalNames[i] != nullptr; i++)
+	for (auto field : AutoSegs::ClassFields.fields)
 	{
-		names.push_back(GlobalNames[i]);
+		if (strlen(field->ClassName) == 0){
+			names.push_back(field->FieldName);
+		}
 	}
+	std::sort(names.begin(), names.end(), ci_less());
 	return true;
 }
 
@@ -122,33 +61,28 @@ bool GlobalScopeStateNode::GetChildNode(std::string name, std::shared_ptr<StateN
 {
 	if (m_children.empty())
 	{
-		std::vector<std::string> childNames;
-		GetChildNames(childNames);
-		caseless_path_set childSet {childNames.begin(), childNames.end()};
-		for (auto ns : Namespaces.AllNamespaces)
+		for (auto f : AutoSegs::ClassFields.fields)
 		{
-			auto symbolIter = ns->Symbols.GetIterator();
-			PSymbolTable::MapType::Pair *pair;
-			while (symbolIter.NextPair(pair))
-			{
-				if (childSet.find(pair->Key.GetChars()) != childSet.end())
+			if (strlen(f->ClassName) == 0) {
+				for (auto ns : Namespaces.AllNamespaces)
 				{
-					std::string symname = pair->Key.GetChars();
-					PSymbol *val = pair->Value;
-					if (val->SymbolName == NAME_None)
+					if (auto it = ns->Symbols.FindSymbol(f->FieldName, true); it != nullptr)
 					{
-						continue;
-					}
-					PField *field = dyn_cast<PField>(val);
-					if (field)
-					{
-						field->Type;
-						// the offset is the address of the field
-						void *addr = (void *)(field->Offset);
-						VMValue val = GetVMValue(addr, field->Type, field->BitValue);
-						m_children[symname] = RuntimeState::CreateNodeForVariable(symname, val, field->Type);
+						if (PField *field = dyn_cast<PField>(it); field)
+						{
+							if (field->Offset != f->FieldOffset)
+							{
+								continue;
+							}
+							// the offset is the address of the field
+							void *addr = (void *)(field->Offset);
+							VMValue val = GetVMValue(addr, field->Type, field->BitValue);
+							m_children[f->FieldName] = RuntimeState::CreateNodeForVariable(f->FieldName, val, field->Type);
+							break;
+						}
 					}
 				}
+
 			}
 		}
 	}

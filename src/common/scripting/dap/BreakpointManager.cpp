@@ -21,6 +21,7 @@
 */
 
 #include "BreakpointManager.h"
+#include <atomic>
 #include <cstdint>
 #include <regex>
 #include "Utilities.h"
@@ -33,14 +34,7 @@ namespace DebugServer
 
 int64_t BreakpointManager::GetBreakpointID()
 {
-	++m_CurrentID;
-	int64_t id = m_CurrentID;
-	if (id < 0)
-	{
-		m_CurrentID = 1;
-		id = m_CurrentID;
-	}
-	return id;
+	return ++m_CurrentID;
 }
 
 
