@@ -272,7 +272,7 @@ void HWSprite::DrawSprite(HWDrawInfo *di, FRenderState &state, bool translucent)
 
 		if (!modelframe)
 		{
-			if ((texture && texture->GetNormalmap()))
+			if (normspec)
 			{
 				state.SetNormal(-di->Viewpoint.ViewVector3D.X, -di->Viewpoint.ViewVector3D.Z, -di->Viewpoint.ViewVector3D.Y);
 			}
@@ -290,7 +290,7 @@ void HWSprite::DrawSprite(HWDrawInfo *di, FRenderState &state, bool translucent)
 			{
 				state.SetDepthBias(-1, -128);
 			}
-			state.SetLightIndex((texture && texture->GetNormalmap()) ? dynlightindex : -1);
+			state.SetLightIndex(normspec ? dynlightindex : -1);
 			state.Draw(DT_TriangleStrip, vertexindex, 4);
 
 			if (foglayer)
@@ -604,7 +604,7 @@ bool HWSprite::CalculateVertices(HWDrawInfo* di, FVector3* v, DVector3* vp)
 inline void HWSprite::PutSprite(HWDrawInfo *di, bool translucent)
 {
 	// That's a lot of checks...
-	if (((modelframe && !modelframe->isVoxel && !(modelframeflags & MDL_NOPERPIXELLIGHTING)) || (texture && texture->GetNormalmap()))
+	if (((modelframe && !modelframe->isVoxel && !(modelframeflags & MDL_NOPERPIXELLIGHTING)) || normspec)
 		&& RenderStyle.BlendOp != STYLEOP_Shadow
 		&& gl_light_sprites && di->Level->HasDynamicLights && !di->isFullbrightScene() && !fullbright
 		&& actor && !(actor->renderflags2 & RF2_NODYNAMICLIGHTING))
@@ -1079,6 +1079,9 @@ void HWSprite::Process(HWDrawInfo *di, AActor* thing, sector_t * sector, area_t 
 		if (!texture || !texture->isValid())
 			return;
 
+		normspec = texture->GetNormalmap() && (texture->GetSpecularmap() ||
+											   (texture->GetMetallic() && texture->GetRoughness()
+												&& texture->GetAmbientOcclusion()));
 		// Canvas textures are stored upside down
 		if (!isPicnumOverride && texture && texture->isHardwareCanvas()) std::swap(vt, vb);
 
