@@ -169,58 +169,15 @@ UNSAFE_CCMD (crashout)
 }
 #endif
 
-
-UNSAFE_CCMD (dir)
-{
-	FString path;
-
-	if (argv.argc() > 1)
-	{
-		path = NicePath(argv[1]);
-	}
-	else
-	{
-		path = I_GetCWD();;
-	}
-	auto base = ExtractFileBase(path.GetChars(), true);
-	FString bpath;
-	if (base.IndexOfAny("*?") >= 0)
-	{
-		bpath = ExtractFilePath(path.GetChars());
-	}
-	else
-	{
-		base = "*";
-		bpath = path;
-	}
-
-	FileSys::FileList list;
-	if (!FileSys::ScanDirectory(list, bpath.GetChars(), base.GetChars(), true))
-	{
-		Printf ("Nothing matching %s\n", path.GetChars());
-	}
-	else
-	{
-		Printf ("Listing of %s:\n", path.GetChars());
-		for(auto& entry : list)
-		{
-			if (entry.isDirectory)
-				Printf (PRINT_BOLD, "%s <dir>\n", entry.FileName.c_str());
-			else
-				Printf ("%s\n", entry.FileName.c_str());
-		}
-	}
-}
-
 //==========================================================================
 //
-// CCMD wdir
+// CCMD dir
 //
 // Lists the contents of a loaded wad file.
 //
 //==========================================================================
 
-CCMD (wdir)
+CCMD (dir)
 {
 	int wadnum;
 	if (argv.argc() != 2) wadnum = -1;
