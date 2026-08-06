@@ -94,10 +94,21 @@ Size SDL2DisplayBackend::GetScreenSize()
 
 void* SDL2DisplayBackend::StartTimer(int timeoutMilliseconds, std::function<void()> onTimer)
 {
-	return SDL2DisplayWindow::StartTimer(timeoutMilliseconds, std::move(onTimer));
+	auto* funcPtr = new std::function<void()>(std::move(onTimer));
+
+	SDL_TimerID id = SDL_AddTimer(timeoutMilliseconds, [](uint32_t interval, void* param) -> uint32_t {
+		auto* cb = static_cast<std::function<void()>*>(param);
+		if (cb && *cb) (*cb)();
+		delete cb;
+		return 0;
+	}, funcPtr);
+
+	return reinterpret_cast<void*>(static_cast<uintptr_t>(id));
 }
 
 void SDL2DisplayBackend::StopTimer(void* timerID)
 {
-	SDL2DisplayWindow::StopTimer(timerID);
+	if (!timerID) return;
+	SDL_TimerID id = static_cast<SDL_TimerID>(reinterpret_cast<uintptr_t>(timerID));
+	SDL_RemoveTimer(id);
 }
