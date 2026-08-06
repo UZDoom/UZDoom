@@ -5,9 +5,9 @@
 #include <unordered_map>
 #include "image.h"
 #include "rect.h"
+#include "font.h"
 #include <vector>
 
-class Font;
 class Point;
 class Rect;
 class Colorf;
@@ -66,12 +66,12 @@ public:
 	void line(const Point& p0, const Point& p1, const Colorf& color);
 
 	void drawText(const Point& pos, const Colorf& color, const std::string& text);
-	Rect measureText(const std::string& text);
+	Rect measureText(const std::string_view& text);
 	VerticalTextPosition verticalTextAlign();
 
 	void drawText(const std::shared_ptr<Font>& font, const Point& pos, const std::string& text, const Colorf& color);
 	void drawTextEllipsis(const std::shared_ptr<Font>& font, const Point& pos, const Rect& clipBox, const std::string& text, const Colorf& color);
-	Rect measureText(const std::shared_ptr<Font>& font, const std::string& text);
+	Rect measureText(const std::shared_ptr<Font>& font, const std::string_view& text);
 	FontMetrics getFontMetrics(const std::shared_ptr<Font>& font);
 	int getCharacterIndex(const std::shared_ptr<Font>& font, const std::string& text, const Point& hitPoint);
 
@@ -103,9 +103,14 @@ protected:
 	std::unique_ptr<CanvasTexture> whiteTexture;
 
 private:
+	std::unique_ptr<CanvasFontGroup>& WithFont(const std::shared_ptr<Font> &font);
+
+	Rect measureText(const std::unique_ptr<CanvasFontGroup> &font, const std::string_view& text);
+	void drawText(const std::unique_ptr<CanvasFontGroup> &font, const Point& pos, const Colorf& color, const std::string& text);
 	void drawLineUnclipped(const Point& p0, const Point& p1, const Colorf& color);
 
 	std::unique_ptr<CanvasFontGroup> font;
+	std::unordered_map<std::shared_ptr<Font>, std::unique_ptr<CanvasFontGroup>> fonts;
 
 	Point origin;
 	std::vector<Rect> clipStack;
