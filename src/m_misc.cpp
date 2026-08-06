@@ -373,8 +373,22 @@ void M_SaveDefaultsFinal ()
 
 UNSAFE_CCMD (writeini)
 {
-	const char *filename = (argv.argc() == 1) ? NULL : argv[1];
-	if (!M_SaveDefaults (filename))
+	FString fileName = {};
+	if (argv.argc() > 1)
+	{
+		FString file = argv[1];
+		file.ReplaceChars('.', '-');
+		file += ".ini";
+
+		FString path = M_GetConfigPath(true);
+		auto i = path.LastIndexOf("/") + 1;
+		path.Remove(i, path.Len() - i);
+		path.AppendFormat("%s", file.GetChars());
+
+		fileName = path;
+	}
+
+	if (!M_SaveDefaults (fileName.IsEmpty() ? nullptr : fileName.GetChars()))
 	{
 		Printf ("Writing config failed: %s\n", strerror(errno));
 	}
