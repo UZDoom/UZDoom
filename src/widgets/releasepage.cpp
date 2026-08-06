@@ -31,18 +31,18 @@
 #include "releasepage.h"
 #include "version.h"
 #include "zstring.h"
+#include "textblock.h"
 
 constexpr unsigned NUMBER_OF_RELEASES_TO_DISPLAY = 3;
 
 ReleasePage::ReleasePage(LauncherWindow* launcher, const FStartupSelectionInfo& info) : Widget(nullptr), Launcher(launcher)
 {
 	ShowThis = new CheckboxLabel(this);
-	Notes = new TextEdit(this);
+	Notes = new TextBlock(this);
 
 	auto text = GetReleaseNotes();
 
 	Notes->SetText(text.GetChars());
-	Notes->SetReadOnly(true);
 
 	ShowThis->SetChecked(info.notifyNewRelease);
 }
@@ -71,7 +71,6 @@ void ReleasePage::OnGeometryChanged()
 
 	Launcher->UpdatePlayButton();
 }
-
 
 FString ReleasePage::_ParseReleaseNotes(rapidxml::xml_node<char> * release)
 {
@@ -133,7 +132,25 @@ FString ReleasePage::_ParseReleaseNotes(rapidxml::xml_node<char> * release)
 		while (blocknode)
 		{
 			std::string_view name = blocknode->name();
-			if (prev != "" && (name == "p" || name == prev))
+
+			// Flathub doesn't want headers, so this is a hack
+			// TODO: embed raw markdown, generate metainfo from that
+			if (auto node = blocknode->first_node(); node && name == "p" && node == blocknode->last_node() && node->type() == rapidxml::node_data)
+			{
+				if (const char *data = node->value(); data && data[0] == '*')
+				{
+					std::string str{data};
+					if (str.starts_with("**") && str.ends_with("**"))
+					{
+						text.AppendFormat("\n## %s\n", str.substr(2, str.size()-4).c_str());
+						prev = "h2";
+						blocknode = blocknode->next_sibling();
+						continue;
+					}
+				}
+			}
+
+			if (prev != "" && (name == "p" || name != prev))
 				text.AppendCharacter('\n');
 			prev = name;
 
@@ -168,7 +185,7 @@ FString ReleasePage::_ParseReleaseNotes(rapidxml::xml_node<char> * release)
 
 	FString result;
 	result.AppendFormat(
-		"%s version %s, released %s",
+		"# %s version %s, released %s",
 		GAMENAME,
 		version
 			? version->value()

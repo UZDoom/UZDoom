@@ -19,8 +19,8 @@
 #include <zwidget/core/widget.h>
 
 class LauncherWindow;
-class TextEdit;
 class PushButton;
+class TextBlock;
 struct FStartupSelectionInfo;
 
 class AboutPage : public Widget
@@ -36,7 +36,7 @@ private:
 
 	LauncherWindow* Launcher = nullptr;
 
-	TextEdit* Text = nullptr;
+	TextBlock* Text = nullptr;
 	PushButton* Notes = nullptr;
 	PushButton* ForceUpdate = nullptr;
 };
