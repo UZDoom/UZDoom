@@ -108,6 +108,7 @@ public:
 
 	bool CursorLocked = false;
 	bool isFullscreen = false;
+	bool updating = false;
 
 	static bool ExitRunLoop;
 	static Uint32 PaintEventNumber;
