@@ -95,7 +95,7 @@ struct FStartupSelectionInfo
 	int DefaultIWAD = 0;
 	FString DefaultArgs = {};
 	bool bSaveArgs = true;
-	bool isNewRelease = true;
+	int displayRelease = 1;
 
 	// Settings
 	int DefaultStartFlags = 0;

@@ -71,7 +71,7 @@ LauncherWindow::LauncherWindow(FStartupSelectionInfo& info, struct WindowParams 
 	Buttonbar = new LauncherButtonbar(this);
 	Buttonbar->SetStyleColor("background-color", Theme::getMain(COLOR_BACKGROUND));
 
-	bool releasenotes = info.isNewRelease && info.notifyNewRelease;
+	bool releasenotes = info.displayRelease && info.notifyNewRelease;
 
 	PlayGame = new PlayGamePage(this, info);
 	Settings = new SettingsPage(this, info);
