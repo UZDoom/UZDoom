@@ -181,6 +181,12 @@ static const char *KeyConfCommands[] =
 
 // CODE --------------------------------------------------------------------
 
+void C_SanitizeFileName(FString& file)
+{
+	file.ReplaceChars('.', '-');
+	file.ReplaceChars(':', '-');
+}
+
 bool C_IsValidInt(const char* arg, int& value, int base)
 {
 	char* end_read;

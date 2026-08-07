@@ -105,7 +105,7 @@ void execLogfile(const char *fn, bool append)
 	if (fn != nullptr && strlen(fn) > 0)
 	{
 		file.AppendFormat("-%s", fn);
-		file.ReplaceChars('.', '-');
+		C_SanitizeFileName(file);
 	}
 	file.AppendFormat(".txt");
 
