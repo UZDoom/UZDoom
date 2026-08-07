@@ -30,15 +30,20 @@
 #include "name.h"
 #include "releasepage.h"
 #include "version.h"
+#include "versioninfo.h"
 #include "zstring.h"
 #include "textblock.h"
 
 constexpr unsigned NUMBER_OF_RELEASES_TO_DISPLAY = 3;
 
+bool ReleasePage::show_upcoming = false;
+
 ReleasePage::ReleasePage(LauncherWindow* launcher, const FStartupSelectionInfo& info) : Widget(nullptr), Launcher(launcher)
 {
 	ShowThis = new CheckboxLabel(this);
 	Notes = new TextBlock(this);
+
+	show_upcoming = info.displayRelease >= 3;
 
 	auto text = GetReleaseNotes();
 
@@ -83,6 +88,8 @@ FString ReleasePage::_ParseReleaseNotes(rapidxml::xml_node<char> * release)
 	auto date = release->first_attribute("date");
 	auto url = release->first_node("url");
 	FString text;
+
+	if (!show_upcoming && VersionInfo{version->value()} > GetCurrentVersionForUpdater()) return "";
 
 	// https://docs.flathub.org/docs/for-app-authors/metainfo-guidelines#description
 	//
@@ -221,14 +228,19 @@ FString ReleasePage::_BuildReleaseNotes(rapidxml::xml_document<> &doc)
 
 	FString text;
 
-	for (unsigned i = 1; ; i++)
+	for (unsigned i = 1; release; )
 	{
-		release->type();
-		text.AppendFormat("%s", _ParseReleaseNotes(release).GetChars());
+		if (auto notes = _ParseReleaseNotes(release); !notes.IsEmpty())
+		{
+			text.AppendFormat("%s", notes.GetChars());
 
-		if (!release || i >= NUMBER_OF_RELEASES_TO_DISPLAY) break;
+			if (!release || i >= NUMBER_OF_RELEASES_TO_DISPLAY) break;
 
-		text.AppendFormat("\n\n---\n\n");
+			text.AppendFormat("\n\n---\n\n");
+
+			i++;
+		}
+
 		release = release->next_sibling("release");
 	}
 

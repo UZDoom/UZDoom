@@ -46,4 +46,6 @@ private:
 	static FString _BuildReleaseNotes(rapidxml::xml_document<> &);
 	static char * _OpenReleaseNotes();
 	static FString GetReleaseNotes();
+
+	static bool show_upcoming;
 };
