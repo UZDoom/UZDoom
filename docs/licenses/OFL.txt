@@ -1,13 +1,3 @@
-Copyright 2014-2021 Adobe (http://www.adobe.com/), with Reserved Font Name 'Source'
-Copyright 2022 The Noto Project Authors (https://github.com/notofonts/armenian)
-Copyright 2022 The Noto Project Authors (https://github.com/notofonts/georgian)
-Copyright 2022 The Noto Project Authors (https://github.com/notofonts/latin-greek-cyrillic)
-
-This Font Software is licensed under the SIL Open Font License, Version 1.1.
-This license is copied below, and is also available with a FAQ at:
-http://scripts.sil.org/OFL
-
-
 -----------------------------------------------------------
 SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
 -----------------------------------------------------------
