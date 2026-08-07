@@ -29,6 +29,7 @@ fi
 
 slugs=()
 requests=()
+subsets=()
 
 failed=0
 index=0
@@ -58,9 +59,19 @@ do
 	fi
 
 	printf -v request "%s?%s" "${slug}" "${COMMON}"
-	if subset=$(jq -r '.subsets | join(",")' <<< "${data}")
+	if _subsets=( $(jq -r '.subsets | join(" ")' <<< "${data}") )
 	then
-		printf -v request "%s&subsets=%s" "${request}" "${subset}"
+		subset=""
+		for s in "${_subsets[@]}"; do
+			if [[ ! " ${subsets[*]} " =~ [[:space:]]${s}[[:space:]] ]]; then
+				subsets+=("$s")
+				subset+=",$s"
+			fi
+		done
+		if [[ "$subset" == ,* ]]; then
+			echo
+			printf -v request "%s&subsets=%s" "${request}" "${subset:1}"
+		fi
 	fi
 
 	slugs[$index]="${slug}"
