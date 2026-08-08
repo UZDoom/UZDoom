@@ -713,10 +713,14 @@ void P_DrawRailTrail(AActor *source, TArray<SPortalHit> &portalhits, int color1,
 			// Only consider sound in 2D (for now, anyway)
 			// [BB] You have to divide by lengthsquared here, not multiply with it.
 			AActor *mo = player->camera;
-			double r = ((seg.start.Y - mo->Y()) * (-seg.dir.Y) - (seg.start.X - mo->X()) * (seg.dir.X)) / (seg.length * seg.length);
-			r = clamp<double>(r, 0., 1.);
-			seg.soundpos = seg.start.XY() + r * seg.dir.XY();
-			seg.sounddist = (seg.soundpos - mo->Pos()).LengthSquared();
+			if (!mo) mo = player->mo;
+			if (mo)
+			{
+				double r = ((seg.start.Y - mo->Y()) * (-seg.dir.Y) - (seg.start.X - mo->X()) * (seg.dir.X)) / (seg.length * seg.length);
+				r = clamp<double>(r, 0., 1.);
+				seg.soundpos = seg.start.XY() + r * seg.dir.XY();
+				seg.sounddist = (seg.soundpos - mo->Pos()).LengthSquared();
+			}
 		}
 		else
 		{
@@ -748,8 +752,9 @@ void P_DrawRailTrail(AActor *source, TArray<SPortalHit> &portalhits, int color1,
 				// The railgun's sound is special. It gets played from the
 				// point on the slug's trail that is closest to the hearing player.
 				AActor *mo = player->camera;
+				if (!mo) mo = player->mo;
 
-				if (fabs(mo->X() - trail[0].start.X) < 20 && fabs(mo->Y() - trail[0].start.Y) < 20)
+				if (mo && fabs(mo->X() - trail[0].start.X) < 20 && fabs(mo->Y() - trail[0].start.Y) < 20)
 				{ // This player (probably) fired the railgun
 					S_Sound (mo, CHAN_WEAPON, 0, sound, 1, ATTN_NORM);
 				}
