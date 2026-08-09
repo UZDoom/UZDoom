@@ -76,8 +76,8 @@ void HWViewpointBuffer::Set2D(FRenderState &di, int width, int height, int pll)
 {
 	HWViewpointUniforms matrices;
 
-	matrices.mViewMatrix.loadIdentity();
-	matrices.mNormalViewMatrix.loadIdentity();
+	matrices.ViewMatrix.loadIdentity();
+	matrices.NormalViewMatrix.loadIdentity();
 	matrices.mViewHeight = 0;
 	matrices.mGlobVis = 1.f;
 	matrices.mPalLightLevels = pll;
@@ -85,7 +85,7 @@ void HWViewpointBuffer::Set2D(FRenderState &di, int width, int height, int pll)
 	matrices.mShadowmapFilter = gl_shadowmap_filter;
 	matrices.mLightBlendMode = 0;
 
-	matrices.mProjectionMatrix.ortho(0, (float)width, (float)height, 0, -1.0f, 1.0f);
+	matrices.ProjectionMatrix.ortho(0, (float)width, (float)height, 0, -1.0f, 1.0f);
 	matrices.CalcDependencies();
 
 	CheckSize();

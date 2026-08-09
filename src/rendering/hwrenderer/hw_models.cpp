@@ -39,7 +39,7 @@ CVAR(Bool, gl_light_models, true, CVAR_ARCHIVE)
 VSMatrix FHWModelRenderer::GetViewToWorldMatrix()
 {
 	VSMatrix objectToWorldMatrix;
-	di->VPUniforms.mViewMatrix.inverseMatrix(objectToWorldMatrix);
+	di->VPUniforms.ViewMatrix.inverseMatrix(objectToWorldMatrix);
 	return objectToWorldMatrix;
 }
 

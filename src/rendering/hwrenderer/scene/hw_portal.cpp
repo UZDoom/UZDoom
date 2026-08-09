@@ -160,13 +160,13 @@ void FPortalSceneState::RenderPortal(HWPortal *p, FRenderState &state, bool uses
 	VSMatrix tempmatrix;
 	if (outer_di->Viewpoint.bDoOrtho && ((p->GetHWPortalType() == HWP_SKY) || (p->GetHWPortalType() == HWP_SKYBOX)))
 	{
-		tempmatrix = outer_di->VPUniforms.mProjectionMatrix; // ensure perspective projection matrix for skies
-		outer_di->VPUniforms.mProjectionMatrix = outer_di->ProjectionMatrix2;
+		tempmatrix = outer_di->VPUniforms.ProjectionMatrix; // ensure perspective projection matrix for skies
+		outer_di->VPUniforms.ProjectionMatrix = outer_di->ProjectionMatrix2;
 	}
 	if (gl_portals) outer_di->RenderPortal(p, state, usestencil);
 	if (outer_di->Viewpoint.bDoOrtho && ((p->GetHWPortalType() == HWP_SKY) || (p->GetHWPortalType() == HWP_SKYBOX)))
 	{
-		outer_di->VPUniforms.mProjectionMatrix = tempmatrix;
+		outer_di->VPUniforms.ProjectionMatrix = tempmatrix;
 	}
 }
 
@@ -256,7 +256,7 @@ void HWPortal::SetupStencil(HWDrawInfo *di, FRenderState &state, bool usestencil
 	{
 		if (GetMirrorSide() != 0) // (strcmp(GetName(), "Planemirror ceiling") == 0) || (strcmp(GetName(), "Planemirror floor") == 0))
 		{
-			di->VPUniforms.mViewMatrix.translate(0.0, -zshift * GetMirrorSide(), 0.0);
+			di->VPUniforms.ViewMatrix.translate(0.0, -zshift * GetMirrorSide(), 0.0);
 			screen->mViewpoints->SetViewpoint(state, &di->VPUniforms);
 		}
 
@@ -306,7 +306,7 @@ void HWPortal::SetupStencil(HWDrawInfo *di, FRenderState &state, bool usestencil
 
 		if (GetMirrorSide() != 0) // (strcmp(GetName(), "Planemirror ceiling") == 0) || (strcmp(GetName(), "Planemirror floor") == 0))
 		{
-			di->VPUniforms.mViewMatrix.translate(0.0, zshift * GetMirrorSide(), 0.0);
+			di->VPUniforms.ViewMatrix.translate(0.0, zshift * GetMirrorSide(), 0.0);
 			screen->mViewpoints->SetViewpoint(state, &di->VPUniforms);
 		}
 
@@ -345,7 +345,7 @@ void HWPortal::RemoveStencil(HWDrawInfo *di, FRenderState &state, bool usestenci
 
 		if (GetMirrorSide() != 0) // (strcmp(GetName(), "Planemirror ceiling") == 0) || (strcmp(GetName(), "Planemirror floor") == 0))
 		{
-			di->VPUniforms.mViewMatrix.translate(0.0, -zshift * GetMirrorSide(), 0.0);
+			di->VPUniforms.ViewMatrix.translate(0.0, -zshift * GetMirrorSide(), 0.0);
 			screen->mViewpoints->SetViewpoint(state, &di->VPUniforms);
 		}
 
@@ -383,7 +383,7 @@ void HWPortal::RemoveStencil(HWDrawInfo *di, FRenderState &state, bool usestenci
 		state.SetStencil(0, SOP_Keep);
 		if (GetMirrorSide() != 0) // (strcmp(GetName(), "Planemirror ceiling") == 0) || (strcmp(GetName(), "Planemirror floor") == 0))
 		{
-			di->VPUniforms.mViewMatrix.translate(0.0, zshift * GetMirrorSide(), 0.0);
+			di->VPUniforms.ViewMatrix.translate(0.0, zshift * GetMirrorSide(), 0.0);
 			screen->mViewpoints->SetViewpoint(state, &di->VPUniforms);
 		}
 	}
