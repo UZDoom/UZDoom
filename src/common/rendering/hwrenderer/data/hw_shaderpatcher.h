@@ -29,8 +29,10 @@
 #include "matrix.h"
 #include <utility>
 #include "shaderuniforms.h"
+#include "engineerrors.h"
 
 #include <boost/pfr.hpp>
+#include <qlibs/reflect>
 
 FString RemoveLegacyUserUniforms(FString code);
 FString RemoveSamplerBindings(FString code, TArray<std::pair<FString, int>> &samplerstobind);	// For GL 3.3 compatibility which cannot declare sampler bindings in the sampler source.
@@ -155,17 +157,70 @@ namespace ShaderInputsOutputs
 		return get_field_types_impl<T>(std::make_index_sequence<N>{});
 	}
 
+	template<typename T, size_t... I>
+	consteval std::array<size_t, sizeof...(I)> get_field_sizes_impl(std::index_sequence<I...>)
+	{
+		return std::array<size_t, sizeof...(I)>{sizeof(typename boost::pfr::tuple_element_t<I, T>)...};
+	}
+
+	template<typename T, size_t N = boost::pfr::tuple_size_v<T>>
+	consteval std::array<size_t, N> get_field_sizes()
+	{
+		return get_field_sizes_impl<T>(std::make_index_sequence<N>{});
+	}
+
+	template<typename T, size_t... I>
+	consteval std::array<size_t, sizeof...(I)> get_field_offsets_impl(std::index_sequence<I...>)
+	{
+		return std::array<size_t, sizeof...(I)>{(reflect::offset_of<I, T>())...};
+	}
+
+	template<typename T, size_t N = boost::pfr::tuple_size_v<T>>
+	consteval std::array<size_t, N> get_field_offsets()
+	{
+		return get_field_offsets_impl<T>(std::make_index_sequence<N>{});
+	}
+
 	template<typename T>
 	FString GenerateStruct()
 	{
 		auto field_names = boost::pfr::names_as_array<T>();
 		auto field_types = get_field_types<T>();
+		auto field_sizes = get_field_sizes<T>();
+		auto field_offsets = get_field_offsets<T>();
 
 		FString out = "{\n";
+
+		size_t expected_offset = 0;
 
 		int n = boost::pfr::tuple_size_v<T>;
 		for(int i = 0; i < n; i++)
 		{
+			size_t sz = field_sizes[i];
+			size_t align = sz;
+
+			if(sz == 12) // vec3, ivec3
+			{
+				align = 16; // can only align in multiples of 1, 2 and 4 elements
+			}
+
+			if(sz == 24) //dvec3
+			{
+				align = 32; // can only align in multiples of 1, 2 and 4 elements
+			}
+
+			if((expected_offset % align) != 0)
+			{
+				expected_offset += (align - (expected_offset % align)); // do pad
+			}
+
+			if(field_offsets[i] != expected_offset)
+			{
+				I_Error("bad struct");
+			}
+
+			expected_offset += sz;
+
 			if(field_names[i][0] == 'm')
 			{
 				out << "    " << field_types[i] << " u" << field_names[i].substr(1) << ";\n";
