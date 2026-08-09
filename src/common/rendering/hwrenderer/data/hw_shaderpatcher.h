@@ -29,7 +29,6 @@
 #include "matrix.h"
 #include <utility>
 #include "shaderuniforms.h"
-#include "engineerrors.h"
 
 #include <boost/pfr.hpp>
 #include <qlibs/reflect>
@@ -182,14 +181,10 @@ namespace ShaderInputsOutputs
 	}
 
 	template<typename T>
-	FString GenerateStruct()
+	consteval bool VerifyStructAlignment()
 	{
-		auto field_names = boost::pfr::names_as_array<T>();
-		auto field_types = get_field_types<T>();
 		auto field_sizes = get_field_sizes<T>();
 		auto field_offsets = get_field_offsets<T>();
-
-		FString out = "{\n";
 
 		size_t expected_offset = 0;
 
@@ -216,11 +211,28 @@ namespace ShaderInputsOutputs
 
 			if(field_offsets[i] != expected_offset)
 			{
-				I_Error("bad struct");
+				return false;
 			}
 
 			expected_offset += sz;
+		}
 
+		return true;
+	}
+
+	template<typename T>
+	FString GenerateStruct()
+	{
+		auto field_names = boost::pfr::names_as_array<T>();
+		auto field_types = get_field_types<T>();
+
+		static_assert(VerifyStructAlignment<T>() == true, "struct does not conform with std140/std430 alignment");
+
+		FString out = "{\n";
+
+		int n = boost::pfr::tuple_size_v<T>;
+		for(int i = 0; i < n; i++)
+		{
 			if(field_names[i][0] == 'm')
 			{
 				out << "    " << field_types[i] << " u" << field_names[i].substr(1) << ";\n";
