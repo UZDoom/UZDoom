@@ -28,6 +28,7 @@
 #include "zstring.h"
 #include "matrix.h"
 #include <utility>
+#include <type_traits>
 #include "shaderuniforms.h"
 
 #include <boost/pfr.hpp>
@@ -144,6 +145,56 @@ namespace ShaderInputsOutputs
 		}
 	}
 
+	template<typename T>
+	consteval size_t cpp_type_to_glsl_alignment()
+	{ //TODO expand?
+	  if constexpr(std::is_same_v<T, VSMatrix>)
+	  {
+		  return 16;
+	  }
+	  else if constexpr(std::is_same_v<T, DVector4>)
+	  {
+		  return 32;
+	  }
+	  else if constexpr(std::is_same_v<T, FVector4>)
+	  {
+		  return 16;
+	  }
+	  else if constexpr(std::is_same_v<T, DVector3>)
+	  {
+		  return 32;
+	  }
+	  else if constexpr(std::is_same_v<T, FVector3>)
+	  {
+		  return 16;
+	  }
+	  else if constexpr(std::is_same_v<T, DVector2>)
+	  {
+		  return 16;
+	  }
+	  else if constexpr(std::is_same_v<T, FVector2>)
+	  {
+		  return 8;
+	  }
+	  else if constexpr(std::is_same_v<T, double>)
+	  {
+		  return 8;
+	  }
+	  else if constexpr(std::is_same_v<T, float>)
+	  {
+		  return 4;
+	  }
+	  else if constexpr(std::is_same_v<T, int>)
+	  {
+		  return 4;
+	  }
+	  else
+	  {
+		  static_assert(std::is_same_v<T, void> && std::is_same_v<T, int>, "unknown type");
+	  }
+	}
+
+
 	template<typename T, size_t... I>
 	consteval std::array<const char *, sizeof...(I)> get_field_types_impl(std::index_sequence<I...>)
 	{
@@ -169,6 +220,18 @@ namespace ShaderInputsOutputs
 	}
 
 	template<typename T, size_t... I>
+	consteval std::array<size_t, sizeof...(I)> get_field_alignments_impl(std::index_sequence<I...>)
+	{
+		return std::array<size_t, sizeof...(I)>{cpp_type_to_glsl_alignment<typename boost::pfr::tuple_element_t<I, T>>()...};
+	}
+
+	template<typename T, size_t N = boost::pfr::tuple_size_v<T>>
+	consteval std::array<size_t, N> get_field_alignments()
+	{
+		return get_field_alignments_impl<T>(std::make_index_sequence<N>{});
+	}
+
+	template<typename T, size_t... I>
 	consteval std::array<size_t, sizeof...(I)> get_field_offsets_impl(std::index_sequence<I...>)
 	{
 		return std::array<size_t, sizeof...(I)>{(reflect::offset_of<I, T>())...};
@@ -180,10 +243,11 @@ namespace ShaderInputsOutputs
 		return get_field_offsets_impl<T>(std::make_index_sequence<N>{});
 	}
 
-	template<typename T>
+	template<typename T, bool std430>
 	consteval bool VerifyStructAlignment()
-	{
+	{ //TODO support arrays and std430 when we switch to C++26
 		auto field_sizes = get_field_sizes<T>();
+		auto field_alignments = get_field_alignments<T>();
 		auto field_offsets = get_field_offsets<T>();
 
 		size_t expected_offset = 0;
@@ -192,17 +256,7 @@ namespace ShaderInputsOutputs
 		for(int i = 0; i < n; i++)
 		{
 			size_t sz = field_sizes[i];
-			size_t align = sz;
-
-			if(sz == 12) // vec3, ivec3
-			{
-				align = 16; // can only align in multiples of 1, 2 and 4 elements
-			}
-
-			if(sz == 24) //dvec3
-			{
-				align = 32; // can only align in multiples of 1, 2 and 4 elements
-			}
+			size_t align = field_alignments[i];
 
 			if((expected_offset % align) != 0)
 			{
@@ -220,27 +274,31 @@ namespace ShaderInputsOutputs
 		return true;
 	}
 
-	template<typename T>
+	template<typename T, bool std430 = false>
 	FString GenerateStruct()
 	{
 		auto field_names = boost::pfr::names_as_array<T>();
 		auto field_types = get_field_types<T>();
 
-		static_assert(VerifyStructAlignment<T>() == true, "struct does not conform with std140/std430 alignment");
+		static_assert(VerifyStructAlignment<T, std430>() == true, "struct does not conform with std140/std430 alignment");
 
 		FString out = "{\n";
 
 		int n = boost::pfr::tuple_size_v<T>;
 		for(int i = 0; i < n; i++)
 		{
+			out << "    " << field_types[i] << " ";
+
 			if(field_names[i][0] == 'm')
 			{
-				out << "    " << field_types[i] << " u" << field_names[i].substr(1) << ";\n";
+				out << "u" << field_names[i].substr(1);
 			}
 			else
 			{
-				out << "    " << field_types[i] << " " << field_names[i] << ";\n";
+				out << field_names[i];
 			}
+
+			out << ";\n";
 		}
 		out << "}";
 		return out;
