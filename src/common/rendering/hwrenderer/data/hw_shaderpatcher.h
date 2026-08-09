@@ -26,8 +26,11 @@
 
 #include "tarray.h"
 #include "zstring.h"
+#include "matrix.h"
 #include <utility>
 #include "shaderuniforms.h"
+
+#include <boost/pfr.hpp>
 
 FString RemoveLegacyUserUniforms(FString code);
 FString RemoveSamplerBindings(FString code, TArray<std::pair<FString, int>> &samplerstobind);	// For GL 3.3 compatibility which cannot declare sampler bindings in the sampler source.
@@ -89,5 +92,90 @@ namespace ShaderInputsOutputs
 	{
 		return GenerateInputsOutputs(isVulkan, isFrag,
 			ShaderProperties[static_cast<int>(type)] | (isGBuffer ? GBufferPass : 0) | (hasClipDistance ? HasClipDistance : 0));
+	}
+
+	template<typename T>
+	consteval const char * cpp_type_to_glsl_type()
+	{ //TODO expand?
+		if constexpr(std::is_same_v<T, VSMatrix>)
+		{
+			return "mat4";
+		}
+		else if constexpr(std::is_same_v<T, DVector4>)
+		{
+			return "dvec4";
+		}
+		else if constexpr(std::is_same_v<T, FVector4>)
+		{
+			return "vec4";
+		}
+		else if constexpr(std::is_same_v<T, DVector3>)
+		{
+			return "dvec3";
+		}
+		else if constexpr(std::is_same_v<T, FVector3>)
+		{
+			return "vec3";
+		}
+		else if constexpr(std::is_same_v<T, DVector2>)
+		{
+			return "dvec2";
+		}
+		else if constexpr(std::is_same_v<T, FVector2>)
+		{
+			return "vec2";
+		}
+		else if constexpr(std::is_same_v<T, double>)
+		{
+			return "double";
+		}
+		else if constexpr(std::is_same_v<T, float>)
+		{
+			return "float";
+		}
+		else if constexpr(std::is_same_v<T, int>)
+		{
+			return "int";
+		}
+		else
+		{
+			static_assert(std::is_same_v<T, void> && std::is_same_v<T, int>, "unknown type");
+		}
+	}
+
+	template<typename T, size_t... I>
+	consteval std::array<const char *, sizeof...(I)> get_field_types_impl(std::index_sequence<I...>)
+	{
+		return std::array<const char *, sizeof...(I)>{cpp_type_to_glsl_type<typename boost::pfr::tuple_element_t<I, T>>()...};
+	}
+
+	template<typename T, size_t N = boost::pfr::tuple_size_v<T>>
+	consteval std::array<const char *, N> get_field_types()
+	{
+		return get_field_types_impl<T>(std::make_index_sequence<N>{});
+	}
+
+	template<typename T>
+	FString GenerateStruct()
+	{
+		auto field_names = boost::pfr::names_as_array<T>();
+		auto field_types = get_field_types<T>();
+
+		FString out = "{\n";
+
+		int n = boost::pfr::tuple_size_v<T>;
+		for(int i = 0; i < n; i++)
+		{
+			if(field_names[i][0] == 'm')
+			{
+				out << "    " << field_types[i] << " u" << field_names[i].substr(1) << ";\n";
+			}
+			else
+			{
+				out << "    " << field_types[i] << " " << field_names[i] << ";\n";
+			}
+		}
+		out << "}";
+		return out;
 	}
 }

@@ -302,28 +302,6 @@ bool FShader::Load(const char * name, const char * vert_prog_lump, const char * 
 		precision highp int;
 		precision highp float;
 
-		// This must match the HWViewpointUniforms struct
-		layout(std140) uniform ViewpointUBO {
-			mat4 ProjectionMatrix;
-			mat4 ViewMatrix;
-			mat4 NormalViewMatrix;
-
-			vec4 uCameraPos;
-			vec4 uClipLine;
-
-			float uGlobVis;			// uGlobVis = R_GetGlobVis(r_visibility) / 32.0
-			int uPalLightLevels;
-			int uViewHeight;		// Software fuzz scaling
-			float uClipHeight;
-			float uClipHeightDirection;
-			int uShadowmapFilter;
-
-			int uLightBlendMode;
-
-			float uThickFogDistance;
-			float uThickFogMultiplier;
-		};
-
 		uniform int uTextureMode;
 		uniform vec2 uClipSplit;
 		uniform float uAlphaThreshold;
@@ -490,6 +468,8 @@ bool FShader::Load(const char * name, const char * vert_prog_lump, const char * 
 	{
 		pre_placeholder << "\n#define GBUFFER_PASS\n";
 	}
+
+	pre_placeholder << "layout(std140) uniform ViewpointUBO" << ShaderInputsOutputs::GenerateStruct<HWViewpointUniforms>() << ";\n";
 
 	FString vp_comb = defines;
 	vp_comb << i_data.GetChars();

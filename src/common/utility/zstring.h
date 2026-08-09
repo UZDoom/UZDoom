@@ -28,6 +28,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <string>
+#include <string_view>
 
 #ifdef _WIN32
 #include <utf8.h>
@@ -229,6 +230,7 @@ public:
 	FString &operator /= (const char *tail);
 
 	FString &operator << (const FString &tail) { return *this += tail; }
+	FString &operator << (std::string_view tail) { return AppendCStrPart(tail.data(), tail.length()); }
 	FString &operator << (const char *tail) { return *this += tail; }
 	FString &operator << (char tail) { return *this += tail; }
 
