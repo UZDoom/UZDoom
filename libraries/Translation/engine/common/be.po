@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-13 23:20-0400\n"
+"PO-Revision-Date: 2026-07-30 16:57-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Belarusian <https://hosted.weblate.org/projects/uzdoom/common/be/>\n"
 "Language: be\n"
@@ -263,7 +263,6 @@ msgid "CNTRLMNU_SLOT1"
 msgstr "Зброя 1"
 
 # only show appropriate slots per game
-# 
 msgid "CNTRLMNU_SLOT2"
 msgstr "Зброя 2"
 
@@ -309,7 +308,7 @@ msgstr "Папярэдні прадмет"
 # most are not used yet but will be
 #, fuzzy
 msgid "MAPCNTRLMNU_TITLE"
-msgstr "Клавішы кіравання аўтакартай"
+msgstr "Кіраванне Аўтакартай"
 
 msgid "MAPCNTRLMNU_CONTROLS"
 msgstr "Аўтакарта"
@@ -493,7 +492,7 @@ msgstr "Уключыце падтрымку кантролера"
 
 # Supposed to be empty in Russian and Serbian.
 msgid "JOYMNU_DISABLED2"
-msgstr ""
+msgstr "немагчыма выявіць любыя"
 
 msgid "JOYMNU_INVALID"
 msgstr "Недапушчальны кантролер абраны для меню"
@@ -801,7 +800,7 @@ msgid "ADVSNDMNU_OPLNUMCHIPS"
 msgstr "Колькасць эмуляваных чыпаў OPL"
 
 msgid "ADVSNDMNU_OPLGAIN"
-msgstr ""
+msgstr "Гучнасць"
 
 msgid "ADVSNDMNU_OPLFULLPAN"
 msgstr "Поўная стэрэапанарама для MIDI"
@@ -870,10 +869,10 @@ msgid "ADVSNDMNU_VLMODEL"
 msgstr "Мадэль гучнасці"
 
 msgid "ADVSNDMNU_CHANALLOC"
-msgstr ""
+msgstr "Метад размеркавання каналаў"
 
 msgid "ADVSNDMNU_AUTOARPEGGIO"
-msgstr ""
+msgstr "Аўтаматычнае арпеджыа"
 
 msgid "ADVSNDMNU_OPNCORES"
 msgstr "Ядро эмуляцыі OPN2"
@@ -985,7 +984,7 @@ msgstr ""
 msgid "OPTVAL_JAVAOPL3"
 msgstr ""
 
-msgid "OPTVAL_ESFMu"
+msgid "OPTVAL_ESFMU"
 msgstr ""
 
 msgid "OPTVAL_YMFMOPL2"
@@ -1064,13 +1063,13 @@ msgid "ADLVLMODEL_DMX"
 msgstr "DMX (Дакладная, з памылкай АМ)"
 
 msgid "OPNVLMODEL_DMX"
-msgstr ""
+msgstr "Як у DMX"
 
 msgid "ADLVLMODEL_APOGEE"
 msgstr "Apogee (Дакладная, з памылкай АМ)"
 
 msgid "OPNVLMODEL_APOGEE"
-msgstr ""
+msgstr "Як у Apogee Sound System"
 
 msgid "OPNVLMODEL_WIN9X"
 msgstr "Падобная на Win9X"
@@ -1097,7 +1096,7 @@ msgid "ADLVLMODEL_HMIOLD"
 msgstr "HMI SOS (Стары варыянт з памылкамі)"
 
 msgid "ADLCHANALLOC_AUTO"
-msgstr ""
+msgstr "Аўта"
 
 msgid "ADLCHANALLOC_OFFDELAY"
 msgstr ""
@@ -1462,34 +1461,34 @@ msgstr "Рэдагаваць асяроддзе"
 msgid "REVMNU_NEW"
 msgstr "Новае асяроддзе"
 
-msgid "REVMNU_Reflections_Scale"
+msgid "REVMNU_REFLECTIONS_SCALE"
 msgstr ""
 
-msgid "REVMNU_Reflections_Delay_Scale"
+msgid "REVMNU_REFLECTIONS_DELAY_SCALE"
 msgstr ""
 
-msgid "REVMNU_Decay_Time_Scale"
+msgid "REVMNU_DECAY_TIME_SCALE"
 msgstr ""
 
-msgid "REVMNU_Decay_HF_Limit"
+msgid "REVMNU_DECAY_HF_LIMIT"
 msgstr ""
 
-msgid "REVMNU_Reverb_Scale"
+msgid "REVMNU_REVERB_SCALE"
 msgstr ""
 
-msgid "REVMNU_Reverb_Delay_Scale"
+msgid "REVMNU_REVERB_DELAY_SCALE"
 msgstr ""
 
-msgid "REVMNU_Echo_Time_Scale"
+msgid "REVMNU_ECHO_TIME_SCALE"
 msgstr ""
 
-msgid "REVMNU_Modulation_Time_Scale"
+msgid "REVMNU_MODULATION_TIME_SCALE"
 msgstr ""
 
-msgid "REVMNU_Based_on"
+msgid "REVMNU_BASED_ON"
 msgstr "На падставе"
 
-msgid "REVMNU_Name"
+msgid "REVMNU_NAME"
 msgstr "Назва"
 
 msgid "REVMNU_ID_1"
@@ -1498,16 +1497,16 @@ msgstr ""
 msgid "REVMNU_ID_2"
 msgstr ""
 
-msgid "REVMNU_Create"
+msgid "REVMNU_CREATE"
 msgstr "Стварыць"
 
-msgid "REVMNU_Save"
+msgid "REVMNU_SAVE"
 msgstr "Захаваць…"
 
-msgid "REVMNU_File_name"
+msgid "REVMNU_FILE_NAME"
 msgstr "Імя файла"
 
-msgid "REVMNU_Environments_to_save"
+msgid "REVMNU_ENVIRONMENTS_TO_SAVE"
 msgstr "Захаваць асяроддзі"
 
 msgid "DSPLYMNU_VKOPT"
@@ -1538,7 +1537,7 @@ msgid "OPTVAL_HQNX"
 msgstr "hqNx"
 
 msgid "OPTVAL_HQNXMMX"
-msgstr ""
+msgstr "hqNx MMX"
 
 msgid "OPTVAL_NXBRZ"
 msgstr "xBRZ"
@@ -1664,33 +1663,33 @@ msgid "OPTVAL_LASTSAVEDTIME"
 msgstr "Час апошняга захавання"
 
 msgid "PICKER_PLAYHOST"
-msgstr ""
+msgstr "Арганізаваць Гульню"
 
 msgid "PICKER_PLAYJOIN"
-msgstr ""
+msgstr "Далучыцца да Гульні"
 
 msgid "PICKER_REMPARM"
-msgstr ""
+msgstr "Пам'ятаць Параметры"
 
 # For stuff like id24.
 msgid "PICKER_SUPPORTWADS"
 msgstr ""
 
 msgid "PICKER_TAB_MULTI"
-msgstr ""
+msgstr "Мульціплеер"
 
 msgid "PICKER_LOADSAVE"
-msgstr ""
+msgstr "Загрузіць Файл Захавання:"
 
 msgid "PICKER_REMSAVE"
-msgstr ""
+msgstr "Пам'ятаць Файл Захавання"
 
 # As in, to host a game.
 msgid "PICKER_HOST"
 msgstr ""
 
 msgid "PICKER_JOIN"
-msgstr ""
+msgstr "Прыяднацца"
 
 msgid "PICKER_NETRATE"
 msgstr ""
@@ -1701,60 +1700,202 @@ msgid "PICKER_NETBACKUP"
 msgstr ""
 
 msgid "PICKER_GAMEMODE"
-msgstr ""
+msgstr "Рэжым Гульні:"
 
 msgid "PICKER_COOP"
-msgstr ""
+msgstr "Кааператыў"
 
 msgid "PICKER_DM"
-msgstr ""
+msgstr "Дэзматч"
 
 msgid "PICKER_TDM"
-msgstr ""
+msgstr "Камандны Дэзматч"
 
 # Which team the player wants to be assigned to.
 msgid "PICKER_TEAM"
-msgstr ""
+msgstr "Каманда нумар:"
 
 msgid "PICKER_ALTDM"
-msgstr ""
+msgstr "Выкарыстоўваць Альтернатыўныя Правілы Дэзматча"
 
 msgid "PICKER_PLAYERS"
-msgstr ""
+msgstr "Максімум Гульцоў:"
 
 msgid "PICKER_PORT"
-msgstr ""
+msgstr "Порт Сервера:"
 
 # Max number of players.
 msgid "PICKER_PLAYERHINT"
-msgstr ""
+msgstr "Максімум 64"
 
 # GZDoom's default port.
 msgid "PICKER_PORTHINT"
-msgstr ""
+msgstr "Стандартны 5029"
 
 # Team 255 randomizes which team the player gets put on.
 msgid "PICKER_TEAMHINT"
-msgstr ""
+msgstr "255 = Выпадковы"
 
 msgid "PICKER_IP"
-msgstr ""
+msgstr "IP Сервера:"
 
 msgid "PICKER_TDMLABEL"
-msgstr ""
+msgstr "Камандны Дэзматч:"
 
 # Same context as TXT_SAY.
 msgid "TXT_SAYTEAM"
-msgstr ""
+msgstr "Казаць (Каманда):"
 
 msgid "MISCMNU_DISCORDRPC"
-msgstr ""
+msgstr "Паказваць Актыўнасць у Discord"
 
 msgid "JOYMNU_TURNSPEED"
-msgstr ""
+msgstr "Хуткацсь павароту"
 
 msgid "JOYMNU_LOOKSPEED"
-msgstr ""
+msgstr "Хуткасць агляду"
 
 msgid "JOYMNU_ANALOGSTRAFERUN"
+msgstr "Аналагавы бег стрэйфам"
+
+msgid "ACCMNU_TITLE"
+msgstr "Налады даступнасці"
+
+msgid "MSGMNU_MESSAGEQUEUE"
+msgstr "Размер чаргі паведамленній"
+
+msgid "NOTES_FAIL"
+msgstr "Немагчыма атрымаць нататкі да версіі"
+
+msgid "NOTES_UNKNOWN"
+msgstr "Невядомы"
+
+msgid "NOTES_RELEASED"
+msgstr "%s версіі %s, выпушчаны %s"
+
+msgid "NOTES_EMPTY"
+msgstr "Няма апісання."
+
+msgid "NOTES_DETAILS"
+msgstr "Больш падробную інфармацыю глядзіце на: %s"
+
+msgid "PICKER_SHOWTHIS"
+msgstr "Паказваць гэтую старонку пасля абнаўленняў"
+
+msgid "PICKER_SHOWNOTES"
+msgstr "Паказаць нататкі версіі"
+
+msgid "PICKER_TAB_RELEASE"
+msgstr "Нататкі Версіі"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_SIZE"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_DIFFUSION"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ROOM"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ROOM_HF"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ROOM_LF"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DECAY_TIME"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DECAY_HF_RATIO"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DECAY_LF_RATIO"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_DELAY"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_X"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Y"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Z"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB"
+msgstr "Рэверберацыя"
+
+# Jargon.
+msgid "REVMNU_REVERB_DELAY"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_X"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Y"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Z"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ECHO_TIME"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ECHO_DEPTH"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_MODULATION_TIME"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_MODULATION_DEPTH"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_AIR_ABSORPTION_HF"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_HF_REFERENCE"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_LF_REFERENCE"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DIFFUSION"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DENSITY"
 msgstr ""

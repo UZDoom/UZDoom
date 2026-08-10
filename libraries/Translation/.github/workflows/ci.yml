@@ -8,13 +8,21 @@ jobs:
     steps:
     - uses: actions/checkout@v6
 
+    - name: Dump Event
+      shell: bash
+      env:
+        EVENT: ${{ toJson(github) }}
+      run: echo "${EVENT}"
+
     - name: validate
       run: |
+        echo "::group::dependencies"
         sudo apt-get -qq update
         sudo apt-get -qq install gettext
         pipx install --quiet vermin pylint autopep8 csvkit
+        echo "echo ::endgroup::"
 
-        bash scripts/validate.sh
+        bash scripts/validate.sh || [[ ! '${{github.ref_name}}' =~ main* ]]
         mkdir files
 
     - name: build

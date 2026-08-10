@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-10 09:01+0000\n"
+"PO-Revision-Date: 2026-07-31 11:01+0000\n"
 "Last-Translator: Tapwave <kolb.rodrigue@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/doom-engine-games/chex-quest/fr/>\n"
 "Language: fr\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2026.7.1.dev0\n"
+"X-Generator: Weblate 2026.8.dev0\n"
 
 # Flem = phlegm
 msgid "GOTBLUEFLEM"
@@ -23,7 +23,7 @@ msgid "GOTREDFLEM"
 msgstr "Flémclé rouge récupérée."
 
 msgid "GOTGOGGLES"
-msgstr "Ultra-Lunettes Récupérées."
+msgstr "Ultra-Lunettes Récupérées"
 
 msgctxt "chex"
 msgid "PD_BLUECO"

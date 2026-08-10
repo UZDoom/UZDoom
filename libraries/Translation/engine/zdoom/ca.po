@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-14 05:01+0000\n"
-"Last-Translator: Júlia Rosell Saldaña <contacte@juliars.cat>\n"
+"PO-Revision-Date: 2026-07-29 23:01+0000\n"
+"Last-Translator: jordi conesa <jordicons@gmail.com>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
@@ -2757,10 +2757,9 @@ msgstr "Feina excel·lent!"
 msgid "CE4TEXT"
 msgstr "Fantàstic"
 
-#, fuzzy
 msgid "CLOADNET"
 msgstr ""
-"No pots carregar mentre estàs en una missió de xarxa!\n"
+"No pots carregar una partida desada mentre estàs en una missió de xarxa!\n"
 "\n"
 "Prem una tecla."
 
@@ -4314,9 +4313,8 @@ msgstr "Ordena la llista de dibuix"
 msgid "GLLIGHTMNU_TITLE"
 msgstr "Llums dinàmiques"
 
-#, fuzzy
 msgid "GLLIGHTMNU_LIGHTSENABLED"
-msgstr "Lightsenabled"
+msgstr "Llums dinàmiques"
 
 msgid "GLLIGHTMNU_LIGHTSPRITES"
 msgstr "Lightsprites"
@@ -5336,3 +5334,121 @@ msgstr "Automàtic (preferible ZDoom)"
 
 msgid "OPTVAL_VTAVANILLA"
 msgstr "Automàtic (preferiblement vainilla)"
+
+msgid "UPDATER_CHECK_FOR_UPDATES"
+msgstr "Cercar actualitzacions"
+
+msgid "UPDATER_PROMPT_TO_INSTALL"
+msgstr "Demana per instal·lar"
+
+msgid "UPDATER_SETTINGS"
+msgstr "Configuració de l'actualitzador"
+
+msgid "UPDATER_INTERVAL"
+msgstr "Comprova cada:"
+
+msgid "UPDATER_UPDATE_AVAILABLE"
+msgstr "Nova actualització disponible"
+
+msgid "UPDATER_UPDATE_SKIP"
+msgstr "Saltar actualització"
+
+msgid "UPDATER_TITLE"
+msgstr "Verificador de l'actualització"
+
+msgid "UPDATER_DISABLE"
+msgstr "Desactivar comprovació d'actualitzacions"
+
+msgid "UPDATER_CHECK_FAILED"
+msgstr "Comprovació d'actualització fallada"
+
+msgid "UPDATER_UPDATE_FAILED"
+msgstr "Actualització fallada"
+
+msgid "UPDATER_YES_PROMPT"
+msgstr "Sí, i demanar si s'instal·len actualitzacions"
+
+msgid "UPDATER_DISMISS_UPDATE"
+msgstr "Sortir de l'actualització?"
+
+msgid "UPDATER_ASK_AUTO"
+msgstr ""
+"Vols que automàticament es cerquin actualitzacions\n"
+"(això es pot canviar més tard a la pestanya d'opcions)"
+
+msgid "UPDATER_ASK_INTERVAL"
+msgstr ""
+"Cada quan vols que es cerquin actualitzacions?\n"
+"(això pot ser canviat en la pestanya d'opcions)"
+
+msgid "UPDATER_ZIP_FAIL"
+msgstr "Fallada en obrir fitxer zip"
+
+msgid "UPDATER_ZIP_ERROR"
+msgstr "Fallada en l'extracció del zip, error: '{}' mentre s'escriu fitxer '{}'"
+
+msgid "UPDATER_UPDATING"
+msgstr "Actualitzant..."
+
+msgid "UPDATER_STARTING"
+msgstr "Començant descàrrega..."
+
+msgid "UPDATER_SUCCESS"
+msgstr "Actualitació satisfactòria, el llançador ara es reiniciarà."
+
+msgid "UPDATER_UP_TO_DATE"
+msgstr "Tot al dia!"
+
+msgid "UPDATER_CANCELLED"
+msgstr "L'actualització s'ha cancel·lat"
+
+msgid "UPDATER_INVALID_JSON"
+msgstr "Actualització invàlida de JSON"
+
+msgid "UPDATER_NOT_A_DIR"
+msgstr "'{}' no és un directori"
+
+msgid "OPTVAL_DISABLE"
+msgstr "Desactivar"
+
+msgid "OPTVAL_NOTIFY"
+msgstr "Avisar"
+
+msgid "OPTVAL_DAILY"
+msgstr "Diari"
+
+msgid "OPTVAL_WEEKLY"
+msgstr "Setmanal"
+
+msgid "OPTVAL_MONTHLY"
+msgstr "Mensual"
+
+msgid "TXT_DOWNLOADING"
+msgstr "Descarregant"
+
+msgid "TXT_EXPERIMENTAL"
+msgstr "Experimental"
+
+msgid "TXT_UPDATE"
+msgstr "Actualització"
+
+msgid "TXT_UPDATED"
+msgstr "Actualitzat"
+
+msgid "TXT_CANCELLED"
+msgstr "Cancel·lat"
+
+msgid "TXT_BACK"
+msgstr "Enrera"
+
+msgid "TXT_DISMISS"
+msgstr "Abandonar"
+
+msgid "TXT_SKIP"
+msgstr "Saltar"
+
+msgid "TXT_CONFIRM"
+msgstr "Confirmar"
+
+msgid "TXT_OK"
+msgstr "OK"

@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-13 23:20-0400\n"
+"PO-Revision-Date: 2026-07-30 16:57-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Serbian <https://hosted.weblate.org/projects/uzdoom/unused/sr/>\n"
 "Language: sr\n"
@@ -121,118 +121,6 @@ msgstr "Од равноправних до равноправних"
 # each other individually.
 msgid "PICKER_NETSERVER"
 msgstr "Пакет-сервер"
-
-# Jargon.
-msgid "REVMNU_AIR_ABSORPTION_HF"
-msgstr "Апсорпција ваздуха HF"
-
-# Jargon.
-msgid "REVMNU_DECAY_HF_RATIO"
-msgstr "Однос високог интензитета опадања"
-
-# Jargon.
-msgid "REVMNU_DECAY_LF_RATIO"
-msgstr "Однос ниског броја опадања"
-
-# Jargon.
-msgid "REVMNU_DECAY_TIME"
-msgstr "Време распада"
-
-# Jargon.
-msgid "REVMNU_DENSITY"
-msgstr "Густина"
-
-# Jargon.
-msgid "REVMNU_DIFFUSION"
-msgstr "Дифузија"
-
-# Jargon.
-msgid "REVMNU_ECHO_DEPTH"
-msgstr "Дубина одјека"
-
-# Jargon.
-msgid "REVMNU_ECHO_TIME"
-msgstr "Време одјека"
-
-# Jargon.
-msgid "REVMNU_ENVIRONMENT_DIFFUSION"
-msgstr "Дифузија у окружењу"
-
-# Jargon.
-msgid "REVMNU_ENVIRONMENT_SIZE"
-msgstr "Величина окружења"
-
-# Jargon.
-msgid "REVMNU_HF_REFERENCE"
-msgstr "ВФ референца"
-
-# Jargon.
-msgid "REVMNU_LF_REFERENCE"
-msgstr "НФ референца"
-
-# Jargon.
-msgid "REVMNU_MODULATION_DEPTH"
-msgstr "Дубина модулације"
-
-# Jargon.
-msgid "REVMNU_MODULATION_TIME"
-msgstr "Време модулације"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS"
-msgstr "Рефлексије"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS_DELAY"
-msgstr "Кашњење рефлексија"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS_PAN_X"
-msgstr "Рефлексије Пан X"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS_PAN_Y"
-msgstr "Рефлексије Пан Y"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS_PAN_Z"
-msgstr "Рефлексије Пан З"
-
-# Jargon.
-msgid "REVMNU_REVERB"
-msgstr "Одјек"
-
-# Jargon.
-msgid "REVMNU_REVERB_DELAY"
-msgstr "Одјек реверба"
-
-# Jargon.
-msgid "REVMNU_REVERB_PAN_X"
-msgstr "Реверб Пан X"
-
-# Jargon.
-msgid "REVMNU_REVERB_PAN_Y"
-msgstr "Реверб Пан Y"
-
-# Jargon.
-msgid "REVMNU_REVERB_PAN_Z"
-msgstr "Реверб Пан З"
-
-# Jargon.
-msgid "REVMNU_ROOM"
-msgstr "Соба"
-
-# Jargon.
-msgid "REVMNU_ROOM_HF"
-msgstr "Соба ВФ"
-
-# Jargon.
-msgid "REVMNU_ROOM_LF"
-msgstr "Соба ЛФ"
-
-# Jargon.
-msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
-msgstr "Фактор опадања просторија"
 
 msgid "SNDMNU_BACKEND"
 msgstr "Звучни бекенд"

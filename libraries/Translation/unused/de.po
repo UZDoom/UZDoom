@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-13 23:20-0400\n"
+"PO-Revision-Date: 2026-07-30 16:57-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/uzdoom/unused/de/>\n"
 "Language: de\n"
@@ -121,118 +121,6 @@ msgstr "Peer-to-Peer"
 # each other individually.
 msgid "PICKER_NETSERVER"
 msgstr "Paket-Server"
-
-# Jargon.
-msgid "REVMNU_AIR_ABSORPTION_HF"
-msgstr "HF-Luftabsorption"
-
-# Jargon.
-msgid "REVMNU_DECAY_HF_RATIO"
-msgstr "HF Verfallrate"
-
-# Jargon.
-msgid "REVMNU_DECAY_LF_RATIO"
-msgstr "LF Verfallrate"
-
-# Jargon.
-msgid "REVMNU_DECAY_TIME"
-msgstr "Verfallzeit"
-
-# Jargon.
-msgid "REVMNU_DENSITY"
-msgstr "Dichte"
-
-# Jargon.
-msgid "REVMNU_DIFFUSION"
-msgstr "Diffusion"
-
-# Jargon.
-msgid "REVMNU_ECHO_DEPTH"
-msgstr "Halltiefe"
-
-# Jargon.
-msgid "REVMNU_ECHO_TIME"
-msgstr "Hallzeit"
-
-# Jargon.
-msgid "REVMNU_ENVIRONMENT_DIFFUSION"
-msgstr "Umgebungsdiffusion"
-
-# Jargon.
-msgid "REVMNU_ENVIRONMENT_SIZE"
-msgstr "Umgebungsgröße"
-
-# Jargon.
-msgid "REVMNU_HF_REFERENCE"
-msgstr "HF Referenz"
-
-# Jargon.
-msgid "REVMNU_LF_REFERENCE"
-msgstr "LF Referenz"
-
-# Jargon.
-msgid "REVMNU_MODULATION_DEPTH"
-msgstr "Modulationstiefe"
-
-# Jargon.
-msgid "REVMNU_MODULATION_TIME"
-msgstr "Modulationszeit"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS"
-msgstr "Reflektionen"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS_DELAY"
-msgstr "Reflektionsversögerung"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS_PAN_X"
-msgstr "X-Reflektionsschwenkung"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS_PAN_Y"
-msgstr "Y-Reflektionsschwenkung"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS_PAN_Z"
-msgstr "Z-Reflektionsschwenkung"
-
-# Jargon.
-msgid "REVMNU_REVERB"
-msgstr "Hall"
-
-# Jargon.
-msgid "REVMNU_REVERB_DELAY"
-msgstr "Hallverzögerung"
-
-# Jargon.
-msgid "REVMNU_REVERB_PAN_X"
-msgstr "X-Hallschwenkung"
-
-# Jargon.
-msgid "REVMNU_REVERB_PAN_Y"
-msgstr "Y-Hallschwenkung"
-
-# Jargon.
-msgid "REVMNU_REVERB_PAN_Z"
-msgstr "Z-Hallschwenkung"
-
-# Jargon.
-msgid "REVMNU_ROOM"
-msgstr "Zimmer"
-
-# Jargon.
-msgid "REVMNU_ROOM_HF"
-msgstr "HF Raum"
-
-# Jargon.
-msgid "REVMNU_ROOM_LF"
-msgstr "LF Raum"
-
-# Jargon.
-msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
-msgstr "Raumabrollfaktor"
 
 msgid "SNDMNU_BACKEND"
 msgstr "Soundsystem"
