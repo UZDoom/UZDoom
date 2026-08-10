@@ -6912,3 +6912,12 @@ msgstr "Confirm"
 
 msgid "TXT_OK"
 msgstr "OK"
+
+msgid "CMPTMNU_TRANSFERSECRET"
+msgstr "BOOM's floor changing special transfers secret."
+
+msgid "PICKER_THEME"
+msgstr "Theme"
+
+msgid "OPTVAL_LIGHT"
+msgstr "Light"

@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-23 17:01+0000\n"
+"PO-Revision-Date: 2026-08-10 11:51+0000\n"
 "Last-Translator: Tim Richter <jank21976@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/doom-engine-games/the-plutonia-experiment/de/>\n"
 "Language: de\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.8.dev0\n"
+"X-Generator: Weblate 2026.9.dev0\n"
 
 msgid "TXT_PLUT_EP"
 msgstr "Das Plutonia Experiment"
@@ -21,6 +21,7 @@ msgstr "Level 1: Kongo"
 msgid "PHUSTR_2"
 msgstr "Level 2: Seelenbrunnen"
 
+#, fuzzy
 msgid "PHUSTR_3"
 msgstr "Level 3: Aztekisch"
 
@@ -37,7 +38,7 @@ msgid "PHUSTR_7"
 msgstr "Level 7: Gehege"
 
 msgid "PHUSTR_8"
-msgstr "Level 8: Bereich"
+msgstr "Level 8: Reich"
 
 msgid "PHUSTR_9"
 msgstr "Level 9: Schlachthaus"
@@ -58,7 +59,7 @@ msgid "PHUSTR_14"
 msgstr "Level 14: Entstehung"
 
 msgid "PHUSTR_15"
-msgstr "Level 15: Zwielicht"
+msgstr "Level 15: Dämmerung"
 
 msgid "PHUSTR_16"
 msgstr "Level 16: Das Omen"
@@ -70,10 +71,10 @@ msgid "PHUSTR_18"
 msgstr "Level 18: Neurosphäre"
 
 msgid "PHUSTR_19"
-msgstr "Level 19: EIND"
+msgstr "Level 19: FEIND"
 
 msgid "PHUSTR_20"
-msgstr "Level 20: Die Todeszone"
+msgstr "Level 20: Reich des Todes"
 
 msgid "PHUSTR_21"
 msgstr "Level 21: Töter"

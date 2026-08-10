@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-13 23:20-0400\n"
+"PO-Revision-Date: 2026-07-30 16:57-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/uzdoom/unused/id/>\n"
 "Language: id\n"
@@ -121,118 +121,6 @@ msgstr "Peer-to-Peer"
 # each other individually.
 msgid "PICKER_NETSERVER"
 msgstr "Server paket"
-
-# Jargon.
-msgid "REVMNU_AIR_ABSORPTION_HF"
-msgstr "Penyerapan udara HF"
-
-# Jargon.
-msgid "REVMNU_DECAY_HF_RATIO"
-msgstr "Rasio peluruhan HF"
-
-# Jargon.
-msgid "REVMNU_DECAY_LF_RATIO"
-msgstr "Rasio peluruhan LF"
-
-# Jargon.
-msgid "REVMNU_DECAY_TIME"
-msgstr "Waktu peluruhan"
-
-# Jargon.
-msgid "REVMNU_DENSITY"
-msgstr "Kepadatan"
-
-# Jargon.
-msgid "REVMNU_DIFFUSION"
-msgstr "Difusi"
-
-# Jargon.
-msgid "REVMNU_ECHO_DEPTH"
-msgstr "Kedalaman gema"
-
-# Jargon.
-msgid "REVMNU_ECHO_TIME"
-msgstr "Waktu gema"
-
-# Jargon.
-msgid "REVMNU_ENVIRONMENT_DIFFUSION"
-msgstr "Difusi lingkungan"
-
-# Jargon.
-msgid "REVMNU_ENVIRONMENT_SIZE"
-msgstr "Ukuran lingkungan"
-
-# Jargon.
-msgid "REVMNU_HF_REFERENCE"
-msgstr "Referensi HF"
-
-# Jargon.
-msgid "REVMNU_LF_REFERENCE"
-msgstr "Referensi LF"
-
-# Jargon.
-msgid "REVMNU_MODULATION_DEPTH"
-msgstr "Kedalaman modulasi"
-
-# Jargon.
-msgid "REVMNU_MODULATION_TIME"
-msgstr "Waktu modulasi"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS"
-msgstr "Refleksi"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS_DELAY"
-msgstr "Tunda refleksi"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS_PAN_X"
-msgstr "Refleksi Pan X"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS_PAN_Y"
-msgstr "Refleksi Pan Y"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS_PAN_Z"
-msgstr "Refleksi Pan Z"
-
-# Jargon.
-msgid "REVMNU_REVERB"
-msgstr "Reverb"
-
-# Jargon.
-msgid "REVMNU_REVERB_DELAY"
-msgstr "Tunda gema"
-
-# Jargon.
-msgid "REVMNU_REVERB_PAN_X"
-msgstr "Gema Pan X"
-
-# Jargon.
-msgid "REVMNU_REVERB_PAN_Y"
-msgstr "Gema Pan Y"
-
-# Jargon.
-msgid "REVMNU_REVERB_PAN_Z"
-msgstr "Gema Pan Z"
-
-# Jargon.
-msgid "REVMNU_ROOM"
-msgstr "Ruangan"
-
-# Jargon.
-msgid "REVMNU_ROOM_HF"
-msgstr "HF ruangan"
-
-# Jargon.
-msgid "REVMNU_ROOM_LF"
-msgstr "LF ruangan"
-
-# Jargon.
-msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
-msgstr "Faktor pengurangan ruangan"
 
 msgid "SNDMNU_BACKEND"
 msgstr "Backend suara"

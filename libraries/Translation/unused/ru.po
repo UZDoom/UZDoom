@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-13 23:20-0400\n"
+"PO-Revision-Date: 2026-07-30 16:57-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/uzdoom/unused/ru/>\n"
 "Language: ru\n"
@@ -121,118 +121,6 @@ msgstr "Пиринговая"
 # each other individually.
 msgid "PICKER_NETSERVER"
 msgstr "Пакетный сервер"
-
-# Jargon.
-msgid "REVMNU_AIR_ABSORPTION_HF"
-msgstr ""
-
-# Jargon.
-msgid "REVMNU_DECAY_HF_RATIO"
-msgstr "Коэффициент Высокой Частоты Спада"
-
-# Jargon.
-msgid "REVMNU_DECAY_LF_RATIO"
-msgstr "Коэффициент Низкой Частоты Спада"
-
-# Jargon.
-msgid "REVMNU_DECAY_TIME"
-msgstr "Время Спада"
-
-# Jargon.
-msgid "REVMNU_DENSITY"
-msgstr "Плотность"
-
-# Jargon.
-msgid "REVMNU_DIFFUSION"
-msgstr "Рассеивание"
-
-# Jargon.
-msgid "REVMNU_ECHO_DEPTH"
-msgstr "Глубина Эхо"
-
-# Jargon.
-msgid "REVMNU_ECHO_TIME"
-msgstr "Время Эхо"
-
-# Jargon.
-msgid "REVMNU_ENVIRONMENT_DIFFUSION"
-msgstr "Рассеивание Окружения"
-
-# Jargon.
-msgid "REVMNU_ENVIRONMENT_SIZE"
-msgstr "Размер Окружения"
-
-# Jargon.
-msgid "REVMNU_HF_REFERENCE"
-msgstr "HF Референс"
-
-# Jargon.
-msgid "REVMNU_LF_REFERENCE"
-msgstr "LF Референс"
-
-# Jargon.
-msgid "REVMNU_MODULATION_DEPTH"
-msgstr "Глубина Модуляции"
-
-# Jargon.
-msgid "REVMNU_MODULATION_TIME"
-msgstr "Время Модуляции"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS"
-msgstr "Отражения"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS_DELAY"
-msgstr "Задержка Отражений"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS_PAN_X"
-msgstr "Панорамирование Отражений X"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS_PAN_Y"
-msgstr "Панорамирование Отражений Y"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS_PAN_Z"
-msgstr "Панорамирование Отражений Z"
-
-# Jargon.
-msgid "REVMNU_REVERB"
-msgstr "Реверберация"
-
-# Jargon.
-msgid "REVMNU_REVERB_DELAY"
-msgstr "Задержка Реверберации"
-
-# Jargon.
-msgid "REVMNU_REVERB_PAN_X"
-msgstr "Панорамирование Реверберации X"
-
-# Jargon.
-msgid "REVMNU_REVERB_PAN_Y"
-msgstr "Панорамирование Реверберации Y"
-
-# Jargon.
-msgid "REVMNU_REVERB_PAN_Z"
-msgstr "Панорамирование Реверберации Z"
-
-# Jargon.
-msgid "REVMNU_ROOM"
-msgstr "Комната"
-
-# Jargon.
-msgid "REVMNU_ROOM_HF"
-msgstr "Комната Высокая Частота"
-
-# Jargon.
-msgid "REVMNU_ROOM_LF"
-msgstr "Комната Низкая Частота"
-
-# Jargon.
-msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
-msgstr "Фактор затихания отраженного звука"
 
 msgid "SNDMNU_BACKEND"
 msgstr "Звуковая подсистема"

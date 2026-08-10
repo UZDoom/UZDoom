@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-14 05:01+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2026-07-31 23:01+0000\n"
+"Last-Translator: RageSpark <bgamer332ofc@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -4568,9 +4568,9 @@ msgstr ""
 "suportada)."
 
 # Shouldn’t this say “%e is the newest supported”?
-# 
+#
 # — Undead
-# 
+#
 # Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
 msgstr ""
@@ -5422,3 +5422,81 @@ msgstr "%s Hz"
 
 msgid "VALFORMAT_METER"
 msgstr "%s m"
+
+msgid "UPDATER_CHECK_FOR_UPDATES"
+msgstr "Verificar Atualizações"
+
+msgid "UPDATER_SETTINGS"
+msgstr "Configurações de Atualização"
+
+msgid "UPDATER_UPDATE_AVAILABLE"
+msgstr "Nova Atualização Disponível"
+
+msgid "UPDATER_UPDATE_SKIP"
+msgstr "Ignorar Atualização"
+
+msgid "UPDATER_TITLE"
+msgstr "Verificador de Atualizações"
+
+msgid "UPDATER_DISABLE"
+msgstr "Desativar Verificação de Atualizações"
+
+msgid "UPDATER_UPDATING"
+msgstr "Atualizando..."
+
+msgid "UPDATER_STARTING"
+msgstr "Iniciando o download..."
+
+msgid "UPDATER_SUCCESS"
+msgstr "Atualizado com sucesso, o aplicativo irá reiniciar."
+
+msgid "UPDATER_CANCELLED"
+msgstr "Atualização foi cancelada"
+
+msgid "OPTVAL_DISABLE"
+msgstr "Desativar"
+
+msgid "OPTVAL_NOTIFY"
+msgstr "Notificar"
+
+msgid "OPTVAL_DAILY"
+msgstr "Diário"
+
+msgid "OPTVAL_WEEKLY"
+msgstr "Semanal"
+
+msgid "OPTVAL_MONTHLY"
+msgstr "Mensal"
+
+msgid "TXT_DOWNLOADING"
+msgstr "Baixando"
+
+msgid "TXT_EXPERIMENTAL"
+msgstr "Experimental"
+
+msgid "TXT_UPDATED"
+msgstr "Atualizado"
+
+msgid "TXT_CANCELLED"
+msgstr "Cancelado"
+
+msgid "TXT_BACK"
+msgstr "Retornar"
+
+msgid "TXT_DISMISS"
+msgstr "Ignorar"
+
+msgid "TXT_SKIP"
+msgstr "Pular"
+
+msgid "TXT_CONFIRM"
+msgstr "Confirmar"
+
+msgid "TXT_OK"
+msgstr "OK"
+
+msgid "UPDATER_CHECK_FAILED"
+msgstr "Falha ao verificar atualizações"
+
+msgid "UPDATER_UPDATE_FAILED"
+msgstr "Atualização Falhou"

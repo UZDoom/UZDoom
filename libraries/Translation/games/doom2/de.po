@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-23 17:01+0000\n"
+"PO-Revision-Date: 2026-07-30 19:01+0000\n"
 "Last-Translator: Tim Richter <jank21976@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/doom-engine-games/doom-2/de/>\n"
 "Language: de\n"
@@ -106,7 +106,7 @@ msgid "HUSTR_29"
 msgstr "Level 29: Das lebende Ende"
 
 msgid "HUSTR_30"
-msgstr "Level 30: Symbol der Sünde"
+msgstr "Level 30: Ikone der Sünde"
 
 msgid "HUSTR_31"
 msgstr "Level 31: Wolfenstein"

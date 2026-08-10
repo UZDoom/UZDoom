@@ -639,7 +639,7 @@ msgstr ""
 msgid "MSGMNU_MESSAGEQUEUE"
 msgstr ""
 
-msgid "$MSGMNU_MESSAGEFADE"
+msgid "MSGMNU_MESSAGEFADE"
 msgstr ""
 
 msgid "MSGMNU_STACKIDENTICAL"
@@ -978,7 +978,7 @@ msgstr ""
 msgid "OPTVAL_JAVAOPL3"
 msgstr ""
 
-msgid "OPTVAL_ESFMu"
+msgid "OPTVAL_ESFMU"
 msgstr ""
 
 msgid "OPTVAL_YMFMOPL2"
@@ -1449,34 +1449,34 @@ msgstr ""
 msgid "REVMNU_NEW"
 msgstr ""
 
-msgid "REVMNU_Reflections_Scale"
+msgid "REVMNU_REFLECTIONS_SCALE"
 msgstr ""
 
-msgid "REVMNU_Reflections_Delay_Scale"
+msgid "REVMNU_REFLECTIONS_DELAY_SCALE"
 msgstr ""
 
-msgid "REVMNU_Decay_Time_Scale"
+msgid "REVMNU_DECAY_TIME_SCALE"
 msgstr ""
 
-msgid "REVMNU_Decay_HF_Limit"
+msgid "REVMNU_DECAY_HF_LIMIT"
 msgstr ""
 
-msgid "REVMNU_Reverb_Scale"
+msgid "REVMNU_REVERB_SCALE"
 msgstr ""
 
-msgid "REVMNU_Reverb_Delay_Scale"
+msgid "REVMNU_REVERB_DELAY_SCALE"
 msgstr ""
 
-msgid "REVMNU_Echo_Time_Scale"
+msgid "REVMNU_ECHO_TIME_SCALE"
 msgstr ""
 
-msgid "REVMNU_Modulation_Time_Scale"
+msgid "REVMNU_MODULATION_TIME_SCALE"
 msgstr ""
 
-msgid "REVMNU_Based_on"
+msgid "REVMNU_BASED_ON"
 msgstr ""
 
-msgid "REVMNU_Name"
+msgid "REVMNU_NAME"
 msgstr ""
 
 msgid "REVMNU_ID_1"
@@ -1485,16 +1485,16 @@ msgstr ""
 msgid "REVMNU_ID_2"
 msgstr ""
 
-msgid "REVMNU_Create"
+msgid "REVMNU_CREATE"
 msgstr ""
 
-msgid "REVMNU_Save"
+msgid "REVMNU_SAVE"
 msgstr ""
 
-msgid "REVMNU_File_name"
+msgid "REVMNU_FILE_NAME"
 msgstr ""
 
-msgid "REVMNU_Environments_to_save"
+msgid "REVMNU_ENVIRONMENTS_TO_SAVE"
 msgstr ""
 
 msgid "DSPLYMNU_VKOPT"
@@ -1756,4 +1756,116 @@ msgid "PICKER_TAB_ABOUT"
 msgstr ""
 
 msgid "PICKER_TAB_RELEASE"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_SIZE"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_DIFFUSION"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ROOM"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ROOM_HF"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ROOM_LF"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DECAY_TIME"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DECAY_HF_RATIO"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DECAY_LF_RATIO"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_DELAY"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_X"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Y"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Z"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB_DELAY"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_X"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Y"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Z"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ECHO_TIME"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ECHO_DEPTH"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_MODULATION_TIME"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_MODULATION_DEPTH"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_AIR_ABSORPTION_HF"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_HF_REFERENCE"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_LF_REFERENCE"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DIFFUSION"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DENSITY"
 msgstr ""

@@ -4571,9 +4571,7 @@ msgstr ""
 "Сачувана игра „%s“ је из старије верзије: %d (%e је најстарија подржана)."
 
 # Shouldn’t this say “%e is the newest supported”?
-# 
 # — Undead
-# 
 # Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
 msgstr ""
