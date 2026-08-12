@@ -73,6 +73,7 @@ function(query_repo_info)
 				)
 
 				if(NOT "${Temp}" STREQUAL "")
+					message(STATUS "Dirty build:\n${Temp}")
 					math(EXPR Distance "(${Distance} * -1) - 1")
 				endif()
 			endif()
