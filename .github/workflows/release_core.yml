@@ -80,7 +80,7 @@ jobs:
           }
 
           move artifacts/Windows\ Release/*.zip Windows-UZDoom-${{ inputs.title }}-x86_64.zip windows
-          move artifacts/MacOS\ Release/*.dmg MacOS-UZDoom-${{ inputs.title }}-x86_64.dmg macos
+          move artifacts/MacOS\ Release/*.dmg MacOS-UZDoom-${{ inputs.title }}-ARM64.dmg macos
           appimage=Linux-UZDoom-${{ inputs.title }}-x86_64.AppImage
           move artifacts/Linux\ Release/*.AppImage ${appimage} linux
           move artifacts/Linux\ Release/*.zsync ${appimage}.zsync _
