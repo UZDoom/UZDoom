@@ -14,24 +14,30 @@
 **
 */
 
-#include <cstring>
-
-#include <zwidget/widgets/checkboxlabel/checkboxlabel.h>
-#include <zwidget/widgets/pushbutton/pushbutton.h>
-#include <zwidget/widgets/textedit/textedit.h>
-#include <zwidget/widgets/tabwidget/tabwidget.h>
-
 #include "aboutpage.h"
+
+#include <zwidget/widgets/pushbutton/pushbutton.h>
+#include <zwidget/widgets/tabwidget/tabwidget.h>
+#include <zwidget/core/widget.h>
+#include <cmath>
+#include <cstring>
+#include <functional>
+#include <string>
+#include <sstream>
+
 #include "filesystem.h"
 #include "findfile.h"
+#include "fs_files.h"
 #include "gameconfigfile.h"
 #include "gstrings.h"
 #include "i_interface.h"
 #include "launcherwindow.h"
-#include "name.h"
 #include "releasepage.h"
+#include "resourcefile.h"
+#include "stringtable.h"
 #include "version.h"
 #include "zstring.h"
+#include "textblock.h"
 
 #ifdef HAS_UPDATER
 #include "curl_loader.h"
@@ -39,8 +45,7 @@
 
 AboutPage::AboutPage(LauncherWindow* launcher, const FStartupSelectionInfo& info) : Widget(nullptr), Launcher(launcher)
 {
-	// [Marcus] TODO: Probably make this rich-text
-	Text = new TextEdit(this);
+	Text = new TextBlock(this);
 	Notes = new PushButton(this);
 
 	auto wad = BaseFileSearch(BASEWAD, NULL, true, GameConfig);
@@ -50,23 +55,39 @@ AboutPage::AboutPage(LauncherWindow* launcher, const FStartupSelectionInfo& info
 		auto resf = FResourceFile::OpenResourceFile(wad);
 		FString text;
 
-		auto append = [&resf,&text](const char * name) {
+		auto getText = [&resf](const char * name)->std::string {
 			auto lump = resf->FindEntry(name);
-			if (lump < 0) return;
+			if (lump < 0) return "";
 			auto data = resf->Read(lump);
-			text.AppendCStrPart(data.string(), data.size());
+			return {data.string(), data.size()};
+		};
+		auto replace = [](std::string &s, const std::string &a, const std::string &b)
+		{
+			size_t pos = s.find(a);
+			while (pos != std::string::npos)
+			{
+				s.replace(pos, a.size(), b);
+				pos = s.find(a, pos + b.size());
+			}
 		};
 
 		int lump;
 		if (resf)
 		{
-			append("about.txt");
-
-			// [Marcus] I would love to instead have this done at compile time and also
-			// separate the entries by ' · ', but there's currently a bug in zwidget
-			// that breaks how long a soft-wrapped line of text can be :(
+			{
+				auto str = getText("about.txt");
+				text.AppendCStrPart(str.c_str(), str.size());
+			}
 			text.AppendCharacter('\n');
-			append("contributors.txt");
+
+			auto ss = std::stringstream{getText("contributors.txt")};
+			size_t count = 0;
+			for (std::string line; std::getline(ss, line, '\n'); count++)
+			{
+				const char* fmt = count==0? "%s": "\u00a0· %s";
+				replace(line, " ", "\u00a0");
+				text.AppendFormat(fmt, line.c_str());
+			}
 
 			text.StripLeftRight();
 		}
@@ -76,7 +97,6 @@ AboutPage::AboutPage(LauncherWindow* launcher, const FStartupSelectionInfo& info
 		Text->SetText(text.GetChars());
 	}
 
-	Text->SetReadOnly(true);
 	Notes->SetText(GStrings.GetString("PICKER_SHOWNOTES"));
 
 	Notes->OnClick = [=,this]()

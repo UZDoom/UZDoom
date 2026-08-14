@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-13 23:20-0400\n"
+"PO-Revision-Date: 2026-07-30 16:57-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://hosted.weblate.org/projects/uzdoom/unused/en_GB/>\n"
 "Language: en_GB\n"
@@ -121,118 +121,6 @@ msgstr "Peer-to-Peer"
 # each other individually.
 msgid "PICKER_NETSERVER"
 msgstr "Packet-Server"
-
-# Jargon.
-msgid "REVMNU_AIR_ABSORPTION_HF"
-msgstr "Air Absorption HF"
-
-# Jargon.
-msgid "REVMNU_DECAY_HF_RATIO"
-msgstr "Decay HF Ratio"
-
-# Jargon.
-msgid "REVMNU_DECAY_LF_RATIO"
-msgstr "Decay LF Ratio"
-
-# Jargon.
-msgid "REVMNU_DECAY_TIME"
-msgstr "Decay Time"
-
-# Jargon.
-msgid "REVMNU_DENSITY"
-msgstr "Density"
-
-# Jargon.
-msgid "REVMNU_DIFFUSION"
-msgstr "Diffusion"
-
-# Jargon.
-msgid "REVMNU_ECHO_DEPTH"
-msgstr "Echo Depth"
-
-# Jargon.
-msgid "REVMNU_ECHO_TIME"
-msgstr "Echo Time"
-
-# Jargon.
-msgid "REVMNU_ENVIRONMENT_DIFFUSION"
-msgstr "Environment Diffusion"
-
-# Jargon.
-msgid "REVMNU_ENVIRONMENT_SIZE"
-msgstr "Environment Size"
-
-# Jargon.
-msgid "REVMNU_HF_REFERENCE"
-msgstr "HF Reference"
-
-# Jargon.
-msgid "REVMNU_LF_REFERENCE"
-msgstr "LF Reference"
-
-# Jargon.
-msgid "REVMNU_MODULATION_DEPTH"
-msgstr "Modulation Depth"
-
-# Jargon.
-msgid "REVMNU_MODULATION_TIME"
-msgstr "Modulation Time"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS"
-msgstr "Reflections"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS_DELAY"
-msgstr "Reflections Delay"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS_PAN_X"
-msgstr "Reflections Pan X"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS_PAN_Y"
-msgstr "Reflections Pan Y"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS_PAN_Z"
-msgstr "Reflections Pan Z"
-
-# Jargon.
-msgid "REVMNU_REVERB"
-msgstr "Reverb"
-
-# Jargon.
-msgid "REVMNU_REVERB_DELAY"
-msgstr "Reverb Delay"
-
-# Jargon.
-msgid "REVMNU_REVERB_PAN_X"
-msgstr "Reverb Pan X"
-
-# Jargon.
-msgid "REVMNU_REVERB_PAN_Y"
-msgstr "Reverb Pan Y"
-
-# Jargon.
-msgid "REVMNU_REVERB_PAN_Z"
-msgstr "Reverb Pan Z"
-
-# Jargon.
-msgid "REVMNU_ROOM"
-msgstr "Room"
-
-# Jargon.
-msgid "REVMNU_ROOM_HF"
-msgstr "Room HF"
-
-# Jargon.
-msgid "REVMNU_ROOM_LF"
-msgstr "Room LF"
-
-# Jargon.
-msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
-msgstr "Room Rolloff Factor"
 
 msgid "SNDMNU_BACKEND"
 msgstr "Sound backend"

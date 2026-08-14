@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-19 00:01+0000\n"
-"Last-Translator: Skyler Shirra <skyler.shirra@gmail.com>\n"
+"PO-Revision-Date: 2026-07-30 16:57-0400\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Esperanto <https://hosted.weblate.org/projects/uzdoom/common/eo/>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.8.dev0\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
 
 msgid "PRESSYN"
 msgstr "Premu Y aŭ N."
@@ -263,7 +263,6 @@ msgid "CNTRLMNU_SLOT1"
 msgstr "Armilo 1"
 
 # only show appropriate slots per game
-# 
 msgid "CNTRLMNU_SLOT2"
 msgstr "Armilo 2"
 
@@ -982,7 +981,7 @@ msgstr ""
 msgid "OPTVAL_JAVAOPL3"
 msgstr ""
 
-msgid "OPTVAL_ESFMu"
+msgid "OPTVAL_ESFMU"
 msgstr ""
 
 msgid "OPTVAL_YMFMOPL2"
@@ -1457,34 +1456,34 @@ msgstr "Modifi medion"
 msgid "REVMNU_NEW"
 msgstr "Nova medio"
 
-msgid "REVMNU_Reflections_Scale"
+msgid "REVMNU_REFLECTIONS_SCALE"
 msgstr "Skalo de reflektoj"
 
-msgid "REVMNU_Reflections_Delay_Scale"
+msgid "REVMNU_REFLECTIONS_DELAY_SCALE"
 msgstr "Prokrastskalo de reflektoj"
 
-msgid "REVMNU_Decay_Time_Scale"
+msgid "REVMNU_DECAY_TIME_SCALE"
 msgstr "Tempskalo de purtiĝo"
 
-msgid "REVMNU_Decay_HF_Limit"
+msgid "REVMNU_DECAY_HF_LIMIT"
 msgstr "AF-Limito de purtiĝo"
 
-msgid "REVMNU_Reverb_Scale"
+msgid "REVMNU_REVERB_SCALE"
 msgstr "Skalo de resono"
 
-msgid "REVMNU_Reverb_Delay_Scale"
+msgid "REVMNU_REVERB_DELAY_SCALE"
 msgstr "Prokrastskalo de resono"
 
-msgid "REVMNU_Echo_Time_Scale"
+msgid "REVMNU_ECHO_TIME_SCALE"
 msgstr "Tempskalo de eĥo"
 
-msgid "REVMNU_Modulation_Time_Scale"
+msgid "REVMNU_MODULATION_TIME_SCALE"
 msgstr "Tempskalo de modulado"
 
-msgid "REVMNU_Based_on"
+msgid "REVMNU_BASED_ON"
 msgstr "Bazita de"
 
-msgid "REVMNU_Name"
+msgid "REVMNU_NAME"
 msgstr "Nomo"
 
 msgid "REVMNU_ID_1"
@@ -1493,16 +1492,16 @@ msgstr "Identigo #1"
 msgid "REVMNU_ID_2"
 msgstr "Identigo #2"
 
-msgid "REVMNU_Create"
+msgid "REVMNU_CREATE"
 msgstr "Krei"
 
-msgid "REVMNU_Save"
+msgid "REVMNU_SAVE"
 msgstr "Konservi…"
 
-msgid "REVMNU_File_name"
+msgid "REVMNU_FILE_NAME"
 msgstr "Dosiernomo"
 
-msgid "REVMNU_Environments_to_save"
+msgid "REVMNU_ENVIRONMENTS_TO_SAVE"
 msgstr "Medioj por konservi"
 
 msgid "DSPLYMNU_VKOPT"
@@ -1790,3 +1789,115 @@ msgstr "Grando de mesaĝa atendovico"
 
 msgid "MSGMNU_STACKIDENTICAL"
 msgstr "Staki ripetitajn mesaĝojn"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_SIZE"
+msgstr "Mediamplekso"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_DIFFUSION"
+msgstr "Medidifuzo"
+
+# Jargon.
+msgid "REVMNU_ROOM"
+msgstr "Ĉambro"
+
+# Jargon.
+msgid "REVMNU_ROOM_HF"
+msgstr "Ĉambro (AF)"
+
+# Jargon.
+msgid "REVMNU_ROOM_LF"
+msgstr "Ĉambro (MaF)"
+
+# Jargon.
+msgid "REVMNU_DECAY_TIME"
+msgstr "Putriĝo-tempo"
+
+# Jargon.
+msgid "REVMNU_DECAY_HF_RATIO"
+msgstr "Putriĝo-proporcio (AF)"
+
+# Jargon.
+msgid "REVMNU_DECAY_LF_RATIO"
+msgstr "Putriĝo-proporcio (MaF)"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS"
+msgstr "Reflektoj"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_DELAY"
+msgstr "Prokrasto de reflektoj"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_X"
+msgstr "Reflektoj alturnas tra X"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Y"
+msgstr "Reflektoj alturnas tra Y"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Z"
+msgstr "Reflektoj alturnas tra Z"
+
+# Jargon.
+msgid "REVMNU_REVERB"
+msgstr "Resono"
+
+# Jargon.
+msgid "REVMNU_REVERB_DELAY"
+msgstr "Prokrasto de resono"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_X"
+msgstr "Resono alturnas tra X"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Y"
+msgstr "Resono alturnas tra Y"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Z"
+msgstr "Resono alturnas tra Z"
+
+# Jargon.
+msgid "REVMNU_ECHO_TIME"
+msgstr "Tempo de eĥo"
+
+# Jargon.
+msgid "REVMNU_ECHO_DEPTH"
+msgstr "Produndo de eĥo"
+
+# Jargon.
+msgid "REVMNU_MODULATION_TIME"
+msgstr "Tempo de modulado"
+
+# Jargon.
+msgid "REVMNU_MODULATION_DEPTH"
+msgstr "Produndo de modulado"
+
+# Jargon.
+msgid "REVMNU_AIR_ABSORPTION_HF"
+msgstr "Aer-absorbo AF"
+
+# Jargon.
+msgid "REVMNU_HF_REFERENCE"
+msgstr "AF referenco"
+
+# Jargon.
+msgid "REVMNU_LF_REFERENCE"
+msgstr "MaF referenco"
+
+# Jargon.
+msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
+msgstr "Ĉambro-Rolloff-faktoro"
+
+# Jargon.
+msgid "REVMNU_DIFFUSION"
+msgstr "Difuzo"
+
+# Jargon.
+msgid "REVMNU_DENSITY"
+msgstr "Denseco"

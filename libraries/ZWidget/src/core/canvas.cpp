@@ -380,7 +380,16 @@ void Canvas::line(const Point& p0, const Point& p1, const Colorf& color)
 	}
 }
 
-void Canvas::drawText(const Point& pos, const Colorf& color, const std::string& text)
+inline std::unique_ptr<CanvasFontGroup>& Canvas::WithFont(const std::shared_ptr<Font> &font)
+{
+	if (!fonts.contains(font))
+	{
+		fonts.emplace(font, std::make_unique<CanvasFontGroup>(font->GetName(), font->GetHeight() * uiscale));
+	}
+	return fonts.at(font);
+}
+
+inline void Canvas::drawText(const std::unique_ptr<CanvasFontGroup> &font, const Point& pos, const Colorf& color, const std::string& text)
 {
 	double x = std::round((origin.x + pos.x) * uiscale);
 	double y = std::round((origin.y + pos.y) * uiscale);
@@ -406,9 +415,14 @@ void Canvas::drawText(const Point& pos, const Colorf& color, const std::string& 
 	}
 }
 
+void Canvas::drawText(const Point& pos, const Colorf& color, const std::string& text)
+{
+	drawText(font, pos, color, text);
+}
+
 void Canvas::drawText(const std::shared_ptr<Font>& font, const Point& pos, const std::string& text, const Colorf& color)
 {
-	drawText(pos, color, text);
+	drawText(WithFont(font), pos, color, text);
 }
 
 void Canvas::drawTextEllipsis(const std::shared_ptr<Font>& font, const Point& pos, const Rect& clipBox, const std::string& text, const Colorf& color)
@@ -416,12 +430,7 @@ void Canvas::drawTextEllipsis(const std::shared_ptr<Font>& font, const Point& po
 	drawText(pos, color, text);
 }
 
-Rect Canvas::measureText(const std::shared_ptr<Font>& font, const std::string& text)
-{
-	return measureText(text);
-}
-
-Rect Canvas::measureText(const std::string& text)
+Rect Canvas::measureText(const std::unique_ptr<CanvasFontGroup> &font, const std::string_view& text)
 {
 	double x = 0.0;
 	double y = font->GetTextMetrics().ascender - font->GetTextMetrics().descender;
@@ -440,6 +449,16 @@ Rect Canvas::measureText(const std::string& text)
 	}
 
 	return Rect::xywh(0.0, 0.0, x / uiscale, y / uiscale);
+}
+
+Rect Canvas::measureText(const std::shared_ptr<Font>& font, const std::string_view& text)
+{
+	return measureText(WithFont(font), text);
+}
+
+Rect Canvas::measureText(const std::string_view& text)
+{
+	return measureText(font, text);
 }
 
 FontMetrics Canvas::getFontMetrics(const std::shared_ptr<Font>& font)

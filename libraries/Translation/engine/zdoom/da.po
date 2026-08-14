@@ -4567,9 +4567,7 @@ msgstr ""
 "version)."
 
 # Shouldn’t this say “%e is the newest supported”?
-# 
 # — Undead
-# 
 # Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
 msgstr ""

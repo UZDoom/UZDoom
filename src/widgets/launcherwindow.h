@@ -54,6 +54,7 @@ public:
 	void ForceCheckUpdate();
 
 private:
+	void SetValues();
 	void OnClose() override;
 	void OnGeometryChanged() override;
 	void OnWindowClose() override;

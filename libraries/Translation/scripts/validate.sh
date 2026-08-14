@@ -7,6 +7,7 @@ phase() {
 		if [[ "$error_count" == 0 ]]; then
 			echo "Okay"
 		else
+			[[ -n "$GITHUB_ACTIONS" ]] && echo "::warning ::'$_phase' failed with $error_count error(s)"
 			echo "Checks failed in $error_count place(s)!" >&2
 		fi
 		echo
@@ -14,6 +15,7 @@ phase() {
 	printf "###\n"
 	if [[ -n "$_phase" ]]; then
 		printf "# END %s\n" "$_phase"
+		[[ -n "$GITHUB_ACTIONS" ]] && echo "echo ::endgroup::"
 		if [[ "$error_count" != 0 ]]; then
 			echo "###"
 			exit 1
@@ -21,6 +23,7 @@ phase() {
 			printf "#\n"
 		fi
 	fi
+	[[ -n "$GITHUB_ACTIONS" ]] && echo "::group::$*"
 	[[ -n "$*" ]] && printf "# BEGIN %s\n" "$*"
 	printf "###\n\n"
 	_phase="$*"

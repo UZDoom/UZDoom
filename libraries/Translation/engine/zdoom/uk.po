@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-20 19:01+0000\n"
+"PO-Revision-Date: 2026-08-01 21:01+0000\n"
 "Last-Translator: Ron Dallas <Lot_bohdan@ukr.net>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/uk/>\n"
 "Language: uk\n"
@@ -85,7 +85,7 @@ msgstr "Ви дійсно хочете вийти?"
 
 msgctxt "heretic"
 msgid "SWSTRING"
-msgstr "Доступно только в полной версии"
+msgstr "Доступно тільки в повній версії"
 
 msgid "DOSY"
 msgstr "(Натисніть Y для виходу)"
@@ -145,7 +145,7 @@ msgstr ""
 msgid "QUITMSG11"
 msgstr ""
 "Був би я твоїм боссом –\n"
-"розніс у дедматчі за хвилину!"
+"розніс у дезматчі за хвилину!"
 
 msgid "QUITMSG12"
 msgstr ""
@@ -3991,7 +3991,7 @@ msgid "OPTVAL_CLASSIC"
 msgstr "Класичний (швидше)"
 
 msgid "OPTVAL_PRECISE"
-msgstr "Точний"
+msgstr "Точне"
 
 msgid "OPTVAL_CAPPED"
 msgstr "Обмежений"
@@ -4561,9 +4561,9 @@ msgid "TXT_TOOOLDSG"
 msgstr "Збереження \"%s\" з старішої версії: %d (%e остання сумісна)."
 
 # Shouldn’t this say “%e is the newest supported”?
-# 
+#
 # — Undead
-# 
+#
 # Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
 msgstr "Збереження \"%s\" з новіщої версії: %d (%e остання сумісна)."
@@ -5368,7 +5368,7 @@ msgid "OPTVAL_ROCKETEXP_STYLE_ADD"
 msgstr "Адаптивний"
 
 msgid "OPTVAL_LAX"
-msgstr "Гнучкий"
+msgstr "Гнучке"
 
 msgid "OPTVAL_STRICT"
 msgstr "Точний"
@@ -5461,7 +5461,7 @@ msgid "UPDATER_INTERVAL"
 msgstr "Перевіряти кожен:"
 
 msgid "UPDATER_UPDATE_AVAILABLE"
-msgstr "Доступно нове оновлення"
+msgstr "Доступне нове оновлення"
 
 msgid "UPDATER_UPDATE_SKIP"
 msgstr "Пропустити оновлення"
@@ -5547,7 +5547,7 @@ msgid "TXT_EXPERIMENTAL"
 msgstr "Експериментальне"
 
 msgid "TXT_UPDATE"
-msgstr "Оновлення"
+msgstr "Оновити"
 
 msgid "TXT_UPDATED"
 msgstr "Оновлено"
@@ -5569,3 +5569,7 @@ msgstr "Підтвердити"
 
 msgid "TXT_OK"
 msgstr "OK"
+
+#, fuzzy
+msgid "CMPTMNU_TRANSFERSECRET"
+msgstr "Механізм зміни підлоги з передаванням секрету в BOOM"

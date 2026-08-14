@@ -22,7 +22,8 @@
 
 class LauncherWindow;
 class CheckboxLabel;
-class TextEdit;
+class TextBlock;
+class FString;
 struct FStartupSelectionInfo;
 
 class ReleasePage : public Widget
@@ -38,11 +39,13 @@ private:
 
 	LauncherWindow* Launcher = nullptr;
 
-	TextEdit* Notes = nullptr;
+	TextBlock* Notes = nullptr;
 	CheckboxLabel* ShowThis = nullptr;
 
 	static FString _ParseReleaseNotes(rapidxml::xml_node<char> *);
 	static FString _BuildReleaseNotes(rapidxml::xml_document<> &);
 	static char * _OpenReleaseNotes();
 	static FString GetReleaseNotes();
+
+	static bool show_upcoming;
 };

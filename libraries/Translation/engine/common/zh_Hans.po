@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-13 23:20-0400\n"
+"PO-Revision-Date: 2026-07-30 16:57-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/projects/uzdoom/common/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -263,7 +263,6 @@ msgid "CNTRLMNU_SLOT1"
 msgstr "武器1"
 
 # only show appropriate slots per game
-# 
 msgid "CNTRLMNU_SLOT2"
 msgstr "武器2"
 
@@ -979,7 +978,7 @@ msgstr "DOSBox OPL3"
 msgid "OPTVAL_JAVAOPL3"
 msgstr "Java OPL3"
 
-msgid "OPTVAL_ESFMu"
+msgid "OPTVAL_ESFMU"
 msgstr "ESFMu OPL3"
 
 msgid "OPTVAL_YMFMOPL2"
@@ -1454,34 +1453,34 @@ msgstr "编辑环境"
 msgid "REVMNU_NEW"
 msgstr "新建环境"
 
-msgid "REVMNU_Reflections_Scale"
+msgid "REVMNU_REFLECTIONS_SCALE"
 msgstr "反射比例"
 
-msgid "REVMNU_Reflections_Delay_Scale"
+msgid "REVMNU_REFLECTIONS_DELAY_SCALE"
 msgstr "反射延迟比例"
 
-msgid "REVMNU_Decay_Time_Scale"
+msgid "REVMNU_DECAY_TIME_SCALE"
 msgstr "衰减时间比例"
 
-msgid "REVMNU_Decay_HF_Limit"
+msgid "REVMNU_DECAY_HF_LIMIT"
 msgstr "衰减HF限制"
 
-msgid "REVMNU_Reverb_Scale"
+msgid "REVMNU_REVERB_SCALE"
 msgstr "混响比例"
 
-msgid "REVMNU_Reverb_Delay_Scale"
+msgid "REVMNU_REVERB_DELAY_SCALE"
 msgstr "混响延迟比例"
 
-msgid "REVMNU_Echo_Time_Scale"
+msgid "REVMNU_ECHO_TIME_SCALE"
 msgstr "回声时间比例"
 
-msgid "REVMNU_Modulation_Time_Scale"
+msgid "REVMNU_MODULATION_TIME_SCALE"
 msgstr "调制时间比例"
 
-msgid "REVMNU_Based_on"
+msgid "REVMNU_BASED_ON"
 msgstr "基于"
 
-msgid "REVMNU_Name"
+msgid "REVMNU_NAME"
 msgstr "名称"
 
 msgid "REVMNU_ID_1"
@@ -1490,16 +1489,16 @@ msgstr "ID #1"
 msgid "REVMNU_ID_2"
 msgstr "ID #2"
 
-msgid "REVMNU_Create"
+msgid "REVMNU_CREATE"
 msgstr "创建"
 
-msgid "REVMNU_Save"
+msgid "REVMNU_SAVE"
 msgstr "保存…"
 
-msgid "REVMNU_File_name"
+msgid "REVMNU_FILE_NAME"
 msgstr "文件名"
 
-msgid "REVMNU_Environments_to_save"
+msgid "REVMNU_ENVIRONMENTS_TO_SAVE"
 msgstr "保存环境"
 
 msgid "DSPLYMNU_VKOPT"
@@ -1787,5 +1786,117 @@ msgstr "消息队列大小"
 msgid "MSGMNU_STACKIDENTICAL"
 msgstr "堆叠重复消息"
 
-msgid "$MSGMNU_MESSAGEFADE"
+msgid "MSGMNU_MESSAGEFADE"
 msgstr "消息淡出时长"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_SIZE"
+msgstr "环境大小"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_DIFFUSION"
+msgstr "环境传播"
+
+# Jargon.
+msgid "REVMNU_ROOM"
+msgstr "房间"
+
+# Jargon.
+msgid "REVMNU_ROOM_HF"
+msgstr "房间HF"
+
+# Jargon.
+msgid "REVMNU_ROOM_LF"
+msgstr "房间LF"
+
+# Jargon.
+msgid "REVMNU_DECAY_TIME"
+msgstr "衰减时间"
+
+# Jargon.
+msgid "REVMNU_DECAY_HF_RATIO"
+msgstr "衰减HF率"
+
+# Jargon.
+msgid "REVMNU_DECAY_LF_RATIO"
+msgstr "衰减LF率"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS"
+msgstr "反射"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_DELAY"
+msgstr "反射延迟"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_X"
+msgstr "反射X定位"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Y"
+msgstr "反射Y定位"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Z"
+msgstr "反射Z定位"
+
+# Jargon.
+msgid "REVMNU_REVERB"
+msgstr "混响"
+
+# Jargon.
+msgid "REVMNU_REVERB_DELAY"
+msgstr "混响延迟"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_X"
+msgstr "混响X定位"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Y"
+msgstr "混响Y定位"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Z"
+msgstr "混响Z定位"
+
+# Jargon.
+msgid "REVMNU_ECHO_TIME"
+msgstr "回声时间"
+
+# Jargon.
+msgid "REVMNU_ECHO_DEPTH"
+msgstr "回声深度"
+
+# Jargon.
+msgid "REVMNU_MODULATION_TIME"
+msgstr "调制时间"
+
+# Jargon.
+msgid "REVMNU_MODULATION_DEPTH"
+msgstr "调制深度"
+
+# Jargon.
+msgid "REVMNU_AIR_ABSORPTION_HF"
+msgstr "空气吸收HF"
+
+# Jargon.
+msgid "REVMNU_HF_REFERENCE"
+msgstr "HF参考值"
+
+# Jargon.
+msgid "REVMNU_LF_REFERENCE"
+msgstr "LF参考值"
+
+# Jargon.
+msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
+msgstr "房间滚降因子"
+
+# Jargon.
+msgid "REVMNU_DIFFUSION"
+msgstr "传播"
+
+# Jargon.
+msgid "REVMNU_DENSITY"
+msgstr "密度"

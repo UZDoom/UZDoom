@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-13 23:20-0400\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2026-07-31 23:01+0000\n"
+"Last-Translator: RageSpark <bgamer332ofc@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/uzdoom/common/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: python 3.14.6 polib 1.2.0\n"
+"X-Generator: Weblate 2026.8.dev0\n"
 
 msgid "PRESSYN"
 msgstr "Aperte Y ou N."
@@ -264,7 +264,6 @@ msgid "CNTRLMNU_SLOT1"
 msgstr "Arma 1"
 
 # only show appropriate slots per game
-# 
 msgid "CNTRLMNU_SLOT2"
 msgstr "Arma 2"
 
@@ -308,9 +307,8 @@ msgid "CNTRLMNU_PREVIOUSITEM"
 msgstr "Item anterior"
 
 # most are not used yet but will be
-#, fuzzy
 msgid "MAPCNTRLMNU_TITLE"
-msgstr "Peronalizar comandos do mapa"
+msgstr "Personalizar comandos do mapa"
 
 msgid "MAPCNTRLMNU_CONTROLS"
 msgstr "Comandos do mapa"
@@ -991,7 +989,7 @@ msgid "OPTVAL_JAVAOPL3"
 msgstr "Java OPL3"
 
 #, fuzzy
-msgid "OPTVAL_ESFMu"
+msgid "OPTVAL_ESFMU"
 msgstr "ESFMu OPL3"
 
 #, fuzzy
@@ -1474,34 +1472,34 @@ msgstr "Editar ambiente"
 msgid "REVMNU_NEW"
 msgstr "Novo ambiente"
 
-msgid "REVMNU_Reflections_Scale"
+msgid "REVMNU_REFLECTIONS_SCALE"
 msgstr "Escala de reflexos"
 
-msgid "REVMNU_Reflections_Delay_Scale"
+msgid "REVMNU_REFLECTIONS_DELAY_SCALE"
 msgstr "Escala de atraso de reflexos"
 
-msgid "REVMNU_Decay_Time_Scale"
+msgid "REVMNU_DECAY_TIME_SCALE"
 msgstr "Escala de tempo de decaimento"
 
-msgid "REVMNU_Decay_HF_Limit"
+msgid "REVMNU_DECAY_HF_LIMIT"
 msgstr "Limite de decaimento em alta freq"
 
-msgid "REVMNU_Reverb_Scale"
+msgid "REVMNU_REVERB_SCALE"
 msgstr "Escala de reverberação"
 
-msgid "REVMNU_Reverb_Delay_Scale"
+msgid "REVMNU_REVERB_DELAY_SCALE"
 msgstr "Escala de atraso de reverberação"
 
-msgid "REVMNU_Echo_Time_Scale"
+msgid "REVMNU_ECHO_TIME_SCALE"
 msgstr "Escala de tempo de eco"
 
-msgid "REVMNU_Modulation_Time_Scale"
+msgid "REVMNU_MODULATION_TIME_SCALE"
 msgstr "Escala de tempo de modulação"
 
-msgid "REVMNU_Based_on"
+msgid "REVMNU_BASED_ON"
 msgstr "Baseado em"
 
-msgid "REVMNU_Name"
+msgid "REVMNU_NAME"
 msgstr "Nome"
 
 msgid "REVMNU_ID_1"
@@ -1510,16 +1508,16 @@ msgstr "ID #1"
 msgid "REVMNU_ID_2"
 msgstr "ID #2"
 
-msgid "REVMNU_Create"
+msgid "REVMNU_CREATE"
 msgstr "Criar"
 
-msgid "REVMNU_Save"
+msgid "REVMNU_SAVE"
 msgstr "Salvar…"
 
-msgid "REVMNU_File_name"
+msgid "REVMNU_FILE_NAME"
 msgstr "Nome do arquivo"
 
-msgid "REVMNU_Environments_to_save"
+msgid "REVMNU_ENVIRONMENTS_TO_SAVE"
 msgstr "Ambientes para salvar"
 
 msgid "DSPLYMNU_VKOPT"
@@ -1809,5 +1807,117 @@ msgstr "Quantidade de Mensagens"
 msgid "MSGMNU_STACKIDENTICAL"
 msgstr "Combinar mensagens repetidas"
 
-msgid "$MSGMNU_MESSAGEFADE"
+msgid "MSGMNU_MESSAGEFADE"
 msgstr "Duração de fadeout das mensagens"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_SIZE"
+msgstr "Tamanho do ambiente"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_DIFFUSION"
+msgstr "Difusão do ambiente"
+
+# Jargon.
+msgid "REVMNU_ROOM"
+msgstr "Sala"
+
+# Jargon.
+msgid "REVMNU_ROOM_HF"
+msgstr "Sala (alta frequência)"
+
+# Jargon.
+msgid "REVMNU_ROOM_LF"
+msgstr "Sala (baixa frequência)"
+
+# Jargon.
+msgid "REVMNU_DECAY_TIME"
+msgstr "Tempo de decaimento"
+
+# Jargon.
+msgid "REVMNU_DECAY_HF_RATIO"
+msgstr "Taxa de decaimento (alta freq.)"
+
+# Jargon.
+msgid "REVMNU_DECAY_LF_RATIO"
+msgstr "Taxa de decaimento (baixa freq.)"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS"
+msgstr "Reflexos"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_DELAY"
+msgstr "Atraso de reflexos"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_X"
+msgstr "Deslocamento X de reflexos"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Y"
+msgstr "Deslocamento Y de reflexos"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Z"
+msgstr "Deslocamento Z de reflexos"
+
+# Jargon.
+msgid "REVMNU_REVERB"
+msgstr "Reverberação"
+
+# Jargon.
+msgid "REVMNU_REVERB_DELAY"
+msgstr "Atraso de reverberação"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_X"
+msgstr "Deslocamento X de reverberação"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Y"
+msgstr "Deslocamento Y de reverberação"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Z"
+msgstr "Deslocamento Z de reverberação"
+
+# Jargon.
+msgid "REVMNU_ECHO_TIME"
+msgstr "Tempo de eco"
+
+# Jargon.
+msgid "REVMNU_ECHO_DEPTH"
+msgstr "Profundidade de eco"
+
+# Jargon.
+msgid "REVMNU_MODULATION_TIME"
+msgstr "Tempo de modulação"
+
+# Jargon.
+msgid "REVMNU_MODULATION_DEPTH"
+msgstr "Profundidade de modulação"
+
+# Jargon.
+msgid "REVMNU_AIR_ABSORPTION_HF"
+msgstr "Absorção de ar de alta freq."
+
+# Jargon.
+msgid "REVMNU_HF_REFERENCE"
+msgstr "Referência de alta freq."
+
+# Jargon.
+msgid "REVMNU_LF_REFERENCE"
+msgstr "Referência de baixa freq."
+
+# Jargon.
+msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
+msgstr "Fator de roll-off de sala"
+
+# Jargon.
+msgid "REVMNU_DIFFUSION"
+msgstr "Difusão"
+
+# Jargon.
+msgid "REVMNU_DENSITY"
+msgstr "Densidade"

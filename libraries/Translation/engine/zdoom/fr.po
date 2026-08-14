@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-14 05:01+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2026-07-31 10:01+0000\n"
+"Last-Translator: Tapwave <kolb.rodrigue@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -4346,9 +4346,8 @@ msgstr "Ordonner liste de rendu par texture"
 msgid "GLLIGHTMNU_TITLE"
 msgstr "Lumières Dynamiques"
 
-#, fuzzy
 msgid "GLLIGHTMNU_LIGHTSENABLED"
-msgstr "Lumières Dynamiques (Hardware)"
+msgstr "Lumières Dynamiques"
 
 msgid "GLLIGHTMNU_LIGHTSPRITES"
 msgstr "Lumières affectent les sprites"
@@ -4568,9 +4567,9 @@ msgstr ""
 "ancienne supportée."
 
 # Shouldn’t this say “%e is the newest supported”?
-# 
+#
 # — Undead
-# 
+#
 # Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
 msgstr ""
@@ -5423,3 +5422,124 @@ msgstr "Seuil de Double-clic"
 
 msgid "ACCMNU_TOOLTIP_DOUBLECLICK_THRESHOLD"
 msgstr "Temps entre deux clics pour activer un évènement double-clic"
+
+msgid "UPDATER_CHECK_FOR_UPDATES"
+msgstr "Vérifier Mises à Jour"
+
+msgid "UPDATER_PROMPT_TO_INSTALL"
+msgstr "Demander pour installer"
+
+msgid "UPDATER_SETTINGS"
+msgstr "Paramètres Mises à Jour"
+
+msgid "UPDATER_INTERVAL"
+msgstr "Vérifier chaque :"
+
+msgid "UPDATER_UPDATE_AVAILABLE"
+msgstr "Nouvelle MàJ Disponible"
+
+msgid "UPDATER_UPDATE_SKIP"
+msgstr "Ignorer MàJ"
+
+msgid "UPDATER_TITLE"
+msgstr "Vérificateur de MàJ"
+
+msgid "UPDATER_DISABLE"
+msgstr "Désactiver Vérificateur de MàJ"
+
+msgid "UPDATER_CHECK_FAILED"
+msgstr "La Vérification de la MàJ a Échoué"
+
+msgid "UPDATER_UPDATE_FAILED"
+msgstr "La MàJ a Échoué"
+
+msgid "UPDATER_YES_PROMPT"
+msgstr "Oui, et demander pour installer les MàJ"
+
+msgid "UPDATER_DISMISS_UPDATE"
+msgstr "Ignorer MàJ ?"
+
+msgid "UPDATER_ASK_AUTO"
+msgstr ""
+"Voulez vous automatiquement vérifier s'il y a des mises à jour ?\n"
+"(Ceci peut être changé plus tard dans l'onglet options)"
+
+msgid "UPDATER_ASK_INTERVAL"
+msgstr ""
+"À quelle fréquence voulez-vous vérifier s'il y a des Mises à Jour ?\n"
+"(Ceci peut être changé plus tard dans l'onglet options)"
+
+msgid "UPDATER_ZIP_FAIL"
+msgstr "Échec de l'ouverture du fichier zip"
+
+msgid "UPDATER_ZIP_ERROR"
+msgstr "Échec de l'ouverture du fichier zip, erreur : '{}' lors de l'écriture du fichier '{}'"
+
+msgid "UPDATER_UPDATING"
+msgstr "Mise à jour..."
+
+msgid "UPDATER_STARTING"
+msgstr "Démarrage du Téléchargement..."
+
+msgid "UPDATER_SUCCESS"
+msgstr "Mise à jour réussie, le lançeur va maintenant redémarrer."
+
+msgid "UPDATER_UP_TO_DATE"
+msgstr "À Jour !"
+
+msgid "UPDATER_CANCELLED"
+msgstr "Mise à jour annulée"
+
+msgid "UPDATER_INVALID_JSON"
+msgstr "JSON de la MàJ Invalide"
+
+msgid "UPDATER_NOT_A_DIR"
+msgstr "'{}' n'est pas un dossier"
+
+msgid "OPTVAL_DISABLE"
+msgstr "Désactiver"
+
+msgid "OPTVAL_NOTIFY"
+msgstr "Notifier"
+
+msgid "OPTVAL_DAILY"
+msgstr "Quotidiennement"
+
+msgid "OPTVAL_WEEKLY"
+msgstr "Hebdomadairement"
+
+msgid "OPTVAL_MONTHLY"
+msgstr "Mensuellement"
+
+msgid "TXT_DOWNLOADING"
+msgstr "Téléchargement"
+
+msgid "TXT_EXPERIMENTAL"
+msgstr "Expérimental"
+
+msgid "TXT_UPDATE"
+msgstr "Mise à Jour"
+
+msgid "TXT_UPDATED"
+msgstr "À Jour"
+
+msgid "TXT_CANCELLED"
+msgstr "Annulé"
+
+msgid "TXT_BACK"
+msgstr "Retour"
+
+msgid "TXT_DISMISS"
+msgstr "Ignorer"
+
+msgid "TXT_SKIP"
+msgstr "Passer"
+
+msgid "TXT_CONFIRM"
+msgstr "Confirmer"
+
+msgid "TXT_OK"
+msgstr "OK"
+
+msgid "CMPTMNU_TRANSFERSECRET"
+msgstr "Le spécial de changement de sol de BOOM transfère les secrets."

@@ -29,11 +29,18 @@ def dump_csv(destination, table):
         csv.writer(file).writerows(table)
 
 
-def remap(s):
+def remap(s, utf):
     """
-    Maps proper chars to chars/sequences that uzdoom can understand.
-    This is temporary, and eventually everything in here will be removed.
+    Prepares string for table
     """
+
+    s = s.rstrip()
+
+    # Maps proper chars to chars/sequences that uzdoom can understand.
+    # This is temporary, and eventually everything in here will be removed.
+
+    if not utf:
+        return s
 
     return s\
         .replace("™", "(TM)")\
@@ -60,23 +67,28 @@ def fill_dict(path):
     data = {}
 
     meta["id"] = po.metadata["Language"]
+
+    # used to alert something when wrong
     meta["valid"] = True
 
     # for now uzdoom needs the top left cell to be "default"
     if meta["id"] == SOURCE_LANG or meta["id"] == SOURCE_LANG_ALT:
         meta["id"] = "default"
 
+    # If we are using unifont instead of doom's font
     has_utf = meta["id"] in ["ja", "ko", "zh_Hans", "zh_Hant"]
 
+    # loop through each entry in a language, and add to map
     for e in po:
         specific_id = e.msgid
         entry = {"id": e.msgid}
 
         if e.msgstr:
-            entry["string"] = e.msgstr if has_utf else remap(e.msgstr)
+            entry["string"] = remap(e.msgstr, has_utf)
         if e.tcomment:
             entry["remarks"] = e.tcomment
         if e.msgctxt:
+            # filters are used to change strings in certain cases
             entry["filter"] = e.msgctxt
             specific_id = f"{specific_id}#{e.msgctxt}"
 
@@ -107,14 +119,19 @@ def get_po_files(po_paths):
             continue
 
         _po_files = {}
+        # find each po file in the dir, add to dict using the filename
         for f in po_path.iterdir():
             if f.is_file() and str(f).endswith(".po"):
+
                 po_id = f.parts[-1][0:-3]
                 _po_files[po_id] = fill_dict(f)
+
                 if not _po_files[po_id]["meta"]["valid"]:
                     failed = True
+
                 if po_id not in languages:
                     languages[po_id] = _po_files[po_id]["meta"]["id"]
+
                 if languages[po_id] != _po_files[po_id]["meta"]["id"]:
                     failed = True
                     la = languages[po_id]

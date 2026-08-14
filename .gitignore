@@ -1,5 +1,5 @@
 # build artifacts
-/build*
+/*build*
 /wadsrc/*.pk3
 .flatpak-builder/
 *.AppImage

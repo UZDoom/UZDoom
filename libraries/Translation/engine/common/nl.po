@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-13 23:20-0400\n"
+"PO-Revision-Date: 2026-07-30 16:57-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/uzdoom/common/nl/>\n"
 "Language: nl\n"
@@ -264,7 +264,6 @@ msgid "CNTRLMNU_SLOT1"
 msgstr "Wapenslot 1"
 
 # only show appropriate slots per game
-# 
 msgid "CNTRLMNU_SLOT2"
 msgstr "Wapenslot 2"
 
@@ -980,7 +979,7 @@ msgstr "DOSBox OPL3"
 msgid "OPTVAL_JAVAOPL3"
 msgstr "Java OPL3"
 
-msgid "OPTVAL_ESFMu"
+msgid "OPTVAL_ESFMU"
 msgstr "ESFMu OPL3"
 
 msgid "OPTVAL_YMFMOPL2"
@@ -1456,34 +1455,34 @@ msgstr "Omgeving bewerken"
 msgid "REVMNU_NEW"
 msgstr "Nieuwe omgeving"
 
-msgid "REVMNU_Reflections_Scale"
+msgid "REVMNU_REFLECTIONS_SCALE"
 msgstr "Reflectieschaal"
 
-msgid "REVMNU_Reflections_Delay_Scale"
+msgid "REVMNU_REFLECTIONS_DELAY_SCALE"
 msgstr "Reflecties Vertragingsschaal"
 
-msgid "REVMNU_Decay_Time_Scale"
+msgid "REVMNU_DECAY_TIME_SCALE"
 msgstr "Verval-tijdschaal"
 
-msgid "REVMNU_Decay_HF_Limit"
+msgid "REVMNU_DECAY_HF_LIMIT"
 msgstr "Decay HF-limiet"
 
-msgid "REVMNU_Reverb_Scale"
+msgid "REVMNU_REVERB_SCALE"
 msgstr "Reverb-schaal"
 
-msgid "REVMNU_Reverb_Delay_Scale"
+msgid "REVMNU_REVERB_DELAY_SCALE"
 msgstr "Reverb Delay-schaal"
 
-msgid "REVMNU_Echo_Time_Scale"
+msgid "REVMNU_ECHO_TIME_SCALE"
 msgstr "Echotijdschaal"
 
-msgid "REVMNU_Modulation_Time_Scale"
+msgid "REVMNU_MODULATION_TIME_SCALE"
 msgstr "Modulatietijdschaal"
 
-msgid "REVMNU_Based_on"
+msgid "REVMNU_BASED_ON"
 msgstr "Gebaseerd op"
 
-msgid "REVMNU_Name"
+msgid "REVMNU_NAME"
 msgstr "Naam"
 
 msgid "REVMNU_ID_1"
@@ -1492,16 +1491,16 @@ msgstr "ID #1"
 msgid "REVMNU_ID_2"
 msgstr "ID #2"
 
-msgid "REVMNU_Create"
+msgid "REVMNU_CREATE"
 msgstr "Aanmaken"
 
-msgid "REVMNU_Save"
+msgid "REVMNU_SAVE"
 msgstr "Opslaan…"
 
-msgid "REVMNU_File_name"
+msgid "REVMNU_FILE_NAME"
 msgstr "Bestandsnaam"
 
-msgid "REVMNU_Environments_to_save"
+msgid "REVMNU_ENVIRONMENTS_TO_SAVE"
 msgstr "Omgevingen om op te slaan"
 
 msgid "DSPLYMNU_VKOPT"
@@ -1788,3 +1787,115 @@ msgstr "Grootte van de berichtenwachtrij"
 
 msgid "MSGMNU_STACKIDENTICAL"
 msgstr "Herhaalde berichten stapelen"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_SIZE"
+msgstr "Omgeving Grootte"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_DIFFUSION"
+msgstr "Milieuverspreiding"
+
+# Jargon.
+msgid "REVMNU_ROOM"
+msgstr "Kamer"
+
+# Jargon.
+msgid "REVMNU_ROOM_HF"
+msgstr "Kamer HF"
+
+# Jargon.
+msgid "REVMNU_ROOM_LF"
+msgstr "Kamer LF"
+
+# Jargon.
+msgid "REVMNU_DECAY_TIME"
+msgstr "Vervaldtijd"
+
+# Jargon.
+msgid "REVMNU_DECAY_HF_RATIO"
+msgstr "Verval HF-verhouding"
+
+# Jargon.
+msgid "REVMNU_DECAY_LF_RATIO"
+msgstr "Verval LF-verhouding"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS"
+msgstr "Reflecties"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_DELAY"
+msgstr "Reflecties Vertraging"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_X"
+msgstr "Reflecties Pan X"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Y"
+msgstr "Reflecties Pan Y"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Z"
+msgstr "Reflecties Pan Z"
+
+# Jargon.
+msgid "REVMNU_REVERB"
+msgstr "Nagalm"
+
+# Jargon.
+msgid "REVMNU_REVERB_DELAY"
+msgstr "Reverb-vertraging"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_X"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Y"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Z"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ECHO_TIME"
+msgstr "Echotijd"
+
+# Jargon.
+msgid "REVMNU_ECHO_DEPTH"
+msgstr "Echo-diepte"
+
+# Jargon.
+msgid "REVMNU_MODULATION_TIME"
+msgstr "Modulatietijd"
+
+# Jargon.
+msgid "REVMNU_MODULATION_DEPTH"
+msgstr "Modulatie diepte"
+
+# Jargon.
+msgid "REVMNU_AIR_ABSORPTION_HF"
+msgstr "Luchtabsorptie HF"
+
+# Jargon.
+msgid "REVMNU_HF_REFERENCE"
+msgstr "HF-referentie"
+
+# Jargon.
+msgid "REVMNU_LF_REFERENCE"
+msgstr "LF-referentie"
+
+# Jargon.
+msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
+msgstr "Ruimte-rolloff-factor"
+
+# Jargon.
+msgid "REVMNU_DIFFUSION"
+msgstr "Diffusie"
+
+# Jargon.
+msgid "REVMNU_DENSITY"
+msgstr "Dichtheid"

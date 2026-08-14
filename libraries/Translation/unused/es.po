@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-13 23:20-0400\n"
+"PO-Revision-Date: 2026-07-30 16:57-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/uzdoom/unused/es/>\n"
 "Language: es\n"
@@ -121,118 +121,6 @@ msgstr ""
 # each other individually.
 msgid "PICKER_NETSERVER"
 msgstr ""
-
-# Jargon.
-msgid "REVMNU_AIR_ABSORPTION_HF"
-msgstr "Absorción en aire de frecuencia alta"
-
-# Jargon.
-msgid "REVMNU_DECAY_HF_RATIO"
-msgstr "Ratio de decadencia (Frecuencia alta)"
-
-# Jargon.
-msgid "REVMNU_DECAY_LF_RATIO"
-msgstr "Ratio de decadencia (Frecuencia baja)"
-
-# Jargon.
-msgid "REVMNU_DECAY_TIME"
-msgstr "Tiempo de decadencia"
-
-# Jargon.
-msgid "REVMNU_DENSITY"
-msgstr "Densidad"
-
-# Jargon.
-msgid "REVMNU_DIFFUSION"
-msgstr "Difusión"
-
-# Jargon.
-msgid "REVMNU_ECHO_DEPTH"
-msgstr "Profundidad de eco"
-
-# Jargon.
-msgid "REVMNU_ECHO_TIME"
-msgstr "Tiempo de eco"
-
-# Jargon.
-msgid "REVMNU_ENVIRONMENT_DIFFUSION"
-msgstr "Difusión de ambiente"
-
-# Jargon.
-msgid "REVMNU_ENVIRONMENT_SIZE"
-msgstr "Tamaño de ambiente"
-
-# Jargon.
-msgid "REVMNU_HF_REFERENCE"
-msgstr "Referencia de frecuencia alta"
-
-# Jargon.
-msgid "REVMNU_LF_REFERENCE"
-msgstr "Referencia de frecuencia baja"
-
-# Jargon.
-msgid "REVMNU_MODULATION_DEPTH"
-msgstr "Profundidad de modulación"
-
-# Jargon.
-msgid "REVMNU_MODULATION_TIME"
-msgstr "Tiempo de modulación"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS"
-msgstr "Reflejos"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS_DELAY"
-msgstr "Retraso de reflejos"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS_PAN_X"
-msgstr "Desplazamiento en X de reflejos"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS_PAN_Y"
-msgstr "Desplazamiento en Y de reflejos"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS_PAN_Z"
-msgstr "Desplazamiento en Z de reflejos"
-
-# Jargon.
-msgid "REVMNU_REVERB"
-msgstr "Reverberación"
-
-# Jargon.
-msgid "REVMNU_REVERB_DELAY"
-msgstr "Retraso de reverberación"
-
-# Jargon.
-msgid "REVMNU_REVERB_PAN_X"
-msgstr "Desplazamiento en X de reverberación"
-
-# Jargon.
-msgid "REVMNU_REVERB_PAN_Y"
-msgstr "Desplazamiento en Y de reverberación"
-
-# Jargon.
-msgid "REVMNU_REVERB_PAN_Z"
-msgstr "Desplazamiento en Z de reverberación"
-
-# Jargon.
-msgid "REVMNU_ROOM"
-msgstr "Sala"
-
-# Jargon.
-msgid "REVMNU_ROOM_HF"
-msgstr "Sala (Frecuencia alta)"
-
-# Jargon.
-msgid "REVMNU_ROOM_LF"
-msgstr "Sala (Frecuencia baja)"
-
-# Jargon.
-msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
-msgstr "Factor de Roll-off de sala"
 
 msgid "SNDMNU_BACKEND"
 msgstr "Sistema de sonido"

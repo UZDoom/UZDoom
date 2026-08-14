@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-13 23:20-0400\n"
+"PO-Revision-Date: 2026-07-30 16:57-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/uzdoom/common/pl/>\n"
 "Language: pl\n"
@@ -263,7 +263,6 @@ msgid "CNTRLMNU_SLOT1"
 msgstr "Broń 1"
 
 # only show appropriate slots per game
-# 
 msgid "CNTRLMNU_SLOT2"
 msgstr "Broń 2"
 
@@ -981,7 +980,7 @@ msgstr "DOSBox OPL3"
 msgid "OPTVAL_JAVAOPL3"
 msgstr "Java OPL3"
 
-msgid "OPTVAL_ESFMu"
+msgid "OPTVAL_ESFMU"
 msgstr "ESFMu OPL3"
 
 msgid "OPTVAL_YMFMOPL2"
@@ -1462,34 +1461,34 @@ msgstr "Edytuj Środowisko"
 msgid "REVMNU_NEW"
 msgstr "Nowe Środowisko"
 
-msgid "REVMNU_Reflections_Scale"
+msgid "REVMNU_REFLECTIONS_SCALE"
 msgstr "Rozmiar Odbić"
 
-msgid "REVMNU_Reflections_Delay_Scale"
+msgid "REVMNU_REFLECTIONS_DELAY_SCALE"
 msgstr "Skala Opóźnienia Odbić"
 
-msgid "REVMNU_Decay_Time_Scale"
+msgid "REVMNU_DECAY_TIME_SCALE"
 msgstr "Skala Czasu Rozkładu"
 
-msgid "REVMNU_Decay_HF_Limit"
+msgid "REVMNU_DECAY_HF_LIMIT"
 msgstr "Limit Rozkładu Wysokich Częstotliwości"
 
-msgid "REVMNU_Reverb_Scale"
+msgid "REVMNU_REVERB_SCALE"
 msgstr "Skala Pogłosu"
 
-msgid "REVMNU_Reverb_Delay_Scale"
+msgid "REVMNU_REVERB_DELAY_SCALE"
 msgstr "Skala Opóźnienia Pogłosu"
 
-msgid "REVMNU_Echo_Time_Scale"
+msgid "REVMNU_ECHO_TIME_SCALE"
 msgstr "Skala Czasu Echa"
 
-msgid "REVMNU_Modulation_Time_Scale"
+msgid "REVMNU_MODULATION_TIME_SCALE"
 msgstr "Skala Modulacji Czasu"
 
-msgid "REVMNU_Based_on"
+msgid "REVMNU_BASED_ON"
 msgstr "Bazowane na"
 
-msgid "REVMNU_Name"
+msgid "REVMNU_NAME"
 msgstr "Nazwa"
 
 msgid "REVMNU_ID_1"
@@ -1498,16 +1497,16 @@ msgstr "ID #1"
 msgid "REVMNU_ID_2"
 msgstr "ID #2"
 
-msgid "REVMNU_Create"
+msgid "REVMNU_CREATE"
 msgstr "Stwórz"
 
-msgid "REVMNU_Save"
+msgid "REVMNU_SAVE"
 msgstr "Zapisz…"
 
-msgid "REVMNU_File_name"
+msgid "REVMNU_FILE_NAME"
 msgstr "Nazwa pliku"
 
-msgid "REVMNU_Environments_to_save"
+msgid "REVMNU_ENVIRONMENTS_TO_SAVE"
 msgstr "Środowiska do zapisu"
 
 msgid "DSPLYMNU_VKOPT"
@@ -1796,3 +1795,115 @@ msgstr "Grupuj powtarzające się wiadomości"
 
 msgid "MSGMNU_MESSAGEQUEUE"
 msgstr "Rozmiar kolejki wiadomości"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_SIZE"
+msgstr "Rozmiar Środowiska"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_DIFFUSION"
+msgstr "Dyfuzja Środowiska"
+
+# Jargon.
+msgid "REVMNU_ROOM"
+msgstr "Pokój"
+
+# Jargon.
+msgid "REVMNU_ROOM_HF"
+msgstr "Pokój (wysokie częstotliwości)"
+
+# Jargon.
+msgid "REVMNU_ROOM_LF"
+msgstr "Pokój (niskie częstotliwości)"
+
+# Jargon.
+msgid "REVMNU_DECAY_TIME"
+msgstr "Czas Rozkładu"
+
+# Jargon.
+msgid "REVMNU_DECAY_HF_RATIO"
+msgstr "Wskażnik Rozkładu dla wysokich częstotliwości"
+
+# Jargon.
+msgid "REVMNU_DECAY_LF_RATIO"
+msgstr "Wskaźnik Rozkładu dla niskich częstotliwości"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS"
+msgstr "Obicia"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_DELAY"
+msgstr "Opóźnienie Odbić"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_X"
+msgstr "Odbicia Osi X"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Y"
+msgstr "Odbicia Osi Y"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Z"
+msgstr "Odbicia Osi Z"
+
+# Jargon.
+msgid "REVMNU_REVERB"
+msgstr "Pogłos"
+
+# Jargon.
+msgid "REVMNU_REVERB_DELAY"
+msgstr "Opóźnienie Pogłosu"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_X"
+msgstr "Pogłos Osi X"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Y"
+msgstr "Pogłos Osi Y"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Z"
+msgstr "Pogłos Osi Z"
+
+# Jargon.
+msgid "REVMNU_ECHO_TIME"
+msgstr "Czas Echa"
+
+# Jargon.
+msgid "REVMNU_ECHO_DEPTH"
+msgstr "Głębokość Echa"
+
+# Jargon.
+msgid "REVMNU_MODULATION_TIME"
+msgstr "Czas Modulacji"
+
+# Jargon.
+msgid "REVMNU_MODULATION_DEPTH"
+msgstr "Głębokość Modulacji"
+
+# Jargon.
+msgid "REVMNU_AIR_ABSORPTION_HF"
+msgstr "Absorbcja Powietrza (wysokie częstotliwości)"
+
+# Jargon.
+msgid "REVMNU_HF_REFERENCE"
+msgstr "Odniesienie wysokich częstotliwości"
+
+# Jargon.
+msgid "REVMNU_LF_REFERENCE"
+msgstr "Odniesienie niskich częstotliwości"
+
+# Jargon.
+msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
+msgstr "Czynnik Zejścia"
+
+# Jargon.
+msgid "REVMNU_DIFFUSION"
+msgstr "Dyfuzja"
+
+# Jargon.
+msgid "REVMNU_DENSITY"
+msgstr "Zagęszczenie"

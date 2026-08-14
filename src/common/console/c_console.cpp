@@ -1234,12 +1234,14 @@ CCMD (clear)
 
 CCMD (echo)
 {
-	int last = argv.argc()-1;
-	for (int i = 1; i <= last; ++i)
+	int count = argv.argc();
+	FString str = (count <= 1)? "": argv[1];
+	for (auto i = 2; i < count; i++)
 	{
-		FString formatted = strbin1 (argv[i]);
-		Printf ("%s%s", formatted.GetChars(), i!=last ? " " : "\n");
+		str.AppendCharacter(' ');
+		str += argv[i];
 	}
+	Printf("%s\n", str.GetChars());
 }
 
 CCMD(toggleconsole)

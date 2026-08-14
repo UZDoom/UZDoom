@@ -33,6 +33,15 @@ CUSTOM_CVARD(Int, ui_theme, 0, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "launcher theme
 	if (self > 4) self = 4;
 }
 
+// This is the cvar exposed to the launcher to ensure that high-contrast themes don't break.
+CUSTOM_CVAR(Int, ui_preferred_theme, 0, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+{
+	if (self < 0)
+		self = 0;
+	else if (self > 2)
+		self = 2;
+}
+
 TDeletingArray<FResourceFile*>* WidgetResources = nullptr;
 
 bool IsZWidgetAvailable()
@@ -80,6 +89,13 @@ void InitWidgetResources(const char* filename)
 		break;
 	}		
 	auto use_dark = ui_theme == 1 || ui_theme == 3 || (ui_theme == 0 && (theme & Dark));
+	if (ui_theme == 0 && ui_preferred_theme > 0)
+	{
+		if (ui_preferred_theme == 1)
+			use_dark = true;
+		else if (ui_preferred_theme == 2)
+			use_dark = false;
+	}
 
 	Theme::initilize(use_dark? DARK: LIGHT, theme & HighContrast);
 
@@ -139,7 +155,7 @@ std::vector<SingleFontData> LoadWidgetFontData(const std::string& name, bool roo
 	if (!stricmp(name.c_str(), "notosans"))
 	{
 		// to update/add fonts:
-		// tools/download-fonts.sh wadsrc/static ui/noto 'Noto Sans' 'Noto Sans Armenian' 'Noto Sans Georgian' 'Noto Sans JP' 'Noto Sans KR' 'Noto Sans SC' # 'Noto Sans TC'
+		// tools/download-fonts.sh wadsrc/static ui/noto 'Noto Sans' 'Noto Sans Armenian' 'Noto Sans Georgian' 'Noto Sans JP' 'Noto Sans KR' 'Noto Sans SC' 'Noto Sans Tamil' # 'Noto Sans TC'
 		struct { const char *file; const char *lang; } fonts[] = {
 			// fonts with specific languages list here for high priority
 			{ "ui/noto/noto-sans-jp.ttf", "ja-*-*" },
@@ -151,6 +167,7 @@ std::vector<SingleFontData> LoadWidgetFontData(const std::string& name, bool roo
 			{ "ui/noto/noto-sans.ttf", ""},
 			{ "ui/noto/noto-sans-armenian.ttf", ""},
 			{ "ui/noto/noto-sans-georgian.ttf", ""},
+			{ "ui/noto/noto-sans-tamil.ttf", ""},
 		};
 
 		auto count = sizeof(fonts) / sizeof(fonts[0]);

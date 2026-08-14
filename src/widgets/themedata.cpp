@@ -123,7 +123,7 @@ void Theme::initilize(Mode mode, bool contrast)
 			}
 			if (!t)
 			{
-				DPrintf(DMSG_WARNING, "Theme not selected");
+				DPrintf(DMSG_WARNING, "Theme not selected\n");
 				continue;
 			}
 			if (contrast) continue;

@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-13 23:20-0400\n"
+"PO-Revision-Date: 2026-07-30 16:57-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/uzdoom/unused/fr/>\n"
 "Language: fr\n"
@@ -121,118 +121,6 @@ msgstr ""
 # each other individually.
 msgid "PICKER_NETSERVER"
 msgstr ""
-
-# Jargon.
-msgid "REVMNU_AIR_ABSORPTION_HF"
-msgstr ""
-
-# Jargon.
-msgid "REVMNU_DECAY_HF_RATIO"
-msgstr ""
-
-# Jargon.
-msgid "REVMNU_DECAY_LF_RATIO"
-msgstr ""
-
-# Jargon.
-msgid "REVMNU_DECAY_TIME"
-msgstr "Temps Decay"
-
-# Jargon.
-msgid "REVMNU_DENSITY"
-msgstr "Densité"
-
-# Jargon.
-msgid "REVMNU_DIFFUSION"
-msgstr ""
-
-# Jargon.
-msgid "REVMNU_ECHO_DEPTH"
-msgstr "Profondeur écho"
-
-# Jargon.
-msgid "REVMNU_ECHO_TIME"
-msgstr "Longueur écho"
-
-# Jargon.
-msgid "REVMNU_ENVIRONMENT_DIFFUSION"
-msgstr "Diffusion Environnement"
-
-# Jargon.
-msgid "REVMNU_ENVIRONMENT_SIZE"
-msgstr "Taille Environnement"
-
-# Jargon.
-msgid "REVMNU_HF_REFERENCE"
-msgstr ""
-
-# Jargon.
-msgid "REVMNU_LF_REFERENCE"
-msgstr ""
-
-# Jargon.
-msgid "REVMNU_MODULATION_DEPTH"
-msgstr "Profondeur Modulation"
-
-# Jargon.
-msgid "REVMNU_MODULATION_TIME"
-msgstr "Longueur Modulation"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS"
-msgstr "Réflexions"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS_DELAY"
-msgstr "Délai Reflections"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS_PAN_X"
-msgstr "Orientation Reflections X"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS_PAN_Y"
-msgstr "Orientation Reflections Y"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS_PAN_Z"
-msgstr "Orientation Reflections Z"
-
-# Jargon.
-msgid "REVMNU_REVERB"
-msgstr "Réverbération"
-
-# Jargon.
-msgid "REVMNU_REVERB_DELAY"
-msgstr "Délai Reverb"
-
-# Jargon.
-msgid "REVMNU_REVERB_PAN_X"
-msgstr "Orientation Reverb X"
-
-# Jargon.
-msgid "REVMNU_REVERB_PAN_Y"
-msgstr "Orientation Reverb Y"
-
-# Jargon.
-msgid "REVMNU_REVERB_PAN_Z"
-msgstr "Orientation Reverb Z"
-
-# Jargon.
-msgid "REVMNU_ROOM"
-msgstr "Salle"
-
-# Jargon.
-msgid "REVMNU_ROOM_HF"
-msgstr "HF Salle"
-
-# Jargon.
-msgid "REVMNU_ROOM_LF"
-msgstr "LF Salle"
-
-# Jargon.
-msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
-msgstr "Facteur de rolloff Salle"
 
 msgid "SNDMNU_BACKEND"
 msgstr "Traitement Son"
