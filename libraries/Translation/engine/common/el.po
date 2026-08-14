@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-13 23:20-0400\n"
+"PO-Revision-Date: 2026-07-30 16:57-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Greek <https://hosted.weblate.org/projects/uzdoom/common/el/>\n"
 "Language: el\n"
@@ -263,7 +263,6 @@ msgid "CNTRLMNU_SLOT1"
 msgstr "Όπλο 1"
 
 # only show appropriate slots per game
-# 
 msgid "CNTRLMNU_SLOT2"
 msgstr "Όπλο 2"
 
@@ -982,7 +981,7 @@ msgstr ""
 msgid "OPTVAL_JAVAOPL3"
 msgstr ""
 
-msgid "OPTVAL_ESFMu"
+msgid "OPTVAL_ESFMU"
 msgstr ""
 
 msgid "OPTVAL_YMFMOPL2"
@@ -1458,34 +1457,34 @@ msgstr "Επεξεργασία Περιβάλλοντος"
 msgid "REVMNU_NEW"
 msgstr "Νέο Περιβάλλον"
 
-msgid "REVMNU_Reflections_Scale"
+msgid "REVMNU_REFLECTIONS_SCALE"
 msgstr ""
 
-msgid "REVMNU_Reflections_Delay_Scale"
+msgid "REVMNU_REFLECTIONS_DELAY_SCALE"
 msgstr ""
 
-msgid "REVMNU_Decay_Time_Scale"
+msgid "REVMNU_DECAY_TIME_SCALE"
 msgstr ""
 
-msgid "REVMNU_Decay_HF_Limit"
+msgid "REVMNU_DECAY_HF_LIMIT"
 msgstr ""
 
-msgid "REVMNU_Reverb_Scale"
+msgid "REVMNU_REVERB_SCALE"
 msgstr ""
 
-msgid "REVMNU_Reverb_Delay_Scale"
+msgid "REVMNU_REVERB_DELAY_SCALE"
 msgstr ""
 
-msgid "REVMNU_Echo_Time_Scale"
+msgid "REVMNU_ECHO_TIME_SCALE"
 msgstr ""
 
-msgid "REVMNU_Modulation_Time_Scale"
+msgid "REVMNU_MODULATION_TIME_SCALE"
 msgstr ""
 
-msgid "REVMNU_Based_on"
+msgid "REVMNU_BASED_ON"
 msgstr "Βασισμένο σε"
 
-msgid "REVMNU_Name"
+msgid "REVMNU_NAME"
 msgstr "Όνομα"
 
 msgid "REVMNU_ID_1"
@@ -1494,16 +1493,16 @@ msgstr ""
 msgid "REVMNU_ID_2"
 msgstr ""
 
-msgid "REVMNU_Create"
+msgid "REVMNU_CREATE"
 msgstr "Δημιουργία"
 
-msgid "REVMNU_Save"
+msgid "REVMNU_SAVE"
 msgstr "Αποθήκευση…"
 
-msgid "REVMNU_File_name"
+msgid "REVMNU_FILE_NAME"
 msgstr "Όνομα αρχείου"
 
-msgid "REVMNU_Environments_to_save"
+msgid "REVMNU_ENVIRONMENTS_TO_SAVE"
 msgstr "Περιβάλλοντα για αποθήκευση"
 
 msgid "DSPLYMNU_VKOPT"
@@ -1754,3 +1753,115 @@ msgstr "Ταχύτητα κοιτάγματος"
 
 msgid "JOYMNU_ANALOGSTRAFERUN"
 msgstr "Αναλογικό σφυροκόπημο τρέξιμο"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_SIZE"
+msgstr "Μέγεθος Περιβάλλοντος"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_DIFFUSION"
+msgstr "Διάχυση Περιβάλλοντος"
+
+# Jargon.
+msgid "REVMNU_ROOM"
+msgstr "Δωμάτιο"
+
+# Jargon.
+msgid "REVMNU_ROOM_HF"
+msgstr "Δωμάτιο HF"
+
+# Jargon.
+msgid "REVMNU_ROOM_LF"
+msgstr "Δωμάτιο LF"
+
+# Jargon.
+msgid "REVMNU_DECAY_TIME"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DECAY_HF_RATIO"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DECAY_LF_RATIO"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS"
+msgstr "Αντανακλάσεις"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_DELAY"
+msgstr "Καθυστέρηση Αντανακλάσεων"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_X"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Y"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Z"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB"
+msgstr "Αντήχηση"
+
+# Jargon.
+msgid "REVMNU_REVERB_DELAY"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_X"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Y"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Z"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ECHO_TIME"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ECHO_DEPTH"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_MODULATION_TIME"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_MODULATION_DEPTH"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_AIR_ABSORPTION_HF"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_HF_REFERENCE"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_LF_REFERENCE"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DIFFUSION"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DENSITY"
+msgstr ""

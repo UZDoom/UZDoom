@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-13 23:20-0400\n"
+"PO-Revision-Date: 2026-07-30 16:57-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Croatian <https://hosted.weblate.org/projects/uzdoom/unused/hr/>\n"
 "Language: hr\n"
@@ -121,118 +121,6 @@ msgstr "Ravnopravno Povezivanje"
 # each other individually.
 msgid "PICKER_NETSERVER"
 msgstr "Paketni poslužitelj"
-
-# Jargon.
-msgid "REVMNU_AIR_ABSORPTION_HF"
-msgstr "Apsorpcija zraka visoke frekvencije"
-
-# Jargon.
-msgid "REVMNU_DECAY_HF_RATIO"
-msgstr "Omjer raspadanja visoke frekvencije"
-
-# Jargon.
-msgid "REVMNU_DECAY_LF_RATIO"
-msgstr "Omjer raspadanja niske frekvencije"
-
-# Jargon.
-msgid "REVMNU_DECAY_TIME"
-msgstr "Vrijeme raspadanja"
-
-# Jargon.
-msgid "REVMNU_DENSITY"
-msgstr "Gustoća"
-
-# Jargon.
-msgid "REVMNU_DIFFUSION"
-msgstr "Difuzija okoliša"
-
-# Jargon.
-msgid "REVMNU_ECHO_DEPTH"
-msgstr "Dubina jeke"
-
-# Jargon.
-msgid "REVMNU_ECHO_TIME"
-msgstr "Vrijeme jeke"
-
-# Jargon.
-msgid "REVMNU_ENVIRONMENT_DIFFUSION"
-msgstr "Difuzija okoliša"
-
-# Jargon.
-msgid "REVMNU_ENVIRONMENT_SIZE"
-msgstr "Veličina okoliša"
-
-# Jargon.
-msgid "REVMNU_HF_REFERENCE"
-msgstr "Referenca visoke frekvencije"
-
-# Jargon.
-msgid "REVMNU_LF_REFERENCE"
-msgstr "Referenca niske frekvencije"
-
-# Jargon.
-msgid "REVMNU_MODULATION_DEPTH"
-msgstr "Dubina modulacije"
-
-# Jargon.
-msgid "REVMNU_MODULATION_TIME"
-msgstr "Vrijeme modulacije"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS"
-msgstr "Odrazi"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS_DELAY"
-msgstr "Kašnjenje odraza"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS_PAN_X"
-msgstr "Kretanje odraza X"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS_PAN_Y"
-msgstr "Kretanje odraza Y"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS_PAN_Z"
-msgstr "Kretanje odraza Z"
-
-# Jargon.
-msgid "REVMNU_REVERB"
-msgstr "Odjekivanje"
-
-# Jargon.
-msgid "REVMNU_REVERB_DELAY"
-msgstr "Kašnjenje odjekivanja"
-
-# Jargon.
-msgid "REVMNU_REVERB_PAN_X"
-msgstr "Kretanje odjekivanja X"
-
-# Jargon.
-msgid "REVMNU_REVERB_PAN_Y"
-msgstr "Kretanje odjekivanja Y"
-
-# Jargon.
-msgid "REVMNU_REVERB_PAN_Z"
-msgstr "Kretanje odjekivanja Z"
-
-# Jargon.
-msgid "REVMNU_ROOM"
-msgstr "Soba"
-
-# Jargon.
-msgid "REVMNU_ROOM_HF"
-msgstr "Soba visoke frekvencije"
-
-# Jargon.
-msgid "REVMNU_ROOM_LF"
-msgstr "Soba niske frekvencije"
-
-# Jargon.
-msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
-msgstr "Faktor opadanja prostorije"
 
 msgid "SNDMNU_BACKEND"
 msgstr "Zvučna pozadina"

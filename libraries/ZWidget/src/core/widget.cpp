@@ -700,6 +700,7 @@ Point Widget::MapToGlobal(const Point& pos) const
 
 void Widget::OnWindowPaint()
 {
+	// TODO: holy shit, this causes so much startup lag. We need a real repaint system
 	Repaint();
 }
 

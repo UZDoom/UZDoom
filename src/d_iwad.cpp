@@ -55,7 +55,7 @@ CVARD(Bool, i_loadsupportwad, true, CVAR_ARCHIVE|CVAR_GLOBALCONFIG, "Load id24.w
 CVARD(Bool, i_is_new_release, true, CVAR_HIDDEN, "");
 // Search game distributors' (Steam, GOG, Bethesda) paths for installed IWADs
 CVARD(Bool, i_searchdistributors, true, CVAR_ARCHIVE|CVAR_GLOBALCONFIG, "Search storefront intallations for IWADS");
-// Show release notes upon update 0:no, 1: yes, 2: always for testing
+// Show release notes upon update 0:no, 1: yes, 2: always for testing, 3: always plus upcoming
 CVARD(Int, i_display_new_release, 1, CVAR_ARCHIVE|CVAR_GLOBALCONFIG, "Show release notes upon update");
 
 CVARD(Bool, ui_remember_size, true,  CVAR_ARCHIVE|CVAR_GLOBALCONFIG, "Launcher retains size between launches");
@@ -850,7 +850,7 @@ int FIWadManager::IdentifyVersion (std::vector<FileSys::ResourceName>&wadfiles, 
 		FStartupSelectionInfo info = FStartupSelectionInfo(wads, *Args, flags);
 
 		info.DefaultFileLoadBehaviour = i_exit_on_not_found;
-		info.isNewRelease = (i_display_new_release>1) || i_is_new_release;
+		info.displayRelease = (i_display_new_release != 1)? i_display_new_release: i_is_new_release? 1: 0;
 		info.notifyNewRelease = !!i_display_new_release;
 
 		if (ui_remember_size)
@@ -859,27 +859,25 @@ int FIWadManager::IdentifyVersion (std::vector<FileSys::ResourceName>&wadfiles, 
 			info.LauncherHeight = ui_launcher_height;
 		}
 
-		if (I_PickIWad((queryiwad || showlauncher) || HoldingQueryKey(queryiwad_key), info))
+		const bool pickRes = I_PickIWad(queryiwad || showlauncher || HoldingQueryKey(queryiwad_key), info);
+		pick = info.SaveInfo();
+		disableautoload = !!(info.DefaultStartFlags & 1);
+		autoloadlights = !!(info.DefaultStartFlags & 2);
+		autoloadbrightmaps = !!(info.DefaultStartFlags & 4);
+		autoloadwidescreen = !!(info.DefaultStartFlags & 8);
+		i_loadsupportwad = !!(info.DefaultStartFlags & 16);
+		i_exit_on_not_found = info.DefaultFileLoadBehaviour;
+		if (!info.notifyNewRelease)
+			i_display_new_release = 0; // don't change truthy values
+		if (ui_remember_size)
 		{
-			pick = info.SaveInfo();
-			disableautoload = !!(info.DefaultStartFlags & 1);
-			autoloadlights = !!(info.DefaultStartFlags & 2);
-			autoloadbrightmaps = !!(info.DefaultStartFlags & 4);
-			autoloadwidescreen = !!(info.DefaultStartFlags & 8);
-			i_loadsupportwad = !!(info.DefaultStartFlags & 16);
-			i_exit_on_not_found = info.DefaultFileLoadBehaviour;
-			if (!info.notifyNewRelease)
-				i_display_new_release = 0; // don't change truthy values
-			if (ui_remember_size)
-			{
-				ui_launcher_width = info.LauncherWidth;
-				ui_launcher_height = info.LauncherHeight;
-			}
+			ui_launcher_width = info.LauncherWidth;
+			ui_launcher_height = info.LauncherHeight;
 		}
-		else
-		{
+
+		if (!pickRes)
 			return -1;
-		}
+
 		havepicked = true;
 	}
 

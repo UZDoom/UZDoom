@@ -67,6 +67,7 @@ void C_ClearDelayedCommands();
 
 // Process a single console command. Does not handle wait.
 void C_DoCommand (const char *cmd, int keynum=0);
+void C_SanitizeFileName(FString& file);
 bool C_IsValidInt(const char* arg, int& value, int base = 10);
 bool C_IsValidFloat(const char* arg, double& value);
 

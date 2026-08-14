@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-23 17:01+0000\n"
+"PO-Revision-Date: 2026-07-30 19:01+0000\n"
 "Last-Translator: Tim Richter <jank21976@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/doom-engine-games/doom/de/>\n"
 "Language: de\n"
@@ -37,7 +37,7 @@ msgid "HUSTR_E1M4"
 msgstr "E1M4: Betriebssteuerung"
 
 msgid "HUSTR_E1M5"
-msgstr "E1M5: Phobos-Labor"
+msgstr "E1M5: Phobos Labor"
 
 msgid "HUSTR_E1M6"
 msgstr "E1M6: Zentralverarbeitung"
@@ -118,13 +118,13 @@ msgid "HUSTR_E4M3"
 msgstr "E4M3: Trennt die Bösen"
 
 msgid "HUSTR_E4M4"
-msgstr "E4M4: Das Böse schläft nie"
+msgstr "E4M4: Ungebändigtes Böse"
 
 msgid "HUSTR_E4M5"
 msgstr "E4M5: Sie werden bereuen"
 
 msgid "HUSTR_E4M6"
-msgstr "E4M6: Gegen die Elenden"
+msgstr "E4M6: Gegen die Bösen"
 
 msgid "HUSTR_E4M7"
 msgstr "E4M7: Und die Hölle folgte"

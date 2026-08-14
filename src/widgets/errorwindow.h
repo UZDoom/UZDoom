@@ -78,7 +78,7 @@ private:
 
 	Scrollbar* scrollbar = nullptr;
 
-	std::shared_ptr<Font> largefont = Font::Create("Poppins", 16.0);
-	std::shared_ptr<Font> font = Font::Create("Poppins", 12.0);
+	std::shared_ptr<Font> largefont = Font::Create("NotoSans", 16.0);
+	std::shared_ptr<Font> font = Font::Create("NotoSans", 12.0);
 	std::vector<SpanLayout> lines;
 };

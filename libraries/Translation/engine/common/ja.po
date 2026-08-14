@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-13 23:20-0400\n"
+"PO-Revision-Date: 2026-07-30 16:57-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/uzdoom/common/ja/>\n"
 "Language: ja\n"
@@ -263,7 +263,6 @@ msgid "CNTRLMNU_SLOT1"
 msgstr "武器スロット 1"
 
 # only show appropriate slots per game
-# 
 msgid "CNTRLMNU_SLOT2"
 msgstr "武器スロット 2"
 
@@ -984,7 +983,7 @@ msgstr ""
 msgid "OPTVAL_JAVAOPL3"
 msgstr ""
 
-msgid "OPTVAL_ESFMu"
+msgid "OPTVAL_ESFMU"
 msgstr ""
 
 msgid "OPTVAL_YMFMOPL2"
@@ -1463,34 +1462,34 @@ msgstr "反響編集"
 msgid "REVMNU_NEW"
 msgstr "新規反響設定"
 
-msgid "REVMNU_Reflections_Scale"
+msgid "REVMNU_REFLECTIONS_SCALE"
 msgstr "Reflections音階"
 
-msgid "REVMNU_Reflections_Delay_Scale"
+msgid "REVMNU_REFLECTIONS_DELAY_SCALE"
 msgstr "Reflections Delay音階"
 
-msgid "REVMNU_Decay_Time_Scale"
+msgid "REVMNU_DECAY_TIME_SCALE"
 msgstr "Decay Time音階"
 
-msgid "REVMNU_Decay_HF_Limit"
+msgid "REVMNU_DECAY_HF_LIMIT"
 msgstr "Decay HF限度"
 
-msgid "REVMNU_Reverb_Scale"
+msgid "REVMNU_REVERB_SCALE"
 msgstr "Reverb音階"
 
-msgid "REVMNU_Reverb_Delay_Scale"
+msgid "REVMNU_REVERB_DELAY_SCALE"
 msgstr "Reverb Delay音階"
 
-msgid "REVMNU_Echo_Time_Scale"
+msgid "REVMNU_ECHO_TIME_SCALE"
 msgstr "Echo Time音階"
 
-msgid "REVMNU_Modulation_Time_Scale"
+msgid "REVMNU_MODULATION_TIME_SCALE"
 msgstr "Modulation Time音階"
 
-msgid "REVMNU_Based_on"
+msgid "REVMNU_BASED_ON"
 msgstr "音響の元"
 
-msgid "REVMNU_Name"
+msgid "REVMNU_NAME"
 msgstr "名前"
 
 msgid "REVMNU_ID_1"
@@ -1499,16 +1498,16 @@ msgstr ""
 msgid "REVMNU_ID_2"
 msgstr ""
 
-msgid "REVMNU_Create"
+msgid "REVMNU_CREATE"
 msgstr "作成"
 
-msgid "REVMNU_Save"
+msgid "REVMNU_SAVE"
 msgstr "セーブする…"
 
-msgid "REVMNU_File_name"
+msgid "REVMNU_FILE_NAME"
 msgstr "ファイル名"
 
-msgid "REVMNU_Environments_to_save"
+msgid "REVMNU_ENVIRONMENTS_TO_SAVE"
 msgstr "音響を保存"
 
 msgid "DSPLYMNU_VKOPT"
@@ -1761,3 +1760,115 @@ msgstr "上下視点速度"
 
 msgid "JOYMNU_ANALOGSTRAFERUN"
 msgstr "アナログ ストレイフ ラン"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_SIZE"
+msgstr "反響サイズ"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_DIFFUSION"
+msgstr "反響伝播"
+
+# Jargon.
+msgid "REVMNU_ROOM"
+msgstr "部屋"
+
+# Jargon.
+msgid "REVMNU_ROOM_HF"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ROOM_LF"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DECAY_TIME"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DECAY_HF_RATIO"
+msgstr "Decay HF比率"
+
+# Jargon.
+msgid "REVMNU_DECAY_LF_RATIO"
+msgstr "Decay LF比率"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS"
+msgstr "反射"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_DELAY"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_X"
+msgstr "Reflections X定位"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Y"
+msgstr "Reflections Y定位"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Z"
+msgstr "Reflections Z定位"
+
+# Jargon.
+msgid "REVMNU_REVERB"
+msgstr "リバーブ"
+
+# Jargon.
+msgid "REVMNU_REVERB_DELAY"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_X"
+msgstr "Reverb X定位"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Y"
+msgstr "Reverb Y定位"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Z"
+msgstr "Reverb Z定位"
+
+# Jargon.
+msgid "REVMNU_ECHO_TIME"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ECHO_DEPTH"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_MODULATION_TIME"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_MODULATION_DEPTH"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_AIR_ABSORPTION_HF"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_HF_REFERENCE"
+msgstr "HF参照値"
+
+# Jargon.
+msgid "REVMNU_LF_REFERENCE"
+msgstr "LF参照値"
+
+# Jargon.
+msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DIFFUSION"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DENSITY"
+msgstr "密度"

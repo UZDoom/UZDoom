@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-06-13 17:09+0000\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2026-08-02 18:35+0000\n"
+"Last-Translator: Andrei Stepanov <adem4ik@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/doom-engine-games/strife/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 2026.7.dev0\n"
+"X-Generator: Weblate 2026.8.dev0\n"
 
 msgid "TXT_STRIFE_MAP01"
 msgstr "МЕСТНОСТЬ 1: Святилище"
@@ -126,7 +126,6 @@ msgstr "МЕСТНОСТЬ 37: Сектора обстрела"
 msgid "TXT_STRIFE_MAP38"
 msgstr "МЕСТНОСТЬ 38: Управляемый хаос"
 
-#, fuzzy
 msgid "TXT_DLG_SCRIPT01_D0_IDONT"
 msgstr "Не подходи ко мне — мне не нужны неприятности! У меня их и так достаточно из-за этого мерзавца Харриса. Он обещал мне деньги, а вместо этого меня ожидает «допрос» у Программиста."
 
@@ -159,7 +158,7 @@ msgid "TXT_DLG_SCRIPT02_D3032_YOUVE"
 msgstr "Ты уже вытянул из меня всё, что только можно!"
 
 msgid "TXT_DLG_SCRIPT02_D4548_WHATC"
-msgstr "Чем могу быть полезен?"
+msgstr "Чего желаете?"
 
 msgid "TXT_RPLY0_SCRIPT02_D4548_ASSAU"
 msgstr "Штурмовую винтовку"

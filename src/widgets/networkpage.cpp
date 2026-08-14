@@ -123,26 +123,24 @@ void NetworkPage::SetValues(FStartupSelectionInfo& info) const
 	info.DefaultNetArgs = ParametersEdit->GetText();
 
 	info.bHosting = IsInHost();
-	if (info.bHosting)
-	{
-		info.DefaultNetPage = 0;
-		HostPage->SetValues(info);
-	}
-	else
-	{
-		info.DefaultNetPage = 1;
-		JoinPage->SetValues(info);
-	}
+	info.DefaultNetPage = info.bHosting ? 0 : 1;
+
+	HostPage->SetValues(info);
+	JoinPage->SetValues(info);
 
 	info.bSaveNetFile = SaveFileCheckbox->GetChecked();
 	info.bSaveNetArgs = SaveParametersCheckbox->GetChecked();
 	const auto save = SaveFileEdit->GetText();
-	if (!save.empty())
-		info.AdditionalNetArgs.AppendFormat(" -loadgame \"%s\"", save.c_str());
-	const auto pClass = PlayerClassEdit->GetText();
-	if (!pClass.empty())
-		info.AdditionalNetArgs.AppendFormat(" +playerclass \"%s\"", pClass.c_str());
 	info.DefaultNetSaveFile = save;
+
+	if (info.bNetStart)
+	{
+		if (!save.empty())
+			info.AdditionalNetArgs.AppendFormat(" -loadgame \"%s\"", save.c_str());
+		const auto pClass = PlayerClassEdit->GetText();
+		if (!pClass.empty())
+			info.AdditionalNetArgs.AppendFormat(" +playerclass \"%s\"", pClass.c_str());
+	}
 }
 
 void NetworkPage::UpdatePlayButton()
@@ -266,23 +264,23 @@ HostSubPage::HostSubPage(NetworkPage* main, const FStartupSelectionInfo& info) :
 
 void HostSubPage::SetValues(FStartupSelectionInfo& info) const
 {
-	info.AdditionalNetArgs = "";
+	FString tempArgs = {};
 
 	info.DefaultNetExtraTic = ExtraTicCheckbox->GetChecked();
 	if (info.DefaultNetExtraTic)
-		info.AdditionalNetArgs.AppendFormat(" -extratic");
+		tempArgs.AppendFormat(" -extratic");
 
 	const int dup = TicDupDropdown->GetSelectedItem();
 	if (dup > 0)
-		info.AdditionalNetArgs.AppendFormat(" -dup %d", dup + 1);
+		tempArgs.AppendFormat(" -dup %d", dup + 1);
 	info.DefaultNetTicDup = dup;
 
 	info.DefaultNetPlayers = clamp<int>(MaxPlayersEdit->GetTextInt(), 1, MAXPLAYERS);
-	info.AdditionalNetArgs.AppendFormat(" -host %d", info.DefaultNetPlayers);
+	tempArgs.AppendFormat(" -host %d", info.DefaultNetPlayers);
 	const int port = clamp<int>(PortEdit->GetTextInt(), 0, UINT16_MAX);
 	if (port > 0)
 	{
-		info.AdditionalNetArgs.AppendFormat(" -port %d", port);
+		tempArgs.AppendFormat(" -port %d", port);
 		info.DefaultNetHostPort = port;
 	}
 	else
@@ -295,11 +293,11 @@ void HostSubPage::SetValues(FStartupSelectionInfo& info) const
 	switch (info.DefaultNetGameMode)
 	{
 	case 1:
-		info.AdditionalNetArgs.AppendFormat(" -coop");
+		tempArgs.AppendFormat(" -coop");
 		break;
 	case 3:
 		{
-			info.AdditionalNetArgs.AppendFormat(" +teamplay 1");
+			tempArgs.AppendFormat(" +teamplay 1");
 			int team = 255;
 			if (!TeamEdit->GetText().empty())
 			{
@@ -307,16 +305,19 @@ void HostSubPage::SetValues(FStartupSelectionInfo& info) const
 				if (team < 0 || team > 255)
 					team = 255;
 			}
-			info.AdditionalNetArgs.AppendFormat(" +team %d", team);
+			tempArgs.AppendFormat(" +team %d", team);
 			info.DefaultNetHostTeam = team;
 		}
 	case 2:
 		if (AltDeathmatchCheckbox->GetChecked())
-			info.AdditionalNetArgs.AppendFormat(" -altdeath");
+			tempArgs.AppendFormat(" -altdeath");
 		else
-			info.AdditionalNetArgs.AppendFormat(" -deathmatch");
+			tempArgs.AppendFormat(" -deathmatch");
 		break;
 	}
+
+	if (info.bNetStart && info.bHosting)
+		info.AdditionalNetArgs = tempArgs;
 }
 
 void HostSubPage::UpdateLanguage()
@@ -419,6 +420,8 @@ JoinSubPage::JoinSubPage(NetworkPage* main, const FStartupSelectionInfo& info) :
 
 void JoinSubPage::SetValues(FStartupSelectionInfo& info) const
 {
+	FString tempArgs = {};
+
 	FString addr = AddressEdit->GetText();
 	info.DefaultNetAddress = addr;
 	const int port = clamp<int>(AddressPortEdit->GetTextInt(), 0, UINT16_MAX);
@@ -432,8 +435,7 @@ void JoinSubPage::SetValues(FStartupSelectionInfo& info) const
 		info.DefaultNetJoinPort = 0;
 	}
 
-	info.AdditionalNetArgs = "";
-	info.AdditionalNetArgs.AppendFormat(" -join %s", addr.GetChars());
+	tempArgs.AppendFormat(" -join %s", addr.GetChars());
 
 	int team = 255;
 	if (!TeamEdit->GetText().empty())
@@ -442,8 +444,11 @@ void JoinSubPage::SetValues(FStartupSelectionInfo& info) const
 		if (team < 0 || team > 255)
 			team = 255;
 	}
-	info.AdditionalNetArgs.AppendFormat(" +team %d", team);
+	tempArgs.AppendFormat(" +team %d", team);
 	info.DefaultNetJoinTeam = team;
+
+	if (info.bNetStart && !info.bHosting)
+		info.AdditionalNetArgs = tempArgs;
 }
 
 void JoinSubPage::UpdateLanguage()

@@ -980,7 +980,7 @@ msgstr "DOSBox OPL3"
 msgid "OPTVAL_JAVAOPL3"
 msgstr "Java OPL3"
 
-msgid "OPTVAL_ESFMu"
+msgid "OPTVAL_ESFMU"
 msgstr "ESFMu OPL3"
 
 msgid "OPTVAL_YMFMOPL2"
@@ -1452,34 +1452,34 @@ msgstr "Uredi okruženje"
 msgid "REVMNU_NEW"
 msgstr "Novo okruženje"
 
-msgid "REVMNU_Reflections_Scale"
+msgid "REVMNU_REFLECTIONS_SCALE"
 msgstr "Skala refleksija"
 
-msgid "REVMNU_Reflections_Delay_Scale"
+msgid "REVMNU_REFLECTIONS_DELAY_SCALE"
 msgstr "Skala odgađanja refleksija"
 
-msgid "REVMNU_Decay_Time_Scale"
+msgid "REVMNU_DECAY_TIME_SCALE"
 msgstr "Vremenska skala raspadanja"
 
-msgid "REVMNU_Decay_HF_Limit"
+msgid "REVMNU_DECAY_HF_LIMIT"
 msgstr "Granica HF raspadanja"
 
-msgid "REVMNU_Reverb_Scale"
+msgid "REVMNU_REVERB_SCALE"
 msgstr "Skala odjeka"
 
-msgid "REVMNU_Reverb_Delay_Scale"
+msgid "REVMNU_REVERB_DELAY_SCALE"
 msgstr "Skala odgode reverb-a"
 
-msgid "REVMNU_Echo_Time_Scale"
+msgid "REVMNU_ECHO_TIME_SCALE"
 msgstr "Vrijeme odjeka"
 
-msgid "REVMNU_Modulation_Time_Scale"
+msgid "REVMNU_MODULATION_TIME_SCALE"
 msgstr "Vremenska skala modulacije"
 
-msgid "REVMNU_Based_on"
+msgid "REVMNU_BASED_ON"
 msgstr "Na osnovu"
 
-msgid "REVMNU_Name"
+msgid "REVMNU_NAME"
 msgstr "Ime"
 
 msgid "REVMNU_ID_1"
@@ -1488,16 +1488,16 @@ msgstr "ID br. 1"
 msgid "REVMNU_ID_2"
 msgstr "ID br. 2"
 
-msgid "REVMNU_Create"
+msgid "REVMNU_CREATE"
 msgstr "Napravi"
 
-msgid "REVMNU_Save"
+msgid "REVMNU_SAVE"
 msgstr "Sačuvaj…"
 
-msgid "REVMNU_File_name"
+msgid "REVMNU_FILE_NAME"
 msgstr "Naziv datoteke"
 
-msgid "REVMNU_Environments_to_save"
+msgid "REVMNU_ENVIRONMENTS_TO_SAVE"
 msgstr "Okruženja za spremanje"
 
 msgid "DSPLYMNU_VKOPT"

@@ -377,7 +377,7 @@ UNSAFE_CCMD (writeini)
 	if (argv.argc() > 1)
 	{
 		FString file = argv[1];
-		file.ReplaceChars('.', '-');
+		C_SanitizeFileName(file);
 		file += ".ini";
 
 		FString path = M_GetConfigPath(true);

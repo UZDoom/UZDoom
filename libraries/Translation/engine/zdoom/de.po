@@ -2,21 +2,21 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-20 07:01+0000\n"
-"Last-Translator: heiko123abc <heiko1234aaa@gmail.com>\n"
+"PO-Revision-Date: 2026-08-10 11:51+0000\n"
+"Last-Translator: Tim Richter <jank21976@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.8.dev0\n"
+"X-Generator: Weblate 2026.9.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "Drücke eine Taste."
 
 msgid "SECRETMESSAGE"
-msgstr "Ein Geheimnis ist enthüllt!"
+msgstr "Ein Geheimnis wurde enthüllt!"
 
 msgid "D_DEVSTR"
 msgstr "Nutzloser Modus: AN"
@@ -103,7 +103,7 @@ msgstr ""
 msgid "QUITMSG3"
 msgstr ""
 "Ich würde nicht gehen, wenn ich du wäre.\n"
-"DOS ist viel übler."
+"DOS ist viel schlimmer."
 
 msgid "QUITMSG4"
 msgstr ""
@@ -113,7 +113,7 @@ msgstr ""
 msgid "QUITMSG5"
 msgstr ""
 "Bitte gehe noch nicht—hinter\n"
-"der Ecke da lauert ein Dämon!"
+"der Ecke lauert noch ein Dämon!"
 
 msgid "QUITMSG6"
 msgstr ""
@@ -150,7 +150,7 @@ msgstr ""
 msgid "QUITMSG12"
 msgstr ""
 "Also, Kumpel, wenn du jetzt abhaust,\n"
-"begehst du Fahnenflucht!"
+"begehst du Fahrerflucht!"
 
 msgid "QUITMSG13"
 msgstr ""
@@ -169,7 +169,7 @@ msgstr ""
 
 msgid "QUITMSG16"
 msgstr ""
-"Carnage interruptus…\n"
+"Macht beim Massaker eine pause…\n"
 "Was für ein Witzbold!"
 
 msgid "QUITMSG17"
@@ -837,7 +837,7 @@ msgstr "Schütze"
 
 # a.k.a. former commando
 msgid "CC_HEAVY"
-msgstr "Schwerer Waffenträger"
+msgstr "MG-Schütze"
 
 msgid "CC_IMP"
 msgstr "Kobold"
@@ -978,19 +978,19 @@ msgid "OB_STEALTHZOMBIE"
 msgstr "%o dachte, einen Zombie zu sehen."
 
 msgid "OB_UNDEADHIT"
-msgstr "%o wurde von einem Wiederauferstandenen K.O geschlagen."
+msgstr "%o wurde von einem Wiederauferstandenen verprügelt."
 
 msgid "OB_IMPHIT"
-msgstr "%o wurde von einem Kobold gekratzt."
+msgstr "%o wurde von einem Kobold zerfetzt."
 
 msgid "OB_CACOHIT"
-msgstr "%o kam dem Cacodämonen zu nahe."
+msgstr "%o kam einem Cacodämonen zu nahe."
 
 msgid "OB_DEMONHIT"
 msgstr "%o wurde von einem Dämonen gebissen."
 
 msgid "OB_SPECTREHIT"
-msgstr "%o wurde von dem Schemen gefressen."
+msgstr "%o wurde von einem Geist gefressen."
 
 msgid "OB_BARONHIT"
 msgstr "%o wurde von dem Höllenbaron aufgerissen."
@@ -1026,10 +1026,10 @@ msgid "OB_CACO"
 msgstr "%o wurde von einem Cacodämonen gequält."
 
 msgid "OB_BARON"
-msgstr "%o wurde von einem Höllenbaron geröstet."
+msgstr "%o wurde von einem Höllenbaron fertig gemacht."
 
 msgid "OB_KNIGHT"
-msgstr "%o wurde von einem Höllenritter gebraten."
+msgstr "%o wurde von einem Höllenritter gegrillt."
 
 msgid "OB_SPIDER"
 msgstr "%o stand in Ehrfurcht vor dem Spinnendämon."
@@ -1047,7 +1047,7 @@ msgid "OB_DOG"
 msgstr "%o wurde von einem Hund zerrissen."
 
 msgid "OB_MPFIST"
-msgstr "%o kaute auf %ks Faust herum."
+msgstr "%o hat von %k einen in die fresse bekommen."
 
 msgid "OB_MPCHAINSAW"
 msgstr "%o wurde von %ks Kettensäge zerteilt."
@@ -1194,7 +1194,7 @@ msgid "TXT_WPNPHOENIXROD"
 msgstr "Phönixstab"
 
 msgid "TXT_WPNGAUNTLETS"
-msgstr "Handschuhe des Zauberers"
+msgstr "Handschuhe des Nekromanten"
 
 msgid "TXT_NEEDBLUEKEY"
 msgstr "Du brauchst einen blauen Schlüssel, um diese Tür zu öffnen"
@@ -4562,9 +4562,9 @@ msgstr ""
 "unterstützte Version."
 
 # Shouldn’t this say “%e is the newest supported”?
-# 
+#
 # — Undead
-# 
+#
 # Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
 msgstr ""
@@ -5542,3 +5542,9 @@ msgstr "Bestätigen"
 
 msgid "TXT_OK"
 msgstr "OK"
+
+msgid "PICKER_THEME"
+msgstr "Design"
+
+msgid "OPTVAL_LIGHT"
+msgstr "Hell"

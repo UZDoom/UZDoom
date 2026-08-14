@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-13 23:20-0400\n"
+"PO-Revision-Date: 2026-07-30 16:57-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/projects/uzdoom/unused/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -121,118 +121,6 @@ msgstr "点对点"
 # each other individually.
 msgid "PICKER_NETSERVER"
 msgstr "数据包服务器"
-
-# Jargon.
-msgid "REVMNU_AIR_ABSORPTION_HF"
-msgstr "空气吸收HF"
-
-# Jargon.
-msgid "REVMNU_DECAY_HF_RATIO"
-msgstr "衰减HF率"
-
-# Jargon.
-msgid "REVMNU_DECAY_LF_RATIO"
-msgstr "衰减LF率"
-
-# Jargon.
-msgid "REVMNU_DECAY_TIME"
-msgstr "衰减时间"
-
-# Jargon.
-msgid "REVMNU_DENSITY"
-msgstr "密度"
-
-# Jargon.
-msgid "REVMNU_DIFFUSION"
-msgstr "传播"
-
-# Jargon.
-msgid "REVMNU_ECHO_DEPTH"
-msgstr "回声深度"
-
-# Jargon.
-msgid "REVMNU_ECHO_TIME"
-msgstr "回声时间"
-
-# Jargon.
-msgid "REVMNU_ENVIRONMENT_DIFFUSION"
-msgstr "环境传播"
-
-# Jargon.
-msgid "REVMNU_ENVIRONMENT_SIZE"
-msgstr "环境大小"
-
-# Jargon.
-msgid "REVMNU_HF_REFERENCE"
-msgstr "HF参考值"
-
-# Jargon.
-msgid "REVMNU_LF_REFERENCE"
-msgstr "LF参考值"
-
-# Jargon.
-msgid "REVMNU_MODULATION_DEPTH"
-msgstr "调制深度"
-
-# Jargon.
-msgid "REVMNU_MODULATION_TIME"
-msgstr "调制时间"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS"
-msgstr "反射"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS_DELAY"
-msgstr "反射延迟"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS_PAN_X"
-msgstr "反射X定位"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS_PAN_Y"
-msgstr "反射Y定位"
-
-# Jargon.
-msgid "REVMNU_REFLECTIONS_PAN_Z"
-msgstr "反射Z定位"
-
-# Jargon.
-msgid "REVMNU_REVERB"
-msgstr "混响"
-
-# Jargon.
-msgid "REVMNU_REVERB_DELAY"
-msgstr "混响延迟"
-
-# Jargon.
-msgid "REVMNU_REVERB_PAN_X"
-msgstr "混响X定位"
-
-# Jargon.
-msgid "REVMNU_REVERB_PAN_Y"
-msgstr "混响Y定位"
-
-# Jargon.
-msgid "REVMNU_REVERB_PAN_Z"
-msgstr "混响Z定位"
-
-# Jargon.
-msgid "REVMNU_ROOM"
-msgstr "房间"
-
-# Jargon.
-msgid "REVMNU_ROOM_HF"
-msgstr "房间HF"
-
-# Jargon.
-msgid "REVMNU_ROOM_LF"
-msgstr "房间LF"
-
-# Jargon.
-msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
-msgstr "房间滚降因子"
 
 msgid "SNDMNU_BACKEND"
 msgstr "声音后台"

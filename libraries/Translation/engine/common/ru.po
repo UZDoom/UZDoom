@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-13 23:20-0400\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2026-08-02 19:01+0000\n"
+"Last-Translator: Andrei Stepanov <adem4ik@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/uzdoom/common/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: python 3.14.6 polib 1.2.0\n"
+"X-Generator: Weblate 2026.8.dev0\n"
 
 msgid "PRESSYN"
 msgstr "Нажмите Y или N."
@@ -263,7 +263,6 @@ msgid "CNTRLMNU_SLOT1"
 msgstr "Первое оружие"
 
 # only show appropriate slots per game
-# 
 msgid "CNTRLMNU_SLOT2"
 msgstr "Второе оружие"
 
@@ -979,7 +978,7 @@ msgstr "DOSBox OPL3"
 msgid "OPTVAL_JAVAOPL3"
 msgstr "Java OPL3"
 
-msgid "OPTVAL_ESFMu"
+msgid "OPTVAL_ESFMU"
 msgstr "ESFMu OPL3"
 
 msgid "OPTVAL_YMFMOPL2"
@@ -1454,34 +1453,34 @@ msgstr "Редактировать окружение"
 msgid "REVMNU_NEW"
 msgstr "Новое окружение"
 
-msgid "REVMNU_Reflections_Scale"
+msgid "REVMNU_REFLECTIONS_SCALE"
 msgstr "Размер Отражений"
 
-msgid "REVMNU_Reflections_Delay_Scale"
+msgid "REVMNU_REFLECTIONS_DELAY_SCALE"
 msgstr "Размер Задержки Отражений"
 
-msgid "REVMNU_Decay_Time_Scale"
+msgid "REVMNU_DECAY_TIME_SCALE"
 msgstr "Размер Времени Спада"
 
-msgid "REVMNU_Decay_HF_Limit"
+msgid "REVMNU_DECAY_HF_LIMIT"
 msgstr "Лимит Высокой Частоты Спада"
 
-msgid "REVMNU_Reverb_Scale"
+msgid "REVMNU_REVERB_SCALE"
 msgstr "Размер Реверберации"
 
-msgid "REVMNU_Reverb_Delay_Scale"
+msgid "REVMNU_REVERB_DELAY_SCALE"
 msgstr "Размер Задержки Реверберации"
 
-msgid "REVMNU_Echo_Time_Scale"
+msgid "REVMNU_ECHO_TIME_SCALE"
 msgstr "Шкала времени эха"
 
-msgid "REVMNU_Modulation_Time_Scale"
+msgid "REVMNU_MODULATION_TIME_SCALE"
 msgstr "Шкала времени модуляции"
 
-msgid "REVMNU_Based_on"
+msgid "REVMNU_BASED_ON"
 msgstr "Основано на"
 
-msgid "REVMNU_Name"
+msgid "REVMNU_NAME"
 msgstr "Название"
 
 msgid "REVMNU_ID_1"
@@ -1490,16 +1489,16 @@ msgstr "ИД №1"
 msgid "REVMNU_ID_2"
 msgstr "ИД №2"
 
-msgid "REVMNU_Create"
+msgid "REVMNU_CREATE"
 msgstr "Создать"
 
-msgid "REVMNU_Save"
+msgid "REVMNU_SAVE"
 msgstr "Сохранить…"
 
-msgid "REVMNU_File_name"
+msgid "REVMNU_FILE_NAME"
 msgstr "Имя файла"
 
-msgid "REVMNU_Environments_to_save"
+msgid "REVMNU_ENVIRONMENTS_TO_SAVE"
 msgstr "Сохранить окружения"
 
 msgid "DSPLYMNU_VKOPT"
@@ -1787,5 +1786,117 @@ msgstr "Куча повторяющихся сообщений"
 msgid "MSGMNU_MESSAGEQUEUE"
 msgstr "Размер очереди в сообщениях"
 
-msgid "$MSGMNU_MESSAGEFADE"
+msgid "MSGMNU_MESSAGEFADE"
 msgstr "Длительность затухания сообщения"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_SIZE"
+msgstr "Размер Окружения"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_DIFFUSION"
+msgstr "Рассеивание Окружения"
+
+# Jargon.
+msgid "REVMNU_ROOM"
+msgstr "Комната"
+
+# Jargon.
+msgid "REVMNU_ROOM_HF"
+msgstr "Комната Высокая Частота"
+
+# Jargon.
+msgid "REVMNU_ROOM_LF"
+msgstr "Комната Низкая Частота"
+
+# Jargon.
+msgid "REVMNU_DECAY_TIME"
+msgstr "Время Спада"
+
+# Jargon.
+msgid "REVMNU_DECAY_HF_RATIO"
+msgstr "Коэффициент Высокой Частоты Спада"
+
+# Jargon.
+msgid "REVMNU_DECAY_LF_RATIO"
+msgstr "Коэффициент Низкой Частоты Спада"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS"
+msgstr "Отражения"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_DELAY"
+msgstr "Задержка Отражений"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_X"
+msgstr "Панорамирование Отражений X"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Y"
+msgstr "Панорамирование Отражений Y"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Z"
+msgstr "Панорамирование Отражений Z"
+
+# Jargon.
+msgid "REVMNU_REVERB"
+msgstr "Реверберация"
+
+# Jargon.
+msgid "REVMNU_REVERB_DELAY"
+msgstr "Задержка Реверберации"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_X"
+msgstr "Панорамирование Реверберации X"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Y"
+msgstr "Панорамирование Реверберации Y"
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Z"
+msgstr "Панорамирование Реверберации Z"
+
+# Jargon.
+msgid "REVMNU_ECHO_TIME"
+msgstr "Время Эхо"
+
+# Jargon.
+msgid "REVMNU_ECHO_DEPTH"
+msgstr "Глубина Эхо"
+
+# Jargon.
+msgid "REVMNU_MODULATION_TIME"
+msgstr "Время Модуляции"
+
+# Jargon.
+msgid "REVMNU_MODULATION_DEPTH"
+msgstr "Глубина Модуляции"
+
+# Jargon.
+msgid "REVMNU_AIR_ABSORPTION_HF"
+msgstr "Воздушное поглощение ВЧ"
+
+# Jargon.
+msgid "REVMNU_HF_REFERENCE"
+msgstr "HF Референс"
+
+# Jargon.
+msgid "REVMNU_LF_REFERENCE"
+msgstr "LF Референс"
+
+# Jargon.
+msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
+msgstr "Фактор затихания отраженного звука"
+
+# Jargon.
+msgid "REVMNU_DIFFUSION"
+msgstr "Рассеивание"
+
+# Jargon.
+msgid "REVMNU_DENSITY"
+msgstr "Плотность"
