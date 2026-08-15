@@ -108,18 +108,20 @@ void Theme::initilize(Mode mode, bool contrast)
 			auto command = sc.MatchString(ThemeCommandStrings);
 			switch (command)
 			{
+			default:
+				break;
 			case -1:
 				DPrintf(DMSG_WARNING, "Unknown theme command");
-				break;
+				continue;
 			case THEME_LIGHT:
 				t = &Theme::light;
-				break;
+				continue;
 			case THEME_DARK:
 				t = &Theme::dark;
-				break;
+				continue;
 			case THEME_ACCENT:
 				Theme::accent = Colorf::fromRgb(hex(sc));
-				break;
+				continue;
 			}
 			if (!t)
 			{
