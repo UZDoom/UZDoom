@@ -1887,6 +1887,7 @@ class PlayerPawn : Actor
 		}
 
 		let weapon = player.PendingWeapon;
+		bool fromPowerup = false;
 
 		// If the player has a tome of power, use self weapon's powered up
 		// version, if one is available.
@@ -1896,6 +1897,7 @@ class PlayerPawn : Actor
 			player.mo.FindInventory ('PowerWeaponLevel2', true))
 		{
 			weapon = weapon.SisterWeapon;
+			fromPowerup = true;
 		}
 
 		player.PendingWeapon = WP_NOCHANGE;
@@ -1904,7 +1906,7 @@ class PlayerPawn : Actor
 
 		if (weapon != null)
 		{
-			weapon.OnSelect();
+			weapon.OnSelect(fromPowerup);
 			weapon.PlayUpSound(self);
 			player.refire = 0;
 
