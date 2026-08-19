@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-14 05:01+0000\n"
-"Last-Translator: Yu Ji Wan <z1wan@hanmail.net>\n"
+"PO-Revision-Date: 2026-08-10 23:42-0400\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/ko/>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2026.8.dev0\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
 
 msgid "PRESSKEY"
 msgstr "키를 누르시오."
@@ -286,37 +286,11 @@ msgstr "음악 전환"
 msgid "STSTR_NOMUS"
 msgstr "불가능한 선택입니다"
 
-msgid "STSTR_DQDON"
-msgstr "무미건조한 모드: 켜짐"
-
-msgid "STSTR_DQDOFF"
-msgstr "무미건조한 모드: 끔"
-
-msgid "STSTR_DQD2ON"
-msgstr "엄청나게 무미건조한 모드: 켜짐"
-
-msgid "STSTR_DQD2OFF"
-msgstr "엄청나게 무미건조한 모드: 끔"
-
 msgid "STSTR_KFAADDED"
 msgstr "아주 행복한 탄약 추가됨"
 
 msgid "STSTR_FAADDED"
 msgstr "탄약(열쇠 없이) 추가됨"
-
-msgid "STSTR_NCON"
-msgstr "노 클립 모드: 켜짐"
-
-msgid "STSTR_NCOFF"
-msgstr "노 클립 모드: 끔"
-
-#, fuzzy
-msgid "STSTR_NC2ON"
-msgstr "노 클립 모드 2: 켜짐"
-
-#, fuzzy
-msgid "STSTR_NC2OFF"
-msgstr "노 클립 모드 2: 끔"
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -338,49 +312,17 @@ msgstr "… 후진 건 아니지만 - GM"
 msgid "STSTR_CLEV"
 msgstr "레벨 변경 중…"
 
-msgid "TXT_BUDDHAON"
-msgstr "부처 모드: 켜짐"
-
-msgid "TXT_BUDDHAOFF"
-msgstr "부처 모드: 끔"
-
-msgid "TXT_BUDDHA2ON"
-msgstr "나무 아미타불 모드: 켜짐"
-
-msgid "TXT_BUDDHA2OFF"
-msgstr "나무 아미타불 모드: 끔"
-
-msgid "TXT_CHEATPOWERON"
-msgstr "파워: 켜짐"
-
-msgid "TXT_CHEATPOWEROFF"
-msgstr "파워: 끔"
-
 msgid "TXT_CHEATHEALTH"
 msgstr "체력 완전 회복"
 
 msgid "TXT_CHEATKEYS"
 msgstr "모든 열쇠"
 
-msgid "TXT_CHEATSOUNDON"
-msgstr "효과음 디버그: 켜짐"
-
-msgid "TXT_CHEATSOUNDOFF"
-msgstr "효과음 디버그: 끔"
-
 msgid "TXT_CHEATIDDQD"
 msgstr "치트 쓸려고? 그럼 죽어야지!"
 
 msgid "TXT_CHEATIDKFA"
 msgstr "사기꾼놈! 너는 무기를 가질 자격이 없어"
-
-#, fuzzy
-msgid "TXT_CHEATTICKERON"
-msgstr "프레임 속도 표시: 켜짐"
-
-#, fuzzy
-msgid "TXT_CHEATTICKEROFF"
-msgstr "프레임 속도 표시: 끔"
 
 msgid "TXT_CHEATARTIFACTS3"
 msgstr "얻었다"
@@ -391,12 +333,6 @@ msgstr "넌 미다스의 손을 얻었어, 베이비"
 msgid "TXT_GOTSTUFF"
 msgstr "무언가를 얻었다!"
 
-msgid "TXT_FREEZEON"
-msgstr "시간정지: 켜짐"
-
-msgid "TXT_FREEZEOFF"
-msgstr "시간정지: 끔"
-
 msgid "TXT_STRANGE"
 msgstr "뭔가 이상한 기분이…"
 
@@ -406,35 +342,17 @@ msgstr "기분이 더더욱 이상해졌다."
 msgid "TXT_NOTSTRANGE"
 msgstr "자기 자신처럼 생각하게 됐다."
 
-msgid "TXT_LEADBOOTSON"
-msgstr "납 장화: 켜짐"
-
-msgid "TXT_LEADBOOTSOFF"
-msgstr "납 장화: 끔"
-
 msgid "TXT_LIGHTER"
 msgstr "가벼운 느낌이 든다"
 
 msgid "TXT_GRAVITY"
 msgstr "중력이 당신을 붙잡았다"
 
-msgid "TXT_NOTARGET_ON"
-msgstr "적 표적 감지: 켜짐"
-
-msgid "TXT_NOTARGET_OFF"
-msgstr "적 표적 감지: 끔"
-
 msgid "TXT_ANUBIS_ON"
 msgstr "“공포에 떨어라!”"
 
 msgid "TXT_ANUBIS_OFF"
 msgstr "오거 갑옷은 이제 없다"
-
-msgid "TXT_CHASECAM_ON"
-msgstr "3인칭 카메라: 켜짐"
-
-msgid "TXT_CHASECAM_OFF"
-msgstr "3인칭 카메라: 끔"
 
 msgid "TXT_BADDIE_KILLED"
 msgstr "1 명의 나쁜놈이 사살됨"
@@ -459,24 +377,6 @@ msgstr "게임 밖에서 무엇을 죽이고 싶습니까?"
 
 msgid "TXT_NOT_FROZEN"
 msgstr "플레이어 정지 속성: 끔"
-
-msgid "AMSTR_FOLLOWOFF"
-msgstr "추적 모드: 끔"
-
-msgid "AMSTR_FOLLOWON"
-msgstr "추적 모드: 켜짐"
-
-msgid "AMSTR_GRIDON"
-msgstr "격자: 켜짐"
-
-msgid "AMSTR_GRIDOFF"
-msgstr "격자: 끔"
-
-msgid "AMSTR_TEXON"
-msgstr "텍스쳐 모드: 켜짐"
-
-msgid "AMSTR_TEXOFF"
-msgstr "텍스쳐 모드: 끔"
 
 msgid "AMSTR_MARKEDSPOT"
 msgstr "지점 추가"
@@ -2856,14 +2756,6 @@ msgstr ""
 "이 퀘스트를 잠시 중단하시겠습니까?\n"
 "\n"
 "Y키 또는 N키를 누르시오."
-
-msgctxt "chex"
-msgid "STSTR_DQDON"
-msgstr "무적 모드: 켜짐"
-
-msgctxt "chex"
-msgid "STSTR_DQDOFF"
-msgstr "무적 모드: 끔"
 
 msgctxt "chex"
 msgid "STSTR_FAADDED"
@@ -5391,3 +5283,60 @@ msgstr "자동 (바닐라 기본 설정)"
 #, fuzzy
 msgid "OPTVAL_VTAZDOOM"
 msgstr "자동 (Z둠 기본 설정)"
+
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "무미건조한 모드: {켜짐|끔}"
+
+msgid "STSTR_DQD2{ON|OFF}"
+msgstr "엄청나게 무미건조한 모드: {켜짐|끔}"
+
+msgid "STSTR_NC{ON|OFF}"
+msgstr "노 클립 모드: {켜짐|끔}"
+
+#, fuzzy
+msgid "STSTR_NC2{ON|OFF}"
+msgstr "노 클립 모드 2: {켜짐|끔}"
+
+msgid "TXT_BUDDHA{ON|OFF}"
+msgstr "부처 모드: {켜짐|끔}"
+
+msgid "TXT_BUDDHA2{ON|OFF}"
+msgstr "나무 아미타불 모드: {켜짐|끔}"
+
+msgid "TXT_CHEATPOWER{ON|OFF}"
+msgstr "파워: {켜짐|끔}"
+
+msgid "TXT_CHEATSOUND{ON|OFF}"
+msgstr "효과음 디버그: {켜짐|끔}"
+
+#, fuzzy
+msgid "TXT_CHEATTICKER{ON|OFF}"
+msgstr "프레임 속도 표시: {켜짐|끔}"
+
+msgid "TXT_FREEZE{ON|OFF}"
+msgstr "시간정지: {켜짐|끔}"
+
+msgid "TXT_LEADBOOTS{ON|OFF}"
+msgstr "납 장화: {켜짐|끔}"
+
+msgid "TXT_NOTARGET_{ON|OFF}"
+msgstr "적 표적 감지: {켜짐|끔}"
+
+msgid "TXT_CHASECAM_{ON|OFF}"
+msgstr "3인칭 카메라: {켜짐|끔}"
+
+msgid "AMSTR_FOLLOW{ON|OFF}"
+msgstr "추적 모드: {켜짐|끔}"
+
+msgid "AMSTR_GRID{ON|OFF}"
+msgstr "격자: {켜짐|끔}"
+
+msgid "AMSTR_TEX{ON|OFF}"
+msgstr "텍스쳐 모드: {켜짐|끔}"
+
+msgctxt "chex"
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "무적 모드: {켜짐|끔}"
+
+msgid "MSG{ON|OFF}"
+msgstr "메시지: {켜짐|끔}"

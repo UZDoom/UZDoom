@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-08-01 21:01+0000\n"
-"Last-Translator: Ron Dallas <Lot_bohdan@ukr.net>\n"
+"PO-Revision-Date: 2026-08-10 23:42-0400\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 2026.8.dev0\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
 
 msgid "PRESSKEY"
 msgstr "Натисніть будь яку клавішу."
@@ -282,35 +282,11 @@ msgstr "Зміна музики"
 msgid "STSTR_NOMUS"
 msgstr "Некоректний Вибір"
 
-msgid "STSTR_DQDON"
-msgstr "Безсмертя: ВВІМК"
-
-msgid "STSTR_DQDOFF"
-msgstr "Безсмертя: ВИМК"
-
-msgid "STSTR_DQD2ON"
-msgstr "Повне безсмертя: ВВІМК"
-
-msgid "STSTR_DQD2OFF"
-msgstr "Повне безсмертя: ВИМК"
-
 msgid "STSTR_KFAADDED"
 msgstr "Спорядження поповнено"
 
 msgid "STSTR_FAADDED"
 msgstr "Спорядження поповнено (без ключів)"
-
-msgid "STSTR_NCON"
-msgstr "Прохід крізь стіни: ВВІМК"
-
-msgid "STSTR_NCOFF"
-msgstr "Прохід крізь стіни: ВИМК"
-
-msgid "STSTR_NC2ON"
-msgstr "3D Проліт крізь стіни: Увімк."
-
-msgid "STSTR_NC2OFF"
-msgstr "3D Проліт крізь стіни: Вимк."
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -332,47 +308,17 @@ msgstr "… непогано — гм"
 msgid "STSTR_CLEV"
 msgstr "Зміна рівня…"
 
-msgid "TXT_BUDDHAON"
-msgstr "Будда-мод: ВВІМК"
-
-msgid "TXT_BUDDHAOFF"
-msgstr "Будда-мод: ВИМК"
-
-msgid "TXT_BUDDHA2ON"
-msgstr "Ультимативний Будда-мод: ВВІМК"
-
-msgid "TXT_BUDDHA2OFF"
-msgstr "Ультимативний Будда-мод: ВИМК"
-
-msgid "TXT_CHEATPOWERON"
-msgstr "Сила: УВІМК"
-
-msgid "TXT_CHEATPOWEROFF"
-msgstr "Сила: ВИМК"
-
 msgid "TXT_CHEATHEALTH"
 msgstr "Повне здоров'я"
 
 msgid "TXT_CHEATKEYS"
 msgstr "Усі ключі"
 
-msgid "TXT_CHEATSOUNDON"
-msgstr "Налагодження звуку: УВІМК"
-
-msgid "TXT_CHEATSOUNDOFF"
-msgstr "Налагодження звуку: ВИМК"
-
 msgid "TXT_CHEATIDDQD"
 msgstr "Хех, чітериш? Тепер помри!"
 
 msgid "TXT_CHEATIDKFA"
 msgstr "Пройдисвіт—ти не заслужив зброї"
-
-msgid "TXT_CHEATTICKERON"
-msgstr "Лічильник: ВВІМК"
-
-msgid "TXT_CHEATTICKEROFF"
-msgstr "Лічильник: ВИМК"
 
 msgid "TXT_CHEATARTIFACTS3"
 msgstr "Ви отримали це"
@@ -383,12 +329,6 @@ msgstr "Дар Мідаса у твоїх руках, золотце"
 msgid "TXT_GOTSTUFF"
 msgstr "Отримано предмети!"
 
-msgid "TXT_FREEZEON"
-msgstr "Режим заморозки: ВВІМК"
-
-msgid "TXT_FREEZEOFF"
-msgstr "Режим заморозки: ВИМК"
-
 msgid "TXT_STRANGE"
 msgstr "Ви почуваєте себе дивно…"
 
@@ -398,35 +338,17 @@ msgstr "Ви почуваєте себе ще дивніше."
 msgid "TXT_NOTSTRANGE"
 msgstr "Ви почуваєтесь собою."
 
-msgid "TXT_LEADBOOTSON"
-msgstr "Свинцеві чоботи: УВІМК"
-
-msgid "TXT_LEADBOOTSOFF"
-msgstr "Свинцеві чоботи: ВИМК"
-
 msgid "TXT_LIGHTER"
 msgstr "Ви побороли гравітацію"
 
 msgid "TXT_GRAVITY"
 msgstr "Гравітація знову притискає вас до землі"
 
-msgid "TXT_NOTARGET_ON"
-msgstr "Невідчутність: ВВІМК"
-
-msgid "TXT_NOTARGET_OFF"
-msgstr "Невідчутність: ВИМК"
-
 msgid "TXT_ANUBIS_ON"
 msgstr "\"Трясись зі страху!\""
 
 msgid "TXT_ANUBIS_OFF"
 msgstr "Броню огра знято"
-
-msgid "TXT_CHASECAM_ON"
-msgstr "Камера від 3-ї особи: УВІМК"
-
-msgid "TXT_CHASECAM_OFF"
-msgstr "Камера від 3-ї особи: ВИМК"
 
 msgid "TXT_BADDIE_KILLED"
 msgstr "1 поганець вмер"
@@ -451,24 +373,6 @@ msgstr "Що, хочеш вбивати в реальності?"
 
 msgid "TXT_NOT_FROZEN"
 msgstr "Властивості замороженого гравця: ВИМК"
-
-msgid "AMSTR_FOLLOWOFF"
-msgstr "Прив'язка до гравца: ВИМК"
-
-msgid "AMSTR_FOLLOWON"
-msgstr "Прив'язка до гравца: УВІМК"
-
-msgid "AMSTR_GRIDON"
-msgstr "Сітка: ВВІМК"
-
-msgid "AMSTR_GRIDOFF"
-msgstr "Сітка: ВИМК"
-
-msgid "AMSTR_TEXON"
-msgstr "Текстурний режим: ВВІМК"
-
-msgid "AMSTR_TEXOFF"
-msgstr "Текстурний режим: ВИМК"
 
 msgid "AMSTR_MARKEDSPOT"
 msgstr "Позначка"
@@ -2849,14 +2753,6 @@ msgstr ""
 "Натисніть Y або N."
 
 msgctxt "chex"
-msgid "STSTR_DQDON"
-msgstr "Невразливість: УВІМК"
-
-msgctxt "chex"
-msgid "STSTR_DQDOFF"
-msgstr "Невразливість: ВИМК"
-
-msgctxt "chex"
 msgid "STSTR_FAADDED"
 msgstr "Додано Зорч"
 
@@ -4430,7 +4326,7 @@ msgid "OPTVAL_BRIGHT"
 msgstr "Яскраво"
 
 msgid "OPTVAL_DARK"
-msgstr "Темно"
+msgstr "Темна"
 
 # This refers to the Doom Legacy port, not a legacy lighting style!
 msgid "OPTVAL_LEGACY"
@@ -4561,9 +4457,9 @@ msgid "TXT_TOOOLDSG"
 msgstr "Збереження \"%s\" з старішої версії: %d (%e остання сумісна)."
 
 # Shouldn’t this say “%e is the newest supported”?
-#
+# 
 # — Undead
-#
+# 
 # Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
 msgstr "Збереження \"%s\" з новіщої версії: %d (%e остання сумісна)."
@@ -5455,7 +5351,7 @@ msgid "UPDATER_SETTINGS"
 msgstr "Налаштування оновлювача"
 
 msgid "UPDATER_PROMPT_TO_INSTALL"
-msgstr "Пропонувати встановлення"
+msgstr "Пропонувати встан."
 
 msgid "UPDATER_INTERVAL"
 msgstr "Перевіряти кожен:"
@@ -5573,3 +5469,64 @@ msgstr "OK"
 #, fuzzy
 msgid "CMPTMNU_TRANSFERSECRET"
 msgstr "Механізм зміни підлоги з передаванням секрету в BOOM"
+
+msgid "PICKER_THEME"
+msgstr "Тема"
+
+msgid "OPTVAL_LIGHT"
+msgstr "Світла"
+
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Безсмертя: {ВВІМК|ВИМК}"
+
+msgid "STSTR_DQD2{ON|OFF}"
+msgstr "Повне безсмертя: {ВВІМК|ВИМК}"
+
+msgid "STSTR_NC{ON|OFF}"
+msgstr "Прохід крізь стіни: {ВВІМК|ВИМК}"
+
+msgid "STSTR_NC2{ON|OFF}"
+msgstr "3D Проліт крізь стіни: {Увімк|Вимк}"
+
+msgid "TXT_BUDDHA{ON|OFF}"
+msgstr "Будда-мод: {ВВІМК|ВИМК}"
+
+msgid "TXT_BUDDHA2{ON|OFF}"
+msgstr "Ультимативний Будда-мод: {ВВІМК|ВИМК}"
+
+msgid "TXT_CHEATPOWER{ON|OFF}"
+msgstr "Сила: {УВІМК|ВИМК}"
+
+msgid "TXT_CHEATSOUND{ON|OFF}"
+msgstr "Налагодження звуку: {УВІМК|ВИМК}"
+
+msgid "TXT_CHEATTICKER{ON|OFF}"
+msgstr "Лічильник: {ВВІМК|ВИМК}"
+
+msgid "TXT_FREEZE{ON|OFF}"
+msgstr "Режим заморозки: {ВВІМК|ВИМК}"
+
+msgid "TXT_LEADBOOTS{ON|OFF}"
+msgstr "Свинцеві чоботи: {УВІМК|ВИМК}"
+
+msgid "TXT_NOTARGET_{ON|OFF}"
+msgstr "Невідчутність: {ВВІМК|ВИМК}"
+
+msgid "TXT_CHASECAM_{ON|OFF}"
+msgstr "Камера від 3-ї особи: {УВІМК|ВИМК}"
+
+msgid "AMSTR_FOLLOW{ON|OFF}"
+msgstr "Прив'язка до гравца: {УВІМК|ВИМК}"
+
+msgid "AMSTR_GRID{ON|OFF}"
+msgstr "Сітка: {ВВІМК|ВИМК}"
+
+msgid "AMSTR_TEX{ON|OFF}"
+msgstr "Текстурний режим: {ВВІМК|ВИМК}"
+
+msgctxt "chex"
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Невразливість: {УВІМК|ВИМК}"
+
+msgid "MSG{ON|OFF}"
+msgstr "Повідомлення: {УВІМК|ВИМК}"

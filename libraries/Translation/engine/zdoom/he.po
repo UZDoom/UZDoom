@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-13 23:20-0400\n"
+"PO-Revision-Date: 2026-08-10 23:42-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/he/>\n"
 "Language: he\n"
@@ -236,34 +236,10 @@ msgstr ""
 msgid "STSTR_NOMUS"
 msgstr "בחירה בלתי אפשרית"
 
-msgid "STSTR_DQDON"
-msgstr ""
-
-msgid "STSTR_DQDOFF"
-msgstr ""
-
-msgid "STSTR_DQD2ON"
-msgstr ""
-
-msgid "STSTR_DQD2OFF"
-msgstr ""
-
 msgid "STSTR_KFAADDED"
 msgstr ""
 
 msgid "STSTR_FAADDED"
-msgstr ""
-
-msgid "STSTR_NCON"
-msgstr ""
-
-msgid "STSTR_NCOFF"
-msgstr ""
-
-msgid "STSTR_NC2ON"
-msgstr ""
-
-msgid "STSTR_NC2OFF"
 msgstr ""
 
 # “inVuln”: Invulnerability sphere
@@ -286,47 +262,17 @@ msgstr ""
 msgid "STSTR_CLEV"
 msgstr ""
 
-msgid "TXT_BUDDHAON"
-msgstr ""
-
-msgid "TXT_BUDDHAOFF"
-msgstr ""
-
-msgid "TXT_BUDDHA2ON"
-msgstr ""
-
-msgid "TXT_BUDDHA2OFF"
-msgstr ""
-
-msgid "TXT_CHEATPOWERON"
-msgstr "כוח: פעיל"
-
-msgid "TXT_CHEATPOWEROFF"
-msgstr "כוח: כבוי"
-
 msgid "TXT_CHEATHEALTH"
 msgstr ""
 
 msgid "TXT_CHEATKEYS"
 msgstr "כל המפתחות"
 
-msgid "TXT_CHEATSOUNDON"
-msgstr ""
-
-msgid "TXT_CHEATSOUNDOFF"
-msgstr ""
-
 msgid "TXT_CHEATIDDQD"
 msgstr ""
 
 msgid "TXT_CHEATIDKFA"
 msgstr "רמאי—לא מגיע לך נשקים"
-
-msgid "TXT_CHEATTICKERON"
-msgstr ""
-
-msgid "TXT_CHEATTICKEROFF"
-msgstr ""
 
 msgid "TXT_CHEATARTIFACTS3"
 msgstr ""
@@ -337,12 +283,6 @@ msgstr ""
 msgid "TXT_GOTSTUFF"
 msgstr ""
 
-msgid "TXT_FREEZEON"
-msgstr "מצב קפאון: פעיל"
-
-msgid "TXT_FREEZEOFF"
-msgstr "מצב קפאון: כבוי"
-
 msgid "TXT_STRANGE"
 msgstr "אתה מרגיש מוזר…"
 
@@ -352,34 +292,16 @@ msgstr "אתה מרגיש מוזר אפילו יותר."
 msgid "TXT_NOTSTRANGE"
 msgstr "אתה מרגיש כמו עצמך שוב."
 
-msgid "TXT_LEADBOOTSON"
-msgstr ""
-
-msgid "TXT_LEADBOOTSOFF"
-msgstr ""
-
 msgid "TXT_LIGHTER"
 msgstr "אתה מרגיש קל יותר"
 
 msgid "TXT_GRAVITY"
 msgstr "כוח הכבידה מושך אותך מטה"
 
-msgid "TXT_NOTARGET_ON"
-msgstr ""
-
-msgid "TXT_NOTARGET_OFF"
-msgstr ""
-
 msgid "TXT_ANUBIS_ON"
 msgstr ""
 
 msgid "TXT_ANUBIS_OFF"
-msgstr ""
-
-msgid "TXT_CHASECAM_ON"
-msgstr ""
-
-msgid "TXT_CHASECAM_OFF"
 msgstr ""
 
 msgid "TXT_BADDIE_KILLED"
@@ -404,24 +326,6 @@ msgid "TXT_WHAT_KILL"
 msgstr ""
 
 msgid "TXT_NOT_FROZEN"
-msgstr ""
-
-msgid "AMSTR_FOLLOWOFF"
-msgstr ""
-
-msgid "AMSTR_FOLLOWON"
-msgstr ""
-
-msgid "AMSTR_GRIDON"
-msgstr ""
-
-msgid "AMSTR_GRIDOFF"
-msgstr ""
-
-msgid "AMSTR_TEXON"
-msgstr ""
-
-msgid "AMSTR_TEXOFF"
 msgstr ""
 
 msgid "AMSTR_MARKEDSPOT"
@@ -2757,14 +2661,6 @@ msgid "ENDGAME"
 msgstr ""
 
 msgctxt "chex"
-msgid "STSTR_DQDON"
-msgstr ""
-
-msgctxt "chex"
-msgid "STSTR_DQDOFF"
-msgstr ""
-
-msgctxt "chex"
 msgid "STSTR_FAADDED"
 msgstr ""
 
@@ -5033,3 +4929,58 @@ msgstr ""
 
 msgid "OPTMNU_ACCESSIBILITY"
 msgstr "הגדרות נגישות"
+
+msgid "STSTR_DQD{ON|OFF}"
+msgstr ""
+
+msgid "STSTR_DQD2{ON|OFF}"
+msgstr ""
+
+msgid "STSTR_NC{ON|OFF}"
+msgstr ""
+
+msgid "STSTR_NC2{ON|OFF}"
+msgstr ""
+
+msgid "TXT_BUDDHA{ON|OFF}"
+msgstr ""
+
+msgid "TXT_BUDDHA2{ON|OFF}"
+msgstr ""
+
+msgid "TXT_CHEATPOWER{ON|OFF}"
+msgstr "כוח: {פעיל|כבוי}"
+
+msgid "TXT_CHEATSOUND{ON|OFF}"
+msgstr ""
+
+msgid "TXT_CHEATTICKER{ON|OFF}"
+msgstr ""
+
+msgid "TXT_FREEZE{ON|OFF}"
+msgstr "מצב קפאון: {פעיל|כבוי}"
+
+msgid "TXT_LEADBOOTS{ON|OFF}"
+msgstr ""
+
+msgid "TXT_NOTARGET_{ON|OFF}"
+msgstr ""
+
+msgid "TXT_CHASECAM_{ON|OFF}"
+msgstr ""
+
+msgid "AMSTR_FOLLOW{ON|OFF}"
+msgstr ""
+
+msgid "AMSTR_GRID{ON|OFF}"
+msgstr ""
+
+msgid "AMSTR_TEX{ON|OFF}"
+msgstr ""
+
+msgctxt "chex"
+msgid "STSTR_DQD{ON|OFF}"
+msgstr ""
+
+msgid "MSG{ON|OFF}"
+msgstr "הודעות: {פעיל|כבוי}"

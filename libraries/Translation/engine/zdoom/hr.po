@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-14 05:01+0000\n"
-"Last-Translator: SecularSteve <fairfull.playing@gmail.com>\n"
+"PO-Revision-Date: 2026-08-10 23:42-0400\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Croatian <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/hr/>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 2026.8.dev0\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
 
 msgid "PRESSKEY"
 msgstr "Pritisni tipku."
@@ -284,37 +284,11 @@ msgstr "Promjena glazbe"
 msgid "STSTR_NOMUS"
 msgstr "Nemogući odabir"
 
-msgid "STSTR_DQDON"
-msgstr "Način bezstupnjevnosti: UKLJ"
-
-msgid "STSTR_DQDOFF"
-msgstr "Način bezstupnjevnosti: ISKLJ"
-
-msgid "STSTR_DQD2ON"
-msgstr "Način krajnje bezstupnjevnosti: UKLJ"
-
-msgid "STSTR_DQD2OFF"
-msgstr "Način krajnje bezstupnjevnosti: ISKLJ"
-
 msgid "STSTR_KFAADDED"
 msgstr "Jako sretno streljivo je dodano"
 
 msgid "STSTR_FAADDED"
 msgstr "Streljivo (bez ključeva) je dodano"
-
-msgid "STSTR_NCON"
-msgstr "Bez načina presjecanja: UKLJ"
-
-msgid "STSTR_NCOFF"
-msgstr "Bez načina presjecanja: ISKLJ"
-
-#, fuzzy
-msgid "STSTR_NC2ON"
-msgstr "Bez načina presjecanja 2: UKLJ"
-
-#, fuzzy
-msgid "STSTR_NC2OFF"
-msgstr "Bez načina presjecanja 2: ISKLJ"
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -336,47 +310,17 @@ msgstr ""
 msgid "STSTR_CLEV"
 msgstr "Promjena razine…"
 
-msgid "TXT_BUDDHAON"
-msgstr "Način Bude: UKLJ"
-
-msgid "TXT_BUDDHAOFF"
-msgstr "Način Bude: ISKLJ"
-
-msgid "TXT_BUDDHA2ON"
-msgstr "Ultimativni način Bude: UKLJ"
-
-msgid "TXT_BUDDHA2OFF"
-msgstr "Ultimativni način Bude: ISKLJ"
-
-msgid "TXT_CHEATPOWERON"
-msgstr "Energija: UKLJ"
-
-msgid "TXT_CHEATPOWEROFF"
-msgstr "Energija: ISKLJ"
-
 msgid "TXT_CHEATHEALTH"
 msgstr "Puno zdravlje"
 
 msgid "TXT_CHEATKEYS"
 msgstr "Svi ključevi"
 
-msgid "TXT_CHEATSOUNDON"
-msgstr "Otklanjanje pogrešaka zvuka: UKLJ"
-
-msgid "TXT_CHEATSOUNDOFF"
-msgstr "Otklanjanje pogrešaka zvuka: ISKLJ"
-
 msgid "TXT_CHEATIDDQD"
 msgstr "Pokušavaš varati, ha? Sada, umireš!"
 
 msgid "TXT_CHEATIDKFA"
 msgstr "Varalico! Pička ti matera! Ne zaslužuješ oružja"
-
-msgid "TXT_CHEATTICKERON"
-msgstr "Brojač: UKLJ"
-
-msgid "TXT_CHEATTICKEROFF"
-msgstr "Brojač: ISKLJ"
 
 msgid "TXT_CHEATARTIFACTS3"
 msgstr "Možeš ti to"
@@ -387,12 +331,6 @@ msgstr "Imaš Midin dodir, dušo"
 msgid "TXT_GOTSTUFF"
 msgstr "Imaš sve što ti treba!"
 
-msgid "TXT_FREEZEON"
-msgstr "Način zamrzavanja: UKLJ"
-
-msgid "TXT_FREEZEOFF"
-msgstr "Način zamrzavanja: ISKLJ"
-
 msgid "TXT_STRANGE"
 msgstr "Osjećaš se čudno…"
 
@@ -402,35 +340,17 @@ msgstr "Osjećaš se još čudnije."
 msgid "TXT_NOTSTRANGE"
 msgstr "Osjećaš se opet kao ti."
 
-msgid "TXT_LEADBOOTSON"
-msgstr "Olovne čizme: UKLJ"
-
-msgid "TXT_LEADBOOTSOFF"
-msgstr "Olovne čizme: ISKLJ"
-
 msgid "TXT_LIGHTER"
 msgstr "Osjećaš se lakše"
 
 msgid "TXT_GRAVITY"
 msgstr "Gravitacija te opterećuje"
 
-msgid "TXT_NOTARGET_ON"
-msgstr "Nema cilja: UKLJ"
-
-msgid "TXT_NOTARGET_OFF"
-msgstr "Bez cilja: ISKLJ"
-
 msgid "TXT_ANUBIS_ON"
 msgstr "\"Drhti od straha!\""
 
 msgid "TXT_ANUBIS_OFF"
 msgstr "Nema više Ogre oklopa"
-
-msgid "TXT_CHASECAM_ON"
-msgstr "Prateća kamera: UKLJ"
-
-msgid "TXT_CHASECAM_OFF"
-msgstr "Prateća kamera: ISKLJ"
 
 msgid "TXT_BADDIE_KILLED"
 msgstr "1 zlikovac ubijen"
@@ -455,24 +375,6 @@ msgstr "Što želiš ubiti izvan igre?"
 
 msgid "TXT_NOT_FROZEN"
 msgstr "Zamrznuta svojstva igrača: ISKLJ"
-
-msgid "AMSTR_FOLLOWOFF"
-msgstr "Način praćenja: ISKLJ"
-
-msgid "AMSTR_FOLLOWON"
-msgstr "Način praćenja: UKLJ"
-
-msgid "AMSTR_GRIDON"
-msgstr "Mreža: UKLJ"
-
-msgid "AMSTR_GRIDOFF"
-msgstr "Mreža: ISKLJ"
-
-msgid "AMSTR_TEXON"
-msgstr "Način tekstura: UKLJ"
-
-msgid "AMSTR_TEXOFF"
-msgstr "Način tekstura: ISKLJ"
 
 msgid "AMSTR_MARKEDSPOT"
 msgstr "Označena točka"
@@ -2856,14 +2758,6 @@ msgstr ""
 "Pritisni Y ili N."
 
 msgctxt "chex"
-msgid "STSTR_DQDON"
-msgstr "Nepobjedivi način rada: UKLJ"
-
-msgctxt "chex"
-msgid "STSTR_DQDOFF"
-msgstr "Nepobjedivi način rada: ISKLJ"
-
-msgctxt "chex"
 msgid "STSTR_FAADDED"
 msgstr "Zorč je dodan"
 
@@ -5182,3 +5076,59 @@ msgstr "Auto (poželjno vanilija)"
 #, fuzzy
 msgid "OPTVAL_VTAZDOOM"
 msgstr "Automatski (preferirano za ZDoom)"
+
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Način bezstupnjevnosti: {UKLJ|ISKLJ}"
+
+msgid "STSTR_DQD2{ON|OFF}"
+msgstr "Način krajnje bezstupnjevnosti: {UKLJ|ISKLJ}"
+
+msgid "STSTR_NC{ON|OFF}"
+msgstr "Bez načina presjecanja: {UKLJ|ISKLJ}"
+
+#, fuzzy
+msgid "STSTR_NC2{ON|OFF}"
+msgstr "Bez načina presjecanja 2: {UKLJ|ISKLJ}"
+
+msgid "TXT_BUDDHA{ON|OFF}"
+msgstr "Način Bude: {UKLJ|ISKLJ}"
+
+msgid "TXT_BUDDHA2{ON|OFF}"
+msgstr "Ultimativni način Bude: {UKLJ|ISKLJ}"
+
+msgid "TXT_CHEATPOWER{ON|OFF}"
+msgstr "Energija: {UKLJ|ISKLJ}"
+
+msgid "TXT_CHEATSOUND{ON|OFF}"
+msgstr "Otklanjanje pogrešaka zvuka: {UKLJ|ISKLJ}"
+
+msgid "TXT_CHEATTICKER{ON|OFF}"
+msgstr "Brojač: {UKLJ|ISKLJ}"
+
+msgid "TXT_FREEZE{ON|OFF}"
+msgstr "Način zamrzavanja: {UKLJ|ISKLJ}"
+
+msgid "TXT_LEADBOOTS{ON|OFF}"
+msgstr "Olovne čizme: {UKLJ|ISKLJ}"
+
+msgid "TXT_NOTARGET_{ON|OFF}"
+msgstr "Bez cilja: {UKLJ|ISKLJ}"
+
+msgid "TXT_CHASECAM_{ON|OFF}"
+msgstr "Prateća kamera: {UKLJ|ISKLJ}"
+
+msgid "AMSTR_FOLLOW{ON|OFF}"
+msgstr "Način praćenja: {UKLJ|ISKLJ}"
+
+msgid "AMSTR_GRID{ON|OFF}"
+msgstr "Mreža: {UKLJ|ISKLJ}"
+
+msgid "AMSTR_TEX{ON|OFF}"
+msgstr "Način tekstura: {UKLJ|ISKLJ}"
+
+msgctxt "chex"
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Nepobjedivi način rada: {UKLJ|ISKLJ}"
+
+msgid "MSG{ON|OFF}"
+msgstr "Poruke: {UKLJ|ISKLJ}"

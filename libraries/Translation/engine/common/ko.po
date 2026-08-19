@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-30 16:57-0400\n"
+"PO-Revision-Date: 2026-08-10 23:42-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/uzdoom/common/ko/>\n"
 "Language: ko\n"
@@ -49,12 +49,6 @@ msgstr ""
 # This is a gender sensitive message where %s represents the player
 msgid "TXT_X_CHEATS"
 msgstr "%s 이(가) 치트를 사용 함"
-
-msgid "MSGOFF"
-msgstr "메시지: 끔"
-
-msgid "MSGON"
-msgstr "메시지: 켜짐"
 
 msgid "TXT_SAY"
 msgstr "말하다:"

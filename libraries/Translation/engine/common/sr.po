@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-30 16:57-0400\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2026-08-14 16:16+0000\n"
+"Last-Translator: Jimothy McAlloy <asbestos606@gmail.com>\n"
 "Language-Team: Serbian <https://hosted.weblate.org/projects/uzdoom/common/sr/>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: python 3.14.6 polib 1.2.0\n"
+"X-Generator: Weblate 2026.9.dev0\n"
 
 msgid "PRESSYN"
 msgstr "Притисните Y или N."
@@ -28,7 +28,7 @@ msgstr ""
 "Притисните било који тастер."
 
 msgid "SAFEMESSAGE"
-msgstr "Да ли заиста желите то да урадите?"
+msgstr "Да ли заиста желите ово да урадите?"
 
 msgid "QSPROMPT"
 msgstr ""
@@ -50,18 +50,11 @@ msgstr ""
 msgid "TXT_X_CHEATS"
 msgstr "%s вара"
 
-msgid "MSGOFF"
-msgstr "Поруке: ИСКЉ"
-
-msgid "MSGON"
-msgstr "Поруке: УКЉ"
-
 msgid "TXT_SAY"
-msgstr "Пиши:"
+msgstr "Реци:"
 
 msgid "TXT_QUITENDOOM"
-msgstr ""
-"Притисните било који тастер или кликните било где на екрану да одустанете."
+msgstr "Притисните било који тастер или кликните било где на екрану да изађете."
 
 msgid "NEWSAVE"
 msgstr "<Нова сачувана игра>"
@@ -85,7 +78,7 @@ msgid "MNU_DIFFVERSION"
 msgstr "Другачија верзија"
 
 msgid "MNU_NOFILES"
-msgstr "Нема фајлова"
+msgstr "Нема датотека"
 
 msgid "MNU_DELETESG"
 msgstr "Да ли стварно желите да избришете сачувану игру?"
@@ -109,13 +102,13 @@ msgid "OPTMNU_MOUSE"
 msgstr "Миш"
 
 msgid "OPTMNU_JOYSTICK"
-msgstr "Контролер"
+msgstr "Подешавања контролера"
 
 msgid "OPTMNU_PLAYER"
 msgstr "Подешавање играча"
 
 msgid "OPTMNU_GAMEPLAY"
-msgstr "Гејмплеј"
+msgstr "Подешавања гејмплеја"
 
 msgid "OPTMNU_AUTOMAP"
 msgstr "Аутомапа"
@@ -127,7 +120,7 @@ msgid "OPTMNU_MISCELLANEOUS"
 msgstr "Разно"
 
 msgid "OPTMNU_SOUND"
-msgstr "Настройки звука"
+msgstr "Подешавања звукаЗвук"
 
 msgid "OPTMNU_DISPLAY"
 msgstr "Приказ"
@@ -307,9 +300,8 @@ msgid "CNTRLMNU_PREVIOUSITEM"
 msgstr "Претходни предмет"
 
 # most are not used yet but will be
-#, fuzzy
 msgid "MAPCNTRLMNU_TITLE"
-msgstr "Промени контроле мапе"
+msgstr "Штимуј контроле мапе"
 
 msgid "MAPCNTRLMNU_CONTROLS"
 msgstr "Контроле мапе"
@@ -450,25 +442,25 @@ msgid "OPTVAL_LOWERRIGHT"
 msgstr "Доње десно"
 
 msgid "OPTVAL_TOUCHSCREENLIKE"
-msgstr "Као додирни екран"
+msgstr "Као екран на додир"
 
 msgid "OPTSTR_SIMPLEARROW"
-msgstr "Стрелица"
+msgstr "Једноставна стрелица"
 
 msgid "OPTSTR_SYSTEMCURSOR"
 msgstr "Системска стрелица"
 
 msgid "OPTVAL_DEFAULT"
-msgstr "Подраз"
+msgstr "Подразumevano"
 
 msgid "JOYMNU_TITLE"
-msgstr "Конфигурација контролера"
+msgstr "Конфигурирај контролер"
 
 msgid "JOYMNU_OPTIONS"
 msgstr "Подешавања контролера"
 
 msgid "JOYMNU_NOMENU"
-msgstr "Блокирај улаз контролера у менију"
+msgstr "Блокирај сигнал контролера у менију"
 
 msgid "JOYMNU_ENABLE"
 msgstr "Омогући подршку за контролере"
@@ -489,7 +481,7 @@ msgid "JOYMNU_CONFIG"
 msgstr "Подешавања контролере:"
 
 msgid "JOYMNU_DISABLED1"
-msgstr "Омогућите подржавање контролера"
+msgstr "Подржавање контролера мора бити"
 
 # Supposed to be empty in Russian and Serbian.
 msgid "JOYMNU_DISABLED2"
@@ -516,20 +508,17 @@ msgstr "Нема конфигурационих оса"
 msgid "OPTVAL_NONE"
 msgstr "Ништа"
 
-#, fuzzy
 msgid "OPTVAL_TURNING"
-msgstr "Скретање"
+msgstr "гледање лево/десно"
 
 msgid "OPTVAL_LOOKINGUPDOWN"
 msgstr "Гледање горе/доле"
 
-#, fuzzy
 msgid "OPTVAL_MOVINGFORWARD"
-msgstr "Кретање напред"
+msgstr "кретање напред/назад"
 
-#, fuzzy
 msgid "OPTVAL_STRAFING"
-msgstr "Кретање у страну"
+msgstr "кретање лево/десно"
 
 msgid "OPTVAL_MOVINGUPDOWN"
 msgstr "Кретање горе/доле"
@@ -592,7 +581,7 @@ msgid "TXT_COLOR_GOLD"
 msgstr "Златна"
 
 msgid "TXT_COLOR_BRIGHTGREEN"
-msgstr "Светла зелена"
+msgstr "Светло зелена"
 
 msgid "TXT_COLOR_RUST"
 msgstr "Рђа"
@@ -724,7 +713,7 @@ msgid "OPTSTR_PROLOGIC"
 msgstr "Долби Про Логик декодер"
 
 msgid "OPTSTR_QUAD"
-msgstr "Четвородупло"
+msgstr "Четвороструко"
 
 msgid "OPTSTR_SURROUND"
 msgstr "5 спикер"
@@ -780,15 +769,14 @@ msgstr "Напредна подешавања"
 msgid "SNDMNU_MODREPLAYER"
 msgstr "Подешавања модулног риплејера"
 
-#, fuzzy
 msgid "SNDMNU_MIDIPLAYER"
-msgstr "MIDI плејер подешавања"
+msgstr "подешавања MIDI уређаја"
 
 msgid "ADVSNDMNU_TITLE"
 msgstr "Напредна подешавања звука"
 
 msgid "ADVSNDMNU_SAMPLERATE"
-msgstr "Фреквенција узорковања"
+msgstr "брзина узорка"
 
 msgid "ADVSNDMNU_HRTF"
 msgstr "ХРТФ"
@@ -996,13 +984,11 @@ msgstr "YMFM ОПЛ3"
 msgid "OPTVAL_NUKEDOPL3"
 msgstr "Nuked ОПЛ3"
 
-#, fuzzy
 msgid "OPTVAL_LLENUKEDOPL2"
-msgstr "ОПЛ2-LLE (Веома тежак!)"
+msgstr "ОПЛ2-LLE (захтеван за покретање)"
 
-#, fuzzy
 msgid "OPTVAL_LLENUKEDOPL3"
-msgstr "ОПЛ3-LLE (Веома тежак!)"
+msgstr "ОПЛ3-LLE (захтеван за покретање"
 
 msgid "OPTVAL_MAMEOPN2"
 msgstr "MAME OPN2 (YM2612)"
@@ -1025,17 +1011,14 @@ msgstr "Nuked OPN2 (YM3438)"
 msgid "OPTVAL_NUKEDOPN2YM2612"
 msgstr "Nuked OPN2 (YM2612)"
 
-#, fuzzy
 msgid "OPTVAL_OPN2YM2612LLE"
-msgstr "OPN2-LLE (YM2612) (Веома тежак!)"
+msgstr "OPN2-LLE (YM2612) (захтеван за покретање)"
 
-#, fuzzy
 msgid "OPTVAL_OPN2YM3438LLE"
-msgstr "OPN2-LLE (YM3438) (Веома тежак!)"
+msgstr "OPN2-LLE (YM3438) (захтеван за покретање)"
 
-#, fuzzy
 msgid "OPTVAL_OPN2YMF276LLE"
-msgstr "OPN2-LLE (YMF276) (Веома тежак!)"
+msgstr "OPN2-LLE (YMF276) (захтеван за покретање)"
 
 msgid "OPTVAL_GENSOPN2"
 msgstr "GENS OPN2 (YM2612)"
@@ -1157,9 +1140,8 @@ msgstr "Супротно"
 msgid "OPTVAL_REVERSEFIRST"
 msgstr "Обрнуто"
 
-#, fuzzy
 msgid "GLMNU_POSTPROCESS"
-msgstr "Пост обрада"
+msgstr "Пост-обрада"
 
 msgid "GLPREFMNU_TONEMAP"
 msgstr "Тонирано-мапни мод"
@@ -1425,9 +1407,8 @@ msgstr "Окретање брзих чувања"
 msgid "MISCMNU_QUICKSAVECOUNT"
 msgstr "Број брзих чувања у окретању"
 
-#, fuzzy
 msgid "MISCMNU_CLEANMENU"
-msgstr "Онемогући скалирање менија"
+msgstr "Скалирање класичног ЗДум менија"
 
 msgid "MISCMNU_PAUSEINBACKGROUND"
 msgstr "Паузирајте игру у позадини"
@@ -1761,7 +1742,7 @@ msgid "JOYMNU_LOOKSPEED"
 msgstr "Брзина гледања"
 
 msgid "JOYMNU_ANALOGSTRAFERUN"
-msgstr "Аналогно трчање"
+msgstr "Аналогно трчање у страну"
 
 msgid "NOTES_FAIL"
 msgstr "Немогуће је парсирати белешке о издању"
@@ -1769,14 +1750,12 @@ msgstr "Немогуће је парсирати белешке о издању"
 msgid "NOTES_UNKNOWN"
 msgstr "Непознато"
 
-#, fuzzy
 msgid "NOTES_RELEASED"
-msgstr "објављено"
+msgstr "%s verzija %s, datum %s"
 
 msgid "NOTES_EMPTY"
 msgstr "Опис није наведен."
 
-#, fuzzy
 msgid "NOTES_DETAILS"
 msgstr "За више детаља погледајте: %s"
 
@@ -1906,3 +1885,12 @@ msgstr "Дифузија"
 # Jargon.
 msgid "REVMNU_DENSITY"
 msgstr "Густина"
+
+msgid "MSGMNU_MESSAGEQUEUE"
+msgstr "величина реда порука"
+
+msgid "MSGMNU_MESSAGEFADE"
+msgstr "Време док поруке не нестану"
+
+msgid "MSGMNU_STACKIDENTICAL"
+msgstr "Гомилај понављане поруке"

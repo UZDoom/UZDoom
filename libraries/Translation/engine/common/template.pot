@@ -45,12 +45,6 @@ msgstr ""
 msgid "TXT_X_CHEATS"
 msgstr ""
 
-msgid "MSGOFF"
-msgstr ""
-
-msgid "MSGON"
-msgstr ""
-
 msgid "TXT_SAY"
 msgstr ""
 

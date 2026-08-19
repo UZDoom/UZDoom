@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-14 05:01+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2026-08-10 23:42-0400\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Finnish <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.8.dev0\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
 
 msgid "PRESSKEY"
 msgstr "Paina jotain näppäintä."
@@ -284,37 +284,11 @@ msgstr "Musiikin vaihtaminen"
 msgid "STSTR_NOMUS"
 msgstr "Valinta ei mahdollinen"
 
-msgid "STSTR_DQDON"
-msgstr "Kuolemattomuustila: PÄÄLLÄ"
-
-msgid "STSTR_DQDOFF"
-msgstr "Kuolemattomuustila: POIS"
-
-msgid "STSTR_DQD2ON"
-msgstr "Varma kuolemattomuustila: PÄÄLLÄ"
-
-msgid "STSTR_DQD2OFF"
-msgstr "Varma kuolemattomuustila: POIS"
-
 msgid "STSTR_KFAADDED"
 msgstr "Täysaseistus"
 
 msgid "STSTR_FAADDED"
 msgstr "Täysaseistus (ilman avaimia)"
-
-msgid "STSTR_NCON"
-msgstr "Seinänläpikulkutila: PÄÄLLÄ"
-
-msgid "STSTR_NCOFF"
-msgstr "Seinänläpikulkutila: POIS"
-
-#, fuzzy
-msgid "STSTR_NC2ON"
-msgstr "Seinänläpikulkutila 2: PÄÄLLÄ"
-
-#, fuzzy
-msgid "STSTR_NC2OFF"
-msgstr "Seinänläpikulkutila 2: POIS"
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -338,47 +312,17 @@ msgstr "… ei ole syvältä - GM"
 msgid "STSTR_CLEV"
 msgstr "Vaihdetaan tasoa…"
 
-msgid "TXT_BUDDHAON"
-msgstr "Buddhatila: PÄÄLLÄ"
-
-msgid "TXT_BUDDHAOFF"
-msgstr "Buddhatila: POIS"
-
-msgid "TXT_BUDDHA2ON"
-msgstr "Korkein buddhatila: PÄÄLLÄ"
-
-msgid "TXT_BUDDHA2OFF"
-msgstr "Korkein buddhatila: POIS"
-
-msgid "TXT_CHEATPOWERON"
-msgstr "Voima: PÄÄLLÄ"
-
-msgid "TXT_CHEATPOWEROFF"
-msgstr "Voima: POIS"
-
 msgid "TXT_CHEATHEALTH"
 msgstr "Täysi terveys"
 
 msgid "TXT_CHEATKEYS"
 msgstr "Kaikki avaimet"
 
-msgid "TXT_CHEATSOUNDON"
-msgstr "Äänen vianmääritystila: PÄÄLLÄ"
-
-msgid "TXT_CHEATSOUNDOFF"
-msgstr "Äänen vianmääritystila: POIS"
-
 msgid "TXT_CHEATIDDQD"
 msgstr "Yrität huijata, vai? Nyt kuolet!"
 
 msgid "TXT_CHEATIDKFA"
 msgstr "Huijari—et ansaitse aseita"
-
-msgid "TXT_CHEATTICKERON"
-msgstr "Laskuri: PÄÄLLÄ"
-
-msgid "TXT_CHEATTICKEROFF"
-msgstr "Laskuri: POIS"
 
 msgid "TXT_CHEATARTIFACTS3"
 msgstr "Saamasi pitää"
@@ -389,12 +333,6 @@ msgstr "Kulta, sinulla on Midaksen kosketus"
 msgid "TXT_GOTSTUFF"
 msgstr "Sait kamppeet!"
 
-msgid "TXT_FREEZEON"
-msgstr "Jäädytystila: PÄÄLLÄ"
-
-msgid "TXT_FREEZEOFF"
-msgstr "Jäädytystila: POIS"
-
 msgid "TXT_STRANGE"
 msgstr "Sinulla on kummallinen olo…"
 
@@ -404,35 +342,17 @@ msgstr "Olosi on vieläkin kummempi."
 msgid "TXT_NOTSTRANGE"
 msgstr "Tunnet olevasi jälleen oma itsesi."
 
-msgid "TXT_LEADBOOTSON"
-msgstr "Lyijysaappaat: PÄÄLLÄ"
-
-msgid "TXT_LEADBOOTSOFF"
-msgstr "Lyijysaappaat: POIS"
-
 msgid "TXT_LIGHTER"
 msgstr "Tunnet olosi kevyemmäksi"
 
 msgid "TXT_GRAVITY"
 msgstr "Painovoima painaa sinua alas"
 
-msgid "TXT_NOTARGET_ON"
-msgstr "Hyökkäämättömyystila: PÄÄLLÄ"
-
-msgid "TXT_NOTARGET_OFF"
-msgstr "Hyökkäämättömyystila: POIS"
-
 msgid "TXT_ANUBIS_ON"
 msgstr "\"Vapise pelosta!\""
 
 msgid "TXT_ANUBIS_OFF"
 msgstr "Ei enää örkkipanssaria"
-
-msgid "TXT_CHASECAM_ON"
-msgstr "Seurantakamera: PÄÄLLÄ"
-
-msgid "TXT_CHASECAM_OFF"
-msgstr "Seurantakamera: POIS"
 
 msgid "TXT_BADDIE_KILLED"
 msgstr "1 pahis tapettu"
@@ -458,24 +378,6 @@ msgstr "Mitä haluat tappaa pelin ulkopuolella?"
 
 msgid "TXT_NOT_FROZEN"
 msgstr "Jäätyneen pelaajan ominaisuudet kytketty: POIS"
-
-msgid "AMSTR_FOLLOWOFF"
-msgstr "Seuraamistila: POIS"
-
-msgid "AMSTR_FOLLOWON"
-msgstr "Seuraamistila: PÄÄLLÄ"
-
-msgid "AMSTR_GRIDON"
-msgstr "Ruudukko: PÄÄLLÄ"
-
-msgid "AMSTR_GRIDOFF"
-msgstr "Ruudukko: POIS"
-
-msgid "AMSTR_TEXON"
-msgstr "Pintakuviointitila: PÄÄLLÄ"
-
-msgid "AMSTR_TEXOFF"
-msgstr "Pintakuviointitila: POIS"
 
 msgid "AMSTR_MARKEDSPOT"
 msgstr "Merkitty paikka"
@@ -2861,14 +2763,6 @@ msgstr ""
 "Paina Y tai N."
 
 msgctxt "chex"
-msgid "STSTR_DQDON"
-msgstr "Kuolemattomuustila: PÄÄLLÄ"
-
-msgctxt "chex"
-msgid "STSTR_DQDOFF"
-msgstr "Kuolemattomuustila: POIS"
-
-msgctxt "chex"
 msgid "STSTR_FAADDED"
 msgstr "Zorch lisätty"
 
@@ -5176,3 +5070,59 @@ msgstr "Automaattinen (alkuperäistä suosiva)"
 #, fuzzy
 msgid "OPTVAL_VTAZDOOM"
 msgstr "Automaattinen (ZDoomia suosiva)"
+
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Kuolemattomuustila: {PÄÄLLÄ|POIS}"
+
+msgid "STSTR_DQD2{ON|OFF}"
+msgstr "Varma kuolemattomuustila: {PÄÄLLÄ|POIS}"
+
+msgid "STSTR_NC{ON|OFF}"
+msgstr "Seinänläpikulkutila: {PÄÄLLÄ|POIS}"
+
+#, fuzzy
+msgid "STSTR_NC2{ON|OFF}"
+msgstr "Seinänläpikulkutila 2: {PÄÄLLÄ|POIS}"
+
+msgid "TXT_BUDDHA{ON|OFF}"
+msgstr "Buddhatila: {PÄÄLLÄ|POIS}"
+
+msgid "TXT_BUDDHA2{ON|OFF}"
+msgstr "Korkein buddhatila: {PÄÄLLÄ|POIS}"
+
+msgid "TXT_CHEATPOWER{ON|OFF}"
+msgstr "Voima: {PÄÄLLÄ|POIS}"
+
+msgid "TXT_CHEATSOUND{ON|OFF}"
+msgstr "Äänen vianmääritystila: {PÄÄLLÄ|POIS}"
+
+msgid "TXT_CHEATTICKER{ON|OFF}"
+msgstr "Laskuri: {PÄÄLLÄ|POIS}"
+
+msgid "TXT_FREEZE{ON|OFF}"
+msgstr "Jäädytystila: {PÄÄLLÄ|POIS}"
+
+msgid "TXT_LEADBOOTS{ON|OFF}"
+msgstr "Lyijysaappaat: {PÄÄLLÄ|POIS}"
+
+msgid "TXT_NOTARGET_{ON|OFF}"
+msgstr "Hyökkäämättömyystila: {PÄÄLLÄ|POIS}"
+
+msgid "TXT_CHASECAM_{ON|OFF}"
+msgstr "Seurantakamera: {PÄÄLLÄ|POIS}"
+
+msgid "AMSTR_FOLLOW{ON|OFF}"
+msgstr "Seuraamistila: {PÄÄLLÄ|POIS}"
+
+msgid "AMSTR_GRID{ON|OFF}"
+msgstr "Ruudukko: {PÄÄLLÄ|POIS}"
+
+msgid "AMSTR_TEX{ON|OFF}"
+msgstr "Pintakuviointitila: {PÄÄLLÄ|POIS}"
+
+msgctxt "chex"
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Kuolemattomuustila: {PÄÄLLÄ|POIS}"
+
+msgid "MSG{ON|OFF}"
+msgstr "Viestit: {PÄÄLLÄ|POIS}"

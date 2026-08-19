@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-14 05:01+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2026-08-10 23:42-0400\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/nb_NO/>\n"
 "Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.8.dev0\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
 
 msgid "PRESSKEY"
 msgstr "Trykk på en tast."
@@ -284,37 +284,11 @@ msgstr "Music Change"
 msgid "STSTR_NOMUS"
 msgstr "Umulig valg"
 
-msgid "STSTR_DQDON"
-msgstr "Gradløshetsmodus: PÅ"
-
-msgid "STSTR_DQDOFF"
-msgstr "Gradløshetsmodus: AV"
-
-msgid "STSTR_DQD2ON"
-msgstr "Ultimativ gradløshetsmodus: PÅ"
-
-msgid "STSTR_DQD2OFF"
-msgstr "Ultimativ gradløshetsmodus: AV"
-
 msgid "STSTR_KFAADDED"
 msgstr "Veldig glad ammunisjon lagt til"
 
 msgid "STSTR_FAADDED"
 msgstr "Ammo (ingen nøkler) Lagt til"
-
-msgid "STSTR_NCON"
-msgstr "Ingen klipping-modus: PÅ"
-
-msgid "STSTR_NCOFF"
-msgstr "Ingen klippemodus: AV"
-
-#, fuzzy
-msgid "STSTR_NC2ON"
-msgstr "No Clipping Mode 2: PÅ"
-
-#, fuzzy
-msgid "STSTR_NC2OFF"
-msgstr "Ingen klippemodus 2: AV"
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -336,47 +310,17 @@ msgstr "… suger ikke - GM"
 msgid "STSTR_CLEV"
 msgstr "Endre nivå…"
 
-msgid "TXT_BUDDHAON"
-msgstr "Buddha-modus: PÅ"
-
-msgid "TXT_BUDDHAOFF"
-msgstr "Buddha-modus: AV"
-
-msgid "TXT_BUDDHA2ON"
-msgstr "Ultimativ Buddha-modus: PÅ"
-
-msgid "TXT_BUDDHA2OFF"
-msgstr "Ultimativ Buddha-modus: AV"
-
-msgid "TXT_CHEATPOWERON"
-msgstr "Strøm: PÅ"
-
-msgid "TXT_CHEATPOWEROFF"
-msgstr "Slå: AV"
-
 msgid "TXT_CHEATHEALTH"
 msgstr "Full helse"
 
 msgid "TXT_CHEATKEYS"
 msgstr "Alle taster"
 
-msgid "TXT_CHEATSOUNDON"
-msgstr "Lyd feilsøking: PÅ"
-
-msgid "TXT_CHEATSOUNDOFF"
-msgstr "Lyd feilsøking: AV"
-
 msgid "TXT_CHEATIDDQD"
 msgstr "Prøver du å jukse? Nå dør du!"
 
 msgid "TXT_CHEATIDKFA"
 msgstr "Juksemaker—du fortjener ikke våpen"
-
-msgid "TXT_CHEATTICKERON"
-msgstr "Ticker: PÅ"
-
-msgid "TXT_CHEATTICKEROFF"
-msgstr "Ticker: AV"
 
 msgid "TXT_CHEATARTIFACTS3"
 msgstr "Du har det"
@@ -387,12 +331,6 @@ msgstr "Du har Midas Touch, baby"
 msgid "TXT_GOTSTUFF"
 msgstr "Du har greiene!"
 
-msgid "TXT_FREEZEON"
-msgstr "Frysemodus: PÅ"
-
-msgid "TXT_FREEZEOFF"
-msgstr "Frysemodus: AV"
-
 msgid "TXT_STRANGE"
 msgstr "Du føler deg rar…"
 
@@ -402,35 +340,17 @@ msgstr "Du føler deg enda merkeligere."
 msgid "TXT_NOTSTRANGE"
 msgstr "Du føler deg som deg selv igjen."
 
-msgid "TXT_LEADBOOTSON"
-msgstr "Blystøvler: PÅ"
-
-msgid "TXT_LEADBOOTSOFF"
-msgstr "Blystøvler: AV"
-
 msgid "TXT_LIGHTER"
 msgstr "Du føler deg lettere"
 
 msgid "TXT_GRAVITY"
 msgstr "Tyngdekraften tynger deg ned"
 
-msgid "TXT_NOTARGET_ON"
-msgstr "No Target: PÅ"
-
-msgid "TXT_NOTARGET_OFF"
-msgstr "No Target: AV"
-
 msgid "TXT_ANUBIS_ON"
 msgstr "\"Skjelv av frykt!\""
 
 msgid "TXT_ANUBIS_OFF"
 msgstr "Ikke mer Ogre Armor"
-
-msgid "TXT_CHASECAM_ON"
-msgstr "Chase-cam: PÅ"
-
-msgid "TXT_CHASECAM_OFF"
-msgstr "Chasecam: AV"
 
 msgid "TXT_BADDIE_KILLED"
 msgstr "1 skurk drept"
@@ -455,24 +375,6 @@ msgstr "Hva vil du drepe utenfor et spill?"
 
 msgid "TXT_NOT_FROZEN"
 msgstr "Frosne spilleregenskaper slått: AV"
-
-msgid "AMSTR_FOLLOWOFF"
-msgstr "Følgemodus: AV"
-
-msgid "AMSTR_FOLLOWON"
-msgstr "Følgemodus: PÅ"
-
-msgid "AMSTR_GRIDON"
-msgstr "Rutenett: PÅ"
-
-msgid "AMSTR_GRIDOFF"
-msgstr "Rutenett: AV"
-
-msgid "AMSTR_TEXON"
-msgstr "Teksturmodus: PÅ"
-
-msgid "AMSTR_TEXOFF"
-msgstr "Teksturmodus: AV"
 
 msgid "AMSTR_MARKEDSPOT"
 msgstr "Markert punkt"
@@ -2854,14 +2756,6 @@ msgstr ""
 "Trykk på Y eller N."
 
 msgctxt "chex"
-msgid "STSTR_DQDON"
-msgstr "Uovervinnelig modus: PÅ"
-
-msgctxt "chex"
-msgid "STSTR_DQDOFF"
-msgstr "Uovervinnelig modus: AV"
-
-msgctxt "chex"
 msgid "STSTR_FAADDED"
 msgstr "Zorch lagt til"
 
@@ -5165,3 +5059,59 @@ msgstr "Auto (Vanilla foretrukket)"
 #, fuzzy
 msgid "OPTVAL_VTAZDOOM"
 msgstr "Auto (ZDoom foretrukket)"
+
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Gradløshetsmodus: {PÅ|AV}"
+
+msgid "STSTR_DQD2{ON|OFF}"
+msgstr "Ultimativ gradløshetsmodus: {PÅ|AV}"
+
+msgid "STSTR_NC{ON|OFF}"
+msgstr "Ingen klippemodus: {PÅ|AV}"
+
+#, fuzzy
+msgid "STSTR_NC2{ON|OFF}"
+msgstr "Ingen klippemodus 2: {PÅ|AV}"
+
+msgid "TXT_BUDDHA{ON|OFF}"
+msgstr "Buddha-modus: {PÅ|AV}"
+
+msgid "TXT_BUDDHA2{ON|OFF}"
+msgstr "Ultimativ Buddha-modus: {PÅ|AV}"
+
+msgid "TXT_CHEATPOWER{ON|OFF}"
+msgstr "Strøm: {PÅ|AV}"
+
+msgid "TXT_CHEATSOUND{ON|OFF}"
+msgstr "Lyd feilsøking: {PÅ|AV}"
+
+msgid "TXT_CHEATTICKER{ON|OFF}"
+msgstr "Ticker: {PÅ|AV}"
+
+msgid "TXT_FREEZE{ON|OFF}"
+msgstr "Frysemodus: {PÅ|AV}"
+
+msgid "TXT_LEADBOOTS{ON|OFF}"
+msgstr "Blystøvler: {PÅ|AV}"
+
+msgid "TXT_NOTARGET_{ON|OFF}"
+msgstr "No Target: {PÅ|AV}"
+
+msgid "TXT_CHASECAM_{ON|OFF}"
+msgstr "Chasecam: {PÅ|AV}"
+
+msgid "AMSTR_FOLLOW{ON|OFF}"
+msgstr "Følgemodus: {PÅ|AV}"
+
+msgid "AMSTR_GRID{ON|OFF}"
+msgstr "Rutenett: {PÅ|AV}"
+
+msgid "AMSTR_TEX{ON|OFF}"
+msgstr "Teksturmodus: {PÅ|AV}"
+
+msgctxt "chex"
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Uovervinnelig modus: {PÅ|AV}"
+
+msgid "MSG{ON|OFF}"
+msgstr "Meldinger: {PÅ|AV}"

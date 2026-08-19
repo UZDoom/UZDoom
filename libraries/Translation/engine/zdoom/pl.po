@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-14 05:01+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2026-08-10 23:42-0400\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 2026.8.dev0\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
 
 msgid "PRESSKEY"
 msgstr "Wciśnij dowolny klawisz."
@@ -282,37 +282,11 @@ msgstr "Zmieniono muzykę"
 msgid "STSTR_NOMUS"
 msgstr "Niemożliwy wybór"
 
-msgid "STSTR_DQDON"
-msgstr "Tryb oblanej magisterki: WŁ"
-
-msgid "STSTR_DQDOFF"
-msgstr "Tryb oblanej magisterki: WYŁ"
-
-msgid "STSTR_DQD2ON"
-msgstr "Tryb oblanego licencjatu: WŁ"
-
-msgid "STSTR_DQD2OFF"
-msgstr "Tryb oblanego licencjatu: WYŁ"
-
 msgid "STSTR_KFAADDED"
 msgstr "Bardzo szczęśliwa amunicja dodana"
 
 msgid "STSTR_FAADDED"
 msgstr "Amunicja (bez kluczy) dodana"
-
-msgid "STSTR_NCON"
-msgstr "Tryb no-clip: WŁ"
-
-msgid "STSTR_NCOFF"
-msgstr "Tryb no-clip: WYŁ"
-
-#, fuzzy
-msgid "STSTR_NC2ON"
-msgstr "Drugi tryb no-clip: WŁ"
-
-#, fuzzy
-msgid "STSTR_NC2OFF"
-msgstr "Drugy tryb no-clip: WYŁ"
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -336,47 +310,17 @@ msgstr "… nie ssie - GM"
 msgid "STSTR_CLEV"
 msgstr "Zmienianie poziomu…"
 
-msgid "TXT_BUDDHAON"
-msgstr "Tryb Buddy: WŁ"
-
-msgid "TXT_BUDDHAOFF"
-msgstr "Tryb Buddy: WYŁ"
-
-msgid "TXT_BUDDHA2ON"
-msgstr "Maksymalny Tryb Buddy: WŁ"
-
-msgid "TXT_BUDDHA2OFF"
-msgstr "Maksymalny Tryb Buddy: WYŁ"
-
-msgid "TXT_CHEATPOWERON"
-msgstr "Zasilanie: WŁ"
-
-msgid "TXT_CHEATPOWEROFF"
-msgstr "Zasilanie: WYŁ"
-
 msgid "TXT_CHEATHEALTH"
 msgstr "Pełne zdrowie"
 
 msgid "TXT_CHEATKEYS"
 msgstr "Wszystkie klucze"
 
-msgid "TXT_CHEATSOUNDON"
-msgstr "Debugowanie dźwięku: WŁ"
-
-msgid "TXT_CHEATSOUNDOFF"
-msgstr "Debugowanie dźwięku: WYŁ"
-
 msgid "TXT_CHEATIDDQD"
 msgstr "Próbujesz oszukiwać, co? Teraz giń!"
 
 msgid "TXT_CHEATIDKFA"
 msgstr "Oszust—nie zasługujesz na broń"
-
-msgid "TXT_CHEATTICKERON"
-msgstr "Wskaźnik: WŁ"
-
-msgid "TXT_CHEATTICKEROFF"
-msgstr "Wskaźnik: WYŁ"
 
 msgid "TXT_CHEATARTIFACTS3"
 msgstr "Udało ci się"
@@ -387,12 +331,6 @@ msgstr "Zdobył@[irreg_3_pl] dotyk Midasa, skarbie"
 msgid "TXT_GOTSTUFF"
 msgstr "Zdobył@[irreg_3_pl] parę rzeczy!"
 
-msgid "TXT_FREEZEON"
-msgstr "Tryb zamrożenia: WŁ"
-
-msgid "TXT_FREEZEOFF"
-msgstr "Tryb zamrożenia: WYŁ"
-
 msgid "TXT_STRANGE"
 msgstr "Dziwnie się czujesz…"
 
@@ -402,35 +340,17 @@ msgstr "Czujesz się jeszcze dziwniej."
 msgid "TXT_NOTSTRANGE"
 msgstr "Znów czujesz się sobą."
 
-msgid "TXT_LEADBOOTSON"
-msgstr "Ołowiane buty: WŁ"
-
-msgid "TXT_LEADBOOTSOFF"
-msgstr "Ołowiane buty: WYŁ"
-
 msgid "TXT_LIGHTER"
 msgstr "Czujesz się lżejsz@[adj_pl]"
 
 msgid "TXT_GRAVITY"
 msgstr "Grawitacja znów cię przyciąga"
 
-msgid "TXT_NOTARGET_ON"
-msgstr "Głuche i Ślepe Potwory: WŁ"
-
-msgid "TXT_NOTARGET_OFF"
-msgstr "Głuche i Ślepe Potwory: WYŁ"
-
 msgid "TXT_ANUBIS_ON"
 msgstr "\"Drżyj ze strachu!\""
 
 msgid "TXT_ANUBIS_OFF"
 msgstr "Nigdy więcej Pancerza Ogrów"
-
-msgid "TXT_CHASECAM_ON"
-msgstr "Kamera śledzenia: WŁ"
-
-msgid "TXT_CHASECAM_OFF"
-msgstr "Kamera śledzenia: WYŁ"
 
 msgid "TXT_BADDIE_KILLED"
 msgstr "1 zabity przeciwnik"
@@ -456,24 +376,6 @@ msgstr "Co ty chcesz zabić nie będąc w grze?"
 
 msgid "TXT_NOT_FROZEN"
 msgstr "Właściwości zamrożonego gracza: WYŁ"
-
-msgid "AMSTR_FOLLOWOFF"
-msgstr "Tryb śledzenia: WYŁ"
-
-msgid "AMSTR_FOLLOWON"
-msgstr "Tryb śledzenia: WŁ"
-
-msgid "AMSTR_GRIDON"
-msgstr "Siatka: WŁ"
-
-msgid "AMSTR_GRIDOFF"
-msgstr "Siatka: WYŁ"
-
-msgid "AMSTR_TEXON"
-msgstr "Tekstury: WŁ"
-
-msgid "AMSTR_TEXOFF"
-msgstr "Tekstury: WYŁ"
 
 msgid "AMSTR_MARKEDSPOT"
 msgstr "Oznaczono miejsce"
@@ -2855,14 +2757,6 @@ msgstr ""
 "Czy na pewno chcesz zakończyć misję?\n"
 "\n"
 "Wciśnij Y lub N."
-
-msgctxt "chex"
-msgid "STSTR_DQDON"
-msgstr "Tryb Niewrażliwości: WŁ"
-
-msgctxt "chex"
-msgid "STSTR_DQDOFF"
-msgstr "Tryb Niewrażliwości: WYŁ"
 
 msgctxt "chex"
 msgid "STSTR_FAADDED"
@@ -5281,3 +5175,59 @@ msgstr "Automatyczny (Preferowany oryginalny)"
 #, fuzzy
 msgid "OPTVAL_VTAZDOOM"
 msgstr "Automatyczny (Preferowany ZDoom)"
+
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Tryb oblanej magisterki: {WŁ|WYŁ}"
+
+msgid "STSTR_DQD2{ON|OFF}"
+msgstr "Tryb oblanego licencjatu: {WŁ|WYŁ}"
+
+msgid "STSTR_NC{ON|OFF}"
+msgstr "Tryb no-clip: {WŁ|WYŁ}"
+
+#, fuzzy
+msgid "STSTR_NC2{ON|OFF}"
+msgstr "Drugi tryb no-clip: {WŁ|WYŁ}"
+
+msgid "TXT_BUDDHA{ON|OFF}"
+msgstr "Tryb Buddy: {WŁ|WYŁ}"
+
+msgid "TXT_BUDDHA2{ON|OFF}"
+msgstr "Maksymalny Tryb Buddy: {WŁ|WYŁ}"
+
+msgid "TXT_CHEATPOWER{ON|OFF}"
+msgstr "Zasilanie: {WŁ|WYŁ}"
+
+msgid "TXT_CHEATSOUND{ON|OFF}"
+msgstr "Debugowanie dźwięku: {WŁ|WYŁ}"
+
+msgid "TXT_CHEATTICKER{ON|OFF}"
+msgstr "Wskaźnik: {WŁ|WYŁ}"
+
+msgid "TXT_FREEZE{ON|OFF}"
+msgstr "Tryb zamrożenia: {WŁ|WYŁ}"
+
+msgid "TXT_LEADBOOTS{ON|OFF}"
+msgstr "Ołowiane buty: {WŁ|WYŁ}"
+
+msgid "TXT_NOTARGET_{ON|OFF}"
+msgstr "Głuche i Ślepe Potwory: {WŁ|WYŁ}"
+
+msgid "TXT_CHASECAM_{ON|OFF}"
+msgstr "Kamera śledzenia: {WŁ|WYŁ}"
+
+msgid "AMSTR_FOLLOW{ON|OFF}"
+msgstr "Tryb śledzenia: {WŁ|WYŁ}"
+
+msgid "AMSTR_GRID{ON|OFF}"
+msgstr "Siatka: {WŁ|WYŁ}"
+
+msgid "AMSTR_TEX{ON|OFF}"
+msgstr "Tekstury: {WŁ|WYŁ}"
+
+msgctxt "chex"
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Tryb Niewrażliwości: {WŁ|WYŁ}"
+
+msgid "MSG{ON|OFF}"
+msgstr "Wiadomości: {WŁ|WYŁ}"

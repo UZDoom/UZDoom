@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-05-11 03:43+0000\n"
+"PO-Revision-Date: 2026-08-10 22:27-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Spanish (Mexico) <https://hosted.weblate.org/projects/doom-engine-games/harmony-filter/es_MX/>\n"
 "Language: es_MX\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.5-dev\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
 
 #, fuzzy
 msgctxt "doom harmony"
@@ -141,14 +141,6 @@ msgid "GOTSHOTGUN"
 msgstr ""
 
 msgctxt "doom harmony"
-msgid "STSTR_DQDON"
-msgstr ""
-
-msgctxt "doom harmony"
-msgid "STSTR_DQDOFF"
-msgstr ""
-
-msgctxt "doom harmony"
 msgid "STSTR_KFAADDED"
 msgstr ""
 
@@ -227,4 +219,8 @@ msgstr ""
 
 msgctxt "doom harmony"
 msgid "TXT_D2E1"
+msgstr ""
+
+msgctxt "doom harmony"
+msgid "STSTR_DQD{ON|OFF}"
 msgstr ""

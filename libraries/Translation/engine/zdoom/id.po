@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-14 05:01+0000\n"
-"Last-Translator: Arif Budiman <arifpedia@gmail.com>\n"
+"PO-Revision-Date: 2026-08-10 23:42-0400\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2026.8.dev0\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
 
 msgid "PRESSKEY"
 msgstr "Tekan sembarang tombol."
@@ -282,35 +282,11 @@ msgstr "Pergantian Musik"
 msgid "STSTR_NOMUS"
 msgstr "Pilihan Tidak Valid"
 
-msgid "STSTR_DQDON"
-msgstr "Mode Tanpa Derajat: AKTIF"
-
-msgid "STSTR_DQDOFF"
-msgstr "Mode Tanpa Derajat: NONAKTIF"
-
-msgid "STSTR_DQD2ON"
-msgstr "Mode Tanpa Derajat Tertinggi: AKTIF"
-
-msgid "STSTR_DQD2OFF"
-msgstr "Mode Tanpa Derajat Tertinggi: NONAKTIF"
-
 msgid "STSTR_KFAADDED"
 msgstr "Amunisi Sangat Menyenangkan Ditambahkan"
 
 msgid "STSTR_FAADDED"
 msgstr "Amunisi (tanpa kunci) Ditambahkan"
-
-msgid "STSTR_NCON"
-msgstr "Mode Tanpa Kliping: AKTIF"
-
-msgid "STSTR_NCOFF"
-msgstr "Mode Tanpa Kliping: NONAKTIF"
-
-msgid "STSTR_NC2ON"
-msgstr "Mode Tanpa Kliping 3D: AKTIF"
-
-msgid "STSTR_NC2OFF"
-msgstr "Mode Tanpa Kliping 3D: NONAKTIF"
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -332,47 +308,17 @@ msgstr "… tidak buruk - GM"
 msgid "STSTR_CLEV"
 msgstr "Mengganti Level…"
 
-msgid "TXT_BUDDHAON"
-msgstr "Mode Buddha: AKTIF"
-
-msgid "TXT_BUDDHAOFF"
-msgstr "Mode Buddha: NONAKTIF"
-
-msgid "TXT_BUDDHA2ON"
-msgstr "Mode Buddha Tertinggi: AKTIF"
-
-msgid "TXT_BUDDHA2OFF"
-msgstr "Mode Buddha Tertinggi: NONAKTIF"
-
-msgid "TXT_CHEATPOWERON"
-msgstr "Daya: AKTIF"
-
-msgid "TXT_CHEATPOWEROFF"
-msgstr "Daya: NONAKTIF"
-
 msgid "TXT_CHEATHEALTH"
 msgstr "Kesehatan penuh"
 
 msgid "TXT_CHEATKEYS"
 msgstr "Semua kunci"
 
-msgid "TXT_CHEATSOUNDON"
-msgstr "Debug suara: AKTIF"
-
-msgid "TXT_CHEATSOUNDOFF"
-msgstr "Debug suara: NONAKTIF"
-
 msgid "TXT_CHEATIDDQD"
 msgstr "Mencoba curang, hah? Sekarang kamu mati!"
 
 msgid "TXT_CHEATIDKFA"
 msgstr "Penipu—kamu tidak layak mendapat senjata"
-
-msgid "TXT_CHEATTICKERON"
-msgstr "Ticker: AKTIF"
-
-msgid "TXT_CHEATTICKEROFF"
-msgstr "Ticker: NONAKTIF"
 
 msgid "TXT_CHEATARTIFACTS3"
 msgstr "Kamu mendapatkannya"
@@ -383,12 +329,6 @@ msgstr "Kamu mendapat Sentuhan Midas, sayang"
 msgid "TXT_GOTSTUFF"
 msgstr "Kamu mendapat barangnya!"
 
-msgid "TXT_FREEZEON"
-msgstr "Mode Beku: AKTIF"
-
-msgid "TXT_FREEZEOFF"
-msgstr "Mode Beku: NONAKTIF"
-
 msgid "TXT_STRANGE"
 msgstr "Kamu merasa aneh…"
 
@@ -398,35 +338,17 @@ msgstr "Kamu merasa semakin aneh."
 msgid "TXT_NOTSTRANGE"
 msgstr "Kamu merasa seperti dirimu sendiri lagi."
 
-msgid "TXT_LEADBOOTSON"
-msgstr "Sepatu timbal: AKTIF"
-
-msgid "TXT_LEADBOOTSOFF"
-msgstr "Sepatu timbal: NONAKTIF"
-
 msgid "TXT_LIGHTER"
 msgstr "Kamu merasa lebih ringan"
 
 msgid "TXT_GRAVITY"
 msgstr "Gravitasi menarikmu ke bawah"
 
-msgid "TXT_NOTARGET_ON"
-msgstr "Tanpa Target: AKTIF"
-
-msgid "TXT_NOTARGET_OFF"
-msgstr "Tanpa Target: NONAKTIF"
-
 msgid "TXT_ANUBIS_ON"
 msgstr "\"Gemetarlah ketakutan!\""
 
 msgid "TXT_ANUBIS_OFF"
 msgstr "Tidak ada lagi Zirah Ogre"
-
-msgid "TXT_CHASECAM_ON"
-msgstr "Kamera pengikut: AKTIF"
-
-msgid "TXT_CHASECAM_OFF"
-msgstr "Kamera pengikut: NONAKTIF"
 
 msgid "TXT_BADDIE_KILLED"
 msgstr "1 musuh terbunuh"
@@ -452,24 +374,6 @@ msgstr "Apa yang ingin kamu bunuh di luar game?"
 
 msgid "TXT_NOT_FROZEN"
 msgstr "Properti pemain yang dibekukan: NONAKTIF"
-
-msgid "AMSTR_FOLLOWOFF"
-msgstr "Mode Ikuti: NONAKTIF"
-
-msgid "AMSTR_FOLLOWON"
-msgstr "Mode Ikuti: AKTIF"
-
-msgid "AMSTR_GRIDON"
-msgstr "Grid: AKTIF"
-
-msgid "AMSTR_GRIDOFF"
-msgstr "Grid: NONAKTIF"
-
-msgid "AMSTR_TEXON"
-msgstr "Mode Tekstur: AKTIF"
-
-msgid "AMSTR_TEXOFF"
-msgstr "Mode Tekstur: NONAKTIF"
 
 msgid "AMSTR_MARKEDSPOT"
 msgstr "Titik Ditandai"
@@ -2848,14 +2752,6 @@ msgstr ""
 "Apakah kamu yakin ingin mengakhiri petualangan?\n"
 "\n"
 "Tekan Y atau N."
-
-msgctxt "chex"
-msgid "STSTR_DQDON"
-msgstr "Mode Kebal: AKTIF"
-
-msgctxt "chex"
-msgid "STSTR_DQDOFF"
-msgstr "Mode Kebal: NONAKTIF"
 
 msgctxt "chex"
 msgid "STSTR_FAADDED"
@@ -5406,3 +5302,58 @@ msgid "ACCMNU_TOOLTIP_DOUBLECLICK_THRESHOLD"
 msgstr ""
 "Waktu antara penekanan tombol berturut-turut untuk memicu peristiwa klik "
 "ganda"
+
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Mode Tanpa Derajat: {AKTIF|NONAKTIF}"
+
+msgid "STSTR_DQD2{ON|OFF}"
+msgstr "Mode Tanpa Derajat Tertinggi: {AKTIF|NONAKTIF}"
+
+msgid "STSTR_NC{ON|OFF}"
+msgstr "Mode Tanpa Kliping: {AKTIF|NONAKTIF}"
+
+msgid "STSTR_NC2{ON|OFF}"
+msgstr "Mode Tanpa Kliping 3D: {AKTIF|NONAKTIF}"
+
+msgid "TXT_BUDDHA{ON|OFF}"
+msgstr "Mode Buddha: {AKTIF|NONAKTIF}"
+
+msgid "TXT_BUDDHA2{ON|OFF}"
+msgstr "Mode Buddha Tertinggi: {AKTIF|NONAKTIF}"
+
+msgid "TXT_CHEATPOWER{ON|OFF}"
+msgstr "Daya: {AKTIF|NONAKTIF}"
+
+msgid "TXT_CHEATSOUND{ON|OFF}"
+msgstr "Debug suara: {AKTIF|NONAKTIF}"
+
+msgid "TXT_CHEATTICKER{ON|OFF}"
+msgstr "Ticker: {AKTIF|NONAKTIF}"
+
+msgid "TXT_FREEZE{ON|OFF}"
+msgstr "Mode Beku: {AKTIF|NONAKTIF}"
+
+msgid "TXT_LEADBOOTS{ON|OFF}"
+msgstr "Sepatu timbal: {AKTIF|NONAKTIF}"
+
+msgid "TXT_NOTARGET_{ON|OFF}"
+msgstr "Tanpa Target: {AKTIF|NONAKTIF}"
+
+msgid "TXT_CHASECAM_{ON|OFF}"
+msgstr "Kamera pengikut: {AKTIF|NONAKTIF}"
+
+msgid "AMSTR_FOLLOW{ON|OFF}"
+msgstr "Mode Ikuti: {AKTIF|NONAKTIF}"
+
+msgid "AMSTR_GRID{ON|OFF}"
+msgstr "Grid: {AKTIF|NONAKTIF}"
+
+msgid "AMSTR_TEX{ON|OFF}"
+msgstr "Mode Tekstur: {AKTIF|NONAKTIF}"
+
+msgctxt "chex"
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Mode Kebal: {AKTIF|NONAKTIF}"
+
+msgid "MSG{ON|OFF}"
+msgstr "Pesan: {AKTIF|MATI}"

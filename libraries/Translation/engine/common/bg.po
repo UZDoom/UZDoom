@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-30 16:57-0400\n"
+"PO-Revision-Date: 2026-08-10 23:42-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Bulgarian <https://hosted.weblate.org/projects/uzdoom/common/bg/>\n"
 "Language: bg\n"
@@ -49,12 +49,6 @@ msgstr ""
 # This is a gender sensitive message where %s represents the player
 msgid "TXT_X_CHEATS"
 msgstr "%s измамен код"
-
-msgid "MSGOFF"
-msgstr "Съобщения: ИЗКЛ"
-
-msgid "MSGON"
-msgstr "Съобщения: ВКЛ"
 
 msgid "TXT_SAY"
 msgstr "Пиши:"

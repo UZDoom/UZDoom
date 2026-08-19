@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-31 02:10+0000\n"
-"Last-Translator: Automatic translation add-on <noreply-addon-autotranslate@weblate.org>\n"
+"PO-Revision-Date: 2026-08-10 23:42-0400\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Belarusian <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/be/>\n"
 "Language: be\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 2026.8.dev0\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
 
 msgid "PRESSKEY"
 msgstr "Націсніце любую клавішу."
@@ -283,37 +283,11 @@ msgstr "Змена музыкі"
 msgid "STSTR_NOMUS"
 msgstr "Немагчымы выбар"
 
-msgid "STSTR_DQDON"
-msgstr "Рэжым непісьменнасці: УКЛ"
-
-msgid "STSTR_DQDOFF"
-msgstr "Рэжым непісьменнасці: ВЫКЛ"
-
-msgid "STSTR_DQD2ON"
-msgstr "Рэжым поўнай непісьменнасці: УКЛ"
-
-msgid "STSTR_DQD2OFF"
-msgstr "Рэжым поўнай непісьменнасці: ВЫКЛ"
-
 msgid "STSTR_KFAADDED"
 msgstr "Боезапас на шчасце папоўнены"
 
 msgid "STSTR_FAADDED"
 msgstr "Боезапас (без ключоў) папоўнены"
-
-msgid "STSTR_NCON"
-msgstr "Рэжым без сутыкненняў: УКЛ"
-
-msgid "STSTR_NCOFF"
-msgstr "Рэжым без сутыкненняў: ВЫКЛ"
-
-#, fuzzy
-msgid "STSTR_NC2ON"
-msgstr "Рэжым без сутыкненняў 2: УКЛ"
-
-#, fuzzy
-msgid "STSTR_NC2OFF"
-msgstr "Рэжым без сутыкненняў 2: ВЫКЛ"
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -336,47 +310,17 @@ msgstr "…не адстой - GM"
 msgid "STSTR_CLEV"
 msgstr "Змена ўзроўню…"
 
-msgid "TXT_BUDDHAON"
-msgstr "Рэжым Буды: УКЛ"
-
-msgid "TXT_BUDDHAOFF"
-msgstr "Рэжым Буды: ВЫКЛ"
-
-msgid "TXT_BUDDHA2ON"
-msgstr "Рэжым ультыматыўнага Буды: УКЛ"
-
-msgid "TXT_BUDDHA2OFF"
-msgstr "Рэжым ультыматыўнага Буды: ВЫКЛ"
-
-msgid "TXT_CHEATPOWERON"
-msgstr "Сіла: УКЛ"
-
-msgid "TXT_CHEATPOWEROFF"
-msgstr "Сіла: ВЫКЛ"
-
 msgid "TXT_CHEATHEALTH"
 msgstr "Поўнае здароўе"
 
 msgid "TXT_CHEATKEYS"
 msgstr "Усе ключы"
 
-msgid "TXT_CHEATSOUNDON"
-msgstr "Адладка гуку: УКЛ"
-
-msgid "TXT_CHEATSOUNDOFF"
-msgstr "Адладка гуку: ВЫКЛ"
-
 msgid "TXT_CHEATIDDQD"
 msgstr "Спрабуеш жульнічаць, так? Тады здохні!"
 
 msgid "TXT_CHEATIDKFA"
 msgstr "Жулік—ты не заслугоўваеш зброі"
-
-msgid "TXT_CHEATTICKERON"
-msgstr "Лічыльнік: УКЛ"
-
-msgid "TXT_CHEATTICKEROFF"
-msgstr "Лічыльнік: ВЫКЛ"
 
 msgid "TXT_CHEATARTIFACTS3"
 msgstr "Вы атрымалі гэта"
@@ -387,12 +331,6 @@ msgstr "У табе цяпер дакрананне Мідаса, дзетка"
 msgid "TXT_GOTSTUFF"
 msgstr "Рэчы атрыманы!"
 
-msgid "TXT_FREEZEON"
-msgstr "Рэжым замарозкі: УКЛ"
-
-msgid "TXT_FREEZEOFF"
-msgstr "Рэжым замарозкі: ВЫКЛ"
-
 msgid "TXT_STRANGE"
 msgstr "Вы адчуваеце сябе дзіўна…"
 
@@ -402,35 +340,17 @@ msgstr "Вы адчуваеце сябе яшчэ больш дзіўна."
 msgid "TXT_NOTSTRANGE"
 msgstr "Вы зноў адчуваеце сябе сабой."
 
-msgid "TXT_LEADBOOTSON"
-msgstr "Свінцовыя боты: УКЛ"
-
-msgid "TXT_LEADBOOTSOFF"
-msgstr "Свінцовыя боты: ВЫКЛ"
-
 msgid "TXT_LIGHTER"
 msgstr "Вы адчуваеце сябе лягчэй"
 
 msgid "TXT_GRAVITY"
 msgstr "Гравітацыя цягне вас уніз"
 
-msgid "TXT_NOTARGET_ON"
-msgstr "Незаўважнасць: УКЛ"
-
-msgid "TXT_NOTARGET_OFF"
-msgstr "Незаўважнасць: ВЫКЛ"
-
 msgid "TXT_ANUBIS_ON"
 msgstr "«Дрыжыцеся ад страху!»"
 
 msgid "TXT_ANUBIS_OFF"
 msgstr "Браня огра знята"
-
-msgid "TXT_CHASECAM_ON"
-msgstr "Від ад трэцяй асобы: УКЛ"
-
-msgid "TXT_CHASECAM_OFF"
-msgstr "Від ад трэцяй асобы: ВЫКЛ"
 
 msgid "TXT_BADDIE_KILLED"
 msgstr "1 благіш забіты"
@@ -455,24 +375,6 @@ msgstr "Што вы хочаце забіць па-за гульнёй?"
 
 msgid "TXT_NOT_FROZEN"
 msgstr "Уласцівасці замарожанага гульца: ВЫКЛ"
-
-msgid "AMSTR_FOLLOWOFF"
-msgstr "Прывязка да гульца: ВЫКЛ"
-
-msgid "AMSTR_FOLLOWON"
-msgstr "Прывязка да гульца: УКЛ"
-
-msgid "AMSTR_GRIDON"
-msgstr "Сетка: УКЛ"
-
-msgid "AMSTR_GRIDOFF"
-msgstr "Сетка: ВЫКЛ"
-
-msgid "AMSTR_TEXON"
-msgstr "Тэкстурны рэжым: УКЛ"
-
-msgid "AMSTR_TEXOFF"
-msgstr "Тэкстурны рэжым: ВЫКЛ"
 
 msgid "AMSTR_MARKEDSPOT"
 msgstr "Метка"
@@ -2808,14 +2710,6 @@ msgid "ENDGAME"
 msgstr ""
 
 msgctxt "chex"
-msgid "STSTR_DQDON"
-msgstr ""
-
-msgctxt "chex"
-msgid "STSTR_DQDOFF"
-msgstr ""
-
-msgctxt "chex"
 msgid "STSTR_FAADDED"
 msgstr ""
 
@@ -5096,3 +4990,59 @@ msgstr "Насычанасць"
 
 msgid "OPTMNU_ACCESSIBILITY"
 msgstr "Налады даступнасці"
+
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Рэжым непісьменнасці: {УКЛ|ВЫКЛ}"
+
+msgid "STSTR_DQD2{ON|OFF}"
+msgstr "Рэжым поўнай непісьменнасці: {УКЛ|ВЫКЛ}"
+
+msgid "STSTR_NC{ON|OFF}"
+msgstr "Рэжым без сутыкненняў: {УКЛ|ВЫКЛ}"
+
+#, fuzzy
+msgid "STSTR_NC2{ON|OFF}"
+msgstr "Рэжым без сутыкненняў 2: {УКЛ|ВЫКЛ}"
+
+msgid "TXT_BUDDHA{ON|OFF}"
+msgstr "Рэжым Буды: {УКЛ|ВЫКЛ}"
+
+msgid "TXT_BUDDHA2{ON|OFF}"
+msgstr "Рэжым ультыматыўнага Буды: {УКЛ|ВЫКЛ}"
+
+msgid "TXT_CHEATPOWER{ON|OFF}"
+msgstr "Сіла: {УКЛ|ВЫКЛ}"
+
+msgid "TXT_CHEATSOUND{ON|OFF}"
+msgstr "Адладка гуку: {УКЛ|ВЫКЛ}"
+
+msgid "TXT_CHEATTICKER{ON|OFF}"
+msgstr "Лічыльнік: {УКЛ|ВЫКЛ}"
+
+msgid "TXT_FREEZE{ON|OFF}"
+msgstr "Рэжым замарозкі: {УКЛ|ВЫКЛ}"
+
+msgid "TXT_LEADBOOTS{ON|OFF}"
+msgstr "Свінцовыя боты: {УКЛ|ВЫКЛ}"
+
+msgid "TXT_NOTARGET_{ON|OFF}"
+msgstr "Незаўважнасць: {УКЛ|ВЫКЛ}"
+
+msgid "TXT_CHASECAM_{ON|OFF}"
+msgstr "Від ад трэцяй асобы: {УКЛ|ВЫКЛ}"
+
+msgid "AMSTR_FOLLOW{ON|OFF}"
+msgstr "Прывязка да гульца: {УКЛ|ВЫКЛ}"
+
+msgid "AMSTR_GRID{ON|OFF}"
+msgstr "Сетка: {УКЛ|ВЫКЛ}"
+
+msgid "AMSTR_TEX{ON|OFF}"
+msgstr "Тэкстурны рэжым: {УКЛ|ВЫКЛ}"
+
+msgctxt "chex"
+msgid "STSTR_DQD{ON|OFF}"
+msgstr ""
+
+msgid "MSG{ON|OFF}"
+msgstr "Паведамленні: {УКЛ|ВЫКЛ}"

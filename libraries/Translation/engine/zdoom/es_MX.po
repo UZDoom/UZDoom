@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-08-07 20:51+0000\n"
-"Last-Translator: Gabriel Valderrama <koto41@gmail.com>\n"
+"PO-Revision-Date: 2026-08-10 23:42-0400\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Spanish (Mexico) <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/es_MX/>\n"
 "Language: es_MX\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.9.dev0\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
 
 msgid "PRESSKEY"
 msgstr "Pulsa una tecla."
@@ -282,35 +282,11 @@ msgstr "Cambio de Música"
 msgid "STSTR_NOMUS"
 msgstr "Selección Imposible"
 
-msgid "STSTR_DQDON"
-msgstr "Modo Dios: ACTIVADO"
-
-msgid "STSTR_DQDOFF"
-msgstr "Modo Dios: DESACTIVADO"
-
-msgid "STSTR_DQD2ON"
-msgstr "Modo Dios Supremo: ACTIVADO"
-
-msgid "STSTR_DQD2OFF"
-msgstr "Modo Dios Supremo: DESACTIVADO"
-
 msgid "STSTR_KFAADDED"
 msgstr "Munición Añadida al Máximo"
 
 msgid "STSTR_FAADDED"
 msgstr "Munición (sin llaves) Añadida"
-
-msgid "STSTR_NCON"
-msgstr "Modo sin Sujeción: ACTIVADO"
-
-msgid "STSTR_NCOFF"
-msgstr "Modo sin Sujeción: DESACTIVADO"
-
-msgid "STSTR_NC2ON"
-msgstr "Modo sin Sujeción 3D: ACTIVADO"
-
-msgid "STSTR_NC2OFF"
-msgstr "Modo sin Sujeción 3D: DESACTIVADO"
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -319,7 +295,8 @@ msgstr "Modo sin Sujeción 3D: DESACTIVADO"
 # “Allmap”: Computer area map
 # “Lite-amp”: Light-amplification visor
 msgid "STSTR_BEHOLD"
-msgstr "in(V)ulnerable, ber(S)erker, (I)nvisible, (R)adiación, m(A)pa, o (L)uz"
+msgstr ""
+"in(V)ulnerable, ber(S)erker, (I)nvisible, (R)adiación, m(A)pa, o (L)uz"
 
 msgid "STSTR_BEHOLDX"
 msgstr "Potenciador Activado"
@@ -332,47 +309,17 @@ msgstr "… no apesta… - GM"
 msgid "STSTR_CLEV"
 msgstr "Cambiando de Nivel…"
 
-msgid "TXT_BUDDHAON"
-msgstr "Modo Buda: ACTIVADO"
-
-msgid "TXT_BUDDHAOFF"
-msgstr "Modo Buda: DESACTIVADO"
-
-msgid "TXT_BUDDHA2ON"
-msgstr "Modo Buda Supremo: ACTIVADO"
-
-msgid "TXT_BUDDHA2OFF"
-msgstr "Modo Buda Supremo: DESACTIVADO"
-
-msgid "TXT_CHEATPOWERON"
-msgstr "Poder: ACTIVADO"
-
-msgid "TXT_CHEATPOWEROFF"
-msgstr "Poder: DESACTIVADO"
-
 msgid "TXT_CHEATHEALTH"
 msgstr "Salud Llena"
 
 msgid "TXT_CHEATKEYS"
 msgstr "Todas las llaves"
 
-msgid "TXT_CHEATSOUNDON"
-msgstr "Depuración de Sonido: ACTIVADO"
-
-msgid "TXT_CHEATSOUNDOFF"
-msgstr "Depuración de Sonido: DESACTIVADO"
-
 msgid "TXT_CHEATIDDQD"
 msgstr "¿Tratando de usar trucos, eh? ¡Pues muere!"
 
 msgid "TXT_CHEATIDKFA"
 msgstr "Trampos@[ao_esp]—no te mereces las armas"
-
-msgid "TXT_CHEATTICKERON"
-msgstr "Ticker: ACTIVADO"
-
-msgid "TXT_CHEATTICKEROFF"
-msgstr "Ticker: DESACTIVADO"
 
 msgid "TXT_CHEATARTIFACTS3"
 msgstr "Lo tienes"
@@ -383,12 +330,6 @@ msgstr "Tienes el Toque de Midas, baby"
 msgid "TXT_GOTSTUFF"
 msgstr "¡Tienes las cosas!"
 
-msgid "TXT_FREEZEON"
-msgstr "Modo congelado: ACTIVADO"
-
-msgid "TXT_FREEZEOFF"
-msgstr "Modo congelado: DESACTIVADO"
-
 msgid "TXT_STRANGE"
 msgstr "Te sientes extrañ@[ao_esp]…"
 
@@ -398,35 +339,17 @@ msgstr "Te sientes aún más extrañ@[ao_esp]."
 msgid "TXT_NOTSTRANGE"
 msgstr "Te sientes como tú mism@[ao_esp] otra vez."
 
-msgid "TXT_LEADBOOTSON"
-msgstr "Botas de Plomo: ACTIVADAS"
-
-msgid "TXT_LEADBOOTSOFF"
-msgstr "Botas de Plomo: DESACTIVADAS"
-
 msgid "TXT_LIGHTER"
 msgstr "Te sientes livian@[ao_esp]"
 
 msgid "TXT_GRAVITY"
 msgstr "La gravedad te hace descender"
 
-msgid "TXT_NOTARGET_ON"
-msgstr "Ningún Objetivo: ACTIVADO"
-
-msgid "TXT_NOTARGET_OFF"
-msgstr "Ningún Objetivo: DESACTIVADO"
-
 msgid "TXT_ANUBIS_ON"
 msgstr "\"¡Tiemblen de miedo!\""
 
 msgid "TXT_ANUBIS_OFF"
 msgstr "No más Armadura de Ogro"
-
-msgid "TXT_CHASECAM_ON"
-msgstr "Cámara trasera: ACTIVADA"
-
-msgid "TXT_CHASECAM_OFF"
-msgstr "Cámara trasera: DESACTIVADA"
 
 msgid "TXT_BADDIE_KILLED"
 msgstr "Un malito asesinado"
@@ -451,24 +374,6 @@ msgstr "¿Qué quieres matar fuera de un juego?"
 
 msgid "TXT_NOT_FROZEN"
 msgstr "Propiedades de jugador congelado: DESACTIVADAS"
-
-msgid "AMSTR_FOLLOWOFF"
-msgstr "Modo Seguimiento: DESACTIVADO"
-
-msgid "AMSTR_FOLLOWON"
-msgstr "Modo Seguimiento: ACTIVADO"
-
-msgid "AMSTR_GRIDON"
-msgstr "Cuadrícula: ACTIVADA"
-
-msgid "AMSTR_GRIDOFF"
-msgstr "Cuadrícula: DESACTIVADA"
-
-msgid "AMSTR_TEXON"
-msgstr "Modo Textura: ACTIVADO"
-
-msgid "AMSTR_TEXOFF"
-msgstr "Modo Textura: DESACTIVADO"
 
 msgid "AMSTR_MARKEDSPOT"
 msgstr "Punto Marcado"
@@ -2849,14 +2754,6 @@ msgstr ""
 "Pulsa Y o N."
 
 msgctxt "chex"
-msgid "STSTR_DQDON"
-msgstr "Modo Invencible: ACTIVADO"
-
-msgctxt "chex"
-msgid "STSTR_DQDOFF"
-msgstr "Modo Invencible: DESACTIVADO"
-
-msgctxt "chex"
 msgid "STSTR_FAADDED"
 msgstr "Zorch Añadido"
 
@@ -4558,10 +4455,14 @@ msgid "TXT_OTHERENGINESG"
 msgstr "La partida guardada '%s' es de otro motor basado en ZDoom:"
 
 msgid "TXT_TOOOLDSG"
-msgstr "La partida guardada '%s' es de una versión anterior (%d). La versión más antigua soportada es la %e."
+msgstr ""
+"La partida guardada '%s' es de una versión anterior (%d). La versión más "
+"antigua soportada es la %e."
 
 msgid "TXT_TOONEWSG"
-msgstr "La partida guardada '%s' es de una versión posterior (%d). La versión más reciente soportada es la %e."
+msgstr ""
+"La partida guardada '%s' es de una versión posterior (%d). La versión más "
+"reciente soportada es la %e."
 
 msgid "TXT_NOMAPSG"
 msgstr "A la partida guardada '%s' le falta el mapa actual."
@@ -5161,10 +5062,14 @@ msgid "ACCMNU_LIGHT_EXTRA"
 msgstr "Iluminación Extra"
 
 msgid "ACCMNU_TOOLTIP_LIGHT_RADIUS"
-msgstr "Controla el radio de luz alrededor del jugador en unidades de mapa. Valores mayores iluminan más la escena."
+msgstr ""
+"Controla el radio de luz alrededor del jugador en unidades de mapa. Valores "
+"mayores iluminan más la escena."
 
 msgid "ACCMNU_TOOLTIP_LIGHT_EXTRA"
-msgstr "Cantidad de iluminación sectorial que se debe añadir a los niveles de iluminación sectorial existentes, manteniendo el modo de iluminación actual."
+msgstr ""
+"Cantidad de iluminación sectorial que se debe añadir a los niveles de "
+"iluminación sectorial existentes, manteniendo el modo de iluminación actual."
 
 msgid "ACCMNU_LIGHT_RADIUS"
 msgstr "Radio de Luz del Jugador"
@@ -5194,34 +5099,51 @@ msgid "DSPLYMNU_IMAGEADJUST"
 msgstr "Calibración de Imagen"
 
 msgid "DSPLYMNU_IMAGEADJUST_TOP1"
-msgstr "Desde una distancia de visualización normal, ajusta estos deslizadores."
+msgstr ""
+"Desde una distancia de visualización normal, ajusta estos deslizadores."
 
 msgid "DSPLYMNU_IMAGEADJUST_TOP2"
-msgstr "El Escalado/Supermuestreo puede dar como resultado una salida incorrecta."
+msgstr ""
+"El Escalado/Supermuestreo puede dar como resultado una salida incorrecta."
 
 msgid "DSPLYMNU_IMAGEADJUST_TOP3"
 msgstr "Por favor deshabilítalos antes de ajustar."
 
 msgid "DSPLYMNU_TOOLTIP_GAMMA"
-msgstr "Compensa las limitaciones de tu monitor. Ajusta hasta que los bloques grises verticales desaparezcan. No uses esta función para aumentar el brillo del juego, sino solo para asegurarte de que la imagen esté calibrada para tu configuración."
+msgstr ""
+"Compensa las limitaciones de tu monitor. Ajusta hasta que los bloques grises"
+" verticales desaparezcan. No uses esta función para aumentar el brillo del "
+"juego, sino solo para asegurarte de que la imagen esté calibrada para tu "
+"configuración."
 
 msgid "DSPLYMNU_BLACKPOINT"
 msgstr "Compensación de punto negro"
 
 msgid "DSPLYMNU_TOOLTIP_BLACKPOINT"
-msgstr "Compensa los monitores que no muestran correctamente los píxeles oscuros. Ajusta hasta que los bloques blancos diagonales desaparezcan. No uses esta función para aumentar el brillo del juego, sino solo para asegurarte de que la imagen esté calibrada para tu configuración."
+msgstr ""
+"Compensa los monitores que no muestran correctamente los píxeles oscuros. "
+"Ajusta hasta que los bloques blancos diagonales desaparezcan. No uses esta "
+"función para aumentar el brillo del juego, sino solo para asegurarte de que "
+"la imagen esté calibrada para tu configuración."
 
 msgid "DSPLYMNU_TOOLTIP_IMAGEADJUST_RESET"
-msgstr "Reinicia todas las opciones en este menú a la configuración por defecto."
+msgstr ""
+"Reinicia todas las opciones en este menú a la configuración por defecto."
 
 msgid "DSPLYMNU_TOOLTIP_BRIGHTNESS"
-msgstr "Aplica un ajuste lineal de brillo. Ajústalo a tu gusto o para ver en la oscuridad."
+msgstr ""
+"Aplica un ajuste lineal de brillo. Ajústalo a tu gusto o para ver en la "
+"oscuridad."
 
 msgid "DSPLYMNU_TOOLTIP_CONTRAST"
-msgstr "Ajusta la diferencia percibida entre colores similares. Controla la nitidez o descoloración de las imágenes. Ajústalo a tu gusto."
+msgstr ""
+"Ajusta la diferencia percibida entre colores similares. Controla la nitidez "
+"o descoloración de las imágenes. Ajústalo a tu gusto."
 
 msgid "DSPLYMNU_TOOLTIP_SATURATION"
-msgstr "Ajusta la intensidad de los colores, haciendo que la imagen se vea más vívida o más tenue. Ajústalo a tu gusto."
+msgstr ""
+"Ajusta la intensidad de los colores, haciendo que la imagen se vea más "
+"vívida o más tenue. Ajústalo a tu gusto."
 
 msgid "DSPLYMNU_IMAGEADJUST_BOTTOM"
 msgstr "Ajusta hasta que parezca un color gris uniforme."
@@ -5380,7 +5302,9 @@ msgid "ACCMNU_DOUBLECLICK_THRESHOLD"
 msgstr "Umbral de Doble Clic"
 
 msgid "ACCMNU_TOOLTIP_DOUBLECLICK_THRESHOLD"
-msgstr "Tiempo entre presiones de teclas consecutivas para gatillar un evento de doble clic"
+msgstr ""
+"Tiempo entre presiones de teclas consecutivas para gatillar un evento de "
+"doble clic"
 
 msgid "OPTVAL_VTAZDOOM"
 msgstr "Automático (ZDoom de Preferencia)"
@@ -5447,7 +5371,9 @@ msgid "UPDATER_STARTING"
 msgstr "Iniciando Descarga..."
 
 msgid "UPDATER_SUCCESS"
-msgstr "La actualización se ha realizado correctamente, el lanzador se reiniciará ahora."
+msgstr ""
+"La actualización se ha realizado correctamente, el lanzador se reiniciará "
+"ahora."
 
 msgid "UPDATER_UP_TO_DATE"
 msgstr "¡Estás al día!"
@@ -5508,3 +5434,64 @@ msgstr "OK"
 
 msgid "CMPTMNU_TRANSFERSECRET"
 msgstr "Secreto de las transferencias especiales de cambio de piso de BOOM."
+
+msgid "PICKER_THEME"
+msgstr "Tema"
+
+msgid "OPTVAL_LIGHT"
+msgstr "Claro"
+
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Modo Dios: {ACTIVADO|DESACTIVADO}"
+
+msgid "STSTR_DQD2{ON|OFF}"
+msgstr "Modo Dios Supremo: {ACTIVADO|DESACTIVADO}"
+
+msgid "STSTR_NC{ON|OFF}"
+msgstr "Modo sin Sujeción: {ACTIVADO|DESACTIVADO}"
+
+msgid "STSTR_NC2{ON|OFF}"
+msgstr "Modo sin Sujeción 3D: {ACTIVADO|DESACTIVADO}"
+
+msgid "TXT_BUDDHA{ON|OFF}"
+msgstr "Modo Buda: {ACTIVADO|DESACTIVADO}"
+
+msgid "TXT_BUDDHA2{ON|OFF}"
+msgstr "Modo Buda Supremo: {ACTIVADO|DESACTIVADO}"
+
+msgid "TXT_CHEATPOWER{ON|OFF}"
+msgstr "Poder: {ACTIVADO|DESACTIVADO}"
+
+msgid "TXT_CHEATSOUND{ON|OFF}"
+msgstr "Depuración de Sonido: {ACTIVADO|DESACTIVADO}"
+
+msgid "TXT_CHEATTICKER{ON|OFF}"
+msgstr "Ticker: {ACTIVADO|DESACTIVADO}"
+
+msgid "TXT_FREEZE{ON|OFF}"
+msgstr "Modo congelado: {ACTIVADO|DESACTIVADO}"
+
+msgid "TXT_LEADBOOTS{ON|OFF}"
+msgstr "Botas de Plomo: {ACTIVADAS|DESACTIVADAS}"
+
+msgid "TXT_NOTARGET_{ON|OFF}"
+msgstr "Ningún Objetivo: {ACTIVADO|DESACTIVADO}"
+
+msgid "TXT_CHASECAM_{ON|OFF}"
+msgstr "Cámara trasera: {ACTIVADA|DESACTIVADA}"
+
+msgid "AMSTR_FOLLOW{ON|OFF}"
+msgstr "Modo Seguimiento: {ACTIVADO|DESACTIVADO}"
+
+msgid "AMSTR_GRID{ON|OFF}"
+msgstr "Cuadrícula: {ACTIVADA|DESACTIVADA}"
+
+msgid "AMSTR_TEX{ON|OFF}"
+msgstr "Modo Textura: {ACTIVADO|DESACTIVADO}"
+
+msgctxt "chex"
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Modo Invencible: {ACTIVADO|DESACTIVADO}"
+
+msgid "MSG{ON|OFF}"
+msgstr "Mensajes: {ACTIVADOS|DESACTIVADOS}"

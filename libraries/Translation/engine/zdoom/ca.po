@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-29 23:01+0000\n"
-"Last-Translator: jordi conesa <jordicons@gmail.com>\n"
+"PO-Revision-Date: 2026-08-10 23:42-0400\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.8.dev0\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
 
 msgid "PRESSKEY"
 msgstr "Prem una tecla."
@@ -277,35 +277,11 @@ msgstr "Canvi de música"
 msgid "STSTR_NOMUS"
 msgstr "Selecció impossible"
 
-msgid "STSTR_DQDON"
-msgstr "Mode invulnerable: ON"
-
-msgid "STSTR_DQDOFF"
-msgstr "Mode invulnerable: OFF"
-
-msgid "STSTR_DQD2ON"
-msgstr "Mode invulnerable definitiu: ON"
-
-msgid "STSTR_DQD2OFF"
-msgstr "Mode invulnerable definitiu: OFF"
-
 msgid "STSTR_KFAADDED"
 msgstr "Munició molt feliç afegida"
 
 msgid "STSTR_FAADDED"
 msgstr "Munició afegida (sense claus)"
-
-msgid "STSTR_NCON"
-msgstr "Mode travessar parets: ON"
-
-msgid "STSTR_NCOFF"
-msgstr "Mode travessar parets: OFF"
-
-msgid "STSTR_NC2ON"
-msgstr "Mode travessar parets 3D: ON"
-
-msgid "STSTR_NC2OFF"
-msgstr "Mode travessar parets 3D: OFF"
 
 msgid "STSTR_BEHOLD"
 msgstr "Invuln., Força, Invis., Rad., Tot el mapa o Amplificador"
@@ -319,47 +295,17 @@ msgstr "...no fa pena - GM"
 msgid "STSTR_CLEV"
 msgstr "Canviant de nivell…"
 
-msgid "TXT_BUDDHAON"
-msgstr "Mode Buda: ON"
-
-msgid "TXT_BUDDHAOFF"
-msgstr "Mode Buda: OFF"
-
-msgid "TXT_BUDDHA2ON"
-msgstr "Mode Buda definitiu: ON"
-
-msgid "TXT_BUDDHA2OFF"
-msgstr "Mode Buda definitiu: OFF"
-
-msgid "TXT_CHEATPOWERON"
-msgstr "Poder: ON"
-
-msgid "TXT_CHEATPOWEROFF"
-msgstr "Poder: OFF"
-
 msgid "TXT_CHEATHEALTH"
 msgstr "Salut completa"
 
 msgid "TXT_CHEATKEYS"
 msgstr "Totes les claus"
 
-msgid "TXT_CHEATSOUNDON"
-msgstr "Depuració de so: ON"
-
-msgid "TXT_CHEATSOUNDOFF"
-msgstr "Depuració de so: OFF"
-
 msgid "TXT_CHEATIDDQD"
 msgstr "Intentant fer trampes, eh? Ara mors!"
 
 msgid "TXT_CHEATIDKFA"
 msgstr "Trampós: no et mereixes armes"
-
-msgid "TXT_CHEATTICKERON"
-msgstr "Ticker: ON"
-
-msgid "TXT_CHEATTICKEROFF"
-msgstr "Ticker: OFF"
 
 msgid "TXT_CHEATARTIFACTS3"
 msgstr "Ho has aconseguit"
@@ -370,12 +316,6 @@ msgstr "Has aconseguit el toc de Mides, nano"
 msgid "TXT_GOTSTUFF"
 msgstr "Has aconseguit les coses!"
 
-msgid "TXT_FREEZEON"
-msgstr "Mode congelació: ON"
-
-msgid "TXT_FREEZEOFF"
-msgstr "Mode congelació: OFF"
-
 msgid "TXT_STRANGE"
 msgstr "Estrany…"
 
@@ -385,35 +325,17 @@ msgstr "Et sents encara més estrany."
 msgid "TXT_NOTSTRANGE"
 msgstr "Això no té res d’estrany."
 
-msgid "TXT_LEADBOOTSON"
-msgstr "Botes de plom: ON"
-
-msgid "TXT_LEADBOOTSOFF"
-msgstr "Botes de plom: OFF"
-
 msgid "TXT_LIGHTER"
 msgstr "Et sents més lleuger"
 
 msgid "TXT_GRAVITY"
 msgstr "La gravetat et pesa"
 
-msgid "TXT_NOTARGET_ON"
-msgstr "Sense objectiu: ON"
-
-msgid "TXT_NOTARGET_OFF"
-msgstr "Sense objectiu: OFF"
-
 msgid "TXT_ANUBIS_ON"
 msgstr "«Tremoleu de por!»"
 
 msgid "TXT_ANUBIS_OFF"
 msgstr "S’ha acabat l’armadura d’ogre"
-
-msgid "TXT_CHASECAM_ON"
-msgstr "Càmera en tercera persona: ON"
-
-msgid "TXT_CHASECAM_OFF"
-msgstr "Càmera en tercera persona: OFF"
 
 msgid "TXT_BADDIE_KILLED"
 msgstr "1 enemic eliminat"
@@ -438,24 +360,6 @@ msgstr "Què vols matar fora d’una partida?"
 
 msgid "TXT_NOT_FROZEN"
 msgstr "Propietats de jugador congelades: OFF"
-
-msgid "AMSTR_FOLLOWOFF"
-msgstr "Mode seguiment: OFF"
-
-msgid "AMSTR_FOLLOWON"
-msgstr "Mode seguiment: ON"
-
-msgid "AMSTR_GRIDON"
-msgstr "Graella: ON"
-
-msgid "AMSTR_GRIDOFF"
-msgstr "Graella: OFF"
-
-msgid "AMSTR_TEXON"
-msgstr "Mode textures: ON"
-
-msgid "AMSTR_TEXOFF"
-msgstr "Mode textures: OFF"
 
 msgid "AMSTR_MARKEDSPOT"
 msgstr "Punt marcat"
@@ -2823,14 +2727,6 @@ msgstr ""
 "Segur que vols acabar la missió?\n"
 "\n"
 "Prem Y o N."
-
-msgctxt "chex"
-msgid "STSTR_DQDON"
-msgstr "Mode invencible: ON"
-
-msgctxt "chex"
-msgid "STSTR_DQDOFF"
-msgstr "Mode invencible: OFF"
 
 msgctxt "chex"
 msgid "STSTR_FAADDED"
@@ -5385,7 +5281,8 @@ msgid "UPDATER_ZIP_FAIL"
 msgstr "Fallada en obrir fitxer zip"
 
 msgid "UPDATER_ZIP_ERROR"
-msgstr "Fallada en l'extracció del zip, error: '{}' mentre s'escriu fitxer '{}'"
+msgstr ""
+"Fallada en l'extracció del zip, error: '{}' mentre s'escriu fitxer '{}'"
 
 msgid "UPDATER_UPDATING"
 msgstr "Actualitzant..."
@@ -5452,3 +5349,58 @@ msgstr "Confirmar"
 
 msgid "TXT_OK"
 msgstr "OK"
+
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Mode invulnerable: {ON|OFF}"
+
+msgid "STSTR_DQD2{ON|OFF}"
+msgstr "Mode invulnerable definitiu: {ON|OFF}"
+
+msgid "STSTR_NC{ON|OFF}"
+msgstr "Mode travessar parets: {ON|OFF}"
+
+msgid "STSTR_NC2{ON|OFF}"
+msgstr "Mode travessar parets 3D: {ON|OFF}"
+
+msgid "TXT_BUDDHA{ON|OFF}"
+msgstr "Mode Buda: {ON|OFF}"
+
+msgid "TXT_BUDDHA2{ON|OFF}"
+msgstr "Mode Buda definitiu: {ON|OFF}"
+
+msgid "TXT_CHEATPOWER{ON|OFF}"
+msgstr "Poder: {ON|OFF}"
+
+msgid "TXT_CHEATSOUND{ON|OFF}"
+msgstr "Depuració de so: {ON|OFF}"
+
+msgid "TXT_CHEATTICKER{ON|OFF}"
+msgstr "Ticker: {ON|OFF}"
+
+msgid "TXT_FREEZE{ON|OFF}"
+msgstr "Mode congelació: {ON|OFF}"
+
+msgid "TXT_LEADBOOTS{ON|OFF}"
+msgstr "Botes de plom: {ON|OFF}"
+
+msgid "TXT_NOTARGET_{ON|OFF}"
+msgstr "Sense objectiu: {ON|OFF}"
+
+msgid "TXT_CHASECAM_{ON|OFF}"
+msgstr "Càmera en tercera persona: {ON|OFF}"
+
+msgid "AMSTR_FOLLOW{ON|OFF}"
+msgstr "Mode seguiment: {ON|OFF}"
+
+msgid "AMSTR_GRID{ON|OFF}"
+msgstr "Graella: {ON|OFF}"
+
+msgid "AMSTR_TEX{ON|OFF}"
+msgstr "Mode textures: {ON|OFF}"
+
+msgctxt "chex"
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Mode invencible: {ON|OFF}"
+
+msgid "MSG{ON|OFF}"
+msgstr "Missatges: {ON|OFF}"

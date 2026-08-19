@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-30 16:57-0400\n"
+"PO-Revision-Date: 2026-08-10 23:42-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/projects/uzdoom/common/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -49,12 +49,6 @@ msgstr ""
 # This is a gender sensitive message where %s represents the player
 msgid "TXT_X_CHEATS"
 msgstr "%s 作弊了"
-
-msgid "MSGOFF"
-msgstr "消息：关闭"
-
-msgid "MSGON"
-msgstr "消息：开启"
 
 msgid "TXT_SAY"
 msgstr "发言："

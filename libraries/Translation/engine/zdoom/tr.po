@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-14 05:01+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2026-08-10 23:42-0400\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.8.dev0\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
 
 msgid "PRESSKEY"
 msgstr "Bir tuşa bas."
@@ -283,37 +283,11 @@ msgstr "Müzik Değişimi"
 msgid "STSTR_NOMUS"
 msgstr "İmkansız Seçim"
 
-msgid "STSTR_DQDON"
-msgstr "Dokunulmazlık Modu: AÇIK"
-
-msgid "STSTR_DQDOFF"
-msgstr "Dokunulmazlık Modu: KAPALI"
-
-msgid "STSTR_DQD2ON"
-msgstr "Nihai Dokunulmazlık Modu: AÇIK"
-
-msgid "STSTR_DQD2OFF"
-msgstr "Nihai Dokunulmazlık Modu: KAPALI"
-
 msgid "STSTR_KFAADDED"
 msgstr "Çok Mutlu Cephane Eklendi"
 
 msgid "STSTR_FAADDED"
 msgstr "Cephane (anahtar yok) Eklendi"
-
-msgid "STSTR_NCON"
-msgstr "Klipsleme Yok Modu: AÇIK"
-
-msgid "STSTR_NCOFF"
-msgstr "Klipsleme Yok Modu: KAPALI"
-
-#, fuzzy
-msgid "STSTR_NC2ON"
-msgstr "Klipsleme Yok Modu 2: AÇIK"
-
-#, fuzzy
-msgid "STSTR_NC2OFF"
-msgstr "Klipsleme Yok Modu 2: KAPALI"
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -335,47 +309,17 @@ msgstr "… berbat değil - GM"
 msgid "STSTR_CLEV"
 msgstr "Seviye Değiştiriliyor…"
 
-msgid "TXT_BUDDHAON"
-msgstr "Buda modu: AÇIK"
-
-msgid "TXT_BUDDHAOFF"
-msgstr "Buda modu: KAPALI"
-
-msgid "TXT_BUDDHA2ON"
-msgstr "Nihai Buda Modu: AÇIK"
-
-msgid "TXT_BUDDHA2OFF"
-msgstr "Nihai Buda Modu: KAPALI"
-
-msgid "TXT_CHEATPOWERON"
-msgstr "Güç: AÇIK"
-
-msgid "TXT_CHEATPOWEROFF"
-msgstr "Güç: KAPALI"
-
 msgid "TXT_CHEATHEALTH"
 msgstr "Tam sağlık"
 
 msgid "TXT_CHEATKEYS"
 msgstr "Tüm anahtarlar"
 
-msgid "TXT_CHEATSOUNDON"
-msgstr "Ses hata ayıklama: AÇIK"
-
-msgid "TXT_CHEATSOUNDOFF"
-msgstr "Ses hata ayıklama: KAPALI"
-
 msgid "TXT_CHEATIDDQD"
 msgstr "Hile yapmaya çalışıyorsun, ha? Şimdi öleceksin!"
 
 msgid "TXT_CHEATIDKFA"
 msgstr "Hileci, silahları hak etmiyorsun"
-
-msgid "TXT_CHEATTICKERON"
-msgstr "Ticker: AÇIK"
-
-msgid "TXT_CHEATTICKEROFF"
-msgstr "Ticker: KAPALI"
 
 msgid "TXT_CHEATARTIFACTS3"
 msgstr "Tamamdır"
@@ -386,12 +330,6 @@ msgstr "Sende Midas Dokunuşu var, bebeğim"
 msgid "TXT_GOTSTUFF"
 msgstr "Mal sende!"
 
-msgid "TXT_FREEZEON"
-msgstr "Dondurma modu: AÇIK"
-
-msgid "TXT_FREEZEOFF"
-msgstr "Dondurma modu: KAPALI"
-
 msgid "TXT_STRANGE"
 msgstr "Garip hissediyorsun…"
 
@@ -401,35 +339,17 @@ msgstr "Daha da garip hissediyorsun."
 msgid "TXT_NOTSTRANGE"
 msgstr "Tekrar kendin gibi hissediyorsun."
 
-msgid "TXT_LEADBOOTSON"
-msgstr "Kurşun çizmeler: AÇIK"
-
-msgid "TXT_LEADBOOTSOFF"
-msgstr "Kurşun çizmeler: KAPALI"
-
 msgid "TXT_LIGHTER"
 msgstr "Daha hafif hissediyorsun"
 
 msgid "TXT_GRAVITY"
 msgstr "Yerçekimi seni ağırlaştırır"
 
-msgid "TXT_NOTARGET_ON"
-msgstr "Hedef Yok: AÇIK"
-
-msgid "TXT_NOTARGET_OFF"
-msgstr "Hedef Yok: KAPALI"
-
 msgid "TXT_ANUBIS_ON"
 msgstr "\"Korkudan titre!\""
 
 msgid "TXT_ANUBIS_OFF"
 msgstr "Artık Ogre Zırhı yok"
-
-msgid "TXT_CHASECAM_ON"
-msgstr "Chasecam: AÇIK"
-
-msgid "TXT_CHASECAM_OFF"
-msgstr "Chasecam: KAPALI"
 
 msgid "TXT_BADDIE_KILLED"
 msgstr "1 kötü öldürüldü"
@@ -454,24 +374,6 @@ msgstr "Oyun dışında ne öldürmek istiyorsun?"
 
 msgid "TXT_NOT_FROZEN"
 msgstr "Dondurulmuş oyuncu özellikleri: KAPALI"
-
-msgid "AMSTR_FOLLOWOFF"
-msgstr "Takip Modu: KAPALI"
-
-msgid "AMSTR_FOLLOWON"
-msgstr "Takip Modu: AÇIK"
-
-msgid "AMSTR_GRIDON"
-msgstr "Izgara: AÇIK"
-
-msgid "AMSTR_GRIDOFF"
-msgstr "Izgara: KAPALI"
-
-msgid "AMSTR_TEXON"
-msgstr "Doku Modu: AÇIK"
-
-msgid "AMSTR_TEXOFF"
-msgstr "Doku Modu: KAPALI"
 
 msgid "AMSTR_MARKEDSPOT"
 msgstr "İşaretli Nokta"
@@ -2855,14 +2757,6 @@ msgstr ""
 "Y veya N tuşuna basın."
 
 msgctxt "chex"
-msgid "STSTR_DQDON"
-msgstr "Yenilmez Mod: AÇIK"
-
-msgctxt "chex"
-msgid "STSTR_DQDOFF"
-msgstr "Yenilmez Modu: KAPALI"
-
-msgctxt "chex"
 msgid "STSTR_FAADDED"
 msgstr "Zorch Eklendi"
 
@@ -5179,3 +5073,59 @@ msgstr "Otomatik (Vanilya Tercihli)"
 #, fuzzy
 msgid "OPTVAL_VTAZDOOM"
 msgstr "Otomatik (ZDoom Tercih Edilir)"
+
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Dokunulmazlık Modu: {AÇIK|KAPALI}"
+
+msgid "STSTR_DQD2{ON|OFF}"
+msgstr "Nihai Dokunulmazlık Modu: {AÇIK|KAPALI}"
+
+msgid "STSTR_NC{ON|OFF}"
+msgstr "Klipsleme Yok Modu: {AÇIK|KAPALI}"
+
+#, fuzzy
+msgid "STSTR_NC2{ON|OFF}"
+msgstr "Klipsleme Yok Modu 2: {AÇIK|KAPALI}"
+
+msgid "TXT_BUDDHA{ON|OFF}"
+msgstr "Buda modu: {AÇIK|KAPALI}"
+
+msgid "TXT_BUDDHA2{ON|OFF}"
+msgstr "Nihai Buda Modu: {AÇIK|KAPALI}"
+
+msgid "TXT_CHEATPOWER{ON|OFF}"
+msgstr "Güç: {AÇIK|KAPALI}"
+
+msgid "TXT_CHEATSOUND{ON|OFF}"
+msgstr "Ses hata ayıklama: {AÇIK|KAPALI}"
+
+msgid "TXT_CHEATTICKER{ON|OFF}"
+msgstr "Ticker: {AÇIK|KAPALI}"
+
+msgid "TXT_FREEZE{ON|OFF}"
+msgstr "Dondurma modu: {AÇIK|KAPALI}"
+
+msgid "TXT_LEADBOOTS{ON|OFF}"
+msgstr "Kurşun çizmeler: {AÇIK|KAPALI}"
+
+msgid "TXT_NOTARGET_{ON|OFF}"
+msgstr "Hedef Yok: {AÇIK|KAPALI}"
+
+msgid "TXT_CHASECAM_{ON|OFF}"
+msgstr "Chasecam: {AÇIK|KAPALI}"
+
+msgid "AMSTR_FOLLOW{ON|OFF}"
+msgstr "Takip Modu: {AÇIK|KAPALI}"
+
+msgid "AMSTR_GRID{ON|OFF}"
+msgstr "Izgara: {AÇIK|KAPALI}"
+
+msgid "AMSTR_TEX{ON|OFF}"
+msgstr "Doku Modu: {AÇIK|KAPALI}"
+
+msgctxt "chex"
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Yenilmez {Mod: AÇIK|Modu: KAPALI}"
+
+msgid "MSG{ON|OFF}"
+msgstr "Mesajlar: {AÇIK|KAPALI}"

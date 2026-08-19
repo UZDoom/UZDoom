@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-13 23:20-0400\n"
+"PO-Revision-Date: 2026-08-10 23:42-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Arabic <https://hosted.weblate.org/projects/uzdoom/common/ar/>\n"
 "Language: ar\n"
@@ -48,12 +48,6 @@ msgstr ""
 
 msgid "TXT_X_CHEATS"
 msgstr "شفرات %s"
-
-msgid "MSGOFF"
-msgstr "الرسائل: إيقاف"
-
-msgid "MSGON"
-msgstr "الرسائل: تشغيل"
 
 msgid "TXT_SAY"
 msgstr "قل:"
