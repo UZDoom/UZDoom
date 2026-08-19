@@ -2,6 +2,8 @@
 #include <SDL2/SDL_events.h>
 #include <SDL2/SDL_video.h>
 #include <stdexcept>
+#include <atomic>
+#include <mutex>
 #include <SDL2/SDL_vulkan.h>
 #include <SDL2/SDL_hints.h>
 
@@ -436,14 +438,18 @@ void SDL2DisplayWindow::ExitLoop()
 
 std::unordered_map<void *, std::function<void()>> SDL2DisplayWindow::Timers;
 std::unordered_map<void *, void *> SDL2DisplayWindow::TimerHandles;
-unsigned long SDL2DisplayWindow::TimerIDs = 0;
+std::atomic<uintptr_t> SDL2DisplayWindow::TimerIDs{0};
+std::mutex SDL2DisplayWindow::TimerMutex;
 Uint32 TimerEventID = SDL_RegisterEvents(1);
 
 Uint32 SDL2DisplayWindow::ExecTimer(Uint32 interval, void* execID)
 {
 	// cancel event and stop loop if function not found
-	if (Timers.find(execID) == Timers.end())
-		return 0;
+	{
+		std::lock_guard<std::mutex> lock(TimerMutex);
+		if (Timers.find(execID) == Timers.end())
+			return 0;
+	}
 
 	SDL_Event timerEvent;
 	SDL_zero(timerEvent);
@@ -458,21 +464,38 @@ Uint32 SDL2DisplayWindow::ExecTimer(Uint32 interval, void* execID)
 
 void* SDL2DisplayWindow::StartTimer(int timeoutMilliseconds, std::function<void()> onTimer)
 {
-	void* execID = (void*)(uintptr_t)++TimerIDs;
-	void* id = (void*)(uintptr_t)SDL_AddTimer(timeoutMilliseconds, SDL2DisplayWindow::ExecTimer, execID);
+	void *execID = reinterpret_cast<void*>(++TimerIDs);
 
-	if (!id) return id;
+	{
+		std::lock_guard<std::mutex> lock(TimerMutex);
+		Timers[execID] = std::move(onTimer);
+	}
 
-	Timers.insert({execID, onTimer});
-	TimerHandles.insert({id, execID});
+	SDL_TimerID id = SDL_AddTimer(timeoutMilliseconds, SDL2DisplayWindow::ExecTimer, execID);
 
-	return id;
+	if (!id) {
+		std::lock_guard<std::mutex> lock(TimerMutex);
+		Timers.erase(execID);
+		return nullptr;
+	}
+
+	void *handle = reinterpret_cast<void*>(id);
+
+	{
+		std::lock_guard<std::mutex> lock(TimerMutex);
+		TimerHandles[handle] = execID;
+	}
+
+	return handle;
 }
 
 void SDL2DisplayWindow::StopTimer(void* timerID)
 {
-	SDL_RemoveTimer((SDL_TimerID)(uintptr_t)timerID);
+	if (!timerID) return;
 
+	SDL_RemoveTimer(static_cast<SDL_TimerID>(reinterpret_cast<uintptr_t>(timerID)));
+
+	std::lock_guard<std::mutex> lock(TimerMutex);
 	auto execID = TimerHandles.find(timerID);
 	if (execID == TimerHandles.end())
 		return;
