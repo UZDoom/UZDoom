@@ -21,6 +21,7 @@
 #include <zwidget/widgets/textlabel/textlabel.h>
 
 #include "basics.h"
+#include "c_console.h"
 #include "gstrings.h"
 #include "netstartwindow.h"
 #include "version.h"
@@ -312,8 +313,10 @@ void NetStartWindow::OnGeometryChanged()
 
 void NetStartWindow::OnCallbackTimerExpired()
 {
+	static auto t = 0u;
 	if (timer_callback)
 	{
+		if (t++%60 == 5) DEBUG_LOG("%s", "tick");
 		bool result = false;
 		try
 		{
