@@ -183,8 +183,8 @@ SettingsPage::SettingsPage(LauncherWindow* launcher, const FStartupSelectionInfo
 		int opts = sizeof(FILELOAD_OPTS)/sizeof(FILELOAD_OPTS[0]), selected = opts-1;
 		for (int i = 0; i < opts; i++)
 		{
-			LoadList->AddItem(GStrings.GetString(FILELOAD_OPTS[i].string));
 			if (info.DefaultFileLoadBehaviour == FILELOAD_OPTS[i].flag) selected = i;
+			if (i != opts-1 || selected == opts-1) LoadList->AddItem(GStrings.GetString(FILELOAD_OPTS[i].string));
 		}
 		LoadList->SetSelectedItem(selected);
 	}
