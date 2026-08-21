@@ -24,6 +24,7 @@
 
 #include "c_cvars.h"
 #include "cmdlib.h"
+#include "c_console.h"
 #include "d_main.h"
 #include "d_steam.h"
 #include "engineerrors.h"
