@@ -633,6 +633,7 @@ int FIWadManager::IdentifyVersion (std::vector<FileSys::ResourceName>&wadfiles, 
 	// Collect all IWADs in the search path
 	for (auto &dir : mSearchPaths)
 	{
+		DEBUG_LOG("Using IWAD search path %s", dir.GetChars());
 		AddIWADCandidates(dir.GetChars());
 	}
 	for (auto& dir : mRecursiveSearchPaths)
