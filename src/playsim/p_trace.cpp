@@ -235,6 +235,8 @@ void FTraceInfo::EnterSectorPortal(FPathTraverse &pt, int position, double frac,
 		Results->Sector = entersec->GetPortal(position)->mDestination;
 		Results->Distance = enterdist;
 		TraceCallback(*Results, TraceCallbackData);
+		Results->HitType = TRACE_HitNone;
+		Results->Sector = NULL;
 	}
 
 	Setup3DFloors();
@@ -282,6 +284,9 @@ void FTraceInfo::EnterLinePortal(FPathTraverse &pt, intercept_t *in)
 		Results->Side = 0;
 		Results->Sector = li->frontsector;
 		TraceCallback(*Results, TraceCallbackData);
+		Results->HitType = TRACE_HitNone;
+		Results->Sector = NULL;
+		Results->Line = NULL;
 	}
 }
 
