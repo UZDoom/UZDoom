@@ -799,7 +799,7 @@ cont:
 
 bool FTraceInfo::ThingCheck(intercept_t *in, double dist, DVector3 hit)
 {
-	if (hit.Z > in->d.thing->Top())
+	if (hit.Z >= in->d.thing->Top())
 	{
 		// trace enters above actor
 		if (Vec.Z >= 0) return true;      // Going up: can't hit
@@ -816,7 +816,7 @@ bool FTraceInfo::ThingCheck(intercept_t *in, double dist, DVector3 hit)
 		if (fabs(hit.X - in->d.thing->X()) > in->d.thing->radius ||
 			fabs(hit.Y - in->d.thing->Y()) > in->d.thing->radius) return true;
 	}
-	else if (hit.Z < in->d.thing->Z())
+	else if (hit.Z <= in->d.thing->Z())
 	{ // trace enters below actor
 		if (Vec.Z <= 0) return true;      // Going down: can't hit
 
