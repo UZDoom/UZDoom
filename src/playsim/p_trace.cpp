@@ -174,7 +174,8 @@ bool Trace(const DVector3 &start, sector_t *sector, const DVector3 &direction, d
 
 	// [DVR] Future person looking at this. These two ReportPortals blocks are necessary for
 	// the for-loop over TArray<SPortalHit> &portalhits argument of P_DrawRailTrail() function
-	// in /src/playsim/p_effect.cpp
+	// in /src/playsim/p_effect.cpp. Also the reason P_LineTrace() is having NumPortals field
+	// manually reduced by 2 in /src/playsim/p_map.cpp.
 	if ((flags & TRACE_ReportPortals) && callback != NULL)
 	{
 		tempResult.HitType = TRACE_CrossingPortal;
@@ -232,11 +233,11 @@ void FTraceInfo::EnterSectorPortal(FPathTraverse &pt, int position, double frac,
 		Results->SrcAngleFromTarget = Vec.Angle();
 		Results->Fraction = frac;
 		Results->Line = NULL;
-		Results->Sector = entersec->GetPortal(position)->mDestination;
+		Results->Sector = CurSector;
 		Results->Distance = enterdist;
 		TraceCallback(*Results, TraceCallbackData);
 		Results->HitType = TRACE_HitNone;
-		Results->Sector = NULL;
+		Results->HitPos = enter; // Used if TRACE_HitNone occurs
 	}
 
 	Setup3DFloors();
@@ -283,10 +284,11 @@ void FTraceInfo::EnterLinePortal(FPathTraverse &pt, intercept_t *in)
 		Results->Line = li;
 		Results->Side = 0;
 		Results->Sector = li->frontsector;
+		Results->Distance = enterdist;
 		TraceCallback(*Results, TraceCallbackData);
 		Results->HitType = TRACE_HitNone;
-		Results->Sector = NULL;
 		Results->Line = NULL;
+		Results->HitPos = exit; // Used if TRACE_HitNone occurs
 	}
 }
 
@@ -1053,14 +1055,14 @@ bool FTraceInfo::TraceTraverse (int ptflags)
 	// Check for sector portals when no line or thing was crossed
 	if (Results->HitType == TRACE_HitNone)
 	{
-		// Crossed a floor portals?
-		while (Vec.Z < 0 && !CurSector->PortalBlocksMovement(sector_t::floor))
+		// Crossed a floor portal?
+		if (Vec.Z < 0 && !CurSector->PortalBlocksMovement(sector_t::floor))
 		{
-			double dist2 = MaxDist;
-			DVector3 hit2 = Start + Vec * MaxDist;
+			double dist = MaxDist;
+			DVector3 hit = Start + Vec * MaxDist;
 			// calculate position where the portal is crossed
 			double portz = CurSector->GetPortalPlaneZ(sector_t::floor);
-			if (hit2.Z < portz && limitz > portz)
+			if (hit.Z < portz && limitz > portz)
 			{
 				limitz = portz;
 				EnterSectorPortal(it, sector_t::floor, (portz - Start.Z) / (Vec.Z * MaxDist), CurSector);
@@ -1068,32 +1070,30 @@ bool FTraceInfo::TraceTraverse (int ptflags)
 				while ((in = it.Next()))
 				{
 					Trace3DFloors(&lastsplashsector);
-					dist2 = MaxDist * in->frac;
-					hit2 = Start + Vec * dist2;
+					dist = MaxDist * in->frac;
+					hit = Start + Vec * dist;
 					if (((in->d.thing->flags & ActorMask) || ActorMask == 0xffffffff) && in->d.thing != IgnoreThis)
 					{
-						if (!ThingCheck(in, dist2, hit2))
+						if (!ThingCheck(in, dist, hit))
 						{
 							actorfound = true;
 							break;
 						}
 					}
 				}
-				if (actorfound) break;
-			}
-			else
-			{
-				break;
+				if (!actorfound) return TraceTraverse(ptflags); // recursive restart
+				// [DVR] Recursive since the two sides of sector portals can have independent decorations
+				// so just because we saw no line intercepts on one side doesn't mean that there won't be
+				// any on the other side.
 			}
 		}
-		// ... or a ceiling portals?
-		while (Vec.Z > 0 && !CurSector->PortalBlocksMovement(sector_t::ceiling))
+		else if (Vec.Z > 0 && !CurSector->PortalBlocksMovement(sector_t::ceiling)) // ... or a ceiling portal?
 		{
-			double dist2 = MaxDist;
-			DVector3 hit2 = Start + Vec * dist2;
+			double dist = MaxDist;
+			DVector3 hit = Start + Vec * MaxDist;
 			// calculate position where the portal is crossed
 			double portz = CurSector->GetPortalPlaneZ(sector_t::ceiling);
-			if (hit2.Z > portz && limitz < portz)
+			if (hit.Z > portz && limitz < portz)
 			{
 				limitz = portz;
 				EnterSectorPortal(it, sector_t::ceiling, (portz - Start.Z) / (Vec.Z * MaxDist), CurSector);
@@ -1101,22 +1101,21 @@ bool FTraceInfo::TraceTraverse (int ptflags)
 				while ((in = it.Next()))
 				{
 					Trace3DFloors(&lastsplashsector);
-					dist2 = MaxDist * in->frac;
-					hit2 = Start + Vec * dist2;
+					dist = MaxDist * in->frac;
+					hit = Start + Vec * dist;
 					if (((in->d.thing->flags & ActorMask) || ActorMask == 0xffffffff) && in->d.thing != IgnoreThis)
 					{
-						if (!ThingCheck(in, dist2, hit2))
+						if (!ThingCheck(in, dist, hit))
 						{
 							actorfound = true;
 							break;
 						}
 					}
 				}
-				if (actorfound) break;
-			}
-			else
-			{
-				break;
+				if (!actorfound) return TraceTraverse(ptflags); // recursive restart
+				// [DVR] Recursive since the two sides of sector portals can have independent decorations
+				// so just because we saw no line intercepts on one side doesn't mean that there won't be
+				// any on the other side.
 			}
 		}
 	}
