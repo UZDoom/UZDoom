@@ -156,7 +156,13 @@ FStartupSelectionInfo::FStartupSelectionInfo(const TArray<WadStuff>& wads, FArgs
 	DefaultNetJoinPort = defaultnetjoinport;
 	DefaultNetJoinTeam = defaultnetjointeam;
 
-	prideColors = Args->CheckParm(FArg_pride)? "list": ui_colors;
+	const char *pride = ui_colors;
+	if (Args->CheckParm(FArg_pride))
+	{
+		pride = Args->CheckValue(FArg_pride);
+		pride = pride? pride: "list";
+	}
+	prideColors = pride;
 	prideMix = ui_color_mix;
 
 #ifdef HAS_UPDATER
