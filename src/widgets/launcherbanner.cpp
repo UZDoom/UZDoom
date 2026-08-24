@@ -37,14 +37,16 @@ std::vector<Color::Color> getColors(FName id)
 		uint32_t data[19]; // alternate {space, color}. if space is 0, that is the end of the flag.
 	};
 	struct Flag tints[] = { // sorted alphabetically
+		{ "aceflux",      { 1, 0xC62253, 1, 0xC12678, 1, 0xC0279A, 1, 0xA928AC, 1, 0x8C26AE, 0 }},
 		{ "agender",      { 1, 0x000000, 1, 0xBCC4C7, 1, 0xFFFFFF, 1, 0xB7F684, 1, 0xFFFFFF, 1, 0xBCC4C7, 1, 0x000000, 0 }},
 		{ "aroace",       { 1, 0xE28C00, 1, 0xECCD00, 1, 0xFFFFFF, 1, 0x62AEDC, 1, 0x203856, 0 }},
-		{ "aroflux",      {1, 0xe7516a, 1, 0xd86d65, 1, 0xb7a55d, 1, 0xa3c95a, 1, 0x92e454, 0 }},
+		{ "aroflux",      { 1, 0xE7516A, 1, 0xD86D65, 1, 0xB7A55D, 1, 0xA3C95A, 1, 0x92E454, 0 }},
 		{ "aromantic",    { 1, 0x3DA542, 1, 0xA7D379, 1, 0xFFFFFF, 1, 0xA9A9A9, 1, 0x000000, 0 }},
 		{ "asexual",      { 1, 0x000000, 1, 0xA3A3A3, 1, 0xFFFFFF, 1, 0x800080, 0 }},
 		{ "bear",         { 1, 0x613704, 1, 0xD46300, 1, 0xFDDC62, 1, 0xFDE5B7, 1, 0xFFFFFF, 1, 0x545454, 1, 0x000000, 0 }},
 		{ "bisexual",     { 2, 0xD60270, 1, 0x9B4F96, 2, 0x0038A8, 0 }},
 		{ "demisexual",   { 5, 0xFFFFFF, 1, 0x6E0070, 1, 0x000000, 1, 0x6E0070, 5, 0xD2D2D2, 0 }},
+		{ "diversity",    { 1, 0xCD66FF, 1, 0xFF6599, 1, 0xFF0000, 1, 0xFF9900, 1, 0xFFFF01, 1, 0x009A00, 1, 0x0099CB, 1, 0x330099, 1, 0x990099, 0 }},
 		{ "gay",          { 1, 0x078D70, 1, 0x26CEAA, 1, 0x98E8C1, 1, 0xFFFFFF, 1, 0x7BADE2, 1, 0x5049CC, 1, 0x3D1A78, 0 }},
 		{ "genderfluid",  { 1, 0xFF76A4, 1, 0xFFFFFF, 1, 0xC011D7, 1, 0x000000, 1, 0x2F3CBE, 0 }},
 		{ "genderqueer",  { 1, 0xB57EDC, 1, 0xFFFFFF, 1, 0x4A8123, 0 }},
