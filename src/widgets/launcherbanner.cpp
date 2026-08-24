@@ -102,6 +102,23 @@ std::vector<Color::Color> getColors(FName id)
 			}
 		}
 	}
+	else
+	{
+		FString data = id.GetChars();
+		data.ToLower();
+		auto split = data.Split(",", FString::TOK_KEEPEMPTY);
+		for (auto &str: split)
+		{
+			unsigned c = strtoul(str.GetChars(), nullptr, 16);
+			if (c > 0xFFFFFF || str.Len() != 6 || str[1] == 'x') break;
+			colors.push_back(Color::rgb(c));
+		}
+		if (split.size() != colors.size())
+		{
+			colors.clear();
+			Printf("Unknown flag '%s'\n", data.GetChars());
+		}
+	}
 
 	return colors;
 }
