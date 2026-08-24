@@ -565,6 +565,7 @@ file( GLOB HEADER_FILES
 	common/thirdparty/utf8proc/*.h
 	common/rendering/*.h
 	common/rendering/gl_load/*.h
+	common/rendering/gl/*.h
 	common/rendering/gles/*.h
 	common/rendering/hwrenderer/data/*.h
 	common/rendering/vulkan/*.h
