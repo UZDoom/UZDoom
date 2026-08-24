@@ -280,7 +280,7 @@ FGameConfigFile::FGameConfigFile ()
 		"# contains a search directory.\n\n"
 
 		"# $DOOMWADPATH references a system environment variable of the same name whose\n"
-		"# value contains a colon (on Windows) or semicolon (on other systems) delimited\n"
+		"# value contains a semicolon (on Windows) or colon (on other systems) delimited\n"
 		"# list of searchable directories.\n"
 		"# It's *similar* to $DOOMWADDIR, except that $DOOMWADPATH is a list of possible\n"
 		"# search directories.\n\n"
