@@ -1,0 +1,3 @@
+This is the default bank from the Nineko's MIDI2VGM VB6-written utility.
+It contained no drums, and therefore, the drumkit was imported from the
+"gems-fmlib-gmize.wopn" bank.
