@@ -779,18 +779,12 @@ public:
 				th->friendlyseeblocks = CheckInt(key);
 				break;
 
-			case NAME_light_softshadowradius:
-			case NAME_light_linearity:
-			case NAME_light_noshadowmap:
-			case NAME_light_dontlightactors:
-			case NAME_light_dontlightmap:
-			case NAME_light_shadowminquality:
 			case NAME_lm_suncolor:
 			case NAME_lm_sunintensity:
 			case NAME_lm_sampledist:
-			case NAME_lm_bounce:
-			case NAME_lm_ao:
-			case NAME_lm_dynamic:
+			case NAME_lm_lightprobegridsize:
+			case NAME_lm_bounces:
+			case NAME_lm_texturesize:
 				CHECK_N(Zd | Zdt)
 					break;
 
@@ -1172,6 +1166,8 @@ public:
 			case NAME_lm_sampledist_top:
 			case NAME_lm_sampledist_mid:
 			case NAME_lm_sampledist_bot:
+			case NAME_lm_nolightmap:
+			case NAME_lm_nocastshadows:
 				CHECK_N(Zd | Zdt)
 				break;
 
@@ -1531,6 +1527,8 @@ public:
 			case NAME_lm_sampledist_top:
 			case NAME_lm_sampledist_mid:
 			case NAME_lm_sampledist_bot:
+			case NAME_lm_nolightmap:
+			case NAME_lm_nocastshadows:
 				CHECK_N(Zd | Zdt)
 					break;
 
@@ -2211,7 +2209,8 @@ public:
 
 				case NAME_lm_sampledist_floor:
 				case NAME_lm_sampledist_ceiling:
-				case NAME_lm_dynamic:
+				case NAME_lm_nolightmap:
+				case NAME_lm_nocastshadows:
 					CHECK_N(Zd | Zdt)
 					break;
 
