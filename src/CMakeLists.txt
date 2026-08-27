@@ -1456,20 +1456,13 @@ else()
 endif()
 
 add_custom_command(TARGET zdoom POST_BUILD
-	COMMAND ${CMAKE_COMMAND} -E make_directory "${ZDOOM_RESOURCE_DIR}/soundfonts"
-	COMMAND ${CMAKE_COMMAND} -E make_directory "${ZDOOM_RESOURCE_DIR}/fm_banks"
+	COMMAND ${CMAKE_COMMAND} -E copy_directory
+		"${CMAKE_SOURCE_DIR}/soundfont"
+		"${ZDOOM_RESOURCE_DIR}/soundfonts"
 
-	COMMAND ${CMAKE_COMMAND} -E copy_if_different
-		"${CMAKE_SOURCE_DIR}/soundfont/uzdoom.sf2"
-		"${ZDOOM_RESOURCE_DIR}/soundfonts/uzdoom.sf2"
-
-	COMMAND ${CMAKE_COMMAND} -E copy_if_different
-		"${CMAKE_SOURCE_DIR}/fm_banks/GENMIDI.GS.wopl"
-		"${ZDOOM_RESOURCE_DIR}/fm_banks/GENMIDI.GS.wopl"
-
-	COMMAND ${CMAKE_COMMAND} -E copy_if_different
-		"${CMAKE_SOURCE_DIR}/fm_banks/gs-by-papiezak-and-sneakernets.wopn"
-		"${ZDOOM_RESOURCE_DIR}/fm_banks/gs-by-papiezak-and-sneakernets.wopn"
+	COMMAND ${CMAKE_COMMAND} -E copy_directory
+		"${CMAKE_SOURCE_DIR}/fm_banks"
+		"${ZDOOM_RESOURCE_DIR}/fm_banks"
 
 	VERBATIM
 )
