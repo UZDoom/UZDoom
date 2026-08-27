@@ -312,10 +312,10 @@ jobs:
         rm -rf soundfonts fm_banks
 
         mkdir -p package/soundfonts
-        cp -f ../soundfont/uzdoom.sf2 package/soundfonts
+        cp -f ../soundfont/* package/soundfonts
 
         mkdir -p package/fm_banks
-        cp -f ../fm_banks/GENMIDI.GS.wopl ../fm_banks/gs-by-papiezak-and-sneakernets.wopn package/fm_banks
+        cp -f ../fm_banks/* package/fm_banks
 
         shopt -s nullglob
         mv -f *.exe *.pk3 *.pdb package
