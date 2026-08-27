@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-08-10 23:42-0400\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2026-08-24 13:06+0000\n"
+"Last-Translator: Tim Richter <jank21976@gmail.com>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: python 3.14.6 polib 1.2.0\n"
+"X-Generator: Weblate 2026.9.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "Drücke eine Taste."
@@ -553,16 +553,16 @@ msgid "OB_FRIENDLY4"
 msgstr "%k hat wieder einen Freund verloren."
 
 msgid "GOTARMOR"
-msgstr "Panzer genommen."
+msgstr "Rüstung genommen."
 
 msgid "GOTMEGA"
-msgstr "MegaPanzer genommen!"
+msgstr "MegaRüstung genommen!"
 
 msgid "GOTHTHBONUS"
 msgstr "Gesundheitsbonus genommen."
 
 msgid "GOTARMBONUS"
-msgstr "Panzerbonus genommen."
+msgstr "Rüstungsbonus genommen."
 
 msgid "GOTSTIM"
 msgstr "Stimpack genommen."
@@ -600,6 +600,7 @@ msgstr "Unverwundbarkeit!"
 msgid "GOTBERSERK"
 msgstr "Berserker!"
 
+#, fuzzy
 msgid "GOTINVIS"
 msgstr "Teilweise Unsichtbarkeit"
 

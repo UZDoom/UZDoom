@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-08-10 23:42-0400\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2026-08-25 08:51+0000\n"
+"Last-Translator: Arif Budiman <arifpedia@gmail.com>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: python 3.14.6 polib 1.2.0\n"
+"X-Generator: Weblate 2026.9.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "Tekan sembarang tombol."
@@ -4237,7 +4237,7 @@ msgid "GLTEXMNU_SORTDRAWLIST"
 msgstr "Urutkan daftar gambar berdasarkan tekstur"
 
 msgid "GLLIGHTMNU_TITLE"
-msgstr "Cahaya Dinamis"
+msgstr "Lampu Dinamis"
 
 #, fuzzy
 msgid "GLLIGHTMNU_LIGHTSENABLED"
@@ -5357,3 +5357,136 @@ msgstr "Mode Kebal: {AKTIF|NONAKTIF}"
 
 msgid "MSG{ON|OFF}"
 msgstr "Pesan: {AKTIF|MATI}"
+
+msgid "OPTVAL_VTAZDOOM"
+msgstr "Otomatis (ZDoom Diutamakan)"
+
+msgid "OPTVAL_VTAVANILLA"
+msgstr "Otomatis (Vanilla Diutamakan)"
+
+msgid "UPDATER_CHECK_FOR_UPDATES"
+msgstr "Periksa Pembaruan"
+
+msgid "UPDATER_PROMPT_TO_INSTALL"
+msgstr "Minta untuk menginstal"
+
+msgid "UPDATER_SETTINGS"
+msgstr "Pengaturan Pembaruan"
+
+msgid "UPDATER_INTERVAL"
+msgstr "Periksa setiap:"
+
+msgid "UPDATER_UPDATE_AVAILABLE"
+msgstr "Pembaruan Baru Tersedia"
+
+msgid "UPDATER_UPDATE_SKIP"
+msgstr "Lewati Pembaruan"
+
+msgid "UPDATER_TITLE"
+msgstr "Pemeriksa Pembaruan"
+
+msgid "UPDATER_DISABLE"
+msgstr "Nonaktifkan Pemeriksa Pembaruan"
+
+msgid "UPDATER_CHECK_FAILED"
+msgstr "Pemeriksaan Pembaruan Gagal"
+
+msgid "UPDATER_UPDATE_FAILED"
+msgstr "Pembaruan Gagal"
+
+msgid "UPDATER_YES_PROMPT"
+msgstr "Ya, dan minta untuk menginstal pembaruan"
+
+msgid "UPDATER_DISMISS_UPDATE"
+msgstr "Tutup Pembaruan?"
+
+msgid "UPDATER_ASK_AUTO"
+msgstr ""
+"Apakah Anda ingin secara otomatis memeriksa pembaruan?\n"
+"(ini dapat diubah nanti di tab opsi)"
+
+msgid "UPDATER_ASK_INTERVAL"
+msgstr ""
+"Seberapa sering Anda ingin memeriksa pembaruan?\n"
+"(ini dapat diubah nanti di tab opsi)"
+
+msgid "UPDATER_ZIP_FAIL"
+msgstr "Gagal membuka file zip"
+
+msgid "UPDATER_ZIP_ERROR"
+msgstr "Gagal mengekstrak zip, kesalahan: '{}' saat menulis file '{}'"
+
+msgid "UPDATER_UPDATING"
+msgstr "Memperbarui..."
+
+msgid "UPDATER_STARTING"
+msgstr "Memulai Unduhan..."
+
+msgid "UPDATER_SUCCESS"
+msgstr "Pembaruan berhasil, peluncur akan dimulai ulang sekarang."
+
+msgid "UPDATER_UP_TO_DATE"
+msgstr "Sudah Terbaru!"
+
+msgid "UPDATER_CANCELLED"
+msgstr "Pembaruan dibatalkan"
+
+msgid "UPDATER_INVALID_JSON"
+msgstr "JSON Pembaruan Tidak Valid"
+
+msgid "UPDATER_NOT_A_DIR"
+msgstr "'{}' bukan direktori"
+
+msgid "OPTVAL_DISABLE"
+msgstr "Nonaktifkan"
+
+msgid "OPTVAL_NOTIFY"
+msgstr "Beri Tahu"
+
+msgid "OPTVAL_DAILY"
+msgstr "Harian"
+
+msgid "OPTVAL_WEEKLY"
+msgstr "Mingguan"
+
+msgid "OPTVAL_MONTHLY"
+msgstr "Bulanan"
+
+msgid "TXT_DOWNLOADING"
+msgstr "Mengunduh"
+
+msgid "TXT_EXPERIMENTAL"
+msgstr "Eksperimental"
+
+msgid "TXT_UPDATE"
+msgstr "Perbarui"
+
+msgid "TXT_UPDATED"
+msgstr "Diperbarui"
+
+msgid "TXT_CANCELLED"
+msgstr "Dibatalkan"
+
+msgid "TXT_BACK"
+msgstr "Kembali"
+
+msgid "TXT_DISMISS"
+msgstr "Tutup"
+
+msgid "TXT_SKIP"
+msgstr "Lewati"
+
+msgid "TXT_CONFIRM"
+msgstr "Konfirmasi"
+
+msgid "TXT_OK"
+msgstr "OK"
+
+msgid "CMPTMNU_TRANSFERSECRET"
+msgstr "Transfer khusus perubahan lantai BOOM meneruskan rahasia."
+
+msgid "PICKER_THEME"
+msgstr "Tema"
+
+msgid "OPTVAL_LIGHT"
+msgstr "Terang"

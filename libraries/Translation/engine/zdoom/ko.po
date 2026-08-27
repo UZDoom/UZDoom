@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-08-10 23:42-0400\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2026-08-19 07:56+0000\n"
+"Last-Translator: Yu Ji Wan <z1wan@hanmail.net>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/ko/>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: python 3.14.6 polib 1.2.0\n"
+"X-Generator: Weblate 2026.9.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "키를 누르시오."
@@ -5340,3 +5340,130 @@ msgstr "무적 모드: {켜짐|끔}"
 
 msgid "MSG{ON|OFF}"
 msgstr "메시지: {켜짐|끔}"
+
+msgid "CMPTMNU_TRANSFERSECRET"
+msgstr "BOOM의 층 이동 특별 전송 비밀."
+
+msgid "UPDATER_CHECK_FOR_UPDATES"
+msgstr "업데이트를 확인하세요"
+
+msgid "UPDATER_PROMPT_TO_INSTALL"
+msgstr "설치하라는 메시지"
+
+msgid "UPDATER_SETTINGS"
+msgstr "업데이트 설정"
+
+msgid "UPDATER_INTERVAL"
+msgstr "다음 사항을 모두 확인하세요:"
+
+msgid "UPDATER_UPDATE_AVAILABLE"
+msgstr "새로운 업데이트가 있습니다"
+
+msgid "UPDATER_UPDATE_SKIP"
+msgstr "업데이트 건너뛰기"
+
+msgid "UPDATER_TITLE"
+msgstr "업데이트 확인"
+
+msgid "UPDATER_DISABLE"
+msgstr "업데이트 확인 기능 비활성화"
+
+msgid "UPDATER_CHECK_FAILED"
+msgstr "업데이트 확인 실패"
+
+msgid "UPDATER_UPDATE_FAILED"
+msgstr "업데이트 실패"
+
+msgid "UPDATER_YES_PROMPT"
+msgstr "네, 그리고 업데이트 설치를 요청하는 메시지가 표시됩니다"
+
+msgid "UPDATER_DISMISS_UPDATE"
+msgstr "업데이트를 취소하시겠습니까?"
+
+msgid "UPDATER_ASK_AUTO"
+msgstr ""
+"업데이트를 자동으로 확인하시겠습니까?\n"
+"(이 설정은 나중에 옵션 탭에서 변경할 수 있습니다.)"
+
+msgid "UPDATER_ASK_INTERVAL"
+msgstr ""
+"업데이트를 얼마나 자주 확인하시겠습니까?\n"
+"(이 설정은 나중에 옵션 탭에서 변경할 수 있습니다.)"
+
+msgid "UPDATER_ZIP_FAIL"
+msgstr "압축 파일을 열 수 없습니다"
+
+msgid "UPDATER_ZIP_ERROR"
+msgstr "압축 파일 압축 해제에 실패했습니다. 파일 '{}'을 쓰는 동안 '{}' 오류가 발생했습니다"
+
+msgid "UPDATER_UPDATING"
+msgstr "업데이트 중..."
+
+msgid "UPDATER_STARTING"
+msgstr "다운로드 시작 중..."
+
+msgid "UPDATER_SUCCESS"
+msgstr "업데이트가 성공적으로 완료되었습니다. 런처가 다시 시작됩니다."
+
+msgid "UPDATER_UP_TO_DATE"
+msgstr "최신 정보입니다!"
+
+msgid "UPDATER_CANCELLED"
+msgstr "업데이트가 취소되었습니다"
+
+msgid "UPDATER_INVALID_JSON"
+msgstr "잘못된 업데이트 JSON"
+
+msgid "UPDATER_NOT_A_DIR"
+msgstr "'{}'는 디렉터리가 아닙니다"
+
+msgid "OPTVAL_DISABLE"
+msgstr "비활성화"
+
+msgid "OPTVAL_NOTIFY"
+msgstr "알림"
+
+msgid "OPTVAL_DAILY"
+msgstr "일일"
+
+msgid "OPTVAL_WEEKLY"
+msgstr "주간"
+
+msgid "OPTVAL_MONTHLY"
+msgstr "월간"
+
+msgid "TXT_DOWNLOADING"
+msgstr "다운로드 중"
+
+msgid "TXT_EXPERIMENTAL"
+msgstr "실험적인"
+
+msgid "TXT_UPDATE"
+msgstr "업데이트"
+
+msgid "TXT_UPDATED"
+msgstr "업데이트됨"
+
+msgid "TXT_CANCELLED"
+msgstr "취소"
+
+msgid "TXT_BACK"
+msgstr "뒤쪽에"
+
+msgid "TXT_DISMISS"
+msgstr "해고하다"
+
+msgid "TXT_SKIP"
+msgstr "건너뛰다"
+
+msgid "TXT_CONFIRM"
+msgstr "확인하다"
+
+msgid "TXT_OK"
+msgstr "좋아요"
+
+msgid "PICKER_THEME"
+msgstr "주제"
+
+msgid "OPTVAL_LIGHT"
+msgstr "빛"

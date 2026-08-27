@@ -966,6 +966,9 @@ msgstr ""
 msgid "OPTVAL_MAMEOPL2"
 msgstr ""
 
+msgid "OPTVAL_DOSBOXOPL2"
+msgstr ""
+
 msgid "OPTVAL_DOSBOXOPL3"
 msgstr ""
 
@@ -1002,7 +1005,13 @@ msgstr ""
 msgid "OPTVAL_OPALOPL3"
 msgstr ""
 
-msgid "OPTVAL_NUKEDOPL3174"
+msgid "OPTVAL_NUKEDOPL3FAST"
+msgstr ""
+
+msgid "OPTVAL_NUKEDOPL2"
+msgstr ""
+
+msgid "OPTVAL_NUKEDCQM"
 msgstr ""
 
 msgid "OPTVAL_NUKEDOPN2YM3438"
@@ -1081,6 +1090,15 @@ msgid "ADLVLMODEL_HMI"
 msgstr ""
 
 msgid "ADLVLMODEL_HMIOLD"
+msgstr ""
+
+msgid "ADLVLMODEL_MS_ADLIB"
+msgstr ""
+
+msgid "ADLVLMODEL_IMF_CREATOR"
+msgstr ""
+
+msgid "ADLVLMODEL_OCONNEL"
 msgstr ""
 
 msgid "ADLCHANALLOC_AUTO"

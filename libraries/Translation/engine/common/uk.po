@@ -1008,9 +1008,6 @@ msgstr "MAME YM2608"
 msgid "OPTVAL_OPALOPL3"
 msgstr "Opal OPL3"
 
-msgid "OPTVAL_NUKEDOPL3174"
-msgstr "Nuked OPL3 v1.7.4"
-
 msgid "OPTVAL_NUKEDOPN2YM3438"
 msgstr "Nuked OPN2 (YM3438)"
 

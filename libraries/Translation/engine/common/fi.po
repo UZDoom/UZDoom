@@ -1010,9 +1010,6 @@ msgstr ""
 msgid "OPTVAL_OPALOPL3"
 msgstr ""
 
-msgid "OPTVAL_NUKEDOPL3174"
-msgstr ""
-
 msgid "OPTVAL_NUKEDOPN2YM3438"
 msgstr ""
 
