@@ -2,6 +2,8 @@ make_release_only()
 
 add_library(adl OBJECT)
 
+include(models/opl_models.cmake)
+
 target_sources(adl
 PRIVATE
 	adlmidi_midiplay.cpp
@@ -13,12 +15,17 @@ PRIVATE
 	chips/opal_opl3.cpp
 	chips/opal/opal.c
 	chips/dosbox/dbopl.cpp
-	chips/nuked_opl3_v174.cpp
 	chips/java_opl3.cpp
+	chips/dosbox_opl2.cpp
 	chips/dosbox_opl3.cpp
 	chips/nuked_opl3.cpp
-	chips/nuked/nukedopl3_174.c
 	chips/nuked/nukedopl3.c
+	chips/nuked_opl3_fast.cpp
+	chips/nuked_fast/nukedopl3_fast.c
+	chips/nuked_cqm.cpp
+	chips/nuked_cqm/cqm.c
+	chips/nuked_opl2.cpp
+	chips/nuked/nukedopl2.c
 	chips/ym3812_lle.cpp
 	chips/ym3812_lle/nopl2.c
 	chips/ym3812_lle/nuked_fmopl2.c
@@ -31,6 +38,7 @@ PRIVATE
 	chips/mame_opl2.cpp
 	# chips/mame/mame_fmopl.cpp  # Duplicate of ../oplsynth/fmopl.cpp
 	wopl/wopl_file.c
+	${OPL_MODELS_SOURCES}
 )
 
 if(COMPILER_SUPPORTS_CXX14)

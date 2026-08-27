@@ -1,7 +1,7 @@
 /*
- * Interfaces over Yamaha OPL3 (YMF262) chip emulators
+ * Interfaces over Yamaha OPL2 (YM3812) and Yamaha OPL3 (YMF262) chip emulators
  *
- * Copyright (c) 2017-2025 Vitaly Novichkov (Wohlstand)
+ * Copyright (c) 2017-2026 Vitaly Novichkov (Wohlstand)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -18,29 +18,31 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
-#ifndef NUKED_OPL3174_H
-#define NUKED_OPL3174_H
+#ifndef VPC_OPL3_EMU
+#define VPC_OPL3_EMU
 
 #include "opl_chip_base.h"
 
-class NukedOPL3v174 final : public OPLChipBaseT<NukedOPL3v174>
+class VpcOPL3 final : public OPLChipBaseBufferedT<VpcOPL3>
 {
     void *m_chip;
 public:
-    NukedOPL3v174();
-    ~NukedOPL3v174() override;
+    VpcOPL3();
+    ~VpcOPL3() override;
 
     bool canRunAtPcmRate() const override { return false; }
     void setRate(uint32_t rate) override;
     void reset() override;
     void writeReg(uint16_t addr, uint8_t data) override;
     void writePan(uint16_t addr, uint8_t data) override;
+
     void nativePreGenerate() override {}
     void nativePostGenerate() override {}
-    void nativeGenerate(int16_t *frame) override;
+    void nativeGenerateN(int16_t *output, size_t frames) override;
+
     const char *emulatorName() override;
     ChipType chipType() override;
     bool hasFullPanning() override;
 };
 
-#endif // NUKED_OPL3174_H
+#endif // VPC_OPL3_EMU

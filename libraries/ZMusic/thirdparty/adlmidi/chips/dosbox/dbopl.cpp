@@ -902,12 +902,12 @@ INLINE void Channel::GeneratePercussion( Chip* chip, Bit32s* output ) {
 		sample += static_cast<Bit32u>(Op(5)->GetWave( tcIndex, tcVol ));
 	}
 	sample <<= 1;
-	if ( opl3Mode ) {
-		output[0] += sample;
-		output[1] += sample;
-	} else {
-		output[0] += sample;
-	}
+	// if ( opl3Mode ) {
+	output[0] += sample;
+	output[1] += sample;
+	// } else {
+	// 	output[0] += sample;
+	// }
 }
 
 template<SynthMode mode>
@@ -968,7 +968,7 @@ Channel* Channel::BlockTemplate( Chip* chip, Bit32u samples, Bit32s* output ) {
 	for ( Bitu i = 0; i < samples; i++ ) {
 		//Early out for percussion handlers
 		if ( mode == sm2Percussion ) {
-			GeneratePercussion<false>( chip, output + i );
+			GeneratePercussion<false>( chip, output + i * 2 );
 			continue;	//Prevent some unitialized value bitching
 		} else if ( mode == sm3Percussion ) {
 			GeneratePercussion<true>( chip, output + i * 2 );
@@ -1007,7 +1007,8 @@ Channel* Channel::BlockTemplate( Chip* chip, Bit32u samples, Bit32s* output ) {
 		switch( mode ) {
 		case sm2AM:
 		case sm2FM:
-			output[ i ] += sample;
+			output[ i * 2 + 0 ] += sample;
+			output[ i * 2 + 1 ] += sample;
 			break;
 		case sm3AM:
 		case sm3FM:
@@ -1258,14 +1259,14 @@ Bit32u Chip::WriteAddr( Bit32u port, Bit8u val ) {
 void Chip::GenerateBlock2( Bitu total, Bit32s* output ) {
 	while ( total > 0 ) {
 		Bit32u samples = ForwardLFO( static_cast<Bit32u>(total) );
-		memset(output, 0, sizeof(Bit32s) * samples);
+		memset(output, 0, sizeof(Bit32s) * samples * 2);
 //		int count = 0;
 		for( Channel* ch = chan; ch < chan + 9; ) {
 //			count++;
 			ch = (ch->*(ch->synthHandler))( this, samples, output );
 		}
 		total -= samples;
-		output += samples;
+		output += samples * 2;
 	}
 }
 
@@ -1278,14 +1279,14 @@ void Chip::GenerateBlock2_Mix( Bitu total, Bit32s* output ) {
 			ch = (ch->*(ch->synthHandler))( this, samples, output );
 		}
 		total -= samples;
-		output += samples;
+		output += samples * 2;
 	}
 }
 
 void Chip::GenerateBlock3( Bitu total, Bit32s* output  ) {
 	while ( total > 0 ) {
 		Bit32u samples = ForwardLFO( static_cast<Bit32u>(total) );
-		memset(output, 0, sizeof(Bit32s) * samples *2);
+		memset(output, 0, sizeof(Bit32s) * samples * 2);
 //		int count = 0;
 		for( Channel* ch = chan; ch < chan + 18; ) {
 //			count++;

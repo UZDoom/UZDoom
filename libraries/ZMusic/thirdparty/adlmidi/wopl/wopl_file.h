@@ -1,7 +1,7 @@
 /*
  * Wohlstand's OPL3 Bank File - a bank format to store OPL3 timbre data and setup
  *
- * Copyright (c) 2015-2025 Vitaly Novichkov <admin@wohlnet.ru>
+ * Copyright (c) 2015-2026 Vitaly Novichkov <admin@wohlnet.ru>
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the "Software"),
@@ -90,12 +90,14 @@ typedef enum WOPL_InstrumentFlags
     WOPL_Ins_Pseudo4op  = 0x02,
     /* Is a blank instrument entry */
     WOPL_Ins_IsBlank    = 0x04,
+    /* Should melodic note play a fixed tone? */
+    WOPL_Ins_FixedNote  = 0x40,
 
     /* RythmMode flags mask */
-    WOPL_RhythmModeMask  = 0x38,
+    WOPL_RhythmModeMask = 0x38,
 
     /* Mask of the flags range */
-    WOPL_Ins_ALL_MASK   = 0x07
+    WOPL_Ins_ALL_MASK   = 0x47
 } WOPL_InstrumentFlags;
 
 typedef enum WOPL_RhythmMode

@@ -2,7 +2,7 @@
  * libADLMIDI is a free Software MIDI synthesizer library with OPL3 emulation
  *
  * Original ADLMIDI code: Copyright (c) 2010-2014 Joel Yliluoma <bisqwit@iki.fi>
- * ADLMIDI Library API:   Copyright (c) 2015-2025 Vitaly Novichkov <admin@wohlnet.ru>
+ * ADLMIDI Library API:   Copyright (c) 2015-2026 Vitaly Novichkov <admin@wohlnet.ru>
  *
  * Library is based on the ADLMIDI, a MIDI player for Linux and Windows with OPL3 emulation:
  * http://iki.fi/bisqwit/source/adlmidi.html
@@ -24,9 +24,14 @@
 #ifndef ADLMIDI_MIDIPLAY_HPP
 #define ADLMIDI_MIDIPLAY_HPP
 
+#ifndef ENABLE_HW_OPL_DOS
+#   include <set>
+#endif
+
 #include "oplinst.h"
 #include "adlmidi_private.hpp"
 #include "adlmidi_ptr.hpp"
+#include "adlmidi_arr.hpp"
 #include "structures/pl_list.hpp"
 
 /**
@@ -65,6 +70,13 @@ struct MIDIEventHooks
 
 class MIDIplay
 {
+#if defined(__DJGPP__)
+public:
+    void dpmi_lock_begin() {}
+private:
+    DPMILocker<MIDIplay> m_dpmi_locker;
+#endif
+
     friend void adl_reset(struct ADL_MIDIPlayer*);
 public:
     explicit MIDIplay(unsigned long sampleRate = 22050);
@@ -207,20 +219,22 @@ public:
             {
                 //! Destination chip channel
                 uint16_t chip_chan;
-                //! ins, inde to adl[]
-                OplTimbre op;
-                //! Is this voice must be detunable?
-                bool    pseudo4op;
+                //! Instrument entry
+                const OplTimbre *op;
+                //! Should we play the second 2-op voice?
+                bool pseudo4op;
 
                 void assign(const Phys &oth)
                 {
                     op = oth.op;
                     pseudo4op = oth.pseudo4op;
                 }
+
                 bool operator==(const Phys &oth) const
                 {
                     return (op == oth.op) && (pseudo4op == oth.pseudo4op);
                 }
+
                 bool operator!=(const Phys &oth) const
                 {
                     return !operator==(oth);
@@ -236,7 +250,7 @@ public:
             {
                 Phys *ph = NULL;
 
-                for(unsigned i = 0; i < chip_channels_count && !ph; ++i)
+                for(unsigned i = 0; i < chip_channels_count && i < MaxNumPhysItemCount && !ph; ++i)
                 {
                     if(chip_channels[i].chip_chan == chip_chan)
                         ph = &chip_channels[i];
@@ -269,8 +283,10 @@ public:
             {
                 intptr_t pos = ph - chip_channels;
                 assert(pos >= 0 && pos < static_cast<intptr_t>(chip_channels_count));
-                for(intptr_t i = pos + 1; i < static_cast<intptr_t>(chip_channels_count); ++i)
+
+                for(intptr_t i = pos + 1; i < static_cast<intptr_t>(chip_channels_count) && i < MaxNumPhysItemCount; ++i)
                     chip_channels[i - 1] = chip_channels[i];
+
                 --chip_channels_count;
             }
 
@@ -358,6 +374,53 @@ public:
             notes_iterator it = create_activenote(note);
             assert(!it.is_end());
             return it;
+        }
+
+        /**
+         * @brief Emergency attempt to retrieve a free active note slot by clean-up from the junk
+         * @return true if got one extra free channel, otherwise it's a dead end
+         */
+        bool drop_oldest_blank_note(MIDIplay *play, size_t midCh)
+        {
+            // Attempt to clean blank notes
+            for(notes_iterator it = activenotes.begin(); it != activenotes.end(); ++it)
+            {
+                if(it->value.isBlank)
+                {
+                    activenotes.erase(it);
+                    return true;
+                }
+            }
+
+            // Then attempt to clean MIDI notes that has no active chip voices
+            for(notes_iterator it = activenotes.begin(); it != activenotes.end(); ++it)
+            {
+                if(it->value.chip_channels_count == 0)
+                {
+                    activenotes.erase(it);
+                    return true;
+                }
+            }
+
+            // And then attempt to off one of working notes
+            for(notes_iterator it = activenotes.begin(); it != activenotes.end(); ++it)
+            {
+                play->noteUpdate(midCh, it, Upd_Off);
+                return true;
+            }
+
+            return false;
+        }
+
+        bool has_free_active_notes(MIDIplay *play, size_t midCh)
+        {
+            if(activenotes.size() >= activenotes.capacity())
+            {
+                if(!drop_oldest_blank_note(play, midCh)) // Attempt to rescue the situation
+                    return false; // Overflow!
+            }
+
+            return true;
         }
 
         /**
@@ -464,11 +527,11 @@ public:
         {
             uint16_t    MidCh;
             uint8_t     note;
-            bool operator==(const Location &l) const
-                { return MidCh == l.MidCh && note == l.note; }
-            bool operator!=(const Location &l) const
-                { return !operator==(l); }
+
+            bool operator==(const Location &l) const { return MidCh == l.MidCh && note == l.note; }
+            bool operator!=(const Location &l) const { return !operator==(l); }
         };
+
         struct LocationData
         {
             Location loc;
@@ -560,6 +623,11 @@ public:
     AdlMIDI_UPtr<BW_MidiRtInterface> m_sequencerInterface;
 
     /**
+     * @brief Devices filter mask state (#ADLMIDI_DeviceFilter)
+     */
+    uint32_t m_sequencerDeviceMask;
+
+    /**
      * @brief Initialize MIDI sequencer interface
      */
     void initSequencerInterface();
@@ -619,7 +687,7 @@ public:
     };
 
     //! Available MIDI Channels
-    std::vector<MIDIchannel> m_midiChannels;
+    adl_array<MIDIchannel, true> m_midiChannels;
 
     //! CMF Rhythm mode
     bool    m_cmfPercussionMode;
@@ -645,15 +713,30 @@ public:
 
 private:
     //! Per-track MIDI devices map
-    std::map<std::string, size_t> m_midiDevices;
+    struct MidiDeviceEntry
+    {
+        char name[100];
+        size_t track;
+    } m_midiDevices[127];
+    static const size_t m_midiDevicesSize = 127;
+
+    //! Number of used MIDI devices (up to 100)
+    size_t m_midiDevicesUsed;
+
     //! Current MIDI device per track
-    std::map<size_t /*track*/, size_t /*channel begin index*/> m_currentMidiDevice;
+    size_t m_currentMidiDevice[127];
+    static const size_t m_currentMidiDeviceMax = 127;
 
     //! Padding to fix CLanc code model's warning
     char _padding[7];
 
     //! Chip channels map
-    std::vector<AdlChannel> m_chipChannels;
+    adl_array<AdlChannel, true> m_chipChannels;
+    //! Per-chip bitmask of chip channels reserved by the user from MIDI voice
+    //! allocation. Bit N set = channel N on that chip will be skipped by the
+    //! note allocator so raw OPL writes via realTime_rawOPL_Chip won't be
+    //! clobbered by MIDI playback.
+    adl_array<uint32_t> m_reservedChipChannels;
     //! Counter of arpeggio processing
     size_t m_arpeggioCounter;
 
@@ -665,12 +748,14 @@ private:
     //! Local error string
     std::string errorStringOut;
 
+#ifndef ENABLE_HW_OPL_DOS
     //! Missing instruments catches
     std::set<size_t> caugh_missing_instruments;
     //! Missing melodic banks catches
     std::set<size_t> caugh_missing_banks_melodic;
     //! Missing percussion banks catches
     std::set<size_t> caugh_missing_banks_percussion;
+#endif
 
 public:
 
@@ -876,11 +961,60 @@ public:
     size_t realTime_currentDevice(size_t track);
 
     /**
-     * @brief Send raw OPL chip command
-     * @param reg OPL Register
+     * @brief Send a raw OPL2 chip command to chip 0.
+     *
+     * Used internally by the IMF/KLM sequencer which stores OPL2-era register
+     * streams. Because libADLMIDI always runs chips in OPL3-extended mode for
+     * stereo output, this function auto-ORs 0x30 into connection-register
+     * (0xC0..0xC8) values so an OPL2-expecting stream produces non-silent
+     * output on an OPL3. Writes always target chip 0 and a single 8-bit
+     * register port; OPL3-aware code should use realTime_rawOPL3_Chip().
+     *
+     * @param reg   OPL2 register (0x00..0xFF)
      * @param value Value to write
      */
-    void realTime_rawOPL(uint8_t reg, uint8_t value);
+    void realTime_rawOPL2(uint8_t reg, uint8_t value);
+
+    /**
+     * @brief Send a raw OPL3 register write to a specific chip.
+     *
+     * Bypasses the MIDI driver entirely and writes exactly what the caller
+     * passes, with no 0xC0 fixup. Takes a 16-bit address so the upper bit can
+     * select the secondary OPL3 register bank. The caller is responsible for
+     * the OPL3 panning / stereo bits. Exposed via adl_rt_rawOPL3().
+     *
+     * @param chipId Zero-based chip index [0..m_synth->m_numChips-1]
+     * @param reg    OPL3 register address (0x000..0x1FF)
+     * @param value  Register value
+     * @return 1 on success, 0 on out-of-range arguments
+     */
+    int realTime_rawOPL3_Chip(size_t chipId, uint16_t reg, uint8_t value);
+
+    /**
+     * @brief Reserve chip channels so the note allocator skips them.
+     *
+     * The caller can then safely drive those channels via raw OPL writes
+     * (realTime_rawOPL3_Chip / adl_rt_rawOPL3) without MIDI stealing their
+     * voices. Reserving a primary 4-op master channel (indices 0..5) is
+     * sufficient to disable the whole pseudo-4-op voice pair: the secondary
+     * sibling is passive and only reached via its primary, so the allocator
+     * will never acquire it once the primary is reserved.
+     *
+     * @param chipId       Zero-based chip index [0..m_synth->m_numChips-1]
+     * @param channelMask  Bitmask of chip channel indices within the chip
+     *                     (bit 0 = channel 0, bit 17 = channel 17 for OPL3).
+     *                     Channel indices are per-chip, 0..22 (melodic 0..17,
+     *                     rhythm base 18..22).
+     * @return 1 on success, 0 on invalid chipId
+     */
+    int reserveChipChannels(size_t chipId, uint32_t channelMask);
+
+    /**
+     * @brief Get the reservation mask currently in effect for a chip.
+     * @param chipId Zero-based chip index
+     * @return Bitmask of reserved per-chip channels, or 0 if chipId is out of range.
+     */
+    uint32_t getReservedChipChannels(size_t chipId) const;
 
 #if defined(ADLMIDI_AUDIO_TICK_HANDLER)
     // Audio rate tick handler
@@ -961,6 +1095,18 @@ private:
         Upd_Mute   = 0x40,
         Upd_OffMute = Upd_Off + Upd_Mute
     };
+
+    void noteUpdPatch(const AdlChannel::Location &loc, const MIDIchannel::NoteInfo::Phys &ins, const OplInstMeta *ains);
+
+    void noteUpdOff(size_t midCh,
+                    MIDIchannel::NoteInfo &info,
+                    const AdlChannel::Location &loc,
+                    const MIDIchannel::NoteInfo::Phys &ins,
+                    bool mute);
+
+    void noteUpdVolume(size_t midCh, MIDIchannel::NoteInfo &info, const MIDIchannel::NoteInfo::Phys &ins);
+
+    void noteUpdFreq(size_t midCh, const AdlChannel::Location &loc, MIDIchannel::NoteInfo &info, const MIDIchannel::NoteInfo::Phys &ins);
 
     /**
      * @brief Update active note
@@ -1078,10 +1224,11 @@ private:
 public:
     /**
      * @brief Checks was device name used or not
-     * @param name Name of MIDI device
+     * @param name Non-null-terminated name of MIDI device
+     * @param len Length of string
      * @return Offset of the MIDI Channels, multiple to 16
      */
-    size_t chooseDevice(const std::string &name);
+    size_t chooseDevice(const char *name, size_t len);
 
     /**
      * @brief Gets a textual description of the state of chip channels
@@ -1090,6 +1237,11 @@ public:
      * @param size number of characters available to write
      */
     void describeChannels(char *text, char *attr, size_t size);
+
+#if defined(__DJGPP__)
+public:
+    void dpmi_lock_end() {}
+#endif
 };
 
 #endif //  ADLMIDI_MIDIPLAY_HPP

@@ -51,13 +51,44 @@ typedef struct {
     uint32_t writebuf_last;
     opl3_writebuf writebuf[OPL_WRITEBUF_SIZE];
     int32_t  writebuf_size;
+    uint32_t writebuf_cycle;
 } nopl3_t;
+
+static void nopl3_write2(nopl3_t *chip, int port, int val);
 
 static void nopl3_cycle(nopl3_t *chip, int size)
 {
+    opl3_writebuf* writebuf;
     int i;
+
     for (i = 0; i < (size * 576) / 8; i++)
     {
+        if (chip->writebuf_size > 0 && chip->writebuf_cycle == 0)
+        {
+            writebuf = &chip->writebuf[chip->writebuf_cur];
+
+            if (writebuf->reg & 4)
+            {
+                /* Address */
+                writebuf->reg &= 3;
+                nopl3_write2(chip, writebuf->reg, writebuf->data);
+            }
+            else
+            {
+                /* Data */
+                writebuf->reg_2 &= 3;
+                nopl3_write2(chip, writebuf->reg_2, writebuf->data_2);
+
+                chip->writebuf_cur = (chip->writebuf_cur + 1) % OPL_WRITEBUF_SIZE;
+                --chip->writebuf_size;
+            }
+
+            chip->writebuf_cycle = 32;
+        }
+
+        if (chip->writebuf_cycle > 0)
+            --chip->writebuf_cycle;
+
         chip->chip.input.mclk = i & 1;
         FMOPL3_Clock(&chip->chip);
 
@@ -126,6 +157,8 @@ void nopl3_reset(void *chip)
     nopl3_t* chip2 = chip;
     int i = 0;
 
+    chip2->writebuf_cycle = 0;
+
     chip2->chip.input.ic = 0;
     for (i = 0; i < 100; i++)
         nopl3_cycle(chip2, 2);
@@ -149,26 +182,8 @@ void nopl3_getsample_one_native(void *chip, short *sndptr)
 {
     nopl3_t* chip2 = chip;
     short *p = sndptr;
-    opl3_writebuf* writebuf;
 
-    /* Address */
-    if (chip2->writebuf_size > 0)
-    {
-        writebuf = &chip2->writebuf[chip2->writebuf_cur];
-
-        writebuf->reg &= 3;
-        nopl3_write2(chip2, writebuf->reg, writebuf->data);
-        nopl3_cycle(chip2, 1);
-
-        writebuf->reg_2 &= 3;
-        nopl3_write2(chip2, writebuf->reg_2, writebuf->data_2);
-        nopl3_cycle(chip2, 1);
-
-        chip2->writebuf_cur = (chip2->writebuf_cur + 1) % OPL_WRITEBUF_SIZE;
-        --chip2->writebuf_size;
-    }
-    else
-        nopl3_cycle(chip2, 2);
+    nopl3_cycle(chip2, 2);
 
     *p++ = chip2->sample_b;
     *p++ = chip2->sample_a;

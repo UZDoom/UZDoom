@@ -379,7 +379,7 @@ uint32_t opl_registers_base<Revision>::compute_phase_step(uint32_t choffs, uint3
 //-------------------------------------------------
 //  log_keyon - log a key-on event
 //-------------------------------------------------
-
+#ifdef YMFM_DEBUG
 template<int Revision>
 std::string opl_registers_base<Revision>::log_keyon(uint32_t choffs, uint32_t opoffs)
 {
@@ -429,7 +429,7 @@ std::string opl_registers_base<Revision>::log_keyon(uint32_t choffs, uint32_t op
 
 	return buffer;
 }
-
+#endif
 
 //*********************************************************
 //  OPLL SPECIFICS
@@ -680,7 +680,7 @@ uint32_t opll_registers::compute_phase_step(uint32_t choffs, uint32_t opoffs, op
 //-------------------------------------------------
 //  log_keyon - log a key-on event
 //-------------------------------------------------
-
+#ifdef YMFM_DEBUG
 std::string opll_registers::log_keyon(uint32_t choffs, uint32_t opoffs)
 {
 	uint32_t chnum = choffs;
@@ -723,7 +723,7 @@ std::string opll_registers::log_keyon(uint32_t choffs, uint32_t opoffs)
 
 	return buffer;
 }
-
+#endif
 
 
 //*********************************************************

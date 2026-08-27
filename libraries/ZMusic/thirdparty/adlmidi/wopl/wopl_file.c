@@ -1,7 +1,7 @@
 /*
  * Wohlstand's OPL3 Bank File - a bank format to store OPL3 timbre data and setup
  *
- * Copyright (c) 2015-2025 Vitaly Novichkov <admin@wohlnet.ru>
+ * Copyright (c) 2015-2026 Vitaly Novichkov <admin@wohlnet.ru>
  *
  * Permission is hereby granted, free of charge, to any person obtaining
  * a copy of this software and associated documentation files (the "Software"),

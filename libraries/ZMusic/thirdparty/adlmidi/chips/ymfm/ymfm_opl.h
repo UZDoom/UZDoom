@@ -195,8 +195,10 @@ public:
 	// compute the phase step, given a PM value
 	uint32_t compute_phase_step(uint32_t choffs, uint32_t opoffs, opdata_cache const &cache, int32_t lfo_raw_pm);
 
+#ifdef YMFM_DEBUG
 	// log a key-on event
 	std::string log_keyon(uint32_t choffs, uint32_t opoffs);
+#endif
 
 	// system-wide registers
 	uint32_t test() const                            { return byte(0x01, 0, 8); }
@@ -401,8 +403,10 @@ public:
 	// compute the phase step, given a PM value
 	uint32_t compute_phase_step(uint32_t choffs, uint32_t opoffs, opdata_cache const &cache, int32_t lfo_raw_pm);
 
+#ifdef YMFM_DEBUG
 	// log a key-on event
 	std::string log_keyon(uint32_t choffs, uint32_t opoffs);
+#endif
 
 	// set the instrument data
 	void set_instrument_data(uint8_t const *data)

@@ -2,7 +2,7 @@
  * libOPNMIDI is a free Software MIDI synthesizer library with OPN2 (YM2612) emulation
  *
  * MIDI parser and player (Original code from ADLMIDI): Copyright (c) 2010-2014 Joel Yliluoma <bisqwit@iki.fi>
- * OPNMIDI Library and YM2612 support:   Copyright (c) 2017-2025 Vitaly Novichkov <admin@wohlnet.ru>
+ * OPNMIDI Library and YM2612 support:   Copyright (c) 2017-2026 Vitaly Novichkov <admin@wohlnet.ru>
  *
  * Library is based on the ADLMIDI, a MIDI player for Linux and Windows with OPL3 emulation:
  * http://iki.fi/bisqwit/source/adlmidi.html
@@ -23,6 +23,8 @@
 
 #include "opnmidi_opn2.hpp"
 #include "opnmidi_private.hpp"
+
+#include "models/opn_models.h"
 
 #if defined(OPNMIDI_DISABLE_NUKED_EMULATOR) && defined(OPNMIDI_DISABLE_MAME_EMULATOR) && \
     defined(OPNMIDI_DISABLE_GENS_EMULATOR) && defined(OPNMIDI_DISABLE_GX_EMULATOR) && \
@@ -156,40 +158,14 @@ int opn2_getLowestEmulator()
     return emu;
 }
 
-
-
-/***************************************************************
- *                    Volume model tables                      *
- ***************************************************************/
-
-// Mapping from MIDI volume level to OPL level value.
-
-static const uint_fast32_t s_dmx_volume_model[128] =
+const struct OpnTimbre c_defaultInsCache =
 {
-    0,  1,  3,  5,  6,  8,  10, 11,
-    13, 14, 16, 17, 19, 20, 22, 23,
-    25, 26, 27, 29, 30, 32, 33, 34,
-    36, 37, 39, 41, 43, 45, 47, 49,
-    50, 52, 54, 55, 57, 59, 60, 61,
-    63, 64, 66, 67, 68, 69, 71, 72,
-    73, 74, 75, 76, 77, 79, 80, 81,
-    82, 83, 84, 84, 85, 86, 87, 88,
-    89, 90, 91, 92, 92, 93, 94, 95,
-    96, 96, 97, 98, 99, 99, 100, 101,
-    101, 102, 103, 103, 104, 105, 105, 106,
-    107, 107, 108, 109, 109, 110, 110, 111,
-    112, 112, 113, 113, 114, 114, 115, 115,
-    116, 117, 117, 118, 118, 119, 119, 120,
-    120, 121, 121, 122, 122, 123, 123, 123,
-    124, 124, 125, 125, 126, 126, 127, 127,
-};
-
-static const uint_fast32_t W9X_volume_mapping_table[32] =
-{
-    63, 63, 40, 36, 32, 28, 23, 21,
-    19, 17, 15, 14, 13, 12, 11, 10,
-    9,  8,  7,  6,  5,  5,  4,  4,
-    3,  3,  2,  2,  1,  1,  0,  0
+    {
+        {0, 0x7F, 0, 0, 0, 0xFF, 0},
+        {0, 0x7F, 0, 0, 0, 0xFF, 0},
+        {0, 0x7F, 0, 0, 0, 0xFF, 0},
+        {0, 0x7F, 0, 0, 0, 0xFF, 0}
+    }, 0, 0, 0
 };
 
 static const uint32_t g_noteChannelsMap[6] = { 0, 1, 2, 4, 5, 6 };
@@ -204,17 +180,6 @@ static inline void getOpnChannel(size_t     in_channel,
     out_port = ((ch4 < 3) ? 0 : 1);
     out_ch = static_cast<uint32_t>(ch4 % 3);
 }
-
-
-/***************************************************************
- *               Standard frequency formula                    *
- * *************************************************************/
-
-static inline double s_commonFreq(double tone)
-{
-    return std::exp(0.057762265 * tone);
-}
-
 
 
 enum
@@ -249,6 +214,8 @@ OPN2::OPN2() :
     m_masterVolume(MasterVolumeDefault),
     m_musicMode(MODE_MIDI),
     m_volumeScale(VOLUME_Generic),
+    m_getFreq(&opnModel_genericFreqOPN2),
+    m_getVolume(&opnModel_genericVolume),
     m_channelAlloc(OPNMIDI_ChanAlloc_AUTO),
     m_lfoEnable(false),
     m_lfoFrequency(0),
@@ -274,6 +241,41 @@ bool OPN2::setupLocked()
     return (m_musicMode == MODE_CMF ||
             m_musicMode == MODE_IMF ||
             m_musicMode == MODE_RSXX);
+}
+
+void OPN2::setFrequencyModel(VolumesScale model)
+{
+    m_volumeScale = model;
+
+    // Use different frequency formulas in depend on a volume model
+    switch(m_volumeScale)
+    {
+    case VOLUME_DMX:
+        m_getVolume = &opnModel_dmxLikeVolume;
+        break;
+
+    case VOLUME_APOGEE:
+        m_getVolume = &opnModel_apogeeLikeVolume;
+        break;
+
+    case VOLUME_9X:
+        m_getVolume = &opnModel_9xLikeVolume;
+        break;
+
+    case VOLUME_NATIVE:
+        m_getVolume = &opnModel_nativeVolume;
+        break;
+
+    default:
+        m_getVolume = &opnModel_genericVolume;
+    }
+}
+
+void OPN2::resetInstCache()
+{
+    // Reset caches once bank is changed
+    opn2_fill_vector<const OpnTimbre*>(m_insCache, &c_defaultInsCache);
+    opn2_fill_vector<bool>(m_insCacheModified, false);
 }
 
 void OPN2::writeReg(size_t chip, uint8_t port, uint8_t index, uint8_t value)
@@ -303,67 +305,48 @@ void OPN2::noteOff(size_t c)
 
 void OPN2::noteOn(size_t c, double tone)
 {
-    // Hertz range: 0..131071
-    double hertz = s_commonFreq(tone);
-
-    if(hertz < 0) // Avoid infinite loop
-        return;
-
-    double coef;
-    switch(m_chipFamily)
-    {
-    case OPNChip_OPN2: default:
-        coef = 321.88557; break;
-    case OPNChip_OPNA:
-        coef = 309.12412; break;
-    }
-    hertz *= coef;
-
     size_t      chip;
     uint8_t     port;
-    uint32_t    cc;
+    uint32_t    cc, mul_offset = 0;
     size_t      ch4 = c % 6;
+    uint16_t    ftone = 0;
+    const OpnTimbre *adli = m_insCache[c];
+    bool        cacheModded = m_insCacheModified[c];
+
     getOpnChannel(c, chip, port, cc);
 
-    uint32_t octave = 0, ftone = 0, mul_offset = 0;
-    const OpnTimbre &adli = m_insCache[c];
+    if(tone < 0.0)
+        tone = 0.0; // Lower than 0 is impossible!
 
-    //Basic range until max of octaves reaching
-    while((hertz >= 1023.75) && (octave < 0x3800))
-    {
-        hertz /= 2.0;    // Calculate octave
-        octave += 0x800;
-    }
-    //Extended range, rely on frequency multiplication increment
-    while(hertz >= 2036.75)
-    {
-        hertz /= 2.0;    // Calculate octave
-        mul_offset++;
-    }
-    ftone = octave + static_cast<uint32_t>(hertz + 0.5);
+    ftone = m_getFreq(tone, &mul_offset);
 
     for(size_t op = 0; op < 4; op++)
     {
-        uint32_t reg = adli.OPS[op].data[0];
+        uint32_t reg = adli->OPS[op].data[0];
         uint16_t address = static_cast<uint16_t>(0x30 + (op * 4) + cc);
+
         if(mul_offset > 0) // Increase frequency multiplication value
         {
             uint32_t dt  = reg & 0xF0;
             uint32_t mul = reg & 0x0F;
+
             if((mul + mul_offset) > 0x0F)
             {
                 mul_offset = 0;
                 mul = 0x0F;
             }
+
             writeRegI(chip, port, address, uint8_t(dt | (mul + mul_offset)));
+            m_insCacheModified[c] = true;
         }
-        else
+        else if(cacheModded)
         {
             writeRegI(chip, port, address, uint8_t(reg));
+            m_insCacheModified[c] = false;
         }
     }
 
-    writeRegI(chip, port, 0xA4 + cc, (ftone>>8) & 0xFF);//Set frequency and octave
+    writeRegI(chip, port, 0xA4 + cc, (ftone >> 8) & 0xFF);//Set frequency and octave
     writeRegI(chip, port, 0xA0 + cc, ftone & 0xFF);
     writeRegI(chip, 0, 0x28, 0xF0 + g_noteChannelsMap[ch4]);
 }
@@ -372,26 +355,19 @@ void OPN2::touchNote(size_t c,
                      uint_fast32_t velocity,
                      uint_fast32_t channelVolume,
                      uint_fast32_t channelExpression,
-                     uint8_t brightness)
+                     uint8_t brightness,
+                     bool isDrum)
 {
     size_t      chip;
     uint8_t     port;
     uint32_t    cc;
     getOpnChannel(c, chip, port, cc);
 
-    const OpnTimbre &adli = m_insCache[c];
+    const OpnTimbre *adli = m_insCache[c];
+    uint8_t alg = adli->fbalg & 0x07;
+    bool doBrightness = false;
 
-    uint_fast32_t volume = 0;
-
-    uint8_t op_vol[4] =
-    {
-        adli.OPS[OPERATOR1].data[1],
-        adli.OPS[OPERATOR2].data[1],
-        adli.OPS[OPERATOR3].data[1],
-        adli.OPS[OPERATOR4].data[1],
-    };
-
-    bool alg_do[8][4] =
+    const bool alg_do[8][4] =
     {
         /*
          * Yeah, Operator 2 and 3 are seems swapped
@@ -409,121 +385,65 @@ void OPN2::touchNote(size_t c,
         {true ,true ,true ,true},//Algorithm #7:  W = 1 + 2 + 3 + 4
     };
 
-    switch(m_volumeScale)
+    OPNVolume_t vol =
     {
-    default:
-    case Synth::VOLUME_Generic:
-    {
-        volume = velocity * m_masterVolume *
-                 channelVolume * channelExpression;
-
-        /* If the channel has arpeggio, the effective volume of
-             * *this* instrument is actually lower due to timesharing.
-             * To compensate, add extra volume that corresponds to the
-             * time this note is *not* heard.
-             * Empirical tests however show that a full equal-proportion
-             * increment sounds wrong. Therefore, using the square root.
-             */
-        //volume = (int)(volume * std::sqrt( (double) ch[c].users.size() ));
-        const double c1 = 11.541560327111707;
-        const double c2 = 1.601379199767093e+02;
-        const uint_fast32_t minVolume = 1108075; // 8725 * 127
-
-        // The formula below: SOLVE(V=127^4 * 2^( (A-63.49999) / 8), A)
-        if(volume > minVolume)
+        (uint_fast8_t)(velocity & 0x7F),
+        (uint_fast8_t)(channelVolume & 0x7F),
+        (uint_fast8_t)(channelExpression & 0x7F),
+        (uint_fast8_t)(m_masterVolume & 0x7F),
+        (uint_fast8_t)alg,
         {
-            double lv = std::log(static_cast<double>(volume));
-            volume = static_cast<uint_fast32_t>(lv * c1 - c2) * 2;
+            adli->OPS[OPERATOR1].data[1],
+            adli->OPS[OPERATOR2].data[1],
+            adli->OPS[OPERATOR3].data[1],
+            adli->OPS[OPERATOR4].data[1]
+        },
+        {
+            alg_do[alg][0] || m_scaleModulators,
+            alg_do[alg][1] || m_scaleModulators,
+            alg_do[alg][2] || m_scaleModulators,
+            alg_do[alg][3] || m_scaleModulators
         }
-        else
-            volume = 0;
-    }
-    break;
+    };
 
-    case Synth::VOLUME_NATIVE:
+    m_getVolume(&vol);
+
+    if(brightness != 127 && !isDrum)
     {
-        volume = velocity * channelVolume * channelExpression;
-        //volume = volume * m_masterVolume / (127 * 127 * 127) / 2;
-        volume = (volume * m_masterVolume) / 4096766;
-
-        if(volume > 0)
-            volume += 64;//OPN has 0~127 range. As 0...63 is almost full silence, but at 64 to 127 is very closed to OPL3, just add 64.
-    }
-    break;
-
-    case Synth::VOLUME_DMX:
-    {
-        volume = (channelVolume * channelExpression * m_masterVolume) / 16129;
-        volume = (s_dmx_volume_model[volume] + 1) << 1;
-        volume = (s_dmx_volume_model[(velocity < 128) ? velocity : 127] * volume) >> 9;
-
-        if(volume > 0)
-            volume += 64;//OPN has 0~127 range. As 0...63 is almost full silence, but at 64 to 127 is very closed to OPL3, just add 64.
-    }
-    break;
-
-    case Synth::VOLUME_APOGEE:
-    {
-        volume = (channelVolume * channelExpression * m_masterVolume / 16129);
-        volume = ((64 * (velocity + 0x80)) * volume) >> 15;
-        //volume = ((63 * (vol + 0x80)) * Ch[MidCh].volume) >> 15;
-        if(volume > 0)
-            volume += 64;//OPN has 0~127 range. As 0...63 is almost full silence, but at 64 to 127 is very closed to OPL3, just add 64.
-    }
-    break;
-
-    case Synth::VOLUME_9X:
-    {
-        //volume = 63 - W9X_volume_mapping_table[(((vol * Ch[MidCh].volume /** Ch[MidCh].expression*/) * 127 / 16129 /*2048383*/) >> 2)];
-        volume = 63 - W9X_volume_mapping_table[((velocity * channelVolume * channelExpression * m_masterVolume / 2048383) >> 2)];
-        //volume = W9X_volume_mapping_table[vol >> 2] + volume;
-        if(volume > 0)
-            volume += 64;//OPN has 0~127 range. As 0...63 is almost full silence, but at 64 to 127 is very closed to OPL3, just add 64.
-    }
-    break;
+        brightness = opnModels_xgBrightnessToOPN(brightness);
+        doBrightness = true;
     }
 
-
-    if(volume > 127)
-        volume = 127;
-
-    uint8_t alg = adli.fbalg & 0x07;
     for(uint8_t op = 0; op < 4; op++)
     {
-        bool do_op = alg_do[alg][op] || m_scaleModulators;
-        uint32_t x = op_vol[op];
-        uint32_t vol_res = do_op ? (127 - (static_cast<uint32_t>(volume) * (127 - (x & 127))) / 127) : x;
-        if(brightness != 127)
-        {
-            brightness = static_cast<uint32_t>(::round(127.0 * ::sqrt((static_cast<double>(brightness)) * (1.0 / 127.0))));
-            if(!do_op)
-                vol_res = (127 - (brightness * (127 - (static_cast<uint32_t>(vol_res) & 127))) / 127);
-        }
-        writeRegI(chip, port, 0x40 + cc + (4 * op), vol_res);
+        if(doBrightness && !vol.doOp[op])
+            vol.tlOp[op] = (127 - (brightness * (127 - (static_cast<uint32_t>(vol.tlOp[op]) & 127))) / 127);
+
+        writeRegI(chip, port, 0x40 + cc + (4 * op), vol.tlOp[op]);
     }
-    // Correct formula (ST3, AdPlug):
-    //   63-((63-(instrvol))/63)*chanvol
-    // Reduces to (tested identical):
-    //   63 - chanvol + chanvol*instrvol/63
-    // Also (slower, floats):
-    //   63 + chanvol * (instrvol / 63.0 - 1)
 }
 
-void OPN2::setPatch(size_t c, const OpnTimbre &instrument)
+void OPN2::setPatch(size_t c, const OpnTimbre *instrument)
 {
     size_t      chip;
     uint8_t     port;
     uint32_t    cc;
     getOpnChannel(c, chip, port, cc);
+
+    if(m_insCache[c] == instrument)
+        return; // Already up to date!
+
     m_insCache[c] = instrument;
+    m_insCacheModified[c] = false;
+
     for(uint8_t d = 0; d < 7; d++)
     {
         for(uint8_t op = 0; op < 4; op++)
-            writeRegI(chip, port, 0x30 + (0x10 * d) + (op * 4) + cc, instrument.OPS[op].data[d]);
+            writeRegI(chip, port, 0x30 + (0x10 * d) + (op * 4) + cc, instrument->OPS[op].data[d]);
     }
 
-    writeRegI(chip, port, 0xB0 + cc, instrument.fbalg);//Feedback/Algorithm
-    m_regLFOSens[c] = (m_regLFOSens[c] & 0xC0) | (instrument.lfosens & 0x3F);
+    writeRegI(chip, port, 0xB0 + cc, instrument->fbalg);//Feedback/Algorithm
+    m_regLFOSens[c] = (m_regLFOSens[c] & 0xC0) | (instrument->lfosens & 0x3F);
     writeRegI(chip, port, 0xB4 + cc, m_regLFOSens[c]);//Panorame and LFO bits
 }
 
@@ -533,12 +453,12 @@ void OPN2::setPan(size_t c, uint8_t value)
     uint8_t     port;
     uint32_t    cc;
     getOpnChannel(c, chip, port, cc);
-    const OpnTimbre &adli = m_insCache[c];
+    const OpnTimbre *adli = m_insCache[c];
     uint8_t val = 0;
 
     if(m_softPanningSup && m_softPanning)
     {
-        val = (OPN_PANNING_BOTH & 0xC0) | (adli.lfosens & 0x3F);
+        val = (OPN_PANNING_BOTH & 0xC0) | (adli->lfosens & 0x3F);
         writePan(chip, c % 6, value);
         writeRegI(chip, port, 0xB4 + cc, val);
     }
@@ -547,7 +467,7 @@ void OPN2::setPan(size_t c, uint8_t value)
         int panning = 0;
         if(value  < 64 + 16) panning |= OPN_PANNING_LEFT;
         if(value >= 64 - 16) panning |= OPN_PANNING_RIGHT;
-        val = (panning & 0xC0) | (adli.lfosens & 0x3F);
+        val = (panning & 0xC0) | (adli->lfosens & 0x3F);
         writePan(chip, c % 6, 64);
         writeRegI(chip, port, 0xB4 + cc, val);
     }
@@ -573,6 +493,8 @@ void OPN2::silenceAll() // Silence all OPL channels.
             writeRegI(chip, port, 0x30 + (0x10 * 1) + (op * 4) + cc, 0x7F);
             writeRegI(chip, port, 0x30 + (0x10 * 5) + (op * 4) + cc, 0xFF);
         }
+
+        m_insCache[c] = &c_defaultInsCache;
     }
 }
 
@@ -593,23 +515,23 @@ void OPN2::setVolumeScaleModel(OPNMIDI_VolumeModels volumeModel)
         break;
 
     case OPNMIDI_VolumeModel_Generic:
-        m_volumeScale = OPN2::VOLUME_Generic;
+        setFrequencyModel(OPN2::VOLUME_Generic);
         break;
 
     case OPNMIDI_VolumeModel_NativeOPN2:
-        m_volumeScale = OPN2::VOLUME_NATIVE;
+        setFrequencyModel(OPN2::VOLUME_NATIVE);
         break;
 
     case OPNMIDI_VolumeModel_DMX:
-        m_volumeScale = OPN2::VOLUME_DMX;
+        setFrequencyModel(OPN2::VOLUME_DMX);
         break;
 
     case OPNMIDI_VolumeModel_APOGEE:
-        m_volumeScale = OPN2::VOLUME_APOGEE;
+        setFrequencyModel(OPN2::VOLUME_APOGEE);
         break;
 
     case OPNMIDI_VolumeModel_9X:
-        m_volumeScale = OPN2::VOLUME_9X;
+        setFrequencyModel(OPN2::VOLUME_9X);
         break;
     }
 }
@@ -655,26 +577,18 @@ void OPN2::reset(int emulator, unsigned long PCM_RATE, OPNFamily family, void *a
         m_numChips = 2;// VGM Dumper can't work in multichip mode
 #endif
 
-    const struct OpnTimbre defaultInsCache =
-    {
-        {
-            {0, 0x7F, 0, 0, 0, 0xFF, 0},
-            {0, 0x7F, 0, 0, 0, 0xFF, 0},
-            {0, 0x7F, 0, 0, 0, 0xFF, 0},
-            {0, 0x7F, 0, 0, 0, 0xFF, 0}
-        }, 0, 0, 0
-    };
-
     if(rebuild_needed)
     {
         m_insCache.clear();
+        m_insCacheModified.clear();
         m_regLFOSens.clear();
         m_chips.clear();
         m_chips.resize(m_numChips, AdlMIDI_SPtr<OPNChipBase>());
     }
     else
     {
-        opn2_fill_vector<OpnTimbre>(m_insCache, defaultInsCache);
+        opn2_fill_vector<const OpnTimbre*>(m_insCache, &c_defaultInsCache);
+        opn2_fill_vector<bool>(m_insCacheModified, false);
         opn2_fill_vector<uint8_t>(m_regLFOSens, 0);
     }
 
@@ -799,8 +713,20 @@ void OPN2::reset(int emulator, unsigned long PCM_RATE, OPNFamily family, void *a
 
     m_chipFamily = family;
     m_numChannels = m_numChips * 6;
-    m_insCache.resize(m_numChannels,   m_emptyInstrument.op[0]);
+    m_insCache.resize(m_numChannels, &c_defaultInsCache);
+    m_insCacheModified.resize(m_numChannels, false);
     m_regLFOSens.resize(m_numChannels,    0);
+
+    switch(m_chipFamily)
+    {
+    default:
+    case OPNChip_OPN2:
+        m_getFreq = &opnModel_genericFreqOPN2;
+        break;
+    case OPNChip_OPNA:
+        m_getFreq = &opnModel_genericFreqOPNA;
+        break;
+    }
 
     uint8_t regLFOSetup = (m_lfoEnable ? 8 : 0) | (m_lfoFrequency & 7);
     m_regLFOSetup = regLFOSetup;

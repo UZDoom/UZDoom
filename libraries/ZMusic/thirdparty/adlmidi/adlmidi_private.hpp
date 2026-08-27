@@ -2,7 +2,7 @@
  * libADLMIDI is a free Software MIDI synthesizer library with OPL3 emulation
  *
  * Original ADLMIDI code: Copyright (c) 2010-2014 Joel Yliluoma <bisqwit@iki.fi>
- * ADLMIDI Library API:   Copyright (c) 2015-2025 Vitaly Novichkov <admin@wohlnet.ru>
+ * ADLMIDI Library API:   Copyright (c) 2015-2026 Vitaly Novichkov <admin@wohlnet.ru>
  *
  * Library is based on the ADLMIDI, a MIDI player for Linux and Windows with OPL3 emulation:
  * http://iki.fi/bisqwit/source/adlmidi.html
@@ -70,16 +70,10 @@ typedef int32_t ssize_t;
 #   endif
 #endif
 
-#include <vector>
-#include <list>
 #include <string>
 //#ifdef __WATCOMC__
 //#include <myset.h> //TODO: Implemnet a workaround for OpenWatcom to fix a crash while using those containers
 //#include <mymap.h>
-//#else
-#include <map>
-#include <set>
-#include <new> // nothrow
 //#endif
 #include <cstdlib>
 #include <cstring>
@@ -147,6 +141,9 @@ typedef class OPL3 Synth;
 
 #define ADLMIDI_BUILD
 #include "adlmidi.h"    //Main API
+#ifdef ENABLE_HW_OPL_DOS
+#   include "adlmidi_dos.h" // DOS-only API
+#endif
 
 #include "adlmidi_ptr.hpp"
 
@@ -232,6 +229,20 @@ extern int adlCalculateFourOpChannels(MIDIplay *play, bool silent = false);
 
 #ifndef DISABLE_EMBEDDED_BANKS
 extern void adlFromInstrument(const BanksDump::InstrumentEntry &instIn, OplInstMeta &instOut);
+#endif
+
+// DOS specific tricks
+#ifdef ENABLE_HW_OPL_DOS
+extern void adl_lock_code(void);
+extern void adl_unlock_code(void);
+
+// Dummies to identify the code position addresses
+
+extern void adl_pub_dpmi_lock_begin();
+extern void adl_pub_dpmi_lock_end();
+
+extern void adl_seq_dpmi_lock_begin();
+extern void adl_seq_dpmi_lock_end();
 #endif
 
 #endif // ADLMIDI_PRIVATE_HPP

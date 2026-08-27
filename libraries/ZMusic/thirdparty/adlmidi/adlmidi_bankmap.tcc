@@ -2,7 +2,7 @@
  * libADLMIDI is a free MIDI to WAV conversion library with OPL3 emulation
  *
  * Original ADLMIDI code: Copyright (c) 2010-2014 Joel Yliluoma <bisqwit@iki.fi>
- * ADLMIDI Library API:   Copyright (c) 2015-2025 Vitaly Novichkov <admin@wohlnet.ru>
+ * ADLMIDI Library API:   Copyright (c) 2015-2026 Vitaly Novichkov <admin@wohlnet.ru>
  *
  * Library is based on the ADLMIDI, a MIDI player for Linux and Windows with OPL3 emulation:
  * http://iki.fi/bisqwit/source/adlmidi.html
@@ -30,7 +30,7 @@ inline BasicBankMap<T>::BasicBankMap()
       m_size(0),
       m_capacity(0)
 {
-    m_buckets.reset(new Slot *[hash_buckets]());
+    m_buckets.reset_arr(new Slot *[hash_buckets](), hash_buckets);
 }
 
 template <class T>
@@ -53,7 +53,7 @@ void BasicBankMap<T>::reserve(size_t capacity)
     need = (need < minalloc) ? minalloc : need;
 
     AdlMIDI_SPtrArray<Slot> slotz;
-    slotz.reset(new Slot[need]);
+    slotz.reset_arr(new Slot[need], need);
     m_allocations.push_back(slotz);
     m_capacity += need;
 
@@ -66,8 +66,10 @@ typename BasicBankMap<T>::iterator
 BasicBankMap<T>::begin() const
 {
     iterator it(m_buckets.get(), NULL, 0);
+
     while(it.index < hash_buckets && !(it.slot = m_buckets[it.index]))
         ++it.index;
+
     return it;
 }
 
@@ -115,11 +117,14 @@ BasicBankMap<T>::iterator::operator++()
 {
     if(slot->next)
         slot = slot->next;
-    else {
+    else
+    {
         Slot *slot = NULL;
         ++index;
+
         while(index < hash_buckets && !(slot = buckets[index]))
             ++index;
+
         this->slot = slot;
     }
     return *this;
@@ -162,13 +167,18 @@ BasicBankMap<T>::insert(const value_type &value)
 {
     size_t index = hash(value.first);
     Slot *slot = bucket_find(index, value.first);
+
     if(slot)
         return std::make_pair(iterator(m_buckets.get(), slot, index), false);
+
     slot = allocate_slot();
-    if(!slot) {
+
+    if(!slot)
+    {
         reserve(m_capacity + minimum_allocation);
         slot = ensure_allocate_slot();
     }
+
     slot->value = value;
     bucket_add(index, slot);
     ++m_size;
@@ -181,11 +191,15 @@ BasicBankMap<T>::insert(const value_type &value, do_not_expand_t)
 {
     size_t index = hash(value.first);
     Slot *slot = bucket_find(index, value.first);
+
     if(slot)
         return std::make_pair(iterator(m_buckets.get(), slot, index), false);
+
     slot = allocate_slot();
+
     if(!slot)
         return std::make_pair(end(), false);
+
     slot->value = value;
     bucket_add(index, slot);
     ++m_size;
@@ -219,9 +233,12 @@ BasicBankMap<T>::allocate_slot()
     Slot *slot = m_freeslots;
     if(!slot)
         return NULL;
+
     Slot *next = slot->next;
+
     if(next)
         next->prev = NULL;
+
     m_freeslots = next;
     return slot;
 }
@@ -239,8 +256,10 @@ template <class T>
 void BasicBankMap<T>::free_slot(Slot *slot)
 {
     Slot *next = m_freeslots;
+
     if(next)
         next->prev = slot;
+
     slot->prev = NULL;
     slot->next = next;
     m_freeslots = slot;
@@ -252,8 +271,10 @@ typename BasicBankMap<T>::Slot *
 BasicBankMap<T>::bucket_find(size_t index, key_type key)
 {
     Slot *slot = m_buckets[index];
+
     while(slot && slot->value.first != key)
         slot = slot->next;
+
     return slot;
 }
 
@@ -262,8 +283,10 @@ void BasicBankMap<T>::bucket_add(size_t index, Slot *slot)
 {
     assert(slot);
     Slot *next = m_buckets[index];
+
     if(next)
         next->prev = slot;
+
     slot->next = next;
     m_buckets[index] = slot;
 }
@@ -274,10 +297,12 @@ void BasicBankMap<T>::bucket_remove(size_t index, Slot *slot)
     assert(slot);
     Slot *prev = slot->prev;
     Slot *next = slot->next;
+
     if(!prev)
         m_buckets[index] = next;
     else
         prev->next = next;
+
     if(next)
         next->prev = prev;
 }

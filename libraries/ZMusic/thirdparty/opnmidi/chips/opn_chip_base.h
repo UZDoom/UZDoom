@@ -1,7 +1,7 @@
 /*
  * Interfaces over Yamaha OPN2 (YM2612) chip emulators
  *
- * Copyright (c) 2017-2025 Vitaly Novichkov (Wohlstand)
+ * Copyright (c) 2017-2026 Vitaly Novichkov (Wohlstand)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -75,6 +75,7 @@ public:
     virtual void nativePreGenerate() = 0;
     virtual void nativePostGenerate() = 0;
     virtual void nativeGenerate(int16_t *frame) = 0;
+    virtual void resampledGenerate(int32_t *frame) = 0;
 
     virtual void generate(int16_t *output, size_t frames) = 0;
     virtual void generateAndMix(int16_t *output, size_t frames) = 0;
@@ -126,7 +127,7 @@ private:
     void nativeTick(int16_t *frame);
     void setupResampler(uint32_t rate);
     void resetResampler();
-    void resampledGenerate(int32_t *output);
+    void resampledGenerate(int32_t *output) override;
 #if defined(OPNMIDI_ENABLE_HQ_RESAMPLER)
     VResampler *m_resampler;
 #else

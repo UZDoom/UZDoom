@@ -2,7 +2,7 @@
  * libADLMIDI is a free Software MIDI synthesizer library with OPL3 emulation
  *
  * Original ADLMIDI code: Copyright (c) 2010-2014 Joel Yliluoma <bisqwit@iki.fi>
- * ADLMIDI Library API:   Copyright (c) 2015-2025 Vitaly Novichkov <admin@wohlnet.ru>
+ * ADLMIDI Library API:   Copyright (c) 2015-2026 Vitaly Novichkov <admin@wohlnet.ru>
  *
  * Library is based on the ADLMIDI, a MIDI player for Linux and Windows with OPL3 emulation:
  * http://iki.fi/bisqwit/source/adlmidi.html
@@ -25,10 +25,10 @@
 #include "adlmidi_opl3.hpp"
 #include "adlmidi_private.hpp"
 #include "adlmidi_cvt.hpp"
-#include "file_reader.hpp"
+#include "midiseq/file_reader.hpp"
 #ifndef ADLMIDI_DISABLE_MIDI_SEQUENCER
 #   define BWMIDI_ENABLE_OPL_MUSIC_SUPPORT
-#   include "midi_sequencer.hpp"
+#   include "midiseq/midi_sequencer.hpp"
 #endif
 #include "wopl/wopl_file.h"
 
@@ -111,9 +111,10 @@ bool MIDIplay::LoadBank(FileAndMemReader &fr)
         }
     }
 
-    Synth &synth = *m_synth;
+    // Kill all notes before switching the bank
+    realTime_panic();
 
-    synth.setEmbeddedBank(m_setup.bankId);
+    Synth &synth = *m_synth;
 
     synth.m_insBankSetup.scaleModulators = false;
     synth.m_insBankSetup.deepTremolo = (wopl->opl_flags & WOPL_FLAG_DEEP_TREMOLO) != 0;
@@ -126,6 +127,8 @@ bool MIDIplay::LoadBank(FileAndMemReader &fr)
 
     uint16_t slots_counts[2] = {wopl->banks_count_melodic, wopl->banks_count_percussion};
     WOPLBank *slots_src_ins[2] = { wopl->banks_melodic, wopl->banks_percussive };
+
+    synth.m_insBanks.clear();
 
     for(size_t ss = 0; ss < 2; ss++)
     {
@@ -144,6 +147,8 @@ bool MIDIplay::LoadBank(FileAndMemReader &fr)
             }
         }
     }
+
+    synth.clearInstCache();
 
     synth.m_embeddedBank = Synth::CustomBankTag; // Use dynamic banks!
     //Percussion offset is count of instruments multipled to count of melodic banks
@@ -182,10 +187,10 @@ bool MIDIplay::LoadMIDI_post()
 
     if(format == MidiSequencer::Format_CMF)
     {
-        const std::vector<MidiSequencer::CmfInstrument> &instruments = seq.getRawCmfInstruments();
+        const MidiSequencer::CmfInstrumentsList &instruments = seq.getRawCmfInstruments();
         synth.m_insBanks.clear();//Clean up old banks
 
-        uint16_t ins_count = static_cast<uint16_t>(instruments.size());
+        uint16_t ins_count = static_cast<uint16_t>(instruments.size);
         for(uint16_t i = 0; i < ins_count; ++i)
         {
             const uint8_t *insData = instruments[i].data;
@@ -223,11 +228,10 @@ bool MIDIplay::LoadMIDI_post()
             adlins.voice2_fine_tune = 0.0;
         }
 
-        synth.m_embeddedBank = Synth::CustomBankTag; // Ignore AdlBank number, use dynamic banks instead
-        //std::printf("CMF deltas %u ticks %u, basictempo = %u\n", deltas, ticks, basictempo);
+        synth.m_embeddedBank = Synth::CustomBankTag;
         synth.m_rhythmMode = true;
         synth.m_musicMode = Synth::MODE_CMF;
-        synth.m_volumeScale = Synth::VOLUME_NATIVE;
+        synth.setFrequencyModel(Synth::VOLUME_NATIVE);
         setToOPL2 = true;
 
         synth.m_numChips = 1;
@@ -235,16 +239,14 @@ bool MIDIplay::LoadMIDI_post()
     }
     else if(format == MidiSequencer::Format_RSXX)
     {
-        //opl.CartoonersVolumes = true;
         synth.m_musicMode     = Synth::MODE_RSXX;
-        synth.m_volumeScale   = Synth::VOLUME_NATIVE;
+        synth.setFrequencyModel(Synth::VOLUME_RSXX);
 
         synth.m_numChips = 1;
         synth.m_numFourOps = 0;
     }
     else if(format == MidiSequencer::Format_IMF || format == MidiSequencer::Format_KLM)
     {
-        //std::fprintf(stderr, "Done reading IMF file\n");
         synth.m_numFourOps  = 0; //Don't use 4-operator channels for IMF playing!
         synth.m_rhythmMode = false;//Don't enforce rhythm-mode when it's unneeded
         synth.m_musicMode = Synth::MODE_IMF;
@@ -268,8 +270,10 @@ bool MIDIplay::LoadMIDI_post()
     m_setup.tick_skip_samples_delay = 0;
     chipReset(); // Reset OPL3 chip
     //opl.Reset(); // ...twice (just in case someone misprogrammed OPL3 previously)
-    m_chipChannels.clear();
     m_chipChannels.resize(synth.m_numChannels);
+
+    if(m_reservedChipChannels.size < synth.m_numChips)
+        m_reservedChipChannels.resize_fill(synth.m_numChips, 0u);
 
     if(setToOPL2)
         synth.toggleOPL3(false);
@@ -282,10 +286,15 @@ bool MIDIplay::LoadMIDI(const std::string &filename)
     FileAndMemReader file;
     file.openFile(filename.c_str());
 
+    file.dumpFile();
+
     if(!LoadMIDI_pre())
         return false;
 
     MidiSequencer &seq = *m_sequencer;
+
+    seq.setDeviceMask(m_sequencerDeviceMask);
+
     if(!seq.loadMIDI(file))
     {
         errorStringOut = seq.getErrorString();
@@ -294,6 +303,10 @@ bool MIDIplay::LoadMIDI(const std::string &filename)
 
     if(!LoadMIDI_post())
         return false;
+
+#if defined(BWMIDI_ENABLE_DEBUG_SONG_DUMP) && !defined(__DJGPP__)
+    seq.debugDumpContents(filename + ".dump.txt");
+#endif
 
     return true;
 }
@@ -307,6 +320,9 @@ bool MIDIplay::LoadMIDI(const void *data, size_t size)
         return false;
 
     MidiSequencer &seq = *m_sequencer;
+
+    seq.setDeviceMask(m_sequencerDeviceMask);
+
     if(!seq.loadMIDI(file))
     {
         errorStringOut = seq.getErrorString();

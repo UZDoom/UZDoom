@@ -1,7 +1,7 @@
 /*
- * Interfaces over Yamaha OPL3 (YMF262) chip emulators
+ * Interfaces over Yamaha OPL2 (YM3812) and Yamaha OPL3 (YMF262) chip emulators
  *
- * Copyright (c) 2017-2025 Vitaly Novichkov (Wohlstand)
+ * Copyright (c) 2017-2026 Vitaly Novichkov (Wohlstand)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -24,9 +24,57 @@
 #include <assert.h>
 #ifdef __DJGPP__
 #   include <pc.h>
+#   include <sys/segments.h>
+#   include <dpmi.h>
 #endif
 
 #include "dos_hw_opl.h"
+
+static bool s_dpmi_lock_memory(void *address, size_t size)
+{
+#ifdef __DJGPP__
+    unsigned long baseaddr;
+    __dpmi_meminfo mem;
+
+    if(__dpmi_get_segment_base_address(_my_ds(), &baseaddr) == -1)
+        return false;
+
+    mem.handle = 0;
+    mem.address = baseaddr + (intptr_t)address;
+    mem.size = size;
+
+    return __dpmi_lock_linear_region(&mem) != -1;
+#else
+#   error "FIXME: Implement DPMI lock for THIS platform!"
+    return -1;
+#endif
+}
+
+static bool s_dpmi_unlock_memory(void *address, size_t size)
+{
+#ifdef __DJGPP__
+    unsigned long baseaddr;
+    __dpmi_meminfo mem;
+
+    if(__dpmi_get_segment_base_address(_my_ds(), &baseaddr) == -1)
+        return false;
+
+    mem.handle = 0;
+    mem.address = baseaddr + (intptr_t)address;
+    mem.size = size;
+
+    return __dpmi_unlock_linear_region(&mem) != -1;
+#else
+#   error "FIXME: Implement DPMI unlock for THIS platform!"
+    return -1;
+#endif
+}
+
+#define s_dpmi_lock(obj)\
+    (s_dpmi_lock_memory((void*)&obj, sizeof(obj)))
+
+#define s_dpmi_unlock(obj)\
+    (s_dpmi_unlock_memory((void*)&obj, sizeof(obj)))
 
 static uint16_t                 s_OPLBase[2]    = {0x388, 0x38A};
 static char                     s_devName[80]   = {0};
@@ -81,10 +129,18 @@ static void s_detect()
     s_detected = true;
 }
 
+void DOS_HW_OPL::dpmi_lock_begin()
+{}
+
 DOS_HW_OPL::DOS_HW_OPL()
 {
     s_detect();
     s_updateDevName();
+
+    s_dpmi_lock(s_OPLBase);
+    s_dpmi_lock(s_devName);
+    s_dpmi_lock(s_type);
+    s_dpmi_lock(s_detected);
 }
 
 void DOS_HW_OPL::setOplAddress(uint16_t address)
@@ -108,6 +164,11 @@ DOS_HW_OPL::~DOS_HW_OPL()
         DOS_HW_OPL::writeReg(0x104, 0);
         DOS_HW_OPL::writeReg(0x105, 0);
     }
+
+    s_dpmi_unlock(s_OPLBase);
+    s_dpmi_unlock(s_devName);
+    s_dpmi_unlock(s_type);
+    s_dpmi_unlock(s_detected);
 }
 
 void DOS_HW_OPL::writeReg(uint16_t addr, uint8_t data)
@@ -124,7 +185,7 @@ void DOS_HW_OPL::writeReg(uint16_t addr, uint8_t data)
 
     outportb(port + 1, data);
 
-    for(unsigned c = 0; c < 35; ++c)
+    for(unsigned c = 0; c < 27; ++c)
         inportb(port);
 #   endif
 
@@ -161,3 +222,6 @@ OPLChipBase::ChipType DOS_HW_OPL::chipType()
 {
     return s_type;
 }
+
+void DOS_HW_OPL::dpmi_lock_end()
+{}

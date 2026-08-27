@@ -567,6 +567,8 @@ void ADLMIDIDevice::initGain()
 	case ADLMIDI_VolumeModel_Generic:
 	case ADLMIDI_VolumeModel_9X:
 	case ADLMIDI_VolumeModel_9X_GENERIC_FM:
+	case ADLMIDI_VolumeModel_MS_ADLIB:
+	case ADLMIDI_VolumeModel_OConnell:
 		OutputGainFactor = 2.0f;
 		break;
 	// Middle volume models
@@ -581,6 +583,7 @@ void ADLMIDIDevice::initGain()
 	case ADLMIDI_VolumeModel_APOGEE:
 	case ADLMIDI_VolumeModel_APOGEE_Fixed:
 	case ADLMIDI_VolumeModel_AIL:
+	case ADLMIDI_VolumeModel_IMF_Creator:
 		OutputGainFactor = 3.5f;
 		break;
 	// Quiter models
