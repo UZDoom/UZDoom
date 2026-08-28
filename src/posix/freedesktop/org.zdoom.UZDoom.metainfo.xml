@@ -104,7 +104,7 @@
 
 	<releases>
 		<!-- Keep 5 full descriptions, and 2 years of releases with just urls -->
-		<release version="5.0.0" date="2026-06-01"> <!--TODO-->
+		<release version="5.0.0" date="2026-08-28">
 			<description>
 				<p>After an over year-long development cycle and a truckload of internal reworks, UZDoom 5.0 has finally arrived! Starring bone manipulations for IQM models, significantly improved controller support (including haptic feedback!), the overhauled multiplayer, ZScript debug support, and much more, we knew this version would need a full upgrade. We appreciate everyone being patient since we know it took a while, but we promise it was worth the wait. With the updater being added, we can now make smaller releases more often so long periods of development like this should be an issue of the past. Our focus going forward will be on making releases as big new features are added.</p>
 				<p>**General**</p>
@@ -407,7 +407,7 @@
 				<li>The initial loading screen now takes longer to appear. This is purely visual and does not impact how long the engine takes to actually start.</li>
 				</ul>
 			</description>
-			<url>https://forum.zdoom.org/viewtopic.php?t=000000</url> <!--TODO-->
+			<url>https://github.com/UZDoom/UZDoom/releases/tag/5.0.0</url>
 		</release>
 
 		<release version="4.14.3" date="2025-11-28">
