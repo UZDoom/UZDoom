@@ -275,6 +275,7 @@ void WriteSavePic(player_t* player, FileWriter* file, int width, int height)
 		screen->mLights->Clear();
 		screen->mBones->Clear();
 		screen->mViewpoints->Clear();
+		screen->mBoneCacheGeneration++;
 
 		// This shouldn't overwrite the global viewpoint even for a short time.
 		FRenderViewpoint savevp;
@@ -346,6 +347,7 @@ sector_t* RenderView(player_t* player)
 		screen->mLights->Clear();
 		screen->mBones->Clear();
 		screen->mViewpoints->Clear();
+		screen->mBoneCacheGeneration++;
 
 		// NoInterpolateView should have no bearing on camera textures, but needs to be preserved for the main view below.
 		bool saved_niv = NoInterpolateView;

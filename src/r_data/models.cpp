@@ -675,12 +675,24 @@ void RenderFrameModels(FModelRenderer *renderer, FLevelLocals *Level, const FSpr
 	int boneStartingPosition = -1;
 	bool evaluatedSingle = false;
 
+	if (modelData && modelData->cachedBoneFrame == screen->mBoneCacheGeneration && modelData->cachedBoneStartPos >= 0)
+	{
+		boneStartingPosition = modelData->cachedBoneStartPos;
+		evaluatedSingle = true;
+	}
+
 	for (unsigned i = 0; i < frameinfo.modelsamount; i++)
 	{
 		if (CalcModelOverrides(i, smf, modelData, frameinfo, drawinfo, is_decoupled))
 		{
 			RenderModelFrame(renderer, i, smf, modelData, frameinfo, drawinfo, is_decoupled, tic, translation, boneStartingPosition, evaluatedSingle);
 		}
+	}
+
+	if (modelData && boneStartingPosition >= 0)
+	{
+		modelData->cachedBoneFrame = screen->mBoneCacheGeneration;
+		modelData->cachedBoneStartPos = boneStartingPosition;
 	}
 }
 

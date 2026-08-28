@@ -750,6 +750,8 @@ public:
 	int							 flags;
 	int							 overrideFlagsSet;
 	int							 overrideFlagsClear;
+	unsigned int				 cachedBoneFrame;
+	int							 cachedBoneStartPos = -1;
 
 	AnimInfo anims;
 

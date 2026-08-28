@@ -147,6 +147,7 @@ public:
 	HWViewpointBuffer *mViewpoints = nullptr;	// Viewpoint render data.
 	FLightBuffer *mLights = nullptr;			// Dynamic lights
 	BoneBuffer* mBones = nullptr;				// Model bones
+	unsigned int mBoneCacheGeneration = 0;		
 	IShadowMap mShadowMap;
 
 	int mGameScreenWidth = 0;
