@@ -1382,7 +1382,7 @@ intercept_t *FPathTraverse::Next()
 		return NULL;
 	}
 	if (dist > 1. || in == NULL) return NULL;	// checked everything in range
-	// in->done = true;
+
 	return in;
 }
 
@@ -1662,7 +1662,6 @@ void FPathTraverse::PortalRelocate(const DVector2 &displacement, int flags, doub
 
 FPathTraverse::~FPathTraverse()
 {
-	// intercepts.Resize(intercept_index);
 	intercepts.Clear();
 }
 
