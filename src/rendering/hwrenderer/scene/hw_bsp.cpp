@@ -264,15 +264,36 @@ bool HWDrawInfo::IsDistanceCulled(seg_t *line)
 	if (Viewpoint.culldistsq <= 0.0)
 		return false;
 
-	double dist1 = (line->v1->fPos() - Viewpoint.Pos).LengthSquared();
-	double dist2 = (line->v2->fPos() - Viewpoint.Pos).LengthSquared();
+	DVector2 VPos = Viewpoint.Pos.XY();
 	if (Viewpoint.bDoOob && r_radarclipper && !(Level->flags3 & LEVEL3_NOFOGOFWAR))
 	{
-		dist1 = (line->v1->fPos() - Viewpoint.OffPos).LengthSquared();
-		dist2 = (line->v2->fPos() - Viewpoint.OffPos).LengthSquared();
+		VPos = Viewpoint.OffPos.XY();
 	}
+	DVector2 vec1 = (line->linedef->v1->fPos() - VPos);
+	DVector2 vec2 = (line->linedef->v2->fPos() - VPos);
+	double dist1 = vec1.LengthSquared();
+	double dist2 = vec2.LengthSquared();
 	if ((dist1 > Viewpoint.culldistsq) && (dist2 > Viewpoint.culldistsq))
-		return true;
+	{
+		if (vec1.dot(vec2) > 0.0) // Angle subtended by the line at the viewpoint less than 90-degrees
+		{
+			return true;
+		}
+		else
+		{
+			DVector2 linevec = line->linedef->Delta();
+			double linelensq = linevec.LengthSquared();
+			if (linelensq > 0.0)
+			{
+				double projlen = -vec1.dot(linevec) / linelensq;
+				DVector2 closest = line->linedef->v1->fPos() + linevec * projlen;
+				if ((VPos- closest).LengthSquared() > Viewpoint.culldistsq)
+				{
+					return true;
+				}
+			}
+		}
+	}
 	return false;
 }
 

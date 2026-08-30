@@ -147,7 +147,10 @@ CUSTOM_CVARD(Bool, r_cull_fps, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "Boolean
 		r_distance_cull_type = 3;
 	}
 }
-CVARD(Color, gl_cullcolor, 0x888888, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "Fog color when r_distance_cull_type > 1. Does not override map fade colors. Hardware renderer only.")
+CUSTOM_CVARD(Color, gl_cullcolor, 0x888888, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "Fog color when r_distance_cull_type > 1. Does not override map fade colors. Hardware renderer only.")
+{
+	primaryLevel->cullcolor = gl_cullcolor;
+}
 
 int 			viewwindowx;
 int 			viewwindowy;

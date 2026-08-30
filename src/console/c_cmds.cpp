@@ -1011,6 +1011,11 @@ CCMD(changesky)
 CCMD(skymisttoggle)
 {
 	primaryLevel->flags3 ^= LEVEL3_SKYMIST;
+	if (primaryLevel->flags3 | LEVEL3_SKYMIST)
+	{
+		primaryLevel->skymisttexture.SetNull();
+		InitSkyMap (primaryLevel);
+	}
 }
 
 //-----------------------------------------------------------------------------
