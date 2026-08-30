@@ -87,7 +87,7 @@ level_info_t *FindLevelInfo (const char *mapname, bool allowdefault)
 		if (TheDefaultLevelInfo.LevelName.IsEmpty())
 		{
 			TheDefaultLevelInfo.SkyPic2 = TheDefaultLevelInfo.SkyPic1 = "SKY1";
-			TheDefaultLevelInfo.SkyMistPic = "SKYMIST1";
+			TheDefaultLevelInfo.SkyMistPic = "SKYMISTA";
 			TheDefaultLevelInfo.LevelName = "Unnamed";
 		}
 		return &TheDefaultLevelInfo;
@@ -247,7 +247,7 @@ void level_info_t::Reset()
 	NextMap = "";
 	NextSecretMap = "";
 	SkyPic1 = SkyPic2 = "-NOFLAT-";
-	SkyMistPic = "SKYMIST1";
+	SkyMistPic = "SKYMISTA";
 	cluster = 0;
 	partime = 0;
 	sucktime = 0;
