@@ -36,6 +36,9 @@
 #include <memory>
 #endif
 
+#include "version.h"
+#include "autosegs.h"
+
 struct JitFuncInfo
 {
 	FString name;
@@ -832,6 +835,25 @@ static int CaptureStackTrace(int max_frames, void **out_frames)
 #endif
 }
 
+static FString DemangleVMExportFunction(FString fn, bool &isExport)
+{
+	if(fn.IndexOf("AF_") == 0)
+	{ // action function
+		for(auto &afn : AutoSegs::ActionFunctons.fields)
+		{
+			FString cname = afn->ClassName;
+			FString fn2 = "AF_" + cname + "_" + afn->FuncName;
+
+			if(fn == fn2)
+			{
+				isExport = true;
+				return cname + "::" + afn->FuncName;
+			}
+		}
+	}
+	return fn;
+}
+
 #ifdef WIN32
 class NativeSymbolResolver
 {
@@ -847,7 +869,7 @@ public:
 		SymCleanup(GetCurrentProcess());
 	}
 
-	FString GetName(void *frame)
+	FString GetName(void *frame, FString &function_name)
 	{
 		FString s;
 
@@ -864,6 +886,10 @@ public:
 			if ((DWORD64)frame < (DWORD64)moduleInfo.lpBaseOfDll || (DWORD64)frame >= ((DWORD64)moduleInfo.lpBaseOfDll + moduleInfo.SizeOfImage))
 				return s; // Ignore anything not from the exe itself
 
+			bool isExport = false;
+
+			function_name = DemangleVMExportFunction(symbol64->Name, isExport);
+
 			IMAGEHLP_LINE64 line64;
 			DWORD displacement1 = 0;
 			memset(&line64, 0, sizeof(IMAGEHLP_LINE64));
@@ -871,11 +897,14 @@ public:
 			result = SymGetLineFromAddr64(GetCurrentProcess(), (DWORD64)frame, &displacement1, &line64);
 			if (result)
 			{
-				s.Format("Called from %s at %s, line %d\n", symbol64->Name, line64.FileName, (int)line64.LineNumber);
+				FString fname(line64.FileName);
+				fname = FString(fname.GetChars() + fname.LastIndexOf("\\src\\") + 5);
+				fname.ReplaceChars("\\",'/');
+				s.Format("Called from %s at %s, line %d %s\n", function_name.GetChars(), (GAMENAMELOWERCASE ".exe:" + fname).GetChars(), (int)line64.LineNumber, isExport ? "[Native Export]" : "[Native]");
 			}
 			else
 			{
-				s.Format("Called from %s\n", symbol64->Name);
+				s.Format("Called from %s at <unknown>, line <unknown> %s\n", function_name.GetChars(), isExport ? "[Export]" : "[Native]");
 			}
 		}
 
@@ -888,7 +917,7 @@ public:
 class NativeSymbolResolver
 {
 public:
-	FString GetName(void *frame)
+	FString GetName(void *frame, FString &function_name)
 	{
 		FString s;
 		char **strings;
@@ -938,7 +967,11 @@ public:
 			function = new_function;
 		}
 
-		s.Format("Called from %s at %s\n", function, filename);
+		bool isExport = false;
+
+		function_name = DemangleVMExportFunction(function, isExport);
+
+		s.Format("Called from %s at %s %s\n", function_name.GetChars(), filename, isExport? "[Export]" : "[Native]");
 
 		if (new_function)
 		{
@@ -965,7 +998,7 @@ int JITPCToLine(uint8_t *pc, const JitFuncInfo *info)
 	return -1;
 }
 
-FString JitGetStackFrameName(NativeSymbolResolver *nativeSymbols, void *pc)
+static FString JitGetStackFrameName(NativeSymbolResolver *nativeSymbols, void *pc, bool &isNative, FString &function_name)
 {
 	for (unsigned int i = 0; i < JitDebugInfo.Size(); i++)
 	{
@@ -976,6 +1009,8 @@ FString JitGetStackFrameName(NativeSymbolResolver *nativeSymbols, void *pc)
 
 			FString s;
 
+			function_name = info.name;
+
 			if (line == -1)
 				s.Format("Called from %s at %s\n", info.name.GetChars(), info.filename.GetChars());
 			else
@@ -985,7 +1020,9 @@ FString JitGetStackFrameName(NativeSymbolResolver *nativeSymbols, void *pc)
 		}
 	}
 
-	return nativeSymbols ? nativeSymbols->GetName(pc) : FString();
+	isNative = nativeSymbols;
+
+	return nativeSymbols ? nativeSymbols->GetName(pc, function_name) : FString();
 }
 
 FString JitCaptureStackTrace(int framesToSkip, bool includeNativeFrames, int maxFrames)
@@ -1001,7 +1038,10 @@ FString JitCaptureStackTrace(int framesToSkip, bool includeNativeFrames, int max
 	FString s;
 	for (int i = framesToSkip + 1; i < numframes; i++)
 	{
-		FString name = JitGetStackFrameName(nativeSymbols.get(), frames[i]);
+		bool isNative = false;
+		FString function_name;
+		FString name = JitGetStackFrameName(nativeSymbols.get(), frames[i], isNative, function_name);
+
 		if (!name.IsEmpty())
 		{
 			s += name;
@@ -1009,6 +1049,8 @@ FString JitCaptureStackTrace(int framesToSkip, bool includeNativeFrames, int max
 			if (maxFrames != -1 && maxFrames == total)
 				break;
 		}
+		
+		if(isNative && function_name.Compare("GameMain") == 0) break; // don't stack trace past GameMain, since that's where platform-specific code starts
 	}
 	return s;
 }

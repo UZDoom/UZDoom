@@ -356,8 +356,11 @@ int VMNativeFunction::NativeScriptCall(VMFunction *func, VMValue *params, int nu
 	}
 	catch (CVMAbortException &err)
 	{
-		err.MaybePrintMessage();
-		err.stacktrace.AppendFormat("Called from %s\n", func->PrintableName);
+		if(!vm_jit || !JIT_INCLUDE_STACK_FRAME)
+		{
+			err.MaybePrintMessage();
+			err.stacktrace.AppendFormat("Called from %s\n", func->PrintableName);
+		}
 		throw;
 	}
 }
@@ -834,7 +837,7 @@ CVMAbortException::CVMAbortException(EVMAbortException reason, const char *morei
 	}
 
 	if (vm_jit)
-		stacktrace = JitCaptureStackTrace(1, false);
+		stacktrace = JitCaptureStackTrace(1, JIT_INCLUDE_STACK_FRAME);
 	else
 		stacktrace = "";
 }

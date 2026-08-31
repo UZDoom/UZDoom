@@ -53,8 +53,7 @@
 #include "vulkan/textures/vk_renderbuffers.h"
 #include "vulkan/textures/vk_samplers.h"
 #include "vulkan/textures/vk_texture.h"
-
-FString JitCaptureStackTrace(int framesToSkip, bool includeNativeFrames, int maxFrames = -1);
+#include "jit.h"
 
 EXTERN_CVAR(Int, gl_tonemap)
 EXTERN_CVAR(Int, screenblocks)
@@ -103,7 +102,7 @@ void VulkanPrintLog(const char* typestr, const std::string& msg)
 
 	if (vk_debug_callstack && showcallstack)
 	{
-		FString callstack = JitCaptureStackTrace(0, true, 5);
+		FString callstack = JitCaptureStackTrace(0, JIT_INCLUDE_STACK_FRAME, 5);
 		if (!callstack.IsEmpty())
 			Printf("%s\n", callstack.GetChars());
 	}
