@@ -375,7 +375,7 @@ const char* BaseFileSearch(const char* file, const char* ext, bool lookfirstinpr
 
 void D_FileNotFound(EFileRequirements test, const char* type, const char* file)
 {
-	Printf("%s not found: %s\n", type, file);
+	Printf(TEXTCOLOR_ORANGE " %s not found: %s\n", type, file);
 
 	if (!(i_exit_on_not_found & test)) return;
 

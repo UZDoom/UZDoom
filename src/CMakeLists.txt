@@ -301,6 +301,10 @@ if (HAVE_VULKAN)
 	list( APPEND PROJECT_LIBRARIES "zvulkan" )
 endif()
 
+add_subdirectory("common/thirdparty/freetype-2.13.3")
+add_subdirectory("common/thirdparty/harfbuzz-7.3.0")
+add_subdirectory("utility/trex")
+list( APPEND PROJECT_LIBRARIES "trex" )
 list( APPEND PROJECT_LIBRARIES "zwidget" )
 list( APPEND PROJECT_LIBRARIES "webp" )
 
@@ -565,6 +569,7 @@ file( GLOB HEADER_FILES
 	common/thirdparty/utf8proc/*.h
 	common/rendering/*.h
 	common/rendering/gl_load/*.h
+	common/rendering/gl/*.h
 	common/rendering/gles/*.h
 	common/rendering/hwrenderer/data/*.h
 	common/rendering/vulkan/*.h
@@ -1118,6 +1123,7 @@ set (PCH_SOURCES
 	common/menu/messagebox.cpp
 	common/menu/optionmenu.cpp
 	common/menu/resolutionmenu.cpp
+	common/menu/advancedfontmenu.cpp
 	common/menu/menudef.cpp
 	common/menu/savegamemanager.cpp
 	common/statusbar/base_sbar.cpp
@@ -1209,6 +1215,7 @@ set (PCH_SOURCES
 	utility/nodebuilder/nodebuild_gl.cpp
 	utility/nodebuilder/nodebuild_utility.cpp
 	utility/system_theme.cpp
+	utility/simdutf/simdutf.cpp
 )
 
 if( ZMUSIC_SYSTEM_INSTALL OR NOT DEFINED BUILD_SHARED_LIBS OR BUILD_SHARED_LIBS)
@@ -1273,7 +1280,6 @@ set( GAME_SOURCES
 	common/filesystem/source/fs_stringpool.cpp
 	common/filesystem/source/unicode.cpp
 	common/filesystem/source/critsec.cpp
-
 )
 
 set( GAME_NONPCH_SOURCES ${GAME_SOURCES} )
@@ -1427,6 +1433,7 @@ include_directories(
 	xlat
 	utility
 	utility/nodebuilder
+	utility/simdutf
 	scripting
 	scripting/zscript
 	rendering

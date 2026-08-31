@@ -524,7 +524,7 @@ void DBaseStatusBar::DoDrawAutomapHUD(int crdefault, int highlight)
 	int vwidth = int(twod->GetWidth() / scalev.X);
 	int vheight = int(twod->GetHeight() / scalev.Y);
 
-	auto font = generic_ui ? NewSmallFont : SmallFont;
+	auto font = FFont::GetSmallTextFont(generic_ui ? NewSmallFont : SmallFont);
 	auto font2 = font;
 	auto fheight = font->GetHeight();
 	FString textbuffer;
@@ -543,7 +543,11 @@ void DBaseStatusBar::DoDrawAutomapHUD(int crdefault, int highlight)
 	{
 		sec = Tics2Seconds(primaryLevel->time);
 		textbuffer.Format("%02d:%02d:%02d", sec / 3600, (sec % 3600) / 60, sec % 60);
-		DrawText(twod, font, crdefault, vwidth - zerowidth * 8 - textdist, y, textbuffer.GetChars(), DTA_VirtualWidth, vwidth, DTA_VirtualHeight, vheight,
+		const bool useDynamicAlighment = font->IsValidDynamicFont();
+		auto       xpos =
+            useDynamicAlighment ? vwidth - font->StringWidth(textbuffer) - textdist : vwidth - zerowidth * 8 - textdist;
+		DrawText(twod, font, crdefault, xpos, y, textbuffer.GetChars(),
+		         DTA_VirtualWidth, vwidth, DTA_VirtualHeight, vheight,
 			DTA_Monospace, EMonospacing::CellCenter, DTA_Spacing, zerowidth, DTA_KeepRatio, true, TAG_END);
 		y += fheight;
 	}
@@ -1100,7 +1104,7 @@ void DBaseStatusBar::DrawLog ()
 		auto scale = active_con_scaletext(twod, generic_ui || log_vgafont);
 		hudwidth = twod->GetWidth() / scale;
 		hudheight = twod->GetHeight() / scale;
-		FFont *font = (generic_ui || log_vgafont)? NewSmallFont : SmallFont;
+		FFont *font = FFont::GetSmallTextFont((generic_ui || log_vgafont)? NewSmallFont : SmallFont);
 
 		int linelen = hudwidth<640? Scale(hudwidth,9,10)-40 : 560;
 		auto lines = V_BreakLines (font, linelen, text[0] == '$'? GStrings.GetString(text.GetChars()+1) : text.GetChars());

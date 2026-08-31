@@ -519,7 +519,7 @@ class Inventory : Actor
 	//
 	//===========================================================================
 
-	virtual protected bool TryPickup (in out Actor toucher)
+	virtual protected bool TryPickup (in out Actor toucher, bool pickup = false)
 	{
 		Actor newtoucher = toucher; // in case changed by the powerup
 
@@ -663,7 +663,7 @@ class Inventory : Actor
 	//
 	//===========================================================================
 
-	bool, Actor CallTryPickup(Actor toucher)
+	bool, Actor CallTryPickup(Actor toucher, bool pickup = false)
 	{
 		let saved_toucher = toucher;
 		let Invstack = Inv; // A pointer of the inventories item stack.
@@ -683,12 +683,12 @@ class Inventory : Actor
 		// CanPickup processes restrictions by player class.
 		else if (CanPickup(toucher))
 		{
-			res = TryPickup(toucher);
+			res = TryPickup(toucher, pickup);
 		}
 		else if (!bRestrictAbsolutely)
 		{
 			// let an item decide for itself how it will handle this
-			res = TryPickupRestricted(toucher);
+			res = TryPickupRestricted(toucher, pickup);
 		}
 		else
 			return false, null;
@@ -713,7 +713,7 @@ class Inventory : Actor
 					Invstack = titem.Inv;
 					if (titem.Owner == self)
 					{
-						if (!titem.CallTryPickup(toucher)) // The object no longer can exist
+						if (!titem.CallTryPickup(toucher, pickup)) // The object no longer can exist
 						{
 							titem.Destroy();
 						}
@@ -749,7 +749,7 @@ class Inventory : Actor
 	//
 	//===========================================================================
 
-	virtual bool TryPickupRestricted (in out Actor toucher)
+	virtual bool TryPickupRestricted (in out Actor toucher, bool pickup = false)
 	{
 		return false;
 	}
@@ -877,7 +877,7 @@ class Inventory : Actor
 		}
 
 		bool res;
-		[res, toucher] = give.CallTryPickup(toucher);
+		[res, toucher] = give.CallTryPickup(toucher, true);
 		if (!res)
 		{
 			if (give != self)
@@ -1407,8 +1407,8 @@ class DehackedPickup : Inventory
 	bool droppedbymonster;
 
 	private native class<Inventory> DetermineType();
-
-	override bool TryPickup (in out Actor toucher)
+	
+	override bool TryPickup (in out Actor toucher, bool pickup)
 	{
 		let type = DetermineType ();
 		if (type == NULL)
@@ -1430,7 +1430,7 @@ class DehackedPickup : Inventory
 			{
 				RealPickup.ModifyDropAmount(0);
 			}
-			if (!RealPickup.CallTryPickup (toucher))
+			if (!RealPickup.CallTryPickup (toucher, pickup))
 			{
 				RealPickup.Destroy ();
 				RealPickup = NULL;
@@ -1517,7 +1517,7 @@ class FakeInventory : Inventory
 		return Respawnable && Super.ShouldRespawn();
 	}
 
-	override bool TryPickup (in out Actor toucher)
+	override bool TryPickup (in out Actor toucher, bool pickup)
 	{
 		let success = toucher.A_CallSpecial(special, args[0], args[1], args[2], args[3], args[4]);
 

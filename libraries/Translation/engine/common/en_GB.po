@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-30 16:57-0400\n"
+"PO-Revision-Date: 2026-08-10 23:42-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://hosted.weblate.org/projects/uzdoom/common/en_GB/>\n"
 "Language: en_GB\n"
@@ -49,12 +49,6 @@ msgstr ""
 # This is a gender sensitive message where %s represents the player
 msgid "TXT_X_CHEATS"
 msgstr "%s cheats"
-
-msgid "MSGOFF"
-msgstr "Messages: OFF"
-
-msgid "MSGON"
-msgstr "Messages: ON"
 
 msgid "TXT_SAY"
 msgstr "Say:"
@@ -972,6 +966,9 @@ msgstr "Chip-o-matic"
 msgid "OPTVAL_MAMEOPL2"
 msgstr "MAME OPL2"
 
+msgid "OPTVAL_DOSBOXOPL2"
+msgstr "DOSBox OPL2"
+
 msgid "OPTVAL_DOSBOXOPL3"
 msgstr "DOSBox OPL3"
 
@@ -1008,8 +1005,14 @@ msgstr "MAME YM2608"
 msgid "OPTVAL_OPALOPL3"
 msgstr "Opal OPL3"
 
-msgid "OPTVAL_NUKEDOPL3174"
-msgstr "Nuked OPL3 v1.7.4"
+msgid "OPTVAL_NUKEDOPL3FAST"
+msgstr "Nuked OPL3 Fast"
+
+msgid "OPTVAL_NUKEDOPL2"
+msgstr "Nuked OPL2"
+
+msgid "OPTVAL_NUKEDCQM"
+msgstr "Nuked CQM (Creative's OPL3 clone)"
 
 msgid "OPTVAL_NUKEDOPN2YM3438"
 msgstr "Nuked OPN2 (YM3438)"
@@ -1088,6 +1091,15 @@ msgstr "HMI Sound Operating System"
 
 msgid "ADLVLMODEL_HMIOLD"
 msgstr "HMI SOS (Old, with bugs)"
+
+msgid "ADLVLMODEL_MS_ADLIB"
+msgstr "MS AdLib driver"
+
+msgid "ADLVLMODEL_IMF_CREATOR"
+msgstr "IMF Creator"
+
+msgid "ADLVLMODEL_OCONNEL"
+msgstr "Jamie O'Connel's FM Synth driver"
 
 msgid "ADLCHANALLOC_AUTO"
 msgstr "Auto"

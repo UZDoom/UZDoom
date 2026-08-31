@@ -4,6 +4,7 @@
 Builds language files
 """
 
+import re
 import sys
 import csv
 import json
@@ -39,7 +40,7 @@ def remap(s, utf):
     # Maps proper chars to chars/sequences that uzdoom can understand.
     # This is temporary, and eventually everything in here will be removed.
 
-    if not utf:
+    if utf:
         return s
 
     return s\
@@ -78,28 +79,46 @@ def fill_dict(path):
     # If we are using unifont instead of doom's font
     has_utf = meta["id"] in ["ja", "ko", "zh_Hans", "zh_Hant"]
 
-    # loop through each entry in a language, and add to map
-    for e in po:
-        specific_id = e.msgid
-        entry = {"id": e.msgid}
-
-        if e.msgstr:
-            entry["string"] = remap(e.msgstr, has_utf)
-        if e.tcomment:
-            entry["remarks"] = e.tcomment
-        if e.msgctxt:
+    def add_entry(e_id, e_str, e_filter, e_comment):
+        """add the specific entry to the map"""
+        specific_id = e_id
+        entry = {"id": e_id}
+        if e_str:
+            entry["string"] = remap(e_str, has_utf)
+        if e_comment:
+            entry["remarks"] = e_comment
+        if e_filter:
             # filters are used to change strings in certain cases
-            entry["filter"] = e.msgctxt
-            specific_id = f"{specific_id}#{e.msgctxt}"
+            entry["filter"] = e_filter
+            specific_id = f"{specific_id}#{e_filter}"
 
         if specific_id in data:
             if meta["valid"]:
                 print(f"in: {path}")
             meta["valid"] = False
-            print(f"redefining: {specific_id} as '{e.msgstr}'")
-            continue
+            print(f"redefining: {specific_id} as '{entry['string']}'")
+            return
 
         data[specific_id] = entry
+
+    alt_pattern = re.compile('(.*){(.*)\\|(.*)}(.*)')
+    # loop through each entry in a language, and add to map
+    for e in po:
+        alt_match = alt_pattern.match(e.msgid)
+        if alt_match:
+            id1 = alt_match.group(1) + alt_match.group(2) + alt_match.group(4)
+            id2 = alt_match.group(1) + alt_match.group(3) + alt_match.group(4)
+            str1 = str2 = e.msgstr
+            alt_match = alt_pattern.match(e.msgstr)
+            if alt_match:
+                str1 = alt_match.group(
+                    1) + alt_match.group(2) + alt_match.group(4)
+                str2 = alt_match.group(
+                    1) + alt_match.group(3) + alt_match.group(4)
+            add_entry(id1, str1, e.msgctxt, e.tcomment)
+            add_entry(id2, str2, e.msgctxt, e.tcomment)
+        else:
+            add_entry(e.msgid, e.msgstr, e.msgctxt, e.tcomment)
 
     return {"data": data, "meta": meta}
 

@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-14 05:01+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2026-08-10 23:42-0400\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.8.dev0\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
 
 msgid "PRESSKEY"
 msgstr "Premi un tasto."
@@ -152,10 +152,9 @@ msgstr ""
 "Senti amico, esci adesso\n"
 "e perdi la tua conta delle vittime!"
 
-#, fuzzy
 msgid "QUITMSG13"
 msgstr ""
-"Esci pure. quanto tornerai\n"
+"Esci pure. Quanto tornerai\n"
 "ti aspetterò con un bastone."
 
 msgid "QUITMSG14"
@@ -283,35 +282,11 @@ msgstr "Cambio di musica"
 msgid "STSTR_NOMUS"
 msgstr "Selezione impossibile"
 
-msgid "STSTR_DQDON"
-msgstr "Modalità Invincibilità: ATTIVA"
-
-msgid "STSTR_DQDOFF"
-msgstr "Modalità Invincibilità: SPENTA"
-
-msgid "STSTR_DQD2ON"
-msgstr "Modalità Invincibilità Ultima: ATTIVA"
-
-msgid "STSTR_DQD2OFF"
-msgstr "Modalità Invincibilità Ultima: SPENTA"
-
 msgid "STSTR_KFAADDED"
 msgstr "Equipaggiamento Completato"
 
 msgid "STSTR_FAADDED"
 msgstr "Equipaggiamento Completato (senza chiavi)"
-
-msgid "STSTR_NCON"
-msgstr "No Clipping: ATTIVO"
-
-msgid "STSTR_NCOFF"
-msgstr "No Clipping: SPENTO"
-
-msgid "STSTR_NC2ON"
-msgstr "3D No Clipping: ATTIVO"
-
-msgid "STSTR_NC2OFF"
-msgstr "3D No Clipping: SPENTO"
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -333,47 +308,17 @@ msgstr "… non fa schifo - GM"
 msgid "STSTR_CLEV"
 msgstr "Cambio di livello…"
 
-msgid "TXT_BUDDHAON"
-msgstr "Modalità Buddha: ATTIVA"
-
-msgid "TXT_BUDDHAOFF"
-msgstr "Modalità Buddha: SPENTA"
-
-msgid "TXT_BUDDHA2ON"
-msgstr "Modalità Ultimo Buddha: ATTIVA"
-
-msgid "TXT_BUDDHA2OFF"
-msgstr "Modalità Ultimo Buddha: SPENTA"
-
-msgid "TXT_CHEATPOWERON"
-msgstr "Potere: ATTIVO"
-
-msgid "TXT_CHEATPOWEROFF"
-msgstr "Potere: SPENTO"
-
 msgid "TXT_CHEATHEALTH"
 msgstr "Piena salute"
 
 msgid "TXT_CHEATKEYS"
 msgstr "Tutte le chiavi"
 
-msgid "TXT_CHEATSOUNDON"
-msgstr "Debug del suono: ATTIVO"
-
-msgid "TXT_CHEATSOUNDOFF"
-msgstr "Debug del suono: SPENTO"
-
 msgid "TXT_CHEATIDDQD"
 msgstr "Cerchi di barare, eh? Allora muori!"
 
 msgid "TXT_CHEATIDKFA"
 msgstr "Imbroglione—non meriti armi"
-
-msgid "TXT_CHEATTICKERON"
-msgstr "Ticker: ATTIVO"
-
-msgid "TXT_CHEATTICKEROFF"
-msgstr "Ticker: SPENTO"
 
 msgid "TXT_CHEATARTIFACTS3"
 msgstr "Concesso"
@@ -384,12 +329,6 @@ msgstr "Hai avuto il Tocco di Mida, baby"
 msgid "TXT_GOTSTUFF"
 msgstr "Hai avuto il materiale!"
 
-msgid "TXT_FREEZEON"
-msgstr "Modalità arresto del tempo: ATTIVA"
-
-msgid "TXT_FREEZEOFF"
-msgstr "Modalità arresto del tempo: SPENTA"
-
 msgid "TXT_STRANGE"
 msgstr "Ti senti strano…"
 
@@ -399,35 +338,17 @@ msgstr "Ti senti ancora più strano."
 msgid "TXT_NOTSTRANGE"
 msgstr "Ti senti di nuovo te stesso."
 
-msgid "TXT_LEADBOOTSON"
-msgstr "Stivali di Piombo: ATTIVI"
-
-msgid "TXT_LEADBOOTSOFF"
-msgstr "Stivali di Piombo: SPENTI"
-
 msgid "TXT_LIGHTER"
 msgstr "Ti senti più leggero"
 
 msgid "TXT_GRAVITY"
 msgstr "La gravità ti riporta a terra"
 
-msgid "TXT_NOTARGET_ON"
-msgstr "Modalità Mostri ciechi e sordi: ATTIVA"
-
-msgid "TXT_NOTARGET_OFF"
-msgstr "Modalità Mostri ciechi e sordi: SPENTA"
-
 msgid "TXT_ANUBIS_ON"
 msgstr "\"Trema con terrore!\""
 
 msgid "TXT_ANUBIS_OFF"
 msgstr "Niente più armatura Ogre"
-
-msgid "TXT_CHASECAM_ON"
-msgstr "Modalità camera da inseguimento: ATTIVA"
-
-msgid "TXT_CHASECAM_OFF"
-msgstr "Modalità camera da inseguimento: SPENTA"
 
 msgid "TXT_BADDIE_KILLED"
 msgstr "Ucciso 1 maligno"
@@ -453,24 +374,6 @@ msgstr "Cosa vorresti uccidere fuori dal gioco?"
 
 msgid "TXT_NOT_FROZEN"
 msgstr "Proprietà del giocatore ghiacciato: SPENTE"
-
-msgid "AMSTR_FOLLOWOFF"
-msgstr "Modalità inseguimento: SPENTA"
-
-msgid "AMSTR_FOLLOWON"
-msgstr "Modalità inseguimento: ATTIVA"
-
-msgid "AMSTR_GRIDON"
-msgstr "Griglia: ATTIVA"
-
-msgid "AMSTR_GRIDOFF"
-msgstr "Griglia: SPENTA"
-
-msgid "AMSTR_TEXON"
-msgstr "Modalità Texture: ATTIVA"
-
-msgid "AMSTR_TEXOFF"
-msgstr "Modalità Texture: SPENTA"
 
 msgid "AMSTR_MARKEDSPOT"
 msgstr "Posizione segnata"
@@ -2854,14 +2757,6 @@ msgstr ""
 "Premi Y oppure N."
 
 msgctxt "chex"
-msgid "STSTR_DQDON"
-msgstr "Modalità invincibile: ATTIVA"
-
-msgctxt "chex"
-msgid "STSTR_DQDOFF"
-msgstr "Modalità invincibile: SPENTA"
-
-msgctxt "chex"
 msgid "STSTR_FAADDED"
 msgstr "Zorch aggiunto"
 
@@ -4349,9 +4244,8 @@ msgstr "Ordina la lista draw per texture"
 msgid "GLLIGHTMNU_TITLE"
 msgstr "Luci Dinamiche"
 
-#, fuzzy
 msgid "GLLIGHTMNU_LIGHTSENABLED"
-msgstr "Luci Dinamiche (Hardware)"
+msgstr "Luci Dinamiche"
 
 msgid "GLLIGHTMNU_LIGHTSPRITES"
 msgstr "Le luci influiscono sugli sprite"
@@ -4816,9 +4710,8 @@ msgid "MISCMNU_RESTARTONDEATH"
 msgstr "Riavvio con pistola in caso di morte"
 
 # Resets inventory on every map
-#, fuzzy
 msgid "GMPLYMNU_PISTOLSTART"
-msgstr "Avvio pistola"
+msgstr "Avvio con pistola su ogni mappa"
 
 msgid "CMPTMNU_VOODOOZOMBIES"
 msgstr ""
@@ -5196,3 +5089,58 @@ msgstr "Automatico (Vanilla preferito)"
 #, fuzzy
 msgid "OPTVAL_VTAZDOOM"
 msgstr "Automatico (ZDoom preferito)"
+
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Modalità Invincibilità: {ATTIVA|SPENTA}"
+
+msgid "STSTR_DQD2{ON|OFF}"
+msgstr "Modalità Invincibilità Ultima: {ATTIVA|SPENTA}"
+
+msgid "STSTR_NC{ON|OFF}"
+msgstr "No Clipping: {ATTIVO|SPENTO}"
+
+msgid "STSTR_NC2{ON|OFF}"
+msgstr "3D No Clipping: {ATTIVO|SPENTO}"
+
+msgid "TXT_BUDDHA{ON|OFF}"
+msgstr "Modalità Buddha: {ATTIVA|SPENTA}"
+
+msgid "TXT_BUDDHA2{ON|OFF}"
+msgstr "Modalità Ultimo Buddha: {ATTIVA|SPENTA}"
+
+msgid "TXT_CHEATPOWER{ON|OFF}"
+msgstr "Potere: {ATTIVO|SPENTO}"
+
+msgid "TXT_CHEATSOUND{ON|OFF}"
+msgstr "Debug del suono: {ATTIVO|SPENTO}"
+
+msgid "TXT_CHEATTICKER{ON|OFF}"
+msgstr "Ticker: {ATTIVO|SPENTO}"
+
+msgid "TXT_FREEZE{ON|OFF}"
+msgstr "Modalità arresto del tempo: {ATTIVA|SPENTA}"
+
+msgid "TXT_LEADBOOTS{ON|OFF}"
+msgstr "Stivali di Piombo: {ATTIVI|SPENTI}"
+
+msgid "TXT_NOTARGET_{ON|OFF}"
+msgstr "Modalità Mostri ciechi e sordi: {ATTIVA|SPENTA}"
+
+msgid "TXT_CHASECAM_{ON|OFF}"
+msgstr "Modalità camera da inseguimento: {ATTIVA|SPENTA}"
+
+msgid "AMSTR_FOLLOW{ON|OFF}"
+msgstr "Modalità inseguimento: {ATTIVA|SPENTA}"
+
+msgid "AMSTR_GRID{ON|OFF}"
+msgstr "Griglia: {ATTIVA|SPENTA}"
+
+msgid "AMSTR_TEX{ON|OFF}"
+msgstr "Modalità Texture: {ATTIVA|SPENTA}"
+
+msgctxt "chex"
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Modalità invincibile: {ATTIVA|SPENTA}"
+
+msgid "MSG{ON|OFF}"
+msgstr "Messaggi: {ATTIVI|SPENTI}"

@@ -138,14 +138,6 @@ msgid "GOTSHOTGUN"
 msgstr ""
 
 msgctxt "doom harmony"
-msgid "STSTR_DQDON"
-msgstr ""
-
-msgctxt "doom harmony"
-msgid "STSTR_DQDOFF"
-msgstr ""
-
-msgctxt "doom harmony"
 msgid "STSTR_KFAADDED"
 msgstr ""
 
@@ -241,4 +233,8 @@ msgstr ""
 
 msgctxt "doom harmony"
 msgid "TXT_D2E1"
+msgstr ""
+
+msgctxt "doom harmony"
+msgid "STSTR_DQD{ON|OFF}"
 msgstr ""

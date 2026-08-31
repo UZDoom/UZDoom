@@ -1098,7 +1098,7 @@ class OptionMenuSliderBase : OptionMenuItem
 	private void DrawSliderElement (int color, int x, int y, String str, bool grayed = false)
 	{
 		int overlay = grayed? Color(96, 48, 0, 0) : 0;
-		screen.DrawText (ConFont, color, x, y, str, DTA_CellX, 16 * CleanXfac_1, DTA_CellY, 16 * CleanYfac_1, DTA_ColorOverlay, overlay);
+		screen.DrawText (SymbolsFont, color, x, y, str, DTA_CellX, 16 * CleanXfac_1, DTA_CellY, 16 * CleanYfac_1, DTA_ColorOverlay, overlay);
 	}
 
 	protected void DrawSlider (int x, int y, double min, double max, double cur, int fracdigits, int indent, bool grayed = false)

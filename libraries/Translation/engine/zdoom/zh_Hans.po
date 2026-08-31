@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-08-09 02:48+0000\n"
-"Last-Translator: dwing <12104745@qq.com>\n"
+"PO-Revision-Date: 2026-08-13 11:51+0000\n"
+"Last-Translator: gearo po <suzijie95@gmail.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/zh_Hans/>\n"
 "Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
@@ -170,7 +170,7 @@ msgstr ""
 msgid "QUITMSG16"
 msgstr ""
 "射得正爽呢……\n"
-"真吊人胃口！"
+"真是吊人胃口！"
 
 msgid "QUITMSG17"
 msgstr ""
@@ -188,7 +188,7 @@ msgstr "好嘛！杀完就跑！"
 
 msgid "QUITMSG21"
 msgstr ""
-"你可以退出……\n"
+"你可以离开……\n"
 "但你躲不掉……"
 
 msgid "QUITMSG22"
@@ -282,35 +282,11 @@ msgstr "音乐更换"
 msgid "STSTR_NOMUS"
 msgstr "无法选择"
 
-msgid "STSTR_DQDON"
-msgstr "无敌模式：开"
-
-msgid "STSTR_DQDOFF"
-msgstr "无敌模式：关"
-
-msgid "STSTR_DQD2ON"
-msgstr "终极无敌模式：开"
-
-msgid "STSTR_DQD2OFF"
-msgstr "终极无敌模式：关"
-
 msgid "STSTR_KFAADDED"
 msgstr "增加了非常满意的弹药"
 
 msgid "STSTR_FAADDED"
 msgstr "增加了弹药(无钥匙)"
-
-msgid "STSTR_NCON"
-msgstr "穿墙模式：开"
-
-msgid "STSTR_NCOFF"
-msgstr "穿墙模式：关"
-
-msgid "STSTR_NC2ON"
-msgstr "3D穿墙模式：开"
-
-msgid "STSTR_NC2OFF"
-msgstr "3D穿墙模式：关"
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -332,47 +308,17 @@ msgstr "……没那么烂 - GM"
 msgid "STSTR_CLEV"
 msgstr "更换关卡……"
 
-msgid "TXT_BUDDHAON"
-msgstr "佛陀模式：开"
-
-msgid "TXT_BUDDHAOFF"
-msgstr "佛陀模式：关"
-
-msgid "TXT_BUDDHA2ON"
-msgstr "终极佛陀模式：开"
-
-msgid "TXT_BUDDHA2OFF"
-msgstr "终极佛陀模式：关"
-
-msgid "TXT_CHEATPOWERON"
-msgstr "力量：开"
-
-msgid "TXT_CHEATPOWEROFF"
-msgstr "力量：关"
-
 msgid "TXT_CHEATHEALTH"
 msgstr "生命全满"
 
 msgid "TXT_CHEATKEYS"
 msgstr "所有钥匙"
 
-msgid "TXT_CHEATSOUNDON"
-msgstr "声音调试：开"
-
-msgid "TXT_CHEATSOUNDOFF"
-msgstr "声音调试：关"
-
 msgid "TXT_CHEATIDDQD"
 msgstr "想作弊，嗯？那你死了！"
 
 msgid "TXT_CHEATIDKFA"
 msgstr "作弊者——你不配拥有武器"
-
-msgid "TXT_CHEATTICKERON"
-msgstr "Ticker：开"
-
-msgid "TXT_CHEATTICKEROFF"
-msgstr "Ticker：关"
 
 msgid "TXT_CHEATARTIFACTS3"
 msgstr "你得到了"
@@ -383,12 +329,6 @@ msgstr "你得到了点金术，孩子"
 msgid "TXT_GOTSTUFF"
 msgstr "你收获满满！"
 
-msgid "TXT_FREEZEON"
-msgstr "冻结模式：开"
-
-msgid "TXT_FREEZEOFF"
-msgstr "冻结模式：关"
-
 msgid "TXT_STRANGE"
 msgstr "你感觉很怪……"
 
@@ -398,36 +338,17 @@ msgstr "你感觉更怪了。"
 msgid "TXT_NOTSTRANGE"
 msgstr "你感觉又做回自己了。"
 
-msgid "TXT_LEADBOOTSON"
-msgstr "防辐射靴：开"
-
-msgid "TXT_LEADBOOTSOFF"
-msgstr "防辐射靴：关"
-
 msgid "TXT_LIGHTER"
 msgstr "你感觉变轻了"
 
 msgid "TXT_GRAVITY"
 msgstr "重力将你拉了下来"
 
-#, fuzzy
-msgid "TXT_NOTARGET_ON"
-msgstr "无视模式：开"
-
-msgid "TXT_NOTARGET_OFF"
-msgstr "无视模式：关"
-
 msgid "TXT_ANUBIS_ON"
 msgstr "“吓得发抖！”"
 
 msgid "TXT_ANUBIS_OFF"
 msgstr "再也没有食人魔盔甲"
-
-msgid "TXT_CHASECAM_ON"
-msgstr "跟随视角：开"
-
-msgid "TXT_CHASECAM_OFF"
-msgstr "跟随视角：关"
 
 msgid "TXT_BADDIE_KILLED"
 msgstr "干掉了1个坏蛋"
@@ -452,24 +373,6 @@ msgstr "游戏之外你想杀些什么？"
 
 msgid "TXT_NOT_FROZEN"
 msgstr "冻结玩家属性：关"
-
-msgid "AMSTR_FOLLOWOFF"
-msgstr "跟随模式：关"
-
-msgid "AMSTR_FOLLOWON"
-msgstr "跟随模式：开"
-
-msgid "AMSTR_GRIDON"
-msgstr "网格：开"
-
-msgid "AMSTR_GRIDOFF"
-msgstr "网格：关"
-
-msgid "AMSTR_TEXON"
-msgstr "纹理模式：开"
-
-msgid "AMSTR_TEXOFF"
-msgstr "纹理模式：关"
 
 msgid "AMSTR_MARKEDSPOT"
 msgstr "标记点"
@@ -2850,14 +2753,6 @@ msgstr ""
 "\n"
 "按Y键确认，按N键取消。"
 
-msgctxt "chex"
-msgid "STSTR_DQDON"
-msgstr "无敌模式：开"
-
-msgctxt "chex"
-msgid "STSTR_DQDOFF"
-msgstr "无敌模式：关"
-
 #, fuzzy
 msgctxt "chex"
 msgid "STSTR_FAADDED"
@@ -4570,9 +4465,9 @@ msgid "TXT_TOOOLDSG"
 msgstr "存档“%s”来自旧版本(%d)。支持的最低版本是%e。"
 
 # Shouldn’t this say “%e is the newest supported”?
-#
+# 
 # — Undead
-#
+# 
 # Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
 msgstr "存档“%s”来自新版本(%d)。支持的最高版本是%e。"
@@ -5529,3 +5424,59 @@ msgstr "主题"
 
 msgid "OPTVAL_LIGHT"
 msgstr "浅色"
+
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "无敌模式：{开|关}"
+
+msgid "STSTR_DQD2{ON|OFF}"
+msgstr "终极无敌模式：{开|关}"
+
+msgid "STSTR_NC{ON|OFF}"
+msgstr "穿墙模式：{开|关}"
+
+msgid "STSTR_NC2{ON|OFF}"
+msgstr "3D穿墙模式：{开|关}"
+
+msgid "TXT_BUDDHA{ON|OFF}"
+msgstr "佛陀模式：{开|关}"
+
+msgid "TXT_BUDDHA2{ON|OFF}"
+msgstr "终极佛陀模式：{开|关}"
+
+msgid "TXT_CHEATPOWER{ON|OFF}"
+msgstr "力量：{开|关}"
+
+msgid "TXT_CHEATSOUND{ON|OFF}"
+msgstr "声音调试：{开|关}"
+
+msgid "TXT_CHEATTICKER{ON|OFF}"
+msgstr "Ticker：{开|关}"
+
+msgid "TXT_FREEZE{ON|OFF}"
+msgstr "冻结模式：{开|关}"
+
+msgid "TXT_LEADBOOTS{ON|OFF}"
+msgstr "防辐射靴：{开|关}"
+
+#, fuzzy
+msgid "TXT_NOTARGET_{ON|OFF}"
+msgstr "无视模式：{开|关}"
+
+msgid "TXT_CHASECAM_{ON|OFF}"
+msgstr "跟随视角：{开|关}"
+
+msgid "AMSTR_FOLLOW{ON|OFF}"
+msgstr "跟随模式：{开|关}"
+
+msgid "AMSTR_GRID{ON|OFF}"
+msgstr "网格：{开|关}"
+
+msgid "AMSTR_TEX{ON|OFF}"
+msgstr "纹理模式：{开|关}"
+
+msgctxt "chex"
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "无敌模式：{开|关}"
+
+msgid "MSG{ON|OFF}"
+msgstr "消息：{开|关}"

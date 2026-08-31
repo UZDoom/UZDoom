@@ -136,7 +136,15 @@ class AltHud ui
 	{
 		let seconds = Thinker.Tics2Seconds(timer);
 		String s = String.Format("%02i:%02i:%02i", seconds / 3600, (seconds % 3600) / 60, seconds % 60);
-		int length = 8 * fnt.GetCharWidth("0");
+		int length;
+		if (fnt.IsValidDynamicFont())
+		{
+			length = fnt.StringWidth(s);
+		}
+		else
+		{
+			length = 8 * fnt.GetCharWidth("0");
+		}
 		DrawHudText(fnt, color, s, x-length, y, trans);
 	}
 
@@ -148,14 +156,34 @@ class AltHud ui
 
 	virtual void DrawStatLine(int x, in out int y, String prefix, String text)
 	{
-		y -= SmallFont.GetHeight()-1;
-		screen.DrawText(SmallFont, hudcolor_statnames, x, y, prefix,
-			DTA_KeepRatio, true,
-			DTA_VirtualWidth, hudwidth, DTA_VirtualHeight, hudheight, DTA_Alpha, 0.75);
+		let fnt = Font.GetSmallTextFont(SmallFont);
 
-		screen.DrawText(SmallFont, hudcolor_stats, x+statspace, y, text,
-			DTA_KeepRatio, true,
-			DTA_VirtualWidth, hudwidth, DTA_VirtualHeight, hudheight, DTA_Alpha, 0.75);
+		if (fnt.IsValidDynamicFont())
+		{
+			//the dynamic text tends to larger. Adjust the desired height to be roughly what the hud was designed for (smallfont)
+			float scaleAdjust = fnt.GetHeight() / SmallFont.GetHeight();
+			y -= SmallFont.GetHeight()-1;
+			int adjustedHeight = ceil(hudheight * scaleAdjust);
+			int adjustedWidth = ceil(hudwidth * scaleAdjust);
+			screen.DrawText(fnt, hudcolor_statnames, x, ceil(y*scaleAdjust), prefix,
+				DTA_KeepRatio, true,
+				DTA_VirtualWidth, adjustedWidth, DTA_VirtualHeight, adjustedHeight, DTA_Alpha, 0.75);
+
+			screen.DrawText(fnt, hudcolor_stats, x+(statspace*scaleAdjust), ceil(y*scaleAdjust), text,
+				DTA_KeepRatio, true,
+				DTA_VirtualWidth, adjustedWidth, DTA_VirtualHeight, adjustedHeight, DTA_Alpha, 0.75);
+		}
+		else
+		{
+			y -= fnt.GetHeight()-1;
+			screen.DrawText(fnt, hudcolor_statnames, x, y, prefix,
+				DTA_KeepRatio, true,
+				DTA_VirtualWidth, hudwidth, DTA_VirtualHeight, hudheight, DTA_Alpha, 0.75);
+
+			screen.DrawText(fnt, hudcolor_stats, x+statspace, y, text,
+				DTA_KeepRatio, true,
+				DTA_VirtualWidth, hudwidth, DTA_VirtualHeight, hudheight, DTA_Alpha, 0.75);
+		}
 	}
 
 	virtual void DrawStatus(PlayerInfo CPlayer, int x, int y)
@@ -230,8 +258,9 @@ class AltHud ui
 			&& !gameinfo.berserkpic.IsNull()
 			&& CPlayer.mo.FindInventory('PowerStrength');
 
+		let fnt = Font.GetBigTextFont(HudFont);
 		DrawImageToBox(haveBerserk ? gameinfo.berserkpic : gameinfo.healthpic, x, y, 31, 17);
-		DrawHudNumber(HudFont, fontcolor, health, x + 33, y + 17);
+		DrawHudNumber(fnt, fontcolor, health, x + 33, y + 17);
 	}
 
 	//===========================================================================
@@ -289,7 +318,9 @@ class AltHud ui
 				DrawImageToBox(TexMan.CheckForTexture(harmorIcons[bestslot], TexMan.Type_Sprite), x, y, 31, 17);
 			}
 			else if (barmor) DrawImageToBox(barmor.Icon, x, y, 31, 17);
-			DrawHudNumber(HudFont, fontcolor, ap, x + 33, y + 17);
+
+			let fnt = Font.GetBigTextFont(HudFont);
+			DrawHudNumber(fnt, fontcolor, ap, x + 33, y + 17);
 		}
 	}
 
@@ -460,6 +491,8 @@ class AltHud ui
 
 		let wi = CPlayer.ReadyWeapon;
 
+		let fnt = Font.GetConsoleFont(ConFont);
+
 		orderedammos.Clear();
 
 		if (0 == hud_showammo)
@@ -510,8 +543,9 @@ class AltHud ui
 		//buf = String.Format("%0d/%0d", 0, 0);
 		buf = String.Format("%0*d/%0*d", ammocurlen, 0, ammomaxlen, 0);
 
-		int def_width = ConFont.StringWidth(buf);
-		int yadd = ConFont.GetHeight();
+		float scaleAdjust = fnt.GetHeight() / ConFont.GetHeight();
+		int def_width = fnt.StringWidth(buf);
+		int yadd = ceil(fnt.GetHeight()*scaleAdjust);
 
 		int xtext = x - def_width;
 		int ximage = x;
@@ -545,13 +579,25 @@ class AltHud ui
 			// buf = String.Format("%d/%d", ammo, maxammo);
 			buf = String.Format("%*d/%*d", ammocurlen, ammo, ammomaxlen, maxammo);
 
-			int tex_width= clamp(ConFont.StringWidth(buf) - def_width, 0, 1000);
+			int tex_width= clamp(fnt.StringWidth(buf) - def_width, 0, 1000);
 
 			int fontcolor=( !maxammo ? Font.CR_GRAY :
 							 ammo < ( (maxammo * hud_ammo_red) / 100) ? Font.CR_RED :
 							 ammo < ( (maxammo * hud_ammo_yellow) / 100) ? Font.CR_GOLD : Font.CR_GREEN );
 
-			DrawHudText(ConFont, fontcolor, buf, xtext-tex_width, y+yadd, trans);
+			if (fnt.IsValidDynamicFont())
+			{
+				int adjustedHeight = ceil(hudheight*scaleAdjust);
+				int adjustedWidth = ceil(hudwidth*scaleAdjust);
+				int adjustedY = (y*scaleAdjust) - (fnt.GetHeight() * 0.5);
+				int adjustedX = (hudwidth*scaleAdjust) - tex_width;
+				screen.DrawText(fnt, fontcolor, (xtext*scaleAdjust)-tex_width, adjustedY, buf, DTA_VirtualWidth, adjustedWidth, DTA_VirtualHeight, adjustedHeight,
+					DTA_KeepRatio, true, DTA_Alpha, trans);
+			}
+			else
+			{
+				DrawHudText(fnt, fontcolor, buf, xtext-tex_width, y+yadd, trans);
+			}
 			DrawImageToBox(icon, ximage, y, 16, 8, trans);
 			y-=10;
 		}
@@ -699,7 +745,8 @@ class AltHud ui
 	virtual void DrawFrags(PlayerInfo CPlayer, int x, int y)
 	{
 		DrawImageToBox(fragpic, x, y, 31, 17);
-		DrawHudNumber(HudFont, Font.CR_GRAY, CPlayer.fragcount, x + 33, y + 17);
+		let fnt = Font.GetBigTextFont(HudFont);
+		DrawHudNumber(fnt, Font.CR_GRAY, CPlayer.fragcount, x + 33, y + 17);
 	}
 
 	//---------------------------------------------------------------------------
@@ -710,7 +757,7 @@ class AltHud ui
 
 	void DrawCoordinateEntry(int xpos, int ypos, String coordstr, Font fnt = nullptr)
 	{
-		if (fnt == nullptr) fnt = SmallFont;
+		if (fnt == nullptr) fnt = Font.GetSmallTextFont(SmallFont);
 		screen.DrawText(fnt, hudcolor_xyco, xpos, ypos, coordstr,
 						 DTA_KeepRatio, true,
 						 DTA_VirtualWidth, hudwidth, DTA_VirtualHeight, hudheight);
@@ -720,7 +767,7 @@ class AltHud ui
 	{
 		Vector3 pos;
 		String coordstr;
-		let fnt = generic_ui ? NewSmallFont : SmallFont;
+		let fnt = Font.GetSmallTextFont(generic_ui ? NewSmallFont : SmallFont);
 		int h = fnt.GetHeight();
 		let mo = CPlayer.mo;
 
@@ -739,7 +786,7 @@ class AltHud ui
 
 		if (withmapname)
 		{
-			let font = generic_ui? NewSmallFont : SmallFont.CanPrint(Level.LevelName)? SmallFont : OriginalSmallFont;
+			let font = Font.GetSmallTextFont(generic_ui? NewSmallFont : SmallFont.CanPrint(Level.LevelName)? SmallFont : OriginalSmallFont);
 			int hh = font.GetHeight();
 
 			screen.DrawText(font, hudcolor_titl, hudwidth - 6 - font.StringWidth(Level.MapName), ypos, Level.MapName,
@@ -826,8 +873,24 @@ class AltHud ui
 			}
 
 			int characterCount = timeString.length();
-			int width  = SmallFont.GetCharWidth("0") * characterCount + 2; // small offset from screen's border
-			DrawHudText(SmallFont, hud_timecolor, timeString, hudwidth - width, y, 1);
+			let font = Font.GetSmallTextFont(SmallFont);
+			int width = 0;
+			if (font.IsValidDynamicFont())
+			{
+				width = font.StringWidth(timeString);
+				float scaleAdjust = font.GetHeight() / SmallFont.GetHeight();
+				int adjustedWidth = hudwidth*scaleAdjust;
+				int adjustedHeight = hudheight*scaleAdjust;
+				screen.DrawText(font, hud_timecolor, int(ceil(hudwidth*scaleAdjust - width))-2, y-font.GetHeight(), timeString,
+				DTA_KeepRatio, true,
+				DTA_VirtualWidth, adjustedWidth, DTA_VirtualHeight, adjustedHeight);
+			}
+			else
+			{
+				width = font.GetCharWidth("0") * characterCount + 2; // small offset from screen's border
+				DrawHudText(font, hud_timecolor, timeString, hudwidth - width, y, 1);
+			}
+			
 			return true;
 		}
 		return false;
@@ -853,9 +916,25 @@ class AltHud ui
 			String tempstr = String.Format("a:%dms - l:%dms", arbitratordelay, localdelay);
 
 			int characterCount = tempstr.Length();
-			int width = SmallFont.GetCharWidth("0") * characterCount + 2; // small offset from screen's border
+			let font = Font.GetSmallTextFont(SmallFont);
+			int width = 0;
+			if (font.IsValidDynamicFont())
+			{
+				width = font.StringWidth(tempstr);
+				float scaleAdjust = font.GetHeight() / SmallFont.GetHeight();
+				int adjustedWidth = hudwidth*scaleAdjust;
+				int adjustedHeight = hudheight*scaleAdjust;
+				screen.DrawText(font, color, int(ceil(hudwidth*scaleAdjust - width))-2, y-font.GetHeight(), tempstr,
+				DTA_KeepRatio, true,
+				DTA_VirtualWidth, adjustedWidth, DTA_VirtualHeight, adjustedHeight);
+			}
+			else
+			{
+				width = font.GetCharWidth("0") * characterCount + 2; // small offset from screen's border
+				DrawHudText(font, color, tempstr, hudwidth - width, y, 1);
+			}
 
-			DrawHudText(SmallFont, color, tempstr, hudwidth - width, y, 1);
+			
 			return true;
 		}
 		return false;
@@ -928,7 +1007,8 @@ class AltHud ui
 		DrawInventory(CPlayer, 144, hudheight - 28);
 		if (idmypos) DrawCoordinates(CPlayer, true);
 
-		int h = SmallFont.GetHeight();
+		let font = Font.GetSmallTextFont(SmallFont);
+		int h = font.GetHeight();
 		y = h;
 		if (DrawTime(y)) y += h;
 		if (DrawLatency(y)) y += h;
@@ -943,7 +1023,7 @@ class AltHud ui
 
 	virtual void DrawAutomap(PlayerInfo CPlayer)
 	{
-		let font = generic_ui? NewSmallFont : SmallFont;
+		let font = Font.GetSmallTextFont(generic_ui? NewSmallFont : SmallFont);
 
 		int fonth = font.GetHeight() + 1;
 		int bottom = hudheight - 1;
@@ -967,7 +1047,7 @@ class AltHud ui
 		}
 
 		let amstr = Level.FormatMapName(hudcolor_titl);
-		font = generic_ui? NewSmallFont : SmallFont.CanPrint(amstr)? SmallFont : OriginalSmallFont;
+		font = Font.GetSmallTextFont(generic_ui? NewSmallFont : SmallFont.CanPrint(amstr)? SmallFont : OriginalSmallFont);
 
 		bottom = hudheight - fonth - 1;
 

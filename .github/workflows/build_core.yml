@@ -89,8 +89,8 @@ jobs:
       id: key
       shell: bash
       run: |
-        ref=${{ github.base_ref || github.ref }}
-        main=${{ github.event.repository.master_branch || 'trunk' }}
+        ref="${{ github.base_ref || github.ref }}"
+        main="${{ github.event.repository.master_branch || 'trunk' }}"
         suffix="${{ inputs.name }}/${{ inputs.build_type }}"
         echo "ref: $ref"
         if [[ -z "${ref}" || "${ref}" == refs/* ]]; then

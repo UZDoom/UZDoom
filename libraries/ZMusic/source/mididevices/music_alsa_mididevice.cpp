@@ -73,20 +73,19 @@ protected:
 	void PlayerLoop();
 
 	// Event handling
-	void HandleEvent(snd_seq_event_t &event, uint32_t tick);
+	void HandleEvent(snd_seq_event_t& event, uint32_t tick);
 	void SendImmediateShortMsg(uint8_t command, uint8_t data1 = 0, uint8_t data2 = 0);
 	snd_midi_event_t* Coder = nullptr;
 
 	// PulledEvent structure to hold the next event to be processed
-	struct PulledEvent
+	struct
 	{
-		snd_seq_event_t Event;
-		uint32_t TickDelta;
-	};
-	PulledEvent PulledEvent;
+		snd_seq_event_t event;
+		uint32_t tick_delta;
+	} PulledEvent;
 
 	// Alsa sequencer handles
-	AlsaSequencer &sequencer;
+	AlsaSequencer& sequencer;
 	const static int IntendedPortId = 0;
 	bool Connected = false;
 	int PortId = -1;
@@ -103,9 +102,9 @@ protected:
 	std::condition_variable ExitCond;
 
 	// Timing
-	int InitialTempo = 500000;
-	int Tempo;
-	int Division = 100; // PPQN
+	int64_t InitialTempo = 500000;
+	int64_t Tempo;
+	int64_t Division = 100; // PPQN
 
 	// ZMusic MidiHeader data
 	MidiHeader* Events = nullptr;
@@ -113,10 +112,10 @@ protected:
 	uint32_t PositionOffset;
 };
 
-AlsaMIDIDevice::AlsaMIDIDevice(int dev_id, bool precache) : sequencer(AlsaSequencer::Get())
+AlsaMIDIDevice::AlsaMIDIDevice(int dev_id, bool precache) : sequencer{AlsaSequencer::Get()}
 {
-	auto & internalDevices = sequencer.GetInternalDevices();
-	auto & device = internalDevices.at(dev_id);
+	auto& internalDevices = sequencer.GetInternalDevices();
+	auto& device = internalDevices.at(dev_id);
 	DestinationClientId = device.ClientID;
 	DestinationPortId = device.PortNumber;
 	Precache = precache;
@@ -229,7 +228,7 @@ void AlsaMIDIDevice::PrecacheInstruments(const uint16_t* instruments, int count)
 	{
 		return;
 	}
-	uint8_t bank[16] = {0};
+	uint8_t bank[16] = {};
 	uint8_t i, chan;
 
 	for (i = 0, chan = 0; i < count; ++i)
@@ -378,8 +377,8 @@ bool AlsaMIDIDevice::PullEvent()
 		return false;
 	}
 
-	uint32_t* event = (uint32_t*)(Events->lpData + Position);
-	PulledEvent.TickDelta = event[0]; // First 4 bytes of event
+	const uint32_t* event = (uint32_t*)(Events->lpData + Position);
+	PulledEvent.tick_delta = event[0]; // First 4 bytes of event
 
 	// Get event size to advance Position
 	if (event[2] < 0x80000000) // Short message (event[2] is the combined status/data bytes)
@@ -395,20 +394,20 @@ bool AlsaMIDIDevice::PullEvent()
 	switch (MEVENT_EVENTTYPE(event[2]))
 	{
 	case MEVENT_TEMPO:
-		snd_seq_ev_set_queue_tempo(&PulledEvent.Event, QueueId, MEVENT_EVENTPARM(event[2]));
+		snd_seq_ev_set_queue_tempo(&PulledEvent.event, QueueId, MEVENT_EVENTPARM(event[2]));
 		break;
 	case MEVENT_LONGMSG: // SysEx message...
 		{
-			int long_msg_len = MEVENT_EVENTPARM(event[2]);
-			uint8_t* long_msg_data = (uint8_t*)&event[3];
+			uint32_t long_msg_len = MEVENT_EVENTPARM(event[2]);
+			const uint8_t* long_msg_data = (uint8_t*)&event[3];
 			// Ensure valid sysex message
 			if (long_msg_len > 2 && long_msg_data[0] == 0xF0 && long_msg_data[long_msg_len - 1] == 0xF7)
 			{
-				snd_seq_ev_set_sysex(&PulledEvent.Event, long_msg_len, (void*)long_msg_data);
+				snd_seq_ev_set_sysex(&PulledEvent.event, long_msg_len, (void*)long_msg_data);
 			}
 			else
 			{
-				PulledEvent.Event.type = SND_SEQ_EVENT_NONE;
+				PulledEvent.event.type = SND_SEQ_EVENT_NONE;
 			}
 			break;
 		}
@@ -419,11 +418,11 @@ bool AlsaMIDIDevice::PullEvent()
 								(uint8_t)((event[2] >> 16) & 0xff) }; // Data 2
 
 			// This silently ignores extra bytes, so no message length logic is needed.
-			snd_midi_event_encode(Coder, msg, 3, &PulledEvent.Event);
+			snd_midi_event_encode(Coder, msg, 3, &PulledEvent.event);
 			break;
 		}
 	default: // We didn't really recognize the event, treat it as a NOP
-		PulledEvent.Event.type = SND_SEQ_EVENT_NONE;
+		PulledEvent.event.type = SND_SEQ_EVENT_NONE;
 	}
 	return true;
 }
@@ -435,8 +434,9 @@ bool AlsaMIDIDevice::PullEvent()
  */
 void AlsaMIDIDevice::PlayerLoop()
 {
-	std::unique_lock<std::mutex> lock(Mutex);
-	const std::chrono::microseconds buffer_step(40000);
+	std::unique_lock<std::mutex> lock{Mutex};
+	using namespace std::literals::chrono_literals;
+	constexpr std::chrono::microseconds buffer_step = 40ms;
 
 	// TODO: fill in error handling throughout this.
 	snd_seq_queue_tempo_t* tempo;
@@ -449,12 +449,12 @@ void AlsaMIDIDevice::PlayerLoop()
 	snd_seq_drain_output(sequencer.handle);
 
 	Tempo = InitialTempo;
-	int buffered_ticks = 0;
+	uint32_t buffer_tick = 0;
 
 	snd_seq_queue_status_t* status;
 	snd_seq_queue_status_malloc(&status);
 
-	snd_seq_ev_clear(&PulledEvent.Event);
+	snd_seq_ev_clear(&PulledEvent.event);
 
 	while (!Exit.load(std::memory_order_relaxed))
 	{
@@ -466,11 +466,11 @@ void AlsaMIDIDevice::PlayerLoop()
 		}
 
 		// Figure out if we should sleep (the event is too far in the future for us to care), and for how long
-		int pulled_event_tick = buffered_ticks + PulledEvent.TickDelta;
+		auto pulled_event_tick = buffer_tick + PulledEvent.tick_delta;
 		snd_seq_get_queue_status(sequencer.handle, QueueId, status);
-		int queue_tick = snd_seq_queue_status_get_tick_time(status);
-		int ticks_until_pulled_ev = pulled_event_tick - queue_tick;
-		auto time_until_pulled_ev = std::chrono::microseconds(ticks_until_pulled_ev * Tempo / Division);
+		auto queue_tick = snd_seq_queue_status_get_tick_time(status);
+		auto ticks_until_pulled_ev = int64_t{pulled_event_tick} - queue_tick;
+		std::chrono::microseconds time_until_pulled_ev{ticks_until_pulled_ev * Tempo / Division};
 		auto schedule_time = time_until_pulled_ev - buffer_step;
 		if (schedule_time >= buffer_step)
 		{
@@ -486,8 +486,8 @@ void AlsaMIDIDevice::PlayerLoop()
 		}
 
 		// We found an event worthy of sending to the sequencer
-		HandleEvent(PulledEvent.Event, pulled_event_tick);
-		buffered_ticks = pulled_event_tick;
+		HandleEvent(PulledEvent.event, pulled_event_tick);
+		buffer_tick = pulled_event_tick;
 		Position += PositionOffset;
 	}
 
@@ -495,7 +495,7 @@ void AlsaMIDIDevice::PlayerLoop()
 }
 
 // Requires QueueId to be started first for non-zero tick positioned events.
-void AlsaMIDIDevice::HandleEvent(snd_seq_event_t &event, uint32_t tick)
+void AlsaMIDIDevice::HandleEvent(snd_seq_event_t& event, uint32_t tick)
 {
 	if (event.type == SND_SEQ_EVENT_NONE)
 	{	// NOP event, clear event handle and return.
@@ -511,7 +511,7 @@ void AlsaMIDIDevice::HandleEvent(snd_seq_event_t &event, uint32_t tick)
 		event.dest.port = SND_SEQ_PORT_SYSTEM_TIMER;
 	}
 	snd_seq_ev_schedule_tick(&event, QueueId, false, tick);
-	int result = snd_seq_event_output(sequencer.handle, &event);
+	auto result = snd_seq_event_output(sequencer.handle, &event);
 	if (result < 0)
 	{
 		ZMusic_Printf(ZMUSIC_MSG_ERROR, "Alsa sequencer did not accept event: error %d!\n", result);

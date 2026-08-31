@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-14 05:01+0000\n"
-"Last-Translator: Júlia Rosell Saldaña <contacte@juliars.cat>\n"
+"PO-Revision-Date: 2026-08-10 23:42-0400\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Latin <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/la/>\n"
 "Language: la\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.8.dev0\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
 
 msgid "PRESSKEY"
 msgstr "Preme clavem."
@@ -277,35 +277,11 @@ msgstr "Mutatio musicae"
 msgid "STSTR_NOMUS"
 msgstr "Electio impossibilis"
 
-msgid "STSTR_DQDON"
-msgstr "Degreelessness Modus: DE"
-
-msgid "STSTR_DQDOFF"
-msgstr "Degreelessness Modus: Off"
-
-msgid "STSTR_DQD2ON"
-msgstr "Ultima Degreelessness Modus: DE"
-
-msgid "STSTR_DQD2OFF"
-msgstr "Ultima Degreelessness Modus: Off"
-
 msgid "STSTR_KFAADDED"
 msgstr "Ipsum Felix Ammo Added"
 
 msgid "STSTR_FAADDED"
 msgstr "Ammo (non claves) Added"
-
-msgid "STSTR_NCON"
-msgstr "Non Clipping Modus: ON"
-
-msgid "STSTR_NCOFF"
-msgstr "Non Clipping Modus: OFF"
-
-msgid "STSTR_NC2ON"
-msgstr "3D Non Clipping Modus: ON"
-
-msgid "STSTR_NC2OFF"
-msgstr "3D Non Clipping Modus: OFF"
 
 msgid "STSTR_BEHOLD"
 msgstr "inVuln, Str, Inviso, Rad, Allmap, vel Lite-amp ."
@@ -319,47 +295,17 @@ msgstr "... non lactaverunt - GM"
 msgid "STSTR_CLEV"
 msgstr "Mutans Gradus…"
 
-msgid "TXT_BUDDHAON"
-msgstr "Buddha modus: ON"
-
-msgid "TXT_BUDDHAOFF"
-msgstr "Buddha modus: OFF"
-
-msgid "TXT_BUDDHA2ON"
-msgstr "Ultima Buddha Modus: ON"
-
-msgid "TXT_BUDDHA2OFF"
-msgstr "Ultima Buddha Modus: OFF"
-
-msgid "TXT_CHEATPOWERON"
-msgstr "Potentia: ON"
-
-msgid "TXT_CHEATPOWEROFF"
-msgstr "Potentia: OFF"
-
 msgid "TXT_CHEATHEALTH"
 msgstr "Plena sanitas"
 
 msgid "TXT_CHEATKEYS"
 msgstr "Omnes claves"
 
-msgid "TXT_CHEATSOUNDON"
-msgstr "Sana debug: ON"
-
-msgid "TXT_CHEATSOUNDOFF"
-msgstr "Sana lusione: ON"
-
 msgid "TXT_CHEATIDDQD"
 msgstr "Fallere, annon? iam morieris!"
 
 msgid "TXT_CHEATIDKFA"
 msgstr "Fraudator-tela non merentur"
-
-msgid "TXT_CHEATTICKERON"
-msgstr "Ticker: ACTIVUS"
-
-msgid "TXT_CHEATTICKEROFF"
-msgstr "Ticker: Off"
 
 msgid "TXT_CHEATARTIFACTS3"
 msgstr "Vos obtinuit eam"
@@ -370,12 +316,6 @@ msgstr "Midae Tactus adfers, parve"
 msgid "TXT_GOTSTUFF"
 msgstr "Tu supellectilem obtinuit!"
 
-msgid "TXT_FREEZEON"
-msgstr "Gelatio modus: ON"
-
-msgid "TXT_FREEZEOFF"
-msgstr "Gelatio modus: OFF"
-
 msgid "TXT_STRANGE"
 msgstr "Mirum sentis…"
 
@@ -385,35 +325,17 @@ msgstr "Etiam peregrinum sentis."
 msgid "TXT_NOTSTRANGE"
 msgstr "Ut te ipsum iterum sentis."
 
-msgid "TXT_LEADBOOTSON"
-msgstr "Caligae ducunt: ON"
-
-msgid "TXT_LEADBOOTSOFF"
-msgstr "Caligae duc: OFF"
-
 msgid "TXT_LIGHTER"
 msgstr "Sentire levius"
 
 msgid "TXT_GRAVITY"
 msgstr "Gravitas gravat te"
 
-msgid "TXT_NOTARGET_ON"
-msgstr "Non Target: ON"
-
-msgid "TXT_NOTARGET_OFF"
-msgstr "Non Target: OFF"
-
 msgid "TXT_ANUBIS_ON"
 msgstr "\"Contremisce cum timore!\""
 
 msgid "TXT_ANUBIS_OFF"
 msgstr "Non magis Ogre Lorica ."
-
-msgid "TXT_CHASECAM_ON"
-msgstr "Camera sequens: ACTIVA"
-
-msgid "TXT_CHASECAM_OFF"
-msgstr "Camera sequens: INACTIVA"
 
 msgid "TXT_BADDIE_KILLED"
 msgstr "i baddie occisus est"
@@ -439,24 +361,6 @@ msgstr "Quid extra lusum necare vis?"
 
 msgid "TXT_NOT_FROZEN"
 msgstr "Quid ludio ludius proprietatibus: OFF"
-
-msgid "AMSTR_FOLLOWOFF"
-msgstr "Sequere Modus: Off"
-
-msgid "AMSTR_FOLLOWON"
-msgstr "Sequere Modus: ON"
-
-msgid "AMSTR_GRIDON"
-msgstr "Eget: ON"
-
-msgid "AMSTR_GRIDOFF"
-msgstr "Eget: OFF"
-
-msgid "AMSTR_TEXON"
-msgstr "Textura Modus: DE"
-
-msgid "AMSTR_TEXOFF"
-msgstr "Textura Modus: OFF"
 
 msgid "AMSTR_MARKEDSPOT"
 msgstr "Locus signatus"
@@ -2825,14 +2729,6 @@ msgstr ""
 "Certusne es te quaestum finire velle?\n"
 "\n"
 "Preme Y vel N."
-
-msgctxt "chex"
-msgid "STSTR_DQDON"
-msgstr "Invictus Modus: DE"
-
-msgctxt "chex"
-msgid "STSTR_DQDOFF"
-msgstr "Invictus Modus: OFF"
 
 msgctxt "chex"
 msgid "STSTR_FAADDED"
@@ -5334,3 +5230,58 @@ msgstr "Automaticus (ZDoom Praefertur)"
 
 msgid "OPTVAL_VTAVANILLA"
 msgstr "Automaticum (Vanilla Praefertur)"
+
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Degreelessness Modus: {DE|Off}"
+
+msgid "STSTR_DQD2{ON|OFF}"
+msgstr "Ultima Degreelessness Modus: {DE|Off}"
+
+msgid "STSTR_NC{ON|OFF}"
+msgstr "Non Clipping Modus: {ON|OFF}"
+
+msgid "STSTR_NC2{ON|OFF}"
+msgstr "3D Non Clipping Modus: {ON|OFF}"
+
+msgid "TXT_BUDDHA{ON|OFF}"
+msgstr "Buddha modus: {ON|OFF}"
+
+msgid "TXT_BUDDHA2{ON|OFF}"
+msgstr "Ultima Buddha Modus: {ON|OFF}"
+
+msgid "TXT_CHEATPOWER{ON|OFF}"
+msgstr "Potentia: {ON|OFF}"
+
+msgid "TXT_CHEATSOUND{ON|OFF}"
+msgstr "Sana debug: {ON|OFF}"
+
+msgid "TXT_CHEATTICKER{ON|OFF}"
+msgstr "Ticker: {ACTIVUS|Off}"
+
+msgid "TXT_FREEZE{ON|OFF}"
+msgstr "Gelatio modus: {ON|OFF}"
+
+msgid "TXT_LEADBOOTS{ON|OFF}"
+msgstr "Caligae ducunt: {ON|OFF}"
+
+msgid "TXT_NOTARGET_{ON|OFF}"
+msgstr "Non Target: {ON|OFF}"
+
+msgid "TXT_CHASECAM_{ON|OFF}"
+msgstr "Camera sequens: {ACTIVA|INACTIVA}"
+
+msgid "AMSTR_FOLLOW{ON|OFF}"
+msgstr "Sequere Modus: {ON|Off}"
+
+msgid "AMSTR_GRID{ON|OFF}"
+msgstr "Eget: {ON|OFF}"
+
+msgid "AMSTR_TEX{ON|OFF}"
+msgstr "Textura Modus: {DE|OFF}"
+
+msgctxt "chex"
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Invictus Modus: {DE|OFF}"
+
+msgid "MSG{ON|OFF}"
+msgstr "Mandata: {ON|OFF}"

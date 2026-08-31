@@ -175,7 +175,7 @@ void DListMenuDescriptor::Reset()
 	mFont = NULL;
 	mFontColor = CR_UNTRANSLATED;
 	mFontColor2 = CR_UNTRANSLATED;
-	mTooltipFont = NewConsoleFont;
+	mTooltipFont = FFont::GetDescriptionFont(NewConsoleFont);
 	mFromEngine = false;
 	mVirtWidth = mVirtHeight = -1;	// default to clean scaling
 }
@@ -195,7 +195,7 @@ void DOptionMenuDescriptor::Reset()
 	mScrollTop = 0;
 	mIndent = 0;
 	mDontDim = 0;
-	mFont = BigUpper;
+	mFont        = BigUpper;
 	mTooltipFont = NewConsoleFont;
 }
 

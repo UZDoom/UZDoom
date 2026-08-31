@@ -191,6 +191,10 @@ BOOL DoReplaceFile(wstr_t root_folder, wstr_t update_folder, wstr_t folder, wstr
 
 	if(GetFileAttributesW(update_path.str) & FILE_ATTRIBUTE_DIRECTORY)
 	{
+		if(!PathFileExistsW(root_path.str))
+		{
+			CreateDirectoryW(root_path.str, NULL);
+		}
 		return DoReplaceFolder(root_folder, update_folder, new_path);
 	}
 	else

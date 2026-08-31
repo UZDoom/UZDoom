@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-13 23:20-0400\n"
+"PO-Revision-Date: 2026-08-10 23:42-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Greek <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/el/>\n"
 "Language: el\n"
@@ -284,37 +284,11 @@ msgstr "Άλλαξε μουσική"
 msgid "STSTR_NOMUS"
 msgstr "Αδήνατη επιλογή"
 
-msgid "STSTR_DQDON"
-msgstr "Θεική λειτουργία: ΕΝΕΡΓΗ"
-
-msgid "STSTR_DQDOFF"
-msgstr "Θεική λειτουργία: ΑΝΕΝΕΡΓΟ"
-
-msgid "STSTR_DQD2ON"
-msgstr "Απόλητη θεική λειτουργία: ΕΝΕΡΓΗ"
-
-msgid "STSTR_DQD2OFF"
-msgstr "Απόλητη θεική λειτουργία: ΑΝΕΝΕΡΓΟ"
-
 msgid "STSTR_KFAADDED"
 msgstr "Πάρα Πολύ Χαρούμενα Πυρομαχηκά Προστέθηκαν"
 
 msgid "STSTR_FAADDED"
 msgstr "Πυρομαχικά (Όχι κλειδία) προστέθηκαν"
-
-msgid "STSTR_NCON"
-msgstr "Noclip λειτουργία: ΕΝΕΡΓΟ"
-
-msgid "STSTR_NCOFF"
-msgstr "Noclip λειτουργία: ΑΝΕΝΕΡΓΟ"
-
-#, fuzzy
-msgid "STSTR_NC2ON"
-msgstr "Δέυτερη noclip λειτουργία: ΕΝΕΡΓΟ"
-
-#, fuzzy
-msgid "STSTR_NC2OFF"
-msgstr "Noclip λειτουργία 2: ΑΝΕΝΕΡΓΟ"
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -336,47 +310,17 @@ msgstr "… δέν είναι χάλια - GM"
 msgid "STSTR_CLEV"
 msgstr "Αλλαγή πίστας…"
 
-msgid "TXT_BUDDHAON"
-msgstr "Λειτουργία Βουδα: ΕΝΕΡΓΟ"
-
-msgid "TXT_BUDDHAOFF"
-msgstr "Λειτουργία Βουδα: ΑΝΕΝΕΡΓΟ"
-
-msgid "TXT_BUDDHA2ON"
-msgstr "Λειτουργία Απόλητου Βουδα: ΕΝΕΡΓΟ"
-
-msgid "TXT_BUDDHA2OFF"
-msgstr "Λειτουργία Απόλητου Βουδα: ΑΝΕΝΕΡΓΟ"
-
-msgid "TXT_CHEATPOWERON"
-msgstr "Δύναμη: ΕΝΕΡΓΟ"
-
-msgid "TXT_CHEATPOWEROFF"
-msgstr "Δύναμη: ΑΝΕΝΕΡΓΟ"
-
 msgid "TXT_CHEATHEALTH"
 msgstr "Ολόκληρη υγεία"
 
 msgid "TXT_CHEATKEYS"
 msgstr "Όλα τα κλειδία"
 
-msgid "TXT_CHEATSOUNDON"
-msgstr "Debug ήχου: ΕΝΕΡΓΟ"
-
-msgid "TXT_CHEATSOUNDOFF"
-msgstr "Debug ήχου: ΑΝΕΝΕΡΓΟ"
-
 msgid "TXT_CHEATIDDQD"
 msgstr "Προσπαθείς να εξαπατήσεις, ε? Τώρα πεθένεις!"
 
 msgid "TXT_CHEATIDKFA"
 msgstr "Απατεόνα δέν σου αξήζουν όπλα"
-
-msgid "TXT_CHEATTICKERON"
-msgstr "Χρονόμετρο: ΕΝΕΡΓΟ"
-
-msgid "TXT_CHEATTICKEROFF"
-msgstr "Χρονόμετρο: ΑΝΕΝΕΡΓΟ"
 
 msgid "TXT_CHEATARTIFACTS3"
 msgstr "Το πήρες"
@@ -387,12 +331,6 @@ msgstr "Έχεις το αγγιγμα το Μίδα, μωρό"
 msgid "TXT_GOTSTUFF"
 msgstr "Πήρες τηατ πράγματα !"
 
-msgid "TXT_FREEZEON"
-msgstr "Παγομένη λειτουργία: ΕΝΕΡΓΟ"
-
-msgid "TXT_FREEZEOFF"
-msgstr "Παγομένη λειτουργία: ΑΝΕΝΕΡΓΟ"
-
 msgid "TXT_STRANGE"
 msgstr "Νιώθης περίεργα…"
 
@@ -402,35 +340,17 @@ msgstr "Νιώθης ακόμα πιό περίεργα."
 msgid "TXT_NOTSTRANGE"
 msgstr "Νιώθης σάν τον εαύτο σου ξανά."
 
-msgid "TXT_LEADBOOTSON"
-msgstr "Μολυβδένιες μπότες: ΕΝΕΡΓΟ"
-
-msgid "TXT_LEADBOOTSOFF"
-msgstr "Μολυβδένιες μπότες: ΑΝΕΝΕΡΓΟ"
-
 msgid "TXT_LIGHTER"
 msgstr "Νιώθης πιο ελαφρής"
 
 msgid "TXT_GRAVITY"
 msgstr "Η βαρύτητα σε πιάνει"
 
-msgid "TXT_NOTARGET_ON"
-msgstr "Αστόχευτη λειτουργία: ΕΝΕΡΓΟ"
-
-msgid "TXT_NOTARGET_OFF"
-msgstr "Αστόχευτη λειτουργία: ΑΝΕΝΕΡΓΟ"
-
 msgid "TXT_ANUBIS_ON"
 msgstr "\"Τρέμε με φόβο!\""
 
 msgid "TXT_ANUBIS_OFF"
 msgstr "Καθόλου δρακοντική πανοπλία πια"
-
-msgid "TXT_CHASECAM_ON"
-msgstr "Κάμερα τρίτου πρωσώπου: ΕΝΕΡΓΟ"
-
-msgid "TXT_CHASECAM_OFF"
-msgstr "Κάμερα τρίτου πρωσώπου: ΑΝΕΝΕΡΓΟ"
 
 msgid "TXT_BADDIE_KILLED"
 msgstr "Ενας κακός πέθανε"
@@ -455,24 +375,6 @@ msgstr "Τί θέλεις να σκοτώσεις έξω απο ένα παιχ�
 
 msgid "TXT_NOT_FROZEN"
 msgstr "Η ιδιότητες ενος παγομένου παίχτη: ΑΝΕΝΕΡΓΟ"
-
-msgid "AMSTR_FOLLOWOFF"
-msgstr "Ακολούθηση: ΑΝΕΝΕΡΓΟ"
-
-msgid "AMSTR_FOLLOWON"
-msgstr "Ακολούθηση: ΕΝΕΡΓΟ"
-
-msgid "AMSTR_GRIDON"
-msgstr "Πλέχμα: ΕΝΕΡΓΟ"
-
-msgid "AMSTR_GRIDOFF"
-msgstr "Πλέχμα: ΑΝΕΝΕΡΓΟ"
-
-msgid "AMSTR_TEXON"
-msgstr "Γραφικός χάρτης: ΕΝΕΡΓΟ"
-
-msgid "AMSTR_TEXOFF"
-msgstr "Γραφικός χάρτης: ΑΝΕΝΕΡΓΟ"
 
 msgid "AMSTR_MARKEDSPOT"
 msgstr "Μαρκαρησμένη τοποθεσεία"
@@ -2810,14 +2712,6 @@ msgid "ENDGAME"
 msgstr ""
 
 msgctxt "chex"
-msgid "STSTR_DQDON"
-msgstr ""
-
-msgctxt "chex"
-msgid "STSTR_DQDOFF"
-msgstr ""
-
-msgctxt "chex"
 msgid "STSTR_FAADDED"
 msgstr ""
 
@@ -5094,3 +4988,59 @@ msgstr ""
 
 msgid "DSPLYMNU_BRIGHTNESS"
 msgstr "Φωτηνότητα"
+
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Θεική λειτουργία: {ΕΝΕΡΓΗ|ΑΝΕΝΕΡΓΟ}"
+
+msgid "STSTR_DQD2{ON|OFF}"
+msgstr "Απόλητη θεική λειτουργία: {ΕΝΕΡΓΗ|ΑΝΕΝΕΡΓΟ}"
+
+msgid "STSTR_NC{ON|OFF}"
+msgstr "Noclip λειτουργία: {ΕΝΕΡΓΟ|ΑΝΕΝΕΡΓΟ}"
+
+#, fuzzy
+msgid "STSTR_NC2{ON|OFF}"
+msgstr "Noclip λειτουργία 2: {ΕΝΕΡΓΟ|ΑΝΕΝΕΡΓΟ}"
+
+msgid "TXT_BUDDHA{ON|OFF}"
+msgstr "Λειτουργία Βουδα: {ΕΝΕΡΓΟ|ΑΝΕΝΕΡΓΟ}"
+
+msgid "TXT_BUDDHA2{ON|OFF}"
+msgstr "Λειτουργία Απόλητου Βουδα: {ΕΝΕΡΓΟ|ΑΝΕΝΕΡΓΟ}"
+
+msgid "TXT_CHEATPOWER{ON|OFF}"
+msgstr "Δύναμη: {ΕΝΕΡΓΟ|ΑΝΕΝΕΡΓΟ}"
+
+msgid "TXT_CHEATSOUND{ON|OFF}"
+msgstr "Debug ήχου: {ΕΝΕΡΓΟ|ΑΝΕΝΕΡΓΟ}"
+
+msgid "TXT_CHEATTICKER{ON|OFF}"
+msgstr "Χρονόμετρο: {ΕΝΕΡΓΟ|ΑΝΕΝΕΡΓΟ}"
+
+msgid "TXT_FREEZE{ON|OFF}"
+msgstr "Παγομένη λειτουργία: {ΕΝΕΡΓΟ|ΑΝΕΝΕΡΓΟ}"
+
+msgid "TXT_LEADBOOTS{ON|OFF}"
+msgstr "Μολυβδένιες μπότες: {ΕΝΕΡΓΟ|ΑΝΕΝΕΡΓΟ}"
+
+msgid "TXT_NOTARGET_{ON|OFF}"
+msgstr "Αστόχευτη λειτουργία: {ΕΝΕΡΓΟ|ΑΝΕΝΕΡΓΟ}"
+
+msgid "TXT_CHASECAM_{ON|OFF}"
+msgstr "Κάμερα τρίτου πρωσώπου: {ΕΝΕΡΓΟ|ΑΝΕΝΕΡΓΟ}"
+
+msgid "AMSTR_FOLLOW{ON|OFF}"
+msgstr "Ακολούθηση: {ΕΝΕΡΓΟ|ΑΝΕΝΕΡΓΟ}"
+
+msgid "AMSTR_GRID{ON|OFF}"
+msgstr "Πλέχμα: {ΕΝΕΡΓΟ|ΑΝΕΝΕΡΓΟ}"
+
+msgid "AMSTR_TEX{ON|OFF}"
+msgstr "Γραφικός χάρτης: {ΕΝΕΡΓΟ|ΑΝΕΝΕΡΓΟ}"
+
+msgctxt "chex"
+msgid "STSTR_DQD{ON|OFF}"
+msgstr ""
+
+msgid "MSG{ON|OFF}"
+msgstr "Μηνύματα: {ΕΝΕΡΓΑ|ΑΝΕΝΕΡΓΟ}"

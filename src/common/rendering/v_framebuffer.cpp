@@ -106,6 +106,15 @@ void DFrameBuffer::SetClearColor(int color)
 	mSceneClearColor[3] = 1.f;
 }
 
+void DFrameBuffer::SetClearColorPal(PalEntry pe)
+{
+	float factor = 1.0f / 255.f;
+	mSceneClearColor[0] = pe.r * factor;
+	mSceneClearColor[1] = pe.g * factor;
+	mSceneClearColor[2] = pe.b * factor;
+	mSceneClearColor[3] = 1.f;
+}
+
 //==========================================================================
 //
 // DFrameBuffer :: SetVSync

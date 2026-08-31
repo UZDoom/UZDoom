@@ -238,12 +238,12 @@ void C_InitConback(FTextureID fallback, bool tile, double brightness)
 void C_InitConsole (int width, int height, bool ingame)
 {
 	int cwidth, cheight;
-
+	FFont *ourConsoleFont = CurrentConsoleFont ? FFont::GetConsoleFont(CurrentConsoleFont) : nullptr;
 	vidactive = ingame;
-	if (CurrentConsoleFont != NULL)
+	if (ourConsoleFont != NULL)
 	{
-		cwidth = CurrentConsoleFont->GetCharWidth ('M');
-		cheight = CurrentConsoleFont->GetHeight();
+		cwidth  = ourConsoleFont->GetCharWidth('M');
+		cheight = ourConsoleFont->GetHeight();
 	}
 	else
 	{
@@ -634,17 +634,19 @@ void C_DrawConsole ()
 	int lines, left, offset;
 
 	int textScale = active_con_scale(twod);
+	FFont *ourConsoleFont = FFont::GetConsoleFont(CurrentConsoleFont);
 
 	left = Defaults::left_margin;
-	lines = (ConBottom/textScale-CurrentConsoleFont->GetHeight()*2)/CurrentConsoleFont->GetHeight();
-	if (-CurrentConsoleFont->GetHeight() + lines*CurrentConsoleFont->GetHeight() > ConBottom/textScale - CurrentConsoleFont->GetHeight()*7/2)
+	lines = (ConBottom / textScale - ourConsoleFont->GetHeight() * 2) / ourConsoleFont->GetHeight();
+	if (-ourConsoleFont->GetHeight() + lines * ourConsoleFont->GetHeight() >
+	    ConBottom / textScale - ourConsoleFont->GetHeight() * 7 / 2)
 	{
-		offset = -CurrentConsoleFont->GetHeight()/2;
+		offset = -ourConsoleFont->GetHeight() / 2;
 		lines--;
 	}
 	else
 	{
-		offset = -CurrentConsoleFont->GetHeight();
+		offset = -ourConsoleFont->GetHeight();
 	}
 
 	oldbottom = ConBottom;
@@ -693,14 +695,15 @@ void C_DrawConsole ()
 		if (ConBottom >= Defaults::min_con_lines_for_text)
 		{
 			if (textScale == 1)
-				DrawText(twod, CurrentConsoleFont, CR_ORANGE, twod->GetWidth() - Defaults::left_margin -
-					CurrentConsoleFont->StringWidth (GetVersionString()),
-					round((float)ConBottom / textScale) - CurrentConsoleFont->GetHeight() - Defaults::bottom_margin,
+				DrawText(twod, ourConsoleFont, CR_ORANGE,
+				         twod->GetWidth() - Defaults::left_margin - ourConsoleFont->StringWidth(GetVersionString()),
+				         round((float)ConBottom / textScale) - ourConsoleFont->GetHeight() - Defaults::bottom_margin,
 					GetVersionString(), TAG_DONE);
 			else
-				DrawText(twod, CurrentConsoleFont, CR_ORANGE, (float)twod->GetWidth() / textScale - Defaults::left_margin -
-					CurrentConsoleFont->StringWidth(GetVersionString()),
-					round((float)ConBottom / textScale) - CurrentConsoleFont->GetHeight() - Defaults::bottom_margin,
+				DrawText(twod, ourConsoleFont, CR_ORANGE,
+				         (float)twod->GetWidth() / textScale - Defaults::left_margin -
+				             ourConsoleFont->StringWidth(GetVersionString()),
+				         round((float)ConBottom / textScale) - ourConsoleFont->GetHeight() - Defaults::bottom_margin,
 					GetVersionString(),
 					DTA_VirtualWidth, twod->GetWidth() / textScale,
 					DTA_VirtualHeight, twod->GetHeight() / textScale,
@@ -718,24 +721,26 @@ void C_DrawConsole ()
 	if (lines > 0)
 	{
 		// No more enqueuing because adding new text to the console won't touch the actual print data.
-		conbuffer->FormatText(CurrentConsoleFont, ConWidth / textScale);
+		conbuffer->FormatText(ourConsoleFont, ConWidth / textScale);
 		unsigned int consolelines = conbuffer->GetFormattedLineCount();
 		FBrokenLines *blines = conbuffer->GetLines();
 		if (blines != nullptr)
 		{
 			FBrokenLines* printline = blines + consolelines - 1 - RowAdjust;
 
-			int bottomline = ConBottom / textScale - CurrentConsoleFont->GetHeight() * 2 - 4;
+			int bottomline = ConBottom / textScale - ourConsoleFont->GetHeight() * 2 - 4;
 
 			for (FBrokenLines* p = printline; p >= blines && lines > 0; p--, lines--)
 			{
 				if (textScale == 1)
 				{
-					DrawText(twod, CurrentConsoleFont, CR_TAN, Defaults::left_margin, offset + lines * CurrentConsoleFont->GetHeight(), p->Text.GetChars(), TAG_DONE);
+					DrawText(twod, ourConsoleFont, CR_TAN, Defaults::left_margin,
+					         offset + lines * ourConsoleFont->GetHeight(), p->Text.GetChars(), TAG_DONE);
 				}
 				else
 				{
-					DrawText(twod, CurrentConsoleFont, CR_TAN, Defaults::left_margin, offset + lines * CurrentConsoleFont->GetHeight(), p->Text.GetChars(),
+					DrawText(twod, ourConsoleFont, CR_TAN, Defaults::left_margin,
+					         offset + lines * ourConsoleFont->GetHeight(), p->Text.GetChars(),
 						DTA_VirtualWidth, twod->GetWidth() / textScale,
 						DTA_VirtualHeight, twod->GetHeight() / textScale,
 						DTA_KeepRatio, true, TAG_DONE);
@@ -754,14 +759,16 @@ void C_DrawConsole ()
 					}
 					CmdLine.Draw(left, bottomline, textScale, cursoron);
 				}
-				if (RowAdjust && ConBottom >= CurrentConsoleFont->GetHeight() * 7 / 2)
+				if (RowAdjust && ConBottom >= ourConsoleFont->GetHeight() * 7 / 2)
 				{
 					// Indicate that the view has been scrolled up (10)
 					// and if we can scroll no further (12)
 					if (textScale == 1)
-						DrawChar(twod, CurrentConsoleFont, CR_GREEN, 0, bottomline, RowAdjust == conbuffer->GetFormattedLineCount() ? 12 : 10, TAG_DONE);
+						DrawChar(twod, ourConsoleFont, CR_GREEN, 0, bottomline,
+						         RowAdjust == conbuffer->GetFormattedLineCount() ? 12 : 10, TAG_DONE);
 					else
-						DrawChar(twod, CurrentConsoleFont, CR_GREEN, 0, bottomline, RowAdjust == conbuffer->GetFormattedLineCount() ? 12 : 10,
+						DrawChar(twod, ourConsoleFont, CR_GREEN, 0, bottomline,
+						         RowAdjust == conbuffer->GetFormattedLineCount() ? 12 : 10,
 							DTA_VirtualWidth, twod->GetWidth() / textScale,
 							DTA_VirtualHeight, twod->GetHeight() / textScale,
 							DTA_KeepRatio, true, TAG_DONE);

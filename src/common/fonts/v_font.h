@@ -29,6 +29,8 @@
 #include "palentry.h"
 #include "name.h"
 #include "palettecontainer.h"
+#include "Trex/Atlas.hpp"
+#include "Trex/TextShaper.hpp"
 
 class FGameTexture;
 struct FRemapTable;
@@ -72,6 +74,15 @@ enum EColorRange : int
 
 extern int NumTextColors;
 
+struct IntermediateDrawString
+{
+	std::basic_string<char32_t> StringUTF32;
+	Trex::ShapedGlyphs          TrexGlyphs;
+	std::vector<int>            Colors;
+	std::vector<uint32_t>            Codepoints;
+	const FFont                      *Font;
+};
+
 using GlyphSet = TMap<int, FGameTexture*>;
 
 class FFont
@@ -87,11 +98,15 @@ public:
 		Fon1,
 		Fon2,
 		BMF,
-		Custom
+		Custom,
+		Dynamic
 	};
 
-	FFont (const char *fontname, const char *nametemplate, const char *filetemplate, int first, int count, int base, int fdlump, int spacewidth=-1, bool notranslate = false, bool iwadonly = false, bool doomtemplate = false, GlyphSet *baseGlpyphs = nullptr);
+	FFont(const char *fontname, const char *nametemplate, const char *filetemplate, int first, int count, int base,
+	      int fdlump, int spacewidth = -1, bool notranslate = false, bool iwadonly = false, bool doomtemplate = false,
+	      GlyphSet *baseGlpyphs = nullptr);
 	FFont(int lump, FName nm = NAME_None);
+	explicit FFont(const char *fontname, Trex::Atlas* fontAtlas, const int supersampleScale);
 	virtual ~FFont ();
 
 	virtual FGameTexture *GetChar (int code, int translation, int *const width) const;
@@ -106,13 +121,40 @@ public:
 	int GetMaxAscender(const FString &text) const { return GetMaxAscender((uint8_t*)text.GetChars()); }
 	virtual void LoadTranslations();
 	FName GetName() const { return FontName; }
+	[[nodiscard]] bool CanBeSubstitutedWithDynamic() const noexcept;
 
 	static FFont *FindFont(FName fontname);
+
+	static void UpdateAdvFontMappingTables();
+	static FFont *GetDynamicSubstitutionForStaticFont(FFont *const fontToSub);
+	static void   MakeFontChoiceCVARs();
+
+	// standard font choices
+	//TODO: this seems not super extensible - what if mods want to add semantic font choices?
+	static FFont *GetSmallTextFont(FFont* fallbackIfNoUserChoice);
+	static FFont *GetTitleFont(FFont* fallbackIfNoUserChoice);
+	static FFont *GetDescriptionFont(FFont* fallbackIfNoUserChoice);
+	static FFont *GetConsoleFont(FFont* fallbackIfNoUserChoice);
+	static FFont *GetBigTextFont(FFont* fallbackIfNoUserChoice);
+
+	static const FFont* GetFontListHead()
+	{
+		return FirstFont;
+	}
+
+	const FFont* GetNextFont() const
+	{
+		return Next;
+	}
 
 	// Return width of string in pixels (unscaled)
 	int StringWidth (const uint8_t *str, int spacing = 0) const;
 	inline int StringWidth (const char *str, int spacing = 0) const { return StringWidth ((const uint8_t *)str, spacing); }
 	inline int StringWidth (const FString &str, int spacing = 0) const { return StringWidth ((const uint8_t *)str.GetChars(), spacing); }
+
+	[[nodiscard]] int StringWidthUTF32(const std::u32string_view str) const;
+
+	bool CanPrint(const char32_t utf32char) const;
 
 	// Checks if the font contains all characters to print this text.
 	bool CanPrint(const uint8_t *str) const;
@@ -141,6 +183,33 @@ public:
 	static int GetLuminosity(uint32_t* colorsused, TArray<double>& Luminosity, int* minlum = nullptr, int* maxlum = nullptr);
 	EFontType GetType() const { return Type; }
 
+	inline bool IsValidDynamicFont() const
+	{
+		return Type == EFontType::Dynamic && DynamicFontAtlas && DynamicFontAtlasTexture;
+	}
+
+	inline Trex::Atlas *GetDynamicFontAtlas() const
+	{
+		return DynamicFontAtlas;
+	}
+
+	inline FGameTexture* GetDynamicFontAtlasTexture() const
+	{
+		return DynamicFontAtlasTexture;
+	}
+
+	inline double GetInvSupersampleScale() const
+	{
+		return InvSupersampleFactor;
+	}
+
+	inline Trex::TextShaper* GetDynamicTextShaper() const
+	{
+		return DynamicTextShaper;
+	}
+
+	FFont *GetDynamicFontFallbackForChar32(char32_t srcChar) const;
+
 	friend void V_InitCustomFonts();
 
 	void CopyFrom(const FFont& other)
@@ -161,6 +230,11 @@ public:
 		Translations = other.Translations;
 		lowercaselatinonly = other.lowercaselatinonly;
 		Lump = other.Lump;
+	}
+
+	static inline std::vector<const FFont *> &GetRemappableFonts()
+	{
+		return RemappableFonts;
 	}
 
 protected:
@@ -195,14 +269,26 @@ protected:
 	FName FontName = NAME_None;
 	FFont *Next;
 
+	//DYNAMIC FONTS
+	Trex::Atlas *DynamicFontAtlas = nullptr;
+	Trex::TextShaper *DynamicTextShaper             = nullptr;
+	FGameTexture *DynamicFontAtlasTexture = nullptr;
+	double        InvSupersampleFactor          = 1.0 / 3.0;
+	//DYNAMIC FONTS
+
 	static FFont *FirstFont;
 	friend struct FontsDeleter;
 
 	friend void V_ClearFonts();
 	friend void V_InitFonts();
+
+	static inline std::vector<const FFont *>     RemappableFonts;
 };
 
-extern FFont *SmallFont, *SmallFont2, *BigFont, *BigUpper, *ConFont, *IntermissionFont, *NewConsoleFont, *NewSmallFont, *CurrentConsoleFont, *OriginalSmallFont, *AlternativeSmallFont, *OriginalBigFont, *AlternativeBigFont;
+void ParseIntoIntermediateDrawStrings(const std::u32string_view utf32SrcString, const FFont *font, int normalcolor,
+                                      std::vector<IntermediateDrawString> &outStrings);
+
+extern FFont *SmallFont, *SmallFont2, *BigFont, *BigUpper, *ConFont, *SymbolsFont, *IntermissionFont, *NewConsoleFont, *NewSmallFont, *CurrentConsoleFont, *OriginalSmallFont, *AlternativeSmallFont, *OriginalBigFont, *AlternativeBigFont;
 
 void V_InitFonts();
 void V_ClearFonts();

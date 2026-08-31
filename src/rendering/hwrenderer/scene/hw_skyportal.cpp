@@ -26,6 +26,16 @@
 #include "hw_renderstate.h"
 #include "skyboxtexture.h"
 
+EXTERN_CVAR(Int, r_distance_cull_type)
+EXTERN_CVAR(Color, gl_cullcolor)
+CUSTOM_CVARD(Int, gl_cull_skyfog, 255, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "Sky Fog (1-255) to use when r_distance_cull_type > 1. Overlays over skymist layer. Hardware renderer only.")
+{
+	if (self < 1)
+		self = 1;
+	else if (self > 255)
+		self = 255;
+}
+
 //-----------------------------------------------------------------------------
 //
 //
@@ -78,19 +88,20 @@ void HWSkyPortal::DrawContents(HWDrawInfo *di, FRenderState &state)
 		}
 	}
 
-	if (di->Level->skyfog>0 && (origin->fadecolor & 0xffffff) != 0)
+	if ((di->Level->skyfog>0 && (origin->fadecolor & 0xffffff) != 0) || (r_distance_cull_type > 1))
 	{
 		PalEntry FadeColor = origin->fadecolor;
-		FadeColor.a = clamp<int>(di->Level->skyfog, 0, 255);
+		if (r_distance_cull_type < 2) FadeColor.a = clamp<int>(di->Level->skyfog, 0, 255);
+		else FadeColor.a = gl_cull_skyfog;
 
 		if (di->Level->flags3 & LEVEL3_SKYMIST && origin->texture[2])
 		{
 			float misth = origin->texture[2]->GetDisplayHeight();
 			float myscale = di->Level->hw_skymistyscale;
 			float myoffset = (myscale - 1.0)*0.857*misth; // [DVR] Why so many magic numbers when it comes to sky??
-			vertexBuffer->RenderDome(state, origin->texture[2], origin->x_offset[2], myoffset, false, FSkyVertexBuffer::SKYMODE_FOGLAYER, !!(di->Level->flags & LEVEL_FORCETILEDSKY), 0, (myscale == 0.0 ? 0 : 240.0/misth/myscale), FadeColor);
+			vertexBuffer->RenderDome(state, origin->texture[2], origin->x_offset[2], myoffset, false, FSkyVertexBuffer::SKYMODE_FOGLAYER, !!(di->Level->flags & LEVEL_FORCETILEDSKY), 1.0, (myscale == 0.0 ? 0 : 240.0/misth/myscale), FadeColor);
 		}
-		else if (!di->isFullbrightScene())
+		else if (!di->isFullbrightScene() || r_distance_cull_type > 1)
 		{
 			state.EnableTexture(false);
 			state.SetObjectColor(FadeColor);

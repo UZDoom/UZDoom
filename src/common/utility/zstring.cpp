@@ -30,6 +30,7 @@
 #include "utf8.h"
 #include "stb_sprintf.h"
 #include "vm.h"
+#include "printf.h"
 
 extern uint16_t lowerforupper[65536];
 extern uint16_t upperforlower[65536];
@@ -88,6 +89,64 @@ void FString::AttachToOther (const FString &other)
 	{
 		Chars = const_cast<FString &>(other).Data()->AddRef();
 	}
+}
+
+FString FString::RemoveColorTags(const FString &srcString)
+{
+	FString newString = srcString;
+	newString.Substitute(TEXTCOLOR_BLACK, "");
+	newString.Substitute(TEXTCOLOR_BLUE, "");
+	newString.Substitute(TEXTCOLOR_TEAL, "");
+	newString.Substitute(TEXTCOLOR_SAPPHIRE, "");
+	newString.Substitute(TEXTCOLOR_FIRE, "");
+	newString.Substitute(TEXTCOLOR_ICE, "");
+	newString.Substitute(TEXTCOLOR_CYAN, "");
+	newString.Substitute(TEXTCOLOR_DARKGRAY, "");
+	newString.Substitute(TEXTCOLOR_PURPLE, "");
+	newString.Substitute(TEXTCOLOR_DARKBROWN, "");
+	newString.Substitute(TEXTCOLOR_DARKRED, "");
+	newString.Substitute(TEXTCOLOR_OLIVE, "");
+	newString.Substitute(TEXTCOLOR_CREAM, "");
+	newString.Substitute(TEXTCOLOR_LIGHTBLUE, "");
+	newString.Substitute(TEXTCOLOR_UNTRANSLATED, "");
+	newString.Substitute(TEXTCOLOR_RED, "");
+	newString.Substitute(TEXTCOLOR_YELLOW, "");
+	newString.Substitute(TEXTCOLOR_GREEN, "");
+	newString.Substitute(TEXTCOLOR_GREY, "");
+	newString.Substitute(TEXTCOLOR_GRAY, "");
+	newString.Substitute(TEXTCOLOR_WHITE, "");
+	newString.Substitute(TEXTCOLOR_BRICK, "");
+	newString.Substitute(TEXTCOLOR_TAN, "");
+	newString.Substitute(TEXTCOLOR_ESCAPE, "");
+
+	//also need to strip named color tags. Make sure everything in EColorRange is covered.
+	newString.Substitute("[BLACK]", "");
+	newString.Substitute("[BLUE]", "");
+	newString.Substitute("[TEAL]", "");
+	newString.Substitute("[ORANGE]", "");
+	newString.Substitute("[GOLD]", "");
+	newString.Substitute("[GREEN]", "");
+	newString.Substitute("[YELLOW]", "");
+	newString.Substitute("[PURPLE]", "");
+	newString.Substitute("[CYAN]", "");
+	newString.Substitute("[BRICK]", "");
+	newString.Substitute("[TAN]", "");
+	newString.Substitute("[GRAY]", "");
+	newString.Substitute("[GREY]", "");
+	newString.Substitute("[GREY]", "");
+	newString.Substitute("[BROWN]", "");
+	newString.Substitute("[RED]", "");
+	newString.Substitute("[WHITE]", "");
+	newString.Substitute("[UNTRANSLATED]", "");
+	newString.Substitute("[LIGHTBLUE]", "");
+	newString.Substitute("[CREAM]", "");
+	newString.Substitute("[OLIVE]", "");
+	newString.Substitute("[DARKGREEN]", "");
+	newString.Substitute("[DARKRED]", "");
+	newString.Substitute("[DARKBROWN]", "");
+	newString.Substitute("[DARKGRAY]", "");
+	newString.Substitute("[ICE]", "");
+	return newString;
 }
 
 FString::FString (const char *copyStr)

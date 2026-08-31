@@ -24,6 +24,7 @@
 
 #include "c_cvars.h"
 #include "cmdlib.h"
+#include "c_console.h"
 #include "d_main.h"
 #include "d_steam.h"
 #include "engineerrors.h"
@@ -632,6 +633,7 @@ int FIWadManager::IdentifyVersion (std::vector<FileSys::ResourceName>&wadfiles, 
 	// Collect all IWADs in the search path
 	for (auto &dir : mSearchPaths)
 	{
+		DEBUG_LOG("Using IWAD search path %s", dir.GetChars());
 		AddIWADCandidates(dir.GetChars());
 	}
 	for (auto& dir : mRecursiveSearchPaths)

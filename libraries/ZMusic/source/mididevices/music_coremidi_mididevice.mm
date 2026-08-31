@@ -37,7 +37,6 @@
 #include <mach/mach_time.h>
 #include <CoreAudio/HostTime.h>
 
-#include <array>
 #include <atomic>
 #include <condition_variable>
 #include <mutex>
@@ -59,7 +58,7 @@
 class CoreMIDIDevice : public MIDIDevice
 {
 public:
-	CoreMIDIDevice(int deviceID, bool precache);
+	CoreMIDIDevice(int dev_id, bool precache);
 	~CoreMIDIDevice();
 
 	int Open() override;
@@ -85,33 +84,30 @@ protected:
 
 	// Event handling
 	void PrepareTempo(uint32_t tempo);
-	void PrepareMidiMsg(uint8_t* msg, uint32_t length);
-	void SendMIDIData(const uint8_t* data, size_t length, MIDITimeStamp timestamp);
-	void SendImmediateShortMsg(uint8_t command, uint8_t data1 = 0, uint8_t data2 = 0);
-	int GetShortMsgLength(uint8_t* msg);
-	std::array<uint8_t, 3> ShortMsgBuffer;
+	void PrepareShortMsg(uint32_t msg);
+	void PrepareLongMsg(const uint8_t* long_msg, uint32_t length);
+	void HandleEvent(const uint32_t* data, ByteCount word_count, MIDITimeStamp timestamp);
+	void SendImmediateShortMsg(uint32_t command, uint32_t data1 = 0, uint32_t data2 = 0);
 
 	// PulledEvent structure to hold the next event to be processed
-	enum EventType_t { TempoEv, MidiMsgEv, NOP };
-	union EventData_t
+	enum EventType { EVENT_TEMPO, EVENT_MESSAGE, EVENT_NOP };
+	struct
 	{
-		uint32_t tempo;
-		uint8_t* msg;
-	};
-	struct PulledEvent
-	{
-		EventType_t EventType;
-		EventData_t EventData;
-		uint32_t length;
-		uint32_t TickDelta;
-	};
-	PulledEvent PulledEvent;
+		union
+		{
+			uint32_t tempo;
+			uint32_t msg_buffer[64];
+		} data;
+		EventType type;
+		ByteCount word_count;
+		uint32_t tick_delta;
+	} PulledEvent;
 
 	// CoreMIDI handles
-	MIDIClientRef midiClient;
-	MIDIPortRef midiOutPort;
-	MIDIEndpointRef midiDestination;
-	int deviceID;
+	inline static MIDIClientRef MidiClient = 0;
+	inline static MIDIPortRef MidiOutPort = 0;
+	MIDIEndpointRef MidiDestination;
+	int DeviceID;
 
 	// Threading
 	std::thread PlayerThread;
@@ -120,9 +116,9 @@ protected:
 	std::condition_variable ExitCond;
 
 	// Timing
-	int InitialTempo;
-	int Tempo;
-	int Division;
+	int64_t InitialTempo;
+	int64_t Tempo;
+	int64_t Division;
 
 	// ZMusic MidiHeader data
 	MidiHeader* Events; // Linked list of MIDI headers akin to win32 MIDIHDR
@@ -136,16 +132,14 @@ protected:
 //
 //==========================================================================
 
-CoreMIDIDevice::CoreMIDIDevice(int deviceID, bool precache)
-	: deviceID(deviceID)
-	, midiClient(0)
-	, midiOutPort(0)
-	, midiDestination(0)
-	, InitialTempo(500000)      // Default: 120 BPM (500,000 µs per quarter note)
-	, Division(100)       // Default PPQN
-	, Events(nullptr)
-	, Position(0)
-	, Precache(precache)
+CoreMIDIDevice::CoreMIDIDevice(int dev_id, bool precache)
+	: DeviceID{dev_id}
+	, MidiDestination{0}
+	, InitialTempo{500000}      // Default: 120 BPM (500,000 µs per quarter note)
+	, Division{100}       // Default PPQN
+	, Events{nullptr}
+	, Position{0}
+	, Precache{precache}
 {
 }
 
@@ -170,49 +164,45 @@ CoreMIDIDevice::~CoreMIDIDevice()
 
 int CoreMIDIDevice::Open()
 {
-	if (midiDestination)
+	if (MidiDestination)
 		return 0;
 
 	OSStatus status;
 
-	// Create MIDI client
-	status = MIDIClientCreate(CFSTR("ZMusic"), nullptr, nullptr, &midiClient);
-	if (status != noErr)
+	if (!MidiClient)
 	{
-		ZMusic_Printf(ZMUSIC_MSG_ERROR, "CoreMIDI: Failed to create MIDI client (error %d)\n", (int)status);
-		return -1;
+		// Create MIDI client
+		status = MIDIClientCreate(CFSTR("ZMusic"), nullptr, nullptr, &MidiClient);
+		if (status != noErr)
+		{
+			ZMusic_Printf(ZMUSIC_MSG_ERROR, "CoreMIDI: Failed to create MIDI client (error %d)\n", (int)status);
+			return -1;
+		}
 	}
 
-	// Create output port
-	status = MIDIOutputPortCreate(midiClient, CFSTR("ZMusic Program Music"), &midiOutPort);
-	if (status != noErr)
+	if (!MidiOutPort)
 	{
-		ZMusic_Printf(ZMUSIC_MSG_ERROR, "CoreMIDI: Failed to create output port (error %d)\n", (int)status);
-		MIDIClientDispose(midiClient);
-		midiClient = 0;
-		return -1;
+		// Create output port
+		status = MIDIOutputPortCreate(MidiClient, CFSTR("ZMusic Program Music"), &MidiOutPort);
+		if (status != noErr)
+		{
+			ZMusic_Printf(ZMUSIC_MSG_ERROR, "CoreMIDI: Failed to create output port (error %d)\n", (int)status);
+			return -1;
+		}
 	}
 
 	// Get destination endpoint by device ID
-	ItemCount destCount = MIDIGetNumberOfDestinations();
-	if (deviceID < 0 || deviceID >= (int)destCount)
+	ItemCount midiout_device_count = MIDIGetNumberOfDestinations();
+	if (DeviceID < 0 || DeviceID >= (int)midiout_device_count)
 	{
-		ZMusic_Printf(ZMUSIC_MSG_ERROR, "CoreMIDI: Invalid device ID %d (available: %d)\n", deviceID, (int)destCount);
-		MIDIPortDispose(midiOutPort);
-		MIDIClientDispose(midiClient);
-		midiOutPort = 0;
-		midiClient = 0;
+		ZMusic_Printf(ZMUSIC_MSG_ERROR, "CoreMIDI: Invalid device ID %d (available: %d)\n", DeviceID, (int)midiout_device_count);
 		return -1;
 	}
 
-	midiDestination = MIDIGetDestination(deviceID);
-	if (!midiDestination)
+	MidiDestination = MIDIGetDestination(DeviceID);
+	if (!MidiDestination)
 	{
-		ZMusic_Printf(ZMUSIC_MSG_ERROR, "CoreMIDI: Failed to get destination for device %d\n", deviceID);
-		MIDIPortDispose(midiOutPort);
-		MIDIClientDispose(midiClient);
-		midiOutPort = 0;
-		midiClient = 0;
+		ZMusic_Printf(ZMUSIC_MSG_ERROR, "CoreMIDI: Failed to get destination for device %d\n", DeviceID);
 		return -1;
 	}
 
@@ -227,26 +217,13 @@ int CoreMIDIDevice::Open()
 
 void CoreMIDIDevice::Close()
 {
-	if (!midiDestination)
+	if (!MidiDestination)
+	{
 		return;
-
+	}
 	// Stop player thread
 	Stop();
-
-	// Dispose CoreMIDI objects
-	if (midiOutPort != 0)
-	{
-		MIDIPortDispose(midiOutPort);
-		midiOutPort = 0;
-	}
-
-	if (midiClient != 0)
-	{
-		MIDIClientDispose(midiClient);
-		midiClient = 0;
-	}
-
-	midiDestination = 0;
+	MidiDestination = 0;
 }
 
 //==========================================================================
@@ -257,7 +234,7 @@ void CoreMIDIDevice::Close()
 
 bool CoreMIDIDevice::IsOpen() const
 {
-	return midiDestination;
+	return MidiDestination;
 }
 
 //==========================================================================
@@ -269,10 +246,10 @@ bool CoreMIDIDevice::IsOpen() const
 int CoreMIDIDevice::GetTechnology() const
 {
 	// Query if device is offline/virtual
-	if (midiDestination != 0)
+	if (MidiDestination != 0)
 	{
 		SInt32 offline = 0;
-		MIDIObjectGetIntegerProperty(midiDestination, kMIDIPropertyOffline, &offline);
+		MIDIObjectGetIntegerProperty(MidiDestination, kMIDIPropertyOffline, &offline);
 		return offline ? MIDIDEV_SWSYNTH : MIDIDEV_MIDIPORT;
 	}
 	return MIDIDEV_MIDIPORT;
@@ -335,7 +312,7 @@ void CoreMIDIDevice::PrecacheInstruments(const uint16_t* instruments, int count)
 	{
 		return;
 	}
-	uint8_t bank[16] = {0};
+	uint8_t bank[16] = {};
 	uint8_t i, chan;
 
 	for (i = 0, chan = 0; i < count; ++i)
@@ -414,7 +391,7 @@ void CoreMIDIDevice::InitPlayback()
 
 int CoreMIDIDevice::Resume()
 {
-	if (!midiDestination || PlayerThread.joinable())
+	if (!MidiDestination || PlayerThread.joinable())
 	{
 		return -1;
 	}
@@ -439,7 +416,7 @@ void CoreMIDIDevice::Stop()
 	{
 		PlayerThread.join();
 	}
-	MIDIFlushOutput(midiDestination); // Drop pending events.
+	MIDIFlushOutput(MidiDestination); // Drop pending events.
 
 	// Reset all channels to prevent hanging notes
 	for (int channel = 0; channel < 16; ++channel)
@@ -535,8 +512,8 @@ bool CoreMIDIDevice::PullEvent()
 		return false;
 	}
 
-	uint32_t* event = (uint32_t*)(Events->lpData + Position);
-	PulledEvent.TickDelta = event[0]; // First 4 bytes of event
+	const uint32_t* event = (uint32_t*)(Events->lpData + Position);
+	PulledEvent.tick_delta = event[0]; // First 4 bytes of event
 
 	// Get event size to advance Position
 	if (event[2] < 0x80000000) // Short message (event[2] is the combined status/data bytes)
@@ -557,32 +534,26 @@ bool CoreMIDIDevice::PullEvent()
 		break;
 	case MEVENT_LONGMSG:
 		{	// Long MIDI message (SysEx, etc.), data starts after event[3]
-			int long_msg_len = MEVENT_EVENTPARM(event[2]);
-			uint8_t* long_msg_data = (uint8_t*)&event[3];
+			uint32_t long_msg_len = MEVENT_EVENTPARM(event[2]);
+			const uint8_t* long_msg_data = (uint8_t*)&event[3];
 			// Ensure valid sysex message
 			if (long_msg_len > 2 && long_msg_data[0] == 0xF0 && long_msg_data[long_msg_len - 1] == 0xF7)
-			{
-				PrepareMidiMsg(long_msg_data, long_msg_len);
+			{	// Strip sysex start (0xF0) and end (0xF7) bytes
+				PrepareLongMsg(long_msg_data + 1, long_msg_len - 2);
 			}
 			else
 			{
-				PulledEvent.EventType = NOP;
+				PulledEvent.type = EVENT_NOP;
 			}
 			break;
 		}
 	case MEVENT_SHORTMSG:
-		{
-			// event[2] contains the 1, 2, or 3 byte MIDI message
-			ShortMsgBuffer = {	(uint8_t)(event[2] & 0xff), // Status
-								(uint8_t)((event[2] >> 8) & 0xff), // Data 1
-								(uint8_t)((event[2] >> 16) & 0xff) }; // Data 2
-
-			int msgLen = GetShortMsgLength(ShortMsgBuffer.data());
-			PrepareMidiMsg(ShortMsgBuffer.data(), msgLen);
+		{	// MIDI 1.0 voice msg type (0x2) | Group (0x0) | the remaining 24 bits are raw MIDI 1.0 bytes
+			PrepareShortMsg(0x20 << 24 | CFSwapInt32(event[2]) >> 8);
 			break;
 		}
 	default:
-		PulledEvent.EventType = NOP;
+		PulledEvent.type = EVENT_NOP;
 	}
 
 	// Indicate that an event was processed.
@@ -599,12 +570,13 @@ bool CoreMIDIDevice::PullEvent()
 
 void CoreMIDIDevice::PlayerLoop()
 {
-	std::unique_lock<std::mutex> lock(Mutex);
-	std::chrono::nanoseconds buffer_step(40000000);
+	std::unique_lock<std::mutex> lock{Mutex};
+	using namespace std::literals::chrono_literals;
+	constexpr std::chrono::nanoseconds buffer_step = 40ms;
 
 	Tempo = InitialTempo;
-	// Initialize midi clock with current host time
-	MIDITimeStamp buffer_timestamp = AudioConvertHostTimeToNanos(AudioGetCurrentHostTime());
+	// Initialize midi clock with current host time, CoreAudio and CoreMidi work in nano seconds.
+	std::chrono::nanoseconds buffer_timestamp{AudioConvertHostTimeToNanos(AudioGetCurrentHostTime())};
 
 	// Process all available events and schedule them with CoreMIDI
 	while (!Exit.load(std::memory_order_relaxed))
@@ -615,13 +587,14 @@ void CoreMIDIDevice::PlayerLoop()
 			continue;
 		}
 
-		// CoreAudio and CoreMidi work in nano seconds so multiply by 1000.
-		MIDITimeStamp pulled_ev_timestamp = buffer_timestamp + PulledEvent.TickDelta * Tempo / Division * 1000;
-
-		auto time_until_pulled_ev = std::chrono::nanoseconds(pulled_ev_timestamp - AudioConvertHostTimeToNanos(AudioGetCurrentHostTime()));
+		// Multiply by 1000 to convert to nanoseconds, multiplication is done before any division to be accurate to the nanosecond.
+		std::chrono::nanoseconds pulled_ev_time_delta{1000 * PulledEvent.tick_delta * Tempo / Division};
+		auto pulled_ev_timestamp = buffer_timestamp + pulled_ev_time_delta;
+		std::chrono::nanoseconds current_timestamp{AudioConvertHostTimeToNanos(AudioGetCurrentHostTime())};
+		auto time_until_pulled_ev = pulled_ev_timestamp - current_timestamp;
 		auto schedule_time = time_until_pulled_ev - buffer_step;
 		if (schedule_time >= buffer_step)
-		{    // Try to keep buffered events under 2x buffer_step
+		{	// Try to keep buffered events under 2x buffer_step
 			if (ExitCond.wait_for(lock, schedule_time) == std::cv_status::no_timeout)
 			{
 				continue;
@@ -634,15 +607,15 @@ void CoreMIDIDevice::PlayerLoop()
 		}
 
 		// Handle PulledEvent
-		switch (PulledEvent.EventType)
+		switch (PulledEvent.type)
 		{
-		case TempoEv:
-			Tempo = PulledEvent.EventData.tempo;
+		case EVENT_TEMPO:
+			Tempo = PulledEvent.data.tempo;
 			break;
-		case MidiMsgEv:
-			SendMIDIData(PulledEvent.EventData.msg, PulledEvent.length, AudioConvertNanosToHostTime(pulled_ev_timestamp));
+		case EVENT_MESSAGE:
+			HandleEvent(PulledEvent.data.msg_buffer, PulledEvent.word_count, AudioConvertNanosToHostTime(pulled_ev_timestamp.count()));
 			break;
-		case NOP:
+		case EVENT_NOP:
 		default:
 			;
 		}
@@ -653,7 +626,7 @@ void CoreMIDIDevice::PlayerLoop()
 
 //==========================================================================
 //
-// CoreMIDIDevice :: PrepareTempo and PrepareMidiMsg
+// CoreMIDIDevice :: PrepareTempo and PrepareShortMsg
 //
 // Prepare pulled event to be handled later
 //
@@ -661,78 +634,128 @@ void CoreMIDIDevice::PlayerLoop()
 
 void CoreMIDIDevice::PrepareTempo(const uint32_t tempo)
 {
-	PulledEvent.EventType = TempoEv;
-	PulledEvent.EventData.tempo = tempo;
+	PulledEvent.type = EVENT_TEMPO;
+	PulledEvent.data.tempo = tempo;
 }
-void CoreMIDIDevice::PrepareMidiMsg(uint8_t* msg, uint32_t length)
+void CoreMIDIDevice::PrepareShortMsg(uint32_t msg)
 {
-	PulledEvent.EventType = MidiMsgEv;
-	PulledEvent.EventData.msg = msg;
-	PulledEvent.length = length;
+	PulledEvent.type = EVENT_MESSAGE;
+	PulledEvent.data.msg_buffer[0] = msg;
+	PulledEvent.word_count = 1;
 }
 
 //==========================================================================
 //
-// CoreMIDIDevice :: SendMIDIData
+// CoreMIDIDevice :: PrepareLongMsg
 //
-// Send raw MIDI data to the CoreMIDI output port
+// Prepares MIDI sysex messages by packing them into UMPs (Universal Midi Packets)
+// sysex UMPs must always come in pairs of 32-bit structures called UMPs
+// the first 2 bytes of the first UMP contain metadata to identify the UMP
+// the last 2 bytes and the entirety of the second UMP (4 bytes) 2 + 4 = 6 bytes
+// are for the raw sysex message each UMP packed in the native endianness of the machine
 //
 //==========================================================================
 
-void CoreMIDIDevice::SendMIDIData(const uint8_t* data, size_t length, MIDITimeStamp timestamp)
+void CoreMIDIDevice::PrepareLongMsg(const uint8_t* long_msg, uint32_t length)
 {
-	// The required size for the MIDIPacketList is the size of the list itself
-	// plus the size of the packet header and the actual MIDI data.
-	size_t requiredSize = offsetof(MIDIPacketList, packet) + offsetof(MIDIPacket, data) + length;
-
-	// Use a stack buffer for small messages to avoid heap allocation (fast path).
-	// Short messages typically need 15-17 bytes (14 offsets + message length)
-	// and long messages can need up to 25 bytes in my testing, so 64 bytes should be sufficient for most cases.
-	Byte small_buffer[64];
-
-	// Choose the buffer to use.
-	Byte* buffer;
-	std::vector<Byte> large_buffer; // Will be used only if needed.
-
-	if (requiredSize > sizeof(small_buffer))
+	uint ump_count = (length / 6) * 2;
+	if (length % 6)
 	{
-		ZMusic_Printf(ZMUSIC_MSG_DEBUG, "CoreMIDI: Required MIDIPacketList size \"%zu\" exceeds small_buffer size \"%zu\"\n", requiredSize, sizeof(small_buffer));
-		try
-		{
-			large_buffer.resize(requiredSize);
-			buffer = large_buffer.data();
-		}
-		catch (const std::bad_alloc&)
-		{
-			ZMusic_Printf(ZMUSIC_MSG_ERROR, "CoreMIDI: Failed to allocate memory for large MIDI message.\n");
-			return;
-		}
+		ump_count += 2;
 	}
-	else
+	if (ump_count > 64)
+	{	// Max capacity of 1 MIDIEventPacket is 64 32-bit words, thus max size sysex is 64 / 2 x 6 = 192 bytes
+		// for larger messages a bigger buffer could be allocated and type punned to MIDIEventList for up to 65,536 bytes
+		// and for even larger sysex messages we could split it over successive invocations of MIDIEventListAdd.
+		// Nonetheless since sysex messages here typically do not get past 11 bytes, I think neither solution is worth implementing.
+		ZMusic_Printf(ZMUSIC_MSG_ERROR, "CoreMidi: message needs %u UMPs, exceeding MIDIEventPacket capacity: 64\n", ump_count);
+		PulledEvent.type = EVENT_NOP;
+		return;
+	}
+	auto remaining_bytes = length;
+	auto index_ptr = long_msg;
+	size_t msg_buffer_index = 0;
+	while (remaining_bytes > 0)
 	{
-		buffer = small_buffer;
+		// Determine how many bytes go into this UMP pair (up to 6 bytes)
+		// Note: keep it uint32_t because it will be bitshifted and or'ed to construct the UMP
+		uint32_t chunk_size = std::min<uint32_t>(6, remaining_bytes);
+	
+		// Determine UMP Status (third 4 bits)
+		uint32_t status;
+		if (length <= 6)
+		{
+			status = 0x0; // Complete System Exclusive Message fits in one UMP pair
+		}
+		else if (index_ptr == long_msg)
+		{
+			status = 0x1; // Start UMP
+		}
+		else if (remaining_bytes > 6)
+		{
+			status = 0x2; // Continue UMP
+		}
+		else
+		{
+			status = 0x3; // End UMP
+		}
+	
+		// Initialize buffer with 0s
+		uint32_t buffer[6] = {};
+		// Copy bytes from index_ptr and expand them to 32 bits for bitshifting and or'ing later
+		// when chunk_size is < 6 the extra bytes are left as 0s, this padding is part of the spec; the second UMP is needed even if it's all 0s
+		for (uint32_t i = 0; i < chunk_size; ++i)
+		{
+			buffer[i] = index_ptr[i];
+		}
+
+		// (sysex msg type (0x3) | Group (0x0)) = 8 bits | Status = 4 bits | # of bytes = 4 bits | first 2 bytes from buffer
+		const uint32_t ump_1 = 0x30 << 24 | status << 20 | chunk_size << 16 | buffer[0] << 8 | buffer[1];
+
+		// last 4 bytes from buffer
+		const uint32_t ump_2 = buffer[2] << 24 | buffer[3] << 16 | buffer[4] << 8 | buffer[5];
+	
+		PulledEvent.data.msg_buffer[msg_buffer_index] = ump_1;
+		++msg_buffer_index;
+		PulledEvent.data.msg_buffer[msg_buffer_index] = ump_2;
+		++msg_buffer_index;
+
+		remaining_bytes -= chunk_size;
+		index_ptr += chunk_size;
 	}
 
-	MIDIPacketList* packetList = (MIDIPacketList*)buffer;
-	MIDIPacket* packet = MIDIPacketListInit(packetList);
+	PulledEvent.type = EVENT_MESSAGE;
+	PulledEvent.word_count = ump_count;
+}
 
-	// Add the MIDI data to the packet list. The size passed to MIDIPacketListAdd
-	// is the total size of the buffer we have available.
-	packet = MIDIPacketListAdd(packetList, (buffer == small_buffer) ? sizeof(small_buffer) : requiredSize, packet,
-								timestamp, length, data);
+//==========================================================================
+//
+// CoreMIDIDevice :: HandleEvent
+//
+// Schedules MIDI events to be sent to the output port
+//
+//==========================================================================
 
-	if (packet != nullptr)
+void CoreMIDIDevice::HandleEvent(const uint32_t* data, ByteCount word_count, MIDITimeStamp timestamp)
+{
+	MIDIEventList event_list = {};
+	MIDIEventPacket* event_packet = MIDIEventListInit(&event_list, kMIDIProtocol_1_0);
+
+	// Add the event to the event list.
+	event_packet = MIDIEventListAdd(&event_list, sizeof(MIDIEventList::packet), event_packet, timestamp, word_count, data);
+
+	if (event_packet != nullptr)
 	{
-		OSStatus status = MIDISend(midiOutPort, midiDestination, packetList);
+		OSStatus status = MIDISendEventList(MidiOutPort, MidiDestination, &event_list);
 		if (status != noErr)
 		{
-			ZMusic_Printf(ZMUSIC_MSG_ERROR, "CoreMIDI: MIDISend failed (error %d)\n", (int)status);
+			ZMusic_Printf(ZMUSIC_MSG_ERROR, "CoreMIDI: \"MIDISendEventList\" failed with error: %d\n", (int)status);
 		}
 	}
 	else
 	{
-		// This should ideally not happen with dynamic allocation, but we keep the check for safety.
-		ZMusic_Printf(ZMUSIC_MSG_ERROR, "CoreMIDI: MIDIPacketListAdd failed unexpectedly.\n");
+		// Should never happen as long as (word_count <= 64)
+		ZMusic_Printf(ZMUSIC_MSG_ERROR, "CoreMIDI: \"MIDIEventListAdd\" failed unexpectedly.\n");
 	}
 }
 
@@ -744,41 +767,10 @@ void CoreMIDIDevice::SendMIDIData(const uint8_t* data, size_t length, MIDITimeSt
 //
 //==========================================================================
 
-void CoreMIDIDevice::SendImmediateShortMsg(uint8_t command, uint8_t data1, uint8_t data2)
+void CoreMIDIDevice::SendImmediateShortMsg(uint32_t command, uint32_t data1, uint32_t data2)
 {
-	uint8_t msg[3] = { command, data1, data2 };
-	int msgLen = GetShortMsgLength(msg);
-	SendMIDIData(msg, msgLen, 0);
-}
-
-//==========================================================================
-//
-// CoreMIDIDevice :: GetShortMsgLength
-//
-// Determines the length of a short MIDI message
-// The actual correct length is necessary for CoreMIDI to work.
-//
-//==========================================================================
-
-int CoreMIDIDevice::GetShortMsgLength(uint8_t* msg)
-{
-	int msgLen;
-	if (msg[0] >= 0xF0) // System messages
-	{
-		if (msg[0] == 0xF0 || msg[0] == 0xF7) msgLen = 1; // Start/Stop/Continue/Timing/Active Sensing/Reset (1 byte)
-		else if (msg[0] == 0xF1 || msg[0] == 0xF3) msgLen = 2; // Time Code Quarter Frame, Song Select (2 bytes)
-		else if (msg[0] == 0xF2) msgLen = 3; // Song Position Pointer (3 bytes)
-		else msgLen = 1; // Default to 1 for other unknown system messages
-	}
-	else if (msg[0] >= 0xC0 && msg[0] <= 0xDF) // Program Change or Channel Aftertouch (2 bytes)
-	{
-		msgLen = 2;
-	}
-	else // Note On/Off, Poly Aftertouch, Control Change, Pitch Bend (3 bytes)
-	{
-		msgLen = 3;
-	}
-	return msgLen;
+	const uint32_t msg = 0x20 << 24 | command << 16 | data1 << 8 | data2;
+	HandleEvent(&msg, 1, 0);
 }
 
 //==========================================================================

@@ -2,7 +2,7 @@
  * libOPNMIDI is a free Software MIDI synthesizer library with OPN2 (YM2612) emulation
  *
  * MIDI parser and player (Original code from ADLMIDI): Copyright (c) 2010-2014 Joel Yliluoma <bisqwit@iki.fi>
- * OPNMIDI Library and YM2612 support:   Copyright (c) 2017-2025 Vitaly Novichkov <admin@wohlnet.ru>
+ * OPNMIDI Library and YM2612 support:   Copyright (c) 2017-2026 Vitaly Novichkov <admin@wohlnet.ru>
  *
  * Library is based on the ADLMIDI, a MIDI player for Linux and Windows with OPL3 emulation:
  * http://iki.fi/bisqwit/source/adlmidi.html
@@ -30,7 +30,7 @@ extern "C" {
 
 #define OPNMIDI_VERSION_MAJOR       1
 #define OPNMIDI_VERSION_MINOR       6
-#define OPNMIDI_VERSION_PATCHLEVEL  1
+#define OPNMIDI_VERSION_PATCHLEVEL  2
 
 #define OPNMIDI_TOSTR_I(s) #s
 #define OPNMIDI_TOSTR(s) OPNMIDI_TOSTR_I(s)
@@ -48,13 +48,16 @@ extern "C" {
 #include <stdint.h>
 typedef uint8_t         OPN2_UInt8;
 typedef uint16_t        OPN2_UInt16;
+typedef uint32_t        OPN2_UInt32;
 typedef int8_t          OPN2_SInt8;
 typedef int16_t         OPN2_SInt16;
 #else
 typedef unsigned char   OPN2_UInt8;
 typedef unsigned short  OPN2_UInt16;
+typedef unsigned int    OPN2_UInt32;
 typedef char            OPN2_SInt8;
 typedef short           OPN2_SInt16;
+typedef int             OPN2_SInt32;
 #endif
 
 
@@ -143,6 +146,34 @@ enum OPNMIDI_ChannelAlloc
     OPNMIDI_ChanAlloc_AnyReleased,
     /*! Count of available channel allocation modes */
     OPNMIDI_ChanAlloc_Count
+};
+
+/**
+ * @brief Device types to filter incompatible MIDI tracks, primarily used by HMI/HMP and EMIDI.
+ * Can be combined to enable more tracks.
+ */
+enum OPNMIDI_DeviceFilter
+{
+    OPNMIDI_Device_GeneralMidi      = 0x0001, /* MPU-401 counted as here */
+    OPNMIDI_Device_OPL2             = 0x0002,
+    OPNMIDI_Device_OPL3             = 0x0004,
+    OPNMIDI_Device_MT32             = 0x0008,
+    OPNMIDI_Device_AWE32            = 0x0010,
+    OPNMIDI_Device_WaveBlaster      = 0x0020,
+    OPNMIDI_Device_ProAudioSpectrum = 0x0040,
+    OPNMIDI_Device_SoundMan16       = 0x0080,
+    OPNMIDI_Device_DIGI             = 0x0100, /* Digital samples controlled by MIDI */
+    OPNMIDI_Device_SoundScape       = 0x0200,
+    OPNMIDI_Device_WaveTable        = 0x0400,
+    OPNMIDI_Device_GravisUltrasound = 0x0800,
+    OPNMIDI_Device_PCSpeaker        = 0x1000,
+    OPNMIDI_Device_Callback         = 0x2000,
+    OPNMIDI_Device_SoundMasterII    = 0x4000,
+
+    OPNMIDI_Device_FM               = OPNMIDI_Device_OPL2|OPNMIDI_Device_OPL3|OPNMIDI_Device_ProAudioSpectrum|OPNMIDI_Device_SoundMan16,
+    OPNMIDI_Device_AdLib            = OPNMIDI_Device_OPL2,
+    OPNMIDI_Device_SoundBlaster     = OPNMIDI_Device_OPL2|OPNMIDI_Device_OPL3,
+    OPNMIDI_Device_ANY              = 0xFFFF
 };
 
 /**
@@ -462,6 +493,15 @@ extern OPNMIDI_DECLSPEC void opn2_setAutoArpeggio(struct OPN2_MIDIPlayer *device
 extern OPNMIDI_DECLSPEC int opn2_getAutoArpeggio(struct OPN2_MIDIPlayer *device);
 
 /**
+ * @brief Enable or disable the handling of events according Apogee Sound System's EMIDI standard for MIDI files
+ * @param device Instance of the library
+ * @param emidiEn 0 - disabled, 1 - enabled
+ *
+ * Note: The mode must be set before loading the MIDI file, otherwise this option will take no effect
+ */
+extern OPNMIDI_DECLSPEC void opn2_setModeEMIDI(struct OPN2_MIDIPlayer *device, int emidiEn);
+
+/**
  * @brief Enable or disable built-in loop (built-in loop supports 'loopStart' and 'loopEnd' tags to loop specific part)
  * @param device Instance of the library
  * @param loopEn 0 - disabled, 1 - enabled
@@ -527,6 +567,18 @@ extern OPNMIDI_DECLSPEC void opn2_setChannelAllocMode(struct OPN2_MIDIPlayer *de
  * @return Channel allocation mode (#OPNMIDI_ChannelAlloc)
  */
 extern OPNMIDI_DECLSPEC int opn2_getChannelAllocMode(struct OPN2_MIDIPlayer *device);
+
+/**
+ * @brief Assigns the device filter to enable/disable tracks in special formats like HMI/HMP or EMIDI
+ *
+ * The value must be assigned before loading a file, otherwise it will not work as intended.
+ *
+ * When library was built without MIDI sequencer, this function gives no effect.
+ *
+ * @param device Instance of the library
+ * @param mask Mask of the device (#OPNMIDI_DeviceFilter)
+ */
+extern OPNMIDI_DECLSPEC void opn2_setDeviceFilterMask(struct OPN2_MIDIPlayer *device, OPN2_UInt32 mask);
 
 /**
  * @brief Load WOPN bank file from File System

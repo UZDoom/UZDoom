@@ -57,10 +57,10 @@ class MessageBoxMenu : Menu
 
 		if (!generic_ui)
 		{
-			if (SmallFont && SmallFont.CanPrint(message) && SmallFont.CanPrint("$TXT_YES") && SmallFont.CanPrint("$TXT_NO")) textFont = SmallFont;
-			else if (OriginalSmallFont && OriginalSmallFont.CanPrint(message) && OriginalSmallFont.CanPrint("$TXT_YES") && OriginalSmallFont.CanPrint("$TXT_NO")) textFont = OriginalSmallFont;
+			if (SmallFont && SmallFont.CanPrint(message) && SmallFont.CanPrint("$TXT_YES") && SmallFont.CanPrint("$TXT_NO")) textFont = Font.GetSmallTextFont(SmallFont);
+			else if (OriginalSmallFont && OriginalSmallFont.CanPrint(message) && OriginalSmallFont.CanPrint("$TXT_YES") && OriginalSmallFont.CanPrint("$TXT_NO")) textFont = Font.GetSmallTextFont(OriginalSmallFont);
 		}
-
+		textFont = Font.GetSmallTextFont(textFont);
 		if (!textFont)
 		{
 			arrowFont = textFont = NewSmallFont;
@@ -125,8 +125,11 @@ class MessageBoxMenu : Menu
 			{
 				if ((MenuTime() % 8) < 6)
 				{
+					bool centerVerticalAlignment = textFont.IsValidDynamicFont();
+					float dynamicAlignment = (y + (fontheight * 0.5)) + (fontheight * messageSelection);
+					float staticAlignment = y + fontheight * messageSelection;
 					screen.DrawText(arrowFont, OptionMenuSettings.mFontColorSelection,
-						destWidth/2 - 3 - arrowFont.StringWidth(selector), y + fontheight * messageSelection, selector, DTA_VirtualWidth, destWidth, DTA_VirtualHeight, destHeight, DTA_KeepRatio, true);
+						destWidth/2 - 3 - arrowFont.StringWidth(selector), centerVerticalAlignment? dynamicAlignment : staticAlignment , selector, DTA_VirtualWidth, destWidth, DTA_VirtualHeight, destHeight, DTA_KeepRatio, true);
 				}
 			}
 		}

@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-05-11 03:43+0000\n"
+"PO-Revision-Date: 2026-08-10 22:27-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/doom-engine-games/harmony-filter/sv/>\n"
 "Language: sv\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.5-dev\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
 
 #, fuzzy
 msgctxt "doom harmony"
@@ -140,14 +140,6 @@ msgid "GOTSHOTGUN"
 msgstr "Förvärvad: Hagelgevär"
 
 msgctxt "doom harmony"
-msgid "STSTR_DQDON"
-msgstr "Gud läge PÅ"
-
-msgctxt "doom harmony"
-msgid "STSTR_DQDOFF"
-msgstr "Gud läge AV"
-
-msgctxt "doom harmony"
 msgid "STSTR_KFAADDED"
 msgstr "Alla vapen/ammunition/nycklar"
 
@@ -249,3 +241,7 @@ msgstr "Tack för att du spelar"
 msgctxt "doom harmony"
 msgid "TXT_D2E1"
 msgstr ""
+
+msgctxt "doom harmony"
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Gud läge {PÅ|AV}"

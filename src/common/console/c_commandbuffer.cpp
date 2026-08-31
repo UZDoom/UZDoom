@@ -46,27 +46,51 @@ FString FCommandBuffer::GetText() const
 
 void FCommandBuffer::Draw(int x, int y, int scale, bool cursor)
 {
-	if (scale == 1)
+	FFont *const ourConsoleFont = FFont::GetConsoleFont(CurrentConsoleFont);
+	const bool   isDynamicFont  = ourConsoleFont->IsValidDynamicFont();
+	
+	if (isDynamicFont)
 	{
-		DrawChar(twod, CurrentConsoleFont, CR_ORANGE, x, y, '\x1c', TAG_DONE);
-		DrawText(twod, CurrentConsoleFont, CR_ORANGE, x + CurrentConsoleFont->GetCharWidth(0x1c), y,
+		DrawText(twod, ourConsoleFont, CR_ORANGE, x, y, "]", DTA_VirtualWidth, twod->GetWidth() / scale,
+		         DTA_VirtualHeight, twod->GetHeight() / scale, DTA_KeepRatio, true, TAG_DONE);
+
+		DrawText(twod, ourConsoleFont, CR_ORANGE, x + ourConsoleFont->GetCharWidth(0x1c), y, &Text[StartPos],
+		         DTA_VirtualWidth, twod->GetWidth() / scale, DTA_VirtualHeight, twod->GetHeight() / scale,
+		         DTA_KeepRatio, true, TAG_DONE);
+
+		if (cursor)
+		{
+			std::u32string subStr   = Text.substr(CursorPosCells - StartPosCells);
+			auto    strWidth = ourConsoleFont->StringWidthUTF32(subStr);
+			auto           fullStrWidth      = ourConsoleFont->StringWidthUTF32(Text);
+			auto           remainingStrWidth = fullStrWidth - strWidth;
+			DrawText(twod, ourConsoleFont, CR_YELLOW, x + remainingStrWidth + ourConsoleFont->GetCharWidth(0x1c),
+			         y, "█", DTA_VirtualWidth, twod->GetWidth() / scale, DTA_VirtualHeight,
+			         twod->GetHeight() / scale, DTA_KeepRatio, true, TAG_DONE);
+		}
+	}
+	else if (scale == 1)
+	{
+		DrawChar(twod, ourConsoleFont, CR_ORANGE, x, y, '\x1c', TAG_DONE);
+		DrawText(twod, ourConsoleFont, CR_ORANGE, x + ourConsoleFont->GetCharWidth(0x1c), y,
 			&Text[StartPos], TAG_DONE);
 
 		if (cursor)
 		{
-			DrawChar(twod, CurrentConsoleFont, CR_YELLOW,
-				x + CurrentConsoleFont->GetCharWidth(0x1c) + (CursorPosCells - StartPosCells) * CurrentConsoleFont->GetCharWidth(0xb),
-				y, '\xb', TAG_DONE);
+			DrawChar(twod, ourConsoleFont, CR_YELLOW,
+			         x + ourConsoleFont->GetCharWidth(0x1c) +
+			             (CursorPosCells - StartPosCells) * ourConsoleFont->GetCharWidth(0xb),
+			         y, '\xb', TAG_DONE);
 		}
 	}
 	else
 	{
-		DrawChar(twod, CurrentConsoleFont, CR_ORANGE, x, y, '\x1c',
+		DrawChar(twod, ourConsoleFont, CR_ORANGE, x, y, '\x1c',
 			DTA_VirtualWidth, twod->GetWidth() / scale,
 			DTA_VirtualHeight, twod->GetHeight() / scale,
 			DTA_KeepRatio, true, TAG_DONE);
 
-		DrawText(twod, CurrentConsoleFont, CR_ORANGE, x + CurrentConsoleFont->GetCharWidth(0x1c), y,
+		DrawText(twod, ourConsoleFont, CR_ORANGE, x + ourConsoleFont->GetCharWidth(0x1c), y,
 			&Text[StartPos],
 			DTA_VirtualWidth, twod->GetWidth() / scale,
 			DTA_VirtualHeight, twod->GetHeight() / scale,
@@ -74,9 +98,10 @@ void FCommandBuffer::Draw(int x, int y, int scale, bool cursor)
 
 		if (cursor)
 		{
-			DrawChar(twod, CurrentConsoleFont, CR_YELLOW,
-				x + CurrentConsoleFont->GetCharWidth(0x1c) + (CursorPosCells - StartPosCells) * CurrentConsoleFont->GetCharWidth(0xb),
-				y, '\xb',
+			DrawChar(twod, ourConsoleFont, CR_YELLOW,
+			         x + ourConsoleFont->GetCharWidth(0x1c) +
+			             (CursorPosCells - StartPosCells) * ourConsoleFont->GetCharWidth(0xb),
+			         y, '\xb',
 				DTA_VirtualWidth, twod->GetWidth() / scale,
 				DTA_VirtualHeight, twod->GetHeight() / scale,
 				DTA_KeepRatio, true, TAG_DONE);

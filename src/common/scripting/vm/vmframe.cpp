@@ -631,7 +631,15 @@ template<> void VMCheckParam<DObject*>(VMFunction* func, int index)
 		I_FatalError("%s argument %d is not an object", func->PrintableName, index);
 }
 
+template<> void VMCheckParam<void*>(VMFunction* func, int index)
+{
+}
+
 template<> void VMCheckReturn<void>(VMFunction* func, int index)
+{
+}
+
+template<> void VMCheckReturn<void*>(VMFunction* func, int index)
 {
 }
 

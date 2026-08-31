@@ -40,6 +40,7 @@
 #include <cassert>
 #include <cstdint>
 #include <cstdio>
+#include <cinttypes>
 #include <cstring>
 #include <algorithm>
 #include <memory>

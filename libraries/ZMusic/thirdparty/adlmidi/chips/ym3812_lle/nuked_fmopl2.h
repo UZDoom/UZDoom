@@ -25,6 +25,8 @@
 #ifndef NUKED_FMOPL2_H
 #define NUKED_FMOPL2_H
 
+#include <stdint.h>
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -32,249 +34,249 @@ extern "C" {
 
 typedef struct
 {
-    int mclk;
-    int address;
-    int data_i;
-    int ic;
-    int cs;
-    int rd;
-    int wr;
+    uint_fast32_t mclk;
+    uint_fast32_t address;
+    uint_fast32_t data_i;
+    uint_fast32_t ic;
+    uint_fast32_t cs;
+    uint_fast32_t rd;
+    uint_fast32_t wr;
 } fmopl2_input_t;
 
 typedef struct
 {
     fmopl2_input_t input;
 
-    int mclk1;
-    int mclk2;
-    int clk1;
-    int clk2;
+    uint_fast32_t mclk1;
+    uint_fast32_t mclk2;
+    uint_fast32_t clk1;
+    uint_fast32_t clk2;
 
-    int prescaler_reset_l[2];
-    int prescaler_cnt[2];
-    int prescaler_l1[2];
-    int prescaler_l2[2];
+    uint_fast32_t prescaler_reset_l[2];
+    uint_fast32_t prescaler_cnt[2];
+    uint_fast32_t prescaler_l1[2];
+    uint_fast32_t prescaler_l2[2];
 
-    int reset1;
+    uint_fast32_t reset1;
 
-    int fsm_reset_l[2];
-    int fsm_reset; /* wire */
-    int fsm_cnt1[2];
-    int fsm_cnt2[2];
-    int fsm_cnt1_of; /* wire */
-    int fsm_cnt2_of; /* wire */
-    int fsm_sel[13];
-    int fsm_cnt; /* wire */
-    int fsm_ch_out;
-    int fsm_do_fb;
-    int fsm_load_fb;
-    int fsm_l1[2];
-    int fsm_l2[2];
-    int fsm_l3[2];
-    int fsm_l4[2];
-    int fsm_l5[2];
-    int fsm_l6[2];
-    int fsm_out[16];
+    uint_fast32_t fsm_reset_l[2];
+    uint_fast32_t fsm_reset; /* wire */
+    uint_fast32_t fsm_cnt1[2];
+    uint_fast32_t fsm_cnt2[2];
+    uint_fast32_t fsm_cnt1_of; /* wire */
+    uint_fast32_t fsm_cnt2_of; /* wire */
+    uint_fast32_t fsm_sel[13];
+    uint_fast32_t fsm_cnt; /* wire */
+    uint_fast32_t fsm_ch_out;
+    uint_fast32_t fsm_do_fb;
+    uint_fast32_t fsm_load_fb;
+    uint_fast32_t fsm_l1[2];
+    uint_fast32_t fsm_l2[2];
+    uint_fast32_t fsm_l3[2];
+    uint_fast32_t fsm_l4[2];
+    uint_fast32_t fsm_l5[2];
+    uint_fast32_t fsm_l6[2];
+    uint_fast32_t fsm_out[16];
 
-    int io_rd;
-    int io_wr;
-    int io_cs;
-    int io_a0;
+    uint_fast32_t io_rd;
+    uint_fast32_t io_wr;
+    uint_fast32_t io_cs;
+    uint_fast32_t io_a0;
 
-    int io_read0;
-    int io_read1;
-    int io_write;
-    int io_write0;
-    int io_write1;
-    int io_dir;
-    int io_data;
+    uint_fast32_t io_read0;
+    uint_fast32_t io_read1;
+    uint_fast32_t io_write;
+    uint_fast32_t io_write0;
+    uint_fast32_t io_write1;
+    uint_fast32_t io_dir;
+    uint_fast32_t io_data;
 
-    int data_latch;
+    uint_fast32_t data_latch;
 
-    int write0;
-    int write0_sr;
-    int write0_latch[6];
-    int write1;
-    int write1_sr;
-    int write1_latch[6];
+    uint_fast32_t write0;
+    uint_fast32_t write0_sr;
+    uint_fast32_t write0_latch[6];
+    uint_fast32_t write1;
+    uint_fast32_t write1_sr;
+    uint_fast32_t write1_latch[6];
 
-    int reg_sel1;
-    int reg_sel2;
-    int reg_sel3;
-    int reg_sel4;
-    int reg_sel8;
-    int reg_selbd;
-    int reg_test;
-    int reg_timer1;
-    int reg_timer2;
-    int reg_notesel;
-    int reg_csm;
-    int reg_da;
-    int reg_dv;
-    int rhythm;
-    int reg_rh_kon;
-    int reg_sel4_wr; /* wire */
-    int reg_sel4_rst; /* wire */
-    int reg_t1_mask;
-    int reg_t2_mask;
-    int reg_t1_start;
-    int reg_t2_start;
-    int reg_mode_b3;
-    int reg_mode_b4;
+    uint_fast32_t reg_sel1;
+    uint_fast32_t reg_sel2;
+    uint_fast32_t reg_sel3;
+    uint_fast32_t reg_sel4;
+    uint_fast32_t reg_sel8;
+    uint_fast32_t reg_selbd;
+    uint_fast32_t reg_test;
+    uint_fast32_t reg_timer1;
+    uint_fast32_t reg_timer2;
+    uint_fast32_t reg_notesel;
+    uint_fast32_t reg_csm;
+    uint_fast32_t reg_da;
+    uint_fast32_t reg_dv;
+    uint_fast32_t rhythm;
+    uint_fast32_t reg_rh_kon;
+    uint_fast32_t reg_sel4_wr; /* wire */
+    uint_fast32_t reg_sel4_rst; /* wire */
+    uint_fast32_t reg_t1_mask;
+    uint_fast32_t reg_t2_mask;
+    uint_fast32_t reg_t1_start;
+    uint_fast32_t reg_t2_start;
+    uint_fast32_t reg_mode_b3;
+    uint_fast32_t reg_mode_b4;
 
-    int t1_cnt[2];
-    int t2_cnt[2];
-    int t1_of[2];
-    int t2_of[2];
-    int t1_status;
-    int t2_status;
-    int unk_status1;
-    int unk_status2;
-    int timer_st_load_l;
-    int timer_st_load;
-    int t1_start;
-    int t1_start_l[2];
-    int t2_start_l[2];
-    int t1_load; /* wire */
-    int csm_load_l;
-    int csm_load;
-    int csm_kon;
-    int rh_sel0;
-    int rh_sel[2];
+    uint_fast32_t t1_cnt[2];
+    uint_fast32_t t2_cnt[2];
+    uint_fast32_t t1_of[2];
+    uint_fast32_t t2_of[2];
+    uint_fast32_t t1_status;
+    uint_fast32_t t2_status;
+    uint_fast32_t unk_status1;
+    uint_fast32_t unk_status2;
+    uint_fast32_t timer_st_load_l;
+    uint_fast32_t timer_st_load;
+    uint_fast32_t t1_start;
+    uint_fast32_t t1_start_l[2];
+    uint_fast32_t t2_start_l[2];
+    uint_fast32_t t1_load; /* wire */
+    uint_fast32_t csm_load_l;
+    uint_fast32_t csm_load;
+    uint_fast32_t csm_kon;
+    uint_fast32_t rh_sel0;
+    uint_fast32_t rh_sel[2];
 
-    int keyon_comb;
-    int address;
-    int address_valid;
-    int address_valid_l[2];
-    int address_valid2;
-    int data;
-    int slot_cnt1[2];
-    int slot_cnt2[2];
-    int slot_cnt;
-    int sel_ch;
+    uint_fast32_t keyon_comb;
+    uint_fast32_t address;
+    uint_fast32_t address_valid;
+    uint_fast32_t address_valid_l[2];
+    uint_fast32_t address_valid2;
+    uint_fast32_t data;
+    uint_fast32_t slot_cnt1[2];
+    uint_fast32_t slot_cnt2[2];
+    uint_fast32_t slot_cnt;
+    uint_fast32_t sel_ch;
 
-    int ch_fnum[10][2];
-    int ch_block[3][2];
-    int ch_keyon[2];
-    int ch_connect[2];
-    int ch_fb[3][2];
-    int op_multi[4][2];
-    int op_ksr[2];
-    int op_egt[2];
-    int op_vib[2];
-    int op_am[2];
-    int op_tl[6][2];
-    int op_ksl[2][2];
-    int op_ar[4][2];
-    int op_dr[4][2];
-    int op_sl[4][2];
-    int op_rr[4][2];
-    int op_wf[2][2];
-    int op_mod[2];
-    int op_value; /* wire */
+    uint_fast32_t ch_fnum[10][2];
+    uint_fast32_t ch_block[3][2];
+    uint_fast32_t ch_keyon[2];
+    uint_fast32_t ch_connect[2];
+    uint_fast32_t ch_fb[3][2];
+    uint_fast32_t op_multi[4][2];
+    uint_fast32_t op_ksr[2];
+    uint_fast32_t op_egt[2];
+    uint_fast32_t op_vib[2];
+    uint_fast32_t op_am[2];
+    uint_fast32_t op_tl[6][2];
+    uint_fast32_t op_ksl[2][2];
+    uint_fast32_t op_ar[4][2];
+    uint_fast32_t op_dr[4][2];
+    uint_fast32_t op_sl[4][2];
+    uint_fast32_t op_rr[4][2];
+    uint_fast32_t op_wf[2][2];
+    uint_fast32_t op_mod[2];
+    uint_fast32_t op_value; /* wire */
 
-    int eg_load1_l;
-    int eg_load1;
-    int eg_load2_l;
-    int eg_load2;
-    int eg_load3_l;
-    int eg_load3;
+    uint_fast32_t eg_load1_l;
+    uint_fast32_t eg_load1;
+    uint_fast32_t eg_load2_l;
+    uint_fast32_t eg_load2;
+    uint_fast32_t eg_load3_l;
+    uint_fast32_t eg_load3;
 
-    int trem_carry[2];
-    int trem_value[2];
-    int trem_dir[2];
-    int trem_step;
-    int trem_out;
-    int trem_of[2];
+    uint_fast32_t trem_carry[2];
+    uint_fast32_t trem_value[2];
+    uint_fast32_t trem_dir[2];
+    uint_fast32_t trem_step;
+    uint_fast32_t trem_out;
+    uint_fast32_t trem_of[2];
 
-    int eg_timer[2];
-    int eg_timer_masked[2];
-    int eg_carry[2];
-    int eg_mask[2];
-    int eg_subcnt[2];
-    int eg_subcnt_l[2];
-    int eg_sync_l[2];
-    int eg_timer_low;
-    int eg_shift;
-    int eg_state[2][2];
-    int eg_level[9][2];
-    int eg_out[2];
-    int eg_dokon; /* wire */
-    int eg_mute[2];
+    uint_fast32_t eg_timer[2];
+    uint_fast32_t eg_timer_masked[2];
+    uint_fast32_t eg_carry[2];
+    uint_fast32_t eg_mask[2];
+    uint_fast32_t eg_subcnt[2];
+    uint_fast32_t eg_subcnt_l[2];
+    uint_fast32_t eg_sync_l[2];
+    uint_fast32_t eg_timer_low;
+    uint_fast32_t eg_shift;
+    uint_fast32_t eg_state[2][2];
+    uint_fast32_t eg_level[9][2];
+    uint_fast32_t eg_out[2];
+    uint_fast32_t eg_dokon; /* wire */
+    uint_fast32_t eg_mute[2];
 
-    int block;
-    int fnum;
-    int keyon;
-    int connect;
-    int connect_l[2];
-    int fb;
-    int fb_l[2][2];
-    int multi;
-    int ksr;
-    int egt;
-    int vib;
-    int am;
-    int tl;
-    int ksl;
-    int ar;
-    int dr;
-    int sl;
-    int rr;
-    int wf;
+    uint_fast32_t block;
+    uint_fast32_t fnum;
+    uint_fast32_t keyon;
+    uint_fast32_t connect;
+    uint_fast32_t connect_l[2];
+    uint_fast32_t fb;
+    uint_fast32_t fb_l[2][2];
+    uint_fast32_t multi;
+    uint_fast32_t ksr;
+    uint_fast32_t egt;
+    uint_fast32_t vib;
+    uint_fast32_t am;
+    uint_fast32_t tl;
+    uint_fast32_t ksl;
+    uint_fast32_t ar;
+    uint_fast32_t dr;
+    uint_fast32_t sl;
+    uint_fast32_t rr;
+    uint_fast32_t wf;
 
-    int lfo_cnt[2];
-    int t1_step; /* wire */
-    int t2_step; /* wire */
-    int am_step; /* wire */
-    int vib_step; /* wire */
-    int vib_cnt[2];
-    int pg_phase[19][2];
-    int dbg_serial[2];
+    uint_fast32_t lfo_cnt[2];
+    uint_fast32_t t1_step; /* wire */
+    uint_fast32_t t2_step; /* wire */
+    uint_fast32_t am_step; /* wire */
+    uint_fast32_t vib_step; /* wire */
+    uint_fast32_t vib_cnt[2];
+    uint_fast32_t pg_phase[19][2];
+    uint_fast32_t dbg_serial[2];
 
-    int noise_lfsr[2];
+    uint_fast32_t noise_lfsr[2];
 
-    int hh_load;
-    int tc_load;
-    int hh_bit2;
-    int hh_bit3;
-    int hh_bit7;
-    int hh_bit8;
-    int tc_bit3;
-    int tc_bit5;
-    int op_logsin[2];
-    int op_shift[2];
-    int op_pow[2];
-    int op_mute[2];
-    int op_sign[2];
-    int op_fb[2][13][2];
+    uint_fast32_t hh_load;
+    uint_fast32_t tc_load;
+    uint_fast32_t hh_bit2;
+    uint_fast32_t hh_bit3;
+    uint_fast32_t hh_bit7;
+    uint_fast32_t hh_bit8;
+    uint_fast32_t tc_bit3;
+    uint_fast32_t tc_bit5;
+    uint_fast32_t op_logsin[2];
+    uint_fast32_t op_shift[2];
+    uint_fast32_t op_pow[2];
+    uint_fast32_t op_mute[2];
+    uint_fast32_t op_sign[2];
+    uint_fast32_t op_fb[2][13][2];
 
-    int pg_out; /* wire */
-    int pg_out_rhy; /* wire */
+    uint_fast32_t pg_out; /* wire */
+    uint_fast32_t pg_out_rhy; /* wire */
 
-    int accm_value[2];
-    int accm_shifter[2];
-    int accm_load1_l;
-    int accm_load1;
-    int accm_clamplow;
-    int accm_clamphigh;
-    int accm_top;
-    int accm_sel[2];
-    int accm_mo[2];
+    uint_fast32_t accm_value[2];
+    uint_fast32_t accm_shifter[2];
+    uint_fast32_t accm_load1_l;
+    uint_fast32_t accm_load1;
+    uint_fast32_t accm_clamplow;
+    uint_fast32_t accm_clamphigh;
+    uint_fast32_t accm_top;
+    uint_fast32_t accm_sel[2];
+    uint_fast32_t accm_mo[2];
 
-    int o_sh;
-    int o_mo;
-    int o_irq_pull;
-    int o_sy;
+    uint_fast32_t o_sh;
+    uint_fast32_t o_mo;
+    uint_fast32_t o_irq_pull;
+    uint_fast32_t o_sy;
 
-    int data_o;
-    int data_z;
+    uint_fast32_t data_o;
+    uint_fast32_t data_z;
 
-    int o_clk1;
-    int o_clk2;
-    int o_reset1;
-    int o_write0;
-    int o_write1;
-    int o_data_latch;
+    uint_fast32_t o_clk1;
+    uint_fast32_t o_clk2;
+    uint_fast32_t o_reset1;
+    uint_fast32_t o_write0;
+    uint_fast32_t o_write1;
+    uint_fast32_t o_data_latch;
 
 } fmopl2_t;
 

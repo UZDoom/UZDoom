@@ -27,6 +27,7 @@ class ListMenuItem : MenuItemBase
 	{
 		int w = desc ? desc.DisplayWidth() : ListMenuDescriptor.CleanScale;
 		int h = desc ? desc.DisplayHeight() : -1;
+		fnt = fnt;
 		if (w == ListMenuDescriptor.CleanScale)
 		{
 			screen.DrawText(fnt, color, x, y, text, ontop? DTA_CleanTop : DTA_Clean, true);
@@ -165,7 +166,7 @@ class ListMenuItemStaticText : ListMenuItem
 	{
 		if (mText.Length() != 0)
 		{
-			let font = generic_ui? NewSmallFont : mFont;
+			let font = menuDelegate.PickFont(generic_ui? NewSmallFont : mFont);
 
 			String text = Stringtable.Localize(mText);
 
@@ -290,6 +291,23 @@ class ListMenuItemTextItem : ListMenuItemSelectable
 		DrawText(desc, font, selected ? mColorSelected : mColor, x, mYpos, mText);
 	}
 
+	override void DrawSelector(double xofs, double yofs, TextureID tex, ListMenuDescriptor desc)
+	{
+		if (tex.isNull())
+		{
+			if ((Menu.MenuTime() % 8) < 6)
+			{
+				DrawText(desc, ConFont, OptionMenuSettings.mFontColorSelection, mXpos + xofs, mYpos + yofs + 8, "\xd");
+			}
+		}
+		else
+		{
+			let font = menuDelegate.PickFont(mFont);
+			yofs += float(font.GetHeight()) * 0.33;
+			DrawTexture(desc, tex, mXpos + xofs, mYpos + yofs);
+		}
+	}
+
 	override int GetWidth()
 	{
 		let font = menuDelegate.PickFont(mFont);
@@ -353,7 +371,7 @@ class ListMenuItemCaptionItem : ListMenuItem
 
 	override void Draw(bool selected, ListMenuDescriptor desc)
 	{
-		let font = menuDelegate.PickFont(desc.mFont);
+		let font = Font.GetTitleFont(menuDelegate.PickFont(desc.mFont));
 		if (font && mText.Length() > 0)
 		{
 			menuDelegate.DrawCaption(mText, font, 0, true);

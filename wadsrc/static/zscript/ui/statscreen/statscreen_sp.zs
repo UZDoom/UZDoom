@@ -151,25 +151,28 @@ class DoomStatusScreen : StatusScreen
 
 	override void drawStats (void)
 	{
-		// line height
-		int lh = IntermissionFont.GetHeight() * 3 / 2;
-
 		drawLF();
 
+		let ourFont = Font.GetBigTextFont(generic_ui? NewSmallFont : content.mFont);
+		bool usingDynamicFont = ourFont.IsValidDynamicFont();
+
+		// line height
+		int lh = usingDynamicFont? ourFont.GetHeight() * 3 / 2 : IntermissionFont.GetHeight() * 3 / 2;
 
 		// For visual consistency, only use the patches here if all are present.
 		bool useGfx = TexMan.OkForLocalization(Kills, "$TXT_IMKILLS")
 			&& TexMan.OkForLocalization(Items, "$TXT_IMITEMS")
 			&& TexMan.OkForLocalization(P_secret, "$TXT_IMSECRETS")
 			&& TexMan.OkForLocalization(Timepic, "$TXT_IMTIME")
-			&& (!wbs.partime || TexMan.OkForLocalization(Par, "$TXT_IMPAR"));
+			&& (!wbs.partime || TexMan.OkForLocalization(Par, "$TXT_IMPAR"))
+			&& !usingDynamicFont;
 
 		// The font color may only be used when the entire screen is printed as text.
 		// Otherwise the text based parts should not be translated to match the other graphics patches.
 		let tcolor = useGfx? Font.CR_UNTRANSLATED : content.mColor;
 
 		Font printFont;
-		Font textFont = generic_ui? NewSmallFont : content.mFont;
+		Font textFont = Font.GetBigTextFont(generic_ui? NewSmallFont : content.mFont);
 		int statsx = SP_STATSX;
 
 		int timey = SP_TIMEY;
@@ -199,7 +202,7 @@ class DoomStatusScreen : StatusScreen
 				statsx = max(0, (320 - allwidth) / 2);
 			}
 
-			printFont = generic_ui? IntermissionFont : content.mFont;
+			printFont = Font.GetBigTextFont(content.mFont);
 			DrawText (textFont, tcolor, statsx, SP_STATSY, "$TXT_IMKILLS");
 			DrawText (textFont, tcolor, statsx, SP_STATSY+lh, "$TXT_IMITEMS");
 			DrawText (textFont, tcolor, statsx, SP_STATSY+2*lh, "$TXT_IMSECRETS");
@@ -251,7 +254,7 @@ class RavenStatusScreen : DoomStatusScreen
 
 		drawLF();
 
-		Font textFont = generic_ui? NewSmallFont : content.mFont;
+		Font textFont = Font.GetSmallTextFont(generic_ui? NewSmallFont : content.mFont);
 		let tcolor = content.mColor;
 
 		DrawText (textFont, tcolor, 50, 65, "$TXT_IMKILLS", shadow:true);

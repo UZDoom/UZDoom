@@ -43,6 +43,7 @@ extend class ScreenJobRunner
 		if (!netgame || GetSkipType() == ST_UNSKIPPABLE)
 			return;
 
+		Font ourConFont = Font.GetConsoleFont(ConFont);
 		if (net_cutscenereadytype == 0)
 		{
 			int totalClients, readyClients;
@@ -63,7 +64,7 @@ extend class ScreenJobRunner
 				if (IsPlayerReady(consoleplayer))
 					Screen.DrawTexture(readyico, true, 0, 0, DTA_CleanNoMove, true, DTA_TopLeft, true);
 
-				Screen.DrawText(ConFont, Font.CR_UNTRANSLATED, (int(readysize.X) + 4) * CleanXFac, CleanYFac, String.Format("%d/%d", readyClients, totalClients), DTA_CleanNoMove, true);
+				Screen.DrawText(ourConFont, Font.CR_UNTRANSLATED, (int(readysize.X) + 4) * CleanXFac, CleanYFac, String.Format("%d/%d", readyClients, totalClients), DTA_CleanNoMove, true);
 				int startTimer = GetReadyTimer();
 				if (startTimer > 0)
 				{
@@ -71,7 +72,7 @@ extend class ScreenJobRunner
 					if (startTimer <= GameTicRate * 5)
 						col = Font.CR_RED;
 
-					Screen.DrawText(ConFont, col, 0, int(readysize.Y) * CleanYFac + CleanYFac, SystemTime.Format("%M:%S", int(ceil(double(startTimer) / GameTicRate))), DTA_CleanNoMove, true);
+					Screen.DrawText(ourConFont, col, 0, int(readysize.Y) * CleanYFac + CleanYFac, SystemTime.Format("%M:%S", int(ceil(double(startTimer) / GameTicRate))), DTA_CleanNoMove, true);
 				}
 			}
 		}
@@ -93,9 +94,9 @@ extend class ScreenJobRunner
 			}
 
 			string contTxt = StringTable.Localize(contType);
-			int xOfs = (Screen.GetWidth() - ConFont.StringWidth(contTxt) * CleanXFac) / 2;
-			int yOfs = Screen.GetHeight() - ConFont.GetHeight() * CleanYFac - CleanYFac;
-			Screen.DrawText(ConFont, Font.CR_GREEN, xOfs, yOfs, contTxt, DTA_CleanNoMove, true);
+			int xOfs = (Screen.GetWidth() - ourConFont.StringWidth(contTxt) * CleanXFac) / 2;
+			int yOfs = Screen.GetHeight() - ourConFont.GetHeight() * CleanYFac - CleanYFac;
+			Screen.DrawText(ourConFont, Font.CR_GREEN, xOfs, yOfs, contTxt, DTA_CleanNoMove, true);
 		}
 	}
 }

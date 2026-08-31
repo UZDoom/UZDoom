@@ -58,8 +58,13 @@ const float MY_SQRT2    = float(1.41421356237309504880); // sqrt(2)
 // EXTERNAL DATA DECLARATIONS ----------------------------------------------
 
 extern bool DrawFSHUD;		// [RH] Defined in d_main.cpp
+extern cycle_t FrameCycles;	// [DVR] Defined in d_main.cpp
 EXTERN_CVAR (Bool, cl_capfps)
 EXTERN_CVAR (Bool, haptics_do_world)
+EXTERN_CVAR(Int, r_distance_cull_type)
+EXTERN_CVAR(Float, r_line_distance_cull)
+EXTERN_CVAR(Int, r_cull_fps_target)
+EXTERN_CVAR(Float, i_timescale)
 
 // TYPES -------------------------------------------------------------------
 
@@ -128,6 +133,24 @@ CUSTOM_CVARD(Float, r_actorspriteshadowfadeheight, 0.0, CVAR_ARCHIVE | CVAR_GLOB
 	else if (self > 8192.f)
 		self = 8192.f;
 }
+CUSTOM_CVARD(Bool, r_cull_distance, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "Boolean CVAR for menudef graycheck. Sets r_distance_cull_type to 2 (unless it was 1).") // This had to be a CVAR for menudef greycheck
+{
+	if (self && !(r_distance_cull_type > 0 && r_distance_cull_type < 3))
+	{
+		r_distance_cull_type = 2;
+	}
+}
+CUSTOM_CVARD(Bool, r_cull_fps, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "Boolean CVAR for menudef graycheck. Sets r_distance_cull_type to 3.") // This had to be a CVAR for menudef greycheck
+{
+	if (self && r_distance_cull_type != 3)
+	{
+		r_distance_cull_type = 3;
+	}
+}
+CUSTOM_CVARD(Color, gl_cullcolor, 0x888888, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "Fog color when r_distance_cull_type > 1. Does not override map fade colors. Hardware renderer only.")
+{
+	primaryLevel->cullcolor = gl_cullcolor;
+}
 
 int 			viewwindowx;
 int 			viewwindowy;
@@ -155,8 +178,11 @@ FRenderViewpoint::FRenderViewpoint()
 	FieldOfView =  DAngle::fromDeg(90.); // Angles in the SCREENWIDTH wide window
 	ScreenProj = 0.0;
 	ScreenProjX = 0.0;
+	culldistsq = 4000.0 * 4000.0;
+	I_Sum = 0.0;
 	TicFrac = 0.0;
 	FrameTime = 0;
+	LastFrameTime = 0;
 	extralight = 0;
 	showviewer = false;
 }
@@ -954,6 +980,36 @@ void R_SetupFrame(FRenderViewpoint& viewPoint, const FViewWindow& viewWindow, AA
 
 	viewPoint.ViewLevel = actor->Level;
 
+	if (r_distance_cull_type > 0) // Best to compute this once per frame instead of once per line
+	{
+		if (r_distance_cull_type < 3)
+		{
+			viewPoint.culldistsq = r_line_distance_cull * r_line_distance_cull;
+			if (viewPoint.FieldOfView.Degrees() > 0.0) viewPoint.culldistsq /= viewPoint.FieldOfView.Sin() * viewPoint.FieldOfView.Sin();
+		}
+		else if (!WorldPaused(true) && viewactive)
+		{
+			double frame_time_error = (screen->FrameTime - viewPoint.LastFrameTime) * i_timescale/1000.0 - 1.0 / r_cull_fps_target;
+			// Using FrameCycles.Time() - 1.0 / r_cull_fps_target; will only measure frame render time, but displayed total fps will not match
+			viewPoint.I_Sum = (0.99 * viewPoint.I_Sum) + frame_time_error;
+			if (fabs(viewPoint.I_Sum)*r_cull_fps_target < 10.0)
+			{
+				viewPoint.culldistsq -= (0.0001 * viewPoint.I_Sum) * viewPoint.culldistsq;
+			}
+			else if (fabs(viewPoint.I_Sum)*r_cull_fps_target < 100.0)
+			{
+				viewPoint.culldistsq -= (frame_time_error > 0.0 ? 0.1 : -0.1) * viewPoint.culldistsq;
+			}
+			else
+			{
+				viewPoint.culldistsq -= (frame_time_error > 0.0 ? 0.5 : -0.5) * viewPoint.culldistsq;
+			}
+			viewPoint.culldistsq = clamp(viewPoint.culldistsq, 1100000.0, 256000000.0);
+		}
+		viewPoint.culldist = actor->Level->culldist = sqrt(viewPoint.culldistsq);
+	}
+	viewPoint.LastFrameTime = screen->FrameTime;
+
 	player_t* player = actor->player;
 	if (player != nullptr && player->mo == actor)
 	{
@@ -1228,10 +1284,18 @@ void R_SetupFrame(FRenderViewpoint& viewPoint, const FViewWindow& viewWindow, AA
 	}
 	else
 	{
-		screen->SetClearColor(GPalette.BlackIndex);
-	}
-
-
+		if (r_distance_cull_type < 2)
+		{
+			screen->SetClearColor(GPalette.BlackIndex);
+		}
+		else
+		{
+			if (actor->Level->cullcolor == 0) actor->Level->cullcolor = PalEntry(gl_cullcolor);
+			screen->SetClearColorPal(actor->Level->cullcolor);
+			SWRenderer->SetClearColor(actor->Level->cullcolor);
+		}
+    }
+	
 	// And finally some info that is needed for the hardware renderer
 
 	// Scale the pitch to account for the pixel stretching, because the playsim doesn't know about this and treats it as 1:1.

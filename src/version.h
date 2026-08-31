@@ -26,20 +26,20 @@
 
 /** Lots of different version numbers **/
 
-#define VERSIONSTR "5.0.0-pre"
+#define VERSIONSTR "5.1.0-pre"
 
 // The version as seen in the Windows resource
-#define RC_FILEVERSION 4,9999,9999,0
-#define RC_PRODUCTVERSION 4,9999,9999,0
+#define RC_FILEVERSION 5,0,9999,0
+#define RC_PRODUCTVERSION 5,0,9999,0
 #define RC_PRODUCTVERSION2 VERSIONSTR
 // These are for content versioning.
 #define VER_MAJOR 5
-#define VER_MINOR 0
+#define VER_MINOR 1
 #define VER_REVISION 0
 
 // This should always refer to the UZDoom version a derived port is based on and not reflect the derived port's version number!
 #define ENG_MAJOR 5
-#define ENG_MINOR 0
+#define ENG_MINOR 1
 #define ENG_REVISION 0
 
 // Version stored in the ini's [LastRun] section.

@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-19 00:01+0000\n"
-"Last-Translator: Skyler Shirra <skyler.shirra@gmail.com>\n"
+"PO-Revision-Date: 2026-08-10 23:42-0400\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Esperanto <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/eo/>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.8.dev0\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
 
 msgid "PRESSKEY"
 msgstr "Premu klavon."
@@ -283,37 +283,11 @@ msgstr "Muzikŝanĝo"
 msgid "STSTR_NOMUS"
 msgstr "Malebla Elektaĵo"
 
-msgid "STSTR_DQDON"
-msgstr "Nevundebla Reĝimo: ŜALTITA"
-
-msgid "STSTR_DQDOFF"
-msgstr "Nevundebla Reĝimo: MALŜALTITA"
-
-msgid "STSTR_DQD2ON"
-msgstr "Pleja Nevundebla Reĝimo: ŜALTITA"
-
-msgid "STSTR_DQD2OFF"
-msgstr "Pleja Nevundebla Reĝimo: MALŜALTITA"
-
 msgid "STSTR_KFAADDED"
 msgstr "Tre Feliĉa Municio Aldonita"
 
 msgid "STSTR_FAADDED"
 msgstr "Municio (neniuj ŝlosiloj) Aldonita"
-
-msgid "STSTR_NCON"
-msgstr "Reĝimo de Neniu Tondado: ŜALTITA"
-
-msgid "STSTR_NCOFF"
-msgstr "Reĝimo de Neniu Tondado: MALŜALTITA"
-
-#, fuzzy
-msgid "STSTR_NC2ON"
-msgstr "Reĝimo de Neniu Tondado 2: ŜALTITA"
-
-#, fuzzy
-msgid "STSTR_NC2OFF"
-msgstr "Reĝimo de Neniu Tondado 2: MALŜALTITA"
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -335,47 +309,17 @@ msgstr "… ne aĉas - GM"
 msgid "STSTR_CLEV"
 msgstr "Ŝanĝante Nivelon…"
 
-msgid "TXT_BUDDHAON"
-msgstr "Budha reĝimo: ŜALTITA"
-
-msgid "TXT_BUDDHAOFF"
-msgstr "Budha reĝimo: MALŜALTITA"
-
-msgid "TXT_BUDDHA2ON"
-msgstr "Pleja Budha Reĝimo: ŜALTITA"
-
-msgid "TXT_BUDDHA2OFF"
-msgstr "Pleja Budha Reĝimo: MALŜALTITA"
-
-msgid "TXT_CHEATPOWERON"
-msgstr "Povo: ŜALTITA"
-
-msgid "TXT_CHEATPOWEROFF"
-msgstr "Povo: MALŜALTITA"
-
 msgid "TXT_CHEATHEALTH"
 msgstr "Plena sano"
 
 msgid "TXT_CHEATKEYS"
 msgstr "Ĉiuj ŝlosiloj"
 
-msgid "TXT_CHEATSOUNDON"
-msgstr "Sono-sencimiga reĝimo: ŜALTITA"
-
-msgid "TXT_CHEATSOUNDOFF"
-msgstr "Sono-sencimiga reĝimo: MALŜALTITA"
-
 msgid "TXT_CHEATIDDQD"
 msgstr "Provas trompi, ĉu vi? Nun vi mortas!"
 
 msgid "TXT_CHEATIDKFA"
 msgstr "Trompanto—vi ne meritas armilojn"
-
-msgid "TXT_CHEATTICKERON"
-msgstr "Nombrilo: ŜALTITA"
-
-msgid "TXT_CHEATTICKEROFF"
-msgstr "Nombrilo: MALŜALTITA"
 
 msgid "TXT_CHEATARTIFACTS3"
 msgstr "Vi akiris ĝin"
@@ -386,12 +330,6 @@ msgstr "Vi akiris la Tuŝon de Midas, kara"
 msgid "TXT_GOTSTUFF"
 msgstr "Vi akiris la aĵojn!"
 
-msgid "TXT_FREEZEON"
-msgstr "Movhalta reĝimo: ŜALTITA"
-
-msgid "TXT_FREEZEOFF"
-msgstr "Movhalta reĝimo: MALŜALTITA"
-
 msgid "TXT_STRANGE"
 msgstr "Vi sentas vin strange…"
 
@@ -401,35 +339,17 @@ msgstr "Vi sentas vin eĉ pli strange."
 msgid "TXT_NOTSTRANGE"
 msgstr "Vi denove sentas vin kiel vi mem."
 
-msgid "TXT_LEADBOOTSON"
-msgstr "Botoj el plumbo: ŜALTITA"
-
-msgid "TXT_LEADBOOTSOFF"
-msgstr "Botoj el plumbo: MALŜALTITA"
-
 msgid "TXT_LIGHTER"
 msgstr "Vi sentas vin pli malpeza"
 
 msgid "TXT_GRAVITY"
 msgstr "Gravito pezigas vin"
 
-msgid "TXT_NOTARGET_ON"
-msgstr "Neniu Celo: ŜALTITA"
-
-msgid "TXT_NOTARGET_OFF"
-msgstr "Neniu Celo: MALŜALTITA"
-
 msgid "TXT_ANUBIS_ON"
 msgstr "\"Tremu pro timo!\""
 
 msgid "TXT_ANUBIS_OFF"
 msgstr "Ne plu Ogrokiraso"
-
-msgid "TXT_CHASECAM_ON"
-msgstr "Ĉaskamerao: ŜALTITA"
-
-msgid "TXT_CHASECAM_OFF"
-msgstr "Ĉaskamerao: MALŜALTITA"
 
 msgid "TXT_BADDIE_KILLED"
 msgstr "1 malbonulo mortigita"
@@ -454,24 +374,6 @@ msgstr "Kion vi volas mortigi ekster ludo?"
 
 msgid "TXT_NOT_FROZEN"
 msgstr "Atributoj de movhaltitaj ludantoj: MALŜALTITA"
-
-msgid "AMSTR_FOLLOWOFF"
-msgstr "Sekvigreĝimo: MALŜALTITA"
-
-msgid "AMSTR_FOLLOWON"
-msgstr "Sekvigreĝimo: ŜALTITA"
-
-msgid "AMSTR_GRIDON"
-msgstr "Krado: ŜALTITA"
-
-msgid "AMSTR_GRIDOFF"
-msgstr "Krado: MALŜALTITA"
-
-msgid "AMSTR_TEXON"
-msgstr "Tekstura Reĝimo: ŜALTITA"
-
-msgid "AMSTR_TEXOFF"
-msgstr "Tekstura Reĝimo: MALŜALTITA"
 
 msgid "AMSTR_MARKEDSPOT"
 msgstr "Loko Markita"
@@ -2850,14 +2752,6 @@ msgstr ""
 "Ĉu vi certas ke vi volas fini la serĉon?\n"
 "\n"
 "Premu Y aŭ N."
-
-msgctxt "chex"
-msgid "STSTR_DQDON"
-msgstr "Nevenkebla-reĝimo: ŜALTITA"
-
-msgctxt "chex"
-msgid "STSTR_DQDOFF"
-msgstr "Nevenkebla-reĝimo: MALŜALTITA"
 
 msgctxt "chex"
 msgid "STSTR_FAADDED"
@@ -5358,3 +5252,59 @@ msgstr "Aŭtomata (preferata de la originala)"
 #, fuzzy
 msgid "OPTVAL_VTAZDOOM"
 msgstr "Aŭtomata (preferata de ZDoom)"
+
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Nevundebla Reĝimo: {ŜALTITA|MALŜALTITA}"
+
+msgid "STSTR_DQD2{ON|OFF}"
+msgstr "Pleja Nevundebla Reĝimo: {ŜALTITA|MALŜALTITA}"
+
+msgid "STSTR_NC{ON|OFF}"
+msgstr "Reĝimo de Neniu Tondado: {ŜALTITA|MALŜALTITA}"
+
+#, fuzzy
+msgid "STSTR_NC2{ON|OFF}"
+msgstr "Reĝimo de Neniu Tondado 2: {ŜALTITA|MALŜALTITA}"
+
+msgid "TXT_BUDDHA{ON|OFF}"
+msgstr "Budha reĝimo: {ŜALTITA|MALŜALTITA}"
+
+msgid "TXT_BUDDHA2{ON|OFF}"
+msgstr "Pleja Budha Reĝimo: {ŜALTITA|MALŜALTITA}"
+
+msgid "TXT_CHEATPOWER{ON|OFF}"
+msgstr "Povo: {ŜALTITA|MALŜALTITA}"
+
+msgid "TXT_CHEATSOUND{ON|OFF}"
+msgstr "Sono-sencimiga reĝimo: {ŜALTITA|MALŜALTITA}"
+
+msgid "TXT_CHEATTICKER{ON|OFF}"
+msgstr "Nombrilo: {ŜALTITA|MALŜALTITA}"
+
+msgid "TXT_FREEZE{ON|OFF}"
+msgstr "Movhalta reĝimo: {ŜALTITA|MALŜALTITA}"
+
+msgid "TXT_LEADBOOTS{ON|OFF}"
+msgstr "Botoj el plumbo: {ŜALTITA|MALŜALTITA}"
+
+msgid "TXT_NOTARGET_{ON|OFF}"
+msgstr "Neniu Celo: {ŜALTITA|MALŜALTITA}"
+
+msgid "TXT_CHASECAM_{ON|OFF}"
+msgstr "Ĉaskamerao: {ŜALTITA|MALŜALTITA}"
+
+msgid "AMSTR_FOLLOW{ON|OFF}"
+msgstr "Sekvigreĝimo: {ŜALTITA|MALŜALTITA}"
+
+msgid "AMSTR_GRID{ON|OFF}"
+msgstr "Krado: {ŜALTITA|MALŜALTITA}"
+
+msgid "AMSTR_TEX{ON|OFF}"
+msgstr "Tekstura Reĝimo: {ŜALTITA|MALŜALTITA}"
+
+msgctxt "chex"
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Nevenkebla-reĝimo: {ŜALTITA|MALŜALTITA}"
+
+msgid "MSG{ON|OFF}"
+msgstr "Mesaĝoj: {ŜALTITA|MALŜALTITA}"

@@ -2,7 +2,7 @@
  * libOPNMIDI is a free Software MIDI synthesizer library with OPN2 (YM2612) emulation
  *
  * MIDI parser and player (Original code from ADLMIDI): Copyright (c) 2010-2014 Joel Yliluoma <bisqwit@iki.fi>
- * OPNMIDI Library and YM2612 support:   Copyright (c) 2017-2025 Vitaly Novichkov <admin@wohlnet.ru>
+ * OPNMIDI Library and YM2612 support:   Copyright (c) 2017-2026 Vitaly Novichkov <admin@wohlnet.ru>
  *
  * Library is based on the ADLMIDI, a MIDI player for Linux and Windows with OPL3 emulation:
  * http://iki.fi/bisqwit/source/adlmidi.html
@@ -57,7 +57,8 @@ public:
 #endif
 private:
     //! Cached patch data, needed by Touch()
-    std::vector<OpnTimbre>    m_insCache;
+    std::vector<const OpnTimbre*> m_insCache;
+    std::vector<bool> m_insCacheModified;
     //! Cached per-channel LFO sensitivity flags
     std::vector<uint8_t>        m_regLFOSens;
     //! LFO setup registry cache
@@ -181,6 +182,11 @@ public:
         VOLUME_9X
     } m_volumeScale;
 
+    //! Frequency computation function
+    uint16_t (*m_getFreq)(double tone, uint32_t *mul_offset);
+    //! OPL Volume computation function
+    void (*m_getVolume)(struct OPNVolume_t *v);
+
     //! Channel allocation algorithm
     OPNMIDI_ChannelAlloc m_channelAlloc;
 
@@ -211,6 +217,14 @@ public:
      * @return true when setup on the fly is locked
      */
     bool setupLocked();
+
+    /**
+     * @brief Changes the volume model and assigns frequency formula
+     * @param model
+     */
+    void setFrequencyModel(VolumesScale model);
+
+    void resetInstCache();
 
     /**
      * @brief Write data to OPN2 chip register
@@ -261,14 +275,15 @@ public:
                    uint_fast32_t velocity,
                    uint_fast32_t channelVolume = 127,
                    uint_fast32_t channelExpression = 127,
-                   uint8_t brightness = 127);
+                   uint8_t brightness = 127,
+                   bool isDrum = false);
 
     /**
      * @brief Set the instrument into specified chip channel
      * @param c Channel of chip (Emulated chip choosing by next formula: [c = ch + (chipId * 23)])
      * @param instrument Instrument data to set into the chip channel
      */
-    void setPatch(size_t c, const OpnTimbre &instrument);
+    void setPatch(size_t c, const OpnTimbre *instrument);
 
     /**
      * @brief Set panpot position

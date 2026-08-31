@@ -43,7 +43,7 @@ def main():
             continue
 
         po = polib.pofile(ppath)
-        pattern = re.compile('^[A-Z0-9_]+$')
+        pattern = re.compile('^[A-Z0-9_{|}]+$')
         expected = set()
         for e in po:
             if not bool(pattern.match(e.msgid)):

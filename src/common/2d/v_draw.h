@@ -227,8 +227,8 @@ struct DrawParms
 	bool indexed;
 	bool nooffset;
 	int8_t fsscalemode;
-	double srcx, srcy;
-	double srcwidth, srcheight;
+	double srcx, srcy; //in 0-1 space
+	double srcwidth, srcheight; //in 0-1 space
 	double patchscalex, patchscaley;
 	double rotateangle;
 	IntRect viewport;
@@ -296,7 +296,10 @@ bool ParseDrawTextureTags(F2DDrawer *drawer, FGameTexture* img, double x, double
 
 template<class T>
 void DrawTextCommon(F2DDrawer *drawer, FFont* font, int normalcolor, double x, double y, const T* string, DrawParms& parms);
-bool SetTextureParms(F2DDrawer *drawer, DrawParms* parms, FGameTexture* img, double x, double y);
+bool SetTextureParms(F2DDrawer *drawer, DrawParms *parms, FGameTexture *img, double x, double y);
+
+bool SetTextureParmsSubrect(F2DDrawer *drawer, DrawParms *parms, FGameTexture *img, double xx, double yy, double srcx,
+                            double srcy, double w, double h);
 
 void GetFullscreenRect(double width, double height, int fsmode, DoubleRect* rect);
 

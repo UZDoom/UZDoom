@@ -568,6 +568,7 @@ template<> void VMCheckParam<DVector4>(VMFunction* func, int index);
 template<> void VMCheckParam<DQuaternion>(VMFunction* func, int index);
 template<> void VMCheckParam<FString>(VMFunction* func, int index);
 template<> void VMCheckParam<DObject*>(VMFunction* func, int index);
+template<> void VMCheckParam<void*>(VMFunction* func, int index);
 
 template<> void VMCheckReturn<void>(VMFunction* func, int index);
 template<> void VMCheckReturn<int>(VMFunction* func, int index);

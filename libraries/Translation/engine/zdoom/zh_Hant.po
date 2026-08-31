@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-13 23:20-0400\n"
+"PO-Revision-Date: 2026-08-10 23:42-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/zh_Hant/>\n"
 "Language: zh_Hant\n"
@@ -282,35 +282,11 @@ msgstr "音樂已改變"
 msgid "STSTR_NOMUS"
 msgstr "辦不到的選擇"
 
-msgid "STSTR_DQDON"
-msgstr "無人能敵模式：開"
-
-msgid "STSTR_DQDOFF"
-msgstr "無人能敵模式：關"
-
-msgid "STSTR_DQD2ON"
-msgstr "終極無人能敵模式：開"
-
-msgid "STSTR_DQD2OFF"
-msgstr "終極無人能敵模式：關"
-
 msgid "STSTR_KFAADDED"
 msgstr "非常快樂彈藥已獲取"
 
 msgid "STSTR_FAADDED"
 msgstr "彈藥（無鑰匙）已獲取"
-
-msgid "STSTR_NCON"
-msgstr "穿牆模式：開"
-
-msgid "STSTR_NCOFF"
-msgstr "穿牆模式：關"
-
-msgid "STSTR_NC2ON"
-msgstr "三維穿牆模式：開"
-
-msgid "STSTR_NC2OFF"
-msgstr "三維穿牆模式：關"
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -332,47 +308,17 @@ msgstr "… 別搞砸了－GM"
 msgid "STSTR_CLEV"
 msgstr "切換關卡中…"
 
-msgid "TXT_BUDDHAON"
-msgstr "佛陀模式：開"
-
-msgid "TXT_BUDDHAOFF"
-msgstr "佛陀模式：關"
-
-msgid "TXT_BUDDHA2ON"
-msgstr "終極佛陀模式：開"
-
-msgid "TXT_BUDDHA2OFF"
-msgstr "終極佛陀模式：關"
-
-msgid "TXT_CHEATPOWERON"
-msgstr "強化術本：開"
-
-msgid "TXT_CHEATPOWEROFF"
-msgstr "強化術本：關"
-
 msgid "TXT_CHEATHEALTH"
 msgstr "生命值全滿"
 
 msgid "TXT_CHEATKEYS"
 msgstr "全部的鑰匙"
 
-msgid "TXT_CHEATSOUNDON"
-msgstr "音效除錯：開"
-
-msgid "TXT_CHEATSOUNDOFF"
-msgstr "音效除錯：關"
-
 msgid "TXT_CHEATIDDQD"
 msgstr "想作弊，對吧？那麼就受死吧！"
 
 msgid "TXT_CHEATIDKFA"
 msgstr "作弊者－你得不到武器的"
-
-msgid "TXT_CHEATTICKERON"
-msgstr "Ticker：開"
-
-msgid "TXT_CHEATTICKEROFF"
-msgstr "Ticker：關"
 
 msgid "TXT_CHEATARTIFACTS3"
 msgstr "你得到它了"
@@ -383,12 +329,6 @@ msgstr "寶貝，你獲得了點石成金"
 msgid "TXT_GOTSTUFF"
 msgstr "你得到了道具！"
 
-msgid "TXT_FREEZEON"
-msgstr "凍結模式：開"
-
-msgid "TXT_FREEZEOFF"
-msgstr "凍結模式：關"
-
 msgid "TXT_STRANGE"
 msgstr "你感覺怪怪的…"
 
@@ -398,35 +338,17 @@ msgstr "你感覺更加怪異了。"
 msgid "TXT_NOTSTRANGE"
 msgstr "你再次感覺到自己了。"
 
-msgid "TXT_LEADBOOTSON"
-msgstr ""
-
-msgid "TXT_LEADBOOTSOFF"
-msgstr ""
-
 msgid "TXT_LIGHTER"
 msgstr "你感覺變輕了"
 
 msgid "TXT_GRAVITY"
 msgstr "重力壓垮了你"
 
-msgid "TXT_NOTARGET_ON"
-msgstr "無目標：開"
-
-msgid "TXT_NOTARGET_OFF"
-msgstr "無目標：關"
-
 msgid "TXT_ANUBIS_ON"
 msgstr "「恐懼地顫抖吧！」"
 
 msgid "TXT_ANUBIS_OFF"
 msgstr "巨魔鎧甲已失效"
-
-msgid "TXT_CHASECAM_ON"
-msgstr "追蹤鏡頭：開"
-
-msgid "TXT_CHASECAM_OFF"
-msgstr "追蹤鏡頭：關"
 
 msgid "TXT_BADDIE_KILLED"
 msgstr "已殺死一隻壞蛋"
@@ -451,24 +373,6 @@ msgstr "你是想殺死什麼來自遊戲之外的東西嗎？"
 
 msgid "TXT_NOT_FROZEN"
 msgstr "凍結玩家角色特性：關"
-
-msgid "AMSTR_FOLLOWOFF"
-msgstr "跟隨模式：關"
-
-msgid "AMSTR_FOLLOWON"
-msgstr "跟隨模式：開"
-
-msgid "AMSTR_GRIDON"
-msgstr "網格：開"
-
-msgid "AMSTR_GRIDOFF"
-msgstr "網格：關"
-
-msgid "AMSTR_TEXON"
-msgstr "材質模式：開"
-
-msgid "AMSTR_TEXOFF"
-msgstr "材質模式：關"
 
 msgid "AMSTR_MARKEDSPOT"
 msgstr "已標記地點"
@@ -2803,14 +2707,6 @@ msgid "ENDGAME"
 msgstr ""
 
 msgctxt "chex"
-msgid "STSTR_DQDON"
-msgstr ""
-
-msgctxt "chex"
-msgid "STSTR_DQDOFF"
-msgstr ""
-
-msgctxt "chex"
 msgid "STSTR_FAADDED"
 msgstr ""
 
@@ -5079,3 +4975,58 @@ msgstr ""
 
 msgid "OPTMNU_ACCESSIBILITY"
 msgstr "無障礙輔助選項"
+
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "無人能敵模式：{開|關}"
+
+msgid "STSTR_DQD2{ON|OFF}"
+msgstr "終極無人能敵模式：{開|關}"
+
+msgid "STSTR_NC{ON|OFF}"
+msgstr "穿牆模式：{開|關}"
+
+msgid "STSTR_NC2{ON|OFF}"
+msgstr "三維穿牆模式：{開|關}"
+
+msgid "TXT_BUDDHA{ON|OFF}"
+msgstr "佛陀模式：{開|關}"
+
+msgid "TXT_BUDDHA2{ON|OFF}"
+msgstr "終極佛陀模式：{開|關}"
+
+msgid "TXT_CHEATPOWER{ON|OFF}"
+msgstr "強化術本：{開|關}"
+
+msgid "TXT_CHEATSOUND{ON|OFF}"
+msgstr "音效除錯：{開|關}"
+
+msgid "TXT_CHEATTICKER{ON|OFF}"
+msgstr "Ticker：{開|關}"
+
+msgid "TXT_FREEZE{ON|OFF}"
+msgstr "凍結模式：{開|關}"
+
+msgid "TXT_LEADBOOTS{ON|OFF}"
+msgstr ""
+
+msgid "TXT_NOTARGET_{ON|OFF}"
+msgstr "無目標：{開|關}"
+
+msgid "TXT_CHASECAM_{ON|OFF}"
+msgstr "追蹤鏡頭：{開|關}"
+
+msgid "AMSTR_FOLLOW{ON|OFF}"
+msgstr "跟隨模式：{開|關}"
+
+msgid "AMSTR_GRID{ON|OFF}"
+msgstr "網格：{開|關}"
+
+msgid "AMSTR_TEX{ON|OFF}"
+msgstr "材質模式：{開|關}"
+
+msgctxt "chex"
+msgid "STSTR_DQD{ON|OFF}"
+msgstr ""
+
+msgid "MSG{ON|OFF}"
+msgstr "訊息：{開|關}"

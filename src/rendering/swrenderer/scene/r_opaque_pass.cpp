@@ -69,51 +69,34 @@ EXTERN_CVAR(Bool, r_drawvoxels);
 EXTERN_CVAR(Bool, r_debug_disable_vis_filter);
 extern uint32_t r_renderercaps;
 
-double model_distance_cull = 1e16;
-
 EXTERN_CVAR(Float, r_actorspriteshadowdist)
 
-namespace
+EXTERN_CVAR(Bool, r_cull_fps) // This had to be a CVAR for menudef greycheck
+EXTERN_CVAR(Bool, r_cull_distance) // This had to be a CVAR for menudef greycheck
+
+CUSTOM_CVARD(Int, r_distance_cull_type, 0, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "Distance culling type. 0 : Don't cull. 1 : Cull to r_line_distance_cull (without fog). 2 : Cull to r_line_distance_cull (with fog). 4 : Dynamic cull to maintain fps to r_cull_fps_target (with fog). Fog only in hardware renderer.")
 {
-	double sprite_distance_cull = 1e16;
-	double line_distance_cull = 1e16;
+	if (self > 3)
+	{
+		self= 3;
+	}
+	else if (self < 0)
+	{
+		self= 0;
+	}
+	r_cull_fps = (self == 3);
+	r_cull_distance = (self > 0) && (self < 3);
 }
 
-CUSTOM_CVAR(Float, r_sprite_distance_cull, 0.f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+CUSTOM_CVARD(Int, r_cull_fps_target, 90, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "Target fps for dynamic distance culling. Active only when r_distance_cull_type == 3.")
 {
-	if (r_sprite_distance_cull > 0.0)
+	if (self < 1)
 	{
-		sprite_distance_cull = r_sprite_distance_cull * r_sprite_distance_cull;
-	}
-	else
-	{
-		sprite_distance_cull = 1e16;
-	}
-}
-
-CUSTOM_CVAR(Float, r_line_distance_cull, 0.f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
-{
-	if (r_line_distance_cull > 0.0)
-	{
-		line_distance_cull = r_line_distance_cull * r_line_distance_cull;
-	}
-	else
-	{
-		line_distance_cull = 1e16;
+		self = 1;
 	}
 }
 
-CUSTOM_CVAR(Float, r_model_distance_cull, 1024.f, 0/*CVAR_ARCHIVE | CVAR_GLOBALCONFIG*/) // Experimental for the moment until a good default is chosen
-{
-	if (r_model_distance_cull > 0.0)
-	{
-		model_distance_cull = r_model_distance_cull * r_model_distance_cull;
-	}
-	else
-	{
-		model_distance_cull = 1e16;
-	}
-}
+CVARD(Float, r_line_distance_cull, 4000.f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "Fixed culling distance. Active only when r_distance_cull_type == 1 or 2.")
 
 namespace swrenderer
 {
@@ -617,9 +600,9 @@ namespace swrenderer
 		int count = sub->numlines;
 		while (count--)
 		{
-			double dist1 = (line->v1->fPos() - viewpointPos).LengthSquared();
-			double dist2 = (line->v2->fPos() - viewpointPos).LengthSquared();
-			if (dist1 > line_distance_cull && dist2 > line_distance_cull)
+			double dist1 = r_distance_cull_type > 0 ? (line->v1->fPos() - viewpointPos).LengthSquared() : 0.0;
+			double dist2 = r_distance_cull_type > 0 ? (line->v2->fPos() - viewpointPos).LengthSquared() : 0.0;
+			if (dist1 > Thread->Viewport->viewpoint.culldistsq && dist2 > Thread->Viewport->viewpoint.culldistsq)
 			{
 				FarClipLine farclip(Thread);
 				farclip.Render(line, InSubsector, floorplane, ceilingplane, Fake3DOpaque::Normal);
@@ -1027,9 +1010,16 @@ namespace swrenderer
 			return false;
 		}
 
-		double distanceSquared = (thing->Pos() - Thread->Viewport->viewpoint.Pos).LengthSquared();
-		if (distanceSquared > sprite_distance_cull)
-			return false;
+		if (r_distance_cull_type > 0)
+		{
+			double distanceSquared = (thing->Pos() - Thread->Viewport->viewpoint.Pos).LengthSquared();
+			if (distanceSquared > Thread->Viewport->viewpoint.culldistsq)
+				return false;
+			// This is slower because of sqrt? Skip in software renderer?
+			// double thingdistance = (thing->Pos() - Thread->Viewport->viewpoint.Pos).Length();
+			// if (thingdistance - 1.414 * thing->RenderRadius() > Thread->Viewport->viewpoint.culldist)
+			// 	return false;
+		}
 
 		return true;
 	}

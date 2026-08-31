@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-13 23:20-0400\n"
+"PO-Revision-Date: 2026-08-10 23:42-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: English <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/en/>\n"
 "Language: en\n"
@@ -279,18 +279,6 @@ msgstr "Music Change"
 msgid "STSTR_NOMUS"
 msgstr "Impossible Selection"
 
-msgid "STSTR_DQDON"
-msgstr "Degreelessness Mode: ON"
-
-msgid "STSTR_DQDOFF"
-msgstr "Degreelessness Mode: OFF"
-
-msgid "STSTR_DQD2ON"
-msgstr "Ultimate Degreelessness Mode: ON"
-
-msgid "STSTR_DQD2OFF"
-msgstr "Ultimate Degreelessness Mode: OFF"
-
 #, fuzzy
 msgid "STSTR_KFAADDED"
 msgstr "Very Happy Ammo Added"
@@ -298,18 +286,6 @@ msgstr "Very Happy Ammo Added"
 #, fuzzy
 msgid "STSTR_FAADDED"
 msgstr "Ammo (no keys) Added"
-
-msgid "STSTR_NCON"
-msgstr "No Clipping Mode: ON"
-
-msgid "STSTR_NCOFF"
-msgstr "No Clipping Mode: OFF"
-
-msgid "STSTR_NC2ON"
-msgstr "3D No Clipping Mode: ON"
-
-msgid "STSTR_NC2OFF"
-msgstr "3D No Clipping Mode: OFF"
 
 #, fuzzy
 msgid "STSTR_BEHOLD"
@@ -327,24 +303,6 @@ msgstr "… doesn't suck - GM"
 msgid "STSTR_CLEV"
 msgstr "Changing Level…"
 
-msgid "TXT_BUDDHAON"
-msgstr "Buddha mode: ON"
-
-msgid "TXT_BUDDHAOFF"
-msgstr "Buddha mode: OFF"
-
-msgid "TXT_BUDDHA2ON"
-msgstr "Ultimate Buddha Mode: ON"
-
-msgid "TXT_BUDDHA2OFF"
-msgstr "Ultimate Buddha Mode: OFF"
-
-msgid "TXT_CHEATPOWERON"
-msgstr "Power: ON"
-
-msgid "TXT_CHEATPOWEROFF"
-msgstr "Power: OFF"
-
 #, fuzzy
 msgid "TXT_CHEATHEALTH"
 msgstr "Full health"
@@ -353,12 +311,6 @@ msgstr "Full health"
 msgid "TXT_CHEATKEYS"
 msgstr "All keys"
 
-msgid "TXT_CHEATSOUNDON"
-msgstr "Sound debug: ON"
-
-msgid "TXT_CHEATSOUNDOFF"
-msgstr "Sound debug: OFF"
-
 #, fuzzy
 msgid "TXT_CHEATIDDQD"
 msgstr "Trying to cheat, eh? Now you die!"
@@ -366,12 +318,6 @@ msgstr "Trying to cheat, eh? Now you die!"
 #, fuzzy
 msgid "TXT_CHEATIDKFA"
 msgstr "Cheater—you don't deserve weapons"
-
-msgid "TXT_CHEATTICKERON"
-msgstr "Ticker: ON"
-
-msgid "TXT_CHEATTICKEROFF"
-msgstr "Ticker: OFF"
 
 #, fuzzy
 msgid "TXT_CHEATARTIFACTS3"
@@ -385,12 +331,6 @@ msgstr "You got the Midas Touch, baby"
 msgid "TXT_GOTSTUFF"
 msgstr "You got the stuff!"
 
-msgid "TXT_FREEZEON"
-msgstr "Freeze mode: ON"
-
-msgid "TXT_FREEZEOFF"
-msgstr "Freeze mode: OFF"
-
 #, fuzzy
 msgid "TXT_STRANGE"
 msgstr "You feel strange…"
@@ -403,12 +343,6 @@ msgstr "You feel even stranger."
 msgid "TXT_NOTSTRANGE"
 msgstr "You feel like yourself again."
 
-msgid "TXT_LEADBOOTSON"
-msgstr "Lead boots: ON"
-
-msgid "TXT_LEADBOOTSOFF"
-msgstr "Lead boots: OFF"
-
 #, fuzzy
 msgid "TXT_LIGHTER"
 msgstr "You feel lighter"
@@ -417,12 +351,6 @@ msgstr "You feel lighter"
 msgid "TXT_GRAVITY"
 msgstr "Gravity weighs you down"
 
-msgid "TXT_NOTARGET_ON"
-msgstr "No Target: ON"
-
-msgid "TXT_NOTARGET_OFF"
-msgstr "No Target: OFF"
-
 #, fuzzy
 msgid "TXT_ANUBIS_ON"
 msgstr "\"Quake with fear!\""
@@ -430,12 +358,6 @@ msgstr "\"Quake with fear!\""
 #, fuzzy
 msgid "TXT_ANUBIS_OFF"
 msgstr "No more Ogre Armor"
-
-msgid "TXT_CHASECAM_ON"
-msgstr "Chase-cam: ON"
-
-msgid "TXT_CHASECAM_OFF"
-msgstr "Chase-cam: OFF"
 
 #, fuzzy
 msgid "TXT_BADDIE_KILLED"
@@ -467,24 +389,6 @@ msgstr "What do you want to kill outside of a game?"
 
 msgid "TXT_NOT_FROZEN"
 msgstr "Frozen player properties: OFF"
-
-msgid "AMSTR_FOLLOWOFF"
-msgstr "Follow Mode: OFF"
-
-msgid "AMSTR_FOLLOWON"
-msgstr "Follow Mode: ON"
-
-msgid "AMSTR_GRIDON"
-msgstr "Grid: ON"
-
-msgid "AMSTR_GRIDOFF"
-msgstr "Grid: OFF"
-
-msgid "AMSTR_TEXON"
-msgstr "Texture Mode: ON"
-
-msgid "AMSTR_TEXOFF"
-msgstr "Texture Mode: OFF"
 
 #, fuzzy
 msgid "AMSTR_MARKEDSPOT"
@@ -3540,14 +3444,6 @@ msgstr ""
 "Are you sure you want to end the quest?\n"
 "\n"
 "Press Y or N."
-
-msgctxt "chex"
-msgid "STSTR_DQDON"
-msgstr "Invincible Mode: ON"
-
-msgctxt "chex"
-msgid "STSTR_DQDOFF"
-msgstr "Invincible Mode: OFF"
 
 msgctxt "chex"
 msgid "STSTR_FAADDED"
@@ -6921,3 +6817,58 @@ msgstr "Theme"
 
 msgid "OPTVAL_LIGHT"
 msgstr "Light"
+
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Degreelessness Mode: {ON|OFF}"
+
+msgid "STSTR_DQD2{ON|OFF}"
+msgstr "Ultimate Degreelessness Mode: {ON|OFF}"
+
+msgid "STSTR_NC{ON|OFF}"
+msgstr "No Clipping Mode: {ON|OFF}"
+
+msgid "STSTR_NC2{ON|OFF}"
+msgstr "3D No Clipping Mode: {ON|OFF}"
+
+msgid "TXT_BUDDHA{ON|OFF}"
+msgstr "Buddha mode: {ON|OFF}"
+
+msgid "TXT_BUDDHA2{ON|OFF}"
+msgstr "Ultimate Buddha Mode: {ON|OFF}"
+
+msgid "TXT_CHEATPOWER{ON|OFF}"
+msgstr "Power: {ON|OFF}"
+
+msgid "TXT_CHEATSOUND{ON|OFF}"
+msgstr "Sound debug: {ON|OFF}"
+
+msgid "TXT_CHEATTICKER{ON|OFF}"
+msgstr "Ticker: {ON|OFF}"
+
+msgid "TXT_FREEZE{ON|OFF}"
+msgstr "Freeze mode: {ON|OFF}"
+
+msgid "TXT_LEADBOOTS{ON|OFF}"
+msgstr "Lead boots: {ON|OFF}"
+
+msgid "TXT_NOTARGET_{ON|OFF}"
+msgstr "No Target: {ON|OFF}"
+
+msgid "TXT_CHASECAM_{ON|OFF}"
+msgstr "Chase-cam: {ON|OFF}"
+
+msgid "AMSTR_FOLLOW{ON|OFF}"
+msgstr "Follow Mode: {ON|OFF}"
+
+msgid "AMSTR_GRID{ON|OFF}"
+msgstr "Grid: {ON|OFF}"
+
+msgid "AMSTR_TEX{ON|OFF}"
+msgstr "Texture Mode: {ON|OFF}"
+
+msgctxt "chex"
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Invincible Mode: {ON|OFF}"
+
+msgid "MSG{ON|OFF}"
+msgstr "Messages: {ON|OFF}"

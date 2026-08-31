@@ -615,6 +615,66 @@ DEFINE_ACTION_FUNCTION_NATIVE(FFont, FindFont, FindFont)
 	ACTION_RETURN_POINTER(FFont::FindFont(name));
 }
 
+static FFont* GetSmallTextFont(FFont* fallbackIfNoUserChoice)
+{
+	return FFont::GetSmallTextFont(fallbackIfNoUserChoice);
+}
+
+DEFINE_ACTION_FUNCTION_NATIVE(FFont, GetSmallTextFont, GetSmallTextFont)
+{
+	PARAM_PROLOGUE;
+	PARAM_POINTER(fallbackIfNoUserChoice, FFont);
+	ACTION_RETURN_POINTER(FFont::GetSmallTextFont(fallbackIfNoUserChoice));
+}
+
+static FFont *GetTitleFont(FFont *fallbackIfNoUserChoice)
+{
+	return FFont::GetTitleFont(fallbackIfNoUserChoice);
+}
+
+DEFINE_ACTION_FUNCTION_NATIVE(FFont, GetTitleFont, GetTitleFont)
+{
+	PARAM_PROLOGUE;
+	PARAM_POINTER(fallbackIfNoUserChoice, FFont);
+	ACTION_RETURN_POINTER(FFont::GetTitleFont(fallbackIfNoUserChoice));
+}
+
+static FFont *GetDescriptionFont(FFont *fallbackIfNoUserChoice)
+{
+	return FFont::GetDescriptionFont(fallbackIfNoUserChoice);
+}
+
+DEFINE_ACTION_FUNCTION_NATIVE(FFont, GetDescriptionFont, GetDescriptionFont)
+{
+	PARAM_PROLOGUE;
+	PARAM_POINTER(fallbackIfNoUserChoice, FFont);
+	ACTION_RETURN_POINTER(FFont::GetDescriptionFont(fallbackIfNoUserChoice));
+}
+
+static FFont *GetConsoleFont(FFont *fallbackIfNoUserChoice)
+{
+	return FFont::GetConsoleFont(fallbackIfNoUserChoice);
+}
+
+DEFINE_ACTION_FUNCTION_NATIVE(FFont, GetConsoleFont, GetConsoleFont)
+{
+	PARAM_PROLOGUE;
+	PARAM_POINTER(fallbackIfNoUserChoice, FFont);
+	ACTION_RETURN_POINTER(FFont::GetConsoleFont(fallbackIfNoUserChoice));
+}
+
+static FFont *GetBigTextFont(FFont *fallbackIfNoUserChoice)
+{
+	return FFont::GetBigTextFont(fallbackIfNoUserChoice);
+}
+
+DEFINE_ACTION_FUNCTION_NATIVE(FFont, GetBigTextFont, GetBigTextFont)
+{
+	PARAM_PROLOGUE;
+	PARAM_POINTER(fallbackIfNoUserChoice, FFont);
+	ACTION_RETURN_POINTER(FFont::GetBigTextFont(fallbackIfNoUserChoice));
+}
+
 static int GetCharWidth(FFont *font, int code)
 {
 	return font->GetCharWidth(code);
@@ -636,6 +696,17 @@ DEFINE_ACTION_FUNCTION_NATIVE(FFont, GetHeight, GetHeight)
 {
 	PARAM_SELF_STRUCT_PROLOGUE(FFont);
 	ACTION_RETURN_INT(self->GetHeight());
+}
+
+static int IsValidDynamicFont(FFont *font)
+{
+	return font->IsValidDynamicFont();
+}
+
+DEFINE_ACTION_FUNCTION_NATIVE(FFont, IsValidDynamicFont, IsValidDynamicFont)
+{
+	PARAM_SELF_STRUCT_PROLOGUE(FFont);
+	ACTION_RETURN_INT(self->IsValidDynamicFont());
 }
 
 static int GetDisplacement(FFont* font)
@@ -724,8 +795,16 @@ DEFINE_ACTION_FUNCTION_NATIVE(FFont, GetCursor, GetCursor)
 
 static int GetGlyphHeight(FFont* fnt, int code)
 {
-	auto glyph = fnt->GetChar(code, CR_UNTRANSLATED, nullptr);
-	return glyph ? (int)glyph->GetDisplayHeight() : 0;
+	if (fnt->IsValidDynamicFont())
+	{
+		char32_t srcChar = code;
+		return fnt->GetDynamicFontAtlas()->GetGlyphs().GetGlyphByCodepoint(srcChar).height;
+	}
+	else
+	{
+		auto glyph = fnt->GetChar(code, CR_UNTRANSLATED, nullptr);
+		return glyph ? (int)glyph->GetDisplayHeight() : 0;
+	}
 }
 
 DEFINE_ACTION_FUNCTION_NATIVE(FFont, GetGlyphHeight, GetGlyphHeight)

@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-07-13 23:20-0400\n"
+"PO-Revision-Date: 2026-08-10 23:42-0400\n"
 "Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Bashkir <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/ba/>\n"
 "Language: ba\n"
@@ -284,37 +284,11 @@ msgstr "Promjena glazbe"
 msgid "STSTR_NOMUS"
 msgstr "Nemogući odabir"
 
-msgid "STSTR_DQDON"
-msgstr "Način bezstupnjevnosti: ҠАБЫҘ"
-
-msgid "STSTR_DQDOFF"
-msgstr "Način bezstupnjevnosti: ҺҮНДЕР"
-
-msgid "STSTR_DQD2ON"
-msgstr "Način krajnje bezstupnjevnosti: ҠАБЫҘ"
-
-msgid "STSTR_DQD2OFF"
-msgstr "Način krajnje bezstupnjevnosti: ҺҮНДЕР"
-
 msgid "STSTR_KFAADDED"
 msgstr "Jako sretna municija je dodana"
 
 msgid "STSTR_FAADDED"
 msgstr "Municija (bez ključeva) je dodana"
-
-msgid "STSTR_NCON"
-msgstr "Lebdoprozirni mod: ҠАБЫҘ"
-
-msgid "STSTR_NCOFF"
-msgstr "Lebdoprozirni mod: ҺҮНДЕР"
-
-#, fuzzy
-msgid "STSTR_NC2ON"
-msgstr "Lebdoprozirni mod 2: ҠАБЫҘ"
-
-#, fuzzy
-msgid "STSTR_NC2OFF"
-msgstr "Lebdoprozirni mod 2: ҺҮНДЕР"
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -339,47 +313,17 @@ msgstr "… nije sranje - GM"
 msgid "STSTR_CLEV"
 msgstr "Promjena razine…"
 
-msgid "TXT_BUDDHAON"
-msgstr "Način Bude: ҠАБЫҘ"
-
-msgid "TXT_BUDDHAOFF"
-msgstr "Način Bude: ҺҮНДЕР"
-
-msgid "TXT_BUDDHA2ON"
-msgstr "Ultimativni način Bude: ҠАБЫҘ"
-
-msgid "TXT_BUDDHA2OFF"
-msgstr "Ultimativni način Bude: ҺҮНДЕР"
-
-msgid "TXT_CHEATPOWERON"
-msgstr "Energija: ҠАБЫҘ"
-
-msgid "TXT_CHEATPOWEROFF"
-msgstr "Energija: ҺҮНДЕР"
-
 msgid "TXT_CHEATHEALTH"
 msgstr "Puno zdravlje"
 
 msgid "TXT_CHEATKEYS"
 msgstr "Svi ključevi"
 
-msgid "TXT_CHEATSOUNDON"
-msgstr "Debug zvuka: ҠАБЫҘ"
-
-msgid "TXT_CHEATSOUNDOFF"
-msgstr "Debug zvuka: ҺҮНДЕР"
-
 msgid "TXT_CHEATIDDQD"
 msgstr "Pokušavaš varati, ha? Evo ti smrt na!"
 
 msgid "TXT_CHEATIDKFA"
 msgstr "Varalico! Ajd sad bez oružja se dirkaj"
-
-msgid "TXT_CHEATTICKERON"
-msgstr "Brojač: ҠАБЫҘ"
-
-msgid "TXT_CHEATTICKEROFF"
-msgstr "Brojač: ҺҮНДЕР"
 
 msgid "TXT_CHEATARTIFACTS3"
 msgstr "Možeš ti to"
@@ -390,12 +334,6 @@ msgstr "Imaš Midasov dodir, zlato"
 msgid "TXT_GOTSTUFF"
 msgstr "Ti si frajer!"
 
-msgid "TXT_FREEZEON"
-msgstr "Zamrznuti mod: ҠАБЫҘ"
-
-msgid "TXT_FREEZEOFF"
-msgstr "Zamrznuti mod: ҺҮНДЕР"
-
 msgid "TXT_STRANGE"
 msgstr "Osječaš se čudno…"
 
@@ -405,35 +343,17 @@ msgstr "Osječaš se još čudnije."
 msgid "TXT_NOTSTRANGE"
 msgstr "Osječaš se opet ko ti."
 
-msgid "TXT_LEADBOOTSON"
-msgstr "Olovne čizme: ҠАБЫҘ"
-
-msgid "TXT_LEADBOOTSOFF"
-msgstr "Olovne čizme: ҺҮНДЕР"
-
 msgid "TXT_LIGHTER"
 msgstr "Osječaš se laganije"
 
 msgid "TXT_GRAVITY"
 msgstr "Gravitacija te povija"
 
-msgid "TXT_NOTARGET_ON"
-msgstr "Bez Mete: ҠАБЫҘ"
-
-msgid "TXT_NOTARGET_OFF"
-msgstr "Bez Mete: ҺҮНДЕР"
-
 msgid "TXT_ANUBIS_ON"
 msgstr "\"Tresite se s strahom!\""
 
 msgid "TXT_ANUBIS_OFF"
 msgstr "Nema više Ogrovog oklopa"
-
-msgid "TXT_CHASECAM_ON"
-msgstr "Pratokamera: ҠАБЫҘ"
-
-msgid "TXT_CHASECAM_OFF"
-msgstr "Pratokamera: ҺҮНДЕР"
 
 msgid "TXT_BADDIE_KILLED"
 msgstr "1 zločac ubijen"
@@ -458,24 +378,6 @@ msgstr "Šta želite ubiti van igre?"
 
 msgid "TXT_NOT_FROZEN"
 msgstr "Svojstva zamrznutog igrača su: ҺҮНДЕР"
-
-msgid "AMSTR_FOLLOWOFF"
-msgstr "Način praćenja: ҺҮНДЕР"
-
-msgid "AMSTR_FOLLOWON"
-msgstr "Način praćenja: ҠАБЫҘ"
-
-msgid "AMSTR_GRIDON"
-msgstr "Mreža: ҠАБЫҘ"
-
-msgid "AMSTR_GRIDOFF"
-msgstr "Mreža: ҺҮНДЕР"
-
-msgid "AMSTR_TEXON"
-msgstr "Način tekstura: ҠАБЫҘ"
-
-msgid "AMSTR_TEXOFF"
-msgstr "Način tekstura: ҺҮНДЕР"
 
 msgid "AMSTR_MARKEDSPOT"
 msgstr "Označena točka"
@@ -2812,14 +2714,6 @@ msgid "ENDGAME"
 msgstr ""
 
 msgctxt "chex"
-msgid "STSTR_DQDON"
-msgstr ""
-
-msgctxt "chex"
-msgid "STSTR_DQDOFF"
-msgstr ""
-
-msgctxt "chex"
 msgid "STSTR_FAADDED"
 msgstr ""
 
@@ -5100,3 +4994,60 @@ msgstr "Kontrast"
 
 msgid "DSPLYMNU_SATURATION"
 msgstr "Saturacija"
+
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Način bezstupnjevnosti: {ҠАБЫҘ|ҺҮНДЕР}"
+
+msgid "STSTR_DQD2{ON|OFF}"
+msgstr "Način krajnje bezstupnjevnosti: {ҠАБЫҘ|ҺҮНДЕР}"
+
+msgid "STSTR_NC{ON|OFF}"
+msgstr "Lebdoprozirni mod: {ҠАБЫҘ|ҺҮНДЕР}"
+
+#, fuzzy
+msgid "STSTR_NC2{ON|OFF}"
+msgstr "Lebdoprozirni mod 2: {ҠАБЫҘ|ҺҮНДЕР}"
+
+msgid "TXT_BUDDHA{ON|OFF}"
+msgstr "Način Bude: {ҠАБЫҘ|ҺҮНДЕР}"
+
+msgid "TXT_BUDDHA2{ON|OFF}"
+msgstr "Ultimativni način Bude: {ҠАБЫҘ|ҺҮНДЕР}"
+
+msgid "TXT_CHEATPOWER{ON|OFF}"
+msgstr "Energija: {ҠАБЫҘ|ҺҮНДЕР}"
+
+msgid "TXT_CHEATSOUND{ON|OFF}"
+msgstr "Debug zvuka: {ҠАБЫҘ|ҺҮНДЕР}"
+
+msgid "TXT_CHEATTICKER{ON|OFF}"
+msgstr "Brojač: {ҠАБЫҘ|ҺҮНДЕР}"
+
+msgid "TXT_FREEZE{ON|OFF}"
+msgstr "Zamrznuti mod: {ҠАБЫҘ|ҺҮНДЕР}"
+
+msgid "TXT_LEADBOOTS{ON|OFF}"
+msgstr "Olovne čizme: {ҠАБЫҘ|ҺҮНДЕР}"
+
+msgid "TXT_NOTARGET_{ON|OFF}"
+msgstr "Bez Mete: {ҠАБЫҘ|ҺҮНДЕР}"
+
+msgid "TXT_CHASECAM_{ON|OFF}"
+msgstr "Pratokamera: {ҠАБЫҘ|ҺҮНДЕР}"
+
+msgid "AMSTR_FOLLOW{ON|OFF}"
+msgstr "Način praćenja: {ҠАБЫҘ|ҺҮНДЕР}"
+
+msgid "AMSTR_GRID{ON|OFF}"
+msgstr "Mreža: {ҠАБЫҘ|ҺҮНДЕР}"
+
+msgid "AMSTR_TEX{ON|OFF}"
+msgstr "Način tekstura: {ҠАБЫҘ|ҺҮНДЕР}"
+
+msgctxt "chex"
+msgid "STSTR_DQD{ON|OFF}"
+msgstr ""
+
+#, fuzzy
+msgid "MSG{ON|OFF}"
+msgstr "Poruke: {Ҡабыҙ|ҺҮНДЕР}"

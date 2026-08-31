@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-08-09 05:51+0000\n"
-"Last-Translator: Andrei Stepanov <adem4ik@gmail.com>\n"
+"PO-Revision-Date: 2026-08-10 23:42-0400\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 2026.9.dev0\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
 
 msgid "PRESSKEY"
 msgstr "Нажмите любую клавишу."
@@ -282,35 +282,11 @@ msgstr "Смена музыки"
 msgid "STSTR_NOMUS"
 msgstr "Неверный выбор"
 
-msgid "STSTR_DQDON"
-msgstr "Безграмотность: ВКЛ"
-
-msgid "STSTR_DQDOFF"
-msgstr "Безграмотность: ОТКЛ"
-
-msgid "STSTR_DQD2ON"
-msgstr "Полная безграмотность: ВКЛ"
-
-msgid "STSTR_DQD2OFF"
-msgstr "Полная безграмотность: ОТКЛ"
-
 msgid "STSTR_KFAADDED"
 msgstr "Боезапас на счастье пополнен"
 
 msgid "STSTR_FAADDED"
 msgstr "Боезапас пополнен (без ключей)"
-
-msgid "STSTR_NCON"
-msgstr "Режим без столкновений: ВКЛ"
-
-msgid "STSTR_NCOFF"
-msgstr "Режим без столкновений: ОТКЛ"
-
-msgid "STSTR_NC2ON"
-msgstr "Режим без столкновений 3D: ВКЛ"
-
-msgid "STSTR_NC2OFF"
-msgstr "Режим без столкновений 3D: ОТКЛ"
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -333,47 +309,17 @@ msgstr "…не отстой — GM"
 msgid "STSTR_CLEV"
 msgstr "Смена уровня…"
 
-msgid "TXT_BUDDHAON"
-msgstr "Режим Будды: ВКЛ"
-
-msgid "TXT_BUDDHAOFF"
-msgstr "Режим Будды: ОТКЛ"
-
-msgid "TXT_BUDDHA2ON"
-msgstr "Высший режим Будды: ВКЛ"
-
-msgid "TXT_BUDDHA2OFF"
-msgstr "Высший режим Будды: ОТКЛ"
-
-msgid "TXT_CHEATPOWERON"
-msgstr "Сила: ВКЛ"
-
-msgid "TXT_CHEATPOWEROFF"
-msgstr "Сила: ОТКЛ"
-
 msgid "TXT_CHEATHEALTH"
 msgstr "Полное здоровье"
 
 msgid "TXT_CHEATKEYS"
 msgstr "Все ключи"
 
-msgid "TXT_CHEATSOUNDON"
-msgstr "Отладка звука: ВКЛ"
-
-msgid "TXT_CHEATSOUNDOFF"
-msgstr "Отладка звука: ОТКЛ"
-
 msgid "TXT_CHEATIDDQD"
 msgstr "Жульничаешь, э? Так умри!"
 
 msgid "TXT_CHEATIDKFA"
 msgstr "Жулик—ты не заслуживаешь оружия"
-
-msgid "TXT_CHEATTICKERON"
-msgstr "Счётчик: ВКЛ"
-
-msgid "TXT_CHEATTICKEROFF"
-msgstr "Счётчик: ОТКЛ"
 
 msgid "TXT_CHEATARTIFACTS3"
 msgstr "Вы получили это"
@@ -384,12 +330,6 @@ msgstr "Ты превращаешь всё в золото, детка"
 msgid "TXT_GOTSTUFF"
 msgstr "Получены предметы!"
 
-msgid "TXT_FREEZEON"
-msgstr "Режим заморозки: ВКЛ"
-
-msgid "TXT_FREEZEOFF"
-msgstr "Режим заморозки: ОТКЛ"
-
 msgid "TXT_STRANGE"
 msgstr "Вы чувствуете себя странно…"
 
@@ -399,35 +339,17 @@ msgstr "Вы чувствуете себя очень странно."
 msgid "TXT_NOTSTRANGE"
 msgstr "Вы снова чувствуете себя собой."
 
-msgid "TXT_LEADBOOTSON"
-msgstr "Свинцовые сапоги: ВКЛ"
-
-msgid "TXT_LEADBOOTSOFF"
-msgstr "Свинцовые сапоги: ОТКЛ"
-
 msgid "TXT_LIGHTER"
 msgstr "Вы чувствуете лёгкость"
 
 msgid "TXT_GRAVITY"
 msgstr "Гравитация тянет вас вниз"
 
-msgid "TXT_NOTARGET_ON"
-msgstr "Незаметность: ВКЛ"
-
-msgid "TXT_NOTARGET_OFF"
-msgstr "Незаметность: ОТКЛ"
-
 msgid "TXT_ANUBIS_ON"
 msgstr "«Дрожите от страха!»"
 
 msgid "TXT_ANUBIS_OFF"
 msgstr "Броня огра снята"
-
-msgid "TXT_CHASECAM_ON"
-msgstr "Вид от третьего лица: ВКЛ"
-
-msgid "TXT_CHASECAM_OFF"
-msgstr "Вид от третьего лица: ОТКЛ"
 
 msgid "TXT_BADDIE_KILLED"
 msgstr "1 плохиш убит"
@@ -452,24 +374,6 @@ msgstr "Что вы хотите убить вне игры?"
 
 msgid "TXT_NOT_FROZEN"
 msgstr "Свойства замороженного игрока: ОТКЛ"
-
-msgid "AMSTR_FOLLOWOFF"
-msgstr "Привязка к игроку: ОТКЛ"
-
-msgid "AMSTR_FOLLOWON"
-msgstr "Привязка к игроку: ВКЛ"
-
-msgid "AMSTR_GRIDON"
-msgstr "Сетка: ВКЛ"
-
-msgid "AMSTR_GRIDOFF"
-msgstr "Сетка: ОТКЛ"
-
-msgid "AMSTR_TEXON"
-msgstr "Текстурный режим: ВКЛ"
-
-msgid "AMSTR_TEXOFF"
-msgstr "Текстурный режим: ОТКЛ"
 
 msgid "AMSTR_MARKEDSPOT"
 msgstr "Отметка"
@@ -2847,14 +2751,6 @@ msgstr ""
 "Вы точно хотите завершить задание?\n"
 "\n"
 "Нажмите Y или N."
-
-msgctxt "chex"
-msgid "STSTR_DQDON"
-msgstr "Режим неуязвимости: ВКЛ"
-
-msgctxt "chex"
-msgid "STSTR_DQDOFF"
-msgstr "Режим неуязвимости: ОТКЛ"
 
 msgctxt "chex"
 msgid "STSTR_FAADDED"
@@ -5529,7 +5425,9 @@ msgid "ACCMNU_DOUBLECLICK_THRESHOLD"
 msgstr "Порог двойного щелчка"
 
 msgid "ACCMNU_TOOLTIP_DOUBLECLICK_THRESHOLD"
-msgstr "Интервал между последовательными нажатиями клавиш для срабатывания события двойного щелчка"
+msgstr ""
+"Интервал между последовательными нажатиями клавиш для срабатывания события "
+"двойного щелчка"
 
 msgid "CMPTMNU_TRANSFERSECRET"
 msgstr "Особый эффект BOOM при изменении пола передаёт секрет."
@@ -5539,3 +5437,58 @@ msgstr "Тема"
 
 msgid "OPTVAL_LIGHT"
 msgstr "Светлый"
+
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Безграмотность: {ВКЛ|ОТКЛ}"
+
+msgid "STSTR_DQD2{ON|OFF}"
+msgstr "Полная безграмотность: {ВКЛ|ОТКЛ}"
+
+msgid "STSTR_NC{ON|OFF}"
+msgstr "Режим без столкновений: {ВКЛ|ОТКЛ}"
+
+msgid "STSTR_NC2{ON|OFF}"
+msgstr "Режим без столкновений 3D: {ВКЛ|ОТКЛ}"
+
+msgid "TXT_BUDDHA{ON|OFF}"
+msgstr "Режим Будды: {ВКЛ|ОТКЛ}"
+
+msgid "TXT_BUDDHA2{ON|OFF}"
+msgstr "Высший режим Будды: {ВКЛ|ОТКЛ}"
+
+msgid "TXT_CHEATPOWER{ON|OFF}"
+msgstr "Сила: {ВКЛ|ОТКЛ}"
+
+msgid "TXT_CHEATSOUND{ON|OFF}"
+msgstr "Отладка звука: {ВКЛ|ОТКЛ}"
+
+msgid "TXT_CHEATTICKER{ON|OFF}"
+msgstr "Счётчик: {ВКЛ|ОТКЛ}"
+
+msgid "TXT_FREEZE{ON|OFF}"
+msgstr "Режим заморозки: {ВКЛ|ОТКЛ}"
+
+msgid "TXT_LEADBOOTS{ON|OFF}"
+msgstr "Свинцовые сапоги: {ВКЛ|ОТКЛ}"
+
+msgid "TXT_NOTARGET_{ON|OFF}"
+msgstr "Незаметность: {ВКЛ|ОТКЛ}"
+
+msgid "TXT_CHASECAM_{ON|OFF}"
+msgstr "Вид от третьего лица: {ВКЛ|ОТКЛ}"
+
+msgid "AMSTR_FOLLOW{ON|OFF}"
+msgstr "Привязка к игроку: {ВКЛ|ОТКЛ}"
+
+msgid "AMSTR_GRID{ON|OFF}"
+msgstr "Сетка: {ВКЛ|ОТКЛ}"
+
+msgid "AMSTR_TEX{ON|OFF}"
+msgstr "Текстурный режим: {ВКЛ|ОТКЛ}"
+
+msgctxt "chex"
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Режим неуязвимости: {ВКЛ|ОТКЛ}"
+
+msgid "MSG{ON|OFF}"
+msgstr "Сообщения: {ВКЛ|ОТКЛ}"

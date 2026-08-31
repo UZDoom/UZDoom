@@ -42,8 +42,17 @@
 #include "texturemanager.h"
 #include "printf.h"
 #include "palentry.h"
+#include "Trex/Font.hpp"
+#include "Trex/Atlas.hpp"
 
 #include "fontinternals.h"
+#include "fs_files.h"
+#include <span>
+#include "c_cvars.h"
+#include "freetype/freetype.h"
+#include <exception>
+#include "freetype/tttables.h"
+#include <stdexcept>
 
 // MACROS ------------------------------------------------------------------
 
@@ -65,7 +74,7 @@ extern int PrintColors[];
 extern TArray<FBitmap> sheetBitmaps;
 
 // PUBLIC DATA DEFINITIONS -------------------------------------------------
-FFont* SmallFont, * SmallFont2, * BigFont, * BigUpper, * ConFont, * IntermissionFont, * NewConsoleFont, * NewSmallFont,
+FFont* SmallFont, * SmallFont2, * BigFont, * BigUpper, * ConFont, *SymbolsFont, * IntermissionFont, * NewConsoleFont, * NewSmallFont,
 	* CurrentConsoleFont, * OriginalSmallFont, * AlternativeSmallFont, * OriginalBigFont, *AlternativeBigFont;
 
 FFont *FFont::FirstFont = nullptr;
@@ -156,6 +165,44 @@ FFont *V_GetFont(const char *name, const char *fontlumpname)
 //
 //==========================================================================
 
+CVAR(Int, font_supersamplescale, 2, CVAR_ARCHIVE);
+
+FFont *FontFromTTF(const FileSys::FolderEntry &f)
+{
+	FString fileName = f.name;
+	if (fileName.IndexOf(".ttf") > 0)
+	{
+		FileSys::FileData data      = fileSystem.ReadFileFullName(f.name);
+		FString           shortName = fileSystem.GetShortName(f.lumpnum).String;
+		Trex::Charset UZDoomCharSet = Trex::Charset::Full();
+
+		Trex::Font TrexFont = Trex::Font(std::span<const uint8_t>(data.bytes(), data.size()));
+		auto       flags      = TrexFont.face->face_flags;
+		const bool bIsUnicode = TrexFont.face->charmap->encoding & FT_ENCODING_UNICODE;
+		if (!bIsUnicode)
+		{
+			throw std::runtime_error("If using a dynamic font, only unicode ttf non-variable fonts are supported.");
+		}
+
+		//scale the line height based on the deviation from latin
+		auto        em                        = TrexFont.face->units_per_EM;
+		const double emMultiplier               = 1000.0 / em;
+		const double emAdjustedHeight = (double)TrexFont.face->height * emMultiplier;
+		const double baselineAdjustedHeight     = 1300.0; //em adjusted height for the plex fonts
+		const double actualFontHeightMultiplier = baselineAdjustedHeight / emAdjustedHeight;
+		const int    adjustedFontSize          = ceil((double)17 * actualFontHeightMultiplier);
+		const int    supersampleScale  = *font_supersamplescale;
+		Trex::Atlas *atlas =
+			new Trex::Atlas(std::span<const uint8_t>(data.bytes(), data.size()), adjustedFontSize * supersampleScale,
+		                    UZDoomCharSet, Trex::RenderMode::DEFAULT);
+
+		return new FFont(shortName.GetChars(), atlas, supersampleScale);
+	}
+	return nullptr;
+}
+
+
+
 void V_InitCustomFonts()
 {
 	FScanner sc;
@@ -174,6 +221,21 @@ void V_InitCustomFonts()
 	char cursor = '_';
 	bool ignoreoffsets = false;
 	int MinLum = -1, MaxLum = -1;
+
+	//load dynamic fonts
+	std::vector<FileSys::FolderEntry> folderdata;
+	if (fileSystem.GetFilesInFolder("fonts/dynamic/", folderdata, true))
+	{
+		std::vector<FFont*> fontsWeAdded;
+		for (const auto&f : folderdata)
+		{
+			FFont* const NewFont = FontFromTTF(f);
+			if (NewFont)
+			{
+				fontsWeAdded.push_back(NewFont);
+			}
+		}
+	}
 
 	while ((llump = fileSystem.FindLump ("FONTDEFS", &lastlump)) != -1)
 	{
@@ -863,10 +925,34 @@ void V_InitFonts()
 	auto lump = fileSystem.CheckNumForFullName("newconsolefont.hex", 0);	// This is always loaded from gzdoom.pk3 to prevent overriding it with incomplete replacements.
 	if (lump == -1) I_FatalError("newconsolefont.hex not found");	// This font is needed - do not start up without it.
 	NewConsoleFont = CreateHexLumpFont("NewConsoleFont", lump);
+	
 	NewSmallFont = CreateHexLumpFont2("NewSmallFont", lump);
+	auto newSmallFontPreOverride = NewSmallFont;
+	
+	{
+		auto fontcvar = FindCVar("fontOverride_NewSmallFont", nullptr);
+		NewSmallFont = V_GetFont(fontcvar? fontcvar->GetHumanString(): nullptr);
+		if (!NewSmallFont)
+		{
+			NewSmallFont = newSmallFontPreOverride;
+		}
+	}
+	
 	CurrentConsoleFont = NewConsoleFont;
 	ConFont = V_GetFont("ConsoleFont", "CONFONT");
+
+	// the symbols font is a copy of the ConFont, but by using a different name we can avoid doing
+	// font substitution when people are using ConFont to draw symbols (ex: sliders)
+	SymbolsFont = new FFont(-1);
+	FFont *fixupNext = SymbolsFont->Next;
+	SymbolsFont           = new FFont{*ConFont};
+	SymbolsFont->Next = fixupNext;
+	FFont::FirstFont      = SymbolsFont;
+	SymbolsFont->FontName = "SymbolsFont";
+
 	V_GetFont("IndexFont", "INDEXFON");	// detect potential replacements for this one.
+
+	FFont::UpdateAdvFontMappingTables();
 }
 
 void V_LoadTranslations()
@@ -876,7 +962,7 @@ void V_LoadTranslations()
 		if (!font->noTranslate) font->LoadTranslations();
 	}
 
-	if (BigFont)
+	if (BigFont && BigFont->IsValidDynamicFont())
 	{
 		CalcDefaultTranslation(BigFont, CR_UNTRANSLATED * 2 + 1);
 		if (OriginalBigFont != nullptr && OriginalBigFont != BigFont)
@@ -889,7 +975,7 @@ void V_LoadTranslations()
 			OriginalBigFont->forceremap = true;
 		}
 	}
-	if (SmallFont)
+	if (SmallFont && SmallFont->IsValidDynamicFont())
 	{
 		CalcDefaultTranslation(SmallFont, CR_UNTRANSLATED * 2);
 		if (OriginalSmallFont != nullptr && OriginalSmallFont != SmallFont)
@@ -901,7 +987,7 @@ void V_LoadTranslations()
 			OriginalSmallFont->Translations[CR_UNTRANSLATED] = FTranslationID::fromInt(sometrans);
 			OriginalSmallFont->forceremap = true;
 		}
-		if (NewSmallFont != nullptr)
+		if (NewSmallFont != nullptr && NewSmallFont->IsValidDynamicFont())
 		{
 			assert(IsLuminosityTranslation(NewSmallFont->Translations[0]));
 			int sometrans = NewSmallFont->Translations[0].index();

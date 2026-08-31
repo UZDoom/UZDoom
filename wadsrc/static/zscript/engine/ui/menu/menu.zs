@@ -204,7 +204,7 @@ class Menu : Object native ui version("2.4")
 		DontBlur = false;
 		AnimatedTransition = false;
 		Animated = false;
-		mTooltipFont = NewConsoleFont;
+		mTooltipFont = Font.GetDescriptionFont(NewConsoleFont);
 		mCurrentTooltip = "";
 		mTooltipScrollTimer = m_tooltip_delay;
 		mTooltipScrollOffset = 0.0;
@@ -505,12 +505,12 @@ class Menu : Object native ui version("2.4")
 
 	deprecated("4.0") static void DrawConText (int color, int x, int y, String str)
 	{
-		screen.DrawText (ConFont, color, x, y, str, DTA_CellX, 8 * CleanXfac, DTA_CellY, 8 * CleanYfac);
+		screen.DrawText (Font.GetConsoleFont(ConFont), color, x, y, str, DTA_CellX, 8 * CleanXfac, DTA_CellY, 8 * CleanYfac);
 	}
 
 	static Font OptionFont()
 	{
-		return NewSmallFont;
+		return Font.GetSmallTextFont(NewSmallFont);
 	}
 
 	static int OptionHeight()

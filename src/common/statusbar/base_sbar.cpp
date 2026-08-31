@@ -742,38 +742,14 @@ void DStatusBarCore::DrawString(FFont* font, const FString& cstring, double x, d
 	{
 		Scale = { 1.,1. };
 	}
-	int ch;
-	while (ch = GetCharFromString(str), ch != '\0')
+
+	if (font->IsValidDynamicFont() || font->CanBeSubstitutedWithDynamic())
 	{
-		if (ch == ' ')
-		{
-			x += (monospaced ? spacing : font->GetSpaceWidth() + spacing) * scaleX;
-			continue;
-		}
-		else if (ch == TEXTCOLOR_ESCAPE)
-		{
-			EColorRange newColor = V_ParseFontColor(str, translation, boldTranslation);
-			if (newColor != CR_UNDEFINED)
-				fontcolor = newColor;
-			continue;
-		}
-
-		int width;
-		FGameTexture* c = font->GetChar(ch, fontcolor, &width);
-		if (c == NULL) //missing character.
-		{
-			continue;
-		}
-		width += font->GetDefaultKerning();
-
-		if (!monospaced) //If we are monospaced lets use the offset
-			x += (c->GetDisplayLeftOffset() * scaleX + 1); //ignore x offsets since we adapt to character size
-
 		double rx, ry, rw, rh;
 		rx = x + drawOffset.X;
 		ry = y + drawOffset.Y;
-		rw = c->GetDisplayWidth();
-		rh = c->GetDisplayHeight();
+		rw = font->StringWidth(cstring);
+		rh = font->GetHeight();
 
 		if (monospacing == EMonospacing::CellCenter)
 			rx += (spacing - rw) / 2;
@@ -794,42 +770,95 @@ void DStatusBarCore::DrawString(FFont* font, const FString& cstring, double x, d
 			rx += orgx;
 			ry += orgy;
 		}
-
-		// Apply text scale
-		rw *= scaleX;
-		rh *= scaleY;
-
-		// This is not really such a great way to draw shadows because they can overlap with previously drawn characters.
-		// This may have to be changed to draw the shadow text up front separately.
-		if ((shadowX != 0 || shadowY != 0) && !(flags & DI_NOSHADOW))
+		ry -= font->GetHeight();
+		int scale     = active_con_scale(twod);
+		int screen_width  = twod->GetWidth() / scale;
+		int screen_height = twod->GetHeight() / scale;
+		DrawText(twod, font, fontcolor, rx / scale, ry / scale, cstring.GetChars(), DTA_KeepRatio, true, DTA_VirtualHeight, screen_height, DTA_VirtualWidth, screen_width, DTA_ScaleX, (double)scale*scaleX,
+		         DTA_ScaleY, (double)scale*scaleY, TAG_DONE);
+	}
+	else
+	{
+		int ch;
+		while (ch = GetCharFromString(str), ch != '\0')
 		{
-			DrawChar(twod, font, CR_UNTRANSLATED, rx + shadowX, ry + shadowY, ch,
-				DTA_DestWidthF, rw,
-				DTA_DestHeightF, rh,
-				DTA_Alpha, (Alpha * 0.4),
-				DTA_FillColor, 0,
-				TAG_DONE);
+			if (ch == ' ')
+			{
+				x += (monospaced ? spacing : font->GetSpaceWidth() + spacing) * scaleX;
+				continue;
+			}
+			else if (ch == TEXTCOLOR_ESCAPE)
+			{
+				EColorRange newColor = V_ParseFontColor(str, translation, boldTranslation);
+				if (newColor != CR_UNDEFINED)
+					fontcolor = newColor;
+				continue;
+			}
+
+			int           width;
+			FGameTexture *c = font->GetChar(ch, fontcolor, &width);
+			if (c == NULL) // missing character.
+			{
+				continue;
+			}
+			width += font->GetDefaultKerning();
+
+			if (!monospaced)                                   // If we are monospaced lets use the offset
+				x += (c->GetDisplayLeftOffset() * scaleX + 1); // ignore x offsets since we adapt to character size
+
+			double rx, ry, rw, rh;
+			rx = x + drawOffset.X;
+			ry = y + drawOffset.Y;
+			rw = c->GetDisplayWidth();
+			rh = c->GetDisplayHeight();
+
+			if (monospacing == EMonospacing::CellCenter)
+				rx += (spacing - rw) / 2;
+			else if (monospacing == EMonospacing::CellRight)
+				rx += (spacing - rw);
+
+			if (!fullscreenOffsets)
+			{
+				StatusbarToRealCoords(rx, ry, rw, rh);
+			}
+			else
+			{
+				rx *= Scale.X;
+				ry *= Scale.Y;
+				rw *= Scale.X;
+				rh *= Scale.Y;
+
+				rx += orgx;
+				ry += orgy;
+			}
+
+			// Apply text scale
+			rw *= scaleX;
+			rh *= scaleY;
+
+			// This is not really such a great way to draw shadows because they can overlap with previously drawn
+			// characters. This may have to be changed to draw the shadow text up front separately.
+			if ((shadowX != 0 || shadowY != 0) && !(flags & DI_NOSHADOW))
+			{
+				DrawChar(twod, font, CR_UNTRANSLATED, rx + shadowX, ry + shadowY, ch, DTA_DestWidthF, rw,
+				         DTA_DestHeightF, rh, DTA_Alpha, (Alpha * 0.4), DTA_FillColor, 0, TAG_DONE);
+			}
+			DrawChar(twod, font, pt == NO_TRANSLATION ? fontcolor : CR_NATIVEPAL, rx, ry, ch, DTA_DestWidthF, rw,
+			         DTA_DestHeightF, rh, DTA_Alpha, Alpha, DTA_TranslationIndex, pt.index(), DTA_LegacyRenderStyle,
+			         ERenderStyle(style), TAG_DONE);
+
+			// Take text scale into account
+			dx = monospaced ? spacing * scaleX : (double(width) + spacing - c->GetDisplayLeftOffset()) * scaleX - 1;
+
+			x += dx;
 		}
-		DrawChar(twod, font, pt == NO_TRANSLATION? fontcolor : CR_NATIVEPAL, rx, ry, ch,
-			DTA_DestWidthF, rw,
-			DTA_DestHeightF, rh,
-			DTA_Alpha, Alpha,
-			DTA_TranslationIndex, pt.index(),
-			DTA_LegacyRenderStyle, ERenderStyle(style),
-			TAG_DONE);
-
-		// Take text scale into account
-		dx = monospaced
-			? spacing * scaleX
-			: (double(width) + spacing - c->GetDisplayLeftOffset()) * scaleX - 1;
-
-		x += dx;
 	}
 }
-
+extern bool DrawFSHUD;
 void SBar_DrawString(DStatusBarCore* self, DHUDFont* font, const FString& string, double x, double y, int flags, int trans, double alpha, int wrapwidth, int linespacing, double scaleX, double scaleY, int pt_, int style)
 {
-	if (font == nullptr || font->mFont == nullptr) ThrowAbortException(X_READ_NIL, nullptr);
+	if (font == nullptr || font->mFont == nullptr)
+		ThrowAbortException(X_READ_NIL, nullptr);
 	if (!twod->HasBegun2D()) ThrowAbortException(X_OTHER, "Attempt to draw to screen outside a draw function");
 	auto pt = FTranslationID::fromInt(pt_);
 
@@ -841,19 +870,23 @@ void SBar_DrawString(DStatusBarCore* self, DHUDFont* font, const FString& string
 		if (y < 0) flags |= DI_SCREEN_BOTTOM;
 		else flags |= DI_SCREEN_TOP;
 	}
+	FFont *renderFont = font->mFont;
+	assert(renderFont);
 
 	if (wrapwidth > 0)
 	{
-		auto brk = V_BreakLines(font->mFont, int(wrapwidth * scaleX), string, true);
-		for (auto& line : brk)
+		auto brk = V_BreakLines(renderFont, int(wrapwidth * scaleX), string, true);
+		for (auto &line : brk)
 		{
-			self->DrawString(font->mFont, line.Text, x, y, flags, alpha, trans, font->mSpacing, font->mMonospacing, font->mShadowX, font->mShadowY, scaleX, scaleY, pt, style);
-			y += (font->mFont->GetHeight() + linespacing) * scaleY;
+			self->DrawString(renderFont, line.Text, x, y, flags, alpha, trans, font->mSpacing, font->mMonospacing,
+			                 font->mShadowX, font->mShadowY, scaleX, scaleY, pt, style);
+			y += (renderFont->GetHeight() + linespacing) * scaleY;
 		}
 	}
 	else
 	{
-		self->DrawString(font->mFont, string, x, y, flags, alpha, trans, font->mSpacing, font->mMonospacing, font->mShadowX, font->mShadowY, scaleX, scaleY, pt, style);
+		self->DrawString(renderFont, string, x, y, flags, alpha, trans, font->mSpacing, font->mMonospacing,
+		                 font->mShadowX, font->mShadowY, scaleX, scaleY, pt, style);
 	}
 }
 

@@ -105,8 +105,17 @@ public:
 		});
 	};
 
-private:
+	[[nodiscard]] FString GetActiveLanguage() const { return activeLanguage; }
+	[[nodiscard]] TMap<FName, LangID> &GetLangMap()
+	{
+		return langMap;
+	}
+	[[nodiscard]] const LangID GetActiveLangID()
+	{
+		return GetID(activeLanguage);
+	}
 
+private:
 	FString activeLanguage;
 	StringMacroMap allMacros;
 	LangMap allStrings;
