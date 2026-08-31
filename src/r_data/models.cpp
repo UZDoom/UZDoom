@@ -637,20 +637,46 @@ static inline void RenderModelFrame(FModelRenderer *renderer, int i, const FSpri
 
 	bool nextFrame = frameinfo.smfNext && drawinfo.modelframe != drawinfo.modelframenext;
 
-	// [Jay] while per-model animations aren't done, DECOUPLEDANIMATIONS does the same as MODELSAREATTACHMENTS
-	if(!evaluatedSingle)
-	{  // [Jay] TODO per-model decoupled animations
-		const TArray<VSMatrix> *boneData = ProcessModelFrame(mdl, nextFrame, i, smf, modelData, frameinfo, drawinfo, is_decoupled, tic, nullptr);
-
-		if(frameinfo.smf_flags & MDL_MODELSAREATTACHMENTS || is_decoupled)
+		// [Jay] while per-model animations aren't done, DECOUPLEDANIMATIONS does the same as MODELSAREATTACHMENTS
+	if (!evaluatedSingle)
+	{ // [Jay] TODO per-model decoupled animations
+		//[MC] Grab bone caches and reuse them across portals if present
+		if (modelData && modelData->cachedBoneFrame == screen->mBoneCacheGeneration &&
+		    modelData->cachedBoneStartPos.SSize() > i && modelData->cachedBoneStartPos[i] >= 0)
 		{
-			if(!boneData && is_decoupled)
-			{
-				boneData = mdl->CalculateBonesOnlyOffsets((modelData && modelData->modelBoneOverrides.SSize() > i)? &modelData->modelBoneOverrides[i] : nullptr, nullptr, tic);
-			}
-
-			boneStartingPosition = boneData ? screen->mBones->UploadBones(*boneData) : -1;
+			boneStartingPosition = modelData->cachedBoneStartPos[i];
 			evaluatedSingle = true;
+		}
+		else
+		{
+			const TArray<VSMatrix> *boneData = ProcessModelFrame(mdl, nextFrame, i, smf, modelData, frameinfo, drawinfo, is_decoupled, tic, nullptr);
+
+			if (frameinfo.smf_flags & MDL_MODELSAREATTACHMENTS || is_decoupled)
+			{
+				if (!boneData && is_decoupled)
+				{
+					boneData = mdl->CalculateBonesOnlyOffsets((modelData && modelData->modelBoneOverrides.SSize() > i) ? &modelData->modelBoneOverrides[i] : nullptr, nullptr, tic);
+				}
+
+				boneStartingPosition = boneData ? screen->mBones->UploadBones(*boneData) : -1;
+				evaluatedSingle = true;
+
+				if (modelData && boneStartingPosition >= 0)
+				{
+					if (modelData->cachedBoneStartPos.SSize() <= i)
+					{
+						auto old = modelData->cachedBoneStartPos.Size();
+						auto ui = unsigned(i);
+						modelData->cachedBoneStartPos.Resize(i + 1);
+						for (unsigned j = old; j < ui; j++)
+						{
+							modelData->cachedBoneStartPos[j] = -1;
+						}
+					}
+					modelData->cachedBoneStartPos[i] = boneStartingPosition;
+					modelData->cachedBoneFrame = screen->mBoneCacheGeneration;
+				}
+			}
 		}
 	}
 

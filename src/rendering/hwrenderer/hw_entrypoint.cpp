@@ -346,6 +346,7 @@ sector_t* RenderView(player_t* player)
 		screen->mLights->Clear();
 		screen->mBones->Clear();
 		screen->mViewpoints->Clear();
+		screen->mBoneCacheGeneration++;
 
 		// NoInterpolateView should have no bearing on camera textures, but needs to be preserved for the main view below.
 		bool saved_niv = NoInterpolateView;
