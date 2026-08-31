@@ -631,51 +631,40 @@ static inline void RenderModelFrame(FModelRenderer *renderer, int i, const FSpri
 	auto tex = drawinfo.skinid.isValid() ? TexMan.GetGameTexture(drawinfo.skinid, true) : nullptr;
 	mdl->BuildVertexBuffer(renderer);
 
-	auto ssidp = drawinfo.surfaceskinids.Size() > 0
-		? drawinfo.surfaceskinids.Data()
-		: (((i * MD3_MAX_SURFACES) < smf->surfaceskinIDs.SSize()) ? &smf->surfaceskinIDs[i * MD3_MAX_SURFACES] : nullptr);
+	auto ssidp = drawinfo.surfaceskinids.Size() > 0 ? drawinfo.surfaceskinids.Data() : (((i * MD3_MAX_SURFACES) < smf->surfaceskinIDs.SSize()) ? &smf->surfaceskinIDs[i * MD3_MAX_SURFACES] : nullptr);
 
 	bool nextFrame = frameinfo.smfNext && drawinfo.modelframe != drawinfo.modelframenext;
 
 		// [Jay] while per-model animations aren't done, DECOUPLEDANIMATIONS does the same as MODELSAREATTACHMENTS
 	if (!evaluatedSingle)
 	{ // [Jay] TODO per-model decoupled animations
-		//[MC] Grab bone caches and reuse them across portals if present
+		bool hasCache = false;
+
 		if (modelData && modelData->cachedBoneFrame == screen->mBoneCacheGeneration &&
 		    modelData->cachedBoneStartPos.SSize() > i && modelData->cachedBoneStartPos[i] >= 0)
 		{
 			boneStartingPosition = modelData->cachedBoneStartPos[i];
-			evaluatedSingle = true;
+			hasCache = true;
 		}
-		else
+
+		if (!hasCache)
 		{
 			const TArray<VSMatrix> *boneData = ProcessModelFrame(mdl, nextFrame, i, smf, modelData, frameinfo, drawinfo, is_decoupled, tic, nullptr);
-
 			if (frameinfo.smf_flags & MDL_MODELSAREATTACHMENTS || is_decoupled)
 			{
 				if (!boneData && is_decoupled)
 				{
 					boneData = mdl->CalculateBonesOnlyOffsets((modelData && modelData->modelBoneOverrides.SSize() > i) ? &modelData->modelBoneOverrides[i] : nullptr, nullptr, tic);
 				}
-
-				boneStartingPosition = boneData ? screen->mBones->UploadBones(*boneData) : -1;
 				evaluatedSingle = true;
+			}
 
-				if (modelData && boneStartingPosition >= 0)
-				{
-					if (modelData->cachedBoneStartPos.SSize() <= i)
-					{
-						auto old = modelData->cachedBoneStartPos.Size();
-						auto ui = unsigned(i);
-						modelData->cachedBoneStartPos.Resize(i + 1);
-						for (unsigned j = old; j < ui; j++)
-						{
-							modelData->cachedBoneStartPos[j] = -1;
-						}
-					}
-					modelData->cachedBoneStartPos[i] = boneStartingPosition;
-					modelData->cachedBoneFrame = screen->mBoneCacheGeneration;
-				}
+			boneStartingPosition = boneData ? screen->mBones->UploadBones(*boneData) : -1;
+
+			if (modelData && modelData->cachedBoneStartPos.SSize() > i && modelData->cachedBoneStartPos[i] >= 0)
+			{
+				modelData->cachedBoneFrame       = screen->mBoneCacheGeneration;
+				modelData->cachedBoneStartPos[i] = boneStartingPosition;
 			}
 		}
 	}
@@ -685,6 +674,7 @@ static inline void RenderModelFrame(FModelRenderer *renderer, int i, const FSpri
 
 void RenderFrameModels(FModelRenderer *renderer, FLevelLocals *Level, const FSpriteModelFrame *smf, const FState *curState, int curTics, double ticFrac, FTranslationID translation, AActor* actor)
 {
+	
 	double tic = actor->GetModelTimer();
 	if (!WorldPaused(true) && !actor->isFrozen())
 	{
@@ -697,6 +687,9 @@ void RenderFrameModels(FModelRenderer *renderer, FLevelLocals *Level, const FSpr
 
 	CalcModelFrameInfo frameinfo = CalcModelFrame(Level, smf, curState, curTics, modelData, actor, is_decoupled, tic, ticFrac);
 	ModelDrawInfo drawinfo;
+
+	if (modelData)
+		modelData->cachedBoneStartPos.Resize(frameinfo.modelsamount);
 
 	int boneStartingPosition = -1;
 	bool evaluatedSingle = false;
