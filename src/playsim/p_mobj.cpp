@@ -65,6 +65,7 @@
 #include "p_terrain.h"
 #include "r_sky.h"
 #include "r_utility.h"
+#include "s_sndseq.h"
 #include "sbar.h"
 #include "serialize_obj.h" // IWYU pragma: keep
 #include "serializer_doom.h"
@@ -6726,9 +6727,9 @@ AActor *FLevelLocals::SpawnMapThing (FMapThing *mthing, int position)
 	{
 		int type = mthing->args[0];
 		if (type == 255) type = -1;
-		if (type > 63)
+		if (type > (MAX_SNDSEQS - 1))
 		{
-			Printf ("Sound sequence %d out of range\n", type);
+			Printf ("Sound sequence %d out of range (0-%d)\n", type, (MAX_SNDSEQS - 1));
 		}
 		else
 		{
