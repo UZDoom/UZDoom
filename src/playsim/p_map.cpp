@@ -1721,6 +1721,11 @@ bool PIT_CheckThing(FMultiBlockThingsIterator &it, FMultiBlockThingsIterator::Ch
 	{ // Can be picked up by tmthing
 		P_TouchSpecialThing(thing, tm.thing);	// can remove thing
 	}
+	else if ((tm.thing->flags9 & MF9_MOVINGSPECIAL) && (tm.thing->flags & MF_SPECIAL) && (thing->flags & MF_PICKUP))
+	{
+		// Also allow moving items to situationally get picked up.
+		P_TouchSpecialThing(tm.thing, thing);
+	}
 
 	// killough 3/16/98: Allow non-solid moving objects to move through solid
 	// ones, by allowing the moving thing (tmthing) to move if it's non-solid,

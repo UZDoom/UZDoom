@@ -439,6 +439,7 @@ enum ActorFlag9
 	MF9_ISPUFF					= 0x00000040,	// [AA] Set on actors by P_SpawnPuff
 	MF9_FORCESECTORDAMAGE		= 0x00000080,	// [inkoalawetrust] Actor ALWAYS takes hurt floor damage if there's any. Even if the floor doesn't have SECMF_HURTMONSTERS.
 	MF9_NOAUTOOFFSKULLFLY		= 0x00000100,	// Don't automatically disable MF_SKULLFLY if velocity is 0.
+	MF9_MOVINGSPECIAL			= 0x00000200,	// For special items, let them interact with others while moving.
 };
 
 // --- mobj.renderflags ---
