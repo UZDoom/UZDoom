@@ -527,7 +527,7 @@ void main()
 			#if (DEF_FOG_RADIAL == 0)
 				fogdist = max(16.0, pixelpos.w);
 			#else
-				fogdist = max(16.0, distance(pixelpos.xyz, uCameraPos.xyz));
+				fogdist = max(16.0, distance(pixelpos.xyz, uFogCenterPos.xyz));
 			#endif
 
 			if (uThickFogDistance > 0.0)

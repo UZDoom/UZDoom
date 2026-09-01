@@ -758,17 +758,33 @@ void FRenderViewpoint::SetViewAngle(const FViewWindow& viewWindow)
 	ViewVector3D.Y = v.Y * PitchCos;
 	ViewVector3D.Z = -PitchSin;
 
-	if (bDoOrtho || bDoOob) // These auto-ensure that camera and camera->ViewPos exist
+	if (camera && camera->ViewPos) // OffPos gets used by clipper when bDoOoB or bDoOrtho
 	{
 		if (camera->tracer != NULL)
 		{
 			OffPos = camera->tracer->Pos();
 		}
+		else if (!(camera->ViewPos->Flags & VPSF_ABSOLUTEPOS))
+		{
+			if (camera->ViewPos->Flags & VPSF_ABSOLUTEOFFSET)
+			{
+				OffPos = Pos - camera->ViewPos->Offset;
+			}
+			else
+			{
+				OffPos = Pos + ViewVector3D * camera->ViewPos->Offset.Length();
+			}
+		}
 		else
 		{
-			OffPos = Pos + ViewVector3D * camera->ViewPos->Offset.Length();
+			OffPos = Pos;
 		}
 	}
+	else
+	{
+			OffPos = Pos;
+	}
+	if (!bFromPortal) { FogCenterPos = OffPos; } // This is where decision on how to set FogCenterPos needs to be taken
 
 	if (bDoOrtho && (camera->ViewPos->Offset.XY().Length() > 0.0))
 	{

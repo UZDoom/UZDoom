@@ -235,9 +235,10 @@ private:
 	void PreparePlayerSprites3D(sector_t * viewsector, area_t in_area);
 public:
 
-	void SetCameraPos(const DVector3 &pos)
+	void SetCameraPos(const DVector3 &pos, const DVector3 &fogpos)
 	{
 		VPUniforms.mCameraPos = { (float)pos.X, (float)pos.Z, (float)pos.Y, 0.f };
+		VPUniforms.mFogCenterPos = { (float)fogpos.X, (float)fogpos.Z, (float)fogpos.Y, 0.f };
 	}
 
 	void SetClipHeight(float h, float d)

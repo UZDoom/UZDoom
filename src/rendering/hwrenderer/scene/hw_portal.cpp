@@ -521,6 +521,7 @@ bool HWMirrorPortal::Setup(HWDrawInfo *di, FRenderState &rstate, Clipper *clippe
 	}
 
 	auto &vp = di->Viewpoint;
+	vp.bFromPortal = true;
 	state->vpIsAllowedOoB = vp.bDoOob;
 	// di->UpdateCurrentMapSection();
 	if (linedef->sidedef[0] && linedef->sidedef[0]->numsegs > 0)
@@ -531,6 +532,7 @@ bool HWMirrorPortal::Setup(HWDrawInfo *di, FRenderState &rstate, Clipper *clippe
 	di->mClipPortal = this;
 	DAngle StartAngle = vp.Angles.Yaw;
 	DVector3 StartPos = vp.Pos;
+	DVector3 StartFCPos = vp.FogCenterPos;
 
 	vertex_t *v1 = linedef->v1;
 	vertex_t *v2 = linedef->v2;
@@ -542,6 +544,7 @@ bool HWMirrorPortal::Setup(HWDrawInfo *di, FRenderState &rstate, Clipper *clippe
 	{
 		// vertical mirror
 		vp.Pos.X = 2 * v1->fX() - StartPos.X;
+		vp.FogCenterPos.X = 2 * v1->fX() - StartFCPos.X;
 
 		// Compensation for reendering inaccuracies
 		if (StartPos.X < v1->fX()) vp.Pos.X -= 0.1;
@@ -551,6 +554,7 @@ bool HWMirrorPortal::Setup(HWDrawInfo *di, FRenderState &rstate, Clipper *clippe
 	{
 		// horizontal mirror
 		vp.Pos.Y = 2 * v1->fY() - StartPos.Y;
+		vp.FogCenterPos.Y = 2 * v1->fY() - StartFCPos.Y;
 
 		// Compensation for reendering inaccuracies
 		if (StartPos.Y < v1->fY())  vp.Pos.Y -= 0.1;
@@ -574,12 +578,23 @@ bool HWMirrorPortal::Setup(HWDrawInfo *di, FRenderState &rstate, Clipper *clippe
 		vp.Pos.X = (x1 + r * dx) * 2 - x;
 		vp.Pos.Y = (y1 + r * dy) * 2 - y;
 
+		double xfc = StartFCPos.X;
+		double yfc = StartFCPos.Y;
+
+		// the above two cases catch len == 0
+		double rfc = ((xfc - x1)*dx + (yfc - y1)*dy) / (dx*dx + dy * dy);
+
+		vp.FogCenterPos.X = (x1 + rfc * dx) * 2 - xfc;
+		vp.FogCenterPos.Y = (y1 + rfc * dy) * 2 - yfc;
+
 		// Compensation for reendering inaccuracies
 		FVector2 v(-dx, dy);
 		v.MakeUnit();
 
 		vp.Pos.X += v[1] * state->renderdepth / 2;
 		vp.Pos.Y += v[0] * state->renderdepth / 2;
+		vp.FogCenterPos.X += v[1] * state->renderdepth / 2;
+		vp.FogCenterPos.Y += v[0] * state->renderdepth / 2;
 	}
 	vp.Angles.Yaw = linedef->Delta().Angle() * 2. - StartAngle;
 
@@ -630,6 +645,7 @@ bool HWLineToLinePortal::Setup(HWDrawInfo *di, FRenderState &rstate, Clipper *cl
 		return false;
 	}
 	auto &vp = di->Viewpoint;
+	vp.bFromPortal = true;
 	state->vpIsAllowedOoB = vp.bDoOob;
 	di->mClipPortal = this;
 
@@ -642,6 +658,8 @@ bool HWLineToLinePortal::Setup(HWDrawInfo *di, FRenderState &rstate, Clipper *cl
 	P_TranslatePortalXY(origin, vp.Path[1].X, vp.Path[1].Y);
 	P_TranslatePortalXY(origin, vp.OffPos.X, vp.OffPos.Y);
 	P_TranslatePortalZ(origin, vp.OffPos.Z);
+	P_TranslatePortalXY(origin, vp.FogCenterPos.X, vp.FogCenterPos.Y);
+	P_TranslatePortalZ(origin, vp.FogCenterPos.Z);
 	if (!vp.showviewer && vp.camera != nullptr && P_PointOnLineSidePrecise(vp.Path[0], glport->lines[0]->mDestination) != P_PointOnLineSidePrecise(vp.Path[1], glport->lines[0]->mDestination))
 	{
 		double distp = (vp.Path[0] - vp.Path[1]).Length();
@@ -710,6 +728,7 @@ bool HWSkyboxPortal::Setup(HWDrawInfo *di, FRenderState &rstate, Clipper *clippe
 		return false;
 	}
 	auto &vp = di->Viewpoint;
+	vp.bFromPortal = true;
 	state->vpIsAllowedOoB = vp.bDoOob;
 
 	state->skyboxrecursion++;
@@ -722,6 +741,7 @@ bool HWSkyboxPortal::Setup(HWDrawInfo *di, FRenderState &rstate, Clipper *clippe
 
 	oldclamp = rstate.SetDepthClamp(false);
 	vp.Pos = origin->InterpolatedPosition(vp.TicFrac);
+	vp.FogCenterPos = vp.Pos;
 	vp.ActorPos = origin->Pos();
 	vp.Angles.Yaw += (origin->PrevAngles.Yaw + deltaangle(origin->PrevAngles.Yaw, origin->Angles.Yaw) * vp.TicFrac);
 
@@ -827,12 +847,14 @@ bool HWSectorStackPortal::Setup(HWDrawInfo *di, FRenderState &rstate, Clipper *c
 
 	FSectorPortalGroup *portal = origin;
 	auto &vp = di->Viewpoint;
+	vp.bFromPortal = true;
 	state->vpIsAllowedOoB = vp.bDoOob;
 
 	vp.Pos += origin->mDisplacement;
 	vp.ActorPos += origin->mDisplacement;
 	vp.ViewActor = nullptr;
 	vp.OffPos += origin->mDisplacement;
+	vp.FogCenterPos += origin->mDisplacement;
 
 	// avoid recursions!
 	if (origin->plane != -1) screen->instack[origin->plane]++;
@@ -929,6 +951,7 @@ bool HWPlaneMirrorPortal::Setup(HWDrawInfo *di, FRenderState &rstate, Clipper *c
 	std::swap(screen->instack[sector_t::floor], screen->instack[sector_t::ceiling]);
 
 	auto &vp = di->Viewpoint;
+	vp.bFromPortal = true;
 	state->vpIsAllowedOoB = vp.bDoOob;
 	old_pm = state->PlaneMirrorMode;
 
@@ -938,6 +961,7 @@ bool HWPlaneMirrorPortal::Setup(HWDrawInfo *di, FRenderState &rstate, Clipper *c
 	double planez = origin->ZatPoint(vp.Pos);
 	vp.Pos.Z = 2 * planez - vp.Pos.Z;
 	vp.OffPos.Z = 2 * planez - vp.OffPos.Z;
+	// vp.FogCenterPos.Z = 2 * planez - vp.OffPos.Z; // [DVR] Leave this commented out. Reflected light travels more distance. Should be foggy.
 	vp.ViewVector3D.Z = - vp.ViewVector3D.Z;
 	vp.ViewActor = nullptr;
 	state->PlaneMirrorMode = origin->fC() < 0 ? -1 : 1;
@@ -1027,6 +1051,7 @@ HWHorizonPortal::HWHorizonPortal(FPortalSceneState *s, HWHorizonInfo * pt, FRend
 {
 	origin = pt;
 
+	vp.bFromPortal = true;
 	// create the vertex data for this horizon portal.
 	HWSectorPlane * sp = &origin->plane;
 	const float vx = vp.Pos.X;
@@ -1104,7 +1129,7 @@ void HWHorizonPortal::DrawContents(HWDrawInfo *di, FRenderState &state)
 		state.ClearScreen();
 		return;
 	}
-	di->SetCameraPos(vp.Pos);
+	di->SetCameraPos(vp.Pos, vp.FogCenterPos);
 
 
 	if (texture->isFullbright())

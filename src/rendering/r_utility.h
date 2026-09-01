@@ -47,6 +47,7 @@ struct FRenderViewpoint
 	DVector2		ViewVector;		// HWR only: direction the camera is facing.
 	DVector3		ViewVector3D;	// 3D direction the camera is facing.
 	DVector3        OffPos;         // Viewpoint position to use for Ortho and OoB calculations
+	DVector3        FogCenterPos;   // Center position for fog calculations
 	AActor			*ViewActor;		// either the same as camera or nullptr
 	FLevelLocals	*ViewLevel;		// The level this viewpoint is on.
 
@@ -82,6 +83,7 @@ struct FRenderViewpoint
 	void SetViewAngle(const FViewWindow& viewWindow);
 	bool IsAllowedOoB();				// Checks if camera actor exists, has viewpos, and viewpos has VPSF_ALLOWOUTOFBOUNDS flag set
 	bool IsOrtho();					// Checks if camera actor exists, has viewpos, and viewpos has VPSF_ORTHOGRAPHIC flag set
+	bool			bFromPortal;	// Is this viewpoint rendering in a portal?
 
 };
 
