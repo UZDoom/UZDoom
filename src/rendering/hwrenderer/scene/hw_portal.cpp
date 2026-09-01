@@ -972,24 +972,41 @@ void HWPlaneMirrorPortal::DrawPortalStencil(FRenderState &state, int pass)
 		// Cannot combine these two for loops because of the DrawIndexed() vs Draw() calls interleaving
 		for (unsigned int i = 0; i < lines.Size(); i++)
 		{
-			flat.section = lines[i].sub->section;
-			flat.iboindex = lines[i].sub->sector->iboindex[isceiling ? sector_t::ceiling : sector_t::floor];
-			flat.plane.GetFromSector(lines[i].sub->sector, isceiling ? sector_t::ceiling : sector_t::floor);
-			screen->mVertexData->Map();
-			auto verts = screen->mVertexData->AllocVertices(5);
-			auto ptr = verts.first;
-			ptr[0].Set(lines[i].vertexes[0]->p.X, flat.plane.plane.ZatPoint(lines[i].vertexes[0]->p),
-					   lines[i].vertexes[0]->p.Y, 0, 0);
-			ptr[1].Set(lines[i].vertexes[1]->p.X, flat.plane.plane.ZatPoint(lines[i].vertexes[1]->p),
-					   lines[i].vertexes[1]->p.Y, 0, 0);
-			ptr[2].Set(lines[i].vertexes[1]->p.X, flat.plane.plane.ZatPoint(lines[i].vertexes[1]->p) + zshift*GetMirrorSide(),
-					   lines[i].vertexes[1]->p.Y, 0, 0);
-			ptr[3].Set(lines[i].vertexes[0]->p.X, flat.plane.plane.ZatPoint(lines[i].vertexes[0]->p) + zshift*GetMirrorSide(),
-					   lines[i].vertexes[0]->p.Y, 0, 0);
-			ptr[4].Set(lines[i].vertexes[0]->p.X, flat.plane.plane.ZatPoint(lines[i].vertexes[0]->p),
-					   lines[i].vertexes[0]->p.Y, 0, 0);
-			screen->mVertexData->Unmap();
-			state.Draw(DT_TriangleStrip, verts.second, 5, screen->IsVulkan());
+			bool edgeline = (i == 0) || !lines[i].seg->backsector
+				|| (lines[i].seg->frontsector->reflect[isceiling ? sector_t::ceiling : sector_t::floor] !=
+					lines[i].seg->backsector->reflect[isceiling ? sector_t::ceiling : sector_t::floor]);
+			if (!edgeline && lines[i].seg->backsector)
+			{
+				if (isceiling)
+				{
+					edgeline |= lines[i].seg->frontsector->ceilingplane.fD() != lines[i].seg->backsector->ceilingplane.fD();
+				}
+				else
+				{
+					edgeline |= lines[i].seg->frontsector->floorplane.fD() != lines[i].seg->backsector->floorplane.fD();
+				}
+			}
+			if (edgeline)
+			{
+				flat.section = lines[i].sub->section;
+				flat.iboindex = lines[i].sub->sector->iboindex[isceiling ? sector_t::ceiling : sector_t::floor];
+				flat.plane.GetFromSector(lines[i].sub->sector, isceiling ? sector_t::ceiling : sector_t::floor);
+				screen->mVertexData->Map();
+				auto verts = screen->mVertexData->AllocVertices(5);
+				auto ptr = verts.first;
+				ptr[0].Set(lines[i].vertexes[0]->p.X, flat.plane.plane.ZatPoint(lines[i].vertexes[0]->p),
+						   lines[i].vertexes[0]->p.Y, 0, 0);
+				ptr[1].Set(lines[i].vertexes[1]->p.X, flat.plane.plane.ZatPoint(lines[i].vertexes[1]->p),
+						   lines[i].vertexes[1]->p.Y, 0, 0);
+				ptr[2].Set(lines[i].vertexes[1]->p.X, flat.plane.plane.ZatPoint(lines[i].vertexes[1]->p) + zshift*GetMirrorSide(),
+						   lines[i].vertexes[1]->p.Y, 0, 0);
+				ptr[3].Set(lines[i].vertexes[0]->p.X, flat.plane.plane.ZatPoint(lines[i].vertexes[0]->p) + zshift*GetMirrorSide(),
+						   lines[i].vertexes[0]->p.Y, 0, 0);
+				ptr[4].Set(lines[i].vertexes[0]->p.X, flat.plane.plane.ZatPoint(lines[i].vertexes[0]->p),
+						   lines[i].vertexes[0]->p.Y, 0, 0);
+				screen->mVertexData->Unmap();
+				state.Draw(DT_TriangleStrip, verts.second, 5, (i == 0));
+			}
 		}
 	}
 	else
