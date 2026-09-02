@@ -108,7 +108,7 @@ extend class PlayerPawn
 
 				if (ammotype && GetDefaultByType(ammotype).GetParentAmmo() == ammotype)
 				{
-					let def = getDefaultByType(ammotype);
+					let def = GetDefaultByType(ammotype);
 					if (def.bNoGiveAll && giveall != ALL_YESYES) continue;
 
 					let ammoitem = FindInventory(ammotype);
@@ -169,8 +169,8 @@ extend class PlayerPawn
 
 					if (keytype)
 					{
-						let def = getDefaultByType(keytype);
 						
+						let def = GetDefaultByType(keytype);
 						if (def.bNoGiveAll && giveall != ALL_YESYES) continue;
 
 						if (def.special1 != 0)
@@ -196,7 +196,7 @@ extend class PlayerPawn
 				let type = (class<Weapon>)(AllActorClasses[i]);
 				if (type != null && type != "Weapon" && !type.isAbstract())
 				{
-					readonly<Weapon> def = getDefaultByType(type);
+					readonly<Weapon> def = GetDefaultByType(type);
 					if (def.bNoGiveAll && giveall != ALL_YESYES) continue;
 
 					// Don't give replaced weapons unless the replacement was done by Dehacked.
@@ -227,7 +227,7 @@ extend class PlayerPawn
 				type = (class<Inventory>)(AllActorClasses[i]);
 				if (type!= null)
 				{
-					let def = getDefaultByType(type);
+					let def = GetDefaultByType(type);
 					if (def.bNoGiveAll && giveall != ALL_YESYES) continue;
 
 					if (def.Icon.isValid() && (def.MaxAmount > 1 || def.bAutoActivate == false) && CheckArtifact(type))
