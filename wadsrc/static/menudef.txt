@@ -2413,6 +2413,7 @@ OptionMenu GameplayOptions protected
 	Option "$GMPLYMNU_ALLOWJUMP",				"sv_jump", "JumpCrouchFreeLook"
 	Option "$GMPLYMNU_ALLOWCROUCH",				"sv_crouch", "JumpCrouchFreeLook"
 	Option "$GMPLYMNU_ALLOWFREELOOK",			"sv_freelook", "JumpCrouchFreeLook"
+	Option "$GMPLYMNU_ALLOWSAVE",			    "sv_save", "JumpCrouchFreeLook"
 	Option "$GMPLYMNU_ALLOWFOV",				"sv_nofov", "NoYes"
 	Option "$GMPLYMNU_BFGFREEAIM",				"sv_nobfgaim", "NoYes"
 	Option "$GMPLYMNU_ALLOWAUTOMAP",			"sv_noautomap", "NoYes"
