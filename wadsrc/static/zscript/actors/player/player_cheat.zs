@@ -89,7 +89,7 @@ extend class PlayerPawn
 			
 			if (type != NULL)
 			{
-				let def = getDefaultByType(type);
+				let def = GetDefaultByType(type);
 				if (giveall == ALL_YES && def.bNoGiveAll) {}
 				else GiveInventory(type, 1, true);
 			}
@@ -106,7 +106,7 @@ extend class PlayerPawn
 			{
 				let ammotype = (class<Ammo>)(AllActorClasses[i]);
 
-				if (ammotype && getDefaultByType(ammotype).GetParentAmmo() == ammotype)
+				if (ammotype && GetDefaultByType(ammotype).GetParentAmmo() == ammotype)
 				{
 					let def = getDefaultByType(ammotype);
 					if (def.bNoGiveAll && giveall != ALL_YESYES) continue;
