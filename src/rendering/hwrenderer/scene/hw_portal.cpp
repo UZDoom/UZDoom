@@ -973,6 +973,7 @@ void HWPlaneMirrorPortal::DrawPortalStencil(FRenderState &state, int pass)
 		for (unsigned int i = 0; i < lines.Size(); i++)
 		{
 			bool edgeline = (i == 0) || !lines[i].seg->backsector || lines[i].seg->backsector->isClosed()
+				|| lines[i].seg->frontsector->isClosed()
 				|| (lines[i].seg->frontsector->reflect[isceiling ? sector_t::ceiling : sector_t::floor] !=
 					lines[i].seg->backsector->reflect[isceiling ? sector_t::ceiling : sector_t::floor]);
 			if (!edgeline && lines[i].seg->backsector)
