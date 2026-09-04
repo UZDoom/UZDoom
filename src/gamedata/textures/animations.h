@@ -128,6 +128,7 @@ class FTextureAnimator
 	FSwitchDef* ParseSwitchDef(FScanner& sc, bool ignoreBad);
 	void AddSwitchPair(FSwitchDef* def1, FSwitchDef* def2);
 	void ParseAnimatedDoor(FScanner& sc);
+	void ResetTimer(FAnimDef &anim);
 
 public:
 
@@ -143,6 +144,7 @@ public:
 	FAnimDef* AddSimpleAnim(FTextureID picnum, int animcount, uint32_t speedmin, uint32_t speedrange = 0);
 	FAnimDef* AddComplexAnim(FTextureID picnum, const TArray<FAnimDef::FAnimFrame>& frames);
 
+	FAnimDef* FindAnim(FTextureID texture);
 	FSwitchDef* FindSwitch(FTextureID texture);
 	FDoorAnimation* FindAnimatedDoor(FTextureID picnum);
 	void UpdateAnimations(uint64_t mstime);
@@ -161,6 +163,7 @@ public:
 	bool InitStandaloneAnimation(FStandaloneAnimation &animInfo, FTextureID tex, uint32_t curTic);
 	FTextureID UpdateStandaloneAnimation(FStandaloneAnimation &animInfo, double curTic);
 	void ResetTimers();
+	bool ResetTimerForTexture(FTextureID texture);
 };
 
 extern FTextureAnimator TexAnim;
