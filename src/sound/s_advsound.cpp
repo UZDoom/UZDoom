@@ -34,6 +34,7 @@
 #include "m_haptics.h"
 #include "r_data/sprites.h"
 #include "s_music.h"
+#include "sc_include.h"
 #include "serializer.h"
 #include "vm.h"
 
@@ -662,86 +663,6 @@ void S_AddLocalSndInfo(int lump)
 
 //==========================================================================
 //
-// S_ResolveIncludePath
-//
-// MH 20251123
-//    Adapted from corresponding file in zcc_parser.cpp
-//    Resolves SNDINFO include paths.
-//    Note that including across archive boundaries is not supported.
-//
-//==========================================================================
-
-static FString S_ResolveIncludePath(int includingLump, const char* includedFile)
-{
-	// Get full path of including file and convert included file to FString
-	FString includer = FString(fileSystem.GetFileFullName(includingLump, true));
-	FString included = FString(includedFile);
-
-	// Strip any redundant "./" from included
-	// Includes shall be relative to parent directory of the including file
-	if (included.IndexOf("./") == 0)
-	{
-		included = included.Mid(2);
-	}
-
-	// Remove file name portion from includer
-	FString incDir = FString("");
-	auto includer_slash_index = includer.LastIndexOf("/");
-	if (includer_slash_index != -1)
-	{
-		incDir = includer.Mid(0, includer_slash_index);
-	}
-
-	// Handle .. references
-	if (included.IndexOf("../") == 0)
-	{
-		bool pathOk = true;
-
-		while (included.IndexOf("../") == 0) // go back one folder for each '..'
-		{
-			included = included.Mid(3);
-			auto slash_index = incDir.LastIndexOf("/");
-			if (slash_index != -1)
-			{
-				incDir = incDir.Mid(0, slash_index);
-			}
-			else if (incDir.IsNotEmpty())
-			{
-				incDir = "";
-			}
-			else
-			{
-				pathOk = false;
-				break;
-			}
-		}
-
-		if (pathOk)
-		{
-			if (incDir.IsNotEmpty())
-			{
-				included = incDir + "/" + included;
-			}
-			return included;
-		}
-
-		// Return unmodified if failed
-		// S_AddSNDINFO will report a "not found" error when trying to use it
-		return FString(includedFile);
-	}
-
-	// Handle include file relative
-	if (incDir.IsNotEmpty())
-	{
-	   included = incDir + "/" + included;
-	}
-
-	// Completed
-	return included;
-}
-
-//==========================================================================
-//
 // S_AddSNDINFO
 //
 // Reads a SNDINFO and does what it says.
@@ -787,7 +708,7 @@ static void S_AddSNDINFO (int lump)
 			// MH 20251115
 			case SI_Include: {
 				sc.MustGetString();
-				FString included = S_ResolveIncludePath(lump, sc.String);
+				FString included = SC_ResolveIncludePath(lump, sc.String);
 				int inclump = fileSystem.CheckNumForFullName(included.GetChars(), true);
 				if (inclump < 0)
 				{
