@@ -132,6 +132,7 @@ DEFINE_FIELD(DPSprite, baseScale)
 DEFINE_FIELD(DPSprite, pivot)
 DEFINE_FIELD(DPSprite, scale)
 DEFINE_FIELD(DPSprite, rotation)
+DEFINE_FIELD(DPSprite, materialnormal)
 DEFINE_FIELD_NAMED(DPSprite, Coord[0], Coord0)
 DEFINE_FIELD_NAMED(DPSprite, Coord[1], Coord1)
 DEFINE_FIELD_NAMED(DPSprite, Coord[2], Coord2)
@@ -152,6 +153,7 @@ DEFINE_FIELD_BIT(DPSprite, Flags, bMirror, PSPF_MIRROR)
 DEFINE_FIELD_BIT(DPSprite, Flags, bPlayerTranslated, PSPF_PLAYERTRANSLATED)
 DEFINE_FIELD_BIT(DPSprite, Flags, bPivotPercent, PSPF_PIVOTPERCENT)
 DEFINE_FIELD_BIT(DPSprite, Flags, bInterpolate, PSPF_INTERPOLATE)
+DEFINE_FIELD_BIT(DPSprite, Flags, bUseMatNormal, PSPF_USEMATNORMAL)
 
 //------------------------------------------------------------------------
 //

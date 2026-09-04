@@ -2785,6 +2785,7 @@ class PSprite : Object native play
 	native Vector2 pivot;
 	native Vector2 scale;
 	native double rotation;
+	native Vector3 materialnormal; // [DVR] For NORMALMAP/SPECULAR/PBR. Direction (0, 0, -1) points towards viewpoint/camera/player.
 	native int HAlign, VAlign;
 	native Vector2 Coord0;		// [MC] Not the actual coordinates. Just the offsets by A_OverlayVertexOffset.
 	native Vector2 Coord1;
@@ -2804,6 +2805,7 @@ class PSprite : Object native play
 	native bool bPlayerTranslated;
 	native bool bPivotPercent;
 	native bool bInterpolate;
+	native bool bUseMatNormal;
 
 	native void SetState(State newstate, bool pending = false);
 
