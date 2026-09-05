@@ -320,23 +320,55 @@ static bool S_CheckSound(sfxinfo_t *startsfx, sfxinfo_t *sfx, TArray<sfxinfo_t *
 void S_CheckIntegrity()
 {
 	TArray<sfxinfo_t *> chain;
-	TArray<bool> broken;
+	TArray<bool>        broken;
+	const unsigned int  numsounds = soundEngine->GetNumSounds();
 
-	broken.Resize(soundEngine->GetNumSounds());
-	memset(&broken[0], 0, sizeof(bool) * soundEngine->GetNumSounds());
-	for (unsigned i = 0; i < soundEngine->GetNumSounds(); i++)
+	broken.Resize(numsounds);
+	memset(&broken[0], 0, sizeof(bool) * numsounds);
+	for (unsigned i = 0; i < numsounds; i++)
 	{
 		auto &sfx = *soundEngine->GetWritableSfx(FSoundID::fromInt(i));
 		broken[i] = !S_CheckSound(&sfx, &sfx, chain);
 	}
-	for (unsigned i = 0; i < soundEngine->GetNumSounds(); i++)
+
+	for (unsigned i = 0; i < numsounds; i++)
 	{
 		if (broken[i])
 		{
 			auto& sfx = *soundEngine->GetWritableSfx(FSoundID::fromInt(i));
 			Printf(TEXTCOLOR_RED "Sound %s has been disabled\n", sfx.name.GetChars());
 			sfx.bRandomHeader = false;
-			sfx.link = NO_SOUND;	// link to the empty sound.
+			sfx.link          = NO_SOUND; // link to the empty sound.
+		}
+	}
+
+	// Checks for missing lumps in Sounds
+	if (developer >= DMSG_WARNING)
+	{
+		for (unsigned i = 0; i < numsounds; i++)
+		{
+			auto &sfx = *soundEngine->GetSfx(FSoundID::fromInt(i));
+			if (sfx.lumpnum <= -1 && sfx.link == sfxinfo_t::NO_LINK && !sfx.bRandomHeader)
+			{
+				const int  sndinfolump = sfx.SndinfoLump;
+				const bool internal    = fileSystem.GetFileContainer(sndinfolump) <= 0; // Ignore missing entries from the internal pk3 only.
+
+				if (!internal)
+				{
+					if (sndinfolump > 0)
+					{
+						FString wadname = fileSystem.GetFileFullPath(sndinfolump);
+						Printf(PRINT_NONOTIFY,
+						       TEXTCOLOR_ORANGE "%s, Sound file doesn't exist for " TEXTCOLOR_WHITE "%s\n",
+						       wadname.GetChars(), sfx.name.GetChars());
+					}
+					else
+					{
+						Printf(PRINT_NONOTIFY, TEXTCOLOR_ORANGE "Sound file doesn't exist for " TEXTCOLOR_WHITE "%s\n",
+						       sfx.name.GetChars());
+					}
+				}
+			}
 		}
 	}
 
@@ -407,21 +439,9 @@ DEFINE_ACTION_FUNCTION(DObject,S_GetLength)
 // lump. Otherwise, adds the new mapping by using S_AddSoundLump().
 //==========================================================================
 
-FSoundID S_AddSound (const char *logicalname, const char *lumpname, FScanner *sc, bool warnMissing)
+FSoundID S_AddSound (const char *logicalname, const char *lumpname, FScanner *sc)
 {
 	int lump = fileSystem.CheckNumForFullName (lumpname, true, ns_sounds);
-
-	if (warnMissing && developer >= DMSG_WARNING && lump <= -1)
-	{
-		if (sc)
-		{
-			Printf(PRINT_NONOTIFY, TEXTCOLOR_ORANGE "%s, " TEXTCOLOR_WHITE "%s" TEXTCOLOR_ORANGE " - Lump doesn't exist: " TEXTCOLOR_WHITE "%s\n", sc->ScriptName.GetChars(), logicalname, lumpname);
-		}
-		else
-		{
-			Printf(PRINT_NONOTIFY, TEXTCOLOR_WHITE "%s" TEXTCOLOR_ORANGE " - Lump doesn't exist: " TEXTCOLOR_WHITE "%s\n", logicalname, lumpname);
-		}
-	}
 
 	return S_AddSound (logicalname, lump, sc);
 }
@@ -482,20 +502,13 @@ static FSoundID S_AddSound (const char *logicalname, int lumpnum, FScanner *sc)
 // Adds the given sound lump to the player sound lists.
 //==========================================================================
 
-FSoundID S_AddPlayerSound (const char *pclass, int gender, FSoundID refid, const char *lumpname, bool warnMissing)
+FSoundID S_AddPlayerSound(const char *pclass, int gender, FSoundID refid, const char *lumpname)
 {
 	int lump = -1;
 
 	if (lumpname)
 	{
 		lump = fileSystem.CheckNumForFullName (lumpname, true, ns_sounds);
-
-		if (warnMissing && developer >= DMSG_WARNING && lump <= -1)
-		{
-			Printf(PRINT_NONOTIFY,
-			       TEXTCOLOR_ORANGE "Player sound " TEXTCOLOR_WHITE "%s, %s" TEXTCOLOR_ORANGE " - Lump doesn't exist: " TEXTCOLOR_WHITE "%s\n",
-			       pclass, soundEngine->GetSoundName(refid), lumpname);
-		}
 	}
 
 	return S_AddPlayerSound (pclass, gender, refid, lump);
@@ -761,14 +774,13 @@ static FString S_ResolveIncludePath(int includingLump, const char* includedFile)
 
 static void S_AddSNDINFO (int lump)
 {
+	const int wadnum = fileSystem.GetFileContainer(lump);
 	bool skipToEndIf;
 	int wantassigns = -1;
 
 	FScanner sc(lump);
 	skipToEndIf = false;
 
-	// Ignore missing entries from the internal pk3 only.
-	const bool warnMissing = fileSystem.GetFileContainer(lump) > 0;
 	while (sc.GetString ())
 	{
 		if (skipToEndIf)
@@ -918,7 +930,8 @@ static void S_AddSNDINFO (int lump)
 				FSoundID refid, sfxnum;
 
 				S_ParsePlayerSoundCommon(sc, pclass, gender, refid);
-				sfxnum = S_AddPlayerSound(pclass.GetChars(), gender, refid, sc.String, warnMissing);
+				sfxnum = S_AddPlayerSound(pclass.GetChars(), gender, refid, sc.String);
+				soundEngine->GetWritableSfx(sfxnum)->SndinfoLump = lump;
 				if (0 == stricmp(sc.String, "dsempty"))
 				{
 					soundEngine->GetWritableSfx(sfxnum)->UserData[0] |= SND_PlayerSilent;
@@ -1326,6 +1339,7 @@ static void S_AddSNDINFO (int lump)
 		else
 		{ // Got a logical sound mapping
 			FString name (sc.String);
+			FSoundID sfxnum;
 			if (wantassigns == -1)
 			{
 				wantassigns = sc.CheckString("=");
@@ -1336,7 +1350,8 @@ static void S_AddSNDINFO (int lump)
 			}
 
 			sc.MustGetString ();
-			S_AddSound (name.GetChars(), sc.String, &sc, warnMissing);
+			sfxnum = S_AddSound(name.GetChars(), sc.String, &sc);
+			soundEngine->GetWritableSfx(sfxnum)->SndinfoLump = lump;
 		}
 	}
 }
