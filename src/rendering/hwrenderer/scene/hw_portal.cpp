@@ -30,6 +30,8 @@
 #include "texturemanager.h"
 #include "hw_viewpointbuffer.h"
 
+EXTERN_CVAR(Bool, gl_noskyboxes)
+
 void SetPlaneTextureRotation(FRenderState& state, HWSectorPlane* plane, FGameTexture* texture);
 
 //-----------------------------------------------------------------------------
@@ -627,6 +629,58 @@ bool HWLineToLinePortal::Setup(HWDrawInfo *di, FRenderState &rstate, Clipper *cl
 	auto &state = mState;
 	if (state->renderdepth>r_portal_recursions)
 	{
+		sector_t* mysector = lines[0].seg->linedef->frontsector;
+		if (mysector->GetTexture(sector_t::ceiling) == skyflatnum ||
+			mysector->GetTexture(sector_t::floor) == skyflatnum)
+		{
+			FSectorPortal *sportal = mysector->ValidatePortal(mysector->GetTexture(sector_t::ceiling) == skyflatnum ?
+															  sector_t::ceiling : sector_t::floor);
+			if (sportal && !(sportal->mFlags & PORTSF_INSKYBOX) && !gl_noskyboxes)
+			{
+				HWSkyboxPortal myportal(mState, sportal);
+				for (unsigned i = 0; i < lines.Size(); i++)
+				{
+					myportal.AddLine(&lines[i]);
+				}
+				myportal.DrawContents(di, rstate);
+			}
+			else
+			{
+				HWSkyInfo skyinfo;
+				skyinfo.init(di, mysector, mysector->GetTexture(sector_t::ceiling) == skyflatnum ?
+							 sector_t::ceiling : sector_t::floor,
+							 mysector->skytransfer, mysector->Colormap.FadeColor);
+				HWSkyPortal sky(screen->mSkyData, mState, &skyinfo, true);
+				sky.SetupStencil(di, rstate, false);
+				auto new_di = di->StartDrawInfo(di->Level, di, di->Viewpoint, &di->VPUniforms);
+				new_di->mCurrentPortal = di->mCurrentPortal;
+				rstate.SetLightIndex(-1);
+				sky.DrawContents(new_di, rstate);
+				new_di->EndDrawInfo();
+				sky.RemoveStencil(di, rstate, false);
+			}
+		}
+		else if (!mysector->Colormap.FadeColor.isBlack())
+		{
+			auto &vp = di->Viewpoint;
+			int fogd = GetFogDensity(di->Level, di->lightmode, mysector->lightlevel, mysector->Colormap.FadeColor,
+									 mysector->Colormap.FogDensity,
+									 mysector->Colormap.BlendFactor);
+			float dist = min((lines[0].seg->linedef->v1->fPos() - vp.Pos.XY()).Length(),
+							 (lines[0].seg->linedef->v2->fPos() - vp.Pos.XY()).Length());
+			if (di->VPUniforms.mThickFogDistance > 0.0 && dist > di->VPUniforms.mThickFogDistance)
+			{
+				dist = dist + di->VPUniforms.mThickFogMultiplier * (dist - di->VPUniforms.mThickFogDistance);
+			}
+			float factor = 1.05f - exp(-fogd * dist / 62500.f);
+			uint32_t alpha = uint32_t(255 * factor)<<24;
+			rstate.EnableTexture(false);
+			rstate.ClearScreen(mysector->Colormap.FadeColor | alpha);
+		}
+		else
+		{
+			rstate.ClearScreen();
+		}
 		return false;
 	}
 	auto &vp = di->Viewpoint;
