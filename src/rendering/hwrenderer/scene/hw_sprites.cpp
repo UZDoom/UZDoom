@@ -273,9 +273,6 @@ void HWSprite::DrawSprite(HWDrawInfo *di, FRenderState &state, bool translucent)
 
 		if (!modelframe)
 		{
-			state.SetNormal(0, 0, 0);
-
-
 			if (screen->BuffersArePersistent())
 			{
 				CreateVertices(di);
@@ -284,7 +281,20 @@ void HWSprite::DrawSprite(HWDrawInfo *di, FRenderState &state, bool translucent)
 			{
 				state.SetDepthBias(-1, -128);
 			}
-			state.SetLightIndex(-1);
+
+			if (actor && (actor->renderflags2 & RF2_SETSPRITENORMAL))
+			{
+				auto actorpos = actor->InterpolatedPosition(vp.TicFrac);
+				auto diff = (actorpos - vp.Pos).Angle().ToVector();
+			    state.SetNormal(-diff.X, 0, -diff.Y);
+				state.SetLightIndex(dynlightindex);
+			}
+			else
+			{
+				state.SetNormal(0, 0, 0);
+				state.SetLightIndex(-1);
+			}
+
 			state.Draw(DT_TriangleStrip, vertexindex, 4);
 
 			if (foglayer)
@@ -597,7 +607,8 @@ bool HWSprite::CalculateVertices(HWDrawInfo* di, FVector3* v, DVector3* vp)
 inline void HWSprite::PutSprite(HWDrawInfo *di, bool translucent)
 {
 	// That's a lot of checks...
-	if (modelframe && !modelframe->isVoxel && !(modelframeflags & MDL_NOPERPIXELLIGHTING) && RenderStyle.BlendOp != STYLEOP_Shadow
+	if (((modelframe && !modelframe->isVoxel && !(modelframeflags & MDL_NOPERPIXELLIGHTING)) ||
+		(actor && (actor->renderflags2 & RF2_SETSPRITENORMAL))) && RenderStyle.BlendOp != STYLEOP_Shadow
 		&& gl_light_sprites && di->Level->HasDynamicLights && !di->isFullbrightScene() && !fullbright
 		&& actor && !(actor->renderflags2 & RF2_NODYNAMICLIGHTING))
 	{
