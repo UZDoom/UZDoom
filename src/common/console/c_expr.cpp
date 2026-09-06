@@ -902,5 +902,5 @@ CCMD (numeval)
 		}
 	}
 
-	Printf ("Usage: eval <expression> [variable]\n");
+	Printf ("Usage: numeval <expression> [variable]\n");
 }
