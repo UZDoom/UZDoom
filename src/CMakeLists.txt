@@ -101,7 +101,7 @@ else()
 	endif()
 
 	# Non-Windows version also needs SDL except native OS X backend
-	if( NOT APPLE OR NOT OSX_COCOA_BACKEND )
+	if( NOT APPLE OR NOT OSX_COCOA_BACKEND AND NOT EMSCRIPTEN )
 		find_package( SDL2 REQUIRED )
 		include_directories( SYSTEM "${SDL2_INCLUDE_DIR}" )
 		link_directories(${SDL2_LINK_DIR})
@@ -1327,6 +1327,48 @@ if(${CMAKE_SYSTEM_NAME} STREQUAL "SunOS")
 	set( PROJECT_LIBRARIES ${PROJECT_LIBRARIES} nsl socket)
 endif()
 
+if(EMSCRIPTEN)
+
+	target_link_options(zdoom PRIVATE
+			$<$<CONFIG:RELEASE>:-sASYNCIFY -sASYNCIFY_STACK_SIZE=1MB>
+			--use-port=sdl2
+			-sSTACK_SIZE=8MB
+			-sINITIAL_MEMORY=1GB
+			-sALLOW_MEMORY_GROWTH
+			-sMODULARIZE
+			-sENVIRONMENT=web
+			-sEXPORTED_RUNTIME_METHODS=callMain,addRunDependency,removeRunDependency,ENV,FS,PATH
+			-lidbfs.js
+			-sEXIT_RUNTIME
+			-sNO_DISABLE_EXCEPTION_CATCHING
+			-sMAX_WEBGL_VERSION=2
+			-sMIN_WEBGL_VERSION=2
+			-sFULL_ES2
+			$<$<NOT:$<BOOL:${DYN_SNDFILE}>>:-L$ENV{EMSDK}/upstream/emscripten/cache/sysroot/lib/ -lFLAC -lvorbis -lvorbisfile -lvorbisenc -lopus -logg>
+			$<$<CONFIG:RELEASE>:-O3 -flto>
+			$<$<CONFIG:DEBUG>:-g -gsource-map -sASSERTIONS=2 --profiling-funcs>
+	)
+
+	target_compile_options(zdoom PRIVATE
+			--use-port=sdl2
+			$<$<CONFIG:RELEASE>:-O3 -flto>
+			$<$<CONFIG:DEBUG>:-g -gsource-map>
+	)
+
+	#Bundle all resources to uzdoom.data
+	target_link_options(zdoom PRIVATE
+			"SHELL:--use-preload-cache"
+			"SHELL:--preload-file ${CMAKE_BINARY_DIR}/uzdoom.pk3@/uzdoom/"
+			"SHELL:--preload-file ${CMAKE_BINARY_DIR}/lights.pk3@/uzdoom/"
+			"SHELL:--preload-file ${CMAKE_BINARY_DIR}/brightmaps.pk3@/uzdoom/"
+			"SHELL:--preload-file ${CMAKE_BINARY_DIR}/game_support.pk3@/uzdoom/"
+			"SHELL:--preload-file ${CMAKE_BINARY_DIR}/game_widescreen_gfx.pk3@/uzdoom/"
+			"SHELL:--preload-file ${CMAKE_BINARY_DIR}/fm_banks/GENMIDI.GS.wopl@/uzdoom/fm_banks/"
+			"SHELL:--preload-file ${CMAKE_BINARY_DIR}/fm_banks/gs-by-papiezak-and-sneakernets.wopn@/uzdoom/fm_banks/"
+			"SHELL:--preload-file ${CMAKE_BINARY_DIR}/soundfonts/uzdoom.sf2@/uzdoom/soundfonts/"
+	)
+endif ()
+
 if( UNIX )
 	find_package( Backtrace )
 	if(Backtrace_FOUND)
@@ -1455,7 +1497,7 @@ else()
 	endif()
 endif()
 
-add_custom_command(TARGET zdoom POST_BUILD
+add_custom_command(TARGET zdoom PRE_BUILD
 	COMMAND ${CMAKE_COMMAND} -E make_directory "${ZDOOM_RESOURCE_DIR}/soundfonts"
 	COMMAND ${CMAKE_COMMAND} -E make_directory "${ZDOOM_RESOURCE_DIR}/fm_banks"
 

@@ -212,6 +212,7 @@ static bool ProgressBarComplete;
 
 void RedrawProgressBar(int CurPos, int MaxPos)
 {
+#ifndef __EMSCRIPTEN__
 	if (!isatty(STDOUT_FILENO)) return;
 
 	if (ProgressBarComplete && CurPos >= MaxPos) return;
@@ -238,6 +239,7 @@ void RedrawProgressBar(int CurPos, int MaxPos)
 	fflush(stdout);
 	ProgressBarCurPos = CurPos;
 	ProgressBarMaxPos = MaxPos;
+#endif
 }
 
 void I_PrintStr(const char *cp)

@@ -197,7 +197,7 @@ void ST_DrawCrosshair(int phealth, double xpos, double ypos, double scale, DAngl
 		DTA_DestHeight, h,
 		DTA_Rotate, angle.Degrees(),
 		DTA_AlphaChannel, true,
-		DTA_RenderStyle, style,
+		DTA_RenderStyle, style.AsDWORD,
 		DTA_FillColor, color & 0xFFFFFF,
 		TAG_DONE);
 }
@@ -587,7 +587,7 @@ void DStatusBarCore::DrawGraphic(FGameTexture* tex, double x, double y, int flag
 		DTA_ClipTop, 0,
 		DTA_ClipBottom, twod->GetHeight(),
 		DTA_ClipRight, clipwidth < 0? twod->GetWidth() : int(x + boxwidth * clipwidth),
-		DTA_Color, color,
+		DTA_Color, static_cast<uint32_t>(color),
 		DTA_TranslationIndex, translation? translation : (flags & DI_TRANSLATABLE) ? GetTranslation().index() : 0,
 		DTA_ColorOverlay, (flags & DI_DIM) ? MAKEARGB(170, 0, 0, 0) : 0,
 		DTA_Alpha, Alpha,
@@ -670,7 +670,7 @@ void DStatusBarCore::DrawRotated(FGameTexture* tex, double x, double y, int flag
 	DrawTexture(twod, tex, x, y,
 		DTA_ScaleX, scaleX,
 		DTA_ScaleY, scaleY,
-		DTA_Color, color,
+		DTA_Color, static_cast<uint32_t>(color),
 		DTA_CenterOffsetRel, !!(flags & DI_ITEM_RELCENTER),
 		DTA_Rotate, angle,
 		DTA_TranslationIndex, translation ? translation : (flags & DI_TRANSLATABLE) ? GetTranslation().index() : 0,

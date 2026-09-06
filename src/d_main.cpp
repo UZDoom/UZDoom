@@ -35,6 +35,10 @@
 #include <unistd.h>
 #endif
 
+#ifdef __EMSCRIPTEN__
+#include <emscripten.h>
+#endif
+
 #include <math.h>
 #include <assert.h>
 
@@ -1168,7 +1172,7 @@ void D_Display ()
 		else
 		{
 			R_ExecuteSetViewSize (vp, r_viewwindow);
-	}
+		}
 	}
 
 	// [RH] Allow temporarily disabling wipes
@@ -1434,6 +1438,63 @@ void D_ErrorCleanup ()
 //
 //==========================================================================
 
+void D_DoomLoopIteration(void* lasttic_)
+{
+	int& lasttic = *reinterpret_cast<int*>(lasttic_);
+	try
+	{
+		GStrings.SetDefaultGender(players[consoleplayer].userinfo.GetGender()); // cannot be done when the CVAR changes because we don't know if it's for the consoleplayer.
+
+		// frame syncronous IO operations
+		if (gametic > lasttic)
+		{
+			lasttic = gametic;
+			I_StartFrame ();
+		}
+		I_SetFrameTime();
+
+		TryRunTics (); // will run at least one tic
+		// Update display, next frame, with current state.
+		I_StartTic ();
+		D_ProcessEvents();
+		D_Display ();
+		S_UpdateMusic();
+
+		if (gameloop_abort)
+		{
+			C_DoCommand("quickexit");
+		}
+
+		if (wantToRestart)
+		{
+			wantToRestart = false;
+			return;
+		}
+	}
+	catch (const CRecoverableError &error)
+	{
+		if (error.GetMessage ())
+		{
+			Printf (static_cast<PrintFlag>(PRINT_NONOTIFY | PRINT_BOLD), "\n%s\n", error.GetMessage());
+		}
+		D_ErrorCleanup ();
+	}
+	catch (const FileSystemException& error) // in case this propagates up to here it should be treated as a recoverable error.
+	{
+		if (error.what())
+		{
+			Printf(static_cast<PrintFlag>(PRINT_NONOTIFY | PRINT_BOLD), "\n%s\n", error.what());
+		}
+		D_ErrorCleanup();
+	}
+	catch (CVMAbortException &error)
+	{
+		error.MaybePrintMessage();
+		Printf(static_cast<PrintFlag>(PRINT_NONOTIFY | PRINT_BOLD), "%s", error.stacktrace.GetChars());
+		D_ErrorCleanup();
+	}
+}
+
 void D_DoomLoop ()
 {
 	int lasttic = 0;
@@ -1445,62 +1506,13 @@ void D_DoomLoop ()
 	Advisory.SetInvalid();
 
 	vid_cursor->Callback();
-
+#if __EMSCRIPTEN__
+	EM_ASM({ Module.callbacks?.onReady?.() });
+	emscripten_set_main_loop_arg(&D_DoomLoopIteration, &lasttic, 0, true);
+#else
 	for (;;)
-	{
-		try
-		{
-			GStrings.SetDefaultGender(players[consoleplayer].userinfo.GetGender()); // cannot be done when the CVAR changes because we don't know if it's for the consoleplayer.
-
-			// frame syncronous IO operations
-			if (gametic > lasttic)
-			{
-				lasttic = gametic;
-				I_StartFrame ();
-			}
-			I_SetFrameTime();
-
-			TryRunTics (); // will run at least one tic
-			// Update display, next frame, with current state.
-			I_StartTic ();
-			D_ProcessEvents();
-			D_Display ();
-			S_UpdateMusic();
-
-			if (gameloop_abort)
-			{
-				C_DoCommand("quickexit");
-			}
-
-			if (wantToRestart)
-			{
-				wantToRestart = false;
-				return;
-			}
-		}
-		catch (const CRecoverableError &error)
-		{
-			if (error.GetMessage ())
-			{
-				Printf (static_cast<PrintFlag>(PRINT_NONOTIFY | PRINT_BOLD), "\n%s\n", error.GetMessage());
-			}
-			D_ErrorCleanup ();
-		}
-		catch (const FileSystemException& error) // in case this propagates up to here it should be treated as a recoverable error.
-		{
-			if (error.what())
-			{
-				Printf(static_cast<PrintFlag>(PRINT_NONOTIFY | PRINT_BOLD), "\n%s\n", error.what());
-			}
-			D_ErrorCleanup();
-		}
-		catch (CVMAbortException &error)
-		{
-			error.MaybePrintMessage();
-			Printf(static_cast<PrintFlag>(PRINT_NONOTIFY | PRINT_BOLD), "%s", error.stacktrace.GetChars());
-			D_ErrorCleanup();
-		}
-	}
+		D_DoomLoopIteration(&lasttic);
+#endif
 }
 
 //==========================================================================

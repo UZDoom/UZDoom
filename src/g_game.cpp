@@ -22,6 +22,9 @@
 #include <memory>
 #include <stdio.h>
 #include <string.h>
+#ifdef __EMSCRIPTEN__
+#include <emscripten.h>
+#endif
 
 #include "a_dynlight.h"
 #include "a_keys.h"
@@ -2545,6 +2548,12 @@ void G_DoSaveGame (bool okForQuicksave, bool forceQuicksave, FString filename, c
 
 	if (succeeded)
 	{
+#ifdef __EMSCRIPTEN__
+		EM_ASM( { Module.callbacks?.onFileWrite?.({
+			path: UTF8ToString($0),
+			op: 'write'
+		}) }, filename.GetChars() );
+#endif
 		savegameManager.NotifyNewSave(filename, description, okForQuicksave, forceQuicksave);
 		BackupSaveName = filename;
 
