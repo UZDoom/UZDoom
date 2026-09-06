@@ -256,7 +256,7 @@ void hw_GetDynModelLight(AActor *self, FDynLightData &modellightdata)
 					if (light->ShouldLightActor(self))
 					{
 						int group = subsector->sector->PortalGroup;
-						DVector3 pos = light->PosRelative(group);
+						DVector3 pos = light->GetPos(group, r_viewpoint.TicFrac);
 						float radius = (float)(light->GetRadius() + actorradius);
 						double dx = pos.X - x;
 						double dy = pos.Y - y;

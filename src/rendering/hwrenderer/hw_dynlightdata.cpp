@@ -21,6 +21,7 @@
 #include"hw_cvars.h"
 #include "v_video.h"
 #include "hwrenderer/scene/hw_drawstructs.h"
+#include "r_utility.h"
 
 // If we want to share the array to avoid constant allocations it needs to be thread local unless it'd be littered with expensive synchronization.
 thread_local FDynLightData lightdata;
@@ -43,7 +44,7 @@ CVAR (Bool, gl_light_particles, true, CVAR_ARCHIVE | CVAR_GLOBALCONFIG);
 //==========================================================================
 bool GetLight(FDynLightData& dld, int group, Plane & p, FDynamicLight * light, bool checkside)
 {
-	DVector3 pos = light->PosRelative(group);
+	DVector3 pos = light->GetPos(group, r_viewpoint.TicFrac);
 	float radius = (light->GetRadius());
 
 	auto dist = fabs(p.DistToPoint((float)pos.X, (float)pos.Z, (float)pos.Y));
@@ -68,7 +69,7 @@ void AddLightToList(FDynLightData &dld, int group, FDynamicLight * light, bool f
 {
 	int i = 0;
 
-	DVector3 pos = light->PosRelative(group);
+	DVector3 pos = light->GetPos(group, r_viewpoint.TicFrac);
 	float radius = light->GetRadius();
 
 	float cs;
