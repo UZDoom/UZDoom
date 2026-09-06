@@ -198,6 +198,8 @@ protected:
 	PNamespace *OutNamespace;
 	ZCC_AST &AST;
 	int Lump;
+
+	bool warnedOfReverseArrays = false;
 };
 
 void ZCC_InitConversions();

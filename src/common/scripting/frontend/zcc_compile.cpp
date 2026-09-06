@@ -2362,6 +2362,11 @@ PType *ZCCCompiler::ResolveArraySize(PType *baseType, ZCC_Expression *arraysize,
 
 		indices = std::move(fixedIndices);
 	}
+	else if(!warnedOfReverseArrays && indices.Size() >= 2)
+	{
+		Warn(arraysize, "Array size declarations are reversed in zscript versions below < 3.7.2");
+		warnedOfReverseArrays = true;
+	}
 
 	FCompileContext ctx(OutNamespace, cls, false, mVersion);
 	for (auto index : indices)
