@@ -1,0 +1,7 @@
+This is the bank imported from Windows NT4 resources, known as "synth.pat".
+Actually it was not being one another copy of "The Fat Man". Instead, it's a
+pretty unique and unexpected bank that uses 4-operator voices.
+
+This is slightly modified variant where are fixed some sounding bugs including
+installing of the proper note offsets to keep octaves match with other
+instruments of the General MIDI set.

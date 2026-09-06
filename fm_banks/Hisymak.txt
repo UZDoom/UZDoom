@@ -1,0 +1,19 @@
+This is the custom General MIDI bank made by Hisymak and originally published here:
+https://forum.zdoom.org/viewtopic.php?t=57466
+
+Description:
+
+Are you a fan of the FM/OPL synthesis and do you like the oldschool sound of the Adlib and Sound Blaster sound cards? Do you use OPL Synth emulation in ZDoom-based Doom ports?
+If yes, then I have something of your interest: A highly enhanced GENMIDI lump to improve the sounding of many instruments and to take the best of the FM/OPL synthesis! With this GENMIDI lump you can listen to MIDI music tracks with better quality than the original Doom's GENMIDI lump can offer.
+
+
+Feature list:
+- Used Doom2 GENMIDI lump as a base
+- More than half of the instruments are modified, either completely or a very minor tweak was made
+- The instruments which sounded bad and crappy were totally relplaced to sound better
+- Many instruments were highlighted and made louder (if they were too quiet for example)
+- Extensive utilization of double-voice feature of GENMIDI (I can afford it as ZDoom supprts emulation of up to 8 OPL chips). Due to this you need to configure emulation of more OPL chips, otherwise many note cutoffs will happen.
+- Many instrument patches were taken from other games (mostly "The Fat Man" patches, Duke Nukem 3D, ROTT, Blood). I tried to take the best of them and combine them together in various ways.
+- Some instruments, mostly the drums, were taken from DMXOPL project. Credits go to Csonicgo and everybody who participated the project.
+- I also made my own unique and interesting modifications and creations
+- Requires OPL3 due to usage of the new OPL3 waveforms

@@ -1,0 +1,22 @@
+This is the bank created by Wohlstand to match the sounding of the bank at the
+Voyetra's Super SAPI FM synth driver for OPL3 chips.
+
+This bank uses dual voices with detunes. Except of few rhythm mode instruments,
+the bank is pretty compatible to the DMX set. The sounding might not be exact
+same as Super SAPI does since libADLMIDI does not yet supports separate panning
+per voices and some other features maintained by Super SAPI, but for the test
+of the stuff, the bank should just work.
+
+I don't know who really created the original instruments, but I don't claim the
+authoship for them. Mine is primarily this bank and the effort to build it from
+many small particles.
+
+This bank can be freely used, modified, shared with any purposes.
+
+License for this bank - MIT
+
+To edit this bank and other banks in WOPL format, you can use this editor
+which I created for that: https://github.com/Wohlstand/OPL3BankEditor
+
+==============================================================================
+This bank build by Vitaliy Novichkov "Wohlstand", 2025-2026
