@@ -552,6 +552,12 @@ void VulkanRenderDevice::AmbientOccludeScene(float m5)
 	mPostprocess->AmbientOccludeScene(m5);
 }
 
+// Grab pass: delegates to mPostprocess (see VkPostprocess::GrabSceneColor).
+void VulkanRenderDevice::GrabSceneColor()
+{
+	mPostprocess->GrabSceneColor();
+}
+
 void VulkanRenderDevice::SetSceneRenderTarget(bool useSSAO)
 {
 	mRenderState->SetRenderTarget(&GetBuffers()->SceneColor, GetBuffers()->SceneDepthStencil.View.get(), GetBuffers()->GetWidth(), GetBuffers()->GetHeight(), VK_FORMAT_R16G16B16A16_SFLOAT, GetBuffers()->GetSceneSamples());

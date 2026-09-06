@@ -212,6 +212,49 @@ void VkPostprocess::BlitCurrentToImage(VkTextureImage *dstimage, VkImageLayout f
 		.Execute(cmdbuffer);
 }
 
+void VkPostprocess::GrabSceneColor()
+{
+	// Blit current SceneColor into SceneColorBackground for material shaders to sample during translucent.
+	auto buffers = fb->GetBuffers();
+	auto srcimage = &buffers->SceneColor;
+	auto dstimage = &buffers->SceneColorBackground;
+	if (!srcimage->Image || !dstimage->Image)
+		return;
+
+	fb->GetRenderState()->EndRenderPass();
+	auto cmdbuffer = fb->GetCommands()->GetDrawCommands();
+
+	VkImageTransition()
+		.AddImage(srcimage, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL, false)
+		.AddImage(dstimage, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, false)
+		.Execute(cmdbuffer);
+
+	VkImageBlit blit = {};
+	blit.srcOffsets[0] = { 0, 0, 0 };
+	blit.srcOffsets[1] = { srcimage->Image->width, srcimage->Image->height, 1 };
+	blit.srcSubresource.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
+	blit.srcSubresource.mipLevel = 0;
+	blit.srcSubresource.baseArrayLayer = 0;
+	blit.srcSubresource.layerCount = 1;
+	blit.dstOffsets[0] = { 0, 0, 0 };
+	blit.dstOffsets[1] = { dstimage->Image->width, dstimage->Image->height, 1 };
+	blit.dstSubresource.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
+	blit.dstSubresource.mipLevel = 0;
+	blit.dstSubresource.baseArrayLayer = 0;
+	blit.dstSubresource.layerCount = 1;
+
+	// Linear filter resolves MSAA when the source is multisampled.
+	cmdbuffer->blitImage(
+		srcimage->Image->image, VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL,
+		dstimage->Image->image, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL,
+		1, &blit, VK_FILTER_LINEAR);
+
+	VkImageTransition()
+		.AddImage(srcimage, VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL, false)
+		.AddImage(dstimage, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, false)
+		.Execute(cmdbuffer);
+}
+
 void VkPostprocess::CopyCurrentToImage(VkTextureImage *dstimage, VkImageLayout finallayout)
 {
 	fb->GetRenderState()->EndRenderPass();

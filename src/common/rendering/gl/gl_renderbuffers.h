@@ -138,6 +138,10 @@ public:
 	void BindSceneDepthTexture(int index);
 	void BlitSceneToTexture();
 
+	// Grab pass: copy scene color into a sampleable texture before translucent.
+	void GrabSceneColor();
+	void BindSceneColorBackgroundTexture(int index);
+
 	void BindCurrentTexture(int index, int filter = GL_NEAREST, int wrap = GL_CLAMP_TO_EDGE);
 	void BindCurrentFB();
 	void BindNextFB();
@@ -211,6 +215,9 @@ private:
 	PPGLFrameBuffer mSceneFB;
 	PPGLFrameBuffer mSceneDataFB;
 	bool mSceneUsesTextures = false;
+	// Grab pass background: single-sample scene color copy.
+	PPGLTexture mSceneColorBackgroundTex;
+	PPGLFrameBuffer mSceneColorBackgroundFB;
 
 	// Effect/HUD buffers
 	PPGLTexture mPipelineTexture[NumPipelineTextures];

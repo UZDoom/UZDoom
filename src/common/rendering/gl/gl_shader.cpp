@@ -416,6 +416,8 @@ bool FShader::Load(const char * name, const char * vert_prog_lump, const char * 
 		uniform sampler2D texture10;
 		uniform sampler2D texture11;
 		uniform sampler2D texture12;
+		// Auto-bound scene framebuffer copy captured before translucent (for refraction in material shaders).
+		uniform sampler2D SceneColor;
 
 		// timer data
 		uniform float timer;
@@ -785,6 +787,9 @@ bool FShader::Load(const char * name, const char * vert_prog_lump, const char * 
 
 	int lightmapindex = glGetUniformLocation(hShader, "LightMap");
 	if (lightmapindex != -1) glUniform1i(lightmapindex, 17);
+
+	int scenecolorindex = glGetUniformLocation(hShader, "SceneColor");
+	if (scenecolorindex != -1) glUniform1i(scenecolorindex, 18);
 
 	glUseProgram(0);
 	return true;
