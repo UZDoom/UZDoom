@@ -58,6 +58,7 @@
 #include "version.h"
 #include "vm.h"
 
+void P_RunParticleLogic();
 void P_RunClientSideLogic();
 
 EXTERN_CVAR (Int, disableautosave)
@@ -2263,6 +2264,11 @@ void TryRunTics()
 		if (totalTics < availableTics - StabilityBuffer)
 			++runTics;
 	}
+
+	// This needs to be done before anything else so one-tic duration particles
+	// are still captured for a single frame.
+	for (int i = 0; i < totalTics; ++i)
+		P_RunParticleLogic();
 
 	const int worldTimer = primaryLevel->LocalWorldTimer;
 	// If there are no tics to run, check for possible stall conditions and new
