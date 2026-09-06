@@ -86,6 +86,8 @@ public:
 
 	int mLightMapID = 0;
 
+	bool mSceneRenderedThisFrame = false;
+
 	//FRotator mAngles;
 
 	FGLRenderer(OpenGLFrameBuffer *fb);
@@ -98,6 +100,7 @@ public:
 	void PresentStereo();
 	void RenderScreenQuad();
 	void PostProcessScene(int fixedcm, float flash, const std::function<void()> &afterBloomDrawEndScene2D);
+	void RunUILayerPostProcess(const std::function<void()> &draw2D);
 	void AmbientOccludeScene(float m5);
 	void ClearTonemapPalette();
 	void BlurScene(float gameinfobluramount);
