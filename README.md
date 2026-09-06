@@ -22,6 +22,9 @@ A continuation of [ZDoom][zdoom] and [GZDoom][gzdoom], UZDoom enhances the origi
 
 UZDoom is **free and open-source software**, built and maintained by a dedicated community of developers and enthusiasts.
 
+> [!CAUTION]
+> The only places to acquire UZDoom from are https://zdoom.org, https://github.com/UZDoom/UZDoom and https://flathub.org/en/apps/org.zdoom.UZDoom, beware any other websites claiming to be affiliated with ZDoom or UZDoom
+
 ## 🙏 Acknowledgments
 
 UZDoom would not be possible without the foundational work of many people. We extend our immense gratitude to:
