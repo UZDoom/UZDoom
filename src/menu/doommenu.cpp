@@ -444,10 +444,15 @@ CCMD (menu_quit)
 	{
 		if (!netgame)
 		{
-			if (gameinfo.quitSound.IsNotEmpty() && S_FindSound(gameinfo.quitSound).isvalid())
+			FSoundID quitSound = NO_SOUND;
+			if (gameinfo.quitSound.IsNotEmpty())
 			{
-				S_Sound(CHAN_VOICE, CHANF_UI|(haptics_do_menus?CHANF_RUMBLE:CHANF_NORUMBLE), gameinfo.quitSound, snd_menuvolume, ATTN_NONE);
-				I_WaitVBL(static_cast<int>(clamp(S_GetMSLength(S_FindSound(gameinfo.quitSound))*0.0735, 105.0, 350.0))); // Aim for 5% over length of sound, to a maximum 5 seconds
+				quitSound = S_FindSound(gameinfo.quitSound);
+			}
+			if (quitSound.isvalid())
+			{
+				S_Sound(CHAN_VOICE, CHANF_UI|(haptics_do_menus?CHANF_RUMBLE:CHANF_NORUMBLE), quitSound, snd_menuvolume, ATTN_NONE);
+				I_WaitVBL(static_cast<int>(clamp(S_GetMSLength(quitSound)*0.0735, 105.0, 350.0))); // Aim for 5% over length of sound, to a maximum 5 seconds, and a minimum of 1.5 seconds like in vanilla
 			}
 		}
 		M_Quit();
