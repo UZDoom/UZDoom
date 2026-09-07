@@ -75,6 +75,36 @@ enum MaterialShaderIndex
 	FIRST_USER_SHADER
 };
 
+
+enum AllShaderIndex
+{
+	FIRST_MATERIAL_SHADER,
+	MATSHADER_Default = FIRST_MATERIAL_SHADER,
+	MATSHADER_Warp1,
+	MATSHADER_Warp2,
+	MATSHADER_Specular,
+	MATSHADER_PBR,
+	MATSHADER_Paletted,
+	MATSHADER_NoTexture,
+	MATSHADER_BasicFuzz,
+	MATSHADER_SmoothFuzz,
+	MATSHADER_SwirlyFuzz,
+	MATSHADER_TranslucentFuzz,
+	MATSHADER_JaggedFuzz,
+	MATSHADER_NoiseFuzz,
+	MATSHADER_SmoothNoiseFuzz,
+	MATSHADER_SoftwareFuzz,
+	MATERIAL_SHADER_COUNT,
+	FIRST_EFFECT_SHADER = MATERIAL_SHADER_COUNT,
+	EFFSHADER_FogBoundary = FIRST_EFFECT_SHADER,
+	EFFSHADER_SphereMap,
+	EFFSHADER_Burn,
+	EFFSHADER_Stencil,
+	EFFSHADER_Dithertrans,
+	ALLSHADER_COUNT,
+	EFFECT_SHADER_COUNT = (ALLSHADER_COUNT - FIRST_EFFECT_SHADER),
+};
+
 enum texflags
 {
 	// These get Or'ed into uTextureMode because it only uses its 3 lowermost bits.
@@ -83,24 +113,6 @@ enum texflags
 	TEXF_Glowmap = 0x40000,
 	TEXF_ClampY = 0x80000,
 };
-
-
-
-enum
-{
-	SFlag_LegacyShader = 1, // legacy HardwareShader shader, DO NOT REUSE
-};
-
-struct UserShaderDesc
-{
-	FString shader;
-	MaterialShaderIndex shaderType;
-	FString defines;
-	bool disablealphatest = false;
-	uint8_t shaderFlags = 0;
-};
-
-extern TArray<UserShaderDesc> usershaders;
 
 class FBitmap;
 struct FRemapTable;

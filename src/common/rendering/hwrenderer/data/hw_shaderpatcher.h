@@ -26,7 +26,8 @@
 
 #include "tarray.h"
 #include "zstring.h"
-#include "utility"
+#include <utility>
+#include "shaderuniforms.h"
 
 FString RemoveLegacyUserUniforms(FString code);
 FString RemoveSamplerBindings(FString code, TArray<std::pair<FString, int>> &samplerstobind);	// For GL 3.3 compatibility which cannot declare sampler bindings in the sampler source.
@@ -52,3 +53,41 @@ struct FEffectShader
 
 extern const FDefaultShader defaultshaders[];
 extern const FEffectShader effectshaders[];
+
+namespace ShaderInputsOutputs
+{
+	enum ShaderProperty
+	{
+		GBufferPass = 1,
+		EffectShader = 2,
+		HasClipDistance = 4,
+		Simple = 8,
+	};
+
+	enum class ShaderPosition
+	{
+		VInput, // vertex input
+		VOutput, // vertex output/frag input
+		FOutput, // frag output
+	};
+
+	struct ShaderIOEntry
+	{
+		ShaderPosition position;
+		VaryingFieldDesc field;
+		int requiredProperties;
+		int forbiddenProperties;
+	};
+
+	extern int ShaderProperties[ALLSHADER_COUNT];
+	extern TArray<ShaderIOEntry> ShaderFields;
+
+	//varying list must match between the frag and vertex shader of the same program
+	FString GenerateInputsOutputs(bool isVulkan, bool isFrag, int flags);
+
+	inline FString GenerateInputsOutputs(bool isVulkan, bool isFrag, AllShaderIndex type, bool isGBuffer, bool hasClipDistance)
+	{
+		return GenerateInputsOutputs(isVulkan, isFrag,
+			ShaderProperties[static_cast<int>(type)] | (isGBuffer ? GBufferPass : 0) | (hasClipDistance ? HasClipDistance : 0));
+	}
+}

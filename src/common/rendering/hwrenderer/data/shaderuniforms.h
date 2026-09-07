@@ -33,6 +33,7 @@ enum
 
 enum class UniformType
 {
+	Undefined = -1,
 	Int,
 	UInt,
 	Float,
@@ -47,6 +48,27 @@ enum class UniformType
 	UVec4,
 	Mat4
 };
+
+inline constexpr const char *GetTypeStr(UniformType type)
+{
+	switch (type)
+	{
+	default:
+	case UniformType::Int: return "int";
+	case UniformType::UInt: return "uint";
+	case UniformType::Float: return "float";
+	case UniformType::Vec2: return "vec2";
+	case UniformType::Vec3: return "vec3";
+	case UniformType::Vec4: return "vec4";
+	case UniformType::IVec2: return "ivec2";
+	case UniformType::IVec3: return "ivec3";
+	case UniformType::IVec4: return "ivec4";
+	case UniformType::UVec2: return "uvec2";
+	case UniformType::UVec3: return "uvec3";
+	case UniformType::UVec4: return "uvec4";
+	case UniformType::Mat4: return "mat4";
+	}
+}
 
 class UniformFieldDesc
 {
@@ -86,28 +108,6 @@ public:
 		decl += "};\n";
 
 		return decl;
-	}
-
-private:
-	static const char *GetTypeStr(UniformType type)
-	{
-		switch (type)
-		{
-		default:
-		case UniformType::Int: return "int";
-		case UniformType::UInt: return "uint";
-		case UniformType::Float: return "float";
-		case UniformType::Vec2: return "vec2";
-		case UniformType::Vec3: return "vec3";
-		case UniformType::Vec4: return "vec4";
-		case UniformType::IVec2: return "ivec2";
-		case UniformType::IVec3: return "ivec3";
-		case UniformType::IVec4: return "ivec4";
-		case UniformType::UVec2: return "uvec2";
-		case UniformType::UVec3: return "uvec3";
-		case UniformType::UVec4: return "uvec4";
-		case UniformType::Mat4: return "mat4";
-		}
 	}
 };
 
@@ -167,3 +167,26 @@ private:
 	IDataBuffer *mBuffer = nullptr;
 	std::vector<UniformFieldDesc> mFields;
 };
+
+struct VaryingFieldDesc
+{
+	UniformType Type;
+	FString Property;
+	FString Name;
+};
+
+enum
+{
+	SFlag_LegacyShader = 1, // legacy HardwareShader shader, DO NOT REUSE
+};
+
+struct UserShaderDesc
+{
+	FString shader;
+	MaterialShaderIndex shaderType;
+	FString defines;
+	bool disablealphatest = false;
+	uint8_t shaderFlags = 0;
+};
+
+extern TArray<UserShaderDesc> usershaders;

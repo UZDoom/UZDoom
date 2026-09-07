@@ -307,6 +307,99 @@ const FEffectShader effectshaders[] =
 	{ "dithertrans", "shaders/glsl/main.vp", "shaders/glsl/main.fp", "shaders/glsl/func_normal.fp", "shaders/glsl/material_normal.fp", "#define NO_ALPHATEST\n#define DITHERTRANS\n" },
 };
 
+namespace ShaderInputsOutputs
+{
+	int ShaderProperties[ALLSHADER_COUNT]
+	{
+		0, //MATSHADER_Default
+		0, //MATSHADER_Warp1
+		0, //MATSHADER_Warp2
+		0, //MATSHADER_Specular
+		0, //MATSHADER_PBR
+		0, //MATSHADER_Paletted
+		0, //MATSHADER_NoTexture
+		0, //MATSHADER_BasicFuzz
+		0, //MATSHADER_SmoothFuzz
+		0, //MATSHADER_SwirlyFuzz
+		0, //MATSHADER_TranslucentFuzz
+		0, //MATSHADER_JaggedFuzz
+		0, //MATSHADER_NoiseFuzz
+		0, //MATSHADER_SmoothNoiseFuzz
+		0, //MATSHADER_SoftwareFuzz
+		0, //EFFSHADER_FogBoundary
+		0, //EFFSHADER_SphereMap
+		ShaderProperty::Simple, //EFFSHADER_Burn
+		ShaderProperty::Simple, //EFFSHADER_Stencil
+		0, //EFFSHADER_Dithertrans
+	};
+
+	TArray<ShaderIOEntry> ShaderFields
+	{
+		//vertex shader inputs
+		{ShaderPosition::VInput, {UniformType::Vec4, "", "aPosition"}, 0, 0},
+		{ShaderPosition::VInput, {UniformType::Vec2, "", "aTexCoord"}, 0, 0},
+		{ShaderPosition::VInput, {UniformType::Vec4, "", "aColor"}, 0, 0},
+		{ShaderPosition::VInput, {UniformType::Vec4, "", "aVertex2"}, 0, Simple},
+		{ShaderPosition::VInput, {UniformType::Vec4, "", "aNormal"}, 0, Simple},
+		{ShaderPosition::VInput, {UniformType::Vec4, "", "aNormal2"}, 0, Simple},
+		{ShaderPosition::VInput, {UniformType::Vec3, "", "aLightmap"}, 0, Simple},
+		{ShaderPosition::VInput, {UniformType::Vec4, "", "aBoneWeight"}, 0, Simple},
+		{ShaderPosition::VInput, {UniformType::UVec4, "", "aBoneSelector"}, 0, Simple},
+		//vertex shader outputs/frag shader inputs
+		{ShaderPosition::VOutput, {UniformType::Vec4, "", "vTexCoord"}, 0, 0},
+		{ShaderPosition::VOutput, {UniformType::Vec4, "", "vColor"}, 0, 0},
+		{ShaderPosition::VOutput, {UniformType::Vec4, "", "pixelpos"}, 0, Simple},
+		{ShaderPosition::VOutput, {UniformType::Vec3, "", "glowdist"}, 0, Simple},
+		{ShaderPosition::VOutput, {UniformType::Vec3, "", "gradientdist"}, 0, Simple},
+		{ShaderPosition::VOutput, {UniformType::Vec4, "", "vWorldNormal"}, 0, Simple},
+		{ShaderPosition::VOutput, {UniformType::Vec4, "", "vEyeNormal"}, 0, Simple},
+		{ShaderPosition::VOutput, {UniformType::Vec4, "", "ClipDistanceA"}, 0, HasClipDistance},
+		{ShaderPosition::VOutput, {UniformType::Vec4, "", "ClipDistanceB"}, 0, HasClipDistance},
+		{ShaderPosition::VOutput, {UniformType::Vec3, "", "vLightmap"}, 0, Simple},
+		//frag shader outputs
+		{ShaderPosition::FOutput, {UniformType::Vec4, "", "FragColor"}, 0, 0},
+		{ShaderPosition::FOutput, {UniformType::Vec4, "", "FragFog"}, GBufferPass, 0},
+		{ShaderPosition::FOutput, {UniformType::Vec4, "", "FragNormal"}, GBufferPass, 0},
+	};
+
+	FString GenerateInputsOutputs(bool isVulkan, bool isFrag, int flags)
+	{
+		using namespace ShaderInputsOutputs;
+
+		FString generated;
+
+		int inputIndex = 0;
+		int outputIndex = 0;
+		for(int i = 0; i < ShaderFields.SSize(); i++)
+		{
+			const auto &entry = ShaderFields[i];
+			bool isOut;
+
+			if((entry.requiredProperties & flags) != entry.requiredProperties) continue;
+			if((entry.forbiddenProperties & flags)) continue;
+
+			if(isFrag)
+			{
+				if(entry.position == ShaderPosition::VInput) continue;
+				isOut = (entry.position == ShaderPosition::FOutput);
+			}
+			else
+			{
+				if(entry.position == ShaderPosition::FOutput) continue;
+				isOut = (entry.position == ShaderPosition::VOutput);
+			}
+			if(isVulkan || entry.position != ShaderPosition::VOutput) // varyings don't use location for opengl
+			{
+				int index = (isOut ? outputIndex : inputIndex)++;
+				generated.AppendFormat("layout(location=%d) ",index);
+			}
+			generated<<(isOut ? "out" : "in")<<" "<<entry.field.Property<<" "<<GetTypeStr(entry.field.Type)<<" "<<entry.field.Name<<";\n";
+		}
+
+		return generated;
+	}
+}
+
 int DFrameBuffer::GetShaderCount()
 {
 	int i;
