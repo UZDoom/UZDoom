@@ -738,7 +738,7 @@ public:
 	// API-dependent render interface
 
 	// Draw commands
-	virtual void ClearScreen() = 0;
+	virtual void ClearScreen(PalEntry color = 0xff000000) = 0;
 	virtual void Draw(int dt, int index, int count, bool apply = true) = 0;
 	virtual void DrawIndexed(int dt, int index, int count, bool apply = true) = 0;
 
