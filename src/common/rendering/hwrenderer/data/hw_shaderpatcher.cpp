@@ -281,8 +281,8 @@ FString RemoveLayoutLocationDecl(FString code, const char *inoutkeyword)
 const FDefaultShader defaultshaders[] =
 {
 	{"Default",	"shaders/glsl/func_normal.fp", "shaders/glsl/material_normal.fp", ""},
-	{"Warp 1",	"shaders/glsl/func_warp1.fp", "shaders/glsl/material_normal.fp", ""},
-	{"Warp 2",	"shaders/glsl/func_warp2.fp", "shaders/glsl/material_normal.fp", ""},
+	{"Warp 1",	"shaders/glsl/func_warp.fp", "shaders/glsl/material_normal.fp", "#define SHADERTYPE_WARP1\n#define USE_GETTEXCOORD\n"},
+	{"Warp 2",	"shaders/glsl/func_warp.fp", "shaders/glsl/material_normal.fp", "#define SHADERTYPE_WARP2\n#define USE_GETTEXCOORD\n"},
 	{"Specular", "shaders/glsl/func_spec.fp", "shaders/glsl/material_specular.fp", "#define SPECULAR\n#define NORMALMAP\n"},
 	{"PBR","shaders/glsl/func_pbr.fp", "shaders/glsl/material_pbr.fp", "#define PBR\n#define NORMALMAP\n"},
 	{"Paletted",	"shaders/glsl/func_paletted.fp", "shaders/glsl/material_nolight.fp", "#define PALETTE_EMULATION\n"},
