@@ -1389,6 +1389,7 @@ void G_DoLoadLevel(const FString &nextmapname, int position, bool autosave, bool
 void FLevelLocals::DoLoadLevel(const FString &nextmapname, int position, bool autosave, bool newGame)
 {
 	MapName = nextmapname;
+	MapFName = MapName;
 	unsigned int i;
 
 	if (NextSkill >= 0)
