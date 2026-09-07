@@ -430,7 +430,7 @@ void FSkyVertexBuffer::DoRenderDome(FRenderState& state, FGameTexture* tex, int 
 	auto& primStart = which ? mPrimStartBuild : mPrimStartDoom;
 	if (tex && tex->isValid())
 	{
-		state.SetMaterial(tex, UF_Texture, 0, (mode == FSkyVertexBuffer::SKYMODE_FOGLAYER ? CLAMP_XY : CLAMP_NONE), 0, -1);
+		state.SetMaterial(tex, UF_Texture, 0, (mode == FSkyVertexBuffer::SKYMODE_FOGLAYER ? CLAMP_XY : CLAMP_NONE), 0, -1, nullptr);
 		state.EnableModelMatrix(true);
 		state.EnableTextureMatrix(true);
 	}
@@ -510,34 +510,34 @@ void FSkyVertexBuffer::RenderBox(FRenderState& state, FSkyBox* tex, float x_offs
 		faces = 4;
 
 		// north
-		state.SetMaterial(tex->GetSkyFace(0), UF_Texture, 0, CLAMP_XY, 0, -1);
+		state.SetMaterial(tex->GetSkyFace(0), UF_Texture, 0, CLAMP_XY, 0, -1, nullptr);
 		state.Draw(DT_TriangleStrip, FaceStart(0), 4);
 
 		// east
-		state.SetMaterial(tex->GetSkyFace(1), UF_Texture, 0, CLAMP_XY, 0, -1);
+		state.SetMaterial(tex->GetSkyFace(1), UF_Texture, 0, CLAMP_XY, 0, -1, nullptr);
 		state.Draw(DT_TriangleStrip, FaceStart(1), 4);
 
 		// south
-		state.SetMaterial(tex->GetSkyFace(2), UF_Texture, 0, CLAMP_XY, 0, -1);
+		state.SetMaterial(tex->GetSkyFace(2), UF_Texture, 0, CLAMP_XY, 0, -1, nullptr);
 		state.Draw(DT_TriangleStrip, FaceStart(2), 4);
 
 		// west
-		state.SetMaterial(tex->GetSkyFace(3), UF_Texture, 0, CLAMP_XY, 0, -1);
+		state.SetMaterial(tex->GetSkyFace(3), UF_Texture, 0, CLAMP_XY, 0, -1, nullptr);
 		state.Draw(DT_TriangleStrip, FaceStart(3), 4);
 	}
 	else
 	{
 		faces = 1;
-		state.SetMaterial(tex->GetSkyFace(0), UF_Texture, 0, CLAMP_XY, 0, -1);
+		state.SetMaterial(tex->GetSkyFace(0), UF_Texture, 0, CLAMP_XY, 0, -1, nullptr);
 		state.Draw(DT_TriangleStrip, FaceStart(-1), 10);
 	}
 
 	// top
-	state.SetMaterial(tex->GetSkyFace(faces), UF_Texture, 0, CLAMP_XY, 0, -1);
+	state.SetMaterial(tex->GetSkyFace(faces), UF_Texture, 0, CLAMP_XY, 0, -1, nullptr);
 	state.Draw(DT_TriangleStrip, FaceStart(tex->GetSkyFlip() ? 6 : 5), 4);
 
 	// bottom
-	state.SetMaterial(tex->GetSkyFace(faces + 1), UF_Texture, 0, CLAMP_XY, 0, -1);
+	state.SetMaterial(tex->GetSkyFace(faces + 1), UF_Texture, 0, CLAMP_XY, 0, -1, nullptr);
 	state.Draw(DT_TriangleStrip, FaceStart(4), 4);
 
 	state.EnableModelMatrix(false);

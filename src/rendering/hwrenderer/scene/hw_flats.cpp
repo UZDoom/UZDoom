@@ -212,7 +212,7 @@ void HWFlat::DrawSubsectors(HWDrawInfo *di, FRenderState &state)
 
 void HWFlat::DrawOtherPlanes(HWDrawInfo *di, FRenderState &state)
 {
-	state.SetMaterial(texture, UF_Texture, 0, CLAMP_NONE, NO_TRANSLATION, -1);
+	state.SetMaterial(texture, UF_Texture, 0, CLAMP_NONE, NO_TRANSLATION, -1, nullptr);
 
 	// Draw the subsectors assigned to it due to missing textures
 	auto pNode = (renderflags&SSRF_RENDERFLOOR) ?
@@ -244,7 +244,7 @@ void HWFlat::DrawFloodPlanes(HWDrawInfo *di, FRenderState &state)
 	// This requires a stencil because the projected plane interferes with
 	// the depth buffer
 
-	state.SetMaterial(texture, UF_Texture, 0, CLAMP_NONE, NO_TRANSLATION, -1);
+	state.SetMaterial(texture, UF_Texture, 0, CLAMP_NONE, NO_TRANSLATION, -1, nullptr);
 
 	// Draw the subsectors assigned to it due to missing textures
 	auto pNode = (renderflags&SSRF_RENDERFLOOR) ?
@@ -332,14 +332,14 @@ void HWFlat::DrawFlat(HWDrawInfo *di, FRenderState &state, bool translucent)
 	{
 		if (sector->special != GLSector_Skybox)
 		{
-			state.SetMaterial(texture, UF_Texture, 0, CLAMP_NONE, NO_TRANSLATION, -1);
+			state.SetMaterial(texture, UF_Texture, 0, CLAMP_NONE, NO_TRANSLATION, -1, nullptr);
 			SetPlaneTextureRotation(state, &plane, texture);
 			DrawSubsectors(di, state);
 			state.EnableTextureMatrix(false);
 		}
 		else if (!hacktype)
 		{
-			state.SetMaterial(texture, UF_Texture, 0, CLAMP_XY, NO_TRANSLATION, -1);
+			state.SetMaterial(texture, UF_Texture, 0, CLAMP_XY, NO_TRANSLATION, -1, nullptr);
 			state.SetLightIndex(dynlightindex);
 			state.Draw(DT_TriangleStrip,iboindex, 4);
 			flatvertices += 4;
@@ -360,7 +360,7 @@ void HWFlat::DrawFlat(HWDrawInfo *di, FRenderState &state, bool translucent)
 		{
 			if (!texture->GetTranslucency()) state.AlphaFunc(Alpha_GEqual, gl_mask_threshold);
 			else state.AlphaFunc(Alpha_GEqual, 0.f);
-			state.SetMaterial(texture, UF_Texture, 0, CLAMP_NONE, NO_TRANSLATION, -1);
+			state.SetMaterial(texture, UF_Texture, 0, CLAMP_NONE, NO_TRANSLATION, -1, nullptr);
 			SetPlaneTextureRotation(state, &plane, texture);
 			DrawSubsectors(di, state);
 			state.EnableTextureMatrix(false);

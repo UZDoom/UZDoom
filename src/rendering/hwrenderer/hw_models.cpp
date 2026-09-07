@@ -32,6 +32,7 @@
 #include "hwrenderer/scene/hw_portal.h"
 #include "hw_bonebuffer.h"
 #include "hw_models.h"
+#include "actor.h"
 
 CVAR(Bool, gl_light_models, true, CVAR_ARCHIVE)
 
@@ -105,9 +106,9 @@ void FHWModelRenderer::SetInterpolation(double inter)
 	state.SetInterpolationFactor((float)inter);
 }
 
-void FHWModelRenderer::SetMaterial(FGameTexture *skin, bool clampNoFilter, FTranslationID translation)
+void FHWModelRenderer::SetMaterial(FGameTexture *skin, bool clampNoFilter, FTranslationID translation, AActor * act)
 {
-	state.SetMaterial(skin, UF_Skin, 0, clampNoFilter ? CLAMP_NOFILTER : CLAMP_NONE, translation, -1);
+	state.SetMaterial(skin, UF_Skin, 0, clampNoFilter ? CLAMP_NOFILTER : CLAMP_NONE, translation, -1, act->GetClass());
 	state.SetLightIndex(modellightindex);
 }
 
