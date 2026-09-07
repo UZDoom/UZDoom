@@ -88,9 +88,7 @@ enum texflags
 
 enum
 {
-	SFlag_Brightmap = 1,
-	SFlag_Detailmap = 2,
-	SFlag_Glowmap = 4,
+	SFlag_LegacyShader = 1, // legacy HardwareShader shader, DO NOT REUSE
 };
 
 struct UserShaderDesc

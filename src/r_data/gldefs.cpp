@@ -1837,6 +1837,7 @@ class GLDefsParser
 			int maplump = -1;
 			UserShaderDesc desc;
 			desc.shaderType = SHADER_Default;
+			desc.shaderFlags = SFlag_LegacyShader;
 			TArray<FString> texNameList;
 			TArray<int> texNameIndex;
 			float speed = 1.f;
@@ -1868,7 +1869,6 @@ class GLDefsParser
 						if (sc.Compare(typeName[i]))
 						{
 							desc.shaderType = typeIndex[i];
-							if (usesBrightmap[i]) desc.shaderFlags |= SFlag_Brightmap;
 							found = true;
 							break;
 						}
