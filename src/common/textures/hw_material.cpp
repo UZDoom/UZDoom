@@ -92,7 +92,7 @@ FMaterial::FMaterial(FGameTexture * tx, int scaleflags)
 
 		// Note that these layers must present a valid texture even if not used, because empty TMUs in the shader are an undefined condition.
 		tx->CreateDefaultBrightmap();
-		auto placeholder = TexMan.GameByIndex(1);
+		auto placeholder = TexMan.GetPlaceholderTexture();
 		if (tx->Brightmap.get())
 		{
 			mTextureLayers.Push({ tx->Brightmap.get(), scaleflags });
