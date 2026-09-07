@@ -392,12 +392,12 @@ std::unique_ptr<VulkanShader> VkShaderManager::LoadVertShader(FString shadername
 
 std::unique_ptr<VulkanShader> VkShaderManager::LoadFragShader(FString shadername, const char *frag_lump, const char *material_lump, const char *light_lump, const char *defines, bool alphatest, bool gbufferpass)
 {
-	FString code = GetTargetGlslVersion();
-	code << "#extension GL_GOOGLE_include_directive : enable\n";
+	FString pre_placeholder = GetTargetGlslVersion();
+	pre_placeholder << "#extension GL_GOOGLE_include_directive : enable\n";
 	if (fb->RaytracingEnabled())
-		code << "\n#define SUPPORTS_RAYTRACING\n";
-	code << defines;
-	code << "\n$placeholder$";	// here the code can later add more needed #defines.
+		pre_placeholder << "\n#define SUPPORTS_RAYTRACING\n";
+
+	FString code = defines;
 	code << "\n#define MAX_STREAM_DATA " << std::to_string(MAX_STREAM_DATA).c_str() << "\n";
 #ifdef NPOT_EMULATION
 	code << "#define NPOT_EMULATION\n";
@@ -469,7 +469,8 @@ std::unique_ptr<VulkanShader> VkShaderManager::LoadFragShader(FString shadername
 			code << (material_lump + 1) << "\n";
 		}
 	}
-	code.Substitute("$placeholder$", placeholder);
+
+	code = pre_placeholder + placeholder + code;
 
 	if (light_lump)
 	{

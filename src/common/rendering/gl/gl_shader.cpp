@@ -486,9 +486,10 @@ bool FShader::Load(const char * name, const char * vert_prog_lump, const char * 
 	else
 		vp_comb << "#define SHADER_STORAGE_LIGHTS\n#define SHADER_STORAGE_BONES\n";
 
-	FString fp_comb = vp_comb;
+	FString pre_placeholder = vp_comb;
 	vp_comb << defines << i_data.GetChars();
-	fp_comb << "$placeholder$\n" << defines << i_data.GetChars();
+	FString fp_comb = defines;
+	fp_comb << i_data.GetChars();
 
 	vp_comb << "#line 1\n";
 	fp_comb << "#line 1\n";
@@ -588,7 +589,8 @@ bool FShader::Load(const char * name, const char * vert_prog_lump, const char * 
 			fp_comb << proc_prog_lump + 1;
 		}
 	}
-	fp_comb.Substitute("$placeholder$", placeholder);
+
+	fp_comb = pre_placeholder + placeholder + fp_comb;
 
 	if (light_fragprog)
 	{
