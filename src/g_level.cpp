@@ -1539,7 +1539,7 @@ void FLevelLocals::DoLoadLevel(const FString &nextmapname, int position, bool au
 
 
 	// [RH] Always save the game when entering a new
-	if (autosave && !savegamerestore && disableautosave < 1)
+	if (autosave && !savegamerestore && disableautosave < 1 && (flags3 & LEVEL3_AUTOAUTOSAVE_NO) == 0)
 	{
 		CreateThinker<DAutosaver>();
 	}

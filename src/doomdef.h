@@ -176,6 +176,8 @@ enum : unsigned
 	DF3_NO_COOP_ONLY_THINGS	= 1 << 5,	// Any Actor that only appears in co-op is disabled
 	DF3_REMEMBER_LAST_WEAP	= 1 << 6,	// When respawning in co-op, keep the last used weapon out instead of switching to the best new one.
 	DF3_PISTOL_START		= 1 << 7,	// Take player inventory when exiting to the next level.
+	DF3_NO_SAVE				= 1 << 8,	// Don't allow manual saving
+	DF3_YES_SAVE			= 1 << 9,	// Allow manual saving
 };
 
 // [RH] Compatibility flags.

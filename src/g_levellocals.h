@@ -863,6 +863,20 @@ public:
 		return !(flags & LEVEL_FREELOOK_NO);
 	}
 
+	//==========================================================================
+	//
+	//
+	//==========================================================================
+
+	bool IsSavingAllowed() const
+	{
+		if (dmflags3 & DF3_YES_SAVE)
+			return true;
+		if (dmflags3 & DF3_NO_SAVE)
+			return false;
+		return !(flags3 & LEVEL3_SAVE_NO);
+	}
+
 	bool MissileShouldClip() const
 	{
 		return (i_compatflags & COMPATF_MISSILECLIP) ||
