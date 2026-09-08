@@ -15,12 +15,13 @@
 **
 */
 
+#include "colorspace.h"
 #include "g_levellocals.h"
-#include "hw_renderstate.h"
-#include "hw_drawstructs.h"
-#include "hw_portal.h"
-#include "hw_lighting.h"
 #include "hw_cvars.h"
+#include "hw_drawstructs.h"
+#include "hw_lighting.h"
+#include "hw_portal.h"
+#include "hw_renderstate.h"
 
 EXTERN_CVAR(Int, r_distance_cull_type)
 
@@ -33,7 +34,7 @@ void SetColor(FRenderState &state, FLevelLocals* Level, ELightMode lightmode, in
 {
 	if (fullbright)
 	{
-		state.SetColorAlpha(0xffffff, alpha, 0);
+		state.SetColorAlpha(Color::str("#fff"), alpha, 0);
 		if (isSoftwareLighting(lightmode)) state.SetSoftLightLevel(255);
 		else state.SetNoSoftLightLevel();
 	}
@@ -110,7 +111,7 @@ void SetFog(FRenderState &state, FLevelLocals* Level, ELightMode lightmode, int 
 	else if (Level->flags&LEVEL_HASFADETABLE)
 	{
 		fogdensity = 70;
-		fogcolor = 0x808080;
+		fogcolor = Color::str("#808080");
 	}
 	else if (cmap != nullptr && !fullbright)
 	{

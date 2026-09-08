@@ -15,6 +15,7 @@
 **
 */
 
+#include "colorspace.h"
 #include "sbar.h"
 #include "r_utility.h"
 #include "v_video.h"
@@ -470,7 +471,7 @@ bool HUDSprite::GetWeaponRenderStyle(DPSprite *psp, AActor *playermo, sector_t *
 	}
 	if (!RenderStyle.IsVisible(alpha)) return false;	// if it isn't visible skip the rest.
 
-	PalEntry ThingColor = (playermo->RenderStyle.Flags & STYLEF_ColorIsFixed) ? playermo->fillcolor : 0xffffff;
+	PalEntry ThingColor = (playermo->RenderStyle.Flags & STYLEF_ColorIsFixed) ? playermo->fillcolor : Color::str("#fff");
 	ThingColor.a = 255;
 
 	const bool bright = isBright(psp);

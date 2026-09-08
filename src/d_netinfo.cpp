@@ -33,6 +33,7 @@
 #include "d_net.h"
 #include "d_player.h"
 #include "c_dispatch.h"
+#include "colorspace.h"
 #include "r_state.h"
 #include "sbar.h"
 #include "teaminfo.h"
@@ -44,22 +45,23 @@
 
 static FRandom pr_pickteam ("PickRandomTeam");
 
-CVAR (Float,	autoaim,				35.f,		CVAR_USERINFO | CVAR_ARCHIVE);
-CVAR (String,	name,					"Player",	CVAR_USERINFO | CVAR_ARCHIVE);
-CVAR (Color,	color,					0x40cf00,	CVAR_USERINFO | CVAR_ARCHIVE);
-CVAR (Int,		colorset,				0,			CVAR_USERINFO | CVAR_ARCHIVE);
-CVAR (String,	skin,					"base",		CVAR_USERINFO | CVAR_ARCHIVE);
-CVAR (Int,		team,					TEAM_NONE,	CVAR_USERINFO | CVAR_ARCHIVE);
-CVAR (String,	gender,					"neutral",	CVAR_USERINFO | CVAR_ARCHIVE);
-CVAR (Bool,		neverswitchonpickup,	false,		CVAR_USERINFO | CVAR_ARCHIVE);
-CVAR (Float,	movebob,				0.25f,		CVAR_USERINFO | CVAR_ARCHIVE);
-CVAR (Bool,		fviewbob,               true,       CVAR_USERINFO | CVAR_ARCHIVE);
-CVAR (Float,	stillbob,				0.f,		CVAR_USERINFO | CVAR_ARCHIVE);
-CVAR (Float,	wbobspeed,				1.f,		CVAR_USERINFO | CVAR_ARCHIVE);
-CVAR (Float,	wbobfire,				0.f,		CVAR_USERINFO | CVAR_ARCHIVE);
-CVAR (String,	playerclass,			"Fighter",	CVAR_USERINFO | CVAR_ARCHIVE);
-CVAR (Bool,		classicflight,			false,		CVAR_USERINFO | CVAR_ARCHIVE);
-DEPR_CVAR(Bool, vertspread,				false,		"Engine feature removed in favour of modding");
+CVAR (Float,  autoaim,                 35.f, CVAR_USERINFO | CVAR_ARCHIVE);
+CVAR (String, name,                "Player", CVAR_USERINFO | CVAR_ARCHIVE);
+CVAR (Color,  color,  Color::str("#40cf00"), CVAR_USERINFO | CVAR_ARCHIVE);
+CVAR (Int,    colorset,                   0, CVAR_USERINFO | CVAR_ARCHIVE);
+CVAR (String, skin,                  "base", CVAR_USERINFO | CVAR_ARCHIVE);
+CVAR (Int,    team,               TEAM_NONE, CVAR_USERINFO | CVAR_ARCHIVE);
+CVAR (String, gender,             "neutral", CVAR_USERINFO | CVAR_ARCHIVE);
+CVAR (Bool,   neverswitchonpickup,    false, CVAR_USERINFO | CVAR_ARCHIVE);
+CVAR (Float,  movebob,                0.25f, CVAR_USERINFO | CVAR_ARCHIVE);
+CVAR (Bool,   fviewbob,                true, CVAR_USERINFO | CVAR_ARCHIVE);
+CVAR (Float,  stillbob,                 0.f, CVAR_USERINFO | CVAR_ARCHIVE);
+CVAR (Float,  wbobspeed,                1.f, CVAR_USERINFO | CVAR_ARCHIVE);
+CVAR (Float,  wbobfire,                 0.f, CVAR_USERINFO | CVAR_ARCHIVE);
+CVAR (String, playerclass,        "Fighter", CVAR_USERINFO | CVAR_ARCHIVE);
+CVAR (Bool,   classicflight,          false, CVAR_USERINFO | CVAR_ARCHIVE);
+
+DEPR_CVAR(Bool, vertspread, false, "Engine feature removed in favour of modding");
 
 enum
 {

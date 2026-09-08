@@ -23,8 +23,8 @@
 
 #pragma once
 
-
 #include "g_levellocals.h"
+#include "colorspace.h"
 
 struct FSWColormap
 {
@@ -71,7 +71,7 @@ void SetDefaultColormap (const char *name);
 #endif
 
 // MSVC needs the forceinline here.
-FORCEINLINE FDynamicColormap *GetColorTable(const FColormap &cm, PalEntry SpecialColor = 0xffffff)
+FORCEINLINE FDynamicColormap *GetColorTable(const FColormap &cm, PalEntry SpecialColor = Color::str("#fff"))
 {
 	PalEntry c =  SpecialColor.Modulate(cm.LightColor);
 

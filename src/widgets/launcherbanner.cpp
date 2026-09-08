@@ -32,34 +32,40 @@
 std::vector<Color::Color> getColors(FName id)
 {
 	using namespace std::chrono;
+	struct ColorNum {
+		uint32_t n;
+		consteval ColorNum() : n(0) {}
+		consteval ColorNum(int num) { n = num; }
+		consteval ColorNum(const char* s) { n = Color::str(s); }
+	};
 	struct Flag {
 		FName flagid;
-		uint32_t data[19]; // alternate {space, color}. if space is 0, that is the end of the flag.
+		struct ColorNum data[19]; // alternate {space, color}. if space is 0, that is the end of the flag.
 	};
 	struct Flag tints[] = { // sorted alphabetically
-		{ "aceflux",      { 1, 0xC62253, 1, 0xC12678, 1, 0xC0279A, 1, 0xA928AC, 1, 0x8C26AE, 0 }},
-		{ "agender",      { 1, 0x000000, 1, 0xBCC4C7, 1, 0xFFFFFF, 1, 0xB7F684, 1, 0xFFFFFF, 1, 0xBCC4C7, 1, 0x000000, 0 }},
-		{ "aroace",       { 1, 0xE28C00, 1, 0xECCD00, 1, 0xFFFFFF, 1, 0x62AEDC, 1, 0x203856, 0 }},
-		{ "aroflux",      { 1, 0xE7516A, 1, 0xD86D65, 1, 0xB7A55D, 1, 0xA3C95A, 1, 0x92E454, 0 }},
-		{ "aromantic",    { 1, 0x3DA542, 1, 0xA7D379, 1, 0xFFFFFF, 1, 0xA9A9A9, 1, 0x000000, 0 }},
-		{ "asexual",      { 1, 0x000000, 1, 0xA3A3A3, 1, 0xFFFFFF, 1, 0x800080, 0 }},
-		{ "bear",         { 1, 0x613704, 1, 0xD46300, 1, 0xFDDC62, 1, 0xFDE5B7, 1, 0xFFFFFF, 1, 0x545454, 1, 0x000000, 0 }},
-		{ "bisexual",     { 2, 0xD60270, 1, 0x9B4F96, 2, 0x0038A8, 0 }},
-		{ "demisexual",   { 5, 0xFFFFFF, 1, 0x6E0070, 1, 0x000000, 1, 0x6E0070, 5, 0xD2D2D2, 0 }},
-		{ "diversity",    { 1, 0xCD66FF, 1, 0xFF6599, 1, 0xFF0000, 1, 0xFF9900, 1, 0xFFFF01, 1, 0x009A00, 1, 0x0099CB, 1, 0x330099, 1, 0x990099, 0 }},
-		{ "gay",          { 1, 0x078D70, 1, 0x26CEAA, 1, 0x98E8C1, 1, 0xFFFFFF, 1, 0x7BADE2, 1, 0x5049CC, 1, 0x3D1A78, 0 }},
-		{ "genderfluid",  { 1, 0xFF76A4, 1, 0xFFFFFF, 1, 0xC011D7, 1, 0x000000, 1, 0x2F3CBE, 0 }},
-		{ "genderqueer",  { 1, 0xB57EDC, 1, 0xFFFFFF, 1, 0x4A8123, 0 }},
-		{ "intersex",     { 5, 0xFFD800, 1, 0x7902AA, 5, 0xFFD800, 0 }},
-		{ "lesbian",      { 1, 0xD52D00, 1, 0xEF7627, 1, 0xFF9A56, 1, 0xFFFFFF, 1, 0xD162A4, 1, 0xB55690, 1, 0xA30262, 0 }},
-		{ "nonbinary",    { 1, 0xFCF434, 1, 0xFFFFFF, 1, 0x9C59D1, 1, 0x2C2C2C, 0 }},
-		{ "omnisexual",   { 1, 0xFE9ACE, 1, 0xFF53BF, 1, 0x200044, 1, 0x6760FE, 1, 0x8EA6FF, 0 }},
-		{ "pansexual",    { 1, 0xFF218C, 1, 0xFFD800, 1, 0x21B1FF, 0 }},
-		{ "philadelphia", { 1, 0x000000, 1, 0x784F17, 1, 0xD12229, 1, 0xF68A1E, 1, 0xFDE01A, 1, 0x007940, 1, 0x24408E, 1, 0x732982, 0 }},
-		{ "polysexual",   { 1, 0xF714BA, 1, 0x01D66A, 1, 0x1594F6, 0 }},
-		{ "queer",        { 1, 0x000000, 1, 0x99D9EA, 1, 0x00A2E8, 1, 0xB5E61D, 1, 0xFFFFFF, 1, 0xFFC90E, 1, 0xFD6666, 1, 0xFFAEC9, 1, 0x000000, 0 }},
-		{ "rainbow",      { 1, 0xE40303, 1, 0xFF8C00, 1, 0xFFED00, 1, 0x008026, 1, 0x004CFF, 1, 0x732982, 0 }},
-		{ "transgender",  { 1, 0x5BCEFA, 1, 0xF5A9B8, 1, 0xFFFFFF, 1, 0xF5A9B8, 1, 0x5BCEFA, 0 }},
+		{ "aceflux",      { 1, "#C62253", 1, "#C12678", 1, "#C0279A", 1, "#A928AC", 1, "#8C26AE", 0 }},
+		{ "agender",      { 1, "#000000", 1, "#BCC4C7", 1, "#FFFFFF", 1, "#B7F684", 1, "#FFFFFF", 1, "#BCC4C7", 1, "#000000", 0 }},
+		{ "aroace",       { 1, "#E28C00", 1, "#ECCD00", 1, "#FFFFFF", 1, "#62AEDC", 1, "#203856", 0 }},
+		{ "aroflux",      { 1, "#E7516A", 1, "#D86D65", 1, "#B7A55D", 1, "#A3C95A", 1, "#92E454", 0 }},
+		{ "aromantic",    { 1, "#3DA542", 1, "#A7D379", 1, "#FFFFFF", 1, "#A9A9A9", 1, "#000000", 0 }},
+		{ "asexual",      { 1, "#000000", 1, "#A3A3A3", 1, "#FFFFFF", 1, "#800080", 0 }},
+		{ "bear",         { 1, "#613704", 1, "#D46300", 1, "#FDDC62", 1, "#FDE5B7", 1, "#FFFFFF", 1, "#545454", 1, "#000000", 0 }},
+		{ "bisexual",     { 2, "#D60270", 1, "#9B4F96", 2, "#0038A8", 0 }},
+		{ "demisexual",   { 5, "#FFFFFF", 1, "#6E0070", 1, "#000000", 1, "#6E0070", 5, "#D2D2D2", 0 }},
+		{ "diversity",    { 1, "#CD66FF", 1, "#FF6599", 1, "#FF0000", 1, "#FF9900", 1, "#FFFF01", 1, "#009A00", 1, "#0099CB", 1, "#330099", 1, "#990099", 0 }},
+		{ "gay",          { 1, "#078D70", 1, "#26CEAA", 1, "#98E8C1", 1, "#FFFFFF", 1, "#7BADE2", 1, "#5049CC", 1, "#3D1A78", 0 }},
+		{ "genderfluid",  { 1, "#FF76A4", 1, "#FFFFFF", 1, "#C011D7", 1, "#000000", 1, "#2F3CBE", 0 }},
+		{ "genderqueer",  { 1, "#B57EDC", 1, "#FFFFFF", 1, "#4A8123", 0 }},
+		{ "intersex",     { 5, "#FFD800", 1, "#7902AA", 5, "#FFD800", 0 }},
+		{ "lesbian",      { 1, "#D52D00", 1, "#EF7627", 1, "#FF9A56", 1, "#FFFFFF", 1, "#D162A4", 1, "#B55690", 1, "#A30262", 0 }},
+		{ "nonbinary",    { 1, "#FCF434", 1, "#FFFFFF", 1, "#9C59D1", 1, "#2C2C2C", 0 }},
+		{ "omnisexual",   { 1, "#FE9ACE", 1, "#FF53BF", 1, "#200044", 1, "#6760FE", 1, "#8EA6FF", 0 }},
+		{ "pansexual",    { 1, "#FF218C", 1, "#FFD800", 1, "#21B1FF", 0 }},
+		{ "philadelphia", { 1, "#000000", 1, "#784F17", 1, "#D12229", 1, "#F68A1E", 1, "#FDE01A", 1, "#007940", 1, "#24408E", 1, "#732982", 0 }},
+		{ "polysexual",   { 1, "#F714BA", 1, "#01D66A", 1, "#1594F6", 0 }},
+		{ "queer",        { 1, "#000000", 1, "#99D9EA", 1, "#00A2E8", 1, "#B5E61D", 1, "#FFFFFF", 1, "#FFC90E", 1, "#FD6666", 1, "#FFAEC9", 1, "#000000", 0 }},
+		{ "rainbow",      { 1, "#E40303", 1, "#FF8C00", 1, "#FFED00", 1, "#008026", 1, "#004CFF", 1, "#732982", 0 }},
+		{ "transgender",  { 1, "#5BCEFA", 1, "#F5A9B8", 1, "#FFFFFF", 1, "#F5A9B8", 1, "#5BCEFA", 0 }},
 	};
 	std::vector<Color::Color> colors;
 
@@ -94,11 +100,11 @@ std::vector<Color::Color> getColors(FName id)
 
 	if (flag < std::size(tints))
 	{
-		for (unsigned i = 0; tints[flag].data[i] != 0; i+=2)
+		for (unsigned i = 0; tints[flag].data[i].n != 0; i+=2)
 		{
-			for (int j = tints[flag].data[i]; j >= 0; j--)
+			for (int j = tints[flag].data[i].n; j >= 0; j--)
 			{
-				colors.push_back(Color::rgb(tints[flag].data[i+1]));
+				colors.push_back(Color::rgb(tints[flag].data[i+1].n));
 			}
 		}
 	}
@@ -129,7 +135,7 @@ LauncherBanner::LauncherBanner(Widget* parent, FName colors, float mix) : Widget
 	auto bg = Theme::getHeader(COLOR_BACKGROUND);
 	if (useColors)
 	{
-		auto base = Color::rgb(0xFFFFFF);
+		auto base = Color::rgb("#fff");
 		if (mix <= 0)
 		{
 			useColors = false;

@@ -28,6 +28,7 @@
 #include "a_sharedglobal.h"
 #include "actorinlines.h"
 #include "c_dispatch.h"
+#include "colorspace.h"
 #include "d_main.h"
 #include "d_net.h"
 #include "d_player.h"
@@ -147,7 +148,7 @@ CUSTOM_CVARD(Bool, r_cull_fps, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "Boolean
 		r_distance_cull_type = 3;
 	}
 }
-CUSTOM_CVARD(Color, gl_cullcolor, 0x888888, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "Fog color when r_distance_cull_type > 1. Does not override map fade colors. Hardware renderer only.")
+CUSTOM_CVARD(Color, gl_cullcolor, Color::str("#888888"), CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "Fog color when r_distance_cull_type > 1. Does not override map fade colors. Hardware renderer only.")
 {
 	primaryLevel->cullcolor = gl_cullcolor;
 }
