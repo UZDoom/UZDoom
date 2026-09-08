@@ -84,11 +84,6 @@ class GoldWand : HereticWeapon
 		if (player.refire)
 		{
 			ang += Random2[FireGoldWand]() * (5.625 / 256);
-
-			if (GetCVar ("vertspread") && !sv_novertspread)
-			{
-				pitch += Random2[FireGoldWand]() * (3.549 / 256);
-			}
 		}
 		LineAttack(ang, PLAYERMISSILERANGE, pitch, damage, 'Hitscan', "GoldWandPuff1");
 		A_StartSound("weapons/wandhit", CHAN_WEAPON);

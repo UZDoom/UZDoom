@@ -71,7 +71,6 @@ AboutPage::AboutPage(LauncherWindow* launcher, const FStartupSelectionInfo& info
 			}
 		};
 
-		int lump;
 		if (resf)
 		{
 			{

@@ -2,6 +2,9 @@ DMXOPL3
 ==================================================================
 https://github.com/sneakernets/DMXOPL
 ==================================================================
+License: MIT License
+https://github.com/sneakernets/DMXOPL/blob/DMXOPL3/LICENSE
+==================================================================
 
 New and improved DMX GENMIDI for Doom and sourceports, taking full advantage of
 the OPL3 waveforms. This takes things up a notch in terms of timbre.

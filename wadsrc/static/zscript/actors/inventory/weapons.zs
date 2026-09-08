@@ -414,7 +414,7 @@ class Weapon : StateProvider
 
 		// Play ready sound, if any.
 		let psp = player.GetPSprite(PSP_WEAPON);
-		if (weapon.ReadySound && psp && psp.curState == weapon.FindState('Ready'))
+		if (weapon.ReadySound && psp && psp.curState == weapon.GetReadyState())
 		{
 			if (!weapon.bReadySndHalf || random[WpnReadySnd]() < 128)
 			{
@@ -556,7 +556,7 @@ class Weapon : StateProvider
 
 	override bool TryPickup (in out Actor toucher)
 	{
-		State ReadyState = FindState('Ready');
+		State ReadyState = GetReadyState();
 		if (ReadyState != NULL && ReadyState.ValidateSpriteFrame())
 		{
 			return Super.TryPickup (toucher);
@@ -1025,7 +1025,7 @@ class Weapon : StateProvider
 		{
 			enoughmask = 1 << altFire;
 		}
-		if (altFire && FindState('AltFire') == null)
+		if (altFire && GetAltAtkState(false) == null)
 		{ // If this weapon has no alternate fire, then there is never enough ammo for it
 			enough &= 1;
 		}

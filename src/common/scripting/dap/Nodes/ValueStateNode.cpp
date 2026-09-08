@@ -236,7 +236,10 @@ dap::Variable ValueStateNode::ToVariable(const VMValue &m_variable, PType *m_typ
 			{
 				if (actualOwner && NameVal < 0 && actualOwner->OwnsState(state))
 				{
-					int stateidx = state - actualOwner->GetStates();
+					ptrdiff_t stateidx_long = state - actualOwner->GetStates();
+					if(stateidx_long < 0 || stateidx_long > INT32_MAX) I_Error("overflow in states list");
+					int stateidx = static_cast<int>(stateidx_long);
+
 					if (stateidx < actualOwner->GetStateLabels()->NumLabels)
 					{
 						StateName = actualOwner->GetStateLabels()->Labels[stateidx].Label;

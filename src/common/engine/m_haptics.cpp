@@ -532,7 +532,7 @@ void Joy_Rumble(const FName source, const struct Haptics data, double attenuatio
 	if (data.ticks <= 0) return;
 	if (attenuation >= 1) return;
 
-	float strength = 1 - (attenuation < 0? 0: attenuation);
+	float strength = 1.0f - (attenuation < 0? 0.0f: static_cast<float>(attenuation));
 
 	// this will overwrite stuff from same source mapping (weapons/pistol not W_BULLET)
 	Haptics.channels.Insert(source, {

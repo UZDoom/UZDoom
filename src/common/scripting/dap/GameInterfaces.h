@@ -684,7 +684,7 @@ static bool FunctionIsAnonymousStateFunction(VMFunction *func)
 }
 
 
-static size_t GetImplicitParmeterCount(const VMFrame *m_stackFrame)
+static int GetImplicitParmeterCount(const VMFrame *m_stackFrame)
 { return m_stackFrame->Func->ImplicitArgs; }
 
 static std::string GetFunctionClassName(const VMFunction *func)

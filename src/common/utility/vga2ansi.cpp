@@ -21,7 +21,6 @@
 **
 */
 
-#include <cstdbool>
 #include <cstdint>
 #include <cstdio>
 #include <cstdlib>
@@ -36,7 +35,7 @@ static void CPrint(const char* in)
 	DWORD bytes_written;
 	if (!StdOut)
 		return;
-	WriteFile(StdOut, in, strlen(in), &bytes_written, NULL);
+	WriteFile(StdOut, in, static_cast<int>(strlen(in)), &bytes_written, NULL);
 }
 #else
 static void CPrint(const char* in)

@@ -140,7 +140,7 @@ DEFINE_ACTION_FUNCTION(IJoystickConfig, SetAxisResponseCurvePoint)
 	PARAM_INT(axis);
 	PARAM_INT(point);
 	PARAM_FLOAT(value);
-	self->SetAxisResponseCurvePoint(axis, point, value);
+	self->SetAxisResponseCurvePoint(axis, point, static_cast<float>(value));
 	return 0;
 }
 

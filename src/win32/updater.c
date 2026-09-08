@@ -29,14 +29,14 @@
 typedef struct
 {
 	WCHAR * str;
-	int len;
+	size_t len;
 } wstr_t;
 
 #define wstr_lit(str) ((wstr_t){str, wcslen(str)})
 
 wstr_t wstr_raw(WCHAR * str)
 {
-	int len = wcslen(str);
+	size_t len = wcslen(str);
 	wstr_t newstr;
 	newstr.str = malloc((len + 1) * sizeof(WCHAR));
 	newstr.len = len;
@@ -248,7 +248,7 @@ int WINAPI wWinMain (HINSTANCE hInstance, HINSTANCE nothing, LPWSTR cmdline, int
 
 	GetModuleFileNameW(NULL, path.str, 8192);
 
-	path.len = (wcsrchr(path.str, '\\') - path.str);
+	path.len = (size_t)(wcsrchr(path.str, '\\') - path.str);
 
 	path.str[path.len] = 0;
 
@@ -298,7 +298,7 @@ int WINAPI wWinMain (HINSTANCE hInstance, HINSTANCE nothing, LPWSTR cmdline, int
 
 		wstr_t exe_path_new = wstr_raw(L"\"");
 
-		wchar_t tmp[2] = L"\0\0";
+		wchar_t tmp[2] = L"\0";
 
 		for(int i = 0; i < exe_path.len; i++)
 		{

@@ -844,7 +844,7 @@ void ParseModelDefLump(int Lump)
 					sc.MustGetString();
 					FixPathSeperator(sc.String);
 					path = sc.String;
-					if (path[(int)path.Len()-1]!='/') path+='/';
+					if (path.IsNotEmpty() && path[(int)path.Len()-1]!='/') path+='/';
 				}
 				else if (sc.Compare("model"))
 				{

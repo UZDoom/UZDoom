@@ -1112,7 +1112,6 @@ static void SetDehParams(FState *state, int codepointer, VMDisassemblyDumper &di
 		sfunc->SourceFileName = pstate->PatchName;
 		sfunc->Proto = funcsym->Variants[0].Proto;
 		sfunc->RegTypes = regts;	// These functions are built after running the script compiler so they don't get this info.
-		int codeSize = buildit.GetAddress();
 		FxFunctionCall expr(pstate->PatchName, NAME_None, FArgumentList(), FScriptPosition(pstate->PatchName, pstate->SourceLineNumber));
 		buildit.BeginStatement(&expr);
 		buildit.MakeFunction(sfunc);
@@ -1520,6 +1519,17 @@ static int PatchThing (int thingy, int flags)
 		{
 			stripwhite(Line2);
 			info->StringVar(NAME_SelfObituary) = Line2;
+		}
+		else if (!stricmp(Line1, "Min respawn tics"))
+		{
+			info->MinRespawnTics = (int)val;
+		}
+		else if (!stricmp(Line1, "Respawn dice"))
+		{
+			if (val < 0)		val = 0;
+			else if (val > 255)	val = 255;
+
+			info->RespawnDice = (int)val;
 		}
 
 		else if (linelen > 6)

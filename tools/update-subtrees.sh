@@ -1,9 +1,16 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# usage:
-# ./update-subtrees all
-# ./update-subtrees component
-# ./update-subtrees component commit
+print_usage() {
+	printf "Usage: "$0" [add | pull] (all | <component>) [<commit>]\n\n"
+	printf "\"pull\" is the default operation.\n\n"
+	printf "[<commit>] may not be set if \"all\" is specified\n"
+	exit
+}
+
+if [[ $# -eq 0 || "${1}" == "--help" || "${1}" == "-h" ]]
+then
+	print_usage
+fi
 
 export GITROOT="$(git rev-parse --show-toplevel)"
 
@@ -18,6 +25,11 @@ then
 	shift
 else
 	operation="pull"
+fi
+
+if [[ "${1}" == "all" && $# -gt 1 || $# -gt 3 ]]
+then
+	print_usage
 fi
 
 subtree_action() {
@@ -36,13 +48,13 @@ subtree_action() {
 	[[ -n "${1}" ]] && repo="${1}"
 	shift
 
-	# Exit script if there's any error
 	set -e
-	RANDOM_COMMIT_MESSAGE="${SRANDOM}"
-	git -C "${GITROOT}" subtree "${operation}" --prefix="${dest}" "${repo}" "${ref}" --squash --message "${RANDOM_COMMIT_MESSAGE}"
 	COMMIT_MESSAGE_TMP_FILE="$(mktemp)"
-	trap 'set +e && rm "${COMMIT_MESSAGE_TMP_FILE}"' RETURN
-	[[ "$(git log --format=%B -n 1)" != "${RANDOM_COMMIT_MESSAGE}" ]] && return
+	trap 'rm "${COMMIT_MESSAGE_TMP_FILE}"' EXIT
+	trap 'trap - EXIT && set +e && rm "${COMMIT_MESSAGE_TMP_FILE}"' RETURN
+	HEAD_BEFORE_OP="$(git rev-parse HEAD)"
+	git -C "${GITROOT}" subtree "${operation}" --prefix="${dest}" "${repo}" "${ref}" --squash --message "THIS SHOULD NOT BE IN COMMIT HISTORY!"
+	[[ "$(git rev-parse HEAD)" == "${HEAD_BEFORE_OP}" ]] && return
 	if [[ "${operation}" == "add" ]]
 	then
 		printf "Add ${dest} from ${ref}\n\n" > "${COMMIT_MESSAGE_TMP_FILE}"
@@ -54,7 +66,7 @@ subtree_action() {
 	if [[ -z "$(git status --porcelain)" ]]
 	then
 		echo "Fetched '${name}' has different commit hash but no actual changes!"
-		[[ -z "${EMPTY_COMMIT_FLAG}" ]] && return
+		[[ -z "${EMPTY_COMMIT_FLAG}" ]] && return || echo "Creating empty commit..."
 	fi
 	git commit ${EMPTY_COMMIT_FLAG} -F "${COMMIT_MESSAGE_TMP_FILE}"
 }

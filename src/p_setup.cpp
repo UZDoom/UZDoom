@@ -287,7 +287,7 @@ void FLevelLocals::ClearLevelData(bool fullgc)
 		// towards anything invalid.
 		FName fieldTypes[] = { NAME_SectorPortal, NAME_LinePortal, NAME_Vertex, NAME_Side, NAME_Line, NAME_SecPlane, NAME_F3DFloor, NAME_Sector };
 		for (DObject* probe = GC::Root; probe != nullptr; probe = probe->ObjNext)
-			probe->ClearNativePointerFields({ fieldTypes, std::size(fieldTypes) });
+			probe->ClearNativePointerFields({ fieldTypes, countof(fieldTypes) });
 	}
 
 	TravellingThinkers.Clear();

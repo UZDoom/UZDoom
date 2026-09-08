@@ -410,9 +410,8 @@ bool HWSprite::CalculateVertices(HWDrawInfo* di, FVector3* v, DVector3* vp)
 	const bool AngledRoll = (actor != nullptr && actor->renderflags2 & RF2_ANGLEDROLL);
 
 	// [BB] Billboard stuff
-	const bool drawWithXYBillboard = ((particle && gl_billboard_particles && !(particle->flags & SPF_NO_XY_BILLBOARD)) || (!(actor && actor->renderflags & RF_FORCEYBILLBOARD)
-		//&& di->mViewActor != nullptr
-		&& (gl_billboard_mode == 1 || (actor && actor->renderflags & RF_FORCEXYBILLBOARD)))) && !AngledRoll;
+	const bool drawWithXYBillboard = ((particle && (gl_billboard_particles || gl_billboard_mode == 1) && !(particle->flags & SPF_NO_XY_BILLBOARD))
+		|| (actor && !(actor->renderflags & RF_FORCEYBILLBOARD) && (gl_billboard_mode == 1 || actor->renderflags & RF_FORCEXYBILLBOARD))) && !AngledRoll;
 
 	bool drawBillboardFacingCamera = gl_billboard_faces_camera;
 	if (!hw_force_cambbpref)

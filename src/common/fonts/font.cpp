@@ -750,7 +750,7 @@ FFont *FFont::GetDynamicSubstitutionForStaticFont(FFont *const fontToSub)
 		const FString cvarName     = "fontchoice_" + subbedFontNameString + "_" + langIDString;
 		if (FStringCVar *const cv = dynamic_cast<FStringCVar *>(FindCVar(cvarName.GetChars(), nullptr)))
 		{
-			foundDynamicRemap = V_GetFont(*cv);
+			foundDynamicRemap = FFont::FindFont(FName(*cv));
 		}
 		
 		if (foundDynamicRemap)
@@ -787,34 +787,34 @@ FFont *FFont::GetSmallTextFont(FFont* const fallbackIfNoUserChoice)
 	const FString cvarName     = "fontchoice_smalltext_" + langIDString;
 	if (FStringCVar* cv = dynamic_cast<FStringCVar*>(FindCVar(cvarName.GetChars(), nullptr)))
 	{
-		userFont = V_GetFont(*cv);
+		userFont = FFont::FindFont(FName(*cv));
 	}
 
 	if (!userFont)
 	{
 		if (lang.CompareNoCase("jp") == 0)
 		{
-			userFont = V_GetFont(*fontchoice_smalltextJP);
+			userFont = FFont::FindFont(FName(*fontchoice_smalltextJP));
 		}
 		else if (lang.CompareNoCase("ko") == 0)
 		{
-			userFont = V_GetFont(*fontchoice_smalltextKO);
+			userFont =FFont::FindFont(FName(*fontchoice_smalltextKO));
 		}
 		else if (lang.CompareNoCase("ru") == 0 || lang.CompareNoCase("sr") == 0)
 		{
-			userFont = V_GetFont(*fontchoice_smalltextCYR);
+			userFont = FFont::FindFont(FName(*fontchoice_smalltextCYR));
 		}
 		else if (lang.CompareNoCase("zh-Hans") == 0)
 		{
-			userFont = V_GetFont(*fontchoice_smalltextSC);
+			userFont = FFont::FindFont(FName(*fontchoice_smalltextSC));
 		}
 		else if (lang.CompareNoCase("th") == 0)
 		{
-			userFont = V_GetFont(*fontchoice_smalltextTH);
+			userFont = FFont::FindFont(FName(*fontchoice_smalltextTH));
 		}
 		else
 		{
-			userFont = V_GetFont(*fontchoice_smalltext);
+			userFont = FFont::FindFont(FName(*fontchoice_smalltext));
 		}
 	}
 
@@ -834,34 +834,34 @@ FFont *FFont::GetTitleFont(FFont *const fallbackIfNoUserChoice)
 	const FString cvarName     = "fontchoice_title_" + langIDString;
 	if (FStringCVar *const cv = dynamic_cast<FStringCVar *>(FindCVar(cvarName.GetChars(), nullptr)))
 	{
-		userFont = V_GetFont(*cv);
+		userFont = FFont::FindFont(FName(*cv));
 	}
 
 	if (!userFont)
 	{
 		if (lang.CompareNoCase("jp") == 0)
 		{
-			userFont = V_GetFont(*fontchoice_titleJP);
+			userFont = FFont::FindFont(FName(*fontchoice_titleJP));
 		}
 		else if (lang.CompareNoCase("ko") == 0)
 		{
-			userFont = V_GetFont(*fontchoice_titleKO);
+			userFont = FFont::FindFont(FName(*fontchoice_titleKO));
 		}
 		else if (lang.CompareNoCase("ru") == 0 || lang.CompareNoCase("sr") == 0)
 		{
-			userFont = V_GetFont(*fontchoice_titleCYR);
+			userFont = FFont::FindFont(FName(*fontchoice_titleCYR));
 		}
 		else if (lang.CompareNoCase("zh-Hans") == 0)
 		{
-			userFont = V_GetFont(*fontchoice_titleSC);
+			userFont = FFont::FindFont(FName(*fontchoice_titleSC));
 		}
 		else if (lang.CompareNoCase("th") == 0)
 		{
-			userFont = V_GetFont(*fontchoice_titleTH);
+			userFont = FFont::FindFont(FName(*fontchoice_titleTH));
 		}
 		else
 		{
-			userFont = V_GetFont(*fontchoice_title);
+			userFont =FFont::FindFont(FName(*fontchoice_title));
 		}
 	}
 
@@ -881,34 +881,34 @@ FFont *FFont::GetDescriptionFont(FFont *const fallbackIfNoUserChoice)
 	const FString cvarName     = "fontchoice_description_" + langIDString;
 	if (FStringCVar *const cv = dynamic_cast<FStringCVar *>(FindCVar(cvarName.GetChars(), nullptr)))
 	{
-		userFont = V_GetFont(*cv);
+		userFont = FFont::FindFont(FName(*cv));
 	}
 
 	if (!userFont)
 	{
 		if (lang.CompareNoCase("jp") == 0)
 		{
-			userFont = V_GetFont(*fontchoice_descriptionJP);
+			userFont = FFont::FindFont(FName(*fontchoice_descriptionJP));
 		}
 		else if (lang.CompareNoCase("ko") == 0)
 		{
-			userFont = V_GetFont(*fontchoice_descriptionKO);
+			userFont = FFont::FindFont(FName(*fontchoice_descriptionKO));
 		}
 		else if (lang.CompareNoCase("ru") == 0 || lang.CompareNoCase("sr") == 0)
 		{
-			userFont = V_GetFont(*fontchoice_descriptionCYR);
+			userFont = FFont::FindFont(FName(*fontchoice_descriptionCYR));
 		}
 		else if (lang.CompareNoCase("zh-Hans") == 0)
 		{
-			userFont = V_GetFont(*fontchoice_descriptionSC);
+			userFont = FFont::FindFont(FName(*fontchoice_descriptionSC));
 		}
 		else if (lang.CompareNoCase("th") == 0)
 		{
-			userFont = V_GetFont(*fontchoice_descriptionTH);
+			userFont = FFont::FindFont(FName(*fontchoice_descriptionTH));
 		}
 		else
 		{
-			userFont = V_GetFont(*fontchoice_description);
+			userFont = FFont::FindFont(FName(*fontchoice_description));
 		}
 	}
 
@@ -921,7 +921,7 @@ FFont *FFont::GetDescriptionFont(FFont *const fallbackIfNoUserChoice)
 
 FFont *FFont::GetConsoleFont(FFont *const fallbackIfNoUserChoice)
 {
-	FFont *const userFont = V_GetFont(*fontchoice_console);
+	FFont *const userFont = FFont::FindFont(FName(*fontchoice_console));
 	if (userFont)
 	{
 		return userFont;
@@ -938,34 +938,34 @@ FFont *FFont::GetBigTextFont(FFont *const fallbackIfNoUserChoice)
 	const FString cvarName     = "fontchoice_bigtext_" + langIDString;
 	if (FStringCVar *const cv = dynamic_cast<FStringCVar *>(FindCVar(cvarName.GetChars(), nullptr)))
 	{
-		userFont = V_GetFont(*cv);
+		userFont = FFont::FindFont(FName(*cv));
 	}
 
 	if (!userFont)
 	{
 		if (lang.CompareNoCase("jp") == 0)
 		{
-			userFont = V_GetFont(*fontchoice_bigtextJP);
+			userFont = FFont::FindFont(FName(*fontchoice_bigtextJP));
 		}
 		else if (lang.CompareNoCase("ko") == 0)
 		{
-			userFont = V_GetFont(*fontchoice_bigtextKO);
+			userFont = FFont::FindFont(FName(*fontchoice_bigtextKO));
 		}
 		else if (lang.CompareNoCase("ru") == 0 || lang.CompareNoCase("sr") == 0)
 		{
-			userFont = V_GetFont(*fontchoice_bigtextCYR);
+			userFont = FFont::FindFont(FName(*fontchoice_bigtextCYR));
 		}
 		else if (lang.CompareNoCase("zh-Hans") == 0)
 		{
-			userFont = V_GetFont(*fontchoice_bigtextSC);
+			userFont = FFont::FindFont(FName(*fontchoice_bigtextSC));
 		}
 		else if (lang.CompareNoCase("th") == 0)
 		{
-			userFont = V_GetFont(*fontchoice_bigtextTH);
+			userFont = FFont::FindFont(FName(*fontchoice_bigtextTH));
 		}
 		else
 		{
-			userFont = V_GetFont(*fontchoice_bigtext);
+			userFont = FFont::FindFont(FName(*fontchoice_bigtext));
 		}
 	}
 

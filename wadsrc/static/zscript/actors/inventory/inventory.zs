@@ -1453,7 +1453,7 @@ class DehackedPickup : Inventory
 	{
 		if (RealPickup != null)
 			return RealPickup.ShouldStay ();
-		else return true;
+		else return false;
 	}
 
 	override bool ShouldRespawn ()

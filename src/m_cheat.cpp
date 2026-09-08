@@ -248,19 +248,19 @@ void cht_DoCheat (player_t *player, int cheat)
 		break;
 
 	case CHT_IDKFA:
-		cht_Give (player, "backpack");
-		cht_Give (player, "weapons");
-		cht_Give (player, "ammo");
-		cht_Give (player, "keys");
-		cht_Give (player, "armor");
+		cht_Give (player, "backpack", 1, true);
+		cht_Give (player, "weapons", 1, true);
+		cht_Give (player, "ammo", 1, true);
+		cht_Give (player, "keys", 1, true);
+		cht_Give (player, "armor", 1, true);
 		msg = GStrings.GetString("STSTR_KFAADDED");
 		break;
 
 	case CHT_IDFA:
-		cht_Give (player, "backpack");
-		cht_Give (player, "weapons");
-		cht_Give (player, "ammo");
-		cht_Give (player, "armor");
+		cht_Give (player, "backpack", 1, true);
+		cht_Give (player, "weapons", 1, true);
+		cht_Give (player, "ammo", 1, true);
+		cht_Give (player, "armor", 1, true);
 		msg = GStrings.GetString("STSTR_FAADDED");
 		break;
 
@@ -289,7 +289,7 @@ void cht_DoCheat (player_t *player, int cheat)
 			{
 				if (i != 0)
 				{
-					cht_Give(player, BeholdPowers[i]);
+					cht_Give(player, BeholdPowers[i], 1, true);
 					if (cheat == CHT_BEHOLDS)
 					{
 						P_GiveBody (player->mo, -100);
@@ -298,7 +298,7 @@ void cht_DoCheat (player_t *player, int cheat)
 				else
 				{
 					// Let's give the item here so that the power doesn't need colormap information.
-					cht_Give(player, "InvulnerabilitySphere");
+					cht_Give(player, "InvulnerabilitySphere", 1, true);
 				}
 			}
 			else
@@ -359,59 +359,59 @@ void cht_DoCheat (player_t *player, int cheat)
 		break;
 
 	case CHT_GIMMIEA:
-		cht_Give (player, "ArtiInvulnerability");
+		cht_Give (player, "ArtiInvulnerability", 1, true);
 		msg = GStrings.GetString("TAG_ARTIINVULNERABILITY");
 		break;
 
 	case CHT_GIMMIEB:
-		cht_Give (player, "ArtiInvisibility");
+		cht_Give (player, "ArtiInvisibility", 1, true);
 		msg = GStrings.GetString("TAG_ARTIINVISIBILITY");
 		break;
 
 	case CHT_GIMMIEC:
-		cht_Give (player, "ArtiHealth");
+		cht_Give (player, "ArtiHealth", 1, true);
 		msg = GStrings.GetString("TAG_ARTIHEALTH");
 		break;
 
 	case CHT_GIMMIED:
-		cht_Give (player, "ArtiSuperHealth");
+		cht_Give (player, "ArtiSuperHealth", 1, true);
 		msg = GStrings.GetString("TAG_ARTISUPERHEALTH");
 		break;
 
 	case CHT_GIMMIEE:
-		cht_Give (player, "ArtiTomeOfPower");
+		cht_Give (player, "ArtiTomeOfPower", 1, true);
 		msg = GStrings.GetString("TAG_ARTITOMEOFPOWER");
 		break;
 
 	case CHT_GIMMIEF:
-		cht_Give (player, "ArtiTorch");
+		cht_Give (player, "ArtiTorch", 1, true);
 		msg = GStrings.GetString("TAG_ARTITORCH");
 		break;
 
 	case CHT_GIMMIEG:
-		cht_Give (player, "ArtiTimeBomb");
+		cht_Give (player, "ArtiTimeBomb", 1, true);
 		msg = GStrings.GetString("TAG_ARTIFIREBOMB");
 		break;
 
 	case CHT_GIMMIEH:
-		cht_Give (player, "ArtiEgg");
+		cht_Give (player, "ArtiEgg", 1, true);
 		msg = GStrings.GetString("TAG_ARTIEGG");
 		break;
 
 	case CHT_GIMMIEI:
-		cht_Give (player, "ArtiFly");
+		cht_Give (player, "ArtiFly", 1, true);
 		msg = GStrings.GetString("TAG_ARTIFLY");
 		break;
 
 	case CHT_GIMMIEJ:
-		cht_Give (player, "ArtiTeleport");
+		cht_Give (player, "ArtiTeleport", 1, true);
 		msg = GStrings.GetString("TAG_ARTITELEPORT");
 		break;
 
 	case CHT_GIMMIEZ:
 		for (int i=0;i<16;i++)
 		{
-			cht_Give (player, "artifacts");
+			cht_Give (player, "artifacts", 1, true);
 		}
 		msg = GStrings.GetString("TAG_ALL_ARTIFACTS");
 		break;
@@ -456,7 +456,7 @@ void cht_DoCheat (player_t *player, int cheat)
 		break;
 
 	case CHT_DONNYTRUMP:
-		cht_Give (player, "HealthTraining");
+		cht_Give (player, "HealthTraining", 1, true);
 		msg = GStrings.GetString("TXT_MIDASTOUCH");
 		break;
 
@@ -490,20 +490,20 @@ void cht_DoCheat (player_t *player, int cheat)
 		break;
 
 	case CHT_PUMPUPH:
-		cht_Give (player, "MedPatch");
-		cht_Give (player, "MedicalKit");
-		cht_Give (player, "SurgeryKit");
+		cht_Give (player, "MedPatch", 1, true);
+		cht_Give (player, "MedicalKit", 1, true);
+		cht_Give (player, "SurgeryKit", 1, true);
 		msg = GStrings.GetString("TXT_GOTSTUFF");
 		break;
 
 	case CHT_PUMPUPP:
-		cht_Give (player, "AmmoSatchel");
+		cht_Give (player, "AmmoSatchel", 1, true);
 		msg = GStrings.GetString("TXT_GOTSTUFF");
 		break;
 
 	case CHT_PUMPUPS:
-		cht_Give (player, "UpgradeStamina", 10);
-		cht_Give (player, "UpgradeAccuracy");
+		cht_Give (player, "UpgradeStamina", 10, true);
+		cht_Give (player, "UpgradeAccuracy", 1, true);
 		msg = GStrings.GetString("TXT_GOTSTUFF");
 		break;
 
@@ -564,14 +564,14 @@ void cht_SetInv(player_t *player, const char *string, int amount, bool beyond)
 	}
 }
 
-void cht_Give (player_t *player, const char *name, int amount)
+void cht_Give (player_t *player, const char *name, int amount, bool keyboard)
 {
 	if (!player->mo) return;
 	IFVIRTUALPTRNAME(player->mo, NAME_PlayerPawn, CheatGive)
 	{
 		FString namestr = name;
-		VMValue params[3] = { player->mo, &namestr, amount };
-		VMCall(func, params, 3, nullptr, 0);
+		VMValue params[] = { player->mo, &namestr, amount, (int)keyboard };
+		VMCall(func, params, 4, nullptr, 0);
 	}
 }
 

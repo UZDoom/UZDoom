@@ -703,7 +703,7 @@ void G_BuildTiccmd (usercmd_t *cmd)
 		// This is inaccurate to how Doom had originally handled analog input, but
 		// that's why it's an option, after all.
 
-		const float sqrtOf2Frac = 0.41421356237309504880; // sqrt(2)'s fractional value
+		const float sqrtOf2Frac = 0.41421356237309504880f; // sqrt(2)'s fractional value
 
 		float move_min = min<float>(fabs(axis_side), fabs(axis_forward));
 		float move_max = max<float>(fabs(axis_side), fabs(axis_forward));
@@ -2667,7 +2667,8 @@ void G_WriteDemoTiccmd (usercmd_t *cmd, int player, int buf)
 		ptrdiff_t body = demobodyspot - demobuffer.Data();
 		// [RH] Allocate more space for the demo
 		maxdemosize += 0x20000;
-		demobuffer.Resize(maxdemosize);
+		assert(maxdemosize < UINT_MAX);
+		demobuffer.Resize(static_cast<unsigned>(maxdemosize));
 		demo_p = TArrayView(demobuffer.Data() + pos, demobuffer.Size() - pos);
 		streamPos = demobuffer.Data() + spot;
 		democompspot = demobuffer.Data() + comp;
@@ -2687,7 +2688,7 @@ void G_RecordDemo (const char* name)
 	FixPathSeperator (demoname);
 	DefaultExtension (demoname, ".lmp");
 	maxdemosize = 0x20000;
-	demobuffer.Resize(maxdemosize);
+	demobuffer.Resize(0x20000);
 	demorecording = true;
 }
 
@@ -2969,7 +2970,7 @@ void G_DoPlayDemo (void)
 	if (demolump >= 0)
 	{
 		size_t demolen = fileSystem.FileLength (demolump);
-		demobuffer.Resize(demolen);
+		demobuffer.Resize(static_cast<int>(demolen));
 		fileSystem.ReadFile (demolump, demobuffer.Data());
 	}
 	else
@@ -2982,7 +2983,7 @@ void G_DoPlayDemo (void)
 			I_Error("Unable to open demo '%s'", defdemoname.GetChars());
 		}
 		size_t demolen = fr.GetLength();
-		demobuffer.Resize(demolen);
+		demobuffer.Resize(static_cast<int>(demolen));
 		if (static_cast<size_t>(fr.Read(demobuffer.Data(), demolen)) != demolen)
 		{
 			I_Error("Unable to read demo '%s'", defdemoname.GetChars());

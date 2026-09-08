@@ -100,7 +100,18 @@ bool PlayGamePage::OnFileDrop(std::string path)
 {
 	auto text = ParametersEdit->GetText();
 	if (!text.empty()) text += " ";
-	text += "-file \"";
+
+	std::string arg;
+	auto ext = path.substr(path.length() - 4u);
+	if (!stricmp(ext.c_str(), ".deh"))
+		arg = "-deh";
+	else if (!stricmp(ext.c_str(), ".bex"))
+		arg = "-bex";
+	else
+		arg = "-file";
+
+	text += arg;
+	text += " \"";
 	text += path;
 	text += "\"";
 	ParametersEdit->SetText(text);

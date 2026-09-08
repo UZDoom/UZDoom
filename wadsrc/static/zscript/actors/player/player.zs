@@ -440,7 +440,7 @@ class PlayerPawn : Actor
 	virtual void FireWeaponAlt (State stat)
 	{
 		let weapn = player.ReadyWeapon;
-		if (weapn == null || weapn.FindState('AltFire') == null || !weapn.CheckAmmo (Weapon.AltFire, true))
+		if (weapn == null || weapn.GetAltAtkState(false) == null || !weapn.CheckAmmo (Weapon.AltFire, true))
 		{
 			return;
 		}

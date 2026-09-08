@@ -38,7 +38,7 @@ extend class PlayerPawn
 		return !(type is "PuzzleItem") && !(type is "Powerup") && !(type is "Ammo") &&	!(type is "Armor") && !(type is "Key") && !(type is "Weapon");
 	}
 
-	virtual void CheatGive (String name, int amount)
+	virtual void CheatGive (String name, int amount, bool keyboard = false)
 	{
 		int i;
 		Class<Inventory> type;

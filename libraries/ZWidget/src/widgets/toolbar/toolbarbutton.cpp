@@ -17,7 +17,7 @@ void ToolbarButton::SetIcon(std::string icon)
 		if (!image)
 			image = new ImageBox(this);
 		image->SetImage(Image::LoadResource(icon, GetDpiScale()));
-		image->SetImageMode(ImageBoxMode::Contain);
+		image->SetImageScale(ImageBoxScale::Contain);
 	}
 	else
 	{

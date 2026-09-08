@@ -1692,7 +1692,7 @@ void NetUpdate(int tics)
 
 				// Client commands.
 
-				TArrayView<uint8_t> cmd = TArrayView(&NetBuffer[size], MAX_MSGLEN - size);
+				TArrayView<uint8_t> cmd = TArrayView(&NetBuffer[size], static_cast<uint32_t>(MAX_MSGLEN - size));
 				for (int i = 0; i < playerCount; ++i)
 				{
 					WriteInt8(playerNums[i], cmd);
@@ -1723,7 +1723,7 @@ void NetUpdate(int tics)
 							// Write out the net events before the user commands so inputs can
 							// be used as a marker for when the given command ends.
 							auto& stream = NetEvents.Streams[curTic % BACKUPTICS];
-							WriteBytes(TArrayView(stream.Stream, stream.Used), cmd);
+							WriteBytes(TArrayView(stream.Stream, static_cast<uint32_t>(stream.Used)), cmd);
 
 							WriteUserCmdMessage(LocalCmds[realTic],
 								realLastTic >= 0 ? &LocalCmds[realLastTic] : nullptr, cmd);
@@ -1771,7 +1771,7 @@ size_t Net_SetEngineInfo(uint8_t*& stream)
 	// Send over any loaded files to ensure their checksum is correct.
 	size_t numWads = 0u;
 	size_t bufferIndex = 7u;
-	for (size_t i = 0u; i < fileSystem.GetNumWads(); ++i)
+	for (int i = 0; i < fileSystem.GetNumWads(); ++i)
 	{
 		if (fileSystem.IsOptionalResource(i))
 			continue;
@@ -1782,10 +1782,10 @@ size_t Net_SetEngineInfo(uint8_t*& stream)
 		bufferIndex += crc.Len() + 1u;
 	}
 
-	stream[3] = (numWads >> 24);
-	stream[4] = (numWads >> 16);
-	stream[5] = (numWads >> 8);
-	stream[6] = numWads;
+	stream[3] = static_cast<uint8_t>((numWads >> 24) & 0xff);
+	stream[4] = static_cast<uint8_t>((numWads >> 16) & 0xff);
+	stream[5] = static_cast<uint8_t>((numWads >> 8) & 0xff);
+	stream[6] = static_cast<uint8_t>(numWads & 0xff);
 
 	return bufferIndex;
 }
@@ -1796,7 +1796,7 @@ FVerificationError Net_VerifyEngine(uint8_t*& stream, size_t& offset)
 
 	TArray<FString> crcs = {};
 	TArray<FString> names = {};
-	for (size_t i = 0u; i < fileSystem.GetNumWads(); ++i)
+	for (int i = 0; i < fileSystem.GetNumWads(); ++i)
 	{
 		if (!fileSystem.IsOptionalResource(i))
 		{
@@ -3464,10 +3464,10 @@ CCMD(kick)
 	}
 
 	TArray<int> cNums = {};
-	for (size_t i = 1u; i < argv.argc(); ++i)
+	for (int i = 1; i < argv.argc(); ++i)
 	{
 		int cNum = -1;
-		if (!C_IsValidInt(argv[i], cNum) || cNum < 0 || cNum >= MAXPLAYERS)
+		if (!C_IsValidInt(argv[i], cNum) || cNum < 0 || cNum >= SMAXPLAYERS)
 			Printf("Bad client number %s\n", argv[i]);
 		else if (cNum != consoleplayer && cNums.Find(cNum) >= cNums.Size())
 			cNums.Push(cNum);
@@ -3502,10 +3502,10 @@ CCMD(mute)
 	}
 
 	TArray<int> pNums = {};
-	for (size_t i = 1u; i < argv.argc(); ++i)
+	for (int i = 1; i < argv.argc(); ++i)
 	{
 		int pNum = -1;
-		if (!C_IsValidInt(argv[i], pNum) || pNum < 0 || pNum >= MAXPLAYERS)
+		if (!C_IsValidInt(argv[i], pNum) || pNum < 0 || pNum >= SMAXPLAYERS)
 			Printf("Bad player number %s\n", argv[i]);
 		else if (pNum != consoleplayer && pNums.Find(pNum) >= pNums.Size())
 			pNums.Push(pNum);
@@ -3577,10 +3577,10 @@ CCMD(unmute)
 	}
 
 	TArray<int> pNums = {};
-	for (size_t i = 1u; i < argv.argc(); ++i)
+	for (int i = 1; i < argv.argc(); ++i)
 	{
 		int pNum = -1;
-		if (!C_IsValidInt(argv[i], pNum) || pNum < 0 || pNum >= MAXPLAYERS)
+		if (!C_IsValidInt(argv[i], pNum) || pNum < 0 || pNum >= SMAXPLAYERS)
 			Printf("Bad player number %s\n", argv[i]);
 		else if (pNum != consoleplayer && pNums.Find(pNum) >= pNums.Size())
 			pNums.Push(pNum);
@@ -3675,10 +3675,10 @@ CCMD(addsettingscontrollers)
 	}
 
 	TArray<int> cNums = {};
-	for (size_t i = 1u; i < argv.argc(); ++i)
+	for (int i = 1; i < argv.argc(); ++i)
 	{
 		int cNum = -1;
-		if (!C_IsValidInt(argv[i], cNum) || cNum < 0 || cNum >= MAXPLAYERS)
+		if (!C_IsValidInt(argv[i], cNum) || cNum < 0 || cNum >= SMAXPLAYERS)
 			Printf("Bad client number %s\n", argv[i]);
 		else if (cNum != Net_Arbitrator && cNums.Find(cNum) >= cNums.Size())
 			cNums.Push(cNum);
@@ -3702,10 +3702,10 @@ CCMD(removesettingscontrollers)
 	}
 
 	TArray<int> cNums = {};
-	for (size_t i = 1u; i < argv.argc(); ++i)
+	for (int i = 1; i < argv.argc(); ++i)
 	{
 		int cNum = -1;
-		if (!C_IsValidInt(argv[i], cNum) || cNum < 0 || cNum >= MAXPLAYERS)
+		if (!C_IsValidInt(argv[i], cNum) || cNum < 0 || cNum >= SMAXPLAYERS)
 			Printf("Bad player number %s\n", argv[i]);
 		else if (cNum != Net_Arbitrator && cNums.Find(cNum) >= cNums.Size())
 			cNums.Push(cNum);

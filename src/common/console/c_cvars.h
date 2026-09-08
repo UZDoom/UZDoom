@@ -451,7 +451,7 @@ public:
 		{ UCVarValue val; val.String = const_cast<char *>(stringrep); SetGenericRep (val, CVAR_String); return stringrep; }
 	inline operator const char * () const { return mValue.GetChars(); }
 	inline const char *operator *() const { return mValue.GetChars(); }
-	inline int Length() const { return mValue.Len(); }
+	inline int Length() const { assert(mValue.Len() < INT32_MAX); return static_cast<int>(mValue.Len()); }
 
 protected:
 	virtual UCVarValue DoSet (UCVarValue value, ECVarType type);

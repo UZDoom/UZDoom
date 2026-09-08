@@ -117,7 +117,7 @@ void FArgs::PrintHelpMessage(bool full)
 
 			sectionMap->Insert(pair->Key, *pair->Value);
 
-			int len = strlen(pair->Key.GetChars());
+			int len = static_cast<int>(strlen(pair->Key.GetChars()));
 			if (maxlen < len) maxlen = len;
 		}
 	}
@@ -189,7 +189,7 @@ void FArgs::PrintHelpMessage(bool full)
 
 				do
 				{
-					int nextBreak = desc.IndexOf("\n", nextSpace+1);
+					int nextBreak = static_cast<int>(desc.IndexOf("\n", nextSpace+1));
 
 					if (nextBreak != -1 || desc.Len() > unsigned(maxlen))
 					{
@@ -197,8 +197,8 @@ void FArgs::PrintHelpMessage(bool full)
 						{
 							space = nextSpace;
 
-							nextBreak = desc.IndexOf("\n", nextSpace+1);
-							nextSpace = desc.IndexOf(" ", nextSpace+1);
+							nextBreak = static_cast<int>(desc.IndexOf("\n", nextSpace+1));
+							nextSpace = static_cast<int>(desc.IndexOf(" ", nextSpace+1));
 
 							if (nextBreak > -1 && nextBreak < nextSpace)
 							{

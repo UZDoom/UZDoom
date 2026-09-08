@@ -258,7 +258,7 @@ bool SpecialSetupRegistersNode::SerializeToProtocol(dap::Variable &variable)
 
 int SpecialSetupRegistersNode::GetNumberOfRegisters() const
 {
-	return GetVMScriptFunction(m_stackFrame->Func)->SpecialInits.size();
+	return GetVMScriptFunction(m_stackFrame->Func)->SpecialInits.SSize();
 }
 
 VMValue SpecialSetupRegistersNode::GetRegisterValue(int index) const

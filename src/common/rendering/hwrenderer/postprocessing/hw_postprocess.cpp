@@ -1146,7 +1146,7 @@ void PPCustomShaderInstance::SetUniforms(PPRenderState *renderstate)
 	if (timeDeltaOffset != FieldOffset.end())
 	{
 		if (uniforms.Size() < timeDeltaOffset->second + sizeof(float))
-			uniforms.Resize(timeDeltaOffset->second + sizeof(float));
+			uniforms.Resize(static_cast<unsigned>(timeDeltaOffset->second + sizeof(float)));
 		memcpy(&uniforms[timeDeltaOffset->second], &renderstate->TimeDelta, sizeof(float));
 	}
 
@@ -1154,7 +1154,7 @@ void PPCustomShaderInstance::SetUniforms(PPRenderState *renderstate)
 	if (timeOffset != FieldOffset.end())
 	{
 		if (uniforms.Size() < timeOffset->second + sizeof(float))
-			uniforms.Resize(timeOffset->second + sizeof(float));
+			uniforms.Resize(static_cast<unsigned>(timeOffset->second + sizeof(float)));
 		memcpy(&uniforms[timeOffset->second], &renderstate->Time, sizeof(float));
 	}
 
@@ -1162,7 +1162,7 @@ void PPCustomShaderInstance::SetUniforms(PPRenderState *renderstate)
 	if (timeGameOffset != FieldOffset.end())
 	{
 		if (uniforms.Size() < timeGameOffset->second + sizeof(float))
-			uniforms.Resize(timeGameOffset->second + sizeof(float));
+			uniforms.Resize(static_cast<unsigned>(timeGameOffset->second + sizeof(float)));
 		memcpy(&uniforms[timeGameOffset->second], &renderstate->TimeGame, sizeof(float));
 	}
 

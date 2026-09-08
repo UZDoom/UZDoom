@@ -16,6 +16,7 @@ jobs:
       tag: ${{ steps.tag.outputs.tag }}
       mode: ${{ steps.emit.outputs.mode }}
       branch: ${{ steps.branch.outputs.branch || steps.tag.outputs.branch }}
+      primary: ${{ steps.branch.outputs.primary }}
     steps:
       - id: details
         shell: bash
@@ -34,8 +35,12 @@ jobs:
             trunk) mode=preview ;;
             experimental) mode=experimental ;;
           esac
+          if [[ "$branch" == 'trunk' ]] || [[ "$branch" =~ ^[0-9]+\.[0-9]+$ ]]; then
+            primary=true
+          fi
           echo "mode=$mode" | tee -a "$GITHUB_OUTPUT"
           echo "branch=$branch" | tee -a "$GITHUB_OUTPUT"
+          echo "primary=$primary" | tee -a "$GITHUB_OUTPUT"
 
       - name: Checkout
         if: ${{ github.ref_type == 'tag' }}
@@ -168,6 +173,70 @@ jobs:
           # These are here twice. First is to get nice output, second is to not make ci fail if network access fails
           flatpak-builder-lint --gha-format appstream $file || true
           AS_VALIDATE_NONET=1 flatpak-builder-lint appstream $file
+
+  update-version:
+    needs:
+    - ci-init
+    runs-on: ubuntu-latest
+    name: Check for version change
+    if: ${{ needs.ci-init.outputs.primary == 'true' && github.event_name == 'push' }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          token: ${{ secrets.TAGGER_PAT || '' }}
+          fetch-depth: 0
+      - run: |
+          # Check if version.h has VERSIONSTR updated, and push that as a tag if so
+          BEFORE="${{ github.event.before }}"
+          AFTER="${{ github.event.after }}"
+
+          info=()
+          function log() { echo "$1"; info+=("$1"); }
+          function version() { # grab value of #defined string $1
+            grep -m1 -iE '^\+?\s*#define\s+'"$1" | sed -E 's/.*\s'$1'\s+"([^"]+)"/\1/'
+          }
+          function parent() {
+            git rev-parse --verify -q "$1" >/dev/null || { echo unknown $1; return 1; }
+            git merge-base "$1" "$AFTER" >/dev/null || { echo out-of-tree $1; return 1; }
+          }
+
+          if ! parent "$BEFORE"; then
+            BEFORE=$(git rev-parse --verify -q "${AFTER}~1" || echo "$AFTER")
+            parent "$BEFORE" || BEFORE="$AFTER"
+          fi
+          BEFORE=$(git merge-base "$BEFORE" "$AFTER" || echo "$BEFORE")
+
+          VERSION=$(git diff "$BEFORE" "$AFTER" -- src/version.h | version VERSIONSTR)
+          printf '%s..%s:%s;\n' "$BEFORE" "$AFTER" "$VERSION"
+
+          if [[ -n "$VERSION" ]]; then
+            log "Version updated: $VERSION"
+            while read -r commit; do
+              version=$(git show "$commit" -- src/version.h | version VERSIONSTR)
+              printf ' - %s %s\n' "$commit" "$version"
+              if [[ "$version" == "$VERSION" ]]; then
+                COMMIT="$commit"
+                break
+              fi
+            done < <(git rev-list $BEFORE..$AFTER)
+          fi
+
+          if [[ -n "$COMMIT" ]]; then
+            log "Commit: $COMMIT"
+            if git rev-parse --verify -q "refs/tags/$VERSION"; then
+              log "Tag already exists"
+            elif ! git tag "$VERSION" "$COMMIT"; then
+              log "Failed to tag commit"
+            elif ! git push origin "refs/tags/$VERSION"; then
+              log "Failed to push tag"
+            else
+              log "Successfully tagged $COMMIT with $VERSION"
+            fi
+          fi
+
+          if [[ ${#info[@]} -gt 0 ]]; then
+            printf "::notice::%s\n" "$(printf "%s%%0A" "${info[@]}")"
+          fi
 
 # ======================
 # Primary Build Configuration

@@ -1,6 +1,8 @@
 // currently I match the fallbacks in themedata.cpp
 
 accent #237887
+anchor Center
+scale Contain
 
 [light]
 
