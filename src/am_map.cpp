@@ -3078,19 +3078,12 @@ void DAutomap::drawThings (bool allmap)
 		t = sec.thinglist;
 		while (t)
 		{
-			// check hide flags and abort unless we are cheating.
-			// NOTE: am_cheat 4+ does not draw hidden lines and things.
-			if (am_cheat == 0 || am_cheat >= 4)
-			{
-				if (t->renderflags & RF_INVISIBLE || t->flags6 & MF6_NOTONAUTOMAP)
-				{
-					continue;
-				}
-			}
-
-			if (am_cheat > 0
-				|| allthings
-				|| (am_showseenthings && t->subsector && t->subsector->flags & SSECMF_DRAWN))
+			// draw this thing if:
+			//	we have am_cheat || allthings || (are showing seen things && this thing is seen)
+			// and
+			// 	am_cheat is less than < 4 (show hidden objects) or (this thing is not invisible and should show on the map)
+			if ((am_cheat > 0 || allthings || (am_showseenthings && t->subsector && t->subsector->flags & SSECMF_DRAWN))
+				&& (am_cheat < 4 || (!(t->renderflags & RF_INVISIBLE) && !(t->flags6 & MF6_NOTONAUTOMAP))))
 			{
 				DVector3 fracPos = t->InterpolatedPosition(r_viewpoint.TicFrac);
 				FVector2 pos = FVector2(float(fracPos.X),float(fracPos.Y)) + FVector2(t->Level->Displacements.getOffset(sec.PortalGroup, MapPortalGroup)) + FVector2(t->AutomapOffsets);
