@@ -153,7 +153,9 @@ jobs:
 
     - name: Setup MSVC
       if: runner.os == 'Windows' && !contains(inputs.name, 'MinGW')
-      uses: ilammy/msvc-dev-cmd@v1 # FIXME: update this
+      uses: TheMrMilchmann/setup-msvc-dev@v4
+      with:
+        arch: x64
 
     - name: Setup MSYS2
       if: runner.os == 'Windows' && contains(inputs.name, 'MinGW')
