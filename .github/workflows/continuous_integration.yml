@@ -397,7 +397,7 @@ jobs:
       matrix:
         config: # put bespoke configs here
           - name: Windows ARM (Testing)
-            os: windows-11-arm
+            os: windows-11-vs2026-arm # windows-11-arm's msvc (17.14) has a bug that we hit. It's fixed in msvc 18
             build_opts: *msvc_opts
             build_opts_extra: ""
             deps_cmdline: *msvc_deps
