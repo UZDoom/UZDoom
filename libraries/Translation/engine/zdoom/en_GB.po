@@ -3544,6 +3544,9 @@ msgstr "Show things as sprites"
 msgid "AUTOMAPMNU_SHOWSEENTHINGS"
 msgstr "Show things when seen"
 
+msgid "AUTOMAPMNU_THINGSPRITESSCALE"
+msgstr "Thing sprites scale"
+
 msgid "AUTOMAPMNU_PTOVERLAY"
 msgstr "Overlay portals"
 

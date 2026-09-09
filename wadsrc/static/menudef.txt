@@ -1944,6 +1944,7 @@ OptionMenu AutomapOptions protected
 	Option "$AUTOMAPMNU_SHOWTRIGGERLINES",		"am_showtriggerlines", "MapTriggers"
 	Option "$AUTOMAPMNU_SHOWTHINGSPRITES",		"am_showthingsprites", "STSTypes"
 	Option "$AUTOMAPMNU_SHOWSEENTHINGS",		"am_showseenthings", "OnOff"
+	Slider "$AUTOMAPMNU_THINGSPRITESSCALE",		"am_thingsspritescale", 0.1, 1.0, 0.1, 1
 
 	StaticText ""
 	Option "$AUTOMAPMNU_PTOVERLAY",				"am_portaloverlay", "OnOff"

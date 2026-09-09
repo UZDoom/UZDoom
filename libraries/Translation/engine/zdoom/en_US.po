@@ -4476,6 +4476,10 @@ msgid "AUTOMAPMNU_SHOWSEENTHINGS"
 msgstr "Show things when seen"
 
 #, fuzzy
+msgid "AUTOMAPMNU_THINGSPRITESSCALE"
+msgstr "Thing sprites scale"
+
+#, fuzzy
 msgid "AUTOMAPMNU_PTOVERLAY"
 msgstr "Overlay portals"
 
