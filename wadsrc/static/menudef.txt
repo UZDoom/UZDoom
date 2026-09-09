@@ -1943,6 +1943,7 @@ OptionMenu AutomapOptions protected
 	Option "$AUTOMAPMNU_DRAWMAPBACK",			"am_drawmapback", "MapBackTypes"
 	Option "$AUTOMAPMNU_SHOWTRIGGERLINES",		"am_showtriggerlines", "MapTriggers"
 	Option "$AUTOMAPMNU_SHOWTHINGSPRITES",		"am_showthingsprites", "STSTypes"
+	Option "$AUTOMAPMNU_SHOWSEENTHINGS",		"am_showseenthings", "OnOff"
 
 	StaticText ""
 	Option "$AUTOMAPMNU_PTOVERLAY",				"am_portaloverlay", "OnOff"
@@ -3133,7 +3134,7 @@ OptionMenu AccessibilityOptions protected
 	Tooltip "$ACCMNU_TOOLTIP_LIGHT_EXTRA"
 	Slider "$ACCMNU_LIGHT_RADIUS", "r_visibility", 0.0, 16.0, 1.0, 1
 	Tooltip "$ACCMNU_TOOLTIP_LIGHT_RADIUS"
-	
+
 	StaticText ""
 	Slider "$ACCMNU_DOUBLECLICK_THRESHOLD", "cl_doubleclickthreshold", 100, 600, 25, 0
 	Tooltip "$ACCMNU_TOOLTIP_DOUBLECLICK_THRESHOLD"
