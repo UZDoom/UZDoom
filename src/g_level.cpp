@@ -703,6 +703,9 @@ bool FLevelLocals::ShouldDoIntermission(cluster_info_t* nextcluster, cluster_inf
 	if ((sv_alwaystally == 2) || (deathmatch))
 		return true;
 
+	if (sv_alwaystally == 3)
+		return false;
+
 	if ((sv_alwaystally == 0) && (flags & LEVEL_NOINTERMISSION))
 		return false;
 

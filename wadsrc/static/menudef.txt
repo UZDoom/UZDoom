@@ -1761,6 +1761,7 @@ OptionValue AlwaysTally
 	0,	"$OPTVAL_MODDEFINED"
 	1,	"$OPTVAL_NOTHUBS"
 	2,	"$OPTVAL_WITHHUBS"
+	3,	"$OPTVAL_NEVER"
 }
 
 OptionValue SaveOrder
