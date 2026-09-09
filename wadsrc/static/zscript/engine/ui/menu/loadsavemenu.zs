@@ -232,15 +232,14 @@ class LoadSaveMenu : ListMenu
 		{
 			int colr;
 			node = manager.GetSavegame(j);
-			if (node.bOldVersion)
+
+			TextureID iconTex = 0;
+			if (node.bOldVersion || node.bMissingWads)
 			{
-				colr = Font.CR_RED;
+				iconTex = TexMan.checkForTexture("warning", TexMan.Type_MiscPatch, 0);
 			}
-			else if (node.bMissingWads)
-			{
-				colr = Font.CR_YELLOW;
-			}
-			else if (j == Selected)
+
+			if (j == Selected)
 			{
 				colr = Font.CR_WHITE;
 			}
@@ -251,28 +250,87 @@ class LoadSaveMenu : ListMenu
 
 			screen.SetClipRect(listboxLeft, listboxTop+rowHeight*i, listboxRight, listboxTop+rowHeight*(i+1));
 
+			int rowTop = listboxTop + (rowHeight * i);
+			int rowBottom = rowTop + rowHeight;
+			int textLeftMargin = 4;
+
 			if (j == Selected)
 			{
-				screen.Clear (listboxLeft, listboxTop+rowHeight*i, listboxRight, listboxTop+rowHeight*(i+1), mEntering ? Color(255,255,0,0) : Color(255,0,0,255));
+				screen.Clear(
+					listboxLeft,
+					rowTop,
+					listboxRight,
+					rowBottom,
+					mEntering ? Color(255,255,0,0) : Color(255,64,64,64));
+			}
+
+			if (iconTex)
+			{
+				int iconSize = 12;
+				int iconPadding = 2;
+
+				Screen.drawTexture(
+					iconTex,
+					false,
+					listboxLeft + (iconPadding * 2),
+					rowTop + iconPadding,
+					DTA_DESTHEIGHT, iconSize,
+					DTA_DESTWIDTH, iconSize);
+
+				textLeftMargin += rowHeight / FontScale;
+			}
+
+			if (j == Selected)
+			{
 				didSeeSelected = true;
 				if (!mEntering)
 				{
-					screen.DrawText (desiredConsoleFont, colr, (listboxLeft+1) / FontScale, (listboxTop+rowHeight*i + FontScale) / FontScale, node.SaveTitle,
-						DTA_VirtualWidthF, screen.GetWidth() / FontScale, DTA_VirtualHeightF, screen.GetHeight() / FontScale, DTA_KeepRatio, true);
+					screen.DrawText(
+						desiredConsoleFont,
+						colr,
+						(listboxLeft / FontScale) + textLeftMargin,
+						(rowTop + FontScale) / FontScale,
+						node.SaveTitle,
+						DTA_VirtualWidthF,
+						screen.GetWidth() / FontScale,
+						DTA_VirtualHeightF,
+						screen.GetHeight() / FontScale,
+						DTA_KeepRatio,
+						true);
 				}
 				else
 				{
 					String s = mInput.GetText() .. NewConsoleFont.GetCursor();
 					int length = int(desiredConsoleFont.StringWidth(s) * FontScale);
 					int displacement = min(0, listboxWidth - 2 - length);
-					screen.DrawText (desiredConsoleFont, Font.CR_WHITE, (listboxLeft + 1 + displacement) / FontScale, (listboxTop+rowHeight*i + FontScale) / FontScale, s,
-						DTA_VirtualWidthF, screen.GetWidth() / FontScale, DTA_VirtualHeightF, screen.GetHeight() / FontScale, DTA_KeepRatio, true);
+					screen.DrawText(
+						desiredConsoleFont,
+						Font.CR_WHITE,
+						((listboxLeft + displacement) / FontScale) + textLeftMargin,
+						(rowTop + FontScale) / FontScale,
+						s,
+						DTA_VirtualWidthF,
+						screen.GetWidth() / FontScale,
+						DTA_VirtualHeightF,
+						screen.GetHeight() / FontScale,
+						DTA_KeepRatio,
+						true);
 				}
 			}
 			else
 			{
-				screen.DrawText (desiredConsoleFont, colr, (listboxLeft+1) / FontScale, (listboxTop+rowHeight*i + FontScale) / FontScale, node.SaveTitle,
-					DTA_VirtualWidthF, screen.GetWidth() / FontScale, DTA_VirtualHeightF, screen.GetHeight() / FontScale, DTA_KeepRatio, true);
+				screen.DrawText(
+					desiredConsoleFont,
+					colr,
+					(listboxLeft / FontScale) + textLeftMargin,
+					(rowTop + FontScale) / FontScale,
+					node.SaveTitle,
+					DTA_VirtualWidthF,
+					screen.GetWidth() / FontScale,
+					DTA_VirtualHeightF,
+					screen.GetHeight() / FontScale,
+					DTA_KeepRatio,
+					true);
 			}
 			screen.ClearClipRect();
 			j++;
