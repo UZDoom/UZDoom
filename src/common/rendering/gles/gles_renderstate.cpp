@@ -214,6 +214,7 @@ bool FGLRenderState::ApplyShader()
 		activeShader->cur->muViewMatrix.Set(&mHwUniforms->mViewMatrix);
 		activeShader->cur->muNormalViewMatrix.Set(&mHwUniforms->mNormalViewMatrix);
 		activeShader->cur->muCameraPos.Set(&mHwUniforms->mCameraPos.X);
+		activeShader->cur->muFogCenterPos.Set(&mHwUniforms->mFogCenterPos.X);
 		activeShader->cur->muClipLine.Set(&mHwUniforms->mClipLine.X);
 		activeShader->cur->muGlobVis.Set(mHwUniforms->mGlobVis);
 		activeShader->cur->muPalLightLevels.Set(mHwUniforms->mPalLightLevels & 0xFF); // JUST pass the pal levels, clear the top bits

@@ -309,6 +309,7 @@ bool FShader::Load(const char * name, const char * vert_prog_lump, const char * 
 			mat4 NormalViewMatrix;
 
 			vec4 uCameraPos;
+			vec4 uFogCenterPos;
 			vec4 uClipLine;
 
 			float uGlobVis;			// uGlobVis = R_GetGlobVis(r_visibility) / 32.0

@@ -810,7 +810,7 @@ vec3 AmbientOcclusionColor()
 	}
 	else
 	{
-		fogdist = max(16.0, distance(pixelpos.xyz, uCameraPos.xyz));
+		fogdist = max(16.0, distance(pixelpos.xyz, uFogCenterPos.xyz));
 	}
 	if (uThickFogDistance > 0.0)
 	{
@@ -875,7 +875,7 @@ void main()
 			}
 			else
 			{
-				fogdist = max(16.0, distance(pixelpos.xyz, uCameraPos.xyz));
+				fogdist = max(16.0, distance(pixelpos.xyz, uFogCenterPos.xyz));
 			}
 			if (uThickFogDistance > 0.0)
 			{

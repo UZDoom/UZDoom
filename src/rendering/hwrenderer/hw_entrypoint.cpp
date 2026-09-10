@@ -161,6 +161,7 @@ sector_t* RenderViewpoint(FRenderViewpoint& mainvp, AActor* camera, IntRect* bou
 
 		// Stereo mode specific viewpoint adjustment
 		vp.Pos += eye.GetViewShift(vp.HWAngles.Yaw.Degrees());
+		vp.bFromPortal = false;
 		di->SetupView(RenderState, vp.Pos.X, vp.Pos.Y, vp.Pos.Z, false, false);
 
 		di->ProcessScene(toscreen);

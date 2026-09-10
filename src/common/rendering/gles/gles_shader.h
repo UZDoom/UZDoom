@@ -306,6 +306,7 @@ public: class ShaderVariantData
 		FBufferedUniformMat4fv muNormalViewMatrix;
 
 		FUniform4f muCameraPos;
+		FUniform4f muFogCenterPos;
 		FUniform4f muClipLine;
 
 		FBufferedUniform1f muGlobVis;
