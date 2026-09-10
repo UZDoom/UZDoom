@@ -405,6 +405,15 @@ void OpenGLFrameBuffer::AmbientOccludeScene(float m5)
 	gl_RenderState.Apply();
 }
 
+// Blit current scene color to the sampleable background texture and bind to unit 18.
+void OpenGLFrameBuffer::GrabSceneColor()
+{
+	if (!GLRenderer || !GLRenderer->mBuffers)
+		return;
+	GLRenderer->mBuffers->GrabSceneColor();
+	GLRenderer->mBuffers->BindSceneColorBackgroundTexture(18);
+}
+
 void OpenGLFrameBuffer::FirstEye()
 {
 	GLRenderer->mBuffers->CurrentEye() = 0;  // always begin at zero, in case eye count changed

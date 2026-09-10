@@ -53,6 +53,8 @@ public:
 	VkTextureImage SceneDepthStencil;
 	VkTextureImage SceneNormal;
 	VkTextureImage SceneFog;
+	// Grab pass background: single-sample scene color copy, read as SceneColor by material shaders.
+	VkTextureImage SceneColorBackground;
 
 	VkFormat PipelineDepthStencilFormat = VK_FORMAT_D24_UNORM_S8_UINT;
 	VkFormat SceneDepthStencilFormat = VK_FORMAT_D24_UNORM_S8_UINT;
@@ -72,6 +74,7 @@ private:
 	void CreateSceneDepthStencil(int width, int height, VkSampleCountFlagBits samples);
 	void CreateSceneFog(int width, int height, VkSampleCountFlagBits samples);
 	void CreateSceneNormal(int width, int height, VkSampleCountFlagBits samples);
+	void CreateSceneColorBackground(int width, int height);
 	VkSampleCountFlagBits GetBestSampleCount();
 
 	VulkanRenderDevice* fb = nullptr;

@@ -174,6 +174,8 @@ struct HWDrawInfo
 	//TArray<ACorona*> Coronas;
 	uint64_t LastFrameTime = 0;
 
+	bool sceneColorDirty = true;
+
 	TArray<MissingTextureInfo> MissingUpperTextures;
 	TArray<MissingTextureInfo> MissingLowerTextures;
 

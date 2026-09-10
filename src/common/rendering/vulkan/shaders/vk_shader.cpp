@@ -277,6 +277,8 @@ static const char *shaderBindings = R"(
 	layout(set = 2, binding = 9) uniform sampler2D texture10;
 	layout(set = 2, binding = 10) uniform sampler2D texture11;
 	layout(set = 2, binding = 11) uniform sampler2D texture12;
+	// Auto-bound scene framebuffer copy captured before translucent (for refraction in material shaders).
+	layout(set = 2, binding = 12) uniform sampler2D SceneColor;
 
 	// This must match the PushConstants struct
 	layout(push_constant) uniform PushConstants

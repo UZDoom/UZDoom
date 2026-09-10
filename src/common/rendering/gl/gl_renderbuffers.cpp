@@ -70,6 +70,8 @@ void FGLRenderBuffers::ClearScene()
 {
 	DeleteFrameBuffer(mSceneFB);
 	DeleteFrameBuffer(mSceneDataFB);
+	DeleteFrameBuffer(mSceneColorBackgroundFB);
+	DeleteTexture(mSceneColorBackgroundTex);
 	if (mSceneUsesTextures)
 	{
 		DeleteTexture(mSceneMultisampleTex);
@@ -228,6 +230,10 @@ void FGLRenderBuffers::CreateScene(int width, int height, int samples, bool need
 			mSceneDataFB = CreateFrameBuffer("SceneGBufferFB", mPipelineTexture[0], mSceneDepthStencilBuf);
 		}
 	}
+
+	// SceneColor grab-pass background, RGBA16F single-sample.
+	mSceneColorBackgroundTex = Create2DTexture("SceneColorBackground", GL_RGBA16F, width, height);
+	mSceneColorBackgroundFB = CreateFrameBuffer("SceneColorBackgroundFB", mSceneColorBackgroundTex);
 }
 
 //==========================================================================
@@ -523,6 +529,34 @@ void FGLRenderBuffers::BlitSceneToTexture()
 
 	glBindFramebuffer(GL_READ_FRAMEBUFFER, 0);
 	glBindFramebuffer(GL_DRAW_FRAMEBUFFER, 0);
+}
+
+//==========================================================================
+//
+// Grab pass: blit scene color to the sampleable background texture (bindings restored to mSceneFB).
+//
+//==========================================================================
+
+void FGLRenderBuffers::GrabSceneColor()
+{
+	if (!mSceneColorBackgroundFB || !mSceneFB)
+		return;
+
+	glBindFramebuffer(GL_READ_FRAMEBUFFER, mSceneFB.handle);
+	glBindFramebuffer(GL_DRAW_FRAMEBUFFER, mSceneColorBackgroundFB.handle);
+	glBlitFramebuffer(0, 0, mWidth, mHeight, 0, 0, mWidth, mHeight, GL_COLOR_BUFFER_BIT, mSamples > 1 ? GL_LINEAR : GL_NEAREST);
+
+	glBindFramebuffer(GL_READ_FRAMEBUFFER, mSceneFB.handle);
+	glBindFramebuffer(GL_DRAW_FRAMEBUFFER, mSceneFB.handle);
+}
+
+void FGLRenderBuffers::BindSceneColorBackgroundTexture(int index)
+{
+	if (!mSceneColorBackgroundTex)
+		return;
+	glActiveTexture(GL_TEXTURE0 + index);
+	glBindTexture(GL_TEXTURE_2D, mSceneColorBackgroundTex.handle);
+	glActiveTexture(GL_TEXTURE0);
 }
 
 //==========================================================================

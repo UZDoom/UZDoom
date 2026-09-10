@@ -24,8 +24,10 @@
 #include "hw_walldispatcher.h"
 #include "hwrenderer/scene/hw_drawlist.h"
 #include "hwrenderer/scene/hw_drawstructs.h"
+#include "models.h"
 #include "r_sky.h"
 #include "r_utility.h"
+#include "texturemanager.h"
 
 FMemArena RenderDataAllocator(1024*1024);	// Use large blocks to reduce allocation time.
 
@@ -785,8 +787,79 @@ HWSprite *HWDrawList::NewSprite()
 //
 //
 //==========================================================================
+int HWDrawList::GetShaderIndexForDrawItem(int i)
+{
+	switch(drawitems[i].rendertype)
+	{
+	case DrawType_FLAT:
+		if (auto t = flats[drawitems[i].index]->texture) return t->GetShaderIndex();
+		return 0;
+
+	case DrawType_WALL:
+		if (auto t = walls[drawitems[i].index]->texture) return t->GetShaderIndex();
+		return 0;
+
+	case DrawType_SPRITE:
+		{
+			auto s = sprites[drawitems[i].index];
+			if (s->OverrideShader >= 0) return s->OverrideShader;
+			// Model-rendered sprites use modelframe skins, not the sprite's frame texture.
+			if (s->modelframe)
+			{
+				for (auto& skinid : s->modelframe->skinIDs)
+				{
+					if (auto t = TexMan.GetGameTexture(skinid))
+					{
+						int idx = t->GetShaderIndex();
+						if (idx >= FIRST_USER_SHADER &&
+							usershaders[idx - FIRST_USER_SHADER].samplesscene)
+							return idx;
+					}
+				}
+				for (auto& skinid : s->modelframe->surfaceskinIDs)
+				{
+					if (auto t = TexMan.GetGameTexture(skinid))
+					{
+						int idx = t->GetShaderIndex();
+						if (idx >= FIRST_USER_SHADER &&
+							usershaders[idx - FIRST_USER_SHADER].samplesscene)
+							return idx;
+					}
+				}
+			}
+			if (s->texture) return s->texture->GetShaderIndex();
+			return 0;
+		}
+	}
+	return 0;
+}
+
+//==========================================================================
+//
+//
+//
+//==========================================================================
 void HWDrawList::DoDraw(HWDrawInfo *di, FRenderState &state, bool translucent, int i)
 {
+	if (translucent)
+	{
+		int shaderIdx = GetShaderIndexForDrawItem(i);
+		bool needsGrab = (shaderIdx >= FIRST_USER_SHADER) &&
+			usershaders[shaderIdx - FIRST_USER_SHADER].samplesscene;
+		if (needsGrab)
+		{
+			if (di->sceneColorDirty)
+			{
+				screen->GrabSceneColor();
+				di->sceneColorDirty = false;
+			}
+		}
+		else
+		{
+			di->sceneColorDirty = true;
+		}
+	}
+
 	switch(drawitems[i].rendertype)
 	{
 	case DrawType_FLAT:

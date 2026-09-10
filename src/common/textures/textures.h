@@ -99,6 +99,7 @@ struct UserShaderDesc
 	MaterialShaderIndex shaderType;
 	FString defines;
 	bool disablealphatest = false;
+	bool samplesscene = false;
 	uint8_t shaderFlags = 0;
 };
 

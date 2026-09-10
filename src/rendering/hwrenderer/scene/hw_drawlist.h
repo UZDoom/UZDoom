@@ -126,6 +126,7 @@ public:
 	SortNode * DoSort(HWDrawInfo *di, SortNode * head);
 	void Sort(HWDrawInfo *di);
 
+	int GetShaderIndexForDrawItem(int i);
 	void DoDraw(HWDrawInfo *di, FRenderState &state, bool translucent, int i);
 	void Draw(HWDrawInfo *di, FRenderState &state, bool translucent);
 	void DrawWalls(HWDrawInfo *di, FRenderState &state, bool translucent);
