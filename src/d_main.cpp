@@ -1446,6 +1446,8 @@ void D_DoomLoop ()
 
 	vid_cursor->Callback();
 
+	bool hasDoneContinue = false;
+
 	for (;;)
 	{
 		try
@@ -1476,6 +1478,13 @@ void D_DoomLoop ()
 			{
 				wantToRestart = false;
 				return;
+			}
+
+			// yuck
+			if (!hasDoneContinue)
+			{
+				savegameManager.DoContinue();
+				hasDoneContinue = true;
 			}
 		}
 		catch (const CRecoverableError &error)
