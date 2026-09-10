@@ -268,13 +268,11 @@ FGameConfigFile::FGameConfigFile ()
 	}
 
 	SetSectionNote("IWADSearch.Directories",
-		// Add env var documentation.
+		// Add environment variable documentation.
 		"\n#### Environment Variable Information ####\n\n"
 
 		"# . references the current directory that UZDoom is launched from within your\n"
-		"# terminal or console.\n"
-		"# For example if you are in /home/Username/a/b/c/d/ when you start UZDoom, it\n"
-		"# will look in that directory for WADs.\n\n"
+		"# terminal or console.\n\n"
 
 		"# $DOOMWADDIR references a system environment variable of the same name that\n"
 		"# contains a search directory.\n\n"
@@ -285,18 +283,16 @@ FGameConfigFile::FGameConfigFile ()
 		"# It's *similar* to $DOOMWADDIR, except that $DOOMWADPATH is a list of possible\n"
 		"# search directories.\n\n"
 
-		"# $HOME references your system user directory.\n"
-		"# On Windows, that will likely default to C:\\Users\\Username\\\n"
-		"# On macOS environments, that will likely default to $HOME (/User/Username)\n"
-		"# On most Linux environments, that will likely default to $HOME (/home/Username)\n\n"
+		"# $HOME references your system user directory.\n\n"
 
-		"# $PROGDIR references the directory that the main binary is located.\n"
-		"# On Windows this is likely to be next to \"UZDoom.exe\".\n"
-		"# On Linux this is likely to be next to where the main binary is for the app,\n"
-		"# and may differ from distro to distro.\n"
-		"# On macOS this is likely to be \"/Applications/UZDoom.app/Content/Resources\"\n"
+		"# $PROGDIR references the directory that the main binary is located.\n\n"
+
+		"For more information and examples of how to use environment variables,\n"
+		"please see the ZDoom Wiki page:\n"
+		"at https://zdoom.org/wiki/Configuration_file#Environment_Variables\n"
+
 		"\n" // Add a final newline before going back to the original section header text.
-		// Finish documentation.
+		// Finish environment variable documentation.
 
 		"# These are the directories to automatically search for IWADs.\n"
 		"# Each directory should be on a separate line, preceded by Path=\n");
