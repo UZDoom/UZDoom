@@ -287,9 +287,9 @@ FGameConfigFile::FGameConfigFile ()
 
 		"# $PROGDIR references the directory that the main binary is located.\n\n"
 
-		"For more information and examples of how to use environment variables,\n"
-		"please see the ZDoom Wiki page:\n"
-		"at https://zdoom.org/wiki/Configuration_file#Environment_Variables\n"
+		"# For more information and examples of how to use environment variables,\n"
+		"# please see the ZDoom Wiki page:\n"
+		"# at https://zdoom.org/wiki/Configuration_file#Environment_Variables\n"
 
 		"\n" // Add a final newline before going back to the original section header text.
 		// Finish environment variable documentation.
