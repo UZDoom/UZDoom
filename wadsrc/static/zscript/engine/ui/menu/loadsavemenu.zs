@@ -118,9 +118,9 @@ class LoadSaveMenu : ListMenu
 		manager.ReadSaveStrings();
 		SetWindows();
 
-		warningTextureId = TexMan.checkForTexture("warning", TexMan.Type_MiscPatch, 0);
-		errorTextureId = TexMan.checkForTexture("error", TexMan.Type_MiscPatch, 0);
-		frameCornerTextureId = TexMan.checkForTexture("uicorner", TexMan.Type_MiscPatch, 0);
+		warningTextureId = TexMan.CheckForTexture("m_warn");
+		errorTextureId = TexMan.CheckForTexture("m_error");
+		frameCornerTextureId = TexMan.CheckForTexture("m_corner");
 	}
 
 	private void SetWindows()
@@ -180,13 +180,17 @@ class LoadSaveMenu : ListMenu
 
 	virtual void DrawFrameBefore(int left, int top, int width, int height)
 	{
-		screen.Dim(0, 0.6, left, top, width, height);
+		screen.Dim(0, 0.9, left, top, width, height);
 	}
 
 	virtual void DrawFrameAfter(int left, int top, int width, int height)
 	{
-		int frameBorder = 2;
+		int frameBorder = 3 * wScale;
 		int cornerSize = 16 * wScale;
+
+		// edges
+		let framecolor = Color(255, 80, 80, 80);
+		Screen.DrawLineFrame(framecolor, left, top, width, height, wScale);
 
 		// TL
 		Screen.drawTexture(
