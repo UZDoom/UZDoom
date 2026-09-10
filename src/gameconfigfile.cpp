@@ -719,16 +719,6 @@ void FGameConfigFile::DoGlobalSetup ()
 				}
 			}
 		}
-
-		if(EngineLastRunVer < 234)
-		{
-			// Native fullscreen is now enabled by default, this is only used for MacOS.
-			var = FindCVar("vid_nativefullscreen", NULL);
-			if(var != NULL)
-			{
-				var->SetGenericRep(1, CVAR_Bool);
-			}
-		}
 	}
 
 	OkayToWrite = true;
