@@ -49,6 +49,7 @@
 
 #include "flatvertices.h"
 #include "hw_cvars.h"
+#include "hwrenderer/postprocessing/hw_postprocess.h"
 
 EXTERN_CVAR (Bool, vid_vsync)
 EXTERN_CVAR(Int, gl_tonemap)
@@ -538,11 +539,30 @@ TArray<uint8_t> OpenGLFrameBuffer::GetScreenshotBuffer(int &pitch, ESSType &colo
 
 void OpenGLFrameBuffer::Draw2D()
 {
-	if (GLRenderer != nullptr)
+	if (GLRenderer == nullptr)
+		return;
+
+	if (hw_postprocess.customShaders.HasUIShaders())
+	{
+		GLRenderer->RunUILayerPostProcess([this]() { ::Draw2D(twod, gl_RenderState); });
+	}
+	else
 	{
 		GLRenderer->mBuffers->BindCurrentFB();
 		::Draw2D(twod, gl_RenderState);
 	}
+}
+
+void OpenGLFrameBuffer::FlushGameUI()
+{
+	if (GLRenderer == nullptr) return;
+	if (!hw_postprocess.customShaders.HasUIShaders()) return;
+	if (!GLRenderer->mSceneRenderedThisFrame) return;
+
+	twod->End();
+	Draw2D();
+	twod->Clear();
+	twod->Begin(GetWidth(), GetHeight());
 }
 
 void OpenGLFrameBuffer::PostProcessScene(bool swscene, int fixedcm, float flash, const std::function<void()> &afterBloomDrawEndScene2D)
