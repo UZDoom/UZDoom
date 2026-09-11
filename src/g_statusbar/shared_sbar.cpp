@@ -529,8 +529,8 @@ void DBaseStatusBar::DoDrawAutomapHUD(int crdefault, int highlight)
 	auto fheight = font->GetHeight();
 	FString textbuffer;
 	int sec;
-	int y = 0;
 	int textdist = 4;
+	int y = textdist;
 	int zerowidth = font->GetCharWidth('0');
 
 	if (!generic_ui)
@@ -558,7 +558,7 @@ void DBaseStatusBar::DoDrawAutomapHUD(int crdefault, int highlight)
 
 	if (!deathmatch)
 	{
-		y = 0;
+		y = textdist;
 		if (am_showmonsters)
 		{
 			textbuffer.Format("%s\34%c %d/%d", GStrings.GetString("AM_MONSTERS"), crdefault + 65, primaryLevel->killed_monsters, primaryLevel->total_monsters);
