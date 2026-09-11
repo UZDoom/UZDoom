@@ -161,7 +161,7 @@ CVAR(Int, am_drawmapback, 1, CVAR_ARCHIVE);
 CVAR(Bool, am_showkeys, true, CVAR_ARCHIVE);
 CVAR(Int, am_showtriggerlines, 0, CVAR_ARCHIVE);
 CVAR(Int, am_showthingsprites, 0, CVAR_ARCHIVE);
-CVAR(Bool, am_showseenthings, false, CVAR_ARCHIVE);
+CVAR(Int, am_showseenthings, 0, CVAR_ARCHIVE);
 CVAR(Float, am_thingsspritescale, 1.0, CVAR_ARCHIVE);
 CVAR (Bool, am_showkeys_always, false, CVAR_ARCHIVE);
 
@@ -3078,11 +3078,18 @@ void DAutomap::drawThings (bool allmap)
 		t = sec.thinglist;
 		while (t)
 		{
+			bool showThisSeenThing = false;
+			if (am_showseenthings != 0 && t->subsector && t->subsector->flags & SSECMF_DRAWN)
+			{
+				showThisSeenThing |= (am_showseenthings == 1 || am_showseenthings == 3) && t->flags&MF_SPECIAL;
+				showThisSeenThing |= (am_showseenthings == 2 || am_showseenthings == 3) && t->flags3&MF3_ISMONSTER && !(t->flags&MF_CORPSE);
+			}
+
 			// draw this thing if:
 			//	we have am_cheat || allthings || (are showing seen things && this thing is seen)
 			// and
 			// 	am_cheat is less than < 4 (show hidden objects) or (this thing is not invisible and should show on the map)
-			if ((am_cheat > 0 || allthings || (am_showseenthings && t->subsector && t->subsector->flags & SSECMF_DRAWN))
+			if ((am_cheat > 0 || allthings || showThisSeenThing)
 				&& (am_cheat < 4 || (!(t->renderflags & RF_INVISIBLE) && !(t->flags6 & MF6_NOTONAUTOMAP))))
 			{
 				DVector3 fracPos = t->InterpolatedPosition(r_viewpoint.TicFrac);
