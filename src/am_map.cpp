@@ -3086,7 +3086,7 @@ void DAutomap::drawThings (bool allmap)
 			}
 
 			// draw this thing if:
-			//	we have am_cheat || allthings || (are showing seen things && this thing is seen)
+			//	we have am_cheat || allthings || (are not in a netgame && are showing seen things && this thing is seen)
 			// and
 			// 	am_cheat is less than < 4 (show hidden objects) or (this thing is not invisible and should show on the map)
 			if ((am_cheat > 0 || allthings || showThisSeenThing)
