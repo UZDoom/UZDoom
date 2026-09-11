@@ -71,6 +71,7 @@ EXTERN_CVAR (Bool, am_showtotaltime)
 EXTERN_CVAR (Bool, am_showlevelname)
 EXTERN_CVAR(Bool, inter_subtitles)
 EXTERN_CVAR(Bool, ui_screenborder_classic_scaling)
+EXTERN_CVAR(Bool, am_match_statusbar)
 
 CVAR(Int, hud_scale, -1, CVAR_ARCHIVE);
 CVAR(Bool, log_vgafont, false, CVAR_ARCHIVE);
@@ -529,8 +530,8 @@ void DBaseStatusBar::DoDrawAutomapHUD(int crdefault, int highlight)
 	auto fheight = font->GetHeight();
 	FString textbuffer;
 	int sec;
-	int y = 0;
 	int textdist = 4;
+	int y = textdist;
 	int zerowidth = font->GetCharWidth('0');
 
 	if (!generic_ui)
@@ -562,7 +563,7 @@ void DBaseStatusBar::DoDrawAutomapHUD(int crdefault, int highlight)
 
 	if (!deathmatch)
 	{
-		y = 0;
+		y = textdist;
 		if (am_showmonsters)
 		{
 			textbuffer.Format("%s\34%c %d/%d", GStrings.GetString("AM_MONSTERS"), crdefault + 65, primaryLevel->killed_monsters, primaryLevel->total_monsters);
@@ -616,8 +617,14 @@ void DBaseStatusBar::DoDrawAutomapHUD(int crdefault, int highlight)
 
 	StatusbarToRealCoords(x, yy, w, h);
 
+	int screenBottom = GetTopOfStatusbar();
+	if (am_match_statusbar && viewheight == SCREENHEIGHT)
+	{
+		screenBottom = SCREENHEIGHT;
+	}
+
 	// Get the y coordinate for the first line of the map name text.
-	y = Scale(GetTopOfStatusbar() - int(h), vheight, twod->GetHeight()) - fheight * numlines;
+	y = Scale(screenBottom - int(h), vheight, twod->GetHeight()) - fheight * numlines;
 
 	// Draw the texts centered above the status bar.
 	for (unsigned i = 0; i < numlines; i++)
