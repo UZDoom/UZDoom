@@ -942,6 +942,8 @@ CVAR(Bool, vid_activeinbackground, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 
 EXTERN_CVAR(Bool, r_drawvoxels)
 EXTERN_CVAR(Int, gl_tonemap)
+EXTERN_CVAR(Bool, am_match_statusbar)
+
 static uint32_t GetCaps()
 {
 	ActorRenderFeatureFlags FlagSet;
@@ -1241,9 +1243,17 @@ void D_Display ()
 		if (!hud_toggled)
 		{
 			V_DrawBlend(viewsec);
+
 			if (automapactive)
 			{
-				primaryLevel->automap->Drawer ((hud_althud && viewheight == SCREENHEIGHT) ? viewheight : StatusBar->GetTopOfStatusbar());
+				if (viewheight == SCREENHEIGHT && (hud_althud || am_match_statusbar))
+				{
+					primaryLevel->automap->Drawer (viewheight);
+				}
+				else
+				{
+					primaryLevel->automap->Drawer (StatusBar->GetTopOfStatusbar());
+				}
 			}
 
 			// for timing the statusbar code.
@@ -1265,7 +1275,7 @@ void D_Display ()
 				StatusBar->CallDraw (HUD_AltHud, vp.TicFrac);
 				StatusBar->DrawTopStuff (HUD_AltHud);
 			}
-			else if (viewheight == SCREENHEIGHT && viewactive && screenblocks > 10)
+			else if (viewheight == SCREENHEIGHT && (viewactive || (am_match_statusbar && automapactive)) && screenblocks > 10)
 			{
 				EHudState state = DrawFSHUD ? HUD_Fullscreen : HUD_None;
 				StatusBar->DrawBottomStuff (state);

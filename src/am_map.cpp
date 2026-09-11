@@ -162,6 +162,7 @@ CVAR(Bool, am_showkeys, true, CVAR_ARCHIVE);
 CVAR(Int, am_showtriggerlines, 0, CVAR_ARCHIVE);
 CVAR(Int, am_showthingsprites, 0, CVAR_ARCHIVE);
 CVAR (Bool, am_showkeys_always, false, CVAR_ARCHIVE);
+CVAR(Bool, am_match_statusbar, true, CVAR_ARCHIVE)
 
 CUSTOM_CVAR(Int, am_emptyspacemargin, 0, CVAR_ARCHIVE)
 {
@@ -608,7 +609,7 @@ CCMD(am_restorecolors)
 }
 
 
-namespace AutoMap::Colors 
+namespace AutoMap::Colors
 {
 	static inline const AMColor not_used = AMColor(0x010000);
 
@@ -1935,7 +1936,7 @@ void DAutomap::drawGrid (int color)
 	start = miny - exty;
 	start = ceil((start - bmaporgy) / FBlockmap::MAPBLOCKUNITS) * FBlockmap::MAPBLOCKUNITS + bmaporgy;
 	end = miny + minlen - exty;
-	
+
 	// draw horizontal gridlines
 	uint16_t yLineCount = ceil(abs(end - start) / (double)FBlockmap::MAPBLOCKUNITS);
 	y = start;
