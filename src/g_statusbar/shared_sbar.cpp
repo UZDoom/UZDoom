@@ -430,12 +430,13 @@ void DBaseStatusBar::SetScale ()
 	if (st_scale < 0 || ForcedScale)
 	{
 		// This is the classic fullscreen scale with aspect ratio compensation.
-		int sby = VerticalResolution - RelTop;
+		int realH  = ForcedScale || !hud_aspectscale ? VerticalResolution * 1.2 : VerticalResolution;
+		int sby = realH - RelTop;
 		float aspect = ActiveRatio(w, h);
 		if (!AspectTallerThanWide(aspect))
-		{
+		{ 
 			// Wider or equal than 4:3
-			SBarTop = Scale(sby, h, VerticalResolution);
+			SBarTop = Scale(sby, h, realH);
 			double width4_3 = w * 1.333 / aspect;
 			ST_X = int((w - width4_3) / 2);
 		}
@@ -445,7 +446,7 @@ void DBaseStatusBar::SetScale ()
 
 			// this was far more obtuse before...
 			double height4_3 = h * aspect / 1.333;
-			SBarTop = int(h - height4_3 + sby * height4_3 / VerticalResolution);
+			SBarTop = int(h - height4_3 + sby * height4_3 / realH);
 		}
 		Displacement = 0;
 		SBarScale.X = -1;
@@ -458,7 +459,7 @@ void DBaseStatusBar::SetScale ()
 		// the resulting scaling factor needs to be reduced accordingly.
 		int realscale = clamp((320 * GetUIScale(twod, st_scale)) / HorizontalResolution, 1, w / HorizontalResolution);
 
-		double realscaley = realscale * (hud_aspectscale ? 1.2 : 1.);
+		double realscaley = realscale * (!ForcedScale && hud_aspectscale ? 1.2 : 1.0);
 
 		ST_X = (w - HorizontalResolution * realscale) / 2;
 		SBarTop = int(h - RelTop * realscaley);
@@ -489,12 +490,12 @@ DVector2 DBaseStatusBar::GetHUDScale() const
 		return Super::GetHUDScale();
 	}
 
-	int scale;
+	double aspectScale = !ForcedScale && hud_aspectscale ? 1.2 : 1.0;
 	if (hud_scale < 0 || ForcedScale)	// a negative value is the equivalent to the old boolean hud_scale. This can yield different values for x and y for higher resolutions.
 	{
-		return defaultScale;
+		return { defaultScale.X, defaultScale.Y * aspectScale };
 	}
-	scale = GetUIScale(twod, hud_scale);
+	int scale = GetUIScale(twod, hud_scale);
 
 	int hres = HorizontalResolution;
 	int vres = VerticalResolution;
@@ -504,7 +505,7 @@ DVector2 DBaseStatusBar::GetHUDScale() const
 	// The global scaling factors are for resources at 320x200, so if the actual ones are higher resolution
 	// the resulting scaling factor needs to be reduced accordingly.
 	int realscale = max<int>(1, (320 * scale) / hres);
-	return{ double(realscale), double(realscale * (hud_aspectscale ? 1.2 : 1.)) };
+	return{ double(realscale), realscale * aspectScale };
 }
 
 //============================================================================
