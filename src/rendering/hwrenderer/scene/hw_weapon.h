@@ -75,6 +75,7 @@ struct HUDSprite
 	FVector3 rotation, translation, pivot;
 
 	int lightindex;
+	bool normspecsprite;
 
 	void SetBright(bool isbelow);
 	bool GetWeaponRenderStyle(DPSprite *psp, AActor *playermo, sector_t *viewsector, WeaponLighting &light, double ticFrac);
