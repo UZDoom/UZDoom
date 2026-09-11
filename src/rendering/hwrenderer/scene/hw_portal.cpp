@@ -946,7 +946,10 @@ bool HWPlaneMirrorPortal::Setup(HWDrawInfo *di, FRenderState &rstate, Clipper *c
 	di->SetClipHeight(planez, state->PlaneMirrorMode < 0 ? -1.f : 1.f);
 	di->SetupView(rstate, vp.Pos.X, vp.Pos.Y, vp.Pos.Z, !!(state->MirrorFlag & 1), !!(state->PlaneMirrorFlag & 1));
 	vp.ViewVector3D.Z = - vp.ViewVector3D.Z;
-	SetupCoverage(di);
+	if (di->outer->mCurrentPortal && (di->outer->mCurrentPortal->GetHWPortalType() != HWP_PLANEMIRROR))
+	{
+		SetupCoverage(di);
+	}
 	ClearClipper(di, clipper);
 
 	di->UpdateCurrentMapSection();
