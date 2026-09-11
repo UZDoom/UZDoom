@@ -103,6 +103,7 @@ class LoadSaveMenu : ListMenu
 
 	TextureID warningTextureId;
 	TextureID errorTextureId;
+	TextureID frameCornerTextureId;
 
 	//=============================================================================
 	//
@@ -119,6 +120,7 @@ class LoadSaveMenu : ListMenu
 
 		warningTextureId = TexMan.CheckForTexture("m_warn");
 		errorTextureId = TexMan.CheckForTexture("m_error");
+		frameCornerTextureId = TexMan.CheckForTexture("m_corner");
 	}
 
 	private void SetWindows()
@@ -183,6 +185,56 @@ class LoadSaveMenu : ListMenu
 		screen.Dim(0, 0.9, left, top, width, height);
 	}
 
+	virtual void DrawFrameCorners(int left, int top, int width, int height)
+	{
+		int frameBorder = 3 * wScale;
+		int cornerSize = 16 * wScale;
+
+		// TL
+		Screen.drawTexture(
+			frameCornerTextureId,
+			false,
+			left - frameBorder,
+			top - frameBorder,
+			DTA_DESTHEIGHT, cornerSize,
+			DTA_DESTWIDTH, cornerSize,
+			DTA_FlipX, false,
+            DTA_FlipY, false);
+
+		// TR
+		Screen.drawTexture(
+			frameCornerTextureId,
+			false,
+			left + width + frameBorder - cornerSize,
+			top - frameBorder,
+			DTA_DESTHEIGHT, cornerSize,
+			DTA_DESTWIDTH, cornerSize,
+		    DTA_FlipX, true,
+            DTA_FlipY, false);
+
+		// BL
+		Screen.drawTexture(
+			frameCornerTextureId,
+			false,
+			left - frameBorder,
+			top + height + frameBorder - cornerSize,
+			DTA_DESTHEIGHT, cornerSize,
+			DTA_DESTWIDTH, cornerSize,
+			DTA_FlipX, false,
+            DTA_FlipY, true);
+
+		// BR
+		Screen.drawTexture(
+			frameCornerTextureId,
+			false,
+			left + width + frameBorder - cornerSize,
+			top + height + frameBorder - cornerSize,
+			DTA_DESTHEIGHT, cornerSize,
+			DTA_DESTWIDTH, cornerSize,
+		    DTA_FlipX, true,
+            DTA_FlipY, true);
+	}
+
 	override void Drawer ()
 	{
 		Super.Drawer();
@@ -215,6 +267,8 @@ class LoadSaveMenu : ListMenu
 					(savepicTop+(savepicHeight-rowHeight)/2) / FontScale, text, DTA_VirtualWidthF, screen.GetWidth() / FontScale, DTA_VirtualHeightF, screen.GetHeight() / FontScale, DTA_KeepRatio, true);
 			}
 		}
+
+		DrawFrameCorners(savepicLeft, savepicTop, savepicWidth, savepicHeight);
 
 		// Draw comment area
 		DrawFrame(commentAreaLeft, commentAreaTop, commentAreaWidth, commentAreaHeight);
@@ -259,7 +313,7 @@ class LoadSaveMenu : ListMenu
 
 				screen.DrawText(
 					desiredSmallFont,
-					Font.CR_WHITE,
+					Font.CR_YELLOW,
 					(commentLeft + iconSize + iconPadding) / FontScale,
 					warningTop / FontScale,
 					text,
@@ -269,6 +323,8 @@ class LoadSaveMenu : ListMenu
 					true);
 			}
 		}
+
+		DrawFrameCorners(commentAreaLeft, commentAreaTop, commentAreaWidth, commentAreaHeight);
 
 		// Draw file area
 		DrawFrame(listboxLeft, listboxTop, listboxWidth, listboxHeight);
@@ -302,7 +358,9 @@ class LoadSaveMenu : ListMenu
 
 			int rowTop = listboxTop + (rowHeight * i);
 			int rowBottom = rowTop + rowHeight;
-			int textLeftMargin = 4;
+			int textLeftMargin = 2;
+			int iconSize = (FontHeight - 4) * FontScale;
+			int iconPadding = 2 * FontScale;
 
 			if (j == Selected)
 			{
@@ -311,37 +369,26 @@ class LoadSaveMenu : ListMenu
 					rowTop,
 					listboxRight,
 					rowBottom,
-					mEntering ? Color(255,255,0,0) : Color(255,64,64,64));
+					mEntering ? Color(255,255,0,0) : Color(255,32,32,32));
 			}
 
 			if (iconTexId)
 			{
-				int iconSize = (FontHeight - 4) * FontScale;
-				int iconPadding = 2 * FontScale;
-
 				Screen.drawTexture(
 					iconTexId,
 					false,
-					listboxLeft + iconPadding,
+					listboxLeft + textLeftMargin + iconPadding,
 					rowTop + iconPadding,
 					DTA_DESTHEIGHT, iconSize,
 					DTA_DESTWIDTH, iconSize);
 
-				textLeftMargin += 14;
+				textLeftMargin += 16;
 			}
 
-			int textColor;
-			if (node.bOldVersion)
+			int textColor = Font.CR_WHITE;
+			if (j == Selected)
 			{
-				textColor = Font.CR_RED;
-			}
-			else if (node.bMissingWads)
-			{
-				textColor = Font.CR_YELLOW;
-			}
-			else
-			{
-				textColor = Font.CR_WHITE;
+				textColor = Font.CR_BRICK;
 			}
 
 			if (j == Selected && mEntering)
@@ -381,6 +428,8 @@ class LoadSaveMenu : ListMenu
 			screen.ClearClipRect();
 			j++;
 		}
+
+		DrawFrameCorners(listboxLeft, listboxTop, listboxWidth, listboxHeight);
 	}
 
 	void UpdateSaveComment()
