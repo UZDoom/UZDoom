@@ -3944,6 +3944,9 @@ msgstr "Weapons"
 msgid "OPTVAL_BOTH"
 msgstr "Both"
 
+msgid "OPTVAL_MONSTERS"
+msgstr "Monsters"
+
 msgid "OPTVAL_ZDOOM"
 msgstr "ZDoom"
 
