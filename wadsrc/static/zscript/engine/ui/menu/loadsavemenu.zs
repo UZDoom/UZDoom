@@ -103,7 +103,6 @@ class LoadSaveMenu : ListMenu
 
 	TextureID warningTextureId;
 	TextureID errorTextureId;
-	TextureID frameCornerTextureId;
 
 	//=============================================================================
 	//
@@ -120,7 +119,6 @@ class LoadSaveMenu : ListMenu
 
 		warningTextureId = TexMan.CheckForTexture("m_warn");
 		errorTextureId = TexMan.CheckForTexture("m_error");
-		frameCornerTextureId = TexMan.CheckForTexture("m_corner");
 	}
 
 	private void SetWindows()
@@ -178,63 +176,11 @@ class LoadSaveMenu : ListMenu
 	//
 	//=============================================================================
 
-	virtual void DrawFrameBefore(int left, int top, int width, int height)
+	virtual void DrawFrame(int left, int top, int width, int height)
 	{
-		screen.Dim(0, 0.9, left, top, width, height);
-	}
-
-	virtual void DrawFrameAfter(int left, int top, int width, int height)
-	{
-		int frameBorder = 3 * wScale;
-		int cornerSize = 16 * wScale;
-
-		// edges
 		let framecolor = Color(255, 80, 80, 80);
 		Screen.DrawLineFrame(framecolor, left, top, width, height, wScale);
-
-		// TL
-		Screen.drawTexture(
-			frameCornerTextureId,
-			false,
-			left - frameBorder,
-			top - frameBorder,
-			DTA_DESTHEIGHT, cornerSize,
-			DTA_DESTWIDTH, cornerSize,
-			DTA_FlipX, false,
-            DTA_FlipY, false);
-
-		// TR
-		Screen.drawTexture(
-			frameCornerTextureId,
-			false,
-			left + width + frameBorder - cornerSize,
-			top - frameBorder,
-			DTA_DESTHEIGHT, cornerSize,
-			DTA_DESTWIDTH, cornerSize,
-		    DTA_FlipX, true,
-            DTA_FlipY, false);
-
-		// BL
-		Screen.drawTexture(
-			frameCornerTextureId,
-			false,
-			left - frameBorder,
-			top + height + frameBorder - cornerSize,
-			DTA_DESTHEIGHT, cornerSize,
-			DTA_DESTWIDTH, cornerSize,
-			DTA_FlipX, false,
-            DTA_FlipY, true);
-
-		// BR
-		Screen.drawTexture(
-			frameCornerTextureId,
-			false,
-			left + width + frameBorder - cornerSize,
-			top + height + frameBorder - cornerSize,
-			DTA_DESTHEIGHT, cornerSize,
-			DTA_DESTWIDTH, cornerSize,
-		    DTA_FlipX, true,
-            DTA_FlipY, true);
+		screen.Dim(0, 0.9, left, top, width, height);
 	}
 
 	override void Drawer ()
@@ -255,7 +201,7 @@ class LoadSaveMenu : ListMenu
 		}
 
 		SetWindows();
-		DrawFrameBefore(savepicLeft, savepicTop, savepicWidth, savepicHeight);
+		DrawFrame(savepicLeft, savepicTop, savepicWidth, savepicHeight);
 		if (!manager.DrawSavePic(savepicLeft, savepicTop, savepicWidth, savepicHeight))
 		{
 			if (manager.SavegameCount() > 0)
@@ -270,10 +216,8 @@ class LoadSaveMenu : ListMenu
 			}
 		}
 
-		DrawFrameAfter(savepicLeft, savepicTop, savepicWidth, savepicHeight);
-
 		// Draw comment area
-		DrawFrameBefore(commentAreaLeft, commentAreaTop, commentAreaWidth, commentAreaHeight);
+		DrawFrame(commentAreaLeft, commentAreaTop, commentAreaWidth, commentAreaHeight);
 
 		if (Selected >= 0 && Selected < manager.SavegameCount())
 		{
@@ -327,11 +271,8 @@ class LoadSaveMenu : ListMenu
 			}
 		}
 
-		DrawFrameAfter(commentAreaLeft, commentAreaTop, commentAreaWidth, commentAreaHeight);
-
-
 		// Draw file area
-		DrawFrameBefore(listboxLeft, listboxTop, listboxWidth, listboxHeight);
+		DrawFrame(listboxLeft, listboxTop, listboxWidth, listboxHeight);
 
 		if (manager.SavegameCount() == 0)
 		{
@@ -390,27 +331,28 @@ class LoadSaveMenu : ListMenu
 				textLeftMargin += 14;
 			}
 
-			int primaryColor;
-			int secondaryColor;
-			if (j == Selected)
+			int textColor;
+			if (node.bOldVersion)
 			{
-				primaryColor = Font.CR_WHITE;
-				secondaryColor = Font.CR_BLACK;
+				textColor = Font.CR_RED;
+			}
+			else if (node.bMissingWads)
+			{
+				textColor = Font.CR_YELLOW;
 			}
 			else
 			{
-				primaryColor = Font.CR_TAN;
-				secondaryColor = Font.CR_BLACK;
+				textColor = Font.CR_WHITE;
 			}
 
 			if (j == Selected && mEntering)
 			{
-				String s = mInput.GetText() .. NewConsoleFont.GetCursor();
-				int length = int(desiredConsoleFont.StringWidth(s) * FontScale);
+				String s = mInput.GetText() .. NewSmallFont.GetCursor();
+				int length = int(desiredSmallFont.StringWidth(s) * FontScale);
 				int displacement = min(0, listboxWidth - 2 - length);
 				screen.DrawText(
-					desiredConsoleFont,
-					primaryColor,
+					desiredSmallFont,
+					textColor,
 					((listboxLeft + displacement) / FontScale) + textLeftMargin,
 					(rowTop + FontScale) / FontScale,
 					s,
@@ -424,8 +366,8 @@ class LoadSaveMenu : ListMenu
 			else
 			{
 				screen.DrawText(
-					desiredConsoleFont,
-					primaryColor,
+					desiredSmallFont,
+					textColor,
 					(listboxLeft / FontScale) + textLeftMargin,
 					(rowTop + FontScale) / FontScale,
 					node.SaveTitle,
@@ -440,8 +382,6 @@ class LoadSaveMenu : ListMenu
 			screen.ClearClipRect();
 			j++;
 		}
-
-		DrawFrameAfter(listboxLeft, listboxTop, listboxWidth, listboxHeight);
 	}
 
 	void UpdateSaveComment()
