@@ -1951,7 +1951,11 @@ OptionMenu AutomapOptions protected
 	Option "$AUTOMAPMNU_DRAWMAPBACK",			"am_drawmapback", "MapBackTypes"
 	Option "$AUTOMAPMNU_SHOWTRIGGERLINES",		"am_showtriggerlines", "MapTriggers"
 	Option "$AUTOMAPMNU_SHOWTHINGSPRITES",		"am_showthingsprites", "STSTypes"
-	Option "$AUTOMAPMNU_SHOWSEENTHINGS",		"am_showseenthings", "ThingTypes"
+	Option "$AUTOMAPMNU_SHOWSEENITEMS",			"am_show_seen_items", "OnOff"
+	Option "$AUTOMAPMNU_SHOWSEENMONSTERS",		"am_show_seen_monsters", "OnOff"
+	Option "$AUTOMAPMNU_SHOWSEENCORPSES",		"am_show_seen_corpses", "OnOff"
+	Option "$AUTOMAPMNU_SHOWSEENFRIENDLIES",	"am_show_seen_friendlies", "OnOff"
+	Option "$AUTOMAPMNU_SHOWSEENDECORATIONS",	"am_show_seen_decorations", "OnOff"
 	Slider "$AUTOMAPMNU_THINGSPRITESSCALE",		"am_thingsspritescale", 0.1, 1.0, 0.1, 1
 
 	StaticText ""

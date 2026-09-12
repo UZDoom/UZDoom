@@ -161,7 +161,11 @@ CVAR(Int, am_drawmapback, 1, CVAR_ARCHIVE);
 CVAR(Bool, am_showkeys, true, CVAR_ARCHIVE);
 CVAR(Int, am_showtriggerlines, 0, CVAR_ARCHIVE);
 CVAR(Int, am_showthingsprites, 0, CVAR_ARCHIVE);
-CVAR(Int, am_showseenthings, 0, CVAR_ARCHIVE);
+CVAR(Bool, am_show_seen_items, false, CVAR_ARCHIVE);
+CVAR(Bool, am_show_seen_monsters, false, CVAR_ARCHIVE);
+CVAR(Bool, am_show_seen_corpses, false, CVAR_ARCHIVE);
+CVAR(Bool, am_show_seen_friendlies, false, CVAR_ARCHIVE);
+CVAR(Bool, am_show_seen_decorations, false, CVAR_ARCHIVE);
 CVAR(Float, am_thingsspritescale, 1.0, CVAR_ARCHIVE);
 CVAR (Bool, am_showkeys_always, false, CVAR_ARCHIVE);
 
@@ -3063,7 +3067,13 @@ void DAutomap::drawThings (bool allmap)
 	bool allthings = allmap && players[consoleplayer].mo->FindInventory(NAME_PowerScanner, true) != nullptr;
 
 	// if there is nothing to draw, abort early.
-	if (!(am_cheat > 0 || allthings || am_showseenthings))
+	if (!(am_cheat > 0
+		|| allthings
+		|| am_show_seen_items
+		|| am_show_seen_monsters
+		|| am_show_seen_corpses
+		|| am_show_seen_friendlies
+		|| am_show_seen_decorations))
 	{
 		return;
 	}
@@ -3079,10 +3089,19 @@ void DAutomap::drawThings (bool allmap)
 		while (t)
 		{
 			bool showThisSeenThing = false;
-			if (am_showseenthings != 0 && t->subsector && t->subsector->flags & SSECMF_DRAWN)
+			if (!netgame && t->subsector && t->subsector->flags & SSECMF_DRAWN)
 			{
-				showThisSeenThing |= (am_showseenthings == 1 || am_showseenthings == 3) && t->flags&MF_SPECIAL;
-				showThisSeenThing |= (am_showseenthings == 2 || am_showseenthings == 3) && t->flags3&MF3_ISMONSTER && !(t->flags&MF_CORPSE);
+				bool isItem = t->flags & MF_SPECIAL;
+				bool isMonster = t->flags3 & MF3_ISMONSTER && !(t->flags & MF_CORPSE);
+				bool isCorpse = t->flags & MF_CORPSE;
+				bool isFriendly = t->flags & MF_FRIENDLY && !(t->flags & MF_CORPSE);
+				bool isDecoration = !isItem && !isMonster && !isCorpse && !isFriendly && t->sprite > 0;
+
+				showThisSeenThing |= am_show_seen_items && isItem;
+				showThisSeenThing |= am_show_seen_monsters && isMonster;
+				showThisSeenThing |= am_show_seen_corpses && isCorpse;
+				showThisSeenThing |= am_show_seen_friendlies && isFriendly;
+				showThisSeenThing |= am_show_seen_decorations && isDecoration;
 			}
 
 			// draw this thing if:

@@ -4472,10 +4472,6 @@ msgid "AUTOMAPMNU_SHOWTHINGSPRITES"
 msgstr "Show things as sprites"
 
 #, fuzzy
-msgid "AUTOMAPMNU_SHOWSEENTHINGS"
-msgstr "Show things when seen"
-
-#, fuzzy
 msgid "AUTOMAPMNU_THINGSPRITESSCALE"
 msgstr "Thing sprites scale"
 

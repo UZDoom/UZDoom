@@ -3541,9 +3541,6 @@ msgstr "Show trigger lines"
 msgid "AUTOMAPMNU_SHOWTHINGSPRITES"
 msgstr "Show things as sprites"
 
-msgid "AUTOMAPMNU_SHOWSEENTHINGS"
-msgstr "Show things when seen"
-
 msgid "AUTOMAPMNU_THINGSPRITESSCALE"
 msgstr "Thing sprites scale"
 
