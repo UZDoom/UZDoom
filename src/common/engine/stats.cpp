@@ -82,46 +82,65 @@ void FStat::EnableStat(const char* name, bool on)
 {
 	FStat* stat = FindStat(name);
 	if (stat)
-		stat->m_Active = on;
+	{
+		if(stat->m_Active != on) stat->ToggleStat();
+	}
 	else
+	{
 		Printf("Unknown stat: %s\n", name);
+	}
 }
 
 void FStat::ToggleStat ()
 {
 	m_Active = !m_Active;
+
+	if(m_Active)
+	{
+		OnEnable();
+	}
+	else
+	{
+		OnDisable();
+	}
 }
 
 void FStat::PrintStat (F2DDrawer *drawer)
 {
-	int textScale = active_con_scale(drawer);
-
-	int fontheight = NewConsoleFont->GetHeight() + 1;
-	int y = drawer->GetHeight() / textScale;
-	int count = 0;
+	int y = drawer->GetHeight();
 
 	for (FStat *stat = FirstStat; stat != NULL; stat = stat->m_Next)
 	{
 		if (stat->m_Active)
 		{
-			FString stattext(stat->GetStats());
-
-			if (stattext.Len() > 0)
-			{
-				y -= fontheight;	// there's at least one line of text
-				for (unsigned i = 0; i < stattext.Len()-1; i++)
-				{
-					// Count number of linefeeds but ignore terminating ones.
-					if (stattext[i] == '\n') y -= fontheight;
-				}
-				DrawText(drawer, NewConsoleFont, CR_GREEN, 5. / textScale, y, stattext.GetChars(),
-					DTA_VirtualWidth, twod->GetWidth() / textScale,
-					DTA_VirtualHeight, twod->GetHeight() / textScale,
-					DTA_KeepRatio, true, TAG_DONE);
-				count++;
-			}
+			y -= stat->DrawStat(drawer, y);
 		}
 	}
+}
+
+double FTextStat::DrawStat(F2DDrawer *drawer, double yoffset_bottom)
+{
+	int textScale = active_con_scale(drawer);
+	int fontheight = NewConsoleFont->GetHeight() + 1;
+
+	double y = yoffset_bottom / textScale;
+
+	FString stattext(GetStats());
+
+	if (stattext.Len() > 0)
+	{
+		y -= fontheight;	// there's at least one line of text
+		for (unsigned i = 0; i < stattext.Len()-1; i++)
+		{
+			// Count number of linefeeds but ignore terminating ones.
+			if (stattext[i] == '\n') y -= fontheight;
+		}
+		DrawText(drawer, NewConsoleFont, CR_GREEN, 5. / textScale, y, stattext.GetChars(),
+			DTA_VirtualWidth, drawer->GetWidth() / textScale,
+			DTA_VirtualHeight, drawer->GetHeight() / textScale,
+			DTA_KeepRatio, true, TAG_DONE);
+	}
+	return yoffset_bottom - (y * textScale);
 }
 
 void FStat::DumpRegisteredStats ()

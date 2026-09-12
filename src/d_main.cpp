@@ -1098,6 +1098,137 @@ static void End2DAndUpdate()
 	twod->OnFrameDone();
 }
 
+
+class GraphBuffer
+{
+	TArray<float> buffer;
+	int index = 0;
+public:
+
+	inline GraphBuffer(int size) : buffer(size, true)
+	{
+		assert(size > 0);
+	}
+
+	inline void Push(float val)
+	{
+		buffer[index] = val;
+		index = (index + 1) % buffer.size();
+	}
+
+	inline const TArray<float>& GetData() const
+	{
+		return buffer;
+	}
+
+	inline int GetStartIndex() const
+	{
+		return index;
+	}
+};
+
+GraphBuffer renderTimeGraph(256);
+
+void RenderGraph(F2DDrawer *drawer, const GraphBuffer& buffer, DVector2 pos, DVector2 size, float yMax, uint32_t color, uint8_t alpha, const char* guideFormatStr)
+{
+	drawer->AddThickLine(DVector2(pos.X, pos.Y + size.Y / 2), DVector2(pos.X + size.X, pos.Y + size.Y / 2), size.Y, MAKEARGB(255, 0, 0, 0), alpha / 2);
+
+	FFont* font = ConFont;
+
+	FString str;
+
+	auto addGuideLine = [&](double y, double val) {
+		drawer->AddLine(DVector2(pos.X, pos.Y + y), DVector2(pos.X + size.X, pos.Y + y), nullptr, MAKEARGB(255, 255, 255, 255), alpha / 2);
+		str.Format(guideFormatStr, val);
+		DrawText(drawer, font, 0, pos.X + size.X, pos.Y + y - 4.0, str.GetChars(), 0);
+	};
+
+	for (int i = 1; i < 10; ++i)
+	{
+		addGuideLine(size.Y * double(i) / 10.0, double((10 - i) / 10.0f * yMax));
+	}
+
+	auto& data = buffer.GetData();
+	auto stepX = size.X / data.size();
+
+	auto calcYPos = [&](float y)
+	{
+		return pos.Y + size.Y * (1.0f - (y / yMax));
+	};
+
+	int startIndex = buffer.GetStartIndex();
+
+	DVector2 prev = DVector2(pos.X, calcYPos(data[startIndex]));
+
+	for (int i = 1; i < data.size(); ++i)
+	{
+		pos.X += stepX;
+		DVector2 next = DVector2(pos.X, calcYPos(data[(startIndex + i) % data.size()]));
+
+		drawer->AddLine(prev, next, nullptr, color, alpha);
+		prev = next;
+	}
+}
+
+int rendergraph_count = 0;
+
+ADD_RAWSTAT_ONOFF(rendergraph)
+{
+	int textScale = active_con_scale(drawer);
+	double width = (drawer->GetWidth() * 0.25) / textScale;
+	double height = (drawer->GetHeight() * 0.25) / textScale;
+	renderTimeGraph.Push(All.TimeMS() + Finish.TimeMS());
+	RenderGraph(drawer, renderTimeGraph,
+		DVector2(0, yoffset_bottom - height), // pos
+		DVector2(width, height), // size
+		20.0f, // ymax
+		MAKEARGB(255, 255, 255, 0), // color
+		255, // alpha
+		"%.1lfms"); // guideFormatStr
+	return height;
+}
+
+STAT_ON(rendergraph)
+{
+	doBench++;
+	rendergraph_count++;
+}
+
+STAT_OFF(rendergraph)
+{
+	doBench--;
+	rendergraph_count--;
+}
+
+ADD_RAWSTAT_ONOFF(rendergraph_center)
+{
+	if(rendergraph_count < 2)
+	{
+		renderTimeGraph.Push(All.TimeMS() + Finish.TimeMS());
+	}
+	RenderGraph(drawer, renderTimeGraph,
+		DVector2(drawer->GetWidth() * 0.25, drawer->GetHeight() * 0.25), // pos
+		DVector2(drawer->GetWidth() * 0.5, drawer->GetHeight() * 0.5), // size
+		20.0f, // ymax
+		MAKEARGB(255, 255, 255, 0), // color
+		255, // alpha
+		"%.1lfms"); // guideFormatStr
+	return 0;
+}
+
+STAT_ON(rendergraph_center)
+{
+	doBench++;
+	rendergraph_count++;
+}
+
+STAT_OFF(rendergraph_center)
+{
+	doBench--;
+	rendergraph_count--;
+}
+
+
 //==========================================================================
 //
 // D_Display
