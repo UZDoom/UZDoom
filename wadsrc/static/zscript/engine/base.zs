@@ -888,6 +888,7 @@ class BrokenLines : Object native version("2.4")
 struct StringTable native
 {
 	native static String Localize(String val, bool prefixed = true);
+	native static String GetUnlocalizedString(String val, bool prefixed = true);
 }
 
 struct Wads	// todo: make FileSystem an alias to 'Wads'

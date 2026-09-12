@@ -52,6 +52,8 @@ class os_Menu : OptionMenu
 		let    query            = os_Query.fromString(text);
 		bool   isAnyTermMatches = mIsAnyOfItem.mCVar.GetBool();
 
+		query.matchEverything = text == "*";
+
 		mDesc.mItems.clear();
 
 		addSearchField(text);
@@ -154,7 +156,9 @@ class os_Menu : OptionMenu
 
 			string label = StringTable.Localize(item.mLabel);
 
-			if (!query.matches(label, isAnyTermMatches)) { continue; }
+			if (!query.matches(label, isAnyTermMatches)
+				&& !(query.matches(StringTable.GetUnlocalizedString(item.mLabel), isAnyTermMatches))
+			) continue;
 
 			found = true;
 
