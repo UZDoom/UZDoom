@@ -240,6 +240,8 @@ FARG(loadgame, "Loading", "Automatically loads specified savegame upon starting.
 	"Automatically loads the specified savegame. To find out a save's file name, press F1 while it"
 	" is highlighted in the save or load menu. If you do not include the .zds extension, " GAMENAME
 	" will automatically add it for you.");
+FARG(continuegame, "Loading", "Automatically loads the last used savegame upon starting.", "",
+	"will automatically find and load the last used savegame.");
 FARG(playdemo, "Loading", "Automatically plays demo file upon startup.", "demofile[.lmp]",
 	GAMENAME " will automatically play the specified demo when it starts. If the .lmp extension is"
 	" omitted, it will automatically be added.");
@@ -1446,8 +1448,6 @@ void D_DoomLoop ()
 
 	vid_cursor->Callback();
 
-	bool hasDoneContinue = false;
-
 	for (;;)
 	{
 		try
@@ -1478,13 +1478,6 @@ void D_DoomLoop ()
 			{
 				wantToRestart = false;
 				return;
-			}
-
-			// yuck
-			if (!hasDoneContinue)
-			{
-				savegameManager.DoContinue();
-				hasDoneContinue = true;
 			}
 		}
 		catch (const CRecoverableError &error)
@@ -3887,6 +3880,11 @@ static int D_InitGame(const FIWADInfo* iwad_info, std::vector<FileSys::ResourceN
 				I_FatalError("Cannot find savegame %s", file.GetChars());
 			}
 			G_LoadGame(file.GetChars());
+		}
+
+		if (Args->CheckParm (FArg_continuegame))
+		{
+			savegameManager.DoContinue();
 		}
 
 		v = Args->CheckValue(FArg_playdemo);
