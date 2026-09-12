@@ -64,7 +64,6 @@ protected:
 	virtual FString ExtractSaveComment(FSerializer &arc) = 0;
 	virtual FString BuildSaveName(const char* prefix, int slot) = 0;
 public:
-	void DoContinue();
 	void NotifyNewSave(const FString &file, const FString &title, bool okForQuicksave, bool forceQuicksave);
 	void ClearSaveGames();
 
@@ -85,6 +84,7 @@ public:
 	bool RemoveNewSaveNode();
 	int RemoveUUIDSaveSlots();
 
+	FString GetLastUsedSaveFile();
 };
 
 extern FString SavegameFolder;	// specifies a subdirectory for the current IWAD.

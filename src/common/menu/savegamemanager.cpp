@@ -41,36 +41,10 @@
 CVAR(String, save_dir, "", CVAR_ARCHIVE | CVAR_GLOBALCONFIG | CVAR_SYSTEM_ONLY);
 FString SavegameFolder;
 CVAR(Int, save_sort_order, 1, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
-CVAR(Bool, save_autocontinue, false, CVAR_ARCHIVE)
 
 EXTERN_FARG(savedir);
 
 extern bool netgame;
-
-void FSavegameManagerBase::DoContinue()
-{
-	if (save_autocontinue)
-	{
-		ReadSaveStrings();
-
-		FSaveGameNode* pLastSave = nullptr;
-		int lastSaveSlot = -1;
-		for (int i = SaveGames.Size() - 1; i >= 0; --i)
-		{
-			auto& save = SaveGames[i];
-			if (pLastSave == nullptr || save->CreationTime > pLastSave->CreationTime)
-			{
-				pLastSave = save;
-				lastSaveSlot = i;
-			}
-		}
-
-		if (pLastSave != nullptr)
-		{
-			LoadSavegame(lastSaveSlot);
-		}
-	}
-}
 
 //=============================================================================
 //
@@ -637,6 +611,34 @@ DEFINE_FIELD(FSaveGameNode, bNoDelete);
 DEFINE_FIELD_X(SavegameManager, FSavegameManagerBase, WindowSize);
 DEFINE_FIELD_X(SavegameManager, FSavegameManagerBase, quickSaveSlot);
 DEFINE_FIELD_X(SavegameManager, FSavegameManagerBase, SaveCommentString);
+
+//=============================================================================
+//
+//	Find the last used save file by checking each creation time on disk.
+//
+//=============================================================================
+
+FString FSavegameManagerBase::GetLastUsedSaveFile()
+{
+	ReadSaveStrings();
+
+	FSaveGameNode* pLastSave = nullptr;
+	for (int i = SaveGames.Size() - 1; i >= 0; --i)
+	{
+		auto& save = SaveGames[i];
+		if (pLastSave == nullptr || save->CreationTime > pLastSave->CreationTime)
+		{
+			pLastSave = save;
+		}
+	}
+
+	if (pLastSave != nullptr)
+	{
+		return pLastSave->Filename;
+	}
+
+	return FString();
+}
 
 //=============================================================================
 //

@@ -3884,7 +3884,11 @@ static int D_InitGame(const FIWADInfo* iwad_info, std::vector<FileSys::ResourceN
 
 		if (Args->CheckParm (FArg_continuegame))
 		{
-			savegameManager.DoContinue();
+			FString file = savegameManager.GetLastUsedSaveFile();
+			if (file.IsNotEmpty())
+			{
+				G_LoadGame(file.GetChars());
+			}
 		}
 
 		v = Args->CheckValue(FArg_playdemo);
