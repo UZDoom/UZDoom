@@ -80,6 +80,17 @@ enum class BufferUsageType
 	Mappable    // initial data is null, staticdata is true
 };
 
+enum class BufferType
+{
+	Index,
+	Vertex,
+	Data,
+};
+
+class IVertexBuffer;
+class IIndexBuffer;
+class IDataBuffer;
+
 class IBuffer
 {
 protected:
@@ -93,8 +104,6 @@ public:
 
 	virtual void SetData(size_t size, const void *data, BufferUsageType type) = 0;
 	virtual void SetSubData(size_t offset, size_t size, const void *data) = 0;
-	virtual void *Lock(unsigned int size) = 0;
-	virtual void Unlock() = 0;
 	virtual void Resize(size_t newsize) = 0;
 
 	virtual void Upload(size_t start, size_t size) {} // For unmappable buffers
@@ -105,20 +114,39 @@ public:
 	size_t Size() { return buffersize; }
 	virtual void GPUDropSync() {}
 	virtual void GPUWaitSync() {}
+
+	virtual BufferType GetBufferType() = 0;
+	virtual IVertexBuffer* ToVertexBuffer() { return nullptr; }
+	virtual IIndexBuffer* ToIndexBuffer() { return nullptr; }
+	virtual IDataBuffer* ToDataBuffer() { return nullptr; }
 };
 
-class IVertexBuffer : virtual public IBuffer
+class ILockableBuffer : virtual public IBuffer
+{
+public:
+	virtual void *Lock(unsigned int size) = 0; // used only by vertex/index buffers
+	virtual void Unlock() = 0;
+};
+
+class IVertexBuffer : virtual public IBuffer, virtual public ILockableBuffer
 {
 public:
 	virtual void SetFormat(int numBindingPoints, int numAttributes, size_t stride, const FVertexBufferAttribute *attrs) = 0;
+
+	virtual BufferType GetBufferType() override { return BufferType::Vertex;}
+	virtual IVertexBuffer* ToVertexBuffer() override { return this; }
 };
 
 // This merely exists to have a dedicated type for index buffers to inherit from.
-class IIndexBuffer : virtual public IBuffer
+class IIndexBuffer : virtual public IBuffer, virtual public ILockableBuffer
 {
+public:
 	// Element size is fixed to 4, thanks to OpenGL requiring this info to be coded into the glDrawElements call.
 	// This mostly prohibits a more flexible buffer setup but GZDoom doesn't use any other format anyway.
 	// Ob Vulkam, element size is a buffer property and of no concern to the drawing functions (as it should be.)
+
+	virtual BufferType GetBufferType() override { return BufferType::Index;}
+	virtual IIndexBuffer* ToIndexBuffer() override { return this; }
 };
 
 class IDataBuffer : virtual public IBuffer
@@ -126,5 +154,6 @@ class IDataBuffer : virtual public IBuffer
 	// Can be either uniform or shader storage buffer, depending on its needs.
 public:
 	virtual void BindRange(FRenderState *state, size_t start, size_t length) = 0;
-
+	virtual BufferType GetBufferType() override { return BufferType::Data;}
+	virtual IDataBuffer* ToDataBuffer() override { return this; }
 };
