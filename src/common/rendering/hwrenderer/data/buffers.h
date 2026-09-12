@@ -93,8 +93,6 @@ public:
 
 	virtual void SetData(size_t size, const void *data, BufferUsageType type) = 0;
 	virtual void SetSubData(size_t offset, size_t size, const void *data) = 0;
-	virtual void *Lock(unsigned int size) = 0;
-	virtual void Unlock() = 0;
 	virtual void Resize(size_t newsize) = 0;
 
 	virtual void Upload(size_t start, size_t size) {} // For unmappable buffers
@@ -107,14 +105,21 @@ public:
 	virtual void GPUWaitSync() {}
 };
 
-class IVertexBuffer : virtual public IBuffer
+class ILockableBuffer : virtual public IBuffer
+{
+public:
+	virtual void *Lock(unsigned int size) = 0; // used only by vertex/index buffers
+	virtual void Unlock() = 0;
+};
+
+class IVertexBuffer : virtual public IBuffer, virtual public ILockableBuffer
 {
 public:
 	virtual void SetFormat(int numBindingPoints, int numAttributes, size_t stride, const FVertexBufferAttribute *attrs) = 0;
 };
 
 // This merely exists to have a dedicated type for index buffers to inherit from.
-class IIndexBuffer : virtual public IBuffer
+class IIndexBuffer : virtual public IBuffer, virtual public ILockableBuffer
 {
 	// Element size is fixed to 4, thanks to OpenGL requiring this info to be coded into the glDrawElements call.
 	// This mostly prohibits a more flexible buffer setup but GZDoom doesn't use any other format anyway.
