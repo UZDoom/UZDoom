@@ -104,7 +104,6 @@ class LoadSaveMenu : ListMenu
 	TextureID warningTextureId;
 	TextureID errorTextureId;
 	TextureID frameCornerTextureId;
-	TextureID listCursorTextureId;
 
 	//=============================================================================
 	//
@@ -122,7 +121,6 @@ class LoadSaveMenu : ListMenu
 		warningTextureId = TexMan.CheckForTexture("m_warn");
 		errorTextureId = TexMan.CheckForTexture("m_error");
 		frameCornerTextureId = TexMan.CheckForTexture("m_corner");
-		listCursorTextureId = TexMan.CheckForTexture("m_lstcur");
 	}
 
 	private void SetWindows()
@@ -330,7 +328,7 @@ class LoadSaveMenu : ListMenu
 		DrawFrameCorners(commentAreaLeft, commentAreaTop, commentAreaWidth, commentAreaHeight);
 
 		// Draw file area
-		////DrawFrame(listboxLeft, listboxTop, listboxWidth, listboxHeight);
+		DrawFrame(listboxLeft, listboxTop, listboxWidth, listboxHeight);
 
 		if (manager.SavegameCount() == 0)
 		{
@@ -361,26 +359,18 @@ class LoadSaveMenu : ListMenu
 
 			int rowTop = listboxTop + (rowHeight * i);
 			int rowBottom = rowTop + rowHeight;
-			int textLeftMargin = 20;
+			int textLeftMargin = 2;
 			int iconSize = (FontHeight - 4) * FontScale;
 			int iconPadding = 2 * FontScale;
 
 			if (j == Selected)
 			{
-				/*screen.Clear(
+				screen.Clear(
 					listboxLeft,
 					rowTop,
 					listboxRight,
 					rowBottom,
-					mEntering ? Color(255,255,0,0) : Color(255,32,32,32));*/
-
-				Screen.drawTexture(
-					listCursorTextureId,
-					false,
-					listboxLeft + 4,
-					rowTop + 4,
-					DTA_DESTWIDTH, iconSize,
-					DTA_DESTHEIGHT, iconSize);
+					mEntering ? Color(255,255,0,0) : Color(255,32,32,32));
 			}
 
 			if (iconTexId)
@@ -401,14 +391,6 @@ class LoadSaveMenu : ListMenu
 			{
 				textColor = Font.CR_BRICK;
 			}
-			/*if (node.bOldVersion)
-			{
-				textColor = Font.CR_RED;
-			}
-			else if (node.bMissingWads)
-			{
-				textColor = Font.CR_YELLOW;
-			}*/
 
 			if (j == Selected && mEntering)
 			{
@@ -448,7 +430,7 @@ class LoadSaveMenu : ListMenu
 			j++;
 		}
 
-		////DrawFrameCorners(listboxLeft, listboxTop, listboxWidth, listboxHeight);
+		DrawFrameCorners(listboxLeft, listboxTop, listboxWidth, listboxHeight);
 	}
 
 	void UpdateSaveComment()
