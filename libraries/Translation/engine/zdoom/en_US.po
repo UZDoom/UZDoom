@@ -4472,6 +4472,10 @@ msgid "AUTOMAPMNU_SHOWTHINGSPRITES"
 msgstr "Show things as sprites"
 
 #, fuzzy
+msgid "AUTOMAPMNU_THINGSPRITESSCALE"
+msgstr "Thing sprites scale"
+
+#, fuzzy
 msgid "AUTOMAPMNU_PTOVERLAY"
 msgstr "Overlay portals"
 
@@ -4990,6 +4994,10 @@ msgstr "Weapons"
 #, fuzzy
 msgid "OPTVAL_BOTH"
 msgstr "Both"
+
+#, fuzzy
+msgid "OPTVAL_MONSTERS"
+msgstr "Monsters"
 
 msgid "OPTVAL_ZDOOM"
 msgstr "ZDoom"

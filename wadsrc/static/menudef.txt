@@ -1890,6 +1890,14 @@ OptionValue MapBackTypes
 	2, "$OPTVAL_MAPDEFINEDCOLORSONLY"
 }
 
+OptionValue ThingTypes
+{
+	0, "$OPTVAL_NONE"
+	1, "$OPTVAL_ITEMS"
+	2, "$OPTVAL_MONSTERS"
+	3, "$OPTVAL_ALL"
+}
+
 OptionValue MapTriggers
 {
 	0, "$OPTVAL_OFF"
@@ -1944,6 +1952,12 @@ OptionMenu AutomapOptions protected
 	Option "$AUTOMAPMNU_DRAWMAPBACK",			"am_drawmapback", "MapBackTypes"
 	Option "$AUTOMAPMNU_SHOWTRIGGERLINES",		"am_showtriggerlines", "MapTriggers"
 	Option "$AUTOMAPMNU_SHOWTHINGSPRITES",		"am_showthingsprites", "STSTypes"
+	Option "$AUTOMAPMNU_SHOWSEENITEMS",			"am_show_seen_items", "OnOff"
+	Option "$AUTOMAPMNU_SHOWSEENMONSTERS",		"am_show_seen_monsters", "OnOff"
+	Option "$AUTOMAPMNU_SHOWSEENCORPSES",		"am_show_seen_corpses", "OnOff"
+	Option "$AUTOMAPMNU_SHOWSEENFRIENDLIES",	"am_show_seen_friendlies", "OnOff"
+	Option "$AUTOMAPMNU_SHOWSEENDECORATIONS",	"am_show_seen_decorations", "OnOff"
+	Slider "$AUTOMAPMNU_THINGSPRITESSCALE",		"am_thingsspritescale", 0.1, 1.0, 0.1, 1
 
 	StaticText ""
 	Option "$AUTOMAPMNU_PTOVERLAY",				"am_portaloverlay", "OnOff"

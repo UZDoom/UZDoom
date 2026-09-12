@@ -3541,6 +3541,9 @@ msgstr "Show trigger lines"
 msgid "AUTOMAPMNU_SHOWTHINGSPRITES"
 msgstr "Show things as sprites"
 
+msgid "AUTOMAPMNU_THINGSPRITESSCALE"
+msgstr "Thing sprites scale"
+
 msgid "AUTOMAPMNU_PTOVERLAY"
 msgstr "Overlay portals"
 
@@ -3937,6 +3940,9 @@ msgstr "Weapons"
 
 msgid "OPTVAL_BOTH"
 msgstr "Both"
+
+msgid "OPTVAL_MONSTERS"
+msgstr "Monsters"
 
 msgid "OPTVAL_ZDOOM"
 msgstr "ZDoom"
