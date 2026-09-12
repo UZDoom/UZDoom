@@ -1622,6 +1622,72 @@ class GLDefsParser
 				sc.MustGetString();
 				usershader.shader = sc.String;
 			}
+			else if (sc.Compare("vertshader"))
+			{
+				sc.MustGetString();
+				usershader.vertshader = sc.String;
+			}
+			else if (sc.Compare("varying"))
+			{
+				bool ok = true;
+
+				sc.MustGetString();
+				FString varyingProperty = "";
+
+				if (sc.Compare("noperspective"))
+				{
+					varyingProperty = "noperspective";
+					sc.MustGetString();
+				}
+				else if (sc.Compare("flat") == 0)
+				{
+					varyingProperty = "flat";
+					sc.MustGetString();
+				}
+				else
+				{
+					varyingProperty = "";
+				}
+
+				FString varyingType = sc.String;
+				varyingType.ToLower();
+
+				sc.MustGetString();
+				FString varyingName = sc.String;
+
+				UniformType parsedType = UniformType::Undefined;
+
+				if (varyingType.Compare("int") == 0)
+				{
+					parsedType = UniformType::Int;
+				}
+				else if (varyingType.Compare("float") == 0)
+				{
+					parsedType = UniformType::Float;
+				}
+				else if (varyingType.Compare("vec2") == 0)
+				{
+					parsedType = UniformType::Vec2;
+				}
+				else if (varyingType.Compare("vec3") == 0)
+				{
+					parsedType = UniformType::Vec3;
+				}
+				else if (varyingType.Compare("vec4") == 0)
+				{
+					parsedType = UniformType::Vec4;
+				}
+				else
+				{
+					sc.ScriptError("Unrecognized varying type '%s'", sc.String);
+					ok = false;
+				}
+
+				if(ok)
+				{
+					usershader.varyings.push_back({parsedType, varyingProperty, varyingName});
+				}
+			}
 			else if (sc.Compare("texture"))
 			{
 				sc.MustGetString();
@@ -1726,7 +1792,7 @@ class GLDefsParser
 			return;
 		}
 		if(is_globalshader)
-		{
+		{ // TODO (nit) extract into function
 			TMap<int, TArray<FName>> target_maps;
 			TMap<int, TArray<FName>> target_classes;
 			TMap<int, bool> target_global;
@@ -1836,6 +1902,23 @@ class GLDefsParser
 					return;
 				}
 
+				if(usershader.vertshader.IsNotEmpty())
+				{
+					int lump = fileSystem.CheckNumForFullName(usershader.vertshader.GetChars());
+					if (lump == -1)
+					{
+						if(gl_strict_gldefs_errors)
+						{
+							sc.ScriptError("inexistent vertex shader lump '%s' in %s", usershader.vertshader.GetChars(), currentName.GetChars());
+						}
+						else
+						{
+							sc.ScriptMessage("inexistent vertex shader lump '%s' in %s", usershader.vertshader.GetChars(), currentName.GetChars());
+						}
+						return;
+					}
+				}
+
 				for(int target : globaltargets)
 				{
 					auto &maps = target_maps[target];
@@ -1930,6 +2013,7 @@ class GLDefsParser
 			return;
 		}
 
+		// TODO (nit) (everything below this) extract into function
 		if (thiswad || iwad)
 		{
 			bool useme = false;
@@ -1979,6 +2063,23 @@ class GLDefsParser
 					sc.ScriptMessage("inexistent shader lump '%s' in %s", usershader.shader.GetChars(), currentName.GetChars());
 				}
 				return;
+			}
+
+			if(usershader.vertshader.IsNotEmpty())
+			{
+				int lump = fileSystem.CheckNumForFullName(usershader.vertshader.GetChars());
+				if (lump == -1)
+				{
+					if(gl_strict_gldefs_errors)
+					{
+						sc.ScriptError("inexistent vertex shader lump '%s' in %s", usershader.vertshader.GetChars(), currentName.GetChars());
+					}
+					else
+					{
+						sc.ScriptMessage("inexistent vertex shader lump '%s' in %s", usershader.vertshader.GetChars(), currentName.GetChars());
+					}
+					return;
+				}
 			}
 
 			int firstUserTexture;
