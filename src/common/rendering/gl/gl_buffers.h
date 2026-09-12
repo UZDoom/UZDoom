@@ -35,7 +35,7 @@
 namespace OpenGLRenderer
 {
 
-class GLBuffer : virtual public IBuffer
+class GLBuffer : virtual public IBuffer, virtual public ILockableBuffer
 {
 protected:
 	const int mUseType;
@@ -47,13 +47,13 @@ protected:
 
 	GLBuffer(int usetype);
 	~GLBuffer();
-	void SetData(size_t size, const void *data, BufferUsageType usage) override;
-	void SetSubData(size_t offset, size_t size, const void *data) override;
-	void Map() override;
-	void Unmap() override;
-	void Resize(size_t newsize) override;
-	void *Lock(unsigned int size) override;
-	void Unlock() override;
+	virtual void SetData(size_t size, const void *data, BufferUsageType usage) override;
+	virtual void SetSubData(size_t offset, size_t size, const void *data) override;
+	virtual void Map() override;
+	virtual void Unmap() override;
+	virtual void Resize(size_t newsize) override;
+	virtual void *Lock(unsigned int size) override;
+	virtual void Unlock() override;
 
 	void GPUDropSync();
 	void GPUWaitSync();
@@ -96,7 +96,7 @@ class GLDataBuffer : public IDataBuffer, public GLBuffer
 	int mBindingPoint;
 public:
 	GLDataBuffer(int bindingpoint, bool is_ssbo);
-	void BindRange(FRenderState* state, size_t start, size_t length);
+	virtual void BindRange(FRenderState* state, size_t start, size_t length) override;
 	void BindBase();
 };
 
