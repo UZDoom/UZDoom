@@ -121,6 +121,8 @@ namespace OpenGLESRenderer
 		int max_texturesize;
 		char* vendorstring;
 		char* modelstring;
+		bool nv_vram_ext;
+		bool ati_vram_ext;
 	};
 
 	extern RenderContextGLES gles;

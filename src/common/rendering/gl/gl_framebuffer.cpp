@@ -601,4 +601,7 @@ FTexture *OpenGLFrameBuffer::WipeEndScreen()
 	return tex;
 }
 
+bool OpenGLFrameBuffer::HasNVidiaVRAMExt() { return gl.flags & RFL_NV_MEM; }
+bool OpenGLFrameBuffer::HasATIVRAMExt() { return gl.flags & RFL_ATI_MEM; }
+
 }

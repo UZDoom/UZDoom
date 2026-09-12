@@ -1105,10 +1105,8 @@ static FString FormatKB(int kb)
 	return tmp;
 }
 
-ADD_STAT(vram)
-{	// TODO move somewhere else
-	// TODO also grab total AMD gpu memory on windows with WGL_AMD_gpu_association (https://registry.khronos.org/OpenGL/extensions/AMD/WGL_AMD_gpu_association.txt / https://registry.khronos.org/OpenGL/extensions/MESA/GLX_MESA_query_renderer.txt)
-	// (because of GL_NVX_gpu_memory_info, nvidia on windows and linux in general (mesa implements the extension for all GPUs) doesn't need it since it returns total memory as well, not just free memory)
+void PrintVRAM_NV(FString &out)
+{
 	int dedicatedMemoryNVidia = -1;
 	glGetIntegerv(GPU_MEMORY_INFO_DEDICATED_VIDMEM_NVX, &dedicatedMemoryNVidia);
 	int totalMemoryNVidia = -1;
@@ -1120,44 +1118,31 @@ ADD_STAT(vram)
 	int evictedMemoryNVidia = -1;
 	glGetIntegerv(GPU_MEMORY_INFO_EVICTED_MEMORY_NVX, &evictedMemoryNVidia);
 
-	FString tmp = "";
-	if(totalMemoryNVidia > 0) // has NVX_gpu_memory_info (TODO move to a proper feature check instead of bruteforcing it like this)
+	out.AppendFormat("Dedicated VRAM: %s\n", FormatKB(dedicatedMemoryNVidia).GetChars());
+	out.AppendFormat("Total VRAM: %s\n", FormatKB(totalMemoryNVidia).GetChars());
+	out.AppendFormat("Free VRAM: %s\n", FormatKB(freeMemoryNVidia).GetChars());
+	out.AppendFormat("Eviction Count: %d\n", evictionCountNVidia);
+	out.AppendFormat("Evicted Memory: %s", FormatKB(evictedMemoryNVidia).GetChars());
+}
+
+void PrintVRAM_ATI(FString &out)
+{
+	struct gpu_memory_info_t
 	{
-		tmp.AppendFormat("Dedicated VRAM: %s\n", FormatKB(dedicatedMemoryNVidia).GetChars());
-		tmp.AppendFormat("Total VRAM: %s\n", FormatKB(totalMemoryNVidia).GetChars());
-		tmp.AppendFormat("Free VRAM: %s\n", FormatKB(freeMemoryNVidia).GetChars());
-		tmp.AppendFormat("Eviction Count: %d\n", evictionCountNVidia);
-		tmp.AppendFormat("Evicted Memory: %s", FormatKB(evictedMemoryNVidia).GetChars());
-	}
-	else
-	{
-		struct gpu_memory_info_t
-		{
-			int total_free = -1;
-			int largest_block = -1;
-			int total_aux_free = -1;
-			int largest_aux_block = -1;
-		};
+		int total_free = -1;
+		int largest_block = -1;
+		int total_aux_free = -1;
+		int largest_aux_block = -1;
+	};
 
-		gpu_memory_info_t texture_free_memory;
+	gpu_memory_info_t texture_free_memory;
 
-		glGetIntegerv(TEXTURE_FREE_MEMORY_ATI, &texture_free_memory.total_free);
+	glGetIntegerv(TEXTURE_FREE_MEMORY_ATI, &texture_free_memory.total_free);
 
-		if(texture_free_memory.total_free > 0) // has ATI_meminfo
-		{
-			tmp.AppendFormat("VRAM:\n");
-			tmp.AppendFormat("    Total Free: %s\n", FormatKB(texture_free_memory.total_free).GetChars());
-			tmp.AppendFormat("    Largest Free Block: %s\n", FormatKB(texture_free_memory.largest_block).GetChars());
-			tmp.AppendFormat("    Total Aux. Free: %s\n", FormatKB(texture_free_memory.total_aux_free).GetChars());
-			tmp.AppendFormat("    Largest Free Aux. Block: %s\n", FormatKB(texture_free_memory.largest_aux_block).GetChars());
-
-		}
-		else
-		{
-			tmp = "No VRAM info available for current GPU";
-		}
-	}
-
-	return tmp;
+	out.AppendFormat("VRAM:\n");
+	out.AppendFormat("    Total Free: %s\n", FormatKB(texture_free_memory.total_free).GetChars());
+	out.AppendFormat("    Largest Free Block: %s\n", FormatKB(texture_free_memory.largest_block).GetChars());
+	out.AppendFormat("    Total Aux. Free: %s\n", FormatKB(texture_free_memory.total_aux_free).GetChars());
+	out.AppendFormat("    Largest Free Aux. Block: %s\n", FormatKB(texture_free_memory.largest_aux_block).GetChars());
 }
 

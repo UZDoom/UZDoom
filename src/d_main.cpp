@@ -4619,3 +4619,33 @@ CCMD(type)
 		Printf("%.*s\n", static_cast<int>(data.size()), data.string());
 	}
 }
+
+void PrintVRAM_ATI(FString &out);
+void PrintVRAM_NV(FString &out);
+//void PrintVRAM_VK(FString &out);
+ADD_STAT(vram)
+{
+	// TODO also grab total AMD gpu memory on windows with WGL_AMD_gpu_association (https://registry.khronos.org/OpenGL/extensions/AMD/WGL_AMD_gpu_association.txt / https://registry.khronos.org/OpenGL/extensions/MESA/GLX_MESA_query_renderer.txt)
+	// (because of GL_NVX_gpu_memory_info, nvidia on windows and linux in general (mesa implements the extension for all GPUs) doesn't need it since it returns total memory as well, not just free memory)
+
+	FString out = "";
+	if(screen->HasNVidiaVRAMExt())
+	{
+		PrintVRAM_NV(out);
+	}
+	else if(screen->HasATIVRAMExt())
+	{
+		PrintVRAM_ATI(out);
+	}
+#if 0
+	else if(screen->HasVulkanVRAMExt())
+	{
+		PrintVRAM_VK(out); // TODO implement for vulkan
+	}
+#endif
+	else
+	{
+		out = "No VRAM info available for current GPU";
+	}
+	return out;
+}

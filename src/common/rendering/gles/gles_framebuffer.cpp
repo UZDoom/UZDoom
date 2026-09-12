@@ -481,4 +481,7 @@ FTexture *OpenGLFrameBuffer::WipeEndScreen()
 	return tex;
 }
 
+bool OpenGLFrameBuffer::HasNVidiaVRAMExt() { return gles.nv_vram_ext; }
+bool OpenGLFrameBuffer::HasATIVRAMExt() { return gles.ati_vram_ext; }
+
 }
