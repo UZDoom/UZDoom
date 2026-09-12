@@ -267,8 +267,33 @@ FGameConfigFile::FGameConfigFile ()
 		}
 	}
 
-	// Add some self-documentation.
 	SetSectionNote("IWADSearch.Directories",
+		// Add environment variable documentation.
+		"\n#### Environment Variable Information ####\n\n"
+
+		"# . references the current directory that UZDoom is launched from within your\n"
+		"# terminal or console.\n\n"
+
+		"# $DOOMWADDIR references a system environment variable of the same name that\n"
+		"# contains a search directory.\n\n"
+
+		"# $DOOMWADPATH references a system environment variable of the same name whose\n"
+		"# value contains a semicolon (on Windows) or colon (on other systems) delimited\n"
+		"# list of searchable directories.\n"
+		"# It's *similar* to $DOOMWADDIR, except that $DOOMWADPATH is a list of possible\n"
+		"# search directories.\n\n"
+
+		"# $HOME references your system user directory.\n\n"
+
+		"# $PROGDIR references the directory that the main binary is located.\n\n"
+
+		"# For more information and examples of how to use environment variables,\n"
+		"# please see the ZDoom Wiki page:\n"
+		"# at https://zdoom.org/wiki/Configuration_file#Environment_Variables\n"
+
+		"\n" // Add a final newline before going back to the original section header text.
+		// Finish environment variable documentation.
+
 		"# These are the directories to automatically search for IWADs.\n"
 		"# Each directory should be on a separate line, preceded by Path=\n");
 	SetSectionNote("FileSearch.Directories",
