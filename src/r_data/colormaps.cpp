@@ -26,11 +26,11 @@
 #include <math.h>
 #include <float.h>
 
-
 #include "filesystem.h"
 #include "r_sky.h"
 #include "textures.h"
 #include "colormaps.h"
+#include "colorspace.h"
 
 #include "c_cvars.h"
 
@@ -38,12 +38,12 @@ CUSTOM_CVAR(Bool, cl_customizeinvulmap, false, CVAR_ARCHIVE|CVAR_NOINITCALL)
 {
 	R_UpdateInvulnerabilityColormap();
 }
-CUSTOM_CVAR(Color, cl_custominvulmapcolor1, 0x00001a, CVAR_ARCHIVE|CVAR_NOINITCALL)
+CUSTOM_CVAR(Color, cl_custominvulmapcolor1, Color::str("#00001a"), CVAR_ARCHIVE|CVAR_NOINITCALL)
 {
 	if (cl_customizeinvulmap)
 		R_UpdateInvulnerabilityColormap();
 }
-CUSTOM_CVAR(Color, cl_custominvulmapcolor2, 0xa6a67a, CVAR_ARCHIVE|CVAR_NOINITCALL)
+CUSTOM_CVAR(Color, cl_custominvulmapcolor2, Color::str("#a6a67a"), CVAR_ARCHIVE|CVAR_NOINITCALL)
 {
 	if (cl_customizeinvulmap)
 		R_UpdateInvulnerabilityColormap();

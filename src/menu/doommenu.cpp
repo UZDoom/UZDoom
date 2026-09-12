@@ -29,6 +29,7 @@
 #include "doommenu.h"
 #include "g_game.h"
 #include "g_level.h"
+#include "colorspace.h"
 #include "gameconfigfile.h"
 #include "gamestate.h"
 #include "gi.h"
@@ -368,7 +369,7 @@ CUSTOM_CVAR(Float, dimamount, 0.8f, CVAR_ARCHIVE)
 		self = 1.f;
 	}
 }
-CVAR(Color, dimcolor, 0x000000, CVAR_ARCHIVE)
+CVAR(Color, dimcolor, Color::str("#000000"), CVAR_ARCHIVE)
 
 void System_M_Dim()
 {

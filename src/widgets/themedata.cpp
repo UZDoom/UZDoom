@@ -132,11 +132,12 @@ void Theme::initilize(Mode mode, bool contrast)
 	};
 
 	// basic fallback
-	Theme::accent = Colorf::fromRgb(0x7f7f7f);
+	using Color::str;
+	Theme::accent = Colorf::fromRgb(str("#777"));
 	Theme::anchor = Center;
 	Theme::scale = Contain;
-	simple(Theme::light, 0xffffff, 0x000000, 0xffff00, 0x000000);
-	simple(Theme::dark,  0x000000, 0xffffff, 0x0000ff, 0xffffff);
+	simple(Theme::light, str("#fff"), str("#000"), str("#ff0"), str("#000"));
+	simple(Theme::dark,  str("#000"), str("#fff"), str("#00f"), str("#fff"));
 
 	auto file = "ui/theme.txt";
 

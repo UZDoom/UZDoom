@@ -72,7 +72,7 @@ jobs:
 
     # https://github.com/actions/runner-images/issues/14083
     - name: Install Winget
-      if: inputs.os == 'windows-11-arm'
+      if: startsWith(inputs.os, 'windows-') && endsWith(inputs.os, '-arm')
       shell: pwsh
       run: |
         Install-Module -Name Microsoft.WinGet.Client -Repository PSGallery -Force
@@ -153,7 +153,9 @@ jobs:
 
     - name: Setup MSVC
       if: runner.os == 'Windows' && !contains(inputs.name, 'MinGW')
-      uses: ilammy/msvc-dev-cmd@v1 # FIXME: update this
+      uses: TheMrMilchmann/setup-msvc-dev@v4
+      with:
+        arch: x64
 
     - name: Setup MSYS2
       if: runner.os == 'Windows' && contains(inputs.name, 'MinGW')

@@ -27,6 +27,7 @@
 #include "c_bind.h"
 #include "c_buttons.h"
 #include "c_dispatch.h"
+#include "colorspace.h"
 #include "d_buttons.h"
 #include "d_event.h"
 #include "d_main.h"
@@ -56,6 +57,8 @@
 #include "v_video.h"
 
 #include "actorinlines.h"
+
+using Color::str;
 
 //=============================================================================
 //
@@ -120,7 +123,6 @@ CVAR(Int, am_lineantialiasing, 0, CVAR_ARCHIVE)
 CVAR(Bool, am_thingrenderstyles, true, CVAR_ARCHIVE)
 CVAR(Int, am_showsubsector, -1, 0);
 
-
 CUSTOM_CVAR(Int, am_showalllines, -1, CVAR_NOINITCALL) // This is a cheat so don't save it.
 {
 	if (primaryLevel && primaryLevel->automap)
@@ -136,7 +138,6 @@ CUSTOM_CVAR(Int, am_cheat, 0, 0)
 		self = 0;
 	}
 }
-
 
 CVAR(Int, am_rotate, 0, CVAR_ARCHIVE);
 CUSTOM_CVAR(Int, am_overlay, 0, CVAR_ARCHIVE)
@@ -258,7 +259,6 @@ CCMD(am_zoom)
 	}
 }
 
-
 //=============================================================================
 //
 // Automap colors
@@ -266,56 +266,55 @@ CCMD(am_zoom)
 //=============================================================================
 
 CVAR (Float, am_sectorfillalpha,           0.0f, CVAR_ARCHIVE);
-CVAR (Color, am_backcolor,             0x6c5440, CVAR_ARCHIVE);
-CVAR (Color, am_yourcolor,             0xfce8d8, CVAR_ARCHIVE);
-CVAR (Color, am_wallcolor,             0x2c1808, CVAR_ARCHIVE);
-CVAR (Color, am_secretwallcolor,       0x000000, CVAR_ARCHIVE);
-CVAR (Color, am_specialwallcolor,      0xffffff, CVAR_ARCHIVE);
-CVAR (Color, am_tswallcolor,           0x888888, CVAR_ARCHIVE);
-CVAR (Color, am_fdwallcolor,           0x887058, CVAR_ARCHIVE);
-CVAR (Color, am_cdwallcolor,           0x4c3820, CVAR_ARCHIVE);
-CVAR (Color, am_efwallcolor,           0x665555, CVAR_ARCHIVE);
-CVAR (Color, am_thingcolor,            0xfcfcfc, CVAR_ARCHIVE);
-CVAR (Color, am_gridcolor,             0x8b5a2b, CVAR_ARCHIVE);
-CVAR (Color, am_xhaircolor,            0x808080, CVAR_ARCHIVE);
-CVAR (Color, am_notseencolor,          0x6c6c6c, CVAR_ARCHIVE);
-CVAR (Color, am_lockedcolor,           0x007800, CVAR_ARCHIVE);
-CVAR (Color, am_intralevelcolor,       0x0000ff, CVAR_ARCHIVE);
-CVAR (Color, am_interlevelcolor,       0xff0000, CVAR_ARCHIVE);
-CVAR (Color, am_secretsectorcolor,     0xff00ff, CVAR_ARCHIVE);
-CVAR (Color, am_unexploredsecretcolor, 0xff00ff, CVAR_ARCHIVE);
-CVAR (Color, am_thingcolor_friend,     0xfcfcfc, CVAR_ARCHIVE);
-CVAR (Color, am_thingcolor_monster,    0xfcfcfc, CVAR_ARCHIVE);
-CVAR (Color, am_thingcolor_ncmonster,  0xfcfcfc, CVAR_ARCHIVE);
-CVAR (Color, am_thingcolor_item,       0xfcfcfc, CVAR_ARCHIVE);
-CVAR (Color, am_thingcolor_citem,      0xfcfcfc, CVAR_ARCHIVE);
-CVAR (Color, am_sectorfillcolor,       0x4e3621, CVAR_ARCHIVE);
-CVAR (Color, am_portalcolor,           0x404040, CVAR_ARCHIVE);
-
+CVAR (Color, am_backcolor,             str("#6c5440"), CVAR_ARCHIVE);
+CVAR (Color, am_yourcolor,             str("#fce8d8"), CVAR_ARCHIVE);
+CVAR (Color, am_wallcolor,             str("#2c1808"), CVAR_ARCHIVE);
+CVAR (Color, am_secretwallcolor,       str("#000000"), CVAR_ARCHIVE);
+CVAR (Color, am_specialwallcolor,      str("#ffffff"), CVAR_ARCHIVE);
+CVAR (Color, am_tswallcolor,           str("#888888"), CVAR_ARCHIVE);
+CVAR (Color, am_fdwallcolor,           str("#887058"), CVAR_ARCHIVE);
+CVAR (Color, am_cdwallcolor,           str("#4c3820"), CVAR_ARCHIVE);
+CVAR (Color, am_efwallcolor,           str("#665555"), CVAR_ARCHIVE);
+CVAR (Color, am_thingcolor,            str("#fcfcfc"), CVAR_ARCHIVE);
+CVAR (Color, am_gridcolor,             str("#8b5a2b"), CVAR_ARCHIVE);
+CVAR (Color, am_xhaircolor,            str("#808080"), CVAR_ARCHIVE);
+CVAR (Color, am_notseencolor,          str("#6c6c6c"), CVAR_ARCHIVE);
+CVAR (Color, am_lockedcolor,           str("#007800"), CVAR_ARCHIVE);
+CVAR (Color, am_intralevelcolor,       str("#0000ff"), CVAR_ARCHIVE);
+CVAR (Color, am_interlevelcolor,       str("#ff0000"), CVAR_ARCHIVE);
+CVAR (Color, am_secretsectorcolor,     str("#ff00ff"), CVAR_ARCHIVE);
+CVAR (Color, am_unexploredsecretcolor, str("#ff00ff"), CVAR_ARCHIVE);
+CVAR (Color, am_thingcolor_friend,     str("#fcfcfc"), CVAR_ARCHIVE);
+CVAR (Color, am_thingcolor_monster,    str("#fcfcfc"), CVAR_ARCHIVE);
+CVAR (Color, am_thingcolor_ncmonster,  str("#fcfcfc"), CVAR_ARCHIVE);
+CVAR (Color, am_thingcolor_item,       str("#fcfcfc"), CVAR_ARCHIVE);
+CVAR (Color, am_thingcolor_citem,      str("#fcfcfc"), CVAR_ARCHIVE);
+CVAR (Color, am_sectorfillcolor,       str("#4e3621"), CVAR_ARCHIVE);
+CVAR (Color, am_portalcolor,           str("#404040"), CVAR_ARCHIVE);
 
 CVAR (Float, am_ovsectorfillalpha,           0.0f, CVAR_ARCHIVE);
-CVAR (Color, am_ovyourcolor,             0xfce8d8, CVAR_ARCHIVE);
-CVAR (Color, am_ovwallcolor,             0x00ff00, CVAR_ARCHIVE);
-CVAR (Color, am_ovsecretwallcolor,       0x008844, CVAR_ARCHIVE);
-CVAR (Color, am_ovspecialwallcolor,      0xffffff, CVAR_ARCHIVE);
-CVAR (Color, am_ovotherwallscolor,       0x008844, CVAR_ARCHIVE);
-CVAR (Color, am_ovlockedcolor,           0x008844, CVAR_ARCHIVE);
-CVAR (Color, am_ovefwallcolor,           0x008844, CVAR_ARCHIVE);
-CVAR (Color, am_ovfdwallcolor,           0x008844, CVAR_ARCHIVE);
-CVAR (Color, am_ovcdwallcolor,           0x008844, CVAR_ARCHIVE);
-CVAR (Color, am_ovunseencolor,           0x00226e, CVAR_ARCHIVE);
-CVAR (Color, am_ovtelecolor,             0xffff00, CVAR_ARCHIVE);
-CVAR (Color, am_ovinterlevelcolor,       0xffff00, CVAR_ARCHIVE);
-CVAR (Color, am_ovsecretsectorcolor,     0x00ffff, CVAR_ARCHIVE);
-CVAR (Color, am_ovunexploredsecretcolor, 0x00ffff, CVAR_ARCHIVE);
-CVAR (Color, am_ovthingcolor,            0xe88800, CVAR_ARCHIVE);
-CVAR (Color, am_ovthingcolor_friend,     0xe88800, CVAR_ARCHIVE);
-CVAR (Color, am_ovthingcolor_monster,    0xe88800, CVAR_ARCHIVE);
-CVAR (Color, am_ovthingcolor_ncmonster,  0xe88800, CVAR_ARCHIVE);
-CVAR (Color, am_ovthingcolor_item,       0xe88800, CVAR_ARCHIVE);
-CVAR (Color, am_ovthingcolor_citem,      0xe88800, CVAR_ARCHIVE);
-CVAR (Color, am_ovsectorfillcolor,       0x000000, CVAR_ARCHIVE);
-CVAR (Color, am_ovportalcolor,           0x004022, CVAR_ARCHIVE);
+CVAR (Color, am_ovyourcolor,             str("#fce8d8"), CVAR_ARCHIVE);
+CVAR (Color, am_ovwallcolor,             str("#00ff00"), CVAR_ARCHIVE);
+CVAR (Color, am_ovsecretwallcolor,       str("#008844"), CVAR_ARCHIVE);
+CVAR (Color, am_ovspecialwallcolor,      str("#ffffff"), CVAR_ARCHIVE);
+CVAR (Color, am_ovotherwallscolor,       str("#008844"), CVAR_ARCHIVE);
+CVAR (Color, am_ovlockedcolor,           str("#008844"), CVAR_ARCHIVE);
+CVAR (Color, am_ovefwallcolor,           str("#008844"), CVAR_ARCHIVE);
+CVAR (Color, am_ovfdwallcolor,           str("#008844"), CVAR_ARCHIVE);
+CVAR (Color, am_ovcdwallcolor,           str("#008844"), CVAR_ARCHIVE);
+CVAR (Color, am_ovunseencolor,           str("#00226e"), CVAR_ARCHIVE);
+CVAR (Color, am_ovtelecolor,             str("#ffff00"), CVAR_ARCHIVE);
+CVAR (Color, am_ovinterlevelcolor,       str("#ffff00"), CVAR_ARCHIVE);
+CVAR (Color, am_ovsecretsectorcolor,     str("#00ffff"), CVAR_ARCHIVE);
+CVAR (Color, am_ovunexploredsecretcolor, str("#00ffff"), CVAR_ARCHIVE);
+CVAR (Color, am_ovthingcolor,            str("#e88800"), CVAR_ARCHIVE);
+CVAR (Color, am_ovthingcolor_friend,     str("#e88800"), CVAR_ARCHIVE);
+CVAR (Color, am_ovthingcolor_monster,    str("#e88800"), CVAR_ARCHIVE);
+CVAR (Color, am_ovthingcolor_ncmonster,  str("#e88800"), CVAR_ARCHIVE);
+CVAR (Color, am_ovthingcolor_item,       str("#e88800"), CVAR_ARCHIVE);
+CVAR (Color, am_ovthingcolor_citem,      str("#e88800"), CVAR_ARCHIVE);
+CVAR (Color, am_ovsectorfillcolor,       str("#000000"), CVAR_ARCHIVE);
+CVAR (Color, am_ovportalcolor,           str("#004022"), CVAR_ARCHIVE);
 
 //=============================================================================
 //
@@ -326,6 +325,11 @@ CVAR (Color, am_ovportalcolor,           0x004022, CVAR_ARCHIVE);
 struct AMColor
 {
 	uint32_t RGB = 0;
+
+	consteval AMColor(std::string_view s) noexcept
+	{
+		RGB = 0xff000000|str(s);
+	}
 
 	constexpr AMColor(uint32_t rgb) noexcept
 	{
@@ -374,33 +378,33 @@ struct AMColor
 //=============================================================================
 
 static const char *ColorNames[] = {
-		"Background",
-		"YourColor",
-		"WallColor",
-		"TwoSidedWallColor",
-		"FloorDiffWallColor",
-		"CeilingDiffWallColor",
-		"ExtraFloorWallColor",
-		"ThingColor",
-		"ThingColor_Item",
-		"ThingColor_CountItem",
-		"ThingColor_Monster",
-		"ThingColor_NocountMonster",
-		"ThingColor_Friend",
-		"SpecialWallColor",
-		"SecretWallColor",
-		"GridColor",
-		"XHairColor",
-		"NotSeenColor",
-		"LockedColor",
-		"IntraTeleportColor",
-		"InterTeleportColor",
-		"SecretSectorColor",
-		"UnexploredSecretColor",
-		"SectorFillColor",
-		"PortalColor",
-		"AlmostBackgroundColor",
-		nullptr
+	"Background",
+	"YourColor",
+	"WallColor",
+	"TwoSidedWallColor",
+	"FloorDiffWallColor",
+	"CeilingDiffWallColor",
+	"ExtraFloorWallColor",
+	"ThingColor",
+	"ThingColor_Item",
+	"ThingColor_CountItem",
+	"ThingColor_Monster",
+	"ThingColor_NocountMonster",
+	"ThingColor_Friend",
+	"SpecialWallColor",
+	"SecretWallColor",
+	"GridColor",
+	"XHairColor",
+	"NotSeenColor",
+	"LockedColor",
+	"IntraTeleportColor",
+	"InterTeleportColor",
+	"SecretSectorColor",
+	"UnexploredSecretColor",
+	"SectorFillColor",
+	"PortalColor",
+	"AlmostBackgroundColor",
+	nullptr
 };
 
 struct AMColorset
@@ -608,93 +612,92 @@ CCMD(am_restorecolors)
 	am_ovsectorfillalpha->ResetToDefault();
 }
 
-
 namespace AutoMap::Colors
 {
-	static inline const AMColor not_used = AMColor(0x010000);
+	static inline const AMColor not_used = AMColor("#010000");
 
 	static inline const std::array<AMColor,AMColorset::EAMColor::AM_NUM_COLORS> DoomColors = {
-		AMColor(0x000000), // background
-		AMColor(0xffffff), // yourcolor
-		AMColor(0xfc0000), // wallcolor
-		AMColor(0x808080), // tswallcolor
-		AMColor(0xbc7848), // fdwallcolor
-		AMColor(0xfcfc00), // cdwallcolor
-		AMColor(0xbc7848), // efwallcolor
-		AMColor(0x74fc6c), // thingcolor
-		AMColor(0x74fc6c), // thingcolor_item
-		AMColor(0x74fc6c), // thingcolor_citem
-		AMColor(0x74fc6c), // thingcolor_monster
-		AMColor(0x74fc6c), // thingcolor_ncmonster
-		AMColor(0x74fc6c), // thingcolor_friend
-		not_used,          // specialwallcolor
-		not_used,          // secretwallcolor
-		AMColor(0x4c4c4c), // gridcolor
-		AMColor(0x808080), // xhaircolor
-		AMColor(0x6c6c6c), // notseencolor
-		AMColor(0xfcfc00), // lockedcolor
-		not_used,          // intrateleport
-		not_used,          // interteleport
-		not_used,          // secretsector
-		not_used,          // unexploredsecretsector
-		AMColor(0x101010), // almostbackground
-		AMColor(0x404040)  // portal
+		AMColor("#a328f0"), // background
+		AMColor("#ffffff"), // yourcolor
+		AMColor("#fc0000"), // wallcolor
+		AMColor("#808080"), // tswallcolor
+		AMColor("#bc7848"), // fdwallcolor
+		AMColor("#fcfc00"), // cdwallcolor
+		AMColor("#bc7848"), // efwallcolor
+		AMColor("#74fc6c"), // thingcolor
+		AMColor("#74fc6c"), // thingcolor_item
+		AMColor("#74fc6c"), // thingcolor_citem
+		AMColor("#74fc6c"), // thingcolor_monster
+		AMColor("#74fc6c"), // thingcolor_ncmonster
+		AMColor("#74fc6c"), // thingcolor_friend
+		not_used,           // specialwallcolor
+		not_used,           // secretwallcolor
+		AMColor("#4c4c4c"), // gridcolor
+		AMColor("#808080"), // xhaircolor
+		AMColor("#6c6c6c"), // notseencolor
+		AMColor("#fcfc00"), // lockedcolor
+		not_used,           // intrateleport
+		not_used,           // interteleport
+		not_used,           // secretsector
+		not_used,           // unexploredsecretsector
+		AMColor("#101010"), // almostbackground
+		AMColor("#404040")  // portal
 	};
 
 	static inline const std::array<AMColor, AMColorset::EAMColor::AM_NUM_COLORS> StrifeColors = {
-		AMColor(0x000000), // background
-		AMColor(0xefef00), // yourcolor
-		AMColor(0xc7c3c3), // wallcolor
-		AMColor(0x777373), // tswallcolor
-		AMColor(0x373b9b), // fdwallcolor
-		AMColor(0x777373), // cdwallcolor
-		AMColor(0x373b9b), // efwallcolor
-		AMColor(0xbb3b00), // thingcolor
-		AMColor(0xdbab00), // thingcolor_item
-		AMColor(0xdbab00), // thingcolor_citem
-		AMColor(0xfc0000), // thingcolor_monster
-		AMColor(0xfc0000), // thingcolor_ncmonster
-		AMColor(0xfc0000), // thingcolor_friend
-		not_used,          // specialwallcolor
-		not_used,          // secretwallcolor
-		AMColor(0x4c4c4c), // gridcolor
-		AMColor(0x808080), // xhaircolor
-		AMColor(0x6c6c6c), // notseencolor
-		AMColor(0x777373), // lockedcolor
-		not_used,          // intrateleport
-		not_used,          // interteleport
-		not_used,          // secretsector
-		not_used,          // unexploredsecretsector
-		AMColor(0x101010), // almostbackground
-		AMColor(0x404040)  // portal
+		AMColor("#000000"), // background
+		AMColor("#efef00"), // yourcolor
+		AMColor("#c7c3c3"), // wallcolor
+		AMColor("#777373"), // tswallcolor
+		AMColor("#373b9b"), // fdwallcolor
+		AMColor("#777373"), // cdwallcolor
+		AMColor("#373b9b"), // efwallcolor
+		AMColor("#bb3b00"), // thingcolor
+		AMColor("#dbab00"), // thingcolor_item
+		AMColor("#dbab00"), // thingcolor_citem
+		AMColor("#fc0000"), // thingcolor_monster
+		AMColor("#fc0000"), // thingcolor_ncmonster
+		AMColor("#fc0000"), // thingcolor_friend
+		not_used,           // specialwallcolor
+		not_used,           // secretwallcolor
+		AMColor("#4c4c4c"), // gridcolor
+		AMColor("#808080"), // xhaircolor
+		AMColor("#6c6c6c"), // notseencolor
+		AMColor("#777373"), // lockedcolor
+		not_used,           // intrateleport
+		not_used,           // interteleport
+		not_used,           // secretsector
+		not_used,           // unexploredsecretsector
+		AMColor("#101010"), // almostbackground
+		AMColor("#404040")  // portal
 	};
 
 	static inline const std::array<AMColor, AMColorset::EAMColor::AM_NUM_COLORS> RavenColors = {
-		AMColor(0x6c5440), // background
-		AMColor(0xffffff), // yourcolor
-		AMColor(0x4b3210), // wallcolor
-		AMColor(0x585d56), // tswallcolor
-		AMColor(0xd0b085), // fdwallcolor
-		AMColor(0x673b1f), // cdwallcolor
-		AMColor(0xd0b085), // efwallcolor
-		AMColor(0xececec), // thingcolor
-		AMColor(0xececec), // thingcolor_item
-		AMColor(0xececec), // thingcolor_citem
-		AMColor(0xececec), // thingcolor_monster
-		AMColor(0xececec), // thingcolor_ncmonster
-		AMColor(0xececec), // thingcolor_friend
-		not_used,          // specialwallcolor
-		not_used,          // secretwallcolor
-		AMColor(0x4b3210), // gridcolor
-		AMColor(0x000000), // xhaircolor
-		AMColor(0x000000), // notseencolor
-		AMColor(0x673b1f), // lockedcolor
-		not_used,          // intrateleport
-		not_used,          // interteleport
-		not_used,          // secretsector
-		not_used,          // unexploredsecretsector
-		AMColor(0x101010), // almostbackground
-		AMColor(0x505050)  // portal
+		AMColor("#6c5440"), // background
+		AMColor("#ffffff"), // yourcolor
+		AMColor("#4b3210"), // wallcolor
+		AMColor("#585d56"), // tswallcolor
+		AMColor("#d0b085"), // fdwallcolor
+		AMColor("#673b1f"), // cdwallcolor
+		AMColor("#d0b085"), // efwallcolor
+		AMColor("#ececec"), // thingcolor
+		AMColor("#ececec"), // thingcolor_item
+		AMColor("#ececec"), // thingcolor_citem
+		AMColor("#ececec"), // thingcolor_monster
+		AMColor("#ececec"), // thingcolor_ncmonster
+		AMColor("#ececec"), // thingcolor_friend
+		not_used,           // specialwallcolor
+		not_used,           // secretwallcolor
+		AMColor("#4b3210"), // gridcolor
+		AMColor("#000000"), // xhaircolor
+		AMColor("#000000"), // notseencolor
+		AMColor("#673b1f"), // lockedcolor
+		not_used,           // intrateleport
+		not_used,           // interteleport
+		not_used,           // secretsector
+		not_used,           // unexploredsecretsector
+		AMColor("#101010"), // almostbackground
+		AMColor("#505050")  // portal
 	};
 }
 
@@ -933,7 +936,6 @@ void AM_StaticInit()
 	}
 }
 
-
 //=============================================================================
 //
 // the actual automap class definition
@@ -995,7 +997,6 @@ class DAutomap :public DAutomapBase
 	// based on player size
 	double min_w;
 	double min_h;
-
 
 	double min_scale_mtof; // used to tell when to stop zooming out
 	double max_scale_mtof; // used to tell when to stop zooming in
@@ -1096,15 +1097,11 @@ public:
 
 IMPLEMENT_CLASS(DAutomap, false, false)
 
-
 //=============================================================================
 //
 //
 //
 //=============================================================================
-
-
-
 
 //=============================================================================
 //
@@ -1342,7 +1339,6 @@ void DAutomap::changeWindowLoc ()
 	ScrollParchment (m_x != oldmx ? oincx : 0, m_y != oldmy ? -oincy : 0);
 }
 
-
 //=============================================================================
 //
 //
@@ -1497,7 +1493,6 @@ void DAutomap::NewResolution()
 	activateNewScale();
 }
 
-
 //=============================================================================
 //
 // Handle events (user inputs) in automap mode
@@ -1527,7 +1522,6 @@ bool DAutomap::Responder (event_t *ev, bool last)
 	}
 	return false;
 }
-
 
 //=============================================================================
 //
@@ -1623,7 +1617,6 @@ void DAutomap::Ticker ()
 	amclock++;
 }
 
-
 //=============================================================================
 //
 // Clear automap frame buffer.
@@ -1666,7 +1659,6 @@ void DAutomap::clearFB (const AMColor &color)
 		}
 	}
 }
-
 
 //=============================================================================
 //
@@ -2357,7 +2349,6 @@ static int AM_CheckSecret(line_t *line)
 	return 0;
 }
 
-
 //=============================================================================
 //
 // Polyobject debug stuff
@@ -2660,7 +2651,6 @@ void DAutomap::drawWalls (bool allmap)
 	{
 		if (p == MapPortalGroup) continue;
 
-
 		for (auto &line : Level->lines)
 		{
 			int pg;
@@ -2803,7 +2793,6 @@ void DAutomap::drawWalls (bool allmap)
 		}
 	}
 }
-
 
 //=============================================================================
 //
@@ -3484,7 +3473,6 @@ void DAutomap::Serialize(FSerializer &arc)
 
 }
 
-
 //=============================================================================
 //
 //
@@ -3542,7 +3530,6 @@ void DAutomap::ResetFollowLocation()
 {
 	f_oldloc.x = FLT_MAX;
 }
-
 
 //=============================================================================
 //

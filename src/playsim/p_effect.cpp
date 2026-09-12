@@ -23,6 +23,7 @@
 ** more useful.
 */
 
+#include "colorspace.h"
 #include "doomtype.h"
 #include "doomstat.h"
 
@@ -1027,7 +1028,7 @@ void DVisualThinker::Construct()
 	Translation = NO_TRANSLATION;
 	PT.subsector = nullptr;
 	cursector = nullptr;
-	PT.color = 0xffffff;
+	PT.color = Color::str("#fff");
 	AnimatedTexture.SetNull();
 
 	_prev = _next = nullptr;

@@ -25,6 +25,7 @@
 #include "m_argv.h"
 #include "startupinfo.h"
 #include "c_cvars.h"
+#include "colorspace.h"
 #include "v_video.h"
 #include "fs_filesystem.h"
 #include <csignal>
@@ -86,24 +87,24 @@ extern uint32_t r_renderercaps;
 
 struct FIWADInfo
 {
-	FString Name;			// Title banner text for this IWAD
-	FString Autoname;		// Name of autoload ini section for this IWAD
-	FString IWadname;		// Default name this game would use - this is for IWAD detection in GAMEINFO.
-	FString SupportWAD;		// Optional support WAD, load if present (initially implemented for id24)
-	int prio = 0;			// selection priority for given IWAD name.
-	FString Configname;		// Name of config section for this IWAD
-	FString Required;		// Requires another IWAD
-	uint32_t FgColor = 0;	// Foreground color for title banner
-	uint32_t BkColor = 0xc0c0c0;		// Background color for title banner
+	FString Name;       // Title banner text for this IWAD
+	FString Autoname;   // Name of autoload ini section for this IWAD
+	FString IWadname;   // Default name this game would use - this is for IWAD detection in GAMEINFO.
+	FString SupportWAD; // Optional support WAD, load if present (initially implemented for id24)
+	int prio = 0;       // selection priority for given IWAD name.
+	FString Configname; // Name of config section for this IWAD
+	FString Required;   // Requires another IWAD
+	uint32_t FgColor = Color::str("#000000"); // Foreground color for title banner
+	uint32_t BkColor = Color::str("#c0c0c0"); // Background color for title banner
 	FString Song;
-	EGameType gametype = GAME_Doom;		// which game are we playing?
-	int StartupType = FStartupInfo::DefaultStartup;		// alternate startup type
-	FString MapInfo;		// Base mapinfo to load
-	bool nokeyboardcheats = false;		// disable keyboard cheats
+	EGameType gametype = GAME_Doom; // which game are we playing?
+	int StartupType = FStartupInfo::DefaultStartup; // alternate startup type
+	FString MapInfo;                // Base mapinfo to load
+	bool nokeyboardcheats = false;  // disable keyboard cheats
 	bool SkipBexStringsIfLanguage = false;
-	TArray<FString> Load;	// Wads to be loaded with this one.
-	TArray<FString> Lumps;	// Lump names for identification
-	TArray<FString> DeleteLumps;	// Lumps which must be deleted from the directory.
+	TArray<FString> Load;           // Wads to be loaded with this one.
+	TArray<FString> Lumps;          // Lump names for identification
+	TArray<FString> DeleteLumps;    // Lumps which must be deleted from the directory.
 	int flags = 0;
 	int LoadWidescreen = -1;
 	int LoadBrightmaps = -1;

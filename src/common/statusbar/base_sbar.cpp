@@ -45,9 +45,9 @@ static int CrosshairNum;
 IMPLEMENT_CLASS(DStatusBarCore, false, false)
 IMPLEMENT_CLASS(DHUDFont, false, false);
 
-CVAR(Color, crosshaircolor,     0xff0000, CVAR_ARCHIVE);
-CVAR(Color, crosshaircolorFull, 0x00ff00, CVAR_ARCHIVE);
-CVAR(Color, crosshaircolorMax,  0x7f7fff, CVAR_ARCHIVE);
+CVAR(Color, crosshaircolor,     Color::str("#ff0000"), CVAR_ARCHIVE);
+CVAR(Color, crosshaircolorFull, Color::str("#00ff00"), CVAR_ARCHIVE);
+CVAR(Color, crosshaircolorMax,  Color::str("#7f7fff"), CVAR_ARCHIVE);
 CVAR(Bool, crosshairshowshealth, false, CVAR_HIDDEN);
 CVAR(Bool, crosshairhascolor, false, CVAR_HIDDEN);
 DEPR_CVAR(Int, crosshairhealth, 0, "replaced by crosshaircolors/crosshairshowshealth/crosshairhascolor");
@@ -156,7 +156,7 @@ void ST_DrawCrosshair(int phealth, double xpos, double ypos, double scale, DAngl
 	else if (crosshaircolors == 3)
 	{
 		style = {{ STYLEOP_Add, STYLEALPHA_InvDstCol, STYLEALPHA_InvSrcCol, STYLEF_RedIsAlpha }};
-		color = 0xffffff;
+		color = Color::str("#fff");
 	}
 	else
 	{
