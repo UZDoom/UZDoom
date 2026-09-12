@@ -156,7 +156,9 @@ class os_Menu : OptionMenu
 
 			string label = StringTable.Localize(item.mLabel);
 
-			if (!query.matches(label, isAnyTermMatches)) { continue; }
+			if (!query.matches(label, isAnyTermMatches)
+				&& !(query.matches(StringTable.GetUnlocalizedString(item.mLabel), isAnyTermMatches))
+			) continue;
 
 			found = true;
 
