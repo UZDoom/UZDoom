@@ -51,6 +51,21 @@ endif()
 find_package(Threads REQUIRED)
 find_package(Python3 3.6 REQUIRED)
 
+if(EMSCRIPTEN)
+	option(WASM_64 "Enable WASM64 build" OFF)
+	option(WASM_THREADS "Enable WASM pthread emulation" OFF)
+	if (WASM_64)
+		set(USE_FLAGS "${USE_FLAGS} -sMEMORY64")
+	endif ()
+	if (WASM_THREADS)
+		set(USE_FLAGS "${USE_FLAGS} -pthread")
+	endif ()
+	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${USE_FLAGS}" CACHE STRING "" FORCE)
+	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${USE_FLAGS}" CACHE STRING "" FORCE)
+	set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${USE_FLAGS}" CACHE STRING "" FORCE)
+endif ()
+
+
 list( APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake )
 include( FindPackageHandleStandardArgs )
 
@@ -60,7 +75,7 @@ if( FORCE_CROSSCOMPILE )
 	set( CMAKE_CROSSCOMPILING TRUE )
 endif()
 
-if(CMAKE_CROSSCOMPILING)
+if(CMAKE_CROSSCOMPILING AND NOT EMSCRIPTEN)
 	set(IMPORT_EXECUTABLES "IMPORTFILE-NOTFOUND" CACHE FILEPATH "Export file from native build.")
 	include(${IMPORT_EXECUTABLES})
 endif()
@@ -99,8 +114,8 @@ function( add_pk3 PK3_NAME )
 	string( REPLACE "." "_" PK3_TARGET ${PK3_NAME} )
 
 	add_custom_command( OUTPUT ${ZDOOM_OUTPUT_DIR}/${PK3_NAME}
-		COMMAND zipdir -udf ${PK3_ZIPDIR_OPTIONS} ${ZDOOM_OUTPUT_DIR}/${PK3_NAME} ${ARGN}
-		DEPENDS zipdir )
+			COMMAND zipdir -udf ${PK3_ZIPDIR_OPTIONS} ${ZDOOM_OUTPUT_DIR}/${PK3_NAME} ${ARGN}
+	DEPENDS zipdir )
 
 	# Create a list of source files for this PK3, for use in the IDE
 	# Phase 1: Create a list of all source files for this PK3 archive, except

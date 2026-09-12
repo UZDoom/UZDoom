@@ -24,6 +24,9 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#ifdef __EMSCRIPTEN__
+#include <emscripten.h>
+#endif
 
 #include "configfile.h"
 #include "files.h"
@@ -844,6 +847,12 @@ bool FConfigFile::WriteConfigFile () const
 		file->Write ("\n", 1);
 	}
 	delete file;
+#ifdef __EMSCRIPTEN__
+	EM_ASM( { Module.callbacks?.onFileWrite?.({
+		path: UTF8ToString($0),
+		op: 'write'
+	}) }, GetPathName() );
+#endif
 	return true;
 }
 
