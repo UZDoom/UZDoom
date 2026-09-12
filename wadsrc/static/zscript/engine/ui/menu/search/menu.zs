@@ -52,6 +52,8 @@ class os_Menu : OptionMenu
 		let    query            = os_Query.fromString(text);
 		bool   isAnyTermMatches = mIsAnyOfItem.mCVar.GetBool();
 
+		query.matchEverything = text == "*";
+
 		mDesc.mItems.clear();
 
 		addSearchField(text);
