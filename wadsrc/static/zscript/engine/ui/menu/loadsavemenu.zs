@@ -69,6 +69,8 @@ class LoadSaveMenu : ListMenu
 	int TopItem;
 	int Selected;
 
+	double wScale;
+
 	int savepicLeft;
 	int savepicTop;
 	int savepicWidth;
@@ -82,19 +84,26 @@ class LoadSaveMenu : ListMenu
 	int listboxHeight;
 	int listboxRight;
 
+	int commentAreaLeft;
 	int commentLeft;
+	int commentAreaTop;
 	int commentTop;
+	int commentAreaWidth;
 	int commentWidth;
+	int commentAreaHeight;
 	int commentHeight;
 	int commentRows;
 
 	bool mEntering;
 	TextEnterMenu mInput;
+	int FontHeight;
 	double FontScale;
 
 	BrokenLines BrokenSaveComment;
 
-
+	TextureID warningTextureId;
+	TextureID errorTextureId;
+	TextureID frameCornerTextureId;
 
 	//=============================================================================
 	//
@@ -108,6 +117,10 @@ class LoadSaveMenu : ListMenu
 		manager = SavegameManager.GetManager();
 		manager.ReadSaveStrings();
 		SetWindows();
+
+		warningTextureId = TexMan.CheckForTexture("m_warn");
+		errorTextureId = TexMan.CheckForTexture("m_error");
+		frameCornerTextureId = TexMan.CheckForTexture("m_corner");
 	}
 
 	private void SetWindows()
@@ -116,7 +129,7 @@ class LoadSaveMenu : ListMenu
 		int Width43 = screen.GetHeight() * 4 / 3;
 		int Left43 = (screen.GetWidth() - Width43) / 2;
 
-		double wScale = Width43 / 640.;
+		wScale = Width43 / 640.;
 
 		savepicLeft = Left43 + int(20 * wScale);
 		savepicTop = int(mDesc.mYpos * screen.GetHeight() / 200);
@@ -124,7 +137,8 @@ class LoadSaveMenu : ListMenu
 		savepicHeight = int(180 * wScale);
 
 		FontScale = max(screen.GetHeight() / 480, 1);
-		rowHeight = int(max((Font.GetConsoleFont(NewConsoleFont).GetHeight() + 1) * FontScale, 1));
+		FontHeight = Font.GetConsoleFont(NewConsoleFont).GetHeight();
+		rowHeight = int(max((FontHeight + 1) * FontScale, 1));
 
 		listboxLeft = savepicLeft + savepicWidth + int(20*wScale);
 		listboxTop = savepicTop;
@@ -134,11 +148,15 @@ class LoadSaveMenu : ListMenu
 		listboxHeight = listboxRows * rowHeight + 1;
 		listboxRight = listboxLeft + listboxWidth;
 
-		commentLeft = savepicLeft;
-		commentTop = savepicTop + savepicHeight + int(16 * wScale);
-		commentWidth = savepicWidth;
-		commentHeight = listboxHeight - savepicHeight - int(16 * wScale);
-		commentRows = commentHeight / rowHeight;
+		commentAreaLeft = savepicLeft;
+		commentLeft = commentAreaLeft + int(4 * wScale);
+		commentAreaTop = savepicTop + savepicHeight + int(16 * wScale);
+		commentTop = commentAreaTop + int(4 * wScale);
+		commentAreaWidth = savepicWidth;
+		commentWidth = commentAreaWidth - int(8 * wScale);
+		commentAreaHeight = listboxHeight - savepicHeight - int(16 * wScale);
+		commentHeight = commentAreaHeight - int(8 * wScale);
+		commentRows = (commentHeight / rowHeight) - 1;
 	}
 
 
@@ -163,17 +181,70 @@ class LoadSaveMenu : ListMenu
 	virtual void DrawFrame(int left, int top, int width, int height)
 	{
 		let framecolor = Color(255, 80, 80, 80);
-		Screen.DrawLineFrame(framecolor, left, top, width, height, screen.GetHeight() / 240);
+		Screen.DrawLineFrame(framecolor, left, top, width, height, wScale);
+		screen.Dim(0, 0.9, left, top, width, height);
+	}
+
+	virtual void DrawFrameCorners(int left, int top, int width, int height)
+	{
+		int frameBorder = 3 * wScale;
+		int cornerSize = 16 * wScale;
+
+		// TL
+		Screen.drawTexture(
+			frameCornerTextureId,
+			false,
+			left - frameBorder,
+			top - frameBorder,
+			DTA_DESTHEIGHT, cornerSize,
+			DTA_DESTWIDTH, cornerSize,
+			DTA_FlipX, false,
+            DTA_FlipY, false);
+
+		// TR
+		Screen.drawTexture(
+			frameCornerTextureId,
+			false,
+			left + width + frameBorder - cornerSize,
+			top - frameBorder,
+			DTA_DESTHEIGHT, cornerSize,
+			DTA_DESTWIDTH, cornerSize,
+		    DTA_FlipX, true,
+            DTA_FlipY, false);
+
+		// BL
+		Screen.drawTexture(
+			frameCornerTextureId,
+			false,
+			left - frameBorder,
+			top + height + frameBorder - cornerSize,
+			DTA_DESTHEIGHT, cornerSize,
+			DTA_DESTWIDTH, cornerSize,
+			DTA_FlipX, false,
+            DTA_FlipY, true);
+
+		// BR
+		Screen.drawTexture(
+			frameCornerTextureId,
+			false,
+			left + width + frameBorder - cornerSize,
+			top + height + frameBorder - cornerSize,
+			DTA_DESTHEIGHT, cornerSize,
+			DTA_DESTWIDTH, cornerSize,
+		    DTA_FlipX, true,
+            DTA_FlipY, true);
 	}
 
 	override void Drawer ()
 	{
 		Super.Drawer();
 
+		Font desiredConsoleFont = Font.GetConsoleFont(NewConsoleFont);
+		Font desiredSmallFont = Font.GetSmallTextFont(NewSmallFont);
+
 		SaveGameNode node;
 		int i;
 		int j;
-		bool didSeeSelected = false;
 
 		// Draw picture area
 		if (gameaction == ga_loadgame || gameaction == ga_loadgamehidecon || gameaction == ga_savegame)
@@ -185,8 +256,6 @@ class LoadSaveMenu : ListMenu
 		DrawFrame(savepicLeft, savepicTop, savepicWidth, savepicHeight);
 		if (!manager.DrawSavePic(savepicLeft, savepicTop, savepicWidth, savepicHeight))
 		{
-			screen.Dim(0, 0.6, savepicLeft, savepicTop, savepicWidth, savepicHeight);
-
 			if (manager.SavegameCount() > 0)
 			{
 				Font font = Font.GetSmallTextFont(NewSmallFont);
@@ -199,23 +268,67 @@ class LoadSaveMenu : ListMenu
 			}
 		}
 
+		DrawFrameCorners(savepicLeft, savepicTop, savepicWidth, savepicHeight);
+
 		// Draw comment area
-		DrawFrame (commentLeft, commentTop, commentWidth, commentHeight);
-		screen.Dim(0, 0.6, commentLeft, commentTop, commentWidth, commentHeight);
+		DrawFrame(commentAreaLeft, commentAreaTop, commentAreaWidth, commentAreaHeight);
 
-		Font desiredConsoleFont = Font.GetConsoleFont(NewConsoleFont);
-
-		int numlinestoprint = min(commentRows, BrokenSaveComment? BrokenSaveComment.Count() : 0);
-		for(int i = 0; i < numlinestoprint; i++)
+		if (Selected >= 0 && Selected < manager.SavegameCount())
 		{
-			screen.DrawText(desiredConsoleFont, Font.CR_ORANGE, commentLeft / FontScale, (commentTop + rowHeight * i) / FontScale, BrokenSaveComment.StringAt(i),
-				DTA_VirtualWidthF, screen.GetWidth() / FontScale, DTA_VirtualHeightF, screen.GetHeight() / FontScale, DTA_KeepRatio, true);
+			int numlinestoprint = min(commentRows, BrokenSaveComment? BrokenSaveComment.Count() : 0);
+			for(int i = 0; i < numlinestoprint; i++)
+			{
+				screen.DrawText(desiredSmallFont, Font.CR_GREY, commentLeft / FontScale, (commentTop + rowHeight * i) / FontScale, BrokenSaveComment.StringAt(i),
+					DTA_VirtualWidthF, screen.GetWidth() / FontScale, DTA_VirtualHeightF, screen.GetHeight() / FontScale, DTA_KeepRatio, true);
+			}
+
+
+			SaveGameNode selectedNode = manager.GetSavegame(Selected);
+			if (selectedNode.bMissingWads || selectedNode.bOldVersion)
+			{
+				int warningTop = (commentTop + commentHeight) - (FontHeight * FontScale);
+				int iconSize = (FontHeight - 4) * FontScale;
+				int iconPadding = 2 * FontScale;
+
+				String text = "";
+				TextureID iconTextureId;
+				if (selectedNode.bMissingWads)
+				{
+					//Stringtable.Localize("$MNU_NOFILES");
+					text = "Missing Content";
+					iconTextureID = warningTextureId;
+				}
+				else if (selectedNode.bOldVersion)
+				{
+					text = "Old Version";
+					iconTextureID = errorTextureId;
+				}
+
+				Screen.drawTexture(
+					iconTextureID,
+					false,
+					commentLeft,
+					warningTop + iconPadding,
+					DTA_DESTHEIGHT, iconSize,
+					DTA_DESTWIDTH, iconSize);
+
+				screen.DrawText(
+					desiredSmallFont,
+					Font.CR_YELLOW,
+					(commentLeft + iconSize + iconPadding) / FontScale,
+					warningTop / FontScale,
+					text,
+					DTA_VirtualWidthF, screen.GetWidth() / FontScale,
+					DTA_VirtualHeightF, screen.GetHeight() / FontScale,
+					DTA_KeepRatio,
+					true);
+			}
 		}
 
+		DrawFrameCorners(commentAreaLeft, commentAreaTop, commentAreaWidth, commentAreaHeight);
 
 		// Draw file area
-		DrawFrame (listboxLeft, listboxTop, listboxWidth, listboxHeight);
-		screen.Dim(0, 0.6, listboxLeft, listboxTop, listboxWidth, listboxHeight);
+		DrawFrame(listboxLeft, listboxTop, listboxWidth, listboxHeight);
 
 		if (manager.SavegameCount() == 0)
 		{
@@ -230,53 +343,94 @@ class LoadSaveMenu : ListMenu
 		j = TopItem;
 		for (i = 0; i < listboxRows && j < manager.SavegameCount(); i++)
 		{
-			int colr;
 			node = manager.GetSavegame(j);
+
+			TextureID iconTexId = 0;
 			if (node.bOldVersion)
 			{
-				colr = Font.CR_RED;
+				iconTexId = errorTextureId;
 			}
 			else if (node.bMissingWads)
 			{
-				colr = Font.CR_YELLOW;
-			}
-			else if (j == Selected)
-			{
-				colr = Font.CR_WHITE;
-			}
-			else
-			{
-				colr = Font.CR_TAN;
+				iconTexId = warningTextureId;
 			}
 
 			screen.SetClipRect(listboxLeft, listboxTop+rowHeight*i, listboxRight, listboxTop+rowHeight*(i+1));
 
+			int rowTop = listboxTop + (rowHeight * i);
+			int rowBottom = rowTop + rowHeight;
+			int textLeftMargin = 2;
+			int iconSize = (FontHeight - 4) * FontScale;
+			int iconPadding = 2 * FontScale;
+
 			if (j == Selected)
 			{
-				screen.Clear (listboxLeft, listboxTop+rowHeight*i, listboxRight, listboxTop+rowHeight*(i+1), mEntering ? Color(255,255,0,0) : Color(255,0,0,255));
-				didSeeSelected = true;
-				if (!mEntering)
-				{
-					screen.DrawText (desiredConsoleFont, colr, (listboxLeft+1) / FontScale, (listboxTop+rowHeight*i + FontScale) / FontScale, node.SaveTitle,
-						DTA_VirtualWidthF, screen.GetWidth() / FontScale, DTA_VirtualHeightF, screen.GetHeight() / FontScale, DTA_KeepRatio, true);
-				}
-				else
-				{
-					String s = mInput.GetText() .. NewConsoleFont.GetCursor();
-					int length = int(desiredConsoleFont.StringWidth(s) * FontScale);
-					int displacement = min(0, listboxWidth - 2 - length);
-					screen.DrawText (desiredConsoleFont, Font.CR_WHITE, (listboxLeft + 1 + displacement) / FontScale, (listboxTop+rowHeight*i + FontScale) / FontScale, s,
-						DTA_VirtualWidthF, screen.GetWidth() / FontScale, DTA_VirtualHeightF, screen.GetHeight() / FontScale, DTA_KeepRatio, true);
-				}
+				screen.Clear(
+					listboxLeft,
+					rowTop,
+					listboxRight,
+					rowBottom,
+					mEntering ? Color(255,255,0,0) : Color(255,32,32,32));
+			}
+
+			if (iconTexId)
+			{
+				Screen.drawTexture(
+					iconTexId,
+					false,
+					listboxLeft + textLeftMargin + iconPadding,
+					rowTop + iconPadding,
+					DTA_DESTHEIGHT, iconSize,
+					DTA_DESTWIDTH, iconSize);
+
+				textLeftMargin += 16;
+			}
+
+			int textColor = Font.CR_WHITE;
+			if (j == Selected)
+			{
+				textColor = Font.CR_BRICK;
+			}
+
+			if (j == Selected && mEntering)
+			{
+				String s = mInput.GetText() .. NewSmallFont.GetCursor();
+				int length = int(desiredSmallFont.StringWidth(s) * FontScale);
+				int displacement = min(0, listboxWidth - 2 - length);
+				screen.DrawText(
+					desiredSmallFont,
+					textColor,
+					((listboxLeft + displacement) / FontScale) + textLeftMargin,
+					(rowTop + FontScale) / FontScale,
+					s,
+					DTA_VirtualWidthF,
+					screen.GetWidth() / FontScale,
+					DTA_VirtualHeightF,
+					screen.GetHeight() / FontScale,
+					DTA_KeepRatio,
+					true);
 			}
 			else
 			{
-				screen.DrawText (desiredConsoleFont, colr, (listboxLeft+1) / FontScale, (listboxTop+rowHeight*i + FontScale) / FontScale, node.SaveTitle,
-					DTA_VirtualWidthF, screen.GetWidth() / FontScale, DTA_VirtualHeightF, screen.GetHeight() / FontScale, DTA_KeepRatio, true);
+				screen.DrawText(
+					desiredSmallFont,
+					textColor,
+					(listboxLeft / FontScale) + textLeftMargin,
+					(rowTop + FontScale) / FontScale,
+					node.SaveTitle,
+					DTA_VirtualWidthF,
+					screen.GetWidth() / FontScale,
+					DTA_VirtualHeightF,
+					screen.GetHeight() / FontScale,
+					DTA_KeepRatio,
+					true);
 			}
+
 			screen.ClearClipRect();
 			j++;
 		}
+
+		DrawFrameCorners(listboxLeft, listboxTop, listboxWidth, listboxHeight);
 	}
 
 	void UpdateSaveComment()
