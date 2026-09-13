@@ -165,6 +165,7 @@ class Menu : Object native ui version("2.4")
 		On,				// Menu is opened
 		WaitKey,		// Menu is opened and waiting for a key in the controls menu
 		OnNoPause,		// Menu is opened but does not pause the game
+		GameplayMenu,	// Menu is opened but does not pause the game, and uses inputevents, and passes through non-consumed events to the playsim
 	};
 
 	native Menu mParentMenu;

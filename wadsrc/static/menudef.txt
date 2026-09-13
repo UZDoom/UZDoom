@@ -1761,6 +1761,7 @@ OptionValue AlwaysTally
 	0,	"$OPTVAL_MODDEFINED"
 	1,	"$OPTVAL_NOTHUBS"
 	2,	"$OPTVAL_WITHHUBS"
+	3,	"$OPTVAL_NEVER"
 }
 
 OptionValue SaveOrder
@@ -1933,6 +1934,7 @@ OptionMenu AutomapOptions protected
 	Option "$AUTOMAPMNU_SHOWTOTALTIME",			"am_showtotaltime", "OnOff"
 	Option "$AUTOMAPMNU_SHOWMAPLABEL",			"am_showmaplabel", "MaplabelTypes"
 	Option "$AUTOMAPMNU_SHOWLEVELNAME",			"am_showlevelname", "OnOff"
+	Option "$AUTOMAPMNU_MATCHSTATUSBAR",		"am_match_statusbar", "OnOff"
 
 	StaticText ""
 	Option "$AUTOMAPMNU_SHOWKEYS",				"am_showkeys", "OnOff"
@@ -3133,7 +3135,7 @@ OptionMenu AccessibilityOptions protected
 	Tooltip "$ACCMNU_TOOLTIP_LIGHT_EXTRA"
 	Slider "$ACCMNU_LIGHT_RADIUS", "r_visibility", 0.0, 16.0, 1.0, 1
 	Tooltip "$ACCMNU_TOOLTIP_LIGHT_RADIUS"
-	
+
 	StaticText ""
 	Slider "$ACCMNU_DOUBLECLICK_THRESHOLD", "cl_doubleclickthreshold", 100, 600, 25, 0
 	Tooltip "$ACCMNU_TOOLTIP_DOUBLECLICK_THRESHOLD"

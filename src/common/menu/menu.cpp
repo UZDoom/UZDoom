@@ -532,6 +532,8 @@ DEFINE_ACTION_FUNCTION(DMenu, ActivateMenu)
 
 void M_SetMenu(FName menu, int param)
 {
+	if(menuactive == MENU_GameplayMenu) menuactive = MENU_Off; // make sure gameplay menu mode gets properly reset when switching menus
+
 	if (sysCallbacks.SetSpecialMenu && !sysCallbacks.SetSpecialMenu(menu, param)) return;
 
 	DMenuDescriptor **desc = MenuDescriptors.CheckKey(menu);
@@ -641,7 +643,6 @@ bool M_Responder (event_t *ev)
 	{
 		return false;
 	}
-
 	if (CurrentMenu != nullptr && menuactive != MENU_Off)
 	{
 		// There are a few input sources we are interested in:
@@ -748,7 +749,7 @@ bool M_Responder (event_t *ev)
 				}
 			}
 		}
-		else if (menuactive != MENU_WaitKey && (ev->type == EV_KeyDown || ev->type == EV_KeyUp))
+		else if (menuactive != MENU_WaitKey && menuactive != MENU_GameplayMenu && (ev->type == EV_KeyDown || ev->type == EV_KeyUp))
 		{
 			// eat blocked controller events without dispatching them.
 			if (ev->data1 >= KEY_FIRSTJOYBUTTON && m_blockcontrollers && ev->type == EV_KeyDown) return true;
@@ -835,9 +836,18 @@ bool M_Responder (event_t *ev)
 				return true;
 			}
 		}
-		return CurrentMenu->CallResponder(ev) || !keyup;
+		if(menuactive != MENU_GameplayMenu || ev->type == EV_GUI_Event)
+		{
+			return CurrentMenu->CallResponder(ev) || !keyup;
+		}
+		else if(CurrentMenu->CallResponder(ev))
+		{
+			return true;
+		}
+		//intentional fallthrough for if MENU_GameplayMenu return false from OnInputEvent
 	}
-	else if (MenuEnabled)
+
+	if (MenuEnabled)
 	{
 		if (ev->type == EV_KeyDown)
 		{

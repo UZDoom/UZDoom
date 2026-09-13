@@ -460,7 +460,7 @@ if ( CPPDAP_FOUND AND NOT FORCE_INTERNAL_CPPDAP )
 	message( STATUS "Using system cppdap library, includes found at ${CPPDAP_INCLUDE_DIR}" )
 else()
 	message( STATUS "Using internal cppdap library" )
-	add_subdirectory( libraries/cppdap )
+	add_subdirectory( libraries/cppdap EXCLUDE_FROM_ALL )
 	set( CPPDAP_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libraries/cppdap" )
 	set( CPPDAP_LIBRARIES cppdap )
 	set( CPPDAP_LIBRARY cppdap )
@@ -475,6 +475,10 @@ set( ZMUSIC_INCLUDE_DIR ${ZMUSIC_ROOT_PATH}/include )
 set( ZMUSIC_LIBRARIES zmusic )
 
 set( LZMA_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libraries/lzma/C" )
+
+set( BOOST_PFR_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libraries/boost_pfr/include" )
+
+set( REFLECT_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libraries/reflect" )
 
 if( NOT CMAKE_CROSSCOMPILING )
 	if( NOT CROSS_EXPORTS )

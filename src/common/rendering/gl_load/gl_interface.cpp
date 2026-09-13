@@ -146,6 +146,9 @@ void gl_LoadExtensions()
 	if (CheckExtension("GL_ARB_texture_compression")) gl.flags |= RFL_TEXTURE_COMPRESSION;
 	if (CheckExtension("GL_EXT_texture_compression_s3tc")) gl.flags |= RFL_TEXTURE_COMPRESSION_S3TC;
 
+	if (CheckExtension("GL_ATI_meminfo")) gl.flags |= RFL_ATI_MEM;
+	if (CheckExtension("GL_NVX_gpu_memory_info")) gl.flags |= RFL_NV_MEM;
+
 	if (gl_version < 4.f)
 	{
 #ifdef _WIN32

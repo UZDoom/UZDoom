@@ -495,7 +495,7 @@ double IQMModel::FindFramerate(FName name)
 	return FErr_NotFound;
 }
 
-void IQMModel::RenderFrame(FModelRenderer* renderer, FGameTexture* skin, int frame1, int frame2, double inter, FTranslationID translation, const FTextureID* surfaceskinids, int boneStartPosition)
+void IQMModel::RenderFrame(FModelRenderer* renderer, FGameTexture* skin, int frame1, int frame2, double inter, FTranslationID translation, const FTextureID* surfaceskinids, int boneStartPosition, AActor * act)
 {
 
 	renderer->SetupFrame(this, 0, 0, NumVertices, boneStartPosition >= 0 ? boneStartPosition : screen->mBones->UploadBones(boneData));
@@ -525,7 +525,7 @@ void IQMModel::RenderFrame(FModelRenderer* renderer, FGameTexture* skin, int fra
 		{
 			if (meshSkin != lastSkin)
 			{
-				renderer->SetMaterial(meshSkin, false, translation);
+				renderer->SetMaterial(meshSkin, false, translation, act);
 				lastSkin = meshSkin;
 			}
 			renderer->DrawElements(Meshes[i].NumTriangles * 3, Meshes[i].FirstTriangle * 3 * sizeof(unsigned int));

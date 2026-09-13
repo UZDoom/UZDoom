@@ -191,6 +191,7 @@ public:
 	bool isFullbrightDisabled() const { return !!(flags & GTexf_DisableFullbrightSprites); }
 	bool isFullbright() const { return !!(flags & GTexf_RenderFullbright); }
 	bool isFullNameTexture() const { return !!(flags & GTexf_FullNameTexture); }
+	void setFullNameTexture() { flags |= GTexf_FullNameTexture; }
 	bool expandSprites() { return expandSprite == -1? ShouldExpandSprite() : !!expandSprite; }
 	bool useWorldPanning() const { return !!(flags & GTexf_WorldPanning);  }
 	void SetWorldPanning(bool on) { if (on) flags |= GTexf_WorldPanning; else flags &= ~GTexf_WorldPanning; }

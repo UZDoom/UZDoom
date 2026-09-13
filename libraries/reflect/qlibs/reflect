@@ -1,0 +1,165 @@
+// <!--
+// The MIT License (MIT)
+//
+// Copyright (c) 2024 Kris Jusiak <kris@jusiak.net>
+//
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in all
+// copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+// SOFTWARE.
+//
+
+#pragma once
+
+#include <array>
+#include <string_view>
+#include <source_location>
+#include <type_traits>
+#include <tuple>
+#include <utility>
+#include <limits>
+#include <cstdint>
+
+#include <boost/pfr.hpp>
+
+namespace reflect::inline v1_2_5 {
+namespace detail {
+template<class T> extern const T ext{};
+template<class T>
+union uninitialized {
+  char bytes[sizeof(T)];
+  T value;
+};
+} // namespace detail
+
+template<std::size_t N, class T> requires std::is_aggregate_v<std::remove_cvref_t<T>>
+[[nodiscard]] constexpr auto offset_of() noexcept -> std::size_t {
+#if defined(__clang__)
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundefined-var-template"
+#endif
+  const auto& unknown = detail::ext<detail::uninitialized<T>>;
+#if defined(__clang__)
+#pragma clang diagnostic pop
+#endif
+  const void* address = __builtin_addressof(boost::pfr::get<N>(unknown.value));
+  for (std::size_t i = 0; i < sizeof(unknown.bytes); ++i) {
+    if (address == &unknown.bytes[i]) {
+      return i;
+    }
+  }
+#if defined(__clang__)
+  __builtin_unreachable();
+#endif
+}
+} // namespace reflect
+
+namespace reflect::test {
+struct empty { };
+struct foo { using type = int; enum E { }; };
+template<class T> struct optional {
+  constexpr optional() = default;
+  constexpr optional(T t) : t{t} { }
+  T t{};
+};
+struct bar { };
+template<class T> struct foo_t { };
+namespace ns::inline v1 { template<auto...> struct bar_v { }; } // ns
+enum e {
+  _141 = 141,
+  _142 = 142,
+};
+enum e1 { e1a };
+enum class e2 : std::uint8_t { e2a, e2b };
+enum e3 { e3a, e3b, e3c, };
+enum class e4 : std::int32_t { e4a, e4b = 5, e4c, e4d = 2, };
+consteval auto enum_min(e) { return e::_141; }
+consteval auto enum_max(e) { return e::_142; }
+void failed();
+inline constexpr auto expect = [](bool cond) { if (not cond) { failed(); } };
+} // reflect::test
+
+static_assert(([] {
+  using namespace reflect;
+  using test::expect;
+
+  // offset_of
+  {
+    struct s {
+      float a;
+      char b;
+      char bb;
+      int c;
+    };
+
+    #pragma pack(push, 1)
+    struct s2 {
+      float a;
+      char b;
+      char bb;
+      int c;
+      double d;
+      char e;
+    };
+    #pragma pack(pop)
+
+    struct a {
+      int i;
+      int j;
+    };
+
+    struct b {
+      int i;
+      int k;
+    };
+
+    struct al {
+      char a;
+      int b;
+      char c;
+    };
+
+    using test::empty;
+
+    struct p {
+      int i;
+#ifdef _MSC_VER
+      [[msvc::no_unique_address]] empty e;
+#else
+      [[no_unique_address]] empty e;
+#endif
+    };
+
+    static_assert(offset_of<0, a>() == __builtin_offsetof(a, i));
+    static_assert(offset_of<1, a>() == __builtin_offsetof(a, j));
+    static_assert(offset_of<0, b>() == __builtin_offsetof(b, i));
+    static_assert(offset_of<1, b>() == __builtin_offsetof(b, k));
+    static_assert(offset_of<0, s>() == __builtin_offsetof(s, a));
+    static_assert(offset_of<1, s>() == __builtin_offsetof(s, b));
+    static_assert(offset_of<2, s>() == __builtin_offsetof(s, bb));
+    static_assert(offset_of<3, s>() == __builtin_offsetof(s, c));
+    static_assert(offset_of<0, s2>() == __builtin_offsetof(s2, a));
+    static_assert(offset_of<1, s2>() == __builtin_offsetof(s2, b));
+    static_assert(offset_of<2, s2>() == __builtin_offsetof(s2, bb));
+    static_assert(offset_of<3, s2>() == __builtin_offsetof(s2, c));
+    static_assert(offset_of<4, s2>() == __builtin_offsetof(s2, d));
+    static_assert(offset_of<5, s2>() == __builtin_offsetof(s2, e));
+    static_assert(offset_of<0, al>() == __builtin_offsetof(al, a));
+    static_assert(offset_of<1, al>() == __builtin_offsetof(al, b));
+    static_assert(offset_of<2, al>() == __builtin_offsetof(al, c));
+    static_assert(offset_of<1, p>() == __builtin_offsetof(p, e));
+  }
+}(), true));

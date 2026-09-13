@@ -354,7 +354,7 @@ int FDMDModel::FindFrame(const char* name, bool nodefault)
 //
 //===========================================================================
 
-void FDMDModel::RenderFrame(FModelRenderer *renderer, FGameTexture * skin, int frameno, int frameno2, double inter, FTranslationID translation, const FTextureID*, int boneStartPosition)
+void FDMDModel::RenderFrame(FModelRenderer *renderer, FGameTexture * skin, int frameno, int frameno2, double inter, FTranslationID translation, const FTextureID*, int boneStartPosition, AActor * act)
 {
 	if (frameno >= info.numFrames || frameno2 >= info.numFrames) return;
 
@@ -366,7 +366,7 @@ void FDMDModel::RenderFrame(FModelRenderer *renderer, FGameTexture * skin, int f
 	}
 
 	renderer->SetInterpolation(inter);
-	renderer->SetMaterial(skin, false, translation);
+	renderer->SetMaterial(skin, false, translation, act);
 	renderer->SetupFrame(this, frames[frameno].vindex, frames[frameno2].vindex, lodInfo[0].numTriangles * 3, -1);
 	renderer->DrawArrays(0, lodInfo[0].numTriangles * 3);
 	renderer->SetInterpolation(0.f);

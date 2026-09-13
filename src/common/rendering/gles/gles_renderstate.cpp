@@ -210,9 +210,9 @@ bool FGLRenderState::ApplyShader()
 
 	if (mHwUniforms)
 	{
-		activeShader->cur->muProjectionMatrix.Set(&mHwUniforms->mProjectionMatrix);
-		activeShader->cur->muViewMatrix.Set(&mHwUniforms->mViewMatrix);
-		activeShader->cur->muNormalViewMatrix.Set(&mHwUniforms->mNormalViewMatrix);
+		activeShader->cur->muProjectionMatrix.Set(&mHwUniforms->ProjectionMatrix);
+		activeShader->cur->muViewMatrix.Set(&mHwUniforms->ViewMatrix);
+		activeShader->cur->muNormalViewMatrix.Set(&mHwUniforms->NormalViewMatrix);
 		activeShader->cur->muCameraPos.Set(&mHwUniforms->mCameraPos.X);
 		activeShader->cur->muClipLine.Set(&mHwUniforms->mClipLine.X);
 		activeShader->cur->muGlobVis.Set(mHwUniforms->mGlobVis);
