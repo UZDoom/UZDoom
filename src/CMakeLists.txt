@@ -304,6 +304,7 @@ add_subdirectory("common/thirdparty/freetype-2.13.3")
 add_subdirectory("common/thirdparty/harfbuzz-7.3.0")
 add_subdirectory("utility/trex")
 list( APPEND PROJECT_LIBRARIES "trex" )
+list( APPEND PROJECT_LIBRARIES "zmusic" )
 list( APPEND PROJECT_LIBRARIES "zwidget" )
 list( APPEND PROJECT_LIBRARIES "${WEBP_TARGET}" )
 
@@ -1443,8 +1444,7 @@ else()
 		COMMAND ${CMAKE_CURRENT_BINARY_DIR}/link-make )
 	IF ("${INSTALL_RPATH}" STREQUAL "")
 		set_target_properties(zdoom PROPERTIES
-			#allow libzmusic.so.1 library in same folder as executable at runtime
-			INSTALL_RPATH "\$ORIGIN:\$ORIGIN/zmusic/build/source"
+			INSTALL_RPATH "\$ORIGIN"
 			BUILD_WITH_INSTALL_RPATH ON
 		)
 	endif()
@@ -1461,22 +1461,6 @@ add_custom_command(TARGET zdoom POST_BUILD
 
 	VERBATIM
 )
-
-if ( NOT ZMUSIC_SYSTEM_INSTALL AND (NOT DEFINED BUILD_SHARED_LIBS OR BUILD_SHARED_LIBS))
-	# bring zmusic in
-	add_custom_command(TARGET zdoom POST_BUILD
-		COMMAND ${CMAKE_COMMAND} -E copy_if_different
-			$<TARGET_FILE:zmusic> $<TARGET_FILE_DIR:zdoom>)
-	if ( NOT WIN32 )
-		add_custom_command(TARGET zdoom POST_BUILD
-			COMMAND ${CMAKE_COMMAND} -E create_symlink
-				$<TARGET_FILE_NAME:zmusic> $<TARGET_SONAME_FILE_NAME:zmusic>
-			COMMAND ${CMAKE_COMMAND} -E create_symlink
-				$<TARGET_SONAME_FILE_NAME:zmusic> $<TARGET_LINKER_FILE_NAME:zmusic>
-			WORKING_DIRECTORY $<TARGET_FILE_DIR:zdoom>)
-	endif()
-	add_dependencies(zdoom zmusic)
-endif()
 
 if (VCPKG_TOOLCHAIN)
 	x_vcpkg_install_local_dependencies(TARGETS zdoom DESTINATION ".")
@@ -1553,18 +1537,6 @@ endif()
 
 target_compile_options(zdoom PRIVATE
 	$<$<CXX_COMPILER_ID:AppleClang>:-fconstexpr-steps=100000000> )
-
-if ( NOT ZMUSIC_SYSTEM_INSTALL )
-	if ( WIN32 OR APPLE )
-		# nothing to do
-	else()
-		install(TARGETS zmusic
-			LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-			PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
-			COMPONENT "Game executable"
-		)
-	endif()
-endif()
 
 if( WIN32 )
 	set( INSTALL_PATH . CACHE STRING "Directory where the executable will be placed during install." )
