@@ -12,6 +12,9 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 set(ABSL_BUILD_TESTING OFF) # don't build/run abseil tests
 
+# UZDoom itself has no libs. Ensure bundled dependencies are statically linked.
+set( BUILD_SHARED_LIBS OFF CACHE INTERNAL "" FORCE )
+
 # make all targets use LTO - want to do this early in the cmake to ensure it applies to any targets
 option( FORCE_NO_LTO "Turn off LTO even if it would be possible to use it." NO )
 
@@ -469,7 +472,6 @@ else()
 endif()
 
 # ZMUSIC
-set( BUILD_SHARED_LIBS OFF CACHE INTERNAL "" FORCE )
 add_subdirectory( libraries/ZMusic )
 set( ZMUSIC_ROOT_PATH "${CMAKE_CURRENT_SOURCE_DIR}/libraries/zmusic" )
 set( ZMUSIC_INCLUDE_DIR ${ZMUSIC_ROOT_PATH}/include )
