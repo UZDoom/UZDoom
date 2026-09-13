@@ -161,7 +161,7 @@ CVAR(Int, am_drawmapback, 1, CVAR_ARCHIVE);
 CVAR(Bool, am_showkeys, true, CVAR_ARCHIVE);
 CVAR(Int, am_showtriggerlines, 0, CVAR_ARCHIVE);
 CVAR(Int, am_showthingsprites, 0, CVAR_ARCHIVE);
-CVAR(Bool, am_showseenthings, false, CVAR_ARCHIVE);
+CVAR(Int, am_show_seen_things, 0, CVAR_ARCHIVE);
 CVAR(Float, am_thingsspritescale, 1.0, CVAR_ARCHIVE);
 CVAR (Bool, am_showkeys_always, false, CVAR_ARCHIVE);
 CVAR(Bool, am_match_statusbar, true, CVAR_ARCHIVE)
@@ -3064,7 +3064,9 @@ void DAutomap::drawThings (bool allmap)
 	bool allthings = allmap && players[consoleplayer].mo->FindInventory(NAME_PowerScanner, true) != nullptr;
 
 	// if there is nothing to draw, abort early.
-	if (!(am_cheat > 0 || allthings || am_showseenthings))
+	if (!(am_cheat > 0
+		|| allthings
+		|| am_show_seen_things))
 	{
 		return;
 	}
@@ -3079,11 +3081,27 @@ void DAutomap::drawThings (bool allmap)
 		t = sec.thinglist;
 		while (t)
 		{
+			bool showThisSeenThing = false;
+			if (!netgame && t->subsector && t->subsector->flags & SSECMF_DRAWN)
+			{
+				bool isItem = t->flags & MF_SPECIAL;
+				bool isMonster = t->flags3 & MF3_ISMONSTER && !(t->flags & MF_CORPSE);
+				bool isCorpse = t->flags & MF_CORPSE;
+				bool isFriendly = t->flags & MF_FRIENDLY && !(t->flags & MF_CORPSE);
+				bool isDecoration = !isItem && !isMonster && !isCorpse && !isFriendly && t->sprite > 0;
+
+				showThisSeenThing |= ((am_show_seen_things>>0)&1) && isItem;
+				showThisSeenThing |= ((am_show_seen_things>>1)&1) && isMonster;
+				showThisSeenThing |= ((am_show_seen_things>>2)&1) && isCorpse;
+				showThisSeenThing |= ((am_show_seen_things>>3)&1) && isFriendly;
+				showThisSeenThing |= ((am_show_seen_things>>4)&1) && isDecoration;
+			}
+
 			// draw this thing if:
 			//	we have am_cheat || allthings || (are not in a netgame && are showing seen things && this thing is seen)
 			// and
 			// 	am_cheat is less than < 4 (show hidden objects) or (this thing is not invisible and should show on the map)
-			if ((am_cheat > 0 || allthings || (!netgame && am_showseenthings && t->subsector && t->subsector->flags & SSECMF_DRAWN))
+			if ((am_cheat > 0 || allthings || showThisSeenThing)
 				&& (am_cheat < 4 || (!(t->renderflags & RF_INVISIBLE) && !(t->flags6 & MF6_NOTONAUTOMAP))))
 			{
 				DVector3 fracPos = t->InterpolatedPosition(r_viewpoint.TicFrac);
