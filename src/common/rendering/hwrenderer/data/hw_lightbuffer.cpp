@@ -72,54 +72,28 @@ void FLightBuffer::Clear()
 	mBuffer = mBufferPipeline[mPipelinePos];
 }
 
-int FLightBuffer::UploadLights(FDynLightData &data)
+int FLightBuffer::UploadLights(const FDynLightData &data)
 {
-	// All meaasurements here are in vec4's.
-	int size0 = data.arrays[0].Size()/4;
-	int size1 = data.arrays[1].Size()/4;
-	int size2 = data.arrays[2].Size()/4;
-	int totalsize = size0 + size1 + size2 + 1;
-
-	if (totalsize > (int)mMaxUploadSize)
+	size_t sz = data.Vec4Size();
+	if(sz <= 1) return -1;	// there are no lights
+	unsigned int thisindex = std::min(mIndex.fetch_add(sz), mBufferSize + 1);
+	TArray<float> out;
+	if(thisindex >= mBufferSize || !data.Combine(out, std::min(mMaxUploadSize, mBufferSize - thisindex)))
 	{
-		int diff = totalsize - (int)mMaxUploadSize;
-
-		size2 -= diff;
-		if (size2 < 0)
-		{
-			size1 += size2;
-			size2 = 0;
-		}
-		if (size1 < 0)
-		{
-			size0 += size1;
-			size1 = 0;
-		}
-		totalsize = size0 + size1 + size2 + 1;
+		mIndex.store(thisindex); // don't let it overflow
+		return -1; // Buffer is full. Since it is being used live at the point of the upload we cannot do much here but to abort.
 	}
 
 	float *mBufferPointer = (float*)mBuffer->Memory();
 	assert(mBufferPointer != nullptr);
-	if (mBufferPointer == nullptr) return -1;
-	if (totalsize <= 1) return -1;	// there are no lights
+	if(mBufferPointer == nullptr) return -1;
 
-	unsigned thisindex = mIndex.fetch_add(totalsize);
-	float parmcnt[] = { 0, float(size0), float(size0 + size1), float(size0 + size1 + size2) };
+	assert(out.Size() <= mMaxUploadSize);
+	assert(thisindex + out.Size() <= mBufferSize);
 
-	if (thisindex + totalsize <= mBufferSize)
-	{
-		float *copyptr = mBufferPointer + thisindex*4;
+	memcpy(mBufferPointer + (thisindex * 4), out.Data(), out.Size() * sizeof(float));
 
-		memcpy(&copyptr[0], parmcnt, ELEMENT_SIZE);
-		memcpy(&copyptr[4], &data.arrays[0][0], size0 * ELEMENT_SIZE);
-		memcpy(&copyptr[4 + 4*size0], &data.arrays[1][0], size1 * ELEMENT_SIZE);
-		memcpy(&copyptr[4 + 4*(size0 + size1)], &data.arrays[2][0], size2 * ELEMENT_SIZE);
-		return thisindex;
-	}
-	else
-	{
-		return -1;	// Buffer is full. Since it is being used live at the point of the upload we cannot do much here but to abort.
-	}
+	return thisindex;
 }
 
 int FLightBuffer::GetBinding(unsigned int index, size_t* pOffset, size_t* pSize)
