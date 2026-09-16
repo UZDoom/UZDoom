@@ -363,7 +363,11 @@ else()
 	if( APPLE )
 		list(PREPEND CMAKE_PREFIX_PATH "/opt/local")    # port
 		list(PREPEND CMAKE_PREFIX_PATH "/opt/homebrew") # brew
-		set(CMAKE_OSX_DEPLOYMENT_TARGET "10.13")
+		if(DEFINED XCODE_VERSION AND XCODE_VERSION VERSION_LESS 27.0)
+			set(CMAKE_OSX_DEPLOYMENT_TARGET "10.13") # This is the actual minimum...
+		else()
+			set(CMAKE_OSX_DEPLOYMENT_TARGET "12.0") # ...but XCode 27 has this as the minimum
+		endif()
 		if( CMAKE_CXX_COMPILER_ID STREQUAL "GNU" )
 			# If we're compiling with a custom GCC on the Mac (which we know since g++-4.2 doesn't support C++11) statically link libgcc.
 			set( ALL_C_FLAGS "-static-libgcc" )
