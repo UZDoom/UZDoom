@@ -1548,7 +1548,14 @@ if( APPLE )
 	# Dymanic libraries like libvulkan.dylib or libMoltenVK.dylib will be loaded by dlopen()
 	# if placed in the directory with the main executable
 	set( CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -rpath @executable_path" )
+
+	# this is enabled with xcode, but not when using ninja. Explicitly enabling it here to make builds unified
+	target_compile_definitions( zdoom PRIVATE
+		_LIBCPP_HARDENING_MODE=$<IF:$<CONFIG:Debug>,_LIBCPP_HARDENING_MODE_DEBUG,_LIBCPP_HARDENING_MODE_FAST> )
 endif()
+
+target_compile_options(zdoom PRIVATE
+	$<$<CXX_COMPILER_ID:AppleClang>:-fconstexpr-steps=100000000> )
 
 if ( NOT ZMUSIC_SYSTEM_INSTALL )
 	if ( WIN32 OR APPLE )
