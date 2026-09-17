@@ -89,7 +89,11 @@ void FConsoleBuffer::AddText(PrintFlag printlevel, const char *text)
 	}
 	else if (text[textsize-1] == '\n')
 	{
-		textsize--;
+		// Don't remove the last newline if another one immediately precedes it.
+		// Otherwise, the text will be missing a line when it's shown in the console.
+		if (text[textsize-2] != '\n')
+			textsize--;
+
 		mAddType = NEWLINE;
 	}
 	else
