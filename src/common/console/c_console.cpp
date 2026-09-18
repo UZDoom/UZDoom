@@ -713,7 +713,7 @@ void C_DrawConsole ()
 
 	}
 
-	if (menuactive != MENU_Off)
+	if (menuactive != MENU_Off && menuactive != MENU_GameplayMenu)
 	{
 		return;
 	}
@@ -800,7 +800,7 @@ void C_ToggleConsole ()
 		if (sysCallbacks.ToggleFullConsole) sysCallbacks.ToggleFullConsole();
 		togglestate = c_down;
 	}
-	else if (!chatmodeon && (ConsoleState == c_up || ConsoleState == c_rising) && menuactive == MENU_Off)
+	else if (!chatmodeon && (ConsoleState == c_up || ConsoleState == c_rising) && (menuactive == MENU_Off || menuactive == MENU_GameplayMenu))
 	{
 		ConsoleState = c_falling;
 		HistPos = NULL;
@@ -1214,7 +1214,7 @@ bool C_Responder (event_t *ev)
 	if (ev->type != EV_GUI_Event ||
 		ConsoleState == c_up ||
 		ConsoleState == c_rising ||
-		menuactive != MENU_Off)
+		(menuactive != MENU_Off && menuactive != MENU_GameplayMenu))
 	{
 		return false;
 	}

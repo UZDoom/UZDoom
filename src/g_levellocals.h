@@ -586,6 +586,7 @@ public:
 	int			lumpnum;
 	FString		LevelName;
 	FString		MapName;			// the lump name (E1M1, MAP01, etc)
+	FName		MapFName;			// cache name index for lump
 	FString		NextMap;			// go here when using the regular exit
 	FString		NextSecretMap;		// map to go to when used secret exit
 	FString		AuthorName;

@@ -692,6 +692,17 @@ void G_BuildTiccmd (usercmd_t *cmd)
 	axis_side = buttonMap.ButtonAnalog(Button_MoveLeft) - buttonMap.ButtonAnalog(Button_MoveRight);
 	axis_up = buttonMap.ButtonAnalog(Button_MoveUp) - buttonMap.ButtonAnalog(Button_MoveDown);
 
+	bool ignore_yaw = false;
+	bool ignore_pitch = false;
+
+	if(menuactive == MENU_GameplayMenu && CurrentMenu && CurrentMenu->mMouseCapture)
+	{ // blank out "look" inputs if GameplayMenu wants mouse
+		ignore_yaw = true;
+		ignore_pitch = true;
+		mousex = 0.0f;
+		mousey = 0.0f;
+	}
+
 	if (cl_analog_straferun)
 	{
 		// Rescale diagonal analog input from roughly [0.77, 0.77] to [1.0, 1.0],
@@ -719,14 +730,18 @@ void G_BuildTiccmd (usercmd_t *cmd)
 
 	if (HELD(BT_STRAFE) || (lookstrafe && buttonMap.ButtonDown(Button_Mlook)))
 	{
-		axis_side = axis_yaw;
-		axis_yaw = 0.0f;
+		if(!ignore_yaw)
+		{
+			axis_side = axis_yaw;
+			axis_yaw = 0.0f;
+		}
 	}
 
 	if (buttonMap.ButtonDown(Button_Mlook))
 	{
 		axis_pitch = axis_forward;
 		axis_forward = 0.0f;
+		ignore_pitch = false;
 	}
 
 	auto i_axis_side    = joyint(axis_side * sidemove[cl_analog_run | speed]);
@@ -740,7 +755,10 @@ void G_BuildTiccmd (usercmd_t *cmd)
 	//		the analog device it is. (turnheld)
 	if (i_axis_yaw)
 	{
-		G_AddViewAngle(i_axis_yaw);
+		if(!ignore_yaw)
+		{
+			G_AddViewAngle(i_axis_yaw);
+		}
 		turnheld = 0;
 	}
 	else if (!HELD(BT_RIGHT|BT_LEFT))
@@ -766,7 +784,10 @@ void G_BuildTiccmd (usercmd_t *cmd)
 
 	if (i_axis_pitch)
 	{
-		G_AddViewPitch(i_axis_pitch);
+		if(!ignore_pitch)
+		{
+			G_AddViewPitch(i_axis_pitch);
+		}
 	}
 	else
 	{

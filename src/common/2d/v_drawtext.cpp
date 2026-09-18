@@ -45,6 +45,7 @@
 #include <string_view>
 #include "simdutf.h"
 #include "renderstyle.h"
+#include "freetype/freetype.h"
 
 int ListGetInt(VMVa_List &tags);
 
@@ -486,34 +487,41 @@ void DrawDynamicFontText(F2DDrawer *drawer, FFont* originalFont, FFont* substitu
 
 	double                 cursorx             = x;
 	double                 cursory             = y;
-	double                 scalex              = parms.scalex;// * parms.patchscalex;
-	double                 scaley              = parms.scaley;// * parms.patchscaley;
+	double                 scalex              = parms.scalex;
+	double                 scaley              = parms.scaley;
 	constexpr FRenderStyle trexTextRenderStyle = {STYLEOP_Add, STYLEALPHA_Src, STYLEALPHA_InvSrc, STYLEF_RedIsAlpha};
 
-	for (auto &s : DrawStrings)
+	for (auto &s : DrawStrings) 
 	{
 		DrawParms           atlasFragmentDrawParms = parms;
+
+		FGameTexture *const atlasTexture = s.Font->GetDynamicFontAtlasTexture();
+		const Trex::Atlas  &atlas        = *s.Font->GetDynamicFontAtlas();
+		Trex::TextShaper   &shaper       = *s.Font->GetDynamicTextShaper();
+
 		const bool          autoScale              = true;
-		const double        scaleAdjust =  autoScale? (double)originalFont->GetHeight() / (double)substitutedFont->GetHeight() : 1.0;
-		const double        shrinkScale            = s.Font->GetInvSupersampleScale();
-		const double        baseFontHeight         = s.Font->GetHeight();
-		FGameTexture *const atlasTexture           = s.Font->GetDynamicFontAtlasTexture();
-		const Trex::Atlas  &atlas                  = *s.Font->GetDynamicFontAtlas();
-		Trex::TextShaper   &shaper                 = *s.Font->GetDynamicTextShaper();
-		scalex                                     = atlasFragmentDrawParms.scalex * atlasFragmentDrawParms.patchscalex * scaleAdjust;
-		scaley                                     = atlasFragmentDrawParms.scaley * atlasFragmentDrawParms.patchscaley * scaleAdjust;
+		const double originalFontHeightInPixels = originalFont->GetHeight();
+		const double fontHeightInPixels = substitutedFont->GetHeight();
+		
+		const double        scaleAdjust =  autoScale? fontHeightInPixels / originalFontHeightInPixels : 1.0;
+		const double        shrinkScale            = s.Font->GetInvSupersampleScale(); 
+		
+		scalex                                     = atlasFragmentDrawParms.scalex * atlasFragmentDrawParms.patchscalex;
+		scaley                                     = atlasFragmentDrawParms.scaley * atlasFragmentDrawParms.patchscaley;
+
+		const double finalRescale = shrinkScale / scaleAdjust;
 
 		for (int i = 0; i < s.TrexGlyphs.size(); ++i)
 		{
 			const Trex::ShapedGlyph &g            = s.TrexGlyphs[i];
-			const double             cx           = (cursorx + (shrinkScale * scalex) * (g.xOffset + g.info.bearingX));
-			const double             heightAdjust = (1.0 / s.Font->GetInvSupersampleScale());
-			double             cy =
-				(cursory + (scaley * shrinkScale) * (baseFontHeight * (heightAdjust) - g.yOffset - g.info.bearingY));
+			const double             cx = (cursorx + (g.xOffset * finalRescale*scalex) + (g.info.bearingX*finalRescale*scalex));
+			double                   cy = (cursory - (g.yOffset * finalRescale *scaley) - (g.info.bearingY*finalRescale*scaley));
 
 			//classic doom fonts don't really have descenders or ascenders. As a result, let's nudge the
 			//vertical coords up by the descender to better match the intent of how they were placed.
-			cy += s.Font->GetDynamicFontAtlas()->GetFont()->GetMetrics().descender * scaleAdjust * shrinkScale;
+			cy += s.Font->GetDynamicFontAtlas()->GetFont()->GetMetrics().ascender * finalRescale;
+			int descender = s.Font->GetDynamicFontAtlas()->GetFont()->GetMetrics().descender;
+			cy += s.Font->GetDynamicFontAtlas()->GetFont()->GetMetrics().descender * finalRescale;
 
 			const double srcx = (double)g.info.x / (double)atlasTexture->GetDisplayWidth();
 			const double srcy = (double)g.info.y / (double)atlasTexture->GetDisplayHeight();
@@ -521,12 +529,9 @@ void DrawDynamicFontText(F2DDrawer *drawer, FFont* originalFont, FFont* substitu
 			const double srch = (double)g.info.height / (double)atlasTexture->GetDisplayHeight();
 			SetTextureParmsSubrect(drawer, &atlasFragmentDrawParms, atlasTexture, cx, cy, srcx, srcy, srcw, srch);
 
-			//const double charHeightScale = (double)g.info.height / (double)substitutedFont->GetHeight();
-			//const double charWidthScale = g.info.width / (double)originalFont->GetWidth();
-
 			atlasFragmentDrawParms.style = trexTextRenderStyle;
-			atlasFragmentDrawParms.destwidth *= (shrinkScale*scaleAdjust);
-			atlasFragmentDrawParms.destheight *= (shrinkScale*scaleAdjust);
+			atlasFragmentDrawParms.destwidth *= finalRescale;
+			atlasFragmentDrawParms.destheight *= finalRescale;
 			atlasFragmentDrawParms.color   = s.Colors[i];
 			atlasFragmentDrawParms.color.a = 255;
 
@@ -535,9 +540,8 @@ void DrawDynamicFontText(F2DDrawer *drawer, FFont* originalFont, FFont* substitu
 			if (drawDropShadow)
 			{
 				DrawParms shadowAtlasFragmentDrawParms = atlasFragmentDrawParms;
-				//double    textScale                    = (double)atlasFragmentDrawParms.destheight / baseFontHeight;
-				shadowAtlasFragmentDrawParms.x += 1.5 * scalex;// * textScale;
-				shadowAtlasFragmentDrawParms.y += 1.5 * scaley;// * textScale;
+				shadowAtlasFragmentDrawParms.x += 1.5 * scalex;
+				shadowAtlasFragmentDrawParms.y += 1.5 * scaley;
 				shadowAtlasFragmentDrawParms.color    = MAKEARGB(255, 11, 11, 11);
 				const FRenderStyle &shadowRenderStyle = LegacyRenderStyles[10];
 				shadowAtlasFragmentDrawParms.style    = shadowRenderStyle;
@@ -545,8 +549,8 @@ void DrawDynamicFontText(F2DDrawer *drawer, FFont* originalFont, FFont* substitu
 			}
 
 			drawer->AddTexture(atlasTexture, atlasFragmentDrawParms);
-			cursorx += (g.xAdvance) * scalex * shrinkScale;
-			cursory += (g.yAdvance) * scaley * shrinkScale;
+			cursorx += (g.xAdvance) * scalex * finalRescale;
+			cursory += (g.yAdvance) * scaley * finalRescale;
 		}
 	}
 }

@@ -161,7 +161,10 @@ CVAR(Int, am_drawmapback, 1, CVAR_ARCHIVE);
 CVAR(Bool, am_showkeys, true, CVAR_ARCHIVE);
 CVAR(Int, am_showtriggerlines, 0, CVAR_ARCHIVE);
 CVAR(Int, am_showthingsprites, 0, CVAR_ARCHIVE);
+CVAR(Int, am_show_seen_things, 0, CVAR_ARCHIVE);
+CVAR(Float, am_thingsspritescale, 1.0, CVAR_ARCHIVE);
 CVAR (Bool, am_showkeys_always, false, CVAR_ARCHIVE);
+CVAR(Bool, am_match_statusbar, true, CVAR_ARCHIVE)
 
 CUSTOM_CVAR(Int, am_emptyspacemargin, 0, CVAR_ARCHIVE)
 {
@@ -608,7 +611,7 @@ CCMD(am_restorecolors)
 }
 
 
-namespace AutoMap::Colors 
+namespace AutoMap::Colors
 {
 	static inline const AMColor not_used = AMColor(0x010000);
 
@@ -1070,7 +1073,7 @@ class DAutomap :public DAutomapBase
 	void drawLineCharacter(const mline_t *lineguy, size_t lineguylines, double scale, DAngle angle, const AMColor &color, double x, double y);
 	void drawPlayers();
 	void drawKeys();
-	void drawThings();
+	void drawThings(bool allmap);
 	void drawMarks();
 	void drawAuthorMarkers();
 	void drawCrosshair(const AMColor &color);
@@ -1935,7 +1938,7 @@ void DAutomap::drawGrid (int color)
 	start = miny - exty;
 	start = ceil((start - bmaporgy) / FBlockmap::MAPBLOCKUNITS) * FBlockmap::MAPBLOCKUNITS + bmaporgy;
 	end = miny + minlen - exty;
-	
+
 	// draw horizontal gridlines
 	uint16_t yLineCount = ceil(abs(end - start) / (double)FBlockmap::MAPBLOCKUNITS);
 	y = start;
@@ -3056,8 +3059,18 @@ void DAutomap::drawKeys ()
 //
 //
 //=============================================================================
-void DAutomap::drawThings ()
+void DAutomap::drawThings (bool allmap)
 {
+	bool allthings = allmap && players[consoleplayer].mo->FindInventory(NAME_PowerScanner, true) != nullptr;
+
+	// if there is nothing to draw, abort early.
+	if (!(am_cheat > 0
+		|| allthings
+		|| am_show_seen_things))
+	{
+		return;
+	}
+
 	AMColor color;
 	AActor*  t;
 	mpoint_t p;
@@ -3068,8 +3081,28 @@ void DAutomap::drawThings ()
 		t = sec.thinglist;
 		while (t)
 		{
-			if (am_cheat > 0 || !(t->flags6 & MF6_NOTONAUTOMAP)
-				|| (am_thingrenderstyles && !(t->renderflags & RF_INVISIBLE) && !(t->flags6 & MF6_NOTONAUTOMAP)))
+			bool showThisSeenThing = false;
+			if (!netgame && t->subsector && t->subsector->flags & SSECMF_DRAWN)
+			{
+				bool isItem = t->flags & MF_SPECIAL;
+				bool isMonster = t->flags3 & MF3_ISMONSTER && !(t->flags & MF_CORPSE);
+				bool isCorpse = t->flags & MF_CORPSE;
+				bool isFriendly = t->flags & MF_FRIENDLY && !(t->flags & MF_CORPSE);
+				bool isDecoration = !isItem && !isMonster && !isCorpse && !isFriendly && t->sprite > 0;
+
+				showThisSeenThing |= ((am_show_seen_things>>0)&1) && isItem;
+				showThisSeenThing |= ((am_show_seen_things>>1)&1) && isMonster;
+				showThisSeenThing |= ((am_show_seen_things>>2)&1) && isCorpse;
+				showThisSeenThing |= ((am_show_seen_things>>3)&1) && isFriendly;
+				showThisSeenThing |= ((am_show_seen_things>>4)&1) && isDecoration;
+			}
+
+			// draw this thing if:
+			//	we have am_cheat || allthings || (are not in a netgame && are showing seen things && this thing is seen)
+			// and
+			// 	am_cheat is less than < 4 (show hidden objects) or (this thing is not invisible and should show on the map)
+			if ((am_cheat > 0 || allthings || showThisSeenThing)
+				&& (am_cheat < 4 || (!(t->renderflags & RF_INVISIBLE) && !(t->flags6 & MF6_NOTONAUTOMAP))))
 			{
 				DVector3 fracPos = t->InterpolatedPosition(r_viewpoint.TicFrac);
 				FVector2 pos = FVector2(float(fracPos.X),float(fracPos.Y)) + FVector2(t->Level->Displacements.getOffset(sec.PortalGroup, MapPortalGroup)) + FVector2(t->AutomapOffsets);
@@ -3104,8 +3137,8 @@ void DAutomap::drawThings ()
 					if (texture == nullptr) goto drawTriangle; // fall back to standard display if no sprite can be found.
 
 					const DVector2 scale = t->InterpolatedScale(r_viewpoint.TicFrac);
-					const double spriteXScale = (scale.X * (10. / 16.) * scale_mtof);
-					const double spriteYScale = (scale.Y * (10. / 16.) * scale_mtof);
+					const double spriteXScale = (scale.X * (10. / 16.) * scale_mtof * am_thingsspritescale);
+					const double spriteYScale = (scale.Y * (10. / 16.) * scale_mtof * am_thingsspritescale);
 
 					if (am_thingrenderstyles) DrawMarker(texture, p.x, p.y, 0, !!(frame->Flip & (1 << rotation)),
 						spriteXScale, spriteYScale, t->Translation, t->InterpolatedAlpha(r_viewpoint.TicFrac), t->fillcolor, t->RenderStyle);
@@ -3397,7 +3430,6 @@ void DAutomap::Drawer (int bottom)
 	changeWindowLoc();
 
 	bool allmap = (Level->flags2 & LEVEL2_ALLMAP) != 0;
-	bool allthings = allmap && players[consoleplayer].mo->FindInventory(NAME_PowerScanner, true) != nullptr;
 
 	if (am_portaloverlay)
 	{
@@ -3438,9 +3470,8 @@ void DAutomap::Drawer (int bottom)
 	drawPlayers();
 	if (G_SkillProperty(SKILLP_EasyKey) || am_showkeys_always)
 		drawKeys();
-	if ((am_cheat >= 2 && am_cheat != 4) || allthings)
-		drawThings();
 
+	drawThings(allmap);
 	drawAuthorMarkers();
 
 	if (!viewactive)

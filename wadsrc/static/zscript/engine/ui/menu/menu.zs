@@ -165,6 +165,7 @@ class Menu : Object native ui version("2.4")
 		On,				// Menu is opened
 		WaitKey,		// Menu is opened and waiting for a key in the controls menu
 		OnNoPause,		// Menu is opened but does not pause the game
+		GameplayMenu,	// Menu is opened but does not pause the game, and uses inputevents, and passes through non-consumed events to the playsim
 	};
 
 	native Menu mParentMenu;
@@ -355,6 +356,8 @@ class Menu : Object native ui version("2.4")
 		Color col = (int(255 * m_tooltip_alpha) << 24) | 0x404040;
 		Screen.DrawLineFrame(col, box.x, box.y, box.width, box.height, CleanXFac_1);
 
+		let font = Font.GetDescriptionFont(mTooltipFont);
+
 		if (mCurrentTooltip.IsEmpty())
 			return;
 
@@ -373,7 +376,7 @@ class Menu : Object native ui version("2.4")
 			scaleType = DTA_CleanNoMove;
 		}
 
-		BrokenLines bl = mTooltipFont.BreakLines(StringTable.Localize(mCurrentTooltip), text.width / textXScale);
+		BrokenLines bl = font.BreakLines(StringTable.Localize(mCurrentTooltip), text.width / textXScale);
 		int maxOffset;
 		if (bl.Count() > m_tooltip_lines)
 		{
@@ -402,12 +405,12 @@ class Menu : Object native ui version("2.4")
 		let [cx, cy, cw, ch] = Screen.GetClipRect();
 		Screen.SetClipRect(text.x, text.y, text.width, text.height);
 
-		int height = mTooltipFont.GetHeight() * textYScale;
+		int height = font.GetHeight() * textYScale;
 		int curY = text.y - int(mTooltipScrollOffset * height);
 		for (int i; i < bl.Count(); ++i)
 		{
 			int xPos = text.x + (text.width - bl.StringWidth(i) * textXScale) / 2;
-			Screen.DrawText(mTooltipFont, Font.CR_UNTRANSLATED, xPos, curY, bl.StringAt(i), scaleType, true);
+			Screen.DrawText(font, Font.CR_UNTRANSLATED, xPos, curY, bl.StringAt(i), scaleType, true);
 			curY += height;
 		}
 
@@ -418,7 +421,7 @@ class Menu : Object native ui version("2.4")
 			int xPos = box.x + box.width - mTooltipFont.StringWidth(".") * textXScale;
 			int yPos = text.y - height / 2;
 			for (int i = 0; i < 3; ++i)
-				Screen.DrawText(mTooltipFont, Font.CR_UNTRANSLATED, xPos, yPos + height / 3 * i, ".", scaleType, true);
+				Screen.DrawText(font, Font.CR_UNTRANSLATED, xPos, yPos + height / 3 * i, ".", scaleType, true);
 		}
 	}
 

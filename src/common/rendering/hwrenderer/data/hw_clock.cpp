@@ -111,7 +111,7 @@ static void AppendLightStats(FString &out)
 		iter_dlight, draw_dlight, iter_dlightf, draw_dlightf );
 }
 
-ADD_STAT(rendertimes)
+ADD_STAT_ONOFF(rendertimes)
 {
 	static FString buff;
 	static int64_t lasttime=0;
@@ -123,6 +123,16 @@ ADD_STAT(rendertimes)
 		lasttime=t;
 	}
 	return buff;
+}
+
+STAT_ON(rendertimes)
+{
+	doBench++;
+}
+
+STAT_OFF(rendertimes)
+{
+	doBench--;
 }
 
 ADD_STAT(renderstats)
@@ -192,8 +202,9 @@ CCMD(bench)
 
 bool glcycle_t::active = false;
 
+int doBench = 0;
+
 void  checkBenchActive()
 {
-	FStat *stat = FStat::FindStat("rendertimes");
-	glcycle_t::active = ((stat != NULL && stat->isActive()) || printstats);
+	glcycle_t::active = (doBench || printstats);
 }

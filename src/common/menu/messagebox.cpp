@@ -78,7 +78,7 @@ void M_StartMessage(const char *message, int messagemode, FName action)
 	if (CurrentMenu == NULL)
 	{
 		// only play a sound if no menu was active before
-		M_StartControlPanel(menuactive == MENU_Off);
+		M_StartControlPanel(menuactive == MENU_Off || menuactive == MENU_GameplayMenu);
 	}
 	DMenu *newmenu = CreateMessageBoxMenu(CurrentMenu, message, messagemode, false, action);
 	newmenu->mParentMenu = CurrentMenu;

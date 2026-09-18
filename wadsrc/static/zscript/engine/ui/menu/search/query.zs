@@ -47,6 +47,8 @@ class os_Query
 		return query;
 	}
 
+	bool matchEverything;
+
 	bool matches(string text, bool isSearchForAny)
 	{
 		return isSearchForAny
@@ -58,6 +60,8 @@ class os_Query
 
 	private bool matchesAny(string text)
 	{
+		if (matchEverything && text.Length() != 0) return true;
+
 		int nParts = mQueryParts.size();
 
 		for (int i = 0; i < nParts; ++i)
@@ -72,6 +76,8 @@ class os_Query
 
 	private bool matchesAll(string text)
 	{
+		if (matchEverything && text.Length() != 0) return true;
+
 		int nParts = mQueryParts.size();
 
 		for (int i = 0; i < nParts; ++i)

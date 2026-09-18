@@ -155,24 +155,20 @@ void FGameTexture::AddAutoMaterials()
 
 	if (flags & GTexf_AutoMaterialsAdded) return; // do this only once
 
-	bool fullname = !!(flags & GTexf_FullNameTexture);
 	FString searchname = GetName();
-
-	if (fullname)
-	{
-		auto dot = searchname.LastIndexOf('.');
-		auto slash = searchname.LastIndexOf('/');
-		if (dot > slash) searchname.Truncate(dot);
-	}
 
 	for (size_t i = 0; i < countof(autosearchpaths); i++)
 	{
 		auto& layer = autosearchpaths[i];
 		if (this->*(layer.pointer) == nullptr)	// only if no explicit assignment had been done.
 		{
-			FStringf lookup("%s%s%s", layer.path, fullname ? "" : "auto/", searchname.GetChars());
+			FStringf lookup("%s%s%s", layer.path, "auto/", searchname.GetChars());
 			auto lump = fileSystem.CheckNumForFullName(lookup.GetChars(), false, FileSys::ns_global, true);
-			if (lump != -1)
+			if (lump == -1)
+			{
+				lump = fileSystem.CheckNumForFullName(lookup.GetChars(), false, FileSys::ns_global, false);
+			}
+			if(lump != -1)
 			{
 				auto bmtex = TexMan.FindGameTexture(fileSystem.GetFileFullName(lump), ETextureType::Any, FTextureManager::TEXMAN_TryAny);
 				if (bmtex != nullptr)
@@ -187,8 +183,12 @@ void FGameTexture::AddAutoMaterials()
 		auto& layer = autosearchpaths2[i];
 		if (!this->Layers || this->Layers.get()->*(layer.pointer) == nullptr)	// only if no explicit assignment had been done.
 		{
-			FStringf lookup("%s%s%s", layer.path, fullname ? "" : "auto/", searchname.GetChars());
+			FStringf lookup("%s%s%s", layer.path, "auto/", searchname.GetChars());
 			auto lump = fileSystem.CheckNumForFullName(lookup.GetChars(), false, FileSys::ns_global, true);
+			if (lump == -1)
+			{
+				lump = fileSystem.CheckNumForFullName(lookup.GetChars(), false, FileSys::ns_global, false);
+			}
 			if (lump != -1)
 			{
 				auto bmtex = TexMan.FindGameTexture(fileSystem.GetFileFullName(lump), ETextureType::Any, FTextureManager::TEXMAN_TryAny);

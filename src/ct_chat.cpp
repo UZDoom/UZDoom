@@ -541,7 +541,7 @@ static bool DoSubstitution (FString &out, const char *in)
 
 bool CanChat()
 {
-	return gamestate == GS_LEVEL && !demoplayback && menuactive == MENU_Off;
+	return gamestate == GS_LEVEL && !demoplayback && (menuactive == MENU_Off || menuactive == MENU_GameplayMenu);
 }
 
 CCMD (messagemode)

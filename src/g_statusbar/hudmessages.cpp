@@ -305,7 +305,13 @@ void DHUDMessage::ResetText (const char *text)
 		width = twod->GetWidth() / active_con_scaletext(twod);
 	}
 
-	Lines = V_BreakLines (Font, NoWrap ? INT_MAX : width, (uint8_t *)text);
+	FFont *finalFont = Font;
+	if (auto dynamicSub = FFont::GetDynamicSubstitutionForStaticFont(Font))
+	{
+		finalFont = dynamicSub;
+	}
+
+	Lines = V_BreakLines (finalFont, NoWrap ? INT_MAX : width, (uint8_t *)text);
 
 	NumLines = Lines.Size();
 	Width = 0;
@@ -356,6 +362,15 @@ void DHUDMessage::Draw (int bottom, int visibility)
 	}
 
 	DrawSetup ();
+
+	int adjustedHeight = Height;
+	int adjustedWidth  = Width;
+
+	FFont *finalFont      = Font;
+	if (auto dynamicSub = FFont::GetDynamicSubstitutionForStaticFont(Font))
+	{
+		finalFont = dynamicSub;
+	}
 
 	int screen_width = twod->GetWidth();
 	int screen_height = twod->GetHeight();
@@ -424,7 +439,14 @@ void DHUDMessage::Draw (int bottom, int visibility)
 		x += Width * xscale / 2;
 	}
 
-	ystep = Font->GetHeight() * yscale;
+	if (auto dynamicSub = FFont::GetDynamicSubstitutionForStaticFont(Font))
+	{
+		ystep = (dynamicSub->GetHeight()) * yscale;
+	}
+	else
+	{
+		ystep = Font->GetHeight() * yscale;
+	}
 
 	if (HUDHeight < 0)
 	{ // A negative height means the HUD size covers the status bar
@@ -464,10 +486,17 @@ void DHUDMessage::DrawSetup ()
 
 void DHUDMessage::DoDraw (int linenum, int x, int y, bool clean, int hudheight)
 {
+	//because earlier code will have already done the alignment, do no rely on dynamic substitution to do repositioning.
+	FFont *finalFont = Font;
+	if (auto dynamicSub = FFont::GetDynamicSubstitutionForStaticFont(Font))
+	{
+		finalFont = dynamicSub;
+	}
+
 	if (hudheight == 0)
 	{
 		int scale = active_con_scaletext(twod);
-		DrawText(twod, Font, TextColor, x, y, Lines[linenum].Text.GetChars(),
+		DrawText(twod, finalFont, TextColor, x, y, Lines[linenum].Text.GetChars(),
 			DTA_VirtualWidth, twod->GetWidth() / scale,
 			DTA_VirtualHeight, twod->GetHeight() / scale,
 			DTA_Alpha, Alpha,
@@ -477,7 +506,7 @@ void DHUDMessage::DoDraw (int linenum, int x, int y, bool clean, int hudheight)
 	}
 	else
 	{
-		DrawText(twod, Font, TextColor, x, y, Lines[linenum].Text.GetChars(),
+		DrawText(twod, finalFont, TextColor, x, y, Lines[linenum].Text.GetChars(),
 			DTA_VirtualWidth, HUDWidth,
 			DTA_VirtualHeight, hudheight,
 			DTA_ClipLeft, ClipLeft,

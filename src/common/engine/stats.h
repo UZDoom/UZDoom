@@ -303,19 +303,22 @@ public:
 	FStat (const char *name);
 	virtual ~FStat ();
 
-	virtual FString GetStats () = 0;
-
 	void ToggleStat ();
 	bool isActive() const
 	{
 		return m_Active;
 	}
 
+	virtual double DrawStat(F2DDrawer *drawer, double yoffset_bottom) = 0;
+
 	static void PrintStat (F2DDrawer *drawer);
 	static FStat *FindStat (const char *name);
 	static void ToggleStat (const char *name);
 	static void EnableStat(const char* name, bool on);
 	static void DumpRegisteredStats ();
+
+	virtual void OnEnable() {};
+	virtual void OnDisable() {};
 
 private:
 	FStat *m_Next;
@@ -325,11 +328,59 @@ private:
 	static FStat *FirstStat;
 };
 
+class FTextStat : public FStat
+{
+public:
+	using FStat::FStat;
+	double DrawStat(F2DDrawer *drawer, double yoffset_bottom);
+	virtual FString GetStats() = 0;
+};
+
 #define ADD_STAT(n) \
+	static class Stat_##n : public FTextStat { \
+		public: \
+			Stat_##n () : FTextStat (#n) {} \
+		FString GetStats ();\
+	} Istaticstat##n; \
+	FString Stat_##n::GetStats ()
+
+#define ADD_RAWSTAT(n) \
 	static class Stat_##n : public FStat { \
 		public: \
 			Stat_##n () : FStat (#n) {} \
-		FString GetStats (); } Istaticstat##n; \
+		double DrawStat(F2DDrawer *drawer, double yoffset_bottom);\
+	} Istaticstat##n; \
+	double Stat_##n::DrawStat (F2DDrawer *drawer, double yoffset_bottom)
+
+#define ADD_STAT_ONOFF(n) \
+	static class Stat_##n : public FTextStat { \
+		public: \
+			Stat_##n () : FTextStat (#n) {} \
+		FString GetStats ();\
+		void OnEnable ();\
+		void OnDisable ();\
+	} Istaticstat##n; \
 	FString Stat_##n::GetStats ()
 
+#define STAT_ON(n) \
+	void Stat_##n::OnEnable ()
+
+#define STAT_OFF(n) \
+	void Stat_##n::OnDisable ()
+
+#define ADD_RAWSTAT_ONOFF(n) \
+	static class Stat_##n : public FStat { \
+		public: \
+			Stat_##n () : FStat (#n) {} \
+		double DrawStat(F2DDrawer *drawer, double yoffset_bottom);\
+		void OnEnable ();\
+		void OnDisable ();\
+	} Istaticstat##n; \
+	double Stat_##n::DrawStat (F2DDrawer *drawer, double yoffset_bottom)
+
+#define STAT_ON(n) \
+	void Stat_##n::OnEnable ()
+
+#define STAT_OFF(n) \
+	void Stat_##n::OnDisable ()
 #endif //__STATS_H__
