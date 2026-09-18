@@ -161,7 +161,7 @@ use_fast_math(zmusiclite)
 
 # Although zmusic-obj puts the public include directory in our private include
 # list, we need to add it to the interface include directories for consumers.
-target_include_directories(zmusic INTERFACE $<INSTALL_INTERFACE:include> $<BUILD_INTERFACE:${ZMusic_SOURCE_DIR}/include>)
+target_include_directories(zmusic INTERFACE $<INSTALL_INTERFACE:include> $<BUILD_INTERFACE:${ZMusic_SOURCE_DIR}/include> $<BUILD_INTERFACE:${ZMusic_SOURCE_DIR}/source/loader>)
 target_include_directories(zmusiclite INTERFACE $<INSTALL_INTERFACE:include> $<BUILD_INTERFACE:${ZMusic_SOURCE_DIR}/include>)
 
 target_link_libraries_hidden(zmusic zmusic-obj adl oplsynth opn timidity timidityplus wildmidi fluidsynth)
