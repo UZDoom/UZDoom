@@ -379,6 +379,7 @@ class OptionMenuItemOptionBase : OptionMenuItem
 		{
 			indent = (screen.GetWidth() / 2);
 		}
+
 		drawLabel(indent, y, selected? OptionMenuSettings.mFontColorSelection : OptionMenuSettings.mFontColor, isGrayed());
 
 		int Selection = GetSelection();
@@ -1113,8 +1114,20 @@ class OptionMenuSliderBase : OptionMenuItem
 			range = 1;
 		}
 
-		int right = x + (12*16 + 4) * CleanXfac_1;	// length of slider. This uses the old ConFont and 
-		int cy = y + CleanYFac;
+		int right = x + (12*16 + 4) * CleanXfac_1;	// length of slider. This uses the Symbols font. 
+		int cy = y;
+
+		//hack: at high clean scaling factors, the placement seems to fall apart. Let's do a special case here.
+		if (Menu.OptionFont().IsValidDynamicFont() && CleanYFac > 1)
+		{
+			//vertically center the sliders within the option height spacing since we don't know excatly what height the option will be.
+			cy -= (Menu.OptionHeight() / 2.0)*CleanYfac_1;
+			cy += 1*CleanYFac;
+		}
+		else
+		{
+			cy += CleanYFac;
+		}
 
 		if (fracdigits >= 0)
 		{
@@ -1323,6 +1336,18 @@ class OptionMenuItemColorPicker : OptionMenuItem
 	override int Draw(OptionMenuDescriptor desc, int y, int indent, bool selected)
 	{
 		drawLabel(indent, y, selected? OptionMenuSettings.mFontColorSelection : OptionMenuSettings.mFontColor,  isGrayed());
+
+		//hack: at high clean scaling factors, the placement seems to fall apart. Let's do a special case here.
+		if (Menu.OptionFont().IsValidDynamicFont() && CleanYFac > 1)
+		{
+			//vertically center the sliders within the option height spacing since we don't know excatly what height the option will be.
+			y -= (Menu.OptionHeight() / 2.0)*CleanYfac_1;
+			y += 1*CleanYFac;
+		}
+		else
+		{
+			y += CleanYFac;
+		}
 
 		if (mCVar != null)
 		{

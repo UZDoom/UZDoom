@@ -270,6 +270,26 @@ DEFINE_ACTION_FUNCTION(FStringStruct, DeleteLastCharacter)
 //
 //=====================================================================================
 
+static void GetString(const FString &label, bool prefixed, FString *result)
+{
+	if (!prefixed)
+		*result = GStrings.GetLanguageString(label.GetChars(), FStringTable::default_table);
+	else if (label.Len() >= 2 && label[0] == '$')
+		*result = GStrings.GetLanguageString(label.GetChars() + 1, FStringTable::default_table);
+	else
+		*result = label;
+}
+
+DEFINE_ACTION_FUNCTION_NATIVE(FStringTable, GetUnlocalizedString, GetString)
+{
+	PARAM_PROLOGUE;
+	PARAM_STRING(label);
+	PARAM_BOOL(prefixed);
+	FString result;
+	GetString(label, prefixed, &result);
+	ACTION_RETURN_STRING(result);
+}
+
 static void LocalizeString(const FString &label, bool prefixed, FString *result)
 {
 	if (!prefixed)

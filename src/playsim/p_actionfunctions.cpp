@@ -6503,6 +6503,8 @@ bool SetAnimationInternal(AActor * self, FName animName, double framerate, int s
 
 				const TArray<TRS>* animationData = animation->AttachAnimationData();
 
+				assert(to.frame1 < animation->NumFrames() && to.frame2 < animation->NumFrames());
+
 				ModelAnimFrame tmp = animation->PrecalculateFrame(anims->prevAnim, to, inter, animationData);
 
 				if(prevAnimOld && std::holds_alternative<ModelAnimFramePrecalculatedIQM>(anims->prevAnim))
@@ -7126,7 +7128,7 @@ DEFINE_ACTION_FUNCTION(AActor, SetAnimationLayerFrameRateUI)
 	ACTION_RETURN_POINTER(AnimInfoToAnimLayer(nativeAnims));
 }
 
-DPrecalculatedAnimationFrame* CalculateAnimationInternal(AActor * self, AnimInfo *anims, double tic)
+DPrecalculatedAnimationFrame* CalculateAnimationInternal(AActor * self, AnimInfo *anims, double tic, bool &oob, FString &oob_message)
 {
 	FModel * mdl = FindFModel(self);
 
@@ -7139,6 +7141,16 @@ DPrecalculatedAnimationFrame* CalculateAnimationInternal(AActor * self, AnimInfo
 	float inter;
 
 	calcFrames(anims->curAnim, tic, to, inter);
+
+	int max = mdl->NumFrames();
+
+	if(to.frame1 >= max || to.frame2 >= max)
+	{
+		int oob_frame = (to.frame1 >= max) ? to.frame1 : to.frame2;
+		oob_message.Format("Frame %d is out of bounds (%d is the max)", oob_frame, max);
+		oob = true;
+		return nullptr;
+	}
 
 	ModelAnimFrame frame = mdl->PrecalculateFrame(anims->prevAnim, to, inter, mdl->AttachAnimationData());
 	assert(std::holds_alternative<ModelAnimFramePrecalculatedIQM>(frame));
@@ -7160,9 +7172,18 @@ DEFINE_ACTION_FUNCTION(AActor, CalculateAnimation)
 
 	AnimInfo nativeAnims = AnimLayerToAnimInfo(layer);
 
-	DPrecalculatedAnimationFrame* calc = CalculateAnimationInternal(self, &nativeAnims, self->GetModelTimer() + 1);
+	bool oob = false;
+	FString oob_message;
+
+	DPrecalculatedAnimationFrame* calc = CalculateAnimationInternal(self, &nativeAnims, self->GetModelTimer() + 1, oob, oob_message);
 
 	RestoreAnimLayer(layer, nativeAnims);
+
+	if(oob)
+	{
+		ThrowAbortException(X_ARRAY_OUT_OF_BOUNDS, oob_message.GetChars());
+		ACTION_RETURN_POINTER(nullptr);
+	}
 
 	ACTION_RETURN_POINTER(calc);
 }
@@ -7179,9 +7200,18 @@ DEFINE_ACTION_FUNCTION(AActor, CalculateAnimationUI)
 
 	AnimInfo nativeAnims = AnimLayerToAnimInfo(layer);
 
-	DPrecalculatedAnimationFrame* calc = CalculateAnimationInternal(self, &nativeAnims, self->GetModelTimer() + I_GetTimeFrac());
+	bool oob = false;
+	FString oob_message;
+
+	DPrecalculatedAnimationFrame* calc = CalculateAnimationInternal(self, &nativeAnims, self->GetModelTimer() + I_GetTimeFrac(), oob, oob_message);
 
 	RestoreAnimLayer(layer, nativeAnims);
+
+	if(oob)
+	{
+		ThrowAbortException(X_ARRAY_OUT_OF_BOUNDS, oob_message.GetChars());
+		ACTION_RETURN_POINTER(nullptr);
+	}
 
 	ACTION_RETURN_POINTER(calc);
 }
@@ -7200,6 +7230,15 @@ DEFINE_ACTION_FUNCTION(AActor, CalculateAnimationFrame)
 
 	if(!mdl)
 	{
+		ACTION_RETURN_POINTER(nullptr);
+	}
+
+	int max = mdl->NumFrames();
+
+	if(iframe->frame1 >= max || iframe->frame2 >= max)
+	{
+		int oob = (iframe->frame1 >= max) ? iframe->frame1 : iframe->frame2;
+		ThrowAbortException(X_ARRAY_OUT_OF_BOUNDS, "Frame %d is out of bounds (%d is the max)", oob, max);
 		ACTION_RETURN_POINTER(nullptr);
 	}
 

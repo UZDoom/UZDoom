@@ -192,8 +192,6 @@ source_group("sharpyuv" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/sharpyuv
 source_group("include" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/include/webp/.+")
 source_group("include\\webp" REGULAR_EXPRESSION "${CMAKE_CURRENT_SOURCE_DIR}/include/webp/core/.+")
 
-include_directories(${CMAKE_CURRENT_SOURCE_DIR})
-
 if(MSVC)
 	# Use all cores for compilation
 	set(CMAKE_CXX_FLAGS "/MP ${CMAKE_CXX_FLAGS}")
@@ -203,6 +201,8 @@ if(MSVC)
 endif()
 
 add_library(webp STATIC ${WEBP_SOURCES} ${WEBP_INCLUDES})
+target_include_directories(webp PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(webp PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 target_link_libraries(webp ${WEBP_LIBS})
 set_target_properties(webp PROPERTIES CXX_STANDARD 17)
 

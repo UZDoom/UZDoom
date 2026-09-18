@@ -56,6 +56,7 @@
 #include "menu.h"
 #include "vm.h"
 #include "c_dispatch.h"
+#include "freetype/freetype.h"
 
 TArray<FBitmap> sheetBitmaps;
 
@@ -1631,8 +1632,8 @@ FFont::FFont(const char *fontname, Trex::Atlas* fontAtlas, const int superSample
 	DynamicFontAtlasTexture = tex;
 	assert(superSampleScale > 0.0);
 	InvSupersampleFactor          = 1.0 / (superSampleScale);
-
-	FontHeight = fontAtlas->GetFont()->GetMetrics().height * InvSupersampleFactor;
+	const int height     = (16.0/fontAtlas->GetFont()->face->units_per_EM)*(fontAtlas->GetFont()->face->ascender - fontAtlas->GetFont()->face->descender);
+	FontHeight = ceil(height);
 }
 
 FFont *FFont::GetDynamicFontFallbackForChar32(char32_t srcChar) const

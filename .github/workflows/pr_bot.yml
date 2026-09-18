@@ -44,12 +44,13 @@ jobs:
             //
 
             const newFace = await (async () => {
-              console.log("newFace", pr.author_association);
-              if (pr.author_association === "FIRST_TIME_CONTRIBUTOR")
-                return true;
               const commits = await repos.listCommits({...auth, author: pr.user.login})
                 .then(({data: commits}) => commits.map(c => c.sha.substring(0,8)));
-              console.log("newFace", commits);
+              console.log("newFace", pr.author_association, commits);
+              if (pr.author_association === "FIRST_TIME_CONTRIBUTOR" || pr.author_association === "FIRST_TIMER")
+                return true;
+              if (pr.author_association === "CONTRIBUTOR" || pr.author_association === "MEMBER")
+                return false;
               return commits.length === 0;
             })();
 

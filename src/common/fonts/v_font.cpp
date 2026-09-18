@@ -184,16 +184,9 @@ FFont *FontFromTTF(const FileSys::FolderEntry &f)
 			throw std::runtime_error("If using a dynamic font, only unicode ttf non-variable fonts are supported.");
 		}
 
-		//scale the line height based on the deviation from latin
-		auto        em                        = TrexFont.face->units_per_EM;
-		const double emMultiplier               = 1000.0 / em;
-		const double emAdjustedHeight = (double)TrexFont.face->height * emMultiplier;
-		const double baselineAdjustedHeight     = 1300.0; //em adjusted height for the plex fonts
-		const double actualFontHeightMultiplier = baselineAdjustedHeight / emAdjustedHeight;
-		const int    adjustedFontSize          = ceil((double)17 * actualFontHeightMultiplier);
 		const int    supersampleScale  = *font_supersamplescale;
 		Trex::Atlas *atlas =
-			new Trex::Atlas(std::span<const uint8_t>(data.bytes(), data.size()), adjustedFontSize * supersampleScale,
+			new Trex::Atlas(std::span<const uint8_t>(data.bytes(), data.size()), 16 * supersampleScale,
 		                    UZDoomCharSet, Trex::RenderMode::DEFAULT);
 
 		return new FFont(shortName.GetChars(), atlas, supersampleScale);

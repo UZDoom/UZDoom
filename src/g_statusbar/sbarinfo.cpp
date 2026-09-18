@@ -1439,6 +1439,17 @@ public:
 				rw *= Scale.X;
 				rh *= Scale.Y;
 
+				// if the font is going to be dynamically substituted, do the scaling a little different.
+				if (FFont *dynamicSub = FFont::GetDynamicSubstitutionForStaticFont(font))
+				{
+					// try to match the size of the old text.
+					double sizeMatchScale = (double)dynamicSub->GetHeight() / (double)font->GetHeight();
+					rw *= sizeMatchScale;
+					rh *= sizeMatchScale;
+					rw /= dynamicSub->GetInvSupersampleScale();
+					rh /= dynamicSub->GetInvSupersampleScale();
+				}
+
 				if(xright)
 					rx = twod->GetWidth() + rx;
 				if(ybot)
