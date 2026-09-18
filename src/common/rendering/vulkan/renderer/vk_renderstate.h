@@ -43,7 +43,7 @@ public:
 	virtual ~VkRenderState() = default;
 
 	// Draw commands
-	void ClearScreen() override;
+	void ClearScreen(PalEntry color) override;
 	void Draw(int dt, int index, int count, bool apply = true) override;
 	void DrawIndexed(int dt, int index, int count, bool apply = true) override;
 
