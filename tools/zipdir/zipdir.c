@@ -36,7 +36,6 @@
 #define stat _stat
 #else
 #include <dirent.h>
-#include <fts.h>
 #endif
 #include <stdio.h>
 #include <string.h>
@@ -203,6 +202,8 @@ void free_dir_trees(dir_tree_t *tree);
 #ifdef _WIN32
 void recurse_dir(dir_tree_t *tree, const char *dirpath);
 dir_tree_t *add_dir(const char *dirpath);
+#else
+static void recurse_dir_posix(dir_tree_t *tree, const char *dirpath);
 #endif
 dir_tree_t *add_dirs(char **argv);
 int count_files(dir_tree_t *trees);
@@ -501,6 +502,84 @@ dir_tree_t *add_dirs(char **argv)
 
 //==========================================================================
 //
+// recurse_dir_posix
+//
+//==========================================================================
+
+static void recurse_dir_posix(dir_tree_t *tree, const char *dirpath)
+{
+	DIR *dir;
+	struct dirent *ent;
+	struct stat statbuf;
+
+	dir = opendir(dirpath);
+	if (dir == NULL)
+	{
+		fprintf(stderr, "Could not open '%s': %s\n", dirpath, strerror(errno));
+		return;
+	}
+	while ((ent = readdir(dir)) != NULL)
+	{
+		if (strcmp(ent->d_name, ".") == 0 || strcmp(ent->d_name, "..") == 0)
+		{
+			continue;
+		}
+		char *fullpath = malloc(strlen(dirpath) + strlen(ent->d_name) + 2);
+		if (fullpath == NULL)
+		{
+			closedir(dir);
+			return;
+		}
+		snprintf(fullpath, strlen(dirpath) + strlen(ent->d_name) + 2, "%s%s", dirpath, ent->d_name);
+		if (lstat(fullpath, &statbuf) != 0)
+		{
+			free(fullpath);
+			continue;
+		}
+		if (S_ISDIR(statbuf.st_mode))
+		{
+			if (ent->d_name[0] == '.')
+			{
+				free(fullpath);
+				continue;
+			}
+			char *newdir = malloc(strlen(fullpath) + 2);
+			if (newdir == NULL)
+			{
+				free(fullpath);
+				closedir(dir);
+				return;
+			}
+			snprintf(newdir, strlen(fullpath) + 2, "%s/", fullpath);
+			recurse_dir_posix(tree, newdir);
+			free(newdir);
+		}
+		else if (S_ISREG(statbuf.st_mode))
+		{
+			file_entry_t *file;
+			if (strlen(ent->d_name) > 0 && ent->d_name[strlen(ent->d_name)-1] == '~')
+			{
+				free(fullpath);
+				continue;
+			}
+			file = alloc_file_entry(dirpath, ent->d_name, statbuf.st_mtime);
+			if (file == NULL)
+			{
+				no_mem = 1;
+			}
+			else
+			{
+				file->next = tree->files;
+				tree->files = file;
+			}
+		}
+		free(fullpath);
+	}
+	closedir(dir);
+}
+
+//==========================================================================
+//
 // add_dirs
 // Misc POSIX vesion (eg 4.4BSD, Solaris)
 //
@@ -510,57 +589,33 @@ dir_tree_t *add_dirs(char **argv)
 
 dir_tree_t *add_dirs(char **argv)
 {
-	FTS *fts;
-	FTSENT *ent;
 	dir_tree_t *tree, *trees = NULL;
-	file_entry_t *file;
+	char *s;
 
-	fts = fts_open(argv, FTS_LOGICAL, NULL);
-	if (fts == NULL)
+	while (*argv != NULL)
 	{
-		fprintf(stderr, "Failed to start directory traversal: %s\n", strerror(errno));
-		return NULL;
-	}
-	while ((ent = fts_read(fts)) != NULL)
-	{
-		if (ent->fts_info == FTS_D && ent->fts_name[0] == '.')
+		for (s = *argv; *s != '\0'; ++s)
 		{
-			// Skip hidden directories. (Prevents SVN bookkeeping
-			// info from being included.)
-			// [BL] Also skip backup files.
-			fts_set(fts, ent, FTS_SKIP);
-		}
-		if (ent->fts_info == FTS_D && ent->fts_level == 0)
-		{
-			tree = alloc_dir_tree(ent->fts_path);
-			if (tree == NULL)
+			if (*s == '\\')
 			{
-				no_mem = 1;
-				break;
+				*s = '/';
 			}
-			tree->next = trees;
-			trees = tree;
 		}
-		if (ent->fts_info != FTS_F)
-		{
-			// We're only interested in remembering files.
-			continue;
-		}
-		else if(ent->fts_name[strlen(ent->fts_name)-1] == '~')
-		{
-			// Don't remember backup files.
-			continue;
-		}
-		file = alloc_file_entry("", ent->fts_path, ent->fts_statp->st_mtime);
-		if (file == NULL)
+		tree = alloc_dir_tree(*argv);
+		if (tree == NULL)
 		{
 			no_mem = 1;
 			break;
 		}
-		file->next = tree->files;
-		tree->files = file;
+		tree->next = trees;
+		trees = tree;
+		recurse_dir_posix(tree, tree->path);
+		if (no_mem)
+		{
+			break;
+		}
+		argv++;
 	}
-	fts_close(fts);
 	return trees;
 }
 #endif
