@@ -1185,7 +1185,7 @@ void R_SetupFrame(FRenderViewpoint& viewPoint, const FViewWindow& viewWindow, AA
 		if (l->IsSpot() && l->IsActive())
 		{
 			l->Yaw = viewPoint.Angles.Yaw;
-			if (!l->explicitpitch)
+			if (!l->IsExplicitPitch())
 				l->Pitch = viewPoint.Angles.Pitch;
 		}
 	}
