@@ -321,27 +321,56 @@ void FGLRenderState::ApplyMaterial()
 	int clampmode = tex->GetClampMode(mMaterial.mClampMode);
 
 	// avoid rebinding the same texture multiple times.
-	if (mMaterial.mMaterial == lastMaterial && lastClamp == clampmode && mMaterial.mTranslation == lastTranslation) return;
+	if (mMaterial.mMaterial == lastMaterial && lastClamp == clampmode && mMaterial.mTranslation == lastTranslation && mMaterial.globalShaderAddr == lastGlobalShaderAddr) return;
 	lastMaterial = mMaterial.mMaterial;
 	lastClamp = clampmode;
 	lastTranslation = mMaterial.mTranslation;
+	lastGlobalShaderAddr = mMaterial.globalShaderAddr;
 
 	int maxbound = 0;
 
-	int numLayers = mMaterial.mMaterial->NumLayers();
+	const GlobalShaderDesc& globalshader = *GetGlobalShader(mMaterial.globalShaderAddr);
+	int numLayersMat = globalshader ? mMaterial.mMaterial->NumNonUserLayers() : mMaterial.mMaterial->NumLayers();
+	int numLayers = globalshader ? (mMaterial.mMaterial->NumNonUserLayers() + globalshader.CountTextures())  : mMaterial.mMaterial->NumLayers();
+
 	MaterialLayerInfo* layer;
 	auto base = static_cast<FHardwareTexture*>(mMaterial.mMaterial->GetLayer(0, mMaterial.mTranslation, &layer));
+
+	auto placeholder = TexMan.GetPlaceholderTexture()->GetTexture();
 
 	if (base->BindOrCreate(tex->GetTexture(), 0, clampmode, mMaterial.mTranslation, layer->scaleFlags))
 	{
 		if (!(layer->scaleFlags & CTF_Indexed))
 		{
-			for (int i = 1; i < numLayers; i++)
+			for (int i = 1; i < numLayersMat; i++)
 			{
 				auto systex = static_cast<FHardwareTexture*>(mMaterial.mMaterial->GetLayer(i, 0, &layer));
 				// fixme: Upscale flags must be disabled for certain layers.
 				systex->BindOrCreate(layer->layerTexture, i, clampmode, 0, layer->scaleFlags);
 				maxbound = i;
+			}
+
+			numLayers = numLayersMat;
+
+			if(globalshader)
+			{
+				size_t i = 0;
+				for (auto& texture : globalshader.CustomShaderTextures)
+				{
+					if (texture != nullptr)
+					{
+						auto systex = static_cast<FHardwareTexture*>(texture->GetHardwareTexture(0, 0));
+						systex->BindOrCreate(texture.get(), i, 0, 0, 0);
+					}
+					else
+					{
+						auto systex = static_cast<FHardwareTexture*>(placeholder->GetHardwareTexture(0, 0));
+						systex->BindOrCreate(placeholder, i, 0, 0, 0);
+					}
+					maxbound = i;
+					i++;
+					numLayers++;
+				}
 			}
 		}
 		else
@@ -352,6 +381,9 @@ void FGLRenderState::ApplyMaterial()
 				systex->Bind(i, false);
 				maxbound = i;
 			}
+
+			numLayersMat = 3;
+			numLayers = 3;
 		}
 	}
 	// unbind everything from the last texture that's still active

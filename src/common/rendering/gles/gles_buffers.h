@@ -34,7 +34,7 @@
 namespace OpenGLESRenderer
 {
 
-class GLBuffer : virtual public IBuffer
+class GLBuffer : virtual public IBuffer, virtual public ILockableBuffer
 {
 protected:
 	const int mUseType;
