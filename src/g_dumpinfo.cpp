@@ -87,9 +87,9 @@ CCMD(listlights)
 			Printf("%s at (%f, %f, %f), color = 0x%02x%02x%02x, radius = %f %s %s",
 				   dl->target->GetClass()->TypeName.GetChars(),
 				   dl->X(), dl->Y(), dl->Z(), dl->GetRed(), dl->GetGreen(), dl->GetBlue(),
-				   dl->radius, dl->IsAttenuated()? "attenuated" : "", dl->shadowmapped? "shadowmapped" : "");
+				   dl->radius, dl->IsAttenuated()? "attenuated" : "", dl->IsShadowMapped()? "shadowmapped" : "");
 			i++;
-			shadowcount += dl->shadowmapped;
+			shadowcount += dl->IsShadowMapped();
 
 			if (dl->target)
 			{
