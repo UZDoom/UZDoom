@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-09-01 05:51+0000\n"
+"PO-Revision-Date: 2026-09-17 03:51+0000\n"
 "Last-Translator: dwing <12104745@qq.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2026.9.dev0\n"
+"X-Generator: Weblate 2026.10.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "按下任意键。"
@@ -202,6 +202,7 @@ msgstr ""
 "先别退出，还有\n"
 "黏液怪在逃窜呢！"
 
+#, fuzzy
 msgid "QUITMSG24"
 msgstr ""
 "别放弃——黏液怪会\n"
@@ -318,6 +319,7 @@ msgstr "所有钥匙"
 msgid "TXT_CHEATIDDQD"
 msgstr "想作弊，嗯？那你死了！"
 
+#, fuzzy
 msgid "TXT_CHEATIDKFA"
 msgstr "作弊者——你不配拥有武器"
 
@@ -2646,6 +2648,7 @@ msgstr "%o被%k用相位Zorcher传送了。"
 msgid "OB_MPLAZ_BOOM"
 msgstr "%o成为%k的LAZ装置的猎物。"
 
+#, fuzzy
 msgctxt "chex"
 msgid "OB_MPBFG_SPLASH"
 msgstr "%o 被 %k 给 LAZ 了。"
@@ -3241,7 +3244,7 @@ msgid "CMPTMNU_SOUNDBEHAVIOR"
 msgstr "音效行为"
 
 msgid "CMPTMNU_SOUNDSLOTS"
-msgstr "为BFG的安静技巧而消音"
+msgstr "限制声音功能以实现无声的BFG技巧"
 
 msgid "CMPTMNU_SILENTPICKUP"
 msgstr "不让别人听到你拾取的声音"
@@ -3397,7 +3400,7 @@ msgid "MAPCOLORMNU_XHAIRCOLOR"
 msgstr "中心点"
 
 msgid "MAPCOLORMNU_NOTSEENCOLOR"
-msgstr "没见过的墙"
+msgstr "未探索的墙"
 
 msgid "MAPCOLORMNU_LOCKEDCOLOR"
 msgstr "上锁的门"
@@ -3634,28 +3637,28 @@ msgid "ALTHUDMNU_AMMOORDER"
 msgstr "弹药显示顺序"
 
 msgid "ALTHUDMNU_AMMORED"
-msgstr "弹药在百分之多少以下时显示成红色"
+msgstr "弹药少于此百分比时显示红色"
 
 msgid "ALTHUDMNU_AMMOYELLOW"
-msgstr "弹药在百分之多少以下时显示成黄色"
+msgstr "弹药少于此百分比时显示黄色"
 
 msgid "ALTHUDMNU_HEALTHRED"
-msgstr "生命在多少以下时显示成红色"
+msgstr "生命少于此数时显示红色"
 
 msgid "ALTHUDMNU_HEALTHYELLOW"
-msgstr "生命在多少以下时显示成黄色"
+msgstr "生命少于此数时显示红色"
 
 msgid "ALTHUDMNU_HEALTHGREEN"
-msgstr "生命在多少以下时显示成绿色"
+msgstr "生命少于此数时显示绿色"
 
 msgid "ALTHUDMNU_ARMORRED"
-msgstr "护甲在多少以下时显示成红色"
+msgstr "护甲少于此数时显示红色"
 
 msgid "ALTHUDMNU_ARMORYELLOW"
-msgstr "护甲在多少以下时显示成黄色"
+msgstr "护甲少于此数时显示黄色"
 
 msgid "ALTHUDMNU_ARMORGREEN"
-msgstr "护甲在多少以下时显示成绿色"
+msgstr "护甲少于此数时显示绿色"
 
 msgid "ALTHUDMNU_AUTOMAPHUD"
 msgstr "可替换式地图HUD"
@@ -5322,6 +5325,7 @@ msgstr "检查更新失败"
 msgid "UPDATER_UPDATE_FAILED"
 msgstr "更新失败"
 
+#, fuzzy
 msgid "UPDATER_PROMPT_TO_INSTALL"
 msgstr "提示安装"
 
@@ -5481,3 +5485,24 @@ msgstr "无敌模式：{开|关}"
 
 msgid "MSG{ON|OFF}"
 msgstr "消息：{开|关}"
+
+msgid "AUTOMAPMNU_MATCHSTATUSBAR"
+msgstr "匹配HUD的状态栏"
+
+msgid "AUTOMAPMNU_SHOWSEENITEMS"
+msgstr "显示物品"
+
+msgid "AUTOMAPMNU_SHOWSEENMONSTERS"
+msgstr "显示怪物"
+
+msgid "AUTOMAPMNU_SHOWSEENCORPSES"
+msgstr "显示尸体"
+
+msgid "AUTOMAPMNU_SHOWSEENFRIENDLIES"
+msgstr "显示友好人物"
+
+msgid "AUTOMAPMNU_SHOWSEENDECORATIONS"
+msgstr "显示装饰物"
+
+msgid "OPTVAL_MONSTERS"
+msgstr "怪物"

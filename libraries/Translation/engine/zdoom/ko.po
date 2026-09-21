@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-09-01 01:51+0000\n"
-"Last-Translator: Yu Ji Wan <z1wan@hanmail.net>\n"
+"PO-Revision-Date: 2026-09-06 20:52+0000\n"
+"Last-Translator: Tim Richter <jank21976@gmail.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/ko/>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2026.9.dev0\n"
+"X-Generator: Weblate 2026.9.1.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "키를 누르시오."
@@ -207,6 +207,7 @@ msgstr ""
 "부디 종료하지 말아 주세요,\n"
 "플레모이드들이 아직도 널려있단 말입니다!"
 
+#, fuzzy
 msgid "QUITMSG24"
 msgstr ""
 "부디 포기하지 마시길—플레모이드들이\n"
@@ -324,6 +325,7 @@ msgstr "모든 열쇠"
 msgid "TXT_CHEATIDDQD"
 msgstr "치트 쓸려고? 그럼 죽어야지!"
 
+#, fuzzy
 msgid "TXT_CHEATIDKFA"
 msgstr "사기꾼놈! 너는 무기를 가질 자격이 없어"
 
@@ -3244,6 +3246,7 @@ msgstr "구형 스프라이트 겹침 판정 사용"
 msgid "CMPTMNU_SOUNDBEHAVIOR"
 msgstr "효과음 관련 설정"
 
+#, fuzzy
 msgid "CMPTMNU_SOUNDSLOTS"
 msgstr "소음 BFG 효과 허용"
 

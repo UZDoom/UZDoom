@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-08-30 16:52+0000\n"
+"PO-Revision-Date: 2026-09-06 20:52+0000\n"
 "Last-Translator: Tim Richter <jank21976@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/tr/>\n"
 "Language: tr\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.9.dev0\n"
+"X-Generator: Weblate 2026.9.1.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "Bir tuşa bas."
@@ -205,6 +205,7 @@ msgstr ""
 "Şimdi pes etme, hala\n"
 "serbest flemoidler var!"
 
+#, fuzzy
 msgid "QUITMSG24"
 msgstr ""
 "Sakın pes etme, flemoidler\n"
@@ -321,6 +322,7 @@ msgstr "Tüm anahtarlar"
 msgid "TXT_CHEATIDDQD"
 msgstr "Hile yapmaya çalışıyorsun, ha? Şimdi öleceksin!"
 
+#, fuzzy
 msgid "TXT_CHEATIDKFA"
 msgstr "Hileci, silahları hak etmiyorsun"
 
@@ -3240,6 +3242,7 @@ msgstr "Sprite sıralamasını ters çevir"
 msgid "CMPTMNU_SOUNDBEHAVIOR"
 msgstr "Ses Davranışı"
 
+#, fuzzy
 msgid "CMPTMNU_SOUNDSLOTS"
 msgstr "Sessiz BFG numarası için sesi kısın"
 

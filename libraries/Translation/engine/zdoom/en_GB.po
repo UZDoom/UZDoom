@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-08-30 16:51+0000\n"
+"PO-Revision-Date: 2026-09-13 14:51+0000\n"
 "Last-Translator: Tim Richter <jank21976@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/en_GB/>\n"
 "Language: en_GB\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.9.dev0\n"
+"X-Generator: Weblate 2026.10.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "Press a key."
@@ -95,10 +95,9 @@ msgstr ""
 "Please don't leave, there's more\n"
 "demons to toast!"
 
-#, fuzzy
 msgid "QUITMSG2"
 msgstr ""
-"Let's beat it—this is turning\n"
+"Let's beat it — this is turning\n"
 "into a bloodbath!"
 
 msgid "QUITMSG3"
@@ -111,10 +110,9 @@ msgstr ""
 "You're trying to say you like DOS\n"
 "better than me, right?"
 
-#, fuzzy
 msgid "QUITMSG5"
 msgstr ""
-"Don't leave yet—there's a\n"
+"Don't leave yet — there's a\n"
 "demon around that corner!"
 
 msgid "QUITMSG6"
@@ -174,11 +172,10 @@ msgstr ""
 "Carnage interruptus…\n"
 "What a tease!"
 
-#, fuzzy
 msgid "QUITMSG17"
 msgstr ""
 "But you're the hope\n"
-"—my only chance!!"
+"— my only chance!!"
 
 msgid "QUITMSG18"
 msgstr "Nobody walks out on Blackbird."
@@ -206,7 +203,7 @@ msgstr ""
 
 msgid "QUITMSG24"
 msgstr ""
-"Don't give up—the flemoids will\n"
+"Don't give up — the flemoids will\n"
 "get the upper hand!"
 
 msgid "QUITMSG25"
@@ -321,7 +318,7 @@ msgid "TXT_CHEATIDDQD"
 msgstr "Trying to cheat, eh? Now you die!"
 
 msgid "TXT_CHEATIDKFA"
-msgstr "Cheater—you don't deserve weapons"
+msgstr "Cheater — you don't deserve weapons"
 
 msgid "TXT_CHEATARTIFACTS3"
 msgstr "You've got it"
@@ -2687,10 +2684,9 @@ msgstr "Wonderful Job!"
 msgid "CE4TEXT"
 msgstr "Fantastic"
 
-#, fuzzy
 msgid "CLOADNET"
 msgstr ""
-"You can't do load while in a net quest!\n"
+"You can't load a savegame while in a net quest!\n"
 "\n"
 "Press a key."
 
@@ -3236,7 +3232,7 @@ msgid "CMPTMNU_SOUNDBEHAVIOR"
 msgstr "Sound Behaviour"
 
 msgid "CMPTMNU_SOUNDSLOTS"
-msgstr "Cripple sound for silent BFG trick"
+msgstr "Limit sound capabilities for silent BFG trick"
 
 msgid "CMPTMNU_SILENTPICKUP"
 msgstr "Don't let others hear your pickups"
@@ -3532,6 +3528,9 @@ msgstr "Show secrets on map"
 msgid "AUTOMAPMNU_SHOWMAPLABEL"
 msgstr "Show map label"
 
+msgid "AUTOMAPMNU_MATCHSTATUSBAR"
+msgstr "Match HUD Statusbar"
+
 msgid "AUTOMAPMNU_DRAWMAPBACK"
 msgstr "Draw map background"
 
@@ -3543,6 +3542,21 @@ msgstr "Show trigger lines"
 
 msgid "AUTOMAPMNU_SHOWTHINGSPRITES"
 msgstr "Show things as sprites"
+
+msgid "AUTOMAPMNU_SHOWSEENITEMS"
+msgstr "Show items"
+
+msgid "AUTOMAPMNU_SHOWSEENMONSTERS"
+msgstr "Show monsters"
+
+msgid "AUTOMAPMNU_SHOWSEENCORPSES"
+msgstr "Show corpses"
+
+msgid "AUTOMAPMNU_SHOWSEENFRIENDLIES"
+msgstr "Show friendly characters"
+
+msgid "AUTOMAPMNU_SHOWSEENDECORATIONS"
+msgstr "Show decorations"
 
 msgid "AUTOMAPMNU_PTOVERLAY"
 msgstr "Overlay portals"
@@ -3940,6 +3954,9 @@ msgstr "Weapons"
 
 msgid "OPTVAL_BOTH"
 msgstr "Both"
+
+msgid "OPTVAL_MONSTERS"
+msgstr "Monsters"
 
 msgid "OPTVAL_ZDOOM"
 msgstr "ZDoom"
@@ -5369,3 +5386,127 @@ msgstr "Invincible Mode: {ON|OFF}"
 
 msgid "MSG{ON|OFF}"
 msgstr "Messages: {ON|OFF}"
+
+msgid "UPDATER_CHECK_FOR_UPDATES"
+msgstr "Check for Updates"
+
+msgid "UPDATER_PROMPT_TO_INSTALL"
+msgstr "Prompt to install"
+
+msgid "UPDATER_SETTINGS"
+msgstr "Updater Settings"
+
+msgid "UPDATER_INTERVAL"
+msgstr "Check every:"
+
+msgid "UPDATER_UPDATE_AVAILABLE"
+msgstr "New Update Available"
+
+msgid "UPDATER_UPDATE_SKIP"
+msgstr "Skip Update"
+
+msgid "UPDATER_TITLE"
+msgstr "Update Checker"
+
+msgid "UPDATER_DISABLE"
+msgstr "Disable Update Checker"
+
+msgid "UPDATER_CHECK_FAILED"
+msgstr "Checking for Update Failed"
+
+msgid "UPDATER_UPDATE_FAILED"
+msgstr "Update Failed"
+
+msgid "UPDATER_YES_PROMPT"
+msgstr "Yes, and prompt to install updates"
+
+msgid "UPDATER_DISMISS_UPDATE"
+msgstr "Dismiss Update?"
+
+msgid "UPDATER_ASK_AUTO"
+msgstr ""
+"Would you like to automatically check for updates?\n"
+"(this can be changed later in the options tab)"
+
+msgid "UPDATER_ASK_INTERVAL"
+msgstr ""
+"How often would you like to check for updates?\n"
+"(this can be changed later in the options tab)"
+
+msgid "UPDATER_ZIP_FAIL"
+msgstr "Failed to open zip file"
+
+msgid "UPDATER_ZIP_ERROR"
+msgstr "Failed to extract zip, error: '{}' while writing file '{}'"
+
+msgid "UPDATER_UPDATING"
+msgstr "Updating..."
+
+msgid "UPDATER_STARTING"
+msgstr "Starting Download..."
+
+msgid "UPDATER_SUCCESS"
+msgstr "Update was successful, the launcher will now restart."
+
+msgid "UPDATER_UP_TO_DATE"
+msgstr "Up to Date!"
+
+msgid "UPDATER_CANCELLED"
+msgstr "Update was cancelled"
+
+msgid "UPDATER_INVALID_JSON"
+msgstr "Invalid Update JSON"
+
+msgid "UPDATER_NOT_A_DIR"
+msgstr "'{}' is not a directory"
+
+msgid "OPTVAL_DISABLE"
+msgstr "Disable"
+
+msgid "OPTVAL_NOTIFY"
+msgstr "Notify"
+
+msgid "OPTVAL_DAILY"
+msgstr "Daily"
+
+msgid "OPTVAL_WEEKLY"
+msgstr "Weekly"
+
+msgid "OPTVAL_MONTHLY"
+msgstr "Monthly"
+
+msgid "TXT_DOWNLOADING"
+msgstr "Downloading"
+
+msgid "TXT_EXPERIMENTAL"
+msgstr "Experimental"
+
+msgid "TXT_UPDATE"
+msgstr "Update"
+
+msgid "TXT_UPDATED"
+msgstr "Updated"
+
+msgid "TXT_CANCELLED"
+msgstr "Cancelled"
+
+msgid "TXT_BACK"
+msgstr "Back"
+
+msgid "TXT_DISMISS"
+msgstr "Dismiss"
+
+msgid "TXT_SKIP"
+msgstr "Skip"
+
+msgid "TXT_CONFIRM"
+msgstr "Confirm"
+
+msgid "TXT_OK"
+msgstr "OK"
+
+msgid "CMPTMNU_TRANSFERSECRET"
+msgstr "BOOM's floor changing special transfers secret."
+
+msgid "PICKER_THEME"
+msgstr "Theme"

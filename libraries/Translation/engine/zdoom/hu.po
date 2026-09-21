@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-08-30 16:51+0000\n"
+"PO-Revision-Date: 2026-09-06 20:51+0000\n"
 "Last-Translator: Tim Richter <jank21976@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/hu/>\n"
 "Language: hu\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.9.dev0\n"
+"X-Generator: Weblate 2026.9.1.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "Nyomjon meg egy gombot."
@@ -204,6 +204,7 @@ msgstr ""
 "Ne lépj ki, még sok\n"
 "slejmoid van szabadon!"
 
+#, fuzzy
 msgid "QUITMSG24"
 msgstr ""
 "Ne add fel—máskülönben\n"
@@ -322,6 +323,7 @@ msgstr "Összes kulcs"
 msgid "TXT_CHEATIDDQD"
 msgstr "Csalni akarsz, mi? Most meghalsz!"
 
+#, fuzzy
 msgid "TXT_CHEATIDKFA"
 msgstr "Csaló—nem érdemelsz fegyvert"
 
@@ -3236,6 +3238,7 @@ msgstr "Sprite rendzés megfordítása"
 msgid "CMPTMNU_SOUNDBEHAVIOR"
 msgstr "Hang viselkedés"
 
+#, fuzzy
 msgid "CMPTMNU_SOUNDSLOTS"
 msgstr "Bénító hang a halk BFG trükknél"
 

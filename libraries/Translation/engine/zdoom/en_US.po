@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-08-30 16:51+0000\n"
+"PO-Revision-Date: 2026-09-11 15:51+0000\n"
 "Last-Translator: Tim Richter <jank21976@gmail.com>\n"
 "Language-Team: English <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/en/>\n"
 "Language: en\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.9.dev0\n"
+"X-Generator: Weblate 2026.10.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "Press a key."
@@ -198,7 +198,7 @@ msgstr ""
 
 msgid "QUITMSG24"
 msgstr ""
-"Don't give up—the flemoids will\n"
+"Don't give up — the flemoids will\n"
 "get the upper hand!"
 
 msgid "QUITMSG25"
@@ -315,9 +315,8 @@ msgstr "All keys"
 msgid "TXT_CHEATIDDQD"
 msgstr "Trying to cheat, eh? Now you die!"
 
-#, fuzzy
 msgid "TXT_CHEATIDKFA"
-msgstr "Cheater—you don't deserve weapons"
+msgstr "Cheater — you don't deserve weapons"
 
 #, fuzzy
 msgid "TXT_CHEATARTIFACTS3"
@@ -4068,7 +4067,7 @@ msgstr "Sound Behavior"
 
 #, fuzzy
 msgid "CMPTMNU_SOUNDSLOTS"
-msgstr "Cripple sound for silent BFG trick"
+msgstr "Limit sound capabilities for silent BFG trick"
 
 #, fuzzy
 msgid "CMPTMNU_SILENTPICKUP"
@@ -4456,6 +4455,10 @@ msgid "AUTOMAPMNU_SHOWMAPLABEL"
 msgstr "Show map label"
 
 #, fuzzy
+msgid "AUTOMAPMNU_MATCHSTATUSBAR"
+msgstr "Match HUD Statusbar"
+
+#, fuzzy
 msgid "AUTOMAPMNU_DRAWMAPBACK"
 msgstr "Draw map background"
 
@@ -4470,6 +4473,26 @@ msgstr "Show trigger lines"
 #, fuzzy
 msgid "AUTOMAPMNU_SHOWTHINGSPRITES"
 msgstr "Show things as sprites"
+
+#, fuzzy
+msgid "AUTOMAPMNU_SHOWSEENITEMS"
+msgstr "Show items"
+
+#, fuzzy
+msgid "AUTOMAPMNU_SHOWSEENMONSTERS"
+msgstr "Show monsters"
+
+#, fuzzy
+msgid "AUTOMAPMNU_SHOWSEENCORPSES"
+msgstr "Show corpses"
+
+#, fuzzy
+msgid "AUTOMAPMNU_SHOWSEENFRIENDLIES"
+msgstr "Show friendly characters"
+
+#, fuzzy
+msgid "AUTOMAPMNU_SHOWSEENDECORATIONS"
+msgstr "Show decorations"
 
 #, fuzzy
 msgid "AUTOMAPMNU_PTOVERLAY"
@@ -4990,6 +5013,10 @@ msgstr "Weapons"
 #, fuzzy
 msgid "OPTVAL_BOTH"
 msgstr "Both"
+
+#, fuzzy
+msgid "OPTVAL_MONSTERS"
+msgstr "Monsters"
 
 msgid "OPTVAL_ZDOOM"
 msgstr "ZDoom"

@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-08-30 16:51+0000\n"
+"PO-Revision-Date: 2026-09-06 11:51+0000\n"
 "Last-Translator: Tim Richter <jank21976@gmail.com>\n"
 "Language-Team: Bashkir <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/ba/>\n"
 "Language: ba\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.9.dev0\n"
+"X-Generator: Weblate 2026.9.1.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "Pritisnite tipku."
@@ -206,6 +206,7 @@ msgstr ""
 "Nemoj sad izaći!\n"
 "Ima još flemoida na slobodi!"
 
+#, fuzzy
 msgid "QUITMSG24"
 msgstr ""
 "Ne odustaj—flemoidi\n"
@@ -325,6 +326,7 @@ msgstr "Svi ključevi"
 msgid "TXT_CHEATIDDQD"
 msgstr "Pokušavaš varati, ha? Evo ti smrt na!"
 
+#, fuzzy
 msgid "TXT_CHEATIDKFA"
 msgstr "Varalico! Ajd sad bez oružja se dirkaj"
 

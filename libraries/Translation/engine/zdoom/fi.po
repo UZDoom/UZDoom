@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-08-30 16:51+0000\n"
+"PO-Revision-Date: 2026-09-06 20:51+0000\n"
 "Last-Translator: Tim Richter <jank21976@gmail.com>\n"
 "Language-Team: Finnish <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/fi/>\n"
 "Language: fi\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.9.dev0\n"
+"X-Generator: Weblate 2026.9.1.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "Paina jotain näppäintä."
@@ -206,6 +206,7 @@ msgstr ""
 "Älä lopeta nyt; limatuksia\n"
 "on vielä vapaalla!"
 
+#, fuzzy
 msgid "QUITMSG24"
 msgstr ""
 "Älä luovuta—limatukset\n"
@@ -324,6 +325,7 @@ msgstr "Kaikki avaimet"
 msgid "TXT_CHEATIDDQD"
 msgstr "Yrität huijata, vai? Nyt kuolet!"
 
+#, fuzzy
 msgid "TXT_CHEATIDKFA"
 msgstr "Huijari—et ansaitse aseita"
 
@@ -3246,6 +3248,7 @@ msgstr "Käännä spritelajittelu"
 msgid "CMPTMNU_SOUNDBEHAVIOR"
 msgstr "Äänen käyttäytyminen"
 
+#, fuzzy
 msgid "CMPTMNU_SOUNDSLOTS"
 msgstr "Rampauta äänijärjestelmä hiljaista BFG-temppua varten"
 

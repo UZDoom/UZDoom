@@ -76,6 +76,12 @@ msgstr "No Picture"
 msgid "MNU_DIFFVERSION"
 msgstr "Different Version"
 
+msgid "MNU_SAVEOLDVERSION"
+msgstr "Old engine version"
+
+msgid "MNU_SAVEMISSINGWADS"
+msgstr "Missing content"
+
 msgid "MNU_NOFILES"
 msgstr "No files"
 

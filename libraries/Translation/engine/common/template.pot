@@ -72,6 +72,12 @@ msgstr ""
 msgid "MNU_DIFFVERSION"
 msgstr ""
 
+msgid "MNU_SAVEOLDVERSION"
+msgstr ""
+
+msgid "MNU_SAVEMISSINGWADS"
+msgstr ""
+
 msgid "MNU_NOFILES"
 msgstr ""
 

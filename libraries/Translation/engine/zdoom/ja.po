@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-08-30 16:51+0000\n"
+"PO-Revision-Date: 2026-09-06 20:51+0000\n"
 "Last-Translator: Tim Richter <jank21976@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/ja/>\n"
 "Language: ja\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2026.9.dev0\n"
+"X-Generator: Weblate 2026.9.1.dev0\n"
 
 #, fuzzy
 msgid "PRESSKEY"
@@ -207,6 +207,7 @@ msgstr ""
 "まだやめないでくれ、にげだした\n"
 "フレモイドたちが のこっているんだから!"
 
+#, fuzzy
 msgid "QUITMSG24"
 msgstr ""
 "あきらめてはダメだ、フレモイドたちの\n"
@@ -323,6 +324,7 @@ msgstr "キー全部"
 msgid "TXT_CHEATIDDQD"
 msgstr "その名を唱えたな? 褒美に死をやろう!"
 
+#, fuzzy
 msgid "TXT_CHEATIDKFA"
 msgstr "不届き者め、貴様が偉業を成すはずがない"
 
@@ -3240,6 +3242,7 @@ msgstr "反転スプライトの並び替え"
 msgid "CMPTMNU_SOUNDBEHAVIOR"
 msgstr "音の挙動"
 
+#, fuzzy
 msgid "CMPTMNU_SOUNDSLOTS"
 msgstr "消音BFG技の為にサウンドを重複させない"
 

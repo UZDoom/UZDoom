@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-08-30 16:52+0000\n"
+"PO-Revision-Date: 2026-09-06 20:52+0000\n"
 "Last-Translator: Tim Richter <jank21976@gmail.com>\n"
 "Language-Team: Bosnian <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/bs/>\n"
 "Language: bs\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 2026.9.dev0\n"
+"X-Generator: Weblate 2026.9.1.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "Pritisnite tipku."
@@ -199,6 +199,7 @@ msgstr ""
 "Ne odustaj sada, još uvijek\n"
 "ima flemoida na slobodi!"
 
+#, fuzzy
 msgid "QUITMSG24"
 msgstr ""
 "Ne odustaj—flemoidi\n"
@@ -307,6 +308,7 @@ msgstr "Svi ključevi"
 msgid "TXT_CHEATIDDQD"
 msgstr "Pokušavaš da varaš, ha? Sad umireš!"
 
+#, fuzzy
 msgid "TXT_CHEATIDKFA"
 msgstr "Prevarantu—ne zaslužuješ oružje"
 
@@ -3209,6 +3211,7 @@ msgstr "Obrnuto sortiranje spriteova"
 msgid "CMPTMNU_SOUNDBEHAVIOR"
 msgstr "Zvučno ponašanje"
 
+#, fuzzy
 msgid "CMPTMNU_SOUNDSLOTS"
 msgstr "Slijepi zvuk za nijemi trik BFG-a"
 

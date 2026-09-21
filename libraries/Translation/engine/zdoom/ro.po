@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-08-30 16:52+0000\n"
+"PO-Revision-Date: 2026-09-06 20:52+0000\n"
 "Last-Translator: Tim Richter <jank21976@gmail.com>\n"
 "Language-Team: Romanian <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/ro/>\n"
 "Language: ro\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2;\n"
-"X-Generator: Weblate 2026.9.dev0\n"
+"X-Generator: Weblate 2026.9.1.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "Apasă o tastă."
@@ -206,6 +206,7 @@ msgstr ""
 "Nu ieși acum, încă mai\n"
 "sunt flemoizi liberi!"
 
+#, fuzzy
 msgid "QUITMSG24"
 msgstr ""
 "Nu renunța—flemoizii\n"
@@ -322,6 +323,7 @@ msgstr "Toate cheile"
 msgid "TXT_CHEATIDDQD"
 msgstr "Încerci să trișezi, ei? Acum mori!"
 
+#, fuzzy
 msgid "TXT_CHEATIDKFA"
 msgstr "Trișor—Nu meriți arme"
 
@@ -3241,6 +3243,7 @@ msgstr "Inversare sortare sprite-uri"
 msgid "CMPTMNU_SOUNDBEHAVIOR"
 msgstr "Comportament Sunet"
 
+#, fuzzy
 msgid "CMPTMNU_SOUNDSLOTS"
 msgstr "Taie sunetul pentru trucul BFG-ului silențios"
 

@@ -2,289 +2,370 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-08-10 23:42-0400\n"
-"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"PO-Revision-Date: 2026-09-15 07:51+0000\n"
+"Last-Translator: TBinhfkl <anhthieufame2021@gmail.com>\n"
 "Language-Team: Vietnamese <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/vi/>\n"
 "Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: python 3.14.6 polib 1.2.0\n"
+"X-Generator: Weblate 2026.10.dev0\n"
 
 msgid "PRESSKEY"
-msgstr ""
+msgstr "Nhấn một phím."
 
 msgid "SECRETMESSAGE"
-msgstr ""
+msgstr "Một bí mật được hé lộ!"
 
 msgid "D_DEVSTR"
-msgstr ""
+msgstr "Chế độ vô dụng: BẬT"
 
 msgid "QUITMSG"
 msgstr ""
+"Bạn có chắc chắn muốn\n"
+"thoát khỏi trò chơi tuyệt vời này không?"
 
 msgid "LOADNET"
 msgstr ""
+"Bạn không thể tải trò chơi khi đang chơi trực tuyến!\n"
+"\n"
+"Nhấn một phím."
 
 msgid "QLOADNET"
 msgstr ""
+"Bạn không thể vào nhanh trong khi đang chơi game trực tuyến!\n"
+"\n"
+"Nhấn một phím."
 
 msgid "QSAVESPOT"
 msgstr ""
+"Bạn chưa chọn ô lưu nhanh!\n"
+"\n"
+"Nhấn một phím."
 
 msgid "NEWGAME"
 msgstr ""
+"Bạn không thể bắt đầu một trò chơi mới\n"
+"khi đang chơi game trực tuyến.\n"
+"\n"
+"Nhấn một phím."
 
 msgid "NIGHTMARE"
 msgstr ""
+"Bạn có chắc không? Trình độ kỹ năng này\n"
+"hoàn toàn không công bằng.\n"
+"\n"
+"Nhấn Y hoặc N."
 
 msgid "SWSTRING"
 msgstr ""
+"Đây là phiên bản dùng thử của Doom.\n"
+"\n"
+"Bạn cần đặt mua toàn bộ bộ ba phần.\n"
+"\n"
+"Nhấn một phím."
 
 msgid "NETEND"
 msgstr ""
+"Bạn không thể kết thúc một ván chơi trực tuyến!\n"
+"\n"
+"Nhấn một phím."
 
 msgid "ENDGAME"
 msgstr ""
+"Bạn có chắc chắn muốn kết thúc trò chơi không?\n"
+"\n"
+"Nhấn Y hoặc N."
 
 msgid "RAVENQUITMSG"
-msgstr ""
+msgstr "Bạn có chắc chắn muốn thoát không?"
 
 msgctxt "heretic"
 msgid "SWSTRING"
-msgstr ""
+msgstr "Chỉ có trong phiên bản đã đăng ký"
 
 msgid "DOSY"
-msgstr ""
+msgstr "(Nhấn Y để thoát)"
 
 msgid "QUITMSG1"
 msgstr ""
+"Đừng vội đi, vẫn còn\n"
+"lũ quỷ cần thiêu rụi đấy!"
 
 msgid "QUITMSG2"
 msgstr ""
+"Chuồn thôi — chuyện này sắp biến thành\n"
+"một cuộc thảm sát rồi!"
 
 msgid "QUITMSG3"
 msgstr ""
+"Nếu là tôi thì tôi sẽ không rời đi đâu.\n"
+"DOS tệ hơn nhiều."
 
 msgid "QUITMSG4"
 msgstr ""
+"Ý bạn là bạn thích DOS\n"
+"hơn tôi, đúng không?"
 
 msgid "QUITMSG5"
 msgstr ""
+"Đừng vội đi — có một con quỷ\n"
+"ở ngay góc kia!"
 
 msgid "QUITMSG6"
 msgstr ""
+"Này, lần tới mà cậu ghé qua đây\n"
+"Tôi sẽ mời cậu một ly đấy."
 
 msgid "QUITMSG7"
-msgstr ""
+msgstr "Cứ việc đi đi. Xem tôi có quan tâm không nào."
 
 msgid "QUITMSG8"
 msgstr ""
+"Ngươi muốn bỏ cuộc ư?\n"
+"Vậy thì, ngươi đã mất đi một phần tám rồi!"
 
 msgid "QUITMSG9"
 msgstr ""
+"Đừng đi vội, có một\n"
+"con quái vật xuyên chiều đang chờ\n"
+"ngay tại dấu nhắc lệnh DOS đấy!"
 
 msgid "QUITMSG10"
 msgstr ""
+"Biến khỏi đây và quay lại\n"
+"với mấy chương trình tẻ nhạt của cậu đi."
 
 msgid "QUITMSG11"
 msgstr ""
+"Nếu tôi là sếp của cậu, tôi sẽ\n"
+"đấu một trận sống mái với cậu ngay lập tức!"
 
 msgid "QUITMSG12"
 msgstr ""
+"Nghe này anh bạn, nếu giờ cậu bỏ đi\n"
+"thì cậu sẽ mất trắng thành tích \"săn\" của mình đấy!"
 
 msgid "QUITMSG13"
 msgstr ""
+"Cứ đi đi. Khi nào quay lại,\n"
+"tôi sẽ đợi sẵn với một cây gậy bóng chày."
 
 msgid "QUITMSG14"
 msgstr ""
+"May cho cậu là tôi không tát cậu\n"
+"vì dám nghĩ đến chuyện bỏ đi đấy."
 
 msgid "QUITMSG15"
 msgstr ""
+"Anh định đi đâu?!\n"
+"Còn cuộc nổi dậy thì sao?"
 
 msgid "QUITMSG16"
 msgstr ""
+"Cuộc tàn sát bị ngắt quãng...\n"
+"Thật là trêu ngươi!"
 
 msgid "QUITMSG17"
 msgstr ""
+"Nhưng em là niềm hy vọng\n"
+"— là cơ hội duy nhất của anh!!"
 
 msgid "QUITMSG18"
-msgstr ""
+msgstr "Không ai bỏ rơi Blackbird cả."
 
 msgid "QUITMSG19"
-msgstr ""
+msgstr "Tôi đã tưởng bạn khác biệt…"
 
 msgid "QUITMSG20"
-msgstr ""
+msgstr "Được thôi! Cứ giết rồi chuồn đi!"
 
 msgid "QUITMSG21"
 msgstr ""
+"Bạn có thể bỏ cuộc…\n"
+"nhưng bạn không thể trốn thoát…"
 
 msgid "QUITMSG22"
 msgstr ""
+"Sao thế, có chuyện gì vậy con?\n"
+"Mẹ bảo đến giờ ăn tối rồi à?"
 
 msgid "QUITMSG23"
 msgstr ""
+"Đừng bỏ cuộc lúc này, vẫn còn\n"
+"lũ Flemoid đang lảng vảng đấy!"
 
 msgid "QUITMSG24"
 msgstr ""
+"Đừng bỏ cuộc — bọn Flemoid sẽ\n"
+"chiếm thế thượng phong đấy!"
 
 msgid "QUITMSG25"
 msgstr ""
+"Đừng rời đi lúc này.\n"
+"Chúng tôi cần sự giúp đỡ của bạn!"
 
 msgid "QUITMSG26"
 msgstr ""
+"Tôi hy vọng bạn chỉ đang tạm nghỉ\n"
+"để thưởng thức món Chex® Party Mix."
 
 msgid "QUITMSG27"
 msgstr ""
+"Đừng bỏ cuộc lúc này!\n"
+"Chúng tôi cần sự giúp đỡ của bạn!"
 
 msgid "QUITMSG28"
 msgstr ""
+"Đừng bỏ rơi\n"
+"Liên đoàn Ngũ cốc Liên ngân hà!"
 
 msgid "QUITMSG29"
 msgstr ""
+"Một Chiến binh Chex® thực thụ\n"
+"sẽ không bỏ cuộc nhanh đến thế đâu!"
 
 msgid "TXT_DEFAULTPICKUPMSG"
-msgstr ""
+msgstr "Bạn có một chuyến đón khách"
 
 msgid "PD_ANY"
-msgstr ""
+msgstr "Bất kỳ chiếc chìa khóa nào cũng có thể mở được cánh cửa này"
 
 msgid "PD_ANYOBJ"
-msgstr ""
+msgstr "Bất kỳ phím nào cũng sẽ kích hoạt vật thể này"
 
 msgid "PD_ALL3"
-msgstr ""
+msgstr "Bạn cần cả ba chiếc chìa khóa để mở cánh cửa này"
 
 msgid "PD_ALL3O"
-msgstr ""
+msgstr "Bạn cần cả ba chiếc chìa khóa để kích hoạt vật thể này"
 
 msgid "PD_ALL6"
-msgstr ""
+msgstr "Bạn cần cả sáu chiếc chìa khóa để mở cánh cửa này"
 
 msgid "PD_ALL6O"
-msgstr ""
+msgstr "Bạn cần tất cả sáu chiếc chìa khóa để kích hoạt vật thể này"
 
 msgid "PD_ALLKEYS"
-msgstr ""
+msgstr "Bạn cần tất cả các chìa khóa"
 
 msgid "HUSTR_MSGU"
-msgstr ""
+msgstr "[Tin nhắn chưa được gửi]"
 
 msgid "HUSTR_TALKTOSELF1"
-msgstr ""
+msgstr "Bạn lẩm bẩm một mình"
 
 msgid "HUSTR_TALKTOSELF2"
-msgstr ""
+msgstr "Ai đó?"
 
 msgid "HUSTR_TALKTOSELF3"
-msgstr ""
+msgstr "Bạn tự làm mình sợ"
 
 msgid "HUSTR_TALKTOSELF4"
-msgstr ""
+msgstr "Bạn bắt đầu nói huyên thuyên đầy phấn khích"
 
 msgid "HUSTR_TALKTOSELF5"
-msgstr ""
+msgstr "Bạn mất trí rồi…"
 
 msgid "HUSTR_MESSAGESENT"
-msgstr ""
+msgstr "[Đã gửi tin nhắn]"
 
 msgid "STSTR_MUS"
-msgstr ""
+msgstr "Thay đổi nhạc"
 
 msgid "STSTR_NOMUS"
-msgstr ""
+msgstr "Lựa chọn bất khả thi"
 
 msgid "STSTR_KFAADDED"
-msgstr ""
+msgstr "Rất hài lòng khi có thêm đạn"
 
 msgid "STSTR_FAADDED"
-msgstr ""
+msgstr "Đã thêm đạn (không cần chìa khóa)"
 
 msgid "STSTR_BEHOLD"
 msgstr ""
 
 msgid "STSTR_BEHOLDX"
-msgstr ""
+msgstr "Đã bật/tắt tăng cường sức mạnh"
 
 msgid "STSTR_CHOPPERS"
-msgstr ""
+msgstr "… không tệ chút nào - GM"
 
 msgid "STSTR_CLEV"
-msgstr ""
+msgstr "Đang thay đổi cấp độ…"
 
 msgid "TXT_CHEATHEALTH"
-msgstr ""
+msgstr "Đầy máu"
 
 msgid "TXT_CHEATKEYS"
-msgstr ""
+msgstr "Tất cả các chìa khóa"
 
 msgid "TXT_CHEATIDDQD"
-msgstr ""
+msgstr "Định giở trò gian lận à? Giờ thì chết đi!"
 
 msgid "TXT_CHEATIDKFA"
-msgstr ""
+msgstr "Đồ gian lận — ngươi không xứng đáng có vũ khí"
 
 msgid "TXT_CHEATARTIFACTS3"
-msgstr ""
+msgstr "Đúng rồi đấy"
 
 msgid "TXT_MIDASTOUCH"
-msgstr ""
+msgstr "Em có bàn tay biến mọi thứ thành vàng đấy, cưng à"
 
 msgid "TXT_GOTSTUFF"
-msgstr ""
+msgstr "Bạn có tố chất đấy!"
 
 msgid "TXT_STRANGE"
-msgstr ""
+msgstr "Bạn cảm thấy lạ lẫm…"
 
 msgid "TXT_STRANGER"
-msgstr ""
+msgstr "Bạn cảm thấy còn kỳ lạ hơn nữa."
 
 msgid "TXT_NOTSTRANGE"
-msgstr ""
+msgstr "Bạn lại cảm thấy là chính mình."
 
 msgid "TXT_LIGHTER"
-msgstr ""
+msgstr "Bạn cảm thấy nhẹ nhàng hơn"
 
 msgid "TXT_GRAVITY"
-msgstr ""
+msgstr "Trọng lực kéo bạn xuống"
 
 msgid "TXT_ANUBIS_ON"
-msgstr ""
+msgstr "\"Hãy run rẩy vì sợ hãi!\""
 
 msgid "TXT_ANUBIS_OFF"
-msgstr ""
+msgstr "Không còn Giáp Ogre nữa"
 
 msgid "TXT_BADDIE_KILLED"
-msgstr ""
+msgstr "1 kẻ xấu bị tiêu diệt"
 
 msgid "TXT_BADDIES_KILLED"
-msgstr ""
+msgstr "%d kẻ địch bị tiêu diệt"
 
 msgid "TXT_MONSTER_KILLED"
-msgstr ""
+msgstr "1 quái vật bị tiêu diệt"
 
 msgid "TXT_MONSTERS_KILLED"
-msgstr ""
+msgstr "Đã tiêu diệt %d quái vật"
 
 msgid "TXT_NO_RESURRECT"
-msgstr ""
+msgstr "Không thể hồi sinh. Người chơi không còn kết nối với cơ thể của mình."
 
 msgid "TXT_ALL_ARTIFACTS"
-msgstr ""
+msgstr "Tất cả các Cổ vật!"
 
 msgid "TXT_WHAT_KILL"
-msgstr ""
+msgstr "Bạn muốn giết thứ gì bên ngoài trò chơi?"
 
 msgid "TXT_NOT_FROZEN"
-msgstr ""
+msgstr "Thuộc tính người chơi bị cố định: TẮT"
 
 msgid "AMSTR_MARKEDSPOT"
-msgstr ""
+msgstr "Điểm được đánh dấu"
 
 msgid "AMSTR_MARKSCLEARED"
-msgstr ""
+msgstr "Đã xóa tất cả các dấu"
 
 msgid "TXT_FRAGLIMIT"
 msgstr ""
@@ -293,25 +374,25 @@ msgid "TXT_TIMELIMIT"
 msgstr ""
 
 msgid "SPREEKILLSELF"
-msgstr ""
+msgstr "%o trông có vẻ ổn cho đến khi %g tự kết liễu đời mình!"
 
 msgid "SPREEOVER"
-msgstr ""
+msgstr "Cuộc tàn sát của %o đã bị %k chấm dứt"
 
 msgid "SPREE5"
-msgstr ""
+msgstr "%k đang có chuỗi hạ gục liên tiếp!"
 
 msgid "SPREE10"
-msgstr ""
+msgstr "%k đang nổi cơn thịnh nộ!"
 
 msgid "SPREE15"
-msgstr ""
+msgstr "%k đang thống trị!"
 
 msgid "SPREE20"
-msgstr ""
+msgstr "%k không thể ngăn cản!"
 
 msgid "SPREE25"
-msgstr ""
+msgstr "%k thật thần thánh!"
 
 msgid "MULTI2"
 msgstr ""
@@ -326,16 +407,16 @@ msgid "MULTI5"
 msgstr ""
 
 msgid "SCORE_BONUS"
-msgstr ""
+msgstr "Tiền thưởng"
 
 msgid "SCORE_COLOR"
-msgstr ""
+msgstr "Màu sắc"
 
 msgid "SCORE_SECRET"
-msgstr ""
+msgstr "Bí mật"
 
 msgid "SCORE_NAME"
-msgstr ""
+msgstr "Tên"
 
 msgid "SCORE_DELAY"
 msgstr ""
@@ -347,155 +428,155 @@ msgid "SCORE_DEATHS"
 msgstr ""
 
 msgid "SCORE_OTHER"
-msgstr ""
+msgstr "Khác"
 
 msgid "SCORE_MISSED"
 msgstr ""
 
 msgid "SCORE_TOTAL"
-msgstr ""
+msgstr "Tổng cộng"
 
 msgid "SCORE_LVLTIME"
-msgstr ""
+msgstr "Thời gian cấp độ"
 
 msgid "TXT_IMKILLS"
 msgstr ""
 
 msgid "TXT_IMITEMS"
-msgstr ""
+msgstr "Vật phẩm"
 
 msgid "TXT_IMSECRETS"
-msgstr ""
+msgstr "Những bí mật"
 
 msgid "TXT_IMTIME"
-msgstr ""
+msgstr "Thời gian"
 
 msgid "TXT_IMPAR"
 msgstr ""
 
 msgid "WI_FINISHED"
-msgstr ""
+msgstr "Hoàn thành"
 
 msgid "WI_ENTERING"
-msgstr ""
+msgstr "Đang vào"
 
 msgctxt "heretic hexen"
 msgid "WI_ENTERING"
-msgstr ""
+msgstr "Bắt đầu bước vào:"
 
 msgid "AM_MONSTERS"
-msgstr ""
+msgstr "Quái vật:"
 
 msgid "AM_SECRETS"
-msgstr ""
+msgstr "Những bí mật:"
 
 msgid "AM_ITEMS"
-msgstr ""
+msgstr "Vật phẩm:"
 
 msgid "OB_SUICIDE"
-msgstr ""
+msgstr "%o vụ tự tử."
 
 msgid "OB_FALLING"
-msgstr ""
+msgstr "%o đã giảm quá sâu."
 
 msgid "OB_CRUSH"
-msgstr ""
+msgstr "%o đã bị ép bẹp."
 
 msgid "OB_EXIT"
-msgstr ""
+msgstr "%o đã cố gắng rời đi."
 
 msgid "OB_WATER"
-msgstr ""
+msgstr "%o không biết bơi."
 
 msgid "OB_SLIME"
-msgstr ""
+msgstr "%o đã đột biến."
 
 msgid "OB_LAVA"
-msgstr ""
+msgstr "%o đã tan chảy."
 
 msgid "OB_BARREL"
-msgstr ""
+msgstr "%o đã nổ tung."
 
 msgid "OB_SPLASH"
-msgstr ""
+msgstr "%o đã đứng sai chỗ."
 
 msgid "OB_R_SPLASH"
-msgstr ""
+msgstr "Lẽ ra %o nên lùi lại."
 
 msgid "OB_ROCKET"
-msgstr ""
+msgstr "Lẽ ra %o nên lùi lại."
 
 msgid "OB_KILLEDSELF"
-msgstr ""
+msgstr "%o đã tự sát."
 
 msgid "OB_VOODOO"
-msgstr ""
+msgstr "%o đã bị giết bởi sức mạnh của tà thuật voodoo."
 
 msgid "OB_MPTELEFRAG"
-msgstr ""
+msgstr "%o đã bị %k tiêu diệt bằng cách dịch chuyển đè lên người."
 
 msgid "OB_MONTELEFRAG"
-msgstr ""
+msgstr "%o đã bị dịch chuyển tức thời."
 
 msgid "OB_DEFAULT"
-msgstr ""
+msgstr "%o đã qua đời."
 
 msgid "OB_MPDEFAULT"
-msgstr ""
+msgstr "%o đã bị %k giết."
 
 msgid "OB_FRIENDLY1"
-msgstr ""
+msgstr "%k càn quét một đồng đội."
 
 msgid "OB_FRIENDLY2"
-msgstr ""
+msgstr "Có vẻ như %k cần đeo kính."
 
 msgid "OB_FRIENDLY3"
-msgstr ""
+msgstr "%k ghi điểm hạ gục cho đội đối phương."
 
 msgid "OB_FRIENDLY4"
-msgstr ""
+msgstr "%k lại mất thêm một người bạn nữa."
 
 msgid "GOTARMOR"
-msgstr ""
+msgstr "Đã lấy được bộ giáp."
 
 msgid "GOTMEGA"
-msgstr ""
+msgstr "Đã lấy được MegaArmor!"
 
 msgid "GOTHTHBONUS"
-msgstr ""
+msgstr "Đã lấy được thưởng máu."
 
 msgid "GOTARMBONUS"
-msgstr ""
+msgstr "Đã lấy được một thưởng giáp."
 
 msgid "GOTSTIM"
-msgstr ""
+msgstr "Đã lấy được một stimpack."
 
 msgid "GOTMEDINEED"
-msgstr ""
+msgstr "Đã lấy được một bộ cứu thương mà bạn THỰC SỰ cần!"
 
 msgid "GOTMEDIKIT"
-msgstr ""
+msgstr "Đã lấy được một bộ cứu thương."
 
 msgid "GOTSUPER"
 msgstr ""
 
 msgid "GOTBLUECARD"
-msgstr ""
+msgstr "Đã lấy được thẻ từ màu xanh dương."
 
 msgid "GOTYELWCARD"
-msgstr ""
+msgstr "Đã lấy được thẻ từ màu vàng."
 
 msgid "GOTREDCARD"
-msgstr ""
+msgstr "Đã lấy được thẻ từ màu đỏ."
 
 msgid "GOTBLUESKUL"
-msgstr ""
+msgstr "Đã lấy được một chiếc đầu lâu màu xanh dương."
 
 msgid "GOTYELWSKUL"
-msgstr ""
+msgstr "Đã lấy được một chiếc đầu lâu màu vàng."
 
 msgid "GOTREDSKUL"
-msgstr ""
+msgstr "Đã lấy được một chiếc đầu lâu màu đỏ."
 
 msgid "GOTINVUL"
 msgstr ""
@@ -504,136 +585,136 @@ msgid "GOTBERSERK"
 msgstr ""
 
 msgid "GOTINVIS"
-msgstr ""
+msgstr "Tàng hình một phần"
 
 msgid "GOTSUIT"
-msgstr ""
+msgstr "Bộ đồ che chắn bức xạ"
 
 msgid "GOTMAP"
-msgstr ""
+msgstr "Bản đồ khu vực máy tính"
 
 msgid "GOTVISOR"
-msgstr ""
+msgstr "Kính khuếch đại ánh sáng"
 
 msgid "GOTMSPHERE"
 msgstr ""
 
 msgid "GOTCLIP"
-msgstr ""
+msgstr "Đã lấy được một clip."
 
 msgid "GOTCLIPBOX"
-msgstr ""
+msgstr "Đã lấy được một hộp đạn."
 
 msgid "GOTROCKET"
-msgstr ""
+msgstr "Đã lấy được một hỏa tiễn."
 
 msgid "GOTROCKBOX"
-msgstr ""
+msgstr "Đã lấy được một hộp hỏa tiễn."
 
 msgid "GOTCELL"
-msgstr ""
+msgstr "Đã lấy được một tế bào năng lượng."
 
 msgid "GOTCELLBOX"
-msgstr ""
+msgstr "Đã lấy được một đóng gói tế bào năng lượng."
 
 msgid "GOTSHELLS"
-msgstr ""
+msgstr "Đã lấy được 4 viên đạn shotgun."
 
 msgid "GOTSHELLBOX"
-msgstr ""
+msgstr "Đã lấy được một hộp đạn shotgun."
 
 msgid "GOTBACKPACK"
-msgstr ""
+msgstr "Đã lấy được một chiếc ba lô đầy đạn!"
 
 msgid "GOTBFG9000"
-msgstr ""
+msgstr "Bạn đã nhận được BFG9000! Ồ, đúng vậy."
 
 msgid "GOTCHAINGUN"
-msgstr ""
+msgstr "Bạn đã nhận được chaingun!"
 
 msgid "GOTCHAINSAW"
-msgstr ""
+msgstr "Một chainsaw! Tìm ít thịt đi!"
 
 msgid "GOTLAUNCHER"
-msgstr ""
+msgstr "Bạn đã nhận được rocket launcher!"
 
 msgid "GOTPLASMA"
-msgstr ""
+msgstr "Bạn đã nhận được plasma gun!"
 
 msgid "GOTSHOTGUN"
-msgstr ""
+msgstr "Bạn đã nhận được shotgun!"
 
 msgid "GOTSHOTGUN2"
-msgstr ""
+msgstr "Bạn đã nhận được super shotgun!"
 
 msgid "PICKUP_PISTOL_DROPPED"
-msgstr ""
+msgstr "Đã lấy được một pistol."
 
 msgid "BETA_BONUS1"
-msgstr ""
+msgstr "Đã lấy được một demonic dagger."
 
 msgid "BETA_BONUS2"
-msgstr ""
+msgstr "Đã lấy được một skullchest."
 
 msgid "BETA_BONUS3"
-msgstr ""
+msgstr "Đã lấy được một evil sceptre."
 
 msgid "BETA_BONUS4"
-msgstr ""
+msgstr "Đã lấy được một kinh thánh bất thánh."
 
 msgid "PD_BLUEO"
-msgstr ""
+msgstr "Bạn cần một chiếc chìa khóa màu xanh để kích hoạt vật thể này"
 
 msgid "PD_REDO"
-msgstr ""
+msgstr "Bạn cần một chiếc chìa khóa màu đỏ để kích hoạt vật thể này"
 
 msgid "PD_YELLOWO"
-msgstr ""
+msgstr "Bạn cần một chiếc chìa khóa màu vàng để kích hoạt vật thể này"
 
 msgid "PD_BLUEK"
-msgstr ""
+msgstr "Bạn cần một chiếc chìa khóa màu xanh để mở cánh cửa này"
 
 msgid "PD_REDK"
-msgstr ""
+msgstr "Bạn cần một chiếc chìa khóa màu đỏ để mở cánh cửa này"
 
 msgid "PD_YELLOWK"
-msgstr ""
+msgstr "Bạn cần một chiếc chìa khóa màu vàng để mở cánh cửa này"
 
 msgid "PD_BLUECO"
-msgstr ""
+msgstr "Bạn cần một thẻ màu xanh để kích hoạt vật thể này"
 
 msgid "PD_REDCO"
-msgstr ""
+msgstr "Bạn cần một thẻ màu đỏ để kích hoạt vật thể này"
 
 msgid "PD_YELLOWCO"
-msgstr ""
+msgstr "Bạn cần một thẻ màu vàng để kích hoạt vật thể này"
 
 msgid "PD_BLUESO"
-msgstr ""
+msgstr "Bạn cần một chiếc đầu lâu màu xanh để kích hoạt vật thể này"
 
 msgid "PD_REDSO"
-msgstr ""
+msgstr "Bạn cần một chiếc đầu lâu màu đỏ để kích hoạt vật thể này"
 
 msgid "PD_YELLOWSO"
-msgstr ""
+msgstr "Bạn cần một chiếc đầu lâu màu vàng để kích hoạt vật thể này"
 
 msgid "PD_BLUEC"
-msgstr ""
+msgstr "Bạn cần một chiếc thẻ màu xanh để mở cánh cửa này"
 
 msgid "PD_REDC"
-msgstr ""
+msgstr "Bạn cần một chiếc thẻ màu đỏ để mở cánh cửa này"
 
 msgid "PD_YELLOWC"
-msgstr ""
+msgstr "Bạn cần một chiếc thẻ màu vàng để mở cánh cửa này"
 
 msgid "PD_BLUES"
-msgstr ""
+msgstr "Bạn cần một chiếc đầu lâu màu xanh để mở cánh cửa này"
 
 msgid "PD_REDS"
-msgstr ""
+msgstr "Bạn cần một chiếc đầu lâu màu đỏ để mở cánh cửa này"
 
 msgid "PD_YELLOWS"
-msgstr ""
+msgstr "Bạn cần một chiếc đầu lâu màu vàng để mở cánh cửa này"
 
 msgid "CC_ZOMBIE"
 msgstr ""
@@ -735,10 +816,10 @@ msgid "TAG_BFG9000"
 msgstr ""
 
 msgid "AMMO_CLIP"
-msgstr ""
+msgstr "Đạn"
 
 msgid "AMMO_SHELLS"
-msgstr ""
+msgstr "Đạn shotgun"
 
 msgid "AMMO_ROCKETS"
 msgstr ""
@@ -747,220 +828,220 @@ msgid "AMMO_CELLS"
 msgstr ""
 
 msgid "OB_STEALTHBABY"
-msgstr ""
+msgstr "%o nghĩ %g đã nhìn thấy một arachnotron."
 
 msgid "OB_STEALTHVILE"
-msgstr ""
+msgstr "%o nghĩ %g đã nhìn thấy một archvile."
 
 msgid "OB_STEALTHBARON"
-msgstr ""
+msgstr "%o nghĩ %g đã nhìn thấy một Baron of Hell."
 
 msgid "OB_STEALTHCACO"
-msgstr ""
+msgstr "%o nghĩ %g đã nhìn thấy một cacodemon."
 
 msgid "OB_STEALTHCHAINGUY"
-msgstr ""
+msgstr "%o nghĩ %g đã nhìn thấy một chaingunner."
 
 msgid "OB_STEALTHDEMON"
-msgstr ""
+msgstr "%o nghĩ %g đã nhìn thấy một demon."
 
 msgid "OB_STEALTHKNIGHT"
-msgstr ""
+msgstr "%o nghĩ %g đã nhìn thấy một Hell Knight."
 
 msgid "OB_STEALTHIMP"
-msgstr ""
+msgstr "%o nghĩ %g đã nhìn thấy một imp."
 
 msgid "OB_STEALTHFATSO"
-msgstr ""
+msgstr "%o nghĩ %g đã nhìn thấy một mancubus."
 
 msgid "OB_STEALTHUNDEAD"
-msgstr ""
+msgstr "%o nghĩ %g đã nhìn thấy một revenant."
 
 msgid "OB_STEALTHSHOTGUNGUY"
-msgstr ""
+msgstr "%o nghĩ %g đã nhìn thấy một sergeant."
 
 msgid "OB_STEALTHZOMBIE"
-msgstr ""
+msgstr "%o nghĩ %g đã nhìn thấy một zombieman."
 
 msgid "OB_UNDEADHIT"
-msgstr ""
+msgstr "%o bị một người đấm revenant."
 
 msgid "OB_IMPHIT"
-msgstr ""
+msgstr "%o đã bị cắt bởi một imp."
 
 msgid "OB_CACOHIT"
-msgstr ""
+msgstr "%o đã đến quá gần một cacodemon."
 
 msgid "OB_DEMONHIT"
-msgstr ""
+msgstr "%o bị một con cắn demon."
 
 msgid "OB_SPECTREHIT"
-msgstr ""
+msgstr "%o đã bị một con vật ăn thịt spectre."
 
 msgid "OB_BARONHIT"
-msgstr ""
+msgstr "%o bị xé toạc bởi một Baron of Hell."
 
 msgid "OB_KNIGHTHIT"
-msgstr ""
+msgstr "%o đã bị phá hủy bởi một Hell Knight."
 
 msgid "OB_ZOMBIE"
-msgstr ""
+msgstr "%o đã bị giết bởi một zombieman."
 
 msgid "OB_SHOTGUY"
-msgstr ""
+msgstr "%o bị bắn bởi một sergeant."
 
 msgid "OB_VILE"
-msgstr ""
+msgstr "%o đã bị thiêu hủy bởi một archvile."
 
 msgid "OB_UNDEAD"
-msgstr ""
+msgstr "%o không thể trốn tránh một revenant's fireball."
 
 msgid "OB_FATSO"
-msgstr ""
+msgstr "%o đã bị đè bẹp bởi một mancubus."
 
 msgid "OB_CHAINGUY"
-msgstr ""
+msgstr "%o bị thủng bởi một chaingunner."
 
 msgid "OB_SKULL"
-msgstr ""
+msgstr "%o đã bị một lost soul."
 
 msgid "OB_IMP"
-msgstr ""
+msgstr "%o bị bỏng bởi một imp."
 
 msgid "OB_CACO"
-msgstr ""
+msgstr "%o đã bị mê hoặc bởi một cacodemon."
 
 msgid "OB_BARON"
-msgstr ""
+msgstr "%o bị bầm tím bởi một Baron of Hell."
 
 msgid "OB_KNIGHT"
-msgstr ""
+msgstr "%o bị trải rộng bởi một Hell Knight."
 
 msgid "OB_SPIDER"
-msgstr ""
+msgstr "%o đứng sững sờ trước spider demon."
 
 msgid "OB_BABY"
-msgstr ""
+msgstr "%o để cho một arachnotron nhận được %h."
 
 msgid "OB_CYBORG"
-msgstr ""
+msgstr "%o bị bắn tung tóe bởi một cyberdemon."
 
 msgid "OB_WOLFSS"
-msgstr ""
+msgstr "%o gặp một Nazi."
 
 msgid "OB_DOG"
-msgstr ""
+msgstr "%o bị chó tấn công."
 
 msgid "OB_MPFIST"
-msgstr ""
+msgstr "%o đã nhai %k's fist."
 
 msgid "OB_MPCHAINSAW"
-msgstr ""
+msgstr "%o đã bị %k cán qua chainsaw."
 
 msgid "OB_MPPISTOL"
-msgstr ""
+msgstr "%o cảm thấy thích thú với %k's pea shooter."
 
 msgid "OB_MPSHOTGUN"
-msgstr ""
+msgstr "%o đã nhai %k's boomstick."
 
 msgid "OB_MPSSHOTGUN"
-msgstr ""
+msgstr "%o bị bắn tung tóe bởi %k's super shotgun."
 
 msgid "OB_MPCHAINGUN"
-msgstr ""
+msgstr "%o đã bị %k's cán chết chaingun."
 
 msgid "OB_MPROCKET"
-msgstr ""
+msgstr "%o cưỡi %k's rocket."
 
 msgid "OB_MPR_SPLASH"
-msgstr ""
+msgstr "%o suýt nữa đã tránh được %k's rocket."
 
 msgid "OB_MPPLASMARIFLE"
-msgstr ""
+msgstr "%o đã tan chảy bởi %k's plasma gun."
 
 msgid "OB_MPBFG_BOOM"
-msgstr ""
+msgstr "%o bị chia tách bởi %k's BFG."
 
 msgid "OB_MPBFG_SPLASH"
-msgstr ""
+msgstr "%o không thể trốn tránh %k's BFG."
 
 msgid "OB_RAILGUN"
-msgstr ""
+msgstr "%o đã bị %k chỉ trích."
 
 msgid "OB_MPBFG_MBF"
-msgstr ""
+msgstr "%o đã bị đốt cháy bởi %k's BFG."
 
 msgid "TXT_GOTBLUEKEY"
-msgstr ""
+msgstr "Chìa khóa xanh"
 
 msgid "TXT_GOTYELLOWKEY"
-msgstr ""
+msgstr "Chìa khóa màu vàng"
 
 msgid "TXT_GOTGREENKEY"
-msgstr ""
+msgstr "Chìa khóa xanh lá"
 
 msgid "TXT_ARTIHEALTH"
 msgstr ""
 
 msgid "TXT_ARTIFLY"
-msgstr ""
+msgstr "Đôi cánh thịnh nộ"
 
 msgid "TXT_ARTIINVULNERABILITY"
-msgstr ""
+msgstr "Chiếc nhẫn bất khả chiến bại"
 
 msgid "TXT_ARTITOMEOFPOWER"
-msgstr ""
+msgstr "Sách Sức Mạnh"
 
 msgid "TXT_ARTIINVISIBILITY"
 msgstr ""
 
 msgid "TXT_ARTIEGG"
-msgstr ""
+msgstr "Trứng biến đổi"
 
 msgid "TXT_ARTISUPERHEALTH"
-msgstr ""
+msgstr "Bình thần bí"
 
 msgid "TXT_ARTITORCH"
-msgstr ""
+msgstr "Ngọn đuốc"
 
 msgid "TXT_ARTIFIREBOMB"
-msgstr ""
+msgstr "Quả bom hẹn giờ của thời cổ đại"
 
 msgid "TXT_ARTITELEPORT"
-msgstr ""
+msgstr "Thiết bị hỗn loạn"
 
 msgid "TXT_ITEMHEALTH"
-msgstr ""
+msgstr "Lọ pha lê"
 
 msgid "TXT_ITEMBAGOFHOLDING"
-msgstr ""
+msgstr "Túi chứa đồ"
 
 msgid "TXT_ITEMSHIELD1"
-msgstr ""
+msgstr "Lá chắn bạc"
 
 msgid "TXT_ITEMSHIELD2"
-msgstr ""
+msgstr "Khiên ma thuật"
 
 msgid "TXT_ITEMSUPERMAP"
-msgstr ""
+msgstr "Cuộn bản đồ"
 
 msgid "TXT_AMMOGOLDWAND1"
-msgstr ""
+msgstr "Gậy pha lê"
 
 msgid "TXT_AMMOGOLDWAND2"
-msgstr ""
+msgstr "Tinh thể Geode"
 
 msgid "TXT_AMMOMACE1"
 msgstr ""
 
 msgid "TXT_AMMOMACE2"
-msgstr ""
+msgstr "Đống Mace Spheres"
 
 msgid "TXT_AMMOCROSSBOW1"
-msgstr ""
+msgstr "Mũi tên hư ảo"
 
 msgid "TXT_AMMOCROSSBOW2"
-msgstr ""
+msgstr "Túi đựng tên của mũi tên hư ảo"
 
 msgid "TXT_AMMOBLASTER1"
 msgstr ""
@@ -2632,7 +2713,7 @@ msgid "MNU_NEWGAME"
 msgstr ""
 
 msgid "MNU_OPTIONS"
-msgstr ""
+msgstr "Tùy chọn"
 
 msgid "MNU_GAMEFILES"
 msgstr ""
@@ -2641,7 +2722,7 @@ msgid "MNU_INFO"
 msgstr ""
 
 msgid "MNU_QUITGAME"
-msgstr ""
+msgstr "Thoát Game"
 
 msgid "MNU_CHOOSESKILL"
 msgstr ""
@@ -3113,13 +3194,13 @@ msgid "CMPTMNU_EXPLODE2"
 msgstr ""
 
 msgid "PLYRMNU_RED"
-msgstr ""
+msgstr "Màu đỏ"
 
 msgid "PLYRMNU_GREEN"
-msgstr ""
+msgstr "Màu xanh lá"
 
 msgid "PLYRMNU_BLUE"
-msgstr ""
+msgstr "Màu xanh da trời"
 
 msgid "PLYRMNU_PLAYERCLASS"
 msgstr ""
@@ -3644,7 +3725,7 @@ msgid "SCALEMNU_ADAPT"
 msgstr ""
 
 msgid "HUDMNU_TITLE"
-msgstr ""
+msgstr "Tùy chọn HUD"
 
 msgid "HUDMNU_ALTHUD"
 msgstr ""
@@ -3710,7 +3791,7 @@ msgid "MISCMNU_INTERSCROLL"
 msgstr ""
 
 msgid "NETMNU_TITLE"
-msgstr ""
+msgstr "Tùy chọn mạng"
 
 msgid "NETMNU_LOCALOPTIONS"
 msgstr ""
@@ -3776,7 +3857,7 @@ msgid "OPTVAL_ITEMS"
 msgstr ""
 
 msgid "OPTVAL_WEAPONS"
-msgstr ""
+msgstr "Vũ khí"
 
 msgid "OPTVAL_BOTH"
 msgstr ""
@@ -4607,7 +4688,7 @@ msgid "JOYMNU_THRESHOLD"
 msgstr ""
 
 msgid "OPTVAL_LINEAR"
-msgstr ""
+msgstr "Tuyến tính"
 
 msgid "OPTVAL_QUADRATIC"
 msgstr ""
@@ -4622,7 +4703,7 @@ msgid "OPTVAL_TEAMONLYCHAT"
 msgstr ""
 
 msgid "OPTVAL_GLOBALCHAT"
-msgstr ""
+msgstr "Toàn cầu"
 
 msgid "NETMNU_NOBOLDCHAT"
 msgstr ""
@@ -4691,7 +4772,7 @@ msgid "HAPMNU_OPT_WORLD"
 msgstr ""
 
 msgid "PAUSE_STRING"
-msgstr ""
+msgstr "Tạm dừng"
 
 msgid "TAG_BACKPACK"
 msgstr ""
@@ -4817,7 +4898,7 @@ msgid "CNTRLMNU_COOPSPYCANCEL"
 msgstr ""
 
 msgid "OPTMNU_ACCESSIBILITY"
-msgstr ""
+msgstr "Tùy chọn trợ năng"
 
 msgid "JOYMNU_ANALOGRUN"
 msgstr ""

@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-09-05 13:51+0000\n"
-"Last-Translator: Tim Richter <jank21976@gmail.com>\n"
+"PO-Revision-Date: 2026-09-19 22:51+0000\n"
+"Last-Translator: Tim Richter <raymond_fry@users.noreply.hosted.weblate.org>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.9.1.dev0\n"
+"X-Generator: Weblate 2026.10.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "Drücke eine Taste."
@@ -198,13 +198,13 @@ msgstr ""
 
 msgid "QUITMSG23"
 msgstr ""
-"Bitte gehe nicht, es laufen noch mehr\n"
+"Bitte gehe nicht, es laufen immer noch\n"
 "Flemoiden herum!"
 
 msgid "QUITMSG24"
 msgstr ""
-"Gib nicht auf—die Flemoiden\n"
-"gewinnen sonst!"
+"Gib nicht auf — sonst gewinnen\n"
+"die Flemoiden!"
 
 msgid "QUITMSG25"
 msgstr ""
@@ -303,7 +303,7 @@ msgstr "Verbesserung umgeschaltet"
 # Printed when entering the idchoppers cheat, which gives the player a
 # chainsaw
 msgid "STSTR_CHOPPERS"
-msgstr "… gar nicht übel - GM"
+msgstr "… nicht schlecht - GM"
 
 msgid "STSTR_CLEV"
 msgstr "Wechsle Level…"
@@ -315,10 +315,10 @@ msgid "TXT_CHEATKEYS"
 msgstr "Alle Schlüssel"
 
 msgid "TXT_CHEATIDDQD"
-msgstr "Versuchst zu betrügen, was? Nun stirbst du!"
+msgstr "Versuchst zu betrügen, was? Jetzt stirbst du!"
 
 msgid "TXT_CHEATIDKFA"
-msgstr "Betrüger—du verdienst keine Waffen"
+msgstr "Betrüger — du verdienst keine Waffen"
 
 msgid "TXT_CHEATARTIFACTS3"
 msgstr "Du hast es"
@@ -568,7 +568,7 @@ msgid "GOTSTIM"
 msgstr "Stimpack genommen."
 
 msgid "GOTMEDINEED"
-msgstr "Medikit genommen, das du WIRKLICH brauchst!"
+msgstr "Medikit genommen, welches du DRINGEND gebraucht hast!"
 
 msgid "GOTMEDIKIT"
 msgstr "Medikit genommen."
@@ -600,9 +600,8 @@ msgstr "Unverwundbarkeit!"
 msgid "GOTBERSERK"
 msgstr "Berserker!"
 
-#, fuzzy
 msgid "GOTINVIS"
-msgstr "Teilweise Unsichtbarkeit"
+msgstr "Partielle Unsichtbarkeit"
 
 msgid "GOTSUIT"
 msgstr "Kontaminationsschutzanzug"
@@ -1179,7 +1178,7 @@ msgid "OB_BEAST"
 msgstr "%o wurde von dem Werdrachen verschmort."
 
 msgid "OB_CLINK"
-msgstr "%o wurde von der Säbelklaue zerschlitzt."
+msgstr "%o wurde von der Säbelklaue aufgeschlitzt."
 
 msgid "OB_DSPARIL1"
 msgstr "%o wurde von D'Sparils Schlange verbrüht."
@@ -1323,7 +1322,7 @@ msgid "TXT_KEY_CASTLE"
 msgstr "Burgschlüssel"
 
 msgid "TXT_ARTIINVULNERABILITY2"
-msgstr "Ikone des Verteidigers"
+msgstr "Zeichen des Verteidigers"
 
 msgid "TXT_ARTISUMMON"
 msgstr "Dunkler Diener"
@@ -1350,7 +1349,7 @@ msgid "TXT_ARTIBLASTRADIUS"
 msgstr "Rückstoßscheibe"
 
 msgid "TXT_ARTIHEALINGRADIUS"
-msgstr "Verbannungsgerät"
+msgstr "Zauber des Mystischen Einflusses"
 
 msgid "TXT_ARTIPUZZSKULL"
 msgstr "Yoricks Schädel"
@@ -1590,10 +1589,10 @@ msgid "TAG_ARTIPOISONBAG3"
 msgstr "Flechettre (Granate)"
 
 msgid "TAG_ARTIHEALINGRADIUS"
-msgstr "Mystic Ambit Zauberspruch"
+msgstr "Zauber des Mystischen Einflusses"
 
 msgid "TAG_ARTIDEFENDER"
-msgstr "Ikone des Verteidigers"
+msgstr "Zeichen des Verteidigers"
 
 msgid "TAG_ARTIPORK"
 msgstr "Porkalator"
@@ -2492,7 +2491,7 @@ msgid "GOTCHEXARMOR"
 msgstr "Du hast die Chex® Rüstung genommen."
 
 msgid "GOTSUPERCHEXARMOR"
-msgstr "Du hast die Super-Chex®Rüstung genommen!"
+msgstr "Du hast die Super-Chex® Rüstung genommen!"
 
 msgid "GOTWATER"
 msgstr "Du hast ein Glas Wasser genommen."
@@ -2561,7 +2560,7 @@ msgid "GOTRAPIDZORCHER"
 msgstr "Du hast den schnellen Zorcher genommen!"
 
 msgid "GOTSUPERBOOTSPORK"
-msgstr "Du hast den Super-Gabelquirl genommen!"
+msgstr "Du hast den Supergöffel genommen!"
 
 msgid "GOTZORCHPROPULSOR"
 msgstr "Du hast den Propellerzorcher genommen!"
@@ -2582,7 +2581,7 @@ msgid "TAG_SPOON"
 msgstr "Löffel"
 
 msgid "TAG_SPORK"
-msgstr "Supergabel"
+msgstr "Supergöffel"
 
 msgid "TAG_MINIZORCHER"
 msgstr "Minizorcher"
@@ -2728,8 +2727,8 @@ msgstr ""
 
 msgid "CNIGHTMARE"
 msgstr ""
-"Achtung, das ist schwer!\n"
-"Willst du das wirklich machen.\n"
+"Achtung, das wird schwer!\n"
+"Willst du wirklich fortfahren?\n"
 "\n"
 "Drücke Y oder N."
 
@@ -2863,7 +2862,7 @@ msgid "MNU_BLACKPLAGUE"
 msgstr "Von der Pest besessen"
 
 msgid "MNU_SQUIRE"
-msgstr "Gutsherr"
+msgstr "Knappe"
 
 msgid "MNU_KNIGHT"
 msgstr "Ritter"
@@ -2908,7 +2907,7 @@ msgid "MNU_ARCHMAGE"
 msgstr "Erzmagier"
 
 msgid "MNU_CHOOSECLASS"
-msgstr "Figurengruppe wählen:"
+msgstr "Klasse wählen:"
 
 msgid "MNU_FIGHTER"
 msgstr "Krieger"
@@ -2933,7 +2932,7 @@ msgid "MNU_COTD"
 msgstr "Stadt der Verdammten"
 
 msgid "MNU_HELLSMAW"
-msgstr "Der Schlund zur Hölle"
+msgstr "Höllenschlund"
 
 msgid "MNU_DOME"
 msgstr "D'Sparils Dom"
@@ -3236,7 +3235,7 @@ msgid "CMPTMNU_SOUNDBEHAVIOR"
 msgstr "Sound-Verhalten"
 
 msgid "CMPTMNU_SOUNDSLOTS"
-msgstr "Amputiere Soundsystem für geräuschloses BFG"
+msgstr "Soundsystem für geräuschlosen BFG Trick einschränken"
 
 msgid "CMPTMNU_SILENTPICKUP"
 msgstr "Andere können deine Gegenstandsaufnahmen nicht hören"
@@ -3924,10 +3923,10 @@ msgid "OPTVAL_SMOOTH_2"
 msgstr "Glatt"
 
 msgid "OPTVAL_TRANSLUCENT"
-msgstr "Transparent"
+msgstr "Transparenz"
 
 msgid "OPTVAL_FUZZ"
-msgstr "Unscharf"
+msgstr "Unschärfe"
 
 msgid "OPTVAL_SHADOW"
 msgstr "Schatten"
@@ -4469,7 +4468,7 @@ msgstr ""
 "unterstützte Version."
 
 msgid "TXT_NOMAPSG"
-msgstr "Spielstand '%s' hat keine Information über den alktuellen Level."
+msgstr "Spielstand '%s' hat keine Information über das alktuelle Level."
 
 msgid "TXT_NOGLOBALSJSON"
 msgstr "%s' ist kein gültiger Spielstand. 'globals.json' fehlt."
@@ -5480,7 +5479,7 @@ msgid "TXT_LEADBOOTS{ON|OFF}"
 msgstr "Bleistiefel: {AN|AUS}"
 
 msgid "TXT_NOTARGET_{ON|OFF}"
-msgstr "notarget: {AN|AUS}"
+msgstr "Notarget: {AN|AUS}"
 
 msgid "TXT_CHASECAM_{ON|OFF}"
 msgstr "Chasecam: {AN|AUS}"
@@ -5500,3 +5499,27 @@ msgstr "Unbesiegbarer Modus: {AN|AUS}"
 
 msgid "MSG{ON|OFF}"
 msgstr "Meldungen: {AN|AUS}"
+
+msgid "AUTOMAPMNU_SHOWSEENFRIENDLIES"
+msgstr "Freundliche Charaktere anzeigen"
+
+msgid "AUTOMAPMNU_SHOWSEENITEMS"
+msgstr "Gegenstände anzeigen"
+
+msgid "AUTOMAPMNU_SHOWSEENMONSTERS"
+msgstr "Monster anzeigen"
+
+msgid "AUTOMAPMNU_SHOWSEENCORPSES"
+msgstr "Leichen anzeigen"
+
+msgid "AUTOMAPMNU_SHOWSEENDECORATIONS"
+msgstr "Dekoration anzeigen"
+
+msgid "AUTOMAPMNU_MATCHSTATUSBAR"
+msgstr "Der HUD Statusleiste angleichen"
+
+msgid "OPTVAL_MONSTERS"
+msgstr "Monster"
+
+msgid "CMPTMNU_TRANSFERSECRET"
+msgstr "BOOMs Transfer geheimnisse."

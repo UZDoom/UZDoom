@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-08-30 16:52+0000\n"
+"PO-Revision-Date: 2026-09-06 20:52+0000\n"
 "Last-Translator: Tim Richter <jank21976@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.9.dev0\n"
+"X-Generator: Weblate 2026.9.1.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "Trykk på en tast."
@@ -206,6 +206,7 @@ msgstr ""
 "Ikke gi opp nå, det er\n"
 "fortsatt flemoider på frifot!"
 
+#, fuzzy
 msgid "QUITMSG24"
 msgstr ""
 "Ikke gi opp—flemoidene\n"
@@ -322,6 +323,7 @@ msgstr "Alle taster"
 msgid "TXT_CHEATIDDQD"
 msgstr "Prøver du å jukse? Nå dør du!"
 
+#, fuzzy
 msgid "TXT_CHEATIDKFA"
 msgstr "Juksemaker—du fortjener ikke våpen"
 
@@ -3239,6 +3241,7 @@ msgstr "Inverter sprite-sortering"
 msgid "CMPTMNU_SOUNDBEHAVIOR"
 msgstr "Lydoppførsel"
 
+#, fuzzy
 msgid "CMPTMNU_SOUNDSLOTS"
 msgstr "Krymp lyd for stille BFG-triks"
 

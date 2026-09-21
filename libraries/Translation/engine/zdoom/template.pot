@@ -3432,6 +3432,9 @@ msgstr ""
 msgid "AUTOMAPMNU_SHOWMAPLABEL"
 msgstr ""
 
+msgid "AUTOMAPMNU_MATCHSTATUSBAR"
+msgstr ""
+
 msgid "AUTOMAPMNU_DRAWMAPBACK"
 msgstr ""
 
@@ -3442,6 +3445,21 @@ msgid "AUTOMAPMNU_SHOWTRIGGERLINES"
 msgstr ""
 
 msgid "AUTOMAPMNU_SHOWTHINGSPRITES"
+msgstr ""
+
+msgid "AUTOMAPMNU_SHOWSEENITEMS"
+msgstr ""
+
+msgid "AUTOMAPMNU_SHOWSEENMONSTERS"
+msgstr ""
+
+msgid "AUTOMAPMNU_SHOWSEENCORPSES"
+msgstr ""
+
+msgid "AUTOMAPMNU_SHOWSEENFRIENDLIES"
+msgstr ""
+
+msgid "AUTOMAPMNU_SHOWSEENDECORATIONS"
 msgstr ""
 
 msgid "AUTOMAPMNU_PTOVERLAY"
@@ -3835,6 +3853,9 @@ msgid "OPTVAL_WEAPONS"
 msgstr ""
 
 msgid "OPTVAL_BOTH"
+msgstr ""
+
+msgid "OPTVAL_MONSTERS"
 msgstr ""
 
 msgid "OPTVAL_ZDOOM"

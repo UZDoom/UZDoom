@@ -2,15 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-08-30 16:51+0000\n"
-"Last-Translator: Tim Richter <jank21976@gmail.com>\n"
+"PO-Revision-Date: 2026-09-12 21:51+0000\n"
+"Last-Translator: Skyler Shirra <skyler.shirra@gmail.com>\n"
 "Language-Team: Esperanto <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/eo/>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.9.dev0\n"
+"X-Generator: Weblate 2026.10.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "Premu klavon."
@@ -205,6 +205,7 @@ msgstr ""
 "Ne nun foriru, ankoraŭ\n"
 "estas mukuloj amoke!"
 
+#, fuzzy
 msgid "QUITMSG24"
 msgstr ""
 "Ne rezignu. La mukuloj\n"
@@ -321,6 +322,7 @@ msgstr "Ĉiuj ŝlosiloj"
 msgid "TXT_CHEATIDDQD"
 msgstr "Provas trompi, ĉu vi? Nun vi mortas!"
 
+#, fuzzy
 msgid "TXT_CHEATIDKFA"
 msgstr "Trompanto—vi ne meritas armilojn"
 
@@ -3236,6 +3238,7 @@ msgstr "Inversigi ordigadon de mov-rastrumoj"
 msgid "CMPTMNU_SOUNDBEHAVIOR"
 msgstr "Sonkonduto"
 
+#, fuzzy
 msgid "CMPTMNU_SOUNDSLOTS"
 msgstr "Kripligi sonon por lertaĵo de silenta BFG"
 
@@ -5311,3 +5314,172 @@ msgstr "Nevenkebla-reĝimo: {ŜALTITA|MALŜALTITA}"
 
 msgid "MSG{ON|OFF}"
 msgstr "Mesaĝoj: {ŜALTITA|MALŜALTITA}"
+
+msgid "OPTVAL_LIGHT"
+msgstr "Hela"
+
+msgid "PICKER_THEME"
+msgstr "Temo"
+
+msgid "TXT_CONFIRM"
+msgstr "Konfermi"
+
+msgid "TXT_SKIP"
+msgstr "Preterlasi"
+
+msgid "TXT_DISMISS"
+msgstr "Ignori"
+
+msgid "TXT_BACK"
+msgstr "Reen"
+
+msgid "TXT_CANCELLED"
+msgstr "Rezignita"
+
+msgid "TXT_UPDATED"
+msgstr "Ĝisdatigita"
+
+msgid "TXT_UPDATE"
+msgstr "Ĝisdatigi"
+
+msgid "TXT_EXPERIMENTAL"
+msgstr "Eksperimenta"
+
+msgid "TXT_DOWNLOADING"
+msgstr "Elŝutata"
+
+msgid "TXT_OK"
+msgstr "OK"
+
+msgid "OPTVAL_MONTHLY"
+msgstr "Monate"
+
+msgid "OPTVAL_WEEKLY"
+msgstr "Semajne"
+
+msgid "OPTVAL_DAILY"
+msgstr "Tage"
+
+msgid "OPTVAL_NOTIFY"
+msgstr "Sciigi"
+
+msgid "OPTVAL_DISABLE"
+msgstr "Malvalidigi"
+
+msgid "CMPTMNU_TRANSFERSECRET"
+msgstr "La specialaĵo de BOOM pri ŝanĝado de plankoj transmetas sekreton."
+
+msgid "AUTOMAPMNU_MATCHSTATUSBAR"
+msgstr "Kongrui statobreton de HUD"
+
+msgid "UPDATER_NOT_A_DIR"
+msgstr "'{}' ne estas dosierulo"
+
+msgid "ACCMNU_DOUBLECLICK_THRESHOLD"
+msgstr "Sojlo de duobla alklako"
+
+msgid "ACCMNU_TOOLTIP_DOUBLECLICK_THRESHOLD"
+msgstr "Tempo inter subsekvencaj klavopremoj por ekagigi duobla-alklakan eventon"
+
+msgid "MAPCOLORMNU_SECTORFILLALPHA"
+msgstr "Plenigi opakon"
+
+msgid "MAPCOLORMNU_SECTORFILLCOLOR"
+msgstr "Plenigi koloron"
+
+msgid "UPDATER_CHECK_FOR_UPDATES"
+msgstr "Kontroli por trovi ĝisdatigojn"
+
+msgid "UPDATER_PROMPT_TO_INSTALL"
+msgstr "Instigi por instali"
+
+msgid "UPDATER_SETTINGS"
+msgstr "Ĝisdatigaj agordoj"
+
+msgid "UPDATER_INTERVAL"
+msgstr "Kontroli ĉiu:"
+
+msgid "UPDATER_UPDATE_AVAILABLE"
+msgstr "Nova ĝisdatigo disponebla"
+
+msgid "UPDATER_UPDATE_SKIP"
+msgstr "Preterlasi ĝisdatigon"
+
+msgid "UPDATER_TITLE"
+msgstr "Ĝisdatiga kontrolilo"
+
+msgid "UPDATER_DISABLE"
+msgstr "Malvalidigi ĝisdatigan kontrolilon"
+
+msgid "UPDATER_CHECK_FAILED"
+msgstr "Kontrolo por ĝisdatigo malsukcesis"
+
+msgid "UPDATER_UPDATE_FAILED"
+msgstr "Ĝisdatigo malsukcesis"
+
+msgid "UPDATER_YES_PROMPT"
+msgstr "Jes, kaj instigi por instali ĝisdatigojn"
+
+msgid "UPDATER_DISMISS_UPDATE"
+msgstr "Ĉu ignori ĝisdatigon?"
+
+msgid "UPDATER_ASK_AUTO"
+msgstr ""
+"Ĉu vi ŝatus aŭtomate kontroli por trovi ĝisdatigojn?\n"
+"(ĉi tiu elekto povas esti ŝangita poste en la langeto de agordoj)"
+
+msgid "UPDATER_ASK_INTERVAL"
+msgstr ""
+"Kiom ofte vi ŝatus kontroli por trovi ĝisdatigojn?\n"
+"(ĉi tiu elekto povas esti ŝangita poste en la langeto de agordoj)"
+
+msgid "UPDATER_ZIP_FAIL"
+msgstr "Malsukcesis malfermi ZIP-dosieron"
+
+msgid "UPDATER_ZIP_ERROR"
+msgstr "Malsukcesis altiri ZIP-dosieron. Eraro: '{}' dum skribado de la dosiero '{}'"
+
+msgid "UPDATER_UPDATING"
+msgstr "Ĝisdatigante..."
+
+msgid "UPDATER_STARTING"
+msgstr "Elŝutaĵo komenciĝas..."
+
+msgid "UPDATER_SUCCESS"
+msgstr "Ĝisdatigo sukcesis, la lanĉilo nun rekomencos."
+
+msgid "UPDATER_UP_TO_DATE"
+msgstr "Ĝisdate!"
+
+msgid "UPDATER_CANCELLED"
+msgstr "Ĝisdatigo estis nuligita"
+
+msgid "UPDATER_INVALID_JSON"
+msgstr "Nevalida ĝisdatiga JSON-dosiero"
+
+msgid "CNTRLMNU_ADJUST_LIGHTS"
+msgstr "Ĝustigo de lumigo"
+
+msgid "OPTVAL_DIRECTMIX"
+msgstr "Senpera mikso"
+
+msgid "OPTVAL_SUPERSTEREO"
+msgstr "Super-stereofonia"
+
+msgid "OPENALMNU_MUSICMODE"
+msgstr "Musika reĝimo"
+
+msgid "OPENALMNU_SUPERSTEREOWIDTH"
+msgstr "Larĝeco de super-stereofonio"
+
+msgid "HUDMNU_CROSSHAIRCOLORFULL"
+msgstr "Retetokoloro ĉe plena sano"
+
+msgid "HUDMNU_CROSSHAIRCOLORMAX"
+msgstr "Retetokoloro ĉe maksimuma sano"
+
+msgid "HUDMNU_CROSSHAIRCOLORS"
+msgstr "Dinamikaj retetokoloroj"
+
+msgid "HUDMNU_CROSSHAIRYOFFSET"
+msgstr "Vertikala deŝovo de reteto"

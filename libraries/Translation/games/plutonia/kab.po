@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-01-23 19:05+0000\n"
+"PO-Revision-Date: 2026-09-21 15:51+0000\n"
 "Last-Translator: ButterflyOfFire <boffire@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Kabyle <https://hosted.weblate.org/projects/doom-engine-games/the-plutonia-experiment/kab/>\n"
 "Language: kab\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.16-dev\n"
+"X-Generator: Weblate 2026.10.dev0\n"
 
 msgid "TXT_PLUT_EP"
 msgstr ""
@@ -111,7 +111,7 @@ msgid "PHUSTR_31"
 msgstr ""
 
 msgid "PHUSTR_32"
-msgstr "ASWIR 32: Go 2 It"
+msgstr "As wir wis: Go 2 It"
 
 # Plutonia after MAP06
 msgid "P1TEXT"

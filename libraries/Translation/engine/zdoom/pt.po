@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-08-30 16:52+0000\n"
+"PO-Revision-Date: 2026-09-06 20:52+0000\n"
 "Last-Translator: Tim Richter <jank21976@gmail.com>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/pt/>\n"
 "Language: pt\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2026.9.dev0\n"
+"X-Generator: Weblate 2026.9.1.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "Carrega numa tecla qualquer."
@@ -204,6 +204,7 @@ msgstr ""
 "Não desistas agora! Ainda há\n"
 "flemoids à solta!"
 
+#, fuzzy
 msgid "QUITMSG24"
 msgstr ""
 "Não desistas—os flemóides\n"
@@ -322,6 +323,7 @@ msgstr "Todas as chaves"
 msgid "TXT_CHEATIDDQD"
 msgstr "A fazer batota, é? Morre!"
 
+#, fuzzy
 msgid "TXT_CHEATIDKFA"
 msgstr "Batoteir@[ao_ptb]—Não mereces armamento"
 
@@ -3239,6 +3241,7 @@ msgstr "Inverter ordem de sprites"
 msgid "CMPTMNU_SOUNDBEHAVIOR"
 msgstr "Comportamento de Áudio"
 
+#, fuzzy
 msgid "CMPTMNU_SOUNDSLOTS"
 msgstr "Bloquear som para o truque da BFG silenciosa"
 

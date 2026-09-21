@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-08-30 16:52+0000\n"
+"PO-Revision-Date: 2026-09-06 20:52+0000\n"
 "Last-Translator: Tim Richter <jank21976@gmail.com>\n"
 "Language-Team: Serbian <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/sr/>\n"
 "Language: sr\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 2026.9.dev0\n"
+"X-Generator: Weblate 2026.9.1.dev0\n"
 
 msgid "PRESSKEY"
 msgstr "Притисните било који тастер."
@@ -204,6 +204,7 @@ msgstr ""
 "Не одустај сада, још увек\n"
 "има флемоида на слободи!"
 
+#, fuzzy
 msgid "QUITMSG24"
 msgstr ""
 "Немој да одустајеш—\n"
@@ -320,6 +321,7 @@ msgstr "Сви кључеви"
 msgid "TXT_CHEATIDDQD"
 msgstr "Покушаваш да вараш, ех? Сада умиреш!"
 
+#, fuzzy
 msgid "TXT_CHEATIDKFA"
 msgstr "Варалице—ти не заслужујеш оружје"
 
@@ -3236,6 +3238,7 @@ msgstr "Обрнуто сортирање спрајтова"
 msgid "CMPTMNU_SOUNDBEHAVIOR"
 msgstr "Понашање звука"
 
+#, fuzzy
 msgid "CMPTMNU_SOUNDSLOTS"
 msgstr "Онемогући звук за тихи ВЈП трик"
 
