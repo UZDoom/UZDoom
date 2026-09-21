@@ -104,6 +104,23 @@
 
 	<releases>
 		<!-- Keep 5 full descriptions, and 2 years of releases with just urls -->
+		<release version="5.0.2" date="2026-09-22">
+			<description>
+				<p>**Bugfixes and minor additions**</p>
+				<ul>
+				<li>Add stat rendergraph to visualize frametimes</li>
+				<li>Fix some issues with decoupled animations</li>
+				<li>Fix some menu layout issues</li>
+				<li>Fix text buffer bug</li>
+				<li>Fix full-screen switching in MacOS</li>
+				<li>MacOS no longer requires accessibility controls</li>
+				<li>Packaging improvements</li>
+				<li>Correct some documentation</li>
+				<li>Improved some translations</li>
+				</ul>
+			</description>
+			<url>https://github.com/UZDoom/UZDoom/releases/tag/5.0.2</url>
+		</release>
 		<release version="5.0.1" date="2026-09-05">
 			<description>
 				<p>**Bugfixes and minor additions**</p>
