@@ -401,7 +401,7 @@ public:
 	// exact = false returns the closest match, to be used for, ex., insertions, exact = true returns Size() when no match, like Find does
 	unsigned int SortedFind(const T& item, bool exact = true) const
 	{
-		unsigned int index = (unsigned int)(std::lower_bound(begin(), end(), item) - begin());
+		unsigned int index = std::distance(begin(), std::lower_bound(begin(), end(), item));
 		if(exact)
 		{
 			return (index < Count && Array[index] == item) ? index : Count;
@@ -418,7 +418,7 @@ public:
 	template<typename Func>
 	unsigned int SortedFind(const T& item, Func &&lt, bool exact = true) const
 	{
-		unsigned int index = (std::lower_bound(begin(), end(), item, lt) - begin());
+		unsigned int index = std::distance(begin(), std::lower_bound(begin(), end(), item, lt));
 		if(exact)
 		{
 			return (index < Count && !std::invoke(lt, Array[index], item) && !std::invoke(lt, item, Array[index])) ? index : Count;
