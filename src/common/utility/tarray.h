@@ -550,16 +550,30 @@ public:
 
 	unsigned SortedAddUnique(const T& obj)
 	{
-		auto f = SortedFind(obj, true);
-		if (f == Size()) Push(obj);
+		auto f = SortedFind(obj, false);
+		if (f == Size())
+		{
+			Push(obj);
+		}
+		else if(Array[f] != obj)
+		{
+			Insert(f, obj);
+		}
 		return f;
 	}
 
 	template<typename Func>
 	unsigned SortedAddUnique(const T& obj, Func &&lt)
 	{
-		auto f = SortedFind(obj, std::forward<Func>(lt), true);
-		if (f == Size()) Push(obj);
+		auto f = SortedFind(obj, std::forward<Func>(lt), false);
+		if (f == Size())
+		{
+			Push(obj);
+		}
+		else if(std::invoke(lt, obj, Array[f])) // should it be obj,array[x] or array[x],obj?
+		{
+			Insert(f, obj);
+		}
 		return f;
 	}
 
