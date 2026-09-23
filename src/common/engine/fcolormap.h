@@ -37,7 +37,7 @@ struct FColormap
 
 	void Clear()
 	{
-		LightColor = 0xffffff;
+		LightColor = Color::str("#fff");
 		FadeColor = 0;
 		Desaturation = 0;
 		BlendFactor = 0;
@@ -46,12 +46,12 @@ struct FColormap
 
 	void MakeWhite()
 	{
-		LightColor = 0xffffff;
+		LightColor = Color::str("#fff");
 	}
 
 	void ClearColor()
 	{
-		LightColor = 0xffffff;
+		LightColor = Color::str("#fff");
 		BlendFactor = 0;
 		Desaturation = 0;
 	}

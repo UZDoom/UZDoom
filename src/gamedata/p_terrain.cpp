@@ -31,6 +31,7 @@
 #include "gi.h"
 #include "r_state.h"
 #include "filesystem.h"
+#include "sc_include.h"
 #include "sc_man.h"
 #include "p_local.h"
 #include "actor.h"
@@ -54,7 +55,8 @@ enum EOuterKeywords
 	OUT_IFHEXEN,
 	OUT_IFSTRIFE,
 	OUT_ENDIF,
-	OUT_DEFAULTTERRAIN
+	OUT_DEFAULTTERRAIN,
+	OUT_INCLUDE
 };
 
 enum ETerrainKeywords
@@ -116,6 +118,7 @@ static void GenericParse (FScanner &sc, FGenericParse *parser, const char **keyw
 static void ParseDamage (FScanner &sc, int keyword, void *fields);
 static void ParseFriction (FScanner &sc, int keyword, void *fields);
 static void ParseDefault (FScanner &sc);
+static void ParseInclude (FScanner &sc);
 
 // EXTERNAL DATA DECLARATIONS ----------------------------------------------
 
@@ -139,6 +142,7 @@ static const char *OuterKeywords[] =
 	"ifstrife",
 	"endif",
 	"defaultterrain",
+	"#include",
 	NULL
 };
 
@@ -335,6 +339,10 @@ static void ParseOuter (FScanner &sc)
 				break;
 
 			case OUT_ENDIF:
+				break;
+
+			case OUT_INCLUDE:
+				ParseInclude (sc);
 				break;
 			}
 		}
@@ -666,6 +674,28 @@ static void ParseDefault (FScanner &sc)
 		terrain = 0;
 	}
 	DefaultTerrainType = terrain;
+}
+
+//==========================================================================
+//
+// ParseInclude
+//
+//==========================================================================
+
+static void ParseInclude (FScanner &sc)
+{
+	sc.MustGetString ();
+
+	FString include_path = SC_ResolveIncludePath(sc.LumpNum, sc.String);
+	int include_lump = fileSystem.CheckNumForFullName(include_path.GetChars(), true);
+	if (include_lump < 0)
+	{
+		sc.ScriptError("include file '%s' not found", include_path.GetChars());
+		return;
+	}
+
+	FScanner included_sc(include_lump);
+	ParseOuter(included_sc);
 }
 
 //==========================================================================

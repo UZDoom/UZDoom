@@ -32,6 +32,13 @@ PRIVATE
 	chips/ymf262_lle.cpp
 	chips/ymf262_lle/nopl3.c
 	chips/ymf262_lle/nuked_fmopl3.c
+	chips/ymfm_opl2.cpp
+	chips/ymfm_opl3.cpp
+	chips/ymfm/ymfm_adpcm.cpp
+	chips/ymfm/ymfm_misc.cpp
+	chips/ymfm/ymfm_opl.cpp
+	chips/ymfm/ymfm_pcm.cpp
+	chips/ymfm/ymfm_ssg.cpp
 	chips/esfmu_opl3.cpp
 	chips/esfmu/esfm.c
 	chips/esfmu/esfm_registers.c
@@ -40,24 +47,6 @@ PRIVATE
 	wopl/wopl_file.c
 	${OPL_MODELS_SOURCES}
 )
-
-if(COMPILER_SUPPORTS_CXX14)
-	set(YMFM_SOURCES
-		chips/ymfm_opl2.cpp
-		chips/ymfm_opl3.cpp
-		chips/ymfm/ymfm_adpcm.cpp
-		chips/ymfm/ymfm_misc.cpp
-		chips/ymfm/ymfm_opl.cpp
-		chips/ymfm/ymfm_pcm.cpp
-		chips/ymfm/ymfm_ssg.cpp
-	)
-	if(DEFINED FLAG_CPP14)
-		set_source_files_properties(${YMFM_SOURCES} COMPILE_FLAGS ${FLAG_CPP14})
-	endif()
-	target_sources(adl PRIVATE ${YMFM_SOURCES})
-else()
-	target_compile_definitions(adl PUBLIC -DADLMIDI_DISABLE_YMFM_EMULATOR)
-endif()
 
 target_compile_definitions(adl PRIVATE ADLMIDI_DISABLE_MIDI_SEQUENCER ADLMIDI_ENABLE_OPL2_LLE_EMULATOR ADLMIDI_ENABLE_OPL3_LLE_EMULATOR)
 

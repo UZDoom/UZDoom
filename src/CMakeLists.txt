@@ -304,6 +304,7 @@ add_subdirectory("common/thirdparty/freetype-2.13.3")
 add_subdirectory("common/thirdparty/harfbuzz-7.3.0")
 add_subdirectory("utility/trex")
 list( APPEND PROJECT_LIBRARIES "trex" )
+list( APPEND PROJECT_LIBRARIES "zmusic" )
 list( APPEND PROJECT_LIBRARIES "zwidget" )
 list( APPEND PROJECT_LIBRARIES "${WEBP_TARGET}" )
 
@@ -1213,13 +1214,10 @@ set (PCH_SOURCES
 	utility/nodebuilder/nodebuild_extract.cpp
 	utility/nodebuilder/nodebuild_gl.cpp
 	utility/nodebuilder/nodebuild_utility.cpp
+	utility/sc_include.cpp
 	utility/system_theme.cpp
 	utility/simdutf/simdutf.cpp
 )
-
-if( ZMUSIC_SYSTEM_INSTALL OR NOT DEFINED BUILD_SHARED_LIBS OR BUILD_SHARED_LIBS)
-	set ( PCH_SOURCES ${PCH_SOURCES} common/utility/i_module.cpp )
-endif()
 
 if( ${HAVE_VM_JIT} )
 	set( PCH_SOURCES ${PCH_SOURCES} ${VM_JIT_SOURCES} )
@@ -1473,6 +1471,13 @@ if( MSVC )
 		COMMENT "Adding manifest..."
 	)
 
+	# Workaround for https://developercommunity.visualstudio.com/t/10828473
+	# Remove this once VS2022 is EOL in 2027 (or 2032 for extended support)
+	if(MSVC_VERSION LESS 1951)
+		message(WARNING "MSVC_CONSTEVAL_BUG: This project uses c++20 features. Some older MSVC versions have bugs that prevent proper compilation. A workaround is being used for your configuration")
+		target_compile_definitions(zdoom PRIVATE MSVC_CONSTEVAL_BUG=1)
+	endif()
+
 endif()
 
 if (WIN32)
@@ -1488,8 +1493,7 @@ else()
 		COMMAND ${CMAKE_CURRENT_BINARY_DIR}/link-make )
 	IF ("${INSTALL_RPATH}" STREQUAL "")
 		set_target_properties(zdoom PROPERTIES
-			#allow libzmusic.so.1 library in same folder as executable at runtime
-			INSTALL_RPATH "\$ORIGIN:\$ORIGIN/zmusic/build/source"
+			INSTALL_RPATH "\$ORIGIN"
 			BUILD_WITH_INSTALL_RPATH ON
 		)
 	endif()
@@ -1506,22 +1510,6 @@ add_custom_command(TARGET zdoom PRE_BUILD
 
 		VERBATIM
 )
-
-if ( NOT ZMUSIC_SYSTEM_INSTALL AND (NOT DEFINED BUILD_SHARED_LIBS OR BUILD_SHARED_LIBS))
-	# bring zmusic in
-	add_custom_command(TARGET zdoom POST_BUILD
-		COMMAND ${CMAKE_COMMAND} -E copy_if_different
-			$<TARGET_FILE:zmusic> $<TARGET_FILE_DIR:zdoom>)
-	if ( NOT WIN32 )
-		add_custom_command(TARGET zdoom POST_BUILD
-			COMMAND ${CMAKE_COMMAND} -E create_symlink
-				$<TARGET_FILE_NAME:zmusic> $<TARGET_SONAME_FILE_NAME:zmusic>
-			COMMAND ${CMAKE_COMMAND} -E create_symlink
-				$<TARGET_SONAME_FILE_NAME:zmusic> $<TARGET_LINKER_FILE_NAME:zmusic>
-			WORKING_DIRECTORY $<TARGET_FILE_DIR:zdoom>)
-	endif()
-	add_dependencies(zdoom zmusic)
-endif()
 
 if (VCPKG_TOOLCHAIN)
 	x_vcpkg_install_local_dependencies(TARGETS zdoom DESTINATION ".")
@@ -1590,19 +1578,14 @@ if( APPLE )
 	# Dymanic libraries like libvulkan.dylib or libMoltenVK.dylib will be loaded by dlopen()
 	# if placed in the directory with the main executable
 	set( CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -rpath @executable_path" )
+
+	# this is enabled with xcode, but not when using ninja. Explicitly enabling it here to make builds unified
+	target_compile_definitions( zdoom PRIVATE
+		_LIBCPP_HARDENING_MODE=$<IF:$<CONFIG:Debug>,_LIBCPP_HARDENING_MODE_DEBUG,_LIBCPP_HARDENING_MODE_FAST> )
 endif()
 
-if ( NOT ZMUSIC_SYSTEM_INSTALL )
-	if ( WIN32 OR APPLE )
-		# nothing to do
-	else()
-		install(TARGETS zmusic
-			LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-			PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
-			COMPONENT "Game executable"
-		)
-	endif()
-endif()
+target_compile_options(zdoom PRIVATE
+	$<$<CXX_COMPILER_ID:AppleClang>:-fconstexpr-steps=100000000> )
 
 if( WIN32 )
 	set( INSTALL_PATH . CACHE STRING "Directory where the executable will be placed during install." )

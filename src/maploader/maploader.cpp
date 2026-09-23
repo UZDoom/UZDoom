@@ -35,6 +35,7 @@
 #include "p_lnspec.h"
 
 #include "v_text.h"
+#include "colorspace.h"
 #include "p_setup.h"
 #include "gi.h"
 #include "engineerrors.h"
@@ -1124,7 +1125,7 @@ void MapLoader::LoadSectors (MapData *map, FMissingTextureTracker &missingtex)
 		}
 		else  if (Level->flags & LEVEL_HASFADETABLE)
 		{
-			ss->Colormap.FadeColor= 0x939393;	// The true color software renderer needs this. (The hardware renderer will ignore this value if LEVEL_HASFADETABLE is set.)
+			ss->Colormap.FadeColor = Color::str("#939393"); // The true color software renderer needs this. (The hardware renderer will ignore this value if LEVEL_HASFADETABLE is set.)
 		}
 		else
 		{

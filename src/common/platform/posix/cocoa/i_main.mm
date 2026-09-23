@@ -157,6 +157,7 @@ FString I_DetectOS()
 	case 14: name = "Sonoma";              break;
 	case 15: name = "Sequoia";             break;
 	case 26: name = "Tahoe";               break;
+	case 27: name = "Golden Gate";         break;
 	}
 
 	char release[16] = "unknown";

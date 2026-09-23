@@ -30,19 +30,6 @@ constexpr ColorP N_PI = static_cast<ColorP>(M_PI);
 	assert(color.type == from);  \
 	color.type = to;
 
-Color rgb(ColorP r, ColorP g, ColorP b)
-{
-	return { SRGB, r, g, b };
-}
-
-Color rgb(uint32_t rgb24)
-{
-	ColorP r = ((rgb24>>16)&0xff)/255.0f;
-	ColorP g = ((rgb24>>8 )&0xff)/255.0f;
-	ColorP b = ((rgb24    )&0xff)/255.0f;
-	return rgb(r, g, b);
-}
-
 uint32_t rgb24(const Color& c)
 {
 	Color C {c};
@@ -91,11 +78,6 @@ void rgb2oklch(Color& rgb)
 	oklab2oklch(rgb);
 }
 
-Color oklch(ColorP L, ColorP c, ColorP h)
-{
-	return { OKLCH, L, c, h };
-}
-
 Color oklch(const Color& c)
 {
 	Color C {c};
@@ -126,11 +108,6 @@ void oklch2oklab(Color& lch)
 	auto c = lch.lch.c, h = lch.lch.h;
 	lch.lab.a = std::isnan(h) ? 0 : c * cos(h * N_PI / N_180);
 	lch.lab.b = std::isnan(h) ? 0 : c * sin(h * N_PI / N_180);
-}
-
-Color oklab(ColorP L, ColorP a, ColorP b)
-{
-	return { OKLAB, L, a, b };
 }
 
 Color oklab(const Color& c)

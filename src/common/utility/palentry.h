@@ -23,6 +23,8 @@
 
 #pragma once
 
+#include "colorspace.h"
+
 #include <algorithm>
 #include <stdint.h>
 
@@ -77,11 +79,11 @@ struct PalEntry
 	}
 	constexpr bool isBlack() const
 	{
-		return (d & 0xffffff) == 0;
+		return (d & 0xffffff) == Color::str("#000");
 	}
 	constexpr bool isWhite() const
 	{
-		return (d & 0xffffff) == 0xffffff;
+		return (d & 0xffffff) == Color::str("#fff");
 	}
 	PalEntry &operator= (const PalEntry &other) = default;
 	constexpr PalEntry &operator= (uint32_t other) { d = other; return *this; }

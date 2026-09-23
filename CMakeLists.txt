@@ -12,6 +12,9 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 set(ABSL_BUILD_TESTING OFF) # don't build/run abseil tests
 
+# UZDoom itself has no libs. Ensure bundled dependencies are statically linked.
+set( BUILD_SHARED_LIBS OFF CACHE INTERNAL "" FORCE )
+
 # make all targets use LTO - want to do this early in the cmake to ensure it applies to any targets
 option( FORCE_NO_LTO "Turn off LTO even if it would be possible to use it." NO )
 
@@ -484,7 +487,6 @@ else()
 endif()
 
 # ZMUSIC
-set( BUILD_SHARED_LIBS OFF CACHE INTERNAL "" FORCE )
 add_subdirectory( libraries/ZMusic )
 set( ZMUSIC_ROOT_PATH "${CMAKE_CURRENT_SOURCE_DIR}/libraries/zmusic" )
 set( ZMUSIC_INCLUDE_DIR ${ZMUSIC_ROOT_PATH}/include )
@@ -523,12 +525,6 @@ add_subdirectory( wadsrc_bm )
 add_subdirectory( wadsrc_lights )
 add_subdirectory( wadsrc_extra )
 add_subdirectory( wadsrc_widepix )
-
-if( ZMUSIC_SYSTEM_INSTALL )
-	# Internal ZMusic library provides miniz target, miniz.h file in partuclar
-	# It's not the case with system-wide ZMusic installation
-	add_subdirectory( libraries/miniz )
-endif()
 
 if( NOT CMAKE_CROSSCOMPILING )
 	export(TARGETS ${CROSS_EXPORTS} FILE "${CMAKE_BINARY_DIR}/ImportExecutables.cmake" )

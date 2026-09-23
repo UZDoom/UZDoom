@@ -401,7 +401,7 @@ public:
 	// exact = false returns the closest match, to be used for, ex., insertions, exact = true returns Size() when no match, like Find does
 	unsigned int SortedFind(const T& item, bool exact = true) const
 	{
-		unsigned int index = (unsigned int)(std::lower_bound(begin(), end(), item) - begin());
+		unsigned int index = std::distance(begin(), std::lower_bound(begin(), end(), item));
 		if(exact)
 		{
 			return (index < Count && Array[index] == item) ? index : Count;
@@ -418,7 +418,7 @@ public:
 	template<typename Func>
 	unsigned int SortedFind(const T& item, Func &&lt, bool exact = true) const
 	{
-		unsigned int index = (std::lower_bound(begin(), end(), item, lt) - begin());
+		unsigned int index = std::distance(begin(), std::lower_bound(begin(), end(), item, lt));
 		if(exact)
 		{
 			return (index < Count && !std::invoke(lt, Array[index], item) && !std::invoke(lt, item, Array[index])) ? index : Count;
@@ -550,16 +550,30 @@ public:
 
 	unsigned SortedAddUnique(const T& obj)
 	{
-		auto f = SortedFind(obj, true);
-		if (f == Size()) Push(obj);
+		auto f = SortedFind(obj, false);
+		if (f == Size())
+		{
+			Push(obj);
+		}
+		else if(Array[f] != obj)
+		{
+			Insert(f, obj);
+		}
 		return f;
 	}
 
 	template<typename Func>
 	unsigned SortedAddUnique(const T& obj, Func &&lt)
 	{
-		auto f = SortedFind(obj, std::forward<Func>(lt), true);
-		if (f == Size()) Push(obj);
+		auto f = SortedFind(obj, std::forward<Func>(lt), false);
+		if (f == Size())
+		{
+			Push(obj);
+		}
+		else if(std::invoke(lt, obj, Array[f])) // should it be obj,array[x] or array[x],obj?
+		{
+			Insert(f, obj);
+		}
 		return f;
 	}
 
