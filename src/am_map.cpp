@@ -3463,11 +3463,21 @@ void DAutomap::Serialize(FSerializer &arc)
 	Super::Serialize(arc);
 	// This only stores those variables which do not get set each time the automap is either activated or drawn.
 	// Especially the screen coordinates can not be brought over because the display settings may have changed.
+	if(arc.isReading() && arc.IsInt("bigstate"))
+	{
+		int tmp;
+		arc("bigstate", tmp);
+		bigstate = !!tmp;
+	}
+	else
+	{
+		arc("bigstate", bigstate);
+	}
+	
 	arc("markpointnum", markpointnum)
 		.Array("markpoints", &markpoints[0].x, AutoMap::Defaults::num_mark_points * 2) // write as a double array.
 		("scale_mtof", scale_mtof)
 		("scale_ftom", scale_ftom)
-		("bigstate", bigstate)
 		("min_x", min_x)
 		("min_y", min_y)
 		("max_x", max_x)

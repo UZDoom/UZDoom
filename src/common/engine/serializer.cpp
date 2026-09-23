@@ -332,6 +332,22 @@ bool FSerializer::BeginObject(const char *name)
 //
 //==========================================================================
 
+bool FSerializer::IsInt(const char* name)
+{
+	if (isReading())
+	{
+		auto v = r->FindKey(name);
+		return v != nullptr && v->IsInt();
+	}
+	return false;
+}
+
+//==========================================================================
+//
+//
+//
+//==========================================================================
+
 bool FSerializer::HasKey(const char* name)
 {
 	if (isReading())
