@@ -140,6 +140,7 @@ public:
 	bool BeginObject(const char *name);
 	void EndObject();
 	bool HasKey(const char* name);
+	bool IsInt(const char* name);
 	bool HasObject(const char* name);
 	bool IsKeyNull(const char* name);
 	bool BeginArray(const char *name);
