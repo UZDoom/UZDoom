@@ -734,7 +734,7 @@ const TArray<VSMatrix>* IQMModel::CalculateBonesIQMSpecialized(int frame1, int f
 	float invt1 = 1.0f - inter1_prev;
 	float invt2 = 1.0f - inter2_prev;
 
-	constexpr const float swapYZ[16]
+	alignas(16) constexpr const float swapYZ[16]
 	{
 		1.0f, 0.0f, 0.0f, 0.0f,
 		0.0f, 0.0f, 1.0f, 0.0f,

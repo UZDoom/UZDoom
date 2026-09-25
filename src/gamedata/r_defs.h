@@ -41,7 +41,6 @@
 // We rely on the thinker data struct
 // to handle sound origins in sectors.
 // SECTORS do store MObjs anyway.
-struct FLightNode;
 struct FGLSection;
 class FSerializer;
 struct FSectorPortalGroup;
@@ -54,6 +53,7 @@ struct FSection;
 struct FLevelLocals;
 struct LightmapSurface;
 struct LightProbe;
+struct FDynamicLight;
 
 const uint16_t NO_INDEX = 0xffffu;
 const uint32_t NO_SIDE = 0xffffffffu;
@@ -1264,6 +1264,7 @@ struct side_t
 	double		alpha;
 	int			UDMFIndex;		// needed to access custom UDMF fields which are stored in loading order.
 	LightmapSurface* lightmap;
+	TArray<FDynamicLight*> dlist;
 	seg_t **segs;	// all segs belonging to this sidedef in ascending order. Used for precise rendering
 	int numsegs;
 	int sidenum;

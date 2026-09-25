@@ -1873,8 +1873,9 @@ void MapLoader::LoadLineDefs2 (MapData * map)
 {
 	int i;
 
+	Level->sides.Clear(); // ensure all sides are cleaned up
 	Level->sides.Alloc(count);
-	memset(&Level->sides[0], 0, count * sizeof(side_t));
+	memset(&Level->sides[0], 0, count * sizeof(side_t)); // it's safe to zero-initialize TArray
 
 	sidetemp.Resize(max<int>(count, Level->vertexes.Size()));
 	for (i = 0; i < count; i++)

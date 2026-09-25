@@ -1461,6 +1461,18 @@ public:
 		return vec_t(g_sindeg(Degrees_));
 	}
 
+	//cos for renderer, not playsim
+	inline vec_t FastCos() const
+	{
+		return vec_t(cos(Radians()));
+	}
+
+	//sin for renderer, not playsim
+	inline vec_t FastSin() const
+	{
+		return vec_t(sin(Radians()));
+	}
+
 	double Tan() const
 	{
 		// use an optimized approach if we have a sine table. If not just call the CRT's tan function.

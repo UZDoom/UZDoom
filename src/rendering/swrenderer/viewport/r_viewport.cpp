@@ -73,7 +73,7 @@ namespace swrenderer
 
 	VSMatrix RenderViewport::SoftwareWorldToView(const FRenderViewpoint &viewpoint)
 	{
-		float m[16] = { 0.0f };
+		alignas(16) float m[16] = { 0.0f };
 		m[0 + 0 * 4] = (float)viewpoint.Sin;
 		m[0 + 1 * 4] = (float)-viewpoint.Cos;
 		m[1 + 2 * 4] = 1.0f;
