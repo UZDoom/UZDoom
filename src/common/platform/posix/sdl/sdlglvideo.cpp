@@ -53,6 +53,10 @@
 #include "vulkan/system/vk_renderdevice.h"
 #endif
 
+#ifdef __EMSCRIPTEN__
+#include <emscripten.h>
+#endif
+
 // MACROS ------------------------------------------------------------------
 
 // TYPES -------------------------------------------------------------------
@@ -79,10 +83,14 @@ CUSTOM_CVAR(Bool, gl_debug, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG | CVAR_NOINI
 {
 	Printf("This won't take effect until " GAMENAME " is restarted.\n");
 }
+#ifdef __EMSCRIPTEN__
+CVAR(Bool, gl_es, true, CVAR_NOSET); // force gles as only supported renderer
+#else
 CUSTOM_CVAR(Bool, gl_es, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG | CVAR_NOINITCALL)
 {
 	Printf("This won't take effect until " GAMENAME " is restarted.\n");
 }
+#endif
 
 CUSTOM_CVAR(String, vid_sdl_render_driver, "", CVAR_ARCHIVE | CVAR_GLOBALCONFIG | CVAR_NOINITCALL)
 {
@@ -149,8 +157,13 @@ namespace Priv
 
 		if (win_w <= 0 || win_h <= 0)
 		{
+#ifdef __EMSCRIPTEN__ // SDL_GetDisplayBounds doesn't work
+			win_w = EM_ASM_INT({ return canvas.getBoundingClientRect().width });
+			win_h = EM_ASM_INT({ return canvas.getBoundingClientRect().height });
+#else
 			win_w = bounds->w * 8 / 10;
 			win_h = bounds->h * 8 / 10;
+#endif
 		}
 
 		int xWindowPos = (win_x <= 0) ? SDL_WINDOWPOS_CENTERED_DISPLAY(vid_adapter) : win_x;
