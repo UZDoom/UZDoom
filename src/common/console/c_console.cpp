@@ -55,6 +55,15 @@
 #include <string_view>
 #include <vector>
 
+#ifdef __linux__
+#include <SDL2/SDL_keyboard.h>
+#define OPEN_CONSOLE do { Printf("open\n"); SDL_StartTextInput(); } while(0)
+#define CLOSE_CONSOLE do { Printf("close\n"); SDL_StopTextInput(); } while(0)
+#else
+#define OPEN_CONSOLE
+#define CLOSE_CONSOLE
+#endif
+
 namespace Console::Defaults
 {
 	static inline constexpr uint8_t left_margin = 8;
@@ -780,6 +789,7 @@ void C_DrawConsole ()
 
 void C_FullConsole ()
 {
+	OPEN_CONSOLE;
 	ConsoleState = c_down;
 	HistPos = NULL;
 	TabbedLast = false;
@@ -802,6 +812,7 @@ void C_ToggleConsole ()
 	}
 	else if (!chatmodeon && (ConsoleState == c_up || ConsoleState == c_rising) && (menuactive == MENU_Off || menuactive == MENU_GameplayMenu))
 	{
+		OPEN_CONSOLE;
 		ConsoleState = c_falling;
 		HistPos = NULL;
 		TabbedLast = false;
@@ -810,6 +821,7 @@ void C_ToggleConsole ()
 	}
 	else if (gamestate != GS_FULLCONSOLE && gamestate != GS_STARTUP)
 	{
+		CLOSE_CONSOLE;
 		ConsoleState = c_rising;
 		C_FlushDisplay();
 		togglestate = c_rising;
@@ -1105,6 +1117,7 @@ static bool C_HandleKey (event_t *ev, FCommandBuffer &buffer)
 			}
 			else if (gamestate == GS_FULLCONSOLE)
 			{
+				CLOSE_CONSOLE;
 				C_DoCommand ("menu_main");
 			}
 			else
