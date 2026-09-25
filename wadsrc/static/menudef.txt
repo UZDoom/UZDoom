@@ -792,6 +792,7 @@ OptionMenu "MouseOptions" protected
 		Option "$MOUSEMNU_SWAPBUTTONS", "m_swapbuttons", "YesNo"
 	}
 	Option "$MOUSEMNU_CURSOR",			"vid_cursor", "Cursors"
+	Option "$MOUSEMNU_INVCURSOR",		"vid_cursor_invert", "YesNo" //, vid_cursor, "-" :(
 	StaticText 	""
 	Slider "$MOUSEMNU_SENSITIVITY_X",	"m_sensitivity_x", 0.1, 8, 0.05, 2
 	Slider "$MOUSEMNU_SENSITIVITY_Y",	"m_sensitivity_y", 0.1, 8, 0.05, 2
