@@ -35,6 +35,7 @@
 #include "textblock.h"
 
 constexpr unsigned NUMBER_OF_RELEASES_TO_DISPLAY = 3;
+constexpr VersionInfo FIRST_UZDOOM{4, 14, 3};
 
 bool ReleasePage::show_upcoming = false;
 
@@ -195,7 +196,7 @@ FString ReleasePage::_ParseReleaseNotes(rapidxml::xml_node<char> * release, Vers
 	FString result;
 	result.AppendFormat(
 		"# %s version %s, released %s",
-		GAMENAME,
+		*versioninfo >= FIRST_UZDOOM? GAMENAME: "GZDoom",
 		version
 			? version->value()
 			: GStrings.GetString("NOTES_UNKNOWN"), // "Unknown"
