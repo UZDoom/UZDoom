@@ -178,7 +178,7 @@ int FHexFontChar::CopyPixels(FBitmap* bmp, int conversion, int frame)
 	if (conversion == luminance) conversion = normal;	// luminance images have no use as an RGB source.
 	PalEntry* palette = hexdata.ConsolePal;
 	auto ppix = CreatePalettedPixels(conversion);
-	bmp->CopyPixelData(0, 0, ppix.Data(), Width, Height, Height, 1, 0, palette, nullptr);
+	bmp->CopyPixelData(0, 0, ppix.Data(), Width, Height, Height, 1, FBitmap::Transform::NONE, palette, nullptr);
 	return 0;
 
 }
@@ -258,7 +258,7 @@ int FHexFontChar2::CopyPixels(FBitmap* bmp, int conversion, int frame)
 	if (conversion == luminance) conversion = normal;	// luminance images have no use as an RGB source.
 	PalEntry* palette = hexdata.SmallPal;
 	auto ppix = CreatePalettedPixels(conversion);
-	bmp->CopyPixelData(0, 0, ppix.Data(), Width, Height, Height, 1, 0, palette, nullptr);
+	bmp->CopyPixelData(0, 0, ppix.Data(), Width, Height, Height, 1, FBitmap::Transform::NONE, palette, nullptr);
 	return 0;
 }
 

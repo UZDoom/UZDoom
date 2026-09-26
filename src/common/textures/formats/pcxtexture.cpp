@@ -484,13 +484,13 @@ int FPCXTexture::CopyPixels(FBitmap *bmp, int conversion, int frame)
 			lump.Seek(sizeof(header), FileReader::SeekSet);
 			ReadPCX8bits (Pixels.Data(), lump, &header);
 		}
-		bmp->CopyPixelData(0, 0, Pixels.Data(), Width, Height, 1, Width, 0, pe);
+		bmp->CopyPixelData(0, 0, Pixels.Data(), Width, Height, 1, Width, FBitmap::Transform::NONE, pe);
 	}
 	else
 	{
 		Pixels.Resize(Width*Height*4);
 		ReadPCX24bits (Pixels.Data(), lump, &header, 3);
-		bmp->CopyPixelDataRGB(0, 0, Pixels.Data(), Width, Height, 3, Width*3, 0, CF_RGB);
+		bmp->CopyPixelDataRGB(0, 0, Pixels.Data(), Width, Height, 3, Width*3, FBitmap::Transform::NONE, CF_RGB);
 	}
 	return 0;
 }

@@ -223,7 +223,7 @@ int FRawPageTexture::CopyPixels(FBitmap *bmp, int conversion, int frame)
 			pe.b = *psource++;
 			pe.a = 255;
 		}
-		bmp->CopyPixelData(0, 0, source, 320, 200, 1, 320, 0, paldata);
+		bmp->CopyPixelData(0, 0, source, 320, 200, 1, 320, FBitmap::Transform::NONE, paldata);
 	}
 	return 0;
 }

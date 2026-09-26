@@ -497,7 +497,7 @@ public:
 	int CopyPixels(FBitmap* dest, int conversion, int frame = 0) override
 	{
 		auto& pic = sheetBitmaps[baseSheet];
-		dest->CopyPixelDataRGB(0, 0, pic.GetPixels() + 4 * (X + pic.GetWidth() * Y), Width, Height, 4, pic.GetWidth() * 4, 0, CF_BGRA);
+		dest->CopyPixelDataRGB(0, 0, pic.GetPixels() + 4 * (X + pic.GetWidth() * Y), Width, Height, 4, pic.GetWidth() * 4, FBitmap::Transform::NONE, CF_BGRA);
 		return 0;
 	}
 
@@ -1607,7 +1607,7 @@ class FTrexAtlasImageSource : public FImageSource
 			format = CF_IA;
 		}
 		dest->CopyPixelDataRGB(0, 0, bmp.Data().data(), bmp.Width(), bmp.Height(),
-		                       channels, bmp.Width() * channels, 0, format);
+		                       channels, bmp.Width() * channels, FBitmap::Transform::NONE, format);
 		return 0;
 	}
 };

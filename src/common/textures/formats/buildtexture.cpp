@@ -60,7 +60,6 @@ PalettedPixels FBuildTexture::CreatePalettedPixels(int conversion, int frame)
 int FBuildTexture::CopyPixels(FBitmap *bmp, int conversion, int frame)
 {
 	PalEntry *Remap = Translation->Palette;
-	bmp->CopyPixelData(0, 0, RawPixels, Width, Height, Height, 1, 0, Remap);
+	bmp->CopyPixelData(0, 0, RawPixels, Width, Height, Height, 1, FBitmap::Transform::NONE, Remap);
 	return -1;
-
 }

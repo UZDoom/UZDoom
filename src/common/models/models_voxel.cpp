@@ -146,7 +146,7 @@ int FVoxelTexture::CopyPixels(FBitmap *bmp, int conversion, int frame)
 			pe[i].a = 255;
 		}
 	}
-	bmp->CopyPixelData(0, 0, bitmap, Width, Height, 1, 16, 0, pe);
+	bmp->CopyPixelData(0, 0, bitmap, Width, Height, 1, 16, FBitmap::Transform::NONE, pe);
 	return 0;
 }
 

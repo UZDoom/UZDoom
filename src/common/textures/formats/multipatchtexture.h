@@ -55,9 +55,10 @@ struct TexPart
 	blend_t Alpha = FRACUNIT;
 	int16_t OriginX = 0;
 	int16_t OriginY = 0;
-	uint8_t Rotate = 0;
+	FBitmap::Transform Rotate = FBitmap::Transform::NONE;
 	uint8_t op = OP_COPY;
 };
+static_assert(sizeof(TexPart) == 32);
 
 struct TexPartBuild
 {
@@ -106,7 +107,7 @@ protected:
 	// The getters must optionally redirect if it's a simple one-patch texture.
 	int CopyPixels(FBitmap *bmp, int conversion, int frame = 0) override;
 	PalettedPixels CreatePalettedPixels(int conversion, int frame = 0) override;
-	void CopyToBlock(uint8_t *dest, int dwidth, int dheight, FImageSource *source, int xpos, int ypos, int rotate, const uint8_t *translation, int style);
+	void CopyToBlock(uint8_t *dest, int dwidth, int dheight, FImageSource *source, int xpos, int ypos, FBitmap::Transform rotate, const uint8_t *translation, int style);
 	void CollectForPrecache(PrecacheInfo &info, bool requiretruecolor) override;
 
 };
