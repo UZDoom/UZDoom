@@ -169,14 +169,14 @@ int FImageSource::CopyPixels(FBitmap *bmp, int conversion, int frame)
 	PalEntry *palette = GPalette.BaseColors;
 
 	auto ppix = CreatePalettedPixels(conversion, frame);
-	bmp->CopyPixelData(0, 0, ppix.Data(), Width, Height, Height, 1, 0, palette, nullptr);
+	bmp->CopyPixelData(0, 0, ppix.Data(), Width, Height, Height, 1, FBitmap::Transform::NONE, palette, nullptr);
 	return 0;
 }
 
 int FImageSource::CopyTranslatedPixels(FBitmap *bmp, const PalEntry *remap, int frame)
 {
 	auto ppix = CreatePalettedPixels(normal, frame);
-	bmp->CopyPixelData(0, 0, ppix.Data(), Width, Height, Height, 1, 0, remap, nullptr);
+	bmp->CopyPixelData(0, 0, ppix.Data(), Width, Height, Height, 1, FBitmap::Transform::NONE, remap, nullptr);
 	return 0;
 }
 

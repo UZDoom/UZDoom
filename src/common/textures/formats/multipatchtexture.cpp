@@ -145,7 +145,7 @@ static uint8_t *GetBlendMap(PalEntry blend, uint8_t *blendwork)
 //
 //==========================================================================
 
-void FMultiPatchTexture::CopyToBlock(uint8_t *dest, int dwidth, int dheight, FImageSource *source, int xpos, int ypos, int rotate, const uint8_t *translation, int style)
+void FMultiPatchTexture::CopyToBlock(uint8_t *dest, int dwidth, int dheight, FImageSource *source, int xpos, int ypos, FBitmap::Transform rotate, const uint8_t *translation, int style)
 {
 	auto cimage = source->GetCachedPalettedPixels(style);	// should use composition cache
 	auto &image = cimage.Pixels;

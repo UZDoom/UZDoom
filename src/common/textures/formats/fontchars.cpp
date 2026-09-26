@@ -166,6 +166,6 @@ int FFontChar2::CopyPixels(FBitmap* bmp, int conversion, int frame)
 {
 	if (conversion == luminance) conversion = normal;	// luminance images have no use as an RGB source.
 	auto ppix = CreatePalettedPixels(conversion);
-	bmp->CopyPixelData(0, 0, ppix.Data(), Width, Height, Height, 1, 0, SourceRemap, nullptr);
+	bmp->CopyPixelData(0, 0, ppix.Data(), Width, Height, Height, 1, FBitmap::Transform::NONE, SourceRemap, nullptr);
 	return 0;
 }

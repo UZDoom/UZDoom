@@ -151,7 +151,7 @@ int FStbTexture::CopyPixels(FBitmap *bmp, int conversion, int frame)
 	int x, y, chan;
 	auto image = stbi_load_from_callbacks(&callbacks, &lump, &x, &y, &chan, STBI_rgb_alpha);
 	if (image)
-		bmp->CopyPixelDataRGB(0, 0, image, x, y, 4, x*4, 0, CF_RGBA);
+		bmp->CopyPixelDataRGB(0, 0, image, x, y, 4, x*4, FBitmap::Transform::NONE, CF_RGBA);
 	stbi_image_free(image);
 	return -1;
 }
