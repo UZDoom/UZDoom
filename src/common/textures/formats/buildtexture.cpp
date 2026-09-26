@@ -22,11 +22,13 @@
 **
 */
 
-#include "files.h"
+#include "basics.h"
 #include "bitmap.h"
 #include "image.h"
+#include "palentry.h"
 #include "palettecontainer.h"
 
+class FString;
 
 //==========================================================================
 //

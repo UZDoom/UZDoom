@@ -31,12 +31,14 @@
 #define STBI_NO_PNM
 #include "stb_image.h"
 
-
+#include "basics.h"
+#include "bitmap.h"
 #include "files.h"
 #include "filesystem.h"
-#include "bitmap.h"
-#include "imagehelpers.h"
+#include "fs_files.h"
+#include "fs_filesystem.h"
 #include "image.h"
+#include "imagehelpers.h"
 
 //==========================================================================
 //

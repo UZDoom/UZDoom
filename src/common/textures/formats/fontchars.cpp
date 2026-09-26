@@ -22,12 +22,16 @@
 **
 */
 
-#include "filesystem.h"
+#include "basics.h"
 #include "bitmap.h"
-#include "image.h"
-#include "imagehelpers.h"
-#include "fontchars.h"
 #include "engineerrors.h"
+#include "filesystem.h"
+#include "fontchars.h"
+#include "fs_files.h"
+#include "fs_filesystem.h"
+#include "image.h"
+
+using FileSys::FileReader;
 
 //==========================================================================
 //

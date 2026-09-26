@@ -21,12 +21,17 @@
 **
 */
 
-#include <ctype.h>
-#include "files.h"
-#include "filesystem.h"
+#include <cstring>
+
+#include "basics.h"
+#include "colormatcher.h"
 #include "image.h"
-#include "multipatchtexture.h"
 #include "imagehelpers.h"
+#include "memarena.h"
+#include "multipatchtexture.h"
+#include "palettecontainer.h"
+#include "palutil.h"
+#include "textures.h"
 
 //==========================================================================
 //

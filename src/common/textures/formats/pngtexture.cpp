@@ -22,16 +22,29 @@
 **
 */
 
-#include "files.h"
+#include <cstring>
+#include <utility>
 
-#include "m_png.h"
+#include "basics.h"
 #include "bitmap.h"
-#include "imagehelpers.h"
-#include "image.h"
-#include "printf.h"
-#include "texturemanager.h"
+#include "files.h"
 #include "filesystem.h"
+#include "fs_files.h"
+#include "fs_filesystem.h"
+#include "gametexture.h"
+#include "image.h"
+#include "imagehelpers.h"
+#include "m_png.h"
 #include "m_swap.h"
+#include "memarena.h"
+#include "palentry.h"
+#include "palettecontainer.h"
+#include "palutil.h"
+#include "printf.h"
+#include "tarray.h"
+#include "textureid.h"
+
+class FString;
 
 //==========================================================================
 //

@@ -22,12 +22,20 @@
 **
 */
 
+#include <climits>
+#include <cstring>
+
+#include "basics.h"
 #include "bitmap.h"
-#include "image.h"
-#include "filesystem.h"
-#include "files.h"
 #include "cmdlib.h"
+#include "files.h"
+#include "filesystem.h"
+#include "fs_files.h"
+#include "fs_filesystem.h"
+#include "image.h"
 #include "palettecontainer.h"
+
+struct PalEntry;
 
 FMemArena ImageArena(32768);
 TArray<FImageSource *>FImageSource::ImageForLump;

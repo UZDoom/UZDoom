@@ -22,12 +22,15 @@
 **
 */
 
-#include "filesystem.h"
-#include "bitmap.h"
-#include "imagehelpers.h"
-#include "image.h"
-#include "textures.h"
+#include <cstring>
 
+#include "basics.h"
+#include "bitmap.h"
+#include "gametexture.h"
+#include "image.h"
+#include "palettecontainer.h"
+#include "textureid.h"
+#include "zstring.h"
 
 class FBarShader : public FImageSource
 {
