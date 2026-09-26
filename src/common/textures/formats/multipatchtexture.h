@@ -22,16 +22,24 @@
 */
 
 #pragma once
-#include "sc_man.h"
-#include "palettecontainer.h"
-#include "textureid.h"
-#include "vectors.h"
+
+#include <utility>
+
+#include "basics.h"
 #include "bitmap.h"
 #include "image.h"
-#include "textures.h"
+#include "palentry.h"
+#include "sc_man.h"
+#include "tarray.h"
+#include "textureid.h"
+#include "vectors.h"
+#include "zstring.h"
 
+class FGameTexture;
 class FImageTexture;
 class FTextureManager;
+struct FPatchLookup;
+struct FRemapTable;
 
 //==========================================================================
 //
@@ -62,7 +70,6 @@ struct TexPartBuild
 	uint8_t Rotate = 0;
 	uint8_t op = OP_COPY;
 };
-
 
 
 //==========================================================================
@@ -128,8 +135,6 @@ struct TexInit
 //
 //==========================================================================
 
-struct FPatchLookup;
-
 struct BuildInfo
 {
 	FString Name;
@@ -168,8 +173,6 @@ struct BuildInfo
 		std::swap(texture, other.texture);
 	}
 };
-
-
 
 class FMultipatchTextureBuilder
 {

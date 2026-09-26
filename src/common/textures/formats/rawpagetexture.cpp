@@ -21,12 +21,21 @@
 **
 */
 
+#include <cstdint>
+
+#ifndef _WIN32
+#include <strings.h>
+#endif
+
+#include "bitmap.h"
 #include "files.h"
 #include "filesystem.h"
-#include "bitmap.h"
-#include "imagehelpers.h"
+#include "fs_files.h"
+#include "fs_filesystem.h"
 #include "image.h"
+#include "imagehelpers.h"
 #include "m_swap.h"
+#include "palentry.h"
 
 // Doom patch format header
 struct patch_t

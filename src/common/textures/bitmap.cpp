@@ -21,8 +21,10 @@
 **
 */
 
+#include "basics.h"
 #include "bitmap.h"
 #include "palutil.h"
+#include "tarray.h"
 
 uint8_t IcePalette[16][3] =
 {

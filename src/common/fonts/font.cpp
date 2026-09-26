@@ -24,39 +24,47 @@
 
 // HEADER FILES ------------------------------------------------------------
 
-#include <cwctype>
-#include <stdlib.h>
-#include <string.h>
-#include <math.h>
-
-
-#include "m_swap.h"
-#include "v_font.h"
-#include "printf.h"
-#include "textures.h"
-#include "filesystem.h"
-#include "cmdlib.h"
-#include "sc_man.h"
-#include "gstrings.h"
-#include "image.h"
-#include "utf8.h"
-#include "myiswalpha.h"
-#include "fontchars.h"
-#include "multipatchtexture.h"
-#include "texturemanager.h"
-#include "i_interface.h"
-
-#include "fontinternals.h"
-#include "Trex/Atlas.hpp"
-#include "texturemanager.h"
-#include "Trex/TextShaper.hpp"
-#include "c_cvars.h"
-#include "simdutf.h"
+#include <climits>
+#include <memory>
 #include <string>
-#include "menu.h"
-#include "vm.h"
-#include "c_dispatch.h"
+#include <string_view>
+#include <utility>
+#include <vector>
+
+#include "Trex/Atlas.hpp"
+#include "Trex/Font.hpp"
+#include "Trex/TextShaper.hpp"
+#include "basics.h"
+#include "bitmap.h"
+#include "c_cvars.h"
+#include "cmdlib.h"
+#include "dobject.h"
+#include "filesystem.h"
+#include "fontinternals.h"
 #include "freetype/freetype.h"
+#include "fs_filesystem.h"
+#include "gametexture.h"
+#include "gstrings.h"
+#include "i_interface.h"
+#include "image.h"
+#include "menu.h"
+#include "myiswalpha.h"
+#include "name.h"
+#include "palentry.h"
+#include "palettecontainer.h"
+#include "printf.h"
+#include "sc_man.h"
+#include "simdutf.h"
+#include "stringtable.h"
+#include "tarray.h"
+#include "textureid.h"
+#include "texturemanager.h"
+#include "textures.h"
+#include "utf8.h"
+#include "v_font.h"
+#include "vectors.h"
+#include "vm.h"
+#include "zstring.h"
 
 TArray<FBitmap> sheetBitmaps;
 

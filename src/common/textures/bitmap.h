@@ -21,11 +21,10 @@
 **
 */
 
-
-#ifndef __BITMAP_H__
-#define __BITMAP_H__
+#pragma once
 
 #include <cstring>
+
 #include "palentry.h"
 
 struct FCopyInfo;
@@ -498,6 +497,3 @@ struct bModulate
 	static __forceinline void OpA(uint8_t &d, uint8_t s, FCopyInfo *i) { d = s; }
 	static __forceinline bool ProcessAlpha0() { return false; }
 };
-
-
-#endif

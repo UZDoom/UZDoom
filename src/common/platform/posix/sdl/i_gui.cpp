@@ -21,11 +21,16 @@
 **
 */
 
-#include <string.h>
+#include <cstring>
 
-#include <SDL2/SDL.h>
+#include <SDL2/SDL_events.h>
+#include <SDL2/SDL_mouse.h>
+#include <SDL2/SDL_surface.h>
 
+#include "basics.h"
 #include "bitmap.h"
+#include "gametexture.h"
+#include "palentry.h"
 #include "textures.h"
 
 bool I_SetCursor(FGameTexture *cursorpic)

@@ -22,17 +22,26 @@
 **
 */
 
+#include <climits>
+#include <cstring>
+
+#include "basics.h"
+#include "bitmap.h"
 #include "engineerrors.h"
-#include "textures.h"
-#include "image.h"
-#include "v_font.h"
 #include "filesystem.h"
-#include "utf8.h"
+#include "fs_files.h"
+#include "gametexture.h"
+#include "image.h"
+#include "name.h"
+#include "palentry.h"
+#include "palettecontainer.h"
+#include "resourcefile.h"
 #include "sc_man.h"
+#include "tarray.h"
+#include "textureid.h"
 #include "texturemanager.h"
-
-#include "fontinternals.h"
-
+#include "textures.h"
+#include "v_font.h"
 
 struct HexDataSource
 {
