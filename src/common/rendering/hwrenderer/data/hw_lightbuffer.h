@@ -48,7 +48,7 @@ public:
 	FLightBuffer(int pipelineNbr = 1);
 	~FLightBuffer();
 	void Clear();
-	int UploadLights(FDynLightData &data);
+	int UploadLights(const FDynLightData &data);
 	void Map() { mBuffer->Map(); }
 	void Unmap() { mBuffer->Unmap(); }
 	unsigned int GetBlockSize() const { return mBlockSize; }
