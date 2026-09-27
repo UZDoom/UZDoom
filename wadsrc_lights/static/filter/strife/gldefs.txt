@@ -615,6 +615,7 @@ flickerlight PHFIRE_FX1
 	size 42
 	secondarySize 48
 	chance 0.3
+	offset 0 28 0
 	attenuate 1
 }
 
@@ -624,6 +625,7 @@ flickerlight PHFIRE_FX2
 	size 60
 	secondarySize 72
 	chance 0.3
+	offset 0 28 0
 	attenuate 1
 }
 
@@ -633,6 +635,7 @@ flickerlight PHFIRE_FX3
 	size 84
 	secondarySize 96
 	chance 0.3
+	offset 0 28 0
 	attenuate 1
 }
 
@@ -642,6 +645,7 @@ flickerlight PHFIRE_FX4
 	size 96
 	secondarySize 108
 	chance 0.3
+	offset 0 28 0
 	attenuate 1
 }
 
@@ -651,6 +655,7 @@ flickerlight PHFIRE_FX5
 	size 99
 	secondarySize 108
 	chance 0.3
+	offset 0 28 0
 	attenuate 1
 }
 
@@ -660,6 +665,7 @@ flickerlight PHFIRE_FX6
 	size 99
 	secondarySize 108
 	chance 0.3
+	offset 0 28 0
 	attenuate 1
 }
 
@@ -669,6 +675,7 @@ flickerlight PHFIRE_FX7
 	size 99
 	secondarySize 108
 	chance 0.3
+	offset 0 28 0
 	attenuate 1
 }
 
@@ -678,6 +685,7 @@ flickerlight PHFIRE_FX8
 	size 90
 	secondarySize 102
 	chance 0.3
+	offset 0 28 0
 	attenuate 1
 }
 
@@ -687,6 +695,7 @@ flickerlight PHFIRE_FX9
 	size 72
 	secondarySize 78
 	chance 0.3
+	offset 0 28 0
 	attenuate 1
 }
 
@@ -696,6 +705,7 @@ flickerlight PHFIRE_FX10
 	size 66
 	secondarySize 72
 	chance 0.3
+	offset 0 28 0
 	attenuate 1
 }
 
@@ -705,6 +715,7 @@ flickerlight PHFIRE_FX11
 	size 54
 	secondarySize 60
 	chance 0.3
+	offset 0 28 0
 	attenuate 1
 }
 
