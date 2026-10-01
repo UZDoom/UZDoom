@@ -1895,6 +1895,10 @@ MapFlagHandlers[] =
 	{ "nofogofwar",						MITYPE_SETFLAG3,	LEVEL3_NOFOGOFWAR, 0 },
 	{ "useskymist",						MITYPE_SETFLAG3,	LEVEL3_SKYMIST, 0 },
 	{ "noambientocclusion",				MITYPE_SETFLAG3,	LEVEL3_NOAMBIENTOCCLUSION, 0 },
+	{ "allowsave",						MITYPE_CLRFLAG3,    LEVEL3_SAVE_NO, 0},
+	{ "nosave",							MITYPE_SETFLAG3,    LEVEL3_SAVE_NO,	0},
+	{ "allowautoautosave",				MITYPE_CLRFLAG3,    LEVEL3_AUTOAUTOSAVE_NO, 0},
+	{ "noautoautosave",                 MITYPE_SETFLAG3,    LEVEL3_AUTOAUTOSAVE_NO, 0},
 	{ "nobotnodes",						MITYPE_IGNORE,	0, 0 },		// Skulltag option: nobotnodes
 	{ "nopassover",						MITYPE_COMPATFLAG, COMPATF_NO_PASSMOBJ, 0 },
 	{ "passover",						MITYPE_CLRCOMPATFLAG, COMPATF_NO_PASSMOBJ, 0 },
