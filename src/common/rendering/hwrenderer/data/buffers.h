@@ -25,6 +25,9 @@
 
 #include <stddef.h>
 #include <assert.h>
+#include <concepts>
+#include <atomic>
+#include "tarray.h"
 
 class FRenderState;
 
@@ -156,4 +159,96 @@ public:
 	virtual void BindRange(FRenderState *state, size_t start, size_t length) = 0;
 	virtual BufferType GetBufferType() override { return BufferType::Data;}
 	virtual IDataBuffer* ToDataBuffer() override { return this; }
+};
+
+struct FBufferContainer
+{
+protected:
+	IBuffer * mBuffer;
+	IBuffer * mBufferPipeline[HW_MAX_PIPELINE_BUFFERS];
+	int mPipelineNbr;
+	int mPipelinePos = 0;
+	bool mBufferSSBO;
+	std::atomic<unsigned int> mIndex;
+	unsigned int mBlockAlign;
+	unsigned int mBlockSize;
+	const unsigned int mBufferSize;
+	const unsigned int mElementSize;
+	const unsigned int mByteSize;
+	const unsigned int mBindingPoint;
+	unsigned int mMaxUploadSize;
+	BufferType mBufferType;
+	BufferUsageType mUsageType;
+	bool mNeedsResize;
+
+	int UploadData(void * data, size_t sz); // SZ IS IN ELEMENT COUNT, NOT IN BYTES, BYTES IS SZ * MELEMENTSIZE
+
+	template<typename T>
+	int UploadData(const TArrayView<const T> arr)
+	{
+		assert(sizeof(T) == mElementSize);
+		return UploadData((void*)arr.Data(), arr.Size());
+	}
+public:
+	FBufferContainer(BufferType type, BufferUsageType usageType, unsigned numElements, unsigned elementSize, int bindingPoint = -1, int pipelineNbr = -1, bool needsResize = false);
+
+	virtual ~FBufferContainer()
+	{
+		for (int n = 0; n < mPipelineNbr; n++)
+		{
+			delete mBufferPipeline[n];
+		}
+	}
+
+	void Clear()
+	{
+		mIndex = 0;
+
+		if(mPipelineNbr > 1)
+		{
+			mPipelinePos++;
+			mPipelinePos %= mPipelineNbr;
+
+			mBuffer = mBufferPipeline[mPipelinePos];
+		}
+	}
+
+	void Map() { mBuffer->Map(); }
+	void Unmap() { mBuffer->Unmap(); }
+
+	unsigned int GetBlockSize() const { return mBlockSize; }
+	BufferType GetBufferType() const { return mBufferType; }
+	bool IsBufferSSBO() const { return mBufferSSBO; }
+
+	// Only for GLES to determin how much data is in the buffer
+	int GetCurrentIndex() { return mIndex; };
+
+	int GetBinding(unsigned int index, size_t* pOffset, size_t* pSize)
+	{
+		// this function will only get called if a uniform buffer is used. For a shader storage buffer we only need to bind the buffer once at the start.
+		unsigned int offset = (index / mBlockAlign) * mBlockAlign;
+
+		*pOffset = offset * mElementSize;
+		*pSize = mBlockSize * mElementSize;
+		return (index - offset);
+	}
+
+	// OpenGL needs the buffer to mess around with the binding.
+	IDataBuffer* GetBuffer() const
+	{
+		return mBuffer->ToDataBuffer();
+	}
+private:
+	IBuffer * CreateBuffer();
+};
+
+enum
+{
+	LIGHTBUF_BINDINGPOINT = 1,
+	POSTPROCESS_BINDINGPOINT = 2,
+	VIEWPOINT_BINDINGPOINT = 3,
+	LIGHTNODES_BINDINGPOINT = 4,
+	LIGHTLINES_BINDINGPOINT = 5,
+	LIGHTLIST_BINDINGPOINT = 6,
+	BONEBUF_BINDINGPOINT = 7
 };

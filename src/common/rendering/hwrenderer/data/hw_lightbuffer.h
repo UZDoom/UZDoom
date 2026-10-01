@@ -26,41 +26,18 @@
 
 class FRenderState;
 
-class FLightBuffer
+class FLightBuffer : public FBufferContainer
 {
-	IDataBuffer *mBuffer;
-	IDataBuffer* mBufferPipeline[HW_MAX_PIPELINE_BUFFERS];
-	int mPipelineNbr;
-	int mPipelinePos = 0;
-
-	bool mBufferType;
-	std::atomic<unsigned int> mIndex;
-	unsigned int mBlockAlign;
-	unsigned int mBlockSize;
-	unsigned int mBufferSize;
-	unsigned int mByteSize;
-	unsigned int mMaxUploadSize;
-
-	void CheckSize();
-
 public:
+	static constexpr int ELEMENTS_PER_LIGHT = 4;			// each light needs 4 vec4's.
+	static constexpr int ELEMENT_SIZE = (4*sizeof(float));
+	static constexpr int MAX_NUMBER_OF_LIGHTS = 80000;
 
-	FLightBuffer(int pipelineNbr = 1);
-	~FLightBuffer();
-	void Clear();
-	int UploadLights(const FDynLightData &data);
-	void Map() { mBuffer->Map(); }
-	void Unmap() { mBuffer->Unmap(); }
-	unsigned int GetBlockSize() const { return mBlockSize; }
-	bool GetBufferType() const { return mBufferType; }
-	int GetBinding(unsigned int index, size_t* pOffset, size_t* pSize);
-
-	// OpenGL needs the buffer to mess around with the binding.
-	IDataBuffer* GetBuffer() const
+	FLightBuffer(int pipelineNbr = 1)
+	:FBufferContainer(BufferType::Data, BufferUsageType::Persistent, MAX_NUMBER_OF_LIGHTS * ELEMENTS_PER_LIGHT, ELEMENT_SIZE, LIGHTBUF_BINDINGPOINT, pipelineNbr, false)
 	{
-		return mBuffer;
 	}
-
+	int UploadLights(const FDynLightData &data);
 };
 
 
