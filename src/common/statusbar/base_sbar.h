@@ -56,6 +56,7 @@ enum DI_Flags
 	DI_MIRROR = 0x1000,		// flip the texture horizontally, like a mirror
 	DI_ITEM_RELCENTER = 0x2000,
 	DI_MIRRORY = 0x40000000,
+	DI_ITEM_REVERSECLIP = 0x80000000,
 
 	DI_SCREEN_AUTO = 0,					// decide based on given offsets.
 	DI_SCREEN_MANUAL_ALIGN = 0x4000,	// If this is on, the following flags will have an effect
