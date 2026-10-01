@@ -190,7 +190,7 @@ bool FGLRenderState::ApplyShader()
 
 	int index = mLightIndex;
 	// Mess alert for crappy AncientGL!
-	if (!screen->mLights->GetBufferType() && index >= 0)
+	if (!screen->mLights->IsBufferSSBO() && index >= 0)
 	{
 		size_t start, size;
 		index = screen->mLights->GetBinding(index, &start, &size);
@@ -205,7 +205,7 @@ bool FGLRenderState::ApplyShader()
 	activeShader->muLightIndex.Set(index);
 
 	index = mBoneIndexBase;
-	if (!screen->mBones->GetBufferType() && index >= 0) // Uniform buffer fallback support
+	if (!screen->mBones->IsBufferSSBO() && index >= 0) // Uniform buffer fallback support
 	{
 		size_t start, size;
 		index = screen->mBones->GetBinding(index, &start, &size);
