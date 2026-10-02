@@ -303,6 +303,11 @@ bool Dropdown::OpenDropdown()
 
 	dropdownOpen = true;
 
+	if (closedDropdown)
+	{
+		closedDropdown->Close();
+		closedDropdown = nullptr;
+	}
 	dropdown = new Widget(Window());
 	listView = new DropdownList(dropdown, this);
 	for (const auto& item : items)
@@ -334,7 +339,11 @@ bool Dropdown::CloseDropdown()
 {
 	if (!dropdownOpen || !dropdown) return false;
 
-	dropdown->Close();
+	// Don't delete the list right away: this is usually called from inside the list's own event handler (picking
+	// an item), and deleting it there made the list touch freed memory on the way back out, a crash. Hide it now
+	// and delete it the next time the dropdown opens.
+	dropdown->Hide();
+	closedDropdown = dropdown;
 	dropdown = nullptr;
 	listView = nullptr;
 	dropdownOpen = false;

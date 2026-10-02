@@ -60,6 +60,7 @@ private:
 
 	bool dropdownOpen = false;
 	Widget* dropdown = nullptr;
+	Widget* closedDropdown = nullptr;   // the last closed list, hidden; deleted on the next open (see CloseDropdown)
 	DropdownList* listView = nullptr;
 
 	int maxDisplayItems = 0;
