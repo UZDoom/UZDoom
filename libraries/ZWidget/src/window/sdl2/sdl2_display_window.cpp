@@ -253,6 +253,7 @@ void SDL2DisplayWindow::SetCursor(StandardCursor cursor)
 void SDL2DisplayWindow::Update()
 {
 	if (updating) return;
+	updating = true;
 	SDL_Event event = {};
 	event.type = PaintEventNumber;
 	event.user.windowID = SDL_GetWindowID(Handle.window);
