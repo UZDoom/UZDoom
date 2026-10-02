@@ -3985,6 +3985,8 @@ static int D_InitGame(const FIWADInfo* iwad_info, std::vector<FileSys::ResourceN
 	{
 		// start the apropriate game based on parms
 		auto v = Args->CheckValue (FArg_record);
+		auto startTime = I_msTime();
+		auto shaderDispRotate = 2;
 
 		if (v)
 		{
@@ -3998,17 +4000,33 @@ static int D_InitGame(const FIWADInfo* iwad_info, std::vector<FileSys::ResourceN
 		StartWindow->Progress(max_progress);
 		if (StartScreen)
 		{
+			StartScreen->SetShaderComp(3);
 			StartScreen->Progress(max_progress);	// advance progress bar to the end.
 			StartScreen->Render(true);
 			StartScreen->Progress(max_progress);	// do this again because Progress advances the counter after redrawing.
 			StartScreen->Render(true);
-			delete StartScreen;
-			StartScreen = NULL;
 		}
 
 		while(!screen->CompileNextShader())
 		{
 			// here we can do some visual updates later
+			if (StartScreen)
+			{
+				if ((I_msTime() - startTime) >= 1000)
+				{
+					startTime = I_msTime();
+					shaderDispRotate++;
+					StartScreen->SetShaderComp(1 + (shaderDispRotate % 3));
+					StartScreen->Render(true);
+				}
+			}
+		}
+		if (StartScreen)
+		{
+			StartScreen->SetShaderComp(false);
+			StartScreen->Render(true);
+			delete StartScreen;
+			StartScreen = NULL;
 		}
 		twod->fullscreenautoaspect = gameinfo.fullscreenautoaspect;
 		// Initialize the size of the 2D drawer so that an attempt to access it outside the draw code won't crash.
