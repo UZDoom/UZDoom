@@ -711,11 +711,11 @@ Order
 	// Doom 1
 	"DOOM Shareware"
 	"DOOM Registered"
+	"The Ultimate DOOM"
 	"DOOM: XBox Edition"
 	"DOOM: BFG Edition"
 	"DOOM: Unity Edition"
 	"DOOM: KEX Edition"
-	"The Ultimate DOOM"
 	// Doom 2
 	"DOOM 2: Hell on Earth"
 	"DOOM 2: L'Enfer sur Terre"
