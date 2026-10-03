@@ -3284,7 +3284,10 @@ void DAutomap::drawMarks ()
 					rotatePoint (&x, &y);
 				}
 
-				DrawText(twod, font, am_markcolor, CXMTOF(x), CYMTOF(y), numstr.c_str(), TAG_DONE);
+				DrawText(twod, font, am_markcolor, CXMTOF(x), CYMTOF(y), numstr.c_str(),
+					DTA_ScaleX, 3.0,
+					DTA_ScaleY, 3.0,
+					TAG_DONE);
 			}
 		}
 	}
