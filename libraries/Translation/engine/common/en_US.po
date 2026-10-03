@@ -1534,6 +1534,9 @@ msgstr "Enable autosaves"
 msgid "MISCMNU_AUTOSAVECOUNT"
 msgstr "Number of autosaves"
 
+msgid "MISCMNU_AUTOQUICKSAVEINTERVAL"
+msgstr "Auto quicksave interval (seconds)"
+
 msgid "MISCMNU_SAVELOADCONFIRMATION"
 msgstr "Save/Load confirmation"
 

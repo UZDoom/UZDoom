@@ -63,6 +63,9 @@ void G_SaveGame (const char *filename, const char *description, bool quick = fal
 // Called by messagebox
 void G_DoQuickSave ();
 
+// Restarts the automatic quicksave interval. Combat also starts its safety delay.
+void G_ResetAutoQuickSaveTimer (bool combat = false);
+
 // Only called by startup code.
 void G_RecordDemo (const char* name);
 

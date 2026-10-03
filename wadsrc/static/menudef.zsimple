@@ -98,6 +98,7 @@ OptionMenu MiscOptionsSimple protected
 	Option "$MISCMNU_NOCHEATS",					"nocheats", "OnOff"
 	Option "$MISCMNU_ALLCHEATS",				"allcheats", "OnOff"
 	Option "$MISCMNU_ENABLEAUTOSAVES",			"disableautosave", "Autosave"
+	Slider "$MISCMNU_AUTOQUICKSAVEINTERVAL",	"autoquicksaveinterval", 0, 3600, 15, 0
 	Option "$MISCMNU_DEHLOAD",					"dehload", "dehopt"
 	Option "$MISCMNU_ENABLESCRIPTSCREENSHOTS",	"enablescriptscreenshot", "OnOff"
 	Option "$OPTMNU_LANGUAGE",					"language", "LanguageOptions"

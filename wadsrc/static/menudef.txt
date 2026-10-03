@@ -1799,6 +1799,7 @@ OptionMenu "MiscOptions" protected
 	Option "$MISCMNU_RESTARTONDEATH",			"cl_restartondeath", "OnOff"
 	Option "$MISCMNU_SAVELOADCONFIRMATION",		"saveloadconfirmation", "OnOff"
 	Slider "$MISCMNU_AUTOSAVECOUNT",			"autosavecount", 1, 20, 1, 0
+	Slider "$MISCMNU_AUTOQUICKSAVEINTERVAL",	"autoquicksaveinterval", 0, 3600, 15, 0
 	Option "$MISCMNU_QUICKSAVEROTATION",		"quicksaverotation", "OnOff"
 	Slider "$MISCMNU_QUICKSAVECOUNT",			"quicksaverotationcount", 1, 20, 1, 0
 	Option "$MISCMNU_SAVEORDER",				"save_sort_order", "SaveOrder"

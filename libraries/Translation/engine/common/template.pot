@@ -1410,6 +1410,9 @@ msgstr ""
 msgid "MISCMNU_AUTOSAVECOUNT"
 msgstr ""
 
+msgid "MISCMNU_AUTOQUICKSAVEINTERVAL"
+msgstr ""
+
 msgid "MISCMNU_SAVELOADCONFIRMATION"
 msgstr ""
 
