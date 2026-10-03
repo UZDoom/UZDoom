@@ -380,6 +380,7 @@ public:
 	int modelframeflags;
 	FRenderStyle RenderStyle;
 	int OverrideShader;
+	bool normspec;			// Whether or not the texture is PBR/normal+specular
 
 	FTranslationID translation;
 	int index;
