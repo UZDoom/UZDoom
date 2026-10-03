@@ -665,8 +665,6 @@ Names
 	"bfgdoom2.wad"
 	"doombfg.wad"
 	"doom2bfg.wad"
-	"doomxbox.wad"
-	"doom2xbox.wad"
 	"plutonia.wad"
 	"plutoniaunity.wad"
 	"plutoniakex.wad"
