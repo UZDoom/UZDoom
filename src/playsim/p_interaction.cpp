@@ -49,6 +49,7 @@
 #include "a_morph.h"
 #include "vm.h"
 #include "g_levellocals.h"
+#include "g_game.h"
 #include "events.h"
 #include "actorinlines.h"
 #include "d_main.h"
@@ -434,7 +435,11 @@ void AActor::Die (AActor *source, AActor *inflictor, int dmgflags, FName MeansOf
 	}
 
 	if (CountsAsKill())
+	{
 		Level->killed_monsters++;
+		if (source && source->player)
+			G_ResetAutoQuickSaveTimer(true);
+	}
 
 	if (source && source->player)
 	{

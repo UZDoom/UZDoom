@@ -124,6 +124,7 @@ void G_DoAutoSave ();
 void G_DoPlayDemo (void);
 void G_DoSaveGame (bool okForQuicksave, bool forceQuicksave, FString filename, const char *description);
 void G_DoVictory (void);
+static void G_CheckAutoQuickSave();
 
 void SetupLoadingCVars();
 void FinishLoadingCVars();
@@ -299,6 +300,14 @@ CUSTOM_CVAR (Int, autosavecount, 4, CVAR_ARCHIVE|CVAR_GLOBALCONFIG)
 CVAR (Int, quicksavenum, -1, CVAR_NOSET|CVAR_ARCHIVE|CVAR_GLOBALCONFIG);
 CVAR (Bool, quicksaverotation, false, CVAR_ARCHIVE|CVAR_GLOBALCONFIG);
 
+CUSTOM_CVAR (Int, autoquicksaveinterval, 0, CVAR_ARCHIVE|CVAR_GLOBALCONFIG)
+{
+	if (self < 0)
+		self = 0;
+	else if (self > 86400)
+		self = 86400;
+}
+
 CUSTOM_CVAR (Int, quicksaverotationcount, 4, CVAR_ARCHIVE|CVAR_GLOBALCONFIG)
 {
 	if (self < 1)
@@ -332,6 +341,8 @@ bool            stoprecording;
 
 static int      nextautosave = -1;
 static int      lastquicksave = -1;
+static int      lastautoquicksavetime = -1;
+static int      lastmonsterkilltime = -1;
 
 static usercmd_t emptycmd;
 
@@ -1384,6 +1395,7 @@ void G_Ticker ()
 	case GS_LEVEL:
 	case GS_TITLELEVEL:
 		P_Ticker ();
+		G_CheckAutoQuickSave();
 		break;
 
 	case GS_DEMOSCREEN:
@@ -2281,6 +2293,7 @@ void G_SaveGame (const char *filename, const char *description, bool quick)
 	}
 	else
 	{
+		G_ResetAutoQuickSaveTimer();
 		savegamefile = filename;
 		savedescription = description;
 		if (quick)
@@ -2294,6 +2307,37 @@ void G_SaveGame (const char *filename, const char *description, bool quick)
 			if (gameaction == ga_quicksave)
 				gameaction = ga_nothing;
 		}
+	}
+}
+
+void G_ResetAutoQuickSaveTimer(bool combat)
+{
+	lastautoquicksavetime = primaryLevel->time;
+	if (combat)
+		lastmonsterkilltime = primaryLevel->time;
+}
+
+static void G_CheckAutoQuickSave()
+{
+	if (autoquicksaveinterval <= 0 || netgame || demoplayback || deathmatch || !usergame || sendsave ||
+		gamestate != GS_LEVEL || gameaction != ga_nothing ||
+		players[consoleplayer].playerstate != PST_LIVE || players[consoleplayer].health <= 0)
+	{
+		return;
+	}
+
+	// Level time resets when a map is loaded, including after loading a savegame.
+	if (lastautoquicksavetime < 0 || lastautoquicksavetime > primaryLevel->time)
+		lastautoquicksavetime = primaryLevel->time;
+	if (lastmonsterkilltime < 0 || lastmonsterkilltime > primaryLevel->time)
+		lastmonsterkilltime = primaryLevel->time;
+
+	const int interval = autoquicksaveinterval * TICRATE;
+	const int combatCooldown = 10 * TICRATE;
+	if (primaryLevel->time - lastautoquicksavetime >= interval &&
+		primaryLevel->time - lastmonsterkilltime >= combatCooldown)
+	{
+		G_DoQuickSave();
 	}
 }
 

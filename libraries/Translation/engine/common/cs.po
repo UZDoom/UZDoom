@@ -1411,6 +1411,9 @@ msgstr "Rotace rychle uložených her"
 msgid "MISCMNU_QUICKSAVECOUNT"
 msgstr "Počet rychle uložených her v rotaci"
 
+msgid "MISCMNU_AUTOQUICKSAVEINTERVAL"
+msgstr "Interval automatického rychlého ukládání (sekundy)"
+
 #, fuzzy
 msgid "MISCMNU_CLEANMENU"
 msgstr "Zakázat čisté škálování nabídek"
