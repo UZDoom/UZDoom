@@ -665,8 +665,6 @@ Names
 	"bfgdoom2.wad"
 	"doombfg.wad"
 	"doom2bfg.wad"
-	"doomxbox.wad"
-	"doom2xbox.wad"
 	"plutonia.wad"
 	"plutoniaunity.wad"
 	"plutoniakex.wad"
@@ -702,41 +700,54 @@ Names
 	"rotwb.wad"
 }
 
-Order	// Order in the IWAD selection box
+Order
+// Order in the IWAD selection box
+// Current Order:
+// Shareware (if available)
+// Registered
+// Approximate release order for each similar entry
 {
 	"DOOM: Complete: WadSmoosh"
-	"DOOM 2: Hell on Earth"
-	"DOOM 2: L'Enfer sur Terre"
-	"DOOM 2: BFG Edition"
-	"DOOM 2: XBox Edition"
-	"DOOM 2: Unity Edition"
-	"DOOM 2: KEX Edition"
-	"The Ultimate DOOM"
-	"DOOM Registered"
+	// Doom 1
 	"DOOM Shareware"
-	"DOOM: BFG Edition"
+	"DOOM Registered"
+	"The Ultimate DOOM"
 	"DOOM: XBox Edition"
+	"DOOM: BFG Edition"
 	"DOOM: Unity Edition"
 	"DOOM: KEX Edition"
-	"Final Doom: Plutonia Experiment"
-	"Final Doom: Plutonia Experiment: Unity Edition"
-	"Final Doom: Plutonia Experiment: KEX Edition"
+	// Doom 2
+	"DOOM 2: Hell on Earth"
+	"DOOM 2: L'Enfer sur Terre"
+	"DOOM 2: XBox Edition"
+	"DOOM 2: BFG Edition"
+	"DOOM 2: Unity Edition"
+	"DOOM 2: KEX Edition"
+	// Final Doom
 	"Final Doom: TNT - Evilution"
 	"Final Doom: TNT - Evilution: Unity Edition"
 	"Final Doom: TNT - Evilution: KEX Edition"
+	"Final Doom: Plutonia Experiment"
+	"Final Doom: Plutonia Experiment: Unity Edition"
+	"Final Doom: Plutonia Experiment: KEX Edition"
+	// Freedoom
 	"Freedoom: Phase 1"
 	"Freedoom: Phase 2"
 	"FreeDM"
+	// Heretic
+	"Heretic Shareware"
 	"Heretic"
 	"Heretic: Shadow of the Serpent Riders"
-	"Heretic Shareware"
+	// Hexen
+	"Hexen: Demo Version"
 	"Hexen: Beyond Heretic"
 	"Hexen: Deathkings of the Dark Citadel"
-	"Hexen: Demo Version"
-	"Strife: Quest for the Sigil"
-	"Strife: Veteran Edition"
+	// Strife
 	"Strife: Teaser (Old Version)"
 	"Strife: Teaser (New Version)"
+	"Strife: Quest for the Sigil"
+	"Strife: Veteran Edition"
+	// Other
 	"Blasphemer"
 	"Chex(R) Quest"
 	"Chex(R) Quest 3"
