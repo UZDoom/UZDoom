@@ -724,12 +724,12 @@ Order
 	"DOOM 2: Unity Edition"
 	"DOOM 2: KEX Edition"
 	// Final Doom
-	"Final Doom: Plutonia Experiment"
-	"Final Doom: Plutonia Experiment: Unity Edition"
-	"Final Doom: Plutonia Experiment: KEX Edition"
 	"Final Doom: TNT - Evilution"
 	"Final Doom: TNT - Evilution: Unity Edition"
 	"Final Doom: TNT - Evilution: KEX Edition"
+	"Final Doom: Plutonia Experiment"
+	"Final Doom: Plutonia Experiment: Unity Edition"
+	"Final Doom: Plutonia Experiment: KEX Edition"
 	// Freedoom
 	"Freedoom: Phase 1"
 	"Freedoom: Phase 2"
