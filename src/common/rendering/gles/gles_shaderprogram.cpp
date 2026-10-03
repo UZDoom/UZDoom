@@ -266,7 +266,10 @@ void FPresentShaderBase::Init(const char * vtx_shader_name, const char * program
 	FString prolog = Uniforms.CreateDeclaration("Uniforms", PresentUniforms::Desc());
 
 	mShader.reset(new FShaderProgram());
-	mShader->Compile(FShaderProgram::Vertex, "shaders_gles/pp/screenquad.vp", prolog.GetChars(), 330);
+	if (gles.glesMode == GLES_MODE_WEBGL)
+		mShader->Compile(FShaderProgram::Vertex, "shaders_webgl/pp/screenquad.vp", prolog.GetChars(), 330);
+	else
+		mShader->Compile(FShaderProgram::Vertex, "shaders_gles/pp/screenquad.vp", prolog.GetChars(), 330);
 	mShader->Compile(FShaderProgram::Fragment, vtx_shader_name, prolog.GetChars(), 330);
 	mShader->Link(program_name);
 	mShader->Bind();
@@ -287,7 +290,10 @@ void FPresentShader::Bind()
 {
 	if (!mShader)
 	{
-		Init("shaders_gles/pp/present.fp", "shaders_gles/pp/present");
+		if (gles.glesMode == GLES_MODE_WEBGL)
+			Init("shaders_webgl/pp/present.fp", "shaders_webgl/pp/present");
+		else
+			Init("shaders_gles/pp/present.fp", "shaders_gles/pp/present");
 	}
 	mShader->Bind();
 }
