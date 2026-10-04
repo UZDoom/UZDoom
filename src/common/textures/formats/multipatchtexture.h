@@ -22,16 +22,24 @@
 */
 
 #pragma once
-#include "sc_man.h"
-#include "palettecontainer.h"
-#include "textureid.h"
-#include "vectors.h"
+
+#include <utility>
+
+#include "basics.h"
 #include "bitmap.h"
 #include "image.h"
-#include "textures.h"
+#include "palentry.h"
+#include "sc_man.h"
+#include "tarray.h"
+#include "textureid.h"
+#include "vectors.h"
+#include "zstring.h"
 
+class FGameTexture;
 class FImageTexture;
 class FTextureManager;
+struct FPatchLookup;
+struct FRemapTable;
 
 //==========================================================================
 //
@@ -47,9 +55,10 @@ struct TexPart
 	blend_t Alpha = FRACUNIT;
 	int16_t OriginX = 0;
 	int16_t OriginY = 0;
-	uint8_t Rotate = 0;
+	OrthoTransform Rotate = OrthoTransform::NONE;
 	uint8_t op = OP_COPY;
 };
+static_assert(sizeof(TexPart) == 32);
 
 struct TexPartBuild
 {
@@ -62,7 +71,6 @@ struct TexPartBuild
 	uint8_t Rotate = 0;
 	uint8_t op = OP_COPY;
 };
-
 
 
 //==========================================================================
@@ -99,7 +107,7 @@ protected:
 	// The getters must optionally redirect if it's a simple one-patch texture.
 	int CopyPixels(FBitmap *bmp, int conversion, int frame = 0) override;
 	PalettedPixels CreatePalettedPixels(int conversion, int frame = 0) override;
-	void CopyToBlock(uint8_t *dest, int dwidth, int dheight, FImageSource *source, int xpos, int ypos, int rotate, const uint8_t *translation, int style);
+	void CopyToBlock(uint8_t *dest, int dwidth, int dheight, FImageSource *source, int xpos, int ypos, OrthoTransform rotate, const uint8_t *translation, int style);
 	void CollectForPrecache(PrecacheInfo &info, bool requiretruecolor) override;
 
 };
@@ -127,8 +135,6 @@ struct TexInit
 // All build info only needed to construct the multipatch textures
 //
 //==========================================================================
-
-struct FPatchLookup;
 
 struct BuildInfo
 {
@@ -168,8 +174,6 @@ struct BuildInfo
 		std::swap(texture, other.texture);
 	}
 };
-
-
 
 class FMultipatchTextureBuilder
 {

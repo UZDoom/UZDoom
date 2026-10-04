@@ -21,11 +21,10 @@
 **
 */
 
-
-#ifndef __BITMAP_H__
-#define __BITMAP_H__
+#pragma once
 
 #include <cstring>
+
 #include "palentry.h"
 
 struct FCopyInfo;
@@ -61,6 +60,17 @@ enum ColorType
 	CF_PalEntry
 };
 
+enum class OrthoTransform: uint8_t
+{
+	NONE       = 0,
+	ROT_90     = 1, // rotate 90°
+	ROT_180    = 2, // rotate 180°
+	ROT_270    = 3, // rotate 270°
+	MIRROR     = 4, // flip horizontally
+	MIRROR_90  = 5, // flip horizontally and rotate 90°
+	MIRROR_180 = 6, // flip horizontally and rotate 180°
+	MIRROR_270 = 7, // flip horizontally and rotate 270°
+};
 
 class FBitmap
 {
@@ -226,29 +236,28 @@ public:
 
 
 	void CopyPixelDataRGB(int originx, int originy, const uint8_t *patch, int srcwidth,
-								int srcheight, int step_x, int step_y, int rotate, int ct, FCopyInfo *inf = NULL,
+								int srcheight, int step_x, int step_y, OrthoTransform rotate, int ct, FCopyInfo *inf = NULL,
 		/* for PNG tRNS */		int r=0, int g=0, int b=0);
 	void CopyPixelData(int originx, int originy, const uint8_t * patch, int srcwidth, int srcheight,
-								int step_x, int step_y, int rotate, const PalEntry * palette, FCopyInfo *inf = NULL);
+								int step_x, int step_y, OrthoTransform rotate, const PalEntry * palette, FCopyInfo *inf = NULL);
 
 
-	void Blit(int originx, int originy, const FBitmap &src, int width, int height, int rotate = 0, FCopyInfo *inf = NULL)
+	inline void Blit(int originx, int originy, const FBitmap &src, int width, int height, OrthoTransform rotate = OrthoTransform::NONE, FCopyInfo *inf = NULL)
 	{
 		CopyPixelDataRGB(originx, originy, src.GetPixels(),  width, height, 4, src.GetWidth()*4, rotate, CF_BGRA, inf);
 	}
 
-	void Blit(int originx, int originy, const FBitmap &src, FCopyInfo *inf = NULL)
+	inline void Blit(int originx, int originy, const FBitmap &src, FCopyInfo *inf = NULL)
 	{
-		CopyPixelDataRGB(originx, originy, src.GetPixels(), src.GetWidth(), src.GetHeight(), 4, src.GetWidth()*4, 0, CF_BGRA, inf);
+		Blit(originx, originy, src, src.GetWidth(), src.GetHeight(), OrthoTransform::NONE);
 	}
-
 
 	friend class FTexture;
 };
 
 bool ClipCopyPixelRect(const FClipRect *cr, int &originx, int &originy,
 						const uint8_t *&patch, int &srcwidth, int &srcheight,
-						int &step_x, int &step_y, int rotate);
+						int &step_x, int &step_y, OrthoTransform rotate);
 
 //===========================================================================
 //
@@ -498,6 +507,3 @@ struct bModulate
 	static __forceinline void OpA(uint8_t &d, uint8_t s, FCopyInfo *i) { d = s; }
 	static __forceinline bool ProcessAlpha0() { return false; }
 };
-
-
-#endif

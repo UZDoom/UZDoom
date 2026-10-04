@@ -22,12 +22,16 @@
 **
 */
 
-#include "filesystem.h"
+#include "basics.h"
 #include "bitmap.h"
-#include "image.h"
-#include "imagehelpers.h"
-#include "fontchars.h"
 #include "engineerrors.h"
+#include "filesystem.h"
+#include "fontchars.h"
+#include "fs_files.h"
+#include "fs_filesystem.h"
+#include "image.h"
+
+using FileSys::FileReader;
 
 //==========================================================================
 //
@@ -162,6 +166,6 @@ int FFontChar2::CopyPixels(FBitmap* bmp, int conversion, int frame)
 {
 	if (conversion == luminance) conversion = normal;	// luminance images have no use as an RGB source.
 	auto ppix = CreatePalettedPixels(conversion);
-	bmp->CopyPixelData(0, 0, ppix.Data(), Width, Height, Height, 1, 0, SourceRemap, nullptr);
+	bmp->CopyPixelData(0, 0, ppix.Data(), Width, Height, Height, 1, OrthoTransform::NONE, SourceRemap, nullptr);
 	return 0;
 }

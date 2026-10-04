@@ -22,16 +22,29 @@
 **
 */
 
-#include "files.h"
+#include <cstring>
+#include <utility>
 
-#include "m_png.h"
+#include "basics.h"
 #include "bitmap.h"
-#include "imagehelpers.h"
-#include "image.h"
-#include "printf.h"
-#include "texturemanager.h"
+#include "files.h"
 #include "filesystem.h"
+#include "fs_files.h"
+#include "fs_filesystem.h"
+#include "gametexture.h"
+#include "image.h"
+#include "imagehelpers.h"
+#include "m_png.h"
 #include "m_swap.h"
+#include "memarena.h"
+#include "palentry.h"
+#include "palettecontainer.h"
+#include "palutil.h"
+#include "printf.h"
+#include "tarray.h"
+#include "textureid.h"
+
+class FString;
 
 //==========================================================================
 //
@@ -619,29 +632,29 @@ int FPNGTexture::CopyPixels(FBitmap *bmp, int conversion, int frame)
 	{
 	case 0:
 	case 3:
-		bmp->CopyPixelData(0, 0, Pixels, Width, Height, 1, Width, 0, pe);
+		bmp->CopyPixelData(0, 0, Pixels, Width, Height, 1, Width, OrthoTransform::NONE, pe);
 		break;
 
 	case 2:
 		if (!HaveTrans)
 		{
-			bmp->CopyPixelDataRGB(0, 0, Pixels, Width, Height, 3, pixwidth, 0, CF_RGB);
+			bmp->CopyPixelDataRGB(0, 0, Pixels, Width, Height, 3, pixwidth, OrthoTransform::NONE, CF_RGB);
 		}
 		else
 		{
-			bmp->CopyPixelDataRGB(0, 0, Pixels, Width, Height, 3, pixwidth, 0, CF_RGBT, nullptr,
+			bmp->CopyPixelDataRGB(0, 0, Pixels, Width, Height, 3, pixwidth, OrthoTransform::NONE, CF_RGBT, nullptr,
 				NonPaletteTrans[0], NonPaletteTrans[1], NonPaletteTrans[2]);
 			transpal = true;
 		}
 		break;
 
 	case 4:
-		bmp->CopyPixelDataRGB(0, 0, Pixels, Width, Height, 2, pixwidth, 0, CF_IA);
+		bmp->CopyPixelDataRGB(0, 0, Pixels, Width, Height, 2, pixwidth, OrthoTransform::NONE, CF_IA);
 		transpal = -1;
 		break;
 
 	case 6:
-		bmp->CopyPixelDataRGB(0, 0, Pixels, Width, Height, 4, pixwidth, 0, CF_RGBA);
+		bmp->CopyPixelDataRGB(0, 0, Pixels, Width, Height, 4, pixwidth, OrthoTransform::NONE, CF_RGBA);
 		transpal = -1;
 		break;
 
@@ -776,11 +789,11 @@ FBitmap FPNGFileTexture::GetBgraBitmap(const PalEntry *remap, int *trans)
 
 	if (ColorType == 3)
 	{
-		bmp.CopyPixelData(0, 0, Pixels.Data(), Width, Height, 1, Width, 0, pe);
+		bmp.CopyPixelData(0, 0, Pixels.Data(), Width, Height, 1, Width, OrthoTransform::NONE, pe);
 	}
 	else
 	{
-		bmp.CopyPixelDataRGB(0, 0, Pixels.Data(), Width, Height, 3, pixwidth, 0, CF_RGB);
+		bmp.CopyPixelDataRGB(0, 0, Pixels.Data(), Width, Height, 3, pixwidth, OrthoTransform::NONE, CF_RGB);
 	}
 	return bmp;
 }

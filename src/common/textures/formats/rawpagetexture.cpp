@@ -21,12 +21,21 @@
 **
 */
 
+#include <cstdint>
+
+#ifndef _WIN32
+#include <strings.h>
+#endif
+
+#include "bitmap.h"
 #include "files.h"
 #include "filesystem.h"
-#include "bitmap.h"
-#include "imagehelpers.h"
+#include "fs_files.h"
+#include "fs_filesystem.h"
 #include "image.h"
+#include "imagehelpers.h"
 #include "m_swap.h"
+#include "palentry.h"
 
 // Doom patch format header
 struct patch_t
@@ -214,7 +223,7 @@ int FRawPageTexture::CopyPixels(FBitmap *bmp, int conversion, int frame)
 			pe.b = *psource++;
 			pe.a = 255;
 		}
-		bmp->CopyPixelData(0, 0, source, 320, 200, 1, 320, 0, paldata);
+		bmp->CopyPixelData(0, 0, source, 320, 200, 1, 320, OrthoTransform::NONE, paldata);
 	}
 	return 0;
 }

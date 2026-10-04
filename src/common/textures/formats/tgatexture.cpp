@@ -21,14 +21,19 @@
 **
 */
 
+#include <cstring>
+
+#include "basics.h"
+#include "bitmap.h"
 #include "files.h"
 #include "filesystem.h"
-
-#include "bitmap.h"
-#include "imagehelpers.h"
+#include "fs_files.h"
+#include "fs_filesystem.h"
 #include "image.h"
+#include "imagehelpers.h"
 #include "m_swap.h"
-
+#include "palentry.h"
+#include "tarray.h"
 
 //==========================================================================
 //
@@ -462,7 +467,7 @@ int FTGATexture::CopyPixels(FBitmap *bmp, int conversion, int frame)
 	switch (hdr.img_type & 7)
 	{
 	case 1:	// paletted
-		bmp->CopyPixelData(0, 0, ptr, Width, Height, step_x, Pitch, 0, pe);
+		bmp->CopyPixelData(0, 0, ptr, Width, Height, step_x, Pitch, OrthoTransform::NONE, pe);
 		break;
 
 	case 2:	// RGB
@@ -470,21 +475,21 @@ int FTGATexture::CopyPixels(FBitmap *bmp, int conversion, int frame)
 		{
 		case 15:
 		case 16:
-			bmp->CopyPixelDataRGB(0, 0, ptr, Width, Height, step_x, Pitch, 0, CF_RGB555);
+			bmp->CopyPixelDataRGB(0, 0, ptr, Width, Height, step_x, Pitch, OrthoTransform::NONE, CF_RGB555);
 			break;
 
 		case 24:
-			bmp->CopyPixelDataRGB(0, 0, ptr, Width, Height, step_x, Pitch, 0, CF_BGR);
+			bmp->CopyPixelDataRGB(0, 0, ptr, Width, Height, step_x, Pitch, OrthoTransform::NONE, CF_BGR);
 			break;
 
 		case 32:
 			if ((hdr.img_desc&15)!=8)	// 32 bits without a valid alpha channel
 			{
-				bmp->CopyPixelDataRGB(0, 0, ptr, Width, Height, step_x, Pitch, 0, CF_BGR);
+				bmp->CopyPixelDataRGB(0, 0, ptr, Width, Height, step_x, Pitch, OrthoTransform::NONE, CF_BGR);
 			}
 			else
 			{
-				bmp->CopyPixelDataRGB(0, 0, ptr, Width, Height, step_x, Pitch, 0, CF_BGRA);
+				bmp->CopyPixelDataRGB(0, 0, ptr, Width, Height, step_x, Pitch, OrthoTransform::NONE, CF_BGRA);
 				transval = -1;
 			}
 			break;
@@ -499,11 +504,11 @@ int FTGATexture::CopyPixels(FBitmap *bmp, int conversion, int frame)
 		{
 		case 8:
 			for(int i=0;i<256;i++) pe[i]=PalEntry(255,i,i,i);	// gray map
-			bmp->CopyPixelData(0, 0, ptr, Width, Height, step_x, Pitch, 0, pe);
+			bmp->CopyPixelData(0, 0, ptr, Width, Height, step_x, Pitch, OrthoTransform::NONE, pe);
 			break;
 
 		case 16:
-			bmp->CopyPixelDataRGB(0, 0, ptr, Width, Height, step_x, Pitch, 0, CF_I16);
+			bmp->CopyPixelDataRGB(0, 0, ptr, Width, Height, step_x, Pitch, OrthoTransform::NONE, CF_I16);
 			break;
 
 		default:

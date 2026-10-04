@@ -22,15 +22,22 @@
 **
 */
 
-#include "v_video.h"
-#include "m_random.h"
-#include "wipe.h"
-
+#include "basics.h"
 #include "bitmap.h"
+#include "c_cvars.h"
+#include "gametexture.h"
 #include "hw_material.h"
-#include "v_draw.h"
-#include "s_soundinternal.h"
+#include "i_sound.h"
 #include "i_time.h"
+#include "m_random.h"
+#include "palentry.h"
+#include "tarray.h"
+#include "textureid.h"
+#include "textures.h"
+#include "v_2ddrawer.h"
+#include "v_draw.h"
+#include "v_video.h"
+#include "wipe.h"
 
 EXTERN_CVAR(Bool, cl_capfps)
 
@@ -49,7 +56,7 @@ public:
 	{
 		FBitmap bmp;
 		bmp.Create(Width, Height);
-		bmp.CopyPixelDataRGB(0, 0, (uint8_t*)WorkBuffer.Data(), Width, Height, 4, Width*4, 0, CF_RGBA, nullptr);
+		bmp.CopyPixelDataRGB(0, 0, (uint8_t*)WorkBuffer.Data(), Width, Height, 4, Width*4, OrthoTransform::NONE, CF_RGBA, nullptr);
 		if (trans) *trans = 0;
 		return bmp;
 	}
