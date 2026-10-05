@@ -54,6 +54,17 @@ extern TMap<int, FString> HexenMusic;
 
 TArray<int> ParsedLumps(8);
 
+EXTERN_FARG(complevel);
+
+enum CompatibilityLevels : int
+{
+	COMPLVL_NONE = -1,
+	COMPLVL_VANILLA,
+	COMPLVL_BOOM,
+	COMPLVL_MBF,
+	COMPLVL_MBF21,
+};
+
 //==========================================================================
 //
 //
@@ -2692,54 +2703,87 @@ void G_ParseMapInfo(FString basemapinfo)
 
 	ELevelCompatFlags flags1 = 0;
 	ELevelCompatFlags2 flags2 = 0;
+
 	if (gameinfo.gametype == GAME_Doom)
 	{
-		int comp = fileSystem.CheckNumForName("COMPLVL");
-		if (comp >= 0)
+		FString wishlevel = Args->CheckValue(FArg_complevel);
+		CompatibilityLevels level = COMPLVL_NONE;
+
+		if (!wishlevel.IsEmpty())
 		{
-			auto complvl = fileSystem.ReadFile(comp);
-			auto data = complvl.string();
-			int length = fileSystem.FileLength(comp);
-			if (length == 7 && !strnicmp("vanilla", data, 7))
+			wishlevel.ToLower();
+			const struct
 			{
-				flags1 =
-					COMPATF_SHORTTEX | COMPATF_STAIRINDEX | COMPATF_USEBLOCKING | COMPATF_NODOORLIGHT | COMPATF_SPRITESORT |
-					COMPATF_TRACE | COMPATF_MISSILECLIP | COMPATF_SOUNDTARGET | COMPATF_DEHHEALTH | COMPATF_CROSSDROPOFF |
-					COMPATF_LIGHT | COMPATF_MASKEDMIDTEX |
-					COMPATF_LIMITPAIN | COMPATF_INVISIBILITY | COMPATF_VILEGHOSTS;
+				CompatibilityLevels level;
+				TArray<FName>       names;
+			} complevels[] = {
+				{ COMPLVL_VANILLA, {"2", "3", "4", "1.9", "doom2", "ultimate", "udoom", "final", "tnt", "plutonia", "vanilla" }},
+				{ COMPLVL_BOOM,		{ "9", "boom" }},
+				{ COMPLVL_MBF,		{ "11", "mbf" }},
+				{ COMPLVL_MBF21,	{ "21", "mbf21" }}
+			};
 
-				flags2 =
-					COMPATF2_FLOORMOVE | COMPATF2_EXPLODE1 | COMPATF2_POINTONLINE | COMPATF2_EMULATEMIKOPORTALS |
-					COMPATF2_RESERVEDLINEFLAG;
-			}
-			else if (length == 4 && !strnicmp("boom", data, 4))
+			for (auto &s : complevels)
 			{
-				flags1 =
-					COMPATF_TRACE | COMPATF_SOUNDTARGET | COMPATF_BOOMSCROLL | COMPATF_MISSILECLIP | COMPATF_MASKEDMIDTEX |
-					COMPATF_INVISIBILITY;
+				if (s.names.Contains(wishlevel))
+				{
+					level = s.level;
+					break;
+				}
+			}
+		}
+		else
+		{
+			int comp = fileSystem.CheckNumForName("COMPLVL");
+			if (comp >= 0)
+			{
+				auto complvl = fileSystem.ReadFile(comp);
+				wishlevel    = complvl.string();
 
-				flags2 =
-					COMPATF2_EXPLODE1 | COMPATF2_POINTONLINE | COMPATF2_EMULATEMIKOPORTALS | COMPATF2_TRANSFERSECRET |
-					COMPATF2_RESERVEDLINEFLAG;
+				if (wishlevel.CompareNoCase("vanilla"))	level = COMPLVL_VANILLA;
+				else if (wishlevel.CompareNoCase("boom"))	level = COMPLVL_BOOM;
+				else if (wishlevel.CompareNoCase("mbf"))	level = COMPLVL_MBF;
+				else if (wishlevel.CompareNoCase("mbf21"))	level = COMPLVL_MBF21;
 			}
-			else if (length == 3 && !strnicmp("mbf", data, 3))
-			{
-				flags1 =
-					COMPATF_TRACE | COMPATF_SOUNDTARGET | COMPATF_BOOMSCROLL | COMPATF_MISSILECLIP | COMPATF_MUSHROOM |
-					COMPATF_MBFMONSTERMOVE | COMPATF_NOBLOCKFRIENDS | COMPATF_MASKEDMIDTEX | COMPATF_INVISIBILITY;
+		}
+
+		switch (level)
+		{
+			case COMPLVL_VANILLA:
+				Printf("Applied Vanilla compatibility level.\n");
+				flags1 = COMPATF_SHORTTEX | COMPATF_STAIRINDEX | COMPATF_USEBLOCKING | COMPATF_NODOORLIGHT |
+				         COMPATF_SPRITESORT | COMPATF_TRACE | COMPATF_MISSILECLIP | COMPATF_SOUNDTARGET |
+				         COMPATF_DEHHEALTH | COMPATF_CROSSDROPOFF | COMPATF_LIGHT | COMPATF_MASKEDMIDTEX |
+				         COMPATF_LIMITPAIN | COMPATF_INVISIBILITY | COMPATF_VILEGHOSTS;
+
+				flags2 = COMPATF2_FLOORMOVE | COMPATF2_EXPLODE1 | COMPATF2_POINTONLINE | COMPATF2_EMULATEMIKOPORTALS |
+			             COMPATF2_RESERVEDLINEFLAG;
+				break;
+			case COMPLVL_BOOM:
+				Printf("Applied Boom compatibility level.\n");
+				flags1 = COMPATF_TRACE | COMPATF_SOUNDTARGET | COMPATF_BOOMSCROLL | COMPATF_MISSILECLIP |
+				         COMPATF_MASKEDMIDTEX | COMPATF_INVISIBILITY;
+
+				flags2 = COMPATF2_EXPLODE1 | COMPATF2_POINTONLINE | COMPATF2_EMULATEMIKOPORTALS |
+			             COMPATF2_TRANSFERSECRET | COMPATF2_RESERVEDLINEFLAG;
+				break;
+			case COMPLVL_MBF:
+				Printf("Applied MBF compatibility level.\n");
+				flags1 = COMPATF_TRACE | COMPATF_SOUNDTARGET | COMPATF_BOOMSCROLL | COMPATF_MISSILECLIP |
+				         COMPATF_MUSHROOM | COMPATF_MBFMONSTERMOVE | COMPATF_NOBLOCKFRIENDS | COMPATF_MASKEDMIDTEX |
+				         COMPATF_INVISIBILITY;
 
 				flags2 = COMPATF2_EXPLODE1 | COMPATF2_AVOID_HAZARDS | COMPATF2_STAYONLIFT | COMPATF2_POINTONLINE |
-				         COMPATF2_TRANSFERSECRET | COMPATF2_RESERVEDLINEFLAG;
-			}
-			else if (length == 5 && !strnicmp("mbf21", data, 5))
-			{
-				flags1 =
-					COMPATF_TRACE | COMPATF_SOUNDTARGET | COMPATF_BOOMSCROLL | COMPATF_MISSILECLIP | COMPATF_MUSHROOM |
-					COMPATF_MASKEDMIDTEX | COMPATF_INVISIBILITY;
+			             COMPATF2_TRANSFERSECRET | COMPATF2_RESERVEDLINEFLAG;
+				break;
+			case COMPLVL_MBF21:
+				Printf("Applied MBF21 compatibility level.\n");
+				flags1 = COMPATF_TRACE | COMPATF_SOUNDTARGET | COMPATF_BOOMSCROLL | COMPATF_MISSILECLIP |
+				         COMPATF_MUSHROOM | COMPATF_MASKEDMIDTEX | COMPATF_INVISIBILITY;
 
 				flags2 = COMPATF2_EXPLODE1 | COMPATF2_AVOID_HAZARDS | COMPATF2_STAYONLIFT | COMPATF2_POINTONLINE |
-				         COMPATF2_TRANSFERSECRET | COMPATF2_RESERVEDLINEFLAG;
-			}
+			             COMPATF2_TRANSFERSECRET | COMPATF2_RESERVEDLINEFLAG;
+				break;
 		}
 	}
 
