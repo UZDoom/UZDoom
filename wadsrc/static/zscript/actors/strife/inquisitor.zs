@@ -135,7 +135,7 @@ class Inquisitor : Actor
 	void A_InquisitorAttack ()
 	{
 		if (target == null)
-			return;
+			return; // FIXME: This prevents an abort. Reconsider if just returning early is the correct thing to do
 
 		A_FaceTarget ();
 

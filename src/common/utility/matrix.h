@@ -38,13 +38,12 @@
 #include "vectors.h"
 #include "quaternion.h"
 
-#ifdef USE_DOUBLE
-typedef double FLOATTYPE;
-#else
-typedef float FLOATTYPE;
+#ifndef NO_SSE
+#include <emmintrin.h>
 #endif
 
-class VSMatrix {
+class alignas(16) VSMatrix
+{
 
 	public:
 
@@ -55,55 +54,41 @@ class VSMatrix {
 			loadIdentity();
 		}
 
-		void translate(FLOATTYPE x, FLOATTYPE y, FLOATTYPE z);
-		void scale(FLOATTYPE x, FLOATTYPE y, FLOATTYPE z);
-		void rotate(FLOATTYPE angle, FLOATTYPE x, FLOATTYPE y, FLOATTYPE z);
+		void translate(float x, float y, float z);
+		void scale(float x, float y, float z);
+		void rotate(float angle, float x, float y, float z);
 		void loadIdentity();
-#ifdef USE_DOUBLE
-		void multMatrix(const float *aMatrix);
-#endif
-		void multVector(FLOATTYPE *aVector);
-		void multMatrix(const FLOATTYPE *aMatrix);
+		void multVector(float *aVector);
+		
+		void multMatrix(const float *aMatrix); // aMatrix **MUST** be 16-byte aligned
+
 		void multMatrix(const VSMatrix &aMatrix)
 		{
 			multMatrix(aMatrix.mMatrix);
 		}
-		void multQuaternion(const TVector4<FLOATTYPE>& q);
-		void multQuaternion(const TQuaternion<FLOATTYPE>& q);
-		void loadMatrix(const FLOATTYPE *aMatrix);
-#ifdef USE_DOUBLE
+		void multQuaternion(const TVector4<float>& q);
+		void multQuaternion(const TQuaternion<float>& q);
 		void loadMatrix(const float *aMatrix);
-#endif
-		void lookAt(FLOATTYPE xPos, FLOATTYPE yPos, FLOATTYPE zPos, FLOATTYPE xLook, FLOATTYPE yLook, FLOATTYPE zLook, FLOATTYPE xUp, FLOATTYPE yUp, FLOATTYPE zUp);
-		void perspective(FLOATTYPE fov, FLOATTYPE ratio, FLOATTYPE nearp, FLOATTYPE farp);
-		void ortho(FLOATTYPE left, FLOATTYPE right, FLOATTYPE bottom, FLOATTYPE top, FLOATTYPE nearp=-1.0f, FLOATTYPE farp=1.0f);
-		void frustum(FLOATTYPE left, FLOATTYPE right, FLOATTYPE bottom, FLOATTYPE top, FLOATTYPE nearp, FLOATTYPE farp);
-		void copy(FLOATTYPE * pDest)
-		{
-			memcpy(pDest, mMatrix, 16 * sizeof(FLOATTYPE));
-		}
-
-#ifdef USE_DOUBLE
+		void lookAt(float xPos, float yPos, float zPos, float xLook, float yLook, float zLook, float xUp, float yUp, float zUp);
+		void perspective(float fov, float ratio, float nearp, float farp);
+		void ortho(float left, float right, float bottom, float top, float nearp=-1.0f, float farp=1.0f);
+		void frustum(float left, float right, float bottom, float top, float nearp, float farp);
 		void copy(float * pDest)
 		{
-			for (int i = 0; i < 16; i++)
-			{
-				pDest[i] = (float)mMatrix[i];
-			}
+			memcpy(pDest, mMatrix, 16 * sizeof(float));
 		}
-#endif
 
-		const FLOATTYPE *get() const
+		const float *get() const
 		{
 			return mMatrix;
 		}
 
-		void multMatrixPoint(const FLOATTYPE *point, FLOATTYPE *res);
+		void multMatrixPoint(const float *point, float *res);
 
 #ifdef USE_DOUBLE
 		void computeNormalMatrix(const float *aMatrix);
 #endif
-		void computeNormalMatrix(const FLOATTYPE *aMatrix);
+		void computeNormalMatrix(const float *aMatrix);
 		void computeNormalMatrix(const VSMatrix &aMatrix)
 		{
 			computeNormalMatrix(aMatrix.mMatrix);
@@ -112,18 +97,18 @@ class VSMatrix {
 		void transpose();
 
 	protected:
-		static void crossProduct(const FLOATTYPE *a, const FLOATTYPE *b, FLOATTYPE *res);
-		static FLOATTYPE dotProduct(const FLOATTYPE *a, const FLOATTYPE * b);
-		static void normalize(FLOATTYPE *a);
-		static void subtract(const FLOATTYPE *a, const FLOATTYPE *b, FLOATTYPE *res);
-		static void add(const FLOATTYPE *a, const FLOATTYPE *b, FLOATTYPE *res);
-		static FLOATTYPE length(const FLOATTYPE *a);
-		static void multMatrix(FLOATTYPE *resMatrix, const FLOATTYPE *aMatrix);
+		static void crossProduct(const float *a, const float *b, float *res);
+		static float dotProduct(const float *a, const float * b);
+		static void normalize(float *a);
+		static void subtract(const float *a, const float *b, float *res);
+		static void add(const float *a, const float *b, float *res);
+		static float length(const float *a);
+		static void multMatrix(float *resMatrix, const float *aMatrix);
 
-		static void setIdentityMatrix(FLOATTYPE *mat, int size = 4);
+		static void setIdentityMatrix(float *mat, int size = 4);
 	public:
 		/// The storage for matrices
-		FLOATTYPE mMatrix[16];
+		float mMatrix[16];
 
 };
 

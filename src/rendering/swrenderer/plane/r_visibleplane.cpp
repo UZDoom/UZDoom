@@ -74,35 +74,27 @@ namespace swrenderer
 
 		auto Level = sec->sector->Level;
 
-		if (Level->lightlists.flat_dlist.SSize() > sec->Index())
+		for(FDynamicLight * lightsource : sec->dlist)
 		{
-			TMap<FDynamicLight *, std::unique_ptr<FLightNode>>::Iterator it(Level->lightlists.flat_dlist[sec->Index()]);
-			TMap<FDynamicLight *, std::unique_ptr<FLightNode>>::Pair *pair;
-			while (it.NextPair(pair))
+			if (lightsource->IsActive() && (height.PointOnSide(lightsource->Pos) > 0))
 			{
-				auto node = pair->Value.get();
-				if (!node) continue;
-
-				if (node->lightsource->IsActive() && (height.PointOnSide(node->lightsource->Pos) > 0))
+				bool found = false;
+				VisiblePlaneLight *light_node = lights;
+				while (light_node)
 				{
-					bool found = false;
-					VisiblePlaneLight *light_node = lights;
-					while (light_node)
+					if (light_node->lightsource == lightsource)
 					{
-						if (light_node->lightsource == node->lightsource)
-						{
-							found = true;
-							break;
-						}
-						light_node = light_node->next;
+						found = true;
+						break;
 					}
-					if (!found)
-					{
-						VisiblePlaneLight *newlight = thread->FrameMemory->NewObject<VisiblePlaneLight>();
-						newlight->next = lights;
-						newlight->lightsource = node->lightsource;
-						lights = newlight;
-					}
+					light_node = light_node->next;
+				}
+				if (!found)
+				{
+					VisiblePlaneLight *newlight = thread->FrameMemory->NewObject<VisiblePlaneLight>();
+					newlight->next = lights;
+					newlight->lightsource = lightsource;
+					lights = newlight;
 				}
 			}
 		}

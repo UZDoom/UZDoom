@@ -57,11 +57,12 @@ FSerializer &Serialize(FSerializer &arc, const char *key, FLightDefaults &value,
 {
 	if (arc.BeginObject(key))
 	{
+		int ltype = value.m_type;
 		arc("name", value.m_Name)
 			.Array("args", value.m_Args, 5)
 			("param", value.m_Param)
 			("pos", value.m_Pos)
-			("type", value.m_type)
+			("type", ltype)
 			("attenuate", value.m_attenuate)
 			("flags", value.m_lightFlags)
 			("swapped", value.m_swapped)
@@ -72,6 +73,7 @@ FSerializer &Serialize(FSerializer &arc, const char *key, FLightDefaults &value,
 			("pitch", value.m_pitch)
 			("lightdefintensity", value.m_LightDefIntensity)
 		.EndObject();
+		value.m_type = static_cast<ELightType>(ltype);
 	}
 	return arc;
 }
@@ -110,10 +112,12 @@ FSerializer &Serialize(FSerializer &arc, const char *key, TDeletingArray<FLightD
 
 void FLightDefaults::ApplyProperties(FDynamicLight * light) const
 {
-	auto oldtype = light->lighttype;
+	auto oldtype = light->GetLightType();
 
-	light->m_active = true;
-	light->lighttype = m_type;
+	light->flags = 0;
+
+	light->flags |= ILF_ACTIVE;
+	light->SetLightType(m_type);
 	light->specialf1 = m_Param;
 	light->lightDefIntensity = m_LightDefIntensity;
 	light->pArgs = m_Args;
@@ -122,7 +126,10 @@ void FLightDefaults::ApplyProperties(FDynamicLight * light) const
 	{
 		light->pSpotInnerAngle = &m_spotInnerAngle;
 		light->pSpotOuterAngle = &m_spotOuterAngle;
-		light->explicitpitch   = m_explicitPitch;
+		if(m_explicitPitch)
+		{
+			light->flags |= ILF_EXPLICIT_PITCH;
+		}
 		light->Yaw             = light->target->Angles.Yaw;
 		if (m_explicitPitch) light->Pitch = m_pitch;
 		else light->Pitch = light->target->Angles.Pitch;
@@ -139,7 +146,10 @@ void FLightDefaults::ApplyProperties(FDynamicLight * light) const
 		light->m_cycler.SetCycleType(CYCLE_Sin);
 		light->m_currentRadius = (float)light->m_cycler.GetVal();
 		if (light->m_currentRadius <= 0) light->m_currentRadius = 1;
-		light->swapped = m_swapped;
+		if(m_swapped)
+		{
+			light->flags |= ILF_SWAPPED;
+		}
 	}
 	light->SetOffset(m_Pos);	// this must be the last thing to do.
 }

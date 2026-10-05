@@ -270,17 +270,48 @@ FGameConfigFile::FGameConfigFile ()
 		}
 	}
 
-	// Add some self-documentation.
+#ifdef _WIN32
+#define PATHSEP_STR "semicolon"
+#else
+#define PATHSEP_STR "colon"
+#endif
+
 	SetSectionNote("IWADSearch.Directories",
+		// Add environment variable documentation.
+		"\n#### Environment Variable Information ####"
+		"\n#"
+		"\n# . references the current directory that UZDoom is launched from within"
+		"\n# your terminal or console."
+		"\n#"
+		"\n# $DOOMWADDIR references a system environment variable of the same name"
+		"\n# that contains a search directory."
+		"\n#"
+		"\n# $DOOMWADPATH references a system environment variable of the same name"
+		"\n# whose value contains a " PATHSEP_STR " delimited list of searchable directories."
+		"\n# It's *similar* to $DOOMWADDIR, except that $DOOMWADPATH is a list of"
+		"\n# possible search directories."
+		"\n#"
+		"\n# $HOME references your system user directory."
+		"\n#"
+		"\n# $PROGDIR references the directory that the main binary is located."
+		"\n#"
+		"\n# For more information and examples of how to use environment variables,"
+		"\n# please see: https://zdoom.org/wiki/Configuration_file#Environment_Variables"
+		"\n#"
+		"\n####\n\n" // Add a final newline before going back to the original section header text.
+		// Finish environment variable documentation.
+
 		"# These are the directories to automatically search for IWADs.\n"
 		"# Each directory should be on a separate line, preceded by Path=\n");
 	SetSectionNote("FileSearch.Directories",
 		"# These are the directories to search for wads added with the -file\n"
-		"# command line parameter, if they cannot be found with the path\n"
-		"# as-is. Layout is the same as for IWADSearch.Directories\n");
+		"# command line parameter, if they cannot be found with the path as-is.\n"
+		"# Layout is the same as for IWADSearch.Directories\n");
 	SetSectionNote("SoundfontSearch.Directories",
 		"# These are the directories to search for soundfonts that let listed in the menu.\n"
 		"# Layout is the same as for IWADSearch.Directories\n");
+
+#undef PATHSEP_STR
 }
 
 FGameConfigFile::~FGameConfigFile ()

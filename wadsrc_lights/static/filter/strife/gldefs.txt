@@ -615,6 +615,7 @@ flickerlight PHFIRE_FX1
 	size 42
 	secondarySize 48
 	chance 0.3
+	offset 0 28 0
 	attenuate 1
 }
 
@@ -624,6 +625,7 @@ flickerlight PHFIRE_FX2
 	size 60
 	secondarySize 72
 	chance 0.3
+	offset 0 28 0
 	attenuate 1
 }
 
@@ -633,6 +635,7 @@ flickerlight PHFIRE_FX3
 	size 84
 	secondarySize 96
 	chance 0.3
+	offset 0 28 0
 	attenuate 1
 }
 
@@ -642,6 +645,7 @@ flickerlight PHFIRE_FX4
 	size 96
 	secondarySize 108
 	chance 0.3
+	offset 0 28 0
 	attenuate 1
 }
 
@@ -651,6 +655,7 @@ flickerlight PHFIRE_FX5
 	size 99
 	secondarySize 108
 	chance 0.3
+	offset 0 28 0
 	attenuate 1
 }
 
@@ -660,6 +665,7 @@ flickerlight PHFIRE_FX6
 	size 99
 	secondarySize 108
 	chance 0.3
+	offset 0 28 0
 	attenuate 1
 }
 
@@ -669,6 +675,7 @@ flickerlight PHFIRE_FX7
 	size 99
 	secondarySize 108
 	chance 0.3
+	offset 0 28 0
 	attenuate 1
 }
 
@@ -678,6 +685,7 @@ flickerlight PHFIRE_FX8
 	size 90
 	secondarySize 102
 	chance 0.3
+	offset 0 28 0
 	attenuate 1
 }
 
@@ -687,6 +695,7 @@ flickerlight PHFIRE_FX9
 	size 72
 	secondarySize 78
 	chance 0.3
+	offset 0 28 0
 	attenuate 1
 }
 
@@ -696,6 +705,7 @@ flickerlight PHFIRE_FX10
 	size 66
 	secondarySize 72
 	chance 0.3
+	offset 0 28 0
 	attenuate 1
 }
 
@@ -705,6 +715,7 @@ flickerlight PHFIRE_FX11
 	size 54
 	secondarySize 60
 	chance 0.3
+	offset 0 28 0
 	attenuate 1
 }
 
@@ -2761,12 +2772,52 @@ object Bang4Cloud
 }
 
 // Fire Droplet
+flickerlight FDROP_FX1
+{
+	color 1.0 0.5 0.0
+	size 90
+	secondarySize 102
+	chance 0.3
+	offset 0 2 0
+	attenuate 1
+}
+
+flickerlight FDROP_FX2
+{
+	color 1.0 0.4 0.0
+	size 72
+	secondarySize 78
+	chance 0.3
+	offset 0 2 0
+	attenuate 1
+}
+
+flickerlight FDROP_FX3
+{
+	color 1.0 0.45 0.0
+	size 66
+	secondarySize 72
+	chance 0.3
+	offset 0 2 0
+	attenuate 1
+}
+
+flickerlight FDROP_FX4
+{
+	color 1.0 0.3 0.0
+	size 54
+	secondarySize 60
+	chance 0.3
+	offset 0 2 0
+	attenuate 1
+}
+
 object FireDroplet
 {
-	frame FFOTA { light PHFIRE_FX8  }
-	frame FFOTB { light PHFIRE_FX9  }
-	frame FFOTC { light PHFIRE_FX10 }
-	frame FFOTD { light PHFIRE_FX11 }
+	frame FFOTA { light FDROP_FX1 }
+	frame FFOTB { light FDROP_FX2 }
+	frame FFOTC { light FDROP_FX3 }
+	frame FFOTD { light FDROP_FX4 }
 }
 
 // Lighning

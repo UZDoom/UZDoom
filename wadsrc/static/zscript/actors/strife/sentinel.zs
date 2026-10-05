@@ -78,10 +78,8 @@ class Sentinel : Actor
 	void A_SentinelAttack ()
 	{
 		// [BB] Without a target the P_SpawnMissileZAimed call will crash.
-		if (!target)
-		{
-			return;
-		}
+		if (target == null)
+			return; // FIXME: This prevents an abort. Reconsider if just returning early is the correct thing to do
 
 		Actor missile = SpawnMissileZAimed (pos.z + 32, target, "SentinelFX2");
 

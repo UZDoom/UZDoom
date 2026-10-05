@@ -35,6 +35,7 @@
 #include "textblock.h"
 
 constexpr unsigned NUMBER_OF_RELEASES_TO_DISPLAY = 3;
+constexpr VersionInfo FIRST_UZDOOM{4, 14, 3};
 
 bool ReleasePage::show_upcoming = false;
 
@@ -77,7 +78,7 @@ void ReleasePage::OnGeometryChanged()
 	Launcher->UpdatePlayButton();
 }
 
-FString ReleasePage::_ParseReleaseNotes(rapidxml::xml_node<char> * release)
+FString ReleasePage::_ParseReleaseNotes(rapidxml::xml_node<char> * release, VersionInfo *versioninfo)
 {
 	// braindead html to plaintext parser
 
@@ -89,7 +90,9 @@ FString ReleasePage::_ParseReleaseNotes(rapidxml::xml_node<char> * release)
 	auto url = release->first_node("url");
 	FString text;
 
-	if (!show_upcoming && VersionInfo{version->value()} > GetCurrentVersionForUpdater()) return "";
+	*versioninfo = VersionInfo{version? version->value(): "0.0.0"};
+
+	if (!show_upcoming && *versioninfo > GetCurrentVersionForUpdater()) return "";
 
 	// https://docs.flathub.org/docs/for-app-authors/metainfo-guidelines#description
 	//
@@ -193,7 +196,7 @@ FString ReleasePage::_ParseReleaseNotes(rapidxml::xml_node<char> * release)
 	FString result;
 	result.AppendFormat(
 		"# %s version %s, released %s",
-		GAMENAME,
+		*versioninfo >= FIRST_UZDOOM? GAMENAME: "GZDoom",
 		version
 			? version->value()
 			: GStrings.GetString("NOTES_UNKNOWN"), // "Unknown"
@@ -227,18 +230,17 @@ FString ReleasePage::_BuildReleaseNotes(rapidxml::xml_document<> &doc)
 	release = release->first_node("release");
 
 	FString text;
+	VersionInfo version;
 
 	for (unsigned i = 1; release; )
 	{
-		if (auto notes = _ParseReleaseNotes(release); !notes.IsEmpty())
+		if (auto notes = _ParseReleaseNotes(release, &version); !notes.IsEmpty())
 		{
 			text.AppendFormat("%s", notes.GetChars());
 
-			if (!release || i >= NUMBER_OF_RELEASES_TO_DISPLAY) break;
+			if (version.revision == 0 && ++i > NUMBER_OF_RELEASES_TO_DISPLAY) break;
 
 			text.AppendFormat("\n\n---\n\n");
-
-			i++;
 		}
 
 		release = release->next_sibling("release");

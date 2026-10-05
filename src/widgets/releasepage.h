@@ -25,6 +25,7 @@ class CheckboxLabel;
 class TextBlock;
 class FString;
 struct FStartupSelectionInfo;
+struct VersionInfo;
 
 class ReleasePage : public Widget
 {
@@ -42,7 +43,7 @@ private:
 	TextBlock* Notes = nullptr;
 	CheckboxLabel* ShowThis = nullptr;
 
-	static FString _ParseReleaseNotes(rapidxml::xml_node<char> *);
+	static FString _ParseReleaseNotes(rapidxml::xml_node<char> *, VersionInfo *);
 	static FString _BuildReleaseNotes(rapidxml::xml_document<> &);
 	static char * _OpenReleaseNotes();
 	static FString GetReleaseNotes();

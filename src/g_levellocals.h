@@ -50,13 +50,6 @@
 
 EXTERN_CVAR(Bool, sv_autocompat)
 
-struct FGlobalDLightLists
-{
-	//TODO add TSet and switch from TMap to TSet
-	TArray<TMap<FDynamicLight*, std::unique_ptr<FLightNode>>> flat_dlist;
-	TArray<TMap<FDynamicLight*, std::unique_ptr<FLightNode>>> wall_dlist;
-};
-
 //============================================================================
 //
 // This is used to mark processed portals for some collection functions.
@@ -779,7 +772,6 @@ public:
 
 	int                LocalWorldTimer = 0;	// For client-sided actions that are still bound to world processing.
 	int                LocalTimer = 0;		// For client-sided actions independent of any world state.
-	FGlobalDLightLists lightlists;
 
 	FDynamicLight *lights;
 	DVisualThinker* VisualThinkerHead = nullptr;
