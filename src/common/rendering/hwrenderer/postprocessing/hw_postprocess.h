@@ -833,9 +833,11 @@ private:
 class PPCustomShaderInstance
 {
 public:
-	PPCustomShaderInstance(PostProcessShader *desc, std::unique_ptr<PPPersistentBuffer> *lastInputTexture);
+	PPCustomShaderInstance(PostProcessShader *desc, std::unique_ptr<PPPersistentBuffer> *lastInputTexture, PPTexture **weaponInputTexture, PPTexture **weaponLastTexture, PPTexture **uiInputTexture, PPTexture **uiLastTexture);
 
 	void Run(PPRenderState *renderstate);
+	void RunWithTextures(PPRenderState *renderstate, PPTexture *in, PPTexture *out);
+	void RunWithUITextures(PPRenderState *renderstate, PPTexture *in, PPTexture *out);
 
 	PostProcessShader *Desc = nullptr;
 
@@ -853,6 +855,16 @@ private:
 
 	std::unique_ptr<PPPersistentBuffer> *LastInputTexture;
 	int LastInputTextureBinding = -1;
+
+	PPTexture **WeaponInputTexture;
+	int WeaponInputTextureBinding = -1;
+	PPTexture **WeaponLastTexture;
+	int WeaponLastTextureBinding = -1;
+
+	PPTexture **UIInputTexture;
+	int UIInputTextureBinding = -1;
+	PPTexture **UILastTexture;
+	int UILastTextureBinding = -1;
 };
 
 class PPCustomShaders
@@ -861,13 +873,41 @@ public:
 	void Run(PPRenderState *renderstate, FString target);
 	void UpdateLastInputTexture(PPRenderState *renderstate);
 
+	bool HasWeaponShaders() const;
+	PPTexture *GetWeaponLayerTexture(int width, int height);
+	void RunWeapon(PPRenderState *renderstate);
+
+	bool HasUIShaders() const;
+	PPTexture *GetUILayerTexture(int width, int height);
+	void RunUI(PPRenderState *renderstate);
+
 private:
 	void CreateShaders();
+	void UpdateWeaponTextures(int width, int height);
+	void UpdateUITextures(int width, int height);
 
 	std::vector<std::unique_ptr<PPCustomShaderInstance>> mShaders;
 	std::unique_ptr<PPPersistentBuffer> mLastInputTexture;
 	int mLastWidth = 0;
 	int mLastHeight = 0;
+
+	PPTexture mWeaponTextures[2];
+	PPTexture mWeaponHistory[2];
+	int mWeaponHistoryIndex = 0;
+	PPTexture *mWeaponInputPtr = nullptr;
+	PPTexture *mWeaponLastPtr = nullptr;
+	int mWeaponTexWidth = 0;
+	int mWeaponTexHeight = 0;
+	PPShader mWeaponCompositeShader = { "shaders/pp/weaponlayer.fp", "", {} };
+
+	PPTexture mUITextures[2];
+	PPTexture mUIHistory[2];
+	int mUIHistoryIndex = 0;
+	PPTexture *mUIInputPtr = nullptr;
+	PPTexture *mUILastPtr = nullptr;
+	int mUITexWidth = 0;
+	int mUITexHeight = 0;
+	PPShader mUICompositeShader = { "shaders/pp/uilayer.fp", "", {} };
 };
 
 class PPShadowMap
