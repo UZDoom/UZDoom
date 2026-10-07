@@ -421,13 +421,23 @@ void SDL2DisplayWindow::ProcessEvents()
 
 void SDL2DisplayWindow::RunLoop()
 {
+	SDL_Event event;
 	ExitRunLoop = false;
+	constexpr auto target = 1000 / 60;
+
 	while (!ExitRunLoop)
 	{
-		SDL_Event event = {};
-		int result = SDL_WaitEvent(&event);
-		if (result == 1)
-			DispatchEvent(event); // Silently ignore if it fails and pray it doesn't busy loop, because SDL and Linux utterly sucks!
+		const auto start = SDL_GetTicks();
+
+		while (SDL_PollEvent(&event))
+		{
+			DispatchEvent(event);
+		}
+
+		if (const auto elapsed = SDL_GetTicks() - start; elapsed < target)
+		{
+			SDL_Delay(target - elapsed);
+		}
 	}
 }
 
