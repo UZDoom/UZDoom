@@ -151,9 +151,11 @@ void CheckNativeMouse()
 	}
 	else
 	{
-		// ungrab mouse when in the menu with mouse control on.
-		wantNative = m_use_mouse
-			&& (MENU_On == menuactive || MENU_OnNoPause == menuactive);
+		// Release the mouse for the active console or mouse enabled menus.
+		bool consoleActive = (MENU_Off == menuactive || MENU_GameplayMenu == menuactive)
+			&& (ConsoleState == c_down || ConsoleState == c_falling);
+		wantNative = consoleActive || (m_use_mouse
+			&& (MENU_On == menuactive || MENU_OnNoPause == menuactive));
 	}
 
 	if (!wantNative && sysCallbacks.WantNativeMouse && sysCallbacks.WantNativeMouse())
