@@ -27,7 +27,6 @@
 #include "hwrenderer/scene/hw_drawinfo.h"
 #include "hwrenderer/scene/hw_drawstructs.h"
 #include "models.h"
-#include "hw_cvars.h"
 #include <cmath>	// needed for std::floor on mac
 
 template<class T>
@@ -100,6 +99,7 @@ LightProbe* FindLightProbe(FLevelLocals* level, float x, float y, float z)
 
 void HWDrawInfo::GetDynSpriteLight(AActor *self, float x, float y, float z, FSection *sec, int portalgroup, float *out)
 {
+	FDynamicLight *light;
 	float frac, lr, lg, lb;
 	float radius;
 
@@ -113,83 +113,93 @@ void HWDrawInfo::GetDynSpriteLight(AActor *self, float x, float y, float z, FSec
 		out[2] = probe->Blue;
 	}
 
-	for(FDynamicLight * light : sec->dlist)
+	// Go through both light lists
+	if (Level->lightlists.flat_dlist.SSize() > sec->Index())
 	{
-		if (light->ShouldLightActor(self))
+		TMap<FDynamicLight *, std::unique_ptr<FLightNode>>::Iterator it(Level->lightlists.flat_dlist[sec->Index()]);
+		TMap<FDynamicLight *, std::unique_ptr<FLightNode>>::Pair *pair;
+		while (it.NextPair(pair))
 		{
-			float dist;
-			FVector3 L;
+			auto node = pair->Value.get();
+			if (!node) continue;
 
-			// This is a performance critical section of code where we cannot afford to let the compiler decide whether to inline the function or not.
-			// This will do the calculations explicitly rather than calling one of AActor's utility functions.
-			if (Level->Displacements.size > 0)
+			light=node->lightsource;
+			if (light->ShouldLightActor(self))
 			{
-				int fromgroup = light->Sector->PortalGroup;
-				int togroup = portalgroup;
-				if (fromgroup == togroup || fromgroup == 0 || togroup == 0) goto direct;
+				float dist;
+				FVector3 L;
 
-				DVector2 offset = Level->Displacements.getOffset(fromgroup, togroup);
-				L = FVector3(x - (float)(light->X() + offset.X), y - (float)(light->Y() + offset.Y), z - (float)light->Z());
-			}
-			else
-			{
-			direct:
-				L = FVector3(x - (float)light->X(), y - (float)light->Y(), z - (float)light->Z());
-			}
-
-			dist = (float)L.LengthSquared();
-			radius = light->GetRadius();
-
-			if (dist < radius * radius)
-			{
-				dist = sqrtf(dist);	// only calculate the square root if we really need it.
-
-				frac = 1.0f - (dist / radius);
-
-				if (light->IsSpot())
+				// This is a performance critical section of code where we cannot afford to let the compiler decide whether to inline the function or not.
+				// This will do the calculations explicitly rather than calling one of AActor's utility functions.
+				if (Level->Displacements.size > 0)
 				{
-					L *= -1.0f / dist;
-					DAngle negPitch = -light->Pitch;
-					DAngle Angle = light->Yaw;
-					double xyLen = negPitch.Cos();
-					double spotDirX = -Angle.Cos() * xyLen;
-					double spotDirY = -Angle.Sin() * xyLen;
-					double spotDirZ = -negPitch.Sin();
-					double cosDir = L.X * spotDirX + L.Y * spotDirY + L.Z * spotDirZ;
-					frac *= (float)smoothstep(light->pSpotOuterAngle->Cos(), light->pSpotInnerAngle->Cos(), cosDir);
+					int fromgroup = light->Sector->PortalGroup;
+					int togroup = portalgroup;
+					if (fromgroup == togroup || fromgroup == 0 || togroup == 0) goto direct;
+
+					DVector2 offset = Level->Displacements.getOffset(fromgroup, togroup);
+					L = FVector3(x - (float)(light->X() + offset.X), y - (float)(light->Y() + offset.Y), z - (float)light->Z());
+				}
+				else
+				{
+				direct:
+					L = FVector3(x - (float)light->X(), y - (float)light->Y(), z - (float)light->Z());
 				}
 
-				if (frac > 0 && (!light->IsShadowMapped() || (light->GetRadius() > 0 && screen->mShadowMap.ShadowTest(light->Pos, { x, y, z }))))
+				dist = (float)L.LengthSquared();
+				radius = light->GetRadius();
+
+				if (dist < radius * radius)
 				{
-					lr = light->GetRed() / 255.0f;
-					lg = light->GetGreen() / 255.0f;
-					lb = light->GetBlue() / 255.0f;
+					dist = sqrtf(dist);	// only calculate the square root if we really need it.
 
-					if (light->target && (light->target->renderflags2 & RF2_LIGHTMULTALPHA))
+					frac = 1.0f - (dist / radius);
+
+					if (light->IsSpot())
 					{
-						float alpha = (float)light->target->Alpha;
-						lr *= alpha;
-						lg *= alpha;
-						lb *= alpha;
+						L *= -1.0f / dist;
+						DAngle negPitch = -light->Pitch;
+						DAngle Angle = light->Yaw;
+						double xyLen = negPitch.Cos();
+						double spotDirX = -Angle.Cos() * xyLen;
+						double spotDirY = -Angle.Sin() * xyLen;
+						double spotDirZ = -negPitch.Sin();
+						double cosDir = L.X * spotDirX + L.Y * spotDirY + L.Z * spotDirZ;
+						frac *= (float)smoothstep(light->pSpotOuterAngle->Cos(), light->pSpotInnerAngle->Cos(), cosDir);
 					}
 
-					// Get GLDEFS intensity
-					lr *= light->GetLightDefIntensity();
-					lg *= light->GetLightDefIntensity();
-					lb *= light->GetLightDefIntensity();
-
-					if (light->IsSubtractive())
+					if (frac > 0 && (!light->shadowmapped || (light->GetRadius() > 0 && screen->mShadowMap.ShadowTest(light->Pos, { x, y, z }))))
 					{
-						float bright = (float)FVector3(lr, lg, lb).Length();
-						FVector3 lightColor(lr, lg, lb);
-						lr = (bright - lr) * -1;
-						lg = (bright - lg) * -1;
-						lb = (bright - lb) * -1;
-					}
+						lr = light->GetRed() / 255.0f;
+						lg = light->GetGreen() / 255.0f;
+						lb = light->GetBlue() / 255.0f;
 
-					out[0] += lr * frac;
-					out[1] += lg * frac;
-					out[2] += lb * frac;
+						if (light->target && (light->target->renderflags2 & RF2_LIGHTMULTALPHA))
+						{
+							float alpha = (float)light->target->Alpha;
+							lr *= alpha;
+							lg *= alpha;
+							lb *= alpha;
+						}
+
+						// Get GLDEFS intensity
+						lr *= light->GetLightDefIntensity();
+						lg *= light->GetLightDefIntensity();
+						lb *= light->GetLightDefIntensity();
+
+						if (light->IsSubtractive())
+						{
+							float bright = (float)FVector3(lr, lg, lb).Length();
+							FVector3 lightColor(lr, lg, lb);
+							lr = (bright - lr) * -1;
+							lg = (bright - lg) * -1;
+							lb = (bright - lb) * -1;
+						}
+
+						out[0] += lr * frac;
+						out[1] += lg * frac;
+						out[2] += lb * frac;
+					}
 				}
 			}
 		}
@@ -216,43 +226,33 @@ void hw_GetDynModelLight(AActor *self, FDynLightData &modellightdata)
 {
 	modellightdata.Clear();
 
-	if (self && self->Sector)
+	if (self)
 	{
+		auto &addedLights = addedLightsArray;	// avoid going through the thread local storage for each use.
+
+		addedLights.Clear();
+
+		float x = (float)self->X();
+		float y = (float)self->Y();
+		float z = (float)self->Center();
 		float actorradius = (float)self->RenderRadius();
+		float radiusSquared = actorradius * actorradius;
+		dl_validcount++;
 
-		if(actorradius <= gl_model_light_optimization_radius)
+		BSPWalkCircle(self->Level, x, y, radiusSquared, [&](subsector_t *subsector) // Iterate through all subsectors potentially touched by actor
 		{
-			int group = self->Sector->PortalGroup;
-			FSection *sec = self->section;
+			auto section = subsector->section;
+			if (section->validcount == dl_validcount) return;	// already done from a previous subsector.
 
-			for(FDynamicLight * light : sec->dlist)
+			if (self->Level->lightlists.flat_dlist.SSize() > subsector->section->Index())
 			{
-				if (light->ShouldLightActor(self))
-				{
-					AddLightToList(modellightdata, group, light, true);
-				}
-			}
-		}
-		else
-		{
-			auto &addedLights = addedLightsArray;	// avoid going through the thread local storage for each use.
-
-			addedLights.Clear();
-
-			float x = (float)self->X();
-			float y = (float)self->Y();
-			float z = (float)self->Center();
-			float radiusSquared = actorradius * actorradius;
-			dl_validcount++;
-
-			//TODO replace with blockmap search
-			BSPWalkCircle(self->Level, x, y, radiusSquared, [&](subsector_t *subsector) // Iterate through all subsectors potentially touched by actor
-			{
-				auto section = subsector->section;
-				if (section->validcount == dl_validcount) return;	// already done from a previous subsector.
-
-				for(FDynamicLight * light : subsector->section->dlist)
-				{
+				TMap<FDynamicLight *, std::unique_ptr<FLightNode>>::Iterator it(self->Level->lightlists.flat_dlist[subsector->section->Index()]);
+				TMap<FDynamicLight *, std::unique_ptr<FLightNode>>::Pair *pair;
+				while (it.NextPair(pair))
+				{ // check all lights touching a subsector
+					auto node = pair->Value.get();
+					if (!node) continue;
+					FDynamicLight *light = node->lightsource;
 					if (light->ShouldLightActor(self))
 					{
 						int group = subsector->sector->PortalGroup;
@@ -272,7 +272,7 @@ void hw_GetDynModelLight(AActor *self, FDynLightData &modellightdata)
 						}
 					}
 				}
-			});
-		}
+			}
+		});
 	}
 }

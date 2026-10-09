@@ -121,15 +121,15 @@ void AddLightToList(FDynLightData &dld, int group, FDynamicLight * light, bool f
 	if (light->IsSpot())
 	{
 		lightType = 1.0f;
-		spotInnerAngle = (float)light->pSpotInnerAngle->FastCos();
-		spotOuterAngle = (float)light->pSpotOuterAngle->FastCos();
+		spotInnerAngle = (float)light->pSpotInnerAngle->Cos();
+		spotOuterAngle = (float)light->pSpotOuterAngle->Cos();
 
 		DAngle negPitch = -light->Pitch;
 		DAngle Angle = light->Yaw;
-		double xzLen = negPitch.FastCos();
-		spotDirX = float(-Angle.FastCos() * xzLen);
-		spotDirY = float(-negPitch.FastSin());
-		spotDirZ = float(-Angle.FastSin() * xzLen);
+		double xzLen = negPitch.Cos();
+		spotDirX = float(-Angle.Cos() * xzLen);
+		spotDirY = float(-negPitch.Sin());
+		spotDirZ = float(-Angle.Sin() * xzLen);
 	}
 
 	float *data = &dld.arrays[i][dld.arrays[i].Reserve(16)];

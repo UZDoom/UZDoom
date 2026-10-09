@@ -150,24 +150,34 @@ void HWFlat::SetupLights(HWDrawInfo *di, FDynLightData &lightdata, int portalgro
 		return;	// no lights on additively blended surfaces.
 	}
 
-	for(FDynamicLight * light : section->dlist)
+	if (di->Level->lightlists.flat_dlist.SSize() > section->Index())
 	{
-		if (!light->IsActive() || light->DontLightMap())
+		TMap<FDynamicLight *, std::unique_ptr<FLightNode>>::Iterator it(di->Level->lightlists.flat_dlist[section->Index()]);
+		TMap<FDynamicLight *, std::unique_ptr<FLightNode>>::Pair *pair;
+		while (it.NextPair(pair))
 		{
-			continue;
-		}
-		iter_dlightf++;
+			auto node = pair->Value.get();
+			if (!node) continue;
 
-		// we must do the side check here because gl_GetLight needs the correct plane orientation
-		// which we don't have for Legacy-style 3D-floors
-		double planeh = plane.plane.ZatPoint(light->Pos);
-		if ((planeh<light->Z() && ceiling) || (planeh>light->Z() && !ceiling))
-		{
-			continue;
-		}
+			FDynamicLight * light = node->lightsource;
 
-		p.Set(plane.plane.Normal(), plane.plane.fD());
-		draw_dlightf += GetLight(lightdata, portalgroup, p, light, false);
+			if (!light->IsActive() || light->DontLightMap())
+			{
+				continue;
+			}
+			iter_dlightf++;
+
+			// we must do the side check here because gl_GetLight needs the correct plane orientation
+			// which we don't have for Legacy-style 3D-floors
+			double planeh = plane.plane.ZatPoint(light->Pos);
+			if ((planeh<light->Z() && ceiling) || (planeh>light->Z() && !ceiling))
+			{
+				continue;
+			}
+
+			p.Set(plane.plane.Normal(), plane.plane.fD());
+			draw_dlightf += GetLight(lightdata, portalgroup, p, light, false);
+		}
 	}
 
 	dynlightindex = screen->mLights->UploadLights(lightdata);
