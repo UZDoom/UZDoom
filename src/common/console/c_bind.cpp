@@ -400,6 +400,34 @@ void FKeyBindings::DoBind (const char *key, const char *bind)
 //
 //=============================================================================
 
+void FKeyBindings::DoBindsBackup()
+{
+	for (int i = 0; i < NUM_KEYS; ++i)
+	{
+		BackupBinds[i] = Binds[i];
+	}
+}
+
+//=============================================================================
+//
+//
+//
+//=============================================================================
+
+void FKeyBindings::RestoreBindsBackup()
+{
+	for (int i = 0; i < NUM_KEYS; ++i)
+	{
+		Binds[i] = BackupBinds[i];
+	}
+}
+
+//=============================================================================
+//
+//
+//
+//=============================================================================
+
 void FKeyBindings::UnbindAll (const TArray<int> *filter_ptr)
 {
 	if (filter_ptr != nullptr)

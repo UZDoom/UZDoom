@@ -39,6 +39,7 @@ FString C_NameKeys (int *keys, int count, bool colors = false);
 class FKeyBindings
 {
 	FString Binds[NUM_KEYS];
+	FString BackupBinds[NUM_KEYS];
 
 public:
 	void PerformBind(FCommandLine &argv, const char *msg);
@@ -50,6 +51,8 @@ public:
 	void UnbindAll (const TArray<int> *filter = nullptr);
 	void UnbindKey(const char *key);
 	void DoBind (const char *key, const char *bind);
+	void DoBindsBackup();
+	void RestoreBindsBackup();
 	void DefaultBind(const char *keyname, const char *cmd);
 
 	void SetBind(unsigned int key, const char *bind, bool override = true)
