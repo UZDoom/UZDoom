@@ -92,7 +92,7 @@ void HWSkyPortal::DrawContents(HWDrawInfo *di, FRenderState &state)
 	{
 		PalEntry FadeColor = origin->fadecolor;
 		if (r_distance_cull_type < 2) FadeColor.a = clamp<int>(di->Level->skyfog, 0, 255);
-		else FadeColor.a = gl_cull_skyfog;
+		else FadeColor.a = max(int(gl_cull_skyfog), clamp<int>(di->Level->skyfog, 0, 255));
 
 		if (di->Level->flags3 & LEVEL3_SKYMIST && origin->texture[2])
 		{

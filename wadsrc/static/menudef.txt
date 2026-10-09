@@ -1403,10 +1403,15 @@ OptionMenu "CullingOptions" protected
 {
 	Title "$CULLMNU_TITLE"
 	Option "$DSPLYMNU_LINECULL",				"r_distance_cull_type", "CullTypes"
+	Tooltip "$DSPLYMNU_LINECULL_TOOLTIP"
 	Slider "$DSPLYMNU_LINECULLDIST",			"r_line_distance_cull",	1000.0, 16000.0, 1000.0, 0, "r_cull_distance"
+	Tooltip "$DSPLYMNU_LINECULLDIST_TOOLTIP"
 	Slider "$DSPLYMNU_CULLFPSMIN",				"r_cull_fps_target", 60, 200, 10, 0, "r_cull_fps"
+	Tooltip "$DSPLYMNU_CULLFPSMIN_TOOLTIP"
 	ColorPicker "$DSPLYMNU_CULLCOLOR",			"gl_cullcolor", "r_distance_cull_type"
+	Tooltip "$DSPLYMNU_CULLCOLOR_TOOLTIP"
 	Slider "$DSPLYMNU_CULLSKYFOG",				"gl_cull_skyfog", 1, 255, 1, 0, "r_distance_cull_type"
+	Tooltip "$DSPLYMNU_CULLSKYFOG_TOOLTIP"
 }
 
 OptionMenu "OpenGLOptions" protected
