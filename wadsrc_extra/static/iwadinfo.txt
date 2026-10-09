@@ -665,8 +665,6 @@ Names
 	"bfgdoom2.wad"
 	"doombfg.wad"
 	"doom2bfg.wad"
-	"doomxbox.wad"
-	"doom2xbox.wad"
 	"plutonia.wad"
 	"plutoniaunity.wad"
 	"plutoniakex.wad"
@@ -702,48 +700,63 @@ Names
 	"rotwb.wad"
 }
 
-Order	// Order in the IWAD selection box
+Order
+// Order in the IWAD selection box
+// Current Order:
+// Shareware (if available)
+// Registered
+// Approximate release order for each similar entry
 {
 	"DOOM: Complete: WadSmoosh"
-	"DOOM 2: Hell on Earth"
-	"DOOM 2: L'Enfer sur Terre"
-	"DOOM 2: BFG Edition"
-	"DOOM 2: XBox Edition"
-	"DOOM 2: Unity Edition"
-	"DOOM 2: KEX Edition"
-	"The Ultimate DOOM"
-	"DOOM Registered"
+	// Doom 1
 	"DOOM Shareware"
-	"DOOM: BFG Edition"
+	"DOOM Registered"
+	"The Ultimate DOOM"
 	"DOOM: XBox Edition"
+	"DOOM: BFG Edition"
 	"DOOM: Unity Edition"
 	"DOOM: KEX Edition"
-	"Final Doom: Plutonia Experiment"
-	"Final Doom: Plutonia Experiment: Unity Edition"
-	"Final Doom: Plutonia Experiment: KEX Edition"
+	// Doom 2
+	"DOOM 2: Hell on Earth"
+	"DOOM 2: L'Enfer sur Terre"
+	"DOOM 2: XBox Edition"
+	"DOOM 2: BFG Edition"
+	"DOOM 2: Unity Edition"
+	"DOOM 2: KEX Edition"
+	// Final Doom
 	"Final Doom: TNT - Evilution"
 	"Final Doom: TNT - Evilution: Unity Edition"
 	"Final Doom: TNT - Evilution: KEX Edition"
-	"Freedoom: Phase 1"
-	"Freedoom: Phase 2"
-	"FreeDM"
+	"Final Doom: Plutonia Experiment"
+	"Final Doom: Plutonia Experiment: Unity Edition"
+	"Final Doom: Plutonia Experiment: KEX Edition"
+	// Freedoom
+	"Freedoom: Phase 1" // Treated like "Doom" by the engine.
+	"Freedoom: Phase 2" // Treated like "Doom" by the engine.
+	"FreeDM" // Treated like "Doom" by the engine.
+	// Heretic
+	"Heretic Shareware"
 	"Heretic"
 	"Heretic: Shadow of the Serpent Riders"
-	"Heretic Shareware"
+	// Hexen
+	"Hexen: Demo Version"
 	"Hexen: Beyond Heretic"
 	"Hexen: Deathkings of the Dark Citadel"
-	"Hexen: Demo Version"
-	"Strife: Quest for the Sigil"
-	"Strife: Veteran Edition"
+	// Strife
 	"Strife: Teaser (Old Version)"
 	"Strife: Teaser (New Version)"
-	"Blasphemer"
+	"Strife: Quest for the Sigil"
+	"Strife: Veteran Edition"
+	// Chex Quest (Licensed)
 	"Chex(R) Quest"
-	"Chex(R) Quest 3"
+	// Hacx (Licensed)
+	"Hacx: Twitch'n Kill"
+	// Other
+	"Blasphemer"
+	"Chex(R) Quest 3" // Unofficial sequel
 	"Action Doom 2: Urban Brawl"
 	"Harmony"
-	"Hacx: Twitch'n Kill"
-	"Hacx 2.0"
+	"Hacx 2.0" // Dead upstream, good to remove?
 	"The Adventures of Square"
 	"The Adventures of Square (Square-ware)"
 	"Delaweare"
