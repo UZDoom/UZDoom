@@ -474,7 +474,6 @@ CUSTOM_CVAR (String, vid_cursor, "None", CVAR_ARCHIVE | CVAR_NOINITCALL)
 {
 	bool res = false;
 
-
 	if (!stricmp(self, "None" ) && gameinfo.CursorPic.IsNotEmpty())
 	{
 		res = I_SetCursor(TexMan.GetGameTextureByName(gameinfo.CursorPic.GetChars()));
@@ -488,6 +487,11 @@ CUSTOM_CVAR (String, vid_cursor, "None", CVAR_ARCHIVE | CVAR_NOINITCALL)
 		I_SetCursor(TexMan.GetGameTextureByName("cursor"));
 	}
 }
+
+CUSTOM_CVARD(Bool, vid_cursor_invert, false, CVAR_ARCHIVE | CVAR_NOINITCALL, "Flips cursor along its y axis")
+{
+	vid_cursor = *vid_cursor;
+};
 
 // Controlled by startup dialog
 CVAR(Bool, disableautoload, false, CVAR_ARCHIVE | CVAR_NOINITCALL | CVAR_GLOBALCONFIG)

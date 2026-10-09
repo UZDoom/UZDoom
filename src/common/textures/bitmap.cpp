@@ -21,8 +21,10 @@
 **
 */
 
+#include "basics.h"
 #include "bitmap.h"
 #include "palutil.h"
+#include "tarray.h"
 
 uint8_t IcePalette[16][3] =
 {
@@ -226,76 +228,81 @@ static const CopyFunc copyfuncs[][12]={
 //===========================================================================
 bool ClipCopyPixelRect(const FClipRect *cr, int &originx, int &originy,
 						const uint8_t *&patch, int &srcwidth, int &srcheight,
-						int &pstep_x, int &pstep_y, int rotate)
+						int &pstep_x, int &pstep_y, OrthoTransform rotate)
 {
 	int pixxoffset;
 	int pixyoffset;
 
 	int step_x;
 	int step_y;
+	bool swap = false;
 
 	assert(cr != NULL);
 	// First adjust the settings for the intended rotation
 	switch (rotate)
 	{
 	default:
-	case 0:	// normal
+	case OrthoTransform::NONE:
 		pixxoffset = 0;
 		pixyoffset = 0;
 		step_x = pstep_x;
 		step_y = pstep_y;
 		break;
 
-	case 1: // rotate 90° right
+	case OrthoTransform::ROT_90:
 		pixxoffset = 0;
 		pixyoffset = srcheight - 1;
 		step_x = -pstep_y;
 		step_y = pstep_x;
+		swap = true;
 		break;
 
-	case 2:	// rotate 180°
+	case OrthoTransform::ROT_180:
 		pixxoffset = srcwidth - 1;
 		pixyoffset = srcheight - 1;
 		step_x = -pstep_x;
 		step_y = -pstep_y;
 		break;
 
-	case 3: // rotate 90° left
+	case OrthoTransform::ROT_270:
 		pixxoffset = srcwidth - 1;
 		pixyoffset = 0;
 		step_x = pstep_y;
 		step_y = -pstep_x;
+		swap = true;
 		break;
 
-	case 4:	// flip horizontally
+	case OrthoTransform::MIRROR:
 		pixxoffset = srcwidth - 1;
 		pixyoffset = 0;
 		step_x = -pstep_x;
 		step_y = pstep_y;
 		break;
 
-	case 5:	// flip horizontally and rotate 90° right
+	case OrthoTransform::MIRROR_90:
 		pixxoffset = srcwidth - 1;
 		pixyoffset = srcheight - 1;
 		step_x = -pstep_y;
 		step_y = -pstep_x;
+		swap = true;
 		break;
 
-	case 6:	// flip vertically
+	case OrthoTransform::MIRROR_180:
 		pixxoffset = 0;
 		pixyoffset = srcheight - 1;
 		step_x = pstep_x;
 		step_y = -pstep_y;
 		break;
 
-	case 7:	// flip horizontally and rotate 90° left
+	case OrthoTransform::MIRROR_270:
 		pixxoffset = 0;
 		pixyoffset = 0;
 		step_x = pstep_y;
 		step_y = pstep_x;
+		swap = true;
 		break;
 	}
-	if (rotate&1)
+	if (swap)
 	{
 		int v = srcwidth;
 		srcwidth = srcheight;
@@ -378,7 +385,7 @@ bool FClipRect::Intersect(int ix, int iy, int iw, int ih)
 //
 //===========================================================================
 void FBitmap::CopyPixelDataRGB(int originx, int originy, const uint8_t *patch, int srcwidth,
-							   int srcheight, int step_x, int step_y, int rotate, int ct, FCopyInfo *inf,
+							   int srcheight, int step_x, int step_y, OrthoTransform rotate, int ct, FCopyInfo *inf,
 							   int r, int g, int b)
 {
 	if (ClipCopyPixelRect(&ClipRect, originx, originy, patch, srcwidth, srcheight, step_x, step_y, rotate))
@@ -394,7 +401,7 @@ void FBitmap::CopyPixelDataRGB(int originx, int originy, const uint8_t *patch, i
 
 template<class TDest, class TBlend>
 void iCopyPaletted(uint8_t *buffer, const uint8_t * patch, int srcwidth, int srcheight, int Pitch,
-					int step_x, int step_y, int rotate, const PalEntry * palette, FCopyInfo *inf)
+					int step_x, int step_y, OrthoTransform rotate, const PalEntry * palette, FCopyInfo *inf)
 {
 	int x,y,pos;
 
@@ -418,7 +425,7 @@ void iCopyPaletted(uint8_t *buffer, const uint8_t * patch, int srcwidth, int src
 }
 
 typedef void (*CopyPalettedFunc)(uint8_t *buffer, const uint8_t * patch, int srcwidth, int srcheight, int Pitch,
-					int step_x, int step_y, int rotate, const PalEntry * palette, FCopyInfo *inf);
+					int step_x, int step_y, OrthoTransform rotate, const PalEntry * palette, FCopyInfo *inf);
 
 
 static const CopyPalettedFunc copypalettedfuncs[]=
@@ -441,7 +448,7 @@ static const CopyPalettedFunc copypalettedfuncs[]=
 //
 //===========================================================================
 void FBitmap::CopyPixelData(int originx, int originy, const uint8_t * patch, int srcwidth, int srcheight,
-										int step_x, int step_y, int rotate, const PalEntry * palette, FCopyInfo *inf)
+										int step_x, int step_y, OrthoTransform rotate, const PalEntry * palette, FCopyInfo *inf)
 {
 	if (ClipCopyPixelRect(&ClipRect, originx, originy, patch, srcwidth, srcheight, step_x, step_y, rotate))
 	{
