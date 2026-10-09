@@ -108,6 +108,7 @@ void GLBuffer::SetSubData(size_t offset, size_t size, const void *data)
 
 void GLBuffer::Map()
 {
+	// persistent buffers need to be mapped if EXT_buffer_storage isn't present
 	assert(nomap == false);	// do not allow mapping of static buffers. Vulkan cannot do that so it should be blocked in OpenGL, too.
 	if (!mPersistent && !nomap)
 	{
