@@ -235,16 +235,21 @@ bool FShader::Load(const char * name, const char * vert_prog_lump_, const char *
 	FString	proc_prog_lump = proc_prog_lump_;
 	FString light_fragprog = light_fragprog_;
 
-	vert_prog_lump.Substitute("shaders/", "shaders_gles/");
-	frag_prog_lump.Substitute("shaders/", "shaders_gles/");
-	proc_prog_lump.Substitute("shaders/", "shaders_gles/");
-	light_fragprog.Substitute("shaders/", "shaders_gles/");
+	const char *shaders_folder = gles.glesMode == GLES_MODE_WEBGL
+		? "shaders_webgl/"
+		: "shaders_gles/";
+
+	vert_prog_lump.Substitute("shaders/", shaders_folder);
+	frag_prog_lump.Substitute("shaders/", shaders_folder);
+	proc_prog_lump.Substitute("shaders/", shaders_folder);
+	light_fragprog.Substitute("shaders/", shaders_folder);
 
 	//light_fragprog.Substitute("material_pbr", "material_normal");
 
 	if(light_fragprog.Len())
-		light_fragprog = "shaders_gles/glsl/material_normal.fp"; // NOTE: Always use normal material for now, ignore others
-
+		light_fragprog = gles.glesMode == GLES_MODE_WEBGL
+			? "shaders_webgl/glsl/material_normal.fp"
+			: "shaders_gles/glsl/material_normal.fp"; // NOTE: Always use normal material for now, ignore others
 
 	static char buffer[10000];
 	FString error;
@@ -420,14 +425,20 @@ bool FShader::Load(const char * name, const char * vert_prog_lump_, const char *
 
 				if (pp_data.IndexOf("GetTexCoord") >= 0)
 				{
-					int pl_lump = fileSystem.CheckNumForFullName("shaders_gles/glsl/func_defaultmat2.fp", 0);
-					if (pl_lump == -1) I_Error("Unable to load '%s'", "shaders_gles/glsl/func_defaultmat2.fp");
+					const char *pl_lump_file = gles.glesMode == GLES_MODE_WEBGL
+						? "shaders_webgl/glsl/func_defaultmat2.fp"
+						: "shaders_gles/glsl/func_defaultmat2.fp";
+					int pl_lump = fileSystem.CheckNumForFullName(pl_lump_file, 0);
+					if (pl_lump == -1) I_Error("Unable to load '%s'", pl_lump_file);
 					fp_comb << "\n" << GetStringFromLump(pl_lump);
 				}
 				else
 				{
-					int pl_lump = fileSystem.CheckNumForFullName("shaders_gles/glsl/func_defaultmat.fp", 0);
-					if (pl_lump == -1) I_Error("Unable to load '%s'", "shaders_gles/glsl/func_defaultmat.fp");
+					const char *pl_lump_file = gles.glesMode == GLES_MODE_WEBGL
+						? "shaders_webgl/glsl/func_defaultmat.fp"
+						: "shaders_gles/glsl/func_defaultmat.fp";
+					int pl_lump = fileSystem.CheckNumForFullName(pl_lump_file, 0);
+					if (pl_lump == -1) I_Error("Unable to load '%s'", pl_lump_file);
 					fp_comb << "\n" << GetStringFromLump(pl_lump);
 
 					if (pp_data.IndexOf("ProcessTexel") < 0)
@@ -452,8 +463,11 @@ bool FShader::Load(const char * name, const char * vert_prog_lump_, const char *
 
 			if (pp_data.IndexOf("ProcessLight") < 0)
 			{
-				int pl_lump = fileSystem.CheckNumForFullName("shaders_gles/glsl/func_defaultlight.fp", 0);
-				if (pl_lump == -1) I_Error("Unable to load '%s'", "shaders_gles/glsl/func_defaultlight.fp");
+				const char *pl_lump_file = gles.glesMode == GLES_MODE_WEBGL
+						? "shaders_webgl/glsl/func_defaultlight.fp"
+						: "shaders_gles/glsl/func_defaultlight.fp";
+				int pl_lump = fileSystem.CheckNumForFullName(pl_lump_file, 0);
+				if (pl_lump == -1) I_Error("Unable to load '%s'", pl_lump_file);
 				fp_comb << "\n" << GetStringFromLump(pl_lump);
 			}
 
@@ -739,7 +753,11 @@ FShader *FShaderCollection::Compile (const char *ShaderName, const char *ShaderP
 	if (!usediscard) defines += "#define NO_ALPHATEST\n";
 
 	FShader *shader = new FShader(ShaderName);
-	shader->Configure(ShaderName, "shaders_gles/glsl/main.vp", "shaders_gles/glsl/main.fp", ShaderPath, LightModePath, defines.GetChars());
+	if (gles.glesMode == GLES_MODE_WEBGL)
+		shader->Configure(ShaderName, "shaders_webgl/glsl/main.vp", "shaders_webgl/glsl/main.fp", ShaderPath, LightModePath, defines.GetChars());
+	else
+		shader->Configure(ShaderName, "shaders_gles/glsl/main.vp", "shaders_gles/glsl/main.fp", ShaderPath, LightModePath, defines.GetChars());
+
 	return shader;
 }
 

@@ -500,7 +500,7 @@ void DHUDMessage::DoDraw (int linenum, int x, int y, bool clean, int hudheight)
 			DTA_VirtualWidth, twod->GetWidth() / scale,
 			DTA_VirtualHeight, twod->GetHeight() / scale,
 			DTA_Alpha, Alpha,
-			DTA_RenderStyle, Style,
+			DTA_RenderStyle, Style.AsDWORD,
 			DTA_KeepRatio, true,
 			TAG_DONE);
 	}
@@ -514,7 +514,7 @@ void DHUDMessage::DoDraw (int linenum, int x, int y, bool clean, int hudheight)
 			DTA_ClipTop, ClipTop,
 			DTA_ClipBottom, ClipBot,
 			DTA_Alpha, Alpha,
-			DTA_RenderStyle, Style,
+			DTA_RenderStyle, Style.AsDWORD,
 			TAG_DONE);
 	}
 }
@@ -593,7 +593,7 @@ void DHUDMessageFadeOut::DoDraw (int linenum, int x, int y, bool clean, int hudh
 				DTA_VirtualWidth, twod->GetWidth() / scale,
 				DTA_VirtualHeight, twod->GetHeight() / scale,
 				DTA_Alpha, trans,
-				DTA_RenderStyle, Style,
+				DTA_RenderStyle, Style.AsDWORD,
 				DTA_KeepRatio, true,
 				TAG_DONE);
 		}
@@ -607,7 +607,7 @@ void DHUDMessageFadeOut::DoDraw (int linenum, int x, int y, bool clean, int hudh
 				DTA_ClipTop, ClipTop,
 				DTA_ClipBottom, ClipBot,
 				DTA_Alpha, trans,
-				DTA_RenderStyle, Style,
+				DTA_RenderStyle, Style.AsDWORD,
 				TAG_DONE);
 		}
 	}
@@ -682,7 +682,7 @@ void DHUDMessageFadeInOut::DoDraw (int linenum, int x, int y, bool clean, int hu
 				DTA_VirtualWidth, twod->GetWidth() / scale,
 				DTA_VirtualHeight, twod->GetHeight() / scale,
 				DTA_Alpha, trans,
-				DTA_RenderStyle, Style,
+				DTA_RenderStyle, Style.AsDWORD,
 				DTA_KeepRatio, true,
 				TAG_DONE);
 		}
@@ -696,7 +696,7 @@ void DHUDMessageFadeInOut::DoDraw (int linenum, int x, int y, bool clean, int hu
 				DTA_ClipTop, ClipTop,
 				DTA_ClipBottom, ClipBot,
 				DTA_Alpha, trans,
-				DTA_RenderStyle, Style,
+				DTA_RenderStyle, Style.AsDWORD,
 				TAG_DONE);
 		}
 	}
@@ -869,7 +869,7 @@ void DHUDMessageTypeOnFadeOut::DoDraw (int linenum, int x, int y, bool clean, in
 					DTA_KeepRatio, true,
 					DTA_TextLen, LineVisible,
 					DTA_Alpha, Alpha,
-					DTA_RenderStyle, Style,
+					DTA_RenderStyle, Style.AsDWORD,
 					TAG_DONE);
 			}
 			else
@@ -883,7 +883,7 @@ void DHUDMessageTypeOnFadeOut::DoDraw (int linenum, int x, int y, bool clean, in
 					DTA_ClipBottom, ClipBot,
 					DTA_Alpha, Alpha,
 					DTA_TextLen, LineVisible,
-					DTA_RenderStyle, Style,
+					DTA_RenderStyle, Style.AsDWORD,
 					TAG_DONE);
 			}
 		}

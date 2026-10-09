@@ -24,6 +24,9 @@
 
 #include <functional>
 #include <chrono>
+#ifdef __EMSCRIPTEN__
+#include <emscripten.h>
+#endif
 
 #include "c_cvars.h"
 #include "cmdlib.h"
@@ -259,7 +262,11 @@ class OpenALSoundStream : public SoundStream
 		alSourcef(Source, AL_MAX_GAIN, 1.f);
 		alSourcef(Source, AL_GAIN, 1.f);
 		alSourcef(Source, AL_PITCH, 1.f);
+#ifndef __EMSCRIPTEN__
 		alSourcef(Source, AL_DOPPLER_FACTOR, 0.f);
+#else
+		alDopplerFactor(0.f);
+#endif
 		alSourcef(Source, AL_ROLLOFF_FACTOR, 0.f);
 		alSourcef(Source, AL_SEC_OFFSET, 0.f);
 		alSourcei(Source, AL_SOURCE_RELATIVE, AL_TRUE);
@@ -698,14 +705,15 @@ OpenALSoundRenderer::OpenALSoundRenderer()
 	attribs.Clear();
 
 	const ALchar *const version = alGetString(AL_VERSION);
+	const ALchar *const vendor = alGetString(AL_VENDOR);
 
-	if (strstr(version, "ALSOFT") == nullptr)
+	if (strstr(version, "ALSOFT") == nullptr && strstr(vendor, "Emscripten") == nullptr)
 	{
 		Printf(TEXTCOLOR_RED "  You are using an unsupported OpenAL implementation\n"
 			"  Install OpenAL Soft library for a better experience\n");
 	}
 
-	DPrintf(DMSG_SPAMMY, "  Vendor: " TEXTCOLOR_ORANGE"%s\n", alGetString(AL_VENDOR));
+	DPrintf(DMSG_SPAMMY, "  Vendor: " TEXTCOLOR_ORANGE"%s\n", vendor);
 	DPrintf(DMSG_SPAMMY, "  Renderer: " TEXTCOLOR_ORANGE"%s\n", alGetString(AL_RENDERER));
 	DPrintf(DMSG_SPAMMY, "  Version: " TEXTCOLOR_ORANGE"%s\n", version);
 	DPrintf(DMSG_SPAMMY, "  Extensions: " TEXTCOLOR_ORANGE"%s\n", alGetString(AL_EXTENSIONS));
@@ -778,7 +786,7 @@ OpenALSoundRenderer::OpenALSoundRenderer()
 	const int numChannels = max<int>(snd_channels, 2);
 	int numSources = numMono + numStereo;
 
-	if (0 == numSources)
+	if (0 >= numSources)
 	{
 		numSources = numChannels;
 	}
@@ -967,6 +975,7 @@ OpenALSoundRenderer::~OpenALSoundRenderer()
 
 void OpenALSoundRenderer::BackgroundProc()
 {
+#if defined(__EMSCRIPTEN_PTHREADS__) || !defined(__EMSCRIPTEN__)
 	std::unique_lock<std::mutex> lock(StreamLock);
 	while(!QuitThread.load())
 	{
@@ -977,12 +986,15 @@ void OpenALSoundRenderer::BackgroundProc()
 		}
 		else
 		{
+#endif
 			// Else, process all active streams and sleep for 100ms
 			for(size_t i = 0;i < Streams.Size();i++)
 				Streams[i]->Process();
+#if defined(__EMSCRIPTEN_PTHREADS__) || !defined(__EMSCRIPTEN__)
 			StreamWake.wait_for(lock, std::chrono::milliseconds(100));
 		}
 	}
+#endif
 }
 
 void OpenALSoundRenderer::AddStream(OpenALSoundStream *stream)
@@ -1260,11 +1272,31 @@ void OpenALSoundRenderer::UnloadSound(SoundHandle sfx)
 	getALError();
 }
 
+#if !defined(__EMSCRIPTEN_PTHREADS__) && defined(__EMSCRIPTEN__)
+void AsyncBackgroundProc(OpenALSoundRenderer *renderer)
+{
+	renderer->BackgroundProc();
+}
+#endif
 
 SoundStream *OpenALSoundRenderer::CreateStream(SoundStreamCallback callback, int buffbytes, SampleType stype, ChannelConfig chans, int samplerate, void *userdata)
 {
+#if defined(__EMSCRIPTEN_PTHREADS__) || !defined(__EMSCRIPTEN__)
 	if(StreamThread.get_id() == std::thread::id())
 		StreamThread = std::thread(std::mem_fn(&OpenALSoundRenderer::BackgroundProc), this);
+#else
+	EM_ASM({
+		if (Module.SoundStreamsWorker) return;
+		let running = false;
+		Module.SoundStreamsWorker = function () {
+			if (running) return;
+			running = true;
+			dynCall('vp', $0, [$1]);
+			running = false;
+		};
+		setInterval(Module.SoundStreamsWorker, 100);
+	}, &AsyncBackgroundProc, this);
+#endif
 	OpenALSoundStream *stream = new OpenALSoundStream(this);
 	if (!stream->Init(callback, buffbytes, stype, chans, samplerate, userdata))
 	{
@@ -1296,7 +1328,11 @@ FISoundChannel *OpenALSoundRenderer::StartSound(SoundHandle sfx, float vol, floa
 
 	alSourcef(source, AL_REFERENCE_DISTANCE, 1.f);
 	alSourcef(source, AL_MAX_DISTANCE, 1000.f);
+#ifndef __EMSCRIPTEN__
 	alSourcef(source, AL_DOPPLER_FACTOR, 0.f);
+#else
+	alDopplerFactor(0.f);
+#endif
 	alSourcef(source, AL_ROLLOFF_FACTOR, 0.f);
 	alSourcef(source, AL_MAX_GAIN, SfxVolume);
 	alSourcef(source, AL_GAIN, SfxVolume*vol);
@@ -1466,7 +1502,11 @@ FISoundChannel *OpenALSoundRenderer::StartSound3D(SoundHandle sfx, SoundListener
 	}
 	alSource3f(source, AL_VELOCITY, vel[0], vel[1], -vel[2]);
 	alSource3f(source, AL_DIRECTION, 0.f, 0.f, 0.f);
+#ifndef __EMSCRIPTEN__
 	alSourcef(source, AL_DOPPLER_FACTOR, 0.f);
+#else
+	alDopplerFactor(0.f);
+#endif
 	if(AL.EXT_SOURCE_RADIUS)
 		alSourcef(source, AL_SOURCE_RADIUS, (chanflags&SNDF_AREA) ? AREA_SOUND_RADIUS : 0.f);
 
@@ -1510,6 +1550,11 @@ FISoundChannel *OpenALSoundRenderer::StartSound3D(SoundHandle sfx, SoundListener
 	}
 	else
 	{
+#ifdef __EMSCRIPTEN__ // check if buffer can be played
+		ALfloat duration = 0;
+		alGetSourcef(source, AL_SEC_LENGTH_SOFT, &duration);
+		if (duration <= 0.f) return NULL;
+#endif
 		if((chanflags&SNDF_ABSTIME))
 			alSourcei(source, AL_SAMPLE_OFFSET, ALint(reuse_chan->StartTime));
 		else
