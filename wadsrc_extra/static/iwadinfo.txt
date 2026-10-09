@@ -731,9 +731,9 @@ Order
 	"Final Doom: Plutonia Experiment: Unity Edition"
 	"Final Doom: Plutonia Experiment: KEX Edition"
 	// Freedoom
-	"Freedoom: Phase 1"
-	"Freedoom: Phase 2"
-	"FreeDM"
+	"Freedoom: Phase 1" // Treated like "Doom" by the engine.
+	"Freedoom: Phase 2" // Treated like "Doom" by the engine.
+	"FreeDM" // Treated like "Doom" by the engine.
 	// Heretic
 	"Heretic Shareware"
 	"Heretic"
@@ -747,14 +747,16 @@ Order
 	"Strife: Teaser (New Version)"
 	"Strife: Quest for the Sigil"
 	"Strife: Veteran Edition"
+	// Chex Quest (Licensed)
+	"Chex(R) Quest"
+	// Hacx (Licensed)
+	"Hacx: Twitch'n Kill"
 	// Other
 	"Blasphemer"
-	"Chex(R) Quest"
-	"Chex(R) Quest 3"
+	"Chex(R) Quest 3" // Unofficial sequel
 	"Action Doom 2: Urban Brawl"
 	"Harmony"
-	"Hacx: Twitch'n Kill"
-	"Hacx 2.0"
+	"Hacx 2.0" // Dead upstream, good to remove?
 	"The Adventures of Square"
 	"The Adventures of Square (Square-ware)"
 	"Delaweare"
