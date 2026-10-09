@@ -74,6 +74,55 @@ struct MaterialLayers
 	FGameTexture* CustomShaderTextures[MAX_CUSTOM_HW_SHADER_TEXTURES];
 };
 
+struct GlobalShaderDesc
+{
+	int shaderindex = -1;
+	RefCountedPtr<FTexture> CustomShaderTextures[MAX_CUSTOM_HW_SHADER_TEXTURES];
+
+	int CountTextures() const // highest texture index
+	{
+		int n = 0;
+		for(int i = 0; i < MAX_CUSTOM_HW_SHADER_TEXTURES; i++)
+		{
+			if(CustomShaderTextures[i] != nullptr)
+			{
+				n = i + 1;
+			}
+		}
+		return n;
+	}
+
+	operator bool() const { return shaderindex >= 0; }
+};
+
+struct GlobalShaderAddr
+{
+	int16_t num;  // [0 - NUM_BUILTIN_SHADERS)
+	int16_t type; // 0 - global, 1 - map, 2 - class, 3 - invalid
+	int32_t name; // global - unused, 1 - map name index, 2 - class name index
+
+	bool operator<(GlobalShaderAddr other)
+	{
+		return reinterpret_cast<uint64_t&>(*this) < reinterpret_cast<uint64_t&>(other);
+	}
+
+	bool operator==(GlobalShaderAddr other)
+	{
+		return reinterpret_cast<uint64_t&>(*this) == reinterpret_cast<uint64_t&>(other);
+	}
+};
+
+static_assert(sizeof(GlobalShaderAddr) == sizeof(uint64_t));
+
+extern const GlobalShaderDesc nullglobalshader;
+extern GlobalShaderDesc globalshaders[NUM_BUILTIN_SHADERS];
+
+const GlobalShaderAddr GetGlobalShaderAddr(int shaderNum, class PClass * curActor); // full checks
+const GlobalShaderDesc * GetGlobalShader(int shaderNum, class PClass * curActor, GlobalShaderAddr &addr); // full checks
+const GlobalShaderDesc * GetGlobalShader(int shaderNum, class PClass * curActor); // full checks
+const GlobalShaderDesc * GetGlobalShader(GlobalShaderAddr index); // no checks, only use with addrs gotten from GetGlobalShaderAddr
+void CleanupGlobalShaders();
+
 enum EGameTexFlags
 {
 	GTexf_NoDecals = 1,						// Decals should not stick to texture
