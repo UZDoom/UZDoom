@@ -114,9 +114,7 @@ void FLightDefaults::ApplyProperties(FDynamicLight * light) const
 {
 	auto oldtype = light->GetLightType();
 
-	light->flags = 0;
-
-	light->flags |= ILF_ACTIVE;
+	light->flags = ILF_ACTIVE|ILF_VISIBLE_TO_PLAYER;
 	light->SetLightType(m_type);
 	light->specialf1 = m_Param;
 	light->lightDefIntensity = m_LightDefIntensity;
