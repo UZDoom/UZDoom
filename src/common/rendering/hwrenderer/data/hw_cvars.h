@@ -86,3 +86,5 @@ EXTERN_CVAR(Bool, r_dithertransparency)
 EXTERN_CVAR(Bool, gl_portals)
 
 EXTERN_CVAR(Bool, gl_strict_gldefs_errors)
+
+EXTERN_CVAR(Int, gl_model_light_optimization_radius)
