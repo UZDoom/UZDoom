@@ -144,3 +144,5 @@ CUSTOM_CVAR(Int, gl_shadowmap_filter, 1, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 }
 
 CVAR(Bool, gl_strict_gldefs_errors, false, CVAR_GLOBALCONFIG | CVAR_ARCHIVE)
+
+CVARD(Int, gl_model_light_optimization_radius, 16, CVAR_ARCHIVE|CVAR_GLOBALCONFIG, "maximum radius for skipping model radius light gather (and just grab current subsector lights instead)")
