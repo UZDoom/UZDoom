@@ -599,7 +599,7 @@ float FXInputController::GetHapticsStrength()
 
 void FXInputController::SetHapticsStrength(float strength)
 {
-	if (Haptics) HapticStrength = clamp(strength, 0.f, 2.f);
+	HapticStrength = clamp(strength, 0.f, 2.f);
 }
 
 //==========================================================================
