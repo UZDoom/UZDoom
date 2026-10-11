@@ -610,7 +610,7 @@ void FXInputController::SetHapticsStrength(float strength)
 
 bool FXInputController::IsHapticsStrengthDefault()
 {
-	return true;
+	return HapticStrength == JOYHAPSTRENGTH_DEFAULT;
 }
 
 //==========================================================================
