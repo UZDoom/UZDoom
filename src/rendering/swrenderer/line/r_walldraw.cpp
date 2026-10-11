@@ -204,7 +204,7 @@ namespace swrenderer
 		drawerargs.DrawWall(Thread);
 	}
 
-	TArray<FDynamicLight*>* RenderWallPart::GetLightList()
+	TMap<FDynamicLight*, std::unique_ptr<FLightNode>>* RenderWallPart::GetLightList()
 	{
 		CameraLight* cameraLight = CameraLight::Instance();
 		if ((cameraLight->FixedLightLevel() >= 0) || cameraLight->FixedColormap())
@@ -213,7 +213,12 @@ namespace swrenderer
 		}
 		else if (curline && curline->sidedef)
 		{
-			return &curline->sidedef->dlist;
+			auto Level = curline->Subsector->sector->Level;
+
+			if (Level->lightlists.wall_dlist.SSize() > curline->sidedef->Index())
+			{
+				return &Level->lightlists.wall_dlist[curline->sidedef->Index()];
+			}
 		}
 
 		return nullptr;

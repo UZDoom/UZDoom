@@ -49,7 +49,7 @@ namespace swrenderer
 		short* dwal;
 		FWallCoords WallC;
 		ProjectedWallTexcoords texcoords;
-		TArray<FDynamicLight*> *lightlist = nullptr;
+		TMap<FDynamicLight*, std::unique_ptr<FLightNode>>* lightlist = nullptr;
 
 		float lightpos;
 		float lightstep;

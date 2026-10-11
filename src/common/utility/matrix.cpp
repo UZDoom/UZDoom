@@ -35,27 +35,20 @@
 #include <math.h>
 #include "matrix.h"
 
-#if defined(__x86_64__) || defined(_M_X64)
-	#include <smmintrin.h>
-	#include <emmintrin.h>
-	#include <pmmintrin.h>
-	#include <tmmintrin.h>
-#endif
-
 #ifdef _MSC_VER
 #pragma warning(disable : 4244)     // truncate from double to float
 #endif
 
-static inline float
-DegToRad(float degrees)
+static inline FLOATTYPE
+DegToRad(FLOATTYPE degrees)
 {
-	return (float)(degrees * (pi::pif() / 180.0f));
+	return (FLOATTYPE)(degrees * (pi::pif() / 180.0f));
 };
 
 // sets the square matrix mat to the identity matrix,
 // size refers to the number of rows (or columns)
 void
-VSMatrix::setIdentityMatrix( float *mat, int size) {
+VSMatrix::setIdentityMatrix( FLOATTYPE *mat, int size) {
 
 	// fill matrix with 0s
 	for (int i = 0; i < size * size; ++i)
@@ -83,51 +76,13 @@ VSMatrix::loadIdentity()
 
 
 // gl MultMatrix implementation
-void VSMatrix::multMatrix(const float *aMatrix)
+void
+VSMatrix::multMatrix(const FLOATTYPE *aMatrix)
 {
-	alignas(16) float res[16];
 
-	#if defined(__x86_64__) || defined(_M_X64)
-	for(int i = 0; i < 4; i++)
-	{
-		__m128 a = _mm_setr_ps(mMatrix[i], mMatrix[i + 4], mMatrix[i + 8], mMatrix[i + 12]); // [0] = m[i, 0]
-																							 // [1] = m[i, 1]
-																							 // [2] = m[i, 2]
-																							 // [3] = m[i, 3]
+	FLOATTYPE res[16];
 
-		for(int j = 0; j < 4; j++)
-		{
-			const int jj = j << 2; // j * 4
-
-			__m128 b = _mm_load_ps(aMatrix + jj); // [0] = b[0, j]
-												  // [1] = b[1, j]
-												  // [2] = b[2, j]
-												  // [3] = b[3, j]
-
-			__m128 c = _mm_mul_ps(a, b); // c[k] = a[i,k] * b[k,j] with k=0..3
-										 // ----------------------
-										 // c[0] = a[i,0] * b[0,j]
-										 // c[1] = a[i,1] * b[1,j]
-										 // c[2] = a[i,2] * b[2,j]
-										 // c[3] = a[i,3] * b[3,j]
-
-			c = _mm_hadd_ps(c, c); // c'2[0] = c[0] + c[1]
-								   // c'2[1] = c[2] + c[3]
-								   // --------------------------------------------
-								   // c'2[0] = (a[i,0] * b[0,j]) + (a[i,1] * b[1,j])
-								   // c'2[1] = (a[i,2] * b[2,j]) + (a[i,3] * b[3,j])
-
-			c = _mm_hadd_ps(c, c); // c'3[0] = c'2[0] + c'2[1]
-								   // ---------------------------------
-								   // c'3[0] = c[0] + c[1] + c[2] + c[3]
-								   // --------------------------------------------------------------------------------------
-								   // c'3[0] = (a[i,0] * b[0,j]) + (a[i,1] * b[1,j]) + (a[i,2] * b[2,j]) + (a[i,3] * b[3,j])
-
-			_mm_store_ss(res + (i + jj), c); // res[i, j] = sum of (a[i,k] * b[k,j]) with k=0..3
-		}
-	}
-	#else
-	for (int i = 0; i < 4; ++i) 
+	for (int i = 0; i < 4; ++i)
 	{
 		for (int j = 0; j < 4; ++j)
 		{
@@ -138,8 +93,7 @@ void VSMatrix::multMatrix(const float *aMatrix)
 			}
 		}
 	}
-	#endif
-	memcpy(mMatrix, res, 16 * sizeof(float));
+	memcpy(mMatrix, res, 16 * sizeof(FLOATTYPE));
 }
 
 #ifdef USE_DOUBLE
@@ -148,7 +102,7 @@ void
 VSMatrix::multMatrix(const float *aMatrix)
 {
 
-	float res[16];
+	FLOATTYPE res[16];
 
 	for (int i = 0; i < 4; ++i)
 	{
@@ -161,48 +115,48 @@ VSMatrix::multMatrix(const float *aMatrix)
 			}
 		}
 	}
-	memcpy(mMatrix, res, 16 * sizeof(float));
+	memcpy(mMatrix, res, 16 * sizeof(FLOATTYPE));
 }
 #endif
 
-void VSMatrix::multQuaternion(const TVector4<float>& q)
+void VSMatrix::multQuaternion(const TVector4<FLOATTYPE>& q)
 {
-	alignas(16) float m[16] = { float(0.0) };
-	m[0 * 4 + 0] = float(1.0) - float(2.0) * q.Y * q.Y - float(2.0) * q.Z * q.Z;
-	m[1 * 4 + 0] = float(2.0) * q.X * q.Y - float(2.0) * q.W * q.Z;
-	m[2 * 4 + 0] = float(2.0) * q.X * q.Z + float(2.0) * q.W * q.Y;
-	m[0 * 4 + 1] = float(2.0) * q.X * q.Y + float(2.0) * q.W * q.Z;
-	m[1 * 4 + 1] = float(1.0) - float(2.0) * q.X * q.X - float(2.0) * q.Z * q.Z;
-	m[2 * 4 + 1] = float(2.0) * q.Y * q.Z - float(2.0) * q.W * q.X;
-	m[0 * 4 + 2] = float(2.0) * q.X * q.Z - float(2.0) * q.W * q.Y;
-	m[1 * 4 + 2] = float(2.0) * q.Y * q.Z + float(2.0) * q.W * q.X;
-	m[2 * 4 + 2] = float(1.0) - float(2.0) * q.X * q.X - float(2.0) * q.Y * q.Y;
-	m[3 * 4 + 3] = float(1.0);
+	FLOATTYPE m[16] = { FLOATTYPE(0.0) };
+	m[0 * 4 + 0] = FLOATTYPE(1.0) - FLOATTYPE(2.0) * q.Y * q.Y - FLOATTYPE(2.0) * q.Z * q.Z;
+	m[1 * 4 + 0] = FLOATTYPE(2.0) * q.X * q.Y - FLOATTYPE(2.0) * q.W * q.Z;
+	m[2 * 4 + 0] = FLOATTYPE(2.0) * q.X * q.Z + FLOATTYPE(2.0) * q.W * q.Y;
+	m[0 * 4 + 1] = FLOATTYPE(2.0) * q.X * q.Y + FLOATTYPE(2.0) * q.W * q.Z;
+	m[1 * 4 + 1] = FLOATTYPE(1.0) - FLOATTYPE(2.0) * q.X * q.X - FLOATTYPE(2.0) * q.Z * q.Z;
+	m[2 * 4 + 1] = FLOATTYPE(2.0) * q.Y * q.Z - FLOATTYPE(2.0) * q.W * q.X;
+	m[0 * 4 + 2] = FLOATTYPE(2.0) * q.X * q.Z - FLOATTYPE(2.0) * q.W * q.Y;
+	m[1 * 4 + 2] = FLOATTYPE(2.0) * q.Y * q.Z + FLOATTYPE(2.0) * q.W * q.X;
+	m[2 * 4 + 2] = FLOATTYPE(1.0) - FLOATTYPE(2.0) * q.X * q.X - FLOATTYPE(2.0) * q.Y * q.Y;
+	m[3 * 4 + 3] = FLOATTYPE(1.0);
 	multMatrix(m);
 }
 
-void VSMatrix::multQuaternion(const TQuaternion<float>& q)
+void VSMatrix::multQuaternion(const TQuaternion<FLOATTYPE>& q)
 {
-	alignas(16) float m[16] = { float(0.0) };
-	m[0 * 4 + 0] = float(1.0) - float(2.0) * q.Y * q.Y - float(2.0) * q.Z * q.Z;
-	m[1 * 4 + 0] = float(2.0) * q.X * q.Y - float(2.0) * q.W * q.Z;
-	m[2 * 4 + 0] = float(2.0) * q.X * q.Z + float(2.0) * q.W * q.Y;
-	m[0 * 4 + 1] = float(2.0) * q.X * q.Y + float(2.0) * q.W * q.Z;
-	m[1 * 4 + 1] = float(1.0) - float(2.0) * q.X * q.X - float(2.0) * q.Z * q.Z;
-	m[2 * 4 + 1] = float(2.0) * q.Y * q.Z - float(2.0) * q.W * q.X;
-	m[0 * 4 + 2] = float(2.0) * q.X * q.Z - float(2.0) * q.W * q.Y;
-	m[1 * 4 + 2] = float(2.0) * q.Y * q.Z + float(2.0) * q.W * q.X;
-	m[2 * 4 + 2] = float(1.0) - float(2.0) * q.X * q.X - float(2.0) * q.Y * q.Y;
-	m[3 * 4 + 3] = float(1.0);
+	FLOATTYPE m[16] = { FLOATTYPE(0.0) };
+	m[0 * 4 + 0] = FLOATTYPE(1.0) - FLOATTYPE(2.0) * q.Y * q.Y - FLOATTYPE(2.0) * q.Z * q.Z;
+	m[1 * 4 + 0] = FLOATTYPE(2.0) * q.X * q.Y - FLOATTYPE(2.0) * q.W * q.Z;
+	m[2 * 4 + 0] = FLOATTYPE(2.0) * q.X * q.Z + FLOATTYPE(2.0) * q.W * q.Y;
+	m[0 * 4 + 1] = FLOATTYPE(2.0) * q.X * q.Y + FLOATTYPE(2.0) * q.W * q.Z;
+	m[1 * 4 + 1] = FLOATTYPE(1.0) - FLOATTYPE(2.0) * q.X * q.X - FLOATTYPE(2.0) * q.Z * q.Z;
+	m[2 * 4 + 1] = FLOATTYPE(2.0) * q.Y * q.Z - FLOATTYPE(2.0) * q.W * q.X;
+	m[0 * 4 + 2] = FLOATTYPE(2.0) * q.X * q.Z - FLOATTYPE(2.0) * q.W * q.Y;
+	m[1 * 4 + 2] = FLOATTYPE(2.0) * q.Y * q.Z + FLOATTYPE(2.0) * q.W * q.X;
+	m[2 * 4 + 2] = FLOATTYPE(1.0) - FLOATTYPE(2.0) * q.X * q.X - FLOATTYPE(2.0) * q.Y * q.Y;
+	m[3 * 4 + 3] = FLOATTYPE(1.0);
 	multMatrix(m);
 }
 
 
 // gl LoadMatrix implementation
 void
-VSMatrix::loadMatrix(const float *aMatrix)
+VSMatrix::loadMatrix(const FLOATTYPE *aMatrix)
 {
-	memcpy(mMatrix, aMatrix, 16 * sizeof(float));
+	memcpy(mMatrix, aMatrix, 16 * sizeof(FLOATTYPE));
 }
 
 #ifdef USE_DOUBLE
@@ -220,7 +174,7 @@ VSMatrix::loadMatrix(const float *aMatrix)
 
 // gl Translate implementation
 void
-VSMatrix::translate(float x, float y, float z)
+VSMatrix::translate(FLOATTYPE x, FLOATTYPE y, FLOATTYPE z)
 {
 	mMatrix[12] = mMatrix[0] * x + mMatrix[4] * y + mMatrix[8] * z + mMatrix[12];
 	mMatrix[13] = mMatrix[1] * x + mMatrix[5] * y + mMatrix[9] * z + mMatrix[13];
@@ -229,7 +183,7 @@ VSMatrix::translate(float x, float y, float z)
 
 void VSMatrix::transpose()
 {
-	float original[16];
+	FLOATTYPE original[16];
 	for (int cnt = 0; cnt < 16; cnt++)
 		original[cnt] = mMatrix[cnt];
 
@@ -253,7 +207,7 @@ void VSMatrix::transpose()
 
 // gl Scale implementation
 void
-VSMatrix::scale(float x, float y, float z)
+VSMatrix::scale(FLOATTYPE x, FLOATTYPE y, FLOATTYPE z)
 {
 	mMatrix[0] *= x;   mMatrix[1] *= x;   mMatrix[2] *= x;   mMatrix[3] *= x;
 	mMatrix[4] *= y;   mMatrix[5] *= y;   mMatrix[6] *= y;   mMatrix[7] *= y;
@@ -263,22 +217,22 @@ VSMatrix::scale(float x, float y, float z)
 
 // gl Rotate implementation
 void
-VSMatrix::rotate(float angle, float x, float y, float z)
+VSMatrix::rotate(FLOATTYPE angle, FLOATTYPE x, FLOATTYPE y, FLOATTYPE z)
 {
-	alignas(16) float mat[16];
-	float v[3];
+	FLOATTYPE mat[16];
+	FLOATTYPE v[3];
 
 	v[0] = x;
 	v[1] = y;
 	v[2] = z;
 
-	float radAngle = DegToRad(angle);
-	float co = cos(radAngle);
-	float si = sin(radAngle);
+	FLOATTYPE radAngle = DegToRad(angle);
+	FLOATTYPE co = cos(radAngle);
+	FLOATTYPE si = sin(radAngle);
 	normalize(v);
-	float x2 = v[0]*v[0];
-	float y2 = v[1]*v[1];
-	float z2 = v[2]*v[2];
+	FLOATTYPE x2 = v[0]*v[0];
+	FLOATTYPE y2 = v[1]*v[1];
+	FLOATTYPE z2 = v[2]*v[2];
 
 //	mat[0] = x2 + (y2 + z2) * co;
 	mat[0] = co + x2 * (1 - co);// + (y2 + z2) * co;
@@ -309,11 +263,11 @@ VSMatrix::rotate(float angle, float x, float y, float z)
 
 // gluLookAt implementation
 void
-VSMatrix::lookAt(float xPos, float yPos, float zPos,
-					float xLook, float yLook, float zLook,
-					float xUp, float yUp, float zUp)
+VSMatrix::lookAt(FLOATTYPE xPos, FLOATTYPE yPos, FLOATTYPE zPos,
+					FLOATTYPE xLook, FLOATTYPE yLook, FLOATTYPE zLook,
+					FLOATTYPE xUp, FLOATTYPE yUp, FLOATTYPE zUp)
 {
-	float dir[3], right[3], up[3];
+	FLOATTYPE dir[3], right[3], up[3];
 
 	up[0] = xUp;	up[1] = yUp;	up[2] = zUp;
 
@@ -328,7 +282,7 @@ VSMatrix::lookAt(float xPos, float yPos, float zPos,
 	crossProduct(right,dir,up);
 	normalize(up);
 
-	alignas(16) float m1[16],m2[16];
+	FLOATTYPE m1[16],m2[16];
 
 	m1[0]  = right[0];
 	m1[4]  = right[1];
@@ -362,9 +316,9 @@ VSMatrix::lookAt(float xPos, float yPos, float zPos,
 
 // gluPerspective implementation
 void
-VSMatrix::perspective(float fov, float ratio, float nearp, float farp)
+VSMatrix::perspective(FLOATTYPE fov, FLOATTYPE ratio, FLOATTYPE nearp, FLOATTYPE farp)
 {
-	float f = 1.0f / tan (fov * (pi::pif() / 360.0f));
+	FLOATTYPE f = 1.0f / tan (fov * (pi::pif() / 360.0f));
 
 	loadIdentity();
 	mMatrix[0] = f / ratio;
@@ -378,9 +332,9 @@ VSMatrix::perspective(float fov, float ratio, float nearp, float farp)
 
 // gl Ortho implementation
 void
-VSMatrix::ortho(float left, float right,
-			float bottom, float top,
-			float nearp, float farp)
+VSMatrix::ortho(FLOATTYPE left, FLOATTYPE right,
+			FLOATTYPE bottom, FLOATTYPE top,
+			FLOATTYPE nearp, FLOATTYPE farp)
 {
 	loadIdentity();
 
@@ -395,11 +349,11 @@ VSMatrix::ortho(float left, float right,
 
 // gl Frustum implementation
 void
-VSMatrix::frustum(float left, float right,
-			float bottom, float top,
-			float nearp, float farp)
+VSMatrix::frustum(FLOATTYPE left, FLOATTYPE right,
+			FLOATTYPE bottom, FLOATTYPE top,
+			FLOATTYPE nearp, FLOATTYPE farp)
 {
-	alignas(16) float m[16];
+	FLOATTYPE m[16];
 
 	setIdentityMatrix(m,4);
 
@@ -418,7 +372,7 @@ VSMatrix::frustum(float left, float right,
 
 /*
 // returns a pointer to the requested matrix
-float *
+FLOATTYPE *
 VSMatrix::get(MatrixTypes aType)
 {
 	return mMatrix[aType];
@@ -436,57 +390,25 @@ VSMatrix::get(MatrixTypes aType)
 
 
 // Compute res = M * point
-void VSMatrix::multMatrixPoint(const float *point, float *res) 
+void
+VSMatrix::multMatrixPoint(const FLOATTYPE *point, FLOATTYPE *res)
 {
-	#if defined(__x86_64__) || defined(_M_X64)
-	__m128 p = _mm_setr_ps(point[0], point[1], point[2], point[3]);
 
 	for (int i = 0; i < 4; ++i)
 	{
-		__m128 m = _mm_setr_ps(mMatrix[i], mMatrix[i + 4], mMatrix[i + 8], mMatrix[i + 12]); // [0] = m[i, 0]
-																							 // [1] = m[i, 1]
-																							 // [2] = m[i, 2]
-																							 // [3] = m[i, 3]
 
-		__m128 c = _mm_mul_ps(p, m); // c[j] = p[j] * m[i, j] with j=0..3
-									 // ---------------------
-									 // c[0] = p[0] * m[i, 0]
-									 // c[1] = p[1] * m[i, 1]
-									 // c[2] = p[2] * m[i, 2]
-									 // c[3] = p[3] * m[i, 3]
-
-		c = _mm_hadd_ps(c, c); // c'2[0] = c[0] + c[1]
-							   // c'2[1] = c[2] + c[3]
-							   // --------------------------------------------
-							   // c'2[0] = (p[0] * m[i, 0]) + (p[1] * m[i, 1])
-							   // c'2[1] = (p[2] * m[i, 2]) + (p[3] * m[i, 3])
-
-		c = _mm_hadd_ps(c, c); // c'3[0] = c'2[0] + c'2[1]
-							   // --------------------------------------------
-							   // c'3[0] = (p[0] * m[i, 0]) + (p[1] * m[i, 1]) + (p[2] * m[i, 2]) + (p[3] * m[i, 3])
-
-		_mm_store_ss(res + i, c); // res[i] = sum of (p[j] * m[i, j]) with j=0..3
-	}
-	#else
-	for (int i = 0; i < 4; ++i) 
-	{
-		res[i] = (point[0] * mMatrix[i]) + (point[1] * mMatrix[i + 4]) + (point[2] * mMatrix[i + 8]) + (point[3] * mMatrix[i + 12]);
-
-		/*
 		res[i] = 0.0f;
-		
+
 		for (int j = 0; j < 4; j++) {
 
 			res[i] += point[j] * mMatrix[j*4 + i];
-		} 
-		*/
+		}
 	}
-	#endif
 }
 
 // res = a cross b;
 void
-VSMatrix::crossProduct(const float *a, const float *b, float *res) {
+VSMatrix::crossProduct(const FLOATTYPE *a, const FLOATTYPE *b, FLOATTYPE *res) {
 
 	res[0] = a[1] * b[2]  -  b[1] * a[2];
 	res[1] = a[2] * b[0]  -  b[2] * a[0];
@@ -495,10 +417,10 @@ VSMatrix::crossProduct(const float *a, const float *b, float *res) {
 
 
 // returns a . b
-float
-VSMatrix::dotProduct(const float *a, const float *b) {
+FLOATTYPE
+VSMatrix::dotProduct(const FLOATTYPE *a, const FLOATTYPE *b) {
 
-	float res = a[0] * b[0]  +  a[1] * b[1]  +  a[2] * b[2];
+	FLOATTYPE res = a[0] * b[0]  +  a[1] * b[1]  +  a[2] * b[2];
 
 	return res;
 }
@@ -506,9 +428,9 @@ VSMatrix::dotProduct(const float *a, const float *b) {
 
 // Normalize a vec3
 void
-VSMatrix::normalize(float *a) {
+VSMatrix::normalize(FLOATTYPE *a) {
 
-	float mag = sqrt(a[0] * a[0]  +  a[1] * a[1]  +  a[2] * a[2]);
+	FLOATTYPE mag = sqrt(a[0] * a[0]  +  a[1] * a[1]  +  a[2] * a[2]);
 
 	a[0] /= mag;
 	a[1] /= mag;
@@ -518,7 +440,7 @@ VSMatrix::normalize(float *a) {
 
 // res = b - a
 void
-VSMatrix::subtract(const float *a, const float *b, float *res) {
+VSMatrix::subtract(const FLOATTYPE *a, const FLOATTYPE *b, FLOATTYPE *res) {
 
 	res[0] = b[0] - a[0];
 	res[1] = b[1] - a[1];
@@ -528,7 +450,7 @@ VSMatrix::subtract(const float *a, const float *b, float *res) {
 
 // res = a + b
 void
-VSMatrix::add(const float *a, const float *b, float *res) {
+VSMatrix::add(const FLOATTYPE *a, const FLOATTYPE *b, FLOATTYPE *res) {
 
 	res[0] = b[0] + a[0];
 	res[1] = b[1] + a[1];
@@ -537,8 +459,8 @@ VSMatrix::add(const float *a, const float *b, float *res) {
 
 
 // returns |a|
-float
-VSMatrix::length(const float *a) {
+FLOATTYPE
+VSMatrix::length(const FLOATTYPE *a) {
 
 	return(sqrt(a[0] * a[0]  +  a[1] * a[1]  +  a[2] * a[2]));
 
@@ -548,7 +470,7 @@ VSMatrix::length(const float *a) {
 
 // computes the derived normal matrix for the view matrix
 void
-VSMatrix::computeNormalMatrix(const float *aMatrix)
+VSMatrix::computeNormalMatrix(const FLOATTYPE *aMatrix)
 {
 
 	double mMat3x3[9];
@@ -595,10 +517,10 @@ VSMatrix::computeNormalMatrix(const float *aMatrix)
 
 // aux function resMat = resMat * aMatrix
 void
-VSMatrix::multMatrix(float *resMat, const float *aMatrix)
+VSMatrix::multMatrix(FLOATTYPE *resMat, const FLOATTYPE *aMatrix)
 {
 
-	float res[16];
+	FLOATTYPE res[16];
 
 	for (int i = 0; i < 4; ++i)
 	{
@@ -611,48 +533,48 @@ VSMatrix::multMatrix(float *resMat, const float *aMatrix)
 			}
 		}
 	}
-	memcpy(resMat, res, 16 * sizeof(float));
+	memcpy(resMat, res, 16 * sizeof(FLOATTYPE));
 }
 
-static double mat3Determinant(const float *mMat3x3)
+static double mat3Determinant(const FLOATTYPE *mMat3x3)
 {
 	return mMat3x3[0] * (mMat3x3[4] * mMat3x3[8] - mMat3x3[5] * mMat3x3[7]) +
 		mMat3x3[1] * (mMat3x3[5] * mMat3x3[6] - mMat3x3[8] * mMat3x3[3]) +
 		mMat3x3[2] * (mMat3x3[3] * mMat3x3[7] - mMat3x3[4] * mMat3x3[6]);
 }
 
-static double mat4Determinant(const float *matrix)
+static double mat4Determinant(const FLOATTYPE *matrix)
 {
-	float mMat3x3_a[9] =
+	FLOATTYPE mMat3x3_a[9] =
 	{
 		matrix[1 * 4 + 1], matrix[2 * 4 + 1], matrix[3 * 4 + 1],
 		matrix[1 * 4 + 2], matrix[2 * 4 + 2], matrix[3 * 4 + 2],
 		matrix[1 * 4 + 3], matrix[2 * 4 + 3], matrix[3 * 4 + 3]
 	};
 
-	float mMat3x3_b[9] =
+	FLOATTYPE mMat3x3_b[9] =
 	{
 		matrix[1 * 4 + 0], matrix[2 * 4 + 0], matrix[3 * 4 + 0],
 		matrix[1 * 4 + 2], matrix[2 * 4 + 2], matrix[3 * 4 + 2],
 		matrix[1 * 4 + 3], matrix[2 * 4 + 3], matrix[3 * 4 + 3]
 	};
 
-	float mMat3x3_c[9] =
+	FLOATTYPE mMat3x3_c[9] =
 	{
 		matrix[1 * 4 + 0], matrix[2 * 4 + 0], matrix[3 * 4 + 0],
 		matrix[1 * 4 + 1], matrix[2 * 4 + 1], matrix[3 * 4 + 1],
 		matrix[1 * 4 + 3], matrix[2 * 4 + 3], matrix[3 * 4 + 3]
 	};
 
-	float mMat3x3_d[9] =
+	FLOATTYPE mMat3x3_d[9] =
 	{
 		matrix[1 * 4 + 0], matrix[2 * 4 + 0], matrix[3 * 4 + 0],
 		matrix[1 * 4 + 1], matrix[2 * 4 + 1], matrix[3 * 4 + 1],
 		matrix[1 * 4 + 2], matrix[2 * 4 + 2], matrix[3 * 4 + 2]
 	};
 
-	float a, b, c, d;
-	float value;
+	FLOATTYPE a, b, c, d;
+	FLOATTYPE value;
 
 	a = mat3Determinant(mMat3x3_a);
 	b = mat3Determinant(mMat3x3_b);
@@ -667,114 +589,114 @@ static double mat4Determinant(const float *matrix)
 	return value;
 }
 
-static void mat4Adjoint(const float *matrix, float *result)
+static void mat4Adjoint(const FLOATTYPE *matrix, FLOATTYPE *result)
 {
-	float mMat3x3_a[9] =
+	FLOATTYPE mMat3x3_a[9] =
 	{
 		matrix[1 * 4 + 1], matrix[2 * 4 + 1], matrix[3 * 4 + 1],
 		matrix[1 * 4 + 2], matrix[2 * 4 + 2], matrix[3 * 4 + 2],
 		matrix[1 * 4 + 3], matrix[2 * 4 + 3], matrix[3 * 4 + 3]
 	};
 
-	float mMat3x3_b[9] =
+	FLOATTYPE mMat3x3_b[9] =
 	{
 		matrix[1 * 4 + 0], matrix[2 * 4 + 0], matrix[3 * 4 + 0],
 		matrix[1 * 4 + 2], matrix[2 * 4 + 2], matrix[3 * 4 + 2],
 		matrix[1 * 4 + 3], matrix[2 * 4 + 3], matrix[3 * 4 + 3]
 	};
 
-	float mMat3x3_c[9] =
+	FLOATTYPE mMat3x3_c[9] =
 	{
 		matrix[1 * 4 + 0], matrix[2 * 4 + 0], matrix[3 * 4 + 0],
 		matrix[1 * 4 + 1], matrix[2 * 4 + 1], matrix[3 * 4 + 1],
 		matrix[1 * 4 + 3], matrix[2 * 4 + 3], matrix[3 * 4 + 3]
 	};
 
-	float mMat3x3_d[9] =
+	FLOATTYPE mMat3x3_d[9] =
 	{
 		matrix[1 * 4 + 0], matrix[2 * 4 + 0], matrix[3 * 4 + 0],
 		matrix[1 * 4 + 1], matrix[2 * 4 + 1], matrix[3 * 4 + 1],
 		matrix[1 * 4 + 2], matrix[2 * 4 + 2], matrix[3 * 4 + 2]
 	};
 
-	float mMat3x3_e[9] =
+	FLOATTYPE mMat3x3_e[9] =
 	{
 		matrix[0 * 4 + 1], matrix[2 * 4 + 1], matrix[3 * 4 + 1],
 		matrix[0 * 4 + 2], matrix[2 * 4 + 2], matrix[3 * 4 + 2],
 		matrix[0 * 4 + 3], matrix[2 * 4 + 3], matrix[3 * 4 + 3]
 	};
 
-	float mMat3x3_f[9] =
+	FLOATTYPE mMat3x3_f[9] =
 	{
 		matrix[0 * 4 + 0], matrix[2 * 4 + 0], matrix[3 * 4 + 0],
 		matrix[0 * 4 + 2], matrix[2 * 4 + 2], matrix[3 * 4 + 2],
 		matrix[0 * 4 + 3], matrix[2 * 4 + 3], matrix[3 * 4 + 3]
 	};
 
-	float mMat3x3_g[9] =
+	FLOATTYPE mMat3x3_g[9] =
 	{
 		matrix[0 * 4 + 0], matrix[2 * 4 + 0], matrix[3 * 4 + 0],
 		matrix[0 * 4 + 1], matrix[2 * 4 + 1], matrix[3 * 4 + 1],
 		matrix[0 * 4 + 3], matrix[2 * 4 + 3], matrix[3 * 4 + 3]
 	};
 
-	float mMat3x3_h[9] =
+	FLOATTYPE mMat3x3_h[9] =
 	{
 		matrix[0 * 4 + 0], matrix[2 * 4 + 0], matrix[3 * 4 + 0],
 		matrix[0 * 4 + 1], matrix[2 * 4 + 1], matrix[3 * 4 + 1],
 		matrix[0 * 4 + 2], matrix[2 * 4 + 2], matrix[3 * 4 + 2]
 	};
 
-	float mMat3x3_i[9] =
+	FLOATTYPE mMat3x3_i[9] =
 	{
 		matrix[0 * 4 + 1], matrix[1 * 4 + 1], matrix[3 * 4 + 1],
 		matrix[0 * 4 + 2], matrix[1 * 4 + 2], matrix[3 * 4 + 2],
 		matrix[0 * 4 + 3], matrix[1 * 4 + 3], matrix[3 * 4 + 3]
 	};
 
-	float mMat3x3_j[9] =
+	FLOATTYPE mMat3x3_j[9] =
 	{
 		matrix[0 * 4 + 0], matrix[1 * 4 + 0], matrix[3 * 4 + 0],
 		matrix[0 * 4 + 2], matrix[1 * 4 + 2], matrix[3 * 4 + 2],
 		matrix[0 * 4 + 3], matrix[1 * 4 + 3], matrix[3 * 4 + 3]
 	};
 
-	float mMat3x3_k[9] =
+	FLOATTYPE mMat3x3_k[9] =
 	{
 		matrix[0 * 4 + 0], matrix[1 * 4 + 0], matrix[3 * 4 + 0],
 		matrix[0 * 4 + 1], matrix[1 * 4 + 1], matrix[3 * 4 + 1],
 		matrix[0 * 4 + 3], matrix[1 * 4 + 3], matrix[3 * 4 + 3]
 	};
 
-	float mMat3x3_l[9] =
+	FLOATTYPE mMat3x3_l[9] =
 	{
 		matrix[0 * 4 + 0], matrix[1 * 4 + 0], matrix[3 * 4 + 0],
 		matrix[0 * 4 + 1], matrix[1 * 4 + 1], matrix[3 * 4 + 1],
 		matrix[0 * 4 + 2], matrix[1 * 4 + 2], matrix[3 * 4 + 2]
 	};
 
-	float mMat3x3_m[9] =
+	FLOATTYPE mMat3x3_m[9] =
 	{
 		matrix[0 * 4 + 1], matrix[1 * 4 + 1], matrix[2 * 4 + 1],
 		matrix[0 * 4 + 2], matrix[1 * 4 + 2], matrix[2 * 4 + 2],
 		matrix[0 * 4 + 3], matrix[1 * 4 + 3], matrix[2 * 4 + 3]
 	};
 
-	float mMat3x3_n[9] =
+	FLOATTYPE mMat3x3_n[9] =
 	{
 		matrix[0 * 4 + 0], matrix[1 * 4 + 0], matrix[2 * 4 + 0],
 		matrix[0 * 4 + 2], matrix[1 * 4 + 2], matrix[2 * 4 + 2],
 		matrix[0 * 4 + 3], matrix[1 * 4 + 3], matrix[2 * 4 + 3]
 	};
 
-	float mMat3x3_o[9] =
+	FLOATTYPE mMat3x3_o[9] =
 	{
 		matrix[0 * 4 + 0], matrix[1 * 4 + 0], matrix[2 * 4 + 0],
 		matrix[0 * 4 + 1], matrix[1 * 4 + 1], matrix[2 * 4 + 1],
 		matrix[0 * 4 + 3], matrix[1 * 4 + 3], matrix[2 * 4 + 3]
 	};
 
-	float mMat3x3_p[9] =
+	FLOATTYPE mMat3x3_p[9] =
 	{
 		matrix[0 * 4 + 0], matrix[1 * 4 + 0], matrix[2 * 4 + 0],
 		matrix[0 * 4 + 1], matrix[1 * 4 + 1], matrix[2 * 4 + 1],
@@ -802,20 +724,20 @@ static void mat4Adjoint(const float *matrix, float *result)
 bool VSMatrix::inverseMatrix(VSMatrix &result)
 {
 	// Calculate mat4 determinant
-	float det = mat4Determinant(mMatrix);
+	FLOATTYPE det = mat4Determinant(mMatrix);
 
 	// Inverse unknown when determinant is close to zero
 	if (fabs(det) < 1e-15)
 	{
 		for (int i = 0; i < 16; i++)
-			result.mMatrix[i] = float(0.0);
+			result.mMatrix[i] = FLOATTYPE(0.0);
 		return false;
 	}
 	else
 	{
 		mat4Adjoint(mMatrix, result.mMatrix);
 
-		float invDet = float(1.0) / det;
+		FLOATTYPE invDet = FLOATTYPE(1.0) / det;
 		for (int i = 0; i < 16; i++)
 		{
 			result.mMatrix[i] = result.mMatrix[i] * invDet;

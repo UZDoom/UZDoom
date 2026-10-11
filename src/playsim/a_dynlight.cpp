@@ -46,7 +46,7 @@ extern TArray<FLightDefaults *> StateLights;
 //
 //==========================================================================
 
-FDynamicLight *FDynamicLight::GetLight(FLevelLocals *Level)
+static FDynamicLight *GetLight(FLevelLocals *Level)
 {
 	FDynamicLight *ret;
 	if (FreeList.Size())
@@ -60,7 +60,7 @@ FDynamicLight *FDynamicLight::GetLight(FLevelLocals *Level)
 	ret->next = Level->lights;
 	Level->lights = ret;
 	if (ret->next) ret->next->prev = ret;
-	ret->flags |= ILF_VISIBLE_TO_PLAYER;
+	ret->visibletoplayer = true;
 	ret->mShadowmapIndex = 1024;
 	ret->Level = Level;
 	ret->Pos.X = -10000000;	// not a valid coordinate.
@@ -75,7 +75,7 @@ FDynamicLight *FDynamicLight::GetLight(FLevelLocals *Level)
 //
 //==========================================================================
 
-void FDynamicLight::AttachLight(AActor *self)
+void AttachLight(AActor *self)
 {
 	if(self->ObjectFlags & OF_EuthanizeMe) return;
 	auto light = GetLight(self->Level);
@@ -91,24 +91,19 @@ void FDynamicLight::AttachLight(AActor *self)
 	light->Sector = self->Sector;
 	light->target = self;
 	light->mShadowmapIndex = 1024;
-	light->flags &= ~(ILF_ACTIVE);
-	light->flags |= ILF_VISIBLE_TO_PLAYER;
-
-	ELightType type = static_cast<ELightType>(self->IntVar(NAME_lighttype));
-
-	if(type > RandomColorFlickerLight) type = PointLight;
-	
-	light->SetLightType(type);
+	light->m_active = false;
+	light->visibletoplayer = true;
+	light->lighttype = (uint8_t)self->IntVar(NAME_lighttype);
 	self->AttachedLights.Push(light);
 
 	// Disable postponed processing of dynamic light because its setup has been completed by this function
 	self->flags8 &= ~MF8_RECREATELIGHTS;
 }
 
-DEFINE_ACTION_FUNCTION_NATIVE(ADynamicLight, AttachLight, FDynamicLight::AttachLight)
+DEFINE_ACTION_FUNCTION_NATIVE(ADynamicLight, AttachLight, AttachLight)
 {
 	PARAM_SELF_PROLOGUE(AActor);
-	FDynamicLight::AttachLight(self);
+	AttachLight(self);
 	return 0;
 }
 
@@ -118,15 +113,15 @@ DEFINE_ACTION_FUNCTION_NATIVE(ADynamicLight, AttachLight, FDynamicLight::AttachL
 //
 //==========================================================================
 
-void FDynamicLight::ActivateLight(AActor *self)
+void ActivateLight(AActor *self)
 {
 	for (auto l : self->AttachedLights) l->Activate();
 }
 
-DEFINE_ACTION_FUNCTION_NATIVE(ADynamicLight, ActivateLight, FDynamicLight::ActivateLight)
+DEFINE_ACTION_FUNCTION_NATIVE(ADynamicLight, ActivateLight, ActivateLight)
 {
 	PARAM_SELF_PROLOGUE(AActor);
-	FDynamicLight::ActivateLight(self);
+	ActivateLight(self);
 	return 0;
 }
 
@@ -137,15 +132,15 @@ DEFINE_ACTION_FUNCTION_NATIVE(ADynamicLight, ActivateLight, FDynamicLight::Activ
 //
 //==========================================================================
 
-void FDynamicLight::DeactivateLight(AActor *self)
+void DeactivateLight(AActor *self)
 {
 	for (auto l : self->AttachedLights) l->Deactivate();
 }
 
-DEFINE_ACTION_FUNCTION_NATIVE(ADynamicLight, DeactivateLight, FDynamicLight::DeactivateLight)
+DEFINE_ACTION_FUNCTION_NATIVE(ADynamicLight, DeactivateLight, DeactivateLight)
 {
 	PARAM_SELF_PROLOGUE(AActor);
-	FDynamicLight::DeactivateLight(self);
+	DeactivateLight(self);
 	return 0;
 }
 
@@ -198,16 +193,16 @@ void FDynamicLight::ReleaseLight()
 //==========================================================================
 void FDynamicLight::Activate()
 {
-	flags |= ILF_ACTIVE;
+	m_active = true;
 	m_currentRadius = float(GetIntensity());
 	m_tickCount = 0;
 
-	if (GetLightType() == PulseLight)
+	if (lighttype == PulseLight)
 	{
 		float pulseTime = float(specialf1 / TICRATE);
 
 		m_lastUpdate = GetTimer();
-		if (!(flags & ILF_SWAPPED)) m_cycler.SetParams(float(GetSecondaryIntensity()), float(GetIntensity()), pulseTime);
+		if (!swapped) m_cycler.SetParams(float(GetSecondaryIntensity()), float(GetIntensity()), pulseTime);
 		else m_cycler.SetParams(float(GetIntensity()), float(GetSecondaryIntensity()), pulseTime);
 		m_cycler.ShouldCycle(true);
 		m_cycler.SetCycleType(CYCLE_Sin);
@@ -232,7 +227,7 @@ void FDynamicLight::Tick()
 		return;
 	}
 
-	if (flags & ILF_OWNED)
+	if (owned)
 	{
 		if (!target->state || !target->ShouldRenderLocally())
 		{
@@ -241,13 +236,10 @@ void FDynamicLight::Tick()
 		}
 		if (target->flags & MF_UNMORPHED)
 		{
-			flags &= ~(ILF_ACTIVE);
+			m_active = false;
 			return;
 		}
-		if(target->IsVisibleToPlayer() == !(flags & ILF_VISIBLE_TO_PLAYER))
-		{ // cache this value for the renderer to speed up calculations.
-			flags ^= ILF_VISIBLE_TO_PLAYER;
-		}
+		visibletoplayer = target->IsVisibleToPlayer();	// cache this value for the renderer to speed up calculations.
 	}
 
 	// Don't bother if the light won't be shown
@@ -255,7 +247,7 @@ void FDynamicLight::Tick()
 
 	// I am doing this with a type field so that I can dynamically alter the type of light
 	// without having to create or maintain multiple objects.
-	switch(GetLightType())
+	switch(lighttype)
 	{
 	case PulseLight:
 	{
@@ -365,7 +357,7 @@ void FDynamicLight::UpdateLocation()
 		if (IsSpot())
 		{
 			Yaw = angle;
-			if (!(flags & ILF_EXPLICIT_PITCH))
+			if (!explicitpitch)
 				Pitch = target->Angles.Pitch;
 		}
 
@@ -386,7 +378,7 @@ void FDynamicLight::UpdateLocation()
 
 		float intensity;
 
-		if (int lighttype = GetLightType(); lighttype == FlickerLight || lighttype == RandomFlickerLight || lighttype == PulseLight)
+		if (lighttype == FlickerLight || lighttype == RandomFlickerLight || lighttype == PulseLight)
 		{
 			intensity = float(max(GetIntensity(), GetSecondaryIntensity()));
 		}
@@ -421,19 +413,37 @@ void FDynamicLight::AddLightNode(FSection *section, side_t *sidedef)
 {
 	if (section)
 	{
-		bool ok;
-		section->dlist.SortedAddUnique(this, ok);
-		if(ok)
+		if(Level->lightlists.flat_dlist.SSize() <= section->Index())
 		{
+			Level->lightlists.flat_dlist.Resize(section->Index() + 1);
+		}
+
+		auto &flatLightList = Level->lightlists.flat_dlist[section->Index()];
+
+		if (!flatLightList.CheckKey(this))
+		{
+			FLightNode * node = new FLightNode;
+			node->lightsource = this;
+
+			flatLightList.TryEmplace(this, node);
 			touchlists.flat_tlist.SortedAddUnique(section);
 		}
 	}
 	else if (sidedef)
 	{
-		bool ok;
-		sidedef->dlist.SortedAddUnique(this, ok);
-		if(ok)
+		if(Level->lightlists.wall_dlist.SSize() <= sidedef->Index())
 		{
+			Level->lightlists.wall_dlist.Resize(sidedef->Index() + 1);
+		}
+
+		auto &wallLightList = Level->lightlists.wall_dlist[sidedef->Index()];
+
+		if (!wallLightList.CheckKey(this))
+		{
+			FLightNode * node = new FLightNode;
+			node->lightsource = this;
+
+			wallLightList.TryEmplace(this, node);
 			touchlists.wall_tlist.SortedAddUnique(sidedef);
 		}
 	}
@@ -600,10 +610,7 @@ void FDynamicLight::CollectWithinRadius(const DVector3 &opos, FSection *section,
 			}
 		}
 	}
-	if((hitonesidedback && !DontShadowmap() && IsActive()) == !(flags & ILF_SHADOWMAPPED))
-	{
-		flags ^= ILF_SHADOWMAPPED;
-	}
+	shadowmapped = hitonesidedback && !DontShadowmap();
 }
 
 //==========================================================================
@@ -615,7 +622,7 @@ void FDynamicLight::CollectWithinRadius(const DVector3 &opos, FSection *section,
 void FDynamicLight::LinkLight()
 {
 	UnlinkLight();
-	if(radius > 0)
+	if (radius>0)
 	{
 		// passing in radius*radius allows us to do a distance check without any calls to sqrt
 		FSection *sect = Level->PointInRenderSubsector(Pos)->section;
@@ -623,6 +630,7 @@ void FDynamicLight::LinkLight()
 		dl_validcount++;
 		::validcount++;
 		CollectWithinRadius(Pos, sect, float(radius*radius));
+
 	}
 }
 
@@ -634,26 +642,33 @@ void FDynamicLight::LinkLight()
 //==========================================================================
 void FDynamicLight::UnlinkLight()
 {
+
 	for(int i = 0; i < touchlists.wall_tlist.SSize(); i++)
 	{
-		if(touchlists.wall_tlist[i])
+		auto sidedef = touchlists.wall_tlist[i];
+		if (!sidedef) continue;
+
+		if(Level->lightlists.wall_dlist.SSize() > sidedef->Index())
 		{
-			touchlists.wall_tlist[i]->dlist.SortedDelete(this);
+			Level->lightlists.wall_dlist[sidedef->Index()].Remove(this);
 		}
 	}
 
 	for(int i = 0; i < touchlists.flat_tlist.SSize(); i++)
 	{
-		if(touchlists.flat_tlist[i])
+		auto sec = touchlists.flat_tlist[i];
+		if (!sec) continue;
+
+		if(Level->lightlists.flat_dlist.SSize() > sec->Index())
 		{
-			touchlists.flat_tlist[i]->dlist.SortedDelete(this);
+			Level->lightlists.flat_dlist[sec->Index()].Remove(this);
 		}
 	}
 
 	touchlists.flat_tlist.Clear();
 	touchlists.wall_tlist.Clear();
 
-	flags &= ~(ILF_SHADOWMAPPED);
+	shadowmapped = false;
 }
 
 //==========================================================================
@@ -675,7 +690,7 @@ void AActor::AttachLight(unsigned int count, const FLightDefaults *lightdef)
 	}
 	else
 	{
-		light = FDynamicLight::GetLight(Level);
+		light = GetLight(Level);
 		light->SetActor(this, true);
 		AttachedLights.Push(light);
 	}
@@ -927,10 +942,10 @@ void FLevelLocals::RecreateAllAttachedLights()
 		}
 		else if (a->AttachedLights.Size() == 0)
 		{
-			FDynamicLight::AttachLight(a);
+			::AttachLight(a);
 			if (!(a->flags2 & MF2_DORMANT))
 			{
-				FDynamicLight::ActivateLight(a);
+				::ActivateLight(a);
 			}
 		}
 	}

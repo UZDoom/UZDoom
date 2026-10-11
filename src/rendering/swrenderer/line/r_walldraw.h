@@ -59,7 +59,7 @@ namespace swrenderer
 	private:
 		void ProcessStripedWall(const short *uwal, const short *dwal, const ProjectedWallTexcoords& texcoords);
 		void ProcessNormalWall(const short *uwal, const short *dwal, const ProjectedWallTexcoords& texcoords);
-		TArray<FDynamicLight*>* GetLightList();
+		TMap<FDynamicLight*, std::unique_ptr<FLightNode>>* GetLightList();
 
 		RenderThread* Thread = nullptr;
 
@@ -73,7 +73,7 @@ namespace swrenderer
 
 		ProjectedWallLight mLight;
 
-		TArray<FDynamicLight*> *light_list = nullptr;
+		TMap<FDynamicLight*, std::unique_ptr<FLightNode>> *light_list = nullptr;
 		bool mask = false;
 		bool additive = false;
 		fixed_t alpha = 0;
