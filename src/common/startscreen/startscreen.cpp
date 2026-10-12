@@ -693,6 +693,16 @@ void FStartScreen::Render(bool force)
 			DrawTexture(twod, StartupTexture, 0, 0, DTA_VirtualWidthF, displaywidth, DTA_VirtualHeightF, displayheight, TAG_END);
 		}
 
+		if (ShaderComp && NewConsoleFont)
+		{
+			FString compStr = GStrings.localize("$SHADERCOMPILING");
+			compStr.Truncate(compStr.Len() - (3 - ShaderComp));
+			auto strWidth = NewConsoleFont->StringWidth(compStr);
+
+			Dim(twod, PalEntry(0, 0, 0, 255), 0.5, 0, 0, screen->GetWidth(), screen->GetHeight());
+			DrawText(twod, NewConsoleFont, CR_WHITE, (CleanWidth / 2) - (strWidth / 2), (CleanHeight - (NewConsoleFont->GetHeight() * 2)), compStr.GetChars(), DTA_VirtualWidth, CleanWidth, DTA_VirtualHeight, CleanHeight, TAG_DONE);
+		}
+
 		twod->End();
 		screen->Update();
 		twod->OnFrameDone();
