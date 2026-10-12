@@ -440,7 +440,7 @@ void HWWall::SetupLights(HWDrawInfo*di, FDynLightData &lightdata)
 				{
 					iter_dlight++;
 
-					DVector3 posrel = node->lightsource->PosRelative(seg->frontsector->PortalGroup);
+					DVector3 posrel = node->lightsource->GetPos(seg->frontsector->PortalGroup, r_viewpoint.TicFrac);
 					float x = posrel.X;
 					float y = posrel.Y;
 					float z = posrel.Z;
@@ -503,7 +503,7 @@ void HWWall::SetupLights(HWDrawInfo*di, FDynLightData &lightdata)
 				{
 					iter_dlight++;
 
-					DVector3 posrel = node->lightsource->PosRelative(seg->frontsector->PortalGroup);
+					DVector3 posrel = node->lightsource->GetPos(seg->frontsector->PortalGroup, r_viewpoint.TicFrac);
 					float x = posrel.X;
 					float y = posrel.Y;
 					float z = posrel.Z;

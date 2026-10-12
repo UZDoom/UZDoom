@@ -342,58 +342,99 @@ void FDynamicLight::Tick()
 //==========================================================================
 void FDynamicLight::UpdateLocation()
 {
-	double oldx= X();
-	double oldy= Y();
+	if (!IsActive())
+		return;
+
+	const DVector3 oldpos = Pos;
 	float oldradius = radius;
 
-	if (IsActive())
+	AActor *target = this->target;	// perform the read barrier only once.
+
+	// Offset is calculated in relation to the owning actor.
+	DAngle angle = target->Angles.Yaw;
+	double s = angle.Sin();
+	double c = angle.Cos();
+	if (IsSpot())
 	{
-		AActor *target = this->target;	// perform the read barrier only once.
+		Yaw = angle;
+		if (!explicitpitch)
+			Pitch = target->Angles.Pitch;
+	}
 
-		// Offset is calculated in relation to the owning actor.
-		DAngle angle = target->Angles.Yaw;
-		double s = angle.Sin();
-		double c = angle.Cos();
-		if (IsSpot())
+	Vel.Z  = 0.0;
+	Pos = target->Vec3Offset(m_off.X * c + m_off.Y * s, m_off.X * s - m_off.Y * c, m_off.Z + target->GetBobOffset());
+	Sector = target->subsector->sector;	// Get the render sector. target->Sector is the sector according to play logic.
+
+	if (!(target->flags5 & MF5_NOINTERACTION))
+	{
+		// Some z-coordinate fudging to prevent the light from getting too close to the floor or ceiling planes. With proper attenuation this would render them invisible.
+		// A distance of 5 is needed so that the light's effect doesn't become too small.
+		// [SP] don't do this if +NOINTERACTION is set, since the object can fly right through floors and ceilings with that flag
+		if (Z() < target->floorz + 5.) Pos.Z = target->floorz + 5.;
+		else if (Z() > target->ceilingz - 5.) Pos.Z = target->ceilingz - 5.;
+	}
+
+	// The radius being used here is always the maximum possible with the
+	// current settings. This avoids constant relinking of flickering lights
+
+	float intensity;
+
+	if (lighttype == FlickerLight || lighttype == RandomFlickerLight || lighttype == PulseLight)
+	{
+		intensity = float(max(GetIntensity(), GetSecondaryIntensity()));
+	}
+	else
+	{
+		intensity = m_currentRadius;
+	}
+	radius = intensity * 2.0f;
+	if (radius < m_currentRadius * 2) radius = m_currentRadius * 2;
+
+	const bool interpolated = IsInterpolated();
+	// This requires no relinking so is free, it just needs to be gated to ensure it doesn't look
+	// wonky next to the x and y not interpolating.
+	if (interpolated)
+		Vel.Z = oldpos.Z - Z();
+
+	if (X() != oldpos.X || Y() != oldpos.Y || radius != oldradius)
+	{
+		// If we're interpolating light movement, do a singular large relink that covers the span of all
+		// desired sectors along the path. This makes movements more expensive but is needed to ensure all
+		// sectors in the interpolated movement are captured at once. Dynamically relinking every single
+		// frame would be too expensive.
+		if (interpolated)
 		{
-			Yaw = angle;
-			if (!explicitpitch)
-				Pitch = target->Angles.Pitch;
-		}
-
-		Pos = target->Vec3Offset(m_off.X * c + m_off.Y * s, m_off.X * s - m_off.Y * c, m_off.Z + target->GetBobOffset());
-		Sector = target->subsector->sector;	// Get the render sector. target->Sector is the sector according to play logic.
-
-		if (!(target->flags5 & MF5_NOINTERACTION))
-		{
-			// Some z-coordinate fudging to prevent the light from getting too close to the floor or ceiling planes. With proper attenuation this would render them invisible.
-			// A distance of 5 is needed so that the light's effect doesn't become too small.
-			// [SP] don't do this if +NOINTERACTION is set, since the object can fly right through floors and ceilings with that flag
-			if (Z() < target->floorz + 5.) Pos.Z = target->floorz + 5.;
-			else if (Z() > target->ceilingz - 5.) Pos.Z = target->ceilingz - 5.;
-		}
-
-		// The radius being used here is always the maximum possible with the
-		// current settings. This avoids constant relinking of flickering lights
-
-		float intensity;
-
-		if (lighttype == FlickerLight || lighttype == RandomFlickerLight || lighttype == PulseLight)
-		{
-			intensity = float(max(GetIntensity(), GetSecondaryIntensity()));
+			Vel.X = oldpos.X - X();
+			Vel.Y = oldpos.Y - Y();
+			if (!Vel.XY().isZero())
+			{
+				double         curRad = radius;
+				const DVector3 curPos = Pos;
+				radius += Vel.XY().Length() * 0.5;
+				Pos.X -= Vel.X * 0.5;
+				Pos.Y -= Vel.Y * 0.5;
+				LinkLight();
+				radius = curRad;
+				Pos    = curPos;
+			}
+			else
+			{
+				// Only a radius change, don't bother with interpolating.
+				LinkLight();
+			}
 		}
 		else
 		{
-			intensity = m_currentRadius;
-		}
-		radius = intensity * 2.0f;
-		if (radius < m_currentRadius * 2) radius = m_currentRadius * 2;
-
-		if (X() != oldx || Y() != oldy || radius != oldradius)
-		{
-			//Update the light lists
+			// Update the light lists
+			Vel.XY().Zero();
 			LinkLight();
 		}
+	}
+	else if (!Vel.XY().isZero())
+	{
+		// If we interpolated a movement last tick, make sure to link back to our real position.
+		Vel.XY().Zero();
+		LinkLight();
 	}
 }
 
