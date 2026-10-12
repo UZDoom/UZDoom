@@ -1758,10 +1758,10 @@ static int PatchThing (int thingy, int flags)
 						info->DamageType = NAME_Ice;
 						value[1] &= ~0x20000000;
 					}
-					if (value[1] & 0x10000000)
+					if (value[1] & 0x10000)
 					{
 						info->DamageType = NAME_Fire;
-						value[1] &= ~0x10000000;
+						value[1] &= ~0x10000;
 					}
 					if (value[1] & 0x00000001)
 					{
