@@ -477,6 +477,7 @@ fluid_thread_self_set_prio(int prio_level)
 void
 fluid_thread_self_set_prio(int prio_level)
 {
+#if defined(__EMSCRIPTEN_PTHREADS__) || !defined(__EMSCRIPTEN__)
     struct sched_param priority;
 
     if(prio_level > 0)
@@ -501,6 +502,7 @@ fluid_thread_self_set_prio(int prio_level)
 #endif
         FLUID_LOG(FLUID_WARN, "Failed to set thread to high priority");
     }
+#endif
 }
 
 #ifdef FPE_CHECK

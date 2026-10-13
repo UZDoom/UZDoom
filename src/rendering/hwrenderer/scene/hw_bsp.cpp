@@ -40,7 +40,13 @@
 #include <immintrin.h>
 #endif // ARCH_IA32
 
+#if defined(__EMSCRIPTEN_PTHREADS__) || !defined(__EMSCRIPTEN__)
 CVAR(Bool, gl_multithread, true, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+#define RENDERER_THREAD 1
+#else
+CVAR(Bool, gl_multithread, false, CVAR_NOSET)
+#define RENDERER_THREAD 0
+#endif
 
 EXTERN_CVAR(Float, r_actorspriteshadowdist)
 EXTERN_CVAR(Bool, r_radarclipper)
@@ -48,7 +54,7 @@ EXTERN_CVAR(Bool, r_dithertransparency)
 EXTERN_CVAR(Color, gl_cullcolor)
 
 thread_local bool isWorkerThread;
-ctpl::thread_pool renderPool(1);
+ctpl::thread_pool renderPool(RENDERER_THREAD);
 bool inited = false;
 
 const int MAXDITHERACTORS = 20; // Maximum number of enemies that can set dither-transparency flags
