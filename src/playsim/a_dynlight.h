@@ -28,17 +28,18 @@ struct seg_t;
 class FSerializer;
 struct FSectionLine;
 
-enum ELightType
+enum ELightType : uint8_t
 {
-	PointLight,
-	PulseLight,
-	FlickerLight,
-	RandomFlickerLight,
-	SectorLight,
-	DummyLight,
-	ColorPulseLight,
-	ColorFlickerLight,
-	RandomColorFlickerLight
+	PointLight = 0,
+	PulseLight = 1,
+	FlickerLight = 2,
+	RandomFlickerLight = 3,
+	SectorLight = 4,
+	DummyLight = 5,
+	ColorPulseLight = 6,
+	ColorFlickerLight = 7,
+	RandomColorFlickerLight = 8
+	//if more are added, needs changes to FDynamicLight
 };
 
 enum
@@ -138,7 +139,7 @@ protected:
 	int m_Args[5] = { 0,0,0,0,0 };
 	double m_Param = 0;
 	DVector3 m_Pos = { 0,0,0 };
-	int m_type;
+	ELightType m_type;
 	int8_t m_attenuate = -1;
 	LightFlags m_lightFlags = 0;
 	bool m_swapped = false;
@@ -199,16 +200,21 @@ protected:
 	FLightDefaults * m_AssocLight;
 };
 
-
-struct FLightNode
-{
-	FDynamicLight * lightsource;
-};
-
 struct FDynamicLightTouchLists
 {
 	TArray<FSection*> flat_tlist;
 	TArray<side_t*> wall_tlist;
+};
+
+enum
+{
+	IFL_LIGHTTYPE_MASK =	0x00F,
+	ILF_ACTIVE =			0x010,
+	ILF_VISIBLE_TO_PLAYER = 0x020,
+	ILF_SHADOWMAPPED =		0x040,
+	ILF_OWNED =				0x080,
+	ILF_SWAPPED =			0x100,
+	ILF_EXPLICIT_PITCH =	0x200,
 };
 
 struct FDynamicLight
@@ -222,10 +228,11 @@ struct FDynamicLight
 
 	bool ShouldLightActor(AActor *check)
 	{
-		return visibletoplayer && IsActive() &&
-				(!((*pLightFlags) & LF_DONTLIGHTSELF) || target != check) &&
-				(!((*pLightFlags) & LF_DONTLIGHTOTHERS) || target == check) &&
-				(!((*pLightFlags) & LF_DONTLIGHTACTORS));
+		int lf = (*pLightFlags);
+		return ((flags & (ILF_ACTIVE|ILF_VISIBLE_TO_PLAYER)) == (ILF_ACTIVE|ILF_VISIBLE_TO_PLAYER)) &&
+				(!(lf & LF_DONTLIGHTSELF) || target != check) &&
+				(!(lf & LF_DONTLIGHTOTHERS) || target == check) &&
+				(!(lf & LF_DONTLIGHTACTORS));
 	}
 
 	void SetOffset(const DVector3 &pos)
@@ -233,9 +240,33 @@ struct FDynamicLight
 		m_off = pos;
 	}
 
+	inline constexpr bool IsActive() const
+	{
+		return flags & ILF_ACTIVE;
+	}
 
-	bool IsActive() const { return m_active; }
-	float GetRadius() const { return (IsActive() ? m_currentRadius * 2.f : 0.f); }
+	inline constexpr bool IsShadowMapped() const
+	{
+		return flags & ILF_SHADOWMAPPED;
+	}
+
+	inline constexpr bool IsExplicitPitch() const
+	{
+		return flags & ILF_EXPLICIT_PITCH;
+	}
+
+	inline constexpr ELightType GetLightType() const
+	{
+		return static_cast<ELightType>(flags & IFL_LIGHTTYPE_MASK);
+	}
+
+	inline void SetLightType(ELightType type)
+	{
+		flags &= ~(IFL_LIGHTTYPE_MASK);
+		flags |= (type & IFL_LIGHTTYPE_MASK);
+	}
+
+	float GetRadius() const { return ((flags & ILF_ACTIVE) ? m_currentRadius * 2.f : 0.f); }
 	int GetRed() const { return pArgs[LIGHT_RED]; }
 	int GetGreen() const { return pArgs[LIGHT_GREEN]; }
 	int GetBlue() const { return pArgs[LIGHT_BLUE]; }
@@ -253,10 +284,24 @@ struct FDynamicLight
 	bool DontLightActors() const { return !!((*pLightFlags) & LF_DONTLIGHTACTORS); }
 	bool DontLightOthers() const { return !!((*pLightFlags) & (LF_DONTLIGHTOTHERS)); }
 	bool DontLightMap() const { return !!((*pLightFlags) & (LF_DONTLIGHTMAP)); }
-	void Deactivate() { m_active = false; }
+	void Deactivate()
+	{
+		flags &= ~(ILF_ACTIVE | ILF_SHADOWMAPPED);
+	}
 	void Activate();
 
-	void SetActor(AActor *ac, bool isowned) { target = ac; owned = isowned; }
+	void SetActor(AActor *ac, bool isowned)
+	{
+		target = ac;
+		if(isowned)
+		{
+			flags |= ILF_OWNED;
+		}
+		else
+		{
+			flags &= ~(ILF_OWNED);
+		}
+	}
 	double X() const { return Pos.X; }
 	double Y() const { return Pos.Y; }
 	double Z() const { return Pos.Z; }
@@ -296,15 +341,16 @@ public:
 	int m_tickCount;
 	int m_lastUpdate;
 	int mShadowmapIndex;
-	bool m_active;
-	bool visibletoplayer;
-	bool shadowmapped;
-	uint8_t lighttype;
-	bool owned;
-	bool swapped;
-	bool explicitpitch;
+private:
+	uint32_t flags;
+public:
 
 	double lightDefIntensity;
 
 	FDynamicLightTouchLists touchlists;
+
+	static FDynamicLight *GetLight(FLevelLocals *Level);
+	static void AttachLight(AActor *self);
+	static void ActivateLight(AActor *self);
+	static void DeactivateLight(AActor *self);
 };

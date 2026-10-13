@@ -577,10 +577,55 @@ public:
 		return f;
 	}
 
+	unsigned SortedAddUnique(const T& obj, bool &ok)
+	{
+		auto f = SortedFind(obj, false);
+		if (f == Size())
+		{
+			Push(obj);
+			ok = true;
+			return f;
+		}
+		else if(Array[f] != obj)
+		{
+			Insert(f, obj);
+			ok = true;
+			return f;
+		}
+		else
+		{
+			ok = false;
+			return f;
+		}
+	}
+
+	template<typename Func>
+	unsigned SortedAddUnique(const T& obj, Func &&lt, bool &ok)
+	{
+		auto f = SortedFind(obj, std::forward<Func>(lt), false);
+		if (f == Size())
+		{
+			Push(obj);
+			ok = true;
+			return f;
+		}
+		else if(std::invoke(lt, obj, Array[f])) // should it be obj,array[x] or array[x],obj?
+		{
+			Insert(f, obj);
+			ok = true;
+			return f;
+		}
+		else
+		{
+			ok = false;
+			return f;
+		}
+	}
+
 	bool SortedDelete(const T& obj)
 	{
 		auto f = SortedFind(obj, true);
-		if (f == Size())
+		if (f != Size())
 		{
 			Delete(f);
 			return true;
@@ -595,7 +640,7 @@ public:
 	bool SortedDelete(const T& obj, Func &&lt)
 	{
 		auto f = SortedFind(obj, std::forward<Func>(lt), true);
-		if (f == Size())
+		if (f != Size())
 		{
 			Delete(f);
 			return true;
