@@ -22,11 +22,13 @@
 **
 */
 
-#include "files.h"
+#include "basics.h"
 #include "bitmap.h"
 #include "image.h"
+#include "palentry.h"
 #include "palettecontainer.h"
 
+class FString;
 
 //==========================================================================
 //
@@ -58,7 +60,6 @@ PalettedPixels FBuildTexture::CreatePalettedPixels(int conversion, int frame)
 int FBuildTexture::CopyPixels(FBitmap *bmp, int conversion, int frame)
 {
 	PalEntry *Remap = Translation->Palette;
-	bmp->CopyPixelData(0, 0, RawPixels, Width, Height, Height, 1, 0, Remap);
+	bmp->CopyPixelData(0, 0, RawPixels, Width, Height, Height, 1, OrthoTransform::NONE, Remap);
 	return -1;
-
 }
