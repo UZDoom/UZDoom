@@ -46,6 +46,7 @@ public:
 
 	void SetActiveRenderTarget();
 	void PostProcessScene(int fixedcm, float flash, const std::function<void()> &afterBloomDrawEndScene2D);
+	void RunUIPostProcess(const std::function<void()> &draw2D);
 
 	void AmbientOccludeScene(float m5);
 	void BlurScene(float gameinfobluramount);
@@ -63,6 +64,8 @@ public:
 	int GetCurrentPipelineImage() const { return mCurrentPipelineImage; }
 
 	VulkanBuffer* GetAutomaticUniformsBuffer() { return AutomaticUniformsBuffer.get(); }
+
+	bool mSceneRenderedThisFrame = false;
 
 private:
 	void NextEye(int eyeCount);
