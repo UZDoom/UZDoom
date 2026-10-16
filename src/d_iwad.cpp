@@ -69,6 +69,12 @@ EXTERN_FARG(join);
 
 bool foundprio = false; // global to prevent iwad box from appearing
 
+#ifdef _WIN32
+static constexpr char PATH_LIST_SEPARATOR = ';';
+#else
+static constexpr char PATH_LIST_SEPARATOR = ':';
+#endif
+
 //==========================================================================
 //
 // Parses IWAD definitions
@@ -484,6 +490,18 @@ void FIWadManager::CollectSearchPaths()
 			{
 				FString nice = NicePath(value);
 				if (nice.Len() > 0) mRecursiveSearchPaths.Push(nice);
+			}
+			else if (stricmp(key, "PathList") == 0)
+			{
+				FString nice = NicePath(value);
+				if (nice.Len() > 0)
+				{
+					TArray<FString> niceList = nice.Split(PATH_LIST_SEPARATOR);
+					for (const FString &path : niceList)
+					{
+						if (path.Len() > 0) mSearchPaths.Push(path);
+					}
+				}
 			}
 		}
 	}
