@@ -70,6 +70,8 @@ struct UMapEntry
 	PlayerActionOption jumping = PlayerActionOption::UNSET;
 	PlayerActionOption crouching = PlayerActionOption::UNSET;
 	PlayerActionOption freeaim = PlayerActionOption::UNSET;
+	PlayerActionOption saving = PlayerActionOption::UNSET;
+	int noautoautosave = 0;
 };
 
 static TArray<UMapEntry> Maps;
@@ -612,6 +614,20 @@ void CommitUMapinfo(level_info_t *defaultinfo)
 				// noop
 				break;
 		}
+		switch (map.saving)
+		{
+			case PlayerActionOption::ALLOW:
+			case PlayerActionOption::REQUIRE:
+				levelinfo->flags3 &= ~LEVEL3_SAVE_NO;
+				break;
+			case PlayerActionOption::DISALLOW:
+				levelinfo->flags3 |= LEVEL3_SAVE_NO;
+				break;
+			case PlayerActionOption::UNSET:
+				// noop
+				break;
+		}
+		if (map.noautoautosave) levelinfo->flags3 |= LEVEL3_AUTOAUTOSAVE_NO;
 	}
 
 

@@ -685,12 +685,15 @@ CVAR (Flag, sv_cooplosepowerups,	dmflags, DF_COOP_LOSE_POWERUPS);
 CVAR (Flag, sv_cooploseammo,	dmflags, DF_COOP_LOSE_AMMO);
 CVAR (Flag, sv_coophalveammo,	dmflags, DF_COOP_HALVE_AMMO);
 CVAR (Flag, sv_instantreaction,	dmflags, DF_INSTANT_REACTION);
+CVAR (Flag, sv_nosave,			dmflags3, DF3_NO_SAVE);
+CVAR (Flag, sv_allowsave,		dmflags3, DF3_YES_SAVE);
 
 // Some (hopefully cleaner) interface to these settings.
 CVAR (Mask, sv_crouch,			dmflags, DF_NO_CROUCH|DF_YES_CROUCH);
 CVAR (Mask, sv_jump,			dmflags, DF_NO_JUMP|DF_YES_JUMP);
 CVAR (Mask, sv_fallingdamage,	dmflags, DF_FORCE_FALLINGHX|DF_FORCE_FALLINGZD);
 CVAR (Mask, sv_freelook,		dmflags, DF_NO_FREELOOK|DF_YES_FREELOOK);
+CVAR (Mask, sv_save,			dmflags3, DF3_NO_SAVE|DF3_YES_SAVE);
 
 //==========================================================================
 //
