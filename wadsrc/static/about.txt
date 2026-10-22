@@ -15,7 +15,7 @@ UZDoom would not be possible without the work of many people. We extend our imme
 - The countless modders, mappers, and artists in the DOOM community who continue to create amazing content.
 - All the contributors who have submitted code, reported bugs, translated, and helped improve the project over the years.
 
-The UZDoom Icon was designed by Carlos "Cardboard Marty" Sanchez, copyrighted to the the UZDoom team, licensed under Creative Commons BY-SA 4.0
+The UZDoom Icon was designed by Carlos "Cardboard Marty" Sanchez, copyrighted to the UZDoom team, licensed under Creative Commons BY-SA 4.0
 
 # Licensing
 
