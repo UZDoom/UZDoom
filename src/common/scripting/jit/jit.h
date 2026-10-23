@@ -25,6 +25,12 @@
 
 #include "vmintern.h"
 
+#if defined(HAS_DEBUG_SYMBOLS) && defined(_WIN32)
+	#define JIT_INCLUDE_STACK_FRAME true
+#else
+	#define JIT_INCLUDE_STACK_FRAME false
+#endif
+
 JitFuncPtr JitCompile(VMScriptFunction *func);
 void JitDumpLog(FILE *file, VMScriptFunction *func);
 FString JitCaptureStackTrace(int framesToSkip, bool includeNativeFrames, int maxFrames = -1);
