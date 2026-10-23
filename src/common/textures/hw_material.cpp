@@ -26,7 +26,7 @@
 #include "shaderuniforms.h"
 
 
-CVAR(Bool, gl_customshader, true, 0);
+bool gl_customshader = true;
 
 
 static IHardwareTexture* (*layercallback)(int layer, int translation);
@@ -122,14 +122,18 @@ FMaterial::FMaterial(FGameTexture * tx, int scaleflags)
 			mTextureLayers.Push({ placeholder->GetTexture(), 0 });
 		}
 
+		mNumNonUserLayers = mTextureLayers.Size();
+
 		auto index = tx->GetShaderIndex();
+
+		const auto globalshader = mShaderIndex < FIRST_USER_SHADER ? &globalshaders[mShaderIndex] : &nullglobalshader;
+
 		if (gl_customshader)
 		{
-			if (index >= FIRST_USER_SHADER)
+			if (index >= FIRST_USER_SHADER || globalshader->shaderindex >= FIRST_USER_SHADER)
 			{
-				const UserShaderDesc& usershader = usershaders[index - FIRST_USER_SHADER];
-				if (usershader.shaderType == mShaderIndex) // Only apply user shader if it matches the expected material
-				{
+				if (index >= FIRST_USER_SHADER && usershaders[index - FIRST_USER_SHADER].shaderType == mShaderIndex)
+				{ // Only apply user shader if it matches the expected material
 					if (tx->Layers)
 					{
 						for (auto& texture : tx->Layers->CustomShaderTextures)
@@ -139,6 +143,15 @@ FMaterial::FMaterial(FGameTexture * tx, int scaleflags)
 						}
 					}
 					mShaderIndex = index;
+				}
+				else // if(mShaderIndex < FIRST_USER_SHADER && globalshader->shaderindex >= FIRST_USER_SHADER)
+				{
+					for (auto& texture : globalshader->CustomShaderTextures)
+					{
+						if (texture == nullptr) continue;
+						mTextureLayers.Push({texture.get(), 0});
+					}
+					mShaderIndex = globalshaders[mShaderIndex].shaderindex;
 				}
 			}
 		}

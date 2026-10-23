@@ -41,6 +41,101 @@ void ParseColorization(FScanner& sc);
 extern TDeletingArray<FLightDefaults *> LightDefaults;
 extern int AttenuationIsSet;
 
+const GlobalShaderDesc nullglobalshader = {};
+
+GlobalShaderDesc globalshaders[NUM_BUILTIN_SHADERS];
+
+TMap<FName, GlobalShaderDesc> mapshaders[NUM_BUILTIN_SHADERS];
+TMap<FName, GlobalShaderDesc> classshaders[NUM_BUILTIN_SHADERS];
+
+const GlobalShaderDesc * GetGlobalShader(int shaderNum, PClass * curActor, GlobalShaderAddr &addr)
+{
+	if(shaderNum >= NUM_BUILTIN_SHADERS && usershaders[shaderNum - NUM_BUILTIN_SHADERS].shaderFlags & SFlag_Global)
+	{ // allow class and map shaders to override gobal shaders
+		shaderNum = usershaders[shaderNum - NUM_BUILTIN_SHADERS].shaderType;
+	}
+
+	if(shaderNum >= 0 && shaderNum < NUM_BUILTIN_SHADERS)
+	{
+		GlobalShaderDesc * shader;
+		if(curActor)
+		{
+			while(curActor->TypeName != NAME_Actor)
+			{
+				shader = classshaders[shaderNum].CheckKey(curActor->TypeName);
+				if(shader && shader->shaderindex > 0)
+				{
+					addr = {int16_t(shaderNum), 2, curActor->TypeName.GetIndex()};
+					return shader;
+				}
+
+				curActor = curActor->ParentClass;
+			}
+		}
+
+		shader = mapshaders[shaderNum].CheckKey(level.MapFName);
+		if(shader && shader->shaderindex > 0)
+		{
+			addr = {int16_t(shaderNum), 1, level.MapFName.GetIndex()};
+			return shader;
+		}
+
+		addr = {int16_t(shaderNum), 0, 0};
+		return &globalshaders[shaderNum];
+	}
+	else
+	{
+		addr = {0, 3, 0};
+		return &nullglobalshader;
+	}
+}
+
+const GlobalShaderAddr GetGlobalShaderAddr(int shaderNum, PClass * curActor)
+{
+	GlobalShaderAddr addr;
+	GetGlobalShader(shaderNum, curActor, addr);
+	return addr;
+}
+
+const GlobalShaderDesc * GetGlobalShader(int shaderNum, PClass * curActor)
+{
+	GlobalShaderAddr dummy;
+	return GetGlobalShader(shaderNum, curActor, dummy);
+}
+
+const GlobalShaderDesc * GetGlobalShader(GlobalShaderAddr index)
+{
+	if(index.num >= NUM_BUILTIN_SHADERS || index.type > 2) return &nullglobalshader;
+
+	if(index.type == 0) return &globalshaders[index.num];
+
+	FName name {ENamedName(index.name)};
+
+	assert((index.type == 1 && mapshaders[index.num].CheckKey(name)) || (index.type == 2 && classshaders[index.num].CheckKey(name)) || index.type == 3);
+
+	if(index.type == 1) return mapshaders[index.num].CheckKey(name);
+	if(index.type == 2) return classshaders[index.num].CheckKey(name);
+	return &nullglobalshader;
+}
+
+void CleanupGlobalShaders()
+{
+	for(auto &gshader : globalshaders)
+	{
+		gshader = {};
+	}
+
+	for(auto &gshader2 : mapshaders)
+	{
+		gshader2.Clear();
+	}
+
+	for(auto &gshader3 : classshaders)
+	{
+		gshader3.Clear();
+	}
+}
+
 struct ExtraUniformCVARData
 {
 	FString Shader;
@@ -240,6 +335,7 @@ static const char *CoreKeywords[]=
    "material",
    "lightsizefactor",
    "colorization",
+   "globalshader",
    nullptr
 };
 
@@ -265,6 +361,7 @@ enum
    TAG_MATERIAL,
    TAG_LIGHTSIZEFACTOR,
    TAG_COLORIZATION,
+   TAG_GLOBALSHADER,
 };
 
 //==========================================================================
@@ -1271,7 +1368,7 @@ class GLDefsParser
 	//
 	//==========================================================================
 
-	void ParseMaterial()
+	void ParseMaterial(bool is_globalshader)
 	{
 		ETextureType type = ETextureType::Any;
 		bool disable_fullbright = false;
@@ -1279,6 +1376,11 @@ class GLDefsParser
 		bool thiswad = false;
 		bool iwad = false;
 		bool no_mipmap = false;
+
+		TArray<int> globaltargets;
+		FString str_globaltargets;
+		TArray<FName> globalshader_maps;
+		TArray<FName> globalshader_classes;
 
 		UserShaderDesc usershader;
 		TArray<FString> texNameList;
@@ -1293,32 +1395,162 @@ class GLDefsParser
 		const char *keywords[GLDEFS_MATERIAL_NUM_TEXURE_PROPERTIES] = { "brightmap", "normal", "specular", "metallic", "roughness", "ao" };
 		const char *notFound[GLDEFS_MATERIAL_NUM_TEXURE_PROPERTIES] = { "Brightmap", "Normalmap", "Specular texture", "Metallic texture", "Roughness texture", "Ambient occlusion texture" };
 
-		sc.MustGetString();
-		if (sc.Compare("texture")) type = ETextureType::Wall;
-		else if (sc.Compare("flat")) type = ETextureType::Flat;
-		else if (sc.Compare("sprite")) type = ETextureType::Sprite;
-		else sc.UnGet();
+		FGameTexture* tex = nullptr;
 
 		sc.MustGetString();
-		FTextureID no = TexMan.CheckForTexture(sc.String, type, FTextureManager::TEXMAN_TryAny | FTextureManager::TEXMAN_Overridable);
-		auto tex = TexMan.GetGameTexture(no);
-
-		if (tex == nullptr)
+		if(is_globalshader || sc.Compare("globalshader"))
 		{
-			if(gl_strict_gldefs_errors)
+			usershader.shaderFlags |= SFlag_Global; // make sure global usershader objects aren't reused for material shaders
+
+			if(!is_globalshader) sc.MustGetString();
+
+			is_globalshader = true;
+
+			if (sc.Compare("all"))
 			{
-				sc.ScriptError("Material definition refers nonexistent texture '%s'\n", sc.String);
+				str_globaltargets = "all";
+				globaltargets.Push(SHADER_Default);
+				globaltargets.Push(SHADER_Warp1);
+				globaltargets.Push(SHADER_Warp2);
+				globaltargets.Push(SHADER_Specular);
+				globaltargets.Push(SHADER_PBR);
+				globaltargets.Push(SHADER_Paletted);
+				globaltargets.Push(SHADER_NoTexture);
+				globaltargets.Push(SHADER_BasicFuzz);
+				globaltargets.Push(SHADER_SmoothFuzz);
+				globaltargets.Push(SHADER_SwirlyFuzz);
+				globaltargets.Push(SHADER_TranslucentFuzz);
+				globaltargets.Push(SHADER_JaggedFuzz);
+				globaltargets.Push(SHADER_NoiseFuzz);
+				globaltargets.Push(SHADER_SmoothNoiseFuzz);
+				globaltargets.Push(SHADER_SoftwareFuzz);
+			}
+			else if(sc.Compare("default"))
+			{
+				str_globaltargets = "default";
+				globaltargets.Push(SHADER_Default);
+			}
+			else if(sc.Compare("defaultwarp"))
+			{
+				str_globaltargets = "defaultwarp";
+				globaltargets.Push(SHADER_Default);
+				globaltargets.Push(SHADER_Warp1);
+				globaltargets.Push(SHADER_Warp2);
+			}
+			else if(sc.Compare("warp"))
+			{
+				str_globaltargets = "warp";
+				globaltargets.Push(SHADER_Warp1);
+				globaltargets.Push(SHADER_Warp2);
+			}
+			else if(sc.Compare("specular"))
+			{
+				str_globaltargets = "specular";
+				globaltargets.Push(SHADER_Specular);
+			}
+			else if(sc.Compare("pbr"))
+			{
+				str_globaltargets = "pbr";
+				globaltargets.Push(SHADER_PBR);
+			}
+			else if(sc.Compare("base"))
+			{
+				str_globaltargets = "base";
+				globaltargets.Push(SHADER_Default);
+				globaltargets.Push(SHADER_Warp1);
+				globaltargets.Push(SHADER_Warp2);
+				globaltargets.Push(SHADER_Specular);
+				globaltargets.Push(SHADER_PBR);
+			}
+			else if(sc.Compare("paletted"))
+			{
+				str_globaltargets = "paletted";
+				globaltargets.Push(SHADER_Paletted);
+			}
+			else if(sc.Compare("notexture"))
+			{
+				str_globaltargets = "notexture";
+				globaltargets.Push(SHADER_NoTexture);
+			}
+
+			else if(sc.Compare("nonfuzz"))
+			{
+				str_globaltargets = "nonfuzz";
+				globaltargets.Push(SHADER_Default);
+				globaltargets.Push(SHADER_Warp1);
+				globaltargets.Push(SHADER_Warp2);
+				globaltargets.Push(SHADER_Specular);
+				globaltargets.Push(SHADER_PBR);
+				globaltargets.Push(SHADER_Paletted);
+				globaltargets.Push(SHADER_NoTexture);
+			}
+			else if(sc.Compare("fuzz"))
+			{
+				str_globaltargets = "fuzz";
+				globaltargets.Push(SHADER_BasicFuzz);
+				globaltargets.Push(SHADER_SmoothFuzz);
+				globaltargets.Push(SHADER_SwirlyFuzz);
+				globaltargets.Push(SHADER_TranslucentFuzz);
+				globaltargets.Push(SHADER_JaggedFuzz);
+				globaltargets.Push(SHADER_NoiseFuzz);
+				globaltargets.Push(SHADER_SmoothNoiseFuzz);
+				globaltargets.Push(SHADER_SoftwareFuzz);
 			}
 			else
 			{
-				sc.ScriptMessage("Material definition refers nonexistent texture '%s'\n", sc.String);
+				sc.ScriptMessage("Invalid globalshader target\n", sc.String);
+			}
+
+			if(sc.CheckString("map"))
+			{
+				do
+				{
+					sc.MustGetString();
+					globalshader_maps.Push(sc.String);
+				}
+				while(!sc.PeekToken('{'));
+			}
+			else if(sc.CheckString("class"))
+			{
+				do
+				{
+					sc.MustGetString();
+					globalshader_classes.Push(sc.String);
+				}
+				while(!sc.PeekToken('{'));
 			}
 		}
-		else tex->AddAutoMaterials();	// We need these before setting up the texture.
+		else
+		{
+			if (sc.Compare("texture")) type = ETextureType::Wall;
+			else if (sc.Compare("flat")) type = ETextureType::Flat;
+			else if (sc.Compare("sprite")) type = ETextureType::Sprite;
+			else sc.UnGet();
+
+			sc.MustGetString();
+			FTextureID no = TexMan.CheckForTexture(sc.String, type, FTextureManager::TEXMAN_TryAny | FTextureManager::TEXMAN_Overridable);
+			tex = TexMan.GetGameTexture(no);
+
+			if (tex == nullptr)
+			{
+				if(gl_strict_gldefs_errors)
+				{
+					sc.ScriptError("Material definition refers nonexistent texture '%s'\n", sc.String);
+				}
+				else
+				{
+					sc.ScriptMessage("Material definition refers nonexistent texture '%s'\n", sc.String);
+				}
+			}
+			else tex->AddAutoMaterials();	// We need these before setting up the texture.
+		}
 
 		FString currentName;
-
-		if(tex)
+		if(is_globalshader)
+		{
+			currentName.AppendFormat("global shader '%s'", str_globaltargets.GetChars());
+		}
+		else if(tex)
 		{
 			currentName.AppendFormat("texture '%s'", tex->GetName().GetChars());
 		}
@@ -1331,52 +1563,130 @@ class GLDefsParser
 		while (!sc.CheckToken('}'))
 		{
 			sc.MustGetString();
-			if (sc.Compare("disablefullbright"))
-			{
-				// This can also be used without a brightness map to disable
-				// fullbright in rotations that only use brightness maps on
-				// other angles.
-				disable_fullbright = true;
-				disable_fullbright_specified = true;
+			if(!is_globalshader)
+			{ // material-only properties
+				if (sc.Compare("disablefullbright"))
+				{
+					// This can also be used without a brightness map to disable
+					// fullbright in rotations that only use brightness maps on
+					// other angles.
+					disable_fullbright = true;
+					disable_fullbright_specified = true;
+					continue;
+				}
+				else if (sc.Compare("thiswad"))
+				{
+					// only affects textures defined in the WAD containing the definition file.
+					thiswad = true;
+					continue;
+				}
+				else if (sc.Compare ("iwad"))
+				{
+					// only affects textures defined in the IWAD.
+					iwad = true;
+					continue;
+				}
+				else if (sc.Compare("nomipmap"))
+				{
+					no_mipmap = true;
+					continue;
+				}
+				else if (sc.Compare("glossiness"))
+				{
+					sc.MustGetFloat();
+					mlay.Glossiness = (float)sc.Float;
+					continue;
+				}
+				else if (sc.Compare("specularlevel"))
+				{
+					sc.MustGetFloat();
+					mlay.SpecularLevel = (float)sc.Float;
+					continue;
+				}
+				else if (sc.Compare("speed"))
+				{
+					sc.MustGetFloat();
+					speed = float(sc.Float);
+					continue;
+				}
+				else if (sc.Compare("disablealphatest"))
+				{
+					if(tex) tex->SetTranslucent(true);
+					usershader.disablealphatest = true;
+					continue;
+				}
 			}
-			else if (sc.Compare("thiswad"))
-			{
-				// only affects textures defined in the WAD containing the definition file.
-				thiswad = true;
-			}
-			else if (sc.Compare ("iwad"))
-			{
-				// only affects textures defined in the IWAD.
-				iwad = true;
-			}
-			else if (sc.Compare("nomipmap"))
-			{
-				no_mipmap = true;
-			}
-			else if (sc.Compare("glossiness"))
-			{
-				sc.MustGetFloat();
-				mlay.Glossiness = (float)sc.Float;
-			}
-			else if (sc.Compare("specularlevel"))
-			{
-				sc.MustGetFloat();
-				mlay.SpecularLevel = (float)sc.Float;
-			}
-			else if (sc.Compare("speed"))
-			{
-				sc.MustGetFloat();
-				speed = float(sc.Float);
-			}
-			else if (sc.Compare("disablealphatest"))
-			{
-				if(tex) tex->SetTranslucent(true);
-				usershader.disablealphatest = true;
-			}
-			else if (sc.Compare("shader"))
+
+			if (sc.Compare("shader"))
 			{
 				sc.MustGetString();
 				usershader.shader = sc.String;
+			}
+			else if (sc.Compare("vertshader"))
+			{
+				sc.MustGetString();
+				usershader.vertshader = sc.String;
+			}
+			else if (sc.Compare("varying"))
+			{
+				bool ok = true;
+
+				sc.MustGetString();
+				FString varyingProperty = "";
+
+				if (sc.Compare("noperspective"))
+				{
+					varyingProperty = "noperspective";
+					sc.MustGetString();
+				}
+				else if (sc.Compare("flat") == 0)
+				{
+					varyingProperty = "flat";
+					sc.MustGetString();
+				}
+				else
+				{
+					varyingProperty = "";
+				}
+
+				FString varyingType = sc.String;
+				varyingType.ToLower();
+
+				sc.MustGetString();
+				FString varyingName = sc.String;
+
+				UniformType parsedType = UniformType::Undefined;
+
+				if (varyingType.Compare("int") == 0)
+				{
+					parsedType = UniformType::Int;
+				}
+				else if (varyingType.Compare("float") == 0)
+				{
+					parsedType = UniformType::Float;
+				}
+				else if (varyingType.Compare("vec2") == 0)
+				{
+					parsedType = UniformType::Vec2;
+				}
+				else if (varyingType.Compare("vec3") == 0)
+				{
+					parsedType = UniformType::Vec3;
+				}
+				else if (varyingType.Compare("vec4") == 0)
+				{
+					parsedType = UniformType::Vec4;
+				}
+				else
+				{
+					sc.ScriptError("Unrecognized varying type '%s'", sc.String);
+					ok = false;
+				}
+
+				if(ok)
+				{
+					usershader.varyings.push_back({parsedType, varyingProperty, varyingName});
+				}
 			}
 			else if (sc.Compare("texture"))
 			{
@@ -1390,7 +1700,7 @@ class GLDefsParser
 					}
 				}
 				sc.MustGetString();
-				if (tex)
+				if (tex || is_globalshader)
 				{
 					bool okay = false;
 					for (size_t i = 0; i < countof(mlay.CustomShaderTextures); i++)
@@ -1431,7 +1741,7 @@ class GLDefsParser
 			{
 				bool isProperty = false;
 
-				for (int i = 0; i < GLDEFS_MATERIAL_NUM_TEXURE_PROPERTIES; i++)
+				if(!is_globalshader) for (int i = 0; i < GLDEFS_MATERIAL_NUM_TEXURE_PROPERTIES; i++)
 				{
 					if (sc.Compare (keywords[i]))
 					{
@@ -1477,10 +1787,233 @@ class GLDefsParser
 				}
 			}
 		}
-		if (!tex)
+		if (!tex && !is_globalshader)
 		{
 			return;
 		}
+		if(is_globalshader)
+		{ // TODO (nit) extract into function
+			TMap<int, TArray<FName>> target_maps;
+			TMap<int, TArray<FName>> target_classes;
+			TMap<int, bool> target_global;
+
+			if(fileSystem.GetFileContainer(workingLump) > fileSystem.GetMaxIwadNum() && globalshader_maps.Size() == 0 && globalshader_classes.Size() == 0)
+			{
+				sc.ScriptError("globalshader only supported on iwad");
+				return;
+			}
+			else for(int target : globaltargets)
+			{
+				target_maps[target] = globalshader_maps;
+				target_classes[target] = globalshader_classes;
+
+				auto &maps = target_maps[target];
+				auto &classes = target_classes[target];
+
+				if(maps.Size() > 0)
+				{
+					target_global[target] = false;
+					TArray<FName> badmaps;
+					for(FName map : maps)
+					{
+						if(mapshaders[target][map].shaderindex >= 0)
+						{
+							if(gl_strict_gldefs_errors)
+							{
+								sc.ScriptError("%s already exists for map '%s'", currentName.GetChars(), map.GetChars());
+								return;
+							}
+							else
+							{
+								sc.ScriptMessage("%s already exists for map '%s'", currentName.GetChars(), map.GetChars());
+								badmaps.Push(map);
+							}
+						}
+					}
+
+					for(FName map : badmaps)
+					{
+						maps.Delete(maps.Find(map));
+					}
+
+					if(maps.Size() == 0) continue;
+				}
+				else if(classes.Size() > 0)
+				{
+					target_global[target] = false;
+
+					TArray<FName> badclasses;
+					for(FName clazz : classes)
+					{
+						if(classshaders[target][clazz].shaderindex >= 0)
+						{
+							if(gl_strict_gldefs_errors)
+							{
+								sc.ScriptError("%s already exists for class '%s'", currentName.GetChars(), clazz.GetChars());
+								return;
+							}
+							else
+							{
+								sc.ScriptMessage("%s already exists for class '%s'", currentName.GetChars(), clazz.GetChars());
+								badclasses.Push(clazz);
+							}
+						}
+					}
+
+					for(FName clazz : badclasses)
+					{
+						classes.Delete(classes.Find(clazz));
+					}
+
+					if(classes.Size() == 0) continue;
+				}
+				else
+				{
+					target_global[target] = true;
+
+					if(globalshaders[target].shaderindex >= 0)
+					{
+						if(gl_strict_gldefs_errors)
+						{
+							sc.ScriptError("%s already exists", currentName.GetChars());
+						}
+						else
+						{
+							sc.ScriptMessage("%s already exists", currentName.GetChars());
+						}
+						return;
+					}
+				}
+			}
+
+			if (usershader.shader.IsNotEmpty())
+			{
+				int lump = fileSystem.CheckNumForFullName(usershader.shader.GetChars());
+				if (lump == -1)
+				{
+					if(gl_strict_gldefs_errors)
+					{
+						sc.ScriptError("inexistent shader lump '%s' in %s", usershader.shader.GetChars(), currentName.GetChars());
+					}
+					else
+					{
+						sc.ScriptMessage("inexistent shader lump '%s' in %s", usershader.shader.GetChars(), currentName.GetChars());
+					}
+					return;
+				}
+
+				if(usershader.vertshader.IsNotEmpty())
+				{
+					int lump = fileSystem.CheckNumForFullName(usershader.vertshader.GetChars());
+					if (lump == -1)
+					{
+						if(gl_strict_gldefs_errors)
+						{
+							sc.ScriptError("inexistent vertex shader lump '%s' in %s", usershader.vertshader.GetChars(), currentName.GetChars());
+						}
+						else
+						{
+							sc.ScriptMessage("inexistent vertex shader lump '%s' in %s", usershader.vertshader.GetChars(), currentName.GetChars());
+						}
+						return;
+					}
+				}
+
+				for(int target : globaltargets)
+				{
+					auto &maps = target_maps[target];
+					auto &classes = target_classes[target];
+
+					if(maps.Size() == 0 && classes.Size() == 0 && !target_global[target]) continue;
+
+					FString baseDefines = usershader.defines;
+
+					int firstUserTexture;
+
+					if (target == SHADER_Specular)
+					{
+						firstUserTexture = 7;
+					}
+					else if (target == SHADER_PBR)
+					{
+						firstUserTexture = 9;
+					}
+					else
+					{
+						firstUserTexture = 5;
+					}
+
+					for (unsigned int i = 0; i < texNameList.Size(); i++)
+					{
+						usershader.defines.AppendFormat("#define %s texture%d\n", texNameList[i].GetChars(), texNameIndex[i] + firstUserTexture);
+					}
+
+					usershader.shaderType = MaterialShaderIndex(target);
+
+					int shaderIndex = usershaders.Push(usershader) + FIRST_USER_SHADER;
+
+					if(maps.Size() > 0)
+					{
+						for(FName map : maps)
+						{
+							mapshaders[target][map].shaderindex = shaderIndex;
+						}
+					}
+					else if(classes.Size() > 0)
+					{
+						for(FName clazz : classes)
+						{
+							classshaders[target][clazz].shaderindex = shaderIndex;
+						}
+					}
+					else
+					{
+						globalshaders[target].shaderindex = shaderIndex;
+					}
+
+					for (int i = 0; i < MAX_CUSTOM_HW_SHADER_TEXTURES; i++)
+					{
+						if (mlay.CustomShaderTextures[i])
+						{
+							if(maps.Size() > 0)
+							{
+								for(FName map : maps)
+								{
+									mapshaders[target][map].CustomShaderTextures[i] = mlay.CustomShaderTextures[i]->GetTexture();
+								}
+							}
+							else if(classes.Size() > 0)
+							{
+								for(FName clazz : classes)
+								{
+									classshaders[target][clazz].CustomShaderTextures[i] = mlay.CustomShaderTextures[i]->GetTexture();
+								}
+							}
+							else
+							{
+								globalshaders[target].CustomShaderTextures[i] = mlay.CustomShaderTextures[i]->GetTexture();
+							}
+						}
+					}
+
+					usershader.defines = baseDefines;
+				}
+			}
+			else
+			{
+				if(gl_strict_gldefs_errors)
+				{
+					sc.ScriptError("shader lump not specified for %s", usershader.shader.GetChars(), currentName.GetChars());
+				}
+				else
+				{
+					sc.ScriptMessage("shader lump not specified for %s", usershader.shader.GetChars(), currentName.GetChars());
+				}
+			}
+			return;
+		}
+
+		// TODO (nit) (everything below this) extract into function
 		if (thiswad || iwad)
 		{
 			bool useme = false;
@@ -1532,6 +2065,23 @@ class GLDefsParser
 				return;
 			}
 
+			if(usershader.vertshader.IsNotEmpty())
+			{
+				int lump = fileSystem.CheckNumForFullName(usershader.vertshader.GetChars());
+				if (lump == -1)
+				{
+					if(gl_strict_gldefs_errors)
+					{
+						sc.ScriptError("inexistent vertex shader lump '%s' in %s", usershader.vertshader.GetChars(), currentName.GetChars());
+					}
+					else
+					{
+						sc.ScriptMessage("inexistent vertex shader lump '%s' in %s", usershader.vertshader.GetChars(), currentName.GetChars());
+					}
+					return;
+				}
+			}
+
 			int firstUserTexture;
 			if ((mlay.Normal || tex->GetNormalmap()) && (mlay.Specular || tex->GetSpecularmap()))
 			{
@@ -1564,6 +2114,7 @@ class GLDefsParser
 			{
 				if (!usershaders[i].shader.CompareNoCase(usershader.shader) &&
 					usershaders[i].shaderType == usershader.shaderType &&
+					usershaders[i].shaderFlags == usershader.shaderFlags &&
 					!usershaders[i].defines.Compare(usershader.defines))
 				{
 					SetShaderIndex(tex, i + FIRST_USER_SHADER);
@@ -2130,7 +2681,10 @@ public:
 				ParseBrightmap();
 				break;
 			case TAG_MATERIAL:
-				ParseMaterial();
+				ParseMaterial(false);
+				break;
+			case TAG_GLOBALSHADER:
+				ParseMaterial(true);
 				break;
 			case TAG_HARDWARESHADER:
 				ParseHardwareShader();

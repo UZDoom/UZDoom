@@ -15,6 +15,12 @@
 **
 */
 
+#ifdef VERT_CUSTOM_V0
+void ModifyVertex();
+#endif
+
+const int TEXF_Spheremap = 0x100000;
+
 struct BonesResult
 {
 	vec3 Normal;
@@ -86,15 +92,22 @@ void main()
 		vEyeNormal = vec4(normalize((NormalViewMatrix * vec4(normalize(vWorldNormal.xyz), 1.0)).xyz), 1.0);
 	#endif
 
-	#ifdef SPHEREMAP
+	#ifndef SPHEREMAP
+	if((uTextureMode & TEXF_Spheremap) != 0)
+	{
+	#endif
 		vec3 u = normalize(eyeCoordPos.xyz);
 		vec4 n = normalize(NormalViewMatrix * vec4(parmTexCoord.x, 0.0, parmTexCoord.y, 0.0));
 		vec3 r = reflect(u, n.xyz);
 		float m = 2.0 * sqrt( r.x*r.x + r.y*r.y + (r.z+1.0)*(r.z+1.0) );
 		vec2 sst = vec2(r.x/m + 0.5,  r.y/m + 0.5);
 		vTexCoord.xy = sst;
-	#else
+	#ifndef SPHEREMAP
+	}
+	else
+	{
 		vTexCoord = TextureMatrix * vec4(parmTexCoord, 0.0, 1.0);
+	}
 	#endif
 
 	gl_Position = ProjectionMatrix * eyeCoordPos;
@@ -138,6 +151,10 @@ void main()
 #endif
 
 	gl_PointSize = 1.0;
+	
+	#ifdef VERT_CUSTOM_V0
+	ModifyVertex();
+	#endif
 }
 
 #if !defined(SIMPLE)
