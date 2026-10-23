@@ -22,12 +22,20 @@
 **
 */
 
+#include <climits>
+#include <cstring>
+
+#include "basics.h"
 #include "bitmap.h"
-#include "image.h"
-#include "filesystem.h"
-#include "files.h"
 #include "cmdlib.h"
+#include "files.h"
+#include "filesystem.h"
+#include "fs_files.h"
+#include "fs_filesystem.h"
+#include "image.h"
 #include "palettecontainer.h"
+
+struct PalEntry;
 
 FMemArena ImageArena(32768);
 TArray<FImageSource *>FImageSource::ImageForLump;
@@ -161,14 +169,14 @@ int FImageSource::CopyPixels(FBitmap *bmp, int conversion, int frame)
 	PalEntry *palette = GPalette.BaseColors;
 
 	auto ppix = CreatePalettedPixels(conversion, frame);
-	bmp->CopyPixelData(0, 0, ppix.Data(), Width, Height, Height, 1, 0, palette, nullptr);
+	bmp->CopyPixelData(0, 0, ppix.Data(), Width, Height, Height, 1, OrthoTransform::NONE, palette, nullptr);
 	return 0;
 }
 
 int FImageSource::CopyTranslatedPixels(FBitmap *bmp, const PalEntry *remap, int frame)
 {
 	auto ppix = CreatePalettedPixels(normal, frame);
-	bmp->CopyPixelData(0, 0, ppix.Data(), Width, Height, Height, 1, 0, remap, nullptr);
+	bmp->CopyPixelData(0, 0, ppix.Data(), Width, Height, Height, 1, OrthoTransform::NONE, remap, nullptr);
 	return 0;
 }
 

@@ -96,6 +96,7 @@ EXTERN_CVAR (Bool, queryiwad);
 // Used on welcome/IWAD screen.
 EXTERN_CVAR (Int, vid_preferbackend)
 EXTERN_CVAR(Bool, longsavemessages)
+EXTERN_CVAR(Bool, vid_cursor_invert);
 
 extern HANDLE StdOut;
 extern bool FancyStdOut;
@@ -374,20 +375,25 @@ bool I_SetCursor(FGameTexture *cursorpic)
 
 	if (cursorpic != NULL && cursorpic->isValid())
 	{
-		auto image = cursorpic->GetTexture()->GetBgraBitmap(nullptr);
-		// Must be no larger than 32x32. (is this still necessary?
-		if (image.GetWidth() > 32 || image.GetHeight() > 32)
+		auto src = cursorpic->GetTexture()->GetBgraBitmap(nullptr);
+		// Must be no larger than 32x32. (is this still necessary? No, but the limit is dependant on dpi and cursor settings
+		if (src.GetWidth() > 32 || src.GetHeight() > 32)
 		{
 			return false;
 		}
-		// Fixme: This should get a raw image, not a texture. (Once raw images get implemented.)
-		int lo = cursorpic->GetTexelLeftOffset();
-		int to = cursorpic->GetTexelTopOffset();
 
-		cursor = CreateAlphaCursor(image, lo, to);
+		int xhot = vid_cursor_invert? src.GetWidth()-1: 0;
+		int yhot = 0;
+
+		uint8_t buffer[32*32*4];
+		memset(buffer, 0, 32*32*4);
+		FBitmap bmp(buffer, 32*4, 32, 32);
+		bmp.Blit(0, 0, src, src.GetWidth(), src.GetHeight(), vid_cursor_invert? OrthoTransform::MIRROR: OrthoTransform::NONE); // expand to 32*32
+
+		cursor = CreateAlphaCursor(bmp, xhot, yhot);
 		if (cursor == NULL)
 		{
-			cursor = CreateCompatibleCursor(image, lo, to);
+			cursor = CreateCompatibleCursor(bmp, xhot, yhot);
 		}
 		if (cursor == NULL)
 		{
