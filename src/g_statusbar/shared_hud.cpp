@@ -175,7 +175,7 @@ void DBaseStatusBar::DrawAltHUD()
 		hudwidth = int(640 / hud_scalefactor);
 		hudheight = hudwidth * twod->GetHeight() / twod->GetWidth();
 	}
-	if (hud_aspectscale) hudheight = hudheight * 5 / 6;
+	if (!ForcedScale && hud_aspectscale) hudheight = hudheight * 5 / 6;
 
 
 	IFVIRTUALPTRNAME(AltHud, "AltHud", Draw)
