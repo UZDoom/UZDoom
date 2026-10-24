@@ -556,7 +556,7 @@ class Weapon : StateProvider
 
 	override bool TryPickup (in out Actor toucher)
 	{
-		State ReadyState = GetReadyState();
+		State ReadyState = FindState("Ready");
 		if (ReadyState != NULL && ReadyState.ValidateSpriteFrame())
 		{
 			return Super.TryPickup (toucher);

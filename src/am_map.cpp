@@ -130,7 +130,7 @@ CUSTOM_CVAR(Int, am_showalllines, -1, CVAR_NOINITCALL) // This is a cheat so don
 }
 
 EXTERN_CVAR(Bool, sv_cheats)
-CUSTOM_CVAR(Int, am_cheat, 0, 0)
+CUSTOM_CVARD(Int, am_cheat, 0, 0, "Reveals map following IDDT usage levels. Values >=4 don't reveal hidden lines ")
 {
 	// No automap cheat in net games when cheats are disabled!
 	if (netgame && !sv_cheats && self != 0)
@@ -3053,7 +3053,7 @@ void DAutomap::drawThings (bool allmap)
 	bool allthings = allmap && players[consoleplayer].mo->FindInventory(NAME_PowerScanner, true) != nullptr;
 
 	// if there is nothing to draw, abort early.
-	if (!(am_cheat > 0
+	if (!((am_cheat >= 2 && am_cheat != 4)
 		|| allthings
 		|| am_show_seen_things))
 	{
