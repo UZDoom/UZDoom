@@ -53,16 +53,22 @@ enum ENetCommand
 	CMD_GET,
 };
 
-enum ENetFlags
+enum ENetPacketType : uint8_t
 {
-	NCMD_EXIT = 0x80,		// Client has left the game
-	NCMD_RETRANSMIT = 0x40,		//
-	NCMD_SETUP = 0x20,		// Guest is letting the host know who it is
-	NCMD_LEVELREADY = 0x10,		// After loading a level, guests send this over to the host who then sends it back after all are received
-	NCMD_QUITTERS = 0x08,		// Client is getting info about one or more players quitting
-	NCMD_COMPRESSED = 0x04,		// Remainder of packet is compressed
-	NCMD_LATENCYACK = 0x02,		// A latency packet was just read, so let the sender know.
-	NCMD_LATENCY = 0x01,		// Latency packet, used for measuring RTT.
+	NCMD_GAME_DATA,		// Clients are sending gameplay data to each other.
+	NCMD_CONNECT,		// Guest is letting the host know who it is
+	NCMD_DISCONNECT,	// Client has left the game
+	NCMD_LEVEL_READY,	// After loading a level, guests send this over to the host who then sends it back after all are received
+	NCMD_LATENCY,		// Latency packet, used for measuring RTT.
+	NCMD_LATENCY_ACK,	// A latency packet was just read, so let the sender know.
+
+	NCMD_FLAG_START = 1 << 5,	// Packet types cannot reach this number, otherwise they start interfering with the bit flags.
+
+	NCMD_FLAG_QUITTERS		= NCMD_FLAG_START,		// Client is getting info about one or more players quitting
+	NCMD_FLAG_RETRANSMIT	= NCMD_FLAG_START << 1,	// Some information was missing and must be sent back over.
+	NCMD_FLAG_COMPRESSED	= NCMD_FLAG_START << 2,	// Packet must be decompressed to read correctly.
+
+	NCMD_FLAGS				= NCMD_FLAG_QUITTERS | NCMD_FLAG_RETRANSMIT | NCMD_FLAG_COMPRESSED
 };
 
 struct FVerificationError
@@ -117,6 +123,8 @@ void I_NetCmd(ENetCommand cmd);
 void I_NetDone();
 void HandleIncomingConnection();
 void CloseNetwork();
+uint8_t GetPacketFlags(uint8_t flags);
+ENetPacketType GetPacketType(uint8_t type);
 
 void StartNetworkLean();
 bool IsNetworkStartedLean();
