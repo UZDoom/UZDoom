@@ -24,39 +24,47 @@
 
 // HEADER FILES ------------------------------------------------------------
 
-#include <cwctype>
-#include <stdlib.h>
-#include <string.h>
-#include <math.h>
-
-
-#include "m_swap.h"
-#include "v_font.h"
-#include "printf.h"
-#include "textures.h"
-#include "filesystem.h"
-#include "cmdlib.h"
-#include "sc_man.h"
-#include "gstrings.h"
-#include "image.h"
-#include "utf8.h"
-#include "myiswalpha.h"
-#include "fontchars.h"
-#include "multipatchtexture.h"
-#include "texturemanager.h"
-#include "i_interface.h"
-
-#include "fontinternals.h"
-#include "Trex/Atlas.hpp"
-#include "texturemanager.h"
-#include "Trex/TextShaper.hpp"
-#include "c_cvars.h"
-#include "simdutf.h"
+#include <climits>
+#include <memory>
 #include <string>
-#include "menu.h"
-#include "vm.h"
-#include "c_dispatch.h"
+#include <string_view>
+#include <utility>
+#include <vector>
+
+#include "Trex/Atlas.hpp"
+#include "Trex/Font.hpp"
+#include "Trex/TextShaper.hpp"
+#include "basics.h"
+#include "bitmap.h"
+#include "c_cvars.h"
+#include "cmdlib.h"
+#include "dobject.h"
+#include "filesystem.h"
+#include "fontinternals.h"
 #include "freetype/freetype.h"
+#include "fs_filesystem.h"
+#include "gametexture.h"
+#include "gstrings.h"
+#include "i_interface.h"
+#include "image.h"
+#include "menu.h"
+#include "myiswalpha.h"
+#include "name.h"
+#include "palentry.h"
+#include "palettecontainer.h"
+#include "printf.h"
+#include "sc_man.h"
+#include "simdutf.h"
+#include "stringtable.h"
+#include "tarray.h"
+#include "textureid.h"
+#include "texturemanager.h"
+#include "textures.h"
+#include "utf8.h"
+#include "v_font.h"
+#include "vectors.h"
+#include "vm.h"
+#include "zstring.h"
 
 TArray<FBitmap> sheetBitmaps;
 
@@ -489,7 +497,7 @@ public:
 	int CopyPixels(FBitmap* dest, int conversion, int frame = 0) override
 	{
 		auto& pic = sheetBitmaps[baseSheet];
-		dest->CopyPixelDataRGB(0, 0, pic.GetPixels() + 4 * (X + pic.GetWidth() * Y), Width, Height, 4, pic.GetWidth() * 4, 0, CF_BGRA);
+		dest->CopyPixelDataRGB(0, 0, pic.GetPixels() + 4 * (X + pic.GetWidth() * Y), Width, Height, 4, pic.GetWidth() * 4, OrthoTransform::NONE, CF_BGRA);
 		return 0;
 	}
 
@@ -1599,7 +1607,7 @@ class FTrexAtlasImageSource : public FImageSource
 			format = CF_IA;
 		}
 		dest->CopyPixelDataRGB(0, 0, bmp.Data().data(), bmp.Width(), bmp.Height(),
-		                       channels, bmp.Width() * channels, 0, format);
+		                       channels, bmp.Width() * channels, OrthoTransform::NONE, format);
 		return 0;
 	}
 };
