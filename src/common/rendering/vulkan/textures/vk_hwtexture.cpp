@@ -331,16 +331,20 @@ VulkanDescriptorSet* VkMaterial::GetDescriptorSet(const FMaterialState& state)
 	auto base = Source();
 	int clampmode = state.mClampMode;
 	int translation = state.mTranslation;
+	GlobalShaderAddr globalShaderAddr = state.globalShaderAddr;
 	auto translationp = IsLuminosityTranslation(translation)? translation : intptr_t(GPalette.GetTranslation(GetTranslationType(translation), GetTranslationIndex(translation)));
 
 	clampmode = base->GetClampMode(clampmode);
 
 	for (auto& set : mDescriptorSets)
 	{
-		if (set.descriptor && set.clampmode == clampmode && set.remap == translationp) return set.descriptor.get();
+		if (set.descriptor && set.clampmode == clampmode && set.globalShaderAddr == globalShaderAddr && set.remap == translationp) return set.descriptor.get();
 	}
 
-	int numLayers = NumLayers();
+	const GlobalShaderDesc& globalshader = *GetGlobalShader(globalShaderAddr);
+	int numLayersMat = globalshader ? NumNonUserLayers() : NumLayers();
+
+	int numLayers = globalshader ? (NumNonUserLayers() + globalshader.CountTextures())  : NumLayers();
 
 	auto descriptor = fb->GetDescriptorSetManager()->AllocateTextureDescriptorSet(max(numLayers, SHADER_MIN_REQUIRED_TEXTURE_LAYERS));
 
@@ -354,13 +358,37 @@ VulkanDescriptorSet* VkMaterial::GetDescriptorSet(const FMaterialState& state)
 	auto systeximage = systex->GetImage(layer->layerTexture, state.mTranslation, layer->scaleFlags);
 	update.AddCombinedImageSampler(descriptor.get(), 0, systeximage->View.get(), sampler, systeximage->Layout);
 
+	auto dummyImage = fb->GetTextureManager()->GetNullTextureView();
+
 	if (!(layer->scaleFlags & CTF_Indexed))
 	{
-		for (int i = 1; i < numLayers; i++)
+		for (int i = 1; i < numLayersMat; i++)
 		{
 			auto syslayer = static_cast<VkHardwareTexture*>(GetLayer(i, 0, &layer));
 			auto syslayerimage = syslayer->GetImage(layer->layerTexture, 0, layer->scaleFlags);
 			update.AddCombinedImageSampler(descriptor.get(), i, syslayerimage->View.get(), sampler, syslayerimage->Layout);
+		}
+
+		numLayers = numLayersMat;
+
+		if(globalshader)
+		{
+			size_t i = 0;
+			for (auto& texture : globalshader.CustomShaderTextures)
+			{
+				if (texture != nullptr)
+				{
+					VkHardwareTexture *tex = static_cast<VkHardwareTexture*>(texture->GetHardwareTexture(0, 0));
+					VkTextureImage *img = tex->GetImage(texture.get(), 0, 0);
+					update.AddCombinedImageSampler(descriptor.get(), numLayers, img->View.get(), sampler, img->Layout);
+				}
+				else
+				{
+					update.AddCombinedImageSampler(descriptor.get(), numLayers, dummyImage, sampler, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
+				}
+				i++;
+				numLayers++;
+			}
 		}
 	}
 	else
@@ -371,16 +399,17 @@ VulkanDescriptorSet* VkMaterial::GetDescriptorSet(const FMaterialState& state)
 			auto syslayerimage = syslayer->GetImage(layer->layerTexture, 0, layer->scaleFlags);
 			update.AddCombinedImageSampler(descriptor.get(), i, syslayerimage->View.get(), sampler, syslayerimage->Layout);
 		}
+
+		numLayersMat = 3;
 		numLayers = 3;
 	}
 
-	auto dummyImage = fb->GetTextureManager()->GetNullTextureView();
 	for (int i = numLayers; i < SHADER_MIN_REQUIRED_TEXTURE_LAYERS; i++)
 	{
 		update.AddCombinedImageSampler(descriptor.get(), i, dummyImage, sampler, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
 	}
 
 	update.Execute(fb->device.get());
-	mDescriptorSets.emplace_back(clampmode, translationp, std::move(descriptor));
+	mDescriptorSets.emplace_back(clampmode, translationp, globalShaderAddr, std::move(descriptor));
 	return mDescriptorSets.back().descriptor.get();
 }
