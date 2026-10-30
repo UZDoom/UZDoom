@@ -577,9 +577,9 @@ monsters/vassago/hot2		dsincht2
 monsters/vassago/hot3		dsincht3
 
 monsters/tyrant/sight		dstyrsit
-monsters/tyrant/pain		dstyrpai
+$alias monsters/tyrant/pain cyber/pain
 monsters/tyrant/death		dstyrdth
-monsters/tyrant/active		dstyract
+$alias monsters/tyrant/active cyber/active
 monsters/tyrant/walk		dstyrwlk
 
 weapons/incinerator/fire1	dsincfi1
