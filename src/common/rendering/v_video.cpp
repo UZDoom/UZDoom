@@ -82,6 +82,9 @@ CUSTOM_CVAR(Int, vid_maxfps, 500, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 
 CVAR(Bool, vid_shadersupport, true, CVAR_SYSTEM_ONLY);
 
+#ifdef __EMSCRIPTEN__
+CVAR(Int, vid_preferbackend, BACKEND_DEFAULT, CVAR_NOSET); // force gles as only supported renderer
+#else
 CUSTOM_CVAR(Int, vid_preferbackend, BACKEND_DEFAULT, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 {
 	// [SP] This may seem pointless - but I don't want to implement live switching just
@@ -119,6 +122,7 @@ CUSTOM_CVAR(Int, vid_preferbackend, BACKEND_DEFAULT, CVAR_ARCHIVE | CVAR_GLOBALC
 	if (notice) Printf("Changing the video backend requires a restart for " GAMENAME ".\n");
 	else notice = true;
 }
+#endif
 
 CUSTOM_CVAR(Int, uiscale, 0, CVAR_ARCHIVE | CVAR_NOINITCALL)
 {

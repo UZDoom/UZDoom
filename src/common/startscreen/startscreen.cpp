@@ -676,7 +676,7 @@ void FStartScreen::Render(bool force)
 		twod->Begin(screen->GetWidth(), screen->GetHeight());
 
 		// At this point the shader for untextured rendering has not been loaded yet, so we got to clear the screen by rendering a texture with black color.
-		DrawTexture(twod, StartupTexture, 0, 0, DTA_VirtualWidthF, StartupTexture->GetDisplayWidth(), DTA_VirtualHeightF, StartupTexture->GetDisplayHeight(), DTA_KeepRatio, true, DTA_Color, PalEntry(255,0,0,0), TAG_END);
+		DrawTexture(twod, StartupTexture, 0, 0, DTA_VirtualWidthF, StartupTexture->GetDisplayWidth(), DTA_VirtualHeightF, StartupTexture->GetDisplayHeight(), DTA_KeepRatio, true, DTA_Color, static_cast<uint32_t>(PalEntry(255,0,0,0)), TAG_END);
 
 		if (HeaderTexture)
 		{
