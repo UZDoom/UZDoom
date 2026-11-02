@@ -81,7 +81,7 @@ jobs:
 
   ci-success:
     needs:
-      - debinfo
+      - release
       - extra
       - lint-appstream
       - ci-init
@@ -242,14 +242,14 @@ jobs:
 # Primary Build Configuration
 # ======================
 
-  debinfo:
+  release:
     needs:
     - ci-init
     name: ${{ matrix.config.name }} ${{ matrix.config.build_type }}
     uses: ./.github/workflows/build_core.yml
     secrets: inherit
     with:
-      build_type: RelWithDebInfo
+      build_type: Release
       name: ${{ matrix.config.name }}
       os: ${{ matrix.config.os }}
       os_image: ${{ matrix.config.os_image || '' }}
@@ -432,27 +432,6 @@ jobs:
 # ======================
 # Secondary Build Configuration
 # ======================
-
-  release:
-    needs:
-    - ci-init
-    - ci-success
-    name: ${{ matrix.config.name }} ${{ matrix.config.build_type }}
-    uses: ./.github/workflows/build_core.yml
-    secrets: inherit
-    with:
-      build_type: Release
-      name: ${{ matrix.config.name }}
-      os: ${{ matrix.config.os }}
-      os_image: ${{ matrix.config.os_image || '' }}
-      build_opts: ${{ matrix.config.build_opts }} ${{ matrix.config.build_opts_extra }}
-      deps_cmdline: ${{ matrix.config.deps_cmdline }}
-      extra_files: ${{ matrix.config.extra_files }}
-      environment: ${{ needs.ci-init.outputs.mode }}
-    strategy:
-      fail-fast: false
-      matrix:
-        config: *common_config
 
   debug:
     needs:

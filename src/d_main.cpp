@@ -4187,11 +4187,9 @@ static int D_DoomMain_Internal (void)
 	C_InitConsole(80*8, 25*8, false);
 
 	Printf(
-		"%s version %s\nBuild: %s dated %s\nOS: %s\n",
-		GAMENAME,
-		GetVersionString(),
-		BACKEND,
-		GetGitTime(),
+		"%s version %s\nBuild: %s,%s dated %s\nOS: %s\n",
+		GAMENAME, GetVersionString(),
+		BACKEND, CMAKE_BUILD_TYPE, GetGitTime(),
 		I_DetectOS().GetChars()
 	);
 

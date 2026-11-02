@@ -10,6 +10,28 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
+macro(FLAGS CONFIG CL_FLAGS CC_FLAGS)
+	if(MSVC)
+		set(CMAKE_C_FLAGS_${CONFIG} ${CL_FLAGS} CACHE STRING "${CONFIG} C flags" FORCE)
+		set(CMAKE_CXX_FLAGS_${CONFIG} ${CL_FLAGS} CACHE STRING "${CONFIG} C++ flags" FORCE)
+	else()
+		set(CMAKE_C_FLAGS_${CONFIG} ${CC_FLAGS} CACHE STRING "${CONFIG} C flags" FORCE)
+		set(CMAKE_CXX_FLAGS_${CONFIG} ${CC_FLAGS} CACHE STRING "${CONFIG} C++ flags" FORCE)
+	endif()
+endmacro()
+FLAGS(DEBUG           "/MTd /Zi /Od /RTC1"    "-g3")
+FLAGS(RELEASE         "/MT /Zi /O2 /DNDEBUG"  "-O2 -g1 -DNDEBUG")
+FLAGS(RELWITHDEBINFO  "/MT /Zi /O2"           "-O2 -g")
+FLAGS(MINSIZEREL      "/MT /O2 /Ob2 /DNDEBUG" "-O3 -DNDEBUG")
+if (NOT CMAKE_BUILD_TYPE)
+	message(STATUS "No build type selected.")
+	set(CMAKE_BUILD_TYPE "Release")
+endif()
+add_compile_definitions("CMAKE_BUILD_TYPE=\"${CMAKE_BUILD_TYPE}\"")
+string(TOUPPER "${CMAKE_BUILD_TYPE}" BUILD_TYPE)
+message(STATUS "CMAKE_C_FLAGS_${BUILD_TYPE}: ${CMAKE_C_FLAGS} ${CMAKE_C_FLAGS_${BUILD_TYPE}}")
+message(STATUS "CMAKE_CXX_FLAGS_${BUILD_TYPE}: ${CMAKE_CXX_FLAGS} ${CMAKE_CXX_FLAGS_${BUILD_TYPE}}")
+
 set(ABSL_BUILD_TESTING OFF) # don't build/run abseil tests
 
 # UZDoom itself has no libs. Ensure bundled dependencies are statically linked.
@@ -200,12 +222,6 @@ macro( make_release_only )
 	string( REPLACE "/MT " "/MTd " CMAKE_CXX_FLAGS_DEBUG ${CMAKE_CXX_FLAGS_RELEASE} )
 endmacro()
 
-IF( NOT CMAKE_BUILD_TYPE )
-	SET( CMAKE_BUILD_TYPE Debug CACHE STRING
-		"Choose the type of build, options are: Debug Release RelWithDebInfo MinSizeRel."
-		FORCE )
-ENDIF()
-
 set( ZDOOM_OUTPUT_DIR ${CMAKE_BINARY_DIR} CACHE PATH "Directory where zdoom.pk3 and the executable will be created." )
 set( ZDOOM_EXE_NAME "uzdoom" CACHE FILEPATH "Name of the executable to create" )
 
@@ -311,7 +327,7 @@ endif()
 if( MSVC )
 	# Eliminate unreferenced functions and data
 	# Perform identical COMDAT folding
-	set( REL_LINKER_FLAGS "/opt:ref /opt:icf /nodefaultlib:msvcrt /TSAWARE /LARGEADDRESSAWARE" )
+	set( REL_LINKER_FLAGS "/opt:ref /opt:icf /nodefaultlib:msvcrt /TSAWARE /LARGEADDRESSAWARE /DEBUG" )
 
 	# String pooling
 	# Function-level linking
@@ -413,13 +429,13 @@ set( CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO "${CMAKE_EXE_LINKER_FLAGS_RELWITHDEBI
 set( CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${ALL_C_FLAGS}" )
 set( CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} ${REL_C_FLAGS}" )
 set( CMAKE_C_FLAGS_MINSIZEREL "${CMAKE_C_FLAGS_MINSIZEREL} ${REL_C_FLAGS}" )
-set( CMAKE_C_FLAGS_RELWITHDEBINFO "${CMAKE_C_FLAGS_RELWITHDEBINFO} ${REL_C_FLAGS}" )
+set( CMAKE_C_FLAGS_RELWITHDEBINFO "${CMAKE_C_FLAGS_RELWITHDEBINFO} ${REL_C_FLAGS}" ) # Adding -D_DEBUG makes compilation fail
 set( CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} ${DEB_C_FLAGS} -D_DEBUG" )
 
 set( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${ALL_C_FLAGS}" )
 set( CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} ${REL_C_FLAGS}" )
 set( CMAKE_CXX_FLAGS_MINSIZEREL "${CMAKE_CXX_FLAGS_MINSIZEREL} ${REL_C_FLAGS}" )
-set( CMAKE_CXX_FLAGS_RELWITHDEBINFO "${CMAKE_CXX_FLAGS_RELWITHDEBINFO} ${REL_C_FLAGS}" )
+set( CMAKE_CXX_FLAGS_RELWITHDEBINFO "${CMAKE_CXX_FLAGS_RELWITHDEBINFO} ${REL_C_FLAGS}" ) # Adding -D_DEBUG makes compilation fail
 set( CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} ${DEB_C_FLAGS} -D_DEBUG" )
 
 option(FORCE_INTERNAL_BZIP2 "Use internal bzip2")

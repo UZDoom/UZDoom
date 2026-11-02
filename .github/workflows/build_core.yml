@@ -313,18 +313,22 @@ jobs:
 
         rm -rf soundfonts fm_banks
 
-        mkdir -p package/soundfonts
-        cp -f ../soundfont/* package/soundfonts
+        mkdir -p package staging
+        cd staging
 
-        mkdir -p package/fm_banks
-        cp -f ../fm_banks/* package/fm_banks
+        mkdir -p soundfonts fm_banks
+        cp -f ../../soundfont/* soundfonts
+        cp -f ../../fm_banks/* fm_banks
+        mv -f ../*.exe ../*.pk3 .
+        mv ../package/licenses.zip .
+        7z a -sdel -r "../package/${NAME}.zip" *
 
-        shopt -s nullglob
-        mv -f *.exe *.pk3 *.pdb package
+        if [ -f ../uzdoom.pdb ]; then
+          mv -f ../*.pdb .
+          7z a -sdel -r "../package/${NAME}.pdb.zip" *
+        fi
 
-        cd package
-        7z a -sdel -r "${NAME}.zip" *
-        cd ..
+        ls ../package
 
     - name: Package macOS
       if: runner.os == 'macOS'

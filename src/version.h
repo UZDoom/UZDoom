@@ -85,8 +85,6 @@
 #define BASEWAD "uzdoom.pk3"
 // Set OPTIONALWAD to "" (null) to disable searching for it
 #define OPTIONALWAD "game_support.pk3"
-#define GZDOOM 1
-#define VR3D_ENABLED
 
 // More stuff that needs to be different for derivatives.
 #define GAMENAME "UZDoom"

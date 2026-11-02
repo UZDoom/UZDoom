@@ -48,12 +48,7 @@ if( NOT PROJECT_LIBRARIES )
 	set( PROJECT_LIBRARIES "" )
 endif()
 
-add_definitions( -DTHIS_IS_GZDOOM )
-
 if( WIN32 )
-
-	add_definitions( -D_WIN32 )
-
 	set( PROJECT_LIBRARIES
 		Xinput
 		advapi32
@@ -248,7 +243,6 @@ if( DEM_CMAKE_COMPILER_IS_GNUCXX_COMPATIBLE )
 	endif()
 
 	if( NOT NO_STRIP )
-		set (CMAKE_EXE_LINKER_FLAGS_RELEASE "${CMAKE_EXE_LINKER_FLAGS_RELEASE} -s" )
 		set (CMAKE_EXE_LINKER_FLAGS_MINSIZEREL "${CMAKE_EXE_LINKER_FLAGS_MINSIZEREL} -s" )
 	endif()
 endif()
