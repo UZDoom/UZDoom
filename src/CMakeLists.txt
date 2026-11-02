@@ -1321,7 +1321,7 @@ endif()
 if(EMSCRIPTEN)
 
 	target_link_options(zdoom PRIVATE
-			$<$<CONFIG:RELEASE>:-sASYNCIFY -sASYNCIFY_STACK_SIZE=1MB>
+			$<$<CONFIG:RELEASE>:-sJSPI -sASYNCIFY_STACK_SIZE=1MB>
 			--use-port=sdl2
 			-sSTACK_SIZE=8MB
 			-sINITIAL_MEMORY=1GB
