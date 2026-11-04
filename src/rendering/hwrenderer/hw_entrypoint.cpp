@@ -248,6 +248,10 @@ void DoWriteSavePic(FileWriter* file, ESSType ssformat, uint8_t* scr, int width,
 
 void WriteSavePic(player_t* player, FileWriter* file, int width, int height)
 {
+#ifdef __EMSCRIPTEN__
+	SWRenderer->WriteSavePic(player, file, width, height);
+	return;
+#endif
 	if (!V_IsHardwareRenderer())
 	{
 		SWRenderer->WriteSavePic(player, file, width, height);

@@ -122,7 +122,7 @@ DEFINE_ENTRY(LPALCCAPTURESTOP, alcCaptureStop)
 DEFINE_ENTRY(LPALCCAPTURESAMPLES, alcCaptureSamples)
 #undef DEFINE_ENTRY
 
-#ifndef IN_IDE_PARSER
+#if !defined(IN_IDE_PARSER) && !defined(__EMSCRIPTEN__)
 #define alEnable p_alEnable
 #define alDisable p_alDisable
 #define alIsEnabled p_alIsEnabled

@@ -103,6 +103,7 @@ namespace OpenGLESRenderer
 		GLES_MODE_GLES = 0,
 		GLES_MODE_OGL2 = 1,
 		GLES_MODE_OGL3 = 2,
+		GLES_MODE_WEBGL = 3,
 	};
 
 	struct RenderContextGLES

@@ -1,0 +1,27 @@
+/*
+** screenquad.vp
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2016 Magnus Norddahl
+** Copyright 2017-2025 GZDoom Maintainers and Contributors
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
+
+in vec3 PositionInProjection;
+in vec2 UV;
+
+out vec2 TexCoord;
+
+void main()
+{
+	gl_Position = vec4(PositionInProjection, 1.0);
+	TexCoord = UV;
+}
