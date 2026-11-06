@@ -26,7 +26,7 @@
 #include "shaderuniforms.h"
 
 
-CVAR(Bool, gl_customshader, true, 0);
+bool gl_customshader = true;
 
 
 static IHardwareTexture* (*layercallback)(int layer, int translation);

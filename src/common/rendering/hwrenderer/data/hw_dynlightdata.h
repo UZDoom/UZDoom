@@ -19,6 +19,7 @@
 #define __GLC_DYNLIGHT_H
 
 #include "tarray.h"
+#include <algorithm>
 
 struct FDynLightData
 {
@@ -31,20 +32,30 @@ struct FDynLightData
 		arrays[2].Clear();
 	}
 
-	void Combine(int *siz, int max)
+	inline size_t Vec4Size() const
 	{
-		siz[0] = arrays[0].Size();
-		siz[1] = siz[0] + arrays[1].Size();
-		siz[2] = siz[1] + arrays[2].Size();
-		arrays[0].Resize(arrays[0].Size() + arrays[1].Size() + arrays[2].Size());
-		memcpy(&arrays[0][siz[0]], &arrays[1][0], arrays[1].Size() * sizeof(float));
-		memcpy(&arrays[0][siz[1]], &arrays[2][0], arrays[2].Size() * sizeof(float));
-		siz[0]>>=2;
-		siz[1]>>=2;
-		siz[2]>>=2;
-		if (siz[0] > max) siz[0] = max;
-		if (siz[1] > max) siz[1] = max;
-		if (siz[2] > max) siz[2] = max;
+		// All measurements here are in vec4's.
+		int size0 = arrays[0].Size()/4;
+		int size1 = arrays[1].Size()/4;
+		int size2 = arrays[2].Size()/4;
+		return size0 + size1 + size2 + 1;
+	}
+
+	bool Combine(TArray<float> &out, size_t max) const
+	{
+		if(max < (5 * 4)) return false; // not enough space for even a single light
+		size_t len = std::min<size_t>(max, Vec4Size() * 4);
+		out.Resize(len);
+		size_t cur = 4;
+		out[0] = 0;
+		for(int i = 0; i < 3; i++)
+		{
+			size_t l = std::min<size_t>(len - cur, arrays[i].Size());
+			if(l > 0) memcpy(&out[cur], arrays[i].Data(), l * sizeof(float));
+			cur += l;
+			out[i + 1] = (cur - 4) / 4;
+		}
+		return true;
 	}
 
 
