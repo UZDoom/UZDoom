@@ -304,7 +304,6 @@ jobs:
               sudo apt-get -q install -y
                 libopenal-dev
                 waylandpp-dev
-                libsdl2-dev
                 libwebp-dev
                 libbz2-dev
                 libvpx-dev

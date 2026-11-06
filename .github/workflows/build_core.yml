@@ -241,6 +241,18 @@ jobs:
         find build -ls || true
         echo ::endgroup::
 
+    - name: Setup SDL
+      if: runner.os == 'Linux'
+      id: sdl
+      uses: libsdl-org/setup-sdl@main
+      with:
+        install-linux-dependencies: true
+        version: 3-latest
+        version-sdl2-compat: 2-latest
+        build-type: RelWithDebInfo
+        pre-release: false
+        add-to-environment: true
+
     - name: Build
       env:
         BUILD_TYPE: ${{ inputs.build_type }}
@@ -400,6 +412,7 @@ jobs:
         OWNER: ${{ github.repository_owner }}
         REPO: ${{ github.event.repository.name }}
         TAG: ${{ inputs.environment == 'stable' && 'latest' || 'latest-pre' }}
+        SDL_PREFIX: ${{ steps.sdl.outputs.prefix }}
       run: |
         ldd uzdoom
 
@@ -442,6 +455,7 @@ jobs:
           --executable="${pfx}/bin/uzdoom" \
           --desktop-file="${pfx}/share/applications/org.zdoom.UZDoom.desktop" \
           --library "$(library libopenal.so.)" \
+          --library "$SDL_PREFIX/lib/libSDL3.so.0" \
           --icon-file="${pfx}/share/icons/hicolor/scalable/apps/org.zdoom.UZDoom.svg"
 
         mv *.AppImage "package/${NAME}.AppImage"
