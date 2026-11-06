@@ -78,6 +78,7 @@ find_package(Python3 3.6 REQUIRED)
 
 list( APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake )
 include( FindPackageHandleStandardArgs )
+include( CheckSourceCompiles )
 
 # Support cross compiling
 option( FORCE_CROSSCOMPILE "Turn on cross compiling." NO )
@@ -360,6 +361,24 @@ if( MSVC )
 		string(REPLACE "/Zi" "/Z7" CMAKE_C_FLAGS_RELWITHDEBINFO "${CMAKE_C_FLAGS_RELWITHDEBINFO}")
 	endif()
 else()
+	if(LINUX)
+		cmake_push_check_state()
+		set(CMAKE_REQUIRED_QUIET TRUE)
+		check_source_compiles(C [[
+				#include <features.h>
+				#if !defined(__GLIBC__) && !defined(__UCLIBC__) && !defined(__ANDROID__)
+					int main() { return 0; }
+				#endif
+			]] IS_MUSL)
+		cmake_pop_check_state()
+	endif()
+
+	if(IS_MUSL)
+		# band-aid fix for Alpine not liking FString
+		# TODO: actually fix this
+		set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -U_FORTIFY_SOURCE")
+	endif()
+
 	set( REL_LINKER_FLAGS "" )
 	set( ALL_C_FLAGS "-ffp-contract=off" )
 
@@ -378,7 +397,7 @@ else()
 			pkg_check_modules( MUSL_FTS musl-fts )
 			if ( MUSL_FTS_FOUND )
 				list(JOIN MUSL_FTS_LDFLAGS " " MUSL_FTS_LDFLAGS_JOINED)
-				set ( ALL_C_FLAGS "${ALL_C_FLAGS} ${MUSL_FTS_LDFLAGS_JOINED}" )
+				set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${MUSL_FTS_LDFLAGS_JOINED}")
 			else ( MUSL_FTS_FOUND )
 				message (ERROR "fts_* functions not found in the system" )
 			endif ( MUSL_FTS_FOUND )

@@ -752,7 +752,7 @@ void C_ForgetCVars (void);
 #define __CVAR_VALUE_DECLARATION(type,name) \
 	F##type##CVarRef name;
 #define __CVAR_VALUE_DEFINITION(type,name,cname,def,flags,descr,funcptr) \
-	static FCVarDecl cvardecl_##name = { &name, CVAR_##type, (flags), #cname, CVarValue<CVAR_##type>(def), descr, reinterpret_cast<void*>(funcptr)};
+	static FCVarDecl cvardecl_##name = { &name, CVAR_##type, (flags), #cname, CVarValue<CVAR_##type>(def), descr, (void*)(funcptr)};
 
 #define __CVAR_CALLBACK_DECLARATION(type,name) \
 	static void cvarfunc_##name(F##type##CVar &, F##type##CVar::ValueType);
