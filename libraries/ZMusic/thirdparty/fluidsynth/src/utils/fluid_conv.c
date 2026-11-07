@@ -13,14 +13,18 @@
  * Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free
- * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
- * 02110-1301, USA
+ * License along with this library; if not, see
+ * <https://www.gnu.org/licenses/>.
  */
 
 #include "fluid_conv.h"
 #include "fluid_sys.h"
-#include "fluid_conv_tables.inc.h"
+
+extern const fluid_real_t *const fluid_cb2amp_tab;
+extern const fluid_real_t *const fluid_ct2hz_tab;
+extern const fluid_real_t *const fluid_concave_tab;
+extern const fluid_real_t *const fluid_convex_tab;
+extern const fluid_real_t *const fluid_pan_tab;
 
 /*
  * Converts absolute cents to Hertz

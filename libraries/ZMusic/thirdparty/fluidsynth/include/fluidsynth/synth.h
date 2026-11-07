@@ -13,9 +13,8 @@
  * Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free
- * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
- * 02110-1301, USA
+ * License along with this library; if not, see
+ * <https://www.gnu.org/licenses/>.
  */
 
 #ifndef _FLUIDSYNTH_SYNTH_H
@@ -335,7 +334,7 @@ FLUIDSYNTH_API int fluid_synth_tuning_dump(fluid_synth_t *synth, int bank, int p
  * but can also be used manually for custom processing of the rendered audio.
  *
  * @note Please note that all following functions block during rendering. If your goal is to
- * render real-time audio, ensure that you call these functions from a high-priority
+ * render realtime audio, ensure that you call these functions from a high-priority
  * thread with little to no other duties other than calling the rendering functions.
  *
  * @warning
@@ -345,7 +344,7 @@ FLUIDSYNTH_API int fluid_synth_tuning_dump(fluid_synth_t *synth, int bank, int p
  * synth with every call (cf. fluid_synth_get_internal_bufsize()), it will become evident when requesting larger sample chunks:
  * With larger sample chunks it will get harder for the synth to react on those spontaneously occurring events in time
  * (like events received from a MIDI driver, or directly made synth API calls).
- * In those real-time scenarios, prefer requesting smaller
+ * In those realtime scenarios, prefer requesting smaller
  * sample chunks from the synth with each call, to avoid poor quantization of your events in the synthesized audio.
  * This issue is not applicable when using the MIDI player or sequencer for event dispatching. Also
  * refer to the documentation of \setting{audio_period-size}.
@@ -394,7 +393,20 @@ enum fluid_iir_filter_flags
 {
     FLUID_IIR_Q_LINEAR = 1 << 0, /**< The Soundfont spec requires the filter Q to be interpreted in dB. If this flag is set the filter Q is instead assumed to be in a linear range */
     FLUID_IIR_Q_ZERO_OFF = 1 << 1, /**< If this flag the filter is switched off if Q == 0 (prior to any transformation) */
-    FLUID_IIR_NO_GAIN_AMP = 1 << 2 /**< The Soundfont spec requires to correct the gain of the filter depending on the filter's Q. If this flag is set the filter gain will not be corrected. */
+    FLUID_IIR_NO_GAIN_AMP = 1 << 2, /**< The Soundfont spec requires to correct the gain of the filter depending on the filter's Q. If this flag is set the filter gain will not be corrected. */
+    /**
+     * Setting this flag causes the custom filter's cutoff frequency (fc) to dynamically adjust to the
+     * notes played, so that it is possible to
+     * filter at the same spot relative to the sound of the sample playing. In this sense, the filter fc
+     * honors the key and pitch of a note relative to the sample's root_key: if the key of a note is 2 semitones
+     * above the sample's root_key and additionally it's pitched up by 30 cents, the cutoff frequency would
+     * be automatically adjusted by +230 cents. E.g. for horns, one can add an
+     * emphasis on tones that would "stick to" the horn as it played different notes (provided
+     * that these notes use the same sample).
+     * The enum is named after Robin Beanland, who has used this technique in Conker's Bad Fur Day and
+     * (together with other composers) in Jet Force Gemini, implemented by Mike Currington on the N64.
+     */
+    FLUID_IIR_BEANLAND = 1 << 3,
 };
 
 FLUIDSYNTH_API int fluid_synth_set_custom_filter(fluid_synth_t *, int type, int flags);
@@ -449,10 +461,10 @@ enum fluid_channel_mode_flags
 enum fluid_basic_channel_modes
 {
     FLUID_CHANNEL_MODE_MASK = (FLUID_CHANNEL_OMNI_OFF | FLUID_CHANNEL_POLY_OFF), /**< Mask Poly and Omni bits of #fluid_channel_mode_flags, usually only used internally */
-    FLUID_CHANNEL_MODE_OMNION_POLY = FLUID_CHANNEL_MODE_MASK & (~FLUID_CHANNEL_OMNI_OFF & ~FLUID_CHANNEL_POLY_OFF), /**< corresponds to MIDI mode 0 */
-    FLUID_CHANNEL_MODE_OMNION_MONO = FLUID_CHANNEL_MODE_MASK & (~FLUID_CHANNEL_OMNI_OFF & FLUID_CHANNEL_POLY_OFF), /**< corresponds to MIDI mode 1 */
-    FLUID_CHANNEL_MODE_OMNIOFF_POLY = FLUID_CHANNEL_MODE_MASK & (FLUID_CHANNEL_OMNI_OFF & ~FLUID_CHANNEL_POLY_OFF), /**< corresponds to MIDI mode 2 */
-    FLUID_CHANNEL_MODE_OMNIOFF_MONO = FLUID_CHANNEL_MODE_MASK & (FLUID_CHANNEL_OMNI_OFF | FLUID_CHANNEL_POLY_OFF), /**< corresponds to MIDI mode 3 */
+    FLUID_CHANNEL_MODE_OMNION_POLY = (int)FLUID_CHANNEL_MODE_MASK & (int)(~FLUID_CHANNEL_OMNI_OFF & ~FLUID_CHANNEL_POLY_OFF), /**< corresponds to MIDI mode 0 */
+    FLUID_CHANNEL_MODE_OMNION_MONO = (int)FLUID_CHANNEL_MODE_MASK & (int)(~FLUID_CHANNEL_OMNI_OFF & FLUID_CHANNEL_POLY_OFF), /**< corresponds to MIDI mode 1 */
+    FLUID_CHANNEL_MODE_OMNIOFF_POLY = (int)FLUID_CHANNEL_MODE_MASK & (int)(FLUID_CHANNEL_OMNI_OFF & ~FLUID_CHANNEL_POLY_OFF), /**< corresponds to MIDI mode 2 */
+    FLUID_CHANNEL_MODE_OMNIOFF_MONO = (int)FLUID_CHANNEL_MODE_MASK & (int)(FLUID_CHANNEL_OMNI_OFF | FLUID_CHANNEL_POLY_OFF), /**< corresponds to MIDI mode 3 */
     FLUID_CHANNEL_MODE_LAST /**< @internal Value defines the count of basic channel modes (#fluid_basic_channel_modes) @warning This symbol is not part of the public API and ABI stability guarantee and may change at any time! */
 };
 
@@ -526,6 +538,27 @@ FLUIDSYNTH_API int fluid_synth_set_breath_mode(fluid_synth_t *synth,
 FLUIDSYNTH_API int fluid_synth_get_breath_mode(fluid_synth_t *synth,
         int chan, int  *breathmode);
 /** @} Breath Mode */
+
+/** @name Portamento Time Mode
+ * @{
+ */
+
+/**
+ * Indicates the portamento time mode the synthesizer is set to
+ */
+enum fluid_portamento_time_mode
+{
+    FLUID_PORTAMENTO_TIME_MODE_AUTO,     /**< Auto mode - Start with 7-bit MSB, switch to 14-bit when LSB seen */
+    FLUID_PORTAMENTO_TIME_MODE_XG_GS,    /**< XG/GS mode - Always use 7-bit MSB only */
+    FLUID_PORTAMENTO_TIME_MODE_LINEAR,   /**< Linear mode - Always use 14-bit MSB+LSB */
+    FLUID_PORTAMENTO_TIME_MODE_LAST      /**< @internal Value defines the count of portamento time modes
+                                           @warning This symbol is not part of the public API and ABI
+                                           stability guarantee and may change at any time! */
+};
+
+FLUIDSYNTH_API int fluid_synth_set_portamento_time_mode(fluid_synth_t *synth, int mode);
+FLUIDSYNTH_API int fluid_synth_get_portamento_time_mode(fluid_synth_t *synth, int *mode);
+/** @} Portamento Time Mode */
 /** @} MIDI Channel Setup */
 
 

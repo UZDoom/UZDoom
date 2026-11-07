@@ -13,9 +13,8 @@
  * Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free
- * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
- * 02110-1301, USA
+ * License along with this library; if not, see
+ * <https://www.gnu.org/licenses/>.
  */
 
 #include "fluid_sys.h"
@@ -739,7 +738,7 @@ calculate_hold_decay_buffers(fluid_voice_t *voice, int gen_base,
  * fluid_voice_update_param can be called during the setup of the
  * voice (to calculate the initial value for a voice parameter), or
  * during its operation (a generator has been changed due to
- * real-time parameter modifications like pitch-bend).
+ * realtime parameter modifications like pitch-bend).
  *
  * Note: The generator holds three values: The base value .val, an
  * offset caused by modulators .mod, and an offset caused by the
@@ -1278,13 +1277,15 @@ void fluid_voice_update_portamento(fluid_voice_t *voice, int fromkey, int tokey)
     fluid_real_t PitchBeg = fluid_voice_calculate_pitch(voice, fromkey);
     fluid_real_t PitchEnd = fluid_voice_calculate_pitch(voice, tokey);
     fluid_real_t pitchoffset = PitchBeg - PitchEnd;
+    unsigned int countinc;
+    enum fluid_portamento_time_mode tm = channel->synth->portamento_time_mode;
 
     /* Calculates increment countinc */
     /* Increment is function of PortamentoTime (ms)*/
-    unsigned int countinc = (unsigned int)(((fluid_real_t)voice->output_rate *
-                                            0.001f *
-                                            (fluid_real_t)fluid_channel_portamentotime(channel))  /
-                                           (fluid_real_t)FLUID_BUFSIZE  + 0.5f);
+    fluid_real_t ms = fluid_channel_portamentotime_with_mode(channel, tm, channel->synth->portamento_time_has_seen_lsb, fromkey, tokey);
+
+    countinc = (unsigned int)(((fluid_real_t)voice->output_rate * 0.001f * ms) /
+                                            (fluid_real_t)FLUID_BUFSIZE + 0.5f);
 
     /* Send portamento parameters to the voice dsp */
     UPDATE_RVOICE_GENERIC_IR(fluid_rvoice_set_portamento, voice->rvoice, countinc, pitchoffset);
@@ -1565,7 +1566,7 @@ fluid_voice_add_mod_local(fluid_voice_t *voice, fluid_mod_t *mod, int mode, int 
  * @return Note on unique ID
  *
  * A SoundFont loader may store pointers to voices it has created for
- * real-time control during the operation of a voice (for example: parameter
+ * realtime control during the operation of a voice (for example: parameter
  * changes in SoundFont editor). The synth uses a pool of voices internally which are
  * 'recycled' and never deallocated.
  *
