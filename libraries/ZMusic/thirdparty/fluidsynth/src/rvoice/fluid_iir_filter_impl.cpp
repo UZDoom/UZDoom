@@ -310,7 +310,7 @@ void fluid_iir_filter_calc(fluid_iir_filter_t *iir_filter,
                            fluid_real_t output_rate,
                            fluid_real_t fres_mod)
 {
-    unsigned int calc_coeff_flag = false;
+    unsigned int calc_coeff_flag = FALSE;
     fluid_real_t fres, fres_diff;
     
     if(iir_filter->type == FLUID_IIR_DISABLED)
@@ -349,7 +349,7 @@ void fluid_iir_filter_calc(fluid_iir_filter_t *iir_filter,
     if(iir_filter->filter_startup)
     {
         // The filter was just starting up, make sure to calculate initial coefficients for the initial Q value, even though the fres may not have changed
-        calc_coeff_flag = true;
+        calc_coeff_flag = TRUE;
         
         iir_filter->fres_incr_count = 0;
         iir_filter->last_fres = fres;
@@ -372,7 +372,7 @@ void fluid_iir_filter_calc(fluid_iir_filter_t *iir_filter,
 #endif
 
         // The filter coefficients have to be recalculated (filter cutoff has changed).
-        calc_coeff_flag = true;
+        calc_coeff_flag = TRUE;
     }
     else
     {
