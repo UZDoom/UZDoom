@@ -126,10 +126,11 @@ function( add_pk3 PK3_NAME )
 	add_custom_command( OUTPUT ${ZDOOM_OUTPUT_DIR}/${PK3_NAME}
 		COMMAND Python3::Interpreter -B -E -s
 			${CMAKE_SOURCE_DIR}/tools/zipdir.py
+			-dm ${CMAKE_BINARY_DIR}/gitinfo.h
 			${PK3_ZIPDIR_OPTIONS}
 			${ZDOOM_OUTPUT_DIR}/${PK3_NAME}
 			${ARGN}
-		DEPENDS ${CMAKE_SOURCE_DIR}/tools/zipdir.py )
+		DEPENDS ${CMAKE_SOURCE_DIR}/tools/zipdir.py ${CMAKE_BINARY_DIR}/gitinfo.h )
 
 	# Create a list of source files for this PK3, for use in the IDE
 	# Phase 1: Create a list of all source files for this PK3 archive, except
