@@ -1,5 +1,6 @@
 .DS_Store
 build/
+install/
 
 CMakeCache.txt
 CMakeFiles
@@ -40,3 +41,6 @@ install_manifest.txt
 # ProjectFiles
 *.pro.user*
 *.user
+*.vscode
+_codeql_build_dir/
+_codeql_detected_source_root

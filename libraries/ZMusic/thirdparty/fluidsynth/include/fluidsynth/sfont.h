@@ -13,9 +13,8 @@
  * Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free
- * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
- * 02110-1301, USA
+ * License along with this library; if not, see
+ * <https://www.gnu.org/licenses/>.
  */
 
 #ifndef _FLUIDSYNTH_SFONT_H
@@ -247,6 +246,9 @@ FLUIDSYNTH_API int delete_fluid_sfont(fluid_sfont_t *sfont);
 
 FLUIDSYNTH_API int fluid_sfont_set_data(fluid_sfont_t *sfont, void *data);
 FLUIDSYNTH_API void *fluid_sfont_get_data(fluid_sfont_t *sfont);
+
+FLUIDSYNTH_API int fluid_sfont_get_default_mod(fluid_sfont_t *sfont, fluid_mod_t **mod_out);
+FLUIDSYNTH_API int fluid_sfont_set_default_mod(fluid_sfont_t *sfont, const fluid_mod_t *mods, int nmods);
 
 FLUIDSYNTH_API int fluid_sfont_get_id(fluid_sfont_t *sfont);
 FLUIDSYNTH_API const char *fluid_sfont_get_name(fluid_sfont_t *sfont);

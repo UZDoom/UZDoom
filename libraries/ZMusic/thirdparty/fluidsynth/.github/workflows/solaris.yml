@@ -3,10 +3,15 @@ name: FluidSynth Solaris
 on:
   pull_request:
   push:
+    branches:
+      - '**'
     paths-ignore:
       - '.azure/**'
       - '.circleci/**'
       - '.github/workflows/linux.yml'
+      - '.github/workflows/ios.yml'
+      - '.github/workflows/sonarcloud.yml'
+      - '.github/workflows/windows.yml'
       - '.cirrus.yml'
       - 'README.md'
 
@@ -26,12 +31,12 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - name: Checkout
-          uses: actions/checkout@v4
+          uses: actions/checkout@v6
           with:
             submodules: true
 
         - name: Build & test
-          uses: vmactions/solaris-vm@v1.1.4
+          uses: vmactions/solaris-vm@v1.3.1
           with:
             envs: 'CFLAGS_SOLARIS_CC'
             usesh: true

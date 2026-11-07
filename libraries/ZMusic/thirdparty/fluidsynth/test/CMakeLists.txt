@@ -30,6 +30,21 @@ ADD_FLUID_TEST(test_seq_evt_order)
 ADD_FLUID_TEST(test_seq_event_queue_remove)
 ADD_FLUID_TEST(test_jack_obtaining_synth)
 ADD_FLUID_TEST(test_utf8_open)
+ADD_FLUID_TEST(test_portamento_time)
+ADD_FLUID_TEST(test_modulator)
+ADD_FLUID_TEST(test_default_mod)
+ADD_FLUID_TEST(test_ABI)
+ADD_FLUID_TEST(test_file_seek_tell)
+ADD_FLUID_TEST(test_shell_server_auto_port)
+
+if ( GLIB_SUPPORT AND GLib2_VERSION VERSION_GREATER_EQUAL 2.33.12 )
+    # Earlier versions of GLib had broken comment handling and should not be compared to
+    ADD_FLUID_TEST(test_shell_parse_argv_internal)
+endif ( GLIB_SUPPORT AND GLib2_VERSION VERSION_GREATER_EQUAL 2.33.12 )
+
+if ( NOT OSAL STREQUAL "embedded" )
+    ADD_FLUID_TEST(test_threading)
+endif ( NOT OSAL STREQUAL "embedded" )
 
 if( LIBSNDFILE_SUPPORT )
     ADD_FLUID_TEST(test_fast_render)
@@ -61,6 +76,9 @@ set(DSPINTERP_RENDER_DIR "${CMAKE_CURRENT_BINARY_DIR}/manual/dsp_interp")
 set(DYNSAM_RENDER_DIR "${CMAKE_CURRENT_BINARY_DIR}/manual/dynamic-sample-loading")
 set(BANKSELECT_RENDER_DIR "${CMAKE_CURRENT_BINARY_DIR}/manual/midi-bank-select")
 set(STACKEDSF_RENDER_DIR "${CMAKE_CURRENT_BINARY_DIR}/manual/stacked_sf2")
+set(SFE_RENDER_DIR "${CMAKE_CURRENT_BINARY_DIR}/manual/sfe")
+set(RPN_RENDER_DIR "${CMAKE_CURRENT_BINARY_DIR}/manual/rpn")
+set(SYSEX_GS_DT1 "${CMAKE_CURRENT_BINARY_DIR}/manual/sysex/gs_dt1")
 
 if(LIBSNDFILE_SUPPORT)
     set(FEXT "wav")
@@ -72,7 +90,7 @@ endif()
 add_custom_target(check_manual)
 
 add_custom_target(create_iir_dir
-    COMMAND ${CMAKE_COMMAND} -E make_directory ${IIR_FILTER_RENDER_DIR} ${AWE32_NRPN_RENDER_DIR} ${SFSPEC_RENDER_DIR} ${PORTAMENTO_RENDER_DIR} ${REVERB_RENDER_DIR} ${EXCL_RENDER_DIR} ${DSPINTERP_RENDER_DIR} ${DYNSAM_RENDER_DIR} ${STACKEDSF_RENDER_DIR} ${GUGDEMO_RENDER_DIR} ${BANKSELECT_RENDER_DIR}
+    COMMAND ${CMAKE_COMMAND} -E make_directory ${IIR_FILTER_RENDER_DIR} ${AWE32_NRPN_RENDER_DIR} ${SFSPEC_RENDER_DIR} ${PORTAMENTO_RENDER_DIR} ${REVERB_RENDER_DIR} ${EXCL_RENDER_DIR} ${DSPINTERP_RENDER_DIR} ${DYNSAM_RENDER_DIR} ${STACKEDSF_RENDER_DIR} ${GUGDEMO_RENDER_DIR} ${BANKSELECT_RENDER_DIR} ${SFE_RENDER_DIR} ${SYSEX_GS_DT1} ${RPN_RENDER_DIR}
     VERBATIM)
 
 add_custom_target(render1415
@@ -124,7 +142,7 @@ add_custom_target(render1481
 )
 
 add_custom_target(renderAltitude
-    COMMAND fluidsynth -R 1 -C 1 -f fluidsynth.cfg -o "synth.default-soundfont=../../sf2/synthgs-sf2_04-compat.sf2" -F ${AWE32_NRPN_RENDER_DIR}/Altitude.${FEXT} Altitude.mid
+    COMMAND fluidsynth -R 1 -C 1 -g 0.5 -f fluidsynth.cfg -F ${AWE32_NRPN_RENDER_DIR}/Altitude.${FEXT} ../../sf2/synthgs-sf2_04-compat.sf2 -b 1 Altitude.sf2 Altitude.mid
     COMMENT "Rendering AWE32 NRPN test file Altitude.mid"
     DEPENDS fluidsynth create_iir_dir
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/manual/awe32_nrpn/Altitude/
@@ -142,7 +160,7 @@ add_custom_target(renderFilter
 )
 
 add_custom_target(renderUplift
-    COMMAND fluidsynth -R 1 -C 0 -g 0.7 -f fluidsynth.cfg -o "synth.default-soundfont=../../sf2/synthgs-sf2_04-compat.sf2" -F ${AWE32_NRPN_RENDER_DIR}/Uplift-fixed.${FEXT} Uplift-fixed.mid
+    COMMAND fluidsynth -R 1 -C 0 -g 0.7 -f fluidsynth.cfg -F ${AWE32_NRPN_RENDER_DIR}/Uplift-fixed.${FEXT} ../../sf2/synthgs-sf2_04-compat.sf2 -b 1 Uplift.sf2 Uplift-fixed.mid
     COMMENT "Rendering AWE32 NRPN test file Uplift.mid"
     DEPENDS fluidsynth create_iir_dir
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/manual/awe32_nrpn/Uplift/
@@ -165,18 +183,16 @@ add_custom_target(renderHybridCol
     VERBATIM
 )
 
-add_custom_target(render1TOWOW
-    COMMAND fluidsynth -R 0 -C 0 -g 0.5 -F "${PORTAMENTO_RENDER_DIR}/1TOWOW_reduced_to_A3_C4.${FEXT}" "1TOWOW_reduced_to_A3_C4.mid" ${GENERAL_USER_GS2}
-    COMMAND fluidsynth -R 0 -C 0 -g 0.5 -F "${PORTAMENTO_RENDER_DIR}/1TOWOW.${FEXT}" "1TOWOW.MID" ${GENERAL_USER_GS2}
+add_custom_target(renderPortamento
+    COMMAND fluidsynth -R 0 -C 0 -g 0.6 -F "${PORTAMENTO_RENDER_DIR}/1TOWOW_reduced_to_A3_C4.${FEXT}" "1TOWOW_reduced_to_A3_C4.mid" ${GENERAL_USER_GS2}
+    COMMAND fluidsynth -o "synth.portamento-time=linear" -R 0 -C 0 -g 0.6 -F "${PORTAMENTO_RENDER_DIR}/1TOWOW_reduced_to_A3_C4_linear.${FEXT}" "1TOWOW_reduced_to_A3_C4.mid" ${GENERAL_USER_GS2}
+    COMMAND fluidsynth -R 0 -C 0 -g 0.7 -F "${PORTAMENTO_RENDER_DIR}/1TOWOW.${FEXT}" "1TOWOW.MID" ${GENERAL_USER_GS2}
+    COMMAND fluidsynth -R 0 -C 0 -g 0.7 -F "${PORTAMENTO_RENDER_DIR}/3 - Turn Up, Strut In, Chill Out (XG).${FEXT}" "3 - Turn Up, Strut In, Chill Out (XG).mid" ${GENERAL_USER_GS2}
+    COMMAND fluidsynth -R 0 -C 0 -g 0.7 -F "${PORTAMENTO_RENDER_DIR}/6 - Galactic Invasion (XG).${FEXT}" "6 - Galactic Invasion (XG).mid" ${GENERAL_USER_GS2}
+    COMMAND fluidsynth -R 0 -C 0 -g 0.5 -F "${PORTAMENTO_RENDER_DIR}/Descent_Game08.${FEXT}" "Descent_Game08.mid" ${GENERAL_USER_GS2}
+    COMMAND fluidsynth -o "synth.portamento-time=linear" -R 0 -C 0 -g 0.5 -F "${PORTAMENTO_RENDER_DIR}/Descent_Game08_linear.${FEXT}" "Descent_Game08.mid" ${GENERAL_USER_GS2}
+    COMMAND fluidsynth -R 0 -C 0 -g 0.6 -F "${PORTAMENTO_RENDER_DIR}/MM6_-_MrX2010XG.${FEXT}" ${GENERAL_USER_GS2} "MM6_-_MrX2010XG.mid"
     COMMENT "Rendering Portamento tests"
-    DEPENDS fluidsynth create_iir_dir
-    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/manual/portamento/
-    VERBATIM
-)
-
-add_custom_target(renderDescent8
-    COMMAND fluidsynth -R 1 -C 1 -g 0.5 -F ${PORTAMENTO_RENDER_DIR}/Game08.${FEXT} Game08.mid ${GENERAL_USER_GS2}
-    COMMENT "Rendering Descent Game 8"
     DEPENDS fluidsynth create_iir_dir
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/manual/portamento/
     VERBATIM
@@ -301,13 +317,41 @@ add_custom_target(renderBankSelect
     COMMAND fluidsynth -R 0 -C 0 -g 0.6 -F "${BANKSELECT_RENDER_DIR}/Dance_GS.${FEXT}" ${GENERAL_USER_GS2} "Dance_GS.mid"
     COMMAND fluidsynth -R 0 -C 0 -g 0.6 -F "${BANKSELECT_RENDER_DIR}/Dance_original.${FEXT}" ${GENERAL_USER_GS2} "Dance_original.mid"
     COMMAND fluidsynth -R 0 -C 0 -g 0.6 -F "${BANKSELECT_RENDER_DIR}/Dance_XG.${FEXT}" ${GENERAL_USER_GS2} "Dance_XG.mid"
+    COMMAND fluidsynth -o "synth.midi-bank-select=xg" -g 0.6 -F "${BANKSELECT_RENDER_DIR}/9 - On 'Til Morning.${FEXT}" ${GENERAL_USER_GS2} "issue-1524/9 - On 'Til Morning.mid"
+    COMMAND fluidsynth -g 0.6 -F "${BANKSELECT_RENDER_DIR}/MM6_-_MrX2010XG.${FEXT}" "issue-1524/Default.sf2" "issue-1524/MM6_-_MrX2010XG.mid"
     COMMENT "Rendering MIDI Bank selection tests"
     DEPENDS fluidsynth create_iir_dir
     WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/manual/midi-bank-select"
     VERBATIM
 )
 
-if ( LIBINSTPATCH_SUPPORT )
+add_custom_target(renderDMOD
+    COMMAND fluidsynth -R 0 -C 0 -g 0.2 -F "${SFE_RENDER_DIR}/DMOD.${FEXT}" DMOD.sf2 "test-rpn-00-00-pitch-bend-range.mid"
+    COMMENT "Rendering Test MIDI for DMOD SF2"
+    DEPENDS fluidsynth create_iir_dir
+    WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/manual/sfe/dmod"
+    VERBATIM
+)
+
+add_custom_target(renderRPN
+    COMMAND fluidsynth -R 0 -C 0 -g 1.1 -F "${RPN_RENDER_DIR}/SA2 - Prison Lane -- MIDIMan - FluidSynth Test.mid.${FEXT}" ${GENERAL_USER_GS2} "FluidSynth.pitch.bend.fine.tuning.bug.demonstration/SA2 - Prison Lane -- MIDIMan - FluidSynth Test.mid"
+    COMMENT "Rendering Test MIDI for RPNs"
+    DEPENDS fluidsynth create_iir_dir
+    WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/manual/rpn/"
+    VERBATIM
+)
+
+add_custom_target(renderGSDT1
+    COMMAND fluidsynth -R 0 -C 0 -g 0.6 -F "${SYSEX_GS_DT1}/wikipedia_MIDI_sample_gstest.${FEXT}" ${GENERAL_USER_GS2} "wikipedia_MIDI_sample_gstest.mid"
+    COMMAND fluidsynth -R 0 -C 0 -g 0.6 -F "${SYSEX_GS_DT1}/D_DM2TTL - GS Drums.${FEXT}" ${GENERAL_USER_GS2} "D_DM2TTL - GS Drums.mid"
+    COMMAND fluidsynth -R 0 -C 0 -g 0.6 -F "${SYSEX_GS_DT1}/GS Drums Bank Select and Program Change interaction on MSGS.${FEXT}" ${GENERAL_USER_GS2} "GS Drums Bank Select and Program Change interaction on MSGS.mid"
+    COMMENT "Rendering Test MIDIs for SysEx GS DT1"
+    DEPENDS fluidsynth create_iir_dir
+    WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/manual/sysex/gs_dt1"
+    VERBATIM
+)
+
+if ( LIBINSTPATCH_SUPPORT OR ENABLE_NATIVE_DLS )
     add_custom_target(renderStreetwise
         COMMAND fluidsynth -R 0 -C 0 -g 0.6 -F "${STACKEDSF_RENDER_DIR}/Streetwise.${FEXT}" "Streetwise.mid" ${GENERAL_USER_GS2} "Streetwise.dls"
         COMMENT "Rendering testcase for stacked soundfonts"
@@ -315,12 +359,12 @@ if ( LIBINSTPATCH_SUPPORT )
         WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/manual/stacked_sf2/Streetwise/
         VERBATIM
     )
-else ( LIBINSTPATCH_SUPPORT )
+else ( LIBINSTPATCH_SUPPORT OR ENABLE_NATIVE_DLS )
     add_custom_target(renderStreetwise
         COMMAND ${CMAKE_COMMAND} -E cmake_echo_color --red "Cannot render Streetwise, no DLS support!"
         COMMENT "Rendering testcase for stacked soundfonts"
     )
-endif (LIBINSTPATCH_SUPPORT )
+endif (LIBINSTPATCH_SUPPORT OR ENABLE_NATIVE_DLS )
 
 # Add a dependency so that rendering targets depends on check_manual
 add_dependencies(check_manual render1415)
@@ -332,8 +376,7 @@ add_dependencies(check_manual renderFilter)
 add_dependencies(check_manual renderUplift)
 add_dependencies(check_manual renderChrisNRPN)
 add_dependencies(check_manual renderHybridCol)
-add_dependencies(check_manual render1TOWOW)
-add_dependencies(check_manual renderDescent8)
+add_dependencies(check_manual renderPortamento)
 add_dependencies(check_manual renderSfSpecTest)
 add_dependencies(check_manual render1455)
 add_dependencies(check_manual renderDK64JJU)
@@ -346,4 +389,5 @@ add_dependencies(check_manual render1481)
 add_dependencies(check_manual renderStreetwise)
 add_dependencies(check_manual renderGeneralUserDemo)
 add_dependencies(check_manual renderBankSelect)
-
+add_dependencies(check_manual renderDMOD)
+add_dependencies(check_manual renderRPN)
