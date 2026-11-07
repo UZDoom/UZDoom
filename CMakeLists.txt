@@ -124,8 +124,12 @@ function( add_pk3 PK3_NAME )
 	string( REPLACE "." "_" PK3_TARGET ${PK3_NAME} )
 
 	add_custom_command( OUTPUT ${ZDOOM_OUTPUT_DIR}/${PK3_NAME}
-		COMMAND zipdir -udf ${PK3_ZIPDIR_OPTIONS} ${ZDOOM_OUTPUT_DIR}/${PK3_NAME} ${ARGN}
-		DEPENDS zipdir )
+		COMMAND Python3::Interpreter -B -E -s
+			${CMAKE_SOURCE_DIR}/tools/zipdir.py
+			${PK3_ZIPDIR_OPTIONS}
+			${ZDOOM_OUTPUT_DIR}/${PK3_NAME}
+			${ARGN}
+		DEPENDS ${CMAKE_SOURCE_DIR}/tools/zipdir.py )
 
 	# Create a list of source files for this PK3, for use in the IDE
 	# Phase 1: Create a list of all source files for this PK3 archive, except
@@ -152,10 +156,8 @@ function( add_pk3 PK3_NAME )
 	endforeach()
 
 	# Phase 2: Create the PK3 build rule, including the source file list for the IDE
-	# Touch the zipdir executable here so that the pk3s are forced to
-	# rebuild each time since their dependency has "changed."
 	add_custom_target( ${PK3_TARGET} ALL
-		COMMAND ${CMAKE_COMMAND} -E touch $<TARGET_FILE:zipdir>
+		COMMAND ${CMAKE_COMMAND} -E touch ${CMAKE_SOURCE_DIR}/tools/zipdir.py
 		DEPENDS ${ZDOOM_OUTPUT_DIR}/${PK3_NAME}
 		SOURCES ${PK3_SRCS})
 
