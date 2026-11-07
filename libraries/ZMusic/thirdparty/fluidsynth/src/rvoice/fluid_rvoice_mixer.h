@@ -13,9 +13,8 @@
  * Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free
- * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
- * 02110-1301, USA
+ * License along with this library; if not, see
+ * <https://www.gnu.org/licenses/>.
  */
 
 
@@ -25,6 +24,10 @@
 #include "fluidsynth_priv.h"
 #include "fluid_rvoice.h"
 #include "fluid_ladspa.h"
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct _fluid_rvoice_mixer_t fluid_rvoice_mixer_t;
 
@@ -82,6 +85,10 @@ void fluid_rvoice_mixer_set_mix_fx(fluid_rvoice_mixer_t *mixer, int on);
 #ifdef LADSPA
 void fluid_rvoice_mixer_set_ladspa(fluid_rvoice_mixer_t *mixer,
                                    fluid_ladspa_fx_t *ladspa_fx, int audio_groups);
+#endif
+
+#ifdef __cplusplus
+}
 #endif
 
 #endif
