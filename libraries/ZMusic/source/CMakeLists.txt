@@ -164,8 +164,8 @@ use_fast_math(zmusiclite)
 target_include_directories(zmusic INTERFACE $<INSTALL_INTERFACE:include> $<BUILD_INTERFACE:${ZMusic_SOURCE_DIR}/include> $<BUILD_INTERFACE:${ZMusic_SOURCE_DIR}/source/loader>)
 target_include_directories(zmusiclite INTERFACE $<INSTALL_INTERFACE:include> $<BUILD_INTERFACE:${ZMusic_SOURCE_DIR}/include>)
 
-target_link_libraries_hidden(zmusic zmusic-obj adl oplsynth opn timidity timidityplus wildmidi fluidsynth)
-target_link_libraries_hidden(zmusiclite zmusic-obj fluidsynth)
+target_link_libraries_hidden(zmusic zmusic-obj adl oplsynth opn timidity timidityplus wildmidi libfluidsynth)
+target_link_libraries_hidden(zmusiclite zmusic-obj libfluidsynth)
 
 target_compile_definitions(zmusic PUBLIC $<$<STREQUAL:$<TARGET_PROPERTY:zmusic,TYPE>,STATIC_LIBRARY>:ZMUSIC_STATIC>)
 target_compile_definitions(zmusiclite PRIVATE ZMUSIC_LITE=1 PUBLIC $<$<STREQUAL:$<TARGET_PROPERTY:zmusiclite,TYPE>,STATIC_LIBRARY>:ZMUSIC_STATIC>)

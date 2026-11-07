@@ -31,9 +31,7 @@
 
 #include "config.h"
 
-#ifndef WITH_GLIB_STUBS
 #include <glib.h>
-#endif
 
 #if HAVE_STDLIB_H
 #include <stdlib.h> // malloc, free
@@ -78,13 +76,8 @@ typedef double fluid_real_t;
 
 
 /** Atomic types  */
-#if defined(_WIN32) && defined(WITH_GLIB_STUBS)
-typedef long fluid_atomic_int_t;
-typedef unsigned long fluid_atomic_uint_t;
-#else
 typedef int fluid_atomic_int_t;
 typedef unsigned int fluid_atomic_uint_t;
-#endif
 typedef float fluid_atomic_float_t;
 
 

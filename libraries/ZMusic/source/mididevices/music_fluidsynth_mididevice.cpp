@@ -47,7 +47,7 @@
 
 FluidConfig fluidConfig;
 
-#include "../thirdparty/fluidsynth/include/fluidsynth.h"
+#include <fluidsynth.h>
 
 class FluidSynthMIDIDevice : public SoftSynthMIDIDevice
 {

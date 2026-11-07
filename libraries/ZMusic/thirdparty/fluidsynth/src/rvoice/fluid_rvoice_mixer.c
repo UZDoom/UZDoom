@@ -130,7 +130,7 @@ static int fluid_rvoice_mixer_set_threads(fluid_rvoice_mixer_t *mixer, int threa
 static FLUID_INLINE void
 fluid_rvoice_mixer_process_fx(fluid_rvoice_mixer_t *mixer, int current_blockcount)
 {
-    // Making those variables const causes gcc to fail with "variable is predetermined ‘shared’ for ‘shared’".
+    // Making those variables const causes gcc to fail with "variable is predetermined â€˜sharedâ€™ for â€˜sharedâ€™".
     // Not explicitly marking them shared makes it fail for clang and MSVC...
     /*const*/ int fx_channels_per_unit = mixer->buffers.fx_buf_count / mixer->fx_units;
     /*const*/ int dry_count = mixer->buffers.buf_count; /* dry buffers count */

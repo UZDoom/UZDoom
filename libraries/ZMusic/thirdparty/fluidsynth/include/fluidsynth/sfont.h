@@ -268,7 +268,7 @@ typedef const char *(*fluid_preset_get_name_t)(fluid_preset_t *preset);
  * Method to get a virtual SoundFont preset MIDI bank number.
  *
  * @param preset Virtual SoundFont preset
- * @param return The bank number of the preset
+ * @return The bank number of the preset
  */
 typedef int (*fluid_preset_get_banknum_t)(fluid_preset_t *preset);
 
@@ -276,7 +276,7 @@ typedef int (*fluid_preset_get_banknum_t)(fluid_preset_t *preset);
  * Method to get a virtual SoundFont preset MIDI program number.
  *
  * @param preset Virtual SoundFont preset
- * @param return The program number of the preset
+ * @return The program number of the preset
  */
 typedef int (*fluid_preset_get_num_t)(fluid_preset_t *preset);
 
@@ -353,7 +353,7 @@ FLUIDSYNTH_API int fluid_sample_set_sound_data(fluid_sample_t *sample,
 FLUIDSYNTH_API int fluid_sample_set_loop(fluid_sample_t *sample, unsigned int loop_start, unsigned int loop_end);
 FLUIDSYNTH_API int fluid_sample_set_pitch(fluid_sample_t *sample, int root_key, int fine_tune);
 
-/* @} */
+/** @} */
 
 #ifdef __cplusplus
 }

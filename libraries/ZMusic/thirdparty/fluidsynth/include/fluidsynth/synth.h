@@ -55,7 +55,7 @@ FLUIDSYNTH_API void delete_fluid_synth(fluid_synth_t *synth);
 
 FLUIDSYNTH_API double fluid_synth_get_cpu_load(fluid_synth_t *synth);
 FLUID_DEPRECATED FLUIDSYNTH_API const char *fluid_synth_error(fluid_synth_t *synth);
-/* @} */
+/** @} */
 
 /**
  * @defgroup midi_messages MIDI Channel Messages
@@ -102,7 +102,7 @@ FLUIDSYNTH_API int fluid_synth_all_sounds_off(fluid_synth_t *synth, int chan);
 FLUIDSYNTH_API int fluid_synth_set_gen(fluid_synth_t *synth, int chan,
                                        int param, float value);
 FLUIDSYNTH_API float fluid_synth_get_gen(fluid_synth_t *synth, int chan, int param);
-/* @} MIDI Channel Messages */
+/** @} MIDI Channel Messages */
 
 
 /**
@@ -124,7 +124,7 @@ FLUIDSYNTH_API fluid_voice_t *fluid_synth_alloc_voice(fluid_synth_t *synth,
 FLUIDSYNTH_API void fluid_synth_start_voice(fluid_synth_t *synth, fluid_voice_t *voice);
 FLUIDSYNTH_API void fluid_synth_get_voicelist(fluid_synth_t *synth,
         fluid_voice_t *buf[], int bufsize, int ID);
-/* @} Voice Control */
+/** @} Voice Control */
 
 
 /**
@@ -148,7 +148,7 @@ FLUIDSYNTH_API fluid_sfont_t *fluid_synth_get_sfont_by_name(fluid_synth_t *synth
         const char *name);
 FLUIDSYNTH_API int fluid_synth_set_bank_offset(fluid_synth_t *synth, int sfont_id, int offset);
 FLUIDSYNTH_API int fluid_synth_get_bank_offset(fluid_synth_t *synth, int sfont_id);
-/* @} Soundfont Management */
+/** @} Soundfont Management */
 
 
 /**
@@ -183,7 +183,7 @@ FLUIDSYNTH_API int fluid_synth_get_reverb_group_roomsize(fluid_synth_t *synth, i
 FLUIDSYNTH_API int fluid_synth_get_reverb_group_damp(fluid_synth_t *synth, int fx_group, double *damping);
 FLUIDSYNTH_API int fluid_synth_get_reverb_group_width(fluid_synth_t *synth, int fx_group, double *width);
 FLUIDSYNTH_API int fluid_synth_get_reverb_group_level(fluid_synth_t *synth, int fx_group, double *level);
- /* @} Reverb */
+ /** @} Reverb */
 
 
 /**
@@ -233,7 +233,7 @@ FLUIDSYNTH_API int fluid_synth_get_chorus_group_level(fluid_synth_t *synth, int 
 FLUIDSYNTH_API int fluid_synth_get_chorus_group_speed(fluid_synth_t *synth, int fx_group, double *speed);
 FLUIDSYNTH_API int fluid_synth_get_chorus_group_depth(fluid_synth_t *synth, int fx_group, double *depth_ms);
 FLUIDSYNTH_API int fluid_synth_get_chorus_group_type(fluid_synth_t *synth, int fx_group, int *type);
-/* @} Chorus */
+/** @} Chorus */
 
 /**
  * @defgroup synthesis_params Synthesis Parameters
@@ -268,8 +268,15 @@ enum fluid_interp
 {
     FLUID_INTERP_NONE = 0,        /**< No interpolation: Fastest, but questionable audio quality */
     FLUID_INTERP_LINEAR = 1,      /**< Straight-line interpolation: A bit slower, reasonable audio quality */
-    FLUID_INTERP_4THORDER = 4,    /**< Fourth-order interpolation, good quality, the default */
-    FLUID_INTERP_7THORDER = 7,    /**< Seventh-order interpolation */
+    FLUID_INTERP_4THORDER = 4,    /**< Fourth-order interpolation, best quality, the default */
+
+    /**
+     * Seventh-point sinc interpolation
+     * @note This interpolation method was believed to provide highest quality. However, in Feb. 2025 it was discovered
+     * that for certain samples it does introduce ringing artifacts, which
+     * are not present in the 4th order interpolation. This is not a bug, it's rather a limitation of only using 7 points for the sinc interpolation.
+     */
+    FLUID_INTERP_7THORDER = 7,
 
     FLUID_INTERP_DEFAULT = FLUID_INTERP_4THORDER, /**< Default interpolation method */
     FLUID_INTERP_HIGHEST = FLUID_INTERP_7THORDER, /**< Highest interpolation method */
@@ -286,7 +293,7 @@ enum fluid_synth_add_mod
 
 FLUIDSYNTH_API int fluid_synth_add_default_mod(fluid_synth_t *synth, const fluid_mod_t *mod, int mode);
 FLUIDSYNTH_API int fluid_synth_remove_default_mod(fluid_synth_t *synth, const fluid_mod_t *mod);
-/* @} Synthesis Parameters */
+/** @} Synthesis Parameters */
 
 
 /**
@@ -316,7 +323,7 @@ FLUIDSYNTH_API
 int fluid_synth_tuning_iteration_next(fluid_synth_t *synth, int *bank, int *prog);
 FLUIDSYNTH_API int fluid_synth_tuning_dump(fluid_synth_t *synth, int bank, int prog,
         char *name, int len, double *pitch);
-/* @} MIDI Tuning */
+/** @} MIDI Tuning */
 
 
 /**
@@ -357,7 +364,7 @@ FLUID_DEPRECATED FLUIDSYNTH_API int fluid_synth_nwrite_float(fluid_synth_t *synt
 FLUIDSYNTH_API int fluid_synth_process(fluid_synth_t *synth, int len,
                                        int nfx, float *fx[],
                                        int nout, float *out[]);
-/* @} Audio Rendering */
+/** @} Audio Rendering */
 
 
 /**
@@ -391,7 +398,7 @@ enum fluid_iir_filter_flags
 };
 
 FLUIDSYNTH_API int fluid_synth_set_custom_filter(fluid_synth_t *, int type, int flags);
-/* @} IIR Filter */
+/** @} IIR Filter */
 
 
 
@@ -427,12 +434,6 @@ FLUIDSYNTH_API int fluid_synth_set_channel_type(fluid_synth_t *synth, int chan, 
  * @{
  */
 
-// silence a VERY noisy warning in recent MSVC compilers
-#ifdef _MSC_VER
-#pragma warning(push)
-#pragma warning(disable:5287)
-#endif
-
 /**
  * Channel mode bits OR-ed together so that it matches with the midi spec: poly omnion (0), mono omnion (1), poly omnioff (2), mono omnioff (3)
  */
@@ -454,10 +455,6 @@ enum fluid_basic_channel_modes
     FLUID_CHANNEL_MODE_OMNIOFF_MONO = FLUID_CHANNEL_MODE_MASK & (FLUID_CHANNEL_OMNI_OFF | FLUID_CHANNEL_POLY_OFF), /**< corresponds to MIDI mode 3 */
     FLUID_CHANNEL_MODE_LAST /**< @internal Value defines the count of basic channel modes (#fluid_basic_channel_modes) @warning This symbol is not part of the public API and ABI stability guarantee and may change at any time! */
 };
-
-#ifdef _MSC_VER
-#pragma warning(pop)
-#endif
 
 FLUIDSYNTH_API int fluid_synth_reset_basic_channel(fluid_synth_t *synth, int chan);
 
@@ -529,7 +526,7 @@ FLUIDSYNTH_API int fluid_synth_set_breath_mode(fluid_synth_t *synth,
 FLUIDSYNTH_API int fluid_synth_get_breath_mode(fluid_synth_t *synth,
         int chan, int  *breathmode);
 /** @} Breath Mode */
-/* @} MIDI Channel Setup */
+/** @} MIDI Channel Setup */
 
 
 /** @ingroup settings */
