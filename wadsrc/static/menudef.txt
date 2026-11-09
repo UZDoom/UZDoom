@@ -357,8 +357,13 @@ DefaultOptionMenu
 OptionMenu "OptionsMenu" protected
 {
 	Title "$OPTMNU_TITLE"
+
 	Submenu "$OS_TITLE", "os_Menu"
 	StaticText " "
+#ifdef FEATURE_FLAG_DEMO
+	StaticText "Feature flags! :)"
+	StaticText " "
+#endif
 	Submenu "$OPTMNU_CONTROLS",			"CustomizeControls"
 	Submenu "$OPTMNU_MOUSE",			"MouseOptions"
 	Submenu "$OPTMNU_JOYSTICK",			"JoystickOptions"

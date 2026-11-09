@@ -24,6 +24,8 @@ endmacro()
 ## set feature flags like: FEATURE(FOO "does something cool")
 ## these are for indev features to allow for piecemeal PRs
 
+FEATURE(FLAG_DEMO "Demo that feature flags work")
+
 ## END set feature flags here
 
 macro(FLAGS CONFIG CL_FLAGS CC_FLAGS)

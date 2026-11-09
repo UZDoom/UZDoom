@@ -198,6 +198,11 @@ class Menu : Object native ui version("2.4")
 
 	void Init(Menu parent)
 	{
+
+#ifdef FEATURE_FLAG_DEMO
+		console.printf("Feature Flags :O");
+#endif
+
 		mParentMenu = parent;
 		mMouseCapture = false;
 		mBackbuttonSelected = false;

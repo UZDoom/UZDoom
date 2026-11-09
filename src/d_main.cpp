@@ -4191,6 +4191,10 @@ static int D_DoomMain_Internal (void)
 		I_DetectOS().GetChars()
 	);
 
+#ifdef FEATURE_FLAG_DEMO
+	Printf("Feature flags! :)\n");
+#endif
+
 	bool wantsVersion = Args->CheckParm(FArg_version)
 		|| Args->CheckParm(FArg_v);
 	bool wantsHelp = Args->CheckParm(FArg_help)
