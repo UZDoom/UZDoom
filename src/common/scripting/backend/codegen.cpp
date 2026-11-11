@@ -5625,7 +5625,7 @@ FxExpression *FxAbs::Resolve(FCompileContext &ctx)
 
 ExpEmit FxAbs::Emit(VMFunctionBuilder *build)
 {
-	assert(ValueType == val->ValueType);
+	assert(ValueType->GetRegType() == val->ValueType->GetRegType());
 	ExpEmit from = val->Emit(build);
 	ExpEmit to;
 	assert(from.Konst == 0);
@@ -5641,7 +5641,7 @@ ExpEmit FxAbs::Emit(VMFunctionBuilder *build)
 		to = from;
 	}
 
-	if (ValueType->GetRegType() == REGT_INT)
+	if (from.RegType == REGT_INT)
 	{
 		build->Emit(OP_ABS, to.RegNum, from.RegNum, 0);
 	}
