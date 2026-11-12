@@ -1512,6 +1512,7 @@ enum ECompatFlags
 	COMPATF2_EMULATEMIKOPORTALS = 1 << 19, // Emulate Mikoportals Z Underflow
 	COMPATF2_RESERVEDLINEFLAG	= 1 << 20,	// disable certain linedef flag features that may clash with certain maps
 	COMPATF2_TRANSFERSECRET	= 1 << 21, // Allow Boom's Transfer Specials to transfer Secrets
+	COMPATF2_NOCOUNTLOST    = 1 << 22   // Lost souls no longer count towards total monster count in a map
 };
 
 enum HitWaterFlags
