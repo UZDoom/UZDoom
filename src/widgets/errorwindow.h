@@ -48,6 +48,8 @@ private:
 	PushButton* ClipboardButton = nullptr;
 	PushButton* RestartButton = nullptr;
 	PushButton* SaveReportButton = nullptr;
+	PushButton* ConfigDirButton = nullptr;
+	PushButton* WadDirButton = nullptr;
 
 	std::vector<uint8_t> minidump;
 	std::string clipboardtext;
@@ -76,7 +78,7 @@ private:
 
 	Scrollbar* scrollbar = nullptr;
 
-	std::shared_ptr<Font> largefont = Font::Create("Poppins", 16.0);
-	std::shared_ptr<Font> font = Font::Create("Poppins", 12.0);
+	std::shared_ptr<Font> largefont = Font::Create("NotoSans", 16.0);
+	std::shared_ptr<Font> font = Font::Create("NotoSans", 12.0);
 	std::vector<SpanLayout> lines;
 };

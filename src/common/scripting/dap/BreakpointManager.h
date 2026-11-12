@@ -63,7 +63,7 @@ class BreakpointManager
 
 	explicit BreakpointManager(PexCache *pexCache) : m_pexCache(pexCache) { }
 	int64_t GetBreakpointID();
-	int AddInvalidBreakpoint(
+    int64_t AddInvalidBreakpoint(
 		std::vector<dap::Breakpoint> &breakpoints, int line, void *address, const std::string &reason, const dap::optional<dap::Source> &source);
 	bool AddBreakpointInfo(
 		const std::shared_ptr<Binary> &binary,
@@ -90,7 +90,7 @@ class BreakpointManager
 	// set of case-insensitive strings
 	std::map<std::string_view, BreakpointInfo, ci_less> m_nativeFunctionBreakpoints;
 	IdProvider m_idProvider;
-	int64_t m_CurrentID = 1;
+	std::atomic<int64_t> m_CurrentID = 0;
 	size_t times_seen = 0;
 
 	void ClearBreakpointsType(BreakpointInfo::Type type);

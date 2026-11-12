@@ -61,7 +61,7 @@ struct BoneOverrideComponent
 	double interplen = 0.0;
 	T prev = DefVal<T>();
 	T cur = DefVal<T>();
-	
+
 	void Set(const T &newValue, double tic, double newInterplen, int newMode)
 	{
 		double prev_interp_amt = interplen > 0.0 ? std::clamp(((tic - switchtic) / interplen), 0.0, 1.0) : 1.0;
@@ -79,12 +79,12 @@ struct BoneOverrideComponent
 		interplen = newInterplen;
 		mode = newMode;
 	}
-	
+
 	void Modify(T &value, double tic) const
 	{
-		
+
 		float lerp_amt = interplen > 0.0f ? std::clamp(float((tic - switchtic) / interplen), 0.0f, 1.0f) : 1.0f;
-		
+
 		if(mode > 0 || (prev_mode > 0 && lerp_amt < 1.0))
 		{
 			T from = ModifyValue(value, prev, prev_mode);
@@ -92,14 +92,14 @@ struct BoneOverrideComponent
 			value = Lerp(from, to, lerp_amt, 1.0f - lerp_amt);
 		}
 	}
-	
+
 	T Get(const T &value, double tic) const
 	{
 		T newVal = value;
 		Modify(newVal, tic);
 		return newVal;
 	}
-	
+
 private:
 
 	inline static T ModifyValue(const T &orig, const T &cur, int mode)
@@ -108,7 +108,7 @@ private:
 		if(mode == 1) return Add(orig, cur);
 		return cur;
 	}
-	
+
 };
 
 struct BoneOverride
@@ -117,17 +117,17 @@ struct BoneOverride
 	{
 		return (from * to).Unit();
 	}
-	
+
 	static inline FVector3 LerpVec3(const FVector3 &from, const FVector3 &to, float t, float invt)
 	{
 		return from * invt + to * t;
 	}
-	
+
 	static inline FVector3 AddVec3(const FVector3 &from, const FVector3 &to)
 	{
 		return from + to;
 	}
-	
+
 	static inline FVector3 MultVec3(const FVector3 &from, const FVector3 &to)
 	{
 		return FVector3(from.X * to.X, from.Y * to.Y, from.Z * to.Z);

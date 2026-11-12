@@ -389,6 +389,30 @@ void FSoundFontManager::ProcessOneFile(const char* fn)
 void FSoundFontManager::CollectSoundfonts()
 {
 	FConfigFile* GameConfig = sysCallbacks.GetConfig ? sysCallbacks.GetConfig() : nullptr;
+
+	FString prefix;
+#ifdef __linux__
+	prefix = getenv("APPDIR");
+#endif
+
+	auto AddDir = [this](FileSys::FileList &list, FString dir) {
+		dir = NicePath(dir.GetChars());
+		FixPathSeperator(dir);
+		if (dir.IsNotEmpty())
+		{
+			if (FileSys::ScanDirectory(list, dir.GetChars(), "*", true))
+			{
+				for(auto& entry : list)
+				{
+					if (!entry.isDirectory)
+					{
+						ProcessOneFile(entry.FilePath.c_str());
+					}
+				}
+			}
+		}
+	};
+
 	if (GameConfig != NULL && GameConfig->SetSection ("SoundfontSearch.Directories"))
 	{
 		const char *key;
@@ -402,30 +426,17 @@ void FSoundFontManager::CollectSoundfonts()
 
 				FileSys::FileList list;
 
-				FString dir;
-
-				dir = NicePath(value);
-				FixPathSeperator(dir);
-				if (dir.IsNotEmpty())
-				{
-					if (FileSys::ScanDirectory(list, dir.GetChars(), "*", true))
-					{
-						for(auto& entry : list)
-						{
-							if (!entry.isDirectory)
-							{
-								ProcessOneFile(entry.FilePath.c_str());
-							}
-						}
-					}
-				}
+				AddDir(list, prefix / value);
+				AddDir(list, value);
 			}
 		}
 	}
 
 	if (soundfonts.Size() == 0)
 	{
-		ProcessOneFile(NicePath("$PROGDIR/soundfonts/" GAMENAMELOWERCASE ".sf2").GetChars());
+		FString path = NicePath("$PROGDIR/soundfonts/" GAMENAMELOWERCASE ".sf2");
+		ProcessOneFile((prefix / path).GetChars());
+		ProcessOneFile(path.GetChars());
 	}
 }
 

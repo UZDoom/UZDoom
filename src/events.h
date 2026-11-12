@@ -358,8 +358,8 @@ public:
 	bool UiProcess(const event_t* ev);
 	void UiTick();
 	void PostUiTick();
-	
-	// 
+
+	//
 	void ConsoleProcess(int player, FString name, int arg1, int arg2, int arg3, bool manual, bool ui);
 	void NetCommandProcess(FNetworkCommand& cmd);
 
@@ -439,7 +439,7 @@ struct FPlayerEvent
 	bool IsReturn;
 };
 
-struct FConsoleEvent 
+struct FConsoleEvent
 {
 	// player that activated this event. note that it's always -1 for non-playsim events (i.e. these not called with netevent)
 	int Player;

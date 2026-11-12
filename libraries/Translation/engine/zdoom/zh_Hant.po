@@ -2,236 +2,291 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-11-20 13:51+0000\n"
-"Last-Translator: Douggy Sans <dfr1238@gmail.com>\n"
-"Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/"
-"projects/uzdoom/zdoom-engine-strings/zh_Hant/>\n"
+"PO-Revision-Date: 2026-08-10 23:42-0400\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Chinese (Traditional Han script) <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/zh_Hant/>\n"
 "Language: zh_Hant\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.15-dev\n"
-"HeaderCode: cht\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
 
 msgid "PRESSKEY"
 msgstr "按下任何鍵。"
 
 msgid "SECRETMESSAGE"
-msgstr ""
+msgstr "發現了一個秘密！"
 
 msgid "D_DEVSTR"
-msgstr ""
+msgstr "無用模式：開"
 
 msgid "QUITMSG"
 msgstr ""
+"你確定你要離開這款\n"
+"偉大遊戲嗎？"
 
 # In some languages, it may make more sense to translate “Press a key” as
 # “Press any key.”
 msgid "LOADNET"
 msgstr ""
+"你不能在多人連線遊戲中讀取！\n"
+"\n"
+"按下任何鍵。"
 
 msgid "QLOADNET"
 msgstr ""
+"你不能在多人連線遊戲中快速讀取！\n"
+"\n"
+"按下任何鍵。"
 
 msgid "QSAVESPOT"
 msgstr ""
+"你還沒選取一個快速儲存位置！\n"
+"\n"
+"按下任何鍵。"
 
 msgid "NEWGAME"
 msgstr ""
+"你無法在進行多人連線\n"
+"時開始新遊戲。\n"
+"\n"
+"按下任何鍵。"
 
 msgid "NIGHTMARE"
 msgstr ""
+"你確定嗎？這個難度等級\n"
+"是極度不公平的。\n"
+"\n"
+"按下 Y 或 N 。"
 
 msgid "SWSTRING"
 msgstr ""
+"這是共享軟體版本的Doom。\n"
+"\n"
+"你需要購買註冊版本。\n"
+"\n"
+"按下任何鍵。"
 
 msgid "NETEND"
 msgstr ""
+"你無法結束一個多人連線遊戲！\n"
+"\n"
+"按下任何鍵。"
 
 msgid "ENDGAME"
 msgstr ""
+"你確定你要結束這場遊戲？\n"
+"\n"
+"按下 Y 或 N 。"
 
 msgid "RAVENQUITMSG"
-msgstr ""
+msgstr "你確定你要離開嗎？"
 
 msgctxt "heretic"
 msgid "SWSTRING"
-msgstr ""
+msgstr "只在註冊版中可用"
 
 msgid "DOSY"
-msgstr ""
+msgstr "（按下 Y 來離開）"
 
 msgid "QUITMSG1"
 msgstr ""
+"請別離開，那裡有更多\n"
+"惡魔要烤熟！"
 
 msgid "QUITMSG2"
 msgstr ""
+"來擊敗它－這正要變成\n"
+"一場大屠殺了！"
 
 msgid "QUITMSG3"
 msgstr ""
+"如果我是你的話我不會離開。\n"
+"相比之下， DOS 更加糟糕。"
 
 msgid "QUITMSG4"
 msgstr ""
+"你是想說你比我還更喜歡 DOS \n"
+"，是嗎？"
 
 msgid "QUITMSG5"
 msgstr ""
+"還別離開，那裡有一隻\n"
+"惡魔正在那角落！"
 
 msgid "QUITMSG6"
 msgstr ""
+"給我記住，下次你再來這的時候\n"
+"我要把你烤成灰。"
 
 msgid "QUITMSG7"
-msgstr ""
+msgstr "給我快滾啦，我才懶得管哩。"
 
 # More info here.
 msgid "QUITMSG8"
 msgstr ""
+"你想縮了？\n"
+"那，汝離成聖已棋差一著！"
 
 # A “dimensional shambler” is a creature appearing in the works of H. P.
 # Lovecraft.
 msgid "QUITMSG9"
 msgstr ""
+"別走呀，有隻次元蹣跚怪\n"
+"牠正在 DOS 提示字元那邊\n"
+"等著你啊！"
 
 msgid "QUITMSG10"
 msgstr ""
+"滾開啦去搞\n"
+"你的無聊程式啦。"
 
 msgid "QUITMSG11"
 msgstr ""
+"若我是你的上司，我想\n"
+"要馬上跟你死鬥一番！"
 
 msgid "QUITMSG12"
 msgstr ""
+"嘿，夥計。你現在閃人\n"
+"的話就會失去你的殺敵紀錄！"
 
 msgid "QUITMSG13"
 msgstr ""
+"滾啦。當你回來的\n"
+"時候，我會請你一頓球棒餐。"
 
 msgid "QUITMSG14"
 msgstr ""
+"你運氣不錯喔我不想因為\n"
+"你想走人而打你。"
 
 msgid "QUITMSG15"
 msgstr ""
+"你要去哪裡啊？！\n"
+"那惡魔暴亂該怎辦呢？"
 
 msgid "QUITMSG16"
 msgstr ""
+"大屠殺已中斷…\n"
+"真吊人胃口呢！"
 
 msgid "QUITMSG17"
 msgstr ""
+"但你是唯一希望\n"
+"—我的唯一機會！！"
 
 msgid "QUITMSG18"
-msgstr ""
+msgstr "搭上黑鳥後沒人能離開的。"
 
 msgid "QUITMSG19"
-msgstr ""
+msgstr "我以為你並不一樣…"
 
 msgid "QUITMSG20"
-msgstr ""
+msgstr "好！就邊跑邊殺吧！"
 
 msgid "QUITMSG21"
 msgstr ""
+"你可以滾…\n"
+"但你躲不過的…"
 
 msgid "QUITMSG22"
 msgstr ""
+"怎、怎麼回事？\n"
+"你老母說要吃晚餐了？"
 
 msgid "QUITMSG23"
 msgstr ""
+"別走啊，那裏還有些在到處\n"
+"遊蕩的綠色黏液怪啊！"
 
 msgid "QUITMSG24"
 msgstr ""
+"別放棄－那些黏液怪會\n"
+"佔了上風的啊！"
 
 msgid "QUITMSG25"
 msgstr ""
+"別走啊。\n"
+"我們需要你的幫忙啊！"
 
 msgid "QUITMSG26"
 msgstr ""
+"我希望你只是要去吃\n"
+"Chex® 牌綜合派對麥片。"
 
 msgid "QUITMSG27"
 msgstr ""
+"別走啊！\n"
+"我們需要你的幫忙呀！"
 
 msgid "QUITMSG28"
 msgstr ""
+"別拋棄了\n"
+"麥片星際聯邦啊！"
 
 msgid "QUITMSG29"
 msgstr ""
+"真正的 Chex® 戰士\n"
+"是不會那麼快放棄的！"
 
 msgid "TXT_DEFAULTPICKUPMSG"
-msgstr ""
+msgstr "你拾取了物品"
 
 msgid "PD_ANY"
-msgstr ""
+msgstr "任何鑰匙都能打開這道門"
 
 msgid "PD_ANYOBJ"
-msgstr ""
+msgstr "任何鑰匙都能啟動這項物件"
 
 msgid "PD_ALL3"
-msgstr ""
+msgstr "你需要全三把鑰匙來開啟這道門"
 
 msgid "PD_ALL3O"
-msgstr ""
+msgstr "你需要全三把鑰匙來啟用這項物件"
 
 msgid "PD_ALL6"
-msgstr ""
+msgstr "你需要全六把鑰匙來開啟這道門"
 
 msgid "PD_ALL6O"
-msgstr ""
+msgstr "你需要全六把鑰匙來啟用這項物件"
 
 msgid "PD_ALLKEYS"
-msgstr ""
+msgstr "你需要全部的鑰匙"
 
 msgid "HUSTR_MSGU"
-msgstr ""
+msgstr "［訊息未送出］"
 
 msgid "HUSTR_TALKTOSELF1"
-msgstr ""
+msgstr "你自言自語著"
 
 msgid "HUSTR_TALKTOSELF2"
-msgstr ""
+msgstr "那裏是誰？"
 
 msgid "HUSTR_TALKTOSELF3"
-msgstr ""
+msgstr "你嚇了你自己"
 
 msgid "HUSTR_TALKTOSELF4"
-msgstr ""
+msgstr "你開始狂歡"
 
 msgid "HUSTR_TALKTOSELF5"
-msgstr ""
+msgstr "你的理智斷線了…"
 
 msgid "HUSTR_MESSAGESENT"
-msgstr ""
+msgstr "［訊息已送出］"
 
 msgid "STSTR_MUS"
-msgstr ""
+msgstr "音樂已改變"
 
 msgid "STSTR_NOMUS"
-msgstr ""
-
-msgid "STSTR_DQDON"
-msgstr ""
-
-msgid "STSTR_DQDOFF"
-msgstr ""
-
-msgid "STSTR_DQD2ON"
-msgstr ""
-
-msgid "STSTR_DQD2OFF"
-msgstr ""
+msgstr "辦不到的選擇"
 
 msgid "STSTR_KFAADDED"
-msgstr ""
+msgstr "非常快樂彈藥已獲取"
 
 msgid "STSTR_FAADDED"
-msgstr ""
-
-msgid "STSTR_NCON"
-msgstr ""
-
-msgid "STSTR_NCOFF"
-msgstr ""
-
-msgid "STSTR_NC2ON"
-msgstr ""
-
-msgid "STSTR_NC2OFF"
-msgstr ""
+msgstr "彈藥（無鑰匙）已獲取"
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -240,523 +295,451 @@ msgstr ""
 # “Allmap”: Computer area map
 # “Lite-amp”: Light-amplification visor
 msgid "STSTR_BEHOLD"
-msgstr ""
+msgstr "無敵球 (V) ，狂暴箱 (S) ，模糊球 (I) ，防護服 (R) ，全地圖 (A) ，夜視鏡 (L)"
 
 msgid "STSTR_BEHOLDX"
-msgstr ""
+msgstr "強化效果已啟用"
 
 # Printed when entering the idchoppers cheat, which gives the player a
 # chainsaw
 msgid "STSTR_CHOPPERS"
-msgstr ""
+msgstr "… 別搞砸了－GM"
 
 msgid "STSTR_CLEV"
-msgstr ""
-
-msgid "TXT_BUDDHAON"
-msgstr ""
-
-msgid "TXT_BUDDHAOFF"
-msgstr ""
-
-msgid "TXT_BUDDHA2ON"
-msgstr ""
-
-msgid "TXT_BUDDHA2OFF"
-msgstr ""
-
-msgid "TXT_CHEATPOWERON"
-msgstr ""
-
-msgid "TXT_CHEATPOWEROFF"
-msgstr ""
+msgstr "切換關卡中…"
 
 msgid "TXT_CHEATHEALTH"
-msgstr ""
+msgstr "生命值全滿"
 
 msgid "TXT_CHEATKEYS"
-msgstr ""
-
-msgid "TXT_CHEATSOUNDON"
-msgstr ""
-
-msgid "TXT_CHEATSOUNDOFF"
-msgstr ""
+msgstr "全部的鑰匙"
 
 msgid "TXT_CHEATIDDQD"
-msgstr ""
+msgstr "想作弊，對吧？那麼就受死吧！"
 
 msgid "TXT_CHEATIDKFA"
-msgstr ""
-
-msgid "TXT_CHEATTICKERON"
-msgstr ""
-
-msgid "TXT_CHEATTICKEROFF"
-msgstr ""
+msgstr "作弊者－你得不到武器的"
 
 msgid "TXT_CHEATARTIFACTS3"
-msgstr ""
+msgstr "你得到它了"
 
 msgid "TXT_MIDASTOUCH"
-msgstr ""
+msgstr "寶貝，你獲得了點石成金"
 
 msgid "TXT_GOTSTUFF"
-msgstr ""
-
-msgid "TXT_FREEZEON"
-msgstr ""
-
-msgid "TXT_FREEZEOFF"
-msgstr ""
+msgstr "你得到了道具！"
 
 msgid "TXT_STRANGE"
-msgstr ""
+msgstr "你感覺怪怪的…"
 
 msgid "TXT_STRANGER"
-msgstr ""
+msgstr "你感覺更加怪異了。"
 
 msgid "TXT_NOTSTRANGE"
-msgstr ""
-
-msgid "TXT_LEADBOOTSON"
-msgstr ""
-
-msgid "TXT_LEADBOOTSOFF"
-msgstr ""
+msgstr "你再次感覺到自己了。"
 
 msgid "TXT_LIGHTER"
-msgstr ""
+msgstr "你感覺變輕了"
 
 msgid "TXT_GRAVITY"
-msgstr ""
-
-msgid "TXT_NOTARGET_ON"
-msgstr ""
-
-msgid "TXT_NOTARGET_OFF"
-msgstr ""
+msgstr "重力壓垮了你"
 
 msgid "TXT_ANUBIS_ON"
-msgstr ""
+msgstr "「恐懼地顫抖吧！」"
 
 msgid "TXT_ANUBIS_OFF"
-msgstr ""
-
-msgid "TXT_CHASECAM_ON"
-msgstr ""
-
-msgid "TXT_CHASECAM_OFF"
-msgstr ""
+msgstr "巨魔鎧甲已失效"
 
 msgid "TXT_BADDIE_KILLED"
-msgstr ""
+msgstr "已殺死一隻壞蛋"
 
 msgid "TXT_BADDIES_KILLED"
-msgstr ""
+msgstr "已殺死 %d 隻壞蛋"
 
 msgid "TXT_MONSTER_KILLED"
-msgstr ""
+msgstr "已殺死一隻怪物"
 
 msgid "TXT_MONSTERS_KILLED"
-msgstr ""
+msgstr "已殺死 %d 隻怪物"
 
 msgid "TXT_NO_RESURRECT"
-msgstr ""
+msgstr "由於玩家角色已遭斬首，故無法進行復活。"
 
 msgid "TXT_ALL_ARTIFACTS"
-msgstr ""
+msgstr "得到所有的神器！"
 
 msgid "TXT_WHAT_KILL"
-msgstr ""
+msgstr "你是想殺死什麼來自遊戲之外的東西嗎？"
 
 msgid "TXT_NOT_FROZEN"
-msgstr ""
-
-msgid "AMSTR_FOLLOWOFF"
-msgstr ""
-
-msgid "AMSTR_FOLLOWON"
-msgstr ""
-
-msgid "AMSTR_GRIDON"
-msgstr ""
-
-msgid "AMSTR_GRIDOFF"
-msgstr ""
-
-msgid "AMSTR_TEXON"
-msgstr ""
-
-msgid "AMSTR_TEXOFF"
-msgstr ""
+msgstr "凍結玩家角色特性：關"
 
 msgid "AMSTR_MARKEDSPOT"
-msgstr ""
+msgstr "已標記地點"
 
 msgid "AMSTR_MARKSCLEARED"
-msgstr ""
+msgstr "已清除全部標記"
 
 msgid "TXT_FRAGLIMIT"
-msgstr ""
+msgstr "已到達擊殺上限。"
 
 msgid "TXT_TIMELIMIT"
-msgstr ""
+msgstr "已到達時間限制。"
 
 msgid "SPREEKILLSELF"
-msgstr ""
+msgstr "%o 看來不錯，直到 %h 被 %g 給殺死了！"
 
 msgid "SPREEOVER"
-msgstr ""
+msgstr "%o 的大開殺戒模式被 %k 給終結了"
 
 msgid "SPREE5"
-msgstr ""
+msgstr "%k 正在大開殺戒！"
 
 msgid "SPREE10"
-msgstr ""
+msgstr "%k 正在瘋狂亂殺中！"
 
 msgid "SPREE15"
-msgstr ""
+msgstr "%k 正在佔著上風！"
 
 msgid "SPREE20"
-msgstr ""
+msgstr "%k 已經無人可擋！"
 
 msgid "SPREE25"
-msgstr ""
+msgstr "%k 已如神樣般！"
 
 msgid "MULTI2"
-msgstr ""
+msgstr "雙殺！"
 
 msgid "MULTI3"
-msgstr ""
+msgstr "多殺！"
 
 msgid "MULTI4"
-msgstr ""
+msgstr "極端殺戮！"
 
 msgid "MULTI5"
-msgstr ""
+msgstr "怪物般擊殺！"
 
 msgid "SCORE_BONUS"
-msgstr ""
+msgstr "獎勵"
 
 msgid "SCORE_COLOR"
-msgstr ""
+msgstr "顏色"
 
 msgid "SCORE_SECRET"
-msgstr ""
+msgstr "秘密"
 
 msgid "SCORE_NAME"
-msgstr ""
+msgstr "名字"
 
 msgid "SCORE_DELAY"
-msgstr ""
+msgstr "延遲"
 
 msgid "SCORE_FRAGS"
-msgstr ""
+msgstr "擊殺數"
 
 msgid "SCORE_DEATHS"
-msgstr ""
+msgstr "死亡數"
 
 msgid "SCORE_OTHER"
-msgstr ""
+msgstr "其他"
 
 msgid "SCORE_MISSED"
-msgstr ""
+msgstr "錯過"
 
 msgid "SCORE_TOTAL"
-msgstr ""
+msgstr "合計"
 
 msgid "SCORE_LVLTIME"
-msgstr ""
+msgstr "關卡用時"
 
 msgid "TXT_IMKILLS"
-msgstr ""
+msgstr "殺敵數"
 
 msgid "TXT_IMITEMS"
-msgstr ""
+msgstr "物品數"
 
 msgid "TXT_IMSECRETS"
-msgstr ""
+msgstr "秘密數"
 
 msgid "TXT_IMTIME"
-msgstr ""
+msgstr "通關用時"
 
 msgid "TXT_IMPAR"
-msgstr ""
+msgstr "標準通關時間"
 
 msgid "WI_FINISHED"
-msgstr ""
+msgstr "已完成"
 
 msgid "WI_ENTERING"
-msgstr ""
+msgstr "正進入"
 
 msgctxt "heretic hexen"
 msgid "WI_ENTERING"
-msgstr ""
+msgstr "正進入："
 
 msgid "AM_MONSTERS"
-msgstr ""
+msgstr "殺怪數："
 
 msgid "AM_SECRETS"
-msgstr ""
+msgstr "秘密數："
 
 msgid "AM_ITEMS"
-msgstr ""
+msgstr "物品數："
 
 msgid "OB_SUICIDE"
-msgstr ""
+msgstr "%o 自爆了。"
 
 msgid "OB_FALLING"
-msgstr ""
+msgstr "%o 摔的太深了。"
 
 msgid "OB_CRUSH"
-msgstr ""
+msgstr "%o 被壓扁了。"
 
 msgid "OB_EXIT"
-msgstr ""
+msgstr "%o 嘗試要離開。"
 
 msgid "OB_WATER"
-msgstr ""
+msgstr "%o 是個旱鴨子。"
 
 msgid "OB_SLIME"
-msgstr ""
+msgstr "%o 突變了。"
 
 msgid "OB_LAVA"
-msgstr ""
+msgstr "%o 熔化了。"
 
 msgid "OB_BARREL"
-msgstr ""
+msgstr "%o 被炸翻了。"
 
 msgid "OB_SPLASH"
-msgstr ""
+msgstr "%o 站的不夠遠呢。"
 
 msgid "OB_R_SPLASH"
-msgstr ""
+msgstr "%o 應該要站遠一點的。"
 
 msgid "OB_ROCKET"
-msgstr ""
+msgstr "%o 應該要站遠一點的。"
 
 msgid "OB_KILLEDSELF"
-msgstr ""
+msgstr "%o 殺了 %h自己。"
 
 msgid "OB_VOODOO"
-msgstr ""
+msgstr "%o 被巫毒之力給做掉了。"
 
 msgid "OB_MPTELEFRAG"
-msgstr ""
+msgstr "%o 被 %k 給傳送殺了。"
 
 msgid "OB_MONTELEFRAG"
-msgstr ""
+msgstr "%o 被傳送殺了。"
 
 msgid "OB_DEFAULT"
-msgstr ""
+msgstr "%o 掛了。"
 
 msgid "OB_MPDEFAULT"
-msgstr ""
+msgstr "%o 被 %k 給做掉了。"
 
 msgid "OB_FRIENDLY1"
-msgstr ""
+msgstr "%k 撂倒了自己人。"
 
 # English was changed to remove problematic pronoun referencing the killer
 msgid "OB_FRIENDLY2"
-msgstr ""
+msgstr "%k 似乎需要眼鏡。"
 
 msgid "OB_FRIENDLY3"
-msgstr ""
+msgstr "%k 幫對手獲得了一個擊殺數。"
 
 msgid "OB_FRIENDLY4"
-msgstr ""
+msgstr "%k 失去了另一位朋友。"
 
 msgid "GOTARMOR"
-msgstr ""
+msgstr "撿起了護甲。"
 
 msgid "GOTMEGA"
-msgstr ""
+msgstr "撿起了超級護甲！"
 
 msgid "GOTHTHBONUS"
-msgstr ""
+msgstr "撿起了個生命獎勵。"
 
 msgid "GOTARMBONUS"
-msgstr ""
+msgstr "撿起了個護甲獎勵。"
 
 msgid "GOTSTIM"
-msgstr ""
+msgstr "撿起了個治療包。"
 
 msgid "GOTMEDINEED"
-msgstr ""
+msgstr "撿起了個你「非常」需要的急救包！"
 
 msgid "GOTMEDIKIT"
-msgstr ""
+msgstr "撿起了個急救包。"
 
 msgid "GOTSUPER"
-msgstr ""
+msgstr "超級球！"
 
 msgid "GOTBLUECARD"
-msgstr ""
+msgstr "撿起了個藍色鑰匙卡。"
 
 msgid "GOTYELWCARD"
-msgstr ""
+msgstr "撿起了個黃色鑰匙卡。"
 
 msgid "GOTREDCARD"
-msgstr ""
+msgstr "撿起了個紅色鑰匙卡。"
 
 msgid "GOTBLUESKUL"
-msgstr ""
+msgstr "撿起了個藍骷髏鑰匙。"
 
 msgid "GOTYELWSKUL"
-msgstr ""
+msgstr "撿起了個黃骷髏鑰匙。"
 
 msgid "GOTREDSKUL"
-msgstr ""
+msgstr "撿起了個紅骷髏鑰匙。"
 
 msgid "GOTINVUL"
-msgstr ""
+msgstr "無敵球！！"
 
 msgid "GOTBERSERK"
-msgstr ""
+msgstr "狂暴球！！"
 
 msgid "GOTINVIS"
-msgstr ""
+msgstr "模糊球"
 
 msgid "GOTSUIT"
-msgstr ""
+msgstr "輻射防護服"
 
 msgid "GOTMAP"
-msgstr ""
+msgstr "電腦區域地圖"
 
 msgid "GOTVISOR"
-msgstr ""
+msgstr "夜視鏡"
 
 msgid "GOTMSPHERE"
-msgstr ""
+msgstr "超級球！"
 
 msgid "GOTCLIP"
-msgstr ""
+msgstr "撿起了個彈匣。"
 
 msgid "GOTCLIPBOX"
-msgstr ""
+msgstr "撿起了一箱子彈。"
 
 msgid "GOTROCKET"
-msgstr ""
+msgstr "撿起了個火箭彈。"
 
 msgid "GOTROCKBOX"
-msgstr ""
+msgstr "撿起了一箱火箭彈。"
 
 msgid "GOTCELL"
-msgstr ""
+msgstr "撿起了個能量電池。"
 
 msgid "GOTCELLBOX"
-msgstr ""
+msgstr "撿起了個能量電池組。"
 
 msgid "GOTSHELLS"
-msgstr ""
+msgstr "撿起了 4 顆散彈。"
 
 msgid "GOTSHELLBOX"
-msgstr ""
+msgstr "撿起了一箱散彈。"
 
 msgid "GOTBACKPACK"
-msgstr ""
+msgstr "撿起了一個裝滿彈藥的背包！"
 
 msgid "GOTBFG9000"
-msgstr ""
+msgstr "你撿起了 BFG9000！喔，太棒了。"
 
 msgid "GOTCHAINGUN"
-msgstr ""
+msgstr "你撿起了鏈炮！"
 
 msgid "GOTCHAINSAW"
-msgstr ""
+msgstr "一把鏈鋸！來找點肉吧！"
 
 msgid "GOTLAUNCHER"
-msgstr ""
+msgstr "你撿起了火箭發射器！"
 
 msgid "GOTPLASMA"
-msgstr ""
+msgstr "你撿起了電漿槍！"
 
 msgid "GOTSHOTGUN"
-msgstr ""
+msgstr "你撿起了散彈槍！"
 
 msgid "GOTSHOTGUN2"
-msgstr ""
+msgstr "你撿起了超級散彈槍！"
 
 msgid "PICKUP_PISTOL_DROPPED"
-msgstr ""
+msgstr "撿起了個手槍。"
 
 msgid "BETA_BONUS1"
-msgstr ""
+msgstr "你撿起了個惡魔小刀。"
 
 msgid "BETA_BONUS2"
-msgstr ""
+msgstr "你撿起了個顱骨箱。"
 
 msgid "BETA_BONUS3"
-msgstr ""
+msgstr "你撿起了個邪惡權杖。"
 
 msgid "BETA_BONUS4"
-msgstr ""
+msgstr "你撿起了個不潔聖經。"
 
 msgid "PD_BLUEO"
-msgstr ""
+msgstr "你需要藍色鑰匙來啟用這物件"
 
 msgid "PD_REDO"
-msgstr ""
+msgstr "你需要紅色鑰匙來啟用這物件"
 
 msgid "PD_YELLOWO"
-msgstr ""
+msgstr "你需要黃色鑰匙來啟用這物件"
 
 msgid "PD_BLUEK"
-msgstr ""
+msgstr "你需要藍色鑰匙來開啟這道門"
 
 msgid "PD_REDK"
-msgstr ""
+msgstr "你需要紅色鑰匙來開啟這道門"
 
 msgid "PD_YELLOWK"
-msgstr ""
+msgstr "你需要黃色鑰匙來開啟這道門"
 
 msgid "PD_BLUECO"
-msgstr ""
+msgstr "你需要藍色鑰匙卡來啟用這物件"
 
 msgid "PD_REDCO"
-msgstr ""
+msgstr "你需要紅色鑰匙卡來啟用這物件"
 
 msgid "PD_YELLOWCO"
-msgstr ""
+msgstr "你需要黃色鑰匙卡來啟用這物件"
 
 msgid "PD_BLUESO"
-msgstr ""
+msgstr "你需要藍骷髏鑰匙來啟用這物件"
 
 msgid "PD_REDSO"
-msgstr ""
+msgstr "你需要紅骷髏鑰匙來啟用這物件"
 
 msgid "PD_YELLOWSO"
-msgstr ""
+msgstr "你需要黃骷髏鑰匙來啟用這物件"
 
 msgid "PD_BLUEC"
-msgstr ""
+msgstr "你需要藍色鑰匙卡來開啟這道門"
 
 msgid "PD_REDC"
-msgstr ""
+msgstr "你需要紅色鑰匙卡來開啟這道門"
 
 msgid "PD_YELLOWC"
-msgstr ""
+msgstr "你需要黃色鑰匙卡來開啟這道門"
 
 msgid "PD_BLUES"
-msgstr ""
+msgstr "你需要藍骷髏鑰匙來開啟這道門"
 
 msgid "PD_REDS"
-msgstr ""
+msgstr "你需要紅骷髏鑰匙來開啟這道門"
 
 msgid "PD_YELLOWS"
-msgstr ""
+msgstr "你需要黃骷髏鑰匙來開啟這道門"
 
 msgid "CC_ZOMBIE"
-msgstr ""
+msgstr "殭屍士兵"
 
 # a.k.a. (former human) sergeant
 msgid "CC_SHOTGUN"
-msgstr ""
+msgstr "殭屍軍士"
 
 # a.k.a. former commando
 msgid "CC_HEAVY"
-msgstr ""
+msgstr "殭屍突擊隊員"
 
 msgid "CC_IMP"
 msgstr ""
@@ -2080,7 +2063,7 @@ msgstr ""
 msgid "TAG_GLAUNCHER1"
 msgstr ""
 
-# White phosphorous grenade launcher 
+# White phosphorous grenade launcher
 msgid "TAG_GLAUNCHER2"
 msgstr ""
 
@@ -2724,14 +2707,6 @@ msgid "ENDGAME"
 msgstr ""
 
 msgctxt "chex"
-msgid "STSTR_DQDON"
-msgstr ""
-
-msgctxt "chex"
-msgid "STSTR_DQDOFF"
-msgstr ""
-
-msgctxt "chex"
 msgid "STSTR_FAADDED"
 msgstr ""
 
@@ -2763,7 +2738,7 @@ msgid "MNU_NEWGAME"
 msgstr ""
 
 msgid "MNU_OPTIONS"
-msgstr ""
+msgstr "選項"
 
 msgid "MNU_GAMEFILES"
 msgstr ""
@@ -2772,7 +2747,7 @@ msgid "MNU_INFO"
 msgstr ""
 
 msgid "MNU_QUITGAME"
-msgstr ""
+msgstr "離開遊戲"
 
 # This text is extremely space limited!
 msgid "MNU_CHOOSESKILL"
@@ -3223,9 +3198,6 @@ msgstr ""
 msgid "CMPTMNU_SECTORSOUNDS"
 msgstr ""
 
-msgid "CMPTMNU_SOUNDCUTOFF"
-msgstr ""
-
 msgid "CMPTMNU_SOUNDTARGET"
 msgstr ""
 
@@ -3248,13 +3220,13 @@ msgid "CMPTMNU_EXPLODE2"
 msgstr ""
 
 msgid "PLYRMNU_RED"
-msgstr ""
+msgstr "紅"
 
 msgid "PLYRMNU_GREEN"
-msgstr ""
+msgstr "綠"
 
 msgid "PLYRMNU_BLUE"
-msgstr ""
+msgstr "藍"
 
 msgid "PLYRMNU_PLAYERCLASS"
 msgstr ""
@@ -3697,9 +3669,6 @@ msgstr ""
 msgid "DSPLYMNU_OLDTRANS"
 msgstr ""
 
-msgid "DSPLYMNU_TRANSSOUL"
-msgstr ""
-
 msgid "DSPLYMNU_FAKECONTRAST"
 msgstr ""
 
@@ -3782,7 +3751,7 @@ msgid "SCALEMNU_ADAPT"
 msgstr ""
 
 msgid "HUDMNU_TITLE"
-msgstr ""
+msgstr "抬頭顯示器選項"
 
 msgid "HUDMNU_ALTHUD"
 msgstr ""
@@ -3848,12 +3817,9 @@ msgid "MISCMNU_INTERSCROLL"
 msgstr ""
 
 msgid "NETMNU_TITLE"
-msgstr ""
+msgstr "網路選項"
 
 msgid "NETMNU_LOCALOPTIONS"
-msgstr ""
-
-msgid "NETMNU_MOVEPREDICTION"
 msgstr ""
 
 msgid "NETMNU_LINESPECIALPREDICTION"
@@ -3869,15 +3835,6 @@ msgid "NETMNU_HOSTOPTIONS"
 msgstr ""
 
 msgid "NETMNU_EXTRATICS"
-msgstr ""
-
-msgid "NETMNU_TICBALANCE"
-msgstr ""
-
-msgid "OPTVAL_ORIGINAL"
-msgstr ""
-
-msgid "OPTVAL_OPTIMIZED"
 msgstr ""
 
 msgid "OPTVAL_CLASSIC"
@@ -3930,30 +3887,21 @@ msgid "OPTVAL_ITEMS"
 msgstr ""
 
 msgid "OPTVAL_WEAPONS"
-msgstr ""
+msgstr "武器"
 
 msgid "OPTVAL_BOTH"
 msgstr ""
 
 msgid "OPTVAL_ZDOOM"
-msgstr ""
+msgstr "ZDoom"
 
 msgid "OPTVAL_STRIFE"
-msgstr ""
+msgstr "Strife"
 
 msgid "OPTVAL_PLAYER"
 msgstr ""
 
 msgid "OPTVAL_MAP"
-msgstr ""
-
-msgid "OPTVAL_SCALETO640X400"
-msgstr ""
-
-msgid "OPTVAL_PIXELDOUBLE"
-msgstr ""
-
-msgid "OPTVAL_PIXELQUADRUPLE"
 msgstr ""
 
 msgid "OPTVAL_CURRENTWEAPON"
@@ -4049,15 +3997,6 @@ msgstr ""
 msgid "OPTVAL_NODOORS"
 msgstr ""
 
-msgid "OPTVAL_DOUBLE"
-msgstr ""
-
-msgid "OPTVAL_TRIPLE"
-msgstr ""
-
-msgid "OPTVAL_QUADRUPLE"
-msgstr ""
-
 msgid "OPTVAL_ITEMPICKUP"
 msgstr ""
 
@@ -4074,39 +4013,36 @@ msgid "OPTVAL_ONLYMONSTERS"
 msgstr ""
 
 msgid "OPTVAL_HEXEN"
-msgstr ""
+msgstr "Hexen"
 
 msgid "OPTVAL_OLD"
 msgstr ""
 
 msgid "OPTVAL_DOOM"
-msgstr ""
+msgstr "Doom"
 
 msgid "OPTVAL_DOOMSTRICT"
 msgstr ""
 
 msgid "OPTVAL_BOOM"
-msgstr ""
+msgstr "Boom"
 
 msgid "OPTVAL_BOOMSTRICT"
 msgstr ""
 
 msgid "OPTVAL_MBF"
-msgstr ""
+msgstr "MBF"
 
 msgid "OPTVAL_MBFSTRICT"
 msgstr ""
 
 msgid "OPTVAL_MBF21"
-msgstr ""
+msgstr "MBF21"
 
 msgid "OPTVAL_MBF21STRICT"
 msgstr ""
 
 msgid "OPTVAL_ZDOOM2063"
-msgstr ""
-
-msgid "OPTVAL_ALLUNACKNOWLEDGED"
 msgstr ""
 
 msgid "OPTVAL_ERRORS"
@@ -4130,12 +4066,6 @@ msgstr ""
 msgid "OPTVAL_SWDOOMTC"
 msgstr ""
 
-msgid "OPTVAL_DEDICATED"
-msgstr ""
-
-msgid "OPTVAL_INTEGRATED"
-msgstr ""
-
 msgid "OPTVAL_VANILLA"
 msgstr ""
 
@@ -4143,12 +4073,6 @@ msgid "OPTVAL_VTFZDOOM"
 msgstr ""
 
 msgid "OPTVAL_VTFVANILLA"
-msgstr ""
-
-msgid "OPTVAL_VTAZDOOM"
-msgstr ""
-
-msgid "OPTVAL_VTAVANILLA"
 msgstr ""
 
 msgid "OPTVAL_SMALL"
@@ -4239,21 +4163,15 @@ msgid "C_TEAL"
 msgstr ""
 
 msgid "OPTSTR_HERETIC"
-msgstr ""
+msgstr "Heretic"
 
 msgid "OPTSTR_CHEX"
-msgstr ""
-
-msgid "OPTSTR_NOSOUND"
-msgstr ""
+msgstr "Chex®"
 
 msgid "OPTSTR_NOINTERPOLATION"
 msgstr ""
 
 msgid "OPTSTR_SPLINE"
-msgstr ""
-
-msgid "OPTSTR_OPENAL"
 msgstr ""
 
 msgid "DSPLYMNU_GLOPT"
@@ -4268,12 +4186,6 @@ msgstr ""
 msgid "GLMNU_DYNLIGHT"
 msgstr ""
 
-msgid "GLMNU_PREFS"
-msgstr ""
-
-msgid "GLTEXMNU_TRIMSPREDGE"
-msgstr ""
-
 msgid "GLTEXMNU_SORTDRAWLIST"
 msgstr ""
 
@@ -4281,9 +4193,6 @@ msgid "GLLIGHTMNU_TITLE"
 msgstr ""
 
 msgid "GLLIGHTMNU_LIGHTSENABLED"
-msgstr ""
-
-msgid "GLLIGHTMNU_LIGHTDEFS"
 msgstr ""
 
 msgid "GLLIGHTMNU_LIGHTSPRITES"
@@ -4301,16 +4210,10 @@ msgstr ""
 msgid "GLLIGHTMNU_LIGHTSHADOWMAPFILTER"
 msgstr ""
 
-msgid "GLPREFMNU_FOGMODE"
-msgstr ""
-
 msgid "GLPREFMNU_FOGFORCEFULLBRIGHT"
 msgstr ""
 
 msgid "GLPREFMNU_WPNLIGHTSTR"
-msgstr ""
-
-msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
 msgstr ""
 
 msgid "GLPREFMNU_ENV"
@@ -4335,9 +4238,6 @@ msgid "GLPREFMNU_SPRBILLFACECAMERA"
 msgstr ""
 
 msgid "GLPREFMNU_PARTICLESTYLE"
-msgstr ""
-
-msgid "GLPREFMNU_RENDERQUALITY"
 msgstr ""
 
 msgid "GLPREFMNU_VRMODE"
@@ -4389,9 +4289,6 @@ msgstr ""
 msgid "OPTVAL_SOFTWARE"
 msgstr ""
 
-msgid "OPTVAL_OPTIMAL"
-msgstr ""
-
 msgid "OPTVAL_YAXIS"
 msgstr ""
 
@@ -4402,9 +4299,6 @@ msgid "OPTVAL_SQUARE"
 msgstr ""
 
 msgid "OPTVAL_ROUND"
-msgstr ""
-
-msgid "OPTVAL_RADIAL"
 msgstr ""
 
 msgid "OPTVAL_PIXELFUZZ"
@@ -4470,9 +4364,6 @@ msgstr ""
 msgid "TCMNU_TITLE"
 msgstr ""
 
-msgid "TCMNU_TRUECOLOR"
-msgstr ""
-
 msgid "TCMNU_MINFILTER"
 msgstr ""
 
@@ -4480,24 +4371,6 @@ msgid "TCMNU_MAGFILTER"
 msgstr ""
 
 msgid "TCMNU_MIPMAP"
-msgstr ""
-
-msgid "TCMNU_DYNLIGHTS"
-msgstr ""
-
-msgid "OS_TITLE"
-msgstr ""
-
-msgid "OS_ANY"
-msgstr ""
-
-msgid "OS_ALL"
-msgstr ""
-
-msgid "OS_NO_RESULTS"
-msgstr ""
-
-msgid "OS_LABEL"
 msgstr ""
 
 msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
@@ -4537,11 +4410,6 @@ msgstr ""
 msgid "TXT_TOOOLDSG"
 msgstr ""
 
-# Shouldn’t this say “%e is the newest supported”?
-# 
-# — Undead
-# 
-# Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
 msgstr ""
 
@@ -4576,9 +4444,6 @@ msgstr ""
 msgid "TXT_BY"
 msgstr ""
 
-msgid "TXT_QUITENDOOM"
-msgstr ""
-
 msgid "HUDMNU_FLASH"
 msgstr ""
 
@@ -4589,9 +4454,6 @@ msgid "HUDMNU_CROSSHAIRON"
 msgstr ""
 
 msgid "MSGMNU_SUBTITLES"
-msgstr ""
-
-msgid "GLPREFMNU_PALTONENOGREY"
 msgstr ""
 
 msgid "HUDMNU_FONTOPTIONS"
@@ -4632,11 +4494,6 @@ msgid "SCALEMNU_FACTOR"
 msgstr ""
 
 msgid "SCALEMNU_RATIO"
-msgstr ""
-
-# as in "Build engine". This should not be translated unless there is a
-# translated name for the engine
-msgid "OPTVAL_BUILD"
 msgstr ""
 
 # sv_alwaystally
@@ -4887,7 +4744,7 @@ msgid "JOYMNU_THRESHOLD"
 msgstr ""
 
 msgid "OPTVAL_LINEAR"
-msgstr ""
+msgstr "線性"
 
 msgid "OPTVAL_QUADRATIC"
 msgstr ""
@@ -4903,7 +4760,7 @@ msgid "OPTVAL_TEAMONLYCHAT"
 msgstr ""
 
 msgid "OPTVAL_GLOBALCHAT"
-msgstr ""
+msgstr "全域"
 
 # Disables /me functionality in chat when displaying.
 msgid "NETMNU_NOBOLDCHAT"
@@ -4953,9 +4810,6 @@ msgstr ""
 msgid "NETMNU_CHATSLOMO"
 msgstr ""
 
-msgid "JOYMNU_HAPTRIGGERS"
-msgstr ""
-
 msgid "OPTMNU_HAPTICS"
 msgstr ""
 
@@ -4989,7 +4843,7 @@ msgid "HAPMNU_OPT_WORLD"
 msgstr ""
 
 msgid "PAUSE_STRING"
-msgstr ""
+msgstr "暫停"
 
 msgid "TAG_BACKPACK"
 msgstr ""
@@ -5118,3 +4972,61 @@ msgstr ""
 
 msgid "CNTRLMNU_COOPSPYCANCEL"
 msgstr ""
+
+msgid "OPTMNU_ACCESSIBILITY"
+msgstr "無障礙輔助選項"
+
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "無人能敵模式：{開|關}"
+
+msgid "STSTR_DQD2{ON|OFF}"
+msgstr "終極無人能敵模式：{開|關}"
+
+msgid "STSTR_NC{ON|OFF}"
+msgstr "穿牆模式：{開|關}"
+
+msgid "STSTR_NC2{ON|OFF}"
+msgstr "三維穿牆模式：{開|關}"
+
+msgid "TXT_BUDDHA{ON|OFF}"
+msgstr "佛陀模式：{開|關}"
+
+msgid "TXT_BUDDHA2{ON|OFF}"
+msgstr "終極佛陀模式：{開|關}"
+
+msgid "TXT_CHEATPOWER{ON|OFF}"
+msgstr "強化術本：{開|關}"
+
+msgid "TXT_CHEATSOUND{ON|OFF}"
+msgstr "音效除錯：{開|關}"
+
+msgid "TXT_CHEATTICKER{ON|OFF}"
+msgstr "Ticker：{開|關}"
+
+msgid "TXT_FREEZE{ON|OFF}"
+msgstr "凍結模式：{開|關}"
+
+msgid "TXT_LEADBOOTS{ON|OFF}"
+msgstr ""
+
+msgid "TXT_NOTARGET_{ON|OFF}"
+msgstr "無目標：{開|關}"
+
+msgid "TXT_CHASECAM_{ON|OFF}"
+msgstr "追蹤鏡頭：{開|關}"
+
+msgid "AMSTR_FOLLOW{ON|OFF}"
+msgstr "跟隨模式：{開|關}"
+
+msgid "AMSTR_GRID{ON|OFF}"
+msgstr "網格：{開|關}"
+
+msgid "AMSTR_TEX{ON|OFF}"
+msgstr "材質模式：{開|關}"
+
+msgctxt "chex"
+msgid "STSTR_DQD{ON|OFF}"
+msgstr ""
+
+msgid "MSG{ON|OFF}"
+msgstr "訊息：{開|關}"

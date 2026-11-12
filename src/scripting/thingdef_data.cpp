@@ -401,7 +401,7 @@ static FFlagDef ActorFlagDefs[]=
 	DEFINE_FLAG2(BOUNCE_NotOnSky, DONTBOUNCEONSKY, AActor, BounceFlags),
 	DEFINE_FLAG2(BOUNCE_KeepAngle, KEEPBOUNCEANGLE, AActor, BounceFlags),
 	DEFINE_FLAG2(BOUNCE_ModifyPitch, BOUNCEMODIFIESPITCH, AActor, BounceFlags),
-	
+
 	DEFINE_FLAG2(OF_Transient, NOSAVEGAME, AActor, ObjectFlags),
 	DEFINE_PROTECTED_FLAG2(OF_ClientSide, CLIENTSIDE, AActor, ObjectFlags),
 
@@ -660,7 +660,7 @@ void InitImports();
 struct UserInfoCVarNamePlayer
 {
 	FBaseCVar** addr;
-	FString name;
+	FName name;
 	int pnum;
 };
 
@@ -804,7 +804,7 @@ void InitThingdef()
 		if (typeInfo->InitNatives)
 			typeInfo->InitNatives();
 	});
-	
+
 	// Sort the flag lists
 	for (size_t i = 0; i < NUM_FLAG_LISTS; ++i)
 	{
@@ -856,7 +856,7 @@ void InitThingdef()
 		[](FSerializer &arc, const char *key, const void *addr)
 		{
 			const FBaseCVar * self = *(const FBaseCVar**)addr;
-			
+
 			if(self)
 			{
 				arc.BeginObject(key);
@@ -871,7 +871,7 @@ void InitThingdef()
 				}
 				else
 				{
-					FString name = self->GetName();
+					FName name = self->GetFName();
 					arc("name", name);
 				}
 
@@ -882,7 +882,7 @@ void InitThingdef()
 		{
 			FBaseCVar ** self = (FBaseCVar**)addr;
 
-			FString name;
+			FName name;
 			arc.BeginObject(key);
 
 			arc("name", name);
@@ -896,13 +896,22 @@ void InitThingdef()
 			{
 				if(int pnum; arc.ReadOptionalInt("player", pnum))
 				{
-					*self = nullptr;
-					LoadGameUserInfoCVars.Push({self, name, pnum}); // this needs to be done later, since userinfo isn't loaded yet
-					arc.EndObject();
-					return true;
+					if(arc.IsRollback())
+					{
+						*self = GetCVar(pnum, name.GetChars());
+						arc.EndObject();
+						return true;
+					}
+					else
+					{
+						*self = nullptr;
+						LoadGameUserInfoCVars.Push({self, name, pnum}); // this needs to be done later, since userinfo isn't loaded yet
+						arc.EndObject();
+						return true;
+					}
 				}
 			}
-			
+
 			*self = backing;
 
 			arc.EndObject();
@@ -962,4 +971,3 @@ DEFINE_ACTION_FUNCTION(DObject, BAM)
 	PARAM_ANGLE(ang);
 	ACTION_RETURN_INT(ang.BAMs());
 }
-

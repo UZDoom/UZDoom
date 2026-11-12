@@ -78,4 +78,3 @@ protected:
 
 	friend struct FLevelLocals;
 };
-

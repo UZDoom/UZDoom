@@ -15,7 +15,7 @@ public:
 	void SetTitle(const std::string& newtitle) override;
 
 private:
-	DisplayWindow* owner = nullptr;
+	[[maybe_unused]] DisplayWindow* owner = nullptr;
 
 	std::string selected_path;
 	std::string initial_directory;

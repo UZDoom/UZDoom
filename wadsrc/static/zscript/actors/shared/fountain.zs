@@ -37,7 +37,7 @@ class ParticleFountain : Actor
 		+NOGRAVITY
 		+INVISIBLE
 	}
-	
+
 	override void PostBeginPlay ()
 	{
 		Super.PostBeginPlay ();

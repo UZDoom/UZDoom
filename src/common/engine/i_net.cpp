@@ -83,6 +83,8 @@ const char* neterror(void);
 #define neterror() strerror(errno)
 #endif
 
+// TODO: Remove noverification after optfile allows properly handling unverified files.
+FARG(noverification, "Multiplayer", "Allows files over netgames to be mismatched; use with caution. Can only be set by the host.", "", "");
 FARG(host, "Multiplayer", "Designates the machine as the host for a multiplayer game.", "x",
 	"This machine will function as a host for a multiplayer game with x players (including this"
 	" machine). It will wait for other machines to connect using the -join. parameter and then"
@@ -96,7 +98,7 @@ FARG(dup, "Multiplayer", "Send less player movement commands over the network.",
 FARG(port, "Multiplayer", "Specifies an alternative IP port for a network game.", "x",
 	"Specifies an alternate IP port for this machine to use during a network game. By default,"
 	" port 5029 is used.");
-FARG(password, "", "", "",
+FARG(password, "Multiplayer", "Sets a password to be able to join the lobby. Can be up to 255 characters long.", "Password123!@#",
 	"");
 
 // As per http://support.microsoft.com/kb/q192599/ the standard
@@ -265,15 +267,53 @@ static void BuildAddress(sockaddr_in& address, const char* addrName)
 	}
 }
 
+int netInitCount = 0;
+
+void StartNetworkLean()
+{
+	#ifdef _WIN32
+	if (!DebugServer::RuntimeEvents::IsDebugServerRunning())
+	{
+		netInitCount++;
+		if(netInitCount == 1)
+		{
+			WSADATA data;
+			if (WSAStartup(MAKEWORD(2, 2), &data))
+				I_FatalError("Couldn't initialize Windows sockets");
+		}
+	}
+	#else
+	netInitCount++;
+	#endif
+}
+
+static void CloseNetworkLean()
+{
+	if(netInitCount == 0) return;
+	netInitCount--;
+	#ifdef _WIN32
+	if(netInitCount == 0)
+	{
+		if (!DebugServer::RuntimeEvents::IsDebugServerRunning())
+		{
+			WSACleanup();
+		}
+	}
+	#endif
+}
+
+bool IsNetworkStartedLean()
+{
+	#ifdef _WIN32
+	return netInitCount > 0 || DebugServer::RuntimeEvents::IsDebugServerRunning();
+	#else
+	return netInitCount > 0;
+	#endif
+}
+
 static void StartNetwork(bool autoPort)
 {
-#ifdef _WIN32
-	WSADATA data;
-	if (!DebugServer::RuntimeEvents::IsDebugServerRunning()) {
-		if (WSAStartup(0x0101, &data))
-			I_FatalError("Couldn't initialize Windows sockets");
-	}
-#endif
+	if(!IsNetworkStartedLean()) StartNetworkLean();
 
 	netgame = true;
 	multiplayer = true;
@@ -296,11 +336,18 @@ void CloseNetwork()
 		MySocket = INVALID_SOCKET;
 		netgame = false;
 	}
-#ifdef _WIN32
-	if (!DebugServer::RuntimeEvents::IsDebugServerRunning()){
-		WSACleanup();
-	}
-#endif
+
+	CloseNetworkLean();
+}
+
+uint8_t GetPacketFlags(uint8_t flags)
+{
+	return (flags & NCMD_FLAGS);
+}
+
+ENetPacketType GetPacketType(uint8_t type)
+{
+	return static_cast<ENetPacketType>(type & ~NCMD_FLAGS);
 }
 
 static void GenerateGameID()
@@ -449,14 +496,15 @@ static void SendPacket(const sockaddr_in& to)
 	if (NetBufferLength > MAX_MSGLEN)
 		I_FatalError("Netbuffer overflow: Tried to send %lu bytes of data", NetBufferLength);
 
-	assert(!(NetBuffer[0] & NCMD_COMPRESSED));
+	assert(!(NetBuffer[0] & NCMD_FLAG_COMPRESSED));
 
 	uint8_t* dataStart = &TransmitBuffer[4];
 	uLong size = MaxTransmitSize - 5u;
+	assert((NetBufferLength) <= ULONG_MAX);
 	if (NetBufferLength >= MinCompressionSize)
 	{
-		*dataStart = NetBuffer[0] | NCMD_COMPRESSED;
-		const int res = compress2(dataStart + 1, &size, NetBuffer + 1, NetBufferLength - 1u, 9);
+		*dataStart = NetBuffer[0] | NCMD_FLAG_COMPRESSED;
+		const int res = compress2(dataStart + 1, &size, NetBuffer + 1, static_cast<unsigned long>(NetBufferLength - 1u), 9);
 		if (res != Z_OK)
 			I_Error("Net compression failed (zlib error %d)", res);
 
@@ -465,14 +513,14 @@ static void SendPacket(const sockaddr_in& to)
 	else
 	{
 		memcpy(dataStart, NetBuffer, NetBufferLength);
-		size = NetBufferLength;
+		size = static_cast<unsigned long>(NetBufferLength);
 	}
 
 	if (size + 4 > MaxTransmitSize)
 		I_Error("Failed to compress data down to acceptable transmission size");
 
 	// If a connection packet, don't check the game id since they might not have it yet.
-	const uint32_t crc = (NetBuffer[0] & NCMD_SETUP) ? CalcCRC32(dataStart, size) : AddCRC32(CalcCRC32(dataStart, size), GameID, std::extent_v<decltype(GameID)>);
+	const uint32_t crc = GetPacketType(NetBuffer[0]) == NCMD_CONNECT ? CalcCRC32(dataStart, size) : AddCRC32(CalcCRC32(dataStart, size), GameID, std::extent_v<decltype(GameID)>);
 	TransmitBuffer[0] = crc >> 24;
 	TransmitBuffer[1] = crc >> 16;
 	TransmitBuffer[2] = crc >> 8;
@@ -507,7 +555,7 @@ static void GetPacket(sockaddr_in* const from = nullptr)
 				if (client == Net_Arbitrator)
 					I_NetError("Host unexpectedly disconnected");
 
-				NetBuffer[0] = NCMD_EXIT;
+				NetBuffer[0] = NCMD_DISCONNECT;
 				msgSize = 1;
 			}
 		}
@@ -524,13 +572,14 @@ static void GetPacket(sockaddr_in* const from = nullptr)
 	else if (msgSize > 0)
 	{
 		const uint8_t* dataStart = &TransmitBuffer[4];
-		if (client == -1 && !(*dataStart & NCMD_SETUP))
+		const auto type = GetPacketType(*dataStart);
+		if (client == -1 && type != NCMD_CONNECT)
 		{
 			msgSize = 0;
 		}
 		else if (client == -1 && bGameStarted)
 		{
-			NetBuffer[0] = NCMD_SETUP;
+			NetBuffer[0] = NCMD_CONNECT;
 			NetBuffer[1] = PRE_IN_PROGRESS;
 			NetBufferLength = 2u;
 			SendPacket(fromAddress);
@@ -538,7 +587,7 @@ static void GetPacket(sockaddr_in* const from = nullptr)
 		}
 		else
 		{
-			const uint32_t check = (*dataStart & NCMD_SETUP) ? CalcCRC32(dataStart, msgSize - 4) : AddCRC32(CalcCRC32(dataStart, msgSize - 4), GameID, std::extent_v<decltype(GameID)>);
+			const uint32_t check = type == NCMD_CONNECT ? CalcCRC32(dataStart, msgSize - 4) : AddCRC32(CalcCRC32(dataStart, msgSize - 4), GameID, std::extent_v<decltype(GameID)>);
 			const uint32_t crc = (TransmitBuffer[0] << 24) | (TransmitBuffer[1] << 16) | (TransmitBuffer[2] << 8) | TransmitBuffer[3];
 			if (check != crc)
 			{
@@ -548,8 +597,8 @@ static void GetPacket(sockaddr_in* const from = nullptr)
 			}
 			else
 			{
-				NetBuffer[0] = (*dataStart & ~NCMD_COMPRESSED);
-				if (*dataStart & NCMD_COMPRESSED)
+				NetBuffer[0] = (*dataStart & ~NCMD_FLAG_COMPRESSED);
+				if (GetPacketFlags(*dataStart) & NCMD_FLAG_COMPRESSED)
 				{
 					uLongf size = MAX_MSGLEN - 1;
 					int err = uncompress(NetBuffer + 1, &size, dataStart + 1, msgSize - 5);
@@ -618,7 +667,7 @@ static bool GetConnection(sockaddr_in& from)
 
 static void RejectConnection(const sockaddr_in& to, ENetConnectType reason)
 {
-	NetBuffer[0] = NCMD_SETUP;
+	NetBuffer[0] = NCMD_CONNECT;
 	NetBuffer[1] = reason;
 	NetBufferLength = 2u;
 
@@ -627,7 +676,7 @@ static void RejectConnection(const sockaddr_in& to, ENetConnectType reason)
 
 static void SendVerificationError(const sockaddr_in& to, const FVerificationError& error)
 {
-	NetBuffer[0] = NCMD_SETUP;
+	NetBuffer[0] = NCMD_CONNECT;
 	NetBuffer[1] = PRE_VERIFICATION_ERROR;
 	NetBuffer[2] = error.Error;
 	if (error.Error == FVerificationError::VE_ENGINE)
@@ -693,7 +742,7 @@ static void RemoveClientConnection(int client)
 	I_NetLog("Client %u left the lobby", client);
 
 	// Let everyone else know the user left as well.
-	NetBuffer[0] = NCMD_SETUP;
+	NetBuffer[0] = NCMD_CONNECT;
 	NetBuffer[1] = PRE_DISCONNECT;
 	NetBuffer[2] = client;
 	NetBufferLength = 3u;
@@ -716,13 +765,14 @@ void HandleIncomingConnection()
 
 	if (Connected[RemoteClient].Status == CSTAT_READY)
 	{
-		NetBuffer[0] = NCMD_SETUP;
+		NetBuffer[0] = NCMD_CONNECT;
 		NetBuffer[1] = PRE_GO;
 		NetBufferLength = 2u;
 		SendPacket(Connected[RemoteClient].Address);
 	}
 }
 
+static bool SkipFileVerification = false;
 static bool Host_CheckForConnections(void* connected)
 {
 	const bool forceStarting = I_ShouldStartNetGame();
@@ -764,7 +814,8 @@ static bool Host_CheckForConnections(void* connected)
 	sockaddr_in from;
 	while (GetConnection(from))
 	{
-		if (NetBuffer[0] == NCMD_EXIT)
+		const auto type = GetPacketType(NetBuffer[0]);
+		if (type == NCMD_DISCONNECT)
 		{
 			if (RemoteClient >= 0)
 			{
@@ -776,7 +827,7 @@ static bool Host_CheckForConnections(void* connected)
 			continue;
 		}
 
-		if (NetBuffer[0] != NCMD_SETUP)
+		if (type != NCMD_CONNECT)
 			continue;
 
 		if (NetBuffer[1] == PRE_CONNECT)
@@ -798,7 +849,8 @@ static bool Host_CheckForConnections(void* connected)
 			{
 				RejectConnection(from, PRE_BANNED);
 			}
-			else if ((error = Net_VerifyEngine(engineInfo, passwordOffset)).Error != FVerificationError::VE_NONE)
+			else if ((error = Net_VerifyEngine(engineInfo, passwordOffset)).Error != FVerificationError::VE_NONE
+					&& (error.Error == FVerificationError::VE_ENGINE || !SkipFileVerification))
 			{
 				SendVerificationError(from, error);
 			}
@@ -850,7 +902,7 @@ static bool Host_CheckForConnections(void* connected)
 
 	const size_t addrSize = sizeof(sockaddr_in);
 	bool ready = true;
-	NetBuffer[0] = NCMD_SETUP;
+	NetBuffer[0] = NCMD_CONNECT;
 	for (int client = 1; client < MaxClients; ++client)
 	{
 		auto& con = Connected[client];
@@ -885,7 +937,7 @@ static bool Host_CheckForConnections(void* connected)
 				memcpy(&NetBuffer[3], GameID, 8);
 				NetBufferLength = 11u;
 
-				TArrayView<uint8_t> stream = TArrayView(&NetBuffer[NetBufferLength], MAX_MSGLEN - NetBufferLength);
+				TArrayView<uint8_t> stream = TArrayView(&NetBuffer[NetBufferLength], static_cast<uint32_t>(MAX_MSGLEN - NetBufferLength));
 				Net_SetGameInfo(stream);
 				NetBufferLength += stream.Data() - &NetBuffer[NetBufferLength];
 				SendPacket(con.Address);
@@ -911,7 +963,7 @@ static bool Host_CheckForConnections(void* connected)
 							NetBufferLength += addrSize;
 						}
 
-						TArrayView<uint8_t> stream = TArrayView(&NetBuffer[NetBufferLength], MAX_MSGLEN - NetBufferLength);
+						TArrayView<uint8_t> stream = TArrayView(&NetBuffer[NetBufferLength], static_cast<uint32_t>(MAX_MSGLEN - NetBufferLength));
 						Net_SetUserInfo(i, stream);
 						NetBufferLength += stream.Data() - &NetBuffer[NetBufferLength];
 						SendPacket(con.Address);
@@ -941,7 +993,7 @@ static bool Host_CheckForConnections(void* connected)
 
 static void SendAbort()
 {
-	NetBuffer[0] = NCMD_EXIT;
+	NetBuffer[0] = NCMD_DISCONNECT;
 	NetBufferLength = 1u;
 
 	if (consoleplayer == 0)
@@ -988,6 +1040,9 @@ static bool HostGame(int arg)
 
 	// Wait for the lobby to be full.
 	int connectedPlayers = 1;
+	// TODO: This is a really bad solution, but this will be getting removed after -optfile
+	// can properly handle unverified files, so it will do for now.
+	SkipFileVerification = Args->CheckParm(FArg_noverification);
 	if (!I_NetLoop(Host_CheckForConnections, (void*)&connectedPlayers))
 	{
 		SendAbort();
@@ -1010,7 +1065,7 @@ static bool HostGame(int arg)
 
 	I_NetLog("Go");
 
-	NetBuffer[0] = NCMD_SETUP;
+	NetBuffer[0] = NCMD_CONNECT;
 	NetBuffer[1] = PRE_GO;
 	NetBufferLength = 2u;
 	for (size_t client = 1u; client < (size_t)MaxClients; ++client)
@@ -1033,7 +1088,7 @@ static FString ReadVerificationError(TArrayView<uint8_t> stream)
 	}
 
 	TMap<FString, FString> files = {};
-	for (size_t i = 0u; i < fileSystem.GetNumWads(); ++i)
+	for (int i = 0; i < fileSystem.GetNumWads(); ++i)
 	{
 		if (!fileSystem.IsOptionalResource(i))
 		{
@@ -1102,10 +1157,11 @@ static bool Guest_ContactHost(void* unused)
 		if (RemoteClient != 0)
 			continue;
 
-		if (NetBuffer[0] == NCMD_EXIT)
+		const auto type = GetPacketType(NetBuffer[0]);
+		if (type == NCMD_DISCONNECT)
 			I_NetError("The host cancelled the game");
 
-		if (NetBuffer[0] != NCMD_SETUP)
+		if (type != NCMD_CONNECT)
 			continue;
 
 		if (NetBuffer[1] == PRE_HEARTBEAT)
@@ -1174,7 +1230,7 @@ static bool Guest_ContactHost(void* unused)
 				I_NetMessage("Waiting for game to start");
 			}
 
-			NetBuffer[0] = NCMD_SETUP;
+			NetBuffer[0] = NCMD_CONNECT;
 			NetBuffer[1] = PRE_USER_INFO_ACK;
 			NetBuffer[2] = consoleplayer;
 			NetBufferLength = 3u;
@@ -1191,7 +1247,7 @@ static bool Guest_ContactHost(void* unused)
 				Connected[consoleplayer].bHasGameInfo = true;
 			}
 
-			NetBuffer[0] = NCMD_SETUP;
+			NetBuffer[0] = NCMD_CONNECT;
 			NetBuffer[1] = PRE_GAME_INFO_ACK;
 			NetBufferLength = 2u;
 			SendPacket(from);
@@ -1213,14 +1269,14 @@ static bool Guest_ContactHost(void* unused)
 				{
 					Connected[c].Status = CSTAT_READY;
 				}
-				TArrayView<uint8_t> stream = TArrayView(&NetBuffer[byte], MAX_MSGLEN - byte);
+				TArrayView<uint8_t> stream = TArrayView(&NetBuffer[byte], static_cast<unsigned>(MAX_MSGLEN - byte));
 				Net_ReadUserInfo(c, stream);
 				SetClientAck(consoleplayer, c, true);
 
 				I_NetClientConnected(c, 16u);
 			}
 
-			NetBuffer[0] = NCMD_SETUP;
+			NetBuffer[0] = NCMD_CONNECT;
 			NetBuffer[1] = PRE_USER_INFO_ACK;
 			NetBuffer[2] = c;
 			NetBufferLength = 3u;
@@ -1234,7 +1290,7 @@ static bool Guest_ContactHost(void* unused)
 		}
 	}
 
-	NetBuffer[0] = NCMD_SETUP;
+	NetBuffer[0] = NCMD_CONNECT;
 	if (consoleplayer == -1)
 	{
 		NetBuffer[1] = PRE_CONNECT;
@@ -1253,7 +1309,7 @@ static bool Guest_ContactHost(void* unused)
 			NetBuffer[1] = PRE_USER_INFO;
 			NetBufferLength = 2u;
 
-			TArrayView<uint8_t> stream = TArrayView(&NetBuffer[NetBufferLength], MAX_MSGLEN - NetBufferLength);
+			TArrayView<uint8_t> stream = TArrayView(&NetBuffer[NetBufferLength], static_cast<unsigned>(MAX_MSGLEN - NetBufferLength));
 			Net_SetUserInfo(consoleplayer, stream);
 			NetBufferLength += stream.Data() - &NetBuffer[NetBufferLength];
 			SendPacket(Connected[0].Address);

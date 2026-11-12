@@ -536,7 +536,7 @@ void FDDSTexture::DecompressDXT1 (FileReader &lump, uint8_t *buffer, int pixelmo
 						break;
 					}
 					int ci = (yslice >> (x + x)) & 3;
-					if (pixelmode != PIX_ARGB) 
+					if (pixelmode != PIX_ARGB)
 					{
 						buffer[oy + y + (ox + x) * Height] = palcol[ci];
 					}
@@ -796,4 +796,4 @@ int FDDSTexture::CopyPixels(FBitmap *bmp, int conversion, int frame)
 	}
 
 	return -1;
-}	
+}

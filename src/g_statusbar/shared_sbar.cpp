@@ -24,37 +24,31 @@
 
 #include <assert.h>
 
-
-#include "sbar.h"
 #include "c_cvars.h"
 #include "c_dispatch.h"
-#include "c_console.h"
-#include "v_video.h"
-#include "filesystem.h"
-#include "s_sound.h"
-#include "gi.h"
-#include "doomstat.h"
-#include "g_level.h"
+#include "cmdlib.h"
 #include "d_net.h"
 #include "d_player.h"
-#include "serializer.h"
-#include "serialize_obj.h"
-#include "r_utility.h"
-#include "cmdlib.h"
-#include "g_levellocals.h"
-#include "vm.h"
-#include "p_acs.h"
-#include "sbarinfo.h"
-#include "gstrings.h"
+#include "doomstat.h"
 #include "events.h"
+#include "filesystem.h"
 #include "g_game.h"
-#include "utf8.h"
+#include "g_levellocals.h"
+#include "gi.h"
+#include "gstrings.h"
+#include "p_acs.h"
+#include "r_utility.h"
+#include "s_sound.h"
+#include "sbar.h"
+#include "sbarinfo.h"
+#include "serialize_obj.h" // IWYU pragma: keep
+#include "serializer.h"
 #include "texturemanager.h"
-#include "v_palette.h"
 #include "v_draw.h"
-#include "m_fixed.h"
-
-#include "../version.h"
+#include "v_palette.h"
+#include "v_video.h"
+#include "version.h"
+#include "vm.h"
 
 #define XHAIRSHRINKSIZE		(1./18)
 #define XHAIRPICKUPSIZE		(2+XHAIRSHRINKSIZE)
@@ -77,10 +71,13 @@ EXTERN_CVAR (Bool, am_showtotaltime)
 EXTERN_CVAR (Bool, am_showlevelname)
 EXTERN_CVAR(Bool, inter_subtitles)
 EXTERN_CVAR(Bool, ui_screenborder_classic_scaling)
+EXTERN_CVAR(Bool, am_match_statusbar)
 
 CVAR(Int, hud_scale, -1, CVAR_ARCHIVE);
-CVAR(Bool, log_vgafont, false, CVAR_ARCHIVE)
-CVAR(Bool, hud_oldscale, true, CVAR_ARCHIVE)
+CVAR(Bool, log_vgafont, false, CVAR_ARCHIVE);
+CVAR(Bool, hud_oldscale, true, CVAR_ARCHIVE);
+CVAR(Float, crosshair_offset_x, 0., CVAR_ARCHIVE);
+CVAR(Float, crosshair_offset_y, 0., CVAR_ARCHIVE);
 
 DBaseStatusBar *StatusBar;
 
@@ -112,7 +109,7 @@ EXTERN_CVAR(Float, hud_scalefactor)
 EXTERN_CVAR(Bool, hud_aspectscale)
 
 CVAR (Bool, crosshairon, true, CVAR_ARCHIVE);
-CVAR (Int, crosshair, 0, CVAR_ARCHIVE)
+CVAR (Int, crosshair, 1, CVAR_ARCHIVE)
 CVAR (Bool, crosshairforce, false, CVAR_ARCHIVE)
 CUSTOM_CVAR(Int, am_showmaplabel, 2, CVAR_ARCHIVE)
 {
@@ -437,8 +434,8 @@ void DBaseStatusBar::SetScale ()
 		int sby = VerticalResolution - RelTop;
 		float aspect = ActiveRatio(w, h);
 		if (!AspectTallerThanWide(aspect))
-		{ 
-			// Wider or equal than 4:3 
+		{
+			// Wider or equal than 4:3
 			SBarTop = Scale(sby, h, VerticalResolution);
 			double width4_3 = w * 1.333 / aspect;
 			ST_X = int((w - width4_3) / 2);
@@ -527,14 +524,14 @@ void DBaseStatusBar::DoDrawAutomapHUD(int crdefault, int highlight)
 	auto scalev = GetHUDScale();
 	int vwidth = int(twod->GetWidth() / scalev.X);
 	int vheight = int(twod->GetHeight() / scalev.Y);
-	
-	auto font = generic_ui ? NewSmallFont : SmallFont;
+
+	auto font = FFont::GetSmallTextFont(generic_ui ? NewSmallFont : SmallFont);
 	auto font2 = font;
 	auto fheight = font->GetHeight();
 	FString textbuffer;
 	int sec;
-	int y = 0;
 	int textdist = 4;
+	int y = textdist;
 	int zerowidth = font->GetCharWidth('0');
 
 	if (!generic_ui)
@@ -547,7 +544,11 @@ void DBaseStatusBar::DoDrawAutomapHUD(int crdefault, int highlight)
 	{
 		sec = Tics2Seconds(primaryLevel->time);
 		textbuffer.Format("%02d:%02d:%02d", sec / 3600, (sec % 3600) / 60, sec % 60);
-		DrawText(twod, font, crdefault, vwidth - zerowidth * 8 - textdist, y, textbuffer.GetChars(), DTA_VirtualWidth, vwidth, DTA_VirtualHeight, vheight,
+		const bool useDynamicAlighment = font->IsValidDynamicFont();
+		auto       xpos =
+            useDynamicAlighment ? vwidth - font->StringWidth(textbuffer) - textdist : vwidth - zerowidth * 8 - textdist;
+		DrawText(twod, font, crdefault, xpos, y, textbuffer.GetChars(),
+		         DTA_VirtualWidth, vwidth, DTA_VirtualHeight, vheight,
 			DTA_Monospace, EMonospacing::CellCenter, DTA_Spacing, zerowidth, DTA_KeepRatio, true, TAG_END);
 		y += fheight;
 	}
@@ -562,7 +563,7 @@ void DBaseStatusBar::DoDrawAutomapHUD(int crdefault, int highlight)
 
 	if (!deathmatch)
 	{
-		y = 0;
+		y = textdist;
 		if (am_showmonsters)
 		{
 			textbuffer.Format("%s\34%c %d/%d", GStrings.GetString("AM_MONSTERS"), crdefault + 65, primaryLevel->killed_monsters, primaryLevel->total_monsters);
@@ -616,8 +617,14 @@ void DBaseStatusBar::DoDrawAutomapHUD(int crdefault, int highlight)
 
 	StatusbarToRealCoords(x, yy, w, h);
 
+	int screenBottom = GetTopOfStatusbar();
+	if (am_match_statusbar && viewheight == SCREENHEIGHT)
+	{
+		screenBottom = SCREENHEIGHT;
+	}
+
 	// Get the y coordinate for the first line of the map name text.
-	y = Scale(GetTopOfStatusbar() - int(h), vheight, twod->GetHeight()) - fheight * numlines;
+	y = Scale(screenBottom - int(h), vheight, twod->GetHeight()) - fheight * numlines;
 
 	// Draw the texts centered above the status bar.
 	for (unsigned i = 0; i < numlines; i++)
@@ -905,7 +912,7 @@ void DBaseStatusBar::RefreshViewBorder ()
 		DrawBorder(twod, tex, 0, viewwindowy, viewwindowx, viewheight + viewwindowy);
 		DrawBorder(twod, tex, viewwindowx + viewwidth, viewwindowy, Width, viewheight + viewwindowy);
 		DrawBorder(twod, tex, 0, viewwindowy + viewheight, Width, StatusBar->GetTopOfStatusbar());
-		
+
 		V_DrawFrame(twod, viewwindowx, viewwindowy, viewwidth, viewheight, ui_screenborder_classic_scaling);
 	}
 }
@@ -923,7 +930,7 @@ void DBaseStatusBar::RefreshBackground () const
 	float ratio = ActiveRatio (twod->GetWidth(), twod->GetHeight());
 	x = ST_X;
 	y = SBarTop;
-	
+
 	if (x == 0 && y == twod->GetHeight()) return;
 
 	auto tex = GetBorderTexture(primaryLevel);
@@ -1020,7 +1027,9 @@ void DBaseStatusBar::DrawCrosshair (double ticFrac)
 	int health = Scale(CPlayer->health, 100, CPlayer->mo->GetDefault()->health);
 
 	const double size = PrevCrosshairSize * (1.0 - ticFrac) + CrosshairSize * ticFrac;
-	ST_DrawCrosshair(health, viewwidth / 2 + viewwindowx, viewheight / 2 + viewwindowy, size);
+	const double x = viewwindowx + (0.5+crosshair_offset_x/2)*viewwidth;
+	const double y = viewwindowy + (0.5-crosshair_offset_y/2)*viewheight;
+	ST_DrawCrosshair(health, x, y, size);
 }
 
 static void DrawCrosshair(DBaseStatusBar* self, double ticFrac)
@@ -1102,7 +1111,7 @@ void DBaseStatusBar::DrawLog ()
 		auto scale = active_con_scaletext(twod, generic_ui || log_vgafont);
 		hudwidth = twod->GetWidth() / scale;
 		hudheight = twod->GetHeight() / scale;
-		FFont *font = (generic_ui || log_vgafont)? NewSmallFont : SmallFont;
+		FFont *font = FFont::GetSmallTextFont((generic_ui || log_vgafont)? NewSmallFont : SmallFont);
 
 		int linelen = hudwidth<640? Scale(hudwidth,9,10)-40 : 560;
 		auto lines = V_BreakLines (font, linelen, text[0] == '$'? GStrings.GetString(text.GetChars()+1) : text.GetChars());
@@ -1125,7 +1134,7 @@ void DBaseStatusBar::DrawLog ()
 			if (y<0) y=0;
 			w=600;
 		}
-		Dim(twod, 0, 0.5f, Scale(x, twod->GetWidth(), hudwidth), Scale(y, twod->GetHeight(), hudheight), 
+		Dim(twod, 0, 0.5f, Scale(x, twod->GetWidth(), hudwidth), Scale(y, twod->GetHeight(), hudheight),
 							 Scale(w, twod->GetWidth(), hudwidth), Scale(height, twod->GetHeight(), hudheight));
 		x+=20;
 		y+=10;
@@ -1473,4 +1482,3 @@ int GetInventoryIcon(AActor *item, uint32_t flags, int *applyscale)
 	}
 	return picnum.GetIndex();
 }
-

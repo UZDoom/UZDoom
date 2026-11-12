@@ -34,4 +34,3 @@ void G_SerializeHub (FSerializer &file);
 void G_LeavingHub(FLevelLocals *Level, int mode, cluster_info_t * cluster, struct wbstartstruct_t * wbs);
 
 #endif
-

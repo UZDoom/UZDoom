@@ -145,5 +145,3 @@ void FCycler::Update(double diff)
 		m_increment = !m_increment;
 	}
 }
-
-

@@ -171,7 +171,8 @@ enum ELineFlags : uint32_t
 	ML_DRAWFULLHEIGHT			= 0x40000000,	// Draw the full height of the upper/lower sections
 	ML_PORTALCONNECT			= 0x80000000,	// for internal use only: This line connects to a sector with a linked portal (used to speed up sight checks.)
 	// Flag words may not exceed 32 bit due to VM limitations.
-	ML2_BLOCKLANDMONSTERS		= 0x1,	// MBF21
+	ML2_BLOCKLANDMONSTERS		= 0x00000001,	// MBF21
+	ML2_RESERVEDLINEFLAG		= 0x00000002,	// MBF21
 };
 
 
@@ -182,7 +183,7 @@ enum SPAC
 	SPAC_Use = 1<<1,		// when player uses line
 	SPAC_MCross = 1<<2,		// when monster crosses line
 	SPAC_Impact = 1<<3,		// when projectile hits line
-	SPAC_Push = 1<<4,		// when player pushes line	
+	SPAC_Push = 1<<4,		// when player pushes line
 	SPAC_PCross = 1<<5,		// when projectile crosses line
 	SPAC_UseThrough = 1<<6,	// when player uses line (doesn't block)
 	// SPAC_PTOUCH is mapped to SPAC_PCross|SPAC_Impact
@@ -269,7 +270,7 @@ struct mapseg_t
 	int V2() { return LittleShort(v2); }
 };
 
-struct mapseg4_t 
+struct mapseg4_t
 {
 	int32_t v1;
 	int32_t v2;

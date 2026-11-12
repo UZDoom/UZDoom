@@ -3,7 +3,7 @@
  ** Implements base class for the different MIDI formats
  **
  **---------------------------------------------------------------------------
- ** Copyright 2008-2016 Randy Heit
+ ** Copyright 2008-2016 Marisa Heit
  ** Copyright 2017-2018 Christoph Oelckers
  ** All rights reserved.
  **
@@ -142,7 +142,7 @@ std::vector<uint16_t> MIDISource::PrecacheData()
 		uint32_t *event_end = MakeEvents(Events[0], &Events[0][MAX_MIDI_EVENTS*3], 1000000*600);
 		for (uint32_t *event = Events[0]; event < event_end; )
 		{
-			if (MEVENT_EVENTTYPE(event[2]) == 0)
+			if (MEVENT_EVENTTYPE(event[2]) == MEVENT_SHORTMSG)
 			{
 				int command = (event[2] & 0x70);
 				int channel = (event[2] & 0x0f);
@@ -359,7 +359,7 @@ void MIDISource::CreateSMF(std::vector<uint8_t> &file, int looplimit)
 				}
 				running_status = 255;
 			}
-			else if (MEVENT_EVENTTYPE(event[2]) == 0)
+			else if (MEVENT_EVENTTYPE(event[2]) == MEVENT_SHORTMSG)
 			{
 				WriteVarLen(file, delay);
 				delay = 0;

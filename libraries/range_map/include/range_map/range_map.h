@@ -1,5 +1,10 @@
 // (C) Beneficii.  Released under Creative Commons license.
 
+// As clarified in an email to a UZDoom dev:
+// The original intent was to use CC-BY. You have permission to use it under that license.
+
+// https://creativecommons.org/licenses/by/4.0/
+
 #ifndef BENEFICII_RANGE_MAP_RANGE_MAP_HPP
 #define	BENEFICII_RANGE_MAP_RANGE_MAP_HPP
 

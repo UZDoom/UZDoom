@@ -158,3 +158,7 @@ MIDIDevice* CreateWinMIDIDevice(int mididevice);
 #ifdef __linux__
 MIDIDevice* CreateAlsaMIDIDevice(int mididevice);
 #endif
+
+#ifdef __APPLE__
+MIDIDevice* CreateCoreMIDIDevice(int mididevice);
+#endif

@@ -51,7 +51,7 @@ IMPLEMENT_CLASS(PFunction, false, false)
 //==========================================================================
 
 PSymbolConstString::PSymbolConstString(FName name, const FString &str)
-	: PSymbolConst(name, TypeString), Str(str) 
+	: PSymbolConst(name, TypeString), Str(str)
 {
 }
 

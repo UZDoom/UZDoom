@@ -73,7 +73,11 @@ void InitSkyMap(FLevelLocals *Level)
 	}
 	if (Level->skymisttexture.isNull())
 	{
-		Level->skymisttexture = TexMan.CheckForTexture("skymist1", ETextureType::Any);
+		Level->skymisttexture = TexMan.CheckForTexture("skymista", ETextureType::Any);
+		if (TexMan.GetGameTexture(Level->skymisttexture, false) == nullptr)
+		{
+			Level->skymisttexture.SetNull();
+		}
 	}
 
 	skytex1 = TexMan.GetGameTexture(Level->skytexture1, false);
@@ -145,4 +149,3 @@ void R_UpdateSky(double ticFrac)
 		Level->hw_skymistyscale += ticFrac * (Level->skymistyscale - Level->hw_skymistyscale);
 	}
 }
-

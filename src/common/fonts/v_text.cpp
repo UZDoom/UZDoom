@@ -22,21 +22,14 @@
 **
 */
 
-#include <stdlib.h>
-#include <stdarg.h>
-#include <ctype.h>
-#include <wctype.h>
-
-#include "v_text.h"
-#include "v_font.h"
-#include "utf8.h"
-
-#include "filesystem.h"
-
-#include "gstrings.h"
-#include "vm.h"
-#include "serializer.h"
 #include "c_cvars.h"
+#include "gstrings.h"
+#include "printf.h"
+#include "serializer.h"
+#include "utf8.h"
+#include "v_font.h"
+#include "v_text.h"
+#include "vm.h"
 
 //==========================================================================
 //
@@ -91,7 +84,7 @@ TArray<FBrokenLines> V_BreakLines (FFont *font, int maxwidth, const uint8_t *str
 			continue;
 		}
 
-		if (myisspace(c)) 
+		if (myisspace(c))
 		{
 			if (!lastWasSpace)
 			{
@@ -269,6 +262,7 @@ void UpdateGenericUI(bool cvar)
 {
 	auto switchstr = GStrings.CheckString("USE_GENERIC_FONT");
 	generic_ui = (cvar || (switchstr && strtoll(switchstr, nullptr, 0)));
+	AlternativeSmallFont = AlternativeBigFont = NewSmallFont;
 	if (!generic_ui)
 	{
 		// Use the mod's SmallFont if it is complete.
@@ -304,7 +298,7 @@ void UpdateGenericUI(bool cvar)
 	// Turkish i crap. What a mess, just to save two code points... :(
 	switchstr = GStrings.CheckString("REQUIRED_CHARACTERS");
 	special_i = switchstr && strstr(switchstr, "\xc4\xb0") != nullptr; // capital dotted i (İ).
-	if (special_i) 
+	if (special_i)
 	{
 		upperforlower['i'] = 0x130;
 		lowerforupper['I'] = 0x131;

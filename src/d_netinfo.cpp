@@ -33,6 +33,7 @@
 #include "d_net.h"
 #include "d_player.h"
 #include "c_dispatch.h"
+#include "colorspace.h"
 #include "r_state.h"
 #include "sbar.h"
 #include "teaminfo.h"
@@ -44,22 +45,23 @@
 
 static FRandom pr_pickteam ("PickRandomTeam");
 
-CVAR (Float,	autoaim,				35.f,		CVAR_USERINFO | CVAR_ARCHIVE);
-CVAR (String,	name,					"Player",	CVAR_USERINFO | CVAR_ARCHIVE);
-CVAR (Color,	color,					0x40cf00,	CVAR_USERINFO | CVAR_ARCHIVE);
-CVAR (Int,		colorset,				0,			CVAR_USERINFO | CVAR_ARCHIVE);
-CVAR (String,	skin,					"base",		CVAR_USERINFO | CVAR_ARCHIVE);
-CVAR (Int,		team,					TEAM_NONE,	CVAR_USERINFO | CVAR_ARCHIVE);
-CVAR (String,	gender,					"neutral",	CVAR_USERINFO | CVAR_ARCHIVE);
-CVAR (Bool,		neverswitchonpickup,	false,		CVAR_USERINFO | CVAR_ARCHIVE);
-CVAR (Float,	movebob,				0.25f,		CVAR_USERINFO | CVAR_ARCHIVE);
-CVAR (Bool,		fviewbob,               true,       CVAR_USERINFO | CVAR_ARCHIVE);
-CVAR (Float,	stillbob,				0.f,		CVAR_USERINFO | CVAR_ARCHIVE);
-CVAR (Float,	wbobspeed,				1.f,		CVAR_USERINFO | CVAR_ARCHIVE);
-CVAR (Float,	wbobfire,				0.f,		CVAR_USERINFO | CVAR_ARCHIVE);
-CVAR (String,	playerclass,			"Fighter",	CVAR_USERINFO | CVAR_ARCHIVE);
-CVAR (Bool,		classicflight,			false,		CVAR_USERINFO | CVAR_ARCHIVE);
-CVAR (Bool,		vertspread,				false,		CVAR_USERINFO | CVAR_ARCHIVE);
+CVAR (Float,  autoaim,                 35.f, CVAR_USERINFO | CVAR_ARCHIVE);
+CVAR (String, name,                "Player", CVAR_USERINFO | CVAR_ARCHIVE);
+CVAR (Color,  color,  Color::str("#40cf00"), CVAR_USERINFO | CVAR_ARCHIVE);
+CVAR (Int,    colorset,                   0, CVAR_USERINFO | CVAR_ARCHIVE);
+CVAR (String, skin,                  "base", CVAR_USERINFO | CVAR_ARCHIVE);
+CVAR (Int,    team,               TEAM_NONE, CVAR_USERINFO | CVAR_ARCHIVE);
+CVAR (String, gender,             "neutral", CVAR_USERINFO | CVAR_ARCHIVE);
+CVAR (Bool,   neverswitchonpickup,    false, CVAR_USERINFO | CVAR_ARCHIVE);
+CVAR (Float,  movebob,                0.25f, CVAR_USERINFO | CVAR_ARCHIVE);
+CVAR (Bool,   fviewbob,                true, CVAR_USERINFO | CVAR_ARCHIVE);
+CVAR (Float,  stillbob,                 0.f, CVAR_USERINFO | CVAR_ARCHIVE);
+CVAR (Float,  wbobspeed,                1.f, CVAR_USERINFO | CVAR_ARCHIVE);
+CVAR (Float,  wbobfire,                 0.f, CVAR_USERINFO | CVAR_ARCHIVE);
+CVAR (String, playerclass,        "Fighter", CVAR_USERINFO | CVAR_ARCHIVE);
+CVAR (Bool,   classicflight,          false, CVAR_USERINFO | CVAR_ARCHIVE);
+
+DEPR_CVAR(Bool, vertspread, false, "Engine feature removed in favour of modding");
 
 enum
 {
@@ -78,7 +80,6 @@ enum
 	INFO_PlayerClass,
 	INFO_ColorSet,
 	INFO_ClassicFlight,
-	INFO_VertSpread,
 };
 
 const char *GenderNames[GENDER_MAX] = { "male", "female", "neutral", "other" };
@@ -402,7 +403,7 @@ void D_SetupUserInfo ()
 		if ((cvar->GetFlags() & (CVAR_USERINFO|CVAR_IGNORE)) == CVAR_USERINFO)
 		{
 			FBaseCVar **newcvar;
-			FName cvarname(cvar->GetName());
+			FName cvarname = cvar->GetFName();
 
 			switch (cvarname.GetIndex())
 			{
@@ -443,7 +444,7 @@ void userinfo_t::Reset(int pnum)
 		if ((cvar->GetFlags() & (CVAR_USERINFO|CVAR_IGNORE)) == CVAR_USERINFO)
 		{
 			ECVarType type;
-			FName cvarname(cvar->GetName());
+			FName cvarname = cvar->GetFName();
 			FBaseCVar *newcvar;
 
 			// Some cvars have different types for their shadow copies.
@@ -454,9 +455,9 @@ void userinfo_t::Reset(int pnum)
 			case NAME_PlayerClass:	type = CVAR_Int; break;
 			default:				type = cvar->GetRealType(); break;
 			}
-			
+
 			int flags = cvar->GetFlags();
-			
+
 			newcvar = C_CreateCVar(NULL, type, (flags & CVAR_MOD) | ((flags & CVAR_ZS_CUSTOM) << 1) );
 			newcvar->SetGenericRepDefault(cvar->GetGenericRepDefault(CVAR_String), CVAR_String);
 
@@ -562,7 +563,7 @@ void D_UserInfoChanged (FBaseCVar *cvar)
 
 	val = cvar->GetGenericRep (CVAR_String);
 	escaped_val = D_EscapeUserInfo(val.String);
-	if (4 + strlen(cvar->GetName()) + escaped_val.Len() > 256)
+	if (4 + cvar->GetNameLen() + escaped_val.Len() > 256)
 		I_Error ("User info descriptor too big");
 
 	mysnprintf (foo, countof(foo), "\\%s\\%s", cvar->GetName(), escaped_val.GetChars());
@@ -659,7 +660,7 @@ bool D_SendServerInfoChange (FBaseCVar *cvar, UCVarValue value, ECVarType type)
 		}
 		size_t namelen;
 
-		namelen = strlen(cvar->GetName());
+		namelen = cvar->GetNameLen();
 
 		Net_WriteInt8(DEM_SINFCHANGED);
 		Net_WriteInt8((uint8_t)(namelen | (type << 6)));
@@ -690,7 +691,7 @@ bool D_SendServerFlagChange (FBaseCVar *cvar, int bitnum, bool set, bool silent)
 			return true;
 		}
 
-		int namelen = (int)strlen(cvar->GetName());
+		int namelen = (int)cvar->GetNameLen();
 
 		Net_WriteInt8(DEM_SINFCHANGEDXOR);
 		Net_WriteInt8((uint8_t)namelen);
@@ -864,7 +865,7 @@ void D_ReadUserInfoStrings (int pnum, TArrayView<uint8_t>& stream, bool update)
 				}
 				keyname = FName(ptr, valstart - ptr - 1, true);
 			}
-			
+
 			// A few of these need special handling.
 			switch (keyname.GetIndex())
 			{

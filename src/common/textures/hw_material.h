@@ -28,12 +28,11 @@ struct MaterialLayerInfo
 {
 	FTexture* layerTexture;
 	int scaleFlags;
-	int clampflags;
 };
 
 //===========================================================================
-// 
-// this is the material class for OpenGL. 
+//
+// this is the material class for OpenGL.
 //
 //===========================================================================
 
@@ -48,7 +47,7 @@ class FMaterial
 public:
 	static void SetLayerCallback(IHardwareTexture* (*layercallback)(int layer, int translation));
 
-	FGameTexture *sourcetex;	// the owning texture. 
+	FGameTexture *sourcetex;	// the owning texture.
 
 	FMaterial(FGameTexture *tex, int scaleflags);
 	virtual ~FMaterial();
@@ -92,5 +91,3 @@ public:
 };
 
 #endif
-
-

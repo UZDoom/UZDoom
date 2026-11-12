@@ -24,8 +24,8 @@ class MetalArmor : BasicArmorPickup
 	{
 		Radius 20;
 		Height 16;
-		+FLOORCLIP 
-		+INVENTORY.AUTOACTIVATE 
+		+FLOORCLIP
+		+INVENTORY.AUTOACTIVATE
 		+INVENTORY.INVBAR
 		Inventory.MaxAmount 3;
 		Inventory.Icon "I_ARM1";
@@ -48,8 +48,8 @@ class LeatherArmor : BasicArmorPickup
 	{
 		Radius 20;
 		Height 16;
-		+FLOORCLIP 
-		+INVENTORY.AUTOACTIVATE 
+		+FLOORCLIP
+		+INVENTORY.AUTOACTIVATE
 		+INVENTORY.INVBAR
 		Inventory.MaxAmount 5;
 		Inventory.Icon "I_ARM2";
@@ -65,4 +65,3 @@ class LeatherArmor : BasicArmorPickup
 		Stop;
 	}
 }
-

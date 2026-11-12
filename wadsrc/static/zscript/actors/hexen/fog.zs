@@ -50,7 +50,7 @@ class FogSpawner : Actor
 		TNT1 A 20 A_FogSpawn;
 		Loop;
 	}
-	
+
 	//==========================================================================
 	//
 	// A_FogSpawn
@@ -88,7 +88,7 @@ class FogSpawner : Actor
 			mo.WeaveIndexZ = random[FogSpawn](0, 63);
 		}
 	}
-	
+
 }
 
 // Small Fog Patch ----------------------------------------------------------
@@ -114,7 +114,7 @@ class FogPatchSmall : Actor
 		FOGS E 5;
 		Stop;
 	}
-	
+
 	//==========================================================================
 	//
 	// A_FogMove
@@ -176,4 +176,3 @@ class FogPatchLarge : FogPatchMedium
 		Goto Super::Death;
 	}
 }
-

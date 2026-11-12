@@ -6,7 +6,7 @@
 ** helper thread. (Only used by the CD Audio player)
 **
 **---------------------------------------------------------------------------
-** Copyright 1998-2006 Randy Heit
+** Copyright 1998-2006 Marisa Heit
 ** All rights reserved.
 **
 ** Redistribution and use in source and binary forms, with or without

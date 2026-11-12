@@ -80,7 +80,7 @@ void PaletteContainer::SetPalette(const uint8_t* colors, int transparent_index)
 
 
 	// Find white and black from the original palette so that they can be
-	// used to make an educated guess of the translucency % for a 
+	// used to make an educated guess of the translucency % for a
 	// translucency map.
 	WhiteIndex = BestColor((uint32_t*)RawColors, 255, 255, 255, 0, 255);
 	BlackIndex = BestColor((uint32_t*)RawColors, 0, 0, 0, 0, 255);
@@ -291,7 +291,7 @@ FTranslationID PaletteContainer::StoreTranslation(int slot, FRemapTable *remap)
 }
 
 //===========================================================================
-// 
+//
 // Examines the colormap to see if some of the colors have to be
 // considered fullbright all the time.
 //
@@ -557,8 +557,8 @@ bool FRemapTable::AddDesaturation(int start, int end, double r1, double g1, doub
 							GPalette.BaseColors[c].g * 143 +
 							GPalette.BaseColors[c].b * 37) / 256.0;
 
-		PalEntry pe = PalEntry(	min(255, int(r1 + intensity*r2)), 
-								min(255, int(g1 + intensity*g2)), 
+		PalEntry pe = PalEntry(	min(255, int(r1 + intensity*r2)),
+								min(255, int(g1 + intensity*g2)),
 								min(255, int(b1 + intensity*b2)));
 
 		int cc = GPalette.Remap[c];
@@ -661,7 +661,7 @@ bool FRemapTable::AddToTranslation(const char *range)
 	sc.MustGetAnyToken();
 
 	if (sc.TokenType == '[')
-	{ 
+	{
 		// translation using RGB values
 		int r1,g1,b1,r2,g2,b2;
 
@@ -811,5 +811,3 @@ bool FRemapTable::AddColors(int start, int count, const uint8_t*colors, int tran
 	return true;
 
 }
-
-

@@ -64,4 +64,3 @@ struct WBStartStruct native version("2.4")
 	// index of this player in game
 	native int			pnum;
 }
-

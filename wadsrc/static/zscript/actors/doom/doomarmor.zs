@@ -87,4 +87,3 @@ class BlueArmor : BasicArmorPickup
 		loop;
 	}
 }
-

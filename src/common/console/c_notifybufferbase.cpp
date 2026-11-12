@@ -36,9 +36,9 @@ void FNotifyBufferBase::Shift(int maxlines)
 	}
 }
 
-void FNotifyBufferBase::Clear() 
-{ 
-	Text.Clear(); 
+void FNotifyBufferBase::Clear()
+{
+	Text.Clear();
 }
 
 
@@ -127,4 +127,3 @@ void FNotifyBufferBase::Tick()
 		Top += LineHeight;
 	}
 }
-

@@ -72,7 +72,7 @@ static void BufferedSet(bool& modified, T& dst, const T& src)
 
 static void BufferedSet(bool& modified, VSMatrix& dst, const VSMatrix& src)
 {
-	if (memcmp(dst.get(), src.get(), sizeof(FLOATTYPE) * 16) == 0)
+	if (memcmp(dst.get(), src.get(), sizeof(float) * 16) == 0)
 		return;
 	dst = src;
 	modified = true;

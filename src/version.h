@@ -22,36 +22,31 @@
 **
 */
 
-#ifndef __VERSION_H__
-#define __VERSION_H__
-
-const char *GetGitDescription();
-const char *GetGitHash();
-const char *GetGitTime();
-const char *GetVersionString();
+#pragma once
 
 /** Lots of different version numbers **/
 
-#define VERSIONSTR "5.0pre"
+#define VERSIONSTR "5.1.0-pre"
 
 // The version as seen in the Windows resource
-#define RC_FILEVERSION 4,9999,9999,0
-#define RC_PRODUCTVERSION 4,9999,9999,0
+#define RC_FILEVERSION 5,0,9999,0
+#define RC_PRODUCTVERSION 5,0,9999,0
 #define RC_PRODUCTVERSION2 VERSIONSTR
 // These are for content versioning.
 #define VER_MAJOR 5
-#define VER_MINOR 0
+#define VER_MINOR 1
 #define VER_REVISION 0
 
 // This should always refer to the UZDoom version a derived port is based on and not reflect the derived port's version number!
 #define ENG_MAJOR 5
-#define ENG_MINOR 0
+#define ENG_MINOR 1
 #define ENG_REVISION 0
 
 // Version stored in the ini's [LastRun] section.
 // Bump it if you made some configuration change that you want to
 // be able to migrate in FGameConfigFile::DoGlobalSetup().
-#define LASTRUNVERSION "230"
+#define ENGINELASTRUNVERSION "234"
+#define GAMELASTRUNVERSION "1"
 
 // Protocol version used in demos.
 // Bump it if you change existing DEM_ commands or add new ones.
@@ -84,14 +79,12 @@ const char *GetVersionString();
 #define ALLOWLOADIN "LZDOOM"
 
 #ifndef LOAD_GZDOOM_4142_SAVES
-    #define LOAD_GZDOOM_4142_SAVES 1
+	#define LOAD_GZDOOM_4142_SAVES 1
 #endif
 
 #define BASEWAD "uzdoom.pk3"
 // Set OPTIONALWAD to "" (null) to disable searching for it
 #define OPTIONALWAD "game_support.pk3"
-#define GZDOOM 1
-#define VR3D_ENABLED
 
 // More stuff that needs to be different for derivatives.
 #define GAMENAME "UZDoom"
@@ -99,8 +92,11 @@ const char *GetVersionString();
 #define GAMENAMELOWERCASE "uzdoom"
 #define APPID "org.zdoom.UZDoom"
 #define QUERYIWADDEFAULT true
-#define FORUM_URL "http://forum.zdoom.org/"
-#define BUGS_FORUM_URL	"http://forum.zdoom.org/viewforum.php?f=2"
+#define BUGS_URL "https://github.com/UZDoom/UZDoom/issues"
+
+#define UPDATER_URL "https://zdoom.org/uzdoom-updates.php?r={}&f={}"
+#define UPDATER_URL_BACKUP "https://github.com/UZDoom/UZDoom/releases/{}/{}/{}"
+
 // For QUERYIWADDEFAULT: Set to 'true' to always show dialog box on startup by default, 'false' to disable.
 // Should set to 'false' for standalone games, and set to 'true' for regular source port forks that are meant to run any game.
 
@@ -117,4 +113,8 @@ const int SAVEPICHEIGHT = 162;
 const int VID_MIN_WIDTH = 320;
 const int VID_MIN_HEIGHT = 200;
 
-#endif //__VERSION_H__
+const char *GetVersionString();
+const char *GetGitHash();
+const char *GetGitTime();
+const char *GetGitTag();
+int GetGitDistance();

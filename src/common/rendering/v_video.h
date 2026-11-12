@@ -22,22 +22,19 @@
 **
 */
 
-#ifndef __V_VIDEO_H__
-#define __V_VIDEO_H__
+#pragma once
 
 #include <functional>
-#include "basics.h"
-#include "vectors.h"
-#include "m_png.h"
-#include "renderstyle.h"
-#include "c_cvars.h"
-#include "v_2ddrawer.h"
-#include "intrect.h"
-#include "hw_shadowmap.h"
-#include "hw_levelmesh.h"
-#include "buffers.h"
-#include "files.h"
 
+#include "basics.h"
+#include "buffers.h"
+#include "c_cvars.h"
+#include "hw_levelmesh.h"
+#include "hw_shadowmap.h"
+#include "intrect.h"
+#include "m_png.h"
+#include "v_2ddrawer.h"
+#include "vectors.h"
 
 struct FPortalSceneState;
 class FSkyVertexBuffer;
@@ -66,8 +63,24 @@ enum EHWCaps
 
 	RFL_INVALIDATE_BUFFER = 64,
 	RFL_DEBUG = 128,
+	RFL_ATI_MEM = 256,
+	RFL_NV_MEM = 512,
 };
 
+enum {
+	BACKEND_OPENGL,
+	BACKEND_VULKAN,
+	BACKEND_OPENGLES,
+	NUM_BACKEND,
+
+#if defined(VID_BACKEND)
+	BACKEND_DEFAULT = VID_BACKEND,
+#elif defined(HAVE_VULKAN) and not defined(__APPLE__)
+	BACKEND_DEFAULT = BACKEND_VULKAN,
+#else
+	BACKEND_DEFAULT = BACKEND_OPENGL,
+#endif
+};
 
 extern int DisplayWidth, DisplayHeight;
 
@@ -156,6 +169,9 @@ public:
 	virtual bool IsPoly() { return false; }
 	virtual int GetShaderCount();
 	virtual bool CompileNextShader() { return true; }
+	virtual bool HasNVidiaVRAMExt() { return false; }
+	virtual bool HasATIVRAMExt() { return false; }
+	virtual bool HasVulkanVRAMExt() { return false; }
 	void SetAABBTree(hwrenderer::LevelAABBTree * tree)
 	{
 		mShadowMap.SetAABBTree(tree);
@@ -171,7 +187,7 @@ public:
 	}
 
 	// SSBOs have quite worse performance for read only data, so keep this around only as long as Vulkan has not been adapted yet.
-	bool useSSBO() 
+	bool useSSBO()
 	{
 		return IsVulkan();
 	}
@@ -227,7 +243,7 @@ public:
 
 	virtual void InitLightmap(int LMTextureSize, int LMTextureCount, TArray<uint16_t>& LMTextureData) {}
 
-    // Interface to hardware rendering resources
+	// Interface to hardware rendering resources
 	virtual IVertexBuffer *CreateVertexBuffer() { return nullptr; }
 	virtual IIndexBuffer *CreateIndexBuffer() { return nullptr; }
 	virtual IDataBuffer *CreateDataBuffer(int bindingpoint, bool ssbo, bool needsresize) { return nullptr; }
@@ -241,6 +257,7 @@ public:
 
 	// Report a game restart
 	void SetClearColor(int color);
+	void SetClearColorPal(PalEntry pe);
 	virtual int Backend() { return 0; }
 	virtual const char* DeviceName() const { return "Unknown"; }
 	virtual void AmbientOccludeScene(float m5) {}
@@ -289,7 +306,6 @@ private:
 	bool isIn2D = false;
 };
 
-
 // This is the screen updated by I_FinishUpdate.
 extern DFrameBuffer *screen;
 
@@ -297,7 +313,7 @@ extern DFrameBuffer *screen;
 #define SCREENHEIGHT (screen->GetHeight ())
 
 EXTERN_CVAR (Float, vid_gamma)
-
+EXTERN_CVAR (Int, vid_preferbackend)
 
 // Allocates buffer screens, call before R_Init.
 void V_InitScreenSize();
@@ -307,10 +323,6 @@ void V_InitScreen();
 void V_Init2 ();
 
 void V_Shutdown ();
-int V_GetBackend();
 
 inline bool IsRatioWidescreen(int ratio) { return (ratio & 3) != 0; }
 extern bool setsizeneeded, setmodeneeded;
-
-
-#endif // __V_VIDEO_H__

@@ -78,7 +78,7 @@ protected:
 //
 //==========================================================================
 
-void DecompressorBase::DecompressionError(const char *error, ...) const 
+void DecompressorBase::DecompressionError(const char *error, ...) const
 {
 	if (exceptions)
 	{

@@ -21,20 +21,29 @@
 **
 */
 
+#include <cstdint>
+
+#ifndef _WIN32
+#include <strings.h>
+#endif
+
+#include "bitmap.h"
 #include "files.h"
 #include "filesystem.h"
-#include "bitmap.h"
-#include "imagehelpers.h"
+#include "fs_files.h"
+#include "fs_filesystem.h"
 #include "image.h"
+#include "imagehelpers.h"
 #include "m_swap.h"
+#include "palentry.h"
 
 // Doom patch format header
 struct patch_t
 {
-	int16_t			width;			// bounding box size 
+	int16_t			width;			// bounding box size
 	int16_t			height;
-	int16_t			leftoffset; 	// pixels to the left of origin 
-	int16_t			topoffset;		// pixels below the origin 
+	int16_t			leftoffset; 	// pixels to the left of origin
+	int16_t			topoffset;		// pixels below the origin
 	uint32_t 		columnofs[1];	// only [width] used
 };
 
@@ -180,7 +189,7 @@ PalettedPixels FRawPageTexture::CreatePalettedPixels(int conversion, int frame)
 
 	const uint8_t *remap = ImageHelpers::GetRemap(conversion == luminance);
 
-	// This does not handle the custom palette. 
+	// This does not handle the custom palette.
 	// User maps are encouraged to use a real image format when replacing E2END and the original could never be used anywhere else.
 
 	// Convert the source image from row-major to column-major format
@@ -214,7 +223,7 @@ int FRawPageTexture::CopyPixels(FBitmap *bmp, int conversion, int frame)
 			pe.b = *psource++;
 			pe.a = 255;
 		}
-		bmp->CopyPixelData(0, 0, source, 320, 200, 1, 320, 0, paldata);
+		bmp->CopyPixelData(0, 0, source, 320, 200, 1, 320, FBitmap::Transform::NONE, paldata);
 	}
 	return 0;
 }

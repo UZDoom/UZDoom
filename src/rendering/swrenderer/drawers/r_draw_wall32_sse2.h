@@ -131,7 +131,7 @@ namespace swrenderer
 
 			uint32_t srcalpha = args.SrcAlpha() >> (FRACBITS - 8);
 			uint32_t destalpha = args.DestAlpha() >> (FRACBITS - 8);
-					
+
 			int ssecount = count / 2;
 			for (int index = 0; index < ssecount; index++)
 			{

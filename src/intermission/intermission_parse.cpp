@@ -32,7 +32,7 @@
 #include "gi.h"
 #include "screenjob.h"
 #include "d_event.h"
-	
+
 
 static void ReplaceIntermission(FName intname,FIntermissionDescriptor *desc)
 {
@@ -57,7 +57,7 @@ void DeinitIntermissions()
 
 //==========================================================================
 //
-// FIntermissionAction 
+// FIntermissionAction
 //
 //==========================================================================
 
@@ -66,8 +66,8 @@ FIntermissionAction::FIntermissionAction()
 	mSize = sizeof(FIntermissionAction);
 	mClass = RUNTIME_CLASS(DIntermissionScreen);
 	mMusicOrder =
-	mCdId = 
-	mCdTrack = 
+	mCdId =
+	mCdTrack =
 	mDuration = 0;
 	mFlatfill = false;
 	mMusicLooping = true;
@@ -877,7 +877,7 @@ FName FMapInfoParser::CheckEndSequence()
 //==========================================================================
 
 DIntermissionController* F_StartFinale (const char *music, int musicorder, int cdtrack, unsigned int cdid, const char *flat,
-					const char *text, INTBOOL textInLump, INTBOOL finalePic, INTBOOL lookupText, 
+					const char *text, INTBOOL textInLump, INTBOOL finalePic, INTBOOL lookupText,
 					bool ending, FName endsequence)
 {
 	// Hexen's chess ending doesn't have a text screen, even if the cluster has a message defined.
@@ -916,7 +916,7 @@ DIntermissionController* F_StartFinale (const char *music, int musicorder, int c
 		}
 		textscreen->mFlatfill = !finalePic;
 
-		if (music != NULL && *music != 0) 
+		if (music != NULL && *music != 0)
 		{
 			textscreen->mMusic = music;
 			textscreen->mMusicOrder = musicorder;

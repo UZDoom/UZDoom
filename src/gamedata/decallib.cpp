@@ -226,7 +226,7 @@ void FDecalLib::Clear ()
 
 	DelTree (Root);
 	Root = NULL;
-	
+
 	trans = Translations;
 	while (trans != NULL)
 	{
@@ -568,7 +568,7 @@ void FDecalLib::ParseFader (FScanner &sc)
 	sc.MustGetString ();
 	faderName = sc.String;
 	sc.MustGetStringName ("{");
-	
+
 	for (;;)
 	{
 		sc.MustGetString ();
@@ -606,7 +606,7 @@ void FDecalLib::ParseStretcher (FScanner &sc)
 	sc.MustGetString ();
 	stretcherName = sc.String;
 	sc.MustGetStringName ("{");
-	
+
 	for (;;)
 	{
 		sc.MustGetString ();
@@ -657,7 +657,7 @@ void FDecalLib::ParseSlider (FScanner &sc)
 	sc.MustGetString ();
 	sliderName = sc.String;
 	sc.MustGetStringName ("{");
-	
+
 	for (;;)
 	{
 		sc.MustGetString ();
@@ -710,7 +710,7 @@ void FDecalLib::ParseColorchanger (FScanner &sc)
 	sc.MustGetString ();
 	faderName = sc.String;
 	sc.MustGetStringName ("{");
-	
+
 	for (;;)
 	{
 		sc.MustGetString ();

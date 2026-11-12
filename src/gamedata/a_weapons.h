@@ -186,4 +186,3 @@ enum
 	WIF_BFG	=				0x00100000, // BFG tier weapon
 	WIF_EXPLOSIVE =			0x00200000, // Weapon is explosive
 };
-

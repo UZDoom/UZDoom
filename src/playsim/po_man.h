@@ -94,7 +94,7 @@ struct FPolyObj
 	TArray<FPolyVertex>		PrevPts;
 	FPolyVertex				StartSpot;
 	FPolyVertex				CenterSpot;
-	FBoundingBox			Bounds;	// Bounds in map coordinates 
+	FBoundingBox			Bounds;	// Bounds in map coordinates
 	subsector_t				*CenterSubsector;
 	int						MirrorNum;
 

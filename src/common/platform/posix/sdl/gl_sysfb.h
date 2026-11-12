@@ -26,6 +26,7 @@
 
 #include <SDL2/SDL.h>
 
+#include "gl_system.h"
 #include "v_video.h"
 
 class SystemBaseFrameBuffer : public DFrameBuffer

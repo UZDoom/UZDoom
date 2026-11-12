@@ -77,7 +77,7 @@ FGenericStartScreen::FGenericStartScreen(int max_progress)
 				StartupBitmap.Blit(320 * 2 - Background.GetWidth()/2, 220 * 2 - Background.GetHeight() / 2, Background);
 			else
 				StartupBitmap.Blit(0, 0, Background, 640 * 2, 480 * 2);
-		
+
 		}
 	}
 }

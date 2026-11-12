@@ -59,7 +59,7 @@ class MiniMissileLauncher : StrifeWeapon
 		MMIS F 0 A_ReFire;
 		Goto Ready;
 	}
-	
+
 	//============================================================================
 	//
 	// A_FireMiniMissile
@@ -79,7 +79,7 @@ class MiniMissileLauncher : StrifeWeapon
 			if (!weapon.DepleteAmmo (weapon.bAltFire))
 				return;
 		}
-		
+
 		double savedangle = angle;
 		angle += Random2[MiniMissile]() * (11.25 / 256) * AccuracyFactor();
 		player.mo.PlayAttacking2 ();
@@ -87,7 +87,7 @@ class MiniMissileLauncher : StrifeWeapon
 		angle = savedangle;
 	}
 }
-	
+
 
 // Rocket Trail -------------------------------------------------------------
 
@@ -155,4 +155,3 @@ class MiniMissile : Actor
 		Stop;
 	}
 }
-

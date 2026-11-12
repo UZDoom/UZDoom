@@ -104,7 +104,7 @@ enum EDemoCommand
 	DEM_INVUSE,			// 19 4 bytes: ID of item to use
 	DEM_PAUSE,			// 20 Pause game
 	DEM_SAVEGAME,		// 21 String: Filename, String: Description
-	DEM_UNDONE3,		// 22 
+	DEM_UNDONE3,		// 22
 	DEM_UNDONE4,		// 23
 	DEM_UNDONE5,		// 24
 	DEM_UNDONE6,		// 25
@@ -161,7 +161,7 @@ enum EDemoCommand
 	DEM_KICK,			// 76 Byte: Player number
 	DEM_READIED,		// 77
 	DEM_WEAPSELECT,		// 78 Byte: Slot
-	DEM_USEFLECHETTE,	// 79	
+	DEM_USEFLECHETTE,	// 79
 };
 
 // The following are implemented by cht_DoCheat in m_cheat.cpp

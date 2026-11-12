@@ -158,7 +158,7 @@ public:
 	bool IsDangerous (sector_t *sec);
 
 	TArray<FString> getspawned; //Array of bots (their names) which should be spawned when starting a game.
-	
+
 	//uint8_t freeze;			//Game in freeze mode.
 	//uint8_t changefreeze;	//Game wants to change freeze mode.
 	int botnum;

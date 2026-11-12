@@ -23,8 +23,8 @@ public:
 	void SetSelectedItem(int index);
 	void ScrollToItem(int index);
 
-	double GetPreferredWidth();
-	double GetPreferredHeight();
+	double GetPreferredWidth() override;
+	double GetPreferredHeight() override;
 	double GetMinimumHeight() const;
 
 	void Activate();

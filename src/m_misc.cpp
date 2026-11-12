@@ -17,11 +17,15 @@
 **
 */
 
+#include <cctype>
+#include <cstdint>
 #include <sys/stat.h>
 #include <sys/types.h>
+#include <sstream>
 #include <stdlib.h>
 #include <errno.h>
 #include <time.h>
+#include <valarray>
 
 #include "r_defs.h"
 
@@ -78,6 +82,77 @@ static size_t ParseCommandLine (const char *args, int *argc, char **argv);
 //
 //---------------------------------------------------------------------------
 
+// Change this if you want to use a different token to open comments inside a response file.
+static const char *const COMMENT_TOKEN = "#";
+
+static const uint16_t UF_STRIP_WHITESPACE = 1;
+static const uint16_t UF_SKIP_EMPTY = 2;
+static const uint16_t UF_ALLOW_TRAILING = 4;
+
+static std::string Uncomment(const char* from, const uint16_t uncomment_flags = 0)
+{
+	std::stringstream outstream;
+
+	{
+		std::stringstream instream(from);
+		std::string line;
+
+		const bool strip_whitespace = (uncomment_flags & UF_STRIP_WHITESPACE) != 0;
+		const bool skip_empty = (uncomment_flags & UF_SKIP_EMPTY) != 0;
+		const bool allow_trailing = (uncomment_flags & UF_ALLOW_TRAILING) != 0;
+
+		while (std::getline(instream, line)) {
+			// skip comments
+			auto cidx = line.find(COMMENT_TOKEN); // comment token position
+
+			if (cidx == 0) {
+				// starts with token
+				continue;
+			}
+
+			// comment must be first non-whitespace token
+			if (!allow_trailing && cidx != std::string::npos) {
+				size_t start = 0;
+				while (start < cidx && std::isspace(static_cast<unsigned char>(line[start]))) start++;
+				if (start != cidx) cidx = std::string::npos;
+			}
+
+			// case 1: token is in the middle, strip until cidx
+			// case 2: token not present, cidx == npos, aka max size value, so a noop
+			// (faster than adding an IF branch)
+			const std::string_view substring = std::string_view(line).substr(0, cidx);
+
+			// strip whitespace around line
+			size_t start = 0;
+			size_t end = substring.size();
+
+			// skip actually empty lines
+			if (skip_empty && end == 0) {
+				continue;
+			}
+
+			if (strip_whitespace) {
+				// find leading
+				while (start < end && std::isspace(static_cast<unsigned char>(substring[start]))) start++;
+				// trim trailing
+				while (end > start && std::isspace(static_cast<unsigned char>(substring[end - 1]))) end--;
+			}
+
+			const std::string_view trimmed = substring.substr(start, end - start);
+
+			// skip functionally empty lines
+			if (skip_empty && trimmed.size() == 0) {
+				continue;
+			}
+
+			// spit good value
+			outstream << trimmed << ' ';
+		}
+	}
+
+	return outstream.str();
+}
+
 void M_FindResponseFile (void)
 {
 	const int limit = 100;	// avoid infinite recursion
@@ -94,6 +169,7 @@ void M_FindResponseFile (void)
 		{
 			char	**argv;
 			FileSys::FileData file;
+			std::string uncommented;
 			int		argc = 0;
 			size_t	argsize = 0;
 			int 	index;
@@ -112,7 +188,8 @@ void M_FindResponseFile (void)
 				{
 					Printf ("Found response file %s!\n", Args->GetArg(i) + 1);
 					file = fr.ReadPadded(1);
-					argsize = ParseCommandLine (file.string(), &argc, nullptr);
+					uncommented = Uncomment(file.string(), UF_SKIP_EMPTY | UF_STRIP_WHITESPACE);
+					argsize = ParseCommandLine (uncommented.c_str(), &argc, nullptr);
 				}
 			}
 			else
@@ -124,7 +201,7 @@ void M_FindResponseFile (void)
 			{
 				argv = (char **)M_Malloc (argc*sizeof(char *) + argsize);
 				argv[0] = (char *)argv + argc*sizeof(char *);
-				ParseCommandLine (file.string(), nullptr, argv);
+				ParseCommandLine (uncommented.c_str(), nullptr, argv);
 
 				// Create a new argument vector
 				FArgs *newargs = new FArgs;
@@ -296,8 +373,22 @@ void M_SaveDefaultsFinal ()
 
 UNSAFE_CCMD (writeini)
 {
-	const char *filename = (argv.argc() == 1) ? NULL : argv[1];
-	if (!M_SaveDefaults (filename))
+	FString fileName = {};
+	if (argv.argc() > 1)
+	{
+		FString file = argv[1];
+		C_SanitizeFileName(file);
+		file += ".ini";
+
+		FString path = M_GetConfigPath(true);
+		auto i = path.LastIndexOf("/") + 1;
+		path.Remove(i, path.Len() - i);
+		path.AppendFormat("%s", file.GetChars());
+
+		fileName = path;
+	}
+
+	if (!M_SaveDefaults (fileName.IsEmpty() ? nullptr : fileName.GetChars()))
 	{
 		Printf ("Writing config failed: %s\n", strerror(errno));
 	}
@@ -307,10 +398,15 @@ UNSAFE_CCMD (writeini)
 	}
 }
 
-CCMD(openconfig)
+void M_OpenConfigDir()
 {
 	M_SaveDefaults(nullptr);
 	I_OpenShellFolder(ExtractFilePath(GameConfig->GetPathName()).GetChars());
+}
+
+CCMD(openconfig)
+{
+	M_OpenConfigDir();
 }
 
 //
@@ -340,17 +436,17 @@ struct pcx_t
 	uint16_t			ymin;
 	uint16_t			xmax;
 	uint16_t			ymax;
-	
+
 	uint16_t			hdpi;
 	uint16_t			vdpi;
 
 	uint8_t				palette[48];
-	
+
 	int8_t				reserved;
 	int8_t				color_planes;
 	uint16_t			bytes_per_line;
 	uint16_t			palette_type;
-	
+
 	int8_t				filler[58];
 };
 
@@ -697,3 +793,24 @@ DEFINE_ACTION_FUNCTION_NATIVE(_CVar, SaveConfig, SaveConfig)
 	ACTION_RETURN_INT(M_SaveDefaults(nullptr));
 }
 
+void M_OpenWadDir()
+{
+	size_t dirlen;
+	FString autoname = M_GetAppDataPath(true);
+	dirlen = autoname.Len();
+	if (dirlen > 0)
+	{
+		if (autoname[dirlen-1] != '/' && autoname[dirlen-1] != '\\')
+		{
+			autoname += '/';
+		}
+	}
+	autoname = NicePath(autoname.GetChars());
+	CreatePath(autoname.GetChars());
+	I_OpenShellFolder(autoname.GetChars());
+}
+
+CCMD(openwads)
+{
+	M_OpenWadDir();
+}

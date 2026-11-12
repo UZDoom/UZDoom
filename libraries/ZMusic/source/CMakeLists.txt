@@ -38,6 +38,8 @@ INTERFACE
 	zmusic/configuration.cpp
 	zmusic/zmusic.cpp
 	zmusic/critsec.cpp
+	zmusic/file_zip.cpp
+	
 	loader/test.c
 )
 
@@ -107,12 +109,21 @@ if(WIN32)
 	target_compile_definitions(zmusic-obj INTERFACE HAVE_SYSTEM_MIDI)
 	target_link_libraries(zmusic-obj INTERFACE winmm)
 	target_sources(zmusic-obj INTERFACE mididevices/music_win_mididevice.cpp)
-elseif(NOT APPLE)
+elseif(APPLE)
+	target_compile_definitions(zmusic-obj INTERFACE HAVE_SYSTEM_MIDI)
+	target_sources(zmusic-obj INTERFACE
+		mididevices/music_coremidi_mididevice.mm
+	)
+	target_link_libraries(zmusic-obj INTERFACE
+		"-framework CoreMIDI"
+		"-framework CoreFoundation"
+		"-framework CoreAudio"
+	)
+else()
 	find_package(ALSA)
     if(ALSA_FOUND)
 		target_compile_definitions(zmusic-obj INTERFACE HAVE_SYSTEM_MIDI)
-		target_sources(zmusic-obj
-		INTERFACE
+		target_sources(zmusic-obj INTERFACE
 			mididevices/music_alsa_mididevice.cpp
 			mididevices/music_alsa_state.cpp
 		)
@@ -150,11 +161,11 @@ use_fast_math(zmusiclite)
 
 # Although zmusic-obj puts the public include directory in our private include
 # list, we need to add it to the interface include directories for consumers.
-target_include_directories(zmusic INTERFACE $<INSTALL_INTERFACE:include> $<BUILD_INTERFACE:${ZMusic_SOURCE_DIR}/include>)
+target_include_directories(zmusic INTERFACE $<INSTALL_INTERFACE:include> $<BUILD_INTERFACE:${ZMusic_SOURCE_DIR}/include> $<BUILD_INTERFACE:${ZMusic_SOURCE_DIR}/source/loader>)
 target_include_directories(zmusiclite INTERFACE $<INSTALL_INTERFACE:include> $<BUILD_INTERFACE:${ZMusic_SOURCE_DIR}/include>)
 
-target_link_libraries_hidden(zmusic zmusic-obj adl oplsynth opn timidity timidityplus wildmidi fluidsynth)
-target_link_libraries_hidden(zmusiclite zmusic-obj fluidsynth)
+target_link_libraries_hidden(zmusic zmusic-obj adl oplsynth opn timidity timidityplus wildmidi libfluidsynth)
+target_link_libraries_hidden(zmusiclite zmusic-obj libfluidsynth)
 
 target_compile_definitions(zmusic PUBLIC $<$<STREQUAL:$<TARGET_PROPERTY:zmusic,TYPE>,STATIC_LIBRARY>:ZMUSIC_STATIC>)
 target_compile_definitions(zmusiclite PRIVATE ZMUSIC_LITE=1 PUBLIC $<$<STREQUAL:$<TARGET_PROPERTY:zmusiclite,TYPE>,STATIC_LIBRARY>:ZMUSIC_STATIC>)

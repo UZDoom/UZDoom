@@ -38,7 +38,7 @@ struct MD5Check
 // The first list is alpha textures in patch format.
 // Patches are normally paletted but for these it needs to be treated
 // as a grayscale ramp.
-static const MD5Check alphapatches[] = 
+static const MD5Check alphapatches[] =
 {
 {   18, "fb1472adb34ce1de7a40156d484dd3fc"}, // xhair5.gfx
 {   59, "7149115092f5e8f01f84dacc120aae94"}, // xhairs9.gfx
@@ -172,7 +172,7 @@ static const MD5Check alphapatches[] =
 
 // These are IMGZ images that use the game palette.
 // Normally IMGZ is only used for crosshairs, i.e grayscale images.
-static const MD5Check palimgzs[] = 
+static const MD5Check palimgzs[] =
 {
 { 1728, "9ffdd749b414a1d34c74650828ad6504"}, // scodef.imgz
 {64024, "bee2a3ddec08bf975353b3dc139bb956"}, // interpic.imgz

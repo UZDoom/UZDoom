@@ -2265,8 +2265,8 @@ ESFM_generate(esfm_chip *chip, int16_t *buf)
 		{
 			ESFM_slot_generate_emu(&channel->slots[0]);
 		}
-		chip->output_accm[0] += channel->output[0];
-		chip->output_accm[1] += channel->output[1];
+		chip->output_accm[0] += ((int32)channel->output[0] * (int32)channel->pan[0] / 65535);
+		chip->output_accm[1] += ((int32)channel->output[1] * (int32)channel->pan[1] / 65535);
 	}
 
 	buf[0] = ESFM_clip_sample(chip->output_accm[0]);

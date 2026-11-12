@@ -39,6 +39,7 @@
 #include "thingdef.h"
 #include "zcc_parser.h"
 #include "zcc_compile_doom.h"
+#include "r_vanillatrans.h"
 
 // EXTERNAL FUNCTION PROTOTYPES --------------------------------------------
 void InitThingdef();
@@ -150,7 +151,7 @@ void SetImplicitArgs(TArray<PType *> *args, TArray<uint32_t> *argflags, TArray<F
 	if (funcflags & VARF_Method)
 	{
 		// implied self pointer
-		if (args != nullptr)		args->Push(NewPointer(cls, !!(funcflags & VARF_ReadOnly))); 
+		if (args != nullptr)		args->Push(NewPointer(cls, !!(funcflags & VARF_ReadOnly)));
 		if (argflags != nullptr)	argflags->Push(VARF_Implicit | VARF_ReadOnly);
 		if (argnames != nullptr)	argnames->Push(NAME_self);
 	}
@@ -204,7 +205,7 @@ PFunction *CreateAnonymousFunction(PContainerType *containingclass, PType *retur
 	// Functions that only get flagged for actors do not need the additional two context parameters.
 	int fflags = (flags& (SUF_OVERLAY | SUF_WEAPON | SUF_ITEM)) ? VARF_Action | VARF_Method : VARF_Method;
 
-	// [ZZ] give anonymous functions the scope of their class 
+	// [ZZ] give anonymous functions the scope of their class
 	//      (just give them VARF_Play, whatever)
 	fflags |= VARF_Play;
 
@@ -401,8 +402,6 @@ void ParseAllDecorate();
 void SynthesizeFlagFields();
 void SetDoomCompileEnvironment();
 
-extern TMap<FName, bool> AutoTrans;
-
 void ParseScripts()
 {
 	int lump, lastlump = 0;
@@ -458,6 +457,18 @@ void LoadActors()
 
 	FScriptPosition::StrictErrors = strictdecorate;
 	ParseAllDecorate();
+
+	// If preferring vanilla, check if any Actors from DECORATE/ZScript were relying on transparency.
+	for (auto cls : PClass::AllClasses)
+	{
+		if (cls->IsDescendantOf(NAME_Actor) && (GetDefaultByType(cls)->renderflags & RF_ZDOOMTRANS) &&
+		    !AutoTrans.CheckKey(cls->TypeName) && static_cast<PClassActor*>(cls)->ActorInfo()->Replacement == nullptr)
+		{
+			bModdedTransPresent = true;
+			break;
+		}
+	}
+
 	SynthesizeFlagFields();
 
 	FunctionBuildList.Build();
@@ -521,7 +532,7 @@ void LoadActors()
 
 		if (ti->bDecorateClass && ti->IsDescendantOf(NAME_StateProvider))
 		{
-			// either a DECORATE based weapon or CustomInventory. 
+			// either a DECORATE based weapon or CustomInventory.
 			// These are subject to relaxed rules for user variables in states.
 			// Although there is a runtime check for bogus states, let's do a quick analysis if any of the known entry points
 			// hits an unsafe state. If we can find something here it can be handled wuth a compile error rather than a runtime error.

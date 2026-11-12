@@ -15,19 +15,26 @@
 **
 */
 
+#include <cstring>
+#include <utility>
 
-#include "filesystem.h"
-#include "colormatcher.h"
+#include "basics.h"
 #include "bitmap.h"
-#include "model_kvx.h"
+#include "colormatcher.h"
+#include "gametexture.h"
+#include "i_modelvertexbuffer.h"
 #include "image.h"
-#include "texturemanager.h"
-#include "modelrenderer.h"
-#include "voxels.h"
-#include "texturemanager.h"
-#include "palettecontainer.h"
-#include "textures.h"
 #include "imagehelpers.h"
+#include "model.h"
+#include "model_kvx.h"
+#include "modelrenderer.h"
+#include "palentry.h"
+#include "palettecontainer.h"
+#include "tarray.h"
+#include "textureid.h"
+#include "texturemanager.h"
+#include "textures.h"
+#include "voxels.h"
 
 #ifdef _MSC_VER
 #pragma warning(disable:4244) // warning C4244: conversion from 'double' to 'float', possible loss of data
@@ -56,7 +63,7 @@ protected:
 
 //===========================================================================
 //
-// 
+//
 //
 //===========================================================================
 
@@ -70,7 +77,7 @@ FVoxelTexture::FVoxelTexture(FVoxel *vox)
 
 //===========================================================================
 //
-// 
+//
 //
 //===========================================================================
 
@@ -93,13 +100,13 @@ PalettedPixels FVoxelTexture::CreatePalettedPixels(int conversion, int frame)
 
 		}
 	}
-	else 
+	else
 	{
 		for(int i=0;i<256;i++, pp+=3)
 		{
 			Pixels[i] = (uint8_t)i;
 		}
-	}  
+	}
 	ImageHelpers::FlipSquareBlock(Pixels.Data(), Width);
 	return Pixels;
 }
@@ -130,7 +137,7 @@ int FVoxelTexture::CopyPixels(FBitmap *bmp, int conversion, int frame)
 			pe[i].a = 255;
 		}
 	}
-	else 
+	else
 	{
 		for(int i=0;i<256;i++, pp+=3)
 		{
@@ -138,14 +145,14 @@ int FVoxelTexture::CopyPixels(FBitmap *bmp, int conversion, int frame)
 			pe[i] = GPalette.BaseColors[i];
 			pe[i].a = 255;
 		}
-	}    
-	bmp->CopyPixelData(0, 0, bitmap, Width, Height, 1, 16, 0, pe);
+	}
+	bmp->CopyPixelData(0, 0, bitmap, Width, Height, 1, 16, FBitmap::Transform::NONE, pe);
 	return 0;
-}	
+}
 
 //===========================================================================
 //
-// 
+//
 //
 //===========================================================================
 
@@ -158,7 +165,7 @@ FVoxelModel::FVoxelModel(FVoxel *voxel, bool owned)
 
 //===========================================================================
 //
-// 
+//
 //
 //===========================================================================
 
@@ -170,7 +177,7 @@ FVoxelModel::~FVoxelModel()
 
 //===========================================================================
 //
-// 
+//
 //
 //===========================================================================
 
@@ -186,7 +193,7 @@ unsigned int FVoxelModel::AddVertex(FModelVertex &vert, FVoxelMap &check)
 
 //===========================================================================
 //
-// 
+//
 //
 //===========================================================================
 
@@ -233,7 +240,7 @@ void FVoxelModel::AddFace(int x1, int y1, int z1, int x2, int y2, int z2, int x3
 
 //===========================================================================
 //
-// 
+//
 //
 //===========================================================================
 
@@ -269,7 +276,7 @@ void FVoxelModel::MakeSlabPolys(int x, int y, kvxslab_t *voxptr, FVoxelMap &chec
 		if (cull & 8)
 		{
 			AddFace(x, y+1, z, x+1, y+1, z, x, y+1, z+c, x+1, y+1, z+c, *col, check);
-		}	
+		}
 		z+=c;
 		col+=c;
 	}
@@ -282,7 +289,7 @@ void FVoxelModel::MakeSlabPolys(int x, int y, kvxslab_t *voxptr, FVoxelMap &chec
 
 //===========================================================================
 //
-// 
+//
 //
 //===========================================================================
 
@@ -308,7 +315,7 @@ void FVoxelModel::Initialize()
 
 //===========================================================================
 //
-// 
+//
 //
 //===========================================================================
 
@@ -353,7 +360,7 @@ void FVoxelModel::AddSkins(uint8_t *hitlist, const FTextureID*)
 
 //===========================================================================
 //
-// 
+//
 //
 //===========================================================================
 
@@ -390,9 +397,9 @@ float FVoxelModel::getAspectFactor(float stretch)
 //
 //===========================================================================
 
-void FVoxelModel::RenderFrame(FModelRenderer *renderer, FGameTexture * skin, int frame, int frame2, double inter, FTranslationID translation, const FTextureID*, int boneStartPosition)
+void FVoxelModel::RenderFrame(FModelRenderer *renderer, FGameTexture * skin, int frame, int frame2, double inter, FTranslationID translation, const FTextureID*, int boneStartPosition, AActor * act)
 {
-	renderer->SetMaterial(skin, true, translation);
+	renderer->SetMaterial(skin, true, translation, act);
 	renderer->SetupFrame(this, 0, 0, 0, -1);
 	renderer->DrawElements(mNumIndices, 0);
 }

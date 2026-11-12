@@ -60,7 +60,7 @@ class Mauler : StrifeWeapon
 		TRPD A -1;
 		Stop;
 	}
-		
+
 	//============================================================================
 	//
 	// A_FireMauler1
@@ -83,12 +83,12 @@ class Mauler : StrifeWeapon
 		{
 			if (!weap.DepleteAmmo (weap.bAltFire, true))
 				return;
-			
+
 		}
 		player.mo.PlayAttacking2 ();
 
 		double pitch = BulletSlope ();
-			
+
 		for (int i = 0 ; i < 20 ; i++)
 		{
 			int damage = 5 * random[Mauler1](1, 3);
@@ -141,7 +141,7 @@ class Mauler2 : Mauler
 		MAUL E 2 A_ReFire;
 		Goto Ready;
 	}
-	
+
 	//============================================================================
 	//
 	// A_FireMauler2Pre
@@ -187,7 +187,7 @@ class Mauler2 : Mauler
 				return;
 		}
 		player.mo.PlayAttacking2 ();
-		
+
 		SpawnPlayerMissile ("MaulerTorpedo");
 		DamageMobj (self, null, 20, 'Disintegrate');
 		Thrust(7.8125, Angle+180.);
@@ -249,7 +249,7 @@ class MaulerTorpedo : Actor
 		THIT DE 8 Bright;
 		Stop;
 	}
-	
+
 	//============================================================================
 	//
 	// A_MaulerTorpedoWave
@@ -309,5 +309,3 @@ class MaulerTorpedoWave : Actor
 	}
 
 }
-
-

@@ -38,6 +38,7 @@ private:
 	void OnGeometryChanged() override;
 	void OnSetFocus() override;
 	void OnGamesListActivated();
+	bool OnFileDrop(std::string) override;
 
 	LauncherWindow* Launcher = nullptr;
 

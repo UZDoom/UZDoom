@@ -116,7 +116,7 @@ public:
 	~FFlatVertexBuffer();
 
 	void OutputResized(int width, int height);
-	std::pair<IVertexBuffer *, IIndexBuffer *> GetBufferObjects() const 
+	std::pair<IVertexBuffer *, IIndexBuffer *> GetBufferObjects() const
 	{
 		return std::make_pair(mVertexBuffer, mIndexBuffer);
 	}
@@ -171,9 +171,9 @@ public:
 		mVertexBuffer->GPUWaitSync();
 	}
 
-	int GetPipelinePos() 
-	{ 
-		return mPipelinePos; 
+	int GetPipelinePos()
+	{
+		return mPipelinePos;
 	}
 };
 

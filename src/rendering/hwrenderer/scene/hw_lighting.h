@@ -52,4 +52,3 @@ inline	int getExtraLight()
 {
 	return r_viewpoint.extralight * gl_weaponlight;
 }
-

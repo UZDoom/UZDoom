@@ -23,7 +23,7 @@ class DoomStatusBar : BaseStatusBar
 	HUDFont mIndexFont;
 	HUDFont mAmountFont;
 	InventoryBarState diparms;
-	
+
 
 	override void Init()
 	{
@@ -60,7 +60,7 @@ class DoomStatusBar : BaseStatusBar
 		DrawImage("STBAR", (0, 168), DI_ITEM_OFFSETS);
 		DrawImage("STTPRCNT", (90, 171), DI_ITEM_OFFSETS);
 		DrawImage("STTPRCNT", (221, 171), DI_ITEM_OFFSETS);
-		
+
 		Inventory a1 = GetCurrentAmmo();
 		if (a1 != null) DrawString(mHUDFont, FormatNumber(a1.Amount, 3), (44, 171), DI_TEXT_ALIGN_RIGHT|DI_NOSHADOW);
 		DrawString(mHUDFont, FormatNumber(CPlayer.health, 3), (90, 171), DI_TEXT_ALIGN_RIGHT|DI_NOSHADOW);
@@ -68,7 +68,7 @@ class DoomStatusBar : BaseStatusBar
 
 		DrawBarKeys();
 		DrawBarAmmo();
-		
+
 		if (deathmatch || teamplay)
 		{
 			DrawString(mHUDFont, FormatNumber(CPlayer.FragCount, 3), (138, 171), DI_TEXT_ALIGN_RIGHT);
@@ -77,12 +77,12 @@ class DoomStatusBar : BaseStatusBar
 		{
 			DrawBarWeapons();
 		}
-		
+
 		if (multiplayer)
 		{
 			DrawImage("STFBANY", (143, 168), DI_ITEM_OFFSETS|DI_TRANSLATABLE);
 		}
-		
+
 		if (CPlayer.mo.InvSel != null && !Level.NoInventoryBar)
 		{
 			DrawInventoryIcon(CPlayer.mo.InvSel, (160, 198), DI_DIMDEPLETED);
@@ -99,9 +99,9 @@ class DoomStatusBar : BaseStatusBar
 		{
 			DrawInventoryBar(diparms, (48, 169), 7, DI_ITEM_LEFT_TOP);
 		}
-		
+
 	}
-	
+
 	protected virtual void DrawBarKeys()
 	{
 		bool locks[6];
@@ -125,27 +125,27 @@ class DoomStatusBar : BaseStatusBar
 		else image = "";
 		DrawImage(image, (239, 191), DI_ITEM_OFFSETS);
 	}
-	
+
 	protected virtual void DrawBarAmmo()
 	{
 		int amt1, maxamt;
 		[amt1, maxamt] = GetAmount("Clip");
 		DrawString(mIndexFont, FormatNumber(amt1, 3), (288, 173), DI_TEXT_ALIGN_RIGHT);
 		DrawString(mIndexFont, FormatNumber(maxamt, 3), (314, 173), DI_TEXT_ALIGN_RIGHT);
-		
+
 		[amt1, maxamt] = GetAmount("Shell");
 		DrawString(mIndexFont, FormatNumber(amt1, 3), (288, 179), DI_TEXT_ALIGN_RIGHT);
 		DrawString(mIndexFont, FormatNumber(maxamt, 3), (314, 179), DI_TEXT_ALIGN_RIGHT);
-		
+
 		[amt1, maxamt] = GetAmount("RocketAmmo");
 		DrawString(mIndexFont, FormatNumber(amt1, 3), (288, 185), DI_TEXT_ALIGN_RIGHT);
 		DrawString(mIndexFont, FormatNumber(maxamt, 3), (314, 185), DI_TEXT_ALIGN_RIGHT);
-		
+
 		[amt1, maxamt] = GetAmount("Cell");
 		DrawString(mIndexFont, FormatNumber(amt1, 3), (288, 191), DI_TEXT_ALIGN_RIGHT);
 		DrawString(mIndexFont, FormatNumber(maxamt, 3), (314, 191), DI_TEXT_ALIGN_RIGHT);
 	}
-	
+
 	protected virtual void DrawBarWeapons()
 	{
 		DrawImage("STARMS", (104, 168), DI_ITEM_OFFSETS);
@@ -164,7 +164,7 @@ class DoomStatusBar : BaseStatusBar
 		let berserk = CPlayer.mo.FindInventory("PowerStrength");
 		DrawImage(berserk? "PSTRA0" : "MEDIA0", (20, -2));
 		DrawString(mHUDFont, FormatNumber(CPlayer.health, 3), (44, -20));
-		
+
 		let armor = CPlayer.mo.FindInventory("BasicArmor", true);
 		if (armor != null && armor.Amount > 0)
 		{
@@ -199,13 +199,13 @@ class DoomStatusBar : BaseStatusBar
 		{
 			DrawFullscreenKeys();
 		}
-		
+
 		if (isInventoryBarVisible())
 		{
 			DrawInventoryBar(diparms, (0, 0), 7, DI_SCREEN_CENTER_BOTTOM, HX_SHADOW);
 		}
 	}
-	
+
 	protected virtual void DrawFullscreenKeys()
 	{
 		// Draw the keys. This does not use a special draw function like SBARINFO because the specifics will be different for each mod

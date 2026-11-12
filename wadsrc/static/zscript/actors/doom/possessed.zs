@@ -295,8 +295,8 @@ extend class Actor
 			LineAttack(ang, MISSILERANGE, slope, damage, "Hitscan", "Bulletpuff");
 		}
 	}
-	
-	
+
+
 	private void A_SPosAttackInternal()
 	{
 		if (target)
@@ -304,7 +304,7 @@ extend class Actor
 			A_FaceTarget();
 			double bangle = angle;
 			double slope = AimLineAttack(bangle, MISSILERANGE);
-		
+
 			for (int i=0 ; i<3 ; i++)
 			{
 				double ang = bangle + Random2[SPosAttack]() * (22.5/256);
@@ -312,8 +312,8 @@ extend class Actor
 				LineAttack(ang, MISSILERANGE, slope, damage, "Hitscan", "Bulletpuff");
 			}
 		}
-    }
-	
+	}
+
 	void A_SPosAttackUseAtkSound()
 	{
 		if (target)
@@ -322,7 +322,7 @@ extend class Actor
 			A_SPosAttackInternal();
 		}
 	}
-	
+
 	// This version of the function, which uses a hard-coded sound, is meant for Dehacked only.
 	void A_SPosAttack()
 	{
@@ -332,7 +332,7 @@ extend class Actor
 			A_SPosAttackInternal();
 		}
 	}
-	
+
 	private void A_CPosAttackInternal(Sound snd)
 	{
 		if (target)
@@ -351,13 +351,13 @@ extend class Actor
 	{
 		A_CPosAttackInternal(AttackSound);
 	}
-	
+
 	void A_CPosAttackDehacked()
 	{
 		A_CPosAttackInternal("chainguy/attack");
 	}
 
-	
+
 	void A_CPosRefire()
 	{
 		if (HitFriend())

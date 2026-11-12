@@ -89,8 +89,8 @@ class FireDemon : Actor
 		FDMN R 1 A_FreezeDeathChunks;
 		Wait;
 	}
-	
-	
+
+
 
 
 	//============================================================================
@@ -290,7 +290,7 @@ class FireDemon : Actor
 			mo.Vel.Z = (random[FireDemonSplotch]() / 64.) + 3;
 		}
 	}
-	
+
 }
 
 // FireDemonSplotch1 -------------------------------------------------------
@@ -355,7 +355,7 @@ class FireDemonRock1 : Actor
 		FDMN S 200;
 		Stop;
 	}
-	
+
 	//============================================================================
 	//
 	// A_SmBounce

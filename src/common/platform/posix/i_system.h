@@ -43,7 +43,7 @@ struct FStartupSelectionInfo;
 #ifdef __HAIKU__
 #define SHARE_DIR "/boot/system/data"
 #else
-#define SHARE_DIR "/usr/local/share"
+#define SHARE_DIR "/usr/share"
 #endif
 #endif
 

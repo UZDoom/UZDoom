@@ -1469,7 +1469,7 @@ FDInputJoystick *FDInputJoystickManager::EnumDevices()
 	// list and try to find it there, if it's found, it is marked 1. At the end
 	// of this, devices marked 1 existed before and are left alone. Devices
 	// marked 0 are no longer present and should be destroyed. If a device is
-	// present in the new list that we have not yet instantiated, we 
+	// present in the new list that we have not yet instantiated, we
 	// instantiate it now.
 	for (j = 0; j < Devices.Size(); ++j)
 	{

@@ -16,8 +16,8 @@ public:
 
 	void Click();
 
-	double GetPreferredWidth();
-	double GetPreferredHeight();
+	double GetPreferredWidth() override;
+	double GetPreferredHeight() override;
 
 	std::function<void()> OnClick;
 

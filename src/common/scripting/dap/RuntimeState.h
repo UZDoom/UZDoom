@@ -53,5 +53,6 @@ class RuntimeState
 
 	static void GetStackFrames(VMFrameStack *stack, std::vector<VMFrame *> &frames);
 	static bool GetStackFrames(uint32_t stackId, std::vector<VMFrame *> &frames);
+	static int GetStackFrameIndex(VMFrameStack *stack, VMFrame *frame);
 };
 }

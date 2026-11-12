@@ -242,4 +242,3 @@ static const int KeyAxisMapping[NUM_AXIS_CODES] = {
 	KEY_PAD_LTRIGGER,
 	KEY_PAD_RTRIGGER,
 };
-

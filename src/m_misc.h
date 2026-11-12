@@ -38,8 +38,10 @@ void M_ScreenShot (const char *filename);
 void M_LoadDefaults ();
 
 bool M_SaveDefaults (const char *filename);
-void M_SaveCustomKeys (FConfigFile *config, char *section, char *subsection, size_t sublen);
+void M_SaveCustomKeys (FConfigFile *config, FString section);
 
+void M_OpenConfigDir();
+void M_OpenWadDir();
 
 #include "i_specialpaths.h"
 #endif

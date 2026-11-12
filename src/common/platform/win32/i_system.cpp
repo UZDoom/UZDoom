@@ -65,6 +65,7 @@
 #include "cmdlib.h"
 #include "i_interface.h"
 #include "i_mainwindow.h"
+#include "stringtable.h"
 
 #include "widgets/launcherwindow.h"
 
@@ -95,6 +96,7 @@ EXTERN_CVAR (Bool, queryiwad);
 // Used on welcome/IWAD screen.
 EXTERN_CVAR (Int, vid_preferbackend)
 EXTERN_CVAR(Bool, longsavemessages)
+EXTERN_CVAR(Bool, vid_cursor_invert);
 
 extern HANDLE StdOut;
 extern bool FancyStdOut;
@@ -156,7 +158,7 @@ FString I_DetectOS(void)
 			{
 				osname = (info.wProductType == VER_NT_WORKSTATION) ? "7" : "Server 2008 R2";
 			}
-			else if (info.dwMinorVersion == 2)	
+			else if (info.dwMinorVersion == 2)
 			{
 				// Starting with Windows 8.1, you need to specify in your manifest
 				// the highest version of Windows you support, which will also be the
@@ -218,12 +220,12 @@ void CalculateCPUSpeed()
 		ClockCalibration.Reset();
 
 		// Count cycles for at least 55 milliseconds.
-        // The performance counter may be very low resolution compared to CPU
-        // speeds today, so the longer we count, the more accurate our estimate.
-        // On the other hand, we don't want to count too long, because we don't
-        // want the user to notice us spend time here, since most users will
-        // probably never use the performance statistics.
-        min_diff = freq.LowPart * 11 / 200;
+		// The performance counter may be very low resolution compared to CPU
+		// speeds today, so the longer we count, the more accurate our estimate.
+		// On the other hand, we don't want to count too long, because we don't
+		// want the user to notice us spend time here, since most users will
+		// probably never use the performance statistics.
+		min_diff = freq.LowPart * 11 / 200;
 
 		// just in case we were launched with a custom priority class, keep it
 		DWORD OldPriorityClass = GetPriorityClass(GetCurrentProcess());
@@ -294,7 +296,7 @@ static void PrintToStdOut(const char *cpt, HANDLE StdOut)
 
 	DWORD bytes_written;
 	WriteFile(StdOut, printData.GetChars(), (DWORD)printData.Len(), &bytes_written, NULL);
-	if (terminal) 
+	if (terminal)
 		WriteFile(StdOut, "\033[0m", 4, &bytes_written, NULL);
 }
 
@@ -373,20 +375,25 @@ bool I_SetCursor(FGameTexture *cursorpic)
 
 	if (cursorpic != NULL && cursorpic->isValid())
 	{
-		auto image = cursorpic->GetTexture()->GetBgraBitmap(nullptr);
-		// Must be no larger than 32x32. (is this still necessary?
-		if (image.GetWidth() > 32 || image.GetHeight() > 32)
+		auto src = cursorpic->GetTexture()->GetBgraBitmap(nullptr);
+		// Must be no larger than 32x32. (is this still necessary? No, but the limit is dependant on dpi and cursor settings
+		if (src.GetWidth() > 32 || src.GetHeight() > 32)
 		{
 			return false;
 		}
-		// Fixme: This should get a raw image, not a texture. (Once raw images get implemented.)
-		int lo = cursorpic->GetTexelLeftOffset();
-		int to = cursorpic->GetTexelTopOffset();
 
-		cursor = CreateAlphaCursor(image, lo, to);
+		int xhot = vid_cursor_invert? src.GetWidth()-1: 0;
+		int yhot = 0;
+
+		uint8_t buffer[32*32*4];
+		memset(buffer, 0, 32*32*4);
+		FBitmap bmp(buffer, 32*4, 32, 32);
+		bmp.Blit(0, 0, src, src.GetWidth(), src.GetHeight(), vid_cursor_invert? FBitmap::Transform::MIRROR: FBitmap::Transform::NONE); // expand to 32*32
+
+		cursor = CreateAlphaCursor(bmp, xhot, yhot);
 		if (cursor == NULL)
 		{
-			cursor = CreateCompatibleCursor(image, lo, to);
+			cursor = CreateCompatibleCursor(bmp, xhot, yhot);
 		}
 		if (cursor == NULL)
 		{
@@ -619,15 +626,15 @@ bool I_WriteIniFailed(const char* filename)
 	char *lpMsgBuf;
 	FString errortext;
 
-	FormatMessageA (FORMAT_MESSAGE_ALLOCATE_BUFFER | 
-					FORMAT_MESSAGE_FROM_SYSTEM | 
+	FormatMessageA (FORMAT_MESSAGE_ALLOCATE_BUFFER |
+					FORMAT_MESSAGE_FROM_SYSTEM |
 					FORMAT_MESSAGE_IGNORE_INSERTS,
 		NULL,
 		GetLastError(),
 		MAKELANGID(LANG_NEUTRAL, SUBLANG_DEFAULT), // Default language
 		(LPSTR)&lpMsgBuf,
 		0,
-		NULL 
+		NULL
 	);
 	errortext.Format ("The config file %s could not be written:\n%s", filename, lpMsgBuf);
 	LocalFree (lpMsgBuf);
@@ -823,3 +830,14 @@ void I_OpenShellFolder(const char* infolder)
 	}
 }
 
+FString FStringTable::GetSystemLocale()
+{
+	wchar_t LocaleName[LOCALE_NAME_MAX_LENGTH];
+
+	if (GetUserDefaultLocaleName(LocaleName, LOCALE_NAME_MAX_LENGTH) > 0)
+	{
+		return FString(LocaleName);
+	}
+
+	return "en-US";
+}

@@ -803,4 +803,3 @@ struct FTypeTable
 
 
 extern FTypeTable TypeTable;
-

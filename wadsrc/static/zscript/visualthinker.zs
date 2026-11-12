@@ -30,16 +30,16 @@ Class VisualThinker : Thinker native
 	native TextureID		Texture;
 	native TranslationID	Translation;
 	native int16			LightLevel;
-	
+
 	native uint				Flags;
 	native int				VisualThinkerFlags;
-    
-    FlagDef                 FlipOffsetX :       VisualThinkerFlags, 0;
-    FlagDef                 FlipOffsetY :       VisualThinkerFlags, 1;
-    FlagDef                 XFlip :             VisualThinkerFlags, 2;
-    FlagDef                 YFlip :             VisualThinkerFlags, 3;
-    FlagDef                 DontInterpolate :   VisualThinkerFlags, 4;
-    FlagDef                 AddLightLevel :     VisualThinkerFlags, 5;
+
+	FlagDef                 FlipOffsetX :       VisualThinkerFlags, 0;
+	FlagDef                 FlipOffsetY :       VisualThinkerFlags, 1;
+	FlagDef                 XFlip :             VisualThinkerFlags, 2;
+	FlagDef                 YFlip :             VisualThinkerFlags, 3;
+	FlagDef                 DontInterpolate :   VisualThinkerFlags, 4;
+	FlagDef                 AddLightLevel :     VisualThinkerFlags, 5;
 
 	native Color			scolor;
 
@@ -73,7 +73,7 @@ Class VisualThinker : Thinker native
 			p.SetRenderStyle(style);
 			p.Translation = trans;
 			p.Flags = flags;
-            p.VisualThinkerFlags = VisualThinkerFlags;
+			p.VisualThinkerFlags = VisualThinkerFlags;
 			p.UpdateSector();
 			p.UpdateSpriteInfo();
 		}

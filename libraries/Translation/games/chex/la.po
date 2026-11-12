@@ -1,0 +1,297 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-06-09 21:01+0000\n"
+"Last-Translator: Júlia Rosell Saldaña <contacte@juliars.cat>\n"
+"Language-Team: Latin <https://hosted.weblate.org/projects/doom-engine-games/chex-quest/la/>\n"
+"Language: la\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6\n"
+
+msgid "TXT_CHEX_EP"
+msgstr "Chex Quest"
+
+# Flem = phlegm
+msgid "GOTBLUEFLEM"
+msgstr "Hyacinthum flemkey sustulit."
+
+msgid "GOTYELLOWFLEM"
+msgstr "Flavum sustulit."
+
+msgid "GOTREDFLEM"
+msgstr "Rubrum flemkey sustulit."
+
+msgid "GOTGOGGLES"
+msgstr "Ultra invenerunt Goggles"
+
+msgctxt "chex"
+msgid "PD_BLUECO"
+msgstr "Clavis caeruleum opus est ut strenuus hoc objectum"
+
+msgctxt "chex"
+msgid "PD_REDCO"
+msgstr "Clavis rubra opus est ut strenuus hoc objectum"
+
+msgctxt "chex"
+msgid "PD_YELLOWCO"
+msgstr "Vos postulo flavo clavis ut movere hoc objectum"
+
+msgid "PD_BLUEFO"
+msgstr "Vos postulo caeruleum flemkey ut strenuus hoc objectum"
+
+msgid "PD_REDFO"
+msgstr "Vos postulo rubeum flemkey ut movere hoc objectum"
+
+msgid "PD_YELLOWFO"
+msgstr "Vos postulo flavo flemkey ut movere hoc objectum"
+
+msgctxt "chex"
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "Sustulit zorcher."
+
+msgctxt "chex"
+msgid "HUSTR_E1M1"
+msgstr "E1M1: Zonam egressi"
+
+msgctxt "chex"
+msgid "HUSTR_E1M2"
+msgstr "E1M2: Repono facilius"
+
+msgctxt "chex"
+msgid "HUSTR_E1M3"
+msgstr "E1M3: Laboratorium"
+
+msgctxt "chex"
+msgid "HUSTR_E1M4"
+msgstr "EIMIV: Arboretum"
+
+msgctxt "chex"
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Caverna Bazoik"
+
+msgctxt "chex"
+msgid "HUSTR_E2M1"
+msgstr "EIIMI: Portus Spatialis"
+
+msgctxt "chex"
+msgid "HUSTR_E2M2"
+msgstr "EIIMII: Cinematographeum"
+
+msgctxt "chex"
+msgid "HUSTR_E2M3"
+msgstr "EIIMIII: Museum Chex"
+
+msgctxt "chex"
+msgid "HUSTR_E2M4"
+msgstr "E2M4: plateae urbis"
+
+msgctxt "chex"
+msgid "HUSTR_E2M5"
+msgstr "EIIMV: Systema Cloacarum"
+
+msgctxt "chex"
+msgid "HUSTR_E3M1"
+msgstr "E3M1: Imperii Centralis"
+
+msgctxt "chex"
+msgid "HUSTR_E3M2"
+msgstr "E3M2: Cereals United"
+
+msgctxt "chex"
+msgid "HUSTR_E3M3"
+msgstr "EIIIMIII: Villa Chex"
+
+msgctxt "chex"
+msgid "HUSTR_E3M4"
+msgstr "E3M4: Provincialis Park"
+
+msgctxt "chex"
+msgid "HUSTR_E3M5"
+msgstr "EIIIMV: Navis Spatialis Meteorica"
+
+msgctxt "chex"
+msgid "CC_ZOMBIE"
+msgstr "Communis"
+
+msgctxt "chex"
+msgid "CC_SHOTGUN"
+msgstr "Bipedicus"
+
+msgctxt "chex"
+msgid "CC_IMP"
+msgstr "Bipedicus apud Lorica"
+
+msgctxt "chex"
+msgid "CC_DEMON"
+msgstr "Stridicus"
+
+msgctxt "chex"
+msgid "CC_LOST"
+msgstr "Fodina Flemensis"
+
+msgctxt "chex"
+msgid "CC_CACO"
+msgstr "Super Cycloptis"
+
+msgctxt "chex"
+msgid "CC_BARON"
+msgstr "Maximus"
+
+msgctxt "chex"
+msgid "CC_SPIDER"
+msgstr "Flembominatio"
+
+msgctxt "chex"
+msgid "CC_CYBER"
+msgstr "Dominus Snotfolus"
+
+msgctxt "chex"
+msgid "CC_HERO"
+msgstr "Bellator Chexianus"
+
+msgctxt "chex"
+msgid "PD_BLUEC"
+msgstr "Clavis caerulea opus est ad hanc ianuam aperi"
+
+msgctxt "chex"
+msgid "PD_REDC"
+msgstr "Clavis rubra opus est ut hanc ianuam aperias"
+
+msgctxt "chex"
+msgid "PD_YELLOWC"
+msgstr "Clavis lutea opus est ut hanc ianuam aperias"
+
+msgid "PD_BLUEF"
+msgstr "Opus caeruleum flemkey ad hanc portam aperi"
+
+msgid "PD_REDF"
+msgstr "Opus rubeum flemkey ad hanc ianuam aperi"
+
+msgid "PD_YELLOWF"
+msgstr "Vos postulo ut hanc ianuam aperire flavo flemkey"
+
+msgctxt "chex"
+msgid "OB_SLIME"
+msgstr "%o demergi in aliquo limo."
+
+msgctxt "chex"
+msgid "OB_LAVA"
+msgstr "%o demergi in aliquo limo."
+
+msgid "OB_POWERSTRAND"
+msgstr "%o ictus limo inter dimensional!"
+
+msgctxt "chex"
+msgid "OB_KILLEDSELF"
+msgstr "%o ictus limo inter dimensional!"
+
+msgid "OB_STRIDICUS"
+msgstr "%o jactabatur stridicus."
+
+msgid "OB_FLEMMINE"
+msgstr "%o erat a flem meus gooed."
+
+msgid "OB_SUPERCYCLOPTIS"
+msgstr "%o attenuata eximius cycloptis erat."
+
+msgid "OB_MAXIMUS"
+msgstr "%o a Maximo victus est."
+
+msgid "OB_LARVA"
+msgstr "%o erat gooed a larva."
+
+msgid "OB_QUADRUMPUS"
+msgstr "%o Divisum a Quadrumpo."
+
+msgid "OB_FLEMBOMINATION"
+msgstr "%o a Flembominatione victus."
+
+msgid "OB_SNOTFOLUS"
+msgstr "%o a Dominus victus Snotfolus."
+
+msgctxt "chex"
+msgid "OB_MPR_SPLASH"
+msgstr "%o ictus %k propulsor est."
+
+msgctxt "chex"
+msgid "E1TEXT"
+msgstr ""
+"Dimissis monstris Flembrane\n"
+"ad propriam rationem reducitis, vos liberatis\n"
+"captivorum. Flemoids tamen ubique sunt!\n"
+"Tu et captivi intermissum faciunt\n"
+"tuum spaceship. Et limo flemoids tuum\n"
+"navem, sed in orbita anguste fugis.\n"
+"Per reditum tibi gratularis\n"
+"pro audaces eripe, at edis a .\n"
+"monitum…\n"
+"Ultimum Flandrorum non vidimus.\n"
+"\n"
+"Infeliciter dicis. Nam ut\n"
+"domum reverti, invenis quod Flemoides\n"
+"huc aliquo modo secuti sunt. para\n"
+"pro Chex Quaestio 2: Terror in urbe Chex!"
+
+msgctxt "chex"
+msgid "E2TEXT"
+msgstr ""
+"Reliquos flemoids qui zorch habes\n"
+"in cloacas congregentur. Chex urbe fuit\n"
+"servavit. Videtur quod comminatio Flemoidis\n"
+"tandem finivit.\n"
+"\n"
+"\n"
+"Decem anni eunt in pax et felicitatem.\n"
+"Sed Flandri non victi sunt\n"
+"quorum desiderium est moderari nutritionally \n"
+"dimensio di- cerei non diminuitur.\n"
+"Congregatis omnibus copiis, aperuit\n"
+"ingens inter dimensiva discidium in spatio\n"
+"Nunc magna globus bitumen est\n"
+"recta ad frugum planetam!\n"
+"\n"
+"Expediret\n"
+"Chex Quaestio III: Invasio!"
+
+msgctxt "chex"
+msgid "E3TEXT"
+msgstr ""
+"Uno flatu finali, zorch Dominus\n"
+"Snotfolus ad propriam redit rationem!\n"
+"In omnibus odds habes single-\n"
+"invasionem tradite elusi!\n"
+"\n"
+"Vere speras quod Flandrenses habent\n"
+"postremo didicit eorum disciplinam et voluntatem\n"
+"numquam rursus ad sacrificium\n"
+"dimensio.\n"
+"\n"
+"\n"
+"\n"
+"sed si scis eris\n"
+"parata illis!"
+
+msgid "M_EPI1"
+msgstr "Eripe in Bazoik"
+
+msgid "M_EPI2"
+msgstr "Formido in Chex urbe"
+
+msgid "M_EPI3"
+msgstr "Incursio!"
+
+msgid "TAG_GOGGLES"
+msgstr "Ultra Ocularia"
+
+msgid "TAG_BLUEFLEMKEY"
+msgstr "Flemkey Caeruleus"
+
+msgid "TAG_YELLOWFLEMKEY"
+msgstr "Flavus Flemkey"
+
+msgid "TAG_REDFLEMKEY"
+msgstr "Flemkey Ruber"

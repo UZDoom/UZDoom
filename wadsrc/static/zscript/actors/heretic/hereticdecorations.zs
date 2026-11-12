@@ -34,7 +34,7 @@ Class SkullHang70 : Actor
 		Stop;
 	}
 }
-	
+
 Class SkullHang60 : Actor
 {
 	Default
@@ -51,7 +51,7 @@ Class SkullHang60 : Actor
 		Stop;
 	}
 }
-	
+
 Class SkullHang45 : Actor
 {
 	Default
@@ -68,7 +68,7 @@ Class SkullHang45 : Actor
 		Stop;
 	}
 }
-	
+
 Class SkullHang35 : Actor
 {
 	Default
@@ -85,7 +85,7 @@ Class SkullHang35 : Actor
 		Stop;
 	}
 }
-	
+
 Class Chandelier : Actor
 {
 	Default
@@ -319,4 +319,3 @@ Class HangingCorpse : Actor
 		Stop;
 	}
 }
-

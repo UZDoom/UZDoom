@@ -26,8 +26,8 @@ class FastProjectile : Actor
 		Projectile;
 		MissileHeight 0;
 	}
-	
-	
+
+
 	virtual void Effect()
 	{
 		class<Actor> trail = MissileName;
@@ -41,7 +41,7 @@ class FastProjectile : Actor
 			}
 			// Do not clip this offset to the floor.
 			hitz += MissileHeight;
-			
+
 			Actor act = Spawn (trail, (pos.xy, hitz), ALLOW_REPLACE);
 			if (act != null)
 			{
@@ -49,13 +49,13 @@ class FastProjectile : Actor
 					act.target = target;
 				else
 					act.target = self;
-				
+
 				act.angle = angle;
 				act.pitch = pitch;
 			}
 		}
 	}
-	
+
 	//----------------------------------------------------------------------------
 	//
 	// AFastProjectile :: Tick
@@ -120,7 +120,7 @@ class FastProjectile : Actor
 					{
 						tm.ClearLastRipped();	// [RH] Do rip damage each step, like Hexen
 					}
-					
+
 					if (!TryMove (Pos.XY + frac.XY, true, false, tm))
 					{ // Blocked move
 						if (!bSkyExplode)
@@ -167,7 +167,7 @@ class FastProjectile : Actor
 
 					SetZ(floorz);
 					HitFloor ();
-                    Destructible.ProjectileHitPlane(self, SECPART_Floor);
+					Destructible.ProjectileHitPlane(self, SECPART_Floor);
 					ExplodeMissile (NULL, NULL);
 					return;
 				}
@@ -181,12 +181,12 @@ class FastProjectile : Actor
 					}
 
 					SetZ(ceilingz - Height);
-                    Destructible.ProjectileHitPlane(self, SECPART_Ceiling);
+					Destructible.ProjectileHitPlane(self, SECPART_Ceiling);
 					ExplodeMissile (NULL, NULL);
 					return;
 				}
 				CheckPortalTransition();
-				if (changexy && ripcount <= 0) 
+				if (changexy && ripcount <= 0)
 				{
 					ripcount = count >> 3;
 
@@ -211,4 +211,3 @@ class FastProjectile : Actor
 		}
 	}
 }
-

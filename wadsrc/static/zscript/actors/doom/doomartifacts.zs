@@ -109,7 +109,7 @@ class Megasphere : CustomInventory
 		TNT1 A 0 A_GiveInventory("MegasphereHealth", 1);
 		Stop;
 	}
-}	
+}
 
 // Invisibility -------------------------------------------------------------
 
@@ -135,7 +135,7 @@ class BlurSphere : PowerupGiver
 		PINS ABCD 6 Bright;
 		Loop;
 	}
-}	
+}
 
 // Radiation suit (aka iron feet) -------------------------------------------
 
@@ -157,7 +157,7 @@ class RadSuit : PowerupGiver
 		SUIT A -1 Bright;
 		Stop;
 	}
-}	
+}
 
 // infrared -----------------------------------------------------------------
 
@@ -181,7 +181,7 @@ class Infrared : PowerupGiver
 		Loop;
 	}
 }
-	
+
 // Allmap -------------------------------------------------------------------
 
 class Allmap : MapRevealer
@@ -229,4 +229,3 @@ class Berserk : CustomInventory
 		Stop;
 	}
 }
-	

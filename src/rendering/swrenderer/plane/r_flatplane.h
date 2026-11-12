@@ -57,7 +57,7 @@ namespace swrenderer
 	public:
 		RenderColoredPlane(RenderThread *thread);
 		void Render(VisiblePlane *pl);
-		
+
 		RenderThread *Thread = nullptr;
 
 	private:

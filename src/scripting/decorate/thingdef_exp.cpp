@@ -355,7 +355,7 @@ static FxExpression *ParseExpressionA (FScanner &sc, PClassActor *cls)
 				base_expr = new FxDotIdentifier(base_expr, FieldName, pos);
 			}
 		}
-		else 
+		else
 #endif
 			if (sc.CheckToken('['))
 		{
@@ -372,7 +372,7 @@ static FxExpression *ParseExpressionA (FScanner &sc, PClassActor *cls)
 			return new FxPostIncrDecr(base_expr, TK_Decr);
 		}
 		else break;
-	} 
+	}
 
 	return base_expr;
 }
@@ -626,7 +626,7 @@ static FxExpression *ParseAbs(FScanner &sc, PClassActor *cls)
 {
 	FxExpression *x = ParseExpressionM (sc, cls);
 	sc.MustGetToken(')');
-	return new FxAbs(x); 
+	return new FxAbs(x);
 }
 
 static FxExpression *ParseAtan2(FScanner &sc, FName identifier, PClassActor *cls)

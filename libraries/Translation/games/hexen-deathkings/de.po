@@ -2,17 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-02 00:32+0000\n"
+"PO-Revision-Date: 2026-06-16 12:06+0000\n"
 "Last-Translator: heiko123abc <heiko1234aaa@gmail.com>\n"
-"Language-Team: German <https://hosted.weblate.org/projects/doom-engine-games/"
-"hexen-deathkings/de/>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/doom-engine-games/hexen-deathkings/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15-dev\n"
-"HeaderCode: de\n"
+"X-Generator: Weblate 2026.7.dev0\n"
 
 msgid "TXT_HEXDD_MAP41"
 msgstr "Zerstörtes Dorf"
@@ -92,6 +90,7 @@ msgstr "Kanalgrube"
 msgid "TXT_HEXDD_MAP38"
 msgstr "Die Rose"
 
+#, fuzzy
 msgid "TXT_HEXDD_CLUS1MSG"
 msgstr ""
 "Mit zitternden Händen wischst du dir\n"
@@ -115,6 +114,7 @@ msgstr ""
 "\n"
 "Oder nicht?"
 
+#, fuzzy
 msgid "TXT_HEXDD_CLUS2MSG"
 msgstr ""
 "Es sind sicherlich die Seelen der\n"
@@ -137,6 +137,7 @@ msgstr ""
 "\n"
 "Kälte und lauerndem Tod ..."
 
+#, fuzzy
 msgid "TXT_HEXDD_WIN1MSG"
 msgstr ""
 "Wieder findest du dich in der großen\n"
@@ -152,6 +153,7 @@ msgstr ""
 "... Augen, die eine boshafte Absicht\n"
 "verbergen."
 
+#, fuzzy
 msgid "TXT_HEXDD_WIN2MSG"
 msgstr ""
 "Schon einmal hast du die Chaossphäre\n"
@@ -174,8 +176,7 @@ msgstr ""
 
 msgid "TXT_HEXDD_WIN3MSG"
 msgstr ""
-"\\n"
-"...und andere Spieler warten.\n"
+"\\n…und andere Spieler warten.\n"
 "\n"
 
 msgid "TXT_ACS_MAP33_6_YOUDA"
@@ -194,7 +195,7 @@ msgid "TXT_ACS_MAP41_8_ADOOR"
 msgstr "Eine Tür in der Kapelle hat sich geöffnet"
 
 msgid "TXT_ACS_MAP42_4_NOWTH"
-msgstr "Hm. Das ist merkwürdig..."
+msgstr "Hm. Das ist merkwürdig…"
 
 msgid "TXT_ACS_MAP44_1_THREE"
 msgstr "Drei weitere Teile des Rätsels verbleiben"
@@ -224,13 +225,13 @@ msgid "TXT_ACS_MAP45_1_YOUHE"
 msgstr "Du hörst, wie sich in der Ferne eine Platform bewegt"
 
 msgid "TXT_ACS_MAP46_0_ITISD"
-msgstr "Es ist getan..."
+msgstr "Es ist vollbracht…"
 
 msgid "TXT_ACS_MAP46_1_YOUHA"
 msgstr "Du hast das Rätsel noch nicht gelöst"
 
 msgid "TXT_ACS_MAP46_2_IMWAR"
-msgstr "Ich warne dich..."
+msgstr "Ich warne dich…"
 
 msgid "TXT_ACS_MAP46_3_STUBB"
 msgstr "Du bist aber stur, was?"
@@ -242,7 +243,7 @@ msgid "TXT_ACS_MAP46_8_ONEFO"
 msgstr "Ein Viertel des Rätsels ist gelöst"
 
 msgid "TXT_ACS_MAP46_9_BADCH"
-msgstr "Falsche Wahl..."
+msgstr "Schlechte Wahl…"
 
 msgid "TXT_ACS_MAP47_2_THESY"
 msgstr "Die Symbole sind nicht ausgerichtet"
@@ -299,7 +300,7 @@ msgid "TXT_ACS_MAP51_20_GIMME"
 msgstr "Gib mir etwas Zucker, Baby"
 
 msgid "TXT_ACS_MAP51_21_DUHUH"
-msgstr "Uh-huh..."
+msgstr "Uh-huh…"
 
 msgid "TXT_ACS_MAP51_22_FILMI"
 msgstr "Film in einer Stunde?"
@@ -337,11 +338,12 @@ msgstr "Der Ausgang ist offen"
 msgid "TXT_ACS_MAP54_1_THEDO"
 msgstr "Die Türen werden sich nicht von dieser Seite öffnen"
 
+#, fuzzy
 msgid "TXT_ACS_MAP54_4_THEDO"
 msgstr "Die Türen sind offen..."
 
 msgid "TXT_ACS_MAP54_5_IFYOU"
-msgstr "...Wenn du bereit bist"
+msgstr "…Wenn du bereit bist"
 
 msgid "TXT_ACS_MAP54_9_ADOOR"
 msgstr "Eine Tür hat sich geöffnet"

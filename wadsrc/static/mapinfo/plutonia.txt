@@ -422,4 +422,3 @@ cluster 10
 	flat = "$BGFLAT31"
 	entertext = lookup, "P6TEXT"
 }
-

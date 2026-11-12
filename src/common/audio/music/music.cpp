@@ -149,13 +149,13 @@ void S_SetMusicCallbacks(MusicCallbacks* cb)
 int MusicEnabled() // int return is for scripting
 {
 	return mus_enabled && !nomusic;
-} 
+}
 
 //==========================================================================
 //
-// 
 //
-// Create a sound system stream for the currently playing song 
+//
+// Create a sound system stream for the currently playing song
 //==========================================================================
 
 static std::unique_ptr<SoundStream> musicStream;
@@ -1069,7 +1069,7 @@ CCMD (playliststatus)
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 

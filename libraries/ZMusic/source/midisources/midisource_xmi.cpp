@@ -3,7 +3,7 @@
 ** Code to let ZDoom play XMIDI music through the MIDI streaming API.
 **
 **---------------------------------------------------------------------------
-** Copyright 2010 Randy Heit
+** Copyright 2010 Marisa Heit
 ** All rights reserved.
 **
 ** Redistribution and use in source and binary forms, with or without

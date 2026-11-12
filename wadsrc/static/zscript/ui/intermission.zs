@@ -42,7 +42,8 @@ extend class ScreenJobRunner
 	{
 		if (!netgame || GetSkipType() == ST_UNSKIPPABLE)
 			return;
-		
+
+		Font ourConFont = Font.GetConsoleFont(ConFont);
 		if (net_cutscenereadytype == 0)
 		{
 			int totalClients, readyClients;
@@ -59,11 +60,11 @@ extend class ScreenJobRunner
 			{
 				TextureID readyico = TexMan.CheckForTexture("READYICO", TexMan.Type_MiscPatch);
 				Vector2 readysize = TexMan.GetScaledSize(readyico);
-				
+
 				if (IsPlayerReady(consoleplayer))
 					Screen.DrawTexture(readyico, true, 0, 0, DTA_CleanNoMove, true, DTA_TopLeft, true);
 
-				Screen.DrawText(ConFont, Font.CR_UNTRANSLATED, (int(readysize.X) + 4) * CleanXFac, CleanYFac, String.Format("%d/%d", readyClients, totalClients), DTA_CleanNoMove, true);
+				Screen.DrawText(ourConFont, Font.CR_UNTRANSLATED, (int(readysize.X) + 4) * CleanXFac, CleanYFac, String.Format("%d/%d", readyClients, totalClients), DTA_CleanNoMove, true);
 				int startTimer = GetReadyTimer();
 				if (startTimer > 0)
 				{
@@ -71,7 +72,7 @@ extend class ScreenJobRunner
 					if (startTimer <= GameTicRate * 5)
 						col = Font.CR_RED;
 
-					Screen.DrawText(ConFont, col, 0, int(readysize.Y) * CleanYFac + CleanYFac, SystemTime.Format("%M:%S", int(ceil(double(startTimer) / GameTicRate))), DTA_CleanNoMove, true);
+					Screen.DrawText(ourConFont, col, 0, int(readysize.Y) * CleanYFac + CleanYFac, SystemTime.Format("%M:%S", int(ceil(double(startTimer) / GameTicRate))), DTA_CleanNoMove, true);
 				}
 			}
 		}
@@ -93,30 +94,30 @@ extend class ScreenJobRunner
 			}
 
 			string contTxt = StringTable.Localize(contType);
-			int xOfs = (Screen.GetWidth() - ConFont.StringWidth(contTxt) * CleanXFac) / 2;
-			int yOfs = Screen.GetHeight() - ConFont.GetHeight() * CleanYFac - CleanYFac;
-			Screen.DrawText(ConFont, Font.CR_GREEN, xOfs, yOfs, contTxt, DTA_CleanNoMove, true);
+			int xOfs = (Screen.GetWidth() - ourConFont.StringWidth(contTxt) * CleanXFac) / 2;
+			int yOfs = Screen.GetHeight() - ourConFont.GetHeight() * CleanYFac - CleanYFac;
+			Screen.DrawText(ourConFont, Font.CR_GREEN, xOfs, yOfs, contTxt, DTA_CleanNoMove, true);
 		}
 	}
 }
 
 class IntermissionController native ui
 {
-    // This is mostly a black box to the native intermission code.
-    // May be scriptified later, but right now we do not need it.
+	// This is mostly a black box to the native intermission code.
+	// May be scriptified later, but right now we do not need it.
 
-    native void Start();
+	native void Start();
 	native bool Responder(InputEvent ev);
-    native bool Ticker();
-    native void Drawer();
-    native bool NextPage();
+	native bool Ticker();
+	native void Drawer();
+	native bool NextPage();
 }
 
 // Wrapper to play the native intermissions within a screen job.
 class IntermissionScreenJob : ScreenJob
 {
-    IntermissionController controller;
-	
+	IntermissionController controller;
+
 	ScreenJob Init(IntermissionController ctrl, bool allowwipe)
 	{
 		Super.Init();
@@ -132,9 +133,9 @@ class IntermissionScreenJob : ScreenJob
 
 	override void OnDestroy()
 	{
-        if (controller)
-            controller.Destroy();
-        Super.OnDestroy();
+		if (controller)
+			controller.Destroy();
+		Super.OnDestroy();
 	}
 }
 

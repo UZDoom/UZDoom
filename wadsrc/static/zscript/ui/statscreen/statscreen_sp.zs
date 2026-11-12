@@ -20,7 +20,7 @@
 class DoomStatusScreen : StatusScreen
 {
 	int intermissioncounter;
-	
+
 	override void initStats ()
 	{
 		intermissioncounter = gameinfo.intermissioncounter;
@@ -30,7 +30,7 @@ class DoomStatusScreen : StatusScreen
 		cnt_kills[0] = cnt_items[0] = cnt_secret[0] = -1;
 		cnt_time = cnt_par = -1;
 		cnt_pause = GameTicRate;
-	
+
 		cnt_total_time = -1;
 	}
 
@@ -151,25 +151,28 @@ class DoomStatusScreen : StatusScreen
 
 	override void drawStats (void)
 	{
-		// line height
-		int lh = IntermissionFont.GetHeight() * 3 / 2;
-
 		drawLF();
-		
-	
+
+		let ourFont = Font.GetBigTextFont(generic_ui? NewSmallFont : content.mFont);
+		bool usingDynamicFont = ourFont.IsValidDynamicFont();
+
+		// line height
+		int lh = usingDynamicFont? ourFont.GetHeight() * 3 / 2 : IntermissionFont.GetHeight() * 3 / 2;
+
 		// For visual consistency, only use the patches here if all are present.
 		bool useGfx = TexMan.OkForLocalization(Kills, "$TXT_IMKILLS")
 			&& TexMan.OkForLocalization(Items, "$TXT_IMITEMS")
 			&& TexMan.OkForLocalization(P_secret, "$TXT_IMSECRETS")
 			&& TexMan.OkForLocalization(Timepic, "$TXT_IMTIME")
-			&& (!wbs.partime || TexMan.OkForLocalization(Par, "$TXT_IMPAR"));
+			&& (!wbs.partime || TexMan.OkForLocalization(Par, "$TXT_IMPAR"))
+			&& !usingDynamicFont;
 
 		// The font color may only be used when the entire screen is printed as text.
 		// Otherwise the text based parts should not be translated to match the other graphics patches.
 		let tcolor = useGfx? Font.CR_UNTRANSLATED : content.mColor;
 
 		Font printFont;
-		Font textFont = generic_ui? NewSmallFont : content.mFont;
+		Font textFont = Font.GetBigTextFont(generic_ui? NewSmallFont : content.mFont);
 		int statsx = SP_STATSX;
 
 		int timey = SP_TIMEY;
@@ -199,22 +202,22 @@ class DoomStatusScreen : StatusScreen
 				statsx = max(0, (320 - allwidth) / 2);
 			}
 
-			printFont = generic_ui? IntermissionFont : content.mFont;
+			printFont = Font.GetBigTextFont(content.mFont);
 			DrawText (textFont, tcolor, statsx, SP_STATSY, "$TXT_IMKILLS");
 			DrawText (textFont, tcolor, statsx, SP_STATSY+lh, "$TXT_IMITEMS");
 			DrawText (textFont, tcolor, statsx, SP_STATSY+2*lh, "$TXT_IMSECRETS");
 			DrawText (textFont, tcolor, SP_TIMEX, timey, "$TXT_IMTIME");
 			if (wbs.partime) DrawText (textFont, tcolor, 160 + SP_TIMEX, timey, "$TXT_IMPAR");
 		}
-			 
+
 		drawPercent (printFont, 320 - statsx, SP_STATSY, cnt_kills[0], wbs.maxkills, true, tcolor);
 		drawPercent (printFont, 320 - statsx, SP_STATSY+lh, cnt_items[0], wbs.maxitems, true, tcolor);
 		drawPercent (printFont, 320 - statsx, SP_STATSY+2*lh, cnt_secret[0], wbs.maxsecret, true, tcolor);
 		drawTimeFont (printFont, 160 - SP_TIMEX, timey, cnt_time, tcolor);
-			 
+
 		// This really sucks - not just by its message - and should have been removed long ago!
 		// To avoid problems here, the "sucks" text only gets printed if the lump is present, this even applies to the text replacement.
-			 
+
 		if (cnt_time >= wbs.sucktime * 60 * 60 && wbs.sucktime > 0 && Sucks.IsValid())
 		{ // "sucks"
 			int x = 160 - SP_TIMEX;
@@ -251,7 +254,7 @@ class RavenStatusScreen : DoomStatusScreen
 
 		drawLF();
 
-		Font textFont = generic_ui? NewSmallFont : content.mFont;
+		Font textFont = Font.GetSmallTextFont(generic_ui? NewSmallFont : content.mFont);
 		let tcolor = content.mColor;
 
 		DrawText (textFont, tcolor, 50, 65, "$TXT_IMKILLS", shadow:true);

@@ -50,4 +50,3 @@ public:
 	int SetViewpoint(FRenderState &di, HWViewpointUniforms *vp);
 	unsigned int GetBlockSize() const { return mBlockSize; }
 };
-

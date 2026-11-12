@@ -287,9 +287,9 @@ void FLevelLocals::ClearLevelData(bool fullgc)
 		// towards anything invalid.
 		FName fieldTypes[] = { NAME_SectorPortal, NAME_LinePortal, NAME_Vertex, NAME_Side, NAME_Line, NAME_SecPlane, NAME_F3DFloor, NAME_Sector };
 		for (DObject* probe = GC::Root; probe != nullptr; probe = probe->ObjNext)
-			probe->ClearNativePointerFields({ fieldTypes, std::size(fieldTypes) });
+			probe->ClearNativePointerFields({ fieldTypes, countof(fieldTypes) });
 	}
-	
+
 	TravellingThinkers.Clear();
 	interpolator.ClearInterpolations();	// [RH] Nothing to interpolate on a fresh level.
 	Thinkers.DestroyAllThinkers(fullgc);
@@ -309,16 +309,16 @@ void FLevelLocals::ClearLevelData(bool fullgc)
 	{
 		UDMFKeys[i].Clear();
 	}
-	
+
 	SN_StopAllSequences(this);
 
 	FStrifeDialogueNode *node;
-	
+
 	while (StrifeDialogues.Pop (node))
 	{
 		delete node;
 	}
-	
+
 	DialogueRoots.Clear();
 	ClassRoots.Clear();
 
@@ -677,7 +677,7 @@ CCMD(dumpgeometry)
 			for (int j = 0; j<sector.subsectorcount; j++)
 			{
 				subsector_t * sub = sector.subsectors[j];
-				
+
 				Printf(PRINT_LOG, "    Subsector %d - real sector = %d - %s\n", int(sub->Index()), sub->sector->sectornum, sub->hacked & 1 ? "hacked" : "");
 				for (uint32_t k = 0; k<sub->numlines; k++)
 				{
@@ -702,7 +702,7 @@ CCMD(dumpgeometry)
 					{
 						Printf(PRINT_LOG, ", back sector = %d (no partnerseg)", seg->backsector->sectornum);
 					}
-					
+
 					Printf(PRINT_LOG, "\n");
 				}
 			}
@@ -762,4 +762,3 @@ CUSTOM_CVAR(Bool, forcewater, false, CVAR_ARCHIVE | CVAR_SERVERINFO)
 		}
 	}
 }
-

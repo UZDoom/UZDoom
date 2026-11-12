@@ -41,13 +41,13 @@ class InventoryBarState ui
 	Vector2 boxofs;
 	Vector2 selectofs;
 	Vector2 innersize;
-		
+
 	TextureID left;
 	TextureID right;
 	Vector2 arrowoffset;
 
 	double itemalpha;
-	
+
 	HUDFont amountfont;
 	int cr;
 	int flags;
@@ -74,7 +74,7 @@ class InventoryBarState ui
 		me.right = TexMan.CheckForTexture(rightgfx, TexMan.TYPE_MiscPatch);
 		me.arrowoffset = arrowoffs;
 		me.arrowoffset.Y += me.boxsize.Y/2;	// default is centered to the side of the box.
-		if (indexfont == null) 
+		if (indexfont == null)
 		{
 			me.amountfont = HUDFont.Create("INDEXFONT");
 			if (cr == Font.CR_UNTRANSLATED) cr = Font.CR_GOLD;
@@ -97,7 +97,7 @@ class InventoryBarState ui
 		Init(me, indexfont, cr, itemalpha, innersize, leftgfx, rightgfx, arrowoffs, flags);
 		return me;
 	}
-	
+
 	// The default settings here are what SBARINFO is using.
 	static InventoryBarState CreateNoBox(HUDFont indexfont = null, int cr = Font.CR_UNTRANSLATED, double itemalpha = 1.,
 							Vector2 boxsize = (32, 32), String selgfx = "SELECTBO", Vector2 innersize = (0, 0),
@@ -110,7 +110,7 @@ class InventoryBarState ui
 		Init(me, indexfont, cr, itemalpha, innersize, leftgfx, rightgfx, arrowoffs, flags);
 		return me;
 	}
-	
+
 }
 
 class HUDMessageBase native ui
@@ -149,7 +149,7 @@ class BaseStatusBar : StatusBarCore native
 		ST_GODFACE			= ST_NUMPAINFACES*ST_FACESTRIDE,
 		ST_DEADFACE			= ST_GODFACE + 1
 	}
-	
+
 	enum EHudState
 	{
 		HUD_StatusBar,
@@ -180,7 +180,7 @@ class BaseStatusBar : StatusBarCore native
 		ITYPE_WEAPONSLOT,
 		ITYPE_SELECTEDINVENTORY,
 	}
-	
+
 	enum HexArmorType
 	{
 		HEXENARMOR_ARMOR,
@@ -188,7 +188,7 @@ class BaseStatusBar : StatusBarCore native
 		HEXENARMOR_HELM,
 		HEXENARMOR_AMULET,
 	};
-	
+
 	enum AmmoModes
 	{
 		AMMO_PRIMARY,
@@ -196,24 +196,24 @@ class BaseStatusBar : StatusBarCore native
 		AMMO_ANY,
 		AMMO_BOTH
 	};
-	
+
 	enum EHudDraw
 	{
 		HUD_Normal,
 		HUD_HorizCenter
 	}
-	
+
 	enum EShade
 	{
 		SHADER_HORZ = 0,
 		SHADER_VERT = 2,
 		SHADER_REVERSE = 1
 	}
-	
+
 	const XHAIRSHRINKSIZE =(1./18);
 	const XHAIRPICKUPSIZE = (2+XHAIRSHRINKSIZE);
 	const POWERUPICONSIZE = 32;
-	
+
 	native bool Centering;
 	native bool FixedOrigin;
 	native double CrosshairSize;
@@ -227,10 +227,10 @@ class BaseStatusBar : StatusBarCore native
 	native HUDMessageBase DetachMessage(HUDMessageBase msg);
 	native HUDMessageBase DetachMessageID(uint msgid);
 	native void DetachAllMessages();
-	
+
 	native void UpdateScreenGeometry();
 
-	virtual void Init() 
+	virtual void Init()
 	{
 		InitScoreboard();
 	}
@@ -247,7 +247,7 @@ class BaseStatusBar : StatusBarCore native
 		}
 
 		if (idmypos)
-		{ 
+		{
 			// Draw current coordinates
 			DrawMyPos();
 		}
@@ -382,7 +382,7 @@ class BaseStatusBar : StatusBarCore native
 			return pmo.InvFirst;
 		}
 	}
-	
+
 	//============================================================================
 	//
 	// DBaseStatusBar :: GetCurrentAmmo
@@ -429,15 +429,15 @@ class BaseStatusBar : StatusBarCore native
 		{
 			bool applyscale;
 			[icon, applyscale] = GetInventoryIcon(item, flags);
-			
+
 			if (item.Amount == 0 && !showdepleted) return icon, scale;
-			
+
 			if (applyscale)
 				scale = item.Scale;
 		}
 		return icon, scale;
 	}
-	
+
 	//============================================================================
 	//
 	// Convenience functions to retrieve item tags
@@ -450,40 +450,40 @@ class BaseStatusBar : StatusBarCore native
 		if (w == null) return "";
 		let ammo = secondary? w.ammo2 : w.ammo1;
 		return ammo.GetTag();
-	}	
+	}
 
 	String GetWeaponTag()
 	{
 		let w = CPlayer.ReadyWeapon;
 		if (w == null) return "";
 		return w.GetTag();
-	}	
+	}
 
 	String GetSelectedInventoryTag()
 	{
 		let w = CPlayer.mo.InvSel;
 		if (w == null) return "";
 		return w.GetTag();
-	}	
+	}
 
 	// These cannot be done in ZScript.
 	native static String GetGlobalACSString(int index);
 	native static String GetGlobalACSArrayString(int arrayno, int index);
 	native static int GetGlobalACSValue(int index);
 	native static int GetGlobalACSArrayValue(int arrayno, int index);
-	
+
 	//============================================================================
 	//
 	// Convenience functions to retrieve some numbers
 	//
 	//============================================================================
-	
+
 	int GetArmorAmount()
 	{
 		let armor = CPlayer.mo.FindInventory("BasicArmor", true);
 		return armor? armor.Amount : 0;
 	}
-	
+
 	int, int GetAmount(class<Inventory> item)
 	{
 		let it = CPlayer.mo.FindInventory(item);
@@ -514,7 +514,7 @@ class BaseStatusBar : StatusBarCore native
 		}
 		return int(add);
 	}
-	
+
 	// Note that this retrieves the value in tics, not seconds like the equivalent SBARINFO function.
 	// The idea is to let the caller decide what to do with it instead of destroying accuracy here.
 	int GetAirTime()
@@ -524,13 +524,13 @@ class BaseStatusBar : StatusBarCore native
 		else
 			return max(CPlayer.air_finished - Level.maptime, 0);
 	}
-	
+
 	int GetSelectedInventoryAmount()
 	{
 		if(CPlayer.mo.InvSel != NULL) return CPlayer.mo.InvSel.Amount;
 		return 0;
 	}
-	
+
 	int GetKeyCount()
 	{
 		int num = 0;
@@ -540,7 +540,7 @@ class BaseStatusBar : StatusBarCore native
 		}
 		return num;
 	}
-	
+
 	//============================================================================
 	//
 	// various checker functions, based on SBARINFOs condition nodes.
@@ -560,7 +560,7 @@ class BaseStatusBar : StatusBarCore native
 		if (w == null) return false;
 		bool usesammo1 = w.AmmoType1 != NULL;
 		bool usesammo2 = w.AmmoType2 != NULL;
-		
+
 		if (ValidModes == AMMO_PRIMARY) return usesammo1;
 		if (ValidModes == AMMO_SECONDARY) return usesammo2;
 		if (ValidModes == AMMO_ANY) return (usesammo1 || usesammo2);
@@ -579,13 +579,13 @@ class BaseStatusBar : StatusBarCore native
 		if (CPlayer == null) return false;
 		return (CPlayer.inventorytics > 0 && !Level.NoInventoryBar);
 	}
-	
+
 	//============================================================================
 	//
 	// checks if aspect ratio is in a given range
 	//
 	//============================================================================
-	
+
 	bool CheckAspectRatio(double min, double max)
 	{
 		if (CPlayer == null) return false;
@@ -684,11 +684,11 @@ class BaseStatusBar : StatusBarCore native
 	bool CheckHealth(int Amount, bool percentage = false)
 	{
 		if (CPlayer == null) return false;
-		
+
 		int phealth = percentage ? CPlayer.mo.health * 100 / CPlayer.mo.GetMaxHealth() : CPlayer.mo.health;
 		return (phealth >= Amount);
 	}
-	
+
 	//============================================================================
 	//
 	// checks if player is invulnerable
@@ -739,7 +739,7 @@ class BaseStatusBar : StatusBarCore native
 		y = GetTopOfStatusBar() / (3*scale) - height;
 
 		Vector3 pos = CPlayer.mo.Pos;
-		
+
 		for (i = 0; i < 3; y += height, ++i)
 		{
 			double v = i == 0? pos.X : i == 1? pos.Y : pos.Z;
@@ -748,7 +748,7 @@ class BaseStatusBar : StatusBarCore native
 				DTA_VirtualWidth, vwidth, DTA_VirtualHeight, vheight);
 		}
 	}
-	
+
 	//============================================================================
 	//
 	// automap HUD common drawer
@@ -759,13 +759,13 @@ class BaseStatusBar : StatusBarCore native
 	//============================================================================
 
 	protected native void DoDrawAutomapHUD(int crdefault, int highlight);
-	
+
 	virtual void DrawAutomapHUD(double ticFrac)
 	{
 		// game needs to be checked here, so that SBARINFO also gets the correct colors.
 		DoDrawAutomapHUD(Font.CR_GREY, gameinfo.gametype & GAME_DoomChex? Font.CR_UNTRANSLATED : Font.CR_YELLOW);
 	}
-	
+
 	//---------------------------------------------------------------------------
 	//
 	// DrawPowerups
@@ -798,13 +798,13 @@ class BaseStatusBar : StatusBarCore native
 			}
 		}
 	}
-	
+
 	//============================================================================
 	//
 	// draw stuff
 	//
 	//============================================================================
-	
+
 	TranslationID GetTranslation() const
 	{
 		if(gameinfo.gametype & GAME_Raven)
@@ -812,7 +812,7 @@ class BaseStatusBar : StatusBarCore native
 		else
 			return Translation.MakeID(TRANSLATION_Players, CPlayer.mo.PlayerNumber());
 	}
-	
+
 	//============================================================================
 	//
 	//
@@ -826,7 +826,7 @@ class BaseStatusBar : StatusBarCore native
 		{
 			let slotval = harmor.Slots[armorType];
 			let slotincr = harmor.SlotsIncrement[armorType];
-			
+
 			if (slotval > 0 && slotincr > 0)
 			{
 				//combine the alpha values
@@ -836,7 +836,7 @@ class BaseStatusBar : StatusBarCore native
 		}
 		DrawImage(image, pos, flags, alpha, boxsize, scale);
 	}
-	
+
 	//============================================================================
 	//
 	//
@@ -849,7 +849,7 @@ class BaseStatusBar : StatusBarCore native
 		TextureID texture;
 		Vector2 applyscale;
 		[texture, applyscale] = GetIcon(item, flags, false);
-		
+
 		if((flags & DI_ARTIFLASH) && artiflashTick > 0)
 		{
 			DrawImage(flashimgs[artiflashTick-1], pos, flags, alpha, boxsize);
@@ -862,25 +862,25 @@ class BaseStatusBar : StatusBarCore native
 			DrawTexture(texture, pos, flags, alpha, boxsize, applyscale);
 		}
 	}
-	
+
 	//============================================================================
 	//
 	//
 	//
 	//============================================================================
-	
+
 	void DrawShader(int which, Vector2 pos, Vector2 size, int flags = 0, double alpha = 1.)
 	{
 		static const String texnames[] = {"BarShaderHF", "BarShaderHR", "BarShaderVF", "BarShaderVR" };
 		DrawImage(texnames[which], pos, DI_ITEM_LEFT_TOP|DI_ALPHAMAPPED|DI_FORCEFILL | (flags & ~(DI_ITEM_HMASK|DI_ITEM_VMASK)), alpha, size);
 	}
-	
+
 	//============================================================================
 	//
 	//
 	//
 	//============================================================================
-	
+
 	Vector2, int AdjustPosition(Vector2 position, int flags, double width, double height)
 	{
 		// This must be done here, before altered coordinates get sent to the draw functions.
@@ -904,20 +904,20 @@ class BaseStatusBar : StatusBarCore native
 		case DI_ITEM_VCENTER: position.y -= height / 2; break;
 		case DI_ITEM_BOTTOM:  position.y -= height; break;
 		}
-		
+
 		// clear all alignment flags so that the following code only passes on the rest
 		flags &= ~(DI_ITEM_VMASK|DI_ITEM_HMASK);
 		return position, flags;
-	}	
-	
+	}
+
 	//============================================================================
 	//
 	// note that this does not implement chain wiggling, this is because
-	// it would severely complicate the parameter list. The calling code is 
+	// it would severely complicate the parameter list. The calling code is
 	// normally in a better position to do the needed calculations anyway.
 	//
 	//============================================================================
-	
+
 	void DrawGem(String chain, String gem, int displayvalue, int maxrange, Vector2 pos, int leftpadding, int rightpadding, int chainmod, int flags = 0)
 	{
 		TextureID chaintex = TexMan.CheckForTexture(chain, TexMan.TYPE_MiscPatch);
@@ -927,11 +927,11 @@ class BaseStatusBar : StatusBarCore native
 
 		displayvalue = clamp(displayvalue, 0, maxrange);
 		int offset = int(double(chainsize.X - leftpadding - rightpadding) * displayvalue / maxrange);
-	
+
 		DrawTexture(chaintex, pos + (offset % chainmod, 0), flags | DI_ITEM_LEFT_TOP);
 		DrawImage(gem, pos + (offset + leftPadding, 0), flags | DI_ITEM_LEFT_TOP);
 	}
-	
+
 	//============================================================================
 	//
 	// DrawBar
@@ -946,20 +946,20 @@ class BaseStatusBar : StatusBarCore native
 
 		Vector2 texsize = TexMan.GetScaledSize(ontex);
 		[position, flags] = AdjustPosition(position, flags, texsize.X, texsize.Y);
-		
+
 		double value = (maxval != 0) ? clamp(curval / maxval, 0, 1) : 0;
 		if(border != 0) value = 1. - value; //invert since the new drawing method requires drawing the bg on the fg.
-		
-		
+
+
 		// {cx, cb, cr, cy}
 		double Clip[4];
 		Clip[0] = Clip[1] = Clip[2] = Clip[3] = 0;
-		
+
 		bool horizontal = !(vertical & SHADER_VERT);
 		bool reverse = !!(vertical & SHADER_REVERSE);
 		double sizeOfImage = (horizontal ? texsize.X - border*2 : texsize.Y - border*2);
 		Clip[(!horizontal) | ((!reverse)<<1)] = sizeOfImage - sizeOfImage *value;
-		
+
 		// preserve the active clipping rectangle
 		int cx, cy, cw, ch;
 		[cx, cy, cw, ch] = screen.GetClipRect();
@@ -972,10 +972,10 @@ class BaseStatusBar : StatusBarCore native
 			DrawTexture(ontex, position, flags | DI_ITEM_LEFT_TOP, alpha);
 			SetClipRect(position.X + Clip[0], position.Y + Clip[1], texsize.X - Clip[0] - Clip[2], texsize.Y - Clip[1] - Clip[3], flags);
 		}
-		
+
 		if (offtex.IsValid() && TexMan.GetScaledSize(offtex) == texsize) DrawTexture(offtex, position, flags | DI_ITEM_LEFT_TOP, alpha);
 		else Fill(color(int(255*alpha),0,0,0), position.X + Clip[0], position.Y + Clip[1], texsize.X - Clip[0] - Clip[2], texsize.Y - Clip[1] - Clip[3]);
-		
+
 		if (border == 0)
 		{
 			SetClipRect(position.X + Clip[0], position.Y + Clip[1], texsize.X - Clip[0] - Clip[2], texsize.Y - Clip[1] - Clip[3], flags);
@@ -984,7 +984,7 @@ class BaseStatusBar : StatusBarCore native
 		// restore the previous clipping rectangle
 		screen.SetClipRect(cx, cy, cw, ch);
 	}
-	
+
 	//============================================================================
 	//
 	// DrawInventoryBar
@@ -994,25 +994,25 @@ class BaseStatusBar : StatusBarCore native
 	// the actual drawing code.
 	//
 	//============================================================================
-	
+
 	// Except for the placement information this gets all info from the struct that gets passed in.
 	void DrawInventoryBar(InventoryBarState parms, Vector2 position, int numfields, int flags = 0, double bgalpha = 1.)
 	{
 		double width = parms.boxsize.X * numfields;
 		[position, flags] = AdjustPosition(position, flags, width, parms.boxsize.Y);
-		
+
 		CPlayer.mo.InvFirst = ValidateInvFirst(numfields);
 		if (CPlayer.mo.InvFirst == null) return;	// Player has no listed inventory items.
-		
+
 		Vector2 boxsize = parms.boxsize;
 		// First draw all the boxes
 		for(int i = 0; i < numfields; i++)
 		{
 			DrawTexture(parms.box, position + (boxsize.X * i, 0), flags | DI_ITEM_LEFT_TOP, bgalpha);
 		}
-		
+
 		// now the items and the rest
-		
+
 		Vector2 itempos = position + boxsize / 2;
 		Vector2 textpos = position + boxsize - (1, 1 + parms.amountfont.mFont.GetHeight());
 
@@ -1036,7 +1036,7 @@ class BaseStatusBar : StatusBarCore native
 					DrawInventoryIcon(item, itempos + (boxsize.X * i, 0), flags | DI_ITEM_CENTER | DI_DIMDEPLETED );
 				}
 			}
-			
+
 			if (parms.amountfont != null && (item.Amount > 1 || (flags & DI_ALWAYSSHOWCOUNTERS)))
 			{
 				DrawString(parms.amountfont, FormatNumber(item.Amount, 0, 5), textpos + (boxsize.X * i, 0), flags | DI_TEXT_ALIGN_RIGHT, parms.cr, parms.itemalpha);
@@ -1055,4 +1055,3 @@ class BaseStatusBar : StatusBarCore native
 		}
 	}
 }
-

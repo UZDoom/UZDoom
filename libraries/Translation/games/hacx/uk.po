@@ -1,0 +1,656 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-07-11 16:01+0000\n"
+"Last-Translator: Ron Dallas <Lot_bohdan@ukr.net>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/doom-engine-games/hacx-filter/uk/>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 2026.7.1.dev0\n"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG1"
+msgstr "Що, ці жучки тобі не по зубах?"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG"
+msgstr ""
+"Точно хочеш\n"
+"вивалитись з двіжу?"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG2"
+msgstr "Хочеш вийти? І ти називаєш себе хакером?"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG3"
+msgstr "Повернись назад поки я не відправив тобі в вихлопну вірус!"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG4"
+msgstr "Реальні хакери ніколи не відвалюють з двіжухи."
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG5"
+msgstr "Шо ти! Ще ж не було найкращої частини!"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG6"
+msgstr "Здасися зараз — і кіберпростору торба!"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG7"
+msgstr "ДЖИНІ передає палкий привіт, покидьку!"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG8"
+msgstr "Хмм. Герой із тебе так собі, Хакере."
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG9"
+msgstr "Що? Хочеш повернутися на нари?"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG10"
+msgstr "Тре було брати синю пігулку."
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG11"
+msgstr "Ця гра — не просто \"тицяй і біжи\"!"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG12"
+msgstr "Нема питань. Порятунок світу зачекає, правда?"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG13"
+msgstr "Схоже, час форкнутися звідси!"
+
+#, fuzzy
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG14"
+msgstr "Не вирубай комп забуваючи про HacX!"
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_SUICIDE"
+msgstr "%o стер@[adj_3_ua] себе з лиця всесвіту."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_FALLING"
+msgstr "%o сформува@[adj_1_ua] кратер розміром з Канзас."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_CRUSH"
+msgstr "%o розкатало в млинець."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_EXIT"
+msgstr "%o хоті@[adj_1_ua] дати дьору з мережі."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_WATER"
+msgstr "%o попли@[adj_1_ua] як сокира."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_SLIME"
+msgstr "%o влаштува@[adj_1_ua] ядерний бабах."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_LAVA"
+msgstr "%o прийня@[adj_1_ua] гарячу ванну."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_BARREL"
+msgstr "%o злови@[adj_1_ua] передоз нітрогліцерином."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_SPLASH"
+msgstr "%o рознесло на дрібні шматочки."
+
+#, fuzzy
+msgctxt "doom hacx.hacx1"
+msgid "OB_R_SPLASH"
+msgstr "%o хоті@[adj_1_ua] дізнатися, як %g виглядає всередині."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_ROCKET"
+msgstr "%o хоті@[adj_1_ua] дізнатися, як %g виглядає всередині."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_KILLEDSELF"
+msgstr "%o стер@[adj_3_ua] себе з лиця всесвіту."
+
+msgid "OB_THUG"
+msgstr "%o більше не домінантний вид."
+
+#, fuzzy
+msgid "OB_ANDROID"
+msgstr "%o підімкну@[adj_2_ua] до хибної системи."
+
+msgid "OB_MONSTRUCT"
+msgstr "%o отрима@[adj_1_ua] нефігових кібер-звиздюлів."
+
+msgid "OB_ICE"
+msgstr "%o злови@[adj_1_ua] кабіною ЛІД."
+
+msgid "OB_BUZZER"
+msgstr "%o чуть торкнуло струмом."
+
+msgid "OB_STEALTH"
+msgstr "%o відкриває для себе доволі шокуючий поворот."
+
+msgid "OB_DMAN"
+msgstr "%o видалено з кіберпростору."
+
+msgid "OB_GLASS"
+msgstr "%o проби@[adj_1_ua] власну скляну щелепу."
+
+msgid "OB_MANIAC"
+msgstr "Життєве членство %o було припинено."
+
+msgid "OB_MANIACHIT"
+msgstr "Рушій гри не зрозумів, від чого помер@[adj_3_ua] %o."
+
+msgid "OB_TERMIN"
+msgstr "Фатальна бестія спопелила %o."
+
+# This text is not gender neutral, obviously...
+msgid "OB_TERMINHIT"
+msgstr "%o підійшо@[adj_1_ua] занадто близько до протилежної статі."
+
+msgid "OB_REPLI"
+msgstr "%o попроща@[adj_2_ua] зі старим другом."
+
+msgid "OB_REPLIHIT"
+msgstr "%o зрадив старий друг."
+
+msgid "OB_PHAGE"
+msgstr "Природний відбір викреслив %o з себе."
+
+msgid "OB_THORN"
+msgstr "%o не уник@[adj_3_ua] колючої смерті."
+
+msgid "OB_SUMATIC"
+msgstr "%o дізна@[adj_2_ua], як б'ють сумоїсти... і куди саме."
+
+msgid "OB_GENIE"
+msgstr "%o не викона@[adj_1_ua] три бажання %p."
+
+msgid "OB_MINE"
+msgstr "%o не вдалось погладити міну."
+
+msgid "OB_MPKICK"
+msgstr "%o злови@[adj_1_ua] лицем коронний кік Брюса Лі від %k."
+
+msgid "OB_MPREZNATOR"
+msgstr "%o розпа@[adj_2_ua] на шматки від шокуючого викриття %k."
+
+msgid "OB_MPXPISTOL"
+msgstr "%o злови@[adj_1_ua] подвійну дозу звиздюлів від %k."
+
+msgid "OB_MPTAZER"
+msgstr "%o було вимкнуто шокером %k."
+
+msgid "OB_MPCRYOGUN"
+msgstr "%o впійма@[adj_1_ua] обличчям крижаний гнів %k."
+
+msgid "OB_MPUZI"
+msgstr "%o отрима@[adj_1_ua] гангстерський привіт від %k у вигляді десятка дірок."
+
+msgid "OB_MPZOOKA"
+msgstr "%o поласува@[adj_1_ua] фотонною бомбою %k."
+
+msgid "OB_MPZ_SPLASH"
+msgstr "Від %o залишилася акуратна купка фотонів завдяки %k."
+
+# Physically this is utter nonsense, of course.
+msgid "OB_MPANTIGUN"
+msgstr "%o було розкладено %k на антиматерію."
+
+msgid "OB_MPNUKE"
+msgstr "%o захава@[adj_1_ua] нюку %k."
+
+#, fuzzy
+msgid "OB_MPNUKESPLASH"
+msgstr "Під час кривавої різні %k було проведено ядерну реакцію %o."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_MPTELEFRAG"
+msgstr "%o показа@[adj_1_ua] усім свій внутрішній світ завдяки %k."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_MONTELEFRAG"
+msgstr "Атомна структура %o була примусово розчеплена."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_DEFAULT"
+msgstr "Строк придатності %o неочікувано закінчився."
+
+msgid "GOTNUKER"
+msgstr "Взято НЮКЕР! Посмокчіть-но це!"
+
+msgid "GOTUZI"
+msgstr "Взято УЗІ!!"
+
+msgid "GOTREZNATOR"
+msgstr "Резонатор HOIG - ЗАЖАР трохи задниць"
+
+msgid "GOTPHOTONZOOKA"
+msgstr "Взято Фотоно-зуку!"
+
+msgid "GOTBIGSTICK"
+msgstr "Ти тягаєш Велику Палицю!"
+
+msgid "GOTTAZER"
+msgstr "Взято Тейзер!"
+
+#, fuzzy
+msgid "GOTCRYOGUN"
+msgstr "Взято Кріоствол! ЗАМЕРЗНИ!"
+
+msgid "GOTROUNDS"
+msgstr "Взято трохи набоїв!"
+
+msgid "GOTROUNDSCASE"
+msgstr "Взято коробку набоїв!"
+
+# Was "grap" for some reason.
+msgid "GOTTORPEDO"
+msgstr "Взято торпеду!"
+
+msgid "GOTTORPEDOS"
+msgstr "Взято коробку торпед!"
+
+msgid "GOTMOLECULES"
+msgstr "Взято молекулярний модуль!"
+
+msgid "GOTMOLECULESTANK"
+msgstr "Взято резервуар з молекулами!"
+
+msgid "GOTCARTRIDGES"
+msgstr "Взято трохи картриджів!"
+
+msgid "GOTCARTRIDGESCASE"
+msgstr "Взято коробку картриджів!"
+
+msgid "GOTVALISE"
+msgstr "Взято валізу, забиту добром!"
+
+msgid "GOTFORCEFIELD"
+msgstr "Силове поле!"
+
+msgid "GOTMICROTEL"
+msgstr "007Мікротел"
+
+#, fuzzy
+msgid "GOTENKBLIND"
+msgstr "Невидимість в EnK-спектрі!"
+
+msgid "GOTRUBBERBOOTS"
+msgstr "Вулканізовані гумові чоботи!"
+
+#, fuzzy
+msgid "GOTSIARRAY"
+msgstr "SI-масив картографовано!"
+
+msgid "GOTINFRARED"
+msgstr "Інфрачервоний візор!"
+
+msgid "GOTINHALER"
+msgstr "Вдихни поглибше, інгалятор!"
+
+#, fuzzy
+msgid "GOTHYPONEED"
+msgstr "Доза гідергіну з гіпошприца рятує тобі життя!"
+
+msgid "GOTHYPO"
+msgstr "Підібрано гіпошприц!"
+
+msgid "GOTKEYCARD"
+msgstr "Знайдено ключ-карту!"
+
+msgid "GOTCKEY"
+msgstr "Знайдено С-Ключ!"
+
+msgid "GOTPASSWORD"
+msgstr "Знайдено пароль!"
+
+msgid "GOTBLUEZKEY"
+msgstr "Знайдено синій Z-ключ!"
+
+msgid "GOTYELWZKEY"
+msgstr "Знайдено жовтий Z-ключ!"
+
+msgid "GOTREDZKEY"
+msgstr "Знайдено червоний Z-ключ!"
+
+msgid "GOTBODYARMOR"
+msgstr "Бронекостюм!"
+
+msgid "GOTCENTROPHENOXINE"
+msgstr "Центрофеноксин"
+
+msgid "GOTKEVLARVEST"
+msgstr "Взято кевларовий жилет!"
+
+msgid "GOTSKEVLARVEST"
+msgstr "Взято супер-кевларовий жилет!"
+
+msgid "GOTMICROKIT"
+msgstr "Взято мікроаптечку!"
+
+msgid "GOTDAMPENER"
+msgstr "Взято шкодопоглинач!"
+
+msgid "PD_CKEY"
+msgstr "Тобі потрібен С-Ключ, щоб отримати доступ до цього предмету!"
+
+msgid "PD_KEYCARD"
+msgstr "Тобі потрібна ключ-карта, щоб отримати доступ до цього предмету!"
+
+msgid "PD_PASSWORD"
+msgstr "Тобі потрібен пароль, щоб отримати доступ до цього предмету!"
+
+msgid "PD_BLUEZKEY"
+msgstr "Тобі потрібен синій Z-ключ, щоб це запрацювало"
+
+msgid "PD_REDZKEY"
+msgstr "Тобі потрібен червоний Z-ключ, щоб це запрацювало!"
+
+msgid "PD_YELWZKEY"
+msgstr "Тобі потрібен жовтий Z-ключ, щоб це запрацювало!"
+
+msgid "X1TEXT"
+msgstr ""
+"Двадцять лямів в золоті, здається, не варті всіх\n"
+"цих клопотів, чи не так, хакер? У порівнянні з цим\n"
+"нари виглядають просто як якийсь клятий пікнік!\n"
+"\n"
+"Гидкі біомутації та твої\n"
+"сородичі-люди, що висять зі стелі, наче\n"
+"мішки з їжею.\n"
+"\n"
+"Що це, в біса таке, ДЖИНІ? Це зовсім не\n"
+"ті компи, які ти раніше хакав!\n"
+"\n"
+"Тобі краще знайти найближчий термінал,\n"
+"промчати крізь C-простір, розправитися з кількома\n"
+"мутантами і якнайшвидше звідси звинтити!\n"
+"\n"
+
+#, fuzzy
+msgid "X2TEXT"
+msgstr ""
+"Де всі люди?!\n"
+"\n"
+"Париж став пусткою, якщо, звісно,\n"
+"не вважати глюканих мутантів поважними городянами.\n"
+"\n"
+"Ти натрапив на клятий опір. Чорт, ці\n"
+"глюки дають жару! На твоє щастя,\n"
+"клепок у голові їм явно бракує.\n"
+"\n"
+"Але ти все ж здобув частину даних,\n"
+"які потрібні підкомітету. І там повна діч!\n"
+"\n"
+"Цих глюків живлять людські нейронні рідини!\n"
+"Не дивно, що в цьому районі стає дедалі\n"
+"менше людей. Повідом про це підкомітету. І\n"
+"будь обережним…\n"
+
+msgid "X3TEXT"
+msgstr ""
+"Цивілізації, якою ти її знав — торба!\n"
+"\n"
+"Ні друзів, ні родини. Людей більше немає.\n"
+"Принаймні, нормальних людей.\n"
+"\n"
+"Лишилося тільки одне… ДЖИНІ!\n"
+"І навіть якщо доведеться йти на край усесвіту,\n"
+"ти дістанеш цю мутовану дупу!\n"
+"Бо ти ж тепер у люті!\n"
+"\n"
+"А золото? Ніі, тепер це за твій рахунок.\n"
+"\n"
+"……(далі буде)……"
+
+#, fuzzy
+msgid "X5TEXT"
+msgstr ""
+"Ти вижив!\n"
+"\n"
+"Які були шанси, хакере?!\n"
+"Тут усе просто кишить забагованими мутантами.\n"
+"\n"
+"Ти не можеш зв'язатися з підкомітетом.\n"
+"Значить, ворог до них уже дістався.\n"
+"\n"
+"\n"
+"Ти... сам по собі."
+
+msgid "TXT_HACXMAP01"
+msgstr "GenEmp корп."
+
+msgid "TXT_HACXMAP02"
+msgstr "Тунельне місто"
+
+#, fuzzy
+msgid "TXT_HACXMAP03"
+msgstr "Лавова підстанція"
+
+msgid "TXT_HACXMAP04"
+msgstr "Алькатрас"
+
+msgid "TXT_HACXMAP05"
+msgstr "Кібер-цирк"
+
+msgid "TXT_HACXMAP06"
+msgstr "Цифро-Ота"
+
+msgid "TXT_HACXMAP07"
+msgstr "Велика стіна"
+
+msgid "TXT_HACXMAP08"
+msgstr "Сад насолод"
+
+msgid "TXT_HACXMAP09"
+msgstr "Прихована фортеця"
+
+msgid "TXT_HACXMAP10"
+msgstr "Мрія анархіста"
+
+msgid "TXT_HACXMAP11"
+msgstr "(Не) відомі нам!"
+
+msgid "TXT_HACXMAP12"
+msgstr "Готична рукавиця"
+
+msgid "TXT_HACXMAP13"
+msgstr "Каналізації"
+
+msgid "TXT_HACXMAP14"
+msgstr "Тродо-війни"
+
+msgid "TXT_HACXMAP15"
+msgstr "Сутінки Енка"
+
+#, fuzzy
+msgid "TXT_HACXMAP16"
+msgstr "Адаптивний кібер-комплекс"
+
+msgid "TXT_HACXMAP17"
+msgstr "Ріка крові"
+
+msgid "TXT_HACXMAP18"
+msgstr "Бізарро"
+
+msgid "TXT_HACXMAP19"
+msgstr "Кімнати війни"
+
+msgid "TXT_HACXMAP20"
+msgstr "Увага! Порушник!"
+
+msgid "TXT_HACXMAP31"
+msgstr "Осушувальна камера"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_CLEV"
+msgstr "Прибуття до…"
+
+# Printed when entering the idchoppers cheat, which gives the player a
+# chainsaw
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_CHOPPERS"
+msgstr "…підсмажить твій зад!"
+
+# Hacx's content here was totally useless so it got removed. However, this
+# string has to be defined and minimally altered so that the Dehacked
+# replacement is not being triggered.
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_BEHOLD"
+msgstr "(V)безсм., (S)берс., (I)невид., (R)кост., (A)карта, чи (L)нічне бач.?"
+
+#, fuzzy
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_BEHOLDX"
+msgstr "Тепер серйозно!"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_NCON"
+msgstr "Режим «Кібер-Різак»: УВІМКНЕНО"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_NCOFF"
+msgstr "Режим «Кібер-Різак»: ВИМКНЕНО"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_NOMUS"
+msgstr "Вибір: Неможливо "
+
+# Should probably not be translated...
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_MUS"
+msgstr "Додати звуку\n"
+
+#, fuzzy
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_KFAADDED"
+msgstr "INIT-режим \"Тицяй і біжи\""
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_FAADDED"
+msgstr "Хай буде так, Хакере."
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_DQDON"
+msgstr "Режим «Кібер-Всемогутність»: УВІМКНЕНО"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_DQDOFF"
+msgstr "Режим «Кібер-Всемогутність»: ВИМКНЕНО"
+
+msgctxt "doom hacx.hacx1"
+msgid "AMSTR_FOLLOWON"
+msgstr "Відстеження УВІМКНЕНО"
+
+msgctxt "doom hacx.hacx1"
+msgid "AMSTR_FOLLOWOFF"
+msgstr "Відстеження ВИМКНЕНО"
+
+msgctxt "doom hacx.hacx1"
+msgid "DOSY"
+msgstr "- натисни Y щоб втекти! -"
+
+msgctxt "doom hacx.hacx1"
+msgid "ENDGAME"
+msgstr ""
+"Ти божевільний чи просто неадекватний?\n"
+"Кажи: Так чи Ні!"
+
+msgctxt "doom hacx.hacx1"
+msgid "NIGHTMARE"
+msgstr ""
+"Точно? Тобі не стягнути\n"
+"таку складність, хакере!\n"
+"\n"
+"Тисни Y щоб померти. \n"
+
+# For most languages the original Doom text should suffice.
+msgctxt "doom hacx.hacx1"
+msgid "QSPROMPT"
+msgstr ""
+"Перезаписати швидке збереження з назвою\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Натисніть Y або N."
+
+msgctxt "doom hacx.hacx1"
+msgid "QLPROMPT"
+msgstr ""
+"Бажаєте швидко завантажити дані з назвою\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Натисніть Y або N."
+
+msgid "CC_THUG"
+msgstr "Бандюк"
+
+msgid "CC_ANDROID"
+msgstr "Андроїд"
+
+msgid "CC_ICE"
+msgstr "ЛІД"
+
+msgid "CC_BUZZER"
+msgstr "Дзижчалка"
+
+msgid "CC_DMAN"
+msgstr "D-Людина"
+
+msgid "CC_PHAGE"
+msgstr "Фаг"
+
+msgid "CC_MONSTRUCT"
+msgstr "Монструкт"
+
+msgid "CC_MECH"
+msgstr "Меха-маньяк"
+
+msgid "CC_TERMI"
+msgstr "Термінатрікс"
+
+msgid "CC_THORN"
+msgstr "Шипаста штука"
+
+msgid "CC_MAJONG"
+msgstr "Маджонг 7"
+
+msgctxt "doom hacx.hacx1"
+msgid "CC_HERO"
+msgstr "Ден Евенджер"
+
+msgctxt "doom hacx.hacx1"
+msgid "SKILL_BABY"
+msgstr "Будь ласка, не стріляй!"
+
+msgctxt "doom hacx.hacx1"
+msgid "SKILL_EASY"
+msgstr "Агрх, мені треба підлікуватися!"
+
+msgctxt "doom hacx.hacx1"
+msgid "SKILL_NORMAL"
+msgstr "Давай розірвемо їх!"
+
+msgctxt "doom hacx.hacx1"
+msgid "SKILL_HARD"
+msgstr "Я безсмертний!"
+
+msgctxt "doom hacx.hacx1"
+msgid "SKILL_NIGHTMARE"
+msgstr "Безумство!"

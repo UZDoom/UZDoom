@@ -37,7 +37,7 @@ uint32_t R_ColormapNumForName(const char *name);	// killough 4/4/98
 void R_SetDefaultColormap (const char *name);	// [RH] change normal fadetable
 uint32_t R_BlendForColormap (uint32_t map);			// [RH] return calculated blend for a colormap
 
-struct FakeCmap 
+struct FakeCmap
 {
 	char name[8];
 	PalEntry blend;

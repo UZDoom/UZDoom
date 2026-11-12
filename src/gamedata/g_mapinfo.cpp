@@ -54,6 +54,17 @@ extern TMap<int, FString> HexenMusic;
 
 TArray<int> ParsedLumps(8);
 
+EXTERN_FARG(complevel);
+
+enum CompatibilityLevels : int
+{
+	COMPLVL_NONE = -1,
+	COMPLVL_VANILLA,
+	COMPLVL_BOOM,
+	COMPLVL_MBF,
+	COMPLVL_MBF21,
+};
+
 //==========================================================================
 //
 //
@@ -87,7 +98,7 @@ level_info_t *FindLevelInfo (const char *mapname, bool allowdefault)
 		if (TheDefaultLevelInfo.LevelName.IsEmpty())
 		{
 			TheDefaultLevelInfo.SkyPic2 = TheDefaultLevelInfo.SkyPic1 = "SKY1";
-			TheDefaultLevelInfo.SkyMistPic = "SKYMIST1";
+			TheDefaultLevelInfo.SkyMistPic = "SKYMISTA";
 			TheDefaultLevelInfo.LevelName = "Unnamed";
 		}
 		return &TheDefaultLevelInfo;
@@ -175,7 +186,7 @@ static int FindWadClusterInfo (int cluster)
 	for (unsigned int i = 0; i < wadclusterinfos.Size(); i++)
 		if (wadclusterinfos[i].cluster == cluster)
 			return i;
-		
+
 	return -1;
 }
 
@@ -247,7 +258,7 @@ void level_info_t::Reset()
 	NextMap = "";
 	NextSecretMap = "";
 	SkyPic1 = SkyPic2 = "-NOFLAT-";
-	SkyMistPic = "SKYMIST1";
+	SkyMistPic = "SKYMISTA";
 	cluster = 0;
 	partime = 0;
 	sucktime = 0;
@@ -475,7 +486,7 @@ void FMapInfoParser::ParseOpenBrace()
 	{
 	default:
 		format_type = sc.CheckString("{") ? FMT_New : FMT_Old;
-		if (format_type == FMT_New) 
+		if (format_type == FMT_New)
 			sc.SetCMode(true);
 		break;
 
@@ -558,7 +569,7 @@ void FMapInfoParser::ParseComma()
 
 bool FMapInfoParser::CheckNumber()
 {
-	if (format_type == FMT_New) 
+	if (format_type == FMT_New)
 	{
 		if (sc.CheckString(","))
 		{
@@ -577,7 +588,7 @@ bool FMapInfoParser::CheckNumber()
 
 bool FMapInfoParser::CheckFloat()
 {
-	if (format_type == FMT_New) 
+	if (format_type == FMT_New)
 	{
 		if (sc.CheckString(","))
 		{
@@ -1770,7 +1781,7 @@ DEFINE_MAP_OPTION(outro, true)
 
 //==========================================================================
 //
-// All flag based map options 
+// All flag based map options
 //
 //==========================================================================
 
@@ -1880,7 +1891,7 @@ MapFlagHandlers[] =
 	{ "unfreezesingleplayerconversations",MITYPE_SETFLAG2,	LEVEL2_CONV_SINGLE_UNFREEZE, 0 },
 	{ "spawnwithweaponraised",			MITYPE_SETFLAG2,	LEVEL2_PRERAISEWEAPON, 0 },
 	{ "needclustertext",				MITYPE_SETFLAG2,	LEVEL2_NEEDCLUSTERTEXT, 0 },
-	{ "noclustertext",					MITYPE_SETFLAG2,	LEVEL2_NOCLUSTERTEXT, 0 },	// Normally there shouldn't be a need to explicitly set this 
+	{ "noclustertext",					MITYPE_SETFLAG2,	LEVEL2_NOCLUSTERTEXT, 0 },	// Normally there shouldn't be a need to explicitly set this
 	{ "forcefakecontrast",				MITYPE_SETFLAG3,	LEVEL3_FORCEFAKECONTRAST, 0 },
 	{ "nolightfade",					MITYPE_SETFLAG3,	LEVEL3_NOLIGHTFADE, 0 },
 	{ "nocoloredspritelighting",		MITYPE_SETFLAG3,	LEVEL3_NOCOLOREDSPRITELIGHTING, 0 },
@@ -1894,6 +1905,7 @@ MapFlagHandlers[] =
 	{ "attenuatelights",				MITYPE_SETFLAG3,	LEVEL3_ATTENUATE, 0 },
 	{ "nofogofwar",						MITYPE_SETFLAG3,	LEVEL3_NOFOGOFWAR, 0 },
 	{ "useskymist",						MITYPE_SETFLAG3,	LEVEL3_SKYMIST, 0 },
+	{ "noambientocclusion",				MITYPE_SETFLAG3,	LEVEL3_NOAMBIENTOCCLUSION, 0 },
 	{ "nobotnodes",						MITYPE_IGNORE,	0, 0 },		// Skulltag option: nobotnodes
 	{ "nopassover",						MITYPE_COMPATFLAG, COMPATF_NO_PASSMOBJ, 0 },
 	{ "passover",						MITYPE_CLRCOMPATFLAG, COMPATF_NO_PASSMOBJ, 0 },
@@ -1940,11 +1952,12 @@ MapFlagHandlers[] =
 	{ "compat_scriptwait",				MITYPE_COMPATFLAG, 0, COMPATF2_SCRIPTWAIT },
 	{ "compat_avoidhazards",			MITYPE_COMPATFLAG, 0, COMPATF2_AVOID_HAZARDS },
 	{ "compat_stayonlift",				MITYPE_COMPATFLAG, 0, COMPATF2_STAYONLIFT },
-	{ "compat_nombf21",					MITYPE_COMPATFLAG, 0, COMPATF2_NOMBF21 },
+	{ "compat_reservedlineflag",	MITYPE_COMPATFLAG, 0, COMPATF2_RESERVEDLINEFLAG },
 	{ "compat_voodoozombies",			MITYPE_COMPATFLAG, 0, COMPATF2_VOODOO_ZOMBIES },
 	{ "compat_noacsargcheck",			MITYPE_COMPATFLAG, 0, COMPATF2_NOACSARGCHECK },
 	{ "compat_novdolllockmsg",			MITYPE_COMPATFLAG, 0, COMPATF2_NOVDOLLLOCKMSG },
-	{ "compat_nocountlost",             MITYPE_COMPATFLAG, 0, COMPATF2_NOCOUNTLOST},
+	{ "compat_emulatemikoportals",		MITYPE_COMPATFLAG, 0, COMPATF2_EMULATEMIKOPORTALS },
+	{ "compat_nocountlost",             MITYPE_COMPATFLAG, 0, COMPATF2_NOCOUNTLOST },
 
 	{ "cd_start_track",					MITYPE_EATNEXT,	0, 0 },
 	{ "cd_end1_track",					MITYPE_EATNEXT,	0, 0 },
@@ -2112,10 +2125,10 @@ void FMapInfoParser::ParseMapDefinition(level_info_t &info)
 					success = true;
 					return false;  // break
 				}
-				
+
 				return true;  // continue
 			});
-			
+
 			if (!success)
 			{
 				if (!ParseCloseBrace())
@@ -2195,7 +2208,7 @@ level_info_t *FMapInfoParser::ParseMapHeader(level_info_t &defaultinfo)
 			format_type = FMT_Old;
 		}
 	}
-	else 
+	else
 	{
 		sc.MustGetString();
 		mapname = sc.String;
@@ -2540,7 +2553,7 @@ void FMapInfoParser::ParseMapInfo (int lump, level_info_t &gamedefaults, level_i
 			}
 			SetLevelNum (levelinfo, levelinfo->levelnum);	// Wipe out matching levelnums from other maps.
 		}
-		// clusterdef is the old keyword but the new format has enough 
+		// clusterdef is the old keyword but the new format has enough
 		// structuring that 'cluster' can be handled, too. The old format does not.
 		else if (sc.Compare("clusterdef") || (format_type != FMT_Old && sc.Compare("cluster")))
 		{
@@ -2691,52 +2704,87 @@ void G_ParseMapInfo(FString basemapinfo)
 
 	ELevelCompatFlags flags1 = 0;
 	ELevelCompatFlags2 flags2 = 0;
+
 	if (gameinfo.gametype == GAME_Doom)
 	{
-		int comp = fileSystem.CheckNumForName("COMPLVL");
-		if (comp >= 0)
+		FString wishlevel = Args->CheckValue(FArg_complevel);
+		CompatibilityLevels level = COMPLVL_NONE;
+
+		if (!wishlevel.IsEmpty())
 		{
-			auto complvl = fileSystem.ReadFile(comp);
-			auto data = complvl.string();
-			int length = fileSystem.FileLength(comp);
-			if (length == 7 && !strnicmp("vanilla", data, 7))
+			wishlevel.ToLower();
+			const struct
 			{
-				flags1 =
-					COMPATF_SHORTTEX | COMPATF_STAIRINDEX | COMPATF_USEBLOCKING | COMPATF_NODOORLIGHT | COMPATF_SPRITESORT |
-					COMPATF_TRACE | COMPATF_MISSILECLIP | COMPATF_SOUNDTARGET | COMPATF_DEHHEALTH | COMPATF_CROSSDROPOFF |
-					COMPATF_LIGHT | COMPATF_MASKEDMIDTEX |
-					COMPATF_LIMITPAIN | COMPATF_INVISIBILITY | COMPATF_VILEGHOSTS;
+				CompatibilityLevels level;
+				TArray<FName>       names;
+			} complevels[] = {
+				{ COMPLVL_VANILLA, {"2", "3", "4", "1.9", "doom2", "ultimate", "udoom", "final", "tnt", "plutonia", "vanilla" }},
+				{ COMPLVL_BOOM,		{ "9", "boom" }},
+				{ COMPLVL_MBF,		{ "11", "mbf" }},
+				{ COMPLVL_MBF21,	{ "21", "mbf21" }}
+			};
 
-				flags2 =
-					COMPATF2_FLOORMOVE | COMPATF2_EXPLODE1 | COMPATF2_NOMBF21 | COMPATF2_POINTONLINE;
-			}
-			else if (length == 4 && !strnicmp("boom", data, 4))
+			for (auto &s : complevels)
 			{
-				flags1 =
-					COMPATF_TRACE | COMPATF_SOUNDTARGET | COMPATF_BOOMSCROLL | COMPATF_MISSILECLIP | COMPATF_MASKEDMIDTEX |
-					COMPATF_INVISIBILITY;
-
-				flags2 =
-					COMPATF2_EXPLODE1 | COMPATF2_NOMBF21 | COMPATF2_POINTONLINE;
+				if (s.names.Contains(wishlevel))
+				{
+					level = s.level;
+					break;
+				}
 			}
-			else if (length == 3 && !strnicmp("mbf", data, 3))
+		}
+		else
+		{
+			int comp = fileSystem.CheckNumForName("COMPLVL");
+			if (comp >= 0)
 			{
-				flags1 =
-					COMPATF_TRACE | COMPATF_SOUNDTARGET | COMPATF_BOOMSCROLL | COMPATF_MISSILECLIP | COMPATF_MUSHROOM |
-					COMPATF_MBFMONSTERMOVE | COMPATF_NOBLOCKFRIENDS | COMPATF_MASKEDMIDTEX | COMPATF_INVISIBILITY;
+				auto complvl = fileSystem.ReadFile(comp);
+				wishlevel    = complvl.string();
 
-				flags2 =
-					COMPATF2_EXPLODE1 | COMPATF2_AVOID_HAZARDS | COMPATF2_STAYONLIFT | COMPATF2_NOMBF21 | COMPATF2_POINTONLINE;
+				if (wishlevel.CompareNoCase("vanilla"))	level = COMPLVL_VANILLA;
+				else if (wishlevel.CompareNoCase("boom"))	level = COMPLVL_BOOM;
+				else if (wishlevel.CompareNoCase("mbf"))	level = COMPLVL_MBF;
+				else if (wishlevel.CompareNoCase("mbf21"))	level = COMPLVL_MBF21;
 			}
-			else if (length == 5 && !strnicmp("mbf21", data, 5))
-			{
-				flags1 =
-					COMPATF_TRACE | COMPATF_SOUNDTARGET | COMPATF_BOOMSCROLL | COMPATF_MISSILECLIP | COMPATF_MUSHROOM |
-					COMPATF_MASKEDMIDTEX | COMPATF_INVISIBILITY;
+		}
 
-				flags2 =
-					COMPATF2_EXPLODE1 | COMPATF2_AVOID_HAZARDS | COMPATF2_STAYONLIFT | COMPATF2_POINTONLINE;
-			}
+		switch (level)
+		{
+			case COMPLVL_VANILLA:
+				Printf("Applied Vanilla compatibility level.\n");
+				flags1 = COMPATF_SHORTTEX | COMPATF_STAIRINDEX | COMPATF_USEBLOCKING | COMPATF_NODOORLIGHT |
+				         COMPATF_SPRITESORT | COMPATF_TRACE | COMPATF_MISSILECLIP | COMPATF_SOUNDTARGET |
+				         COMPATF_DEHHEALTH | COMPATF_CROSSDROPOFF | COMPATF_LIGHT | COMPATF_MASKEDMIDTEX |
+				         COMPATF_LIMITPAIN | COMPATF_INVISIBILITY | COMPATF_VILEGHOSTS;
+
+				flags2 = COMPATF2_FLOORMOVE | COMPATF2_EXPLODE1 | COMPATF2_POINTONLINE | COMPATF2_EMULATEMIKOPORTALS |
+			             COMPATF2_RESERVEDLINEFLAG;
+				break;
+			case COMPLVL_BOOM:
+				Printf("Applied Boom compatibility level.\n");
+				flags1 = COMPATF_TRACE | COMPATF_SOUNDTARGET | COMPATF_BOOMSCROLL | COMPATF_MISSILECLIP |
+				         COMPATF_MASKEDMIDTEX | COMPATF_INVISIBILITY;
+
+				flags2 = COMPATF2_EXPLODE1 | COMPATF2_POINTONLINE | COMPATF2_EMULATEMIKOPORTALS |
+			             COMPATF2_TRANSFERSECRET | COMPATF2_RESERVEDLINEFLAG;
+				break;
+			case COMPLVL_MBF:
+				Printf("Applied MBF compatibility level.\n");
+				flags1 = COMPATF_TRACE | COMPATF_SOUNDTARGET | COMPATF_BOOMSCROLL | COMPATF_MISSILECLIP |
+				         COMPATF_MUSHROOM | COMPATF_MBFMONSTERMOVE | COMPATF_NOBLOCKFRIENDS | COMPATF_MASKEDMIDTEX |
+				         COMPATF_INVISIBILITY;
+
+				flags2 = COMPATF2_EXPLODE1 | COMPATF2_AVOID_HAZARDS | COMPATF2_STAYONLIFT | COMPATF2_POINTONLINE |
+			             COMPATF2_TRANSFERSECRET | COMPATF2_RESERVEDLINEFLAG;
+				break;
+			case COMPLVL_MBF21:
+				Printf("Applied MBF21 compatibility level.\n");
+				flags1 = COMPATF_TRACE | COMPATF_SOUNDTARGET | COMPATF_BOOMSCROLL | COMPATF_MISSILECLIP |
+				         COMPATF_MUSHROOM | COMPATF_MASKEDMIDTEX | COMPATF_INVISIBILITY;
+
+				flags2 = COMPATF2_EXPLODE1 | COMPATF2_AVOID_HAZARDS | COMPATF2_STAYONLIFT | COMPATF2_POINTONLINE |
+			             COMPATF2_TRANSFERSECRET | COMPATF2_RESERVEDLINEFLAG;
+				break;
 		}
 	}
 
@@ -2828,7 +2876,7 @@ void G_ParseMapInfo(FString basemapinfo)
 void G_AddBoomHelpScreens()
 {
 	// Now add Boom's dynamic help screens to the infopages array if it got marked accordingly.
-	// Doing this manually via config files would be a bit inconvenient for 100 file names, 
+	// Doing this manually via config files would be a bit inconvenient for 100 file names,
 	// so use a "*" entry in the list of help screens to insert these.
 	for (unsigned i = 0; i < gameinfo.infoPages.Size(); i++)
 	{
@@ -2849,7 +2897,7 @@ void G_AddBoomHelpScreens()
 			break;
 		}
 	}
-	
+
 
 }
 

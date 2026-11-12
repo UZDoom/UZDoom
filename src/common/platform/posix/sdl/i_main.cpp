@@ -171,6 +171,13 @@ FString I_DetectOS()
 
 void I_StartupJoysticks();
 
+#define SDL_SETENV(k, v)                                           \
+	do {                                                           \
+		auto old = SDL_getenv(k);                                  \
+		if (old) DEBUG_LOG("%s already set as '%s'", k, old);      \
+		if (SDL_setenv(k, v, 0)) DEBUG_LOG("Failed to set %s", k); \
+	} while (0);
+
 int main (int argc, char **argv)
 {
 #if !defined (__APPLE__)
@@ -185,9 +192,6 @@ int main (int argc, char **argv)
 	// signal(SIGHUP, SignalHandler);
 	// signal(SIGQUIT, SignalHandler);
 
-	printf(GAMENAME" %s - %s - SDL version\nCompiled on %s\n",
-		GetVersionString(), GetGitTime(), __DATE__);
-
 	seteuid (getuid ());
 	// Set LC_NUMERIC environment variable in case some library decides to
 	// clear the setlocale call at least this will be correct.
@@ -196,6 +200,8 @@ int main (int argc, char **argv)
 
 	setlocale (LC_ALL, "C");
 
+	// despite the name, this also sets the wayland app_id
+	SDL_SETENV("SDL_VIDEO_X11_WMCLASS", APPID);
 	if (SDL_Init (0) < 0)
 	{
 		fprintf (stderr, "Could not initialize SDL:\n%s\n", SDL_GetError());
@@ -231,6 +237,7 @@ int main (int argc, char **argv)
 		I_TryRestart(argv);
 	}
 
+	SDL_SetRelativeMouseMode(SDL_FALSE);
 	SDL_Quit();
 
 	return result;

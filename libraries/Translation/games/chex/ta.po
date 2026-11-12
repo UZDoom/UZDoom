@@ -1,0 +1,297 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-06-28 17:01+0000\n"
+"Last-Translator: தமிழ்நேரம் <tamilneram247@gmail.com>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/doom-engine-games/chex-quest/ta/>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.7.dev0\n"
+
+msgid "TXT_CHEX_EP"
+msgstr "செக்ச் குவெச்ட்"
+
+# Flem = phlegm
+msgid "GOTBLUEFLEM"
+msgstr "ஒரு நீல நிற ஃபிளெம்கியை எடுத்தார்."
+
+msgid "GOTYELLOWFLEM"
+msgstr "ஒரு மஞ்சள் ஃபிளெம்கியை எடுத்தார்."
+
+msgid "GOTREDFLEM"
+msgstr "ஒரு சிவப்பு ஃபிளெம்கியை எடுத்தார்."
+
+msgid "GOTGOGGLES"
+msgstr "Ultra Goggles கிடைத்தது"
+
+msgctxt "chex"
+msgid "PD_BLUECO"
+msgstr "இந்தப் பொருளைச் செயல்படுத்த, நீல நிற விசை தேவை"
+
+msgctxt "chex"
+msgid "PD_REDCO"
+msgstr "இந்த பொருளைச் செயல்படுத்த உங்களுக்கு சிவப்பு விசை தேவை"
+
+msgctxt "chex"
+msgid "PD_YELLOWCO"
+msgstr "இந்த பொருளைச் செயல்படுத்த, மஞ்சள் விசை தேவை"
+
+msgid "PD_BLUEFO"
+msgstr "இந்த பொருளைச் செயல்படுத்த உங்களுக்கு நீல நிற ஃபிளெம்கி தேவை"
+
+msgid "PD_REDFO"
+msgstr "இந்த பொருளைச் செயல்படுத்த உங்களுக்கு சிவப்பு நிற ஃபிளெம்கி தேவை"
+
+msgid "PD_YELLOWFO"
+msgstr "இந்த பொருளைச் செயல்படுத்த உங்களுக்கு மஞ்சள் நிற ஃபிளெம்கி தேவை"
+
+msgctxt "chex"
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "ஒரு சோர்ச்சரை எடுத்தார்."
+
+msgctxt "chex"
+msgid "HUSTR_E1M1"
+msgstr "E1M1: இறங்கும் மண்டலம்"
+
+msgctxt "chex"
+msgid "HUSTR_E1M2"
+msgstr "E1M2: சேமிப்பு வசதி"
+
+msgctxt "chex"
+msgid "HUSTR_E1M3"
+msgstr "E1M3: ஆய்வகம்"
+
+msgctxt "chex"
+msgid "HUSTR_E1M4"
+msgstr "E1M4: ஆர்போரேட்டம்"
+
+msgctxt "chex"
+msgid "HUSTR_E1M5"
+msgstr "E1M5: Bazoik குகைகள்"
+
+msgctxt "chex"
+msgid "HUSTR_E2M1"
+msgstr "E2M1: ச்பேச்போர்ட்"
+
+msgctxt "chex"
+msgid "HUSTR_E2M2"
+msgstr "E2M2: சினிமா"
+
+msgctxt "chex"
+msgid "HUSTR_E2M3"
+msgstr "E2M3: செக்ச் மியூசியம்"
+
+msgctxt "chex"
+msgid "HUSTR_E2M4"
+msgstr "E2M4: நகர வீதிகள்"
+
+msgctxt "chex"
+msgid "HUSTR_E2M5"
+msgstr "E2M5: கழிவுநீர் அமைப்பு"
+
+msgctxt "chex"
+msgid "HUSTR_E3M1"
+msgstr "E3M1: நடு கட்டளை"
+
+msgctxt "chex"
+msgid "HUSTR_E3M2"
+msgstr "E3M2: ஐக்கிய தானியங்கள்"
+
+msgctxt "chex"
+msgid "HUSTR_E3M3"
+msgstr "E3M3: வில்லா செக்ச்"
+
+msgctxt "chex"
+msgid "HUSTR_E3M4"
+msgstr "E3M4: மாகாண பூங்கா"
+
+msgctxt "chex"
+msgid "HUSTR_E3M5"
+msgstr "E3M5: விண்கல் விண்கலம்"
+
+msgctxt "chex"
+msgid "CC_ZOMBIE"
+msgstr "பொதுவானது"
+
+msgctxt "chex"
+msgid "CC_SHOTGUN"
+msgstr "இருகால்"
+
+msgctxt "chex"
+msgid "CC_IMP"
+msgstr "கவசத்துடன் பைபெடிகச்"
+
+msgctxt "chex"
+msgid "CC_DEMON"
+msgstr "அலறல்"
+
+msgctxt "chex"
+msgid "CC_LOST"
+msgstr "ஃப்ளெம் மைன்"
+
+msgctxt "chex"
+msgid "CC_CACO"
+msgstr "சூப்பர் சைக்ளோப்டிச்"
+
+msgctxt "chex"
+msgid "CC_BARON"
+msgstr "மாக்சிமச்"
+
+msgctxt "chex"
+msgid "CC_SPIDER"
+msgstr "ஃப்ளெம்போமினேசன்"
+
+msgctxt "chex"
+msgid "CC_CYBER"
+msgstr "லார்ட் ச்னோட்ஃபோலச்"
+
+msgctxt "chex"
+msgid "CC_HERO"
+msgstr "செக்ச் வாரியர்"
+
+msgctxt "chex"
+msgid "PD_BLUEC"
+msgstr "இந்தக் கதவைத் திறக்க நீல நிற திறவுகோல் வேண்டும்"
+
+msgctxt "chex"
+msgid "PD_REDC"
+msgstr "இந்தக் கதவைத் திறக்க உங்களுக்கு சிவப்பு திறவுகோல் தேவை"
+
+msgctxt "chex"
+msgid "PD_YELLOWC"
+msgstr "இந்தக் கதவைத் திறக்க மஞ்சள் நிற திறவுகோல் வேண்டும்"
+
+msgid "PD_BLUEF"
+msgstr "இந்தக் கதவைத் திறக்க நீலச் சுடர் திறவுகோல் வேண்டும்"
+
+msgid "PD_REDF"
+msgstr "இந்தக் கதவைத் திறக்க உங்களுக்கு ஒரு சிவப்பு ஃபிளெம்கி தேவை"
+
+msgid "PD_YELLOWF"
+msgstr "இந்தக் கதவைத் திறக்க மஞ்சள் சுடர் திறவுகோல் வேண்டும்"
+
+msgctxt "chex"
+msgid "OB_SLIME"
+msgstr "%o சில சேற்றில் மூழ்குகிறது."
+
+msgctxt "chex"
+msgid "OB_LAVA"
+msgstr "%o சில சேற்றில் மூழ்குகிறது."
+
+msgid "OB_POWERSTRAND"
+msgstr "%o இடை-பரிமாண ச்லிம் மூலம் தாக்கப்பட்டது!"
+
+msgctxt "chex"
+msgid "OB_KILLEDSELF"
+msgstr "%o இடை-பரிமாண ச்லிம் மூலம் தாக்கப்பட்டது!"
+
+msgid "OB_STRIDICUS"
+msgstr "%i ஒரு ச்ட்ரைடுலசால் தொந்தரவு செய்யப்பட்டது."
+
+msgid "OB_FLEMMINE"
+msgstr "%o ஒரு ஃப்ளெம் சுரங்கத்தால் கசக்கப்பட்டது."
+
+msgid "OB_SUPERCYCLOPTIS"
+msgstr "சூப்பர் சைக்ளோப்டிசால் %o மெலிந்தது."
+
+msgid "OB_MAXIMUS"
+msgstr "%o ஒரு மாக்சிமசால் தோற்கடிக்கப்பட்டது."
+
+msgid "OB_LARVA"
+msgstr "லார்வாவால் %i நன்றாக இருந்தது."
+
+msgid "OB_QUADRUMPUS"
+msgstr "%o ஒரு குவாட்ரம்பசால் ச்லிம் செய்யப்பட்டது."
+
+msgid "OB_FLEMBOMINATION"
+msgstr "%o Flembomination ஆல் தோற்கடிக்கப்பட்டது."
+
+msgid "OB_SNOTFOLUS"
+msgstr "லார்ட் ச்னோட்ஃபோலசால் %o தோற்கடிக்கப்பட்டார்."
+
+msgctxt "chex"
+msgid "OB_MPR_SPLASH"
+msgstr "%k இன் ப்ரொபல்சரால் %o தாக்கப்பட்டது."
+
+msgctxt "chex"
+msgid "E1TEXT"
+msgstr ""
+"அசுரத்தனமான Flembrane அனுப்பிய பிறகு \n"
+"மீண்டும் அவரது சொந்த பரிமாணத்திற்கு, நீங்கள் விடுவிக்கிறீர்கள் \n"
+"கைதிகள். இன்னும் ஃபிளாய்டுகள் எல்லா இடங்களிலும் உள்ளன! \n"
+"நீங்களும் சிறைபிடிக்கப்பட்டவர்களும் ஓய்வெடுக்கிறீர்கள் \n"
+"உங்கள் விண்கலம். ஃபிளாய்டுகள் உங்கள் \n"
+"கப்பல், ஆனால் நீங்கள் குறுகலாக சுற்றுப்பாதையில் தப்பிக்கிறீர்கள். \n"
+"திரும்பும் போது நீங்கள் வாழ்த்தப்படுகிறீர்கள் \n"
+"தைரியமான மீட்புக்காக, ஆனால் நீங்கள் ஒரு வழங்குகிறீர்கள் \n"
+"எச்சரிக்கை… \n"
+"ஃப்ளெமாய்டுகளின் கடைசிப் பகுதியை நாங்கள் பார்க்கவில்லை. \n"
+"\n"
+"துரதிர்ச்டவசமாக நீங்கள் சொல்வது சரிதான். உங்களைப் போலவே \n"
+"வீட்டிற்குத் திரும்பினால், ஃப்ளெமாய்டுகள் இருப்பதைக் காணலாம் \n"
+"எப்படியோ உங்களை இங்கே பின்தொடர்ந்தேன். ஆயத்தம் செய் \n"
+"செக்ச் குவெச்ட் 2க்கு: செக்ச் நகரில் பயங்கரம்!"
+
+msgctxt "chex"
+msgid "E2TEXT"
+msgstr ""
+"எஞ்சியிருக்கும் ஃபிளாய்டுகளை நீங்கள் சோர்ச் செய்யுங்கள் \n"
+"சாக்கடையில் திரண்டனர். செக்ச் சிட்டி இருந்தது \n"
+"காப்பாற்றப்பட்டது. Flemoid அச்சுறுத்தல் என்று தெரிகிறது \n"
+"இறுதியாக முடிந்தது. \n"
+"\n"
+"\n"
+"பத்து ஆண்டுகள் அமைதி மற்றும் செழிப்புடன் கடந்து செல்கின்றன. \n"
+"ஆனால் Flemoids தோற்கடிக்கப்படவில்லை \n"
+"ஊட்டச்சத்தை கட்டுப்படுத்த அவர்களின் விருப்பம் \n"
+"பணக்கார தானிய அளவு குறையவில்லை. \n"
+"அவர்கள் தங்கள் படைகள் அனைத்தையும் சேகரித்து, திறந்துள்ளனர் \n"
+"விண்வெளியில் ஒரு மாபெரும் இடை-பரிமாண பிளவு \n"
+"இப்போது ஒரு பெரிய சேறு பந்தானது \n"
+"தானியங்களின் கிரகத்திற்கு நேராக! \n"
+"\n"
+"தயாராகுங்கள் \n"
+"செக்ச் குவெச்ட் 3: படையெடுப்பு!"
+
+msgctxt "chex"
+msgid "E3TEXT"
+msgstr ""
+"ஒரு இறுதி குண்டுவெடிப்பில், நீங்கள் சோர்ச் லார்ட் \n"
+"ச்னோட்ஃபோலச் மீண்டும் தனது சொந்த பரிமாணத்திற்கு! \n"
+"அனைத்து முரண்பாடுகளுக்கும் எதிராக நீங்கள் ஒற்றை- \n"
+"படையெடுப்பை கையோடு முறியடித்தது! \n"
+"\n"
+"Flemoids என்று நீங்கள் உண்மையிலேயே நம்புகிறீர்கள் \n"
+"இறுதியாக அவர்களின் பாடத்தையும் விருப்பத்தையும் கற்றுக்கொண்டார் \n"
+"மீண்டும் தானியத்திற்கு திரும்புவதில்லை \n"
+"பரிமாணம். \n"
+"\n"
+"\n"
+"\n"
+"ஆனால் அவர்கள் அறிந்தால் நீங்கள் இருப்பீர்கள் \n"
+"அவர்களுக்கு தயார்!"
+
+msgid "M_EPI1"
+msgstr "Bazoik மீது மீட்பு"
+
+msgid "M_EPI2"
+msgstr "செக்ச் நகரில் பயங்கரம்"
+
+msgid "M_EPI3"
+msgstr "படையெடுப்பு!"
+
+msgid "TAG_GOGGLES"
+msgstr "அல்ட்ரா கண்ணாடிகள்"
+
+msgid "TAG_BLUEFLEMKEY"
+msgstr "நீல ஃப்ளெம்கி"
+
+msgid "TAG_YELLOWFLEMKEY"
+msgstr "மஞ்சள் ஃப்ளெம்கி"
+
+msgid "TAG_REDFLEMKEY"
+msgstr "சிவப்பு ஃப்ளெம்கி"

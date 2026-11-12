@@ -24,7 +24,7 @@
 
 //=============================================================================
 //
-// 
+//
 //
 //=============================================================================
 
@@ -42,7 +42,6 @@ class OptionMenuItemPlayerNameField : OptionMenuItemTextField
 		if (i == 0)
 		{
 			return true, players[consoleplayer].GetUserName();
-;
 		}
 		return false, "";
 	}
@@ -60,7 +59,7 @@ class OptionMenuItemPlayerNameField : OptionMenuItemTextField
 
 //=============================================================================
 //
-// 
+//
 //
 //=============================================================================
 
@@ -82,7 +81,7 @@ class OptionMenuItemPlayerTeamItem : OptionMenuItemOptionBase
 			int myteam = players[consoleplayer].GetTeam();
 			let f = double(myteam ==  Team.NoTeam? 0 : myteam + 1);
 			for(int i = 0; i < cnt; i++)
-			{ 
+			{
 				if (f ~== OptionValues.GetValue(mValues, i))
 				{
 					Selection = i;
@@ -105,7 +104,7 @@ class OptionMenuItemPlayerTeamItem : OptionMenuItemOptionBase
 
 //=============================================================================
 //
-// 
+//
 //
 //=============================================================================
 
@@ -127,7 +126,7 @@ class OptionMenuItemPlayerColorItem : OptionMenuItemOptionBase
 			int mycolorset = players[consoleplayer].GetColorSet();
 			let f = double(mycolorset);
 			for(int i = 0; i < cnt; i++)
-			{ 
+			{
 				if (f ~== OptionValues.GetValue(mValues, i))
 				{
 					Selection = i;
@@ -160,7 +159,7 @@ class OptionMenuItemPlayerColorItem : OptionMenuItemOptionBase
 class OptionMenuItemPlayerColorSlider : OptionMenuSliderBase
 {
 	int mChannel;
-	
+
 	OptionMenuItemPlayerColorSlider Init(String label, int channel)
 	{
 		Super.Init(label, 0, 255, 16, false, 'none');
@@ -189,7 +188,7 @@ class OptionMenuItemPlayerColorSlider : OptionMenuSliderBase
 		let menu = NewPlayerMenu(Menu.GetCurrentMenu());
 		if (menu) menu.UpdateTranslation();
 	}
-	
+
 	override int Draw(OptionMenuDescriptor desc, int y, int indent, bool selected)
 	{
 		int mycolorset = players[consoleplayer].GetColorSet();
@@ -199,7 +198,7 @@ class OptionMenuItemPlayerColorSlider : OptionMenuSliderBase
 		}
 		return indent;
 	}
-	
+
 	override bool Selectable()
 	{
 		int mycolorset = players[consoleplayer].GetColorSet();
@@ -209,7 +208,7 @@ class OptionMenuItemPlayerColorSlider : OptionMenuSliderBase
 
 //=============================================================================
 //
-// 
+//
 //
 //=============================================================================
 
@@ -230,7 +229,7 @@ class OptionMenuItemPlayerClassItem : OptionMenuItemOptionBase
 		{
 			double f = players[consoleplayer].GetPlayerClassNum();
 			for(int i = 0; i < cnt; i++)
-			{ 
+			{
 				if (f ~== OptionValues.GetValue(mValues, i))
 				{
 					Selection = i;
@@ -243,13 +242,13 @@ class OptionMenuItemPlayerClassItem : OptionMenuItemOptionBase
 
 	override void SetSelection(int Selection)
 	{
-		
+
 		int cnt = OptionValues.GetCount(mValues);
 		if (cnt > 1)
 		{
 			let val = int(OptionValues.GetValue(mValues, Selection));
 			let menu = NewPlayerMenu(Menu.GetCurrentMenu());
-			if (menu) 
+			if (menu)
 			{
 				menu.PickPlayerClass(val);
 				PlayerMenu.ClassChanged(val, menu.mPlayerClass);
@@ -262,7 +261,7 @@ class OptionMenuItemPlayerClassItem : OptionMenuItemOptionBase
 
 //=============================================================================
 //
-// 
+//
 //
 //=============================================================================
 
@@ -283,7 +282,7 @@ class OptionMenuItemPlayerSkinItem : OptionMenuItemOptionBase
 		{
 			double f = players[consoleplayer].GetSkin();
 			for(int i = 0; i < cnt; i++)
-			{ 
+			{
 				if (f ~== OptionValues.GetValue(mValues, i))
 				{
 					Selection = i;
@@ -296,14 +295,14 @@ class OptionMenuItemPlayerSkinItem : OptionMenuItemOptionBase
 
 	override void SetSelection(int Selection)
 	{
-		
+
 		int cnt = OptionValues.GetCount(mValues);
 		if (cnt > 1)
 		{
 			let val = int(OptionValues.GetValue(mValues, Selection));
 			let menu = NewPlayerMenu(Menu.GetCurrentMenu());
 			PlayerMenu.SkinChanged(val);
-			if (menu) 
+			if (menu)
 			{
 				menu.mPlayerDisplay.SetValue(ListMenuItemPlayerDisplay.PDF_SKIN, val);
 				menu.UpdateTranslation();
@@ -314,7 +313,7 @@ class OptionMenuItemPlayerSkinItem : OptionMenuItemOptionBase
 
 //=============================================================================
 //
-// 
+//
 //
 //=============================================================================
 
@@ -365,7 +364,7 @@ class OptionMenuItemAutoaimSlider : OptionMenuSliderBase
 
 //=============================================================================
 //
-// 
+//
 //
 //=============================================================================
 
@@ -403,13 +402,13 @@ class NewPlayerMenu : OptionMenu
 	PlayerClass mPlayerClass;
 	int mRotation;
 	PlayerMenuPlayerDisplay mPlayerDisplay;
-	
+
 	const PLAYERDISPLAY_X = 170;
 	const PLAYERDISPLAY_Y = 60;
 	const PLAYERDISPLAY_W = 144;
 	const PLAYERDISPLAY_H = 160;
 	const PLAYERDISPLAY_SPACE = 180;
-	
+
 	override void Init(Menu parent, OptionMenuDescriptor desc)
 	{
 		Super.Init(parent, desc);
@@ -418,7 +417,7 @@ class NewPlayerMenu : OptionMenu
 		mPlayerDisplay = new("PlayerMenuPlayerDisplay");
 		mPlayerDisplay.init(BaseColor, AddColor);
 		PickPlayerClass();
-		
+
 		PlayerInfo p = players[consoleplayer];
 		mRotation = 0;
 
@@ -433,14 +432,14 @@ class NewPlayerMenu : OptionMenu
 	{
 		return Super.GetIndent() - 75*CleanXfac_1;
 	}
-	
+
 
 	//=============================================================================
 	//
 	//
 	//
 	//=============================================================================
-	
+
 	void UpdateTranslation()
 	{
 		Translation.SetPlayerTranslation(TRANSLATION_Players, MAXPLAYERS, consoleplayer, mPlayerClass);
@@ -467,7 +466,7 @@ class NewPlayerMenu : OptionMenu
 		}
 		return pclass;
 	}
-	
+
 	//=============================================================================
 	//
 	//
@@ -483,7 +482,7 @@ class NewPlayerMenu : OptionMenu
 		UpdateTranslation();
 	}
 
-	
+
 	//=============================================================================
 	//
 	//
@@ -524,12 +523,12 @@ class NewPlayerMenu : OptionMenu
 	//
 	//
 	//=============================================================================
-	
+
 	override void Ticker()
 	{
 		mPlayerDisplay.Ticker();
 	}
-	
+
 	//=============================================================================
 	//
 	//
@@ -540,14 +539,15 @@ class NewPlayerMenu : OptionMenu
 	{
 		Super.Drawer();
 		mPlayerDisplay.Drawer(false);
-		
+
+		Font font = Font.GetSmallTextFont(NewSmallFont);
 		int x = screen.GetWidth()/(CleanXfac_1*2) + PLAYERDISPLAY_X + PLAYERDISPLAY_W/2;
 		int y = PLAYERDISPLAY_Y + PLAYERDISPLAY_H + 5;
 		String str = Stringtable.Localize("$PLYRMNU_PRESSSPACE");
-		screen.DrawText (NewSmallFont, Font.CR_GOLD, x - NewSmallFont.StringWidth(str)/2, y, str, DTA_VirtualWidth, CleanWidth_1, DTA_VirtualHeight, CleanHeight_1, DTA_KeepRatio, true);
+		screen.DrawText (font, Font.CR_GOLD, x - font.StringWidth(str)/2, y, str, DTA_VirtualWidth, CleanWidth_1, DTA_VirtualHeight, CleanHeight_1, DTA_KeepRatio, true);
 		str = Stringtable.Localize(mRotation ? "$PLYRMNU_SEEFRONT" : "$PLYRMNU_SEEBACK");
-		y += NewSmallFont.GetHeight();
-		screen.DrawText (NewSmallFont, Font.CR_GOLD,x - NewSmallFont.StringWidth(str)/2, y, str, DTA_VirtualWidth, CleanWidth_1, DTA_VirtualHeight, CleanHeight_1, DTA_KeepRatio, true);
+		y += font.GetHeight();
+		screen.DrawText (font, Font.CR_GOLD,x - font.StringWidth(str)/2, y, str, DTA_VirtualWidth, CleanWidth_1, DTA_VirtualHeight, CleanHeight_1, DTA_KeepRatio, true);
 
-	}	
+	}
 }

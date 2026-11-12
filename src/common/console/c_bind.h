@@ -33,12 +33,13 @@ struct event_t;
 class FConfigFile;
 class FCommandLine;
 
-void C_NameKeys (char *str, int first, int second);
+void C_NameKeys (char *str, int first, int second, bool colors = false);
 FString C_NameKeys (int *keys, int count, bool colors = false);
 
 class FKeyBindings
 {
 	FString Binds[NUM_KEYS];
+	FString BackupBinds[NUM_KEYS];
 
 public:
 	void PerformBind(FCommandLine &argv, const char *msg);
@@ -50,6 +51,8 @@ public:
 	void UnbindAll (const TArray<int> *filter = nullptr);
 	void UnbindKey(const char *key);
 	void DoBind (const char *key, const char *bind);
+	void DoBindsBackup();
+	void RestoreBindsBackup();
 	void DefaultBind(const char *keyname, const char *cmd);
 
 	void SetBind(unsigned int key, const char *bind, bool override = true)
@@ -82,6 +85,7 @@ extern FKeyBindings AutomapBindings;
 
 
 bool C_DoKey (event_t *ev, FKeyBindings *binds, FKeyBindings *doublebinds);
+void C_TickQueuedInputs();
 
 // Stuff used by the customize controls menu
 void C_SetDefaultBindings (const TArray<int> *filter = nullptr);
@@ -104,4 +108,3 @@ struct FKeySection
 extern TArray<FKeySection> KeySections;
 
 #endif //__C_BINDINGS_H__
-

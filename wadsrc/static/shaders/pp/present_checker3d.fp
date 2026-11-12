@@ -31,7 +31,7 @@ const vec3 oldWeights = vec3(0.3, 0.56, 0.14);
 
 vec4 ApplyGamma(vec4 c)
 {
-	c.rgb = min(c.rgb, vec3(2.0)); // for HDR mode - prevents stacked translucent sprites (such as plasma) producing way too bright light
+	c.rgb = clamp(c.rgb, vec3(0.0), vec3(2.0)); // for HDR mode - prevents stacked translucent sprites (such as plasma) producing way too bright light
 
 	vec3 val = pow(c.rgb, vec3(2.2));
 

@@ -15,15 +15,16 @@
 **
 */
 
-#include "playgamepage.h"
-#include "launcherwindow.h"
-#include "i_interface.h"
-#include "gstrings.h"
-#include "version.h"
-#include <zwidget/widgets/textlabel/textlabel.h>
-#include <zwidget/widgets/listview/listview.h>
-#include <zwidget/widgets/lineedit/lineedit.h>
 #include <zwidget/widgets/checkboxlabel/checkboxlabel.h>
+#include <zwidget/widgets/lineedit/lineedit.h>
+#include <zwidget/widgets/listview/listview.h>
+#include <zwidget/widgets/textlabel/textlabel.h>
+
+#include "gstrings.h"
+#include "i_interface.h"
+#include "launcherwindow.h"
+#include "playgamepage.h"
+#include "version.h"
 
 PlayGamePage::PlayGamePage(LauncherWindow* launcher, const FStartupSelectionInfo& info) : Widget(nullptr), Launcher(launcher)
 {
@@ -60,10 +61,9 @@ PlayGamePage::PlayGamePage(LauncherWindow* launcher, const FStartupSelectionInfo
 	if (info.DefaultIWAD >= 0 && info.DefaultIWAD < info.Wads->SSize())
 	{
 		GamesList->SetSelectedItem(info.DefaultIWAD);
-		GamesList->ScrollToItem(info.DefaultIWAD);
 	}
 
-	GamesList->OnActivated = [=]() { OnGamesListActivated(); };
+	GamesList->OnActivated = [this]() { OnGamesListActivated(); };
 }
 
 void PlayGamePage::SetValues(FStartupSelectionInfo& info) const
@@ -96,6 +96,28 @@ void PlayGamePage::OnSetFocus()
 	GamesList->SetFocus();
 }
 
+bool PlayGamePage::OnFileDrop(std::string path)
+{
+	auto text = ParametersEdit->GetText();
+	if (!text.empty()) text += " ";
+
+	std::string arg;
+	auto ext = path.substr(path.length() - 4u);
+	if (!stricmp(ext.c_str(), ".deh"))
+		arg = "-deh";
+	else if (!stricmp(ext.c_str(), ".bex"))
+		arg = "-bex";
+	else
+		arg = "-file";
+
+	text += arg;
+	text += " \"";
+	text += path;
+	text += "\"";
+	ParametersEdit->SetText(text);
+	return true;
+}
+
 void PlayGamePage::OnGeometryChanged()
 {
 	double y = 10.0;
@@ -126,4 +148,6 @@ void PlayGamePage::OnGeometryChanged()
 	GamesList->SetFrameGeometry(0.0, listViewTop, GetWidth(), std::max(y - listViewTop, 0.0));
 
 	Launcher->UpdatePlayButton();
+
+	GamesList->ScrollToItem(GamesList->GetSelectedItem());
 }

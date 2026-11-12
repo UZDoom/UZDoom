@@ -70,7 +70,7 @@ class Snout : Weapon
 		WPIG B 8;
 		Goto Ready;
 	}
-	
+
 	//============================================================================
 	//
 	// A_SnoutAttack
@@ -100,7 +100,7 @@ class Snout : Weapon
 			}
 		}
 	}
-	
+
 }
 
 
@@ -159,7 +159,7 @@ class PigPlayer : PlayerPawn
 		PIGY M 1 A_FreezeDeathChunks;
 		Wait;
 	}
-	
+
 
 	override void MorphPlayerThink ()
 	{
@@ -182,9 +182,9 @@ class PigPlayer : PlayerPawn
 		}
 	}
 
-	
+
 }
-	
+
 
 
 // Pig (non-player) ---------------------------------------------------------

@@ -53,7 +53,7 @@ bool FLevelLocals::EV_Thing_Spawn (int tid, AActor *source, int type, DAngle ang
 	// Handle decorate replacements.
 	kind = kind->GetReplacement(this);
 
-	if ((GetDefaultByType(kind)->flags3 & MF3_ISMONSTER) && 
+	if ((GetDefaultByType(kind)->flags3 & MF3_ISMONSTER) &&
 		((dmflags & DF_NO_MONSTERS) || (flags2 & LEVEL2_NOMONSTERS)))
 		return false;
 
@@ -274,7 +274,7 @@ bool FLevelLocals::EV_Thing_Projectile (int tid, AActor *source, int type, const
 	kind = kind->GetReplacement(this);
 
 	defflags3 = GetDefaultByType(kind)->flags3;
-	if ((defflags3 & MF3_ISMONSTER) && 
+	if ((defflags3 & MF3_ISMONSTER) &&
 		((dmflags & DF_NO_MONSTERS) || (flags2 & LEVEL2_NOMONSTERS)))
 		return false;
 
@@ -436,7 +436,7 @@ void P_RemoveThing(AActor * actor)
 
 bool P_Thing_Raise(AActor *thing, AActor *raiser, int flags)
 {
-	if (!thing)	
+	if (!thing)
 		return false;
 
 	FState * RaiseState = thing->GetRaiseState();
@@ -444,7 +444,7 @@ bool P_Thing_Raise(AActor *thing, AActor *raiser, int flags)
 	{
 		return false;	// monster doesn't have a raise state
 	}
-	
+
 	AActor *info = thing->GetDefault ();
 
 	thing->Vel.X = thing->Vel.Y = 0;
@@ -489,7 +489,7 @@ bool P_Thing_CanRaise(AActor *thing)
 	{
 		return false;
 	}
-	
+
 	AActor *info = thing->GetDefault();
 
 	// Check against real height and radius
@@ -570,7 +570,7 @@ int P_Thing_CheckProximity(FLevelLocals *Level, AActor *self, PClass *classname,
 	// We need these to check out.
 	if (!ref || !classname || distance <= 0)
 		return 0;
-	
+
 	int counter = 0;
 	int result = 0;
 	double closer = distance, farther = 0, current = distance;
@@ -580,8 +580,8 @@ int P_Thing_CheckProximity(FLevelLocals *Level, AActor *self, PClass *classname,
 	auto it = self->Level->GetThinkerIterator<AActor>();
 	AActor *mo, *dist = nullptr;
 
-	// [MC] Process of elimination, I think, will get through this as quickly and 
-	// efficiently as possible. 
+	// [MC] Process of elimination, I think, will get through this as quickly and
+	// efficiently as possible.
 	while ((mo = it.Next()))
 	{
 		if (mo == ref) //Don't count self.
@@ -651,7 +651,7 @@ int P_Thing_CheckProximity(FLevelLocals *Level, AActor *self, PClass *classname,
 			// Abort if the number of matching classes nearby is greater, we have obviously succeeded in our goal.
 			// Don't abort if calling the counting version CheckProximity non-action function.
 			if (!counting && counter > count)
-			{					
+			{
 				result = (flags & (CPXF_LESSOREQUAL | CPXF_EXACT)) ? 0 : 1;
 
 				// However, if we have one SET* flag and either the closest or farthest flags, keep the function going.
@@ -703,7 +703,7 @@ int P_Thing_Warp(AActor *caller, AActor *reference, double xofs, double yofs, do
 	int oldpgroup = caller->Sector->PortalGroup;
 
 	zofs += reference->Height * heightoffset;
-	
+
 
 	if (!(flags & WARPF_ABSOLUTEANGLE))
 	{
@@ -723,7 +723,7 @@ int P_Thing_Warp(AActor *caller, AActor *reference, double xofs, double yofs, do
 			// (borrowed from A_SpawnItemEx, assumed workable)
 			// in relative mode negative y values mean 'left' and positive ones mean 'right'
 			// This is the inverse orientation of the absolute mode!
-			
+
 			xofs = xofs1 * c + yofs * s;
 			yofs = xofs1 * s - yofs * c;
 		}
@@ -764,10 +764,10 @@ int P_Thing_Warp(AActor *caller, AActor *reference, double xofs, double yofs, do
 
 			if (flags & WARPF_COPYPITCH)
 				caller->SetPitch(reference->Angles.Pitch, false);
-			
+
 			if (pitch != nullAngle)
 				caller->SetPitch(caller->Angles.Pitch + pitch, false);
-			
+
 			if (flags & WARPF_COPYVELOCITY)
 			{
 				caller->Vel = reference->Vel;
@@ -777,7 +777,7 @@ int P_Thing_Warp(AActor *caller, AActor *reference, double xofs, double yofs, do
 				caller->Vel.Zero();
 			}
 
-			// this is no fun with line portals 
+			// this is no fun with line portals
 			if (flags & WARPF_WARPINTERPOLATION)
 			{
 				// This just translates the movement but doesn't change the vector
@@ -820,14 +820,14 @@ DEFINE_ACTION_FUNCTION(AActor, Warp)
 {
 	PARAM_SELF_PROLOGUE(AActor)
 	PARAM_OBJECT(destination, AActor)
-	PARAM_FLOAT(xofs)				
-	PARAM_FLOAT(yofs)				
-	PARAM_FLOAT(zofs)				
-	PARAM_ANGLE(angle)				
-	PARAM_INT(flags)				
-	PARAM_FLOAT(heightoffset)		
-	PARAM_FLOAT(radiusoffset)		
-	PARAM_ANGLE(pitch)				
+	PARAM_FLOAT(xofs)
+	PARAM_FLOAT(yofs)
+	PARAM_FLOAT(zofs)
+	PARAM_ANGLE(angle)
+	PARAM_INT(flags)
+	PARAM_FLOAT(heightoffset)
+	PARAM_FLOAT(radiusoffset)
+	PARAM_ANGLE(pitch)
 
 	const int result = destination == nullptr ? 0 :
 		P_Thing_Warp(self, destination, xofs, yofs, zofs, angle, flags, heightoffset, radiusoffset, pitch);

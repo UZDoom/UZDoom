@@ -182,6 +182,7 @@ void FMapInfoParser::ParseSkill ()
 				else if (sc.Compare("normal")) skill.SpawnFilter |= 4;
 				else if (sc.Compare("hard")) skill.SpawnFilter |= 8;
 				else if (sc.Compare("nightmare")) skill.SpawnFilter |= 16;
+				else sc.ScriptError("Invalid skill filter name '%s' in skill definition for '%s'\n", sc.String, skill.Name.GetChars());
 			}
 		}
 		else if (sc.Compare ("spawnmulti"))
@@ -238,7 +239,7 @@ void FMapInfoParser::ParseSkill ()
 		else if (sc.Compare("MustConfirm"))
 		{
 			skill.MustConfirm = true;
-			if (format_type == FMT_New) 
+			if (format_type == FMT_New)
 			{
 				if (CheckAssign())
 				{
@@ -270,7 +271,7 @@ void FMapInfoParser::ParseSkill ()
 		{
 			ParseAssign();
 			sc.MustGetFloat();
-			skill.MonsterHealth = sc.Float;	
+			skill.MonsterHealth = sc.Float;
 		}
 		else if (sc.Compare("FriendlyHealth"))
 		{
@@ -364,7 +365,7 @@ int G_SkillProperty(ESkillProperty prop)
 			return AllSkills[gameskill].SlowMonsters;
 
 		case SKILLP_Respawn:
-			if (dmflags & DF_MONSTERS_RESPAWN && AllSkills[gameskill].RespawnCounter==0) 
+			if (dmflags & DF_MONSTERS_RESPAWN && AllSkills[gameskill].RespawnCounter==0)
 				return TICRATE * gameinfo.defaultrespawntime;
 			return AllSkills[gameskill].RespawnCounter;
 
@@ -388,9 +389,9 @@ int G_SkillProperty(ESkillProperty prop)
 
 		case SKILLP_ACSReturn:
 			return AllSkills[gameskill].ACSReturn;
-		
-		case SKILLP_NoPain:			
-			return AllSkills[gameskill].NoPain;	
+
+		case SKILLP_NoPain:
+			return AllSkills[gameskill].NoPain;
 
 		case SKILLP_Infight:
 			if (AllSkills[gameskill].Infighting == LEVEL2_TOTALINFIGHTING) return 1;
@@ -402,7 +403,7 @@ int G_SkillProperty(ESkillProperty prop)
 
 		case SKILLP_SpawnMulti:
 			return AllSkills[gameskill].SpawnMulti;
-			
+
 		case SKILLP_InstantReaction:
 			return AllSkills[gameskill].InstantReaction;
 

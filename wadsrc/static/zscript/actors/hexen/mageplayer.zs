@@ -53,7 +53,7 @@ class MagePlayer : PlayerPawn
 		Player.WeaponSlot 3, "MWeapLightning";
 		Player.WeaponSlot 4, "MWeapBloodscourge";
 		Player.FlechetteType "ArtiPoisonBag2";
-		
+
 		Player.ColorRange 146, 163;
 		Player.Colorset		0, "$TXT_COLOR_BLUE",		146, 163,    161;
 		Player.ColorsetFile 1, "$TXT_COLOR_RED",		"TRANTBL7",  0xB3;
@@ -88,7 +88,7 @@ class MagePlayer : PlayerPawn
 		MAGE L 6 A_NoBlocking;
 		MAGE M 6;
 		MAGE N -1;
-		Stop;		
+		Stop;
 	XDeath:
 		MAGE O 5 A_PlayerScream;
 		MAGE P 5;

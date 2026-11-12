@@ -119,7 +119,7 @@ inline sector_t *getNextSector (line_t *line, const sector_t *sec)
 // P_SWITCH
 //
 
-#define BUTTONTIME TICRATE		// 1 second, in ticks. 
+#define BUTTONTIME TICRATE		// 1 second, in ticks.
 
 bool	P_ChangeSwitchTexture (side_t *side, int useAgain, uint8_t special, bool *quest=NULL);
 bool	P_CheckSwitchRange(AActor *user, line_t *line, int sideno, const DVector3 *optpos = NULL);

@@ -97,7 +97,7 @@ class ClericBoss : Actor
 		FDTH V 4 Bright ;
 		Stop;
 	}
-		
+
 	//============================================================================
 	//
 	// A_ClericAttack

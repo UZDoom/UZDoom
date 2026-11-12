@@ -41,22 +41,22 @@ protected:
 };
 
 // The actual pointer object
-template<class T> 
+template<class T>
 class RefCountedPtr
 {
 public:
-    ~RefCountedPtr() 
+	~RefCountedPtr()
 	{
-        if (ptr) ptr->DecRef();
-    }
+		if (ptr) ptr->DecRef();
+	}
 
-    RefCountedPtr() : ptr(nullptr) 
+	RefCountedPtr() : ptr(nullptr)
 	{}
 
-    explicit RefCountedPtr(T* p) : ptr(p)
-    {
-        if (ptr) ptr->IncRef();
-    }
+	explicit RefCountedPtr(T* p) : ptr(p)
+	{
+		if (ptr) ptr->IncRef();
+	}
 
 	RefCountedPtr(const RefCountedPtr& r) : ptr(r.ptr)
 	{
@@ -68,75 +68,75 @@ public:
 		r.ptr = nullptr;
 	}
 
-    RefCountedPtr & operator=(const RefCountedPtr& r) 
-    {
+	RefCountedPtr & operator=(const RefCountedPtr& r)
+	{
 		if (this != &r)
 		{
-            if (ptr) ptr->DecRef();
+			if (ptr) ptr->DecRef();
 			ptr = r.ptr;
-            if (ptr) ptr->IncRef();
+			if (ptr) ptr->IncRef();
 		}
-        return *this;
-    }
+		return *this;
+	}
 
-    RefCountedPtr& operator=(T* r)
-    {
-        if (ptr != r)
-        {
-            if (ptr) ptr->DecRef();
-            ptr = r;
-            if (ptr) ptr->IncRef();
-        }
-        return *this;
-    }
+	RefCountedPtr& operator=(T* r)
+	{
+		if (ptr != r)
+		{
+			if (ptr) ptr->DecRef();
+			ptr = r;
+			if (ptr) ptr->IncRef();
+		}
+		return *this;
+	}
 
-    RefCountedPtr & operator=(RefCountedPtr&& r)
-    {
+	RefCountedPtr & operator=(RefCountedPtr&& r)
+	{
 		if (this != &r)
 		{
 			if (ptr) ptr->DecRef();
 			ptr = r.ptr;
 			r.ptr = nullptr;
 		}
-        return *this;
-    }
+		return *this;
+	}
 
-    bool operator==(T* p) const
-    {
-        return ptr == p;
-    }
-
-    bool operator!=(T* p) const
-    {
-        return ptr != p;
-    }
-
-    bool operator==(const RefCountedPtr &p) const
-    {
-        return ptr == p.ptr;
-    }
-
-    bool operator!=(const RefCountedPtr& p) const
-    {
-        return ptr != p.ptr;
-    }
-
-    T& operator* () const
+	bool operator==(T* p) const
 	{
-        return *ptr;
-    }
+		return ptr == p;
+	}
 
-    T* operator-> () const 
+	bool operator!=(T* p) const
 	{
-        return ptr;
-    }
+		return ptr != p;
+	}
 
-    T* get() const 
+	bool operator==(const RefCountedPtr &p) const
 	{
-        return ptr;
-    }
+		return ptr == p.ptr;
+	}
+
+	bool operator!=(const RefCountedPtr& p) const
+	{
+		return ptr != p.ptr;
+	}
+
+	T& operator* () const
+	{
+		return *ptr;
+	}
+
+	T* operator-> () const
+	{
+		return ptr;
+	}
+
+	T* get() const
+	{
+		return ptr;
+	}
 
 private:
 
-    T * ptr;
+	T * ptr;
 };

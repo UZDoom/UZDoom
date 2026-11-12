@@ -393,4 +393,3 @@ generator Echidna			BulletChip
 generator PhageNeutron		ArachnotronScorch
 generator GrenadeExplosion	CacoScorch
 generator GuidedChaos		RevenantScorch
-

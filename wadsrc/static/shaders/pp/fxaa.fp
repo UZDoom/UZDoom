@@ -236,7 +236,7 @@ void main()
 	#define FXAA_QUALITY__P11 8.0
 #endif
 
-FxaaFloat4 FxaaPixelShader(FxaaFloat2 pos, FxaaTex tex, FxaaFloat2 fxaaQualityRcpFrame, 
+FxaaFloat4 FxaaPixelShader(FxaaFloat2 pos, FxaaTex tex, FxaaFloat2 fxaaQualityRcpFrame,
 	FxaaFloat fxaaQualitySubpix, FxaaFloat fxaaQualityEdgeThreshold, FxaaFloat fxaaQualityEdgeThresholdMin)
 {
 	FxaaFloat2 posM;

@@ -384,4 +384,3 @@ VulkanDescriptorSet* VkMaterial::GetDescriptorSet(const FMaterialState& state)
 	mDescriptorSets.emplace_back(clampmode, translationp, std::move(descriptor));
 	return mDescriptorSets.back().descriptor.get();
 }
-

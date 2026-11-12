@@ -32,7 +32,7 @@ class TeleportFog : Actor
 	Spawn:
 		TFOG ABABCDEFGHIJ 6 Bright;
 		Stop;
-	
+
 	Raven:
 		TELE ABCDEFGHGFEDC 6 Bright;
 		Stop;
@@ -41,7 +41,7 @@ class TeleportFog : Actor
 		TFOG ABCDEFEDCB 6 Bright;
 		Stop;
 	}
-	
+
 	override void PostBeginPlay ()
 	{
 		Super.PostBeginPlay ();
@@ -56,12 +56,12 @@ class TeleportFog : Actor
 		case GAME_Strife:
 			SetStateLabel("Strife");
 			break;
-			
+
 		default:
 			break;
 		}
 	}
-	
+
 }
 
 
@@ -92,4 +92,3 @@ class TeleportDest3 : TeleportDest2
 		-NOGRAVITY
 	}
 }
-

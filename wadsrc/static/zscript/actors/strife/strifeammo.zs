@@ -252,4 +252,3 @@ class AmmoSatchel : BackpackItem
 		Stop;
 	}
 }
-

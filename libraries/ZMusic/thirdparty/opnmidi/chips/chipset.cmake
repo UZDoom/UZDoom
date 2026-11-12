@@ -21,20 +21,12 @@ set(CHIPS_SOURCES
     "src/opl/chips/pmdwin_opna.cpp"
     "src/opl/chips/pmdwin/opna.c"
     "src/opl/chips/pmdwin/psg.c"
-    "src/opl/chips/pmdwin/rhythmdata.c")
-
-if(COMPILER_SUPPORTS_CXX14) # YMFM can be built in only condition when C++14 and newer were available
-  set(YMFM_SOURCES
-      "src/opl/chips/ymfm_opn2.cpp"
-      "src/opl/chips/ymfm_opna.cpp"
-      "src/opl/chips/ymfm/ymfm_opn.cpp"
-      "src/opl/chips/ymfm/ymfm_misc.cpp"
-      "src/opl/chips/ymfm/ymfm_pcm.cpp"
-      "src/opl/chips/ymfm/ymfm_adpcm.cpp"
-      "src/opl/chips/ymfm/ymfm_ssg.cpp"
-  )
-  if(DEFINED FLAG_CPP14)
-    set_source_files_properties(${YMFM_SOURCES} COMPILE_FLAGS ${FLAG_CPP14})
-  endif()
-  list(APPEND CHIPS_SOURCES ${YMFM_SOURCES})
-endif()
+    "src/opl/chips/pmdwin/rhythmdata.c"
+    "src/opl/chips/ymfm_opn2.cpp"
+    "src/opl/chips/ymfm_opna.cpp"
+    "src/opl/chips/ymfm/ymfm_opn.cpp"
+    "src/opl/chips/ymfm/ymfm_misc.cpp"
+    "src/opl/chips/ymfm/ymfm_pcm.cpp"
+    "src/opl/chips/ymfm/ymfm_adpcm.cpp"
+    "src/opl/chips/ymfm/ymfm_ssg.cpp"
+)

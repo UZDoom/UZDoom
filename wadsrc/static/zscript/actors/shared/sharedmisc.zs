@@ -52,7 +52,7 @@ class PatrolPoint : Actor
 		+NOTONAUTOMAP
 		RenderStyle "None";
 	}
-}	
+}
 
 // A special to execute when a monster reaches a matching patrol point ------
 
@@ -69,7 +69,7 @@ class PatrolSpecial : Actor
 		+NOTONAUTOMAP
 		RenderStyle "None";
 	}
-}	
+}
 
 // Map spot ----------------------------------------------------------------
 
@@ -85,11 +85,11 @@ class MapSpot : Actor
 		RenderStyle "None";
 		CameraHeight 0;
 	}
-}	
+}
 
 // same with different editor number for Legacy maps -----------------------
 
-class FS_Mapspot : Mapspot 
+class FS_Mapspot : Mapspot
 {
 }
 
@@ -177,7 +177,7 @@ class CustomSprite : Actor
 		TNT1 A -1;
 		Stop;
 	}
-	
+
 	override void BeginPlay ()
 	{
 		Super.BeginPlay ();
@@ -218,7 +218,7 @@ class SwitchableDecoration : Actor
 	{
 		SetStateLabel("Inactive");
 	}
-	
+
 }
 
 class SwitchingDecoration : SwitchableDecoration
@@ -239,7 +239,7 @@ class SectorFlagSetter : Actor
 		+DONTSPLASH
 		RenderStyle "None";
 	}
-	
+
 	override void BeginPlay ()
 	{
 		Super.BeginPlay ();

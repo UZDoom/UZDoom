@@ -1,0 +1,4515 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-06-07 01:01+0000\n"
+"Last-Translator: Júlia Rosell Saldaña <contacte@juliars.cat>\n"
+"Language-Team: Catalan <https://hosted.weblate.org/projects/doom-engine-games/strife/ca/>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6\n"
+
+msgid "TXT_STRIFE_MAP01"
+msgstr "ÀREA 1: Santuari"
+
+msgid "TXT_STRIFE_MAP02"
+msgstr "ÀREA 2: Ciutat"
+
+msgid "TXT_STRIFE_MAP03"
+msgstr "ZONA 3: Base frontal"
+
+msgid "TXT_STRIFE_MAP04"
+msgstr "ÀREA 4: Central Elèctrica"
+
+msgid "TXT_STRIFE_MAP05"
+msgstr "ÀREA 5: Presó"
+
+msgid "TXT_STRIFE_MAP06"
+msgstr "ÀREA 6: Clavegueres"
+
+msgid "TXT_STRIFE_MAP07"
+msgstr "ZONA 7: Castell"
+
+msgid "TXT_STRIFE_MAP08"
+msgstr "ÀREA 8: Sala d'audiències"
+
+msgid "TXT_STRIFE_MAP09"
+msgstr "ÀREA 9: Castell: Torre del Programador"
+
+msgid "TXT_STRIFE_MAP10"
+msgstr "ÀREA 10: Nova Base Frontal"
+
+msgid "TXT_STRIFE_MAP11"
+msgstr "ÀREA 11: Fronteres"
+
+msgid "TXT_STRIFE_MAP12"
+msgstr "ÀREA 12: El Temple de l'Oracle"
+
+msgid "TXT_STRIFE_MAP13"
+msgstr "ÀREA 13: Catacumbes"
+
+msgid "TXT_STRIFE_MAP14"
+msgstr "ÀREA 14: Mines"
+
+msgid "TXT_STRIFE_MAP15"
+msgstr "ÀREA 15: Fortalesa: Administració"
+
+msgid "TXT_STRIFE_MAP16"
+msgstr "ÀREA 16: Fortalesa: Torre del Bisbe"
+
+msgid "TXT_STRIFE_MAP17"
+msgstr "ÀREA 17: Fortalesa: The Bailey"
+
+msgid "TXT_STRIFE_MAP18"
+msgstr "ÀREA 18: Fortalesa: Botigues"
+
+msgid "TXT_STRIFE_MAP19"
+msgstr "ÀREA 19: Fortalesa: Complex de Seguretat"
+
+msgid "TXT_STRIFE_MAP20"
+msgstr "ÀREA 20: Fàbrica: Recepció"
+
+msgid "TXT_STRIFE_MAP21"
+msgstr "ÀREA 21: Fàbrica: Fabricació"
+
+msgid "TXT_STRIFE_MAP22"
+msgstr "ÀREA 22: Fàbrica: Farga"
+
+msgid "TXT_STRIFE_MAP23"
+msgstr "ÀREA 23: Ordre Comuns"
+
+msgid "TXT_STRIFE_MAP24"
+msgstr "ÀREA 24: Fàbrica: Capella de Conversió"
+
+msgid "TXT_STRIFE_MAP25"
+msgstr "ÀREA 25: Catacumbes: Temple en ruïnes"
+
+msgid "TXT_STRIFE_MAP26"
+msgstr "ÀREA 26: Camps de proves"
+
+msgid "TXT_STRIFE_MAP27"
+msgstr "ÀREA 27: El Laboratori"
+
+msgid "TXT_STRIFE_MAP28"
+msgstr "ÀREA 28: Vaixell alienígena"
+
+msgid "TXT_STRIFE_MAP29"
+msgstr "ÀREA 29: Cau de l'Entitat"
+
+msgid "TXT_STRIFE_MAP30"
+msgstr "ZONA 30: Base frontal abandonada"
+
+msgid "TXT_STRIFE_MAP31"
+msgstr "ÀREA 31: Equipament de formació"
+
+msgid "TXT_STRIFE_MAP32"
+msgstr "ÀREA 1: Santuari"
+
+msgid "TXT_STRIFE_MAP33"
+msgstr "ÀREA 2: Ciutat"
+
+msgid "TXT_STRIFE_MAP34"
+msgstr "ÀREA 3: Base de Moviment"
+
+msgid "TXT_STRIFE_MAP35"
+msgstr "ÀREA 35: Fàbrica: Producció"
+
+msgid "TXT_STRIFE_MAP36"
+msgstr "ÀREA 36: Castle Clash"
+
+msgid "TXT_STRIFE_MAP37"
+msgstr "ÀREA 37: Killing Grounds"
+
+msgid "TXT_STRIFE_MAP38"
+msgstr "ÀREA 38: Caos ordenat"
+
+# MAP01: Beldin.
+msgid "TXT_DLG_SCRIPT01_D0_IDONT"
+msgstr "No vull cap problema, allunya't de mi. Ja he tingut prou problemes amb el que em va fer aquell bastart Harris. Em va prometre diners, en lloc d'això tinc ganes de ser qüestionat pel programador."
+
+# MAP02: Guy next to Norwall Prison.
+msgid "TXT_DLG_SCRIPT02_D0_ILLHE"
+msgstr "T'ajudaré si m'ajudes. Cinc peces d'or i diré tot el que sé."
+
+msgid "TXT_RPLY0_SCRIPT02_D0_HERES"
+msgstr "Aquí està l'or."
+
+# (This text is only four seconds on screen)
+msgid "TXT_RYES0_SCRIPT02_D0_BESTE"
+msgstr "Sigues sigilós quan mates, no activaràs les alarmes."
+
+# (Four seconds)
+msgid "TXT_RNO0_SCRIPT02_D0_WELLI"
+msgstr "Bé, no et diré res gratis!"
+
+msgid "TXT_DLG_SCRIPT02_D1516_HAVEY"
+msgstr "Per casualitat, tens 5 ors més?"
+
+msgid "TXT_RPLY0_SCRIPT02_D1516_5GOLD"
+msgstr "5 d'or."
+
+# (Four seconds)
+msgid "TXT_RYES0_SCRIPT02_D1516_WELLP"
+msgstr "Bé, els parabolts verinosos poden matar els guàrdies a l'instant i no activaran les alarmes."
+
+# (Four seconds)
+msgid "TXT_RNO0_SCRIPT02_D1516_NOSIR"
+msgstr "No senyor, no us diré res gratis!"
+
+msgid "TXT_DLG_SCRIPT02_D3032_YOUVE"
+msgstr "Ja m'has tret l'última xafarderia!"
+
+# MAP02: Irale.
+msgid "TXT_DLG_SCRIPT02_D4548_WHATC"
+msgstr "Què puc aconseguir per a tu?"
+
+msgid "TXT_RPLY0_SCRIPT02_D4548_ASSAU"
+msgstr "Pistola d'assalt"
+
+msgid "TXT_RYES0_SCRIPT02_D4548_HEREY"
+msgstr "Aquí tens."
+
+msgid "TXT_RNO0_SCRIPT02_D4548_YOUCA"
+msgstr "No t'ho pots permetre ara mateix."
+
+msgid "TXT_RPLY1_SCRIPT02_D4548_CLIPO"
+msgstr "Clip de bales"
+
+msgid "TXT_RYES1_SCRIPT02_D4548_THANK"
+msgstr "Gràcies."
+
+msgid "TXT_RNO1_SCRIPT02_D4548_COMEO"
+msgstr "Vinga, 10 d'or."
+
+msgid "TXT_RPLY2_SCRIPT02_D4548_AMMOB"
+msgstr "Caixa de munició"
+
+msgid "TXT_RYES2_SCRIPT02_D4548_HERES"
+msgstr "Aquí tens la teva munició."
+
+msgid "TXT_RNO2_SCRIPT02_D4548_MAYBE"
+msgstr "Potser en un altre moment."
+
+# (After destroying the crystal in the Power Station)
+msgid "TXT_DLG_SCRIPT02_D6064_GOODN"
+msgstr "Bones notícies del Front per canviar. Macil t'ha enviat per una recompensa i entrenament. Ell m'ha encarregat de donar-te'ls."
+
+msgid "TXT_RPLY0_SCRIPT02_D6064_THANK"
+msgstr "Gràcies."
+
+msgid "TXT_RYES0_SCRIPT02_D6064_GLADT"
+msgstr "Encantat de ser de servei."
+
+msgid "TXT_DLG_SCRIPT02_D7580_ALLRI"
+msgstr "D'acord, aquí teniu algunes indicacions sobre què fer: no us entorpiu els croats: disparar ràfegues curtes amb la vostra pistola d'assalt la manté a l'objectiu."
+
+msgid "TXT_RPLY0_SCRIPT02_D7580_ISTHA"
+msgstr "És això?"
+
+msgid "TXT_RYES0_SCRIPT02_D7580_LOOKY"
+msgstr "Mira, més endavant aprendràs més."
+
+msgid "TXT_DLG_SCRIPT02_D9096_ITHIN"
+msgstr "Crec que puc convertir un llançaflames d'un dels croats perquè l'utilitzi un humà. Oh, alguna cosa més et puc aconseguir?"
+
+msgid "TXT_RPLY0_SCRIPT02_D9096_FLAME"
+msgstr "Llançaflames."
+
+msgid "TXT_RYES0_SCRIPT02_D9096_IKNEW"
+msgstr "Sabia que funcionaria! Aquí tens, porta-la a fer una volta!"
+
+msgid "TXT_RNO0_SCRIPT02_D9096_LISTE"
+msgstr "Escolta, no puc fer res sense les peces adequades!"
+
+msgid "TXT_RPLY1_SCRIPT02_D9096_ASSAU"
+msgstr "Pistola d'assalt"
+
+msgid "TXT_RYES1_SCRIPT02_D9096_WELLH"
+msgstr "Bé, aquí va senyor!"
+
+msgid "TXT_RNO1_SCRIPT02_D9096_OBVIO"
+msgstr "Evidentment, ara mateix no us ho podeu permetre."
+
+msgid "TXT_RPLY2_SCRIPT02_D9096_CLIPO"
+msgstr "Clip de bales"
+
+msgid "TXT_RYES2_SCRIPT02_D9096_THANK"
+msgstr "Gràcies."
+
+msgid "TXT_RNO2_SCRIPT02_D9096_COMEO"
+msgstr "Vinga, 10 d'or."
+
+msgid "TXT_RPLY3_SCRIPT02_D9096_AMMOB"
+msgstr "Caixa de munició"
+
+msgid "TXT_RYES3_SCRIPT02_D9096_HERES"
+msgstr "Aquí tens la teva munició."
+
+msgid "TXT_RNO3_SCRIPT02_D9096_MAYBE"
+msgstr "Potser en un altre moment. Adéu!"
+
+# (With flamethrower)
+msgid "TXT_DLG_SCRIPT02_D10612_NOWTH"
+msgstr "Ara que tens el llançaflames, hi ha alguna cosa més que et pugui aconseguir?"
+
+msgid "TXT_RPLY0_SCRIPT02_D10612_ASSAU"
+msgstr "Pistola d'assalt"
+
+msgid "TXT_RYES0_SCRIPT02_D10612_HEREY"
+msgstr "Aquí tens."
+
+msgid "TXT_RNO0_SCRIPT02_D10612_YOUCA"
+msgstr "No t'ho pots permetre ara mateix."
+
+msgid "TXT_RPLY1_SCRIPT02_D10612_CLIPO"
+msgstr "Clip de bales"
+
+msgid "TXT_RYES1_SCRIPT02_D10612_THANK"
+msgstr "Gràcies."
+
+msgid "TXT_RNO1_SCRIPT02_D10612_COMEO"
+msgstr "Vinga, 10 d'or."
+
+msgid "TXT_RPLY2_SCRIPT02_D10612_AMMOB"
+msgstr "Caixa de munició"
+
+msgid "TXT_RYES2_SCRIPT02_D10612_HERES"
+msgstr "Aquí tens la teva munició."
+
+msgid "TXT_RNO2_SCRIPT02_D10612_MAYBE"
+msgstr "Potser en un altre moment."
+
+msgid "TXT_DLG_SCRIPT02_D12128_NOWTH"
+msgstr "Ara que tens el llançaflames, hi ha alguna cosa més que et pugui aconseguir?"
+
+msgid "TXT_RPLY0_SCRIPT02_D12128_CLIPO"
+msgstr "Clip de bales"
+
+msgid "TXT_RYES0_SCRIPT02_D12128_THANK"
+msgstr "Gràcies."
+
+msgid "TXT_RNO0_SCRIPT02_D12128_COMEO"
+msgstr "Vinga, 10 d'or."
+
+msgid "TXT_RPLY1_SCRIPT02_D12128_AMMOB"
+msgstr "Caixa de munició"
+
+msgid "TXT_RYES1_SCRIPT02_D12128_HERES"
+msgstr "Aquí tens la teva munició."
+
+msgid "TXT_RNO1_SCRIPT02_D12128_MAYBE"
+msgstr "Potser en un altre moment."
+
+msgid "TXT_RPLY2_SCRIPT02_D12128_PHOSP"
+msgstr "Granades de fòsfor"
+
+msgid "TXT_RYES2_SCRIPT02_D12128_THANK"
+msgstr "Gràcies."
+
+msgid "TXT_RNO2_SCRIPT02_D12128_YOUDO"
+msgstr "No en tens prou"
+
+msgid "TXT_RPLY3_SCRIPT02_D12128_POISO"
+msgstr "Parabolts verinosos"
+
+msgid "TXT_RYES3_SCRIPT02_D12128_WORTH"
+msgstr "Val cada or!"
+
+msgid "TXT_RNO3_SCRIPT02_D12128_COMEO"
+msgstr "Vinga, 200 d'or!"
+
+# MAP02: Between governor's mansion and town hall.
+msgid "TXT_DLG_SCRIPT02_D13644_ICANT"
+msgstr "No puc creure que m'he quedat amb aquest deure. Diuen que alguna cosa dolenta va sortir d'aquesta porta de clavegueram... Ara em quedo aquí fins que torni a pujar!"
+
+msgid "TXT_RPLY0_SCRIPT02_D13644_WHATG"
+msgstr "Quina porta?"
+
+msgid "TXT_RYES0_SCRIPT02_D13644_THESE"
+msgstr "La porta de desbordament del clavegueram."
+
+# MAP02: Weapons.
+msgid "TXT_DLG_SCRIPT02_D15160_HELLO"
+msgstr "Hola amic. Què puc aconseguir per a tu?"
+
+msgid "TXT_RPLY0_SCRIPT02_D15160_ELECT"
+msgstr "Cargols elèctrics"
+
+msgid "TXT_RYES0_SCRIPT02_D15160_YOUGO"
+msgstr "Tens els cargols elèctrics."
+
+msgid "TXT_RPLY1_SCRIPT02_D15160_AMMOS"
+msgstr "Cartera de munició"
+
+msgid "TXT_RNO0_SCRIPT02_D15160_NOYOU"
+msgstr "No. No tens el que vull per als cargols elèctrics!"
+
+msgid "TXT_RNO0_SCRIPT02_D16676_NOYOU"
+msgstr "No. No tens el que vull per als cargols elèctrics!"
+
+msgid "TXT_RYES1_SCRIPT02_D15160_THANK"
+msgstr "Gràcies. Alguna cosa més?"
+
+msgid "TXT_RNO1_SCRIPT02_D15160_YOUCA"
+msgstr "No t'ho pots permetre, bon dia."
+
+msgid "TXT_DLG_SCRIPT02_D16676_WHATC"
+msgstr "Què puc aconseguir per a tu?"
+
+msgid "TXT_RPLY0_SCRIPT02_D16676_ELECT"
+msgstr "Cargols elèctrics"
+
+msgid "TXT_RYES0_SCRIPT02_D16676_YOUGO"
+msgstr "Tens els cargols elèctrics."
+
+msgid "TXT_RPLY1_SCRIPT02_D16676_AMMOS"
+msgstr "Cartera de munició"
+
+msgid "TXT_RYES1_SCRIPT02_D16676_THANK"
+msgstr "Gràcies, alguna cosa més?"
+
+msgid "TXT_RNO1_SCRIPT02_D16676_YOUCA"
+msgstr "No us ho podeu permetre, bon dia!"
+
+# MAP02: Armory.
+msgid "TXT_DLG_SCRIPT02_D18192_WELCO"
+msgstr "Benvingut. Què et puc mostrar?"
+
+msgid "TXT_RPLY0_SCRIPT02_D18192_ENVIR"
+msgstr "Vestit ambiental"
+
+msgid "TXT_RYES0_SCRIPT02_D18192_WELLH"
+msgstr "Bé, aquí tens."
+
+msgid "TXT_RNO0_SCRIPT02_D18192_IMSOR"
+msgstr "Ho sento, però no tens prou diners per això."
+
+msgid "TXT_RPLY1_SCRIPT02_D18192_LEATH"
+msgstr "Armadura de cuir"
+
+msgid "TXT_RYES1_SCRIPT02_D18192_HEREY"
+msgstr "Aquí tens."
+
+msgid "TXT_RNO1_SCRIPT02_D18192_PERHA"
+msgstr "Potser en un altre moment?"
+
+msgid "TXT_RPLY2_SCRIPT02_D18192_METAL"
+msgstr "Armadura metàl·lica"
+
+# (in good health = enjoy)
+msgid "TXT_RYES2_SCRIPT02_D18192_WEARI"
+msgstr "Porteu-lo amb bona salut."
+
+msgid "TXT_RNO2_SCRIPT02_D18192_COMEB"
+msgstr "Torna quan puguis permetre't el luxe de comprar alguna cosa que t'estimes!"
+
+msgid "TXT_DLG_SCRIPT02_D19708_WELCO"
+msgstr "Benvingut. Què et puc mostrar?"
+
+msgid "TXT_RPLY0_SCRIPT02_D19708_ENVIR"
+msgstr "Vestit ambiental"
+
+msgid "TXT_RYES0_SCRIPT02_D19708_WELLH"
+msgstr "Bé, aquí tens."
+
+msgid "TXT_RNO0_SCRIPT02_D19708_IMSOR"
+msgstr "Ho sento, però no tens prou diners per això."
+
+msgid "TXT_RPLY1_SCRIPT02_D19708_LEATH"
+msgstr "Armadura de cuir"
+
+msgid "TXT_RYES1_SCRIPT02_D19708_HEREY"
+msgstr "Aquí tens."
+
+msgid "TXT_RNO1_SCRIPT02_D19708_PERHA"
+msgstr "Potser en un altre moment?"
+
+msgid "TXT_RPLY2_SCRIPT02_D19708_METAL"
+msgstr "Armadura metàl·lica"
+
+# (in good health = enjoy)
+msgid "TXT_RYES2_SCRIPT02_D19708_WEARI"
+msgstr "Porteu-lo amb bona salut."
+
+msgid "TXT_RNO2_SCRIPT02_D19708_COMEB"
+msgstr "Torna quan puguis permetre't el luxe de comprar alguna cosa que t'estimes!"
+
+# MAP02: Hospital.
+msgid "TXT_DLG_SCRIPT02_D21224_HOWMA"
+msgstr "Com et puc ajudar?"
+
+msgid "TXT_RPLY0_SCRIPT02_D21224_MEDPA"
+msgstr "Pegat med"
+
+msgid "TXT_RYES0_SCRIPT02_D21224_HERES"
+msgstr "Aquí teniu el vostre pegat."
+
+msgid "TXT_RNO0_SCRIPT02_D21224_YOUNE"
+msgstr "Necessites 10 d'or per això."
+
+msgid "TXT_RPLY1_SCRIPT02_D21224_MEDIC"
+msgstr "Kit mèdic"
+
+msgid "TXT_RYES1_SCRIPT02_D21224_THANK"
+msgstr "Gràcies."
+
+msgid "TXT_RNO1_SCRIPT02_D21224_IWISH"
+msgstr "M'agradaria poder regalar-los, però costen 25 d'or."
+
+msgid "TXT_RPLY2_SCRIPT02_D21224_FIELD"
+msgstr "Kit de cirurgia de camp"
+
+msgid "TXT_RYES2_SCRIPT02_D21224_THERE"
+msgstr "Aquí tens. Cuida't ara."
+
+msgid "TXT_RNO2_SCRIPT02_D21224_WELLM"
+msgstr "Bé, potser us podeu permetre alguns pegats mèdics?"
+
+# (After destroying the crystal in the Power Station)
+msgid "TXT_DLG_SCRIPT02_D22740_IHOPE"
+msgstr "Espero que Macil sàpiga què està fent. Si l'Ordre descobreix que estic ajudant el Front, estic com mort... No és que això us importi. El metge del Front em va donar un xip d'actualització per a tu, estàs preparat?"
+
+msgid "TXT_RPLY0_SCRIPT02_D22740_YESIM"
+msgstr "Sí, estic preparat."
+
+msgid "TXT_RYES0_SCRIPT02_D22740_WELLT"
+msgstr "Bé, això no trigarà més que un segon. Allà, ja fet."
+
+msgid "TXT_DLG_SCRIPT02_D24256_HOWMA"
+msgstr "Com et puc ajudar?"
+
+msgid "TXT_RPLY0_SCRIPT02_D24256_MEDPA"
+msgstr "Pegat med"
+
+msgid "TXT_RYES0_SCRIPT02_D24256_HERES"
+msgstr "Aquí teniu el vostre pegat."
+
+msgid "TXT_RNO0_SCRIPT02_D24256_YOUNE"
+msgstr "Necessites 10 d'or per això."
+
+msgid "TXT_RPLY1_SCRIPT02_D24256_MEDIC"
+msgstr "Kit mèdic"
+
+msgid "TXT_RYES1_SCRIPT02_D24256_THANK"
+msgstr "Gràcies."
+
+msgid "TXT_RNO1_SCRIPT02_D24256_IWISH"
+msgstr "M'agradaria poder regalar-los, però costen 25 d'or."
+
+msgid "TXT_RPLY2_SCRIPT02_D24256_FIELD"
+msgstr "Kit de cirurgia de camp"
+
+msgid "TXT_RYES2_SCRIPT02_D24256_THERE"
+msgstr "Aquí tens. Cuida't ara."
+
+msgid "TXT_RNO2_SCRIPT02_D24256_WELLM"
+msgstr "Bé, potser us podeu permetre alguns pegats mèdics?"
+
+# MAP02: Barkeep.
+msgid "TXT_DLG_SCRIPT02_D25772_HELLO"
+msgstr "Hola desconegut, no t'he vist per aquí abans. Permeteu-me donar-vos un consell gratuït. Aniria amb compte si fos tu. L'Ordre no tolera el lliure albir, i la seva justícia és ràpida."
+
+msgid "TXT_RPLY0_SCRIPT02_D25772_WHATS"
+msgstr "Quina és la paraula?"
+
+# (This text is only four seconds on screen)
+msgid "TXT_RYES0_SCRIPT02_D25772_THEWO"
+msgstr "La paraula és... Les clavegueres contenen més que rates i robots."
+
+msgid "TXT_DLG_SCRIPT02_D27288_WHATC"
+msgstr "Què puc fer per tu ara?"
+
+msgid "TXT_RPLY0_SCRIPT02_D27288_MOREI"
+msgstr "Més informació."
+
+# (Four seconds)
+msgid "TXT_RYES0_SCRIPT02_D27288_THEGO"
+msgstr "El governador és un simple recordatori per a nosaltres que ja no som persones lliures."
+
+msgid "TXT_RNO0_SCRIPT02_D27288_COMEB"
+msgstr "Torna quan tinguis una mica d'or."
+
+msgid "TXT_DLG_SCRIPT02_D28804_WELLY"
+msgstr "Bé, estàs fent moltes preguntes a algú que no vol morir. Assegureu-vos de no anar a fer-vos matar, o pitjor."
+
+msgid "TXT_RPLY0_SCRIPT02_D28804_MOREI"
+msgstr "Més informació."
+
+# (Four seconds)
+msgid "TXT_RYES0_SCRIPT02_D28804_THERE"
+msgstr "Hi ha més a l'Ordre del que sembla."
+
+msgid "TXT_RNO0_SCRIPT02_D28804_WELLT"
+msgstr "En parlarem quan tinguis or!"
+
+msgid "TXT_DLG_SCRIPT02_D30320_THATS"
+msgstr "Això és amic, el pou del coneixement s'ha eixut. T'he dit més del que hauria d'haver de totes maneres. Molta sort... I no tornis."
+
+# MAP02: Power Station guard.
+msgid "TXT_DLG_SCRIPT02_D31836_HEYIM"
+msgstr "Hola, només sóc aquí en cas d'emergència. If the core breaches, then I make sure no one gets inâ¦ or out."
+
+# MAP02: Rust guards.
+msgid "TXT_DLG_SCRIPT02_D33352_WATCH"
+msgstr "Vigila el teu pas, pagès!"
+
+# MAP02: Gray guards.
+msgid "TXT_DLG_SCRIPT02_D34868_WEREG"
+msgstr "Et matarem! "
+
+# MAP02: Green guard.
+msgid "TXT_DLG_SCRIPT02_D36384_WHOIN"
+msgstr "Qui entre les flames ets? Se suposa que ningú s'hauria de passejar per aquesta zona!"
+
+# MAP02: Golden guards.
+msgid "TXT_DLG_SCRIPT02_D37900_YOUTH"
+msgstr "Tu allà, ningú no té permís per aquí. Seguiu endavant!"
+
+# MAP02: Irale's shop.
+msgid "TXT_DLG_SCRIPT02_D39416_IRALE"
+msgstr "Irale et posarà bé!"
+
+# MAP02: Harris.
+msgid "TXT_DLG_SCRIPT02_D40932_IMKIN"
+msgstr "Sóc una mica un corredor de talent per als rebels. Un noi que sigui tan bo com tu podria fer molt d'or... si et connectes amb la gent adequada."
+
+msgid "TXT_RPLY0_SCRIPT02_D40932_IMINT"
+msgstr "M'interessa."
+
+msgid "TXT_RPLY1_SCRIPT02_D40932_SCREW"
+msgstr "A la merda els rebels!"
+
+msgid "TXT_DLG_SCRIPT02_D42448_NONOS"
+msgstr "No, cap segona oportunitat. Oh guàrdies, mateu-lo."
+
+msgid "TXT_DLG_SCRIPT02_D43964_GOODC"
+msgstr "Bona elecció. El santuari de l'Orde al costat del riu és la seva cambra de tortura no oficial. Amagat a dins hi ha un calze daurat. Llisqueu-lo i obteniu la vostra recompensa."
+
+msgid "TXT_RPLY0_SCRIPT02_D43964_HOWAM"
+msgstr "Com se suposa que ho he de fer?"
+
+msgid "TXT_DLG_SCRIPT02_D45480_HERES"
+msgstr "Aquí hi ha una ballesta, només apunta recte i --splat--. Recordeu, agafeu la tassa fantàstica i aneu a la taverna."
+
+msgid "TXT_RPLY0_SCRIPT02_D45480_COOLI"
+msgstr "Genial. Ho aconseguiré."
+
+msgid "TXT_DLG_SCRIPT02_D46996_WHATA"
+msgstr "Què estàs esperant? Porta'm aquest calze."
+
+msgid "TXT_DLG_SCRIPT02_D48512_HEYIK"
+msgstr "Ei, ho sé, sembla un muntatge. Mai li faria això a una màquina de matar tan gran. Tens l'article? Genial! Ara prepara't, or i glòria tal com t'he promès. Agafa aquesta clau i el Governador et recompensarà."
+
+msgid "TXT_RPLY0_SCRIPT02_D48512_HEDBE"
+msgstr "Ell seria millor. Pel teu bé!"
+
+msgid "TXT_RPLY1_SCRIPT02_D48512_WHATW"
+msgstr "Què! On són els meus diners?"
+
+msgid "TXT_DLG_SCRIPT02_D50028_GETLO"
+msgstr "Perd't nen, em molestes."
+
+msgid "TXT_DLG_SCRIPT02_D51544_NOSEC"
+msgstr "Cap segona oportunitat. Oh guàrdies, mateu-lo."
+
+# MAP02: Mourel.
+msgid "TXT_DLG_SCRIPT02_D53060_FIRST"
+msgstr "Primer mataxen milers, ara volen a tots els camperols sense capacitat per a \"proves\" no especificades. Com espera l'Ordre que mantingui la pau? Què dimonis vols?"
+
+msgid "TXT_RPLY0_SCRIPT02_D53060_APRIS"
+msgstr "Un passi de presó, negociem."
+
+msgid "TXT_DLG_SCRIPT02_D54576_ILIKE"
+msgstr "ja m'agraden. Tinc dues tasques que no vull fer jo. Un és desordenat, l'altre sagnant."
+
+msgid "TXT_RPLY0_SCRIPT02_D54576_CALLM"
+msgstr "Truca'm la netejadora"
+
+msgid "TXT_RPLY1_SCRIPT02_D54576_IMNOT"
+msgstr "No sóc esquerp"
+
+# ("messy" chore)
+msgid "TXT_DLG_SCRIPT02_D56092_ONEOF"
+msgstr "Un dels meus sequaços està robant energia amb un toc a la xarxa elèctrica en algun lloc. Troba'l i trunca el seu subministrament i et proporcionaré el que vulguis. Porta'm alguna cosa com a testimoni."
+
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D56092_WHERE"
+msgstr "On trobo aquesta aixeta?"
+
+# (〃)
+msgid "TXT_DLG_SCRIPT02_D57608_IFIKN"
+msgstr "Si ho sabés, ara no seria una tasca, oi? Utilitza el teu encant, però tanca el seu subministrament."
+
+# ("bloody" chore)
+msgid "TXT_DLG_SCRIPT02_D59124_TELLY"
+msgstr "Digueu-vos què, hi ha un sac mentider anomenat Derwin que ha estat venent nens a l'Orde. No toleraré aquest tipus de depravació. No sense el meu tall. Derwin treballa al magatzem. Mata'l i porta'm la seva, orella, i veurem què puc fer."
+
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D59124_HOWDO"
+msgstr "Com hi entro?"
+
+# (〃)
+msgid "TXT_DLG_SCRIPT02_D60640_THISK"
+msgstr "Aquesta clau us portarà a la central elèctrica. Pensant-ho bé, talla l'orella i després mata'l. Molt millor."
+
+# (after completing "messy" chore)
+msgid "TXT_DLG_SCRIPT02_D62156_OHIJU"
+msgstr "Oh, només m'encanten els records. Aquí, això et portarà a la presó. Parleu amb el director Montag. Sigui el que facis després d'això, no ho vull saber."
+
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D62156_THANK"
+msgstr "Gràcies."
+
+msgid "TXT_DLG_SCRIPT02_D63672_GIVEY"
+msgstr "Doneu-vos una pista. Quan deixi de parlar amb tu, te'n vas."
+
+# (after completing "bloody" chore)
+msgid "TXT_DLG_SCRIPT02_D65188_DOYOU"
+msgstr "Tens bones notícies per a mi? Sóc tot orelles."
+
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D65188_THEDE"
+msgstr "L'acte està fet!"
+
+# (〃)
+msgid "TXT_DLG_SCRIPT02_D66704_OHIJU"
+msgstr "Oh, només m'encanten els records. Aquí, això et portarà a la presó. Parleu amb el director Montag. Sigui el que facis després d'això, no ho vull saber."
+
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D66704_FINEB"
+msgstr "Bé per mi."
+
+msgid "TXT_DLG_SCRIPT02_D68220_SOYOU"
+msgstr "Així que ets el ximple que va robar el calze? Us faré arrestar com a lladre rebel... D'aquesta manera milloraré la meva posició amb l'Orde. Com se sent ser un peó inconscient? Et donaré una pista, et farà mal."
+
+msgid "TXT_RPLY0_SCRIPT02_D68220_ITSUC"
+msgstr "Fa pena!"
+
+msgid "TXT_RYES0_SCRIPT02_D68220_FORYO"
+msgstr "Per a tu ho fa."
+
+msgid "TXT_RPLY1_SCRIPT02_D68220_HARRI"
+msgstr "Harris em va prometre diners!"
+
+msgid "TXT_RYES1_SCRIPT02_D68220_TOOBA"
+msgstr "Llàstima. L'únic que rebeu és mort!"
+
+# MAP02: Rowan.
+msgid "TXT_DLG_SCRIPT02_D69736_INASM"
+msgstr "En un món petit, la paraula viatja ràpidament. He sentit que acabes d'eliminar alguns obstacles del teu camí. Bona feina. T'interessen alguns projectes més lucratius?"
+
+msgid "TXT_RPLY0_SCRIPT02_D69736_SUREW"
+msgstr "Clar, per què no."
+
+msgid "TXT_RPLY1_SCRIPT02_D69736_NOTHA"
+msgstr "No gràcies."
+
+msgid "TXT_RYES1_SCRIPT02_D69736_THENG"
+msgstr "Aleshores, perd-te!"
+
+# Rowan.
+msgid "TXT_DLG_SCRIPT02_D71252_FOOLG"
+msgstr "ximple! Guàrdies, allibereu-me d'aquest peó entrometidor."
+
+msgid "TXT_DLG_SCRIPT02_D72768_GOODS"
+msgstr "Bé. Alguns amics meus necessiten que algú silencii. Beldin és retingut per l'Orde al seu santuari. Hi ha una entrada poc utilitzada per un petit moll del riu que no està vigilat. Entra, calla'l i torna'm el seu anell com a prova."
+
+msgid "TXT_RPLY0_SCRIPT02_D72768_WILLI"
+msgstr "Valdrà la pena l'esforç?"
+
+msgid "TXT_DLG_SCRIPT02_D74284_ILLGU"
+msgstr "Et garanteixo 50 d'or i si tornes sense activar totes les alarmes de la ciutat, hi ha l'oportunitat de guanyar molt, molt més, i aquí tens un petit ajudant que t'hauria de donar un avantatge."
+
+msgid "TXT_RPLY0_SCRIPT02_D74284_THANK"
+msgstr "Gràcies, ho necessitaré."
+
+msgid "TXT_DLG_SCRIPT02_D75800_GOODR"
+msgstr "Bé. Recordeu que el seu silenci és daurat."
+
+msgid "TXT_RPLY0_SCRIPT02_D75800_ILLGE"
+msgstr "El buscaré."
+
+msgid "TXT_DLG_SCRIPT02_D77316_MISSI"
+msgstr "Missió complerta? Tens l'anell del traïdor?"
+
+msgid "TXT_RPLY0_SCRIPT02_D77316_HESDE"
+msgstr "Ha mort, on són els meus diners?"
+
+msgid "TXT_RNO0_SCRIPT02_D77316_LIARG"
+msgstr "Mentider! Aneu a buscar l'anell!"
+
+msgid "TXT_DLG_SCRIPT02_D78832_HEREY"
+msgstr "Aquí, t'ho has guanyat. El traïdor que vau matar estava a punt de revelar la ubicació del Front. Vas salvar vides. Com t'agradaria guanyar més or i un futur lliure de tirania?"
+
+msgid "TXT_RPLY0_SCRIPT02_D78832_TELLM"
+msgstr "Digues-me més."
+
+msgid "TXT_RPLY1_SCRIPT02_D78832_NOTMY"
+msgstr "No és el meu estil."
+
+msgid "TXT_DLG_SCRIPT02_D80348_IHAVE"
+msgstr "Tinc una relació comercial amb el líder del Front, Macil. Sé que necessita un company incisiu com tu, i paga bé. Agafeu aquesta unitat de comunicacions recuperada i us portarà a, diguem, oportunitats."
+
+msgid "TXT_RPLY0_SCRIPT02_D80348_THANK"
+msgstr "Gràcies."
+
+msgid "TXT_DLG_SCRIPT02_D81864_GETGO"
+msgstr "Posa't en marxa. Si et quedes per aquí, tots dos som morts."
+
+msgid "TXT_DLG_SCRIPT02_D83380_APITY"
+msgstr "Una llàstima, però ara que saps els meus amics, t'he de matar. Guàrdies, traieu aquestes escombraries!"
+
+msgid "TXT_DLG_SCRIPT02_D84896_FOOLG"
+msgstr "ximple. Guàrdies! Lliura'm del peó entrometidor."
+
+# Geoff.
+msgid "TXT_DLG_SCRIPT02_D86412_WALKA"
+msgstr "Allunya't, noi, només marxa."
+
+msgid "TXT_DLG_SCRIPT02_D87928_WHATA"
+msgstr "Què fas aquí?"
+
+msgid "TXT_RPLY0_SCRIPT02_D87928_HEYIN"
+msgstr "Ei, necessito or!"
+
+msgid "TXT_DLG_SCRIPT02_D89444_BLACK"
+msgstr "Blackbird t'ha dit el codi, oi? Deixa'm apagar l'alarma. Macil està un vol més avall."
+
+msgid "TXT_RPLY0_SCRIPT02_D89444_THANK"
+msgstr "Gràcies."
+
+msgid "TXT_DLG_SCRIPT02_D90960_WALKA"
+msgstr "Allunya't, noi, només marxa."
+
+# Arion.
+msgid "TXT_DLG_SCRIPT02_D92476_DOYOU"
+msgstr "Tens una cita amb el governador? "
+
+msgid "TXT_RPLY0_SCRIPT02_D92476_OFCOU"
+msgstr "Per descomptat!"
+
+msgid "TXT_RPLY1_SCRIPT02_D92476_NOAND"
+msgstr "No, i no en necessito cap!"
+
+msgid "TXT_DLG_SCRIPT02_D93992_SORRY"
+msgstr "Ho sento! No volia dir... Si us plau, puja directament."
+
+msgid "TXT_RPLY0_SCRIPT02_D93992_IKNEW"
+msgstr "Sabia que diries això."
+
+msgid "TXT_DLG_SCRIPT02_D95508_IFYOU"
+msgstr "Si tens tanta pressa, no perdis el temps amb mi."
+
+# MAP02: MacGuffin
+msgid "TXT_DLG_SCRIPT02_D97024_RELEA"
+msgstr "Allibera'm, deixa tranquil un vell."
+
+# (after accepting "messy" chore)
+msgid "TXT_DLG_SCRIPT02_D98540_YOUSE"
+msgstr "Busques saviesa, fill meu? L'ordre ha fet que només ens fem una pregunta: \"Per què?\""
+
+msgid "TXT_RPLY0_SCRIPT02_D98540_WHERE"
+msgstr "On és l'acoblament de potència?"
+
+msgid "TXT_RPLY1_SCRIPT02_D98540_WHERE"
+msgstr "On és el principal de l'Ordre?"
+
+msgid "TXT_RPLY2_SCRIPT02_D98540_WHERE"
+msgstr "On és l'aixeta il·legal?"
+
+msgid "TXT_DLG_SCRIPT02_D100056_ILLTE"
+msgstr "Et diré on és, però no sé de qui manipularàs l'acoblament. És aquí mateix a la depuradora."
+
+msgid "TXT_RPLY0_SCRIPT02_D100056_THANK"
+msgstr "Gràcies"
+
+msgid "TXT_DLG_SCRIPT02_D101572_THATS"
+msgstr "Això és aquí mateix a la depuradora. Però és l'acoblament del Front. Qui et va dir que era de l'Ordre s'equivocava."
+
+msgid "TXT_RPLY0_SCRIPT02_D101572_THANK"
+msgstr "Gràcies"
+
+msgid "TXT_DLG_SCRIPT02_D103088_IFYOU"
+msgstr "Si dius que és il·legal, no vull tenir res a veure amb tu. Tinc prou problemes tal com són."
+
+msgid "TXT_RPLY0_SCRIPT02_D103088_THANK"
+msgstr "Gràcies"
+
+msgid "TXT_DLG_SCRIPT02_D104604_RELEA"
+msgstr "Allibera'm, deixa tranquil un vell."
+
+# MAP03: Macil.
+msgid "TXT_DLG_SCRIPT03_D0_WELCO"
+msgstr "Benvinguts a l'últim cop d'esperança. Només nosaltres tenim el lliure albir per oposar-nos a l'Ordre. Tenim les ments científiques més agudes i molts cossos capaços, però ens falta aquell solucionador de problemes real, que ens donarà l'avantatge que necessitem. Ajuda'ns."
+
+msgid "TXT_RPLY0_SCRIPT03_D0_ALLRI"
+msgstr "D'acord, accepto."
+
+msgid "TXT_RPLY1_SCRIPT03_D0_NOTHA"
+msgstr "No gràcies!"
+
+msgid "TXT_DLG_SCRIPT03_D1516_YOUMI"
+msgstr "És possible que us vulgueu reconsiderar, veient que esteu envoltats de rebels enutjats fortament armats."
+
+msgid "TXT_RPLY0_SCRIPT03_D1516_ALLRI"
+msgstr "D'acord, estic dins!"
+
+msgid "TXT_RPLY1_SCRIPT03_D1516_NOTHA"
+msgstr "No gràcies."
+
+msgid "TXT_DLG_SCRIPT03_D3032_THEND"
+msgstr "Aleshores mor en vergonya i deshonra."
+
+msgid "TXT_DLG_SCRIPT03_D4548_GOODB"
+msgstr "Bé, Blackbird continuarà sent el teu guia. T'ha fet una gran brillantor. Junts heu de desbloquejar els secrets de l'Ordre i els seus servents inhumans. Entra i baixa-los."
+
+msgid "TXT_RPLY0_SCRIPT03_D4548_WHERE"
+msgstr "Per on començo?"
+
+# (Prison mission)
+msgid "TXT_DLG_SCRIPT03_D6064_FRANK"
+msgstr "Francament, la situació és un desastre. Heu de complir diverses missions per preparar el camí per a més atacs a l'Ordre. La nostra darrera incursió va ser un desastre i la majoria de les nostres tropes van ser capturades. Necessito que allibereu aquests presoners."
+
+msgid "TXT_RPLY0_SCRIPT03_D6064_ITHIN"
+msgstr "Crec que puc manejar-ho."
+
+msgid "TXT_DLG_SCRIPT03_D7580_TAKET"
+msgstr "Agafa aquests diners i visita l'Irale que ens subministra les armes. Aleshores, aquesta clau us farà entrar per veure el governador. És un titella corrupte de l'Ordre, però li encanta fer tractes. Fes el que calgui per alliberar els nostres germans d'armes."
+
+msgid "TXT_RPLY0_SCRIPT03_D7580_ILLSE"
+msgstr "Me'n vetllaré."
+
+msgid "TXT_DLG_SCRIPT03_D9096_FIGHT"
+msgstr "Lluita pel Front i la llibertat. Mou-te fora."
+
+# (Crystal mission)
+msgid "TXT_DLG_SCRIPT03_D10612_THEPR"
+msgstr "Els presos han estat benvinguts de nou, gràcies a vosaltres. Aquí teniu una mica d'or, aneu a visitar el metge i l'entrenador d'armes i després, tinc objectius més alts per a vosaltres."
+
+msgid "TXT_RPLY0_SCRIPT03_D10612_IWILL"
+msgstr "ho faré. Què passa després?"
+
+msgid "TXT_DLG_SCRIPT03_D12128_ASING"
+msgstr "Un únic cristall gestiona la xarxa elèctrica que impulsa els escuts de l'Ordre. Destrueix aquest cristall i faràs forats enormes a les defenses de l'Ordre. Blackbird et portarà a un espia que té una manera d'entrar, bona sort."
+
+msgid "TXT_RPLY0_SCRIPT03_D12128_WELLG"
+msgstr "Ho aconseguirem."
+
+msgid "TXT_DLG_SCRIPT03_D13644_FIGHT"
+msgstr "Lluita pel Front i la llibertat. Mou-te fora."
+
+# (Progammer mission)
+msgid "TXT_DLG_SCRIPT03_D15160_YOUVE"
+msgstr "Heu superat totes les nostres expectatives. A causa del teu atreviment, les nostres tropes estan en moviment. Vull que vosaltres dos us uniu a l'assalt, amb un objectiu específic. Treu el programador. És hora de revelar què hem descobert sobre aquesta capa de l'Ordre."
+
+msgid "TXT_RPLY0_SCRIPT03_D15160_TELLM"
+msgstr "Digueu-me què sabem."
+
+msgid "TXT_DLG_SCRIPT03_D16676_THEPR"
+msgstr "El cau del Programador és al castell. Ara, vegeu el metge, agafeu una mica de munició i aneu a buscar-lo."
+
+msgid "TXT_RPLY0_SCRIPT03_D16676_LETME"
+msgstr "Deixa'm fer-los!"
+
+msgid "TXT_DLG_SCRIPT03_D18192_FIGHT"
+msgstr "Lluita pel Front i la llibertat. Mou-te fora."
+
+# MAP03: Barracks.
+msgid "TXT_DLG_SCRIPT03_D19708_REMEM"
+msgstr "Recordeu com era l'ajuntament? Això és un recordatori suau del que estan disposats a fer per arribar a nosaltres. Aneu amb compte."
+
+# MAP03: Upstairs, corridor.
+msgid "TXT_DLG_SCRIPT03_D21224_TALKT"
+msgstr "Parla amb Macil. Ell et podrà ajudar."
+
+# MAP03: Barracks.
+# (dead meat = corpse)
+msgid "TXT_DLG_SCRIPT03_D22740_IVEHE"
+msgstr "He sentit que Macil té un pla per subvertir l'Ordre. Seria millor que fos bo. Un fracàs més i tots som carn morta."
+
+msgid "TXT_DLG_SCRIPT03_D24256_AFEWO"
+msgstr "Alguns d'aquests barrils abocats al seu subministrament d'aigua haurien d'equilibrar una mica les probabilitats."
+
+msgid "TXT_DLG_SCRIPT03_D25772_SOYOU"
+msgstr "Així que ets el nou agent? Gràcies, sense tu, ara estaríem tots morts."
+
+# MAP03: Gerald (no implant)
+msgid "TXT_DLG_SCRIPT03_D27288_IMWOR"
+msgstr "Estic treballant en alguna cosa que ens donarà avantatge. Augmentarà la vostra resistència i us elevarà completament. Gairebé tinc tots els errors resolts. Puc fer alguna cosa per tu?"
+
+msgid "TXT_RPLY0_SCRIPT03_D27288_PATCH"
+msgstr "Apega'm."
+
+msgid "TXT_RYES0_SCRIPT03_D27288_BOYYO"
+msgstr "Noi, ets un autèntic embolic. A veure què puc fer."
+
+msgid "TXT_RPLY1_SCRIPT03_D27288_STAMI"
+msgstr "Implant de resistència?"
+
+msgid "TXT_RYES1_SCRIPT03_D27288_ALLRI"
+msgstr "D'acord, això no trigarà més que un moment."
+
+msgid "TXT_RNO1_SCRIPT03_D27288_ITSNO"
+msgstr "Encara no s'ha fet."
+
+# (one upgrade)
+msgid "TXT_DLG_SCRIPT03_D28804_HEYIM"
+msgstr "Hola, estic treballant en una versió actualitzada del teu implant. Hi ha alguna cosa més que puc fer?"
+
+msgid "TXT_RPLY0_SCRIPT03_D28804_PATCH"
+msgstr "Apega'm."
+
+msgid "TXT_RYES0_SCRIPT03_D28804_WELLA"
+msgstr "Bé, almenys la teva acció visual."
+
+msgid "TXT_RPLY1_SCRIPT03_D28804_IMPLA"
+msgstr "Actualització de l'implant?"
+
+msgid "TXT_RYES1_SCRIPT03_D28804_GOODT"
+msgstr "Bona cosa, mai pot estar massa segur."
+
+msgid "TXT_RNO1_SCRIPT03_D28804_IMALM"
+msgstr "Gairebé he acabat, però no del tot."
+
+# (two upgrades)
+msgid "TXT_DLG_SCRIPT03_D30320_ALLRI"
+msgstr "D'acord, gairebé ho tinc tot funcionant perfectament. Quedaven alguns problemes per desfer-se. Necessites alguna cosa més? "
+
+msgid "TXT_RPLY0_SCRIPT03_D30320_PATCH"
+msgstr "Apega'm."
+
+msgid "TXT_RYES0_SCRIPT03_D30320_WHATH"
+msgstr "Què has intentat fer? Anar cara a cara amb un croat?"
+
+msgid "TXT_RPLY1_SCRIPT03_D30320_IMPLA"
+msgstr "Actualització de l'implant?."
+
+msgid "TXT_RYES1_SCRIPT03_D30320_THATS"
+msgstr "Això ho hauria de fer per tu."
+
+msgid "TXT_RNO1_SCRIPT03_D30320_LETME"
+msgstr "Permeteu-me fer algunes proves més primer."
+
+# (?)
+msgid "TXT_DLG_SCRIPT03_D31836_THATS"
+msgstr "Això és tot el que puc fer amb l'implant ara mateix. Potser alguna curació?"
+
+msgid "TXT_RPLY0_SCRIPT03_D31836_YEAH"
+msgstr "Sí."
+
+msgid "TXT_RYES0_SCRIPT03_D31836_BOYYO"
+msgstr "Noi, ets un autèntic embolic. A veure què puc fer."
+
+# MAP03: Feris (no training).
+msgid "TXT_DLG_SCRIPT03_D33352_WHATC"
+msgstr "Què puc fer per tu?"
+
+msgid "TXT_RPLY0_SCRIPT03_D33352_IMOUT"
+msgstr "Estic sense bales."
+
+msgid "TXT_RYES0_SCRIPT03_D33352_HERES"
+msgstr "Aquí tens una mica de munició. No ho malgastis."
+
+msgid "TXT_RPLY1_SCRIPT03_D33352_TEACH"
+msgstr "Ensenya'm."
+
+msgid "TXT_RYES1_SCRIPT03_D33352_ALLRI"
+msgstr "D'acord, només us mostraré unes quantes indicacions."
+
+msgid "TXT_RNO1_SCRIPT03_D33352_YOURE"
+msgstr "Encara no estàs preparat."
+
+# (one training)
+msgid "TXT_DLG_SCRIPT03_D34868_BACKA"
+msgstr "Tornar de nou? Què necessites?"
+
+msgid "TXT_RPLY0_SCRIPT03_D34868_IMOUT"
+msgstr "Estic sense bales."
+
+msgid "TXT_RYES0_SCRIPT03_D34868_HERES"
+msgstr "Aquí tens una mica de munició. No ho malgastis."
+
+msgid "TXT_RNO0_SCRIPT03_D34868_YOUVE"
+msgstr "Tens prou munició."
+
+msgid "TXT_RPLY1_SCRIPT03_D34868_TEACH"
+msgstr "Ensenya'm."
+
+msgid "TXT_RYES1_SCRIPT03_D34868_ALLRI"
+msgstr "D'acord, això us hauria de mantenir una estona."
+
+msgid "TXT_RNO1_SCRIPT03_D34868_SORRY"
+msgstr "Ho sento, no puc. Només estic seguint les ordres de Macil."
+
+# (two trainings)
+msgid "TXT_DLG_SCRIPT03_D36384_WELLW"
+msgstr "Bé, què és, bales o entrenament? No puc esperar per posar les meves mans a les noves armes que vam capturar. Una mica d'entrenament i després molta venjança."
+
+msgid "TXT_RPLY0_SCRIPT03_D36384_IMOUT"
+msgstr "Estic sense munició."
+
+msgid "TXT_RYES0_SCRIPT03_D36384_HERES"
+msgstr "Aquí tens una mica de munició. No ho malgastis."
+
+msgid "TXT_RNO0_SCRIPT03_D36384_YOUVE"
+msgstr "Tens prou munició."
+
+msgid "TXT_RPLY1_SCRIPT03_D36384_TEACH"
+msgstr "Ensenya'm."
+
+msgid "TXT_RYES1_SCRIPT03_D36384_OKTAK"
+msgstr "D'acord Agafeu el que heu après aquí i mostreu a aquests terrons de l'Ordre el camí cap a l'infern."
+
+msgid "TXT_RNO1_SCRIPT03_D36384_COMEB"
+msgstr "Torna més tard, quan Macil digui que és hora."
+
+# (three trainings)
+msgid "TXT_DLG_SCRIPT03_D37900_IVETA"
+msgstr "T'he ensenyat tot el que puc ara mateix. Doneu-me una mica de temps per posar les noves armes a prova. Això és a menys que et quedis sense bales."
+
+msgid "TXT_RPLY0_SCRIPT03_D37900_YESIA"
+msgstr "Sí que ho sóc."
+
+msgid "TXT_RYES0_SCRIPT03_D37900_HEREY"
+msgstr "Aquí tens."
+
+# MAP03: Upstairs.
+msgid "TXT_DLG_SCRIPT03_D39416_DONTG"
+msgstr "No et facis feliç a la ciutat. Activaràs l'alarma i començaran a enviar guàrdies des del castell. "
+
+# MAP03: Near Macil.
+msgid "TXT_DLG_SCRIPT03_D40932_WELCO"
+msgstr "Benvingut, sempre podem utilitzar més ajuda."
+
+msgid "TXT_DLG_SCRIPT03_D42448_WHENI"
+msgstr "Quan encara estava en acció vam tenir l'oportunitat d'examinar un acòlit abans que arribessin els reforços. Escolta, no són humans."
+
+# MAP03: Downstairs.
+msgid "TXT_DLG_SCRIPT03_D43964_WERET"
+msgstr "Estem intentant trobar on són els mecanismes de la porta del castell, però fins ara no hem tingut sort."
+
+msgid "TXT_DLG_SCRIPT03_D45480_DONTG"
+msgstr "No et deixis atrapar. He escoltat històries d'horror sobre el que fan a la nostra gent després de ser empresonats. Simplement desapareixen... Sense deixar rastre."
+
+msgid "TXT_DLG_SCRIPT03_D46996_HERES"
+msgstr "Aquests són alguns consells, si mai veieu que algun dels Soldats de Llavero de l'Orde va en l'altra direcció. Són ràpids i brutals."
+
+msgid "TXT_DLG_SCRIPT03_D48512_LEAVE"
+msgstr "Deixa'm estar. Estic fent alguna cosa per Macil."
+
+# MAP04: Reactor Core red guard.
+msgid "TXT_DLG_SCRIPT04_D0_SORRY"
+msgstr "Ho sento, no. No tens autorització."
+
+msgid "TXT_DLG_SCRIPT04_D1516_STOPS"
+msgstr "Atureu-vos! Mostra'm la teva placa d'identitat."
+
+msgid "TXT_RPLY0_SCRIPT04_D1516_HERES"
+msgstr "Aquí tens la meva I.D."
+
+msgid "TXT_DLG_SCRIPT04_D3032_OHOKS"
+msgstr "Oh, d'acord. Segur que endavant. Que tinguis un bon dia."
+
+# MAP04: Warehouse red guard.
+msgid "TXT_DLG_SCRIPT04_D4548_DERWI"
+msgstr "Derwin? Sí, ell és al magatzem, però no hi entreu si no se us autoritza."
+
+msgid "TXT_RPLY0_SCRIPT04_D4548_IVEGO"
+msgstr "Tinc autorització."
+
+msgid "TXT_DLG_SCRIPT04_D6064_GOON"
+msgstr "Continua."
+
+msgid "TXT_RPLY0_SCRIPT04_D6064_DOYOU"
+msgstr "Saps on és?"
+
+msgid "TXT_DLG_SCRIPT04_D7580_IDONT"
+msgstr "No sé on és ningú. Només guardo la tapa a la trampa de rates."
+
+msgid "TXT_DLG_SCRIPT04_D9096_YOUAR"
+msgstr "Ets una distracció desagradable."
+
+# MAP04: Reactor Core gray guard.
+msgid "TXT_DLG_SCRIPT04_D10612_MOVEA"
+msgstr "Mou-te o tasta el metall."
+
+msgid "TXT_DLG_SCRIPT04_D12128_PASSY"
+msgstr "Passeu el vostre DNI per aquí per accedir-hi."
+
+# MAP04: Green guard.
+msgid "TXT_DLG_SCRIPT04_D13644_GETBA"
+msgstr "Torna a la feina, ara!"
+
+msgid "TXT_DLG_SCRIPT04_D15160_GETBA"
+msgstr "Torna a la feina, ara!"
+
+# MAP04: Warehouse → Northeast (worker in red)
+msgid "TXT_DLG_SCRIPT04_D16676_WEVEB"
+msgstr "Fa setmanes que correm tot el dia sense temps d'inactivitat. Jo diria que l'Ordre està planejant una incursió de repressió al Front."
+
+# MAP04: Derwin.
+msgid "TXT_DLG_SCRIPT04_D18192_OHDAM"
+msgstr "Oh, carai. El governador t'ha enviat. Li anava a donar el seu tall, realment ho vaig ser. D'acord, escolta. Tinc un paquet amagat. És teu si mires cap a un altre costat."
+
+msgid "TXT_RPLY0_SCRIPT04_D18192_ALLRI"
+msgstr "D'acord, et deixaré anar."
+
+msgid "TXT_RPLY1_SCRIPT04_D18192_SORRY"
+msgstr "Ho sento, res personal."
+
+msgid "TXT_DLG_SCRIPT04_D19708_NUTSI"
+msgstr "Nuts, si jo cau, tu també. Guàrdies!!"
+
+msgid "TXT_DLG_SCRIPT04_D21224_BUSIN"
+msgstr "Negoci el meu cul. Ajuda, guàrdies, en tinc un de viu."
+
+# MAP04: Worner.
+msgid "TXT_DLG_SCRIPT04_D22740_AHIGO"
+msgstr "Ah, he rebut la paraula de Macil que vindries. Tinc una manera de fer-te entrar a la central elèctrica, però és arriscat."
+
+msgid "TXT_RPLY0_SCRIPT04_D22740_ILLTA"
+msgstr "Aprofitaré les meves oportunitats."
+
+msgid "TXT_DLG_SCRIPT04_D24256_ALLRI"
+msgstr "D'acord, vaig robar un D.I. del cadàver d'un ximple que va caure a la fossa del refrigerant del reactor. --blat-- fregit instantàniament."
+
+msgid "TXT_RPLY0_SCRIPT04_D24256_WHATS"
+msgstr "Què he de fer un cop hi hagi?"
+
+msgid "TXT_DLG_SCRIPT04_D25772_TELLW"
+msgstr "Digueu-li a qui ho demani que sou el treballador de substitució del Sr. Crispy. És prou ximple com per treballar. Ah, i potser voldreu fer una ullada al magatzem que hi ha just a sobre nostre."
+
+msgid "TXT_RPLY0_SCRIPT04_D25772_BOYIH"
+msgstr "Noi, espero que aquesta identificació. Obres."
+
+msgid "TXT_DLG_SCRIPT04_D27288_GETOU"
+msgstr "Surt d'aquí, tret que vulguis acabar amb el senyor mort."
+
+# MAP04: Warehouse → Dock Worker.
+msgid "TXT_DLG_SCRIPT04_D28804_HEYLE"
+msgstr "Ei, deixa'm en pau. Si ens agafen perdent el temps ens morim, o treballem extra."
+
+# MAP04: Reactor Core → Northern alarm green door → Level 2 door
+msgid "TXT_DLG_SCRIPT04_D30320_SUCHP"
+msgstr "Tanta pressió, a aquest ritme, aviat tornarem als torns normals. Estem bombejant tones de potència al castell i gairebé he acabat d'enregistrar aquestes noves armes."
+
+msgid "TXT_RPLY0_SCRIPT04_D30320_WEAPO"
+msgstr "Armes?"
+
+msgid "TXT_DLG_SCRIPT04_D31836_WHATD"
+msgstr "Què et sembla, estem recolzats amb mitjons?"
+
+msgid "TXT_RPLY0_SCRIPT04_D31836_WHATK"
+msgstr "Quin tipus d'armes?"
+
+msgid "TXT_DLG_SCRIPT04_D33352_AREYO"
+msgstr "Ets sord? T'acabo de dir com estic ocupat. Torna a la feina."
+
+# MAP04: Reactor Core → Southern alarm green door
+msgid "TXT_DLG_SCRIPT04_D34868_WHOAR"
+msgstr "Qui ets tu? Només es permet el personal de nivell dos en aquesta zona."
+
+msgid "TXT_RPLY0_SCRIPT04_D34868_IMTHE"
+msgstr "Sóc el treballador substitut."
+
+msgid "TXT_DLG_SCRIPT04_D36384_ABOUT"
+msgstr "Ja era hora que apareguessis. Anar a parlar amb Ketrick al nucli. Ah, i agafa aquesta targeta clau. No vull que et disparin el primer dia, oi?"
+
+msgid "TXT_RPLY0_SCRIPT04_D36384_WHERE"
+msgstr "On és el cristall de poder?"
+
+msgid "TXT_DLG_SCRIPT04_D37900_IFYOU"
+msgstr "Si no us poseu a treballar, us dispararan igualment. Mou la túnica."
+
+# MAP04: Reactor Core → Northern alarm green door
+msgid "TXT_DLG_SCRIPT04_D39416_IDONT"
+msgstr "No vull semblar alarmista, però si continuen empenyent el cristall de poder tan fort, fallarà, es trencarà, i després *boom*! â¦Només un pensament."
+
+# MAP04: Reactor Core → Southern alarm green door
+msgid "TXT_DLG_SCRIPT04_D40932_LETME"
+msgstr "Deixeu-me que sigui ben clar. Si aquest terminal es torna a bloquejar, el nivell de refrigerant baixarà i tots haurem de respondre al Programador. Si sobreviurem."
+
+# MAP04: Ketrick.
+msgid "TXT_DLG_SCRIPT04_D42448_YOUYE"
+msgstr "Tu! Sí, tu. No estàs autoritzat per aquesta àrea. Deixa'm la teva targeta clau, ràpid. Estic de tan mal humor!"
+
+msgid "TXT_RPLY0_SCRIPT04_D42448_HEREH"
+msgstr "Aquí tens la meva targeta."
+
+msgid "TXT_DLG_SCRIPT04_D43964_THISI"
+msgstr "Això és escombraries! Espereu aquí. Oh fot-ho. Els guàrdies maten aquest intrús!"
+
+# MAP04: Reactor Core → Sammis
+msgid "TXT_DLG_SCRIPT04_D45480_WORKS"
+msgstr "Treballar, dormir, torturar-se, quina vida. Digues, ets el substitut del bussejador descuidado?"
+
+msgid "TXT_RPLY0_SCRIPT04_D45480_YEAHC"
+msgstr "Sí, no puc esperar per començar."
+
+msgid "TXT_DLG_SCRIPT04_D46996_YEAHR"
+msgstr "Sí, cert. D'acord, posa't a treballar."
+
+msgid "TXT_RPLY0_SCRIPT04_D46996_WHERE"
+msgstr "On és el cristall?"
+
+msgid "TXT_DLG_SCRIPT04_D48512_GOTAL"
+msgstr "Ves a parlar amb Ketrick. Aixequeu la passarel·la amb els interruptors i, a continuació, utilitzeu aquesta identificació. Per a l'ascensor."
+
+msgid "TXT_RPLY0_SCRIPT04_D48512_WHERE"
+msgstr "On és de nou el cristall?"
+
+msgid "TXT_DLG_SCRIPT04_D50028_NONEO"
+msgstr "No és el teu problema, vés a parlar amb Ketrick."
+
+msgid "TXT_RPLY0_SCRIPT04_D50028_OK"
+msgstr "D'acord."
+
+# (bored to tears = extremely bored)
+msgid "TXT_DLG_SCRIPT04_D51544_IFITS"
+msgstr "Si és una feina ocupada que vols, ves a mirar aquella pantalla una estona, t'avorrirà fins a les llàgrimes."
+
+# MAP04: Reactor Core → Southern alarm green door
+msgid "TXT_DLG_SCRIPT04_D53060_THEAL"
+msgstr "El totpoderós Programador és tan paranoic de la infiltració que ha tancat el nucli de l'ordinador. Com se suposa que he de fer la meva feina? L'única manera d'entrar és la carrera suïcida."
+
+msgid "TXT_RPLY0_SCRIPT04_D53060_SUICI"
+msgstr "Carrera suïcida? Què és això?"
+
+msgid "TXT_DLG_SCRIPT04_D54576_ITSAS"
+msgstr "És una manera segura de morir, però això no és important ara mateix. Baixeu per l'ascensor si esteu tan inclinats."
+
+# MAP05: Door Guard.
+msgid "TXT_DLG_SCRIPT05_D0_HALTN"
+msgstr "Atura. Ningú passa per aquí sense l'autorització del director o del governador."
+
+msgid "TXT_RPLY0_SCRIPT05_D0_HERES"
+msgstr "Aquí tens el meu passi, deixa'm entrar."
+
+msgid "TXT_DLG_SCRIPT05_D1516_OKBUT"
+msgstr "D'acord, però parleu només amb el director."
+
+# (After killing Montag)
+msgid "TXT_DLG_SCRIPT05_D3032_DOILO"
+msgstr "Et sembla el Guardià? Seguiu movent-vos, aquesta zona està prohibida."
+
+# MAP05: Prison Guard.
+msgid "TXT_DLG_SCRIPT05_D4548_THEOR"
+msgstr "La ira de l'Ordre plourà sobre aquests servents fins que demanin la mort."
+
+# MAP05: Montag.
+msgid "TXT_DLG_SCRIPT05_D6064_IDONT"
+msgstr "No m'importa si Mourel et va donar una passada. Aquesta és la meva presó. La meva clau és l'única manera d'entrar o sortir, i no m'estic arriscant. L'Ordre no tolera errors."
+
+msgid "TXT_RPLY0_SCRIPT05_D6064_GIVEM"
+msgstr "Dóna'm la maleïda clau!"
+
+msgid "TXT_DLG_SCRIPT05_D7580_OVERM"
+msgstr "Sobre el meu cadàver!"
+
+msgid "TXT_RPLY0_SCRIPT05_D7580_GREAT"
+msgstr "Gran idea!"
+
+msgid "TXT_DLG_SCRIPT05_D9096_SHACK"
+msgstr "Manilles o cadenes, vull que et quedis."
+
+# MAP05: Wolenick.
+msgid "TXT_DLG_SCRIPT05_D10612_IDONT"
+msgstr "No sé com vas fer passar els guàrdies i el Guardià, però espero que t'agradi la decoració, perquè t'acabes de mudar."
+
+msgid "TXT_RPLY0_SCRIPT05_D10612_FREEM"
+msgstr "Allibera els meus companys o mor!"
+
+msgid "TXT_DLG_SCRIPT05_D12128_KILLM"
+msgstr "Mata'm i mai alliberaràs ningú. Tinc l'única clau de patró que desbloquejarà les cel·les."
+
+msgid "TXT_RPLY0_SCRIPT05_D12128_CANYO"
+msgstr "Em pots donar un cop de mà llavors?"
+
+msgid "TXT_DLG_SCRIPT05_D13644_MOVEA"
+msgstr "Seguiu endavant o uniu-vos als vostres amics."
+
+# MAP05: Prisoner.
+msgid "TXT_DLG_SCRIPT05_D15160_DONTJ"
+msgstr "No et quedis allà, treu-nos d'aquí!"
+
+msgid "TXT_DLG_SCRIPT05_D16676_THESK"
+msgstr "El cel, vull veure el cel."
+
+msgid "TXT_DLG_SCRIPT05_D18192_FIVEF"
+msgstr "Cinc peus per quatre peus, cinc peus per quatre peus, cinc peus per quatre peus."
+
+msgid "TXT_DLG_SCRIPT05_D19708_DONTR"
+msgstr "No em deixis anar si l'Ordre encara està al capdavant. No suporto el terror."
+
+msgid "TXT_DLG_SCRIPT05_D21224_IDONT"
+msgstr "No vull enganyar-me, però ja era hora que en Macil enviés algú per treure'ns."
+
+msgid "TXT_DLG_SCRIPT05_D22740_IDGIV"
+msgstr "Donaria qualsevol cosa per només una crosta de pa. Tinc molta gana."
+
+# MAP06: Weran.
+msgid "TXT_DLG_SCRIPT06_D0_AHASU"
+msgstr "Ah, un superficial que necessita un favor. Aquí baix fas un favor per aconseguir un favor i necessito que s'obri l'entrada del poble que és el nostre camí cap al menjar. L'Ordre el té segellat i custodiat."
+
+msgid "TXT_RPLY0_SCRIPT06_D0_WHERE"
+msgstr "On és el mecanisme de la porta?"
+
+msgid "TXT_DLG_SCRIPT06_D1516_DOMYF"
+msgstr "Fes el meu favor primer, o em quedaràs a la gatzoneta."
+
+msgid "TXT_RPLY0_SCRIPT06_D1516_HOWWI"
+msgstr "Com sabràs que està obert?"
+
+msgid "TXT_DLG_SCRIPT06_D3032_BRING"
+msgstr "Porta'm l'uniforme de guàrdia. D'aquesta manera un dels meus ratolins se'l pot posar i ningú intentarà tornar a tancar la porta."
+
+msgid "TXT_RPLY0_SCRIPT06_D3032_YOUWA"
+msgstr "Vols el seu uniforme?"
+
+msgid "TXT_DLG_SCRIPT06_D4548_OPENT"
+msgstr "Obre la porta, porta'm l'uniforme i negociem. En cas contrari, enfadat."
+
+msgid "TXT_DLG_SCRIPT06_D6064_HAVEY"
+msgstr "M'has portat el que vull?"
+
+msgid "TXT_RPLY0_SCRIPT06_D6064_HOWAB"
+msgstr "Què tal aquest uniforme?"
+
+msgid "TXT_RNO0_SCRIPT06_D6064_BRING"
+msgstr "Porta'm l'uniforme."
+
+# MAP06: Weran.
+msgid "TXT_DLG_SCRIPT06_D7580_GOODH"
+msgstr "Bé. Aquí hi ha alguna cosa addicional. Els meus companys ho van arrencar d'un croat caigut, són les parts que formen un llançaflames. Ara l'Irale pot fer-ne un per a tu. Pots divertir-te tant."
+
+msgid "TXT_RPLY0_SCRIPT06_D7580_WHERE"
+msgstr "On és el mecanisme de la porta?"
+
+#
+# https://en.wikipedia.org/wiki/Reclaimed_water
+msgid "TXT_DLG_SCRIPT06_D9096_YOUHA"
+msgstr "Cal entrar a una altra part de les clavegueres. Per arribar-hi s'ha d'entrar al castell des d'una porta de manteniment de clavegueram i drenar el dipòsit de recuperació de fluids. A la part inferior hi ha l'entrada oculta a les clavegueres, i just més enllà hi ha el control manual de la porta."
+
+msgid "TXT_RPLY0_SCRIPT06_D9096_ANYTH"
+msgstr "Alguna altra cosa que puguis fer?"
+
+msgid "TXT_DLG_SCRIPT06_D10612_GOODL"
+msgstr "Molta sort. Us he obert diversos dels nostres túnels. Hauria de facilitar la teva tasca. Oh, talla deu, perfecte! â¦Però colors terribles."
+
+msgid "TXT_RPLY0_SCRIPT06_D10612_THANK"
+msgstr "Gràcies per la teva ajuda."
+
+msgid "TXT_DLG_SCRIPT06_D12128_YOUGI"
+msgstr "No em dones res, no reps res."
+
+# MAP06: Beggar.
+msgid "TXT_DLG_SCRIPT06_D13644_WERAN"
+msgstr "Weran ens salvarà. Encara no ens ha fallat mai."
+
+msgid "TXT_DLG_SCRIPT06_D15160_IFYOU"
+msgstr "Si busqueu una resposta al vostre problema, trobeu Weran. "
+
+msgid "TXT_DLG_SCRIPT06_D16676_LONGL"
+msgstr "Visca el Front? Això és tot una merda. Tots estem esperant morir. "
+
+msgid "TXT_DLG_SCRIPT06_D18192_WITHO"
+msgstr "Amb el nostre pas a la superfície segellat, ni tan sols ens podem alimentar."
+
+msgid "TXT_DLG_SCRIPT06_D19708_FOODD"
+msgstr "Menjar, tens menjar? Si us plau, ajudeu-nos."
+
+# MAP06: Gray acolyte.
+msgid "TXT_DLG_SCRIPT06_D21224_THISI"
+msgstr "Aquesta és la meva recompensa per deixar escapar els presoners, vigilant les clavegueres. Si mai trobo el tipus que els va esclatar, el mataré."
+
+# MAP06: Red acolyte.
+msgid "TXT_DLG_SCRIPT06_D22740_WEVEG"
+msgstr "Tenim aquests petits captaires just on els volem. Pocs dies més d'això, i s'hauran mort de gana fins a l'oblit."
+
+# MAP06: Near storage.
+msgid "TXT_DLG_SCRIPT06_D24256_WHATS"
+msgstr "Quina és la teva autorització? Aquí no hi ha personal no autoritzat."
+
+# MAP07: Red acolyte at the main entrance.
+msgid "TXT_DLG_SCRIPT07_D0_WHATT"
+msgstr "Què dimonis? Qui va obrir les portes? Toca l'alarma!!!"
+
+# MAP07
+msgid "TXT_DLG_SCRIPT07_D1516_THERE"
+msgstr "Hi ha una altra manera d'entrar a les clavegueres, llença aquest interruptor i després puja i purga el dipòsit de recuperació."
+
+# MAP07: Hospital.
+msgid "TXT_DLG_SCRIPT07_D3032_WHATT"
+msgstr "Quin dimoni és el teu problema. Si el programador surt de la seva cambra d'audiència, estàs mort."
+
+msgid "TXT_DLG_SCRIPT07_D4548_HEYYO"
+msgstr "Ei, no tens permís per baixar-hi."
+
+# MAP07: Computer room (northwest building).
+msgid "TXT_DLG_SCRIPT07_D6064_PROGR"
+msgstr "Programador? Qui t'ho ha dit? No hi ha programador. Aquesta història es va difondre fa segles. No em digueu que el Front realment es va creure aquesta merda. Idiotes."
+
+msgid "TXT_RPLY0_SCRIPT07_D6064_WELLW"
+msgstr "Bé, quina és la veritat llavors?"
+
+msgid "TXT_DLG_SCRIPT07_D7580_ITOLD"
+msgstr "T'he dit tot el que sé. Estàs perdent el temps."
+
+# MAP07: Font soldier.
+msgid "TXT_DLG_SCRIPT07_D9096_FIGHT"
+msgstr "Seguim lluitant, triomfarem. Aquest dia ens pertocarà!"
+
+msgid "TXT_DLG_SCRIPT07_D10612_FIGHT"
+msgstr "Seguim lluitant, triomfarem. Aquest dia ens pertocarà!"
+
+msgid "TXT_DLG_SCRIPT07_D12128_FIGHT"
+msgstr "Seguim lluitant, triomfarem. Aquest dia ens pertocarà!"
+
+msgid "TXT_DLG_SCRIPT07_D13644_FIGHT"
+msgstr "Seguim lluitant, triomfarem. Aquest dia ens pertocarà!"
+
+msgid "TXT_DLG_SCRIPT07_D15160_FIGHT"
+msgstr "Seguim lluitant, triomfarem. Aquest dia ens pertocarà!"
+
+msgid "TXT_DLG_SCRIPT07_D16676_FIGHT"
+msgstr "Seguim lluitant, triomfarem. Aquest dia ens pertocarà!"
+
+# MAP08: Northeast room.
+msgid "TXT_DLG_SCRIPT08_D0_YOUKI"
+msgstr "Vas matar tots els guàrdies. No em facis mal. Li vaig dir que era una idea tonta. L'autèntic programador està a la fortalesa. Aquí, agafa aquesta clau."
+
+msgid "TXT_RPLY0_SCRIPT08_D0_YOURE"
+msgstr "Tu ets el programador!"
+
+msgid "TXT_DLG_SCRIPT08_D1516_DOILO"
+msgstr "Em sembla que exerceixo el poder suprem? L'Ordre ens utilitza a tots. Ara va, que ja estic mort."
+
+msgid "TXT_DLG_SCRIPT08_D3032_POWER"
+msgstr "El poder és la clau!"
+
+# MAP10: Macil.
+msgid "TXT_DLG_SCRIPT10_D0_GOODY"
+msgstr "Bé, estàs conscient de nou. Quan vas agafar aquest element que el programador va deixar caure, vas deixar anar alguns secrets terribles."
+
+msgid "TXT_RPLY0_SCRIPT10_D0_WHATK"
+msgstr "Quina mena de secrets. "
+
+msgid "TXT_DLG_SCRIPT10_D1516_WEHAV"
+msgstr "No tenim ni idea d'on ha sortit aquesta arma, però ho hem d'esbrinar. N'has arrencat un a l'Orde, però hem de tenir-ne els cinc. Hem arribat als límits del meu coneixement. Busqueu l'Oracle i demaneu-li ajuda."
+
+msgid "TXT_RPLY0_SCRIPT10_D1516_IMGON"
+msgstr "Necessitaré més subministraments."
+
+msgid "TXT_DLG_SCRIPT10_D3032_HERES"
+msgstr "Aquí hi ha una mica d'or. Ves a visitar el metge i l'entrenador d'armes i després, marxa!"
+
+msgid "TXT_RPLY0_SCRIPT10_D3032_RIGHT"
+msgstr "D'acord!"
+
+msgid "TXT_DLG_SCRIPT10_D4548_FIGHT"
+msgstr "Lluita pel Front i la llibertat. Mou-te fora."
+
+# MAP10: Macil → The Oracle said to kill him
+msgid "TXT_DLG_SCRIPT10_D6064_WHATP"
+msgstr "Què demana el teu retorn? Estàs ferit? No hi ha temps a perdre, continua amb la teva missió. Completa el segell."
+
+msgid "TXT_RPLY0_SCRIPT10_D6064_THEOR"
+msgstr "L'Oracle diu que has de morir!"
+
+msgid "TXT_DLG_SCRIPT10_D7580_IHAVE"
+msgstr "M'he jurat la llibertat. És l'Oracle qui sosté la tercera peça. Aquí tens el teu traïdor."
+
+msgid "TXT_RPLY0_SCRIPT10_D7580_THEOR"
+msgstr "L'Oracle morirà llavors!"
+
+msgid "TXT_RPLY1_SCRIPT10_D7580_ITHIN"
+msgstr "Crec que ets el traïdor!"
+
+# MAP10: Macil → You chose to kill Macil
+msgid "TXT_DLG_SCRIPT10_D9096_SPIRI"
+msgstr "L'Esperit de l'Únic Déu venja'm i converteix aquest món en pols."
+
+# MAP10: Macil → You chose to kill the Oracle
+msgid "TXT_DLG_SCRIPT10_D10612_YOUHA"
+msgstr "Has pres la decisió correcta. Està clar que l'Oracle està controlat per qualsevol mal que impulsi l'Ordre. Torna-hi i reclama la tercera peça del Segell."
+
+# MAP10: Macil → After killing the Oracle
+msgid "TXT_DLG_SCRIPT10_D12128_THERE"
+msgstr "Sembla que l'horror que ens enfrontem no té fi. Hem descobert que l'Orde no està matant el nostre poble. Els està transformant, en soldats biomecànics. Cerqueu la instal·lació on s'està fent això i tanqueu-la, de manera permanent."
+
+msgid "TXT_RPLY0_SCRIPT10_D12128_WHERE"
+msgstr "On es troba això?"
+
+msgid "TXT_DLG_SCRIPT10_D13644_ONEOF"
+msgstr "Un dels nostres capitans, Richter, us espera al costat de la cascada dels comuns. Ha vist les instal·lacions i et pot guiar per dins. Atura aquesta atrocitat, ara."
+
+msgid "TXT_RPLY0_SCRIPT10_D13644_THEYL"
+msgstr "Ho pagaran ells!"
+
+msgid "TXT_DLG_SCRIPT10_D15160_FIGHT"
+msgstr "Lluita pel Front i la llibertat. Mou-te fora."
+
+# MAP10: Macil → After destroying the converter in MAP24.
+msgid "TXT_DLG_SCRIPT10_D16676_IAMTH"
+msgstr "Sóc l'Únic Déu... Necessito que el seu esperit sigui lliure per poder abandonar el meu cos i unir-me a ell en el vol. No tens ni idea del que tens... I de quin terror t'enfrontes... El Déu únic ha de ser lliure... I ell em recompensarà... Jo seré un…"
+
+msgid "TXT_RPLY0_SCRIPT10_D16676_IWILL"
+msgstr "et destruiré!"
+
+# MAP10: Gerald (no upgrade).
+msgid "TXT_DLG_SCRIPT10_D18192_GLADT"
+msgstr "M'alegro de veure que ho has fet. Què necessites? "
+
+msgid "TXT_RPLY0_SCRIPT10_D18192_HEALM"
+msgstr "Cura'm."
+
+msgid "TXT_RYES0_SCRIPT10_D18192_WELLL"
+msgstr "Bé, us deixem arreglar."
+
+msgid "TXT_RNO0_SCRIPT10_D18192_YOURE"
+msgstr "Estàs bé."
+
+msgid "TXT_RPLY1_SCRIPT10_D18192_ANYTH"
+msgstr "Alguna novetat?"
+
+msgid "TXT_RYES1_SCRIPT10_D18192_YESIV"
+msgstr "Sí, tinc un maquinari nou per a tu."
+
+msgid "TXT_RNO1_SCRIPT10_D18192_NOPEI"
+msgstr "No, però hi estic treballant."
+
+# (one upgrade: Mission to talk to the Oracle)
+msgid "TXT_DLG_SCRIPT10_D19708_WHATC"
+msgstr "Què puc fer per tu ara? Feris està desxifrant alguns fitxers realment complexos, però tot val la pena. Ja hi ha informació que podré aplicar a la propera versió de l'implant de resistència."
+
+msgid "TXT_RPLY0_SCRIPT10_D19708_HEALM"
+msgstr "Cura'm."
+
+msgid "TXT_RYES0_SCRIPT10_D19708_YOUSH"
+msgstr "Hauríeu d'aprendre a ser una mica més curós."
+
+msgid "TXT_RPLY1_SCRIPT10_D19708_WHENW"
+msgstr "Quan estarà llest?"
+
+msgid "TXT_RYES1_SCRIPT10_D19708_ITSRE"
+msgstr "Ja està llest. Això no trigarà més que un moment."
+
+msgid "TXT_RNO1_SCRIPT10_D19708_SOON"
+msgstr "Aviat."
+
+# (two upgrades: Mission to decide between Macil or the Oracle)
+msgid "TXT_DLG_SCRIPT10_D21224_ITHIN"
+msgstr "Crec que he trobat un error al vostre maquinari d'implants. Feris m'està ajudant a dissenyar una modificació que s'encarregarà d'això i augmentarà una mica la velocitat del vostre maquinari. Hi ha alguna cosa que pugui fer per tu?"
+
+msgid "TXT_RPLY0_SCRIPT10_D21224_PATCH"
+msgstr "Apega'm."
+
+msgid "TXT_RYES0_SCRIPT10_D21224_THERE"
+msgstr "Allà, tan bo com nou suposo."
+
+msgid "TXT_RPLY1_SCRIPT10_D21224_RETRO"
+msgstr "Renovació?"
+
+# (during sad/bad ending)
+msgid "TXT_RYES1_SCRIPT10_D21224_AHNOW"
+msgstr "Ah, ara estem cuinant."
+
+msgid "TXT_RNO1_SCRIPT10_D21224_ILLHA"
+msgstr "El tindré tan bon punt la Feris l'acabi."
+
+# (three upgrades: Mission to kill the Loremaster with the Oracle alive).
+msgid "TXT_DLG_SCRIPT10_D22740_HOWSI"
+msgstr "Com va? Home, part d'aquesta nova tecnologia és simplement increïble. Això també hauria d'ajudar amb el vostre implant. Tinc un parell d'idees que estic dibuixant i les tindré a punt aviat. Què puc fer per tu, potser una mica de curació?"
+
+msgid "TXT_RPLY0_SCRIPT10_D22740_YESHE"
+msgstr "Sí, cura'm."
+
+msgid "TXT_RYES0_SCRIPT10_D22740_ALLRI"
+msgstr "D'acord, aquí tens."
+
+msgid "TXT_RPLY1_SCRIPT10_D22740_HOWAB"
+msgstr "Què tal aquesta nova tecnologia?"
+
+msgid "TXT_RYES1_SCRIPT10_D22740_LETME"
+msgstr "Feu-me saber com funciona això."
+
+msgid "TXT_RNO1_SCRIPT10_D22740_IMNOT"
+msgstr "Encara no l'he acabat de dissenyar."
+
+# (four upgrades).
+msgid "TXT_DLG_SCRIPT10_D24256_BACKA"
+msgstr "De tornada, no et canses mai d'això? Tinc unes bones notícies, Feris va trobar una manera d'augmentar el rendiment del vostre implant. Em va donar les especificacions i estic intentant que es combinen amb la teva fisiologia. Estic forçant a fer créixer una mica de teixit, coses totalment noves aquí, espero que calgui. Necessites curació?"
+
+msgid "TXT_RPLY0_SCRIPT10_D24256_YESHE"
+msgstr "Sí, cura'm."
+
+msgid "TXT_RYES0_SCRIPT10_D24256_DONEN"
+msgstr "Fet, ara cuida't."
+
+msgid "TXT_RPLY1_SCRIPT10_D24256_WHENW"
+msgstr "Quan acabareu?"
+
+msgid "TXT_RYES1_SCRIPT10_D24256_NOWHE"
+msgstr "Ara. Hola genial, va funcionar!"
+
+msgid "TXT_RNO1_SCRIPT10_D24256_IMWAI"
+msgstr "Estic esperant que el teixit acabi el seu cicle de creixement."
+
+# (five upgrades).
+msgid "TXT_DLG_SCRIPT10_D25772_WELLI"
+msgstr "Bé, he tornat als meus vells trucs, encara estic treballant amb els teus implants. Sabíeu que Macil ara els ha autoritzat per a tothom? No, eh? És perquè t'ha sortit molt bé. Alguna cosa que pugui fer per tu?"
+
+msgid "TXT_RPLY0_SCRIPT10_D25772_HELPM"
+msgstr "Ajuda'm aquí."
+
+msgid "TXT_RYES0_SCRIPT10_D25772_THATS"
+msgstr "Això és tot el que puc fer."
+
+msgid "TXT_RPLY1_SCRIPT10_D25772_NEWIM"
+msgstr "Implant nou?"
+
+msgid "TXT_RYES1_SCRIPT10_D25772_YEPMY"
+msgstr "Sí, el meu millor encara."
+
+msgid "TXT_RNO1_SCRIPT10_D25772_SORRY"
+msgstr "Ho sento, però només cal esperar."
+
+# (six upgrades).
+msgid "TXT_DLG_SCRIPT10_D27288_THISI"
+msgstr "Això és tot, Feris ha aconseguit drenar tot el que ha pogut de totes les dades que tenim, aquesta serà la millor i l'última actualització d'implants. Serà una mica depriment veure la meva millor creació arribar al seu punt àlgid. Bé, almenys la resta de la tripulació em mantindrà ocupat."
+
+msgid "TXT_RPLY0_SCRIPT10_D27288_COULD"
+msgstr "Em podries curar?"
+
+msgid "TXT_RYES0_SCRIPT10_D27288_THERE"
+msgstr "Allà, ja estàs tot a punt."
+
+# MAP10: Feris (no training).
+msgid "TXT_DLG_SCRIPT10_D28804_ITSTH"
+msgstr "És l'heroi. Gran feina! Què puc aconseguir per a tu? Tenim una selecció una mica més gran ara que tenim tota l'ordenança del castell. Si necessites comprar munició, parla amb Justin. Ell et cuidarà. "
+
+msgid "TXT_RPLY0_SCRIPT10_D28804_IMOUT"
+msgstr "Estic sense bales."
+
+msgid "TXT_RYES0_SCRIPT10_D28804_HERES"
+msgstr "Aquí tens una mica de munició. No ho malgastis."
+
+msgid "TXT_RPLY1_SCRIPT10_D28804_TEACH"
+msgstr "Ensenya'm."
+
+msgid "TXT_RYES1_SCRIPT10_D28804_NOWAF"
+msgstr "Ara, alguns consells sobre les grans armes."
+
+msgid "TXT_RNO1_SCRIPT10_D28804_YOURE"
+msgstr "Encara no estàs preparat."
+
+# (one training)
+msgid "TXT_DLG_SCRIPT10_D30320_HOWST"
+msgstr "Com va l'esforç de guerra? No importa, si encara som aquí, deu anar bé. Què puc fer per tu?"
+
+msgid "TXT_RPLY0_SCRIPT10_D30320_IRANO"
+msgstr "Em vaig quedar sense bales."
+
+msgid "TXT_RYES0_SCRIPT10_D30320_THATS"
+msgstr "Això hauria d'ajudar."
+
+msgid "TXT_RNO0_SCRIPT10_D30320_YOUVE"
+msgstr "Tens prou munició."
+
+msgid "TXT_RPLY1_SCRIPT10_D30320_TEACH"
+msgstr "Ensenya'm."
+
+msgid "TXT_RYES1_SCRIPT10_D30320_HEREI"
+msgstr "Aquí, us mostraré alguns trucs de l'ofici."
+
+msgid "TXT_RNO1_SCRIPT10_D30320_YOURE"
+msgstr "Encara no estàs preparat."
+
+# (two trainings)
+msgid "TXT_DLG_SCRIPT10_D31836_WELLH"
+msgstr "Bé, has vingut per tutela o és alguna munició que estàs buscant? No pensis que he acabat amb tu encara. Encara tinc alguns trucs a la màniga."
+
+msgid "TXT_RPLY0_SCRIPT10_D31836_ITSAM"
+msgstr "De moment és munició."
+
+msgid "TXT_RYES0_SCRIPT10_D31836_HERES"
+msgstr "Aquí tens una mica de munició. No ho malgastis."
+
+msgid "TXT_RNO0_SCRIPT10_D31836_YOUVE"
+msgstr "Tens prou munició."
+
+msgid "TXT_RPLY1_SCRIPT10_D31836_TEACH"
+msgstr "Ensenya'm."
+
+msgid "TXT_RYES1_SCRIPT10_D31836_TIMEF"
+msgstr "Temps per a les classes avançades."
+
+msgid "TXT_RNO1_SCRIPT10_D31836_YOURE"
+msgstr "Encara no estàs preparat."
+
+# (three trainings)
+msgid "TXT_DLG_SCRIPT10_D33352_WELLW"
+msgstr "Bé, què és ara? No fas mai un descans? M'alegro que encara estiguis respirant. No m'agradaria que el meu estudiant preferit tornés mirant des de dins d'una bossa per al cos."
+
+msgid "TXT_RPLY0_SCRIPT10_D33352_INEED"
+msgstr "Necessito més bales."
+
+msgid "TXT_RYES0_SCRIPT10_D33352_THERE"
+msgstr "Allà, no ho malgastis."
+
+msgid "TXT_RNO0_SCRIPT10_D33352_YOUHA"
+msgstr "En tens prou."
+
+msgid "TXT_RPLY1_SCRIPT10_D33352_WHATC"
+msgstr "Què em pots ensenyar?"
+
+msgid "TXT_RYES1_SCRIPT10_D33352_DONTG"
+msgstr "No et facis descarat, encara tens marge per créixer."
+
+msgid "TXT_RNO1_SCRIPT10_D33352_NOTHI"
+msgstr "Res fins que estiguis preparat."
+
+# (four trainings)
+msgid "TXT_DLG_SCRIPT10_D34868_LOOKW"
+msgstr "Mira qui ha tornat, què et passa pel cap? Sé que ha estat dur, però tots agraïm els vostres esforços, creieu-me."
+
+msgid "TXT_RPLY0_SCRIPT10_D34868_IVERU"
+msgstr "M'he quedat sense bales."
+
+msgid "TXT_RYES0_SCRIPT10_D34868_WHATE"
+msgstr "Què més hi ha de nou, aquí teniu."
+
+msgid "TXT_RNO0_SCRIPT10_D34868_YOUHA"
+msgstr "Tens més del que et puc donar."
+
+msgid "TXT_RPLY1_SCRIPT10_D34868_TEACH"
+msgstr "Ensenya'm el que puguis."
+
+msgid "TXT_RYES1_SCRIPT10_D34868_ALLRI"
+msgstr "D'acord, aquí tens algunes indicacions."
+
+msgid "TXT_RNO1_SCRIPT10_D34868_NOTRI"
+msgstr "Ara mateix no."
+
+# (five trainings)
+msgid "TXT_DLG_SCRIPT10_D36384_WHATI"
+msgstr "Què és el que necessites? Espero que esteu donant a l'Ordre un tast del tipus de dolor que sentim des de fa anys."
+
+msgid "TXT_RPLY0_SCRIPT10_D36384_SOMEA"
+msgstr "Una mica de munició."
+
+msgid "TXT_RYES0_SCRIPT10_D36384_THERE"
+msgstr "Aquí tens, no ho perdis."
+
+msgid "TXT_RNO0_SCRIPT10_D36384_YOUVE"
+msgstr "Tens prou munició."
+
+msgid "TXT_RPLY1_SCRIPT10_D36384_TEACH"
+msgstr "Ensenya'm."
+
+msgid "TXT_RYES1_SCRIPT10_D36384_AFEWM"
+msgstr "Unes quantes lliçons més i sabràs tot el que puc ensenyar."
+
+msgid "TXT_RNO1_SCRIPT10_D36384_YOURE"
+msgstr "Encara no estàs preparat."
+
+# (six trainings)
+msgid "TXT_DLG_SCRIPT10_D37900_ICANT"
+msgstr "No em puc creure que encara estem per aquí, tu i jo. Som massa els que hem mort des del principi. Què puc fer per tu amic?"
+
+msgid "TXT_RPLY0_SCRIPT10_D37900_IMOUT"
+msgstr "Estic sense bales."
+
+# (in good health = enjoy)
+msgid "TXT_RYES0_SCRIPT10_D37900_HEREU"
+msgstr "Aquí, utilitzeu-los per mantenir-vos en bona salut."
+
+msgid "TXT_RNO0_SCRIPT10_D37900_YOUHA"
+msgstr "En tens prou."
+
+msgid "TXT_RPLY1_SCRIPT10_D37900_TEACH"
+msgstr "Ensenya'm."
+
+msgid "TXT_RYES1_SCRIPT10_D37900_WELLT"
+msgstr "Bé, ja està, ja has acabat. No puc ensenyar més."
+
+msgid "TXT_RNO1_SCRIPT10_D37900_RETUR"
+msgstr "Torna després que Macil et digui que és hora."
+
+# (seven trainings)
+msgid "TXT_DLG_SCRIPT10_D39416_IVETA"
+msgstr "T'he ensenyat tot el que puc ara mateix. T'he donat tot el que hauries de necessitar, tret que et quedis sense bales. Amb els que encara et puc ajudar."
+
+msgid "TXT_RPLY0_SCRIPT10_D39416_YESIA"
+msgstr "Sí que ho sóc."
+
+msgid "TXT_RYES0_SCRIPT10_D39416_HEREY"
+msgstr "Aquí tens. "
+
+# MAP10: Justin.
+msgid "TXT_DLG_SCRIPT10_D40932_CHECK"
+msgstr "Fes una ullada a les novetats, la balisa teletransportadora. Quan utilitzeu la balisa, farem un seguiment del senyal i enviarem ajuda. Hi ha alguna cosa que et pugui aconseguir?"
+
+msgid "TXT_RPLY0_SCRIPT10_D40932_BOXOF"
+msgstr "Caixa de coets"
+
+msgid "TXT_RYES0_SCRIPT10_D40932_THERE"
+msgstr "Aquí tens."
+
+msgid "TXT_RNO0_SCRIPT10_D40932_YOUCA"
+msgstr "No us ho podeu permetre!"
+
+msgid "TXT_RPLY1_SCRIPT10_D40932_HEGRE"
+msgstr "Granades H-E."
+
+msgid "TXT_RYES1_SCRIPT10_D40932_HEREY"
+msgstr "Aquí tens."
+
+msgid "TXT_RNO1_SCRIPT10_D40932_COMEB"
+msgstr "Torna quan tinguis prou diners."
+
+msgid "TXT_RPLY2_SCRIPT10_D40932_ENERG"
+msgstr "Pod energètic"
+
+msgid "TXT_RYES2_SCRIPT10_D40932_HERES"
+msgstr "Aquí teniu la vostra càpsula energètica"
+
+msgid "TXT_RNO2_SCRIPT10_D40932_YOUDO"
+msgstr "No en tens prou per això."
+
+msgid "TXT_RPLY3_SCRIPT10_D40932_TELEP"
+msgstr "Far de teletransportador"
+
+msgid "TXT_RYES3_SCRIPT10_D40932_HELPW"
+msgstr "Ajuda, quan i on la necessitis."
+
+msgid "TXT_RNO3_SCRIPT10_D40932_SORRY"
+msgstr "Ho sento, no hi ha caritat."
+
+# MAP10: Rebels in Macil's room.
+msgid "TXT_DLG_SCRIPT10_D42448_NOWTH"
+msgstr "Ara que tenim el castell controlat, hem d'estar molt atents per mantenir-lo. L'Ordre probablement s'està preparant per contraatacar ara mateix."
+
+# MAP10: Castle's entrance.
+msgid "TXT_DLG_SCRIPT10_D43964_BECAR"
+msgstr "Aneu amb compte allà fora."
+
+# MAP10: Rebel in Hospital.
+msgid "TXT_DLG_SCRIPT10_D45480_KEEPU"
+msgstr "Seguiu així, sense vosaltres no ho hauríem pogut fer."
+
+# MAP11: Commons (no token).
+msgid "TXT_DLG_SCRIPT11_D0_IMTHE"
+msgstr "Sóc el mestre de claus."
+
+# (Oracle's token)
+msgid "TXT_DLG_SCRIPT11_D1516_ALOTO"
+msgstr "Molta gent diria que aquesta és una feina insignificant i insignificant. Però no ho és, de fet…"
+
+msgid "TXT_RPLY0_SCRIPT11_D1516_GIVEM"
+msgstr "Dóna'm la clau!"
+
+msgid "TXT_DLG_SCRIPT11_D3032_OKBUT"
+msgstr "D'acord, però recorda que sóc el mestre de claus."
+
+msgid "TXT_RPLY0_SCRIPT11_D3032_OKPAL"
+msgstr "D'acord amic, el que sigui."
+
+msgid "TXT_DLG_SCRIPT11_D4548_IMTHE"
+msgstr "Sóc el mestre de claus."
+
+# MAP11: Red acolyte at temple's entrance.
+msgid "TXT_DLG_SCRIPT11_D6064_DIETR"
+msgstr "Mor traïdor!"
+
+msgid "TXT_DLG_SCRIPT11_D7580_DIETR"
+msgstr "Mor traïdor!"
+
+# MAP11: Prisoner.
+msgid "TXT_DLG_SCRIPT11_D9096_HAVEY"
+msgstr "Has vingut a regodejar-te? Tot i que estem darrere d'aquestes reixes, mentre aguantem, encara perds."
+
+msgid "TXT_DLG_SCRIPT11_D10612_LETUS"
+msgstr "Deixa'ns sortir d'aquí!"
+
+msgid "TXT_DLG_SCRIPT11_D12128_LEAVE"
+msgstr "Deixa'm en pau!"
+
+# MAP12: Oracle.
+msgid "TXT_DLG_SCRIPT12_D0_WHATI"
+msgstr "Quina és la saviesa que busques, senzill?"
+
+msgid "TXT_RPLY0_SCRIPT12_D0_THESI"
+msgstr "El segell del Déu únic."
+
+msgid "TXT_DLG_SCRIPT12_D1516_IFEEL"
+msgstr "Sento que un fragment ressona dins teu. El segon es troba al cor de la torre carmesí i obsidiana. Allà has de combatre el Bisbe, que és conscient, i t'espera. El trobareu seguint el seu símbol de poder. Porta aquest testimoni al mestre de claus. Torna a mi després d'haver matat la bèstia."
+
+msgid "TXT_RPLY0_SCRIPT12_D1516_ILLBE"
+msgstr "Tornaré."
+
+msgid "TXT_DLG_SCRIPT12_D3032_ALTHO"
+msgstr "Tot i que el bisbe és formidable, aquesta recerca és lleugera. Torna a mi quan tinguis el següent fragment."
+
+# MAP12: Oracle → After killing the Bishop
+msgid "TXT_DLG_SCRIPT12_D4548_YOURN"
+msgstr "El teu proper repte posarà a prova el teu esperit. La tercera peça la porta el vostre propi líder. És el mateix que t'envia a matar."
+
+msgid "TXT_RPLY0_SCRIPT12_D4548_MACIL"
+msgstr "Macil? Un traïdor?"
+
+msgid "TXT_DLG_SCRIPT12_D6064_YOURB"
+msgstr "La teva fe cega li ha permès avançar cap als seus objectius amb cada peça que guanyis. Enfronta't a ell i resol el teu destí."
+
+msgid "TXT_RPLY0_SCRIPT12_D6064_ALLRI"
+msgstr "D'acord, és Macil."
+
+msgid "TXT_RPLY1_SCRIPT12_D6064_ITSYO"
+msgstr "Ets en tu en qui no confio."
+
+msgid "TXT_DLG_SCRIPT12_D7580_WHATE"
+msgstr "Qualsevol elecció que facis per a la teva espècie, perirà sota la voluntat del Déu únic."
+
+# MAP12: Choose to kill Macil.
+msgid "TXT_RPLY0_SCRIPT12_D7580_ILLBE"
+msgstr "Tornaré quan Macil sigui mort."
+
+# MAP12: Choose to not kill Macil.
+msgid "TXT_RPLY1_SCRIPT12_D7580_ICANT"
+msgstr "No puc deixar que això passi."
+
+# MAP12: You chose to kill Macil.
+msgid "TXT_DLG_SCRIPT12_D9096_THERI"
+msgstr "El riu del temps avança per sempre, mentre tu estàs quiet."
+
+# MAP12: Oracle → After killing Macil
+msgid "TXT_DLG_SCRIPT12_D10612_YOUHA"
+msgstr "Has eliminat el càncer del teu cos, però el teu cor encara batega. A continuació, haureu de trobar el cirurgià que mata i controla la vostra gent, el Mestre del Coneixement. Atureu-lo, i la següent peça serà vostra."
+
+msgid "TXT_RPLY0_SCRIPT12_D10612_WHERE"
+msgstr "On el trobo?"
+
+msgid "TXT_DLG_SCRIPT12_D12128_USETH"
+msgstr "Utilitzeu el teletransportador darrere de la porta que acabo d'obrir per arribar al Mestre del Coneixement. Quan sigui mort, utilitzeu el mateix dispositiu per tornar-me."
+
+msgid "TXT_RPLY0_SCRIPT12_D12128_ILLBE"
+msgstr "Tornaré, amb la seva peça!"
+
+msgid "TXT_DLG_SCRIPT12_D13644_THERI"
+msgstr "El riu del temps avança per sempre, mentre tu estàs quiet."
+
+# MAP12: Oracle → After killing the Loremaster with Macil dead.
+msgid "TXT_DLG_SCRIPT12_D15160_PITIF"
+msgstr "Home llàstima, has fet el que milers de persones no han pogut fer... M'aportes el poder del Segell, la veu de l'Únic Déu."
+
+msgid "TXT_RPLY0_SCRIPT12_D15160_IDONT"
+msgstr "No ho entenc."
+
+msgid "TXT_DLG_SCRIPT12_D16676_THESI"
+msgstr "El Segell obrirà la porta i alliberarà l'esperit que netejarà aquest planeta i em deixarà viure per sempre. Despollaré aquest món de les seves energies i trobaré nous mons per conquistar."
+
+msgid "TXT_RPLY0_SCRIPT12_D16676_ICANT"
+msgstr "No et puc deixar fer això."
+
+# MAP12: Oracle → Fight with the Oracle.
+msgid "TXT_DLG_SCRIPT12_D18192_YOUCA"
+msgstr "Pots si estàs mort."
+
+# MAP14: James
+msgid "TXT_DLG_SCRIPT14_D0_AREYO"
+msgstr "Esteu aquí per alliberar-nos? Com que he anat bé, em van treure l'implant. Encara he de quedar-me aquí a baix i netejar la bava."
+
+msgid "TXT_RPLY0_SCRIPT14_D0_YESIM"
+msgstr "Sí, sóc aquí per alliberar-te."
+
+msgid "TXT_RYES0_SCRIPT14_D0_YOUME"
+msgstr "Ho vols dir?"
+
+# (conveyors = conveyor belts)
+msgid "TXT_DLG_SCRIPT14_D1516_ICANT"
+msgstr "No puc ajudar a ningú més. No fins que facis explotar l'emissor. Això és el que hi ha darrere del camp de força de dalt. La meva feina és comprovar les cintes transportadores per assegurar-me que no estiguin encallades. Ja no!"
+
+msgid "TXT_RPLY0_SCRIPT14_D1516_THATS"
+msgstr "Així és, estàs salvat!"
+
+msgid "TXT_RYES0_SCRIPT14_D1516_OHTHA"
+msgstr "Oh, gràcies!"
+
+msgid "TXT_DLG_SCRIPT14_D3032_WEREF"
+msgstr "Som lliures!! Som lliures!! Som lliures!!"
+
+# MAP14: Drone
+msgid "TXT_DLG_SCRIPT14_D4548_MUSTM"
+msgstr "Cal extreure més mineral!"
+
+# MAP14: Peasant (ex-drone)
+msgid "TXT_DLG_SCRIPT14_D6064_WEREF"
+msgstr "Som lliures!! Som lliures!! Som lliures!!"
+
+msgid "TXT_DLG_SCRIPT14_D7580_MUSTM"
+msgstr "Cal extreure més mineral!"
+
+msgid "TXT_DLG_SCRIPT14_D9096_WEREF"
+msgstr "Som lliures!! Som lliures!! Som lliures!!"
+
+msgid "TXT_DLG_SCRIPT14_D10612_MUSTM"
+msgstr "Cal extreure més mineral!"
+
+msgid "TXT_DLG_SCRIPT14_D12128_WEREF"
+msgstr "Som lliures!! Som lliures!! Som lliures!!"
+
+# MAP15: Red acolytes.
+msgid "TXT_DLG_SCRIPT15_D0_WHATA"
+msgstr "Què fas aquí?"
+
+msgid "TXT_RPLY0_SCRIPT15_D0_ROUTI"
+msgstr "Inspecció de rutina."
+
+msgid "TXT_RYES0_SCRIPT15_D0_ALLRI"
+msgstr "D'acord, segueix."
+
+# MAP15: Red acolytes + Technician at the beginning.
+msgid "TXT_DLG_SCRIPT15_D1516_NOTHI"
+msgstr "Res a informar aquí. Tot funciona bé. Si alguna cosa va malament, m'asseguraré d'informar-ho."
+
+# MAP15: Technician at the beginning.
+msgid "TXT_DLG_SCRIPT15_D3032_SIRTH"
+msgstr "Senyor, hi va haver un problema abans, però es va solucionar."
+
+# MAP17: Bailey (if you don't have Order's key)
+msgid "TXT_DLG_SCRIPT17_D0_MOVEA"
+msgstr "Mou-te o tasta el metall."
+
+# (if you have it)
+msgid "TXT_DLG_SCRIPT17_D1516_IDCHE"
+msgstr "I.D. comprovar."
+
+msgid "TXT_RPLY0_SCRIPT17_D1516_HEREI"
+msgstr "Aquí, tinc pressa."
+
+msgid "TXT_DLG_SCRIPT17_D3032_STOPW"
+msgstr "Deixa d'agitar el teu DNI a la cara i entra."
+
+# MAP17: Green guards.
+msgid "TXT_DLG_SCRIPT17_D4548_NOTHI"
+msgstr "No hi ha res a veure aquí. Seguiu endavant."
+
+# MAP17: Hospital → Quincy
+msgid "TXT_DLG_SCRIPT17_D6064_WHATA"
+msgstr "Quin exemplar més sa. No necessites la meva ajuda, oi?"
+
+msgid "TXT_RPLY0_SCRIPT17_D6064_WELLY"
+msgstr "Bé, sí. En Macil m'envia."
+
+msgid "TXT_DLG_SCRIPT17_D7580_SHHHH"
+msgstr "Shhhh... Mantingueu-ho en silenci, tret que vulgueu que ens maten tots dos. Ara, què puc fer per tu?"
+
+msgid "TXT_RPLY0_SCRIPT17_D7580_TELLM"
+msgstr "Digues-me com trobar el bisbe."
+
+msgid "TXT_DLG_SCRIPT17_D9096_OHHHI"
+msgstr "Ohhh, sabia que m'ho demanaries. Mira darrere teu. Aquesta és l'entrada de la ciutadella del bisbe. Està custodiat per un camp de força que només està tancat per als visitants oficials, no per a tu."
+
+msgid "TXT_RPLY0_SCRIPT17_D9096_IMUST"
+msgstr "He de matar el bisbe."
+
+msgid "TXT_DLG_SCRIPT17_D10612_OHSUR"
+msgstr "Oh, segur que sí. Primer, entra al complex de seguretat i utilitza el teletransportador. I això podria ser més del vostre gust, destruir l'ordinador a l'administració central. Sense ordinador, sense camp de força."
+
+msgid "TXT_RPLY0_SCRIPT17_D10612_GREAT"
+msgstr "Genial, sembla fàcil."
+
+# (five-finger discount = theft)
+msgid "TXT_DLG_SCRIPT17_D12128_THERE"
+msgstr "Hi ha un avantatge en destruir l'ordinador, és on es guarden els plànols de la torre. Es pot dir, descompte de cinc dits? Heh heh!"
+
+msgid "TXT_RPLY0_SCRIPT17_D12128_ANYTH"
+msgstr "Alguna cosa més?"
+
+msgid "TXT_DLG_SCRIPT17_D13644_OHWEL"
+msgstr "Bé, diu que el magatzem del bailey va rebre un enviament de maulers, aquesta és l'arma que es vaporitza."
+
+msgid "TXT_RPLY0_SCRIPT17_D13644_ISTHA"
+msgstr "És això, ara?"
+
+msgid "TXT_DLG_SCRIPT17_D15160_DONTY"
+msgstr "No saps el significat de les paraules \"perdre's\"?"
+
+# MAP17: Hospital → Assistant
+msgid "TXT_DLG_SCRIPT17_D16676_TALKT"
+msgstr "Primer parleu amb Quincy. No tinc permís per ajudar ningú tret que ell digui que està bé."
+
+msgid "TXT_DLG_SCRIPT17_D18192_HOWHO"
+msgstr "Com et puc ajudar avui?"
+
+msgid "TXT_RPLY0_SCRIPT17_D18192_MEDPA"
+msgstr "Pegat med"
+
+msgid "TXT_RYES0_SCRIPT17_D18192_HERES"
+msgstr "Aquí teniu el vostre pegat."
+
+msgid "TXT_RNO0_SCRIPT17_D18192_THATI"
+msgstr "Això són 15 d'or amic meu."
+
+msgid "TXT_RPLY1_SCRIPT17_D18192_MEDIC"
+msgstr "Kit mèdic"
+
+msgid "TXT_RYES1_SCRIPT17_D18192_HERES"
+msgstr "Aquí teniu el vostre kit mèdic."
+
+msgid "TXT_RNO1_SCRIPT17_D18192_YOURE"
+msgstr "Tens una mica de fons per això."
+
+msgid "TXT_RPLY2_SCRIPT17_D18192_FIELD"
+msgstr "Kit de cirurgia de camp"
+
+msgid "TXT_RYES2_SCRIPT17_D18192_ONEFI"
+msgstr "Un kit de cirurgia de camp, fet."
+
+msgid "TXT_RNO2_SCRIPT17_D18192_COMEB"
+msgstr "Torna quan tinguis diners!"
+
+# MAP18: Yellow guard
+msgid "TXT_DLG_SCRIPT18_D0_WHATI"
+msgstr "Què és?"
+
+msgid "TXT_RPLY0_SCRIPT18_D0_JUSTL"
+msgstr "Només mirant al voltant."
+
+msgid "TXT_RYES0_SCRIPT18_D0_JUSTK"
+msgstr "Només mantén fora del camí."
+
+msgid "TXT_DLG_SCRIPT18_D1516_THETE"
+msgstr "Els templers seran aquí aviat per recollir els seus nous maulers. Si t'interposes en el seu camí ets un home mort."
+
+msgid "TXT_RPLY0_SCRIPT18_D1516_MAULE"
+msgstr "Maulers?"
+
+msgid "TXT_RYES0_SCRIPT18_D1516_THETE"
+msgstr "L'arma preferida dels templers."
+
+msgid "TXT_DLG_SCRIPT18_D3032_THEYC"
+msgstr "Van entrar abans. D'això es tracta tota la seguretat. Vaig tenir l'oportunitat de mirar-los quan els vaig tancar. Ningú hauria d'entrar o sortir d'allà fins que la resta de l'esquadra no vingui a reclamar les seves armes."
+
+# Appears in MAP19 and is supposed to be spoken by the Peasant1 actor (named
+# “Security Comple”). However, no such actor is spawned in the map, rendering
+# this line unused.
+msgid "TXT_DLG_SCRIPT19_D0_THISI"
+msgstr "Aquí és on s'obtenen els plans de l'administració central."
+
+# SVE.WAD
+# MAP22: C-shaped building → Master Smithy.
+msgid "TXT_DLG_SCRIPT22_D0_IRUNT"
+msgstr "Jo dirigeixo aquest lloc. La meva feina és construir les peces en brut necessàries per als dissenys de robots del Mestre del Saber. Si no ets aquí per negocis oficials, em temo que no tinc temps per parlar."
+
+msgid "TXT_RPLY0_SCRIPT22_D0_IAMON"
+msgstr "Estic en negocis oficials."
+
+# (After giving the blue chalice to Timothy).
+msgid "TXT_DLG_SCRIPT22_D1516_SOYOU"
+msgstr "Així que has parlat amb Timothy, veig. Ell i jo hem treballat junts per intentar desentranyar els misteris de l'Orde, abans que sigui massa tard per a tots nosaltres. Potser ens pots ajudar. He obert la porta al sector productiu."
+
+msgid "TXT_RPLY0_SCRIPT22_D1516_DOYOU"
+msgstr "Saps què hi ha dins?"
+
+msgid "TXT_DLG_SCRIPT22_D3032_ITSAT"
+msgstr "És una zona de màxim secret. L'Ordre no només està criant una mena de... criatura allà dins, sinó que he vist amb els meus propis ulls un artefacte estrany anomenat Talisman. ningú està permès apropar-s'hi. El rumor és que té un gran poder si s'uneix amb altres dos d'aquest tipus."
+
+msgid "TXT_RPLY0_SCRIPT22_D3032_ISUPP"
+msgstr "Suposo que vols aquesta cosa?"
+
+msgid "TXT_DLG_SCRIPT22_D4548_NOIFY"
+msgstr "No! Si el pots trobar, és teu per guardar-lo. Potser podeu utilitzar-lo per ajudar-nos a alliberar-nos de la nostra opressió. Et desitjaria sort, però necessitaràs molt més que això si hi entres…"
+
+msgid "TXT_RPLY0_SCRIPT22_D4548_WHATS"
+msgstr "Què té tot això del passat?"
+
+msgid "TXT_DLG_SCRIPT22_D6064_YOUVE"
+msgstr "Segur que heu vist les altres ruïnes a prop. Sembla que el cometa que es va estavellar al nostre planeta és en realitat una nau espacial, i ho creieu o no, es va originar en aquest món fa molt de temps."
+
+msgid "TXT_RPLY0_SCRIPT22_D6064_SOTHE"
+msgstr "Així doncs, els espectres, el Déu únic…"
+
+msgid "TXT_DLG_SCRIPT22_D7580_THEYA"
+msgstr "Són criatures que van governar aquest món i estan decidits a consumir-ne la vida. Els antics van aconseguir segellar-los, però van donar la seva vida en el procés. Em temo que això és tot el que sé."
+
+msgid "TXT_RPLY0_SCRIPT22_D7580_THANK"
+msgstr "Gràcies... Faré el que pugui."
+
+msgid "TXT_DLG_SCRIPT22_D9096_GODSP"
+msgstr "Salutacions, amic."
+
+# SVE.WAD
+# MAP22: C-shaped building → Apprentice.
+msgid "TXT_DLG_SCRIPT22_D10612_TALKT"
+msgstr "Parleu amb el mestre Smithy si teniu preguntes. L'únic que faig és posar etiquetes a les caixes."
+
+# MAP23: Weapons
+msgid "TXT_DLG_SCRIPT23_D0_WHATC"
+msgstr "Què et puc oferir, ciutadà?"
+
+msgid "TXT_RPLY0_SCRIPT23_D0_AMMOB"
+msgstr "Caixa de munició"
+
+msgid "TXT_RYES0_SCRIPT23_D0_HERES"
+msgstr "Aquí tens la teva munició."
+
+msgid "TXT_RNO0_SCRIPT23_D0_YOUDO"
+msgstr "No en tens prou per això!"
+
+msgid "TXT_RPLY1_SCRIPT23_D0_CRATE"
+msgstr "Caixa de míssils"
+
+msgid "TXT_RYES1_SCRIPT23_D0_HEREC"
+msgstr "Aquí, ciutadà."
+
+msgid "TXT_RNO1_SCRIPT23_D0_ITS85"
+msgstr "És or 85, ciutadà!"
+
+msgid "TXT_RPLY2_SCRIPT23_D0_HEGRE"
+msgstr "Granades H-E"
+
+msgid "TXT_RYES2_SCRIPT23_D0_HEREA"
+msgstr "Aquí teniu les vostres granades."
+
+msgid "TXT_RNO2_SCRIPT23_D0_THEYA"
+msgstr "Són 100 d'or, amic."
+
+msgid "TXT_RPLY3_SCRIPT23_D0_ENERG"
+msgstr "Pod energètic"
+
+msgid "TXT_RYES3_SCRIPT23_D0_HEREY"
+msgstr "Aquí tens."
+
+msgid "TXT_RNO3_SCRIPT23_D0_THATS"
+msgstr "Això són 135 d'or, ho sento."
+
+# MAP23: Armory (with Tevick locked).
+msgid "TXT_DLG_SCRIPT23_D1516_WHATC"
+msgstr "En què et puc ajudar?"
+
+msgid "TXT_RPLY0_SCRIPT23_D1516_LEATH"
+msgstr "Armadura de cuir"
+
+msgid "TXT_RYES0_SCRIPT23_D1516_HEREI"
+msgstr "Aquí és ciutadà."
+
+msgid "TXT_RNO0_SCRIPT23_D1516_THERE"
+msgstr "Aquí no hi ha caritat!"
+
+msgid "TXT_RPLY1_SCRIPT23_D1516_METAL"
+msgstr "Armadura metàl·lica"
+
+msgid "TXT_RYES1_SCRIPT23_D1516_ANEXC"
+msgstr "Un ciutadà excel·lent elecció."
+
+msgid "TXT_RNO1_SCRIPT23_D1516_YOUDO"
+msgstr "No en tens prou per això!"
+
+msgid "TXT_RPLY2_SCRIPT23_D1516_ENVIR"
+msgstr "Vestit ambiental"
+
+msgid "TXT_RYES2_SCRIPT23_D1516_HEREY"
+msgstr "Aquí tens."
+
+msgid "TXT_RNO2_SCRIPT23_D1516_NOMON"
+msgstr "Sense diners, sense vestit."
+
+msgid "TXT_RPLY3_SCRIPT23_D1516_SOMET"
+msgstr "Alguna cosa diferent?"
+
+msgid "TXT_RYES3_SCRIPT23_D1516_GOTHR"
+msgstr "Passeu per la porta del passadís."
+
+msgid "TXT_RNO3_SCRIPT23_D1516_YOUMU"
+msgstr "Has de pagar si vols jugar."
+
+# MAP23: Armory (with Tevick unlocked).
+msgid "TXT_DLG_SCRIPT23_D3032_WHATC"
+msgstr "Què et puc aconseguir?"
+
+msgid "TXT_RPLY0_SCRIPT23_D3032_LEATH"
+msgstr "Armadura de cuir"
+
+msgid "TXT_RYES0_SCRIPT23_D3032_HEREI"
+msgstr "Aquí està, ciutadà."
+
+msgid "TXT_RNO0_SCRIPT23_D3032_THERE"
+msgstr "Aquí no hi ha caritat!"
+
+msgid "TXT_RPLY1_SCRIPT23_D3032_METAL"
+msgstr "Armadura metàl·lica"
+
+msgid "TXT_RYES1_SCRIPT23_D3032_ANEXC"
+msgstr "Un ciutadà excel·lent elecció."
+
+msgid "TXT_RNO1_SCRIPT23_D3032_YOUDO"
+msgstr "No en tens prou per això!"
+
+msgid "TXT_RPLY2_SCRIPT23_D3032_ENVIR"
+msgstr "Vestit ambiental"
+
+msgid "TXT_RYES2_SCRIPT23_D3032_HEREY"
+msgstr "Aquí tens."
+
+msgid "TXT_RNO2_SCRIPT23_D3032_NOMON"
+msgstr "Sense diners, sense vestit."
+
+# MAP23: Hospital
+msgid "TXT_DLG_SCRIPT23_D4548_HOWCA"
+msgstr "Com et puc ajudar avui?"
+
+msgid "TXT_RPLY0_SCRIPT23_D4548_MEDPA"
+msgstr "Pegat med"
+
+msgid "TXT_RYES0_SCRIPT23_D4548_HERES"
+msgstr "Aquí teniu el vostre pegat."
+
+msgid "TXT_RNO0_SCRIPT23_D4548_THATI"
+msgstr "Això són 15 d'or amic meu."
+
+msgid "TXT_RPLY1_SCRIPT23_D4548_MEDIC"
+msgstr "Kit mèdic"
+
+msgid "TXT_RYES1_SCRIPT23_D4548_HERES"
+msgstr "Aquí teniu el vostre kit mèdic."
+
+msgid "TXT_RNO1_SCRIPT23_D4548_YOURA"
+msgstr "Tens una mica baixos de fons per això."
+
+msgid "TXT_RPLY2_SCRIPT23_D4548_FIELD"
+msgstr "Kit de cirurgia de camp"
+
+msgid "TXT_RYES2_SCRIPT23_D4548_ONEFI"
+msgstr "Un kit de cirurgia de camp."
+
+msgid "TXT_RNO2_SCRIPT23_D4548_COMEB"
+msgstr "Torna quan tinguis diners!"
+
+# MAP23: Barkeep.
+msgid "TXT_DLG_SCRIPT23_D6064_HELLO"
+msgstr "Hola amic, què et puc aconseguir?"
+
+msgid "TXT_RPLY0_SCRIPT23_D6064_INFOR"
+msgstr "Informació"
+
+msgid "TXT_RYES0_SCRIPT23_D6064_IVENE"
+msgstr "Mai he vist ningú entrar o sortir de la fàbrica, el camp de força sempre està aixecat."
+
+msgid "TXT_RNO0_SCRIPT23_D6064_NOMON"
+msgstr "Sense diners, sense informació."
+
+msgid "TXT_DLG_SCRIPT23_D7580_YESWH"
+msgstr "Sí, què t'agradaria?"
+
+# (dot not recommended)
+msgid "TXT_RPLY0_SCRIPT23_D7580_MOREI"
+msgstr "Més informació."
+
+msgid "TXT_RYES0_SCRIPT23_D7580_THEFA"
+msgstr "La fàbrica està construïda al lloc de l'impacte del cometa. No crec que sigui per casualitat."
+
+msgid "TXT_RNO0_SCRIPT23_D7580_COMEO"
+msgstr "Anem, és un miserable 5 d'or."
+
+msgid "TXT_DLG_SCRIPT23_D9096_HELLO"
+msgstr "Hola de nou, què serà?"
+
+# (dot not recommended)
+msgid "TXT_RPLY0_SCRIPT23_D9096_MOREI"
+msgstr "Més informació."
+
+msgid "TXT_RYES0_SCRIPT23_D9096_THEFA"
+msgstr "La fàbrica va tancar quan l'Orde va donar a conèixer el seu nou horror: l'Inquisidor."
+
+msgid "TXT_RNO0_SCRIPT23_D9096_5GOLD"
+msgstr "5 d'or si us plau."
+
+# STRIFE1.WAD
+# MAP23: Barkeep
+msgid "TXT_DLG_SCRIPT23_D10612_THATS"
+msgstr "Això és tot el que sé. Fins i tot els cambrers es queden sense coses per dir, ho sento."
+
+# STRIFE1.WAD
+# MAP23: Timothy
+msgid "TXT_DLG_SCRIPT23_D12128_HELLO"
+msgstr "hola."
+
+msgid "TXT_RPLY0_SCRIPT23_D12128_WHATA"
+msgstr "Què estàs fent?"
+
+msgid "TXT_RYES0_SCRIPT23_D12128_IMDOI"
+msgstr "Estic fent coses, marxa!"
+
+# STRIFE1.WAD
+# MAP23: Tevick.
+msgid "TXT_DLG_SCRIPT23_D13644_NOWWH"
+msgstr "Ara, en què et puc ajudar?"
+
+msgid "TXT_RPLY0_SCRIPT23_D13644_SHADO"
+msgstr "Armadura d'ombra?"
+
+msgid "TXT_RYES0_SCRIPT23_D13644_AHHTO"
+msgstr "Ah, per escoltar, però no veure!"
+
+msgid "TXT_RNO0_SCRIPT23_D13644_GETOU"
+msgstr "Surt d'aquí, torna quan tinguis diners en efectiu."
+
+# STRIFE1.WAD
+# MAP23: Richter.
+msgid "TXT_DLG_SCRIPT23_D15160_THANK"
+msgstr "Gràcies Deus, has arribat aquí. Per entrar a la fàbrica cal una clau. El vam robar, però el nostre agent està desaparegut a la xarxa de catacumbes sota la fortalesa de l'Orde. He enviat deu homes bons a aquests túnels per trobar-lo, i cap ha tornat. Hi ha alguna cosa allà baix!"
+
+msgid "TXT_RPLY0_SCRIPT23_D15160_WHATI"
+msgstr "Què és? Humà o...?"
+
+msgid "TXT_DLG_SCRIPT23_D16676_NOTDE"
+msgstr "No. Definitivament no. Sigui el que sigui, heu de lluitar per recuperar la clau. Obriré l'entrada de les catacumbes. Quan el tens, la fàbrica està al costat de les mines. Afanya't, cada segon compta."
+
+msgid "TXT_RPLY0_SCRIPT23_D16676_SOMET"
+msgstr "Una cosa inhumà, eh?, genial."
+
+msgid "TXT_DLG_SCRIPT23_D18192_YOURE"
+msgstr "Estàs perdent temps i vides! Mou-te!"
+
+# SVE.WAD
+# MAP23: Barkeep.
+msgid "TXT_DLG_SCRIPT23_D10612_CANIB"
+msgstr "Puc ser de més ajuda?"
+
+# (dot not recommended)
+msgid "TXT_RPLY0_SCRIPT23_D10612_MOREI"
+msgstr "Més informació."
+
+msgid "TXT_RYES0_SCRIPT23_D10612_LOOKF"
+msgstr "Busca en Timothy. He sentit que coneix alguns dels secrets de l'Ordre."
+
+msgid "TXT_RNO0_SCRIPT23_D10612_JUSTA"
+msgstr "Només 5 d'or més."
+
+msgid "TXT_DLG_SCRIPT23_D12128_THATS"
+msgstr "Això és tot el que sé. Fins i tot els cambrers es queden sense coses per dir, ho sento."
+
+# SVE.WAD
+# MAP23: Timothy (Talking with him for the very first time without the
+# chalice).
+msgid "TXT_DLG_SCRIPT23_D13644_HELLO"
+msgstr "hola."
+
+msgid "TXT_RPLY0_SCRIPT23_D13644_WHATA"
+msgstr "Què estàs fent?"
+
+msgid "TXT_RYES0_SCRIPT23_D13644_IMDOI"
+msgstr "Estic fent coses, marxa!"
+
+msgid "TXT_DLG_SCRIPT23_D15160_IFYOU"
+msgstr "Si teniu tant de temps per perdre, mireu si podeu trobar el calze blau. Els meus estudis sobre l'Ordre suggereixen que l'han amagat en algun lloc del sector manufacturer de la fàbrica. Aquest artefacte seria de gran valor per a mi, així que porteu-me'l i us ajudaré."
+
+msgid "TXT_DLG_SCRIPT23_D16676_YOUFO"
+msgstr "Has trobat el calze blau! D'acord, dóna-m'ho primer i canviarem."
+
+msgid "TXT_RPLY0_SCRIPT23_D16676_TAKEI"
+msgstr "Agafa-ho, de totes maneres és mala sort."
+
+msgid "TXT_RPLY1_SCRIPT23_D16676_SCREW"
+msgstr "A la merda, me'l guardo."
+
+# (If you keep the chalice)
+msgid "TXT_RYES1_SCRIPT23_D16676_THENI"
+msgstr "Llavors no et dono res. Perdre's!"
+
+# (If you give the chalice away)
+msgid "TXT_DLG_SCRIPT23_D18192_LOCAT"
+msgstr "Localitza la farga. La informació que us acabo de donar hauria d'ajudar-vos a entrar en un sector secret de la fàbrica. Un dels treballadors de la farga pot obrir la porta."
+
+msgid "TXT_RPLY0_SCRIPT23_D18192_WHATC"
+msgstr "Què hi puc trobar?"
+
+msgid "TXT_DLG_SCRIPT23_D19708_MYRES"
+msgstr "La meva investigació suggereix que hi ha amagat algun poder fosc del passat antic. Aneu amb compte!"
+
+# SVE.WAD
+# MAP23: Timothy (Talking with him for the very first time with the chalice).
+msgid "TXT_DLG_SCRIPT23_D21224_THATB"
+msgstr "Aquell calze blau, com l'heu trobat? He estat investigant l'Ordre i els seus vincles amb el passat llunyà, i aquest artefacte m'ajudaria. Fem un tracte. Dóna'm el calze i et donaré informació."
+
+msgid "TXT_RPLY0_SCRIPT23_D21224_TAKEI"
+msgstr "Agafa-ho, de totes maneres és mala sort."
+
+msgid "TXT_RPLY1_SCRIPT23_D21224_SCREW"
+msgstr "A la merda, me'l guardo."
+
+msgid "TXT_RYES1_SCRIPT23_D21224_THENI"
+msgstr "Llavors no et dono res. Perdre's!"
+
+# SVE.WAD
+# MAP23: Tevick.
+msgid "TXT_DLG_SCRIPT23_D22740_NOWWH"
+msgstr "Ara, en què et puc ajudar?"
+
+msgid "TXT_RPLY0_SCRIPT23_D22740_SHADO"
+msgstr "Armadura d'ombra?"
+
+msgid "TXT_RYES0_SCRIPT23_D22740_AHHTO"
+msgstr "Ah, per escoltar, però no veure!"
+
+msgid "TXT_RNO0_SCRIPT23_D22740_GETOU"
+msgstr "Surt d'aquí, torna quan tinguis diners en efectiu."
+
+# SVE.WAD
+# MAP23: Richter.
+msgid "TXT_DLG_SCRIPT23_D24256_THANK"
+msgstr "Gràcies Deus, has arribat aquí. Per entrar a la fàbrica cal una clau. El vam robar, però el nostre agent està desaparegut a la xarxa de catacumbes sota la fortalesa de l'Orde. He enviat deu homes bons a aquests túnels per trobar-lo, i cap ha tornat. Hi ha alguna cosa allà baix!"
+
+msgid "TXT_RPLY0_SCRIPT23_D24256_WHATI"
+msgstr "Què és? Humà o...?"
+
+msgid "TXT_DLG_SCRIPT23_D25772_NOTDE"
+msgstr "No. Definitivament no. Sigui el que sigui, heu de lluitar per recuperar la clau. Obriré l'entrada de les catacumbes. Quan el tens, la fàbrica està al costat de les mines. Afanya't, cada segon compta."
+
+msgid "TXT_RPLY0_SCRIPT23_D25772_SOMET"
+msgstr "Una cosa inhumà, eh?, genial."
+
+msgid "TXT_DLG_SCRIPT23_D27288_YOURE"
+msgstr "Estàs perdent temps i vides! Mou-te!"
+
+# MAP27: Peasant → Northeastern room (after the lift).
+msgid "TXT_DLG_SCRIPT27_D0_THEMA"
+msgstr "Al mestre no li agraden els visitants. Li agrada que tot el seu treball es mantingui tranquil. He d'anar a buscar peces noves al traster. Crec que va dir una cama i un braç. Ah, no hi ha temps per parlar més. Me n'aniria abans que et trobi."
+
+msgid "TXT_RPLY0_SCRIPT27_D0_WHYST"
+msgstr "Per què és això."
+
+msgid "TXT_RYES0_SCRIPT27_D0_BECAU"
+msgstr "Perquè, ja et vaig dir que no li agraden les visites!"
+
+msgid "TXT_DLG_SCRIPT27_D1516_YOUKN"
+msgstr "Ja saps, tens la mida adequada per a un dels uniformes d'acòlit."
+
+# MAP31: Programmer.
+msgid "TXT_DLG_SCRIPT31_D0_OHNOI"
+msgstr "Oh, no, no sóc el programador real, s'amaga. Continueu passant per l'àrea d'entrenament de guàrdia, molt dur. Si sobreviu, potser podreu parlar amb ell. O matar-lo."
+
+msgid "TXT_RPLY0_SCRIPT31_D0_WHOAR"
+msgstr "Qui ets tu?"
+
+msgid "TXT_DLG_SCRIPT31_D1516_YOULL"
+msgstr "Mai trobaràs res si et quedes per aquí."
+
+# MAP32: Red acolyte.
+msgid "TXT_DLG_SCRIPT32_D0_PISSO"
+msgstr "Enfadat pagès!"
+
+# Appears in MAP32 and is supposed to be spoken by the AcolyteRust actor
+# (named “Interrogator”). However, no such actor is spawned in the map,
+# rendering this line unused.
+msgid "TXT_DLG_SCRIPT32_D1516_DIELI"
+msgstr "Mor petit home!"
+
+# MAP32: Cell.
+msgid "TXT_DLG_SCRIPT32_D3032_FINAL"
+msgstr "Per fi puc sortir d'aquesta cel·la."
+
+msgid "TXT_RPLY0_SCRIPT32_D3032_WHYAR"
+msgstr "Per què estàs aquí?"
+
+msgid "TXT_RYES0_SCRIPT32_D3032_IWASF"
+msgstr "Em van emmarcar."
+
+msgid "TXT_DLG_SCRIPT32_D4548_HARRI"
+msgstr "Harris va dir que estava conspirant per matar el governador. Mai no faria mal a una ànima."
+
+msgid "TXT_DLG_SCRIPT33_D0_BECAR"
+msgstr "Aneu amb compte allà fora."
+
+# MAP33: Guy next to Norwall Prison.
+msgid "TXT_DLG_SCRIPT33_D1516_SAYFR"
+msgstr "Digues amic, t'ajudaré, si m'ajudes. Dóna'm 5 d'or i et diré el que sé."
+
+msgid "TXT_RPLY0_SCRIPT33_D1516_HERES"
+msgstr "Aquí està l'or."
+
+msgid "TXT_RYES0_SCRIPT33_D1516_IFYOU"
+msgstr "Si pegues a algú, no activaràs les alarmes."
+
+msgid "TXT_RNO0_SCRIPT33_D1516_IWONT"
+msgstr "No et diré res gratis!"
+
+msgid "TXT_DLG_SCRIPT33_D3032_IVEAL"
+msgstr "Ja t'he dit el que sé."
+
+# MAP33: Weapons.
+msgid "TXT_DLG_SCRIPT33_D4548_HELLO"
+msgstr "Hola amic. Què puc aconseguir per a tu?"
+
+msgid "TXT_RPLY0_SCRIPT33_D4548_ELECT"
+msgstr "Cargols elèctrics"
+
+msgid "TXT_RYES0_SCRIPT33_D4548_ONEQU"
+msgstr "És una baralla."
+
+msgid "TXT_RNO0_SCRIPT33_D4548_YOURE"
+msgstr "Estàs trencat!"
+
+msgid "TXT_RPLY1_SCRIPT33_D4548_10ROU"
+msgstr "Clip de bales"
+
+msgid "TXT_RYES1_SCRIPT33_D4548_HERES"
+msgstr "Aquí tens la teva munició"
+
+msgid "TXT_RNO1_SCRIPT33_D4548_SORRY"
+msgstr "Ho sento, sense diners, sense bales."
+
+msgid "TXT_RPLY2_SCRIPT33_D4548_50ROU"
+msgstr "Caixa de munició"
+
+msgid "TXT_RYES2_SCRIPT33_D4548_HEREY"
+msgstr "Aquí tens"
+
+msgid "TXT_RNO2_SCRIPT33_D4548_YOUDO"
+msgstr "No tens prou or!"
+
+msgid "TXT_RPLY3_SCRIPT33_D4548_AMMOS"
+msgstr "Cartera de munició"
+
+msgid "TXT_RYES3_SCRIPT33_D4548_THANK"
+msgstr "Gràcies, alguna cosa més?"
+
+msgid "TXT_RNO3_SCRIPT33_D4548_YOUCA"
+msgstr "No t'ho pots permetre, bon dia."
+
+# MAP33: Armory
+msgid "TXT_DLG_SCRIPT33_D6064_WELCO"
+msgstr "Benvingut. Què et puc mostrar?"
+
+msgid "TXT_RPLY0_SCRIPT33_D6064_ENVIR"
+msgstr "Vestit ambiental"
+
+msgid "TXT_RYES0_SCRIPT33_D6064_HEREY"
+msgstr "Aquí tens."
+
+msgid "TXT_RNO0_SCRIPT33_D6064_YOUDO"
+msgstr "No tens prou diners per això."
+
+msgid "TXT_RPLY1_SCRIPT33_D6064_LEATH"
+msgstr "Armadura de cuir."
+
+msgid "TXT_RYES1_SCRIPT33_D6064_HEREY"
+msgstr "Aquí tens."
+
+msgid "TXT_RNO1_SCRIPT33_D6064_PERHA"
+msgstr "Potser en un altre moment?"
+
+msgid "TXT_RPLY2_SCRIPT33_D6064_METAL"
+msgstr "Armadura metàl·lica"
+
+msgid "TXT_RYES2_SCRIPT33_D6064_WEARI"
+msgstr "Porteu-lo amb bona salut."
+
+msgid "TXT_RNO2_SCRIPT33_D6064_COMEB"
+msgstr "Torna quan t'ho puguis permetre."
+
+# MAP33: Hospital
+msgid "TXT_DLG_SCRIPT33_D7580_HOWMA"
+msgstr "Com et puc ajudar?"
+
+msgid "TXT_RPLY0_SCRIPT33_D7580_MEDPA"
+msgstr "Pegat med"
+
+msgid "TXT_RYES0_SCRIPT33_D7580_HERES"
+msgstr "Aquí teniu el vostre kit de pegats."
+
+msgid "TXT_RNO0_SCRIPT33_D7580_YOUNE"
+msgstr "Necessites 10 d'or per això."
+
+msgid "TXT_RPLY1_SCRIPT33_D7580_FIELD"
+msgstr "Kit de cirurgia de camp"
+
+msgid "TXT_RYES1_SCRIPT33_D7580_THANK"
+msgstr "Gràcies."
+
+msgid "TXT_RNO1_SCRIPT33_D7580_IWISH"
+msgstr "M'agradaria poder regalar-los, però costen 25 d'or."
+
+msgid "TXT_RPLY2_SCRIPT33_D7580_HEALI"
+msgstr "Cura"
+
+msgid "TXT_RYES2_SCRIPT33_D7580_THERE"
+msgstr "Aquí tens. Cuida't ara."
+
+msgid "TXT_RNO2_SCRIPT33_D7580_WELLM"
+msgstr "Bé, potser us podeu permetre alguns pegats mèdics?"
+
+# MAP33: Barkeep.
+msgid "TXT_DLG_SCRIPT33_D9096_HELLO"
+msgstr "Hola amic, no t'havia vist per aquí abans. L'únic que puc dir és que aniria amb compte si fos tu, hi passen moltes coses i és millor que no t'interposis."
+
+msgid "TXT_RPLY0_SCRIPT33_D9096_INFOR"
+msgstr "Informació"
+
+msgid "TXT_RYES0_SCRIPT33_D9096_THESE"
+msgstr "Les clavegueres contenen més que rates i robots."
+
+msgid "TXT_RNO0_SCRIPT33_D9096_HEYAG"
+msgstr "Hola, un noi ha de guanyar diners. Creus que aquests bromistas donen bons consells?"
+
+msgid "TXT_DLG_SCRIPT33_D10612_BACKA"
+msgstr "Tornar de nou eh? Bé, almenys en saps prou per mantenir la teva pròpia pell intacta. Què puc fer per tu ara?"
+
+msgid "TXT_RPLY0_SCRIPT33_D10612_MOREI"
+msgstr "Més informació"
+
+msgid "TXT_RYES0_SCRIPT33_D10612_THEGO"
+msgstr "El governador és un simple recordatori de la influència de l'Orde."
+
+msgid "TXT_RNO0_SCRIPT33_D10612_COMEB"
+msgstr "Torna si canvies d'opinió."
+
+msgid "TXT_DLG_SCRIPT33_D12128_WELLY"
+msgstr "Bé, segur que fas moltes preguntes a algú que ha viscut tant de temps. No obstant això, està bé, prefereixo parlar amb algú com tu que amb la majoria d'aquests."
+
+msgid "TXT_RPLY0_SCRIPT33_D12128_MOREI"
+msgstr "Més informació."
+
+msgid "TXT_RYES0_SCRIPT33_D12128_THERE"
+msgstr "Hi ha més a l'Ordre que el que passa per aquí."
+
+msgid "TXT_RNO0_SCRIPT33_D12128_COMEB"
+msgstr "Torna si canvies d'opinió."
+
+msgid "TXT_DLG_SCRIPT33_D13644_THATS"
+msgstr "Això és amic, el pou del coneixement ha estat aprofitat. T'he dit més del que hauria d'haver de totes maneres."
+
+# MAP33: Harris (beginning).
+msgid "TXT_DLG_SCRIPT33_D15160_HARDT"
+msgstr "És difícil comprar joguines noves... quan estàs arruïnat. Fes un petit encàrrec per mi i obtindràs més del que mai podries gastar. Et faré un home ric."
+
+msgid "TXT_RPLY0_SCRIPT33_D15160_IGOTN"
+msgstr "No tinc res millor a fer."
+
+msgid "TXT_RPLY1_SCRIPT33_D15160_NOTHA"
+msgstr "No gràcies."
+
+msgid "TXT_RYES1_SCRIPT33_D15160_NOBOD"
+msgstr "Ningú s'allunya de mi!"
+
+msgid "TXT_DLG_SCRIPT33_D16676_GOODC"
+msgstr "Bona elecció. El santuari de l'Orde al costat del riu és la seva cambra de tortura no oficial. Amagat a dins hi ha un calze daurat. Llisqueu, em trobeu a la taverna i obteniu la vostra recompensa."
+
+msgid "TXT_RPLY0_SCRIPT33_D16676_HOWAM"
+msgstr "Com se suposa que ho he de fer?"
+
+msgid "TXT_RPLY1_SCRIPT33_D16676_LETME"
+msgstr "Deixa'm pensar-hi."
+
+msgid "TXT_RYES1_SCRIPT33_D16676_SORRY"
+msgstr "Ho sento, no hi ha segones oportunitats. Oh, guàrdies, mateu-lo!"
+
+msgid "TXT_DLG_SCRIPT33_D18192_HERES"
+msgstr "Aquí hi ha una ballesta, només apunta recte i -- splat!--. Recorda, agafa la tassa de luxe i troba'm a la taverna."
+
+msgid "TXT_RPLY0_SCRIPT33_D18192_ILLSE"
+msgstr "Ens veiem allà."
+
+msgid "TXT_DLG_SCRIPT33_D19708_WHATA"
+msgstr "Què estàs esperant? No us preocupeu, netejaré els cossos, només porteu-me aquest calze!"
+
+msgid "TXT_DLG_SCRIPT33_D21224_GUARD"
+msgstr "Guàrdies! Mata el traïdor!"
+
+# MAP33: Harris (tavern).
+msgid "TXT_DLG_SCRIPT33_D22740_HEYIK"
+msgstr "Ei, sé el que estàs pensant, sembla una instal·lació, mai li faria això a una màquina de matar, ho dic en serio. Uf, tot aquest enrenou per una tassa, estrany. Ara prepareu-vos, or i glòria, com us vaig prometre. Agafa aquesta clau i el mateix Governador et recompensarà."
+
+msgid "TXT_RPLY0_SCRIPT33_D22740_GREAT"
+msgstr "Genial, no puc esperar!"
+
+# (if accepting without having the chalice)
+msgid "TXT_RNO0_SCRIPT33_D22740_NOCHA"
+msgstr "Sense calze, sense diners!"
+
+msgid "TXT_RPLY1_SCRIPT33_D22740_ILLKE"
+msgstr "Em quedaré el calze, gràcies."
+
+msgid "TXT_RYES1_SCRIPT33_D22740_KEEPI"
+msgstr "Mantenir-lo? Crec que no!"
+
+msgid "TXT_DLG_SCRIPT33_D24256_WHATA"
+msgstr "Què estàs esperant? El mateix governador et recompensarà."
+
+msgid "TXT_DLG_SCRIPT33_D25772_DIETR"
+msgstr "Mor traïdor! "
+
+# MAP33: Mourel.
+msgid "TXT_DLG_SCRIPT33_D27288_SOYOU"
+msgstr "Així que ets el ximple que va robar el calze? Us faré arrestar com a lladre rebel... D'aquesta manera milloraré la meva posició amb l'Orde. Com se sent ser un peó inconscient?"
+
+msgid "TXT_RPLY0_SCRIPT33_D27288_ITSUC"
+msgstr "Fa pena!"
+
+msgid "TXT_RYES0_SCRIPT33_D27288_FORYO"
+msgstr "Per a tu ho fa."
+
+msgid "TXT_RPLY1_SCRIPT33_D27288_HARRI"
+msgstr "Harris em va prometre diners!"
+
+msgid "TXT_RYES1_SCRIPT33_D27288_TOOBA"
+msgstr "Llàstima. L'únic que rebeu és la mort!"
+
+msgid "TXT_DLG_SCRIPT33_D28804_WEREG"
+msgstr "Et matarem!"
+
+msgid "TXT_DLG_SCRIPT33_D30320_GETOU"
+msgstr "Surt d'aquí!"
+
+# MAP33: Green acolytes (beginning).
+msgid "TXT_DLG_SCRIPT33_D31836_WEREG"
+msgstr "Et matarem!"
+
+# MAP33: Yellow acolytes.
+msgid "TXT_DLG_SCRIPT33_D33352_GETOU"
+msgstr "Surt d'aquí!"
+
+# MAP34: Barracks.
+msgid "TXT_DLG_SCRIPT34_D0_WHATA"
+msgstr "Quin lloc perfecte per a nosaltres, sota l'antic ajuntament. L'Ordre creu que ens han esborrat, però tot el que va ser és un recordatori per a nosaltres del que pot passar quan et descuides. "
+
+# MAP34
+msgid "TXT_DLG_SCRIPT34_D1516_TALKT"
+msgstr "Parla amb Macil, et podrà ajudar."
+
+# MAP34: Barracks.
+msgid "TXT_DLG_SCRIPT34_D3032_IVEHE"
+msgstr "He sentit que Macil tornarà a començar alguna cosa aviat. Necessitem un gran èxit després de l'últim fiasco. Un més així i serem massa febles per continuar."
+
+msgid "TXT_DLG_SCRIPT34_D4548_AFEWO"
+msgstr "Alguns d'aquests barrils abocats al seu subministrament d'aigua haurien d'equilibrar una mica les probabilitats. "
+
+# MAP34: Gerald.
+# (Except for row 1335, everything in rows 1323-1343 is identical to 725-745)
+msgid "TXT_DLG_SCRIPT34_D6064_IMWOR"
+msgstr "Estic treballant en alguna cosa que ens donarà avantatge. Augmentarà la vostra resistència i us elevarà completament. Gairebé tinc tots els errors resolts. Puc fer alguna cosa per tu? "
+
+msgid "TXT_RPLY0_SCRIPT34_D6064_PATCH"
+msgstr "Apega'm."
+
+msgid "TXT_RYES0_SCRIPT34_D6064_BOYYO"
+msgstr "Noi, ets un autèntic embolic. A veure què puc fer."
+
+msgid "TXT_RPLY1_SCRIPT34_D6064_STAMI"
+msgstr "Implant de resistència?"
+
+msgid "TXT_RYES1_SCRIPT34_D6064_ALLRI"
+msgstr "D'acord, això no trigarà més que un moment."
+
+msgid "TXT_RNO1_SCRIPT34_D6064_ITSNO"
+msgstr "Encara no s'ha fet."
+
+msgid "TXT_DLG_SCRIPT34_D7580_HEYIM"
+msgstr "Hola, estic treballant en una versió actualitzada del teu implant. Hi ha alguna cosa més que puc fer?"
+
+msgid "TXT_RPLY0_SCRIPT34_D7580_PATCH"
+msgstr "Apega'm."
+
+msgid "TXT_RYES0_SCRIPT34_D7580_WELLA"
+msgstr "Bé, almenys estàs veient acció."
+
+msgid "TXT_RPLY1_SCRIPT34_D7580_IMPLA"
+msgstr "Actualització de l'implant?"
+
+msgid "TXT_RYES1_SCRIPT34_D7580_GOODT"
+msgstr "Bona cosa, mai pot estar massa segur."
+
+msgid "TXT_RNO1_SCRIPT34_D7580_IMALM"
+msgstr "Gairebé he acabat, però no del tot."
+
+msgid "TXT_DLG_SCRIPT34_D9096_ALLRI"
+msgstr "D'acord, això és tot. Gairebé ho tinc tot funcionant perfectament. Quedaven alguns problemes per solucionar, necessiteu alguna cosa més? "
+
+msgid "TXT_RPLY0_SCRIPT34_D9096_PATCH"
+msgstr "Apega'm."
+
+msgid "TXT_RYES0_SCRIPT34_D9096_WHATH"
+msgstr "Què has intentat fer? Anar cara a cara amb un croat?"
+
+msgid "TXT_RPLY1_SCRIPT34_D9096_IMPLA"
+msgstr "Actualització de l'implant?"
+
+msgid "TXT_RYES1_SCRIPT34_D9096_THATS"
+msgstr "Això ho hauria de fer per tu."
+
+msgid "TXT_RNO1_SCRIPT34_D9096_LETME"
+msgstr "Permeteu-me fer algunes proves més primer."
+
+msgid "TXT_DLG_SCRIPT34_D10612_THATS"
+msgstr "Això és tot el que puc fer amb l'implant ara mateix. Potser alguna curació?"
+
+msgid "TXT_RPLY0_SCRIPT34_D10612_YEAH"
+msgstr "Sí."
+
+msgid "TXT_RYES0_SCRIPT34_D10612_BOYYO"
+msgstr "Noi, ets un autèntic embolic. A veure què puc fer."
+
+# MAP34: Feris (identical to rows 746-768, except for row 1357).
+msgid "TXT_DLG_SCRIPT34_D12128_WHATC"
+msgstr "Què puc fer per tu?"
+
+msgid "TXT_RPLY0_SCRIPT34_D12128_IMOUT"
+msgstr "Estic sense bales."
+
+msgid "TXT_RYES0_SCRIPT34_D12128_HERES"
+msgstr "Aquí tens una mica de munició. No ho malgastis."
+
+msgid "TXT_RPLY1_SCRIPT34_D12128_TEACH"
+msgstr "Ensenya'm."
+
+msgid "TXT_RYES1_SCRIPT34_D12128_ALLRI"
+msgstr "D'acord, només us mostraré unes quantes indicacions."
+
+msgid "TXT_RNO1_SCRIPT34_D12128_YOURE"
+msgstr "Encara no estàs preparat."
+
+msgid "TXT_DLG_SCRIPT34_D13644_BACKA"
+msgstr "Tornar de nou? Què necessites?"
+
+msgid "TXT_RPLY0_SCRIPT34_D13644_IMOUT"
+msgstr "Estic sense bales."
+
+msgid "TXT_RYES0_SCRIPT34_D13644_HERES"
+msgstr "Aquí tens una mica de munició. No ho malgastis."
+
+msgid "TXT_RNO0_SCRIPT34_D13644_YOUVE"
+msgstr "Tens prou munició."
+
+msgid "TXT_RPLY1_SCRIPT34_D13644_TEACH"
+msgstr "Ensenya'm."
+
+msgid "TXT_RYES1_SCRIPT34_D13644_ALLRI"
+msgstr "D'acord, això us hauria de mantenir una estona."
+
+msgid "TXT_RNO1_SCRIPT34_D13644_SORRY"
+msgstr "Ho sento, no puc. Només estic seguint les ordres de Macil."
+
+msgid "TXT_DLG_SCRIPT34_D15160_WELLW"
+msgstr "Bé, què és, bales o entrenament? No puc esperar per posar les meves mans a les noves armes que vam capturar. Un cop hagi acabat amb ells, podré començar a entrenar a tots els altres."
+
+msgid "TXT_RPLY0_SCRIPT34_D15160_IMOUT"
+msgstr "Estic sense munició."
+
+msgid "TXT_RYES0_SCRIPT34_D15160_HERES"
+msgstr "Aquí tens una mica de munició. No ho malgastis."
+
+msgid "TXT_RNO0_SCRIPT34_D15160_YOUVE"
+msgstr "Tens prou munició."
+
+msgid "TXT_RPLY1_SCRIPT34_D15160_TEACH"
+msgstr "Ensenya'm."
+
+msgid "TXT_RYES1_SCRIPT34_D15160_OKTAK"
+msgstr "D'acord Agafa el que has après i mostra a aquests bastards de l'Ordre el camí de l'infern."
+
+msgid "TXT_RNO1_SCRIPT34_D15160_COMEB"
+msgstr "Torna més tard, quan Macil digui que és hora."
+
+msgid "TXT_DLG_SCRIPT34_D16676_IVETA"
+msgstr "T'he ensenyat tot el que puc ara mateix. Doneu-me una mica de temps per posar les noves armes a prova. Això és a menys que et quedis sense bales."
+
+msgid "TXT_RPLY0_SCRIPT34_D16676_YESIA"
+msgstr "Sí que ho sóc."
+
+msgid "TXT_RYES0_SCRIPT34_D16676_HEREY"
+msgstr "Aquí tens."
+
+# MAP34: Upstairs.
+# (Identical to row 769)
+msgid "TXT_DLG_SCRIPT34_D18192_DONTG"
+msgstr "No et facis feliç a la ciutat, posaràs l'alarma i començaran a enviar guàrdies des del castell."
+
+# (Identical to row 770)
+msgid "TXT_DLG_SCRIPT34_D19708_WELCO"
+msgstr "Benvingut, sempre podem utilitzar més ajuda."
+
+# (Similar to row 771)
+msgid "TXT_DLG_SCRIPT34_D21224_WHENI"
+msgstr "Quan encara estava en acció vam tenir l'oportunitat d'examinar un acòlit abans que arribessin els reforços, no són humans et dic."
+
+# MAP34: Downstairs.
+# (Identical to row 772)
+msgid "TXT_DLG_SCRIPT34_D22740_WERET"
+msgstr "Estem intentant trobar on són els mecanismes de la porta del castell, però fins ara no hem tingut sort."
+
+# (Similar to row 773)
+msgid "TXT_DLG_SCRIPT34_D24256_DONTG"
+msgstr "No et deixis atrapar. He escoltat històries d'horror sobre el que fan a la nostra gent després de ser empresonats. Simplement desapareixen, sense rastre, res. "
+
+# (Similar to row 774)
+msgid "TXT_DLG_SCRIPT34_D25772_HERES"
+msgstr "Aquí tens alguns consells, si mai veus algun dels soldats de llauna de l'Orde, córrer cap a l'altra banda. No m'agraden especialment els Reavers, aquestes coses són molt ràpides!"
+
+# MAP34: Macil.
+msgid "TXT_DLG_SCRIPT34_D27288_WELCO"
+msgstr "Benvinguts a l'últim cop d'esperança. Només nosaltres tenim el lliure albir per oposar-nos a l'Ordre. Tenim les ments científiques més agudes i molts cossos capaços. Però ens falta aquell solucionador de problemes real, que ens donarà l'avantatge que necessitem."
+
+msgid "TXT_RPLY0_SCRIPT34_D27288_WHATW"
+msgstr "Què hauré de fer? "
+
+msgid "TXT_DLG_SCRIPT34_D28804_HELPU"
+msgstr "Ajuda'ns. Ajuda'ns a robar la seva tecnologia. Allibera els nostres companys. Lluita contra aquests psicòpates retorçats fins a la mort. Et demano que arrisquis la teva vida per la veritat."
+
+msgid "TXT_RPLY0_SCRIPT34_D28804_IMWIT"
+msgstr "Estic amb tu!"
+
+msgid "TXT_DLG_SCRIPT34_D30320_GOODB"
+msgstr "Bé. Blackbird continuarà sent el vostre guia. T'ha fet una gran brillantor. Junts, heu de desbloquejar els secrets de l'Orde i els seus servents inhumans. Hi ha una presència que s'amaga fora de la nostra comprensió que guia el seu terror. Entra i baixa-los. "
+
+msgid "TXT_RPLY0_SCRIPT34_D30320_LETME"
+msgstr "Deixa'm fer-los!"
+
+msgid "TXT_RYES0_SCRIPT34_D30320_THATS"
+msgstr "Aquest és l'esperit."
+
+msgid "TXT_DLG_SCRIPT34_D31836_WELCO"
+msgstr "Benvingut amic!"
+
+msgid "TXT_RANDOM_PEASANT_01"
+msgstr "Si us plau, no em facis mal."
+
+msgid "TXT_RANDOM_PEASANT_02"
+msgstr "Si vols fer-me mal, realment no val la pena l'esforç."
+
+msgid "TXT_RANDOM_PEASANT_03"
+msgstr "No sé res."
+
+msgid "TXT_RANDOM_PEASANT_04"
+msgstr "Marxa't o trucaré als guàrdies!"
+
+msgid "TXT_RANDOM_PEASANT_05"
+msgstr "M'agradaria que de vegades tots aquests rebels aprenguessin el seu lloc i aturés aquestes ximpleries."
+
+msgid "TXT_RANDOM_PEASANT_06"
+msgstr "Deixa'm en pau, d'acord?"
+
+msgid "TXT_RANDOM_PEASANT_07"
+msgstr "No n'estic segur, però de vegades penso que conec alguns dels acòlits."
+
+msgid "TXT_RANDOM_PEASANT_08"
+msgstr "L'Ordre ho té tot per aquí força ben tancat."
+
+msgid "TXT_RANDOM_PEASANT_09"
+msgstr "No hi ha manera que això sigui només una força de seguretat."
+
+msgid "TXT_RANDOM_PEASANT_10"
+msgstr "He sentit que l'Ordre està molt nerviosa per les accions del Front per aquí."
+
+msgid "TXT_RANDOM_REBEL_01"
+msgstr "No hi ha manera que l'Ordre s'oposi en contra nostre."
+
+msgid "TXT_RANDOM_REBEL_02"
+msgstr "Estem gairebé a punt per fer vaga. Els plans de Macil s'estan complint."
+
+msgid "TXT_RANDOM_REBEL_03"
+msgstr "Tots estem darrere teu, no et preocupis."
+
+msgid "TXT_RANDOM_REBEL_04"
+msgstr "No us acosteu massa a cap d'aquests grans robots. Et fondran per ferralla!"
+
+msgid "TXT_RANDOM_REBEL_05"
+msgstr "Aviat arribarà el dia de la nostra glòria, i els qui s'oposen a nosaltres seran aixafats!"
+
+msgid "TXT_RANDOM_REBEL_06"
+msgstr "No us poseu massa còmode. Encara tenim la feina feta per a nosaltres."
+
+msgid "TXT_RANDOM_REBEL_07"
+msgstr "Macil diu que ets la nova esperança. Tingueu-ho en compte."
+
+msgid "TXT_RANDOM_REBEL_08"
+msgstr "Un cop hem abatut aquests xarlatans, podrem reconstruir aquest món com hauria de ser."
+
+msgid "TXT_RANDOM_REBEL_09"
+msgstr "Recorda que no estàs lluitant només per tu mateix, sinó per tothom aquí i fora."
+
+msgid "TXT_RANDOM_REBEL_10"
+msgstr "Mentre un de nosaltres segueixi dempeus, guanyarem."
+
+msgid "TXT_RANDOM_AGUARD_01"
+msgstr "Avança, camperol."
+
+msgid "TXT_RANDOM_AGUARD_02"
+msgstr "Seguiu la veritable fe, només llavors començareu a comprendre."
+
+msgid "TXT_RANDOM_AGUARD_03"
+msgstr "Només a través de la mort es pot renéixer realment."
+
+msgid "TXT_RANDOM_AGUARD_04"
+msgstr "No m'interessa la teva ximpleria inútil."
+
+msgid "TXT_RANDOM_AGUARD_05"
+msgstr "Si hagués volgut parlar amb tu t'ho hauria dit."
+
+msgid "TXT_RANDOM_AGUARD_06"
+msgstr "Aneu i molesteu algú més!"
+
+msgid "TXT_RANDOM_AGUARD_07"
+msgstr "Seguiu movent-vos!"
+
+msgid "TXT_RANDOM_AGUARD_08"
+msgstr "Si sona l'alarma, manteniu-vos fora del nostre camí!"
+
+msgid "TXT_RANDOM_AGUARD_09"
+msgstr "L'Ordre netejarà el món i el portarà a la nova era."
+
+msgid "TXT_RANDOM_AGUARD_10"
+msgstr "Problema? No, vaig pensar que no."
+
+msgid "TXT_RANDOM_BEGGAR_01"
+msgstr "Almoina pels pobres?"
+
+msgid "TXT_RANDOM_BEGGAR_02"
+msgstr "Què estàs mirant, superficie?"
+
+msgid "TXT_RANDOM_BEGGAR_03"
+msgstr "No tindries cap menjar addicional, oi?"
+
+msgid "TXT_RANDOM_BEGGAR_04"
+msgstr "La gent de la superfície mai ens entendrà."
+
+msgid "TXT_RANDOM_BEGGAR_05"
+msgstr "Ha, els guàrdies no ens poden trobar. Aquests idiotes ni tan sols saben que existim."
+
+msgid "TXT_RANDOM_BEGGAR_06"
+msgstr "Un dia tots, menys els que serveixen l'Orde, es veuran obligats a unir-se a nosaltres."
+
+msgid "TXT_RANDOM_BEGGAR_07"
+msgstr "Mira ara, però saps que aquest serà el teu propi rostre algun dia."
+
+msgid "TXT_RANDOM_BEGGAR_08"
+msgstr "No hi ha res més molest que un aficionat amb actitud!"
+
+msgid "TXT_RANDOM_BEGGAR_09"
+msgstr "L'Ordre farà breument el vostre patètic Front."
+
+msgid "TXT_RANDOM_BEGGAR_10"
+msgstr "Vigila-te, supervisor. Coneixem els nostres enemics!"
+
+msgid "TXT_RANDOM_PGUARD_01"
+msgstr "Som les mans del destí. Guanyar-nos la ira és trobar l'oblit!"
+
+msgid "TXT_RANDOM_PGUARD_02"
+msgstr "L'Ordre netejarà el món dels febles i corruptes!"
+
+msgid "TXT_RANDOM_PGUARD_03"
+msgstr "Obeïu la voluntat dels mestres!"
+
+msgid "TXT_RANDOM_PGUARD_04"
+msgstr "Llarga vida als germans de l'Orde!"
+
+msgid "TXT_RANDOM_PGUARD_05"
+msgstr "El lliure albir és una il·lusió que uneix els febles de ment."
+
+msgid "TXT_RANDOM_PGUARD_06"
+msgstr "El poder és el camí cap a la glòria. Seguir l'Ordre és caminar per aquest camí!"
+
+msgid "TXT_RANDOM_PGUARD_07"
+msgstr "Ocupa el teu lloc entre els justos, uneix-te a nosaltres!"
+
+msgid "TXT_RANDOM_PGUARD_08"
+msgstr "L'Ordre protegeix els seus."
+
+msgid "TXT_RANDOM_PGUARD_09"
+msgstr "Acòlits? Encara no han vist tota la glòria de l'Orde."
+
+msgid "TXT_RANDOM_PGUARD_10"
+msgstr "Si hi ha algun honor dins d'aquesta patètica closca d'un cos, entrareu als braços de l'Orde."
+
+msgid "TXT_RANDOMGOODBYE_1"
+msgstr "Adéu!"
+
+msgid "TXT_RANDOMGOODBYE_2"
+msgstr "Gràcies, adéu!"
+
+msgid "TXT_RANDOMGOODBYE_3"
+msgstr "Ens veiem més tard!"
+
+# MAP33: After getting the hidden com unit in the tavern.
+msgid "TXT_ILOG1"
+msgstr "hola? Comandament, s'acaba d'activar una unitat de comunicació... Estic rebent imatges i so de... algú... Ei, surt d'allà ara... i deixa caure el calze!"
+
+# MAP02: After getting the com unit from Rowan and leaving his room.
+msgid "TXT_ILOG2"
+msgstr "Escolta, aquesta unitat de comunicació em diu que ets 100% humà. M'han ordenat que us faci entrar, aquí estem parlant de confiança. Traeix-me i paga. Ah, i per cert, pots dir-me Blackbird."
+
+# MAP33: After getting the hidden com unit in the tavern.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG2"
+msgstr "Escolta, aquesta unitat de comunicació em diu que ets 100% humà. Potser ets un de nosaltres, i potser podem intentar confiar els uns en els altres. Considereu aquesta prova, hi ha un llançaflames a la mansió del governador. Aconsegueix-ho i et portaré fins a nosaltres."
+
+# MAP02: On the bridge with the com unit.
+msgid "TXT_ILOG3"
+msgstr "Dirigiu-vos a l'antic ajuntament. Macil va fer construir un túnel que ens permetia entrar i sortir sense el coneixement dels acòlits."
+
+# MAP02: In town hall with the com unit.
+msgid "TXT_ILOG4"
+msgstr "Passeu per la porta de la vostra esquerra i després per la de la dreta. El guàrdia es diu Geoff. Digues-li que necessites or."
+
+msgctxt "strifeteaser"
+msgid "TXT_ILOG5"
+msgstr "No entreu a l'ajuntament. Ja no és segur, la nostra coberta ha estat volada. Mata a tots els grans robots, els \"Crusaders\" i et guiaré fins a nosaltres."
+
+# MAP33: In front of "Irale's shop" with the com unit and the Crusaders dead.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG6"
+msgstr "La porta al costat de la botiga d'armes s'obrirà quan tots els croats hagin mort. Dins del magatzem hi ha un teletransportador, fes-lo servir i et portarà fins a nosaltres"
+
+# MAP33: In front of "Irale's shop" with the com unit and the Crusaders alive.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG7"
+msgstr "La porta al costat de la botiga d'armes s'obrirà quan tots els croats hagin mort. Dins del magatzem hi ha un teletransportador, fes-lo servir i et portarà fins a nosaltres."
+
+# MAP33: Room with the flamethrower.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG8"
+msgstr "Mata tants dels grans robots, Croats, com puguis. Quan hagis acabat, et guiaré a Macil"
+
+# MAP34: After leaving the teleporter.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG9"
+msgstr "Passa per la porta i parla amb Macil."
+
+# MAP02: After accepting "messy" chore and leaving Mourel's room.
+msgid "TXT_ILOG10"
+msgstr "Trobeu l'aixeta d'alimentació a la xarxa i tanqueu-la. Porta alguna cosa al governador com a prova. Busca en MacGuffin i parla amb ell."
+
+# MAP02: After accepting "messy" chore and leaving Mourel's mansion.
+msgid "TXT_ILOG11"
+msgstr "Trobeu l'aixeta d'alimentació a la xarxa i tanqueu-la. Porta alguna cosa al governador com a prova. Busca en MacGuffin i parla amb ell. És amunt per la depuradora, al \"bum forat\", per les escales."
+
+# MAP02: After destroying Front's power coupling.
+msgid "TXT_ILOG13"
+msgstr "Idiota! Heu tancat l'alimentació dels circuits de bloqueig que fem servir per ocultar la nostra base a l'Ordre. Dirigiu-vos a l'ajuntament i traieu l'equip d'escaneig, ara! A continuació, torneu al governador i doneu-li l'acoblament trencat."
+
+# MAP02: After destroying Front's power coupling and killing all blue acolytes
+# in the town hall.
+msgid "TXT_ILOG14"
+msgstr "D'acord, \"No confieu en ningú\" és el nom del joc! Aconseguim el permís de presó del governador. Porta-li l'acoblament trencat."
+
+# MAP02: After finding the broken power coupling.
+msgid "TXT_ILOG15"
+msgstr "Bona jugada! El governador és un mentider. Aquest és el nostre acoblament de potència. L'estem utilitzant per ocultar la base de l'Ordre. Torneu-li aquest acoblament trencat i aconseguim aquesta passada."
+
+# MAP05: After crossing the alarm green door.
+msgid "TXT_ILOG18"
+msgstr "Utilitzeu la clau del vigilant per entrar als blocs de cel·les de la presó i trobar una manera d'alliberar els presoners."
+
+# MAP05: After getting to Main Control.
+msgid "TXT_ILOG19"
+msgstr "Trobeu una manera d'alliberar els presoners. Trobeu una manera d'obrir l'interruptor de l'escàner manual."
+
+# MAP05: After cutting Wolenick's hand off.
+msgid "TXT_ILOG20"
+msgstr "Trobeu una manera d'alliberar els presoners. Utilitzeu la mà del jutge per accionar l'interruptor de l'escàner manual."
+
+# MAP05: After setting the prisoners free.
+msgid "TXT_ILOG21"
+msgstr "Molt bé amic meu. Bona feina alliberant els presos. Salta sobre un dels teletransportadors i et portarà de nou a la base."
+
+msgid "TXT_ILOG22"
+msgstr "Destrueix el cristall d'energia que gestiona la xarxa elèctrica que impulsa els escuts de l'Ordre. Aneu a visitar Worner, un espia que vam reclutar al magatzem de la central elèctrica."
+
+# MAP04: After leaving Reactor Core.
+msgid "TXT_ILOG24"
+msgstr "Perdem-nos. Hi ha més diversió per venir."
+
+# MAP02: After destroying the crystal in the Power Station.
+msgid "TXT_ILOG25"
+msgstr "Una aventura més abans del comandament sent que és segur atacar el castell. Macil ha fet que l'Irale et doni or i una mica d'entrenament. Després de visitar-lo, consulteu el metge de la ciutat per obtenir forces."
+
+msgid "TXT_ILOG26"
+msgstr "Visiteu l'Irale i el metge de la ciutat per obtenir or i entrenament, i després troba les clavegueres. Dirigiu-vos pel riu davant de la mansió del governador."
+
+# MAP06: Entrance.
+msgid "TXT_ILOG28"
+msgstr "Estem buscant en Weran, que es diu el Rei Rata. Estic segur que és descriptiu i colorit."
+
+# MAP06: After giving the guard's uniform to Weran.
+msgid "TXT_ILOG33"
+msgstr "Porta les peces del llançaflames a Irale. Escorreu el dipòsit de recuperació. A la part inferior hi ha una entrada oculta a les clavegueres. Els controls de la porta són allà baix, en algun lloc. Destrueix-los."
+
+# MAP06: After destroying the gate controls.
+msgid "TXT_ILOG37"
+msgstr "Ordre, ho ha fet! Les portes estan obertes. Envieu les tropes de xoc i digueu-li a Macil que entrem! Tornem a la base frontal."
+
+# MAP07: Entrace.
+msgid "TXT_ILOG38"
+msgstr "Uneix-te a l'assalt al castell. Busca i treu el programador. Tenim informes contradictoris sobre la seva ubicació. Un diu que està en una aula d'informàtica, un altre amagat en un temple subnivell i un altre al final d'un llarg passadís."
+
+# MAP09: Entrance.
+msgid "TXT_ILOG45"
+msgstr "Trobeu el programador i mateu-lo."
+
+msgid "TXT_ILOG46"
+msgstr "Busqueu l'Oracle i pregunteu-li sobre les altres peces del Segell. L'Oracle resideix a les zones frontereres, a les afores de la ciutat. Creuem el riu, dirigim cap al castell i seguim a l'esquerra per l'arc."
+
+msgid "TXT_ILOG47"
+msgstr "Busqueu l'Oracle i pregunteu-li sobre les altres peces del Segell. El temple de l'Oracle es troba a les zones frontereres, als afores de la ciutat."
+
+# MAP10: After killing the Programmer, talking to Macil and moving a bit.
+msgid "TXT_ILOG48"
+msgstr "Busqueu l'Oracle i pregunteu-li sobre les altres peces del Segell. Agafeu la vostra recompensa i aneu al metge i entrenador d'armes per obtenir salut i entrenament. El temple de l'Oracle es troba a les zones frontereres, als afores de la ciutat."
+
+# MAP11: Entrance to cave.
+msgid "TXT_ILOG50"
+msgstr "Busqueu el temple de l'Oracle i pregunteu-li sobre les altres peces del Segell. Aquí està. Estic gravant tot. No és que no tingui fe que sobreviureu. És que no podem deixar que l'Ordre controli el Segell."
+
+# MAP12: After talking to the Oracle.
+msgid "TXT_ILOG56"
+msgstr "La segona peça es troba al cor de la torre carmesí i obsidiana. Allà hi trobareu el Bisbe. El bisbe és el cap militar de l'Orde. L'eliminem i marquem dues vegades. Porta la fitxa de l'Oracle al mestre clau a les terres frontereres."
+
+# MAP11: Officer's uniform room.
+msgid "TXT_ILOG57"
+msgstr "El bisbe estarà molt vigilat, així que per què no llisquem un uniforme i ens barregem? Localitzeu el bisbe. Un cop l'hagis destruït, torna a l'Oracle."
+
+# MAP17: Bailey → Upstairs.
+msgid "TXT_ILOG59"
+msgstr "Acabo de saber que tenim un informador dins de la fortalesa. Anem cap a l'hospital. Hi treballa. Després d'això, localitza el bisbe i destrueix-lo. Un cop mort, torna a l'Oracle."
+
+# MAP19: Last room (southwestern).
+msgid "TXT_ILOG64"
+msgstr "No et rendeixis. Això és tot. Recte endavant. Salta al teletransportador a l'administració central i destrueix el nucli de l'ordinador. Això matarà el camp de força a l'entrada de la torre del Bisbe. Un cop mort, torna a l'Oracle."
+
+# MAP15: After pressing the switch to reveal the computer.
+msgid "TXT_ILOG70"
+msgstr "Molt impressionant. Deixem-ho explotar. Això hauria de tenir cura del camp de força. Tornem al bailey, després a la torre i al bisbe."
+
+# MAP16: After killing the Bishop.
+msgid "TXT_ILOG74"
+msgstr "Bravo, una altra peça del Segell! Has vist aquell fantasma estrany que va sortir del cos del bisbe? On ho he vist abans? Tornem a l'Oracle."
+
+# MAP11: After killing the Bishop and going to MAP12's entrance.
+msgid "TXT_ILOG76"
+msgstr "Tinc un informe que l'energia espectral que hem trobat prop del Bisbe també està present per part de l'Oracle, anem amb compte."
+
+# MAP10: After killing Macil (Spectre) without having destroyed the converter
+# in MAP24.
+msgid "TXT_ILOG79"
+msgstr "Richter ha assumit el comandament de les nostres forces. Sembla que Macil ens ha estat enganyant durant tot el temps. La seva veritable lleialtat era a l'Orde. Quina serp. Tornem a l'Oracle."
+
+# MAP27: After killing the Loremaster with either Macil or the Oracle alive.
+msgid "TXT_ILOG83"
+msgstr "Una altra peça de Segell. Estem un pas més a prop de la llibertat. I estàs un pas més a prop de mi. Tornem a l'Oracle!"
+
+# MAP27/MAP12: Remark at TXT_SUB_LOG85
+msgid "TXT_ILOG85"
+msgstr "Tens el poder del Segell complet. Què dius que tenim un tancament? Vegem què ha estat protegint el Mestre del Coneixement."
+
+# MAP12: After killing the Oracle with Macil alive.
+msgid "TXT_ILOG87"
+msgstr "Bé, tant per al pronòstic. Espera, Macil ens torna a trucar. Sortim d'aquí d'un sol tros."
+
+# MAP23: After talking with Richter and leaving his room.
+msgid "TXT_ILOG89"
+msgstr "La fàbrica està al costat de les mines. Richter ha de significar les mines de Degnin. El mineral de Degnin és magnètic i explosiu, just el que serveix per tancar camps de força. Agafem la clau de les catacumbes i després anem a les mines a buscar una mica de mineral."
+
+# MAP25: Entrance.
+msgid "TXT_ILOG93"
+msgstr "La fàbrica està al costat de les mines. El mineral de Degnin és magnètic i explosiu, just el que serveix per tancar camps de força. Agafem aquesta clau de les catacumbes, i després baixem a buscar una mica de mineral. Aquestes deuen ser les ruïnes que els agents de Richter estaven buscant, aneu amb compte."
+
+# MAP25: After killing the Spectre.
+msgid "TXT_ILOG95"
+msgstr "La fàbrica està al costat de les mines. El mineral de Degnin és magnètic i explosiu, just el que serveix per tancar camps de força. Amic meu, sigui el que sigui el que estem lluitant, és més que només l'Ordre. Tornem als comuns i després a les mines. Necessitem mineral."
+
+# MAP14: Entrance.
+msgid "TXT_ILOG96"
+msgstr "La fàbrica està al costat de les mines. El mineral de degnina és magnètic i explosiu, just el que serveix per tancar camps de força. Sense baixar la guàrdia, busqueu jaciments de mineral."
+
+# MAP14: After crossing the entrance yard.
+# (drone ≈ slave)
+msgid "TXT_ILOG97"
+msgstr "Sense baixar la guàrdia, busqueu jaciments de mineral. Aquestes pobres ànimes són drons. Les seves funcions sinàptiques estan sent bloquejades per implants RC. Destruïm el transmissor i són gratuïts."
+
+# MAP14: After James's room.
+msgid "TXT_ILOG99"
+msgstr "La fàbrica està al costat de les mines. Sense baixar la guàrdia, busqueu jaciments de mineral. El meu suggeriment és, llençar el mineral al camp de força i després explotar-lo, la compressió resultant hauria de crear una manta magnètica i apagar els llums."
+
+# MAP14: After destroying the transmitter.
+msgid "TXT_ILOG100"
+msgstr "Ara cap a la fàbrica. Sortiu de les mines i no us ho podeu perdre. Busquem aquesta màquina i apaguem-la!"
+
+# MAP20: Path to Conversion Chapel (MAP24).
+# ("neural oscillation" or "brainwave")
+msgid "TXT_ILOG102"
+msgstr "Estic llegint distorsions massives d'ones neuronals des del davant. Crec que l'hem trobat. Entrem-hi i tanquem-lo!"
+
+# MAP24: Converter room.
+msgid "TXT_ILOG103"
+msgstr "Just quan crec que ho hem vist tot! Entren humans i surten... No hi vull ni pensar. Destrueix aquest horror!"
+
+# MAP24: After destroying the converter.
+msgid "TXT_ILOG104"
+msgstr "Macil s'ha tornat boig. Ell només va enviar 200 homes a la mort de manera conscient. Vull venjança! Pels morts i pels morts vius! Tornem i descobrim què està passant."
+
+# MAP10: After killing Macil while having destroyed the converter in MAP24.
+msgid "TXT_ILOG106"
+msgstr "La fàbrica condueix a un \"laboratori\" i estan obtenint una signatura de poder de la peça Sigil des de dins. Tornem a la fàbrica i el nostre següent pas cap a la llibertat."
+
+# MAP16: Entrance → Central door.
+msgid "TXT_ILOG120"
+msgstr "Troba el bisbe i destrueix-lo! Un cop mort, torna a l'Oracle."
+
+# MAP12?
+msgid "TXT_ILOG122"
+msgstr "El laboratori del Mestre del Saber està més enllà del teletransportador que s'acaba d'obrir. Anem a esbrinar de què estava piallant. I el nostre següent pas cap a la llibertat."
+
+# MAP15: Computer destroyed + Room 1
+msgid "TXT_ILOG211"
+msgstr "Vinga, sortim d'aquí. El camp de força està avall, cap a la torre del bisbe. Un cop mort, torna a l'Oracle."
+
+# MAP33?
+msgid "TXT_ILOG1001"
+msgstr "Troba el santuari al costat del riu. Roba el calze de dins. Porta-ho a Harris a la taverna."
+
+# MAP33?
+msgid "TXT_ILOG1002"
+msgstr "Trobeu el governador. Parla amb ell sobre la teva recompensa."
+
+# MAP02: After accepting Rowan's chore.
+msgid "TXT_ILOG1003"
+msgstr "Troba el santuari al costat del riu. A dins hi ha retingut algú anomenat Beldin. Calla'l i torna el seu anell a Rowan com a prova."
+
+# MAP02: After getting the com unit from Rowan.
+msgid "TXT_ILOG1004"
+msgstr "Busca la ubicació del Front i parla amb Macil."
+
+# MAP02?
+msgid "TXT_ILOG1005"
+msgstr "Baixa les escales, troba i parla amb Macil."
+
+# MAP03: After joining the Front.
+msgid "TXT_ILOG1006"
+msgstr "Visiteu Irale, el proveïdor d'armes del Front a la ciutat. És darrere de la porta al costat de la botiga d'armes. A continuació, utilitzeu la clau que us va donar Macil per parlar amb el governador."
+
+# MAP02: After accepting "messy" chore.
+msgid "TXT_ILOG1007"
+msgstr "Trobeu l'aixeta d'alimentació a la xarxa i tanqueu-la. Porta alguna cosa al governador com a prova."
+
+# MAP02: After accepting "bloody" chore.
+msgid "TXT_ILOG1008"
+msgstr "Trobeu a Derwin al magatzem de la central elèctrica. Mata'l, i porta-li l'orella a Mourel."
+
+# MAP03: After completing Mourel's chore.
+msgid "TXT_ILOG1009"
+msgstr "Utilitza el passi que et va donar Mourel per entrar a la presó. Un cop dins, parleu amb el director Montag. Trobeu una manera d'alliberar els presoners."
+
+# MAP05
+msgid "TXT_ILOG1010"
+msgstr "Utilitzeu la clau del vigilant per entrar als blocs de cel·les de la presó i trobar una manera d'alliberar els presoners."
+
+# MAP03: After accepting Macil's second mission.
+msgid "TXT_ILOG1011"
+msgstr "Destrueix el cristall d'energia que gestiona la xarxa elèctrica que impulsa els escuts de l'Ordre. Aneu a visitar Worner, un espia que vam reclutar al magatzem de la central elèctrica. No us oblideu de visitar el metge i l'entrenador d'armes abans de marxar."
+
+# MAP04: After talking to Worner.
+msgid "TXT_ILOG1012"
+msgstr "Destrueix el cristall d'energia que gestiona la xarxa elèctrica que impulsa els escuts de l'Ordre. Utilitzeu el D.I. per entrar a la central elèctrica. És possible que vulgueu fer una ullada al magatzem a sobre de Worner."
+
+# MAP04: After talking to "Mr. Crispy".
+msgid "TXT_ILOG1013"
+msgstr "Destrueix el cristall d'energia que gestiona la xarxa elèctrica que impulsa els escuts de l'Ordre. Ves a parlar amb Ketrick a la zona central."
+
+# MAP04: After talking to Sammis.
+msgid "TXT_ILOG1014"
+msgstr "Destrueix el cristall de poder. Anar a parlar amb Ketrick, pujar la passarel·la amb els interruptors i, a continuació, utilitzar aquest identificador per a l'ascensor."
+
+msgid "TXT_ILOG1015"
+msgstr "Troba l'entrada de la ciutat que l'Orde ha custodiat. Obre la porta i torna a portar l'uniforme del guàrdia a Weran."
+
+msgid "TXT_ILOG1016"
+msgstr "Porta les peces del llançaflames a Irale. Trobeu la porta de manteniment del clavegueram. Busca i buida el dipòsit de recuperació dins del castell. A la part inferior hi ha una entrada oculta a les clavegueres. A aquesta entrada hi ha els controls de la porta, en algun lloc."
+
+# MAP03: After destroying the gate controls and talking to Macil.
+msgid "TXT_ILOG1017"
+msgstr "Uneix-te a l'assalt al castell. Busca i treu el programador. Vegeu el metge i l'entrenador d'armes. Gasta tot el que tens. Això serà una lluita infernal."
+
+msgid "TXT_ILOG1018"
+msgstr "Utilitzeu la clau que us va donar el programador fals per obrir una entrada a la torre del programador. Ha de ser on s'amaga. Trobeu el programador i mateu-lo."
+
+# MAP10: After killing the Programmer and talking to Macil.
+msgid "TXT_ILOG1019"
+msgstr "Busqueu l'Oracle i pregunteu-li sobre les altres peces del Segell. Agafeu la vostra recompensa i aneu al metge i entrenador d'armes per obtenir salut i entrenament."
+
+msgid "TXT_ILOG1020"
+msgstr "La segona peça es troba al cor de la torre carmesí i obsidiana. Allà has de trobar el Bisbe, que t'espera. Porta la fitxa de l'Oracle al mestre clau a les terres frontereres. Un cop hagis destruït el bisbe, torna a l'Oracle."
+
+# MAP11: After getting the Military ID from the keymaster.
+msgid "TXT_ILOG1021"
+msgstr "Troba la torre carmesí i obsidiana. Utilitzeu la clau d'identificació que us va donar el mestre de claus per entrar a la torre. Un cop dins heu de localitzar el Bisbe. Un cop hagis destruït el bisbe, torna a l'Oracle."
+
+# MAP17: After talking to Quincy.
+msgid "TXT_ILOG1022"
+msgstr "Troba el complex de seguretat, lluita per allí i utilitza el teletransportador a l'administració central. Destrueix el nucli de l'ordinador a l'administració central. Això matarà el camp de força de la torre del Bisbe. Un cop mort el bisbe, torna a l'Oracle."
+
+msgid "TXT_ILOG1023"
+msgstr "El teu proper repte posarà a prova el teu esperit. La tercera peça la porta el vostre propi líder. És el mateix que t'envia a matar. Enfronta't a ell i resol el teu destí."
+
+# MAP10: You chose to kill the Oracle.
+msgid "TXT_ILOG1024"
+msgstr "És l'Oracle qui sosté la tercera peça. Aquí tens el teu traïdor. Torneu a l'Oracle i feu-lo caure. Torna a mi quan estigui mort."
+
+msgid "TXT_ILOG1025"
+msgstr "Has eliminat el càncer del teu cos, però el teu cor encara batega. A continuació, haureu de trobar el cirurgià que mata i controla la vostra gent... El mestre del saber. Atureu-lo, i la següent peça serà vostra."
+
+msgid "TXT_ILOG1026"
+msgstr "A continuació, haureu de trobar el cirurgià que mata i controla la vostra gent... El mestre del saber. Atureu-lo, i la següent peça serà vostra. Utilitzeu el teletransportador que vaig obrir per arribar-hi. Quan sigui mort, utilitzeu el mateix dispositiu per tornar-me."
+
+# MAP12: You chose to kill Macil.
+msgid "TXT_ILOG1027"
+msgstr "Has triat amb prudència. La tercera peça la porta el vostre propi líder. Destrueix allò que s'amaga dins del teu cor i torna a mi."
+
+# MAP10: After killing the Oracle and talking to Macil.
+msgid "TXT_ILOG1028"
+msgstr "Hem descobert que l'Ordre està transformant la nostra gent en soldats biomecànics. Trobeu la instal·lació on es fa això i tanqueu-la, de manera permanent! Trobeu a Richter als comuns, prop de la cascada i us dirà com aturar aquesta atrocitat."
+
+# MAP23: After talking with Richter.
+msgid "TXT_ILOG1029"
+msgstr "Per entrar a la fàbrica cal una clau. En vam robar un, però l'agent que el tenia està desaparegut a les catacumbes sota els comuns. Hi ha alguna cosa allà baix que porta els nostres homes. Sigui el que sigui, l'has de trobar i recuperar la clau. Quan el tens, la fàbrica està al costat de les mines."
+
+msgid "TXT_ILOG1101"
+msgstr "Trobeu el calze a la capella del santuari i porteu-lo a Harris a dalt, a la taverna."
+
+msgid "TXT_ILOG1102"
+msgstr "Troba la mansió del governador i parla amb el governador per obtenir la teva recompensa"
+
+msgid "TXT_ILOG1201"
+msgstr "Felicitats! T'has guanyat el nostre agraïment. Visiteu el metge i l'entrenador d'armes i us prepararan per al que us espera. No dubteu a passejar per la base."
+
+msgid "TXT_SPEAKER_ORDER_SERGEANT"
+msgstr "Sergent de l'Ordre"
+
+msgid "TXT_SPEAKER_ROWAN"
+msgstr "Rowan"
+
+msgid "TXT_SPEAKER_FERIS"
+msgstr "Feris"
+
+msgid "TXT_SPEAKER_PRISON_GUARD"
+msgstr "Guarda de presó"
+
+msgid "TXT_SPEAKER_JUSTIN"
+msgstr "Justin"
+
+msgid "TXT_SPEAKER_MACIL"
+msgstr "Macil"
+
+msgid "TXT_SPEAKER_ASSISTANT"
+msgstr "Assistent"
+
+msgid "TXT_SPEAKER_KEY_MASTER"
+msgstr "Clau mestra"
+
+msgid "TXT_SPEAKER_BODYGUARD"
+msgstr "Guardaespatlles"
+
+# Intended to appear in MAP01 of the Strife teaser, but does not spawn.
+msgid "TXT_SPEAKER_INTERROGATOR"
+msgstr "Interrogador"
+
+msgid "TXT_SPEAKER_WARDEN_MONTAG"
+msgstr "Guardià Montag"
+
+msgid "TXT_SPEAKER_RICHTER"
+msgstr "Richter"
+
+msgid "TXT_SPEAKER_MACIL_S_ADVISOR"
+msgstr "Conseller de Macil"
+
+msgid "TXT_SPEAKER_JUDGE_WOLENICK"
+msgstr "Jutge Wolenick"
+
+msgid "TXT_SPEAKER_TEVICK"
+msgstr "Tevick"
+
+msgid "TXT_SPEAKER_HARRIS"
+msgstr "Harris"
+
+msgid "TXT_SPEAKER_FOREMAN"
+msgstr "Capatas"
+
+msgid "TXT_SPEAKER_PRISONER"
+msgstr "Presoner"
+
+msgid "TXT_SPEAKER_SAMMIS"
+msgstr "Sammis"
+
+msgid "TXT_SPEAKER_WEAPON_SMITH"
+msgstr "Ferrer d'armes"
+
+msgid "TXT_SPEAKER_REACTOR_GUARD"
+msgstr "Guàrdia del reactor"
+
+msgid "TXT_SPEAKER_APPRENTICE"
+msgstr "Aprenent"
+
+msgid "TXT_SPEAKER_DOOR_GUARD"
+msgstr "Guarda de la porta"
+
+msgid "TXT_SPEAKER_MASTER_SMITHY"
+msgstr "Mestre ferrer"
+
+msgid "TXT_SPEAKER_WAREHOUSE_GUARD"
+msgstr "Guarda del magatzem"
+
+msgid "TXT_SPEAKER_BARKEEP"
+msgstr "Cambrer"
+
+msgid "TXT_SPEAKER_TIMOTHY"
+msgstr "Timothy"
+
+msgid "TXT_SPEAKER_JAMES"
+msgstr "James"
+
+msgid "TXT_SPEAKER_WORNER"
+msgstr "Worner"
+
+msgid "TXT_SPEAKER_BAILEY_GUARD"
+msgstr "Guàrdia Bailey"
+
+# drone ≈ slave
+msgid "TXT_SPEAKER_DRONE"
+msgstr "Esclau"
+
+msgid "TXT_SPEAKER_FRONT_GUARD"
+msgstr "Guarda davanter"
+
+msgid "TXT_SPEAKER_QUINCY"
+msgstr "Quincy"
+
+msgid "TXT_SPEAKER_SERGEANT"
+msgstr "Sergent"
+
+msgid "TXT_SPEAKER_TEMPLE_GUARD"
+msgstr "Guarda del temple"
+
+msgid "TXT_SPEAKER_ORACLE"
+msgstr "Oracle"
+
+msgid "TXT_SPEAKER_ULAINE"
+msgstr "Ulaina"
+
+msgid "TXT_SPEAKER_FRONT_SOLDIER"
+msgstr "Soldat del front"
+
+msgid "TXT_SPEAKER_PROGRAMMER"
+msgstr "Programador"
+
+msgid "TXT_SPEAKER_MEDIC"
+msgstr "Metge"
+
+msgid "TXT_SPEAKER_WATCHMAN"
+msgstr "Vigilant"
+
+msgid "TXT_SPEAKER_KETRICK"
+msgstr "Ketrick"
+
+msgid "TXT_SPEAKER_WERAN"
+msgstr "Weran"
+
+msgid "TXT_SPEAKER_ADVISOR"
+msgstr "Conseller"
+
+msgid "TXT_SPEAKER_GEOFF"
+msgstr "Geoff"
+
+msgid "TXT_SPEAKER_OVERSEER"
+msgstr "Supervisor"
+
+# Intended to appear in MAP19, but does not spawn.
+#
+msgid "TXT_SPEAKER_SECURITY_COMPLE"
+msgstr "Complex de seguretat"
+
+msgid "TXT_SPEAKER_COMPUTER_TECH"
+msgstr "Techie d'ordinadors"
+
+msgid "TXT_SPEAKER_MACGUFFIN"
+msgstr "McGuffin"
+
+msgid "TXT_SPEAKER_ARION"
+msgstr "Arion"
+
+# This is a compound word. Some languages express this in one word.
+msgid "TXT_SPEAKER_DOCK_WORKER"
+msgstr "Treballador del moll"
+
+msgid "TXT_SPEAKER_IRALE"
+msgstr "Irale"
+
+msgid "TXT_SPEAKER_CORE_GUARD"
+msgstr "Guàrdia del nucli"
+
+msgid "TXT_SPEAKER_SEWER_GUARD"
+msgstr "Guàrdia de la claveguera"
+
+msgid "TXT_SPEAKER_TECHNICIAN"
+msgstr "Tècnic"
+
+msgid "TXT_SPEAKER_GUARD"
+msgstr "Guàrdia"
+
+msgid "TXT_SPEAKER_PEASANT"
+msgstr "Camperol"
+
+msgid "TXT_SPEAKER_ARMORER"
+msgstr "Armer"
+
+msgid "TXT_SPEAKER_BELDIN"
+msgstr "Beldin"
+
+msgid "TXT_SPEAKER_GERARD"
+msgstr "Gerard"
+
+msgid "TXT_SPEAKER_GOVERNOR_MOUREL"
+msgstr "Governador Mourel"
+
+msgid "TXT_SPEAKER_BOWYER"
+msgstr "Bowyer"
+
+msgid "TXT_SPEAKER_DERWIN"
+msgstr "Derwin"
+
+# Menu's intro.
+msgid "TXT_SUB_INTRO1"
+msgstr "El cometa va colpejar el nostre planeta sense previ avís. Hem perdut el nostre paradís d'un sol cop violent."
+
+msgid "TXT_SUB_INTRO2"
+msgstr "L'impacte va alliberar un virus, que va arrasar la terra i va matar milions. Van resultar ser els afortunats."
+
+msgid "TXT_SUB_INTRO3"
+msgstr "Per als que no van morir es van convertir en mutacions de la humanitat. Alguns es van convertir en fanàtics que van sentir la veu d'un déu maligne al seu cap i es van anomenar \"l'Orde\"."
+
+msgid "TXT_SUB_INTRO4"
+msgstr "Els que som sords a aquesta veu patim horriblement i ens veiem obligats a servir aquests psicòtics despietats que empunyen armes més poderoses que qualsevol cosa que puguem reunir."
+
+msgid "TXT_SUB_INTRO5"
+msgstr "Destrueixen les nostres dones i nens perquè els hem d'amagar sota terra i viure com animals amb por constant per les nostres vides."
+
+msgid "TXT_SUB_INTRO6"
+msgstr "Però hi ha xiuxiueis de descontentament. Si ens organitzem, podrem derrotar els nostres amos? S'estan robant armes, s'estan entrenant soldats. Neix un moviment: neix de la lluita de tota la vida!"
+
+# Best ending.
+msgid "TXT_SUB_GOOD1"
+msgstr "Atenció, totes les tropes del Front: ho ha fet! S'ha acabat. El soldat de Blackbird ha matat el Mal. L'Ordre ja no existeix. Merla, em llegiu?"
+
+msgid "TXT_SUB_GOOD2"
+msgstr "Sabia que guanyaries, el meu heroi galant. Tots els combats s'han aturat. La teva victòria ens permetrà crear una vacuna per purgar el virus dels nostres cossos."
+
+msgid "TXT_SUB_GOOD3"
+msgstr "Has salvat el nostre planeta i ens has fet lliures. Ara m'agradaria donar-vos les gràcies... personalment. Ah, i per cert: el nom és Shauna."
+
+# Sad ending.
+msgid "TXT_SUB_SAD1"
+msgstr "Sí, el mal havia desaparegut, però el nostre futur era incert i ennuvolat pel dubte."
+
+msgid "TXT_SUB_SAD2"
+msgstr "Caldrien generacions per purgar el virus de la nostra gent. Si vam sobreviure tant de temps."
+
+msgid "TXT_SUB_SAD3"
+msgstr "El que volgués el mal, ens va esgotar l'única cosa que necessitàvem: ens va deixar sense esperança."
+
+# Worst ending.
+msgid "TXT_SUB_BAD1"
+msgstr "El virus sensible ens va colpejar com una onada, tornant-nos bojos a tots. Vam escoltar el cant de la mort de la sirena i vam ballar."
+
+msgid "TXT_SUB_BAD2"
+msgstr "Aquest mal ens va esgotar tota la vida humana i, menyspreant la procreació, va reciclar les nostres famílies."
+
+msgid "TXT_SUB_BAD3"
+msgstr "Llavors, un dia, el mal va marxar. Simplement no hi havia res per alimentar-se. Estàvem extingits."
+
+# MAP03: After destroying the gate controls.
+msgid "TXT_SUB_MAP03_1"
+msgstr "Les mutacions genètiques causades pel virus no només van deformar la psique de l'Orde, sinó que van provocar la decadència dels seus cossos."
+
+msgid "TXT_SUB_MAP03_2"
+msgstr "Sense la procreació, l'Ordre va trobar que les millores biomecàniques eren l'única manera de mantenir les seves fortaleses i nombres."
+
+msgid "TXT_SUB_MAP03_3"
+msgstr "La decadència ha avançat de manera que la majoria de les tropes a les quals ens enfrontem són més màquines que humanes, però creiem que la seva consciència col·lectiva està controlada per una font…"
+
+msgid "TXT_SUB_MAP03_4"
+msgstr "â¦el Programador: creador de la IA que controla els Acòlits. Destrueix el Programador i podrem paralitzar les tropes de l'Ordre d'un sol cop. Però precaució: tenim informes que pot vaporitzar els atacants."
+
+# MAP10: Macil.
+msgid "TXT_SUB_MAP10_1"
+msgstr "Els fragments reunits a partir dels fitxers de programadors ens diuen que l'Ordre adora una arma intel·ligent. L'anomenen \"el segell\"."
+
+msgid "TXT_SUB_MAP10_2"
+msgstr "La peça que has tocat i recuperat és una de cinc. Ofereix poder extret de la pròpia força vital de l'usuari. Mentre vius, controles el seu poder."
+
+msgid "TXT_SUB_MAP10_3"
+msgstr "El xoc que et va fer fora va ser la peça de Sigil que s'afinava amb tu, el teu pols i les ones cerebrals. Pots portar-lo, però amb un cost: t'esgotarà."
+
+msgid "TXT_SUB_MAP10_4"
+msgstr "Una peça constitueix un poder increïble. La possessió de les cinc peces seria devastadora i donaria a l'usuari el control total del planeta."
+
+# MAP02: After getting the com unit from Rowan and leaving his room.
+msgid "TXT_SUB_LOG2"
+msgstr "Escolta, aquesta unitat de comunicació em diu que ets 100% humà. M'han ordenat que us faci entrar, aquí estem parlant de confiança. Traeix-me i paga. Ah, i per cert, pots dir-me Blackbird."
+
+# MAP02: On the bridge with the com unit.
+msgid "TXT_SUB_LOG3"
+msgstr "Dirigiu-vos a l'antic ajuntament. Després que l'Ordre el bombardés, Macil va fer construir un túnel que ens permetia entrar i sortir sense que els acòlits ho anessin."
+
+# MAP02: In hall town with the com unit.
+msgid "TXT_SUB_LOG4"
+msgstr "Passeu per la porta de la vostra esquerra i després per la de la dreta. El guàrdia es diu Geoff. Digues-li que necessites or."
+
+# MAP03: After joining the Front.
+msgid "TXT_SUB_LOG5"
+msgstr "Irale és el \"fixador\" del Front. Està darrere de la porta sense senyalització al costat de la botiga d'armes."
+
+# MAP02
+msgid "TXT_SUB_LOG6"
+msgstr "Recordeu: matar amb sigil, en lloc de força. No activaràs les alarmes."
+
+# MAP03: After joining the Front and going to Mourel's mansion.
+msgid "TXT_SUB_LOG7"
+msgstr "Tot el que sé del governador és que juga amb tots dos bàndols fins al centre. Aquí teniu la seva suposada \"mansió\"."
+
+msgid "TXT_SUB_LOG8"
+msgstr "Uf. Sens dubte, les escombraries de la humanitat han trobat una llar."
+
+# MAP02: After accepting "bloody" chore.
+msgid "TXT_SUB_LOG9"
+msgstr "Dirigir-se a Mourel de mala qualitat és fer-li un compliment. És un mestill amb un pal."
+
+# MAP02: After accepting "messy" chore and leaving Mourel's room.
+msgid "TXT_SUB_LOG10"
+msgstr "Hem de parlar amb algú que conegui el nucli antic i on es troba aquest acoblament. L'ordre diu: troba MacGuffin. "
+
+# MAP02: After accepting "messy" chore and leaving Mourel's mansion.
+msgid "TXT_SUB_LOG11"
+msgstr "Està en el que educadament s'anomena el \"bum forat\". Agafeu la passarel·la al costat de la depuradora i baixeu les escales."
+
+# MAP02: During "messy" chore.
+msgid "TXT_SUB_LOG12"
+msgstr "Preneu-vos el vostre temps amb aquesta missió. No puc obtenir informació sobre això de Command."
+
+# MAP02: After destroying Front's power coupling.
+msgid "TXT_SUB_LOG13"
+msgstr "Idiota! Heu tancat l'alimentació dels circuits de bloqueig que fem servir per ocultar la nostra base a l'Ordre. Dirigiu-vos a l'ajuntament i traieu l'equip d'escaneig, ara!"
+
+# MAP02: After destroying Front's power coupling and killing all blue acolytes
+# in the town hall.
+msgid "TXT_SUB_LOG14"
+msgstr "D'acord, \"No confieu en ningú\" és el nom del joc! Aconseguim aquest permís del governador i alliberem aquests presoners."
+
+# MAP02: After finding the broken power coupling.
+msgid "TXT_SUB_LOG15"
+msgstr "Bona jugada! El governador és un pèssim mentider. Aquest és el nostre acoblament de potència. Ara aconseguim aquesta passada."
+
+# MAP02: After accepting "bloody" chore.
+msgid "TXT_SUB_LOG16"
+msgstr "El magatzem es troba a la central elèctrica. Fem-ho curt i dolç."
+
+# MAP02: About to enter Norwall Prison.
+msgid "TXT_SUB_LOG17"
+msgstr "Mai vaig pensar que entraria a la presó…"
+
+# MAP05: After crossing the alarm green door.
+msgid "TXT_SUB_LOG18"
+msgstr "Suposo que no hi ha dinar gratuït. Hora de tancar i carregar."
+
+# MAP05: After getting to Main Control.
+msgid "TXT_SUB_LOG19"
+msgstr "D'acord. Heu complagut al governador, heu esquitxat el guardià... Ara sembla que hem d'haver de fer una petita cirurgia."
+
+# MAP05: After cutting Wolenick's hand off.
+msgid "TXT_SUB_LOG20"
+msgstr "Oh, li has tallat la mà! I vaig pensar que eres un noi simpàtic... una mica. Anem-hi."
+
+# MAP05: After setting the prisoners free.
+msgid "TXT_SUB_LOG21"
+msgstr "Molt bé, amic meu. Salta sobre un dels teletransportadors i et portarà de nou a la base."
+
+msgid "TXT_SUB_LOG22"
+msgstr "Worner és un espia que vam reclutar al magatzem de la central elèctrica."
+
+# MAP04: After entering Ketrick's room.
+msgid "TXT_SUB_LOG23"
+msgstr "La paraula del cap és retrocedir quan cops el cristall, o si no, també acabaràs amb gust de mesquite."
+
+# MAP02: After destroying the crystal in the Power Station.
+msgid "TXT_SUB_LOG25"
+msgstr "Una aventura més abans del comandament sent que és segur atacar. Macil ha fet que l'Irale et doni or i una mica d'entrenament. I visiteu el metge per obtenir força."
+
+msgid "TXT_SUB_LOG26"
+msgstr "L'Ordre creu que està segur al seu castell. Incorrecte! Si obriu les portes, seran fàcils de triar. I per això, hauràs de baixar a les clavegueres. Dirigiu-vos pel riu a través de la mansió del governador. "
+
+msgid "TXT_SUB_LOG27"
+msgstr "D'acord, entra aquí. Els habitants de les clavegueres són horribles mutants, però la seva xarxa de túnels els dóna accés als secrets. Agafa't el nas... Baixem."
+
+# MAP06: Entrance.
+msgid "TXT_SUB_LOG28"
+msgstr "Estem buscant en Weran, que es diu el Rei Rata. Estic segur que és descriptiu i colorit."
+
+# MAP06: Down → Left.
+msgid "TXT_SUB_LOG29"
+msgstr "Oh, puig. No vull ni pensar en què estàs intervenint!"
+
+# MAP06: Down → Left → Upstairs → Left.
+msgid "TXT_SUB_LOG30"
+msgstr "Just el que necessito. Més goig marró!"
+
+msgid "TXT_SUB_LOG31"
+msgstr "Ei, mira! Crec que aquesta és la porta que Weran vol entreoberta!"
+
+msgid "TXT_SUB_LOG32"
+msgstr "Tanca els ulls! No vull veure! Oh, massa tard... Puja. Això no sembla un cos humà. Què ha fet l'Ordre? He d'informar-ho al comandament."
+
+# MAP06: After giving the guard's uniform.
+msgid "TXT_SUB_LOG33"
+msgstr "Per què no podem fer una missió en un camp de flors per una vegada?"
+
+# MAP06: Weran's hideout.
+msgid "TXT_SUB_LOG34"
+msgstr "No m'agrada dir-ho, però això em recorda a casa. Estic sota terra no gaire lluny d'aquí."
+
+# MAP06: Exit of the secret entrance.
+msgid "TXT_SUB_LOG35"
+msgstr "No em pregunteu on som. Jo també estic perdut. Ho sento."
+
+# MAP06: Secret entrance from the castle.
+msgid "TXT_SUB_LOG36"
+msgstr "Aquell maó... No hem passat aquest maó? No…"
+
+# MAP06: After destroying the gate controls.
+msgid "TXT_SUB_LOG37"
+msgstr "Ordre, ho ha fet! Les portes estan obertes. Envieu les tropes de xoc i digueu-li a Macil que entrem! "
+
+# MAP07: Entrace.
+msgid "TXT_SUB_LOG38"
+msgstr "Tenim informes contradictoris sobre la ubicació del programador. Un diu que està en una aula d'informàtica, un altre que està en una torre i un altre que esmenta un passadís llarg. Ho sento. "
+
+# MAP07: Near the crusaders.
+msgid "TXT_SUB_LOG39"
+msgstr "Ah, està bé tornar a estar a l'ofensiva. Doneu-los l'infern, nois!"
+
+# MAP07: Computer room.
+msgid "TXT_SUB_LOG40"
+msgstr "Això es veu bé. Informàtica... Programador... Què en penseu?"
+
+# MAP07: Building before the brigde.
+msgid "TXT_SUB_LOG41"
+msgstr "Aquest deu ser el passadís llarg. O això o el meu sentit de l'escala està disparat a l'infern."
+
+# MAP07: Northeast bulding.
+msgid "TXT_SUB_LOG42"
+msgstr "Aquestes són totes les característiques d'un temple del mal. Arquitectura severa, pancarta gran... Jo diria bingo!"
+
+msgid "TXT_SUB_LOG43"
+msgstr "Aquest és el programador totpoderós? De cap manera!"
+
+msgid "TXT_SUB_LOG44"
+msgstr "Ja no sé què creure. L'únic que em diu \"guardar\" és aquella enorme monstruositat a l'esquerra. Però no tinc ni idea de com entrar. "
+
+# MAP09: Entrance.
+# (Probably a reference to Hunter S. Thompson’s quote, “When the going gets
+# weird, the weird turn pro.”)
+msgid "TXT_SUB_LOG45"
+msgstr "Quan l'anar es fa estrany, l'estrany comença. Mireu-vos."
+
+msgid "TXT_SUB_LOG46"
+msgstr "L'Oracle resideix a les zones frontereres, a les afores de la ciutat. Creuem el riu, dirigim cap al castell i seguim a l'esquerra per l'arc."
+
+# MAP02: Castle's entrance (MAP10).
+msgid "TXT_SUB_LOG47"
+msgstr "L'Oracle és un gran sacerdot suposadament simpàtic que opera fora de l'Orde."
+
+# MAP10: After talking to Macil and moving a bit.
+msgid "TXT_SUB_LOG48"
+msgstr "El temple de l'Oracle es troba a Borderlands, als afores de la ciutat."
+
+# MAP11: Entrance.
+msgid "TXT_SUB_LOG49"
+msgstr "L'Ordre ha pres el nostre bell planeta i l'ha convertit en un abocador."
+
+# MAP11: Entrance to cave.
+msgid "TXT_SUB_LOG50"
+msgstr "Aquí està. Ho estic gravant tot, no és que no tingui fe que sobreviureu, és que no podem deixar que l'Ordre controli el Segell."
+
+# MAP12: Bridge to sanctum's normal entrance.
+msgid "TXT_SUB_LOG51"
+msgstr "Ets valent, company meu. Estic orgullós d'acompanyar-me al viatge."
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG52"
+msgstr "Podries fer una pausa un segon? M'estic posant una mica malalt."
+
+# MAP12: Downstairs.
+msgid "TXT_SUB_LOG53"
+msgstr "Per què hem de passar tant de temps sota terra? He vist sota terra."
+
+# MAP12: Sanctum's normal entrance.
+msgid "TXT_SUB_LOG54"
+msgstr "Se suposa que realment hem de confiar en un home el santuari interior del qual és verd?"
+
+# MAP12: After talking to the Oracle.
+msgid "TXT_SUB_LOG55"
+msgstr "Carmesí i obsidiana? Per què no pot dir vermell i negre."
+
+# MAP11: Afther talking to the Oracle and leaving the cave.
+msgid "TXT_SUB_LOG56"
+msgstr "El bisbe és el cap militar de l'Orde. Trama les seves tàctiques, dirigeix els seus espies i s'encarrega de controlar-nos. L'eliminem i marquem dues vegades."
+
+# MAP11: Officer's uniform room.
+msgid "TXT_SUB_LOG57"
+msgstr "El bisbe estarà molt vigilat, així que per què no llisquem un uniforme i ens barregem?"
+
+msgid "TXT_SUB_LOG58"
+msgstr "Recorda'm que guanyem aquesta cosa i trucaré a un decorador."
+
+# MAP17: Bailey → Upstairs.
+msgid "TXT_SUB_LOG59"
+msgstr "Acabo de saber que tenim un informador dins de la fortalesa. Anem cap al que anomenen l'hospital, hi treballa."
+
+# MAP17: Security Complex
+msgid "TXT_SUB_LOG60"
+msgstr "Agafa els plans i elimina l'ordinador, d'acord?"
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG61"
+msgstr "D'acord, no em queixo, però la propera vegada podríem provar la manera que no siguin galledes de sang."
+
+# MAP19: Cross-shaped room at the beginning.
+msgid "TXT_SUB_LOG62"
+msgstr "Hem passat per passadissos interminables abans, però t'ho juro, aquestes parets es mouen mentre passem."
+
+# MAP16
+msgid "TXT_SUB_LOG63"
+msgstr "Bé, t'has d'imaginar. El líder militar és igual a molts dolents."
+
+# MAP19: Last room (southwestern).
+msgid "TXT_SUB_LOG64"
+msgstr "No et rendeixis. Això és tot. Recte endavant."
+
+msgid "TXT_SUB_LOG65"
+msgstr "La propera vegada, parem a una benzinera i demanem indicacions."
+
+# MAP19: After coming across an alarm green door.
+msgid "TXT_SUB_LOG66"
+msgstr "Oh no! Més campanes i xiulets i nois desagradables que ens persegueixen."
+
+# MAP15: After using a big lift next to a Reaver.
+msgid "TXT_SUB_LOG67"
+msgstr "Ja saps, des de fora, aquest lloc sembla petit."
+
+msgid "TXT_SUB_LOG68"
+msgstr "Tinc una nova lectura d'enemics. No t'aturis a mirar, només malgasta'ls."
+
+# STRIFE1.WAD: MAP15
+msgid "TXT_SUB_LOG69"
+msgstr "Odio aquests camps de força. Busqueu l'interruptor de tancament, ha d'estar a prop."
+
+# MAP15: Pressing the switch to reveal the PC.
+msgid "TXT_SUB_LOG70"
+msgstr "Oh, molt impressionant. Volem-ho!"
+
+msgid "TXT_SUB_LOG71"
+msgstr "Salta al teletransportador, anem a volar aquest estand pop."
+
+# MAP16: Entrance.
+msgid "TXT_SUB_LOG72"
+msgstr "Espera, l'Oracle va dir que el coneixeríem pel seu símbol de poder. Estàs pensant el que estic pensant?"
+
+msgid "TXT_SUB_LOG73"
+msgstr "Aquests nois van tenir una idea de decoració que funciona, i la van derrotar a mort."
+
+# MAP16: After killing the Bishop
+msgid "TXT_SUB_LOG74"
+msgstr "Has vist aquell fantasma estrany que va sortir del cos del bisbe? On ho he vist abans?"
+
+msgid "TXT_SUB_LOG75"
+msgstr "Hora de crida al judici. Ara que tenim dues peces potser voldríem tornar a la base. Què et diu el teu instint?"
+
+# MAP11: After killing the Bishop and going to MAP12's entrance
+msgid "TXT_SUB_LOG76"
+msgstr "Tinc un informe que l'energia espectral que hem trobat prop del Bisbe també està present per part de l'Oracle, anem amb compte."
+
+msgid "TXT_SUB_LOG77"
+msgstr "Macil? Part d'aquest embolic? No sé què pensar. Espero que prenguis la decisió correcta."
+
+msgid "TXT_SUB_LOG78"
+msgstr "Confio en Macil, que ha arriscat la seva vida pel Front, o en algun fantasma lleig? No ho sé. Però en tu confio."
+
+# MAP10: After killing Macil (Spectre) without having destroyed the converter
+# in MAP24.
+msgid "TXT_SUB_LOG79"
+msgstr "Richter ha assumit el comandament de les nostres forces. Sembla que Macil ens ha estat enganyant durant tot el temps. La seva veritable lleialtat era a l'Orde. Quina serp."
+
+# MAP26: Entrance.
+msgid "TXT_SUB_LOG80"
+msgstr "Maleïda impressionant porta d'entrada. Però el que busquem és a un altre nivell. Cap avall."
+
+# MAP24: Hall to converter room.
+msgid "TXT_SUB_LOG81"
+msgstr "Quina vergonya. La nostra tecnologia s'està malgastant en tortura en lloc de vida."
+
+# MAP21: Entrance to MAP26 near to an Inquisitor's banner.
+msgid "TXT_SUB_LOG82"
+msgstr "Sent vanidosos com l'infern, marquen els seus temples amb grans pancartes."
+
+# MAP27: After killing the Loremaster with either Macil or the Oracle alive.
+msgid "TXT_SUB_LOG83"
+msgstr "Una altra peça de Segell. Estem un pas més a prop de la llibertat. I estàs un pas més a prop de mi."
+
+# MAP27: Button to MAP28.
+msgid "TXT_SUB_LOG84"
+msgstr "Pel que sembla, necessitem el segell complet per desbloquejar aquest cadell. Alguna cosa em diu que aquest és el final de l'arc de Sant Martí."
+
+# STRIFE1.WAD: MAP12
+#
+# (After killing the Oracle and collecting the final Sigil piece with both
+# Macil and the Loremaster dead)
+#
+# OR
+#
+# MAP27
+#
+# (After defeating the Loremaster and collecting the final Sigil piece with
+# Macil and the Oracle dead)
+msgid "TXT_SUB_LOG85"
+msgstr "Tens el poder del Segell complet. Què dius que anem a tancar una mica."
+
+msgid "TXT_SUB_LOG86"
+msgstr "Gran migdia, el meu heroi. Prepareu-vos per abraçar la glòria."
+
+# MAP12: After killing the Oracle with Macil alive.
+msgid "TXT_SUB_LOG87"
+msgstr "Bé, tant per al pronòstic. Espera, Macil ens torna a trucar. Sortim d'aquí d'un sol tros."
+
+msgid "TXT_SUB_LOG88"
+msgstr "Ho sento, després d'haver arribat als malucs amb sang no se m'acut res d'enginy a dir ara mateix. Tornem a Macil."
+
+# MAP23: After talking with Richter and leaving his room.
+msgid "TXT_SUB_LOG89"
+msgstr "La fàbrica està al costat de les mines. Richter ha de significar les mines de Degnin. El mineral de Degnin és magnètic i explosiu, just el que serveix per tancar camps de força."
+
+# MAP13: Entrance.
+msgid "TXT_SUB_LOG90"
+msgstr "Mines, catacumbes, clavegueres... Quina primera cita!"
+
+# MAP13: West (entrance with parkour to the northwest).
+msgid "TXT_SUB_LOG91"
+msgstr "Tant de bo en Richter hagués estat un toc més específic. Hm, provem aquí."
+
+# MAP13: Northwest (hall to the parkour room).
+msgid "TXT_SUB_LOG92"
+msgstr "Crec que som... Oh, merda. No tinc ni idea d'on som."
+
+# MAP25: Entrance.
+msgid "TXT_SUB_LOG93"
+msgstr "Aquestes deuen ser les ruïnes que buscaven els agents de Richter. Ai, compte! Croats!"
+
+msgid "TXT_SUB_LOG94"
+msgstr "Uf, s'està intentant regenerar. Explota-ho abans de vomitar!"
+
+# MAP25: After killing the Spectre.
+msgid "TXT_SUB_LOG95"
+msgstr "Amic meu, sigui el que sigui el que estem lluitant, és més que l'Ordre. Cap a les mines!"
+
+# MAP14: Entrance.
+msgid "TXT_SUB_LOG96"
+msgstr "Sense baixar la guàrdia, busqueu jaciments de mineral."
+
+# MAP14: After crossing the entrance's yard.
+msgid "TXT_SUB_LOG97"
+msgstr "Aquestes pobres ànimes són drons, les seves funcions sinàptiques estan bloquejades per implants RC. Destruïm l'emissor i són gratuïts!"
+
+# MAP14: After the entrance's yard and before going down.
+msgid "TXT_SUB_LOG98"
+msgstr "L'ordre diu que el transmissor està protegit per un camp de força. Així que dos ocells, una pedra, alliberen els drons i practiqueu amb el mineral."
+
+# MAP14: After James's room.
+msgid "TXT_SUB_LOG99"
+msgstr "El meu suggeriment és, llençar el mineral al camp de força i després explotar-lo. La compressió resultant hauria de crear una manta magnètica i apagar els llums."
+
+# MAP14: After destroying the transmitter.
+msgid "TXT_SUB_LOG100"
+msgstr "Ara cap a la fàbrica. Surt de les mines i no t'ho pots perdre!"
+
+# MAP20: Exit to Commons (MAP23).
+msgid "TXT_SUB_LOG101"
+msgstr "Ho sento, heroi, tot això és nou per a mi."
+
+# MAP20: Path to Conversion Chapel (MAP24).
+msgid "TXT_SUB_LOG102"
+msgstr "Estic llegint distorsions massives d'ones neuronals des del davant. Crec que l'hem trobat."
+
+# MAP24: Converter room.
+msgid "TXT_SUB_LOG103"
+msgstr "Just quan crec que ho hem vist tot! Entren humans i surten... No hi vull ni pensar."
+
+# MAP24: After destroying the converter.
+msgid "TXT_SUB_LOG104"
+msgstr "L'Oracle tenia raó. Macil s'ha tornat boig. Ell només va enviar 200 homes a la seva mort de manera conscient. Vull venjança. Pels morts i pels morts vius!"
+
+msgid "TXT_SUB_LOG105"
+msgstr "Macil? Infectat i amb una peça de segell. Tots aquests anys de creure en ell, en la causa. I per a què?"
+
+# MAP10: After killing Macil while having destroyed the converter in MAP24.
+msgid "TXT_SUB_LOG106"
+msgstr "Richter informa que la fàbrica que vam destruir condueix a un \"laboratori\" i que estan obtenint una signatura de poder Sigil des de dins. Tornem a la fàbrica i el nostre següent pas cap a la llibertat."
+
+# MAP16: Entrance → Central door.
+msgid "TXT_SUB_LOG120"
+msgstr "Qui s'atreveix a desafiar-me i entrar a la meva fortalesa? Un humà sense valor? Enfronta'm i mor!"
+
+# MAP16: Boss room unlocked → Bishop
+msgid "TXT_SUB_LOG121"
+msgstr "No em pots matar. Només ets humà. I sóc més que humà."
+
+# SVE.WAD
+# MAP12: If the player first kills Macil and then the Oracle's spectre before
+# killing the Loremaster with Classic Mode turned off. It talks the Loremaster
+# and BlackBird.
+msgid "TXT_SUB_LOG122"
+msgstr ""
+"Sense mort, vida eterna i més. Molt més! Aquesta és la meva tasca: cyborgs, meitat carn, meitat acer, tot per servir al Déu únic. No serveixes? Et mors!\n"
+"Aquest putz té una altra peça del Segell."
+
+# MAP29: Entity (If the player is progressing through the mediocre ending)
+msgid "TXT_SUB_LOG128"
+msgstr "Ha ha! Benvingut. He esperat aquest moment. He esperat que un ximple com tu em porti la meva llibertat. El teu petit planeta és meu i desitjaràs no haver nascut mai! "
+
+# MAP27: Entrance (It talks the Loremaster and BlackBird).
+msgid "TXT_SUB_LOG129"
+msgstr ""
+"La veritat només es pot trobar en la voluntat universal. Caureu de genolls davant del Déu Veritable, l'Única Llum. Uneix-te a mi i completaré el Segell.\n"
+"Estic fart d'aquesta doble conversa mística."
+
+# MAP29: Entity (If the player is progressing through the good ending)
+msgid "TXT_SUB_LOG130"
+msgstr "Tu... Has aixafat la meva Ordre, has trencat les meves estratagemes i has amenaçat segles de desig. Però prevaldré, et contagiaré i et retorçaré a la meva voluntat…"
+
+msgid "TXT_SUB_LOG200"
+msgstr "Sembla una feina de somni, no?"
+
+msgid "TXT_SUB_LOG201"
+msgstr "Has vist massa. Feu-li gel, Macil!"
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG202"
+msgstr "La propera vegada, m'escoltaràs."
+
+msgid "TXT_SUB_LOG203"
+msgstr "Uf, aquests preus post-apocalíptics…"
+
+msgid "TXT_SUB_LOG204"
+msgstr "Agafa el gran. Ell no t'aturarà."
+
+msgid "TXT_SUB_LOG205"
+msgstr "No et deixis demorar. Endavant!"
+
+msgid "TXT_SUB_LOG206"
+msgstr "Alguna vegada has notat com aquests passadissos tenen el mateix aspecte?"
+
+msgid "TXT_SUB_LOG207"
+msgstr "Ei, de vegades també ho he d'endevinar!"
+
+msgid "TXT_SUB_LOG208"
+msgstr "Ah, i compte amb l'alarma."
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG209"
+msgstr "Oh, carai. Ara mira què has fet!"
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG210"
+msgstr "Merda. Ara l'has volat!"
+
+# MAP15: Computer destroyed + Room 1
+msgid "TXT_SUB_LOG211"
+msgstr "Vinga! Sortim d'aquí."
+
+msgid "TXT_SUB_LOG212"
+msgstr "Oh! No et fiques."
+
+msgid "TXT_SUB_LOG213"
+msgstr "Els muntaràs a la paret! Segueix així!"
+
+msgid "TXT_SUB_LOG214"
+msgstr "Mm. Ets un brut."
+
+msgid "TXT_SUB_LOG215"
+msgstr "Teniu un bon ritme per aquí."
+
+msgid "TXT_SUB_LOG216"
+msgstr "Oh! M'encanta aquest pal de boom-boom."
+
+msgid "TXT_SUB_LOG217"
+msgstr "Mm. M'agrada com et portes."
+
+msgid "TXT_SUB_LOG218"
+msgstr "Fuga! No són humans!"
+
+# (Strife: Veteran Edition)
+# When obtaining the “Spontaneous Combustion” achievement
+msgid "TXT_SUB_LOG219"
+msgstr "Vaja! Acòlit ennegrit! La nova sensació gustativa…"
+
+msgid "TXT_SUB_LOG220"
+msgstr "Segueix fent això i quedaràs cec... però m'agrada."
+
+msgid "TXT_SUB_LOG221"
+msgstr "Suposo que no ens convidaran a tornar a sopar!"
+
+msgid "TXT_SUB_LOG222"
+msgstr "Hem d'arribar a l'últim pis."
+
+msgid "TXT_SUB_LOG223"
+msgstr "Espera... Això sembla interessant. Comproveu-ho."
+
+msgid "TXT_SUB_LOG224"
+msgstr "Uf. Aquell paio m'espanta. Mantinguem-nos lluny."
+
+msgid "TXT_SUB_LOG225"
+msgstr "Esquerra! Gira a l'esquerra!â¦ Ai, un altre esquerra!"
+
+msgid "TXT_SUB_LOG226"
+msgstr "Típic mascle amb cap de porc tossut!â¦ Tret que siguis una noia."
+
+msgid "TXT_SUB_LOG227"
+msgstr "Fort, brutal i silenciós. El meu tipus de parella."
+
+msgid "TXT_SUB_LOG228"
+msgstr "D'acord! M'he equivocat!"
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG229"
+msgstr "Llàstima de no haver-nos conegut mai... cara a cara."
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG230"
+msgstr "Vaig tenir somnis per a tu... Merda dura."
+
+msgid "TXT_SUB_LOG231"
+msgstr "No. No entris a l'ajuntament. Ja no és segur. La nostra coberta ha estat volada. Per això plou heavy metal. Mata tants d'aquests nois grans com puguis. S'anomenen \"Crosades\". Quan hagis acabat, et guiaré a Macil."
+
+msgid "TXT_SUB_LOG232"
+msgstr "Bona feina, amic! És hora de portar-te dins."
+
+msgid "TXT_SUB_LOG233"
+msgstr "Compte amb aquests croats. Són robots grans, gruixuts, i mescles com l'infern. No coneixem a Jack sobre les seves armes, però les probabilitats són... que estiguis superat. Atenció."
+
+msgid "TXT_SUB_LOG234"
+msgstr "Gran feina. Ets la meva idea de passar-ho bé. Ara, sense que ningú et vegi, passa per la porta de la dreta, puja a dalt i troba l'home."
+
+msgid "TXT_SUB_LOG235"
+msgstr "Deixes que et vegi qualsevol, nosaltres tindrem el teu cap."
+
+msgid "TXT_SUB_LOG236"
+msgstr "Imbècil geperut estúpid, ensopegant i amb peus bots! Ens has regalat!"
+
+msgid "TXT_SUB_LOG237"
+msgstr "M'agradaria estar esperant-te darrere d'aquesta porta... però m'he de quedar sota terra. Ha arribat el moment de conèixer el nostre líder, Macil."
+
+# MAP02: Mourel.
+msgid "TXT_BBSUB_SCRIPT02_D57608_IFIKN"
+msgstr "Porc inflat. No sé res d'aquest anomenat acoblament de potència, així que anem a poc a poc."
+
+# MAP03: Macil.
+msgid "TXT_BBSUB_SCRIPT03_D4548_GOODB"
+msgstr "Sembla una feina de somni, no?"
+
+msgid "TXT_BBSUB_SCRIPT03_D7580_TAKET"
+msgstr "I estaré allà amb tu."
+
+msgid "TXT_BBSUB_SCRIPT03_D12128_ASING"
+msgstr "Worner és un espia que vam reclutar al magatzem de la central elèctrica."
+
+msgid "TXT_BBSUB_SCRIPT03_D16676_THEPR"
+msgstr "Assegureu-vos que esteu preparat per a la lluita de la vostra vida. Sense escates. Gasta tot el que tens."
+
+# MAP04: Derwin.
+msgid "TXT_BBSUB_SCRIPT04_D21224_BUSIN"
+msgstr "Disculpeu, em posaré malalt."
+
+# MAP04: Worner.
+msgid "TXT_BBSUB_SCRIPT04_D25772_TELLW"
+msgstr "Mmm. Sona com a armes. Sempre podem utilitzar més potència de foc."
+
+# MAP04: Reactor Core → Northern alarm door
+msgid "TXT_BBSUB_SCRIPT04_D31836_WHATD"
+msgstr "Sembla massa fàcil, però anem a provar-ho."
+
+# MAP04: Reactor Core → Southern alarm door
+msgid "TXT_BBSUB_SCRIPT04_D40932_LETME"
+msgstr "A qui li importa. Ningú escolta els programadors de totes maneres."
+
+msgid "TXT_BBSUB_SCRIPT04_D54576_ITSAS"
+msgstr "Oh! M'alegro d'estar amagat, si saps a què vull dir."
+
+# MAP05: Door Guard.
+msgid "TXT_BBSUB_SCRIPT05_D1516_OKBUT"
+msgstr "Quin gruixut. Espero que el puguis matar més tard."
+
+msgid "TXT_BBSUB_SCRIPT05_D3032_DOILO"
+msgstr "\"Aquesta zona està fora dels límits!\" Pompós fulano."
+
+# MAP05: Prison Guard.
+msgid "TXT_BBSUB_SCRIPT05_D4548_THEOR"
+msgstr "Quin paio més."
+
+# MAP05: Montag.
+msgid "TXT_BBSUB_SCRIPT05_D7580_OVERM"
+msgstr "Potser és perquè no has dit \"si us plau\"."
+
+# MAP06: Weran.
+msgid "TXT_BBSUB_SCRIPT06_D1516_DOMYF"
+msgstr "Tothom és tan necessitat.\n"
+
+msgid "TXT_BBSUB_SCRIPT06_D3032_BRING"
+msgstr "Genial. Ara anem a comprar el Rei Rata."
+
+msgid "TXT_BBSUB_SCRIPT06_D4548_OPENT"
+msgstr "Aposto que aquest noi també fa molt mala olor."
+
+msgid "TXT_BBSUB_SCRIPT06_D9096_YOUHA"
+msgstr "Més clavegueres... Genial. Em pregunto què hi viu allà baix."
+
+# MAP07: Computer room.
+msgid "TXT_BBSUB_SCRIPT07_D6064_PROGR"
+msgstr "Un carreró sense sortida aquí. Millor que continuem buscant."
+
+# MAP10: Macil (Possible reference to a song of The Beatles).
+msgid "TXT_BBSUB_SCRIPT10_D10612_YOUHA"
+msgstr "Endavant, el meu campió. Fem girar i cridar el senyor lleig.\n"
+
+msgid "TXT_BBSUB_SCRIPT10_D12128_THERE"
+msgstr "Biomecànica? Bé, això explica el seu aparentment interminable subministrament de tropes! I la seva mala actitud.\n"
+
+msgid "TXT_BBSUB_SCRIPT10_D16676_IAMTH"
+msgstr "Malalt de merda... Malgasta'l!"
+
+msgid "TXT_BBSUB_SCRIPT12_D12128_USETH"
+msgstr "Pot ser que sigui lleig, però sembla que està al nostre costat."
+
+msgid "TXT_BBSUB_SCRIPT17_D10612_OHSUR"
+msgstr "A jutjar per la història recent, suposo que el sigil està fora."
+
+# This remark is for information about the maulers in the warehouse.
+msgid "TXT_BBSUB_SCRIPT17_D13644_OHWEL"
+msgstr "Hmm. Sense enrenou, sense enrenou, res perquè la mare netegi... Aconsegueix-me'n un, si us plau.\n"
+
+# MAP31
+msgid "TXT_BBSUB_SCRIPT31_D0_OHNOI"
+msgstr "Creus que em cansaria de totes aquestes coses de matar a tothom, però sé que ho trobaré a faltar quan acabi.\n"

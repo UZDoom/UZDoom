@@ -89,7 +89,7 @@ namespace swrenderer
 
 		// Retrieve skycap color in a threadsafe way
 		std::pair<PalEntry, PalEntry> GetSkyCapColor(FSoftwareTexture* tex);
-		
+
 	private:
 		std::unique_ptr<SWTruecolorDrawers> tc_drawers;
 		std::unique_ptr<SWPalDrawers> pal_drawers;

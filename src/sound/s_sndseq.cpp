@@ -258,7 +258,7 @@ struct SSAttenuation
 
 static const SSAttenuation Attenuations[] = {
 	{ "none", ATTN_NONE },
-	{ "normal", ATTN_NORM }, 
+	{ "normal", ATTN_NORM },
 	{ "idle", ATTN_IDLE },
 	{ "static", ATTN_STATIC },
 	{ "surround", ATTN_NONE },
@@ -1395,7 +1395,7 @@ void SN_StopAllSequences (FLevelLocals *Level)
 		node = next;
 	}
 }
-	
+
 //==========================================================================
 //
 //  SN_GetSequenceOffset

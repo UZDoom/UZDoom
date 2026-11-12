@@ -1,7 +1,7 @@
 #pragma once
 
+#include <algorithm>
 #include <cstdint>
-#include <cmath>
 
 class Colorf
 {

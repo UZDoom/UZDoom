@@ -22,15 +22,22 @@
 **
 */
 
-#include "v_video.h"
-#include "m_random.h"
-#include "wipe.h"
-
+#include "basics.h"
 #include "bitmap.h"
+#include "c_cvars.h"
+#include "gametexture.h"
 #include "hw_material.h"
-#include "v_draw.h"
-#include "s_soundinternal.h"
+#include "i_sound.h"
 #include "i_time.h"
+#include "m_random.h"
+#include "palentry.h"
+#include "tarray.h"
+#include "textureid.h"
+#include "textures.h"
+#include "v_2ddrawer.h"
+#include "v_draw.h"
+#include "v_video.h"
+#include "wipe.h"
 
 EXTERN_CVAR(Bool, cl_capfps)
 
@@ -44,16 +51,16 @@ public:
 		Width = w;
 		Height = h;
 	}
-	
+
 	FBitmap GetBgraBitmap(const PalEntry*, int *trans) override
 	{
 		FBitmap bmp;
 		bmp.Create(Width, Height);
-		bmp.CopyPixelDataRGB(0, 0, (uint8_t*)WorkBuffer.Data(), Width, Height, 4, Width*4, 0, CF_RGBA, nullptr);
+		bmp.CopyPixelDataRGB(0, 0, (uint8_t*)WorkBuffer.Data(), Width, Height, 4, Width*4, FBitmap::Transform::NONE, CF_RGBA, nullptr);
 		if (trans) *trans = 0;
 		return bmp;
 	}
-	
+
 	uint32_t *GetBuffer()
 	{
 		return WorkBuffer.Data();
@@ -172,7 +179,7 @@ public:
 	bool Run(int ticks) override;
 	bool RunInterpolated(double ticks) override;
 	bool Interpolatable() override { return true; }
-	
+
 private:
 	float Clock = 0;
 };
@@ -184,9 +191,10 @@ public:
 	bool Run(int ticks) override;
 	bool RunInterpolated(double ticks) override;
 	bool Interpolatable() override { return true; }
-	
+
 private:
-	enum { WIDTH = 320, HEIGHT = 200 };
+	static constexpr int WIDTH = 320;
+	static constexpr int HEIGHT = 200;
 	double y[WIDTH];
 };
 
@@ -217,13 +225,13 @@ Wiper *Wiper::Create(int type)
 	{
 		case wipe_Burn:
 			return new Wiper_Burn;
-			
+
 		case wipe_Fade:
 			return new Wiper_Crossfade;
-			
+
 		case wipe_Melt:
 			return new Wiper_Melt;
-			
+
 		default:
 			return nullptr;
 	}
@@ -311,7 +319,7 @@ bool Wiper_Melt::Run(int ticks)
 {
 	bool done = false;
 	DrawTexture(twod, endScreen, 0, 0, DTA_FlipY, screen->RenderTextureIsFlipped(), DTA_Masked, false,  TAG_DONE);
-	
+
 	// Copy the old screen in vertical strips on top of the new one.
 	while (ticks--)
 	{
@@ -340,9 +348,9 @@ bool Wiper_Melt::Run(int ticks)
 					int32_t right;
 					double bottom;
 				} rect;
-				
+
 				// Only draw for the final tick.
-				
+
 				int w = startScreen->GetTexelWidth();
 				int h = startScreen->GetTexelHeight();
 				dpt.x = i * w / WIDTH;
@@ -469,10 +477,10 @@ bool Wiper_Burn::Run(int ticks)
 {
 	bool done = false;
 
-	
+
 	BurnTime += ticks;
 	ticks *= 2;
-	
+
 	// Make the fire burn
 	while (!done && ticks--)
 	{
@@ -496,7 +504,7 @@ bool Wiper_Burn::Run(int ticks)
 
 	DrawTexture(twod, startScreen, 0, 0, DTA_FlipY, screen->RenderTextureIsFlipped(), DTA_Masked, false, TAG_DONE);
 	DrawTexture(twod, endScreen, 0, 0, DTA_FlipY, screen->RenderTextureIsFlipped(), DTA_Burn, true, DTA_Masked, false, TAG_DONE);
-	
+
 	// The fire may not always stabilize, so the wipe is forced to end
 	// after an arbitrary maximum time.
 	return done || (BurnTime > 40);
@@ -510,13 +518,15 @@ void PerformWipe(FTexture* startimg, FTexture* endimg, int wipe_type, bool stops
 	double diff_frac;
 	bool done;
 
-	GSnd->SetSfxPaused(true, 1);
-	I_FreezeTime(true);
 	twod->End();
 	assert(startimg != nullptr && endimg != nullptr);
 	auto starttex = MakeGameTexture(startimg, nullptr, ETextureType::SWCanvas);
 	auto endtex = MakeGameTexture(endimg, nullptr, ETextureType::SWCanvas);
 	auto wiper = Wiper::Create(wipe_type);
+	if (!wiper)
+		return;
+	GSnd->SetSfxPaused(true, 1);
+	I_FreezeTime(true);
 	wiper->SetTextures(starttex, endtex);
 
 	wipestart = I_msTime();

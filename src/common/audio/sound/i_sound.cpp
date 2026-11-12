@@ -22,22 +22,17 @@
 **
 */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include <cstdio>
+#include <cstdlib>
 
-#include "oalsound.h"
-
-#include "i_module.h"
-#include "cmdlib.h"
-
-#include "c_dispatch.h"
-#include "i_music.h"
-#include "m_argv.h"
-#include "v_text.h"
-#include "c_cvars.h"
-#include "stats.h"
 #include <zmusic.h>
 
+#include "c_cvars.h"
+#include "cmdlib.h"
+#include "i_module.h"
+#include "m_argv.h"
+#include "oalsound.h"
+#include "printf.h"
 
 EXTERN_CVAR (Float, snd_sfxvolume)
 EXTERN_CVAR(Float, snd_musicvolume)
@@ -59,7 +54,7 @@ FARG(nosound, "Configuration", "Turns off all in-game sound/music.", "",
 FARG(nosfx, "Configuration", "Turns off in-game sound effects.", "",
 	"Prevents the playback of sound effects.");
 
-#if !defined(NO_OPENAL)	
+#if !defined(NO_OPENAL)
 #define DEF_BACKEND "openal"
 #else
 #define DEF_BACKEND "null"
@@ -128,6 +123,9 @@ public:
 	void SetMusicVolume (float volume)
 	{
 	}
+	virtual void UpdateMusicParams()
+	{
+	}
 	SoundHandle LoadSound(uint8_t *sfxdata, int length, int def_loop_start, int def_loop_end)
 	{
 		SoundHandle retval = { NULL };
@@ -136,7 +134,7 @@ public:
 	SoundHandle LoadSoundRaw(uint8_t *sfxdata, int length, int frequency, int channels, int bits, int loopstart, int loopend)
 	{
 		SoundHandle retval = { NULL };
-        return retval;
+		return retval;
 	}
 	void UnloadSound (SoundHandle sfx)
 	{
@@ -292,24 +290,24 @@ void I_CloseSound ()
 
 const char *GetSampleTypeName(SampleType type)
 {
-    switch(type)
-    {
-        case SampleType_UInt8: return "Unsigned 8-bit";
-        case SampleType_Int16: return "Signed 16-bit";
-        case SampleType_Float32: return "32-bit float";
-        default: break;
-    }
-    return "(invalid sample type)";
+	switch(type)
+	{
+		case SampleType_UInt8: return "Unsigned 8-bit";
+		case SampleType_Int16: return "Signed 16-bit";
+		case SampleType_Float32: return "32-bit float";
+		default: break;
+	}
+	return "(invalid sample type)";
 }
 
 const char *GetChannelConfigName(ChannelConfig chan)
 {
-    switch(chan)
-    {
-        case ChannelConfig_Mono: return "Mono";
-        case ChannelConfig_Stereo: return "Stereo";
-    }
-    return "(invalid channel config)";
+	switch(chan)
+	{
+		case ChannelConfig_Mono: return "Mono";
+		case ChannelConfig_Stereo: return "Stereo";
+	}
+	return "(invalid channel config)";
 }
 
 SoundRenderer::SoundRenderer ()
@@ -489,4 +487,3 @@ SoundHandle SoundRenderer::LoadSoundVoc(uint8_t *sfxdata, int length)
 	if (data) delete[] data;
 	return retval;
 }
-

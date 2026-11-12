@@ -14,6 +14,15 @@
 **
 */
 
+#ifdef OLD_PROCESSLIGHT
+vec4 ProcessLight(vec4 color);
+
+vec4 ProcessLight(Material material, vec4 color)
+{
+	return ProcessLight(color);
+}
+#endif
+
 void SetupMaterial(inout Material material)
 {
 	vec2 texCoord = GetTexCoord();

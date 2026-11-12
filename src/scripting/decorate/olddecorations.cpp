@@ -576,7 +576,7 @@ static void ParseInsideDecoration (Baggage &bag, AActor *defaults,
 // A sequence definition looks like this:
 //
 // "<rate>:<frames>,<rate>:<frames>,<rate>:<frames>,..."
-// 
+//
 // Rate is a number describing the number of tics between frames in this
 // sequence. If you don't specify it, then a rate of 4 is used. Frames is
 // a list of consecutive frame characters. Each frame can be postfixed with
@@ -655,7 +655,7 @@ static void ParseSpriteFrames (PClassActor *info, TArray<FState> &states, TArray
 					SourceLines.Push(sc);
 				}
 				firstState = false;
-				state.Frame = *token-'A';	
+				state.Frame = *token-'A';
 			}
 			++token;
 		}
@@ -668,4 +668,3 @@ static void ParseSpriteFrames (PClassActor *info, TArray<FState> &states, TArray
 		token = strtok (nullptr, ",\t\n\r");
 	}
 }
-

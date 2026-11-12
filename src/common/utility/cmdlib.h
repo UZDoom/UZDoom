@@ -50,7 +50,7 @@ typedef struct _GUID
 template <typename T, size_t N>
 char(&_ArraySizeHelper(T(&array)[N]))[N];
 
-#define countof( array ) (sizeof( _ArraySizeHelper( array ) )) 
+#define countof( array ) (sizeof( _ArraySizeHelper( array ) ))
 
 // the dec offsetof macro doesnt work very well...
 #define myoffsetof(type,identifier) ((size_t)&((type *)alignof(type))->identifier - alignof(type))

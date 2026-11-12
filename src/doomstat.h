@@ -56,7 +56,7 @@ extern	FString			startmap;			// [RH] Actual map name now
 
 extern	bool 			autostart;
 
-// Selected by user. 
+// Selected by user.
 EXTERN_CVAR (Int, gameskill);
 extern	int				NextSkill;			// [RH] Skill to use at next level load
 
@@ -117,7 +117,7 @@ extern	int		 		viewwidth;
 
 
 // Player taking events. i.e. The local player.
-extern	int				consoleplayer;	
+extern	int				consoleplayer;
 
 
 // --------------------------------------
@@ -133,7 +133,7 @@ extern	bool			demorecording;
 extern	int				demover;
 
 // Quit after playing a demo from cmdline.
-extern	bool			singledemo; 	
+extern	bool			singledemo;
 
 extern	int				SaveVersion;
 
@@ -175,7 +175,7 @@ extern bool setsizeneeded;
 
 //?
 // debug flag to cancel adaptiveness
-extern	bool	 		singletics; 	
+extern	bool	 		singletics;
 
 
 

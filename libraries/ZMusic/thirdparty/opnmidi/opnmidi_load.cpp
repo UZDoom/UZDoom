@@ -2,7 +2,7 @@
  * libOPNMIDI is a free Software MIDI synthesizer library with OPN2 (YM2612) emulation
  *
  * MIDI parser and player (Original code from ADLMIDI): Copyright (c) 2010-2014 Joel Yliluoma <bisqwit@iki.fi>
- * OPNMIDI Library and YM2612 support:   Copyright (c) 2017-2025 Vitaly Novichkov <admin@wohlnet.ru>
+ * OPNMIDI Library and YM2612 support:   Copyright (c) 2017-2026 Vitaly Novichkov <admin@wohlnet.ru>
  *
  * Library is based on the ADLMIDI, a MIDI player for Linux and Windows with OPL3 emulation:
  * http://iki.fi/bisqwit/source/adlmidi.html
@@ -25,9 +25,9 @@
 #include "opnmidi_opn2.hpp"
 #include "opnmidi_private.hpp"
 #include "opnmidi_cvt.hpp"
-#include "file_reader.hpp"
+#include "midiseq/file_reader.hpp"
 #ifndef OPNMIDI_DISABLE_MIDI_SEQUENCER
-#include "midi_sequencer.hpp"
+#include "midiseq/midi_sequencer.hpp"
 #endif
 #include "wopn/wopn_file.h"
 
@@ -111,6 +111,9 @@ bool OPNMIDIplay::LoadBank(FileAndMemReader &fr)
     }
 
     Synth &synth = *m_synth;
+
+    synth.resetInstCache();
+
     synth.m_insBankSetup.volumeModel = wopn->volume_model;
     synth.m_insBankSetup.lfoEnable = (wopn->lfo_freq & 8) != 0;
     synth.m_insBankSetup.lfoFrequency = wopn->lfo_freq & 7;
@@ -183,9 +186,8 @@ bool OPNMIDIplay::LoadMIDI_post()
     }
     else if(format == MidiSequencer::Format_RSXX)
     {
-        synth.m_musicMode     = Synth::MODE_RSXX;
-        synth.m_volumeScale   = Synth::VOLUME_Generic;
-        synth.m_numChips = 2;
+        errorStringOut = "OPNMIDI doesn't supports RSXX, use ADLMIDI to play this file!";
+        return false;
     }
     else if(format == MidiSequencer::Format_IMF)
     {
@@ -217,14 +219,22 @@ bool OPNMIDIplay::LoadMIDI(const std::string &filename)
 {
     FileAndMemReader file;
     file.openFile(filename.c_str());
+
+    file.dumpFile();
+
     if(!LoadMIDI_pre())
         return false;
+
     MidiSequencer &seq = *m_sequencer;
+
+    seq.setDeviceMask(m_sequencerDeviceMask);
+
     if(!seq.loadMIDI(file))
     {
         errorStringOut = seq.getErrorString();
         return false;
     }
+
     if(!LoadMIDI_post())
         return false;
     return true;
@@ -234,16 +244,23 @@ bool OPNMIDIplay::LoadMIDI(const void *data, size_t size)
 {
     FileAndMemReader file;
     file.openData(data, size);
+
     if(!LoadMIDI_pre())
         return false;
+
     MidiSequencer &seq = *m_sequencer;
+
+    seq.setDeviceMask(m_sequencerDeviceMask);
+
     if(!seq.loadMIDI(file))
     {
         errorStringOut = seq.getErrorString();
         return false;
     }
+
     if(!LoadMIDI_post())
         return false;
+
     return true;
 }
 

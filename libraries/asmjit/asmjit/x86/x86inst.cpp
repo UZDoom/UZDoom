@@ -39,7 +39,13 @@
 // [Api-Begin]
 #include "../asmjit_apibegin.h"
 
+#ifdef _MSC_VER
 #pragma warning(disable: 4838) // warning C4838: conversion from '' to 'uint32_t' requires a narrowing conversion
+#endif
+#ifdef __GNUC__
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-enum-enum-conversion"
+#endif
 
 namespace asmjit {
 
@@ -3721,6 +3727,10 @@ UNIT(x86_inst_names) {
 #endif // ASMJIT_TEST && !ASMJIT_DISABLE_TEXT
 
 } // asmjit namespace
+
+#ifdef __GNUC__
+#pragma GCC diagnostic pop
+#endif
 
 // [Api-End]
 #include "../asmjit_apiend.h"

@@ -24,7 +24,7 @@ def = """
 [[member]]
 def = """
     /// The x and y coordinates as a [`Vector2`].
-    /// 
+    ///
     /// This is not a unique piece of data and "overlaps" with [`x`] and [`y`]. Modifying this will
     /// modify them.
     transient Vector2 xy;

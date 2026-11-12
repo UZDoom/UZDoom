@@ -122,4 +122,3 @@ enum PTROP
 void VerifyTargetChain(AActor *self, bool preciseMissileCheck=true);
 void VerifyMasterChain(AActor *self);
 void ASSIGN_AAPTR(AActor *toActor, int toSlot, AActor *ptr, int flags) ;
-

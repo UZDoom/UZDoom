@@ -121,7 +121,7 @@ public:
 	void Tick ();
 	AActor *WhoFor() { return ForWho; }
 	void Cancel ();
-	
+
 
 protected:
 	float Blends[2][4];
@@ -163,7 +163,7 @@ class DEarthquake : public DThinker
 public:
 	static const int DEFAULT_STAT = STAT_EARTHQUAKE;
 	void Construct(AActor *center, double intensityX, double intensityY, double intensityZ, int duration,
-		double damrad, double tremrad, FSoundID quakesfx, int flags, 
+		double damrad, double tremrad, FSoundID quakesfx, int flags,
 		double waveSpeedX, double waveSpeedY, double waveSpeedZ, double falloff, int highpoint, double rollIntensity, double rollWave, double damageMultiplier, double thrustMultiplier, int damage);
 
 	void Serialize(FSerializer &arc);

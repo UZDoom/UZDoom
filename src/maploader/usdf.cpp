@@ -40,7 +40,7 @@
 class USDFParser : public UDMFParserBase
 {
 	FLevelLocals *Level;
-	
+
 	//===========================================================================
 	//
 	// Checks an actor type (different representation depending on namespace)

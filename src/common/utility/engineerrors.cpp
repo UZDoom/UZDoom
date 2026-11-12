@@ -123,4 +123,3 @@ extern FILE *Logfile;
 	}
 	std::terminate(); // recursive I_FatalErrors must immediately terminate.
 }
-

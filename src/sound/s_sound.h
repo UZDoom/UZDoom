@@ -64,8 +64,8 @@ FSoundID S_LookupPlayerSound (const char *playerclass, int gender, FSoundID refi
 const char *S_GetSoundClass(AActor *pp);
 FSoundID S_FindSkinnedSound (AActor *actor, FSoundID refid);
 FSoundID S_FindSkinnedSoundEx (AActor *actor, const char *logicalname, const char *extendedname);
-FSoundID S_AddSound (const char *logicalname, const char *lumpname, FScanner *sc=NULL);	// Add sound by lumpname
-FSoundID S_AddPlayerSound (const char *playerclass, const int gender, FSoundID refid, const char *lumpname);
+FSoundID S_AddSound (const char *logicalname, const char *lumpname, FScanner *sc=NULL, bool warnMissing = false);	// Add sound by lumpname
+FSoundID S_AddPlayerSound (const char *playerclass, const int gender, FSoundID refid, const char *lumpname, bool warnMissing = false);
 FSoundID S_AddPlayerSound (const char *playerclass, const int gender, FSoundID refid, int lumpnum, bool fromskin=false);
 FSoundID S_AddPlayerSoundExisting (const char *playerclass, const int gender, FSoundID refid, FSoundID aliasto, bool fromskin=false);
 void S_MarkPlayerSounds (AActor *player);

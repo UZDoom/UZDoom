@@ -80,4 +80,3 @@ public:
 	virtual unsigned int *LockIndexBuffer(unsigned int size) = 0;
 	virtual void UnlockIndexBuffer() = 0;
 };
-

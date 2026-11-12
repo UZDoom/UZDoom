@@ -1,0 +1,643 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-05-18 05:12+0000\n"
+"Last-Translator: hawkwind3 <hawkwinds_messages@hotmail.com>\n"
+"Language-Team: Hungarian <https://hosted.weblate.org/projects/doom-engine-games/hacx-filter/hu/>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.dev0\n"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG1"
+msgstr "Túl erősek neked a bogarak is?"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG"
+msgstr ""
+"Biztos vagy benne, hogy\n"
+"kihúzod a kábelt?"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG2"
+msgstr "Próbálasz kilépni? És még te nevezed magad hekkernek?"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG3"
+msgstr "Gyere csak vissza, mielőtt feldugok neked egy vírust!"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG4"
+msgstr "Az igazi hekkerek sosem húzzák ki a kábelt."
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG5"
+msgstr "Nemár! Még nem is láttad a legjobb részt!"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG6"
+msgstr "Ha most feladod, akkor a cyberspacenek lőttek!"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG7"
+msgstr "GENIE üdvözletét küldi, te mocsok!"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG8"
+msgstr "Hmm. Ennyit a hős karrieredről, hekker barátom."
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG9"
+msgstr "Hogy micsoda? inkább visszamennél a tolladhoz?"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG10"
+msgstr "Inkább a kék pirulát kellett volna választanod."
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG11"
+msgstr "A játék neve nem Twitch n' Megfutamodás!"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG12"
+msgstr "Semmi pánik. A világmegmentés várhat, nemde?"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG13"
+msgstr "Kettéváglak mint a netsplit a kapcsolatot!"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG14"
+msgstr "Ha elkalandozol, ne feletkezz meg a HacX-ről!"
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_SUICIDE"
+msgstr "%o kitörölte magát az univerzumból."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_FALLING"
+msgstr "%o egy Kansas méretű krátert hagyott maga után."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_CRUSH"
+msgstr "%o emberi palacsintává lapult."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_EXIT"
+msgstr "%o ki akarta húzni a kábelét."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_WATER"
+msgstr "%o úgy úszik mint egy tégla."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_SLIME"
+msgstr "%o felrobbant mérgében."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_LAVA"
+msgstr "%o vett egy forró fürdőt."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_BARREL"
+msgstr "%o túladagolta a nitro-glicerint."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_SPLASH"
+msgstr "%o ripityára szakadt szét."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_R_SPLASH"
+msgstr "%o meg akarta tudni %g hogy néz ki belülről."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_ROCKET"
+msgstr "%o meg akarta tudni %g hogy néz ki belülről."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_KILLEDSELF"
+msgstr "%o kitörölte magát az univerzumból."
+
+msgid "OB_THUG"
+msgstr "Már nem %o a csúcsragadozó."
+
+msgid "OB_ANDROID"
+msgstr "%o a rossz gépet dugta be."
+
+msgid "OB_MONSTRUCT"
+msgstr "%o segge meg lett rugdosva."
+
+msgid "OB_ICE"
+msgstr "%o-t jégre tették."
+
+msgid "OB_BUZZER"
+msgstr "%o-nak még mindig zúg a füle."
+
+msgid "OB_STEALTH"
+msgstr "%o rájön, hogy az áram nem játék."
+
+msgid "OB_DMAN"
+msgstr "%o-t kitörölték a kibertérből."
+
+msgid "OB_GLASS"
+msgstr "%o állon vágta magát."
+
+msgid "OB_MANIAC"
+msgstr "%o elfelejtette befizetni az élők tagdíját."
+
+msgid "OB_MANIACHIT"
+msgstr "Ötletem since hogy halt meg %o."
+
+msgid "OB_TERMIN"
+msgstr "%o-t lebombázta egy bomba nő."
+
+# This text is not gender neutral, obviously...
+msgid "OB_TERMINHIT"
+msgstr "%o túl közel került az ellenkező nemhez."
+
+msgid "OB_REPLI"
+msgstr "%o búcsút intett egy régi barátjának."
+
+msgid "OB_REPLIHIT"
+msgstr "%o-t hátba szúrta egy régi barát."
+
+msgid "OB_PHAGE"
+msgstr "A természetes kiválasztás áldozata lett %o."
+
+msgid "OB_THORN"
+msgstr "Lyukasra szúrták %o-t a tövisek."
+
+msgid "OB_SUMATIC"
+msgstr "%o szerszámjával tompította az jobb horgot."
+
+msgid "OB_GENIE"
+msgstr "%o nem teljesítette %p 3 kívánságát."
+
+msgid "OB_MINE"
+msgstr "%o meg akart simogatni egy aranyos aknát."
+
+msgid "OB_MPKICK"
+msgstr "%o arccal vette le %k pörgőrugását."
+
+msgid "OB_MPREZNATOR"
+msgstr "%k megrázó élmányben részesítette %o-t."
+
+msgid "OB_MPXPISTOL"
+msgstr "%o ólom túladagolást kapott %k-tól."
+
+msgid "OB_MPTAZER"
+msgstr "%o-t sokkolta a hír, hogy %k-t megölte."
+
+msgid "OB_MPCRYOGUN"
+msgstr "%k jégre tette %o-t"
+
+msgid "OB_MPUZI"
+msgstr "%o gengszter stílusban sajttá lyuggatta %k"
+
+msgid "OB_MPZOOKA"
+msgstr "%o megette %k foton bombáját"
+
+msgid "OB_MPZ_SPLASH"
+msgstr "%o-ból csak egy marokni fotont hagyott hátra %k"
+
+# Physically this is utter nonsense, of course.
+msgid "OB_MPANTIGUN"
+msgstr "%k antianyaggá lőttte %o-t"
+
+msgid "OB_MPNUKE"
+msgstr "%o megette %k atombomáját"
+
+msgid "OB_MPNUKESPLASH"
+msgstr "%o felrobbant az idegtől amikor meglátta %k bombáját"
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_MPTELEFRAG"
+msgstr "%k kifordította %o-t"
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_MONTELEFRAG"
+msgstr "%o atomjaira esett szét"
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_DEFAULT"
+msgstr "%o hirtelenjében elérte a lejárati időt"
+
+msgid "GOTNUKER"
+msgstr "Meglelted a NUKER-t! Ezt kapd ki!"
+
+msgid "GOTUZI"
+msgstr "Meglelted az UZI-t!"
+
+msgid "GOTREZNATOR"
+msgstr "Egy HOIG Reznator - okozz pár megrázó élményt"
+
+msgid "GOTPHOTONZOOKA"
+msgstr "Meglelted a Foton Ágyút!"
+
+msgid "GOTBIGSTICK"
+msgstr "Nagy bottal jársz öcsém!"
+
+msgid "GOTTAZER"
+msgstr "Meglelted a Sokkolót!"
+
+msgid "GOTCRYOGUN"
+msgstr "Felkapod a Cryogun-t! Induljon a fagyasztás!"
+
+msgid "GOTROUNDS"
+msgstr "Felkapsz pár lőszert!"
+
+msgid "GOTROUNDSCASE"
+msgstr "Felkapsz egy doboz lőszert!"
+
+# Was "grap" for some reason.
+msgid "GOTTORPEDO"
+msgstr "Felkapsz egy Torpedót!"
+
+#, fuzzy
+msgid "GOTTORPEDOS"
+msgstr "Felkapsz egy doboz Torpedót!"
+
+msgid "GOTMOLECULES"
+msgstr "Felkapsz egy molekula modult!"
+
+msgid "GOTMOLECULESTANK"
+msgstr "Felkapsz egy teli tank molekulát!"
+
+msgid "GOTCARTRIDGES"
+msgstr "Felkapsz pár Töltényt!"
+
+msgid "GOTCARTRIDGESCASE"
+msgstr "Felkapsz egy doboz Töltényt!"
+
+msgid "GOTVALISE"
+msgstr "Felkapsz egy Poggyásznyi Muníciót!"
+
+msgid "GOTFORCEFIELD"
+msgstr "Erőtér!"
+
+msgid "GOTMICROTEL"
+msgstr "007Mikrotel"
+
+msgid "GOTENKBLIND"
+msgstr "EnK védett lettél!"
+
+msgid "GOTRUBBERBOOTS"
+msgstr "Vulkanizált gumi talp!"
+
+msgid "GOTSIARRAY"
+msgstr "SI pálya Felderítő!"
+
+msgid "GOTINFRARED"
+msgstr "Infravörös Sisak!"
+
+msgid "GOTINHALER"
+msgstr "Mély lélegzet, Inhaláló!"
+
+msgid "GOTHYPONEED"
+msgstr "Egy adag Hydergine megmenti az irhád!"
+
+msgid "GOTHYPO"
+msgstr "Felkapsz egy Hypo-t!"
+
+msgid "GOTKEYCARD"
+msgstr "Leltél egy Kulcskártyát!"
+
+msgid "GOTCKEY"
+msgstr "Leltél egy C-Kulcsot!"
+
+msgid "GOTPASSWORD"
+msgstr "Leltél egy Jelszót!"
+
+msgid "GOTBLUEZKEY"
+msgstr "Leltél egy kék Z-Kulcsot!"
+
+msgid "GOTYELWZKEY"
+msgstr "Leltél egy sárga Z-Kulcsot!"
+
+msgid "GOTREDZKEY"
+msgstr "Leltél egy piros Z-Kulcsot!"
+
+msgid "GOTBODYARMOR"
+msgstr "Testpáncél!"
+
+msgid "GOTCENTROPHENOXINE"
+msgstr "Centrophenixine"
+
+msgid "GOTKEVLARVEST"
+msgstr "Felkapsz egy Golyóálló Mellényt!"
+
+#, fuzzy
+msgid "GOTSKEVLARVEST"
+msgstr "Felkapsz egy Szuper Golyóálló Mellényt!"
+
+msgid "GOTMICROKIT"
+msgstr "Felkapsz egy Mikorkit-et!"
+
+msgid "GOTDAMPENER"
+msgstr "Felkapsz egy Tompítót!"
+
+msgid "PD_CKEY"
+msgstr "Egy C-Kulcs szükséges a hozzáféréshez!"
+
+msgid "PD_KEYCARD"
+msgstr "Egy kulcskártya szükséges a hozzáféréshez!"
+
+msgid "PD_PASSWORD"
+msgstr "Egy Jelszó szükséges a hozzáféréshez!"
+
+msgid "PD_BLUEZKEY"
+msgstr "Egy Kék Z-Kulcs szükséges a hozzáféréshez!"
+
+msgid "PD_REDZKEY"
+msgstr "Egy Piros Z-Kulcs szükséges a hozzáféréshez!"
+
+msgid "PD_YELWZKEY"
+msgstr "Egy Sárga Z-Kulcs szükséges a hozzáféréshez!"
+
+msgid "X1TEXT"
+msgstr ""
+"Húsz milka nem ér meg ennyi\n"
+"bosszankodás, ugye hekker? A cella\n"
+"ehhez képest egy francos piknik!\n"
+"\n"
+"Baromi ocsmány bio-mutációk és embertársaid\n"
+"úgy lógnak le a mennyezetről, mintha csak\n"
+"a hentesnél lennénk.\n"
+"\n"
+"Mi az ördög ez a GENIE? Semmilyen más\n"
+"számítógépre nem hasonlít amit hekkelni próbáltál!\n"
+"\n"
+"Jobban jársz ha megkeresed a következő terminált,\n"
+"végig rombolsz a kibertéren mutánsokat\n"
+"gázolva, és minél előbb itt hagyod Dodge-ot!\n"
+"\n"
+
+#, fuzzy
+msgid "X2TEXT"
+msgstr ""
+"Hol vannak az emberek?\n"
+"\n"
+"Párizs egy szellemváros, kivétel ha a mutáns\n"
+"óriás bogarakat nem vesszük számba mint mintapolgár.\n"
+"\n"
+"Komoly ellenállásba ütköztél. Ezek a\n"
+"bogarak aztán tudnak harcolni! Szerencsédre\n"
+"nem a legélesebb kések a fiókban.\n"
+"\n"
+"Szerencsére meg sikerült kerítened az információkat\n"
+"amit az albizottság akart...és igen piszkos!\n"
+"\n"
+"Kiszívják ezek a dögök az emberek gerincvelejét!\n"
+"Nem is csoda, hogy a szomszédság igen megritkult.\n"
+"Jelezz vissza az albizottságnak, és\n"
+"vigyázz magadra...\n"
+
+#, fuzzy
+msgid "X3TEXT"
+msgstr ""
+"A civilizáció mint olyan már nem létezik!\n"
+"\n"
+"Se barátok, se család. Nincs több ember. Legalábbis nem normális emberek.\n"
+"\n"
+"Csak egy dolog van hátra...GENIE! Már olyan zabos vagy, hogy ha a világ végére is kell mened érte, akkor is megkeresed és végzel vele.\n"
+"\n"
+"És az arany? A fenébe is, ingyen van.\n"
+"\n"
+".....(folytatjuk)....."
+
+#, fuzzy
+msgid "X5TEXT"
+msgstr ""
+"Még életben vagy!\n"
+"\n"
+"Mik voltak az esélyeid hekkerem?! Még a csapból is a bogarak folynak.\n"
+"\n"
+"Nem tudod elérni az albizottságot, ami azt jelenti hogy kompromittálódtak.\n"
+"\n"
+"Már...csak Te maradtál."
+
+msgid "TXT_HACXMAP01"
+msgstr "GenEmp Kft."
+
+msgid "TXT_HACXMAP02"
+msgstr "Kanális Község"
+
+msgid "TXT_HACXMAP03"
+msgstr "Láva Szárny"
+
+msgid "TXT_HACXMAP04"
+msgstr "Alkatraz"
+
+msgid "TXT_HACXMAP05"
+msgstr "Kiber Cirkusz"
+
+msgid "TXT_HACXMAP06"
+msgstr "Digitális-Ota"
+
+msgid "TXT_HACXMAP07"
+msgstr "A Nagy Fal"
+
+msgid "TXT_HACXMAP08"
+msgstr "A Gyönyör Kertje"
+
+msgid "TXT_HACXMAP09"
+msgstr "Eltitkolt Erőd"
+
+msgid "TXT_HACXMAP10"
+msgstr "Anarchista Álom"
+
+msgid "TXT_HACXMAP11"
+msgstr "Megláss minket!"
+
+msgid "TXT_HACXMAP12"
+msgstr "Gótikus Vesszőfutás"
+
+msgid "TXT_HACXMAP13"
+msgstr "A Kanális"
+
+msgid "TXT_HACXMAP14"
+msgstr "Trode Háborúk"
+
+msgid "TXT_HACXMAP15"
+msgstr "Enk Alkonya"
+
+msgid "TXT_HACXMAP16"
+msgstr "Proteáni Cybex"
+
+msgid "TXT_HACXMAP17"
+msgstr "Vérfolyó"
+
+msgid "TXT_HACXMAP18"
+msgstr "Bizárró"
+
+msgid "TXT_HACXMAP19"
+msgstr "Háborús Terem"
+
+msgid "TXT_HACXMAP20"
+msgstr "Betolakodó Riadó!"
+
+msgid "TXT_HACXMAP31"
+msgstr "Szárító Szoba"
+
+#, fuzzy
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_CLEV"
+msgstr "Következő állomás...\n"
+
+# Printed when entering the idchoppers cheat, which gives the player a
+# chainsaw
+#, fuzzy
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_CHOPPERS"
+msgstr "...indulhat a sütögetés!"
+
+# Hacx's content here was totally useless so it got removed. However, this
+# string has to be defined and minimally altered so that the Dehacked
+# replacement is not being triggered.
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_BEHOLD"
+msgstr ""
+"Sérthet (V), Berz (S), Láthat(i), Sugár(R), Térkép(A), vagy Fény Sisak(L)?"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_BEHOLDX"
+msgstr "Ennek fele sem Tréfa!"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_NCON"
+msgstr "Kibervágó Mód BE"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_NCOFF"
+msgstr "Kibervágó Mód KI"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_NOMUS"
+msgstr "Lehetetlen Kiválasztás "
+
+# Should probably not be translated...
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_MUS"
+msgstr "Csavard Fel a Szőnyeget\n"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_KFAADDED"
+msgstr "Twitch n'Kill Mód Betöltése"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_FAADDED"
+msgstr "Akkor hát legyen, hekker."
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_DQDON"
+msgstr "Kibererő Mód BE"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_DQDOFF"
+msgstr "Kibererő Mód KI"
+
+msgctxt "doom hacx.hacx1"
+msgid "AMSTR_FOLLOWON"
+msgstr "Követés BE"
+
+msgctxt "doom hacx.hacx1"
+msgid "AMSTR_FOLLOWOFF"
+msgstr "Követés KI"
+
+msgctxt "doom hacx.hacx1"
+msgid "DOSY"
+msgstr "- nyomj Y-t a nyúlcipő felhúzáshoz -"
+
+msgctxt "doom hacx.hacx1"
+msgid "ENDGAME"
+msgstr ""
+"Őrült vagy, vagy csak simán rosszul vagy összerakva?\n"
+"Nos? Igen vagy Nem!"
+
+msgctxt "doom hacx.hacx1"
+msgid "NIGHTMARE"
+msgstr ""
+"Biztos vagy benne? Nem hinném,\n"
+"hogy elbírsz ezzel a fokozattal hekker.\n"
+"\n"
+"Nyomj Y-t a halálhoz. \n"
+
+# For most languages the original Doom text should suffice.
+msgctxt "doom hacx.hacx1"
+msgid "QSPROMPT"
+msgstr ""
+"Gyorsmenteni akarsz az alábbi mentésed alatt\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Nyomj Y-t vagy N-t."
+
+msgctxt "doom hacx.hacx1"
+msgid "QLPROMPT"
+msgstr ""
+"Gyorstölteni akarod ezt a mentést\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Nyomj Y-t vagy N-t."
+
+msgid "CC_THUG"
+msgstr "Bandatag"
+
+msgid "CC_ANDROID"
+msgstr "Android"
+
+msgid "CC_ICE"
+msgstr "Jég"
+
+msgid "CC_BUZZER"
+msgstr "Sokkoló"
+
+msgid "CC_DMAN"
+msgstr "D-Ember"
+
+msgid "CC_PHAGE"
+msgstr "Fekély"
+
+msgid "CC_MONSTRUCT"
+msgstr "Monstrum"
+
+msgid "CC_MECH"
+msgstr "Mecha Megszállott"
+
+msgid "CC_TERMI"
+msgstr "Terminátrix"
+
+msgid "CC_THORN"
+msgstr "Tövis Úrnő"
+
+msgid "CC_MAJONG"
+msgstr "Madzsong 7"
+
+msgctxt "doom hacx.hacx1"
+msgid "CC_HERO"
+msgstr "Dan Evanger"
+
+msgctxt "doom hacx.hacx1"
+msgid "SKILL_BABY"
+msgstr "Kérlek ne lőj!"
+
+msgctxt "doom hacx.hacx1"
+msgid "SKILL_EASY"
+msgstr "Á, kell egy kis életerő!"
+
+msgctxt "doom hacx.hacx1"
+msgid "SKILL_NORMAL"
+msgstr "Tépjük csak szét őket!"
+
+msgctxt "doom hacx.hacx1"
+msgid "SKILL_HARD"
+msgstr "Halhatatlan vagyok!"
+
+msgctxt "doom hacx.hacx1"
+msgid "SKILL_NIGHTMARE"
+msgstr "Téboly!"

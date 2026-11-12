@@ -21,7 +21,7 @@
  */
 
 #include "loader.h"
-#include "../miniz.h"
+#include "miniz.h"
 
 static int muse_test(HIO_HANDLE *, char *, const int);
 static int muse_load(struct module_data *, HIO_HANDLE *, const int);

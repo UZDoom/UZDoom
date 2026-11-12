@@ -49,7 +49,7 @@ static inline constexpr struct SteamAppInfo
 	{"Ultimate Doom/rerelease", 2280},
 	{"Doom 2/rerelease/DOOM II_Data/StreamingAssets", 2300},
 	{"Doom 2/finaldoombase", 2300},
-    {"Master Levels of Doom/doom2", 9160},
+	{"Master Levels of Doom/doom2", 9160},
 	{"Heretic + Hexen/dos/base/heretic", 3286930},
 	{"Heretic + Hexen/dos/base/hexen", 3286930},
 	{"Heretic + Hexen/dos/base/hexendk", 3286930}
@@ -131,7 +131,7 @@ TArray<FString> D_GetSteamGamePaths()
 		FString RegPath = SteamPath + "/config/libraryfolders.vdf";
 		SteamLibraryFolders = D_ParseSteamRegistry(RegPath.GetChars());
 	}
-	catch (const CRecoverableError &error)
+	catch (const CRecoverableError &)
 	{
 		// If we can't parse for some reason just pretend we can't find anything.
 		return result;

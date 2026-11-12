@@ -75,32 +75,32 @@ namespace swrenderer
 	{
 		DrawWallColumns<DrawWall32Command>(args);
 	}
-	
+
 	void SWTruecolorDrawers::DrawWallMasked(const WallDrawerArgs &args)
 	{
 		DrawWallColumns<DrawWallMasked32Command>(args);
 	}
-	
+
 	void SWTruecolorDrawers::DrawWallAdd(const WallDrawerArgs &args)
 	{
 		DrawWallColumns<DrawWallAddClamp32Command>(args);
 	}
-	
+
 	void SWTruecolorDrawers::DrawWallAddClamp(const WallDrawerArgs &args)
 	{
 		DrawWallColumns<DrawWallAddClamp32Command>(args);
 	}
-	
+
 	void SWTruecolorDrawers::DrawWallSubClamp(const WallDrawerArgs &args)
 	{
 		DrawWallColumns<DrawWallSubClamp32Command>(args);
 	}
-	
+
 	void SWTruecolorDrawers::DrawWallRevSubClamp(const WallDrawerArgs &args)
 	{
 		DrawWallColumns<DrawWallRevSubClamp32Command>(args);
 	}
-	
+
 	void SWTruecolorDrawers::DrawColumn(const SpriteDrawerArgs &args)
 	{
 		DrawSprite32Command::DrawColumn(args);
@@ -199,37 +199,37 @@ namespace swrenderer
 	{
 		DrawSpan32Command::DrawColumn(args);
 	}
-	
+
 	void SWTruecolorDrawers::DrawSpanMasked(const SpanDrawerArgs &args)
 	{
 		DrawSpanMasked32Command::DrawColumn(args);
 	}
-	
+
 	void SWTruecolorDrawers::DrawSpanTranslucent(const SpanDrawerArgs &args)
 	{
 		DrawSpanTranslucent32Command::DrawColumn(args);
 	}
-	
+
 	void SWTruecolorDrawers::DrawSpanMaskedTranslucent(const SpanDrawerArgs &args)
 	{
 		DrawSpanAddClamp32Command::DrawColumn(args);
 	}
-	
+
 	void SWTruecolorDrawers::DrawSpanAddClamp(const SpanDrawerArgs &args)
 	{
 		DrawSpanTranslucent32Command::DrawColumn(args);
 	}
-	
+
 	void SWTruecolorDrawers::DrawSpanMaskedAddClamp(const SpanDrawerArgs &args)
 	{
 		DrawSpanAddClamp32Command::DrawColumn(args);
 	}
-	
+
 	void SWTruecolorDrawers::DrawSingleSkyColumn(const SkyDrawerArgs &args)
 	{
 		DrawSkySingle32Command::DrawColumn(args);
 	}
-	
+
 	void SWTruecolorDrawers::DrawDoubleSkyColumn(const SkyDrawerArgs &args)
 	{
 		DrawSkyDouble32Command::DrawColumn(args);

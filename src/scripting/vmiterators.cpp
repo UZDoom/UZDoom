@@ -95,7 +95,7 @@ public:
 	FMultiBlockLinesIterator iterator;
 	FMultiBlockLinesIterator::CheckResult cres;
 
-	
+
 	DBlockLinesIterator(AActor *actor, double checkradius)
 		: iterator(check, actor, checkradius)
 	{

@@ -98,7 +98,7 @@ class Centaur : Actor
 		CENT U 5 A_FreezeDeath;
 		CENT U 1 A_FreezeDeathChunks;
 		Wait;
-	}	
+	}
 }
 
 extend class Actor
@@ -139,7 +139,7 @@ class CentaurLeader : Centaur
 		CENT F 8 Bright A_SpawnProjectile("CentaurFX", 45, 0, 0, CMF_AIMOFFSET);
 		Goto See;
 	}
-}		
+}
 
 // Mashed centaur -----------------------------------------------------------
 //
@@ -242,5 +242,3 @@ class CentaurSword : Actor
 		Stop;
 	}
 }
-
-

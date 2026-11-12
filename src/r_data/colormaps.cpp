@@ -26,11 +26,11 @@
 #include <math.h>
 #include <float.h>
 
-
 #include "filesystem.h"
 #include "r_sky.h"
 #include "textures.h"
 #include "colormaps.h"
+#include "colorspace.h"
 
 #include "c_cvars.h"
 
@@ -38,12 +38,12 @@ CUSTOM_CVAR(Bool, cl_customizeinvulmap, false, CVAR_ARCHIVE|CVAR_NOINITCALL)
 {
 	R_UpdateInvulnerabilityColormap();
 }
-CUSTOM_CVAR(Color, cl_custominvulmapcolor1, 0x00001a, CVAR_ARCHIVE|CVAR_NOINITCALL)
+CUSTOM_CVAR(Color, cl_custominvulmapcolor1, Color::str("#00001a"), CVAR_ARCHIVE|CVAR_NOINITCALL)
 {
 	if (cl_customizeinvulmap)
 		R_UpdateInvulnerabilityColormap();
 }
-CUSTOM_CVAR(Color, cl_custominvulmapcolor2, 0xa6a67a, CVAR_ARCHIVE|CVAR_NOINITCALL)
+CUSTOM_CVAR(Color, cl_custominvulmapcolor2, Color::str("#a6a67a"), CVAR_ARCHIVE|CVAR_NOINITCALL)
 {
 	if (cl_customizeinvulmap)
 		R_UpdateInvulnerabilityColormap();
@@ -144,7 +144,7 @@ void R_InitColormaps (bool allowCustomColormap)
 				b /= 256;
 				// The calculated average is too dark so brighten it according to the palettes's overall brightness
 				int maxcol = max<int>(max<int>(palette_brightness, r), max<int>(g, b));
-				
+
 				fakecmaps[j].blend = PalEntry (255, r * 255 / maxcol, g * 255 / maxcol, b * 255 / maxcol);
 			}
 		}
@@ -174,7 +174,7 @@ uint32_t R_ColormapNumForName (const char *name)
 				return i;
 			}
 		}
-				
+
 		if (!strnicmp (name, "WATERMAP", 8))
 			return MAKEARGB (128,0,0x4f,0xa5);
 	}
@@ -189,7 +189,7 @@ uint32_t R_ColormapNumForName (const char *name)
 
 uint32_t R_BlendForColormap (uint32_t map)
 {
-	return APART(map) ? map : 
+	return APART(map) ? map :
 		map < fakecmaps.Size() ? uint32_t(fakecmaps[map].blend) : 0;
 }
 
@@ -222,4 +222,3 @@ void R_UpdateInvulnerabilityColormap()
 	}
 
 }
-

@@ -16,7 +16,7 @@ LISTMENU "MainMenuTextOnly"
 {
 	StaticPatch 94, 2, "M_DOOM"
 	Position 97, 72
-	
+
 	TextItem "$MNU_NEWGAME", "n", "PlayerclassMenu"
 	TextItem "$MNU_OPTIONS", "o", "OptionsMenu"
 	TextItem "$MNU_LOADGAME", "l", "LoadGameMenu"
@@ -69,4 +69,3 @@ ListMenu "LoadGameMenu"
 	Position 80,54
 	Class "LoadMenu"	// uses its own implementation
 }
-

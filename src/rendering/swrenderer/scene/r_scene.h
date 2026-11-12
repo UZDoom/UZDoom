@@ -35,20 +35,20 @@ namespace swrenderer
 	extern cycle_t WallCycles, PlaneCycles, MaskedCycles, DrawerWaitCycles;
 
 	class RenderThread;
-	
+
 	class RenderScene
 	{
 	public:
 		RenderScene();
 		~RenderScene();
 
-		void Deinit();	
+		void Deinit();
 
 		void SetClearColor(int color);
-		
+
 		void RenderView(player_t *player, DCanvas *target, void *videobuffer, int bufferpitch);
 		void RenderViewToCanvas(AActor *actor, DCanvas *canvas, int x, int y, int width, int height, bool dontmaplines = false);
-	
+
 		bool DontMapLines() const { return dontmaplines; }
 
 		RenderThread *MainThread() { return Threads.front().get(); }
@@ -61,7 +61,7 @@ namespace swrenderer
 
 		void StartThreads(size_t numThreads);
 		void StopThreads();
-		
+
 		bool dontmaplines = false;
 		int clearcolor = 0;
 

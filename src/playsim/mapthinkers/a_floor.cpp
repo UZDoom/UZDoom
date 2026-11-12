@@ -146,7 +146,7 @@ void DFloor::Tick ()
 		return;
 
 	res = m_Sector->MoveFloor (m_Speed, m_FloorDestDist, m_Crush, m_Direction, m_Hexencrush, m_Instant);
-	
+
 	if (res == EMoveResult::pastdest)
 	{
 		SN_StopSequence (m_Sector, CHAN_FLOOR);
@@ -475,7 +475,7 @@ bool FLevelLocals::CreateFloor(sector_t *sec, DFloor::EFloor floortype, line_t *
 
 		// [Graf Zahl]
 		// Don't make sounds for instant movement hacks but make an exception for
-		// switches that activate their own back side. 
+		// switches that activate their own back side.
 		if (!(sec->Level->i_compatflags & COMPATF_SILENT_INSTANT_FLOORS))
 		{
 			if (!line || !(line->activation & (SPAC_Use | SPAC_Push)) || line->backsector != sec)
@@ -615,7 +615,7 @@ bool FLevelLocals::EV_BuildStairs (int tag, DFloor::EStair type, line_t *line, d
 	int 				ok;
 	int					persteptime;
 	bool 				rtn = false;
-	
+
 	sector_t*			sec;
 	sector_t*			tsec = NULL;
 	sector_t*			prev = NULL;
@@ -643,7 +643,7 @@ bool FLevelLocals::EV_BuildStairs (int tag, DFloor::EStair type, line_t *line, d
 		{
 			continue;
 		}
-		
+
 		// new floor thinker
 		rtn = true;
 		floor = CreateThinker<DFloor> (sec);
@@ -667,7 +667,7 @@ bool FLevelLocals::EV_BuildStairs (int tag, DFloor::EStair type, line_t *line, d
 
 		texture = sec->GetTexture(sector_t::floor);
 		osecnum = secnum;				//jff 3/4/98 preserve loop index
-		
+
 		// Find next sector to raise
 		// 1. Find 2-sided line with same sector side[0] (lowest numbered)
 		// 2. Other side is the next sector to raise
@@ -803,7 +803,7 @@ bool FLevelLocals::EV_DoDonut (int tag, line_t *line, double pillarspeed, double
 	DFloor*				floor;
 	vertex_t*			spot;
 	double				height;
-		
+
 	rtn = false;
 
 	auto itr = GetSectorTagIterator(tag, line);
@@ -814,7 +814,7 @@ bool FLevelLocals::EV_DoDonut (int tag, line_t *line, double pillarspeed, double
 		// ALREADY MOVING?	IF SO, KEEP GOING...
 		if (s1->PlaneMoving(sector_t::floor))
 			continue; // safe now, because we check that tag is non-0 in the looping condition [fdari]
-						
+
 		rtn = true;
 		s2 = getNextSector (s1->Lines[0], s1);	// s2 is pool's sector
 		if (!s2)								// note lowest numbered line around
@@ -828,7 +828,7 @@ bool FLevelLocals::EV_DoDonut (int tag, line_t *line, double pillarspeed, double
 			if (ln->backsector == nullptr || ln->backsector == s1)
 				continue;
 			s3 = ln->backsector;
-			
+
 			//	Spawn rising slime
 			floor = CreateThinker<DFloor> (s2);
 			floor->m_Type = DFloor::donutRaise;
@@ -843,7 +843,7 @@ bool FLevelLocals::EV_DoDonut (int tag, line_t *line, double pillarspeed, double
 			height = FindHighestFloorPoint (s3, &spot);
 			floor->m_FloorDestDist = s2->floorplane.PointToDist (spot, height);
 			floor->StartFloorSound ();
-			
+
 			//	Spawn lowering donut-hole
 			floor = CreateThinker<DFloor> (s1);
 			floor->m_Type = DFloor::floorLowerToNearest;
@@ -1123,7 +1123,7 @@ bool FLevelLocals::EV_DoChange (line_t *line, EChange changetype, int tag)
 	while ((secnum = it.Next()) >= 0)
 	{
 		sec = &sectors[secnum];
-              
+
 		rtn = true;
 
 		// handle trigger or numeric change type
@@ -1325,7 +1325,7 @@ bool FLevelLocals::EV_StartWaggle (int tag, line_t *line, int height, int speed,
 	while ((sectorIndex = itr.Next()) >= 0)
 	{
 		sector = &sectors[sectorIndex];
-		if ((!ceiling && sector->PlaneMoving(sector_t::floor)) || 
+		if ((!ceiling && sector->PlaneMoving(sector_t::floor)) ||
 			(ceiling && sector->PlaneMoving(sector_t::ceiling)))
 		{ // Already busy with another thinker
 			continue;

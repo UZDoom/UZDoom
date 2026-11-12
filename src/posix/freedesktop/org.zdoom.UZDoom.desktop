@@ -11,6 +11,7 @@ Type=Application
 Keywords=Doom;Heretic;Hexen;strife;pwad;iwad;first;person;shooter;
 MimeType=application/x-doom-wad;application/x-doom-pk7;application/x-doom-pk3;
 Actions=launch-safemode;launch-doom-1;launch-doom-2;launch-heretic;launch-hexen;launch-strife;
+StartupWMClass=org.zdoom.UZDoom
 
 [Desktop Action launch-safemode]
 Name=UZDoom Safemode

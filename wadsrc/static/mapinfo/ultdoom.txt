@@ -6,4 +6,3 @@ gameinfo
 	finalepage = "CREDIT", "VICTORY2", "ENDPIC"
 	infopage = "HELP1", "*", "CREDIT"
 }
-

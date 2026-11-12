@@ -67,8 +67,8 @@ namespace OpenGLESRenderer
 //
 //==========================================================================
 
-OpenGLFrameBuffer::OpenGLFrameBuffer(void *hMonitor, bool fullscreen) : 
-	Super(hMonitor, fullscreen) 
+OpenGLFrameBuffer::OpenGLFrameBuffer(void *hMonitor, bool fullscreen) :
+	Super(hMonitor, fullscreen)
 {
 	// SetVSync needs to be at the very top to workaround a bug in Nvidia's OpenGL driver.
 	// If wglSwapIntervalEXT is called after glBindFramebuffer in a frame the setting is not changed!
@@ -208,11 +208,11 @@ void OpenGLFrameBuffer::RenderTextureView(FCanvasTexture* tex, std::function<voi
 
 //===========================================================================
 //
-// 
+//
 //
 //===========================================================================
 
-const char* OpenGLFrameBuffer::DeviceName() const 
+const char* OpenGLFrameBuffer::DeviceName() const
 {
 	return gles.modelstring;
 }
@@ -237,8 +237,6 @@ void OpenGLFrameBuffer::Swap()
 
 	mVertexData->NextPipelineBuffer();
 	mVertexData->WaitSync();
-
-	RenderState()->SetVertexBuffer(screen->mVertexData); // Needed for Raze because it does not reset it
 
 	Finish.Unclock();
 	camtexcount = 0;
@@ -267,8 +265,8 @@ void OpenGLFrameBuffer::SetTextureFilterMode()
 	if (GLRenderer != nullptr && GLRenderer->mSamplerManager != nullptr) GLRenderer->mSamplerManager->SetTextureFilterMode();
 }
 
-IHardwareTexture *OpenGLFrameBuffer::CreateHardwareTexture(int numchannels) 
-{ 
+IHardwareTexture *OpenGLFrameBuffer::CreateHardwareTexture(int numchannels)
+{
 	return new FHardwareTexture(numchannels);
 }
 
@@ -288,19 +286,19 @@ void OpenGLFrameBuffer::PrecacheMaterial(FMaterial *mat, int translation)
 			systex->BindOrCreate(layer->layerTexture, i, CLAMP_NONE, 0, layer->scaleFlags);
 		}
 	}
-	// unbind everything. 
+	// unbind everything.
 	FHardwareTexture::UnbindAll();
 	gl_RenderState.ClearLastMaterial();
 }
 
 IVertexBuffer *OpenGLFrameBuffer::CreateVertexBuffer()
-{ 
-	return new GLVertexBuffer; 
+{
+	return new GLVertexBuffer;
 }
 
 IIndexBuffer *OpenGLFrameBuffer::CreateIndexBuffer()
-{ 
-	return new GLIndexBuffer; 
+{
+	return new GLIndexBuffer;
 }
 
 IDataBuffer *OpenGLFrameBuffer::CreateDataBuffer(int bindingpoint, bool ssbo, bool needsresize)
@@ -353,7 +351,7 @@ void OpenGLFrameBuffer::WaitForCommands(bool finish)
 
 //===========================================================================
 //
-// 
+//
 //
 //===========================================================================
 
@@ -366,7 +364,7 @@ void OpenGLFrameBuffer::BeginFrame()
 }
 
 //===========================================================================
-// 
+//
 //	Takes a screenshot
 //
 //===========================================================================
@@ -418,7 +416,7 @@ TArray<uint8_t> OpenGLFrameBuffer::GetScreenshotBuffer(int &pitch, ESSType &colo
 }
 
 //===========================================================================
-// 
+//
 // 2D drawing
 //
 //===========================================================================
@@ -482,5 +480,8 @@ FTexture *OpenGLFrameBuffer::WipeEndScreen()
 	glCopyTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, viewport.left, viewport.top, viewport.width, viewport.height);
 	return tex;
 }
+
+bool OpenGLFrameBuffer::HasNVidiaVRAMExt() { return gles.nv_vram_ext; }
+bool OpenGLFrameBuffer::HasATIVRAMExt() { return gles.ati_vram_ext; }
 
 }

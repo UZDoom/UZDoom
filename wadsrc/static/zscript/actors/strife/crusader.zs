@@ -80,7 +80,7 @@ class Crusader : Actor
 		ROB2 P -1 A_CrusaderDeath;
 		Stop;
 	}
-	
+
 // Crusader -----------------------------------------------------------------
 
 	private bool CrusaderCheckRange ()
@@ -95,7 +95,7 @@ class Crusader : Actor
 	void A_CrusaderChoose ()
 	{
 		if (target == null)
-			return;
+			return; // FIXME: This prevents an abort. Reconsider if just returning early is the correct thing to do
 
 		if (CrusaderCheckRange ())
 		{
@@ -122,6 +122,9 @@ class Crusader : Actor
 
 	void A_CrusaderSweepLeft ()
 	{
+		if (target == null)
+			return; // FIXME: This prevents an abort. Reconsider if just returning early is the correct thing to do
+
 		angle += 90./16;
 		Actor misl = SpawnMissileZAimed (pos.z + 48, target, "FastFlameMissile");
 		if (misl != null)
@@ -132,6 +135,9 @@ class Crusader : Actor
 
 	void A_CrusaderSweepRight ()
 	{
+		if (target == null)
+			return; // FIXME: This prevents an abort. Reconsider if just returning early is the correct thing to do
+
 		angle -= 90./16;
 		Actor misl = SpawnMissileZAimed (pos.z + 48, target, "FastFlameMissile");
 		if (misl != null)
@@ -219,4 +225,3 @@ class DeadCrusader : Actor
 		Stop;
 	}
 }
-

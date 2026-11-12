@@ -130,6 +130,31 @@ static const esbool emu_4op_alg_mod_enable[4][4] =
 	{1, 0, 1, 0}
 };
 
+/*
+ *  Pan law table
+ */
+static const uint16 panlawtable[] =
+{
+    65535, 65529, 65514, 65489, 65454, 65409, 65354, 65289,
+    65214, 65129, 65034, 64929, 64814, 64689, 64554, 64410,
+    64255, 64091, 63917, 63733, 63540, 63336, 63123, 62901,
+    62668, 62426, 62175, 61914, 61644, 61364, 61075, 60776,
+    60468, 60151, 59825, 59489, 59145, 58791, 58428, 58057,
+    57676, 57287, 56889, 56482, 56067, 55643, 55211, 54770,
+    54320, 53863, 53397, 52923, 52441, 51951, 51453, 50947,
+    50433, 49912, 49383, 48846, 48302, 47750, 47191,
+    46340, /* Center left */
+    46340, /* Center right */
+    45472, 44885, 44291, 43690, 43083, 42469, 41848, 41221,
+    40588, 39948, 39303, 38651, 37994, 37330, 36661, 35986,
+    35306, 34621, 33930, 33234, 32533, 31827, 31116, 30400,
+    29680, 28955, 28225, 27492, 26754, 26012, 25266, 24516,
+    23762, 23005, 22244, 21480, 20713, 19942, 19169, 18392,
+    17613, 16831, 16046, 15259, 14469, 13678, 12884, 12088,
+    11291, 10492, 9691, 8888, 8085, 7280, 6473, 5666,
+    4858, 4050, 3240, 2431, 1620, 810, 0
+};
+
 
 /* ------------------------------------------------------------------------- */
 static void
@@ -965,13 +990,17 @@ ESFM_init (esfm_chip *chip)
 	memset(chip, 0, sizeof(esfm_chip));
 	for (channel_idx = 0; channel_idx < 18; channel_idx++)
 	{
+		channel = &chip->channels[channel_idx];
+
+		channel->chip = chip;
+		channel->channel_idx = channel_idx;
+		channel->pan[0] = 46340; /* center pan from pan law table */
+		channel->pan[1] = 46340;
+
 		for (slot_idx = 0; slot_idx < 4; slot_idx++)
 		{
-			channel = &chip->channels[channel_idx];
 			slot = &channel->slots[slot_idx];
 
-			channel->chip = chip;
-			channel->channel_idx = channel_idx;
 			slot->channel = channel;
 			slot->chip = chip;
 			slot->slot_idx = slot_idx;
@@ -1007,4 +1036,26 @@ ESFM_init (esfm_chip *chip)
 	}
 
 	chip->lfsr = 1;
+}
+
+/* ------------------------------------------------------------------------- */
+static void
+ESFM_channel_update_pan(esfm_channel *channel, uint8_t data)
+{
+	channel->pan[0] = panlawtable[data & 0x7F];
+	channel->pan[1] = panlawtable[0x7F - (data & 0x7F)];
+}
+
+/* ------------------------------------------------------------------------- */
+void
+ESFM_write_pan(esfm_chip *chip, uint16_t address, uint8_t data)
+{
+	uint8_t high = (address >> 8) & 0x01;
+	uint8_t regm = address & 0xff;
+	uint8_t channel_idx = 9 * high + (regm & 0x0f);
+	if (channel_idx < 18)
+	{
+		esfm_channel *channel = &chip->channels[channel_idx];
+		ESFM_channel_update_pan(channel, data);
+	}
 }

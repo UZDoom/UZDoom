@@ -203,7 +203,7 @@ void DPusher::Tick ()
 			AActor *thing = cres.thing;
 			// Normal ZDoom is based only on the WINDTHRUST flag, with the noclip cheat as an exemption.
 			bool pusharound = ((thing->flags2 & MF2_WINDTHRUST) && !(thing->flags & MF_NOCLIP));
-					
+
 			// MBF allows any sentient or shootable thing to be affected, but players with a fly cheat aren't.
 			if (Level->i_compatflags & COMPATF_MBFMONSTERMOVE)
 			{
@@ -313,7 +313,7 @@ void FLevelLocals::AdjustPusher(int tag, int magnitude, int angle, bool wind)
 	};
 
 	DPusher::EPusher type = wind? DPusher::p_wind : DPusher::p_current;
-	
+
 	// Find pushers already attached to the sector, and change their parameters.
 	TArray<FThinkerCollection> Collection;
 	{

@@ -3,7 +3,7 @@
 ** General game music player, using Game Music Emu for decoding.
 **
 **---------------------------------------------------------------------------
-** Copyright 2009 Randy Heit
+** Copyright 2009 Marisa Heit
 ** All rights reserved.
 **
 ** Redistribution and use in source and binary forms, with or without

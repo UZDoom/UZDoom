@@ -33,7 +33,7 @@ class PainElemental : Actor
 		Speed 8;
 		PainChance 128;
 		Monster;
-		+FLOAT 
+		+FLOAT
 		+NOGRAVITY
 		SeeSound "pain/sight";
 		PainSound "pain/pain";
@@ -168,7 +168,7 @@ extend class Actor
 			Vector2 stepmove = move / steps;
 			bool savedsolid = bSolid;
 			bool savednoteleport = other.bNoTeleport;
-			
+
 			// make the PE nonsolid for the check and the LS non-teleporting so that P_TryMove doesn't do unwanted things.
 			bSolid = false;
 			other.bNoTeleport = true;
@@ -213,7 +213,7 @@ extend class Actor
 		}
 	}
 
-	
+
 	void A_PainAttack(class<Actor> spawntype = "LostSoul", double addangle = 0, int flags = 0, int limit = -1)
 	{
 		if (target)
@@ -222,7 +222,7 @@ extend class Actor
 			A_PainShootSkull(spawntype, angle + addangle, flags, limit);
 		}
 	}
-	
+
 	void A_DualPainAttack(class<Actor> spawntype = "LostSoul")
 	{
 		if (target)
@@ -232,7 +232,7 @@ extend class Actor
 			A_PainShootSkull(spawntype, angle - 45);
 		}
 	}
-	
+
 	void A_PainDie(class<Actor> spawntype = "LostSoul")
 	{
 		if (target && IsFriend(target))

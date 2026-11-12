@@ -1,0 +1,4515 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-05-27 16:12+0000\n"
+"Last-Translator: SecularSteve <fairfull.playing@gmail.com>\n"
+"Language-Team: Bosnian <https://hosted.weblate.org/projects/doom-engine-games/strife/bs/>\n"
+"Language: bs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 2026.6.dev0\n"
+
+msgid "TXT_STRIFE_MAP01"
+msgstr "Područje 1: Svetište"
+
+msgid "TXT_STRIFE_MAP02"
+msgstr "Područje 2: Grad"
+
+msgid "TXT_STRIFE_MAP03"
+msgstr "Područje 3: Prednja baza"
+
+msgid "TXT_STRIFE_MAP04"
+msgstr "Područje 4: Elektrana"
+
+msgid "TXT_STRIFE_MAP05"
+msgstr "Područje 5: Zatvor"
+
+msgid "TXT_STRIFE_MAP06"
+msgstr "PODRUČJE 6: Kanalizacija"
+
+msgid "TXT_STRIFE_MAP07"
+msgstr "Područje 7: Dvorac"
+
+msgid "TXT_STRIFE_MAP08"
+msgstr "Područje 8: Publička dvorana"
+
+msgid "TXT_STRIFE_MAP09"
+msgstr "Područje 9: Dvorac: Programerska tvrđava"
+
+msgid "TXT_STRIFE_MAP10"
+msgstr "Područje 10: Nova prednja baza"
+
+msgid "TXT_STRIFE_MAP11"
+msgstr "Područje 11: Pogranična područja"
+
+msgid "TXT_STRIFE_MAP12"
+msgstr "Područje 12: Hram Orakla"
+
+msgid "TXT_STRIFE_MAP13"
+msgstr "Područje 13: Katakombe"
+
+msgid "TXT_STRIFE_MAP14"
+msgstr "Područje 14: Rudnici"
+
+msgid "TXT_STRIFE_MAP15"
+msgstr "Područje 15: Tvrđava: Administracija"
+
+msgid "TXT_STRIFE_MAP16"
+msgstr "Područje 16: Tvrđava: Biskupov toranj"
+
+msgid "TXT_STRIFE_MAP17"
+msgstr "Područje 17: Tvrđava: Bailey"
+
+msgid "TXT_STRIFE_MAP18"
+msgstr "Područje 18: Tvrđava: Skladišta"
+
+msgid "TXT_STRIFE_MAP19"
+msgstr "Područje 19: Tvrđava: Sigurnosni kompleks"
+
+msgid "TXT_STRIFE_MAP20"
+msgstr "Područje 20: Fabrika: Prijem"
+
+msgid "TXT_STRIFE_MAP21"
+msgstr "Područje 21: Fabrika: Proizvodnja"
+
+msgid "TXT_STRIFE_MAP22"
+msgstr "Područje 22: Fabrika: Kovačnica"
+
+msgid "TXT_STRIFE_MAP23"
+msgstr "Područje 23: Redovni komuni"
+
+msgid "TXT_STRIFE_MAP24"
+msgstr "Područje 24: Fabrika: Preinaka kapele"
+
+msgid "TXT_STRIFE_MAP25"
+msgstr "Područje 25: Katakombe: Ruševni hram"
+
+msgid "TXT_STRIFE_MAP26"
+msgstr "Područje 26: Poligon za ispitivanje"
+
+msgid "TXT_STRIFE_MAP27"
+msgstr "Područje 27: Laboratorij"
+
+msgid "TXT_STRIFE_MAP28"
+msgstr "Područje 28: Vanzemaljski brod"
+
+msgid "TXT_STRIFE_MAP29"
+msgstr "Područje 29: Skrovište entiteta"
+
+msgid "TXT_STRIFE_MAP30"
+msgstr "Područje 30: Napuštena prednja baza"
+
+msgid "TXT_STRIFE_MAP31"
+msgstr "Područje 31: Objekat za obuku"
+
+msgid "TXT_STRIFE_MAP32"
+msgstr "Područje 1: Svetište"
+
+msgid "TXT_STRIFE_MAP33"
+msgstr "Područje 2: Grad"
+
+msgid "TXT_STRIFE_MAP34"
+msgstr "Područje 3: Baza za kretanje"
+
+msgid "TXT_STRIFE_MAP35"
+msgstr "Područje 35: Fabrika: Proizvodnja"
+
+msgid "TXT_STRIFE_MAP36"
+msgstr "Područje 36: Sudar dvoraca"
+
+msgid "TXT_STRIFE_MAP37"
+msgstr "Područje 37: Polja smrti"
+
+msgid "TXT_STRIFE_MAP38"
+msgstr "Područje 38: Uređeni kaos"
+
+# MAP01: Beldin.
+msgid "TXT_DLG_SCRIPT01_D0_IDONT"
+msgstr "Ne želim nikakve probleme, drži se podalje od mene. Već sam imao dovoljno nevolja zbog onoga što mi je taj gad Harris učinio. Obećao mi je novac, a umjesto toga moram se pripremiti na ispitivanje od strane Programera."
+
+# MAP02: Guy next to Norwall Prison.
+msgid "TXT_DLG_SCRIPT02_D0_ILLHE"
+msgstr "Pomoći ću ti ako mi pomogneš. Pet komada zlata i reći ću sve što znam."
+
+msgid "TXT_RPLY0_SCRIPT02_D0_HERES"
+msgstr "Evo zlata."
+
+# (This text is only four seconds on screen)
+msgid "TXT_RYES0_SCRIPT02_D0_BESTE"
+msgstr "Budite neprimjetni kad ubijate, nećete pokrenuti alarme."
+
+# (Four seconds)
+msgid "TXT_RNO0_SCRIPT02_D0_WELLI"
+msgstr "Pa, neću ti ništa reći besplatno!"
+
+msgid "TXT_DLG_SCRIPT02_D1516_HAVEY"
+msgstr "Imaš li slučajno još pet zlatnih na sebi?"
+
+msgid "TXT_RPLY0_SCRIPT02_D1516_5GOLD"
+msgstr "5 zlata."
+
+# (Four seconds)
+msgid "TXT_RYES0_SCRIPT02_D1516_WELLP"
+msgstr "Pa, otrovne strijele mogu odmah ubiti stražare i neće aktivirati alarme."
+
+# (Four seconds)
+msgid "TXT_RNO0_SCRIPT02_D1516_NOSIR"
+msgstr "Ne, gospodine, neću vam ništa reći besplatno!"
+
+msgid "TXT_DLG_SCRIPT02_D3032_YOUVE"
+msgstr "Već si izvukao od mene posljednju tračicu!"
+
+# MAP02: Irale.
+msgid "TXT_DLG_SCRIPT02_D4548_WHATC"
+msgstr "Šta mogu da vam donesem?"
+
+msgid "TXT_RPLY0_SCRIPT02_D4548_ASSAU"
+msgstr "Jurišna puška"
+
+msgid "TXT_RYES0_SCRIPT02_D4548_HEREY"
+msgstr "Evo."
+
+msgid "TXT_RNO0_SCRIPT02_D4548_YOUCA"
+msgstr "Ne možeš si to priuštiti sada."
+
+msgid "TXT_RPLY1_SCRIPT02_D4548_CLIPO"
+msgstr "Klip metaka"
+
+msgid "TXT_RYES1_SCRIPT02_D4548_THANK"
+msgstr "Hvala."
+
+msgid "TXT_RNO1_SCRIPT02_D4548_COMEO"
+msgstr "Hajde, 10 zlata."
+
+msgid "TXT_RPLY2_SCRIPT02_D4548_AMMOB"
+msgstr "Kutija za municiju"
+
+msgid "TXT_RYES2_SCRIPT02_D4548_HERES"
+msgstr "Evo ti municije."
+
+msgid "TXT_RNO2_SCRIPT02_D4548_MAYBE"
+msgstr "Možda neki drugi put."
+
+# (After destroying the crystal in the Power Station)
+msgid "TXT_DLG_SCRIPT02_D6064_GOODN"
+msgstr "Dobre vijesti s fronta, za promjenu. Macil te je poslao na nagradu i obuku. Naložio mi je da ti ih dam."
+
+msgid "TXT_RPLY0_SCRIPT02_D6064_THANK"
+msgstr "Hvala."
+
+msgid "TXT_RYES0_SCRIPT02_D6064_GLADT"
+msgstr "Drago mi je što mogu pomoći."
+
+msgid "TXT_DLG_SCRIPT02_D7580_ALLRI"
+msgstr "U redu, evo nekoliko savjeta šta treba raditi: nemojte ometati Krstaše: kratki rafali iz vašeg jurišnog puška drže ga na meti."
+
+msgid "TXT_RPLY0_SCRIPT02_D7580_ISTHA"
+msgstr "Je li to sve?"
+
+msgid "TXT_RYES0_SCRIPT02_D7580_LOOKY"
+msgstr "Pogledaj, kasnije ćeš saznati više."
+
+msgid "TXT_DLG_SCRIPT02_D9096_ITHIN"
+msgstr "Mislim da mogu pretvoriti bacač plamena iz jednog od Krstaša za upotrebu od strane čovjeka. Oh, ima li još nešto što mogu nabaviti za tebe?"
+
+msgid "TXT_RPLY0_SCRIPT02_D9096_FLAME"
+msgstr "Bacač plamena."
+
+msgid "TXT_RYES0_SCRIPT02_D9096_IKNEW"
+msgstr "Znao sam da će to uspjeti! Evo, uzmi je na probnu vožnju!"
+
+msgid "TXT_RNO0_SCRIPT02_D9096_LISTE"
+msgstr "Slušaj, ne mogu napraviti ništa bez pravih dijelova!"
+
+msgid "TXT_RPLY1_SCRIPT02_D9096_ASSAU"
+msgstr "Jurišna puška"
+
+msgid "TXT_RYES1_SCRIPT02_D9096_WELLH"
+msgstr "Evo, gospodine!"
+
+msgid "TXT_RNO1_SCRIPT02_D9096_OBVIO"
+msgstr "Očigledno si to trenutno ne možeš priuštiti."
+
+msgid "TXT_RPLY2_SCRIPT02_D9096_CLIPO"
+msgstr "Klip metaka"
+
+msgid "TXT_RYES2_SCRIPT02_D9096_THANK"
+msgstr "Hvala."
+
+msgid "TXT_RNO2_SCRIPT02_D9096_COMEO"
+msgstr "Hajde, 10 zlata."
+
+msgid "TXT_RPLY3_SCRIPT02_D9096_AMMOB"
+msgstr "Kutija za municiju"
+
+msgid "TXT_RYES3_SCRIPT02_D9096_HERES"
+msgstr "Evo tvog streljiva."
+
+msgid "TXT_RNO3_SCRIPT02_D9096_MAYBE"
+msgstr "Možda neki drugi put. Zbogom!"
+
+# (With flamethrower)
+msgid "TXT_DLG_SCRIPT02_D10612_NOWTH"
+msgstr "Sada kad imaš bacač plamena, ima li još nešto što mogu da ti nabavim?"
+
+msgid "TXT_RPLY0_SCRIPT02_D10612_ASSAU"
+msgstr "Jurišna puška"
+
+msgid "TXT_RYES0_SCRIPT02_D10612_HEREY"
+msgstr "Evo."
+
+msgid "TXT_RNO0_SCRIPT02_D10612_YOUCA"
+msgstr "Ne možeš si to priuštiti trenutno."
+
+msgid "TXT_RPLY1_SCRIPT02_D10612_CLIPO"
+msgstr "Klip metaka"
+
+msgid "TXT_RYES1_SCRIPT02_D10612_THANK"
+msgstr "Hvala."
+
+msgid "TXT_RNO1_SCRIPT02_D10612_COMEO"
+msgstr "Hajde, 10 zlata."
+
+msgid "TXT_RPLY2_SCRIPT02_D10612_AMMOB"
+msgstr "Kutija za municiju"
+
+msgid "TXT_RYES2_SCRIPT02_D10612_HERES"
+msgstr "Evo ti municije."
+
+msgid "TXT_RNO2_SCRIPT02_D10612_MAYBE"
+msgstr "Možda neki drugi put."
+
+msgid "TXT_DLG_SCRIPT02_D12128_NOWTH"
+msgstr "Sada kad imaš bacač plamena, ima li još nešto što mogu da ti nabavim?"
+
+msgid "TXT_RPLY0_SCRIPT02_D12128_CLIPO"
+msgstr "Klip metaka"
+
+msgid "TXT_RYES0_SCRIPT02_D12128_THANK"
+msgstr "Hvala."
+
+msgid "TXT_RNO0_SCRIPT02_D12128_COMEO"
+msgstr "Hajde, 10 zlata."
+
+msgid "TXT_RPLY1_SCRIPT02_D12128_AMMOB"
+msgstr "Kutija za municiju"
+
+msgid "TXT_RYES1_SCRIPT02_D12128_HERES"
+msgstr "Evo ti municije."
+
+msgid "TXT_RNO1_SCRIPT02_D12128_MAYBE"
+msgstr "Možda neki drugi put."
+
+msgid "TXT_RPLY2_SCRIPT02_D12128_PHOSP"
+msgstr "Fosforne granate"
+
+msgid "TXT_RYES2_SCRIPT02_D12128_THANK"
+msgstr "Hvala."
+
+msgid "TXT_RNO2_SCRIPT02_D12128_YOUDO"
+msgstr "Nemate dovoljno"
+
+msgid "TXT_RPLY3_SCRIPT02_D12128_POISO"
+msgstr "Otrovni bolti"
+
+msgid "TXT_RYES3_SCRIPT02_D12128_WORTH"
+msgstr "Vrijedi svakog zlata!"
+
+msgid "TXT_RNO3_SCRIPT02_D12128_COMEO"
+msgstr "Hajde, 200 zlata!"
+
+# MAP02: Between governor's mansion and town hall.
+msgid "TXT_DLG_SCRIPT02_D13644_ICANT"
+msgstr "Ne mogu vjerovati da sam dobio ovu dužnost. Kažu da je nešto zlo izašlo iz ovog kanalizacijskog poklopca… Sad moram stajati ovdje dok se opet ne pojavi!"
+
+msgid "TXT_RPLY0_SCRIPT02_D13644_WHATG"
+msgstr "Koji kapak?"
+
+msgid "TXT_RYES0_SCRIPT02_D13644_THESE"
+msgstr "Ventil za prelijevanje kanalizacije."
+
+# MAP02: Weapons.
+msgid "TXT_DLG_SCRIPT02_D15160_HELLO"
+msgstr "Zdravo prijatelju. Šta mogu da ti donesem?"
+
+msgid "TXT_RPLY0_SCRIPT02_D15160_ELECT"
+msgstr "Električni vijci"
+
+msgid "TXT_RYES0_SCRIPT02_D15160_YOUGO"
+msgstr "Dobio si električne bolte."
+
+msgid "TXT_RPLY1_SCRIPT02_D15160_AMMOS"
+msgstr "Futrola za municiju"
+
+msgid "TXT_RNO0_SCRIPT02_D15160_NOYOU"
+msgstr "Ne. Nemate ono što želim za električne bolte!"
+
+msgid "TXT_RNO0_SCRIPT02_D16676_NOYOU"
+msgstr "Ne. Nemate ono što želim za električne bolte!"
+
+msgid "TXT_RYES1_SCRIPT02_D15160_THANK"
+msgstr "Hvala. Ima li još nešto?"
+
+msgid "TXT_RNO1_SCRIPT02_D15160_YOUCA"
+msgstr "Ne možete si to priuštiti, dobar dan."
+
+msgid "TXT_DLG_SCRIPT02_D16676_WHATC"
+msgstr "Šta mogu da vam donesem?"
+
+msgid "TXT_RPLY0_SCRIPT02_D16676_ELECT"
+msgstr "Električni vijci"
+
+msgid "TXT_RYES0_SCRIPT02_D16676_YOUGO"
+msgstr "Dobio si električne bolte."
+
+msgid "TXT_RPLY1_SCRIPT02_D16676_AMMOS"
+msgstr "Futrola za municiju"
+
+msgid "TXT_RYES1_SCRIPT02_D16676_THANK"
+msgstr "Hvala, ima li još nešto?"
+
+msgid "TXT_RNO1_SCRIPT02_D16676_YOUCA"
+msgstr "Ne možeš si to priuštiti, ugodan dan!"
+
+# MAP02: Armory.
+msgid "TXT_DLG_SCRIPT02_D18192_WELCO"
+msgstr "Dobrodošli. Šta vam mogu pokazati?"
+
+msgid "TXT_RPLY0_SCRIPT02_D18192_ENVIR"
+msgstr "Žalba na zaštitu okoliša"
+
+msgid "TXT_RYES0_SCRIPT02_D18192_WELLH"
+msgstr "Pa, evo te."
+
+msgid "TXT_RNO0_SCRIPT02_D18192_IMSOR"
+msgstr "Žao mi je, ali nemaš dovoljno novca za to."
+
+msgid "TXT_RPLY1_SCRIPT02_D18192_LEATH"
+msgstr "Kožni oklop"
+
+msgid "TXT_RYES1_SCRIPT02_D18192_HEREY"
+msgstr "Evo te."
+
+msgid "TXT_RNO1_SCRIPT02_D18192_PERHA"
+msgstr "Možda neki drugi put?"
+
+msgid "TXT_RPLY2_SCRIPT02_D18192_METAL"
+msgstr "Metalni oklop"
+
+# (in good health = enjoy)
+msgid "TXT_RYES2_SCRIPT02_D18192_WEARI"
+msgstr "Nosite ga u zdravlju."
+
+msgid "TXT_RNO2_SCRIPT02_D18192_COMEB"
+msgstr "Vratite se kad budete mogli priuštiti da nešto kupite, o seljo!"
+
+msgid "TXT_DLG_SCRIPT02_D19708_WELCO"
+msgstr "Dobrodošli. Šta vam mogu pokazati?"
+
+msgid "TXT_RPLY0_SCRIPT02_D19708_ENVIR"
+msgstr "Žalba na zaštitu okoliša"
+
+msgid "TXT_RYES0_SCRIPT02_D19708_WELLH"
+msgstr "Pa, evo te."
+
+msgid "TXT_RNO0_SCRIPT02_D19708_IMSOR"
+msgstr "Žao mi je, ali nemaš dovoljno novca za to."
+
+msgid "TXT_RPLY1_SCRIPT02_D19708_LEATH"
+msgstr "Kožni oklop"
+
+msgid "TXT_RYES1_SCRIPT02_D19708_HEREY"
+msgstr "Evo te."
+
+msgid "TXT_RNO1_SCRIPT02_D19708_PERHA"
+msgstr "Možda neki drugi put?"
+
+msgid "TXT_RPLY2_SCRIPT02_D19708_METAL"
+msgstr "Metalni oklop"
+
+# (in good health = enjoy)
+msgid "TXT_RYES2_SCRIPT02_D19708_WEARI"
+msgstr "Nosite ga u zdravlju."
+
+msgid "TXT_RNO2_SCRIPT02_D19708_COMEB"
+msgstr "Vratite se kad budete mogli priuštiti da nešto kupite, o selo!"
+
+# MAP02: Hospital.
+msgid "TXT_DLG_SCRIPT02_D21224_HOWMA"
+msgstr "Kako vam mogu pomoći?"
+
+msgid "TXT_RPLY0_SCRIPT02_D21224_MEDPA"
+msgstr "Medicinski flaster"
+
+msgid "TXT_RYES0_SCRIPT02_D21224_HERES"
+msgstr "Evo tvojeg zakrpa."
+
+msgid "TXT_RNO0_SCRIPT02_D21224_YOUNE"
+msgstr "Za to ti treba 10 zlata."
+
+msgid "TXT_RPLY1_SCRIPT02_D21224_MEDIC"
+msgstr "Ljekarski komplet"
+
+msgid "TXT_RYES1_SCRIPT02_D21224_THANK"
+msgstr "Hvala vam."
+
+msgid "TXT_RNO1_SCRIPT02_D21224_IWISH"
+msgstr "Volio bih da ih mogu pokloniti, ali koštaju 25 zlata."
+
+msgid "TXT_RPLY2_SCRIPT02_D21224_FIELD"
+msgstr "Terenski hirurški komplet"
+
+msgid "TXT_RYES2_SCRIPT02_D21224_THERE"
+msgstr "Evo. Čuvaj se sada."
+
+msgid "TXT_RNO2_SCRIPT02_D21224_WELLM"
+msgstr "Pa, možda si možeš priuštiti neke medicinske flastere?"
+
+# (After destroying the crystal in the Power Station)
+msgid "TXT_DLG_SCRIPT02_D22740_IHOPE"
+msgstr "Nadam se da Macil zna šta radi. Ako Red sazna da pomažem Frontu, gotov sam… Nije da ti to išta znači. Medic Frontu mi je dao nadogradbeni čip za tebe, jesi li spreman?"
+
+msgid "TXT_RPLY0_SCRIPT02_D22740_YESIM"
+msgstr "Da, spreman sam."
+
+msgid "TXT_RYES0_SCRIPT02_D22740_WELLT"
+msgstr "Pa onda, ovo neće potrajati ni sekundu. Eto, gotovo."
+
+msgid "TXT_DLG_SCRIPT02_D24256_HOWMA"
+msgstr "Kako vam mogu pomoći?"
+
+msgid "TXT_RPLY0_SCRIPT02_D24256_MEDPA"
+msgstr "Medicinski flaster"
+
+msgid "TXT_RYES0_SCRIPT02_D24256_HERES"
+msgstr "Evo tvojeg zakrpa."
+
+msgid "TXT_RNO0_SCRIPT02_D24256_YOUNE"
+msgstr "Za to ti treba 10 zlata."
+
+msgid "TXT_RPLY1_SCRIPT02_D24256_MEDIC"
+msgstr "Ljekarski komplet"
+
+msgid "TXT_RYES1_SCRIPT02_D24256_THANK"
+msgstr "Hvala vam."
+
+msgid "TXT_RNO1_SCRIPT02_D24256_IWISH"
+msgstr "Volio bih da ih mogu pokloniti, ali koštaju 25 zlata."
+
+msgid "TXT_RPLY2_SCRIPT02_D24256_FIELD"
+msgstr "Terenski hirurški komplet"
+
+msgid "TXT_RYES2_SCRIPT02_D24256_THERE"
+msgstr "Evo. Čuvaj se sada."
+
+msgid "TXT_RNO2_SCRIPT02_D24256_WELLM"
+msgstr "Pa, možda si možeš priuštiti neke medicinske flastere?"
+
+# MAP02: Barkeep.
+msgid "TXT_DLG_SCRIPT02_D25772_HELLO"
+msgstr "Zdravo, neznanče, nisam te ranije vidio ovdje. Dopusti mi da ti dam besplatan savjet. Bio bih oprezan na tvom mjestu. Red ne podnosi slobodnu volju, a njihova je pravda brza."
+
+msgid "TXT_RPLY0_SCRIPT02_D25772_WHATS"
+msgstr "Šta se dešava?"
+
+# (This text is only four seconds on screen)
+msgid "TXT_RYES0_SCRIPT02_D25772_THEWO"
+msgstr "Riječ je… Kanalizacija sadrži više od samo štakora i robota."
+
+msgid "TXT_DLG_SCRIPT02_D27288_WHATC"
+msgstr "Šta mogu učiniti za vas sada?"
+
+msgid "TXT_RPLY0_SCRIPT02_D27288_MOREI"
+msgstr "Više informacija."
+
+# (Four seconds)
+msgid "TXT_RYES0_SCRIPT02_D27288_THEGO"
+msgstr "Guverner je jednostavan podsjetnik da više nismo slobodni ljudi."
+
+msgid "TXT_RNO0_SCRIPT02_D27288_COMEB"
+msgstr "Vratite se kad nabavite malo zlata."
+
+msgid "TXT_DLG_SCRIPT02_D28804_WELLY"
+msgstr "Pa, postavljaš previše pitanja za nekoga ko ne pokušava umrijeti. Pazi da ne odeš i ne ubiješ se, ili još gore."
+
+msgid "TXT_RPLY0_SCRIPT02_D28804_MOREI"
+msgstr "Više informacija."
+
+# (Four seconds)
+msgid "TXT_RYES0_SCRIPT02_D28804_THERE"
+msgstr "U Redu ima više nego što se na prvi pogled čini."
+
+msgid "TXT_RNO0_SCRIPT02_D28804_WELLT"
+msgstr "Razgovarat ćemo kad dobiješ zlato!"
+
+msgid "TXT_DLG_SCRIPT02_D30320_THATS"
+msgstr "To je to, prijatelju, bunar znanja je presušio. Ionako sam ti rekao više nego što sam trebao. Sretno… I nemoj se vraćati."
+
+# MAP02: Power Station guard.
+msgid "TXT_DLG_SCRIPT02_D31836_HEYIM"
+msgstr "Hej, ovdje sam samo u slučaju hitnog slučaja. Ako jezgro bude probijeno, pobrinem se da niko ne uđe… niti izađe."
+
+# MAP02: Rust guards.
+msgid "TXT_DLG_SCRIPT02_D33352_WATCH"
+msgstr "Pazi koračaj, seljačino!"
+
+# MAP02: Gray guards.
+msgid "TXT_DLG_SCRIPT02_D34868_WEREG"
+msgstr "Ubit ćemo te! "
+
+# MAP02: Green guard.
+msgid "TXT_DLG_SCRIPT02_D36384_WHOIN"
+msgstr "Ko si, dovraga, ti? Niko ne smije da se mota po ovom području!"
+
+# MAP02: Golden guards.
+msgid "TXT_DLG_SCRIPT02_D37900_YOUTH"
+msgstr "Hej, ti tamo, ovdje niko ne smije ući. Idite dalje!"
+
+# MAP02: Irale's shop.
+msgid "TXT_DLG_SCRIPT02_D39416_IRALE"
+msgstr "Irale će te srediti!"
+
+# MAP02: Harris.
+msgid "TXT_DLG_SCRIPT02_D40932_IMKIN"
+msgstr "Ja sam nekako posrednik za talente pobunjenika. Momak koji je dobar koliko i ti možeš zaraditi puno zlata… ako se povežeš s pravim ljudima."
+
+msgid "TXT_RPLY0_SCRIPT02_D40932_IMINT"
+msgstr "Zanima me."
+
+msgid "TXT_RPLY1_SCRIPT02_D40932_SCREW"
+msgstr "Jebite se pobunjenici!"
+
+msgid "TXT_DLG_SCRIPT02_D42448_NONOS"
+msgstr "Ne, nema drugog šansa. Oh stražari, ubijte ga."
+
+msgid "TXT_DLG_SCRIPT02_D43964_GOODC"
+msgstr "Dobar izbor. Svetište Reda uz rijeku je njihova neslužbena komora za mučenje. Skriveno unutra nalazi se zlatni kalež. Uzmeš ga i ubereš svoju nagradu."
+
+msgid "TXT_RPLY0_SCRIPT02_D43964_HOWAM"
+msgstr "Kako to trebam uraditi?"
+
+msgid "TXT_DLG_SCRIPT02_D45480_HERES"
+msgstr "Evo samostrela, samo nišanite ravno i --splat--. Zapamtite, uzmite otmjeni pehar i idite u tavernu."
+
+msgid "TXT_RPLY0_SCRIPT02_D45480_COOLI"
+msgstr "Super. Razumijem."
+
+msgid "TXT_DLG_SCRIPT02_D46996_WHATA"
+msgstr "Šta čekate? Donesi mi taj kalež."
+
+msgid "TXT_DLG_SCRIPT02_D48512_HEYIK"
+msgstr "Hej, znam, nekako izgleda kao podmetanje. Nikada ne bih to učinio takvoj sjajnoj mašini za ubijanje. Imaš li predmet? Odlično! Sada se pripremi, zlato i slava baš kao što sam obećao. Uzmi ovaj ključ i guverner će te nagraditi."
+
+msgid "TXT_RPLY0_SCRIPT02_D48512_HEDBE"
+msgstr "Bolje mu je. Za tvoj račun!"
+
+msgid "TXT_RPLY1_SCRIPT02_D48512_WHATW"
+msgstr "Šta! Gdje je moj novac?"
+
+msgid "TXT_DLG_SCRIPT02_D50028_GETLO"
+msgstr "Nestani, klinko, smetaš mi."
+
+msgid "TXT_DLG_SCRIPT02_D51544_NOSEC"
+msgstr "Nema drugog šansa. Oh stražari, ubijte ga."
+
+# MAP02: Mourel.
+msgid "TXT_DLG_SCRIPT02_D53060_FIRST"
+msgstr "Prvo su poklali hiljade, a sada žele sve sposobne seljake za neodređene 'testove'. Kako Red očekuje da održim mir? Šta, dovraga, želite?"
+
+msgid "TXT_RPLY0_SCRIPT02_D53060_APRIS"
+msgstr "Propusnica za zatvor, dogovorimo se."
+
+msgid "TXT_DLG_SCRIPT02_D54576_ILIKE"
+msgstr "Već mi se sviđaš. Imam dva posla koja ne želim obaviti sam. Jedan je prljav, a drugi krvav."
+
+msgid "TXT_RPLY0_SCRIPT02_D54576_CALLM"
+msgstr "Zovi me Čistačem"
+
+msgid "TXT_RPLY1_SCRIPT02_D54576_IMNOT"
+msgstr "Ne samoživim se"
+
+# ("messy" chore)
+msgid "TXT_DLG_SCRIPT02_D56092_ONEOF"
+msgstr "Jedan od mojih slugu negdje prisvaja struju priključkom na mrežu. Pronađi ga i presijeci mu opskrbu, a ja ću ti dati ono što želiš. Donesi mi nešto kao znak."
+
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D56092_WHERE"
+msgstr "Gdje mogu pronaći ovaj slavin?"
+
+# (〃)
+msgid "TXT_DLG_SCRIPT02_D57608_IFIKN"
+msgstr "Da sam znao, ne bi ovo bio posao, zar ne? Upotrijebi svoj šarm, ali prekini mu dotok."
+
+# ("bloody" chore)
+msgid "TXT_DLG_SCRIPT02_D59124_TELLY"
+msgstr "Reći ću ti nešto: postoji lažljiva vreća po imenu Derwin koji prodaje djecu Redu. Neću tolerirati takvu izopačenost. Ne bez mog udjela. Derwin radi u skladištu. Ubij ga i donesi mi njegovo uho, pa ću vidjeti što mogu učiniti."
+
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D59124_HOWDO"
+msgstr "Kako da uđem?"
+
+# (〃)
+msgid "TXT_DLG_SCRIPT02_D60640_THISK"
+msgstr "Ovaj ključ će ti omogućiti ulazak u elektranu. Kad bolje razmislim, odsijeci mu uho, a zatim ga ubij. Mnogo bolje."
+
+# (after completing "messy" chore)
+msgid "TXT_DLG_SCRIPT02_D62156_OHIJU"
+msgstr "Oh, ja jednostavno obožavam suvenire. Evo, ovo će te uvesti u zatvor. Razgovaraj s upraviteljem zatvora Montagom. Šta god da radiš nakon toga, ne želim znati."
+
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D62156_THANK"
+msgstr "Hvala."
+
+msgid "TXT_DLG_SCRIPT02_D63672_GIVEY"
+msgstr "Dat ću ti natuknicu. Kad prestanem razgovarati s tobom, odlaziš."
+
+# (after completing "bloody" chore)
+msgid "TXT_DLG_SCRIPT02_D65188_DOYOU"
+msgstr "Imaš li dobre vijesti za mene? Sav sam uši."
+
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D65188_THEDE"
+msgstr "Djelo je učinjeno!"
+
+# (〃)
+msgid "TXT_DLG_SCRIPT02_D66704_OHIJU"
+msgstr "Oh, ja jednostavno obožavam suvenire. Evo, ovo će te uvesti u zatvor. Razgovaraj s upraviteljem zatvora Montagom. Šta god da radiš nakon toga, ne želim znati."
+
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D66704_FINEB"
+msgstr "U redu je."
+
+msgid "TXT_DLG_SCRIPT02_D68220_SOYOU"
+msgstr "Dakle, ti si budala koja je ukrala kalež? Uhapsit ću te kao pobunjeničkog lopova… čime ću ojačati svoj položaj u Redu. Kako je to biti nesvjesni pijun? Dat ću ti savjet: bit će bolno."
+
+msgid "TXT_RPLY0_SCRIPT02_D68220_ITSUC"
+msgstr "Sranje je!"
+
+msgid "TXT_RYES0_SCRIPT02_D68220_FORYO"
+msgstr "Za tebe da."
+
+msgid "TXT_RPLY1_SCRIPT02_D68220_HARRI"
+msgstr "Harris mi je obećao novac!"
+
+msgid "TXT_RYES1_SCRIPT02_D68220_TOOBA"
+msgstr "Šteta. Jedino što ćeš dobiti je smrt!"
+
+# MAP02: Rowan.
+msgid "TXT_DLG_SCRIPT02_D69736_INASM"
+msgstr "U malom svijetu glas brzo putuje. Čujem da si upravo uklonio neke prepreke sa svog puta. Dobar posao. Da li si zainteresovan za neke unosnije projekte?"
+
+msgid "TXT_RPLY0_SCRIPT02_D69736_SUREW"
+msgstr "Naravno, zašto ne."
+
+msgid "TXT_RPLY1_SCRIPT02_D69736_NOTHA"
+msgstr "Ne, hvala."
+
+msgid "TXT_RYES1_SCRIPT02_D69736_THENG"
+msgstr "Onda idi!"
+
+# Rowan.
+msgid "TXT_DLG_SCRIPT02_D71252_FOOLG"
+msgstr "Ludak! Čuvari, riješite me ovog nametljivog peona."
+
+msgid "TXT_DLG_SCRIPT02_D72768_GOODS"
+msgstr "Dobro. Nekim, uh, prijateljima mi treba da neko bude ušutkan. Beldin je zatočen u svetištu Reda. Postoji rijetko korišten ulaz pored malog pristaništa na rijeci koji nije čuvan. Uđi, ušutkaj ga i donesi mi njegov prsten kao dokaz."
+
+msgid "TXT_RPLY0_SCRIPT02_D72768_WILLI"
+msgstr "Hoće li se trud isplatiti?"
+
+msgid "TXT_DLG_SCRIPT02_D74284_ILLGU"
+msgstr "Garantiću 50 komada zlata, a ako se vratite, a da ne aktivirate sve alarme u gradu, postoji šansa da zaradite mnogo, mnogo više, i evo malog pomoćnika koji bi vam trebao dati prednost."
+
+msgid "TXT_RPLY0_SCRIPT02_D74284_THANK"
+msgstr "Hvala, trebat će mi."
+
+msgid "TXT_DLG_SCRIPT02_D75800_GOODR"
+msgstr "Dobro. Zapamti, njegova šutnja je zlatna."
+
+msgid "TXT_RPLY0_SCRIPT02_D75800_ILLGE"
+msgstr "Uhvatit ću ga."
+
+msgid "TXT_DLG_SCRIPT02_D77316_MISSI"
+msgstr "Misija izvršena? Imaš prsten izdajnika?"
+
+msgid "TXT_RPLY0_SCRIPT02_D77316_HESDE"
+msgstr "On je mrtav, gdje je moj novac?"
+
+msgid "TXT_RNO0_SCRIPT02_D77316_LIARG"
+msgstr "Lažljivče! Idi i donesi prsten!"
+
+msgid "TXT_DLG_SCRIPT02_D78832_HEREY"
+msgstr "Ovdje si to zaslužio. Izdajnik kojeg si ubio upravo je htio otkriti lokaciju Fronta. Spasio si živote. Kako bi želio zaraditi više zlata i budućnost slobodnu od tiranije?"
+
+msgid "TXT_RPLY0_SCRIPT02_D78832_TELLM"
+msgstr "Recite mi više."
+
+msgid "TXT_RPLY1_SCRIPT02_D78832_NOTMY"
+msgstr "Nije moj stil."
+
+msgid "TXT_DLG_SCRIPT02_D80348_IHAVE"
+msgstr "Imam poslovni odnos s vođom Fronta, Macilom. Znam da mu treba oštar tip poput tebe, i dobro plaća. Uzmi ovu oporavljenu komunikacijsku jedinicu i bit ćeš doveden do, recimo, prilika."
+
+msgid "TXT_RPLY0_SCRIPT02_D80348_THANK"
+msgstr "Hvala."
+
+msgid "TXT_DLG_SCRIPT02_D81864_GETGO"
+msgstr "Kreni. Ako ostanemo ovdje, oboje ćemo biti mrtvi."
+
+msgid "TXT_DLG_SCRIPT02_D83380_APITY"
+msgstr "Šteta, ali sada kad znaš za moje prijatelje, moram te ubiti. Čuvari, izbacite ovo smeće!"
+
+msgid "TXT_DLG_SCRIPT02_D84896_FOOLG"
+msgstr "Ludak. Čuvari! Oslobodite me od dosadnog peona."
+
+# Geoff.
+msgid "TXT_DLG_SCRIPT02_D86412_WALKA"
+msgstr "Otiđi, dječako, samo otiđi."
+
+msgid "TXT_DLG_SCRIPT02_D87928_WHATA"
+msgstr "Šta radiš ovdje?"
+
+msgid "TXT_RPLY0_SCRIPT02_D87928_HEYIN"
+msgstr "Hej, treba mi zlato!"
+
+msgid "TXT_DLG_SCRIPT02_D89444_BLACK"
+msgstr "Blackbird ti je rekao kod, zar ne? Dopusti mi da isključim alarm. Macil je sprat ispod."
+
+msgid "TXT_RPLY0_SCRIPT02_D89444_THANK"
+msgstr "Hvala."
+
+msgid "TXT_DLG_SCRIPT02_D90960_WALKA"
+msgstr "Otiđi, dječače, samo otiđi."
+
+# Arion.
+msgid "TXT_DLG_SCRIPT02_D92476_DOYOU"
+msgstr "Imate li zakazan sastanak s guvernerom? "
+
+msgid "TXT_RPLY0_SCRIPT02_D92476_OFCOU"
+msgstr "Naravno!"
+
+msgid "TXT_RPLY1_SCRIPT02_D92476_NOAND"
+msgstr "Ne, i ne treba mi jedan!"
+
+msgid "TXT_DLG_SCRIPT02_D93992_SORRY"
+msgstr "Oprostite! Nisam mislio… Molim vas, slobodno uđite."
+
+msgid "TXT_RPLY0_SCRIPT02_D93992_IKNEW"
+msgstr "Znao sam da ćeš to reći."
+
+msgid "TXT_DLG_SCRIPT02_D95508_IFYOU"
+msgstr "Ako si toliko žuran, nemoj gubiti vrijeme sa mnom."
+
+# MAP02: MacGuffin
+msgid "TXT_DLG_SCRIPT02_D97024_RELEA"
+msgstr "Oslobodi me, pusti starca na miru."
+
+# (after accepting "messy" chore)
+msgid "TXT_DLG_SCRIPT02_D98540_YOUSE"
+msgstr "Tražiš li mudrost, sine moj? Red je pobrinuo da postavljamo samo jedno pitanje: 'Zašto?'"
+
+msgid "TXT_RPLY0_SCRIPT02_D98540_WHERE"
+msgstr "Gdje je snazno spajanje?"
+
+msgid "TXT_RPLY1_SCRIPT02_D98540_WHERE"
+msgstr "Gdje je glavni redovnik Reda?"
+
+msgid "TXT_RPLY2_SCRIPT02_D98540_WHERE"
+msgstr "Gdje je ilegalni priključak?"
+
+msgid "TXT_DLG_SCRIPT02_D100056_ILLTE"
+msgstr "Reći ću ti gdje se nalazi, ali ne znam s čijim ćeš priključkom petljati. Tu je, upravo u postrojenju za prečišćavanje otpadnih voda."
+
+msgid "TXT_RPLY0_SCRIPT02_D100056_THANK"
+msgstr "Hvala"
+
+msgid "TXT_DLG_SCRIPT02_D101572_THATS"
+msgstr "To je upravo ovdje u postrojenju za prečišćavanje otpadnih voda. Ali to je spoj Fronta. Ko god ti je rekao da je to bilo Reda, griješio je."
+
+msgid "TXT_RPLY0_SCRIPT02_D101572_THANK"
+msgstr "Hvala"
+
+msgid "TXT_DLG_SCRIPT02_D103088_IFYOU"
+msgstr "Ako kažeš da je to nezakonito, ne želim imati ništa s tobom. Već imam dovoljno problema."
+
+msgid "TXT_RPLY0_SCRIPT02_D103088_THANK"
+msgstr "Hvala"
+
+msgid "TXT_DLG_SCRIPT02_D104604_RELEA"
+msgstr "Oslobodi me, ostavi starca na miru."
+
+# MAP03: Macil.
+msgid "TXT_DLG_SCRIPT03_D0_WELCO"
+msgstr "Dobrodošli u posljednji tračak nade. Samo mi imamo slobodnu volju da se suprotstavimo Redu. Imamo najbistrije naučne umove i mnogo sposobnih tijela, ali nam nedostaje taj jedan pravi, hm… rješavač problema koji će nam dati prednost koju trebamo. Pomozite nam."
+
+msgid "TXT_RPLY0_SCRIPT03_D0_ALLRI"
+msgstr "U redu, prihvatam."
+
+msgid "TXT_RPLY1_SCRIPT03_D0_NOTHA"
+msgstr "Ne, hvala!"
+
+msgid "TXT_DLG_SCRIPT03_D1516_YOUMI"
+msgstr "Možda biste trebali preispitati svoju odluku, s obzirom na to da ste okruženi teško naoružanim bijesnim pobunjenicima."
+
+msgid "TXT_RPLY0_SCRIPT03_D1516_ALLRI"
+msgstr "U redu, prihvatam!"
+
+msgid "TXT_RPLY1_SCRIPT03_D1516_NOTHA"
+msgstr "Ne, hvala."
+
+msgid "TXT_DLG_SCRIPT03_D3032_THEND"
+msgstr "Onda umri u sramoti i nečasti."
+
+msgid "TXT_DLG_SCRIPT03_D4548_GOODB"
+msgstr "Dobro, Blackbird će i dalje biti tvoj vodič. Prilično joj se svidio. Zajedno morate otkriti tajne Reda i njihovih neljudskih slugu. Uđite unutra i porazite ih."
+
+msgid "TXT_RPLY0_SCRIPT03_D4548_WHERE"
+msgstr "Odakle da počnem?"
+
+# (Prison mission)
+msgid "TXT_DLG_SCRIPT03_D6064_FRANK"
+msgstr "Iskreno, situacija je haotična. Moraš izvršiti nekoliko misija kako bi pripremio put za daljnje napade na Red. Naš posljednji upad bio je katastrofa i većina naših trupa je zarobljena. Treba mi da oslobodiš te zarobljenike."
+
+msgid "TXT_RPLY0_SCRIPT03_D6064_ITHIN"
+msgstr "Mislim da se mogu nositi s tim."
+
+msgid "TXT_DLG_SCRIPT03_D7580_TAKET"
+msgstr "Uzmite ovaj novac i posjetite Irale, koji nam isporučuje oružje. Ovaj ključ će vam omogućiti ulazak kod guvernera. On je korumpirana marioneta Reda, ali voli sklapati dogovore. Uradite sve što je potrebno da oslobodite naše saborce."
+
+msgid "TXT_RPLY0_SCRIPT03_D7580_ILLSE"
+msgstr "Pobrinuću se za to."
+
+msgid "TXT_DLG_SCRIPT03_D9096_FIGHT"
+msgstr "Borite se za front i slobodu. Krenite."
+
+# (Crystal mission)
+msgid "TXT_DLG_SCRIPT03_D10612_THEPR"
+msgstr "Zahvaljujući tebi, zatvorenici su ponovo dobrodošli. Evo malo zlata, idi posjeti medicinskog tehničara i instruktora oružja, a zatim imam veće ciljeve za tebe."
+
+msgid "TXT_RPLY0_SCRIPT03_D10612_IWILL"
+msgstr "Hoću. Šta je sljedeće?"
+
+msgid "TXT_DLG_SCRIPT03_D12128_ASING"
+msgstr "Jedan kristal napaja mrežu snage koja pokreće štitove Reda. Uništi taj kristal i napravit ćeš ogromne rupe u odbrani Reda. Blackbird će te odvesti do špijuna koji ima pristup, sretno."
+
+msgid "TXT_RPLY0_SCRIPT03_D12128_WELLG"
+msgstr "Razumjet ćemo."
+
+msgid "TXT_DLG_SCRIPT03_D13644_FIGHT"
+msgstr "Borite se za front i slobodu. Krenite."
+
+# (Progammer mission)
+msgid "TXT_DLG_SCRIPT03_D15160_YOUVE"
+msgstr "Nadmašili ste sva naša očekivanja. Zbog vaše odvažnosti naše trupe su u pokretu. Želim da se vi dvoje pridružite jurišu s određenim ciljem. Eliminirajte Programera. Vrijeme je da otkrijemo šta smo saznali o ovom sloju Reda."
+
+msgid "TXT_RPLY0_SCRIPT03_D15160_TELLM"
+msgstr "Recite mi šta znamo."
+
+msgid "TXT_DLG_SCRIPT03_D16676_THEPR"
+msgstr "Programerovo skrovište je u dvorcu. Sada idi do medicinskog radnika, uzmi municiju i idi po njega."
+
+msgid "TXT_RPLY0_SCRIPT03_D16676_LETME"
+msgstr "Pustite me na njih!"
+
+msgid "TXT_DLG_SCRIPT03_D18192_FIGHT"
+msgstr "Borite se za front i slobodu. Krenite."
+
+# MAP03: Barracks.
+msgid "TXT_DLG_SCRIPT03_D19708_REMEM"
+msgstr "Sjećaš li se kako je gradsko vijeće izgledalo? To je blagi podsjetnik na to šta su spremni učiniti da bi nas napali. Budi oprezan."
+
+# MAP03: Upstairs, corridor.
+msgid "TXT_DLG_SCRIPT03_D21224_TALKT"
+msgstr "Razgovaraj s Macilom. On će ti moći pomoći."
+
+# MAP03: Barracks.
+# (dead meat = corpse)
+msgid "TXT_DLG_SCRIPT03_D22740_IVEHE"
+msgstr "Čuo sam da Macil ima plan da potkopa Red. Bolje da bude dobar. Još jedan neuspjeh i svi smo mrtvi meso."
+
+msgid "TXT_DLG_SCRIPT03_D24256_AFEWO"
+msgstr "Par ovih bačvi bačenih u njihov vodeni sistem trebalo bi malo izjednačiti izglede."
+
+msgid "TXT_DLG_SCRIPT03_D25772_SOYOU"
+msgstr "Dakle, ti si novi operativac? Hvala, bez tebe bismo svi sada bili mrtvi."
+
+# MAP03: Gerald (no implant)
+msgid "TXT_DLG_SCRIPT03_D27288_IMWOR"
+msgstr "Radim na nečemu što će nam dati prednost. Povećat će tvoju izdržljivost i potpuno te razbuditi. Gotovo sam riješio sve greške. Mogu li ti pomoći?"
+
+msgid "TXT_RPLY0_SCRIPT03_D27288_PATCH"
+msgstr "Zalijepi me."
+
+msgid "TXT_RYES0_SCRIPT03_D27288_BOYYO"
+msgstr "Čovječe, ti si pravi nered. Vidjet ću šta mogu učiniti."
+
+msgid "TXT_RPLY1_SCRIPT03_D27288_STAMI"
+msgstr "Implantat izdržljivosti?"
+
+msgid "TXT_RYES1_SCRIPT03_D27288_ALLRI"
+msgstr "U redu, ovo neće potrajati ni trenutak."
+
+msgid "TXT_RNO1_SCRIPT03_D27288_ITSNO"
+msgstr "Još nije gotovo."
+
+# (one upgrade)
+msgid "TXT_DLG_SCRIPT03_D28804_HEYIM"
+msgstr "Hej, radim na ažuriranoj verziji tvog implanta. Ima li još nešto što mogu učiniti?"
+
+msgid "TXT_RPLY0_SCRIPT03_D28804_PATCH"
+msgstr "Zalijepi me."
+
+msgid "TXT_RYES0_SCRIPT03_D28804_WELLA"
+msgstr "Pa barem vidiš akciju."
+
+msgid "TXT_RPLY1_SCRIPT03_D28804_IMPLA"
+msgstr "Nadogradnja implantata?"
+
+msgid "TXT_RYES1_SCRIPT03_D28804_GOODT"
+msgstr "Bolje da bude dobro, nikad ne može biti previše sigurno."
+
+msgid "TXT_RNO1_SCRIPT03_D28804_IMALM"
+msgstr "Skoro sam gotov, ali još nisam sasvim."
+
+# (two upgrades)
+msgid "TXT_DLG_SCRIPT03_D30320_ALLRI"
+msgstr "U redu, skoro sve radi savršeno. Ostalo je još nekoliko problema koje treba riješiti. Treba li ti još nešto? "
+
+msgid "TXT_RPLY0_SCRIPT03_D30320_PATCH"
+msgstr "Zalijepi me."
+
+msgid "TXT_RYES0_SCRIPT03_D30320_WHATH"
+msgstr "Šta si pokušavao uraditi? Da se suprotstaviš krstašu?"
+
+msgid "TXT_RPLY1_SCRIPT03_D30320_IMPLA"
+msgstr "Nadogradnja implantata?."
+
+msgid "TXT_RYES1_SCRIPT03_D30320_THATS"
+msgstr "To bi trebalo biti dovoljno za vas."
+
+msgid "TXT_RNO1_SCRIPT03_D30320_LETME"
+msgstr "Dopusti mi da prvo provedem još nekoliko testova."
+
+# (?)
+msgid "TXT_DLG_SCRIPT03_D31836_THATS"
+msgstr "To je sve što trenutno mogu učiniti na implantatu. Možda će se malo zacijeliti?"
+
+msgid "TXT_RPLY0_SCRIPT03_D31836_YEAH"
+msgstr "Da."
+
+msgid "TXT_RYES0_SCRIPT03_D31836_BOYYO"
+msgstr "Čovječe, ti si pravi nered. Vidjet ću šta mogu učiniti."
+
+# MAP03: Feris (no training).
+msgid "TXT_DLG_SCRIPT03_D33352_WHATC"
+msgstr "Šta mogu učiniti za vas?"
+
+msgid "TXT_RPLY0_SCRIPT03_D33352_IMOUT"
+msgstr "Nemam više municije."
+
+msgid "TXT_RYES0_SCRIPT03_D33352_HERES"
+msgstr "Evo ti municije. Nemoj je bacati."
+
+msgid "TXT_RPLY1_SCRIPT03_D33352_TEACH"
+msgstr "Nauči me."
+
+msgid "TXT_RYES1_SCRIPT03_D33352_ALLRI"
+msgstr "U redu, samo ću ti pokazati nekoliko malih savjeta."
+
+msgid "TXT_RNO1_SCRIPT03_D33352_YOURE"
+msgstr "Još nisi spreman."
+
+# (one training)
+msgid "TXT_DLG_SCRIPT03_D34868_BACKA"
+msgstr "Ponovo ovdje? Šta ti treba?"
+
+msgid "TXT_RPLY0_SCRIPT03_D34868_IMOUT"
+msgstr "Nemam više municije."
+
+msgid "TXT_RYES0_SCRIPT03_D34868_HERES"
+msgstr "Evo ti municije. Nemoj je baciti."
+
+msgid "TXT_RNO0_SCRIPT03_D34868_YOUVE"
+msgstr "Imaš dovoljno municije."
+
+msgid "TXT_RPLY1_SCRIPT03_D34868_TEACH"
+msgstr "Nauči me."
+
+msgid "TXT_RYES1_SCRIPT03_D34868_ALLRI"
+msgstr "U redu, ovo bi te trebalo izdržati neko vrijeme."
+
+msgid "TXT_RNO1_SCRIPT03_D34868_SORRY"
+msgstr "Žao mi je, ne mogu. Samo izvršavam Macilove naredbe."
+
+# (two trainings)
+msgid "TXT_DLG_SCRIPT03_D36384_WELLW"
+msgstr "Pa šta je to, municija ili obuka? Jedva čekam da stavim ruke na ona nova oružja koja smo zaplijenili. Malo obuke, a onda puno osvete."
+
+msgid "TXT_RPLY0_SCRIPT03_D36384_IMOUT"
+msgstr "Ostala mi je municija."
+
+msgid "TXT_RYES0_SCRIPT03_D36384_HERES"
+msgstr "Evo ti municije. Nemoj je baciti."
+
+msgid "TXT_RNO0_SCRIPT03_D36384_YOUVE"
+msgstr "Imaš dovoljno municije."
+
+msgid "TXT_RPLY1_SCRIPT03_D36384_TEACH"
+msgstr "Nauči me."
+
+msgid "TXT_RYES1_SCRIPT03_D36384_OKTAK"
+msgstr "U redu. Uzmi ono što si ovdje naučio i pokaži tim budalama iz Reda put u pakao."
+
+msgid "TXT_RNO1_SCRIPT03_D36384_COMEB"
+msgstr "Vratite se kasnije, kad Macil kaže da je vrijeme."
+
+# (three trainings)
+msgid "TXT_DLG_SCRIPT03_D37900_IVETA"
+msgstr "Naučio sam te sve što trenutno mogu. Daj mi malo vremena da isprobam nova oružja. Osim ako ti municija nije ponestala."
+
+msgid "TXT_RPLY0_SCRIPT03_D37900_YESIA"
+msgstr "Da, jesam."
+
+msgid "TXT_RYES0_SCRIPT03_D37900_HEREY"
+msgstr "Evo."
+
+# MAP03: Upstairs.
+msgid "TXT_DLG_SCRIPT03_D39416_DONTG"
+msgstr "Nemoj biti previše brz s okidačem u gradu. Pokrenut ćeš alarm i oni će početi slati straže iz dvorca. "
+
+# MAP03: Near Macil.
+msgid "TXT_DLG_SCRIPT03_D40932_WELCO"
+msgstr "Dobrodošli, uvijek nam dobro dođe dodatna pomoć."
+
+msgid "TXT_DLG_SCRIPT03_D42448_WHENI"
+msgstr "Kad sam još bio u akciji, imali smo priliku pregledati akolita prije nego što su stigle pojačanja. Slušaj, oni nisu ljudi."
+
+# MAP03: Downstairs.
+msgid "TXT_DLG_SCRIPT03_D43964_WERET"
+msgstr "Pokušavamo pronaći gdje se nalaze mehanizmi kapija dvorca, ali do sada nismo imali sreće."
+
+msgid "TXT_DLG_SCRIPT03_D45480_DONTG"
+msgstr "Nemoj da te uhvate. Čuo sam užasne priče o tome šta rade našim ljudima nakon što ih zatvore. Oni jednostavno nestanu… bez traga."
+
+msgid "TXT_DLG_SCRIPT03_D46996_HERES"
+msgstr "Evo nekoliko savjeta: ako ikada vidiš bilo kojeg od vojnika Reda, kreni u suprotnom smjeru. Oni su brzi i brutalni."
+
+msgid "TXT_DLG_SCRIPT03_D48512_LEAVE"
+msgstr "Oстави me na miru. Radim nešto za Macila."
+
+# MAP04: Reactor Core red guard.
+msgid "TXT_DLG_SCRIPT04_D0_SORRY"
+msgstr "Žao mi je, ne. Nemate dozvolu."
+
+msgid "TXT_DLG_SCRIPT04_D1516_STOPS"
+msgstr "Stani! Pokaži mi svoju iskaznicu."
+
+msgid "TXT_RPLY0_SCRIPT04_D1516_HERES"
+msgstr "Evo mog ličnog dokumenta."
+
+msgid "TXT_DLG_SCRIPT04_D3032_OHOKS"
+msgstr "Oh, u redu. Naravno, samo naprijed. Ugodan dan."
+
+# MAP04: Warehouse red guard.
+msgid "TXT_DLG_SCRIPT04_D4548_DERWI"
+msgstr "Derwin? Da, on je dole u skladištu, ali nećeš moći ući ako nisi ovlašten."
+
+msgid "TXT_RPLY0_SCRIPT04_D4548_IVEGO"
+msgstr "Imam dozvolu."
+
+msgid "TXT_DLG_SCRIPT04_D6064_GOON"
+msgstr "Nastavi."
+
+msgid "TXT_RPLY0_SCRIPT04_D6064_DOYOU"
+msgstr "Znaš li gdje je on?"
+
+msgid "TXT_DLG_SCRIPT04_D7580_IDONT"
+msgstr "Ne znam gdje je iko. Samo držim poklopac na zamci za pacove."
+
+msgid "TXT_DLG_SCRIPT04_D9096_YOUAR"
+msgstr "Ti si neugodna smetnja."
+
+# MAP04: Reactor Core gray guard.
+msgid "TXT_DLG_SCRIPT04_D10612_MOVEA"
+msgstr "Maknite se ili ćete okusiti metal."
+
+msgid "TXT_DLG_SCRIPT04_D12128_PASSY"
+msgstr "Provucite ličnu kartu ovdje za pristup."
+
+# MAP04: Green guard.
+msgid "TXT_DLG_SCRIPT04_D13644_GETBA"
+msgstr "Vrati se na posao, odmah!"
+
+msgid "TXT_DLG_SCRIPT04_D15160_GETBA"
+msgstr "Vrati se na posao, odmah!"
+
+# MAP04: Warehouse → Northeast (worker in red)
+msgid "TXT_DLG_SCRIPT04_D16676_WEVEB"
+msgstr "Već sedmicama radimo danonoćno bez ikakvog odmora. Rekao bih da Red planira represivni upad na Front."
+
+# MAP04: Derwin.
+msgid "TXT_DLG_SCRIPT04_D18192_OHDAM"
+msgstr "Oh, dovraga. Guverner te poslao. Namjeravao sam mu dati njegov dio, stvarno jesam. U redu, slušaj. Imam skrivenu gomilu novca. Tvoj je ako zatvoriš oči."
+
+msgid "TXT_RPLY0_SCRIPT04_D18192_ALLRI"
+msgstr "U redu, puštam te."
+
+msgid "TXT_RPLY1_SCRIPT04_D18192_SORRY"
+msgstr "Oprosti, ništa lično."
+
+msgid "TXT_DLG_SCRIPT04_D19708_NUTSI"
+msgstr "Jebote, ako ja padnem, onda padneš i ti. Čuvari!!"
+
+msgid "TXT_DLG_SCRIPT04_D21224_BUSIN"
+msgstr "Poslovanje, kakvo poslovanje. Pomozite, stražari, uhvatio sam živog."
+
+# MAP04: Worner.
+msgid "TXT_DLG_SCRIPT04_D22740_AHIGO"
+msgstr "Ah, dobio sam vijest od Macila da ćeš doći. Imam način da te uvedem u elektranu, ali je prilično rizičan."
+
+msgid "TXT_RPLY0_SCRIPT04_D22740_ILLTA"
+msgstr "Uzet ću svoje šanse."
+
+msgid "TXT_DLG_SCRIPT04_D24256_ALLRI"
+msgstr "U redu, ukrao sam ličnu kartu s leša nekog budale koji je pao u bazen za hlađenje reaktora. --blat-- trenutačno prženje."
+
+msgid "TXT_RPLY0_SCRIPT04_D24256_WHATS"
+msgstr "Šta da radim kad uđem?"
+
+msgid "TXT_DLG_SCRIPT04_D25772_TELLW"
+msgstr "Recite svima koji pitaju da ste zamjenski radnik gospodina Crispyja. To je dovoljno glupo da upali. Oh, i možda biste htjeli provjeriti magacin koji je odmah iznad nas."
+
+msgid "TXT_RPLY0_SCRIPT04_D25772_BOYIH"
+msgstr "Čovječe, nadam se da ovaj ID radi."
+
+msgid "TXT_DLG_SCRIPT04_D27288_GETOU"
+msgstr "Makni se odavde, osim ako ne želiš završiti kao gospodin Mrtvi."
+
+# MAP04: Warehouse → Dock Worker.
+msgid "TXT_DLG_SCRIPT04_D28804_HEYLE"
+msgstr "Hej, ostavi me na miru. Ako nas uhvate da gubimo vrijeme, umrijet ćemo ili ćemo dobiti dodatni posao."
+
+# MAP04: Reactor Core → Northern alarm green door → Level 2 door
+msgid "TXT_DLG_SCRIPT04_D30320_SUCHP"
+msgstr "Takav pritisak, ovim tempom uskoro ćemo se vratiti na normalne smjene. Pumpamo tone snage u dvorac i skoro sam završio s evidentiranjem tog novog oružja."
+
+msgid "TXT_RPLY0_SCRIPT04_D30320_WEAPO"
+msgstr "Oružje?"
+
+msgid "TXT_DLG_SCRIPT04_D31836_WHATD"
+msgstr "Šta misliš, da li smo zalihe čarapa iscrpili?"
+
+msgid "TXT_RPLY0_SCRIPT04_D31836_WHATK"
+msgstr "Kakvo oružje?"
+
+msgid "TXT_DLG_SCRIPT04_D33352_AREYO"
+msgstr "Jesi li gluh? Upravo sam ti rekao koliko sam zauzet. Vratio se na posao."
+
+# MAP04: Reactor Core → Southern alarm green door
+msgid "TXT_DLG_SCRIPT04_D34868_WHOAR"
+msgstr "Ko ste vi? Samo osoblje s dozvolom nivoa dva je dozvoljeno u ovom području."
+
+msgid "TXT_RPLY0_SCRIPT04_D34868_IMTHE"
+msgstr "Ja sam zamjenski radnik."
+
+msgid "TXT_DLG_SCRIPT04_D36384_ABOUT"
+msgstr "Baš si se i pojavio. Idi razgovaraj s Ketrickom u jezgri. Oh, i uzmi ovu karticu. Ne želim da te upucaju prvog dana, ha?"
+
+msgid "TXT_RPLY0_SCRIPT04_D36384_WHERE"
+msgstr "Gdje je kristal moći?"
+
+msgid "TXT_DLG_SCRIPT04_D37900_IFYOU"
+msgstr "Ako ne stigneš na posao, ionako će te upucati. Makni svoju tuniku."
+
+# MAP04: Reactor Core → Northern alarm green door
+msgid "TXT_DLG_SCRIPT04_D39416_IDONT"
+msgstr "Ne želim zvučati alarmistički, ali ako nastave ovako snažno gurati kristal moći, pojavit će se pukotina, pa će se razbiti, i onda *bum*! …Samo razmišljam."
+
+# MAP04: Reactor Core → Southern alarm green door
+msgid "TXT_DLG_SCRIPT04_D40932_LETME"
+msgstr "Da budem sasvim jasan. Ako se ovaj terminal ponovo zablokira, nivo rashladne tečnosti će pasti i svi ćemo morati odgovarati Programeru. Ako preživimo."
+
+# MAP04: Ketrick.
+msgid "TXT_DLG_SCRIPT04_D42448_YOUYE"
+msgstr "Ti! Da, ti. Nemaš dozvolu za ovaj prostor. Daj mi svoju karticu, brzo. Baš sam loše raspoložen!"
+
+msgid "TXT_RPLY0_SCRIPT04_D42448_HEREH"
+msgstr "Evo, evo moju karticu."
+
+msgid "TXT_DLG_SCRIPT04_D43964_THISI"
+msgstr "Ovo je smeće! Čekaj ovdje. Ma k vragu. Čuvari, ubijte ovog uljeza!"
+
+# MAP04: Reactor Core → Sammis
+msgid "TXT_DLG_SCRIPT04_D45480_WORKS"
+msgstr "Rad, san, mučenje – kakav život. Reci, jesi li ti zamjena za nepažljivog ronioca u jamu?"
+
+msgid "TXT_RPLY0_SCRIPT04_D45480_YEAHC"
+msgstr "Da, jedva čekam da počnem."
+
+msgid "TXT_DLG_SCRIPT04_D46996_YEAHR"
+msgstr "Da, naravno. U redu, makni se na posao."
+
+msgid "TXT_RPLY0_SCRIPT04_D46996_WHERE"
+msgstr "Gdje je kristal?"
+
+msgid "TXT_DLG_SCRIPT04_D48512_GOTAL"
+msgstr "Otiđi i razgovaraj s Ketrickom. Pomoću prekidača podigni hodnik, a zatim upotrijebi ovu iskaznicu za lift."
+
+msgid "TXT_RPLY0_SCRIPT04_D48512_WHERE"
+msgstr "Gdje je opet kristal?"
+
+msgid "TXT_DLG_SCRIPT04_D50028_NONEO"
+msgstr "Nije tvoja stvar, idi razgovaraj s Ketrickom."
+
+msgid "TXT_RPLY0_SCRIPT04_D50028_OK"
+msgstr "U redu."
+
+# (bored to tears = extremely bored)
+msgid "TXT_DLG_SCRIPT04_D51544_IFITS"
+msgstr "Ako želiš samo besposlu, idi i gledaj u taj ekran neko vrijeme, dosadilo će ti do suza."
+
+# MAP04: Reactor Core → Southern alarm green door
+msgid "TXT_DLG_SCRIPT04_D53060_THEAL"
+msgstr "Sveznajući Programer je toliko paranoičan zbog infiltracije da je zaključao jezgro računara. Kako da obavim svoj posao? Jedini način ulaska je trka samoubistva."
+
+msgid "TXT_RPLY0_SCRIPT04_D53060_SUICI"
+msgstr "Pokušaj samoubistva? Šta je to?"
+
+msgid "TXT_DLG_SCRIPT04_D54576_ITSAS"
+msgstr "To je siguran način da te ubiju, ali to trenutno nije važno. Spusti se liftom ako želiš."
+
+# MAP05: Door Guard.
+msgid "TXT_DLG_SCRIPT05_D0_HALTN"
+msgstr "Stop. Niko ne prolazi ovuda bez odobrenja upravnika ili guvernera."
+
+msgid "TXT_RPLY0_SCRIPT05_D0_HERES"
+msgstr "Evo moje propusnice, pusti me unutra."
+
+msgid "TXT_DLG_SCRIPT05_D1516_OKBUT"
+msgstr "U redu, ali razgovaraj samo s upravnikom."
+
+# (After killing Montag)
+msgid "TXT_DLG_SCRIPT05_D3032_DOILO"
+msgstr "Zar mi izgledam kao upravnik? Nastavi se kretati, ovo područje je zabranjeno."
+
+# MAP05: Prison Guard.
+msgid "TXT_DLG_SCRIPT05_D4548_THEOR"
+msgstr "Bijes Reda će padati na ove sluge dok ne zamole za smrt."
+
+# MAP05: Montag.
+msgid "TXT_DLG_SCRIPT05_D6064_IDONT"
+msgstr "Ne zanima me da li ti je Mourel dao propusnicu. Ovo je moj zatvor. Moj ključ je jedini način ulaska ili izlaska, i neću riskirati. Red ne toleriše greške."
+
+msgid "TXT_RPLY0_SCRIPT05_D6064_GIVEM"
+msgstr "Daj mi prokleti ključ!"
+
+msgid "TXT_DLG_SCRIPT05_D7580_OVERM"
+msgstr "Preko mog mrtvog tijela!"
+
+msgid "TXT_RPLY0_SCRIPT05_D7580_GREAT"
+msgstr "Sjajna ideja!"
+
+msgid "TXT_DLG_SCRIPT05_D9096_SHACK"
+msgstr "Okovi ili lanci, želim da ostaneš."
+
+# MAP05: Wolenick.
+msgid "TXT_DLG_SCRIPT05_D10612_IDONT"
+msgstr "Ne znam kako si uspio proći pored stražara i upravnika, ali nadam se da ti se sviđa dekor, jer si se upravo uselio."
+
+msgid "TXT_RPLY0_SCRIPT05_D10612_FREEM"
+msgstr "Oslobodi moje saborce ili umri!"
+
+msgid "TXT_DLG_SCRIPT05_D12128_KILLM"
+msgstr "Ubiješ li me, nikada nikoga nećeš osloboditi. Ja posjedujem jedini šablonski ključ koji će otključati ćelije."
+
+msgid "TXT_RPLY0_SCRIPT05_D12128_CANYO"
+msgstr "Možeš li mi onda pomoći?"
+
+msgid "TXT_DLG_SCRIPT05_D13644_MOVEA"
+msgstr "Idite dalje ili se pridružite svojim prijateljima."
+
+# MAP05: Prisoner.
+msgid "TXT_DLG_SCRIPT05_D15160_DONTJ"
+msgstr "Ne staj tamo, izvuči nas odavde!"
+
+msgid "TXT_DLG_SCRIPT05_D16676_THESK"
+msgstr "Nebo, želim vidjeti nebo."
+
+msgid "TXT_DLG_SCRIPT05_D18192_FIVEF"
+msgstr "Pet stopa na četiri stope, pet stopa na četiri stope, pet stopa na četiri stope."
+
+msgid "TXT_DLG_SCRIPT05_D19708_DONTR"
+msgstr "Nemoj me puštati ako je Red još uvijek na vlasti. Ne mogu podnijeti teror."
+
+msgid "TXT_DLG_SCRIPT05_D21224_IDONT"
+msgstr "Ne želim da se žalim, ali već je krajnje vrijeme da Macil pošalje nekoga da nas izvede."
+
+msgid "TXT_DLG_SCRIPT05_D22740_IDGIV"
+msgstr "Dao bih sve za samo koru hljeba. Tako sam gladan."
+
+# MAP06: Weran.
+msgid "TXT_DLG_SCRIPT06_D0_AHASU"
+msgstr "Ah, površnjak kojem je potreban usluga. Ovdje dolje moraš učiniti uslugu da bi dobio uslugu, a meni treba da se otvori ulaz u grad, naš put do hrane. Red ga je zapečatio i čuva."
+
+msgid "TXT_RPLY0_SCRIPT06_D0_WHERE"
+msgstr "Gdje je mehanizam kapije?"
+
+msgid "TXT_DLG_SCRIPT06_D1516_DOMYF"
+msgstr "Prvo mi učini uslugu, inače od mene nećeš dobiti ništa."
+
+msgid "TXT_RPLY0_SCRIPT06_D1516_HOWWI"
+msgstr "Kako ćete znati da je otvoreno?"
+
+msgid "TXT_DLG_SCRIPT06_D3032_BRING"
+msgstr "Donesi mi nazad gardijsku uniformu. Tako će je jedan od mojih ratfelova moći nositi i niko neće ponovo pokušati zatvoriti vrata."
+
+msgid "TXT_RPLY0_SCRIPT06_D3032_YOUWA"
+msgstr "Hoćeš njegovu uniformu?"
+
+msgid "TXT_DLG_SCRIPT06_D4548_OPENT"
+msgstr "Otvori vrata, donesi mi uniformu i razmijenimo. Inače, jebi se."
+
+msgid "TXT_DLG_SCRIPT06_D6064_HAVEY"
+msgstr "Jesi li mi donio ono što želim?"
+
+msgid "TXT_RPLY0_SCRIPT06_D6064_HOWAB"
+msgstr "Šta misliš o ovoj uniformi?"
+
+msgid "TXT_RNO0_SCRIPT06_D6064_BRING"
+msgstr "Donesi mi uniformu."
+
+# MAP06: Weran.
+msgid "TXT_DLG_SCRIPT06_D7580_GOODH"
+msgstr "Dobro. Evo još nešto. Moji drugovi su ovo skinuli sa srušenog križara, to su dijelovi koji čine bacač plamena. Sada ti Irale može napraviti jedan. Možeš se tako zabaviti."
+
+msgid "TXT_RPLY0_SCRIPT06_D7580_WHERE"
+msgstr "Gdje je mehanizam kapije?"
+
+#
+# https://en.wikipedia.org/wiki/Reclaimed_water
+msgid "TXT_DLG_SCRIPT06_D9096_YOUHA"
+msgstr "Morate ući u drugi dio kanalizacije. Da biste tamo stigli, morate ući u dvorac kroz servisni ulaz za kanalizaciju i isprazniti spremnik za reciklažu tečnosti. Na dnu se nalazi skriveni ulaz u kanalizaciju, a odmah iza njega je ručna kontrola kapije."
+
+msgid "TXT_RPLY0_SCRIPT06_D9096_ANYTH"
+msgstr "Možeš li još nešto učiniti?"
+
+msgid "TXT_DLG_SCRIPT06_D10612_GOODL"
+msgstr "Sretno. Otvorio sam nekoliko naših tunela za tebe. To bi trebalo olakšati tvoj zadatak. Oh, veličina deset, savršeno! …Ali užasne boje."
+
+msgid "TXT_RPLY0_SCRIPT06_D10612_THANK"
+msgstr "Hvala na pomoći."
+
+msgid "TXT_DLG_SCRIPT06_D12128_YOUGI"
+msgstr "Ne dajete mi ništa, ne dobijate ništa."
+
+# MAP06: Beggar.
+msgid "TXT_DLG_SCRIPT06_D13644_WERAN"
+msgstr "Weran će nas spasiti. Još nas nikada nije iznevjerio."
+
+msgid "TXT_DLG_SCRIPT06_D15160_IFYOU"
+msgstr "Ako tražiš odgovor na svoj problem, pronađi Werana. "
+
+msgid "TXT_DLG_SCRIPT06_D16676_LONGL"
+msgstr "Neka živi Front? Sve je to glupost. Svi samo čekamo da umremo. "
+
+msgid "TXT_DLG_SCRIPT06_D18192_WITHO"
+msgstr "S obzirom da nam je prolaz na površinu zapečaćen, ne možemo se ni nahraniti."
+
+msgid "TXT_DLG_SCRIPT06_D19708_FOODD"
+msgstr "Hrana, imaš li ikakve hrane? Molimo te, pomozi nam."
+
+# MAP06: Gray acolyte.
+msgid "TXT_DLG_SCRIPT06_D21224_THISI"
+msgstr "Ovo je moja nagrada za puštanje zatvorenika da pobjegnu i čuvanje kanalizacije. Ako ikada pronađem tipa koji ih je izvučio, pobit ću ga."
+
+# MAP06: Red acolyte.
+msgid "TXT_DLG_SCRIPT06_D22740_WEVEG"
+msgstr "Imamo te sitne prosjake baš tamo gdje ih želimo. Još nekoliko dana ovako, i izgladjet će se do zaborava."
+
+# MAP06: Near storage.
+msgid "TXT_DLG_SCRIPT06_D24256_WHATS"
+msgstr "Koja je vaša dozvola? Neovlaštenom osoblju nije dozvoljen pristup ovdje gore."
+
+# MAP07: Red acolyte at the main entrance.
+msgid "TXT_DLG_SCRIPT07_D0_WHATT"
+msgstr "Šta je, dovraga? Ko je otvorio kapije? Uključite alarm!!!"
+
+# MAP07
+msgid "TXT_DLG_SCRIPT07_D1516_THERE"
+msgstr "Postoji još jedan ulaz u kanalizaciju, prebaci taj prekidač, a zatim se popni i isprazni rezervoar za pročišćavanje."
+
+# MAP07: Hospital.
+msgid "TXT_DLG_SCRIPT07_D3032_WHATT"
+msgstr "Koji je, dovraga, tvoj problem. Ako Programer izađe iz svoje audijencijske dvorane, mrtav si."
+
+msgid "TXT_DLG_SCRIPT07_D4548_HEYYO"
+msgstr "Hej, nemaš dozvolu da se spustiš tamo."
+
+# MAP07: Computer room (northwest building).
+msgid "TXT_DLG_SCRIPT07_D6064_PROGR"
+msgstr "Programer? Ko ti je to rekao? Ne postoji Programer. Ta priča je raširena prije mnogo vremena. Nemoj mi reći da je Fronta stvarno vjerovala u to sranje. Idioti."
+
+msgid "TXT_RPLY0_SCRIPT07_D6064_WELLW"
+msgstr "Pa, šta je onda istina?"
+
+msgid "TXT_DLG_SCRIPT07_D7580_ITOLD"
+msgstr "Rekao sam ti sve što znam. Gubiš svoje vrijeme."
+
+# MAP07: Font soldier.
+msgid "TXT_DLG_SCRIPT07_D9096_FIGHT"
+msgstr "Borite se dalje, pobijedit ćemo. Ovaj dan će biti naš!"
+
+msgid "TXT_DLG_SCRIPT07_D10612_FIGHT"
+msgstr "Borite se dalje, pobijedit ćemo. Ovaj dan će biti naš!"
+
+msgid "TXT_DLG_SCRIPT07_D12128_FIGHT"
+msgstr "Borite se dalje, pobijedit ćemo. Ovaj dan će biti naš!"
+
+msgid "TXT_DLG_SCRIPT07_D13644_FIGHT"
+msgstr "Borite se dalje, pobijedit ćemo. Ovaj dan će biti naš!"
+
+msgid "TXT_DLG_SCRIPT07_D15160_FIGHT"
+msgstr "Borite se dalje, pobijedit ćemo. Ovaj dan će biti naš!"
+
+msgid "TXT_DLG_SCRIPT07_D16676_FIGHT"
+msgstr "Borite se dalje, pobijedit ćemo. Ovaj dan će biti naš!"
+
+# MAP08: Northeast room.
+msgid "TXT_DLG_SCRIPT08_D0_YOUKI"
+msgstr "Ubio si sve stražare. Nemoj mi nauditi. Rekao sam mu da je ovo glupa ideja. Pravi Programer je u dvorcu. Evo, uzmi ovaj ključ."
+
+msgid "TXT_RPLY0_SCRIPT08_D0_YOURE"
+msgstr "Ti si programer!"
+
+msgid "TXT_DLG_SCRIPT08_D1516_DOILO"
+msgstr "Izgledam li kao da posjedujem vrhovnu moć? Red nas sve koristi. Sad idi, ja sam već mrtav."
+
+msgid "TXT_DLG_SCRIPT08_D3032_POWER"
+msgstr "Snaga je ključ!"
+
+# MAP10: Macil.
+msgid "TXT_DLG_SCRIPT10_D0_GOODY"
+msgstr "Dobro, ponovo si pri svijesti. Kad si zgrabio onaj predmet koji je Programer ispustio, oslobodio si neka strašna tajna."
+
+msgid "TXT_RPLY0_SCRIPT10_D0_WHATK"
+msgstr "Kakve tajne. "
+
+msgid "TXT_DLG_SCRIPT10_D1516_WEHAV"
+msgstr "Nemamo pojma odakle ovo oružje potiče, ali moramo saznati. Oduzeli ste jedno od Reda, ali moramo imati svih pet. Dosegli smo granice mog znanja. Potražite Orakulu i zatražite od nje pomoć."
+
+msgid "TXT_RPLY0_SCRIPT10_D1516_IMGON"
+msgstr "Trebat će mi više zaliha."
+
+msgid "TXT_DLG_SCRIPT10_D3032_HERES"
+msgstr "Evo malo zlata. Idi posjetiti medicinskog tehničara i instruktora oružja, a zatim kreni!"
+
+msgid "TXT_RPLY0_SCRIPT10_D3032_RIGHT"
+msgstr "U redu!"
+
+msgid "TXT_DLG_SCRIPT10_D4548_FIGHT"
+msgstr "Borite se za front i slobodu. Krenite."
+
+# MAP10: Macil → The Oracle said to kill him
+msgid "TXT_DLG_SCRIPT10_D6064_WHATP"
+msgstr "Šta te je navelo da se vratiš? Jesi li povrijeđen? Nema vremena za gubljenje, nastavi svoju misiju. Dovrši Sigil."
+
+msgid "TXT_RPLY0_SCRIPT10_D6064_THEOR"
+msgstr "Oracle kaže da moraš umrijeti!"
+
+msgid "TXT_DLG_SCRIPT10_D7580_IHAVE"
+msgstr "Zakleo sam se na slobodu. Orakl drži treći dio. Evo tvog izdajnika."
+
+msgid "TXT_RPLY0_SCRIPT10_D7580_THEOR"
+msgstr "Oracle će tada umrijeti!"
+
+msgid "TXT_RPLY1_SCRIPT10_D7580_ITHIN"
+msgstr "Mislim da si ti izdajnik!"
+
+# MAP10: Macil → You chose to kill Macil
+msgid "TXT_DLG_SCRIPT10_D9096_SPIRI"
+msgstr "Duh Jednog Boga, osvetuj me i pretvori ovaj svijet u prašinu."
+
+# MAP10: Macil → You chose to kill the Oracle
+msgid "TXT_DLG_SCRIPT10_D10612_YOUHA"
+msgstr "Napravili ste pravu odluku. Jasno je da je Orakl pod kontrolom zla koje pokreće Red. Vratite se k njemu i preuzmite treći dio Sigila."
+
+# MAP10: Macil → After killing the Oracle
+msgid "TXT_DLG_SCRIPT10_D12128_THERE"
+msgstr "Čini se da užasu s kojim se suočavamo nema kraja. Saznali smo da Red ne ubija naš narod. On ih pretvara u bio-mehaničke vojnike. Pronađite objekt u kojem se to radi i zatvorite ga zauvijek."
+
+msgid "TXT_RPLY0_SCRIPT10_D12128_WHERE"
+msgstr "Gdje se ovo nalazi?"
+
+msgid "TXT_DLG_SCRIPT10_D13644_ONEOF"
+msgstr "Jedan od naših kapetana, Richter, čeka vas pored vodopada u zajedničkom prostoru. On je vidio objekt i može vas provesti unutra. Zaustavite ovu zvjerstvu, odmah."
+
+msgid "TXT_RPLY0_SCRIPT10_D13644_THEYL"
+msgstr "Oni će platiti za ovo!"
+
+msgid "TXT_DLG_SCRIPT10_D15160_FIGHT"
+msgstr "Borite se za front i slobodu. Krenite."
+
+# MAP10: Macil → After destroying the converter in MAP24.
+msgid "TXT_DLG_SCRIPT10_D16676_IAMTH"
+msgstr "Ja sam Jedini Bog… Potrebno mi je da njegov duh bude slobodan kako bih mogao napustiti svoje tijelo i pridružiti mu se u letu. Nemate pojma šta posjedujete… I kakav teror vas čeka… Jedini Bog mora biti slobodan… I on će me nagraditi… Bit ću jedan…"
+
+msgid "TXT_RPLY0_SCRIPT10_D16676_IWILL"
+msgstr "Uništiću te!"
+
+# MAP10: Gerald (no upgrade).
+msgid "TXT_DLG_SCRIPT10_D18192_GLADT"
+msgstr "Drago mi je što si uspio doći. Šta ti treba? "
+
+msgid "TXT_RPLY0_SCRIPT10_D18192_HEALM"
+msgstr "Izliječi me."
+
+msgid "TXT_RYES0_SCRIPT10_D18192_WELLL"
+msgstr "Pa, da te sredimo."
+
+msgid "TXT_RNO0_SCRIPT10_D18192_YOURE"
+msgstr "Sve je u redu."
+
+msgid "TXT_RPLY1_SCRIPT10_D18192_ANYTH"
+msgstr "Ima li šta novo?"
+
+msgid "TXT_RYES1_SCRIPT10_D18192_YESIV"
+msgstr "Da, imam za tebe novi hardver."
+
+msgid "TXT_RNO1_SCRIPT10_D18192_NOPEI"
+msgstr "Ne, ali radim na tome."
+
+# (one upgrade: Mission to talk to the Oracle)
+msgid "TXT_DLG_SCRIPT10_D19708_WHATC"
+msgstr "Šta mogu sada učiniti za vas? Feris dešifruje neke zaista složene datoteke, ali se sve isplati. Već postoje neke informacije koje ću moći primijeniti na sljedeću verziju implanta izdržljivosti."
+
+msgid "TXT_RPLY0_SCRIPT10_D19708_HEALM"
+msgstr "Izliječi me."
+
+msgid "TXT_RYES0_SCRIPT10_D19708_YOUSH"
+msgstr "Trebao bi naučiti biti malo pažljiviji."
+
+msgid "TXT_RPLY1_SCRIPT10_D19708_WHENW"
+msgstr "Kada će to biti spremno?"
+
+msgid "TXT_RYES1_SCRIPT10_D19708_ITSRE"
+msgstr "Sada je spremno. Ovo neće potrajati ni trenutak."
+
+msgid "TXT_RNO1_SCRIPT10_D19708_SOON"
+msgstr "Uskoro."
+
+# (two upgrades: Mission to decide between Macil or the Oracle)
+msgid "TXT_DLG_SCRIPT10_D21224_ITHIN"
+msgstr "Mislim da sam otkrio grešku u tvom implantatnom hardveru. Feris mi pomaže dizajnirati retrofit koji će to riješiti i malo povećati brzinu tvog hardvera. Ima li nešto što mogu učiniti za tebe?"
+
+msgid "TXT_RPLY0_SCRIPT10_D21224_PATCH"
+msgstr "Zalijepi me."
+
+msgid "TXT_RYES0_SCRIPT10_D21224_THERE"
+msgstr "Tamo, kao nov, pretpostavljam."
+
+msgid "TXT_RPLY1_SCRIPT10_D21224_RETRO"
+msgstr "Retrofit?"
+
+# (during sad/bad ending)
+msgid "TXT_RYES1_SCRIPT10_D21224_AHNOW"
+msgstr "Ah, sad tek počinje zabava."
+
+msgid "TXT_RNO1_SCRIPT10_D21224_ILLHA"
+msgstr "Uzet ću to čim Feris to završi."
+
+# (three upgrades: Mission to kill the Loremaster with the Oracle alive).
+msgid "TXT_DLG_SCRIPT10_D22740_HOWSI"
+msgstr "Kako ide? Čovječe, neke od ovih novih tehnologija su jednostavno nevjerovatne. Ovo bi također trebalo pomoći s tvojim implantatom. Imam nekoliko ideja koje skiciram i uskoro ću ih pripremiti. Šta mogu učiniti za tebe, možda neko iscjeljenje?"
+
+msgid "TXT_RPLY0_SCRIPT10_D22740_YESHE"
+msgstr "Da, izliječi me."
+
+msgid "TXT_RYES0_SCRIPT10_D22740_ALLRI"
+msgstr "U redu, evo."
+
+msgid "TXT_RPLY1_SCRIPT10_D22740_HOWAB"
+msgstr "Šta kažete na tu novu tehnologiju?"
+
+msgid "TXT_RYES1_SCRIPT10_D22740_LETME"
+msgstr "Javi mi kako ovo radi."
+
+msgid "TXT_RNO1_SCRIPT10_D22740_IMNOT"
+msgstr "Još nisam završio s dizajniranjem."
+
+# (four upgrades).
+msgid "TXT_DLG_SCRIPT10_D24256_BACKA"
+msgstr "Ponovo sam tu, zar se nikad ne umoriš od ovoga? Imam dobre vijesti, Feris je pronašao način da poveća izlaz tvojeg implantata. Dao mi je specifikacije i pokušavam ih uskladiti s tvojom fiziologijom. Prisilno uzgajam neko tkivo, potpuno nove stvari ovdje, nadam se da će uspjeti. Treba li ti oporavak?"
+
+msgid "TXT_RPLY0_SCRIPT10_D24256_YESHE"
+msgstr "Da, izliječi me."
+
+msgid "TXT_RYES0_SCRIPT10_D24256_DONEN"
+msgstr "Gotovo, sad pazi na sebe."
+
+msgid "TXT_RPLY1_SCRIPT10_D24256_WHENW"
+msgstr "Kada ćeš završiti?"
+
+msgid "TXT_RYES1_SCRIPT10_D24256_NOWHE"
+msgstr "Sada. Hej, sjajno, uspjelo je!"
+
+msgid "TXT_RNO1_SCRIPT10_D24256_IMWAI"
+msgstr "Čekam da tkivo završi svoj ciklus rasta."
+
+# (five upgrades).
+msgid "TXT_DLG_SCRIPT10_D25772_WELLI"
+msgstr "Pa, opet se vraćam starim trikovima, još uvijek radim na tvojim implantatima. Jesi li znao da je Macil sada odobrio njih svima? Ne, ha? To je zato što si se pokazao tako dobro. Ima li išta što mogu učiniti za tebe?"
+
+msgid "TXT_RPLY0_SCRIPT10_D25772_HELPM"
+msgstr "Pomozite mi ovdje."
+
+msgid "TXT_RYES0_SCRIPT10_D25772_THATS"
+msgstr "To je sve što mogu učiniti."
+
+msgid "TXT_RPLY1_SCRIPT10_D25772_NEWIM"
+msgstr "Novi implantat?"
+
+msgid "TXT_RYES1_SCRIPT10_D25772_YEPMY"
+msgstr "Da, moj najbolji do sada."
+
+msgid "TXT_RNO1_SCRIPT10_D25772_SORRY"
+msgstr "Žao mi je, ali moraš samo pričekati."
+
+# (six upgrades).
+msgid "TXT_DLG_SCRIPT10_D27288_THISI"
+msgstr "Evo ga, Feris je uspio izvući sve što je mogao iz svih podataka koje imamo, ovo će biti najbolje i posljednje nadogradnje implanta. Bit će pomalo depresivno gledati kako moja najbolja kreacija dostiže svoj vrhunac. Pa, barem će me ostatak ove posade držati zauzetim."
+
+msgid "TXT_RPLY0_SCRIPT10_D27288_COULD"
+msgstr "Možeš li me izliječiti?"
+
+msgid "TXT_RYES0_SCRIPT10_D27288_THERE"
+msgstr "Eto, sada si sve spremio."
+
+# MAP10: Feris (no training).
+msgid "TXT_DLG_SCRIPT10_D28804_ITSTH"
+msgstr "To je heroj. Odlično! Šta mogu da ti nabavim? Sada imamo malo veći izbor otkako smo dobili svu opremu iz dvorca. Ako ti treba municija, razgovaraj s Justinom. On će se pobrinuti za tebe. "
+
+msgid "TXT_RPLY0_SCRIPT10_D28804_IMOUT"
+msgstr "Nemam više metaka."
+
+msgid "TXT_RYES0_SCRIPT10_D28804_HERES"
+msgstr "Evo ti municije. Nemoj je bacati."
+
+msgid "TXT_RPLY1_SCRIPT10_D28804_TEACH"
+msgstr "Nauči me."
+
+msgid "TXT_RYES1_SCRIPT10_D28804_NOWAF"
+msgstr "Sada, nekoliko savjeta o teškom oružju."
+
+msgid "TXT_RNO1_SCRIPT10_D28804_YOURE"
+msgstr "Još nisi spreman."
+
+# (one training)
+msgid "TXT_DLG_SCRIPT10_D30320_HOWST"
+msgstr "Kako ide ratni napor? Ne brini, ako smo još ovdje, mora da ide dobro. Šta mogu učiniti za tebe?"
+
+msgid "TXT_RPLY0_SCRIPT10_D30320_IRANO"
+msgstr "Ostala sam bez municije."
+
+msgid "TXT_RYES0_SCRIPT10_D30320_THATS"
+msgstr "To bi trebalo pomoći."
+
+msgid "TXT_RNO0_SCRIPT10_D30320_YOUVE"
+msgstr "Imaš dovoljno municije."
+
+msgid "TXT_RPLY1_SCRIPT10_D30320_TEACH"
+msgstr "Nauči me."
+
+msgid "TXT_RYES1_SCRIPT10_D30320_HEREI"
+msgstr "Evo, pokazat ću ti nekoliko trikova zanata."
+
+msgid "TXT_RNO1_SCRIPT10_D30320_YOURE"
+msgstr "Još nisi spreman."
+
+# (two trainings)
+msgid "TXT_DLG_SCRIPT10_D31836_WELLH"
+msgstr "Pa, jesi li došao po poduku ili tražiš streljivo? Nemoj misliti da sam s tobom gotov. Još uvijek imam nekoliko trikova u rukavu."
+
+msgid "TXT_RPLY0_SCRIPT10_D31836_ITSAM"
+msgstr "Za sada je to municija."
+
+msgid "TXT_RYES0_SCRIPT10_D31836_HERES"
+msgstr "Evo ti municije. Nemoj je bacati."
+
+msgid "TXT_RNO0_SCRIPT10_D31836_YOUVE"
+msgstr "Imaš dovoljno municije."
+
+msgid "TXT_RPLY1_SCRIPT10_D31836_TEACH"
+msgstr "Nauči me."
+
+msgid "TXT_RYES1_SCRIPT10_D31836_TIMEF"
+msgstr "Vrijeme je za napredne lekcije."
+
+msgid "TXT_RNO1_SCRIPT10_D31836_YOURE"
+msgstr "Još nisi spreman."
+
+# (three trainings)
+msgid "TXT_DLG_SCRIPT10_D33352_WELLW"
+msgstr "Pa šta je sad? Zar nikad ne uzmeš pauzu? Drago mi je da još uvijek dišeš. Mrzio bih da se moj omiljeni učenik vrati i gleda iz vreće za leš."
+
+msgid "TXT_RPLY0_SCRIPT10_D33352_INEED"
+msgstr "Trebam još metaka."
+
+msgid "TXT_RYES0_SCRIPT10_D33352_THERE"
+msgstr "Evo, nemoj to baciti."
+
+msgid "TXT_RNO0_SCRIPT10_D33352_YOUHA"
+msgstr "Imaš dovoljno."
+
+msgid "TXT_RPLY1_SCRIPT10_D33352_WHATC"
+msgstr "Šta me možeš naučiti?"
+
+msgid "TXT_RYES1_SCRIPT10_D33352_DONTG"
+msgstr "Nemoj postajati drzak, još uvijek imaš prostora za rast."
+
+msgid "TXT_RNO1_SCRIPT10_D33352_NOTHI"
+msgstr "Ništa dok ne budete spremni."
+
+# (four trainings)
+msgid "TXT_DLG_SCRIPT10_D34868_LOOKW"
+msgstr "Pogledaj ko se vratio, šta ti je na umu? Znam da je bilo teško, ali svi mi cijenimo tvoje napore, vjeruj mi."
+
+msgid "TXT_RPLY0_SCRIPT10_D34868_IVERU"
+msgstr "Ostala sam bez municije."
+
+msgid "TXT_RYES0_SCRIPT10_D34868_WHATE"
+msgstr "Šta još ima novo, evo za tebe."
+
+msgid "TXT_RNO0_SCRIPT10_D34868_YOUHA"
+msgstr "Imaš više nego što ti mogu dati."
+
+msgid "TXT_RPLY1_SCRIPT10_D34868_TEACH"
+msgstr "Nauči me što možeš."
+
+msgid "TXT_RYES1_SCRIPT10_D34868_ALLRI"
+msgstr "U redu, evo nekoliko savjeta."
+
+msgid "TXT_RNO1_SCRIPT10_D34868_NOTRI"
+msgstr "Ne sada."
+
+# (five trainings)
+msgid "TXT_DLG_SCRIPT10_D36384_WHATI"
+msgstr "Šta ti treba? Nadam se da Redu pružaš ukus bola koji već godinama osjećamo."
+
+msgid "TXT_RPLY0_SCRIPT10_D36384_SOMEA"
+msgstr "Nekoliko metaka."
+
+msgid "TXT_RYES0_SCRIPT10_D36384_THERE"
+msgstr "Evo, ne rasipaj to."
+
+msgid "TXT_RNO0_SCRIPT10_D36384_YOUVE"
+msgstr "Imaš dovoljno municije."
+
+msgid "TXT_RPLY1_SCRIPT10_D36384_TEACH"
+msgstr "Nauči me."
+
+msgid "TXT_RYES1_SCRIPT10_D36384_AFEWM"
+msgstr "Još nekoliko lekcija i znat ćeš sve što mogu podučiti."
+
+msgid "TXT_RNO1_SCRIPT10_D36384_YOURE"
+msgstr "Još nisi spreman."
+
+# (six trainings)
+msgid "TXT_DLG_SCRIPT10_D37900_ICANT"
+msgstr "Ne mogu da vjerujem da smo još uvijek tu, ti i ja. Previše nas je izginulo od početka. Šta mogu učiniti za tebe, prijatelju?"
+
+msgid "TXT_RPLY0_SCRIPT10_D37900_IMOUT"
+msgstr "Nemam više metaka."
+
+# (in good health = enjoy)
+msgid "TXT_RYES0_SCRIPT10_D37900_HEREU"
+msgstr "Ovdje ih upotrijebi da ostaneš u dobrom zdravlju."
+
+msgid "TXT_RNO0_SCRIPT10_D37900_YOUHA"
+msgstr "Imaš dovoljno."
+
+msgid "TXT_RPLY1_SCRIPT10_D37900_TEACH"
+msgstr "Nauči me."
+
+msgid "TXT_RYES1_SCRIPT10_D37900_WELLT"
+msgstr "Pa, to je to, gotovo je. Ne mogu više podučavati."
+
+msgid "TXT_RNO1_SCRIPT10_D37900_RETUR"
+msgstr "Vratite se nakon što ti Macil kaže da je vrijeme."
+
+# (seven trainings)
+msgid "TXT_DLG_SCRIPT10_D39416_IVETA"
+msgstr "Naučio sam te svemu što trenutno mogu. Dao sam ti sve što bi ti ikada moglo zatrebati, osim ako ti ne ponestane municije. S tim mogu i dalje pomoći."
+
+msgid "TXT_RPLY0_SCRIPT10_D39416_YESIA"
+msgstr "Da, jesam."
+
+msgid "TXT_RYES0_SCRIPT10_D39416_HEREY"
+msgstr "Evo. "
+
+# MAP10: Justin.
+msgid "TXT_DLG_SCRIPT10_D40932_CHECK"
+msgstr "Pogledaj šta je novo, teleporter baka. Kad upotrijebiš baka, pratit ćemo signal i poslati pomoć. Ima li nešto što mogu da ti donesem?"
+
+msgid "TXT_RPLY0_SCRIPT10_D40932_BOXOF"
+msgstr "Kutija raketa"
+
+msgid "TXT_RYES0_SCRIPT10_D40932_THERE"
+msgstr "Evo ti."
+
+msgid "TXT_RNO0_SCRIPT10_D40932_YOUCA"
+msgstr "Ne možeš si to priuštiti!"
+
+msgid "TXT_RPLY1_SCRIPT10_D40932_HEGRE"
+msgstr "H-E granate."
+
+msgid "TXT_RYES1_SCRIPT10_D40932_HEREY"
+msgstr "Evo."
+
+msgid "TXT_RNO1_SCRIPT10_D40932_COMEB"
+msgstr "Vratite se kad budete imali dovoljno novca."
+
+msgid "TXT_RPLY2_SCRIPT10_D40932_ENERG"
+msgstr "Energetska kapsula"
+
+msgid "TXT_RYES2_SCRIPT10_D40932_HERES"
+msgstr "Evo vašeg energetskog podova"
+
+msgid "TXT_RNO2_SCRIPT10_D40932_YOUDO"
+msgstr "Nemate dovoljno za to."
+
+msgid "TXT_RPLY3_SCRIPT10_D40932_TELEP"
+msgstr "Teleporterov signalni predajnik"
+
+msgid "TXT_RYES3_SCRIPT10_D40932_HELPW"
+msgstr "Pomoć, kada i gdje vam je potrebna."
+
+msgid "TXT_RNO3_SCRIPT10_D40932_SORRY"
+msgstr "Žao mi je, nema dobrotvorne pomoći."
+
+# MAP10: Rebels in Macil's room.
+msgid "TXT_DLG_SCRIPT10_D42448_NOWTH"
+msgstr "Sada kad smo stvarno stavili dvorac pod kontrolu, moramo biti izuzetno oprezni da ga zadržimo. Vjerovatno se Red upravo sada sprema uzvratiti udarac."
+
+# MAP10: Castle's entrance.
+msgid "TXT_DLG_SCRIPT10_D43964_BECAR"
+msgstr "Pazi se tamo vani."
+
+# MAP10: Rebel in Hospital.
+msgid "TXT_DLG_SCRIPT10_D45480_KEEPU"
+msgstr "Nastavite s odličnim radom, ne bismo to mogli bez vas."
+
+# MAP11: Commons (no token).
+msgid "TXT_DLG_SCRIPT11_D0_IMTHE"
+msgstr "Ja sam ključar."
+
+# (Oracle's token)
+msgid "TXT_DLG_SCRIPT11_D1516_ALOTO"
+msgstr "Mnogi bi rekli da je ovo nezahvalan i beznačajan posao. Ali to nije, zapravo…"
+
+msgid "TXT_RPLY0_SCRIPT11_D1516_GIVEM"
+msgstr "Daj mi ključ!"
+
+msgid "TXT_DLG_SCRIPT11_D3032_OKBUT"
+msgstr "OK, ali zapamti, ja sam gospodar ključeva."
+
+msgid "TXT_RPLY0_SCRIPT11_D3032_OKPAL"
+msgstr "OK, prijatelju, šta god."
+
+msgid "TXT_DLG_SCRIPT11_D4548_IMTHE"
+msgstr "Ja sam ključar."
+
+# MAP11: Red acolyte at temple's entrance.
+msgid "TXT_DLG_SCRIPT11_D6064_DIETR"
+msgstr "O izdajniče!"
+
+msgid "TXT_DLG_SCRIPT11_D7580_DIETR"
+msgstr "O izdajniče!"
+
+# MAP11: Prisoner.
+msgid "TXT_DLG_SCRIPT11_D9096_HAVEY"
+msgstr "Jesi li došao da se podsmevaš? Iako smo iza ovih rešetaka, sve dok se držimo, ti i dalje gubiš."
+
+msgid "TXT_DLG_SCRIPT11_D10612_LETUS"
+msgstr "Izađite nas odavde!"
+
+msgid "TXT_DLG_SCRIPT11_D12128_LEAVE"
+msgstr "Ostavite me na miru!"
+
+# MAP12: Oracle.
+msgid "TXT_DLG_SCRIPT12_D0_WHATI"
+msgstr "Koja je mudrost koju tražiš, jednostavni?"
+
+msgid "TXT_RPLY0_SCRIPT12_D0_THESI"
+msgstr "Pečat Jednog Boga."
+
+msgid "TXT_DLG_SCRIPT12_D1516_IFEEL"
+msgstr "Osjećam da jedan fragment odjekuje u tebi. Drugi se nalazi u srcu grimizne i obsidijanske kule. Tamo se moraš boriti protiv Episkopa, koji je svjestan i čeka te. Pronaći ćeš ga prateći njegov simbol moći. Odnesi ovaj žeton ključaru. Vratiti se kod mene nakon što ubiješ zvijer."
+
+msgid "TXT_RPLY0_SCRIPT12_D1516_ILLBE"
+msgstr "Vratit ću se."
+
+msgid "TXT_DLG_SCRIPT12_D3032_ALTHO"
+msgstr "Iako je biskup strašan, ovaj zadatak je neznatan. Vratite mi se kada budete posjedovali sljedeći fragment."
+
+# MAP12: Oracle → After killing the Bishop
+msgid "TXT_DLG_SCRIPT12_D4548_YOURN"
+msgstr "Tvoj sljedeći izazov će testirati tvoj duh. Treći dio drži tvoj vođa. On je isti kao onaj koga ti šalje da ubiješ."
+
+msgid "TXT_RPLY0_SCRIPT12_D4548_MACIL"
+msgstr "Macil? Izdajnik?"
+
+msgid "TXT_DLG_SCRIPT12_D6064_YOURB"
+msgstr "Vaša slijepa vjera mu je omogućila da napreduje prema svojim ciljevima sa svakim komadom koji osvojite. Suočite ga i odlučite svoju sudbinu."
+
+msgid "TXT_RPLY0_SCRIPT12_D6064_ALLRI"
+msgstr "U redu, to je Macil."
+
+msgid "TXT_RPLY1_SCRIPT12_D6064_ITSYO"
+msgstr "Ne vjerujem tebi."
+
+msgid "TXT_DLG_SCRIPT12_D7580_WHATE"
+msgstr "Koji god izbor napraviš, tvoj rod će propasti pod voljom Jednog Boga."
+
+# MAP12: Choose to kill Macil.
+msgid "TXT_RPLY0_SCRIPT12_D7580_ILLBE"
+msgstr "Vratit ću se kad Macil umre."
+
+# MAP12: Choose to not kill Macil.
+msgid "TXT_RPLY1_SCRIPT12_D7580_ICANT"
+msgstr "Ne mogu dopustiti da se to dogodi."
+
+# MAP12: You chose to kill Macil.
+msgid "TXT_DLG_SCRIPT12_D9096_THERI"
+msgstr "Rijeka vremena vječno teče naprijed, dok ti stojiš mirno."
+
+# MAP12: Oracle → After killing Macil
+msgid "TXT_DLG_SCRIPT12_D10612_YOUHA"
+msgstr "Izrezao si rak iz svog tijela, ali ti srce i dalje kuca. Sada moraš pronaći kirurga koji klanja i kontrolira tvoj narod, Loremastera. Zaustavi ga i sljedeći dio bit će tvoj."
+
+msgid "TXT_RPLY0_SCRIPT12_D10612_WHERE"
+msgstr "Gdje ga mogu pronaći?"
+
+msgid "TXT_DLG_SCRIPT12_D12128_USETH"
+msgstr "Upotrijebi teleporter iza vrata koja sam upravo otvorio da stigneš do Loremastera. Kad ga ubiješ, upotrijebi isti uređaj da se vratiš k meni."
+
+msgid "TXT_RPLY0_SCRIPT12_D12128_ILLBE"
+msgstr "Vratit ću se s njegovim komadom!"
+
+msgid "TXT_DLG_SCRIPT12_D13644_THERI"
+msgstr "Rijeka vremena vječno teče naprijed, dok ti stojiš mirno."
+
+# MAP12: Oracle → After killing the Loremaster with Macil dead.
+msgid "TXT_DLG_SCRIPT12_D15160_PITIF"
+msgstr "Jadni čovječe, učinio si ono što su hiljade pokušalo, a nisu uspjele… Donosiš mi moć Sigila, glas Jednog Boga."
+
+msgid "TXT_RPLY0_SCRIPT12_D15160_IDONT"
+msgstr "Ne razumijem."
+
+msgid "TXT_DLG_SCRIPT12_D16676_THESI"
+msgstr "Sigil će otvoriti vrata i osloboditi duha koji će očistiti ovu planetu i omogućiti mi da živim zauvijek. Oduzet ću ovom svijetu njegove energije i pronaći nove svjetove za osvajanje."
+
+msgid "TXT_RPLY0_SCRIPT12_D16676_ICANT"
+msgstr "Ne mogu ti to dozvoliti."
+
+# MAP12: Oracle → Fight with the Oracle.
+msgid "TXT_DLG_SCRIPT12_D18192_YOUCA"
+msgstr "Možeš ako si mrtav."
+
+# MAP14: James
+msgid "TXT_DLG_SCRIPT14_D0_AREYO"
+msgstr "Jesi li ovdje da nas oslobodiš? Zato što sam bio dobar, izvukli su mi implantat. Ipak, moram ostati ovdje dolje i obrisati slinu."
+
+msgid "TXT_RPLY0_SCRIPT14_D0_YESIM"
+msgstr "Da, ovdje sam da te oslobodim."
+
+msgid "TXT_RYES0_SCRIPT14_D0_YOUME"
+msgstr "Zaista to misliš?"
+
+# (conveyors = conveyor belts)
+msgid "TXT_DLG_SCRIPT14_D1516_ICANT"
+msgstr "Ne mogu pomoći nikome drugom. Ne dok ne uništiš predajnik. To je ono što se nalazi iza polja sile gore. Moj posao je da provjerim transportne trake i uvjerim se da nisu zaglavljene. Više ne!"
+
+msgid "TXT_RPLY0_SCRIPT14_D1516_THATS"
+msgstr "Tako je, spašeni ste!"
+
+msgid "TXT_RYES0_SCRIPT14_D1516_OHTHA"
+msgstr "Oh, hvala vam!"
+
+msgid "TXT_DLG_SCRIPT14_D3032_WEREF"
+msgstr "Slobodni smo!! Slobodni smo!! Slobodni smo!!"
+
+# MAP14: Drone
+msgid "TXT_DLG_SCRIPT14_D4548_MUSTM"
+msgstr "Moram iskopati više rude!"
+
+# MAP14: Peasant (ex-drone)
+msgid "TXT_DLG_SCRIPT14_D6064_WEREF"
+msgstr "Slobodni smo!! Slobodni smo!! Slobodni smo!!"
+
+msgid "TXT_DLG_SCRIPT14_D7580_MUSTM"
+msgstr "Moram iskopati više rude!"
+
+msgid "TXT_DLG_SCRIPT14_D9096_WEREF"
+msgstr "Slobodni smo!! Slobodni smo!! Slobodni smo!!"
+
+msgid "TXT_DLG_SCRIPT14_D10612_MUSTM"
+msgstr "Moram iskopati više rude!"
+
+msgid "TXT_DLG_SCRIPT14_D12128_WEREF"
+msgstr "Slobodni smo!! Slobodni smo!! Slobodni smo!!"
+
+# MAP15: Red acolytes.
+msgid "TXT_DLG_SCRIPT15_D0_WHATA"
+msgstr "Šta radiš ovdje?"
+
+msgid "TXT_RPLY0_SCRIPT15_D0_ROUTI"
+msgstr "Rutinska inspekcija."
+
+msgid "TXT_RYES0_SCRIPT15_D0_ALLRI"
+msgstr "U redu, nastavite."
+
+# MAP15: Red acolytes + Technician at the beginning.
+msgid "TXT_DLG_SCRIPT15_D1516_NOTHI"
+msgstr "Nema šta da se prijavi ovdje. Sve radi u redu. Ako se išta pokvari, obavezno ću to prijaviti."
+
+# MAP15: Technician at the beginning.
+msgid "TXT_DLG_SCRIPT15_D3032_SIRTH"
+msgstr "Gospodine, ranije je bio problem, ali je riješen."
+
+# MAP17: Bailey (if you don't have Order's key)
+msgid "TXT_DLG_SCRIPT17_D0_MOVEA"
+msgstr "Maknite se ili ćete osjetiti metal."
+
+# (if you have it)
+msgid "TXT_DLG_SCRIPT17_D1516_IDCHE"
+msgstr "Provjera ličnog dokumenta."
+
+msgid "TXT_RPLY0_SCRIPT17_D1516_HEREI"
+msgstr "Ovdje žurim."
+
+msgid "TXT_DLG_SCRIPT17_D3032_STOPW"
+msgstr "Prestani mi mahati ličnom kartom pred licem i idi unutra."
+
+# MAP17: Green guards.
+msgid "TXT_DLG_SCRIPT17_D4548_NOTHI"
+msgstr "Ovdje nema ništa za vidjeti. Idite dalje."
+
+# MAP17: Hospital → Quincy
+msgid "TXT_DLG_SCRIPT17_D6064_WHATA"
+msgstr "Kakav zdrav primjerak. Ne treba ti moja pomoć, zar ne?"
+
+msgid "TXT_RPLY0_SCRIPT17_D6064_WELLY"
+msgstr "Pa, da. Macil me poslao."
+
+msgid "TXT_DLG_SCRIPT17_D7580_SHHHH"
+msgstr "Ššš… Drži je tiho, osim ako ne želiš da nas oboje ubiju. Sad, šta mogu učiniti za tebe?"
+
+msgid "TXT_RPLY0_SCRIPT17_D7580_TELLM"
+msgstr "Recite mi kako da pronađem biskupa."
+
+msgid "TXT_DLG_SCRIPT17_D9096_OHHHI"
+msgstr "Ohhh, znao sam da ćeš me to pitati. Pogledaj iza sebe. To je ulaz u biskupovu citadelu. Čuva ga polje sile koje se isključuje samo za službene posjetitelje, a ne za tebe."
+
+msgid "TXT_RPLY0_SCRIPT17_D9096_IMUST"
+msgstr "Moram ubiti biskupa."
+
+msgid "TXT_DLG_SCRIPT17_D10612_OHSUR"
+msgstr "Oh, naravno da hoćeš. Prvo se probij kroz sigurnosni kompleks i upotrijebi teleporter. A ovo ti se možda više sviđa: uništi računar u centralnoj administraciji. Bez računara nema polja sile."
+
+msgid "TXT_RPLY0_SCRIPT17_D10612_GREAT"
+msgstr "Odlično, to zvuči lako."
+
+# (five-finger discount = theft)
+msgid "TXT_DLG_SCRIPT17_D12128_THERE"
+msgstr "Postoji prednost u uništavanju računara, jer se tamo čuvaju planovi za kulu. Možeš li reći \"popust od pet prstiju\"? Heh heh!"
+
+msgid "TXT_RPLY0_SCRIPT17_D12128_ANYTH"
+msgstr "Nešto još?"
+
+msgid "TXT_DLG_SCRIPT17_D13644_OHWEL"
+msgstr "Pa dobro, priča se da je u baileyjevom skladištu stigla pošiljka maulera, to je oružje koje isparava."
+
+msgid "TXT_RPLY0_SCRIPT17_D13644_ISTHA"
+msgstr "Je li to sad?"
+
+msgid "TXT_DLG_SCRIPT17_D15160_DONTY"
+msgstr "Zar ne znaš značenje riječi \"odjebi\"?"
+
+# MAP17: Hospital → Assistant
+msgid "TXT_DLG_SCRIPT17_D16676_TALKT"
+msgstr "Prvo razgovaraj s Quincijem. Ne smijem nikome pomoći osim ako on ne kaže da je u redu."
+
+msgid "TXT_DLG_SCRIPT17_D18192_HOWHO"
+msgstr "Kako, kako vam mogu pomoći danas?"
+
+msgid "TXT_RPLY0_SCRIPT17_D18192_MEDPA"
+msgstr "Medicinski flaster"
+
+msgid "TXT_RYES0_SCRIPT17_D18192_HERES"
+msgstr "Evo tvojeg zakrpa."
+
+msgid "TXT_RNO0_SCRIPT17_D18192_THATI"
+msgstr "To je 15 zlata, prijatelju moj."
+
+msgid "TXT_RPLY1_SCRIPT17_D18192_MEDIC"
+msgstr "Ljekarski komplet"
+
+msgid "TXT_RYES1_SCRIPT17_D18192_HERES"
+msgstr "Evo vašeg medicinskog kompleta."
+
+msgid "TXT_RNO1_SCRIPT17_D18192_YOURE"
+msgstr "Nemaš dovoljno novca za to."
+
+msgid "TXT_RPLY2_SCRIPT17_D18192_FIELD"
+msgstr "Terenski hirurški komplet"
+
+msgid "TXT_RYES2_SCRIPT17_D18192_ONEFI"
+msgstr "Jedan terenski hirurški komplet, gotovo."
+
+msgid "TXT_RNO2_SCRIPT17_D18192_COMEB"
+msgstr "Vratite se kad budete imali novca!"
+
+# MAP18: Yellow guard
+msgid "TXT_DLG_SCRIPT18_D0_WHATI"
+msgstr "Šta je to?"
+
+msgid "TXT_RPLY0_SCRIPT18_D0_JUSTL"
+msgstr "Samo se osvrćem."
+
+msgid "TXT_RYES0_SCRIPT18_D0_JUSTK"
+msgstr "Samo ostani po strani."
+
+msgid "TXT_DLG_SCRIPT18_D1516_THETE"
+msgstr "Templari će uskoro doći da preuzmu svoje nove maulere. Ako im staneš na put, mrtav si čovječe."
+
+msgid "TXT_RPLY0_SCRIPT18_D1516_MAULE"
+msgstr "Mauleri?"
+
+msgid "TXT_RYES0_SCRIPT18_D1516_THETE"
+msgstr "Omiljeno oružje templara."
+
+msgid "TXT_DLG_SCRIPT18_D3032_THEYC"
+msgstr "Ušli su ranije. Zbog toga je sve ovo sa obezbjeđenjem. Imao sam priliku da ih pogledam kad sam zaključao. Nitko ne smije ulaziti ili izlaziti odatle dok ostatak čete ne dođe po svoje oružje."
+
+# Appears in MAP19 and is supposed to be spoken by the Peasant1 actor (named
+# “Security Comple”). However, no such actor is spawned in the map, rendering
+# this line unused.
+msgid "TXT_DLG_SCRIPT19_D0_THISI"
+msgstr "Ovdje dobijate planove za centralnu administraciju."
+
+# SVE.WAD
+# MAP22: C-shaped building → Master Smithy.
+msgid "TXT_DLG_SCRIPT22_D0_IRUNT"
+msgstr "Ja upravljam ovim mjestom. Moj posao je izrađivati sirovi dijelovi potrebni za Loremasterove dizajne robota. Ako niste ovdje na službenom poslu, bojim se da nemam vremena za razgovor."
+
+msgid "TXT_RPLY0_SCRIPT22_D0_IAMON"
+msgstr "Ja sam na službenom zadatku."
+
+# (After giving the blue chalice to Timothy).
+msgid "TXT_DLG_SCRIPT22_D1516_SOYOU"
+msgstr "Dakle, razgovarao si s Timothyjem, vidim. On i ja smo radili zajedno kako bismo pokušali razotkriti misterije Reda prije nego što bude prekasno za sve nas. Možda nam možeš pomoći. Otvorio sam vrata proizvodnom sektoru."
+
+msgid "TXT_RPLY0_SCRIPT22_D1516_DOYOU"
+msgstr "Znaš li šta je unutra?"
+
+msgid "TXT_DLG_SCRIPT22_D3032_ITSAT"
+msgstr "To je područje strogo povjerljivo. Ne samo da Red tamo uzgaja neku vrstu… stvorenja, nego sam svojim očima vidio čudan artefakt nazvan Talisman. Nitko ne smije prići blizu njega. Prema glasinama, on posjeduje veliku moć ako se spoji s još dva slična artefakta."
+
+msgid "TXT_RPLY0_SCRIPT22_D3032_ISUPP"
+msgstr "Pretpostavljam da želiš ovu stvar?"
+
+msgid "TXT_DLG_SCRIPT22_D4548_NOIFY"
+msgstr "Ne! Ako ga možeš pronaći, tvoj je zauvijek. Možda ćeš ga moći iskoristiti da nam pomogneš osloboditi se od našeg ugnjetavanja. Poželio bih ti sreću, ali trebat će ti mnogo više od toga ako tamo uđeš…"
+
+msgid "TXT_RPLY0_SCRIPT22_D4548_WHATS"
+msgstr "O čemu je sve ovo o prošlosti?"
+
+msgid "TXT_DLG_SCRIPT22_D6064_YOUVE"
+msgstr "Sigurno ste vidjeli i druge ruševine u blizini. Čini se da je Kometa koji se srušio na našu planetu zapravo svemirska letjelica, i vjerovali ili ne, potječe upravo s ovog svijeta, odavno."
+
+msgid "TXT_RPLY0_SCRIPT22_D6064_SOTHE"
+msgstr "Dakle, spektri, Jedan Bog…"
+
+msgid "TXT_DLG_SCRIPT22_D7580_THEYA"
+msgstr "Oni su stvorenja koja su nekada vladala ovim svijetom i namjeravaju uništiti svaki život na njemu. Starci su ih uspjeli zapečatiti, ali su pritom dali svoje živote. Bojim se da je to sve što znam."
+
+msgid "TXT_RPLY0_SCRIPT22_D7580_THANK"
+msgstr "Hvala… Učinit ću što mogu."
+
+msgid "TXT_DLG_SCRIPT22_D9096_GODSP"
+msgstr "Sretno, prijatelju."
+
+# SVE.WAD
+# MAP22: C-shaped building → Apprentice.
+msgid "TXT_DLG_SCRIPT22_D10612_TALKT"
+msgstr "Razgovaraj s majstorom kovačem ako imaš pitanja. Sve što radim je da stavljam etikete na sanduke."
+
+# MAP23: Weapons
+msgid "TXT_DLG_SCRIPT23_D0_WHATC"
+msgstr "Šta mogu da vam donesem, građanine?"
+
+msgid "TXT_RPLY0_SCRIPT23_D0_AMMOB"
+msgstr "Kutija za municiju"
+
+msgid "TXT_RYES0_SCRIPT23_D0_HERES"
+msgstr "Evo ti municije."
+
+msgid "TXT_RNO0_SCRIPT23_D0_YOUDO"
+msgstr "Nemate dovoljno za to!"
+
+msgid "TXT_RPLY1_SCRIPT23_D0_CRATE"
+msgstr "Sanduk raketa"
+
+msgid "TXT_RYES1_SCRIPT23_D0_HEREC"
+msgstr "Evo, građanine."
+
+msgid "TXT_RNO1_SCRIPT23_D0_ITS85"
+msgstr "To je 85 zlata, građanine!"
+
+msgid "TXT_RPLY2_SCRIPT23_D0_HEGRE"
+msgstr "H-E granate"
+
+msgid "TXT_RYES2_SCRIPT23_D0_HEREA"
+msgstr "Evo vaših granata."
+
+msgid "TXT_RNO2_SCRIPT23_D0_THEYA"
+msgstr "To je 100 zlata, prijatelju."
+
+msgid "TXT_RPLY3_SCRIPT23_D0_ENERG"
+msgstr "Energetska kapsula"
+
+msgid "TXT_RYES3_SCRIPT23_D0_HEREY"
+msgstr "Evo te."
+
+msgid "TXT_RNO3_SCRIPT23_D0_THATS"
+msgstr "To je 135 zlata, oprosti."
+
+# MAP23: Armory (with Tevick locked).
+msgid "TXT_DLG_SCRIPT23_D1516_WHATC"
+msgstr "U čemu vam mogu pomoći?"
+
+msgid "TXT_RPLY0_SCRIPT23_D1516_LEATH"
+msgstr "Kožni oklop"
+
+msgid "TXT_RYES0_SCRIPT23_D1516_HEREI"
+msgstr "Evo ga, građanine."
+
+msgid "TXT_RNO0_SCRIPT23_D1516_THERE"
+msgstr "Ovdje nema dobrotvorne pomoći!"
+
+msgid "TXT_RPLY1_SCRIPT23_D1516_METAL"
+msgstr "Metalni oklop"
+
+msgid "TXT_RYES1_SCRIPT23_D1516_ANEXC"
+msgstr "Izvrstan izbor, građanine."
+
+msgid "TXT_RNO1_SCRIPT23_D1516_YOUDO"
+msgstr "Nemate dovoljno za ovo!"
+
+msgid "TXT_RPLY2_SCRIPT23_D1516_ENVIR"
+msgstr "Žalba na zaštitu okoliša"
+
+msgid "TXT_RYES2_SCRIPT23_D1516_HEREY"
+msgstr "Evo te."
+
+msgid "TXT_RNO2_SCRIPT23_D1516_NOMON"
+msgstr "Nema novca, nema tužbe."
+
+msgid "TXT_RPLY3_SCRIPT23_D1516_SOMET"
+msgstr "Nešto drugačije?"
+
+msgid "TXT_RYES3_SCRIPT23_D1516_GOTHR"
+msgstr "Prođi kroz vrata u hodniku."
+
+msgid "TXT_RNO3_SCRIPT23_D1516_YOUMU"
+msgstr "Moraš platiti ako želiš igrati."
+
+# MAP23: Armory (with Tevick unlocked).
+msgid "TXT_DLG_SCRIPT23_D3032_WHATC"
+msgstr "Šta da ti donesem?"
+
+msgid "TXT_RPLY0_SCRIPT23_D3032_LEATH"
+msgstr "Kožni oklop"
+
+msgid "TXT_RYES0_SCRIPT23_D3032_HEREI"
+msgstr "Evo ga, građanine."
+
+msgid "TXT_RNO0_SCRIPT23_D3032_THERE"
+msgstr "Ovdje se ne daje nikakva dobrotvorna pomoć!"
+
+msgid "TXT_RPLY1_SCRIPT23_D3032_METAL"
+msgstr "Metalni oklop"
+
+msgid "TXT_RYES1_SCRIPT23_D3032_ANEXC"
+msgstr "Izvrstan izbor, građanine."
+
+msgid "TXT_RNO1_SCRIPT23_D3032_YOUDO"
+msgstr "Nemate dovoljno za ovo!"
+
+msgid "TXT_RPLY2_SCRIPT23_D3032_ENVIR"
+msgstr "Žalba na zaštitu okoliša"
+
+msgid "TXT_RYES2_SCRIPT23_D3032_HEREY"
+msgstr "Evo te."
+
+msgid "TXT_RNO2_SCRIPT23_D3032_NOMON"
+msgstr "Nema novca, nema tužbe."
+
+# MAP23: Hospital
+msgid "TXT_DLG_SCRIPT23_D4548_HOWCA"
+msgstr "Kako vam mogu pomoći danas?"
+
+msgid "TXT_RPLY0_SCRIPT23_D4548_MEDPA"
+msgstr "Medicinski flaster"
+
+msgid "TXT_RYES0_SCRIPT23_D4548_HERES"
+msgstr "Evo tvojeg zakrpa."
+
+msgid "TXT_RNO0_SCRIPT23_D4548_THATI"
+msgstr "To je 15 zlata, prijatelju moj."
+
+msgid "TXT_RPLY1_SCRIPT23_D4548_MEDIC"
+msgstr "Ljekarski komplet"
+
+msgid "TXT_RYES1_SCRIPT23_D4548_HERES"
+msgstr "Evo vašeg medicinskog kompleta."
+
+msgid "TXT_RNO1_SCRIPT23_D4548_YOURA"
+msgstr "Nemaš dovoljno novca za to."
+
+msgid "TXT_RPLY2_SCRIPT23_D4548_FIELD"
+msgstr "Terenski hirurški komplet"
+
+msgid "TXT_RYES2_SCRIPT23_D4548_ONEFI"
+msgstr "Jedan terenski hirurški komplet."
+
+msgid "TXT_RNO2_SCRIPT23_D4548_COMEB"
+msgstr "Vratite se kad budete imali novca!"
+
+# MAP23: Barkeep.
+msgid "TXT_DLG_SCRIPT23_D6064_HELLO"
+msgstr "Zdravo prijatelju, šta mogu da ti donesem?"
+
+msgid "TXT_RPLY0_SCRIPT23_D6064_INFOR"
+msgstr "Informacije"
+
+msgid "TXT_RYES0_SCRIPT23_D6064_IVENE"
+msgstr "Nikad nisam vidio nikoga kako ulazi ili izlazi iz fabrike, zaštitno polje je uvijek aktivno."
+
+msgid "TXT_RNO0_SCRIPT23_D6064_NOMON"
+msgstr "Nema novca, nema informacija."
+
+msgid "TXT_DLG_SCRIPT23_D7580_YESWH"
+msgstr "Da, šta biste željeli?"
+
+# (dot not recommended)
+msgid "TXT_RPLY0_SCRIPT23_D7580_MOREI"
+msgstr "Više informacija."
+
+msgid "TXT_RYES0_SCRIPT23_D7580_THEFA"
+msgstr "Fabrika je izgrađena na mjestu udara komete. Ne mislim da je to slučajno."
+
+msgid "TXT_RNO0_SCRIPT23_D7580_COMEO"
+msgstr "Ma daj, to su tek mizerna 5 zlata."
+
+msgid "TXT_DLG_SCRIPT23_D9096_HELLO"
+msgstr "Zdravo opet, šta će biti?"
+
+# (dot not recommended)
+msgid "TXT_RPLY0_SCRIPT23_D9096_MOREI"
+msgstr "Više informacija."
+
+msgid "TXT_RYES0_SCRIPT23_D9096_THEFA"
+msgstr "Fabrika je zatvorena kada je Red otkrio svoj novi užas: Inkvizitor."
+
+msgid "TXT_RNO0_SCRIPT23_D9096_5GOLD"
+msgstr "5 zlata, molim."
+
+# STRIFE1.WAD
+# MAP23: Barkeep
+msgid "TXT_DLG_SCRIPT23_D10612_THATS"
+msgstr "To je sve što znam. Čak i konobari ponekad ostanu bez riječi, oprosti."
+
+# STRIFE1.WAD
+# MAP23: Timothy
+msgid "TXT_DLG_SCRIPT23_D12128_HELLO"
+msgstr "Zdravo."
+
+msgid "TXT_RPLY0_SCRIPT23_D12128_WHATA"
+msgstr "Šta radiš?"
+
+msgid "TXT_RYES0_SCRIPT23_D12128_IMDOI"
+msgstr "Radim stvari, idi!"
+
+# STRIFE1.WAD
+# MAP23: Tevick.
+msgid "TXT_DLG_SCRIPT23_D13644_NOWWH"
+msgstr "Pa, čime mogu pomoći?"
+
+msgid "TXT_RPLY0_SCRIPT23_D13644_SHADO"
+msgstr "Sjenkasti oklop?"
+
+msgid "TXT_RYES0_SCRIPT23_D13644_AHHTO"
+msgstr "Ahh, biti čujan, ali ne i viđen!"
+
+msgid "TXT_RNO0_SCRIPT23_D13644_GETOU"
+msgstr "Makni se odavde, vrati se kad budeš imao nešto novca."
+
+# STRIFE1.WAD
+# MAP23: Richter.
+msgid "TXT_DLG_SCRIPT23_D15160_THANK"
+msgstr "Hvala Bogu što si stigao. Da bi ušao u fabriku, treba ti ključ. Mi smo ga ukrali, ali naš agent je nestao u mreži katakomba ispod tvrđave Reda. Poslao sam deset dobrih ljudi u te tunele da ga pronađu, i nijedan se nije vratio. Tamo dolje je nešto!"
+
+msgid "TXT_RPLY0_SCRIPT23_D15160_WHATI"
+msgstr "Šta je to? Čovjek ili… ?"
+
+msgid "TXT_DLG_SCRIPT23_D16676_NOTDE"
+msgstr "Ne. Definitivno ne. Šta god da je, moraš se boriti protiv toga da vratiš ključ. Otvorit ću ulaz u katakombe. Kad ga dobiješ, tvornica je pored rudnika. Požuri, svaka sekunda je važna."
+
+msgid "TXT_RPLY0_SCRIPT23_D16676_SOMET"
+msgstr "Nešto neljudsko, ha?, sjajno."
+
+msgid "TXT_DLG_SCRIPT23_D18192_YOURE"
+msgstr "Gubiš vrijeme i živote! Makni se!"
+
+# SVE.WAD
+# MAP23: Barkeep.
+msgid "TXT_DLG_SCRIPT23_D10612_CANIB"
+msgstr "Mogu li vam još više pomoći?"
+
+# (dot not recommended)
+msgid "TXT_RPLY0_SCRIPT23_D10612_MOREI"
+msgstr "Više informacija."
+
+msgid "TXT_RYES0_SCRIPT23_D10612_LOOKF"
+msgstr "Potraži Timoteja. Čuo sam da zna neke od tajni Reda."
+
+msgid "TXT_RNO0_SCRIPT23_D10612_JUSTA"
+msgstr "Samo još pet zlatnih."
+
+msgid "TXT_DLG_SCRIPT23_D12128_THATS"
+msgstr "To je sve što znam. Čak i konobari ponekad ostanu bez riječi, oprosti."
+
+# SVE.WAD
+# MAP23: Timothy (Talking with him for the very first time without the
+# chalice).
+msgid "TXT_DLG_SCRIPT23_D13644_HELLO"
+msgstr "Zdravo."
+
+msgid "TXT_RPLY0_SCRIPT23_D13644_WHATA"
+msgstr "Šta radiš?"
+
+msgid "TXT_RYES0_SCRIPT23_D13644_IMDOI"
+msgstr "Radim stvari, idi odavde!"
+
+msgid "TXT_DLG_SCRIPT23_D15160_IFYOU"
+msgstr "Ako imaš toliko vremena za gubiti, pokušaj pronaći plavi kalež. Moja istraživanja o Redu sugeriraju da su ga negdje sakrili u proizvodnom sektoru tvornice. Ovaj artefakt bi mi bio od velike vrijednosti, pa mi ga donesi i pomoći ću ti."
+
+msgid "TXT_DLG_SCRIPT23_D16676_YOUFO"
+msgstr "Pronašao si plavi kalež! U redu, daj mi ga prvo, pa ćemo razmijeniti."
+
+msgid "TXT_RPLY0_SCRIPT23_D16676_TAKEI"
+msgstr "Uzmi, ionako donosi nesreću."
+
+msgid "TXT_RPLY1_SCRIPT23_D16676_SCREW"
+msgstr "Jebi se, zadržavam ga."
+
+# (If you keep the chalice)
+msgid "TXT_RYES1_SCRIPT23_D16676_THENI"
+msgstr "Onda ti ne dajem ništa. Nestani!"
+
+# (If you give the chalice away)
+msgid "TXT_DLG_SCRIPT23_D18192_LOCAT"
+msgstr "Lokirajte kovačnicu. Informacije koje sam vam upravo dao trebale bi vam pomoći da uđete u tajni sektor fabrike. Jedan od radnika u kovačnici može otvoriti vrata."
+
+msgid "TXT_RPLY0_SCRIPT23_D18192_WHATC"
+msgstr "Šta tamo mogu pronaći?"
+
+msgid "TXT_DLG_SCRIPT23_D19708_MYRES"
+msgstr "Moje istraživanje sugeriše da se tamo skriva neka mračna sila iz davne prošlosti. Budi oprezan!"
+
+# SVE.WAD
+# MAP23: Timothy (Talking with him for the very first time with the chalice).
+msgid "TXT_DLG_SCRIPT23_D21224_THATB"
+msgstr "Kako si došao do tog plavog kaleža? Istražujem Red i njihove veze sa dalekom prošlošću, a taj artefakt bi mi pomogao. Napravimo dogovor. Daj mi kalež, a ja ću ti dati neke informacije."
+
+msgid "TXT_RPLY0_SCRIPT23_D21224_TAKEI"
+msgstr "Uzmi, ionako donosi nesreću."
+
+msgid "TXT_RPLY1_SCRIPT23_D21224_SCREW"
+msgstr "Jebi se, zadržavam ga."
+
+msgid "TXT_RYES1_SCRIPT23_D21224_THENI"
+msgstr "Onda ti ne dajem ništa. Nestani!"
+
+# SVE.WAD
+# MAP23: Tevick.
+msgid "TXT_DLG_SCRIPT23_D22740_NOWWH"
+msgstr "Pa, čime mogu pomoći?"
+
+msgid "TXT_RPLY0_SCRIPT23_D22740_SHADO"
+msgstr "Sjenkasti oklop?"
+
+msgid "TXT_RYES0_SCRIPT23_D22740_AHHTO"
+msgstr "Ahh, biti čujan, ali ne i viđen!"
+
+msgid "TXT_RNO0_SCRIPT23_D22740_GETOU"
+msgstr "Makni se odavde, vrati se kad budeš imao nešto novca."
+
+# SVE.WAD
+# MAP23: Richter.
+msgid "TXT_DLG_SCRIPT23_D24256_THANK"
+msgstr "Hvala Bogu što si stigao. Da bi ušao u fabriku, trebaš ključ. Mi smo ga ukrali, ali naš agent je nestao u mreži katakomba ispod tvrđave Reda. Poslao sam deset dobrih ljudi u te tunele da ga pronađu, i nijedan se nije vratio. Tamo dolje je nešto!"
+
+msgid "TXT_RPLY0_SCRIPT23_D24256_WHATI"
+msgstr "Šta je to? Čovjek ili… ?"
+
+msgid "TXT_DLG_SCRIPT23_D25772_NOTDE"
+msgstr "Ne. Definitivno ne. Šta god da je, moraš se boriti protiv toga da vratiš ključ. Otvorit ću ulaz u katakombe. Kad ga dobiješ, tvornica je pored rudnika. Požuri, svaka sekunda je važna."
+
+msgid "TXT_RPLY0_SCRIPT23_D25772_SOMET"
+msgstr "Nešto neljudsko, ha?, sjajno."
+
+msgid "TXT_DLG_SCRIPT23_D27288_YOURE"
+msgstr "Gubiš vrijeme i živote! Makni se!"
+
+# MAP27: Peasant → Northeastern room (after the lift).
+msgid "TXT_DLG_SCRIPT27_D0_THEMA"
+msgstr "Majstor ne voli posjetioce. On želi da sav njegov rad ostane netaknut. Moram otići po svježe dijelove iz skladišta. Mislim da je rekao nogu i ruku. Oh, nema više vremena za razgovor. Otišao bih prije nego što te pronađe."
+
+msgid "TXT_RPLY0_SCRIPT27_D0_WHYST"
+msgstr "Zašto je to."
+
+msgid "TXT_RYES0_SCRIPT27_D0_BECAU"
+msgstr "Jer sam ti rekao da on ne voli posjetioce!"
+
+msgid "TXT_DLG_SCRIPT27_D1516_YOUKN"
+msgstr "Znaš, otprilike si prave veličine za uniformu akoliteta."
+
+# MAP31: Programmer.
+msgid "TXT_DLG_SCRIPT31_D0_OHNOI"
+msgstr "O ne, ja nisam pravi programer, on se skriva. Nastavi dalje pored područja za obuku straže, jako je teško. Ako preživiš, možda ćeš moći razgovarati s njim. Ili ga ubiti."
+
+msgid "TXT_RPLY0_SCRIPT31_D0_WHOAR"
+msgstr "Ko si ti?"
+
+msgid "TXT_DLG_SCRIPT31_D1516_YOULL"
+msgstr "Nećeš nikad ništa pronaći ako ovdje stojiš."
+
+# MAP32: Red acolyte.
+msgid "TXT_DLG_SCRIPT32_D0_PISSO"
+msgstr "Jebi se seljačino!"
+
+# Appears in MAP32 and is supposed to be spoken by the AcolyteRust actor
+# (named “Interrogator”). However, no such actor is spawned in the map,
+# rendering this line unused.
+msgid "TXT_DLG_SCRIPT32_D1516_DIELI"
+msgstr "Umri, mali čovječe!"
+
+# MAP32: Cell.
+msgid "TXT_DLG_SCRIPT32_D3032_FINAL"
+msgstr "Konačno mogu izaći iz ove ćelije."
+
+msgid "TXT_RPLY0_SCRIPT32_D3032_WHYAR"
+msgstr "Zašto si ovdje?"
+
+msgid "TXT_RYES0_SCRIPT32_D3032_IWASF"
+msgstr "Namjestili su mi."
+
+msgid "TXT_DLG_SCRIPT32_D4548_HARRI"
+msgstr "Harris je rekao da sam planirao ubiti guvernera. Nikada ne bih naudio nikome."
+
+msgid "TXT_DLG_SCRIPT33_D0_BECAR"
+msgstr "Pazi se tamo vani."
+
+# MAP33: Guy next to Norwall Prison.
+msgid "TXT_DLG_SCRIPT33_D1516_SAYFR"
+msgstr "Hej prijatelju, pomoći ću ti ako mi pomogneš. Daj mi pet zlatnika i reći ću ti šta znam."
+
+msgid "TXT_RPLY0_SCRIPT33_D1516_HERES"
+msgstr "Evo zlata."
+
+msgid "TXT_RYES0_SCRIPT33_D1516_IFYOU"
+msgstr "Ako nekoga udariš, nećeš pokrenuti alarme."
+
+msgid "TXT_RNO0_SCRIPT33_D1516_IWONT"
+msgstr "Neću ti ništa reći besplatno!"
+
+msgid "TXT_DLG_SCRIPT33_D3032_IVEAL"
+msgstr "Već sam ti rekao ono što znam."
+
+# MAP33: Weapons.
+msgid "TXT_DLG_SCRIPT33_D4548_HELLO"
+msgstr "Zdravo prijatelju. Šta mogu da ti donesem?"
+
+msgid "TXT_RPLY0_SCRIPT33_D4548_ELECT"
+msgstr "Električni vijci"
+
+msgid "TXT_RYES0_SCRIPT33_D4548_ONEQU"
+msgstr "To je jedna svađa."
+
+msgid "TXT_RNO0_SCRIPT33_D4548_YOURE"
+msgstr "Nemaš para!"
+
+msgid "TXT_RPLY1_SCRIPT33_D4548_10ROU"
+msgstr "Klip metaka"
+
+msgid "TXT_RYES1_SCRIPT33_D4548_HERES"
+msgstr "Evo tvog streljiva"
+
+msgid "TXT_RNO1_SCRIPT33_D4548_SORRY"
+msgstr "Žao mi je, nema novca, nema metaka."
+
+msgid "TXT_RPLY2_SCRIPT33_D4548_50ROU"
+msgstr "Kutija za municiju"
+
+msgid "TXT_RYES2_SCRIPT33_D4548_HEREY"
+msgstr "Evo"
+
+msgid "TXT_RNO2_SCRIPT33_D4548_YOUDO"
+msgstr "Nemate dovoljno zlata!"
+
+msgid "TXT_RPLY3_SCRIPT33_D4548_AMMOS"
+msgstr "Futrola za municiju"
+
+msgid "TXT_RYES3_SCRIPT33_D4548_THANK"
+msgstr "Hvala, ima li još nešto?"
+
+msgid "TXT_RNO3_SCRIPT33_D4548_YOUCA"
+msgstr "Ne možete si to priuštiti, dobar dan."
+
+# MAP33: Armory
+msgid "TXT_DLG_SCRIPT33_D6064_WELCO"
+msgstr "Dobrodošli. Šta vam mogu pokazati?"
+
+msgid "TXT_RPLY0_SCRIPT33_D6064_ENVIR"
+msgstr "Žalba na zaštitu okoliša"
+
+msgid "TXT_RYES0_SCRIPT33_D6064_HEREY"
+msgstr "Evo te."
+
+msgid "TXT_RNO0_SCRIPT33_D6064_YOUDO"
+msgstr "Nemate dovoljno novca za to."
+
+msgid "TXT_RPLY1_SCRIPT33_D6064_LEATH"
+msgstr "Kožni oklop."
+
+msgid "TXT_RYES1_SCRIPT33_D6064_HEREY"
+msgstr "Evo te."
+
+msgid "TXT_RNO1_SCRIPT33_D6064_PERHA"
+msgstr "Možda neki drugi put?"
+
+msgid "TXT_RPLY2_SCRIPT33_D6064_METAL"
+msgstr "Metalni oklop"
+
+msgid "TXT_RYES2_SCRIPT33_D6064_WEARI"
+msgstr "Nosite ga u zdravlju."
+
+msgid "TXT_RNO2_SCRIPT33_D6064_COMEB"
+msgstr "Vratite se kad budete mogli."
+
+# MAP33: Hospital
+msgid "TXT_DLG_SCRIPT33_D7580_HOWMA"
+msgstr "Kako vam mogu pomoći?"
+
+msgid "TXT_RPLY0_SCRIPT33_D7580_MEDPA"
+msgstr "Medicinski flaster"
+
+msgid "TXT_RYES0_SCRIPT33_D7580_HERES"
+msgstr "Evo vašeg kompleta za zakrpe."
+
+msgid "TXT_RNO0_SCRIPT33_D7580_YOUNE"
+msgstr "Za to ti treba 10 zlata."
+
+msgid "TXT_RPLY1_SCRIPT33_D7580_FIELD"
+msgstr "Terenski hirurški komplet"
+
+msgid "TXT_RYES1_SCRIPT33_D7580_THANK"
+msgstr "Hvala vam."
+
+msgid "TXT_RNO1_SCRIPT33_D7580_IWISH"
+msgstr "Volio bih da ih mogu pokloniti, ali koštaju 25 zlata."
+
+msgid "TXT_RPLY2_SCRIPT33_D7580_HEALI"
+msgstr "Iscjeljenje"
+
+msgid "TXT_RYES2_SCRIPT33_D7580_THERE"
+msgstr "Evo. Čuvaj se sada."
+
+msgid "TXT_RNO2_SCRIPT33_D7580_WELLM"
+msgstr "Pa, možda si možeš priuštiti neke medicinske flastere?"
+
+# MAP33: Barkeep.
+msgid "TXT_DLG_SCRIPT33_D9096_HELLO"
+msgstr "Zdravo prijatelju, nisam te ranije vidio ovdje. Sve što mogu reći je da bih bio oprezan na tvom mjestu, puno se toga dešava i bolje ti je da ne stojiš na putu."
+
+msgid "TXT_RPLY0_SCRIPT33_D9096_INFOR"
+msgstr "Informacije"
+
+msgid "TXT_RYES0_SCRIPT33_D9096_THESE"
+msgstr "Kanalizacija sadrži više od samo pacova i robota."
+
+msgid "TXT_RNO0_SCRIPT33_D9096_HEYAG"
+msgstr "Hej, čovjek mora zaraditi nešto novca. Misliš li da ovi šašuni dobro ostavljaju napojnice?"
+
+msgid "TXT_DLG_SCRIPT33_D10612_BACKA"
+msgstr "Ponovo si tu, ha? Pa barem znaš dovoljno da sačuvaš svoju kožu netaknutom. Šta mogu učiniti za tebe sada?"
+
+msgid "TXT_RPLY0_SCRIPT33_D10612_MOREI"
+msgstr "Više informacija"
+
+msgid "TXT_RYES0_SCRIPT33_D10612_THEGO"
+msgstr "Guverner je jednostavan podsjetnik na utjecaj Reda."
+
+msgid "TXT_RNO0_SCRIPT33_D10612_COMEB"
+msgstr "Vratite se ako promijenite mišljenje."
+
+msgid "TXT_DLG_SCRIPT33_D12128_WELLY"
+msgstr "Pa, postavljaš puno pitanja za nekoga ko je već toliko dugo živ. Ali nema problema, radije bih razgovarao s nekim poput tebe nego s većinom ovih."
+
+msgid "TXT_RPLY0_SCRIPT33_D12128_MOREI"
+msgstr "Više informacija."
+
+msgid "TXT_RYES0_SCRIPT33_D12128_THERE"
+msgstr "Red je mnogo više od onoga što se ovdje događa."
+
+msgid "TXT_RNO0_SCRIPT33_D12128_COMEB"
+msgstr "Vratite se ako promijenite mišljenje."
+
+msgid "TXT_DLG_SCRIPT33_D13644_THATS"
+msgstr "To je to, prijatelju, bunar znanja je iskorišten. Ionako sam ti rekao više nego što sam trebao."
+
+# MAP33: Harris (beginning).
+msgid "TXT_DLG_SCRIPT33_D15160_HARDT"
+msgstr "Teško je kupovati nove igračke… kad si bez novca. Obavi za mene jednu malu poslicu i dobit ćeš više nego što bi ikada mogao potrošiti. Učinit ću te bogatašem."
+
+msgid "TXT_RPLY0_SCRIPT33_D15160_IGOTN"
+msgstr "Nemam ništa bolje za raditi."
+
+msgid "TXT_RPLY1_SCRIPT33_D15160_NOTHA"
+msgstr "Ne, hvala."
+
+msgid "TXT_RYES1_SCRIPT33_D15160_NOBOD"
+msgstr "Niko ne odlazi od mene!"
+
+msgid "TXT_DLG_SCRIPT33_D16676_GOODC"
+msgstr "Dobar izbor. Svetište Reda uz rijeku je njihova neslužbena komora za mučenje. U njemu je skriven zlatni kalež. Uzmi ga, nađi se sa mnom u krčmi i uzmi svoju nagradu."
+
+msgid "TXT_RPLY0_SCRIPT33_D16676_HOWAM"
+msgstr "Kako to trebam uraditi?"
+
+msgid "TXT_RPLY1_SCRIPT33_D16676_LETME"
+msgstr "Dopusti mi da razmislim o tome."
+
+msgid "TXT_RYES1_SCRIPT33_D16676_SORRY"
+msgstr "Žao mi je, nema drugog puta. Oh, stražari, ubijte ga!"
+
+msgid "TXT_DLG_SCRIPT33_D18192_HERES"
+msgstr "Evo samostrela, samo nišanite ravno i -- splat! --. Zapamtite, uzmite otmjeni pehar i nađite se sa mnom u krčmi."
+
+msgid "TXT_RPLY0_SCRIPT33_D18192_ILLSE"
+msgstr "Vidimo se tamo."
+
+msgid "TXT_DLG_SCRIPT33_D19708_WHATA"
+msgstr "Šta čekate? Ne brinite, ja ću počistiti tijela, samo mi donesite taj kalež!"
+
+msgid "TXT_DLG_SCRIPT33_D21224_GUARD"
+msgstr "Čuvari! Ubijte izdajnika!"
+
+# MAP33: Harris (tavern).
+msgid "TXT_DLG_SCRIPT33_D22740_HEYIK"
+msgstr "Hej, znam šta misliš, nekako izgleda kao podmetanje, nikad ne bih to uradio takvoj mašini za ubijanje, stvarno mislim. Uf, sva ova frka zbog jedne šolje, čudno. Sad se pripremi, zlato i slava, kao što sam obećao. Uzmi ovaj ključ i sam guverner će te nagraditi."
+
+msgid "TXT_RPLY0_SCRIPT33_D22740_GREAT"
+msgstr "Sjajno, jedva čekam!"
+
+# (if accepting without having the chalice)
+msgid "TXT_RNO0_SCRIPT33_D22740_NOCHA"
+msgstr "Nema kaleža, nema novca!"
+
+msgid "TXT_RPLY1_SCRIPT33_D22740_ILLKE"
+msgstr "Održat ću kalež, hvala."
+
+msgid "TXT_RYES1_SCRIPT33_D22740_KEEPI"
+msgstr "Zadržati? Mislim da ne!"
+
+msgid "TXT_DLG_SCRIPT33_D24256_WHATA"
+msgstr "Šta čekate? Sam guverner će vas nagraditi."
+
+msgid "TXT_DLG_SCRIPT33_D25772_DIETR"
+msgstr "O izdajniče! "
+
+# MAP33: Mourel.
+msgid "TXT_DLG_SCRIPT33_D27288_SOYOU"
+msgstr "Dakle, ti si budala koja je ukrala kalež? Uhapsiću te kao pobunjeničkog lopova… čime ću unaprijediti svoj položaj u Redu. Kako je to biti nesvjesna pijun?"
+
+msgid "TXT_RPLY0_SCRIPT33_D27288_ITSUC"
+msgstr "Sranje je!"
+
+msgid "TXT_RYES0_SCRIPT33_D27288_FORYO"
+msgstr "Za tebe da."
+
+msgid "TXT_RPLY1_SCRIPT33_D27288_HARRI"
+msgstr "Harris mi je obećao novac!"
+
+msgid "TXT_RYES1_SCRIPT33_D27288_TOOBA"
+msgstr "Šteta. Jedino što ćeš dobiti je smrt!"
+
+msgid "TXT_DLG_SCRIPT33_D28804_WEREG"
+msgstr "Ubit ćemo te!"
+
+msgid "TXT_DLG_SCRIPT33_D30320_GETOU"
+msgstr "Makni se odavde!"
+
+# MAP33: Green acolytes (beginning).
+msgid "TXT_DLG_SCRIPT33_D31836_WEREG"
+msgstr "Ubit ćemo te!"
+
+# MAP33: Yellow acolytes.
+msgid "TXT_DLG_SCRIPT33_D33352_GETOU"
+msgstr "Makni se odavde!"
+
+# MAP34: Barracks.
+msgid "TXT_DLG_SCRIPT34_D0_WHATA"
+msgstr "Kakvo savršeno mjesto za nas, ispod stare gradske vijećnice. Red misli da su nas uništili, ali sve je to bio samo podsjetnik na to šta se može dogoditi kad postaneš nepažljiv. "
+
+# MAP34
+msgid "TXT_DLG_SCRIPT34_D1516_TALKT"
+msgstr "Razgovaraj s Macilom, on će ti moći pomoći."
+
+# MAP34: Barracks.
+msgid "TXT_DLG_SCRIPT34_D3032_IVEHE"
+msgstr "Čuo sam da će Macil uskoro ponovo nešto započeti. Nakon posljednjeg fijaska trebamo veliki hit. Još jedan takav i bit ćemo preslabi da nastavimo."
+
+msgid "TXT_DLG_SCRIPT34_D4548_AFEWO"
+msgstr "Par ovih bačvi bačenih u njihov vodeni sistem trebalo bi malo izjednačiti izglede. "
+
+# MAP34: Gerald.
+# (Except for row 1335, everything in rows 1323-1343 is identical to 725-745)
+msgid "TXT_DLG_SCRIPT34_D6064_IMWOR"
+msgstr "Radim na nečemu što će nam dati prednost. Povećat će tvoju izdržljivost i potpuno te razbuditi. Gotovo sam otklonio sve greške. Mogu li ti pomoći? "
+
+msgid "TXT_RPLY0_SCRIPT34_D6064_PATCH"
+msgstr "Zalijepi me."
+
+msgid "TXT_RYES0_SCRIPT34_D6064_BOYYO"
+msgstr "Čovječe, ti si pravi nered. Vidjet ću šta mogu učiniti."
+
+msgid "TXT_RPLY1_SCRIPT34_D6064_STAMI"
+msgstr "Implantat izdržljivosti?"
+
+msgid "TXT_RYES1_SCRIPT34_D6064_ALLRI"
+msgstr "U redu, ovo neće potrajati ni trenutak."
+
+msgid "TXT_RNO1_SCRIPT34_D6064_ITSNO"
+msgstr "Još nije gotovo."
+
+msgid "TXT_DLG_SCRIPT34_D7580_HEYIM"
+msgstr "Hej, radim na ažuriranoj verziji tvog implanta. Ima li još nešto što mogu učiniti?"
+
+msgid "TXT_RPLY0_SCRIPT34_D7580_PATCH"
+msgstr "Zalijepi me."
+
+msgid "TXT_RYES0_SCRIPT34_D7580_WELLA"
+msgstr "Pa barem vidiš akciju."
+
+msgid "TXT_RPLY1_SCRIPT34_D7580_IMPLA"
+msgstr "Nadogradnja implantata?"
+
+msgid "TXT_RYES1_SCRIPT34_D7580_GOODT"
+msgstr "Bolje da bude dobro, nikad ne može biti previše sigurno."
+
+msgid "TXT_RNO1_SCRIPT34_D7580_IMALM"
+msgstr "Skoro sam gotov, ali još nisam sasvim."
+
+msgid "TXT_DLG_SCRIPT34_D9096_ALLRI"
+msgstr "U redu, ovo je to. Gotovo sve radi savršeno. Ostalo je još nekoliko problema za riješiti, treba li ti još nešto? "
+
+msgid "TXT_RPLY0_SCRIPT34_D9096_PATCH"
+msgstr "Zalijepi me."
+
+msgid "TXT_RYES0_SCRIPT34_D9096_WHATH"
+msgstr "Šta si pokušavao uraditi? Da se suprotstaviš krstašu?"
+
+msgid "TXT_RPLY1_SCRIPT34_D9096_IMPLA"
+msgstr "Nadogradnja implantata?"
+
+msgid "TXT_RYES1_SCRIPT34_D9096_THATS"
+msgstr "To bi trebalo biti dovoljno za vas."
+
+msgid "TXT_RNO1_SCRIPT34_D9096_LETME"
+msgstr "Dopusti mi da prvo provedem još nekoliko testova."
+
+msgid "TXT_DLG_SCRIPT34_D10612_THATS"
+msgstr "To je sve što trenutno mogu učiniti s implantatom. Možda će se malo zacijeliti?"
+
+msgid "TXT_RPLY0_SCRIPT34_D10612_YEAH"
+msgstr "Da."
+
+msgid "TXT_RYES0_SCRIPT34_D10612_BOYYO"
+msgstr "Čovječe, ti si pravi nered. Vidjet ću šta mogu učiniti."
+
+# MAP34: Feris (identical to rows 746-768, except for row 1357).
+msgid "TXT_DLG_SCRIPT34_D12128_WHATC"
+msgstr "Šta mogu učiniti za vas?"
+
+msgid "TXT_RPLY0_SCRIPT34_D12128_IMOUT"
+msgstr "Nemam više metaka."
+
+msgid "TXT_RYES0_SCRIPT34_D12128_HERES"
+msgstr "Evo ti municije. Nemoj je bacati."
+
+msgid "TXT_RPLY1_SCRIPT34_D12128_TEACH"
+msgstr "Nauči me."
+
+msgid "TXT_RYES1_SCRIPT34_D12128_ALLRI"
+msgstr "U redu, samo ću ti pokazati nekoliko malih savjeta."
+
+msgid "TXT_RNO1_SCRIPT34_D12128_YOURE"
+msgstr "Još nisi spreman."
+
+msgid "TXT_DLG_SCRIPT34_D13644_BACKA"
+msgstr "Ponovo? Šta ti treba?"
+
+msgid "TXT_RPLY0_SCRIPT34_D13644_IMOUT"
+msgstr "Nemam više metaka."
+
+msgid "TXT_RYES0_SCRIPT34_D13644_HERES"
+msgstr "Evo ti municije. Nemoj je bacati."
+
+msgid "TXT_RNO0_SCRIPT34_D13644_YOUVE"
+msgstr "Imaš dovoljno municije."
+
+msgid "TXT_RPLY1_SCRIPT34_D13644_TEACH"
+msgstr "Nauči me."
+
+msgid "TXT_RYES1_SCRIPT34_D13644_ALLRI"
+msgstr "U redu, ovo bi te trebalo izdržati neko vrijeme."
+
+msgid "TXT_RNO1_SCRIPT34_D13644_SORRY"
+msgstr "Žao mi je, ne mogu. Samo izvršavam Macilove naredbe."
+
+msgid "TXT_DLG_SCRIPT34_D15160_WELLW"
+msgstr "Pa šta je to, municija ili obuka? Jedva čekam da stavim ruke na ta nova oružja koja smo zaplijenili. Kad završim s njima, moći ću početi obučavati sve ostale."
+
+msgid "TXT_RPLY0_SCRIPT34_D15160_IMOUT"
+msgstr "Ostala mi je municija."
+
+msgid "TXT_RYES0_SCRIPT34_D15160_HERES"
+msgstr "Evo ti municije. Nemoj je bacati."
+
+msgid "TXT_RNO0_SCRIPT34_D15160_YOUVE"
+msgstr "Imaš dovoljno municije."
+
+msgid "TXT_RPLY1_SCRIPT34_D15160_TEACH"
+msgstr "Nauči me."
+
+msgid "TXT_RYES1_SCRIPT34_D15160_OKTAK"
+msgstr "U redu. Uzmi ono što si naučio i pokaži tim bastardima iz Reda put u pakao."
+
+msgid "TXT_RNO1_SCRIPT34_D15160_COMEB"
+msgstr "Vratite se kasnije, kad Macil kaže da je vrijeme."
+
+msgid "TXT_DLG_SCRIPT34_D16676_IVETA"
+msgstr "Naučio sam te svemu što trenutno mogu. Daj mi malo vremena da isprobam nova oružja. Osim ako ti municija nije ponestala."
+
+msgid "TXT_RPLY0_SCRIPT34_D16676_YESIA"
+msgstr "Da, jesam."
+
+msgid "TXT_RYES0_SCRIPT34_D16676_HEREY"
+msgstr "Evo."
+
+# MAP34: Upstairs.
+# (Identical to row 769)
+msgid "TXT_DLG_SCRIPT34_D18192_DONTG"
+msgstr "Nemoj se previše igrati oružjem u gradu, aktivirat ćeš alarm i oni će početi slati straže iz dvorca."
+
+# (Identical to row 770)
+msgid "TXT_DLG_SCRIPT34_D19708_WELCO"
+msgstr "Dobrodošli, uvijek nam dobro dođe dodatna pomoć."
+
+# (Similar to row 771)
+msgid "TXT_DLG_SCRIPT34_D21224_WHENI"
+msgstr "Kad sam još bio u akciji, imali smo priliku pregledati akolita prije nego što su stigle pojačanja, oni nisu ljudi, kažem ti."
+
+# MAP34: Downstairs.
+# (Identical to row 772)
+msgid "TXT_DLG_SCRIPT34_D22740_WERET"
+msgstr "Pokušavamo pronaći gdje se nalaze mehanizmi kapija dvorca, ali do sada nismo imali sreće."
+
+# (Similar to row 773)
+msgid "TXT_DLG_SCRIPT34_D24256_DONTG"
+msgstr "Nemoj da te uhvate. Čuo sam užasne priče o tome šta rade našim ljudima nakon što ih zatvore. Oni jednostavno nestanu, bez traga, ništa. "
+
+# (Similar to row 774)
+msgid "TXT_DLG_SCRIPT34_D25772_HERES"
+msgstr "Evo savjeta: ako ikada vidiš bilo kojeg od limenih vojnika Reda, bježi u drugom smjeru. Posebno ne volim Reavere, ta stvorenja su prokleto brza!"
+
+# MAP34: Macil.
+msgid "TXT_DLG_SCRIPT34_D27288_WELCO"
+msgstr "Dobrodošli u posljednji tračak nade. Samo mi imamo slobodnu volju da se suprotstavimo Redu. Imamo najoštrije naučne umove i mnogo sposobnih tijela. Ali nam nedostaje onaj pravi rješavač problema koji će nam dati prednost koju trebamo."
+
+msgid "TXT_RPLY0_SCRIPT34_D27288_WHATW"
+msgstr "Šta ću morati da uradim? "
+
+msgid "TXT_DLG_SCRIPT34_D28804_HELPU"
+msgstr "Pomozite nam. Pomozite nam ukrasti njihovu tehnologiju. Oslobodite naše saborce. Borite se protiv ovih izopačenih psihopata do smrti. Molim vas da riskirate svoj život za istinu."
+
+msgid "TXT_RPLY0_SCRIPT34_D28804_IMWIT"
+msgstr "Slažem se s tobom!"
+
+msgid "TXT_DLG_SCRIPT34_D30320_GOODB"
+msgstr "Dobro. Blackbird će i dalje biti tvoj vodič. Prilično joj se svidioš. Zajedno morate otkriti tajne Reda i njihovih neljudskih slugu. Postoji prisustvo koje vreba tik izvan našeg razumijevanja i koje usmjerava njihov teror. Uđi unutra i porazi ih. "
+
+msgid "TXT_RPLY0_SCRIPT34_D30320_LETME"
+msgstr "Pustite me na njih!"
+
+msgid "TXT_RYES0_SCRIPT34_D30320_THATS"
+msgstr "To je duh."
+
+msgid "TXT_DLG_SCRIPT34_D31836_WELCO"
+msgstr "Dobrodošao, prijatelju!"
+
+msgid "TXT_RANDOM_PEASANT_01"
+msgstr "Molim te, nemoj me povrijediti."
+
+msgid "TXT_RANDOM_PEASANT_02"
+msgstr "Ako me želiš povrijediti, stvarno ne vrijedim tog truda."
+
+msgid "TXT_RANDOM_PEASANT_03"
+msgstr "Ne znam ništa."
+
+msgid "TXT_RANDOM_PEASANT_04"
+msgstr "Otiđi ili ću pozvati stražu!"
+
+msgid "TXT_RANDOM_PEASANT_05"
+msgstr "Ponekad poželim da svi ti pobunjenici nauče svoje mjesto i prestanu s tim besmislicama."
+
+msgid "TXT_RANDOM_PEASANT_06"
+msgstr "Samo me ostavi na miru, u redu?"
+
+msgid "TXT_RANDOM_PEASANT_07"
+msgstr "Nisam siguran, ali ponekad mislim da poznajem neke od akolita."
+
+msgid "TXT_RANDOM_PEASANT_08"
+msgstr "Red je ovdje sve prilično dobro zaključao."
+
+msgid "TXT_RANDOM_PEASANT_09"
+msgstr "Nema šanse da je ovo samo sigurnosna snaga."
+
+msgid "TXT_RANDOM_PEASANT_10"
+msgstr "Čuo sam da je Red stvarno nervozan zbog akcija Fronta ovdje."
+
+msgid "TXT_RANDOM_REBEL_01"
+msgstr "Nema šanse da se Red usprotivi nama."
+
+msgid "TXT_RANDOM_REBEL_02"
+msgstr "Skoro smo spremni za napad. Macilovi planovi se ostvaruju."
+
+msgid "TXT_RANDOM_REBEL_03"
+msgstr "Svi smo uz tebe, ne brini."
+
+msgid "TXT_RANDOM_REBEL_04"
+msgstr "Nemoj se previše približavati nijednom od tih velikih robota. Otopit će te za otpad!"
+
+msgid "TXT_RANDOM_REBEL_05"
+msgstr "Dan naše slave uskoro će doći, i oni koji nam se protive bit će zdrobljeni!"
+
+msgid "TXT_RANDOM_REBEL_06"
+msgstr "Nemoj se previše opustiti. Još uvijek imamo puno posla."
+
+msgid "TXT_RANDOM_REBEL_07"
+msgstr "Macil kaže da si nova nada. Imaj to na umu."
+
+msgid "TXT_RANDOM_REBEL_08"
+msgstr "Kad jednom porazimo ove šarlatane, moći ćemo obnoviti ovaj svijet onako kako treba."
+
+msgid "TXT_RANDOM_REBEL_09"
+msgstr "Zapamti da se ne boriš samo za sebe, nego i za sve ovdje i vani."
+
+msgid "TXT_RANDOM_REBEL_10"
+msgstr "Sve dok nas je barem jedan preostao, pobijedit ćemo."
+
+msgid "TXT_RANDOM_AGUARD_01"
+msgstr "Idi dalje, seljačino."
+
+msgid "TXT_RANDOM_AGUARD_02"
+msgstr "Slijedi istinsku vjeru, tek tada ćeš početi razumjeti."
+
+msgid "TXT_RANDOM_AGUARD_03"
+msgstr "Samo kroz smrt se može istinski ponovo roditi."
+
+msgid "TXT_RANDOM_AGUARD_04"
+msgstr "Ne zanimaju me tvoje besmislene gluposti."
+
+msgid "TXT_RANDOM_AGUARD_05"
+msgstr "Da sam htio razgovarati s tobom, rekao bih ti to."
+
+msgid "TXT_RANDOM_AGUARD_06"
+msgstr "Idi i nerviraj nekog drugog!"
+
+msgid "TXT_RANDOM_AGUARD_07"
+msgstr "Nastavi se kretati!"
+
+msgid "TXT_RANDOM_AGUARD_08"
+msgstr "Ako se alarm oglasi, samo ostani izvan našeg puta!"
+
+msgid "TXT_RANDOM_AGUARD_09"
+msgstr "Red će očistiti svijet i uvesti ga u novu eru."
+
+msgid "TXT_RANDOM_AGUARD_10"
+msgstr "Problem? Ne, mislio sam da nema."
+
+msgid "TXT_RANDOM_BEGGAR_01"
+msgstr "Milostinja za siromašne?"
+
+msgid "TXT_RANDOM_BEGGAR_02"
+msgstr "Šta gledaš, surfacer?"
+
+msgid "TXT_RANDOM_BEGGAR_03"
+msgstr "Ne biste imali viška hrane, zar ne?"
+
+msgid "TXT_RANDOM_BEGGAR_04"
+msgstr "Vi, površinski ljudi, nikada nas nećete razumjeti."
+
+msgid "TXT_RANDOM_BEGGAR_05"
+msgstr "Ha, stražari nas ne mogu pronaći. Ti idioti čak ni ne znaju da postojimo."
+
+msgid "TXT_RANDOM_BEGGAR_06"
+msgstr "Jednog dana će svi, osim onih koji služe Redu, biti prisiljeni da nam se pridruže."
+
+msgid "TXT_RANDOM_BEGGAR_07"
+msgstr "Sada gledaj, ali znaš da će to jednog dana biti tvoje vlastito lice."
+
+msgid "TXT_RANDOM_BEGGAR_08"
+msgstr "Nema ništa iritantnije od gipsera s držanjem!"
+
+msgid "TXT_RANDOM_BEGGAR_09"
+msgstr "Red će brzo svladati vaš jadni front."
+
+msgid "TXT_RANDOM_BEGGAR_10"
+msgstr "Pazi se, površinaru. Znamo naše neprijatelje!"
+
+msgid "TXT_RANDOM_PGUARD_01"
+msgstr "Mi smo ruke sudbine. Ko izazove naš bijes, pronaći će zaborav!"
+
+msgid "TXT_RANDOM_PGUARD_02"
+msgstr "Red će očistiti svijet od slabih i korumpiranih!"
+
+msgid "TXT_RANDOM_PGUARD_03"
+msgstr "Poštujte volju gospodara!"
+
+msgid "TXT_RANDOM_PGUARD_04"
+msgstr "Dug život braći reda!"
+
+msgid "TXT_RANDOM_PGUARD_05"
+msgstr "Slobodna volja je iluzija koja veže slabe umove."
+
+msgid "TXT_RANDOM_PGUARD_06"
+msgstr "Moć je put ka slavi. Slijediti Red znači koračati tim putem!"
+
+msgid "TXT_RANDOM_PGUARD_07"
+msgstr "Zauzmi svoje mjesto među pravednima, pridruži nam se!"
+
+msgid "TXT_RANDOM_PGUARD_08"
+msgstr "Red štiti svoje."
+
+msgid "TXT_RANDOM_PGUARD_09"
+msgstr "Akoliti? Još nisu vidjeli punu slavu Reda."
+
+msgid "TXT_RANDOM_PGUARD_10"
+msgstr "Ako u toj patetičnoj ljusci tijela postoji ikakva čast, ući ćeš u naručje Reda."
+
+msgid "TXT_RANDOMGOODBYE_1"
+msgstr "Ćao!"
+
+msgid "TXT_RANDOMGOODBYE_2"
+msgstr "Hvala, zbogom!"
+
+msgid "TXT_RANDOMGOODBYE_3"
+msgstr "Vidimo se kasnije!"
+
+# MAP33: After getting the hidden com unit in the tavern.
+msgid "TXT_ILOG1"
+msgstr "Zdravo? Komanda, komunikacijska jedinica je upravo aktivirana… Primam vizuelne i zvučne signale od… nekoga… Hej, ti, izađi odatle odmah… i ispusti kalež!"
+
+# MAP02: After getting the com unit from Rowan and leaving his room.
+msgid "TXT_ILOG2"
+msgstr "Slušaj, ova komunikacijska jedinica mi govori da si 100% human. Dobio sam naredbu da te dovedem, ovdje je riječ o povjerenju. Izdaj me i plati. Oh, i usput, možeš me zvati Blackbird."
+
+# MAP33: After getting the hidden com unit in the tavern.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG2"
+msgstr "Slušaj, ovaj kom-unit mi govori da si 100% human. Možda si jedan od nas, i možda možemo pokušati vjerovati jedni drugima. Uzmi ovo kao test: u guvernerovoj rezidenciji nalazi se bacač plamena. Donesi ga, i odvest ću te do nas."
+
+# MAP02: On the bridge with the com unit.
+msgid "TXT_ILOG3"
+msgstr "Upati se prema staroj gradskoj vijećnici. Macil je dao izgraditi tunel koji nam omogućava da uđemo i izađemo neprimijećeni od akolita."
+
+# MAP02: In town hall with the com unit.
+msgid "TXT_ILOG4"
+msgstr "Prođi kroz vrata s tvoje lijeve strane, zatim kroz ona s desne. Čuvar se zove Geoff. Reci mu da ti treba zlato."
+
+msgctxt "strifeteaser"
+msgid "TXT_ILOG5"
+msgstr "Ne ulazi u gradsku vijećnicu. Više nije sigurno, otkrili su nas. Ubiji sve velike robote, \"Križare\" i ja ću te odvesti do nas."
+
+# MAP33: In front of "Irale's shop" with the com unit and the Crusaders dead.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG6"
+msgstr "Vrata pored oružarnice će se otvoriti kad svi križari budu mrtvi. U skladištu se nalazi teleporter, upotrijebi ga i on će te dovesti do nas"
+
+# MAP33: In front of "Irale's shop" with the com unit and the Crusaders alive.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG7"
+msgstr "Vrata pored oružarnice će se otvoriti kad svi krstaši budu mrtvi. U skladištu se nalazi teleporter, upotrijebi ga i on će te dovesti do nas."
+
+# MAP33: Room with the flamethrower.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG8"
+msgstr "Ubij što više velikih robota, Krstaša, koliko možeš. Kad završiš, odvest ću te do Macila"
+
+# MAP34: After leaving the teleporter.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG9"
+msgstr "Prođi kroz vrata i razgovaraj s Macilom."
+
+# MAP02: After accepting "messy" chore and leaving Mourel's room.
+msgid "TXT_ILOG10"
+msgstr "Pronađi utičnicu na strujnom krugu i isključi je. Donesi nešto Guverneru kao dokaz. Pronađi MacGuffina i razgovaraj s njim."
+
+# MAP02: After accepting "messy" chore and leaving Mourel's mansion.
+msgid "TXT_ILOG11"
+msgstr "Pronađi razvodnu kutiju na strujnom kablu i isključi je. Donesi Guverneru nešto kao dokaz. Pronađi MacGuffina i razgovaraj s njim. On je kod postrojenja za prečišćavanje otpadnih voda, u \"bum hole\", niz stepenice."
+
+# MAP02: After destroying Front's power coupling.
+msgid "TXT_ILOG13"
+msgstr "Idiote! Isključio si napajanje za sklopove za ometanje koje koristimo da prikrijemo našu bazu od Reda. Idi do gradske vijećnice i eliminiši ekipu za skeniranje, odmah! Zatim se vrati kod guvernera i daj mu polomljeno kuplovanje."
+
+# MAP02: After destroying Front's power coupling and killing all blue acolytes
+# in the town hall.
+msgid "TXT_ILOG14"
+msgstr "OK, \"Ne vjeruj nikome\" je ime igre! Hajde da dobijemo taj zatvorski propusnik od guvernera. Odnesi mu polomljeno spojno vratilo."
+
+# MAP02: After finding the broken power coupling.
+msgid "TXT_ILOG15"
+msgstr "Dobar potez! Guverner je lažljivac. Ovo je naše snage uparivanje. Koristimo ga da sakrijemo bazu od Reda. Vratimo mu ovo slomljeno uparivanje i nabavimo tu propusnicu."
+
+# MAP05: After crossing the alarm green door.
+msgid "TXT_ILOG18"
+msgstr "Upotrijebi ključ čuvara da uđeš u blokove zatvorskih ćelija i pronađi način da oslobodiš zatvorenike."
+
+# MAP05: After getting to Main Control.
+msgid "TXT_ILOG19"
+msgstr "Pronađi način da oslobodiš zatvorenike. Pronađi način da otvoriš prekidač ručnog skenera."
+
+# MAP05: After cutting Wolenick's hand off.
+msgid "TXT_ILOG20"
+msgstr "Pronađi način da oslobodiš zatvorenike. Upotrijebi sudijinu ruku da aktiviraš prekidač skenera otiska prsta."
+
+# MAP05: After setting the prisoners free.
+msgid "TXT_ILOG21"
+msgstr "Bravo, prijatelju. Dobar posao oslobađanja zatvorenika. Skoči na jedan od teleportera i on će te vratiti u bazu."
+
+msgid "TXT_ILOG22"
+msgstr "Uništi kristal snage koji pokreće mrežu koja napaja štitove Reda. Posjeti Wornera, špijuna kojeg smo regrutovali u skladištu elektrane."
+
+# MAP04: After leaving Reactor Core.
+msgid "TXT_ILOG24"
+msgstr "Hajde da se izgubimo. Čeka nas još zabave."
+
+# MAP02: After destroying the crystal in the Power Station.
+msgid "TXT_ILOG25"
+msgstr "Još jedna avantura prije nego što zapovjednik smatra da je sigurno napasti dvorac. Macil je dogovorio da ti Irale da zlato i obezbijedi obuku. Nakon što ga posjetiš, posjeti ljekara u gradu za snagu."
+
+msgid "TXT_ILOG26"
+msgstr "Posjeti Irale i ljekara u gradu za zlato i obuku, zatim pronađi kanalizaciju. Kreni uz rijeku preko puta Guvernerove palače."
+
+# MAP06: Entrance.
+msgid "TXT_ILOG28"
+msgstr "Tražimo Werana, koji sebe naziva Kraljem Pacova. Siguran sam da je to i opisno i šareno."
+
+# MAP06: After giving the guard's uniform to Weran.
+msgid "TXT_ILOG33"
+msgstr "Odnesi dijelove bacača plamena Iraleu. Isprazni rezervoar za reciklažu. Na dnu se nalazi skriveni ulaz u kanalizaciju. Kontrole za kapiju su tamo dolje, negdje. Uništi ih."
+
+# MAP06: After destroying the gate controls.
+msgid "TXT_ILOG37"
+msgstr "Komandante, uspio je! Kapije su otvorene. Pošalji šok trupe i reci Macilu da ulazimo! Vraćamo se u bazu na frontu."
+
+# MAP07: Entrace.
+msgid "TXT_ILOG38"
+msgstr "Pridružite se jurišu na dvorac. Pronađite i eliminišite programera. Imamo protivrečne izvještaje o njegovoj lokaciji. Jedan kaže da je u računarskoj sobi, drugi da se skriva u hramu na donjem nivou, a treći da je na kraju dugog hodnika."
+
+# MAP09: Entrance.
+msgid "TXT_ILOG45"
+msgstr "Pronađi programera i ubij ga."
+
+msgid "TXT_ILOG46"
+msgstr "Potraži Orakulu i pitaj je o ostalim dijelovima Sigila. Orakula boravi u pograničnim predjelima, odmah izvan grada. Pređi rijeku, uputi se prema dvorcu i skreni lijevo kroz luk."
+
+msgid "TXT_ILOG47"
+msgstr "Potraži Orakulu i pitaj je o ostalim dijelovima Sigila. Hram Orakule nalazi se u pograničnim predjelima, na rubu grada."
+
+# MAP10: After killing the Programmer, talking to Macil and moving a bit.
+msgid "TXT_ILOG48"
+msgstr "Potraži Orakulu i pitaj je o ostalim dijelovima Sigila. Uzmi svoju nagradu i idi do medicinskog tehničara i instruktora oružja za zdravlje i obuku. Hram Orakule nalazi se u pograničnim predjelima, na rubu grada."
+
+# MAP11: Entrance to cave.
+msgid "TXT_ILOG50"
+msgstr "Potraži hram Orakla i pitaj ga o ostalim dijelovima Sigila. Evo ga. Snimam sve. Nije da nemam povjerenja da ćeš preživjeti. Samo ne smijemo dopustiti da Red kontrolira Sigil."
+
+# MAP12: After talking to the Oracle.
+msgid "TXT_ILOG56"
+msgstr "Drugi dio leži u srcu grimizne i opekne kule. Tamo ćeš pronaći Biskupa. Biskup je vojni vođa Reda. Mi ga napadamo i postižemo dvostruki pogodak. Odnesi Orakulov žeton ključaru u pograničnim krajevima."
+
+# MAP11: Officer's uniform room.
+msgid "TXT_ILOG57"
+msgstr "Biskup će biti strogo čuvan, pa zašto ne bismo ukrali uniformu i uklopili se? Pronađi biskupa. Kad ga uništiš, vrati se Oraklu."
+
+# MAP17: Bailey → Upstairs.
+msgid "TXT_ILOG59"
+msgstr "Upravo sam dobio vijest da imamo doušnika unutar tvrđave. Krenimo prema bolnici. On tamo radi. Nakon toga pronađi biskupa i uništi ga. Kad bude mrtav, vrati se Orakulu."
+
+# MAP19: Last room (southwestern).
+msgid "TXT_ILOG64"
+msgstr "Ne odustaj. Ovo je to. Pravo naprijed. Uskoči u teleporter do centralne administracije i uništi jezgro računara. To će ukloniti polje snage na ulazu u Biskupov toranj. Kad on umre, vrati se Orakulu."
+
+# MAP15: After pressing the switch to reveal the computer.
+msgid "TXT_ILOG70"
+msgstr "Veoma impresivno. Hajde da ga raznesemo. To bi trebalo riješiti polje sile. Vratimo se na Bailey, pa onda na kulu i Biskupa."
+
+# MAP16: After killing the Bishop.
+msgid "TXT_ILOG74"
+msgstr "Bravo, još jedan dio Sigila! Jesi li vidio onog čudnog duha koji je izašao iz tijela biskupa? Gdje sam to već vidio? Vratimo se Orakulu."
+
+# MAP11: After killing the Bishop and going to MAP12's entrance.
+msgid "TXT_ILOG76"
+msgstr "Imam izvještaj da je spektralna energija koju smo pronašli blizu Bishopa također prisutna kod Orakla, budimo oprezni."
+
+# MAP10: After killing Macil (Spectre) without having destroyed the converter
+# in MAP24.
+msgid "TXT_ILOG79"
+msgstr "Richter je preuzeo zapovjedništvo nad našim snagama. Izgleda da nas je Macil sve vrijeme varao. Njegova je odanost zapravo bila prema Redu. Kakva zmija. Vratimo se Oraklu."
+
+# MAP27: After killing the Loremaster with either Macil or the Oracle alive.
+msgid "TXT_ILOG83"
+msgstr "Još jedan komad Sigila. Mi smo korak bliže slobodi. A ti si korak bliže meni. Vratimo se Oraklu!"
+
+# MAP27/MAP12: Remark at TXT_SUB_LOG85
+msgid "TXT_ILOG85"
+msgstr "Ti upravljaš moći potpunog Sigila. Šta kažeš da završimo priču. Hajde da vidimo šta je Majstor mudrosti štitio."
+
+# MAP12: After killing the Oracle with Macil alive.
+msgid "TXT_ILOG87"
+msgstr "Pa, toliko o prognoziranju. Čekaj, Macil nas zove nazad. Hajdemo odavde na komad."
+
+# MAP23: After talking with Richter and leaving his room.
+msgid "TXT_ILOG89"
+msgstr "Fabrika je pored rudnika. Richter sigurno misli na rudnike Degnina. Rudna iz Degnina je magnetična i eksplozivna, baš ono što treba za isključivanje polja sile. Hajde da uzmemo taj ključ iz katakomba, a onda idemo u rudnike po malo rude."
+
+# MAP25: Entrance.
+msgid "TXT_ILOG93"
+msgstr "Fabrika je pored rudnika. Degninski rud je magnetičan i eksplozivan, baš ono što treba za gašenje polja snage. Uzmimo taj ključ iz katakomba, a onda silazimo po malo rude. Ovo moraju biti ruševine koje su Richterovi agenti tražili, pazi se."
+
+# MAP25: After killing the Spectre.
+msgid "TXT_ILOG95"
+msgstr "Fabrika je pored rudnika. Degninski rud je magnetičan i eksplozivan, baš ono što treba za gašenje polja snage. Prijatelju, šta god da je ono protiv čega se borimo, to je više od samog Reda. Vraćamo se na zajedničko okupljalište, pa potom u rudnike. Trebamo rud."
+
+# MAP14: Entrance.
+msgid "TXT_ILOG96"
+msgstr "Fabrika je pored rudnika. Degnin ruda je magnetna i eksplozivna, baš ono što treba za gašenje polja sile. Bez opuštanja budnosti, potražite nalazišta rude."
+
+# MAP14: After crossing the entrance yard.
+# (drone ≈ slave)
+msgid "TXT_ILOG97"
+msgstr "Ne spuštajući gardu, potražite nalazišta rude. Ove jadne duše su dronovi. Njihove sinapsne funkcije su ometene RC implantatima. Uništimo predajnik i oni su slobodni."
+
+# MAP14: After James's room.
+msgid "TXT_ILOG99"
+msgstr "Fabrika je pored rudnika. Bez opuštanja budnosti, potraži nalazišta rude. Moj prijedlog je da rude baciš na polje sile, a zatim ga eksplodiraš; nastali pritisak trebao bi stvoriti magnetski plašt i ugasiti svjetla."
+
+# MAP14: After destroying the transmitter.
+msgid "TXT_ILOG100"
+msgstr "Sada idemo u fabriku. Izađite iz rudnika i ne možete je promašiti. Pronađimo tu mašinu i isključimo je!"
+
+# MAP20: Path to Conversion Chapel (MAP24).
+# ("neural oscillation" or "brainwave")
+msgid "TXT_ILOG102"
+msgstr "Čitam ogromne distorzije neuronskih valova izravno ispred nas. Mislim da smo ga pronašli. Hajdemo unutra i isključimo ga!"
+
+# MAP24: Converter room.
+msgid "TXT_ILOG103"
+msgstr "Upravo kad pomislim da smo sve vidjeli! Uđu kao ljudi, a izlaze… Ne želim ni razmišljati o tome. Uništite ovu užasnu stvar!"
+
+# MAP24: After destroying the converter.
+msgid "TXT_ILOG104"
+msgstr "Macil je poludio. Upravo je svjesno poslao 200 ljudi na smrt. Želim osvetu! Za mrtve i za žive mrtve! Hajdemo se vratiti i saznati šta se dešava."
+
+# MAP10: After killing Macil while having destroyed the converter in MAP24.
+msgid "TXT_ILOG106"
+msgstr "Fabrika vodi do \"laboratorija\", i iz nje dobivaju moćni potpis Sigila. Vraćamo se u fabriku i to je naš sljedeći korak ka slobodi."
+
+# MAP16: Entrance → Central door.
+msgid "TXT_ILOG120"
+msgstr "Pronađi biskupa i uništi ga! Kad umre, vrati se Oraklu."
+
+# MAP12?
+msgid "TXT_ILOG122"
+msgstr "Loremastorova laboratorija je iza teleportera koji se upravo otvorio. Hajde da saznamo o čemu je upravo brbljao. I naš sljedeći korak ka slobodi."
+
+# MAP15: Computer destroyed + Room 1
+msgid "TXT_ILOG211"
+msgstr "Hajde, idemo odavde u pak. Polje sile je isključeno, idemo do biskupove kule. Kad ga ubiješ, vrati se Oraklu."
+
+# MAP33?
+msgid "TXT_ILOG1001"
+msgstr "Pronađi svetište pored rijeke. Ukraji kalež iznutra. Donesi ga Harrisu u gostionici."
+
+# MAP33?
+msgid "TXT_ILOG1002"
+msgstr "Pronađi guvernera. Razgovaraj s njim o svojoj nagradi."
+
+# MAP02: After accepting Rowan's chore.
+msgid "TXT_ILOG1003"
+msgstr "Pronađi svetište uz rijeku. Unutra je zarobljen neko zvan Beldin. Ušutkaj ga i vrati njegov prsten Rowanu kao dokaz."
+
+# MAP02: After getting the com unit from Rowan.
+msgid "TXT_ILOG1004"
+msgstr "Pronađi lokaciju Fronta i razgovaraj s Macilom."
+
+# MAP02?
+msgid "TXT_ILOG1005"
+msgstr "Sпусти se niz stepenice, pronađi Macila i razgovaraj s njim."
+
+# MAP03: After joining the Front.
+msgid "TXT_ILOG1006"
+msgstr "Posjeti Iralea, dobavljača oružja Fronta u gradu. On je iza vrata pored oružarnice. Zatim upotrijebi ključ koji ti je dao Macil da razgovaraš s guvernerom."
+
+# MAP02: After accepting "messy" chore.
+msgid "TXT_ILOG1007"
+msgstr "Pronađi utičnicu na mreži i isključi je. Donesi nešto Guverneru kao dokaz."
+
+# MAP02: After accepting "bloody" chore.
+msgid "TXT_ILOG1008"
+msgstr "Pronađi Derwina u skladištu elektrane. Ubij ga i donesi Mourelu njegovo uho."
+
+# MAP03: After completing Mourel's chore.
+msgid "TXT_ILOG1009"
+msgstr "Upotrijebi propusnicu koju ti je dao Mourel da uđeš u zatvor. Kad si unutra, razgovaraj s upravnikom Montagom. Pronađi način da oslobodiš zatvorenike."
+
+# MAP05
+msgid "TXT_ILOG1010"
+msgstr "Upotrijebi ključ čuvara da uđeš u blokove zatvorskih ćelija i pronađi način da oslobodiš zatvorenike."
+
+# MAP03: After accepting Macil's second mission.
+msgid "TXT_ILOG1011"
+msgstr "Uništi kristal snage koji pokreće mrežu koja napaja štitove Reda. Posjeti Wornera, špijuna kojeg smo regrutovali u skladištu elektrane. Ne zaboravi posjetiti medicinskog tehničara i instruktora oružja prije nego što odeš."
+
+# MAP04: After talking to Worner.
+msgid "TXT_ILOG1012"
+msgstr "Uništi kristal snage koji pokreće mrežu koja napaja štitove Reda. Upotrijebi I.D. da uđeš u elektranu. Možda bi htio provjeriti magacin iznad Wornera."
+
+# MAP04: After talking to "Mr. Crispy".
+msgid "TXT_ILOG1013"
+msgstr "Uništi kristal snage koji pokreće mrežu za napajanje i štitove Reda. Idi i razgovaraj s Ketrickom u jezgri."
+
+# MAP04: After talking to Sammis.
+msgid "TXT_ILOG1014"
+msgstr "Uništi kristal moći. Idi razgovarati s Ketrickom, podigni šetalište pomoću prekidača, a zatim upotrijebi ovu iskaznicu za lift."
+
+msgid "TXT_ILOG1015"
+msgstr "Pronađi ulaz u grad koji je čuvao Red. Otvori vrata i vrati uniformu stražara Weranu."
+
+msgid "TXT_ILOG1016"
+msgstr "Odnesi dijelove bacača plamena Irale. Pronađi vrata za održavanje kanalizacije. Pronađi i isprazni rezervoar za reciklažu unutar dvorca. Na dnu se nalazi skriveni ulaz u kanalizaciju. Negdje niz taj ulaz nalaze se kontrole za kapiju."
+
+# MAP03: After destroying the gate controls and talking to Macil.
+msgid "TXT_ILOG1017"
+msgstr "Pridruži se jurišu na dvorac. Pronađi i eliminiši programera. Pronađi medicinskog tehničara i instruktora za oružje. Potroši sve što imaš. Ovo će biti pakleni okršaj."
+
+msgid "TXT_ILOG1018"
+msgstr "Upotrijebi ključ koji ti je dao lažni Programer da otvoriš ulaz u Programerovu tvrđavu. Mora da je tamo gdje se on skriva. Pronađi Programera i ubij ga."
+
+# MAP10: After killing the Programmer and talking to Macil.
+msgid "TXT_ILOG1019"
+msgstr "Potraži Orakulu i pitaj je o ostalim dijelovima Sigila. Uzmi svoju nagradu i idi do medicinskog tehničara i instruktora oružja za zdravlje i obuku."
+
+msgid "TXT_ILOG1020"
+msgstr "Drugi dio leži u srcu grimizne i opekne kule. Tamo moraš pronaći Biskupa koji te čeka. Odnesi Orakulov žeton ključaru u pograničnim krajevima. Kad uništiš Biskupa, vrati se Orakulu."
+
+# MAP11: After getting the Military ID from the keymaster.
+msgid "TXT_ILOG1021"
+msgstr "Pronađi karmesin i obsidijan toranj. Upotrijebi ID ključ koji ti je dao majstor ključeva da uđeš u toranj. Kad si unutra, moraš pronaći Biskupa. Kad si uništio Biskupa, vrati se Orakulu."
+
+# MAP17: After talking to Quincy.
+msgid "TXT_ILOG1022"
+msgstr "Pronađi sigurnosni kompleks, probij se kroz njega i upotrijebi teleporter do centralne administracije. Uništi računarsko jezgro u centralnoj administraciji. To će uništiti polje snage na kuli biskupa. Kad biskup umre, vrati se Orakulu."
+
+msgid "TXT_ILOG1023"
+msgstr "Tvoj sljedeći izazov će testirati tvoj duh. Treći dio drži tvoj vođa. On je isti kao onaj koga ti šalje da ubiješ. Suočiti se s njim i odlučiti svoju sudbinu."
+
+# MAP10: You chose to kill the Oracle.
+msgid "TXT_ILOG1024"
+msgstr "To je Oracle koji drži treći dio. Tu je tvoj izdajnik. Vratite se Oracleu i ubijte ga. Vratite mi se kad bude mrtav."
+
+msgid "TXT_ILOG1025"
+msgstr "Izrezali ste rak iz svog tijela, ali vaše srce i dalje kuca. Sada morate pronaći kirurga koji klanja i kontrolira vaš narod… Loremastera. Zaustavite ga i sljedeći dio bit će vaš."
+
+msgid "TXT_ILOG1026"
+msgstr "Sljedeće moraš pronaći kirurga koji masakrira i kontrolira tvoj narod… Loremastera. Zaustavi ga i sljedeći dio će biti tvoj. Upotrijebi teleporter koji sam otvorio da ga dostigneš. Kad umre, upotrijebi isti uređaj da se vratiš k meni."
+
+# MAP12: You chose to kill Macil.
+msgid "TXT_ILOG1027"
+msgstr "Mudro si izabrao. Treći dio drži tvoj vođa. Uništi ono što se skriva u tvom srcu i vrati mi se."
+
+# MAP10: After killing the Oracle and talking to Macil.
+msgid "TXT_ILOG1028"
+msgstr "Saznali smo da Red pretvara naš narod u biomehaničke vojnike. Pronađite objekt u kojem se to radi i zatvorite ga zauvijek! Pronađite Richtera u zajedničkom prostoru, blizu vodopada, i on će vam reći kako zaustaviti ovu zvjerstvo."
+
+# MAP23: After talking with Richter.
+msgid "TXT_ILOG1029"
+msgstr "Da biste ušli u fabriku, potreban vam je ključ. Ukrali smo jedan, ali agent koji ga je imao nestaje u katakombama ispod zajedničkog prostora. Tamo dolje nešto odvodi naše ljude. Šta god da je, morate ga pronaći i vratiti ključ. Kad ga dobijete, fabrika je pored rudnika."
+
+msgid "TXT_ILOG1101"
+msgstr "Pronađi kalež u kapeli svetišta i odnesi ga Harrisu na gornji sprat tavernu."
+
+msgid "TXT_ILOG1102"
+msgstr "Pronađi guvernerovu rezidenciju i razgovaraj s guvernerom da dobiješ svoju nagradu"
+
+msgid "TXT_ILOG1201"
+msgstr "Čestitamo! Zaslužili ste našu zahvalnost. Posjetite medicinskog i instruktora oružja i oni će vas pripremiti za ono što vas čeka. Slobodno se prošetajte po bazi."
+
+msgid "TXT_SPEAKER_ORDER_SERGEANT"
+msgstr "Narednik"
+
+msgid "TXT_SPEAKER_ROWAN"
+msgstr "Brijest"
+
+msgid "TXT_SPEAKER_FERIS"
+msgstr "Feris"
+
+msgid "TXT_SPEAKER_PRISON_GUARD"
+msgstr "Temeljac"
+
+msgid "TXT_SPEAKER_JUSTIN"
+msgstr "Džastin"
+
+msgid "TXT_SPEAKER_MACIL"
+msgstr "Maci"
+
+msgid "TXT_SPEAKER_ASSISTANT"
+msgstr "Pomoćnik"
+
+msgid "TXT_SPEAKER_KEY_MASTER"
+msgstr "Majstor ključeva"
+
+msgid "TXT_SPEAKER_BODYGUARD"
+msgstr "Telebičar"
+
+# Intended to appear in MAP01 of the Strife teaser, but does not spawn.
+msgid "TXT_SPEAKER_INTERROGATOR"
+msgstr "Istražitelj"
+
+msgid "TXT_SPEAKER_WARDEN_MONTAG"
+msgstr "Načelnik Montag"
+
+msgid "TXT_SPEAKER_RICHTER"
+msgstr "Rihter"
+
+msgid "TXT_SPEAKER_MACIL_S_ADVISOR"
+msgstr "Macilov savjetnik"
+
+msgid "TXT_SPEAKER_JUDGE_WOLENICK"
+msgstr "Sudija Wolenick"
+
+msgid "TXT_SPEAKER_TEVICK"
+msgstr "Tevik"
+
+msgid "TXT_SPEAKER_HARRIS"
+msgstr "Haris"
+
+msgid "TXT_SPEAKER_FOREMAN"
+msgstr "Načelnik"
+
+msgid "TXT_SPEAKER_PRISONER"
+msgstr "Zatvorenik"
+
+msgid "TXT_SPEAKER_SAMMIS"
+msgstr "Samis"
+
+msgid "TXT_SPEAKER_WEAPON_SMITH"
+msgstr "Kovač oružja"
+
+msgid "TXT_SPEAKER_REACTOR_GUARD"
+msgstr "Reaktorski stražar"
+
+msgid "TXT_SPEAKER_APPRENTICE"
+msgstr "Šegrt"
+
+msgid "TXT_SPEAKER_DOOR_GUARD"
+msgstr "Čuvar vrata"
+
+msgid "TXT_SPEAKER_MASTER_SMITHY"
+msgstr "Majstor kovač"
+
+msgid "TXT_SPEAKER_WAREHOUSE_GUARD"
+msgstr "Čuvar skladišta"
+
+msgid "TXT_SPEAKER_BARKEEP"
+msgstr "Konobar"
+
+msgid "TXT_SPEAKER_TIMOTHY"
+msgstr "Timotej"
+
+msgid "TXT_SPEAKER_JAMES"
+msgstr "Džejms"
+
+msgid "TXT_SPEAKER_WORNER"
+msgstr "Vorner"
+
+msgid "TXT_SPEAKER_BAILEY_GUARD"
+msgstr "Bailey stražar"
+
+# drone ≈ slave
+msgid "TXT_SPEAKER_DRONE"
+msgstr "Dron"
+
+msgid "TXT_SPEAKER_FRONT_GUARD"
+msgstr "Prednji čuvar"
+
+msgid "TXT_SPEAKER_QUINCY"
+msgstr "Kvinzi"
+
+msgid "TXT_SPEAKER_SERGEANT"
+msgstr "Narednik"
+
+msgid "TXT_SPEAKER_TEMPLE_GUARD"
+msgstr "Čuvar hrama"
+
+msgid "TXT_SPEAKER_ORACLE"
+msgstr "Orakl"
+
+msgid "TXT_SPEAKER_ULAINE"
+msgstr "Ulajna"
+
+msgid "TXT_SPEAKER_FRONT_SOLDIER"
+msgstr "Frontovski vojnik"
+
+msgid "TXT_SPEAKER_PROGRAMMER"
+msgstr "Programer"
+
+msgid "TXT_SPEAKER_MEDIC"
+msgstr "Medik"
+
+msgid "TXT_SPEAKER_WATCHMAN"
+msgstr "Čuvar"
+
+msgid "TXT_SPEAKER_KETRICK"
+msgstr "Ketrik"
+
+msgid "TXT_SPEAKER_WERAN"
+msgstr "Vjeran"
+
+msgid "TXT_SPEAKER_ADVISOR"
+msgstr "Savjetnik"
+
+msgid "TXT_SPEAKER_GEOFF"
+msgstr "Džef"
+
+msgid "TXT_SPEAKER_OVERSEER"
+msgstr "Nadzornik"
+
+# Intended to appear in MAP19, but does not spawn.
+#
+msgid "TXT_SPEAKER_SECURITY_COMPLE"
+msgstr "Sigurnosni komplet"
+
+msgid "TXT_SPEAKER_COMPUTER_TECH"
+msgstr "Računarski tehničar"
+
+msgid "TXT_SPEAKER_MACGUFFIN"
+msgstr "MakGafin"
+
+msgid "TXT_SPEAKER_ARION"
+msgstr "Arion"
+
+# This is a compound word. Some languages express this in one word.
+msgid "TXT_SPEAKER_DOCK_WORKER"
+msgstr "Radnik na doku"
+
+msgid "TXT_SPEAKER_IRALE"
+msgstr "Iral"
+
+msgid "TXT_SPEAKER_CORE_GUARD"
+msgstr "Osnovna zaštita"
+
+msgid "TXT_SPEAKER_SEWER_GUARD"
+msgstr "Zaštita od kanalizacije"
+
+msgid "TXT_SPEAKER_TECHNICIAN"
+msgstr "Tehničar"
+
+msgid "TXT_SPEAKER_GUARD"
+msgstr "Čuvar"
+
+msgid "TXT_SPEAKER_PEASANT"
+msgstr "Seoski"
+
+msgid "TXT_SPEAKER_ARMORER"
+msgstr "Oružar"
+
+msgid "TXT_SPEAKER_BELDIN"
+msgstr "Beldin"
+
+msgid "TXT_SPEAKER_GERARD"
+msgstr "Žerard"
+
+msgid "TXT_SPEAKER_GOVERNOR_MOUREL"
+msgstr "Guverner Mourel"
+
+msgid "TXT_SPEAKER_BOWYER"
+msgstr "Bowyer"
+
+msgid "TXT_SPEAKER_DERWIN"
+msgstr "Dervin"
+
+# Menu's intro.
+msgid "TXT_SUB_INTRO1"
+msgstr "Kometa je udarila u našu planetu bez upozorenja. Izgubili smo naš raj jednim nasilnim udarcem."
+
+msgid "TXT_SUB_INTRO2"
+msgstr "Udari su oslobodili virus koji je prošao kroz zemlju i ubio milione. Oni su se pokazali sretnima."
+
+msgid "TXT_SUB_INTRO3"
+msgstr "Oni koji nisu umrli postali su mutacije čovječanstva. Neki su postali fanatici koji su u svojim glavama čuli glas zlog boga i nazivali su se \"Red\"."
+
+msgid "TXT_SUB_INTRO4"
+msgstr "Oni od nas koji su gluhi na ovaj glas užasno pate i prisiljeni su služiti tim nemilosrdnim psihopatima koji koriste oružje moćnije od svega što možemo prikupiti."
+
+msgid "TXT_SUB_INTRO5"
+msgstr "Uništavaju naše žene i djecu, pa ih moramo skrivati pod zemljom i živjeti kao životinje u stalnom strahu za naše živote."
+
+msgid "TXT_SUB_INTRO6"
+msgstr "Ali se čuju šaptanja nezadovoljstva. Ako se organizujemo, možemo li poraziti naše gospodare? Oružje se krade, vojnici se obučavaju. Rođeno je pokret: rođen iz doživotnih sukoba!"
+
+# Best ending.
+msgid "TXT_SUB_GOOD1"
+msgstr "Pažnja, sve jedinice Fronta: uspio je! Gotovo je. Vojnik Blackbirda je ubio Zlo. Red više ne postoji. Blackbirde, jesi li me čuo?"
+
+msgid "TXT_SUB_GOOD2"
+msgstr "Znao sam da ćeš pobijediti, moj hrabri junaku. Sav borba je prestala. Tvoja pobjeda će nam omogućiti da stvorimo cjepivo koje će iskorijeniti virus iz naših tijela."
+
+msgid "TXT_SUB_GOOD3"
+msgstr "Spasili ste naš planet i oslobodili nas. Sada bih vam željela zahvaliti… lično. Oh, usput: zovem se Shauna."
+
+# Sad ending.
+msgid "TXT_SUB_SAD1"
+msgstr "Da, zlo je nestalo, ali naša budućnost je bila neizvjesna i obavijena sumnjom."
+
+msgid "TXT_SUB_SAD2"
+msgstr "Potrebne bi generacije da iskorijenimo virus iz našeg naroda. Ako bismo preživjeli toliko dugo."
+
+msgid "TXT_SUB_SAD3"
+msgstr "Šta god zlo željelo, ono nam je oduzelo ono što nam je bilo najpotrebnije: ostavilo nas je bez nade."
+
+# Worst ending.
+msgid "TXT_SUB_BAD1"
+msgstr "Samosvjesni virus nas je pogodio poput plimnog vala, tjerajući nas sve na ludilo. Čuli smo sirensku pjesmu smrti i plesali smo."
+
+msgid "TXT_SUB_BAD2"
+msgstr "Ovo zlo nam je oduzelo sav ljudski život i, prezirući rađanje, recikliralo naše porodice."
+
+msgid "TXT_SUB_BAD3"
+msgstr "Jednog dana zlo je nestalo. Jednostavno nije imalo na čemu da se hrani. Mi smo izumrli."
+
+# MAP03: After destroying the gate controls.
+msgid "TXT_SUB_MAP03_1"
+msgstr "Genetske mutacije uzrokovane virusom ne samo da su izobličile psihu Reda, već su uzrokovale i propadanje njihovih tijela."
+
+msgid "TXT_SUB_MAP03_2"
+msgstr "Bez razmnožavanja, Red je utvrdio da su biomehanička poboljšanja jedini način da održe svoju snagu i brojnost."
+
+msgid "TXT_SUB_MAP03_3"
+msgstr "Propadanje je toliko napredovalo da je većina trupa s kojima se suočavamo više mašina nego ljudi, ali vjerujemo da njihovu kolektivnu svijest kontrolira jedan izvor…"
+
+msgid "TXT_SUB_MAP03_4"
+msgstr "…Programer: tvorac AI-a koji kontrolira Akolite. Uništi Programera i možemo onesposobiti trupe Reda jednim udarcem. Ali oprez: imamo izvještaje da može ispariti napadače."
+
+# MAP10: Macil.
+msgid "TXT_SUB_MAP10_1"
+msgstr "Dijelovi sastavljeni iz datoteka programera govore nam da Red obožava inteligentno oružje. Zovu ga \"Sigil\"."
+
+msgid "TXT_SUB_MAP10_2"
+msgstr "Komad na koji si se dotaknuo i ponovo pokrio jedan je od pet. On koristi moć crpljenu iz korisnikove vlastite životne sile. Dok god živiš, kontroliraš njegovu moć."
+
+msgid "TXT_SUB_MAP10_3"
+msgstr "Šok koji te onesvijestio bio je komad Sigila koji se sam podešava na tebe, tvoj puls i moždane valove. Možeš ga koristiti, ali po cijeni: ispustit će te do posljednje kapi snage."
+
+msgid "TXT_SUB_MAP10_4"
+msgstr "Jedan dio predstavlja ogromnu moć. Posjedovanje svih pet dijelova bilo bi razorno i dalo bi korisniku potpunu kontrolu nad planetom."
+
+# MAP02: After getting the com unit from Rowan and leaving his room.
+msgid "TXT_SUB_LOG2"
+msgstr "Slušaj, ova komunikacijska jedinica mi govori da si 100% human. Dobio sam naredbu da te dovedem, ovdje je riječ o povjerenju. Izdaj me i plati. Oh, i usput, možeš me zvati Blackbird."
+
+# MAP02: On the bridge with the com unit.
+msgid "TXT_SUB_LOG3"
+msgstr "Uputi se prema staroj gradskoj vijećnici. Nakon što ju je Red bombardovao, Macil je dao izgraditi tunel koji nam omogućava da uđemo i izađemo neprimijećeni od akolita."
+
+# MAP02: In hall town with the com unit.
+msgid "TXT_SUB_LOG4"
+msgstr "Prođi kroz vrata s tvoje lijeve strane, zatim kroz ona s desne. Čuvar se zove Geoff. Reci mu da ti treba zlato."
+
+# MAP03: After joining the Front.
+msgid "TXT_SUB_LOG5"
+msgstr "Irale je \"fixer\" Fronta. Nalazi se iza neoznačenih vrata pored oružarnice."
+
+# MAP02
+msgid "TXT_SUB_LOG6"
+msgstr "Zapamti: ubijaj prikriveno umjesto silom. Nećeš aktivirati alarme."
+
+# MAP03: After joining the Front and going to Mourel's mansion.
+msgid "TXT_SUB_LOG7"
+msgstr "Sve što znam o guverneru je da igra na obje strane prema sredini. Evo njegove takozvane \"vile.\""
+
+msgid "TXT_SUB_LOG8"
+msgstr "Uf. Šljam čovječanstva je zasigurno našao dom."
+
+# MAP02: After accepting "bloody" chore.
+msgid "TXT_SUB_LOG9"
+msgstr "Nazvati Mourela gadnim je mu zapravo kompliment. On je mješanka govana na štapiću."
+
+# MAP02: After accepting "messy" chore and leaving Mourel's room.
+msgid "TXT_SUB_LOG10"
+msgstr "Moramo razgovarati s nekim ko poznaje stari grad i zna gdje se nalazi ovo spajanje. Komanda kaže: pronađi MacGuffin. "
+
+# MAP02: After accepting "messy" chore and leaving Mourel's mansion.
+msgid "TXT_SUB_LOG11"
+msgstr "On je na onome što se uljudno naziva \"bum hole\". Prođi hodnikom pored postrojenja za prečišćavanje otpadnih voda i spusti se niz stepenice."
+
+# MAP02: During "messy" chore.
+msgid "TXT_SUB_LOG12"
+msgstr "Uzimaj si vremena za ovu misiju. Ne mogu dobiti obavještajne podatke o ovome od Komande."
+
+# MAP02: After destroying Front's power coupling.
+msgid "TXT_SUB_LOG13"
+msgstr "Idiote! Isključio si napajanje za ometajuća kola koja koristimo da prikrijemo našu bazu od Reda. Požuri do gradske vijećnice i eliminiši ekipu za skeniranje, odmah!"
+
+# MAP02: After destroying Front's power coupling and killing all blue acolytes
+# in the town hall.
+msgid "TXT_SUB_LOG14"
+msgstr "OK, \"Ne vjeruj nikome\" je ime igre! Uzmimo tu propusnicu od guvernera i oslobodimo te zatvorenike."
+
+# MAP02: After finding the broken power coupling.
+msgid "TXT_SUB_LOG15"
+msgstr "Dobar potez! Guverner je loš lažljivac. To je naše snage spajanje. Sad da to prođemo."
+
+# MAP02: After accepting "bloody" chore.
+msgid "TXT_SUB_LOG16"
+msgstr "Magacin se nalazi u elektrani. Hajde da ovo budemo kratko i slatko."
+
+# MAP02: About to enter Norwall Prison.
+msgid "TXT_SUB_LOG17"
+msgstr "Nikad nisam mislio da ću se provući u zatvor…"
+
+# MAP05: After crossing the alarm green door.
+msgid "TXT_SUB_LOG18"
+msgstr "Pretpostavljam da besplodan ručak ne postoji. Vrijeme je da se pripremimo."
+
+# MAP05: After getting to Main Control.
+msgid "TXT_SUB_LOG19"
+msgstr "U redu. Ugodili ste guverneru, razmazali upravitelja… Sada izgleda da ćemo morati napraviti malo operacije."
+
+# MAP05: After cutting Wolenick's hand off.
+msgid "TXT_SUB_LOG20"
+msgstr "O, odsjekao si mu ruku! A ja sam mislio da si dobar momak… donekle. Hajdemo."
+
+# MAP05: After setting the prisoners free.
+msgid "TXT_SUB_LOG21"
+msgstr "Bravo, prijatelju. Uskoči na jedan od teletransportera i on će te vratiti u bazu."
+
+msgid "TXT_SUB_LOG22"
+msgstr "Worner je špijun kojeg smo regrutovali u skladištu elektrane."
+
+# MAP04: After entering Ketrick's room.
+msgid "TXT_SUB_LOG23"
+msgstr "Poruka od šefa je da se povučeš kad razbiješ kristal, inače ćeš i ti završiti s okusom mesquitea."
+
+# MAP02: After destroying the crystal in the Power Station.
+msgid "TXT_SUB_LOG25"
+msgstr "Još jedna avantura prije nego što zapovjednik smatra da je sigurno napasti. Macil je dogovorio da ti Irale da zlato i obezbijedi obuku. I posjeti medicinskog tehničara za snagu."
+
+msgid "TXT_SUB_LOG26"
+msgstr "Red misli da je siguran u svom dvorcu. Pogriješio je! Ako otvoriš kapije, bit će laka plijen. A za to ćeš morati sići u kanalizaciju. Kreni uz rijeku preko guvernerove rezidencije. "
+
+msgid "TXT_SUB_LOG27"
+msgstr "OK, skloni se ovdje. Stanovnici kanalizacije su užasni mutanti, ali njihova mreža tunela im omogućava pristup tajnama. Drži nos… Silazimo dolje."
+
+# MAP06: Entrance.
+msgid "TXT_SUB_LOG28"
+msgstr "Tražimo Werana, koji sebe naziva Kraljem Pacova. Siguran sam da je to i opisno i šareno."
+
+# MAP06: Down → Left.
+msgid "TXT_SUB_LOG29"
+msgstr "Oh, bljak. Ne želim ni pomisliti u šta gaziš!"
+
+# MAP06: Down → Left → Upstairs → Left.
+msgid "TXT_SUB_LOG30"
+msgstr "Baš mi treba. Još smeđe sluzi!"
+
+msgid "TXT_SUB_LOG31"
+msgstr "Hej, pogledaj! Mislim da je to vrata koja Weran želi ostaviti na škripac!"
+
+msgid "TXT_SUB_LOG32"
+msgstr "Zatvori oči! Ne želim gledati! Oh, prekasno… Fuj. To ne izgleda kao ljudsko tijelo. Šta je Red učinio? Moram ovo prijaviti komandi."
+
+# MAP06: After giving the guard's uniform.
+msgid "TXT_SUB_LOG33"
+msgstr "Zašto ne možemo jednom obaviti misiju u polju cvijeća?"
+
+# MAP06: Weran's hideout.
+msgid "TXT_SUB_LOG34"
+msgstr "Mrzim to reći, ali ovo me podsjeća na dom. Nalazim se pod zemljom, ne tako daleko odavde."
+
+# MAP06: Exit of the secret entrance.
+msgid "TXT_SUB_LOG35"
+msgstr "Nemoj me pitati gdje smo. I ja sam izgubljen. Žao mi je."
+
+# MAP06: Secret entrance from the castle.
+msgid "TXT_SUB_LOG36"
+msgstr "Ta cigla… Zar nismo prošli tu ciglu? Ne…"
+
+# MAP06: After destroying the gate controls.
+msgid "TXT_SUB_LOG37"
+msgstr "Komandante, uspio je! Kapije su otvorene. Pošaljite šok-trupe i recite Macilu da ulazimo! "
+
+# MAP07: Entrace.
+msgid "TXT_SUB_LOG38"
+msgstr "Imamo kontradiktorne izvještaje o lokaciji programera. Jedan kaže da je u računarskoj sobi, drugi da je u kuli, a još jedan spominje dugi hodnik. Žao mi je. "
+
+# MAP07: Near the crusaders.
+msgid "TXT_SUB_LOG39"
+msgstr "Ah, dobro je opet biti u napadu. Pokažite im pakao, momci!"
+
+# MAP07: Computer room.
+msgid "TXT_SUB_LOG40"
+msgstr "Ovo izgleda dobro. Računari… Programer… Šta misliš?"
+
+# MAP07: Building before the brigde.
+msgid "TXT_SUB_LOG41"
+msgstr "Ovo mora da je dugi hodnik. Ili je to, ili mi je osjećaj za razmjere potpuno uništen."
+
+# MAP07: Northeast bulding.
+msgid "TXT_SUB_LOG42"
+msgstr "Ovo su svi znakovi hrama zla. Teška arhitektura, veliki barjak… Rekao bih: bingo!"
+
+msgid "TXT_SUB_LOG43"
+msgstr "Ovo je svemoćni programer? Ne može biti!"
+
+msgid "TXT_SUB_LOG44"
+msgstr "Ne znam više čemu da vjerujem. Jedina stvar koja mi govori \"zadrži\" je ta ogromna monstruoznost s lijeve strane. Ali nemam pojma kako da uđem. "
+
+# MAP09: Entrance.
+# (Probably a reference to Hunter S. Thompson’s quote, “When the going gets
+# weird, the weird turn pro.”)
+msgid "TXT_SUB_LOG45"
+msgstr "Kad stvari postanu čudne, čudni krenu. Čuvaj se."
+
+msgid "TXT_SUB_LOG46"
+msgstr "Orakl boravi u pograničnim predjelima, odmah izvan grada. Pređi rijeku, kreni prema dvorcu i skreni lijevo kroz luk."
+
+# MAP02: Castle's entrance (MAP10).
+msgid "TXT_SUB_LOG47"
+msgstr "Orakl je navodno suosjećajni veliki svećenik koji djeluje izvan Reda."
+
+# MAP10: After talking to Macil and moving a bit.
+msgid "TXT_SUB_LOG48"
+msgstr "Hram Orakla se nalazi u Pograničju, na rubu grada."
+
+# MAP11: Entrance.
+msgid "TXT_SUB_LOG49"
+msgstr "Red je preuzeo našu prekrasnu planetu i pretvorio je u deponiju."
+
+# MAP11: Entrance to cave.
+msgid "TXT_SUB_LOG50"
+msgstr "Evo ga. Snimam sve, nije da nemam povjerenja da ćeš preživjeti, nego jednostavno ne možemo dopustiti da Red kontrolira Sigil."
+
+# MAP12: Bridge to sanctum's normal entrance.
+msgid "TXT_SUB_LOG51"
+msgstr "Ti si hrabar, moj drug. Ponosan sam što mogu biti uz tebe na ovom putovanju."
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG52"
+msgstr "Možeš li na trenutak zastati? Počinje mi biti malo mučno."
+
+# MAP12: Downstairs.
+msgid "TXT_SUB_LOG53"
+msgstr "Zašto moramo provoditi toliko vremena pod zemljom? Vidio sam pod zemljom."
+
+# MAP12: Sanctum's normal entrance.
+msgid "TXT_SUB_LOG54"
+msgstr "Zar zaista trebamo vjerovati tipu čija je sveta odaja zelena?"
+
+# MAP12: After talking to the Oracle.
+msgid "TXT_SUB_LOG55"
+msgstr "Karmine i obsidijan? Zašto ne može reći crveno i crno."
+
+# MAP11: Afther talking to the Oracle and leaving the cave.
+msgid "TXT_SUB_LOG56"
+msgstr "Biskup je vojni vođa Reda. On planira njihove taktike, upravlja njihovim špijunima i zadužen je da nas kontroliše. Mi ga ubijemo i postignemo dva pogotka."
+
+# MAP11: Officer's uniform room.
+msgid "TXT_SUB_LOG57"
+msgstr "Biskup će biti strogo čuvan, pa zašto ne bismo ukrali uniformu i uklopili se?"
+
+msgid "TXT_SUB_LOG58"
+msgstr "Podsjeti me, pobijedimo li ovu stvar, da pozovem dekoratera."
+
+# MAP17: Bailey → Upstairs.
+msgid "TXT_SUB_LOG59"
+msgstr "Upravo sam saznao da imamo doušnika unutar tvrđave. Hajdemo prema onome što oni nazivaju bolnicom, on tamo radi."
+
+# MAP17: Security Complex
+msgid "TXT_SUB_LOG60"
+msgstr "Uzmi planove i isključi računar, ok?"
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG61"
+msgstr "U redu, ne žalim se, ali sljedeći put možda probamo onaj način koji nije baš krvav."
+
+# MAP19: Cross-shaped room at the beginning.
+msgid "TXT_SUB_LOG62"
+msgstr "Već smo prošli kroz beskrajne hodnike, ali kunem se, ovi zidovi se pomiču dok prolazimo."
+
+# MAP16
+msgid "TXT_SUB_LOG63"
+msgstr "Pa, moraš shvatiti. Vojni vođa znači puno loših momaka."
+
+# MAP19: Last room (southwestern).
+msgid "TXT_SUB_LOG64"
+msgstr "Ne odustaj. Ovo je to. Pravo naprijed."
+
+msgid "TXT_SUB_LOG65"
+msgstr "Sljedeći put ćemo stati na benzinskoj pumpi i pitati za upute."
+
+# MAP19: After coming across an alarm green door.
+msgid "TXT_SUB_LOG66"
+msgstr "O ne! Još zvona i zviždaljki i gadni momci nas gone."
+
+# MAP15: After using a big lift next to a Reaver.
+msgid "TXT_SUB_LOG67"
+msgstr "Znaš, izvana ovo mjesto izgleda sićušno."
+
+msgid "TXT_SUB_LOG68"
+msgstr "Dobijam novo očitavanje neprijatelja. Ne stani i ne zuri, samo ih uništi."
+
+# STRIFE1.WAD: MAP15
+msgid "TXT_SUB_LOG69"
+msgstr "Mrzim ova polja snage. Potraži prekidač za isključivanje, mora da je negdje blizu."
+
+# MAP15: Pressing the switch to reveal the PC.
+msgid "TXT_SUB_LOG70"
+msgstr "Ooh, vrlo impresivno. Hajde da ga raznesemo!"
+
+msgid "TXT_SUB_LOG71"
+msgstr "Uskoči na teleporter, idemo razvaliti ovaj pop stand."
+
+# MAP16: Entrance.
+msgid "TXT_SUB_LOG72"
+msgstr "Čekaj, Oracle je rekao da ćemo ga prepoznati po njegovom simbolu moći. Misliš li ono što i ja mislim?"
+
+msgid "TXT_SUB_LOG73"
+msgstr "Ovi momci su dobili ideju za uređenje koja funkcioniše i samo je izlizali do krajnjih granica."
+
+# MAP16: After killing the Bishop
+msgid "TXT_SUB_LOG74"
+msgstr "Jesi li vidio onog čudnog duha koji je izašao iz biskupovog tijela? Gdje sam to već vidio?"
+
+msgid "TXT_SUB_LOG75"
+msgstr "Vrijeme je za prosudbu. Sada kad smo dobili dva komada, možda bismo se trebali vratiti u bazu. Šta ti instinkt govori?"
+
+# MAP11: After killing the Bishop and going to MAP12's entrance
+msgid "TXT_SUB_LOG76"
+msgstr "Imam izvještaj da je spektralna energija koju smo pronašli blizu Bishopa također prisutna kod Orakla, budimo oprezni."
+
+msgid "TXT_SUB_LOG77"
+msgstr "Macil? Dio ovog nereda? Ne znam šta da mislim. Nadam se da ćeš donijeti pravu odluku."
+
+msgid "TXT_SUB_LOG78"
+msgstr "Da li vjerujem Macilu, koji je riskirao život za Front, ili nekom ružnom špijunu? Ne znam. Ali tebi vjerujem."
+
+# MAP10: After killing Macil (Spectre) without having destroyed the converter
+# in MAP24.
+msgid "TXT_SUB_LOG79"
+msgstr "Richter je preuzeo zapovjedništvo nad našim snagama. Izgleda da nas je Macil sve vrijeme varao. Njegova je odanost zapravo bila prema Redu. Kakva zmija."
+
+# MAP26: Entrance.
+msgid "TXT_SUB_LOG80"
+msgstr "Prokleto impresivan ulaz. Ali ono što tražimo je na sasvim drugom nivou. Glava dolje."
+
+# MAP24: Hall to converter room.
+msgid "TXT_SUB_LOG81"
+msgstr "Kakva šteta. Naša tehnologija se troši na mučenje umjesto na život."
+
+# MAP21: Entrance to MAP26 near to an Inquisitor's banner.
+msgid "TXT_SUB_LOG82"
+msgstr "Budući da su prokleto tašti, označavaju svoja sljepoočnice velikim zastavama."
+
+# MAP27: After killing the Loremaster with either Macil or the Oracle alive.
+msgid "TXT_SUB_LOG83"
+msgstr "Još jedan komad Sigila. Mi smo korak bliže slobodi. A ti si korak bliže meni."
+
+# MAP27: Button to MAP28.
+msgid "TXT_SUB_LOG84"
+msgstr "Po svemu sudeći, trebamo cijeli Sigil da bismo otključali ovu stvar. Nešto mi govori da je ovo kraj duge."
+
+# STRIFE1.WAD: MAP12
+#
+# (After killing the Oracle and collecting the final Sigil piece with both
+# Macil and the Loremaster dead)
+#
+# OR
+#
+# MAP27
+#
+# (After defeating the Loremaster and collecting the final Sigil piece with
+# Macil and the Oracle dead)
+msgid "TXT_SUB_LOG85"
+msgstr "Ti upravljaš moći potpunog Sigila. Šta kažeš da odemo po malo zatvaranja."
+
+msgid "TXT_SUB_LOG86"
+msgstr "U podne, moj heroju. Spremi se da prigrliš slavu."
+
+# MAP12: After killing the Oracle with Macil alive.
+msgid "TXT_SUB_LOG87"
+msgstr "Pa, toliko o predviđanjima. Čekaj, Macil nas zove nazad. Hajdemo odavde živ i zdrav."
+
+msgid "TXT_SUB_LOG88"
+msgstr "Žao mi je, nakon što sam do struka u krvi, ne mogu sada smisliti ništa duhovito. Vratimo se Macilu."
+
+# MAP23: After talking with Richter and leaving his room.
+msgid "TXT_SUB_LOG89"
+msgstr "Fabrika je pored rudnika. Richter sigurno misli na rudnike Degnina. Rudna iz Degnina je magnetična i eksplozivna, baš ono što treba za gašenje polja sile."
+
+# MAP13: Entrance.
+msgid "TXT_SUB_LOG90"
+msgstr "Rudnici, katakombe, kanalizacija… Kakav prvi spoj!"
+
+# MAP13: West (entrance with parkour to the northwest).
+msgid "TXT_SUB_LOG91"
+msgstr "Volio bih da je Richter bio malo konkretniji. Hm, pokušajmo ovdje."
+
+# MAP13: Northwest (hall to the parkour room).
+msgid "TXT_SUB_LOG92"
+msgstr "Mislim da smo… Oh, sranje. Nemam pojma gdje smo."
+
+# MAP25: Entrance.
+msgid "TXT_SUB_LOG93"
+msgstr "Ovo moraju biti ruševine koje su agenti Richtera tražili. Oh, pazi! Krstaši!"
+
+msgid "TXT_SUB_LOG94"
+msgstr "Uf, pokušava se regenerisati. Uništi ga prije nego što povratim!"
+
+# MAP25: After killing the Spectre.
+msgid "TXT_SUB_LOG95"
+msgstr "Prijatelju moj, šta god da se borimo protiv toga, to je važnije od Reda. Idemo u rudnike!"
+
+# MAP14: Entrance.
+msgid "TXT_SUB_LOG96"
+msgstr "Ne spuštajući gardu, traži nalazišta rude."
+
+# MAP14: After crossing the entrance's yard.
+msgid "TXT_SUB_LOG97"
+msgstr "Ove jadne duše su dronovi, njihove sinaptičke funkcije su ometene RC implantatima. Uništavamo predajnik i oni su slobodni!"
+
+# MAP14: After the entrance's yard and before going down.
+msgid "TXT_SUB_LOG98"
+msgstr "Komanda kaže da je predajnik zaštićen poljem sile. Tako ubijamo dvije muhe jednim udarcem: oslobađamo dronove i vježbamo s rudom."
+
+# MAP14: After James's room.
+msgid "TXT_SUB_LOG99"
+msgstr "Moj prijedlog je da baciš rudu na polje sile i zatim je eksplodiraš. Nastala kompresija trebala bi stvoriti magnetski pokrivač i ugasiti svjetla."
+
+# MAP14: After destroying the transmitter.
+msgid "TXT_SUB_LOG100"
+msgstr "Sada idemo u fabriku. Izađite iz rudnika i ne možete je promašiti!"
+
+# MAP20: Exit to Commons (MAP23).
+msgid "TXT_SUB_LOG101"
+msgstr "Žao mi je, heroju, sve mi je ovo novo."
+
+# MAP20: Path to Conversion Chapel (MAP24).
+msgid "TXT_SUB_LOG102"
+msgstr "Čitam ogromne distorzije neuronskih valova izravno ispred sebe. Mislim da smo ga pronašli."
+
+# MAP24: Converter room.
+msgid "TXT_SUB_LOG103"
+msgstr "Upravo kad pomislim da smo sve vidjeli! Uđu kao ljudi, a izađu… Ne želim ni razmišljati o tome."
+
+# MAP24: After destroying the converter.
+msgid "TXT_SUB_LOG104"
+msgstr "Proročica je bila u pravu. Macil je poludio. Upravo je svjesno poslao 200 ljudi na smrt. Želim osvetu. Za mrtve i za žive mrtve!"
+
+msgid "TXT_SUB_LOG105"
+msgstr "Macil? Zarazan i s komadom Sigila. Sve ove godine vjerovali smo u njega, u cilj. I sve to za šta?"
+
+# MAP10: After killing Macil while having destroyed the converter in MAP24.
+msgid "TXT_SUB_LOG106"
+msgstr "Richter izvještava da tvornica koju smo uništili vodi do \"laboratorija\", i iznutra dolazi Sigilov energetski potpis. Vraćamo se u tvornicu i to je naš sljedeći korak ka slobodi."
+
+# MAP16: Entrance → Central door.
+msgid "TXT_SUB_LOG120"
+msgstr "Ko se usuđuje da mi se suprotstavi i uđe u moju tvrđavu? Beskorisni čovječe? Suočiti se sa mnom i umrijeti!"
+
+# MAP16: Boss room unlocked → Bishop
+msgid "TXT_SUB_LOG121"
+msgstr "Ne možeš me ubiti. Ti si samo čovjek. A ja sam više od čovjeka."
+
+# SVE.WAD
+# MAP12: If the player first kills Macil and then the Oracle's spectre before
+# killing the Loremaster with Classic Mode turned off. It talks the Loremaster
+# and BlackBird.
+msgid "TXT_SUB_LOG122"
+msgstr ""
+"Nema smrti, vječni život i još mnogo toga. Mnogo više! Ovo je moj zadatak: kiborzi, pola tijela, pola čelika, svi da služe Jednom Bogu. Ne služiš? Umireš!\n"
+"Ovaj kreten ima još jedan dio Sigila."
+
+# MAP29: Entity (If the player is progressing through the mediocre ending)
+msgid "TXT_SUB_LOG128"
+msgstr "Ha ha! Dobrodošao. Čekao sam ovaj trenutak. Čekao sam budalu poput tebe da mi donese moju slobodu. Tvoja sićušna planeta je moja, i požalit ćeš što si se ikada rodio! "
+
+# MAP27: Entrance (It talks the Loremaster and BlackBird).
+msgid "TXT_SUB_LOG129"
+msgstr ""
+"Istina se može pronaći samo u univerzalnoj volji. Padnut ćeš na koljena pred Istinitim Bogom, Jednim Svjetlom. Pridruži mi se i ja ću dovršiti Znak.\n"
+"Dosta mi je tog mističnog dvoličnog govora."
+
+# MAP29: Entity (If the player is progressing through the good ending)
+msgid "TXT_SUB_LOG130"
+msgstr "Ti… Ti si srušio moj Red, razorio moje prevare i ugrozio vijekove želje. Ali ja ću nadvladati, zaraziti ću te i izvrnuti po svojoj volji…"
+
+msgid "TXT_SUB_LOG200"
+msgstr "Zvuči kao posao iz snova, zar ne?"
+
+msgid "TXT_SUB_LOG201"
+msgstr "Vidio si previše. Upravi ga, Macil!"
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG202"
+msgstr "Sljedeći put ćeš me poslušati."
+
+msgid "TXT_SUB_LOG203"
+msgstr "Uf, ovi postapokaliptični cijeni…"
+
+msgid "TXT_SUB_LOG204"
+msgstr "Uzmite onu veliku. On vas neće zaustaviti."
+
+msgid "TXT_SUB_LOG205"
+msgstr "Ne oklijevaj. Pravo naprijed!"
+
+msgid "TXT_SUB_LOG206"
+msgstr "Jesi li ikada primijetio kako ovi hodnici izgledaju isto?"
+
+msgid "TXT_SUB_LOG207"
+msgstr "Hej, ponekad i ja moram pogađati!"
+
+msgid "TXT_SUB_LOG208"
+msgstr "Oh, i pazi na alarm."
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG209"
+msgstr "O, Bože. Sad vidi šta si uradio!"
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG210"
+msgstr "Jebote. Sad si sve zeznuo!"
+
+# MAP15: Computer destroyed + Room 1
+msgid "TXT_SUB_LOG211"
+msgstr "Hajde! Izađimo odavde, dovraga."
+
+msgid "TXT_SUB_LOG212"
+msgstr "Uh. Ne zezaš."
+
+msgid "TXT_SUB_LOG213"
+msgstr "Postavićeš ih na zid! Nastavi dalje!"
+
+msgid "TXT_SUB_LOG214"
+msgstr "Mm. Ti si zvijer."
+
+msgid "TXT_SUB_LOG215"
+msgstr "Imam ovdje lijep ritam."
+
+msgid "TXT_SUB_LOG216"
+msgstr "Ooh. Volim taj boom-boom štapić."
+
+msgid "TXT_SUB_LOG217"
+msgstr "Mm. Sviđa mi se kako se držiš."
+
+msgid "TXT_SUB_LOG218"
+msgstr "Pucaj! Oni nisu ljudi!"
+
+# (Strife: Veteran Edition)
+# When obtaining the “Spontaneous Combustion” achievement
+msgid "TXT_SUB_LOG219"
+msgstr "Vau! Crni akolit! Nova senzacija okusa…"
+
+msgid "TXT_SUB_LOG220"
+msgstr "Nastavi to raditi i oslijepit ćeš… ali mi se sviđa."
+
+msgid "TXT_SUB_LOG221"
+msgstr "Pretpostavljam da nas više neće pozvati na večeru!"
+
+msgid "TXT_SUB_LOG222"
+msgstr "Moramo se popeti na najviši sprat."
+
+msgid "TXT_SUB_LOG223"
+msgstr "Čekaj… Ovo izgleda zanimljivo. Pogledaj."
+
+msgid "TXT_SUB_LOG224"
+msgstr "Uf. Taj tip mi je jeziv. Držimo se podalje."
+
+msgid "TXT_SUB_LOG225"
+msgstr "Lijevo! Skreni lijevo!… Oh, drugo lijevo!"
+
+msgid "TXT_SUB_LOG226"
+msgstr "Tipični tvrdoglav muškarac!… Osim ako nisi djevojka."
+
+msgid "TXT_SUB_LOG227"
+msgstr "Snažan, brutalan i tih. Moj tip partnera."
+
+msgid "TXT_SUB_LOG228"
+msgstr "U redu! Bio sam u krivu!"
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG229"
+msgstr "Šteta što se nikada nismo sreli… licem u lice."
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG230"
+msgstr "Imao sam snove za tebe… Jebote."
+
+msgid "TXT_SUB_LOG231"
+msgstr "Ne. Ne ulazi u gradsku vijećnicu. Više nije sigurno. Naša je tajna otkrivena. Zato pada teški metal. Ubij što više tih velikih momaka možeš. Zovu se \"Križari\". Kad završiš, odvest ću te do Macila."
+
+msgid "TXT_SUB_LOG232"
+msgstr "Dobar posao, prijatelju! Vrijeme je da te uvedemo unutra."
+
+msgid "TXT_SUB_LOG233"
+msgstr "Pazi na te Krstaše. To su veliki, masivni roboti i strašno su zločesti. Ne znamo ništa o njihovom naoružanju, ali vjerovatno si u nepovoljnom položaju. Pazi se."
+
+msgid "TXT_SUB_LOG234"
+msgstr "Odličan posao. Ti si moj idealan provod. Sada, da te niko ne vidi, prođi kroz vrata s desne strane, popni se gore i sretni se s čovjekom."
+
+msgid "TXT_SUB_LOG235"
+msgstr "Ako iko vidi tebe, odrubit ćemo ti glavu."
+
+msgid "TXT_SUB_LOG236"
+msgstr "Ti glupi, posrćući, šakavoškoljasti grbavi imbecile! Otkrio si nas!"
+
+msgid "TXT_SUB_LOG237"
+msgstr "Volio bih da te čekam iza tih vrata… ali moram ostati pod zemljom. Vrijeme je da upoznaš našeg vođu, Macila."
+
+# MAP02: Mourel.
+msgid "TXT_BBSUB_SCRIPT02_D57608_IFIKN"
+msgstr "Naduvena svinja. Ne znam ništa o ovom takozvanom snage-spajanju, pa idemo polako."
+
+# MAP03: Macil.
+msgid "TXT_BBSUB_SCRIPT03_D4548_GOODB"
+msgstr "Zvuči kao posao iz snova, zar ne?"
+
+msgid "TXT_BBSUB_SCRIPT03_D7580_TAKET"
+msgstr "I bit ću odmah uz tebe."
+
+msgid "TXT_BBSUB_SCRIPT03_D12128_ASING"
+msgstr "Worner je špijun kojeg smo regrutovali u skladištu elektrane."
+
+msgid "TXT_BBSUB_SCRIPT03_D16676_THEPR"
+msgstr "Pobrini se da si spreman za borbu svog života. Bez štednje. Potroši sve što imaš."
+
+# MAP04: Derwin.
+msgid "TXT_BBSUB_SCRIPT04_D21224_BUSIN"
+msgstr "Izvini, moram povratiti."
+
+# MAP04: Worner.
+msgid "TXT_BBSUB_SCRIPT04_D25772_TELLW"
+msgstr "Mmm. Zvuči kao oružje. Uvijek nam treba više vatre."
+
+# MAP04: Reactor Core → Northern alarm door
+msgid "TXT_BBSUB_SCRIPT04_D31836_WHATD"
+msgstr "Ovo zvuči previše lako, ali hajde da probamo."
+
+# MAP04: Reactor Core → Southern alarm door
+msgid "TXT_BBSUB_SCRIPT04_D40932_LETME"
+msgstr "Koga briga. Ionako niko ne sluša programere."
+
+msgid "TXT_BBSUB_SCRIPT04_D54576_ITSAS"
+msgstr "Ooh. Drago mi je što sam u skrivanju, ako znaš na šta mislim."
+
+# MAP05: Door Guard.
+msgid "TXT_BBSUB_SCRIPT05_D1516_OKBUT"
+msgstr "Kakav mrzovoljnik. Nadam se da ćeš ga kasnije ubiti."
+
+msgid "TXT_BBSUB_SCRIPT05_D3032_DOILO"
+msgstr "\"Ova zona je zabranjena!\" Ta napuhana faca."
+
+# MAP05: Prison Guard.
+msgid "TXT_BBSUB_SCRIPT05_D4548_THEOR"
+msgstr "Kakav optimista."
+
+# MAP05: Montag.
+msgid "TXT_BBSUB_SCRIPT05_D7580_OVERM"
+msgstr "Možda je zato što nisi rekao \"molim\"."
+
+# MAP06: Weran.
+msgid "TXT_BBSUB_SCRIPT06_D1516_DOMYF"
+msgstr "Svi su tako potrebiti.\n"
+
+msgid "TXT_BBSUB_SCRIPT06_D3032_BRING"
+msgstr "Odlično. Sada kupujemo za Kralja štakora."
+
+msgid "TXT_BBSUB_SCRIPT06_D4548_OPENT"
+msgstr "Kladim se da ovaj tip također jako smrdio."
+
+msgid "TXT_BBSUB_SCRIPT06_D9096_YOUHA"
+msgstr "Još kanalizacije… Sjajno. Pitam se šta tamo dole živi."
+
+# MAP07: Computer room.
+msgid "TXT_BBSUB_SCRIPT07_D6064_PROGR"
+msgstr "Ovdje je ćorsokak. Bolje da nastavimo tražiti."
+
+# MAP10: Macil (Possible reference to a song of The Beatles).
+msgid "TXT_BBSUB_SCRIPT10_D10612_YOUHA"
+msgstr "Naprijed, moj šampione. Napravimo da se gospodin Ružan zavrti i viče.\n"
+
+msgid "TXT_BBSUB_SCRIPT10_D12128_THERE"
+msgstr "Biomehanički? Pa, to objašnjava njihovu naizgled neiscrpnu zalihu vojnika! I njihov loš stav.\n"
+
+msgid "TXT_BBSUB_SCRIPT10_D16676_IAMTH"
+msgstr "Bolestan kreten… Uništi ga!"
+
+msgid "TXT_BBSUB_SCRIPT12_D12128_USETH"
+msgstr "Možda je ružan, ali čini se da je na našoj strani."
+
+msgid "TXT_BBSUB_SCRIPT17_D10612_OHSUR"
+msgstr "Sudeći po nedavnoj prošlosti, pretpostavljam da je prikrivanje isključeno."
+
+# This remark is for information about the maulers in the warehouse.
+msgid "TXT_BBSUB_SCRIPT17_D13644_OHWEL"
+msgstr "Hmm. Bez muke, bez nevolje, ništa što bi mama morala čistiti… Uzmi mi jedan, molim te.\n"
+
+# MAP31
+msgid "TXT_BBSUB_SCRIPT31_D0_OHNOI"
+msgstr "Mislite da bih se umorio od svega ovog ubijanja svih, ali znam da će mi nedostajati kad se sve ovo završi.\n"

@@ -2280,7 +2280,7 @@ void PDynArray::WriteValue(FSerializer &ar, const char *key, const void *addr) c
 	// We may skip an empty array only if it gets stored under a named key.
 	// If no name is given, i.e. it's part of an outer array's element list, even empty arrays must be stored,
 	// because otherwise the array would lose its entry.
-	if (aray->Count > 0 || key == nullptr)	
+	if (aray->Count > 0 || key == nullptr)
 	{
 		if (ar.BeginArray(key))
 		{
@@ -2833,11 +2833,11 @@ PMap *NewMap(PType *keyType, PType *valueType)
 	{
 		FString backingName = "Map_";
 		int backingClass = PMapBackingClass(keyType, valueType, backingName);
-		
+
 		auto backing = NewStruct(backingName, nullptr, true);
 		mapType = new PMap(keyType, valueType, backing, backingClass);
 		TypeTable.AddType(mapType, NAME_Map, (intptr_t)keyType, (intptr_t)valueType, bucket);
-		
+
 	}
 	return (PMap *)mapType;
 }
@@ -3697,4 +3697,3 @@ CCMD(typetable)
 {
 	DumpTypeTable();
 }
-

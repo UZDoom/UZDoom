@@ -50,9 +50,9 @@
 #define XINPUT_DLL_A  "xinput1_3.dll"
 #define XINPUT_DLL_W L"xinput1_3.dll"
 #ifdef UNICODE
-    #define XINPUT_DLL XINPUT_DLL_W
+	#define XINPUT_DLL XINPUT_DLL_W
 #else
-    #define XINPUT_DLL XINPUT_DLL_A
+	#define XINPUT_DLL XINPUT_DLL_A
 #endif
 #endif
 
@@ -599,7 +599,7 @@ float FXInputController::GetHapticsStrength()
 
 void FXInputController::SetHapticsStrength(float strength)
 {
-	if (Haptics) HapticStrength = clamp(strength, 0.f, 2.f);
+	HapticStrength = clamp(strength, 0.f, 2.f);
 }
 
 //==========================================================================
@@ -610,7 +610,7 @@ void FXInputController::SetHapticsStrength(float strength)
 
 bool FXInputController::IsHapticsStrengthDefault()
 {
-	return true;
+	return HapticStrength == JOYHAPSTRENGTH_DEFAULT;
 }
 
 //==========================================================================
@@ -1081,6 +1081,6 @@ void I_Rumble(double high_freq, double low_freq, double _left_trig, double _righ
 	FXInputManager* XInputManager = & static_cast<FXInputManager&> (*JoyDevices[INPUT_XInput]);
 	if (XInputManager != NULL)
 	{
-		XInputManager->Rumble(high_freq, low_freq);
+		XInputManager->Rumble(static_cast<float>(high_freq), static_cast<float>(low_freq));
 	}
 }

@@ -1,7 +1,7 @@
 /*
- * Interfaces over Yamaha OPL3 (YMF262) chip emulators
+ * Interfaces over Yamaha OPL2 (YM3812) and Yamaha OPL3 (YMF262) chip emulators
  *
- * Copyright (c) 2017-2025 Vitaly Novichkov (Wohlstand)
+ * Copyright (c) 2017-2026 Vitaly Novichkov (Wohlstand)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -19,7 +19,6 @@
  */
 
 #include "ymf262_lle.h"
-#include "ymf262_lle/nuked_fmopl3.h"
 #include "ymf262_lle/nopl3.h"
 #include <cstring>
 
@@ -32,8 +31,7 @@ Ymf262LLEOPL3::Ymf262LLEOPL3() :
 
 Ymf262LLEOPL3::~Ymf262LLEOPL3()
 {
-    fmopl3_t *chip_r = reinterpret_cast<fmopl3_t*>(m_chip);
-    nopl3_shutdown(chip_r);
+    nopl3_shutdown(m_chip);
 }
 
 void Ymf262LLEOPL3::setRate(uint32_t rate)

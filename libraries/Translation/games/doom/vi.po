@@ -1,0 +1,175 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-05-27 18:13+0000\n"
+"Last-Translator: pepper <2895954821@qq.com>\n"
+"Language-Team: Vietnamese <https://hosted.weblate.org/projects/doom-engine-games/doom/vi/>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2026.6.dev0\n"
+
+msgid "TXT_D1E1"
+msgstr "Ngập đầu trong xác sống"
+
+msgid "TXT_D1E2"
+msgstr "Bờ cõi địa ngục"
+
+msgid "TXT_D1E3"
+msgstr "Hỏa ngục"
+
+# The episode and levels' names in E4 are taken from the Bible.
+# Proverbs 5:11
+msgid "TXT_D1E4"
+msgstr "xác thịt bị nuốt chửng"
+
+msgid "HUSTR_E1M1"
+msgstr "E1M1:Nhà chứa máy bay"
+
+msgid "HUSTR_E1M2"
+msgstr "E1M2:Nhà máy điện hạt nhân"
+
+msgid "HUSTR_E1M3"
+msgstr "E1M3:Nhà máy lọc độc tố"
+
+msgid "HUSTR_E1M4"
+msgstr "E1M4:Trung tâm chỉ huy"
+
+msgid "HUSTR_E1M5"
+msgstr "E1M5:Phòng thí nghiệm Phobos"
+
+msgid "HUSTR_E1M6"
+msgstr "E1M6:Trung tậm xử lý"
+
+msgid "HUSTR_E1M7"
+msgstr "E1M7:Trạm máy tính"
+
+msgid "HUSTR_E1M8"
+msgstr "E1M8:Dị thường Anomaly"
+
+msgid "HUSTR_E1M9"
+msgstr "E1M9:Căn cú quân sự"
+
+msgid "HUSTR_E1M10"
+msgstr "E1M10:Hệ thống cống ngầm"
+
+msgid "HUSTR_E2M1"
+msgstr "E2M1:Dị thường Deimos"
+
+msgid "HUSTR_E2M2"
+msgstr "E2M2:Khu vực cánh ly"
+
+msgid "HUSTR_E2M3"
+msgstr "E2M3:Nhà máy lọc"
+
+msgid "HUSTR_E2M4"
+msgstr "E2M4:Phòng thí nghiệm Deimos"
+
+msgid "HUSTR_E2M5"
+msgstr "E2M5:Trung tâm chỉ huy"
+
+msgid "HUSTR_E2M6"
+msgstr "E2M6:Sảnh đường của kẻ bị nguyền rủa"
+
+msgid "HUSTR_E2M7"
+msgstr "E2M7:Bể sinh sảnh"
+
+msgid "HUSTR_E2M8"
+msgstr "E2M8:Tháp Babel"
+
+msgid "HUSTR_E2M9"
+msgstr "E2M9:Pháo đài bí ẩn"
+
+msgid "HUSTR_E3M1"
+msgstr "E3M1:Pháo đài Địa ngục"
+
+msgid "HUSTR_E3M2"
+msgstr "E3M2:Vũng lầy tuyệt vọng"
+
+msgid "HUSTR_E3M3"
+msgstr "E3M3:Hỗn loạn"
+
+msgid "HUSTR_E3M4"
+msgstr "E3M4:Ngôi nhà đau đớn"
+
+msgid "HUSTR_E3M5"
+msgstr "E3M5:Thánh đường ô uế"
+
+# Volcano in Antarctica
+msgid "HUSTR_E3M6"
+msgstr "E3M6:Núi Erebus"
+
+msgid "HUSTR_E3M7"
+msgstr "E3M7:Vùng giới hạn"
+
+# Based on the City of Dis, located on the sixth circle of Hell, according to
+# Dante Alighieri's The Divine Comedy
+msgid "HUSTR_E3M8"
+msgstr "E3M8:Địa ngục Dis"
+
+msgid "HUSTR_E3M9"
+msgstr "E3M9:Hầm hang"
+
+# Proverbs 15:24
+msgid "HUSTR_E4M1"
+msgstr "E4M1:Địa ngục bên dưới"
+
+# Psalm 139:22
+msgid "HUSTR_E4M2"
+msgstr "E4M2:Sự căm thù hoàn hảo"
+
+# Matthew 13:49
+msgid "HUSTR_E4M3"
+msgstr "E4M3:trừng phạt kẻ ác"
+
+# James 3:8
+msgid "HUSTR_E4M4"
+msgstr "E4M4:Tà ác ngang ngược"
+
+# Luke 16:30
+msgid "HUSTR_E4M5"
+msgstr "E4M5:Chúng sẽ hối hận"
+
+# Psalm 139:20
+msgid "HUSTR_E4M6"
+msgstr "E4M6:Chống lại người một cách tà ác"
+
+# Revelation 6:8
+msgid "HUSTR_E4M7"
+msgstr "E4M7:Và địa ngục theo sau"
+
+# Proverbs 5:9
+msgid "HUSTR_E4M8"
+msgstr "E4M8:Hướng về kẻ tàn ác"
+
+msgid "HUSTR_E4M9"
+msgstr "E4M9:Sợ hãi"
+
+# Doom Ep.1
+msgid "E1TEXT"
+msgstr ""
+"Sau khi đánh bại lũ trùm to xác và dọn sạch căn cứ trên Mặt Trăng,\n"
+" đáng lẽ bạn phải thắng, đúng không? \n"
+"Đúng không chứ? Phần thưởng hậu hĩnh và tấm vé về nhà của bạn đâu rồi?\n"
+"Cái quái gì thế này? \n"
+"Đáng lẽ không thể kết thúc như thế này được!\n"
+"Nó bốc mùi như thối rữa, \n"
+"nhưng trông giống như căn cứ Deimos đã mất tích. Có vẻ như bạn đang mắc kẹt tại Bờ cõi Địa ngục. \n"
+"Lối thoát duy nhất là xông thẳng về phía trước.\n"
+"Để tiếp tục trải nghiệm DOOM, \n"
+"hãy chơi The Shores of Hell và phần tiếp theo tuyệt vời của nó, Inferno!\n"
+
+# Doom Ep.2
+msgid "E2TEXT"
+msgstr ""
+
+# Doom Ep.3
+msgid "E3TEXT"
+msgstr ""
+
+# Doom Ep.4
+msgid "E4TEXT"
+msgstr ""

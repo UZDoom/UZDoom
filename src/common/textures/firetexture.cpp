@@ -100,7 +100,7 @@ FBitmap FireTexture::GetBgraBitmap(const PalEntry* remap, int* trans)
 			pixels[y * Width + x] = Palette[Image[y * Width + x]];
 		}
 	}
-	
+
 	return bitmap;
 }
 

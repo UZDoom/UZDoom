@@ -63,9 +63,9 @@ static std::pair<uint16_t, uint16_t> time_to_dos(struct tm *time)
 // append_to_zip
 //
 // Write a given file to the zipFile.
-// 
+//
 // zipfile: zip object to be written to
-// 
+//
 // returns: position = success, -1 = error
 //
 //==========================================================================

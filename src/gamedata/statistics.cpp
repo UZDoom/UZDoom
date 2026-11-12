@@ -247,7 +247,7 @@ static void SaveStatistics(const char *fn, TArray<FStatistics> &statlist)
 			FSessionStatistics *sst = &ep_stats.stats[j];
 			if (sst->info[0]>0)
 			{
-				fw->Printf("\t%2i. %10s \"%-33s\" %02d:%02d:%02d %i\n", j+1, sst->name, sst->info, 
+				fw->Printf("\t%2i. %10s \"%-33s\" %02d:%02d:%02d %i\n", j+1, sst->name, sst->info,
 					hours(sst->timeneeded),	minutes(sst->timeneeded), seconds(sst->timeneeded),	sst->skill);
 
 				TArray<FLevelStatistics> &ls = sst->levelstats;
@@ -257,7 +257,7 @@ static void SaveStatistics(const char *fn, TArray<FStatistics> &statlist)
 
 					for(unsigned k=0;k<ls.Size ();k++)
 					{
-						fw->Printf("\t\t%-8s \"%-33s\" %02d:%02d:%02d\n", ls[k].name, ls[k].info, 
+						fw->Printf("\t\t%-8s \"%-33s\" %02d:%02d:%02d\n", ls[k].name, ls[k].info,
 							hours(ls[k].timeneeded), minutes(ls[k].timeneeded), seconds(ls[k].timeneeded));
 					}
 					fw->Printf("\t}\n");
@@ -407,7 +407,7 @@ static void StoreLevelStats(FLevelLocals *Level)
 		LevelData[i].leveltime = Level->maptime;
 
 		// Check for living monsters. On some maps it can happen
-		// that the counter misses some. 
+		// that the counter misses some.
 		auto it = Level->GetThinkerIterator<AActor>();
 		AActor *ac;
 		int mc = 0;
@@ -436,7 +436,7 @@ void STAT_ChangeLevel(const char *newl, FLevelLocals *Level)
 
 	level_info_t *thisinfo = Level->info;
 	level_info_t *nextinfo = NULL;
-	
+
 	if (strncmp(newl, "enDSeQ", 6))
 	{
 		level_info_t *l = FindLevelInfo (newl);
@@ -571,7 +571,7 @@ FString GetStatString()
 	for(unsigned i = 0; i < LevelData.Size(); i++)
 	{
 		OneLevel *l = &LevelData[i];
-		compose.AppendFormat("Level %s - Kills: %d/%d - Items: %d/%d - Secrets: %d/%d - Time: %d:%02d\n", 
+		compose.AppendFormat("Level %s - Kills: %d/%d - Items: %d/%d - Secrets: %d/%d - Time: %d:%02d\n",
 			l->Levelname.GetChars(), l->killcount, l->totalkills, l->itemcount, l->totalitems, l->secretcount, l->totalsecrets,
 			l->leveltime/(60*TICRATE), (l->leveltime/TICRATE)%60);
 	}

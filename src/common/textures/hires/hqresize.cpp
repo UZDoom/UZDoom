@@ -404,7 +404,7 @@ static void xbrzOldScale(size_t factor, const uint32_t* src, uint32_t* trg, int 
 
 
 //===========================================================================
-// 
+//
 // [BB] Upsamples the texture in texbuffer.mBuffer, frees texbuffer.mBuffer and returns
 //  the upsampled buffer.
 //
@@ -488,7 +488,7 @@ void FTexture::CreateUpsampledTextureBuffer(FTextureBuffer &texbuffer, bool hasA
 }
 
 //===========================================================================
-// 
+//
 // This was pulled out of the above function to allow running these
 // checks before the texture is passed to the render state.
 //

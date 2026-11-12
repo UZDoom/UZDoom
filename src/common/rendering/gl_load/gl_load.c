@@ -46,14 +46,14 @@ static void* PosixGetProcAddress (const GLubyte* name)
 
   if (h == NULL)
   {
-    if ((h = dlopen(NULL, RTLD_LAZY | RTLD_LOCAL)) == NULL) return NULL;
-    gpa = dlsym(h, "glXGetProcAddress");
+	if ((h = dlopen(NULL, RTLD_LAZY | RTLD_LOCAL)) == NULL) return NULL;
+	gpa = dlsym(h, "glXGetProcAddress");
   }
 
   if (gpa != NULL)
-    return ((void*(*)(const GLubyte*))gpa)(name);
+	return ((void*(*)(const GLubyte*))gpa)(name);
   else
-    return dlsym(h, (const char*)name);
+	return dlsym(h, (const char*)name);
 }
 #endif /* __sgi || __sun || __unix__ */
 
@@ -91,9 +91,9 @@ static BOOL(WINAPI* makecurrent)(HDC, HGLRC);
 static PROC(WINAPI* getprocaddress)(LPCSTR name);
 static void CheckOpenGL(void)
 {
-    if (opengl32dll == 0)
-    {
-        opengl32dll = LoadLibraryA("OpenGL32.DLL");
+	if (opengl32dll == 0)
+	{
+		opengl32dll = LoadLibraryA("OpenGL32.DLL");
 		if (opengl32dll != 0)
 		{
 			createcontext = (HGLRC(WINAPI*)(HDC)) GetProcAddress(opengl32dll, "wglCreateContext");
@@ -107,31 +107,31 @@ static void CheckOpenGL(void)
 			MessageBoxA(0, "OpenGL32.dll not found", "Fatal error", MB_OK | MB_ICONERROR | MB_TASKMODAL);
 			exit(3);
 		}
-    }
+	}
 }
 
 HGLRC zd_wglCreateContext(HDC dc)
 {
-    CheckOpenGL();
-    return createcontext(dc);
+	CheckOpenGL();
+	return createcontext(dc);
 }
 
 BOOL zd_wglDeleteContext(HGLRC context)
 {
-    CheckOpenGL();
-    return deletecontext(context);
+	CheckOpenGL();
+	return deletecontext(context);
 }
 
 BOOL zd_wglMakeCurrent(HDC dc, HGLRC context)
 {
-    CheckOpenGL();
-    return makecurrent(dc, context);
+	CheckOpenGL();
+	return makecurrent(dc, context);
 }
 
 PROC zd_wglGetProcAddress(LPCSTR name)
 {
-    CheckOpenGL();
-    return getprocaddress(name);
+	CheckOpenGL();
+	return getprocaddress(name);
 }
 
 static PROC WinGetProcAddress(const char *name)
@@ -157,7 +157,7 @@ static PROC WinGetProcAddress(const char *name)
 			//#define IntGetProcAddress(name) PosixGetProcAddress((const GLubyte*)name)
 /* END OF MANUAL CHANGES, DO NOT REMOVE! */
 		#else /* GLX */
-		    #include <GL/glx.h>
+			#include <GL/glx.h>
 
 			#define IntGetProcAddress(name) (*glXGetProcAddressARB)((const GLubyte*)name)
 		#endif
@@ -3547,4 +3547,3 @@ int ogl_IsVersionGEQ(int majorVersion, int minorVersion)
 	if(minorVersion <= g_minor_version) return 1;
 	return 0;
 }
-

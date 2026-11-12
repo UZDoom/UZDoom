@@ -40,7 +40,7 @@ class ArtiBoostArmor : Inventory
 		BRAC ABCDEFGH 4 Bright;
 		Loop;
 	}
-	
+
 	override bool Use (bool pickup)
 	{
 		int count = 0;
@@ -84,5 +84,5 @@ class ArtiBoostArmor : Inventory
 		}
 	}
 
-	
+
 }

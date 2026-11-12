@@ -34,6 +34,18 @@
 #include "vm.h"
 #include "printf.h"
 
+#include "Trex/TextShaper.hpp"
+#include "Trex/BitmapHelpers.hpp"
+#include "Trex/TextShaper.hpp"
+#include <type_traits>
+#include <span>
+#include <string>
+#include "Trex/Atlas.hpp"
+#include <vector>
+#include <string_view>
+#include "simdutf.h"
+#include "renderstyle.h"
+#include "freetype/freetype.h"
 
 int ListGetInt(VMVa_List &tags);
 
@@ -153,6 +165,10 @@ FGameTexture * BuildTextTexture(FFont *font, const char *string, int textcolor)
 //
 //==========================================================================
 
+// fwd declare
+void DrawDynamicFontText(F2DDrawer *drawer, FFont *originalFont, FFont *substitutedFont, int normalcolor, double x,
+                         double y, std::u32string utf32String, DrawParms &parms);
+
 void DrawChar(F2DDrawer *drawer, FFont* font, int normalcolor, double x, double y, int character, int tag_first, ...)
 {
 	if (font == NULL)
@@ -164,7 +180,49 @@ void DrawChar(F2DDrawer *drawer, FFont* font, int normalcolor, double x, double 
 	FGameTexture* pic;
 	int dummy;
 
-	if (NULL != (pic = font->GetChar(character, normalcolor, &dummy)))
+	if (FFont *const substitutedFont = FFont::GetDynamicSubstitutionForStaticFont(font))
+	{
+		pic = substitutedFont->GetDynamicFontAtlasTexture();
+		DrawParms parms;
+		Va_List   tags;
+		va_start(tags.list, tag_first);
+		bool res = ParseDrawTextureTags(drawer, pic, x, y, tag_first, tags, &parms, DrawTexture_Normal);
+		va_end(tags.list);
+		if (!res)
+		{
+			return;
+		}
+		bool     palettetrans = (normalcolor == CR_NATIVEPAL && parms.TranslationId != NO_TRANSLATION);
+		PalEntry color        = 0xffffffff;
+		if (!palettetrans)
+			parms.TranslationId = substitutedFont->GetColorTranslation((EColorRange)normalcolor, &color);
+		parms.color = PalEntry((color.a * parms.color.a) / 255, (color.r * parms.color.r) / 255,
+		                       (color.g * parms.color.g) / 255, (color.b * parms.color.b) / 255);
+		std::u32string u32str(1, character);
+		DrawDynamicFontText(drawer, font, substitutedFont, normalcolor, x, y, u32str, parms);
+	}
+	else if (font->IsValidDynamicFont())
+	{
+		pic = font->GetDynamicFontAtlasTexture();
+		DrawParms parms;
+		Va_List   tags;
+		va_start(tags.list, tag_first);
+		bool res = ParseDrawTextureTags(drawer, pic, x, y, tag_first, tags, &parms, DrawTexture_Normal);
+		va_end(tags.list);
+		if (!res)
+		{
+			return;
+		}
+		bool     palettetrans = (normalcolor == CR_NATIVEPAL && parms.TranslationId != NO_TRANSLATION);
+		PalEntry color        = 0xffffffff;
+		if (!palettetrans)
+			parms.TranslationId = font->GetColorTranslation((EColorRange)normalcolor, &color);
+		parms.color = PalEntry((color.a * parms.color.a) / 255, (color.r * parms.color.r) / 255,
+		                       (color.g * parms.color.g) / 255, (color.b * parms.color.b) / 255);
+		std::u32string u32str(1, character);
+		DrawDynamicFontText(drawer, font, font, normalcolor, x, y, u32str, parms);
+	}
+	else if (NULL != (pic = font->GetChar(character, normalcolor, &dummy)))
 	{
 		DrawParms parms;
 		Va_List tags;
@@ -194,7 +252,42 @@ void DrawChar(F2DDrawer *drawer,  FFont *font, int normalcolor, double x, double
 	FGameTexture *pic;
 	int dummy;
 
-	if (NULL != (pic = font->GetChar(character, normalcolor, &dummy)))
+	if (FFont *const substitutedFont = FFont::GetDynamicSubstitutionForStaticFont(font))
+	{
+		pic = substitutedFont->GetDynamicFontAtlasTexture();
+		DrawParms parms;
+		Va_List   tags;
+		uint32_t  tag = ListGetInt(args);
+		bool      res = ParseDrawTextureTags(drawer, pic, x, y, tag, args, &parms, DrawTexture_Normal);
+		if (!res)
+			return;
+		bool     palettetrans = (normalcolor == CR_NATIVEPAL && parms.TranslationId != NO_TRANSLATION);
+		PalEntry color        = 0xffffffff;
+		if (!palettetrans)
+			parms.TranslationId = substitutedFont->GetColorTranslation((EColorRange)normalcolor, &color);
+		parms.color = PalEntry((color.a * parms.color.a) / 255, (color.r * parms.color.r) / 255,
+		                       (color.g * parms.color.g) / 255, (color.b * parms.color.b) / 255);
+		std::u32string u32str(1, character);
+		DrawDynamicFontText(drawer, font, substitutedFont, normalcolor, x, y, u32str, parms);
+	}
+	else if (font->IsValidDynamicFont())
+	{
+		pic = font->GetDynamicFontAtlasTexture();
+		DrawParms parms;
+		uint32_t  tag = ListGetInt(args);
+		bool      res = ParseDrawTextureTags(drawer, pic, x, y, tag, args, &parms, DrawTexture_Normal);
+		if (!res)
+			return;
+		bool     palettetrans = (normalcolor == CR_NATIVEPAL && parms.TranslationId != NO_TRANSLATION);
+		PalEntry color        = 0xffffffff;
+		if (!palettetrans)
+			parms.TranslationId = font->GetColorTranslation((EColorRange)normalcolor, &color);
+		parms.color = PalEntry((color.a * parms.color.a) / 255, (color.r * parms.color.r) / 255,
+		                       (color.g * parms.color.g) / 255, (color.b * parms.color.b) / 255);
+		std::u32string u32str(1, character);
+		DrawDynamicFontText(drawer, font, font, normalcolor, x, y, u32str, parms);
+	}
+	else if (NULL != (pic = font->GetChar(character, normalcolor, &dummy)))
 	{
 		DrawParms parms;
 		uint32_t tag = ListGetInt(args);
@@ -253,24 +346,235 @@ DEFINE_ACTION_FUNCTION(FCanvas, DrawChar)
 // This is only needed as a dummy. The code using wide strings does not need color control.
 EColorRange V_ParseFontColor(const char32_t *&color_value, int normalcolor, int boldcolor) { return CR_UNTRANSLATED; }
 
-template<class chartype>
-void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, double y, const chartype *string, DrawParms &parms)
+//split the strings into substrings based on what glyphs are supported by the target fonts.
+//shape each substring separately.
+void ParseIntoIntermediateDrawStrings(const std::u32string_view utf32SrcString, const FFont* font, int normalcolor, std::vector<IntermediateDrawString> &outStrings)
 {
-	int 		w;
+	outStrings.clear();
+	
+	auto* currentDrawString = &outStrings.emplace_back(IntermediateDrawString());
+	currentDrawString->Font = font;
+	bool insideEscapeSequence = false;
+	bool insideNamedColorTagSequence = false;
+	int currentcolor = V_LogColorFromColorRange((EColorRange)normalcolor);
+	int boldcolor = normalcolor ? normalcolor - 1 : NumTextColors - 1;
+	bool isInFallback                = false;
+	std::u32string colorSubStr;
+	for (int i =0; i < utf32SrcString.size(); ++i)
+	{
+		const char32_t& srcChar = utf32SrcString[i];
+		if (srcChar == TEXTCOLOR_ESCAPE)
+		{
+			insideEscapeSequence = true;
+			continue;
+		}
+
+		if (insideEscapeSequence && !insideNamedColorTagSequence && srcChar != '[')
+		{
+			if (srcChar == '+')
+			{
+				int intVal           = FindCVar("msgmidcolor", nullptr)->ToInt();
+				currentcolor         = V_LogColorFromColorRange((EColorRange)boldcolor);
+				insideEscapeSequence = false;
+				continue;
+			}
+			else if (srcChar == '-')
+			{
+				currentcolor = V_LogColorFromColorRange((EColorRange)normalcolor);
+				insideEscapeSequence = false;
+				continue;
+			}
+			else if (srcChar == '*')
+			{
+				// use chat color
+				int intVal   = FindCVar("msg3color", nullptr)->ToInt();
+				currentcolor         = V_LogColorFromColorRange((EColorRange)intVal);
+				insideEscapeSequence = false;
+				continue;
+			}
+			else if (srcChar == '!')
+			{
+				//use team chat color
+				int intVal           = FindCVar("msg4color", nullptr)->ToInt();
+				currentcolor         = V_LogColorFromColorRange((EColorRange)intVal);
+				insideEscapeSequence   = false;
+				continue;
+			}
+			else if (srcChar != '[')
+			{
+				// each letter a,b,c etc maps to 1,2,3 .. and so on in EColorRange
+				EColorRange colorRange = (EColorRange)((int)srcChar - (int)'a');
+				currentcolor           = V_LogColorFromColorRange(colorRange);
+				insideEscapeSequence   = false;
+				continue;
+			}
+		}
+		else if (insideEscapeSequence && srcChar == '[')
+		{
+			insideNamedColorTagSequence = true;
+			continue;
+		}
+		else if (insideNamedColorTagSequence && srcChar != ']')
+		{
+			colorSubStr += srcChar;
+			continue;
+		}
+		else if (insideNamedColorTagSequence && srcChar == ']')
+		{
+			insideEscapeSequence        = false;
+			insideNamedColorTagSequence = false;
+			std::string utf8ColorSubStr;
+			utf8ColorSubStr.resize(
+				simdutf::utf8_length_from_utf32(std::span<const char32_t>(colorSubStr.cbegin(), colorSubStr.cend())));
+			simdutf::convert_utf32_to_utf8(colorSubStr.data(), colorSubStr.size(), utf8ColorSubStr.data());
+			EColorRange newcolor        = V_FindFontColor(FName(utf8ColorSubStr.data()));
+			colorSubStr.clear();
+			if (newcolor != CR_UNDEFINED)
+			{
+				currentcolor = V_LogColorFromColorRange(newcolor);
+				continue;
+			}
+			
+			continue;
+		}
+		else if (insideEscapeSequence && srcChar != TEXTCOLOR_ESCAPE && srcChar != '[')
+		{
+			insideEscapeSequence        = false;
+			insideNamedColorTagSequence = false;
+		}
+		else if (insideEscapeSequence)
+		{
+			continue;
+		}
+		//is this codepoint supported by the target font? If no, split
+		//TODO: if we were writing to fallback and we encounter chars we can render with the desired font again,
+		//go back to writing with the desired font
+		if (!font->CanPrint(srcChar) && !isInFallback)
+		{
+			currentDrawString = &outStrings.emplace_back(IntermediateDrawString());
+			currentDrawString->Font = font->GetDynamicFontFallbackForChar32(srcChar);
+			isInFallback            = true;
+			assert(currentDrawString->Font);
+		}
+		else if (isInFallback && font->CanPrint(srcChar))
+		{
+			currentDrawString       = &outStrings.emplace_back(IntermediateDrawString());
+			currentDrawString->Font = font;
+			isInFallback            = false;
+			assert(currentDrawString->Font);
+		}
+		currentDrawString->StringUTF32 += srcChar;
+		currentDrawString->Codepoints.push_back(srcChar);
+		currentDrawString->Colors.push_back(currentcolor);
+	}
+
+	for (auto &s : outStrings)
+	{
+		auto res = s.Font->GetDynamicTextShaper()->ShapeUnicode(
+			std::span<const uint32_t>(s.Codepoints.begin(), s.Codepoints.end()));
+		s.TrexGlyphs = res;
+	}
+}
+
+void DrawDynamicFontText(F2DDrawer *drawer, FFont* originalFont, FFont* substitutedFont, int normalcolor, double x, double y,
+                         std::u32string utf32String, DrawParms &parms)
+{
+	auto                                font = substitutedFont;
+	std::vector<IntermediateDrawString> DrawStrings;
+	ParseIntoIntermediateDrawStrings(utf32String, font, normalcolor, DrawStrings);
+
+	assert(originalFont == substitutedFont || originalFont && substitutedFont->IsValidDynamicFont());
+
+	double                 cursorx             = x;
+	double                 cursory             = y;
+	double                 scalex              = parms.scalex;
+	double                 scaley              = parms.scaley;
+	constexpr FRenderStyle trexTextRenderStyle = {STYLEOP_Add, STYLEALPHA_Src, STYLEALPHA_InvSrc, STYLEF_RedIsAlpha};
+
+	for (auto &s : DrawStrings) 
+	{
+		DrawParms           atlasFragmentDrawParms = parms;
+
+		FGameTexture *const atlasTexture = s.Font->GetDynamicFontAtlasTexture();
+		const Trex::Atlas  &atlas        = *s.Font->GetDynamicFontAtlas();
+		Trex::TextShaper   &shaper       = *s.Font->GetDynamicTextShaper();
+
+		const bool          autoScale              = true;
+		const double originalFontHeightInPixels = originalFont->GetHeight();
+		const double fontHeightInPixels = substitutedFont->GetHeight();
+		
+		const double        scaleAdjust =  autoScale? fontHeightInPixels / originalFontHeightInPixels : 1.0;
+		const double        shrinkScale            = s.Font->GetInvSupersampleScale(); 
+		
+		scalex                                     = atlasFragmentDrawParms.scalex * atlasFragmentDrawParms.patchscalex;
+		scaley                                     = atlasFragmentDrawParms.scaley * atlasFragmentDrawParms.patchscaley;
+
+		const double finalRescale = shrinkScale / scaleAdjust;
+
+		for (int i = 0; i < s.TrexGlyphs.size(); ++i)
+		{
+			const Trex::ShapedGlyph &g            = s.TrexGlyphs[i];
+			const double             cx = (cursorx + (g.xOffset * finalRescale*scalex) + (g.info.bearingX*finalRescale*scalex));
+			double                   cy = (cursory - (g.yOffset * finalRescale *scaley) - (g.info.bearingY*finalRescale*scaley));
+
+			//classic doom fonts don't really have descenders or ascenders. As a result, let's nudge the
+			//vertical coords up by the descender to better match the intent of how they were placed.
+			cy += s.Font->GetDynamicFontAtlas()->GetFont()->GetMetrics().ascender * finalRescale;
+			int descender = s.Font->GetDynamicFontAtlas()->GetFont()->GetMetrics().descender;
+			cy += s.Font->GetDynamicFontAtlas()->GetFont()->GetMetrics().descender * finalRescale;
+
+			const double srcx = (double)g.info.x / (double)atlasTexture->GetDisplayWidth();
+			const double srcy = (double)g.info.y / (double)atlasTexture->GetDisplayHeight();
+			const double srcw = (double)g.info.width / (double)atlasTexture->GetDisplayWidth();
+			const double srch = (double)g.info.height / (double)atlasTexture->GetDisplayHeight();
+			SetTextureParmsSubrect(drawer, &atlasFragmentDrawParms, atlasTexture, cx, cy, srcx, srcy, srcw, srch);
+
+			atlasFragmentDrawParms.style = trexTextRenderStyle;
+			atlasFragmentDrawParms.destwidth *= finalRescale;
+			atlasFragmentDrawParms.destheight *= finalRescale;
+			atlasFragmentDrawParms.color   = s.Colors[i];
+			atlasFragmentDrawParms.color.a = 255;
+
+			// TODO: cvar
+			const bool drawDropShadow = substitutedFont != SymbolsFont;
+			if (drawDropShadow)
+			{
+				DrawParms shadowAtlasFragmentDrawParms = atlasFragmentDrawParms;
+				shadowAtlasFragmentDrawParms.x += 1.5 * scalex;
+				shadowAtlasFragmentDrawParms.y += 1.5 * scaley;
+				shadowAtlasFragmentDrawParms.color    = MAKEARGB(255, 11, 11, 11);
+				const FRenderStyle &shadowRenderStyle = LegacyRenderStyles[10];
+				shadowAtlasFragmentDrawParms.style    = shadowRenderStyle;
+				drawer->AddTexture(atlasTexture, shadowAtlasFragmentDrawParms);
+			}
+
+			drawer->AddTexture(atlasTexture, atlasFragmentDrawParms);
+			cursorx += (g.xAdvance) * scalex * finalRescale;
+			cursory += (g.yAdvance) * scaley * finalRescale;
+		}
+	}
+}
+
+template <typename chartype>
+void DrawStaticFontText(F2DDrawer *drawer, FFont *font, int normalcolor, double x, double y, const chartype *string,
+                        DrawParms &parms)
+{
+	int             w;
 	const chartype *ch;
-	int 		c;
-	double 		cx;
-	double 		cy;
-	int			boldcolor;
-	FTranslationID			trans = INVALID_TRANSLATION;
-	int			kerning;
-	FGameTexture *pic;
+	int             c;
+	double          cx;
+	double          cy;
+	int             boldcolor;
+	FTranslationID  trans = INVALID_TRANSLATION;
+	int             kerning;
+	FGameTexture   *pic;
 
 	double scalex = parms.scalex * parms.patchscalex;
 	double scaley = parms.scaley * parms.patchscaley;
 
-	if (parms.celly == 0) parms.celly = font->GetHeight() + 1;
-	parms.celly = int (parms.celly * scaley);
+	if (parms.celly == 0)
+		parms.celly = font->GetHeight() + 1;
+	parms.celly = int(parms.celly * scaley);
 
 	bool palettetrans = (normalcolor == CR_NATIVEPAL && parms.TranslationId != NO_TRANSLATION);
 
@@ -279,9 +583,10 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 	boldcolor = normalcolor ? normalcolor - 1 : NumTextColors - 1;
 
 	PalEntry colorparm = parms.color;
-	PalEntry color = 0xffffffff;
-	trans = palettetrans? INVALID_TRANSLATION : font->GetColorTranslation((EColorRange)normalcolor, &color);
-	parms.color = PalEntry(colorparm.a, (color.r * colorparm.r) / 255, (color.g * colorparm.g) / 255, (color.b * colorparm.b) / 255);
+	PalEntry color     = 0xffffffff;
+	trans       = palettetrans ? INVALID_TRANSLATION : font->GetColorTranslation((EColorRange)normalcolor, &color);
+	parms.color = PalEntry(colorparm.a, (color.r * colorparm.r) / 255, (color.g * colorparm.g) / 255,
+	                       (color.b * colorparm.b) / 255);
 
 	kerning = font->GetDefaultKerning();
 
@@ -293,7 +598,6 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 		cx += parms.spacing / 2;
 	else if (parms.monospace == EMonospacing::CellRight)
 		cx += parms.spacing;
-
 
 	auto currentcolor = normalcolor;
 	while (ch - string < parms.maxstrlen)
@@ -307,8 +611,9 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 			EColorRange newcolor = V_ParseFontColor(ch, normalcolor, boldcolor);
 			if (newcolor != CR_UNDEFINED)
 			{
-				trans = font->GetColorTranslation(newcolor, &color);
-				parms.color = PalEntry(colorparm.a, (color.r * colorparm.r) / 255, (color.g * colorparm.g) / 255, (color.b * colorparm.b) / 255);
+				trans        = font->GetColorTranslation(newcolor, &color);
+				parms.color  = PalEntry(colorparm.a, (color.r * colorparm.r) / 255, (color.g * colorparm.g) / 255,
+				                        (color.b * colorparm.b) / 255);
 				currentcolor = newcolor;
 			}
 			continue;
@@ -324,12 +629,13 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 		if (NULL != (pic = font->GetChar(c, currentcolor, &w)))
 		{
 			// if palette translation is used, font colors will be ignored.
-			if (!palettetrans) parms.TranslationId = trans;
+			if (!palettetrans)
+				parms.TranslationId = trans;
 			SetTextureParms(drawer, &parms, pic, cx, cy);
 			if (parms.cellx)
 			{
-				w = parms.cellx;
-				parms.destwidth = parms.cellx;
+				w                = parms.cellx;
+				parms.destwidth  = parms.cellx;
 				parms.destheight = parms.celly;
 			}
 			if (parms.monospace == EMonospacing::CellLeft)
@@ -349,10 +655,56 @@ void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, d
 		{
 			cx += (parms.spacing) * scalex;
 		}
-
 	}
 }
 
+template<class chartype>
+std::u32string ConvertStringToUTF32(const chartype *string)
+{
+	// convert string to utf32 for straightforward and debuggable string parsing.
+	std::u32string utf32String;
+
+	if constexpr (std::is_same_v<chartype, uint8_t> || std::is_same_v<chartype, char> ||
+	              std::is_same_v<chartype, char8_t>)
+	{
+		utf32String.resize(
+			simdutf::utf32_length_from_utf8((const char *)string, std::char_traits<chartype>::length(string)), '\0');
+		simdutf::convert_utf8_to_utf32((const char *)string, std::char_traits<chartype>::length(string),
+		                               utf32String.data());
+	}
+	else if constexpr (std::is_same_v<chartype, char16_t>)
+	{
+		utf32String.resize(
+			simdutf::utf32_length_from_utf16((const char16_t *)string, std::char_traits<chartype>::length(string)),
+			'\0');
+		simdutf::convert_utf16_to_utf32(string, std::char_traits<chartype>::length(string), utf32String);
+	}
+	else if constexpr (std::is_same_v<chartype, char32_t>)
+	{
+		utf32String = string;
+	}
+	assert(simdutf::validate_utf32(utf32String.c_str(), utf32String.length()));
+	return utf32String;
+}
+
+template<class chartype>
+void DrawTextCommon(F2DDrawer *drawer, FFont *font, int normalcolor, double x, double y, const chartype *string, DrawParms &parms)
+{
+	if (font->IsValidDynamicFont())
+	{
+		auto utf32String = ConvertStringToUTF32(string);
+		DrawDynamicFontText(drawer, font, font, normalcolor, x, y, utf32String, parms);
+	}
+	else if (FFont* const substitutedFont = FFont::GetDynamicSubstitutionForStaticFont(font))
+	{
+		auto utf32String = ConvertStringToUTF32(string);
+		DrawDynamicFontText(drawer, font, substitutedFont, normalcolor, x, y, utf32String, parms);
+	}
+	else
+	{
+		DrawStaticFontText<chartype>(drawer, font, normalcolor, x, y, string, parms);
+	}
+}
 
 // For now the 'drawer' parameter is a placeholder - this should be the way to handle it later to allow different drawers.
 void DrawText(F2DDrawer *drawer, FFont* font, int normalcolor, double x, double y, const char* string, int tag_first, ...)
@@ -370,8 +722,9 @@ void DrawText(F2DDrawer *drawer, FFont* font, int normalcolor, double x, double 
 	{
 		return;
 	}
+
 	const char *txt = (parms.localize && string[0] == '$') ? GStrings.GetString(string + 1) : string;
-	DrawTextCommon(drawer, font, normalcolor, x, y, (const uint8_t*)string, parms);
+	DrawTextCommon<uint8_t>(drawer, font, normalcolor, x, y, (const uint8_t*)string, parms);
 }
 
 
@@ -410,6 +763,7 @@ void DrawText(F2DDrawer *drawer, FFont *font, int normalcolor, double x, double 
 		return;
 	}
 	const char *txt = (parms.localize && string.Len() >= 2 && string[0] == '$') ? GStrings.GetString(string.GetChars() + 1) : string.GetChars();
+
 	DrawTextCommon(drawer, font, normalcolor, x, y, (uint8_t*)txt, parms);
 }
 

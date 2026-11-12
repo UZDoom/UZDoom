@@ -2,6 +2,9 @@
 https://github.com/sneakernets/DMXOPN2
 https://github.com/papiezak/DMXOPN2
 =============
+License: MIT License
+https://github.com/sneakernets/DMXOPN2/blob/master/LICENSE
+=============
 
 == DMXOPN2 ==
 
@@ -22,4 +25,3 @@ I chose the name "DMX" not because it works with DMX, but that it will
 descriptive, but names aren't everything.
 
 Watch this space.
-

@@ -78,12 +78,12 @@ vec3 ProcessMaterialLight(Material material, vec3 color)
 	vec3 frag;
 
 	if ( uLightBlendMode == 1 )
-	{	// COLOR_CORRECT_CLAMPING 
+	{	// COLOR_CORRECT_CLAMPING
 		vec3 lightcolor = color + desaturate(dynlight).rgb;
 		frag = material.Base.rgb * ((lightcolor / max(max(max(lightcolor.r, lightcolor.g), lightcolor.b), 1.4) * 1.4));
 	}
 	else if ( uLightBlendMode == 2 )
-	{	// UNCLAMPED 
+	{	// UNCLAMPED
 		frag = material.Base.rgb * (color + desaturate(dynlight).rgb);
 	}
 	else

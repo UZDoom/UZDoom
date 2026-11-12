@@ -375,7 +375,7 @@ EMoveResult sector_t::MoveCeiling(double speed, double dest, int crush, int dire
 				return EMoveResult::crushed;
 		}
 		break;
-												
+
 	case 1:
 		// UP
 		movedest = ceilingplane.GetChangedHeight (speed);

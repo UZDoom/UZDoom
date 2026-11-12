@@ -2,12 +2,89 @@ name: Continuous Integration
 
 on: [push, pull_request]
 
+permissions:
+  contents: write
+  actions: write
+
 jobs:
+  ci-init:
+    if: ${{ ! startsWith(github.event.ref, 'refs/tags/x-') }}
+    runs-on: ubuntu-latest
+    name: CI Init
+    outputs:
+      url: ${{ steps.details.outputs.url }}
+      tag: ${{ steps.tag.outputs.tag }}
+      mode: ${{ steps.emit.outputs.mode }}
+      branch: ${{ steps.branch.outputs.branch || steps.tag.outputs.branch }}
+      primary: ${{ steps.branch.outputs.primary }}
+    steps:
+      - id: details
+        shell: bash
+        env:
+          EVENT: ${{ toJson(github) }}
+        run: |
+          echo "${EVENT}"
+          echo "url=${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" | tee -a "$GITHUB_OUTPUT"
+
+      - name: Branch
+        id: branch
+        if: ${{ vars.PUBLISH_RELEASES && github.ref_type == 'branch' }}
+        run: |
+          branch="${{ github.ref_name }}"
+          case "$branch" in
+            trunk) mode=preview ;;
+            experimental) mode=experimental ;;
+          esac
+          if [[ "$branch" == 'trunk' ]] || [[ "$branch" =~ ^[0-9]+\.[0-9]+$ ]]; then
+            primary=true
+          fi
+          echo "mode=$mode" | tee -a "$GITHUB_OUTPUT"
+          echo "branch=$branch" | tee -a "$GITHUB_OUTPUT"
+          echo "primary=$primary" | tee -a "$GITHUB_OUTPUT"
+
+      - name: Checkout
+        if: ${{ github.ref_type == 'tag' }}
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Tag
+        id: tag
+        if: ${{ github.ref_type == 'tag' }}
+        run: |
+          tag="${{ github.ref_name }}"
+          if [[ "$tag" =~ ^([0-9]+\.[0-9]+)\.[0-9]+-? ]]; then
+            branch="${BASH_REMATCH[1]}"
+            if git merge-base --is-ancestor "$tag" "origin/$branch"; then
+              mode=stable
+            fi
+          fi
+          echo "tag=$tag" | tee -a "$GITHUB_OUTPUT"
+          echo "mode=$mode" | tee -a "$GITHUB_OUTPUT"
+          echo "branch=$branch" | tee -a "$GITHUB_OUTPUT"
+
+      - name: Ready
+        id: emit
+        run: |
+          mode=${{ steps.branch.outputs.mode || steps.tag.outputs.mode }}
+          if [[ "${{ vars.PUBLISH_RELEASES }}" ]]; then
+            if [[ -n "$mode" ]]; then
+              echo "::notice::This build will be a '$mode' release"
+            else
+              echo "::notice::No release will be created for this build"
+            fi
+          else
+            echo "::notice::This repos has PUBLISH_RELEASES disabled"
+            mode=
+          fi
+          echo "mode=$mode" | tee -a "$GITHUB_OUTPUT"
+
   ci-success:
     needs:
-      - debug
-      # - extra
-    if: always()
+      - release
+      - extra
+      - lint-appstream
+      - ci-init
     runs-on: ubuntu-latest
     name: CI Success
     steps:
@@ -16,7 +93,349 @@ jobs:
           [[ "${{ contains(needs.*.result, 'failure') }}" == "false" ]] || exit 1
           [[ "${{ contains(needs.*.result, 'cancelled') }}" == "false" ]] || exit 1
 
+# ======================
+# Release Configuration
+# ======================
+
+  ci-release-preview:
+    name: Preview
+    needs:
+      - release
+      - ci-init
+    if: ${{ needs.ci-init.outputs.mode == 'preview' }}
+    uses: ./.github/workflows/release_core.yml
+    secrets: inherit
+    with:
+      title: Preview
+      run-id: ${{ github.run_id }}
+      run-url: ${{ needs.ci-init.outputs.url }}
+      commit: ${{ github.sha }}
+      branch: ${{ needs.ci-init.outputs.branch }}
+      tag-name: x-preview
+      message: They are development builds, so they may be unstable and have issues. Please report any problems you find.
+      preview: true
+
+  ci-release-experimental:
+    name: Experimental
+    needs:
+      - release
+      - ci-init
+    if: ${{ needs.ci-init.outputs.mode == 'experimental' }}
+    uses: ./.github/workflows/release_core.yml
+    secrets: inherit
+    with:
+      title: Experimental
+      run-id: ${{ github.run_id }}
+      run-url: ${{ needs.ci-init.outputs.url }}
+      commit: ${{ github.sha }}
+      branch: ${{ needs.ci-init.outputs.branch }}
+      tag-name: x-testing
+      message: ⚠️ They are experimental development builds, specifically to test upcoming features. **Use at your own risk**.
+      label-name: experimental
+      preview: true
+
+  ci-release-stable:
+    name: Stable
+    needs:
+      - release
+      - ci-init
+    if: ${{ needs.ci-init.outputs.mode == 'stable' }}
+    uses: ./.github/workflows/release_core.yml
+    secrets: inherit
+    with:
+      title: Release
+      run-id: ${{ github.run_id }}
+      run-url: ${{ needs.ci-init.outputs.url }}
+      commit: ${{ github.sha }}
+      branch: ${{ needs.ci-init.outputs.branch }}
+      tag-name: ${{ needs.ci-init.outputs.tag }}
+      message: Release Draft
+      preview: false
+
+# ======================
+# Other Checks
+# ======================
+
+  lint-appstream:
+    needs:
+    - ci-init
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/flathub/flatpak-builder-lint:latest
+    name: Lint Appstream
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          ref: ${{ github.ref }}
+      - run: |
+          file=src/posix/freedesktop/org.zdoom.UZDoom.metainfo.xml
+          # These are here twice. First is to get nice output, second is to not make ci fail if network access fails
+          flatpak-builder-lint --gha-format appstream $file || true
+          AS_VALIDATE_NONET=1 flatpak-builder-lint appstream $file
+
+  update-version:
+    needs:
+    - ci-init
+    runs-on: ubuntu-latest
+    name: Check for version change
+    if: ${{ needs.ci-init.outputs.primary == 'true' && github.event_name == 'push' }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          token: ${{ secrets.TAGGER_PAT || '' }}
+          fetch-depth: 0
+      - run: |
+          # Check if version.h has VERSIONSTR updated, and push that as a tag if so
+          BEFORE="${{ github.event.before }}"
+          AFTER="${{ github.event.after }}"
+
+          info=()
+          function log() { echo "$1"; info+=("$1"); }
+          function version() { # grab value of #defined string $1
+            grep -m1 -iE '^\+?\s*#define\s+'"$1" | sed -E 's/.*\s'$1'\s+"([^"]+)"/\1/'
+          }
+          function parent() {
+            git rev-parse --verify -q "$1" >/dev/null || { echo unknown $1; return 1; }
+            git merge-base "$1" "$AFTER" >/dev/null || { echo out-of-tree $1; return 1; }
+          }
+
+          if ! parent "$BEFORE"; then
+            BEFORE=$(git rev-parse --verify -q "${AFTER}~1" || echo "$AFTER")
+            parent "$BEFORE" || BEFORE="$AFTER"
+          fi
+          BEFORE=$(git merge-base "$BEFORE" "$AFTER" || echo "$BEFORE")
+
+          VERSION=$(git diff "$BEFORE" "$AFTER" -- src/version.h | version VERSIONSTR)
+          printf '%s..%s:%s;\n' "$BEFORE" "$AFTER" "$VERSION"
+
+          if [[ -n "$VERSION" ]]; then
+            log "Version updated: $VERSION"
+            while read -r commit; do
+              version=$(git show "$commit" -- src/version.h | version VERSIONSTR)
+              printf ' - %s %s\n' "$commit" "$version"
+              if [[ "$version" == "$VERSION" ]]; then
+                COMMIT="$commit"
+                break
+              fi
+            done < <(git rev-list $BEFORE..$AFTER)
+          fi
+
+          if [[ -n "$COMMIT" ]]; then
+            log "Commit: $COMMIT"
+            if git rev-parse --verify -q "refs/tags/$VERSION"; then
+              log "Tag already exists"
+            elif ! git tag "$VERSION" "$COMMIT"; then
+              log "Failed to tag commit"
+            elif ! git push origin "refs/tags/$VERSION"; then
+              log "Failed to push tag"
+            else
+              log "Successfully tagged $COMMIT with $VERSION"
+            fi
+          fi
+
+          if [[ ${#info[@]} -gt 0 ]]; then
+            printf "::notice::%s\n" "$(printf "%s%%0A" "${info[@]}")"
+          fi
+
+# ======================
+# Primary Build Configuration
+# ======================
+
+  release:
+    needs:
+    - ci-init
+    name: ${{ matrix.config.name }} ${{ matrix.config.build_type }}
+    uses: ./.github/workflows/build_core.yml
+    secrets: inherit
+    with:
+      build_type: Release
+      name: ${{ matrix.config.name }}
+      os: ${{ matrix.config.os }}
+      os_image: ${{ matrix.config.os_image || '' }}
+      build_opts: ${{ matrix.config.build_opts }} ${{ matrix.config.build_opts_extra }}
+      deps_cmdline: ${{ matrix.config.deps_cmdline }}
+      extra_files: ${{ matrix.config.extra_files }}
+      environment: ${{ needs.ci-init.outputs.mode }}
+    strategy:
+      fail-fast: false
+      matrix:
+        # these are shared between multiple build configs
+        config: &common_config
+          - name: Windows
+            os: windows-latest
+            build_opts: &msvc_opts -DCMAKE_C_COMPILER=cl -DCMAKE_CXX_COMPILER=cl -DUSE_UPDATER=ON
+            build_opts_extra: ""
+            deps_cmdline: &msvc_deps >-
+              winget install --accept-source-agreements --verbose --exact --id=Ccache.Ccache
+            extra_files: &msvc_x86_files >-
+              oalsoft.zip
+                ea8bc36fd7fa05f64e13400d20886de753a227202a4ea3781913489a26b36fc6
+                https://github.com/kcat/openal-soft/releases/download/1.23.1/openal-soft-1.23.1-bin.zip
+              sndfile.zip
+                2173935c0c1ed13cf627951d34483f9d405ead2eb473190461c42ba220643a3f
+                https://github.com/libsndfile/libsndfile/releases/download/1.2.2/libsndfile-1.2.2-win64.zip
+              libcurl.zip
+                d290b4ee475968b04dcb2e0c4f046f2ff25c35c65d3e54259cef7cc6cea069e2
+                https://curl.se/windows/dl-8.20.0_5/curl-8.20.0_5-win64-mingw.zip
+
+          - name: MacOS
+            os: macos-latest
+            build_opts: &mac_opts -DHAVE_VULKAN=ON -DHAVE_GLES2=OFF -DDYN_OPENAL=OFF -DDYN_SNDFILE=OFF
+            build_opts_extra: -DOPENAL_INCLUDE_DIR=/opt/homebrew/opt/openal-soft/include/AL -DOPENAL_LIBRARY=/opt/homebrew/opt/openal-soft/lib/libopenal.dylib
+            deps_cmdline: &mac_deps >-
+              brew install
+                dylibbundler
+                fluid-synth
+                openal-soft
+                vulkan-volk
+                molten-vk
+                ccache
+                libvpx
+                sdl2
+            extra_files: ""
+
+          - name: Linux
+            os: ubuntu-latest
+            os_image: debian:oldstable # use debian/ubuntu distro with oldest glibc, which supports the needed toolchain
+            build_opts: &linux_opts
+            build_opts_extra: -DCMAKE_C_COMPILER=clang-19 -DCMAKE_CXX_COMPILER=clang++-19
+            deps_cmdline: &linux_deps >-
+              sudo apt-get -q install -y
+                libopenal-dev
+                waylandpp-dev
+                libwebp-dev
+                libbz2-dev
+                libvpx-dev
+                gtk-update-icon-cache
+                libfile-mimeinfo-perl
+                desktop-file-utils
+                build-essential
+                ninja-build
+                p7zip-full
+                appstream
+                clang-19
+                ccache
+                cmake
+                fuse
+            extra_files: &linux_files_x86_64 >-
+              linuxdeploy
+                c20cd71e3a4e3b80c3483cef793cda3f4e990aca14014d23c544ca3ce1270b4d
+                https://github.com/linuxdeploy/linuxdeploy/releases/download/1-alpha-20251107-1/linuxdeploy-x86_64.AppImage
+              linuxdeploy-plugin-appimage
+                992d502a248e14ab185448ddf6f6e7d25558cb84d4623c354c3af350c25fccb3
+                https://github.com/linuxdeploy/linuxdeploy-plugin-appimage/releases/download/1-alpha-20250213-1/linuxdeploy-plugin-appimage-x86_64.AppImage
+              appimage-runtime
+                2fca8b443c92510f1483a883f60061ad09b46b978b2631c807cd873a47ec260d
+                https://github.com/AppImage/type2-runtime/releases/download/20251108/runtime-x86_64
+
+  extra:
+    needs:
+    - ci-init
+    name: ${{ matrix.config.name }}
+    uses: ./.github/workflows/build_core.yml
+    secrets: inherit
+    with:
+      name: ${{ matrix.config.name }}
+      os: ${{ matrix.config.os }}
+      os_image: ${{ matrix.config.os_image || '' }}
+      build_opts: ${{ matrix.config.build_opts }} ${{ matrix.config.build_opts_extra }}
+      deps_cmdline: ${{ matrix.config.deps_cmdline }}
+      build_type: ${{ matrix.config.build_type }}
+      extra_files: ${{ matrix.config.extra_files }}
+      environment: ${{ needs.ci-init.outputs.mode }}
+    strategy:
+      fail-fast: false
+      matrix:
+        config: # put bespoke configs here
+          - name: Linux GCC # I'm just here to make sure GCC doesn't break
+            os: ubuntu-latest
+            os_image: ubuntu:latest
+            build_opts: *linux_opts
+            build_opts_extra: ""
+            deps_cmdline: *linux_deps
+            extra_files: *linux_files_x86_64
+            build_type: RelWithDebInfo
+
+          - name: Windows MinGW GCC
+            os: windows-latest
+            build_opts: -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++
+            build_opts_extra: -DFORCE_NO_LTO=true
+            deps_cmdline: &mingw_deps |
+              pacman -S --noconfirm --needed
+                mingw-w64-x86_64-ccache
+                mingw-w64-x86_64-openal
+                mingw-w64-x86_64-libvpx
+                mingw-w64-x86_64-cmake
+                mingw-w64-x86_64-ninja
+                mingw-w64-x86_64-bzip2
+                mingw-w64-x86_64-clang
+                mingw-w64-x86_64-gcc
+                mingw-w64-x86_64-git
+            extra_files: ""
+            build_type: RelWithDebInfo
+
+  optional:
+    needs:
+    - ci-init
+    - ci-success
+    name: ${{ matrix.config.name }}
+    uses: ./.github/workflows/build_core.yml
+    secrets: inherit
+    with:
+      name: ${{ matrix.config.name }}
+      os: ${{ matrix.config.os }}
+      os_image: ${{ matrix.config.os_image || '' }}
+      build_opts: ${{ matrix.config.build_opts }} ${{ matrix.config.build_opts_extra }}
+      deps_cmdline: ${{ matrix.config.deps_cmdline }}
+      build_type: ${{ matrix.config.build_type }}
+      extra_files: ${{ matrix.config.extra_files }}
+      environment: ${{ needs.ci-init.outputs.mode }}
+    strategy:
+      fail-fast: false
+      matrix:
+        config: # put bespoke configs here
+          - name: Windows ARM (Testing)
+            os: windows-11-vs2026-arm # windows-11-arm's msvc (17.14) has a bug that we hit. It's fixed in msvc 18
+            build_opts: *msvc_opts
+            build_opts_extra: ""
+            deps_cmdline: *msvc_deps
+            extra_files: ""
+            build_type: RelWithDebInfo
+
+          - name: Windows MinGW Clang
+            os: windows-latest
+            build_opts: -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++
+            build_opts_extra: ""
+            deps_cmdline: *mingw_deps
+            extra_files: ""
+            build_type: RelWithDebInfo
+
+          - name: Linux ARM (Testing)
+            os: ubuntu-24.04-arm
+            build_opts: *linux_opts
+            build_opts_extra: -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++
+            deps_cmdline: *linux_deps
+            extra_files: &linux_files_aarch64 >-
+              linuxdeploy
+                620095110d693282b8ebeb244a95b5e911cf8f65f76c88b4b47d16ae6346fcff
+                https://github.com/linuxdeploy/linuxdeploy/releases/download/1-alpha-20251107-1/linuxdeploy-aarch64.AppImage
+              linuxdeploy-plugin-appimage
+                83c292149274965a865dcd44c135cfca8ba28c6b7de3eb628d4b8b5f248af17c
+                https://github.com/linuxdeploy/linuxdeploy-plugin-appimage/releases/download/1-alpha-20250213-1/linuxdeploy-plugin-appimage-aarch64.AppImage
+              appimage-runtime
+                00cbdfcf917cc6c0ff6d3347d59e0ca1f7f45a6df1a428a0d6d8a78664d87444
+                https://github.com/AppImage/type2-runtime/releases/download/20251108/runtime-aarch64
+            build_type: RelWithDebInfo
+
+# ======================
+# Secondary Build Configuration
+# ======================
+
   debug:
+    needs:
+    - ci-init
+    - ci-success
     name: ${{ matrix.config.name }} ${{ matrix.config.build_type }}
     uses: ./.github/workflows/build_core.yml
     secrets: inherit
@@ -24,117 +443,11 @@ jobs:
       build_type: Debug
       name: ${{ matrix.config.name }}
       os: ${{ matrix.config.os }}
+      os_image: ${{ matrix.config.os_image || '' }}
+      build_opts: ${{ matrix.config.build_opts }} ${{ matrix.config.build_opts_extra }}
       deps_cmdline: ${{ matrix.config.deps_cmdline }}
-      extra_options: ${{ matrix.config.extra_options }}
-    strategy:
-      fail-fast: false
-      matrix:
-        # these are shared between multiple build configs
-        config: &common_config
-          - name: Windows MSVC
-            os: windows-latest
-            extra_options: -DCMAKE_C_COMPILER=cl -DCMAKE_CXX_COMPILER=cl
-            deps_cmdline: |
-              choco install \
-                tree
-
-          # - name: Windows LLVM
-          #   os: windows-latest
-          #   extra_options: -DCMAKE_C_COMPILER=clang-cl -DCMAKE_CXX_COMPILER=clang-cl -DCMAKE_C_FLAGS="/arch:AVX /clang:-Wno-unused-command-line-argument" -DCMAKE_CXX_FLAGS="/arch:AVX /EHsc /GR /clang:-Wno-c++11-narrowing /clang:-Wno-unused-command-line-argument"
-          #   deps_cmdline: |
-          #     choco install \
-          #       tree
-
-          - name: MacOS LLVM
-            os: macos-latest
-            extra_options: -DHAVE_VULKAN=ON -DHAVE_GLES2=OFF -DDYN_OPENAL=OFF -DOPENAL_INCLUDE_DIR=/opt/homebrew/opt/openal-soft/include/AL -DOPENAL_LIBRARY=/opt/homebrew/opt/openal-soft/lib/libopenal.dylib
-            deps_cmdline: |
-              brew install   \
-                dylibbundler \
-                fluid-synth  \
-                openal-soft  \
-                vulkan-volk  \
-                molten-vk    \
-                libvpx       \
-                sdl2         \
-                tree
-
-          - name: Linux GCC
-            os: ubuntu-latest
-            extra_options:
-            deps_cmdline: |
-              sudo apt-get update && sudo apt-get install \
-                libopenal-dev \
-                waylandpp-dev \
-                libsdl2-dev   \
-                libwebp-dev   \
-                libbz2-dev    \
-                libomp-dev    \
-                libvpx-dev
-
-          - name: Linux LLVM
-            os: ubuntu-latest
-            extra_options: -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++
-            deps_cmdline: |
-              sudo apt-get update && sudo apt-get install \
-                libopenal-dev \
-                waylandpp-dev \
-                libsdl2-dev   \
-                libwebp-dev   \
-                libbz2-dev    \
-                libomp-dev    \
-                libvpx-dev
-
-  # extra:
-  #   name: ${{ matrix.config.name }} ${{ matrix.config.build_type }}
-  #   needs: debug
-  #   uses: ./.github/workflows/build_core.yml
-  #   secrets: inherit
-  #   with:
-  #     name: ${{ matrix.config.name }}
-  #     os: ${{ matrix.config.os }}
-  #     deps_cmdline: ${{ matrix.config.deps_cmdline }}
-  #     extra_options: ${{ matrix.config.extra_options }}
-  #     build_type: ${{ matrix.config.build_type }}
-  #   strategy:
-  #     fail-fast: false
-  #     matrix:
-  #       config: # put bespoke configs here
-  #         - name: Dummy
-  #           os:
-  #           extra_options:
-  #           deps_cmdline:
-  #           build_type:
-
-# ======================
-
-  release:
-    name: ${{ matrix.config.name }} ${{ matrix.config.build_type }}
-    needs: ci-success
-    uses: ./.github/workflows/build_core.yml
-    secrets: inherit
-    with:
-      build_type: Release
-      name: ${{ matrix.config.name }}
-      os: ${{ matrix.config.os }}
-      deps_cmdline: ${{ matrix.config.deps_cmdline }}
-      extra_options: ${{ matrix.config.extra_options }}
-    strategy:
-      fail-fast: false
-      matrix:
-        config: *common_config
-
-  debinfo:
-    name: ${{ matrix.config.name }} ${{ matrix.config.build_type }}
-    needs: ci-success
-    uses: ./.github/workflows/build_core.yml
-    secrets: inherit
-    with:
-      build_type: RelWithDebInfo
-      name: ${{ matrix.config.name }}
-      os: ${{ matrix.config.os }}
-      deps_cmdline: ${{ matrix.config.deps_cmdline }}
-      extra_options: ${{ matrix.config.extra_options }}
+      extra_files: ${{ matrix.config.extra_files }}
+      environment: ${{ needs.ci-init.outputs.mode }}
     strategy:
       fail-fast: false
       matrix:

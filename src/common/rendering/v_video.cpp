@@ -25,33 +25,20 @@
 
 #include <stdio.h>
 
-#include "i_system.h"
-#include "c_cvars.h"
-#include "x86.h"
-#include "i_video.h"
-
 #include "c_console.h"
-
-#include "m_argv.h"
-
-#include "v_video.h"
-#include "v_text.h"
-#include "sc_man.h"
-
-#include "filesystem.h"
+#include "c_cvars.h"
 #include "c_dispatch.h"
-#include "cmdlib.h"
-#include "hardware.h"
-#include "m_png.h"
-#include "menu.h"
-#include "vm.h"
-#include "r_videoscale.h"
-#include "i_time.h"
-#include "version.h"
-#include "texturemanager.h"
 #include "i_interface.h"
+#include "i_time.h"
+#include "i_video.h"
+#include "m_argv.h"
+#include "printf.h"
 #include "v_draw.h"
-
+#include "v_font.h"
+#include "v_video.h"
+#include "version.h"
+#include "vm.h"
+#include "x86.h"
 
 EXTERN_CVAR(Int, menu_resolution_custom_width)
 EXTERN_CVAR(Int, menu_resolution_custom_height)
@@ -93,42 +80,45 @@ CUSTOM_CVAR(Int, vid_maxfps, 500, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 	}
 }
 
-CUSTOM_CVAR(Int, vid_preferbackend, 1, CVAR_ARCHIVE | CVAR_GLOBALCONFIG | CVAR_NOINITCALL)
+CVAR(Bool, vid_shadersupport, true, CVAR_SYSTEM_ONLY);
+
+CUSTOM_CVAR(Int, vid_preferbackend, BACKEND_DEFAULT, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 {
 	// [SP] This may seem pointless - but I don't want to implement live switching just
 	// yet - I'm pretty sure it's going to require a lot of reinits and destructions to
 	// do it right without memory leaks
 
+	static_assert(0 <= BACKEND_DEFAULT && BACKEND_DEFAULT < NUM_BACKEND, "default back-end out of range");
+
 	switch(self)
 	{
+	default:
+		if (self < 0) self = NUM_BACKEND-1;
+		else if (self >= NUM_BACKEND) self = 0;
+		else if (prev > self || prev <= 0) self = self-1;
+		else if (prev < self || prev >= NUM_BACKEND-1) self = self+1;
+		return;
 #ifdef HAVE_GLES2
-	case 3:
-		self = 2;
-		return; // beware of recursions here. Assigning to 'self' will recursively call this handler again.
-	case 2:
+	case BACKEND_OPENGLES:
 		Printf("Selecting OpenGLES 2.0 backend...\n");
 		break;
 #endif
 #ifdef HAVE_VULKAN
-	case 1:
+	case BACKEND_VULKAN:
 		Printf("Selecting Vulkan backend...\n");
 		break;
 #endif
-	default:
+	case BACKEND_OPENGL:
 		Printf("Selecting OpenGL backend...\n");
+		break;
 	}
 
-	Printf("Changing the video backend requires a restart for " GAMENAME ".\n");
-}
+	vid_shadersupport = self != BACKEND_OPENGLES;
 
-int V_GetBackend()
-{
-	int v = vid_preferbackend;
-	if (v == 3) vid_preferbackend = v = 2;
-	else if (v < 0 || v > 3) v = 0;
-	return v;
+	static bool notice = false;
+	if (notice) Printf("Changing the video backend requires a restart for " GAMENAME ".\n");
+	else notice = true;
 }
-
 
 CUSTOM_CVAR(Int, uiscale, 0, CVAR_ARCHIVE | CVAR_NOINITCALL)
 {
@@ -137,7 +127,7 @@ CUSTOM_CVAR(Int, uiscale, 0, CVAR_ARCHIVE | CVAR_NOINITCALL)
 		self = 0;
 		return;
 	}
-	if (sysCallbacks.OnScreenSizeChanged) 
+	if (sysCallbacks.OnScreenSizeChanged)
 		sysCallbacks.OnScreenSizeChanged();
 	setsizeneeded = true;
 }
@@ -259,7 +249,7 @@ void DCanvas::Resize(int width, int height, bool optimizepitch)
 		{
 			CPU.DataL1LineSize = CPUInfo::AssumedDefaultCacheLineSizeBytes;
 		}
-		
+
 		Pitch = width + CPU.DataL1LineSize;
 	}
 	int bytes_per_pixel = Bgra ? 4 : 1;
@@ -275,7 +265,7 @@ CCMD(clean)
 
 
 void V_UpdateModeSize (int width, int height)
-{	
+{
 	// This calculates the menu scale.
 	// The optimal scale will always be to fit a virtual 640 pixel wide display onto the screen.
 	// Exceptions are made for a few ranges where the available virtual width is > 480.
@@ -290,15 +280,15 @@ void V_UpdateModeSize (int width, int height)
 
 	int w = screen->GetWidth();
 	int h = screen->GetHeight();
-	
+
 	// clamp screen aspect ratio to 17:10, for anything wider the width will be reduced
 	double aspect = (double)w / h;
 	if (aspect > 1.7) w = int(w * 1.7 / aspect);
-	
+
 	int factor;
 	if (w < 640) factor = 1;
 	else if (w >= 1024 && w < 1280) factor = 2;
-	else if (w >= 1600 && w < 1920) factor = 3; 
+	else if (w >= 1600 && w < 1920) factor = 3;
 	else  factor = w / 640;
 
 	if (w < 1360) factor = 1;
@@ -321,7 +311,7 @@ void V_OutputResized (int width, int height)
 	twod->End();
 	setsizeneeded = true;
 	C_NewModeAdjust();
-	if (sysCallbacks.OnScreenSizeChanged) 
+	if (sysCallbacks.OnScreenSizeChanged)
 		sysCallbacks.OnScreenSizeChanged();
 }
 
@@ -347,7 +337,7 @@ bool IVideo::SetResolution ()
 //
 
 void V_InitScreenSize ()
-{ 
+{
 	const char *i;
 	int width, height, bits;
 
@@ -417,7 +407,7 @@ void V_Init2()
 CUSTOM_CVAR (Int, vid_aspect, 0, CVAR_GLOBALCONFIG|CVAR_ARCHIVE)
 {
 	setsizeneeded = true;
-	if (sysCallbacks.OnScreenSizeChanged) 
+	if (sysCallbacks.OnScreenSizeChanged)
 		sysCallbacks.OnScreenSizeChanged();
 }
 
@@ -466,7 +456,9 @@ bool vid_hdr_active = false;
 DEFINE_GLOBAL(SmallFont)
 DEFINE_GLOBAL(SmallFont2)
 DEFINE_GLOBAL(BigFont)
+DEFINE_GLOBAL(BigUpper)
 DEFINE_GLOBAL(ConFont)
+DEFINE_GLOBAL(SymbolsFont)
 DEFINE_GLOBAL(NewConsoleFont)
 DEFINE_GLOBAL(NewSmallFont)
 DEFINE_GLOBAL(AlternativeSmallFont)
@@ -506,4 +498,3 @@ CUSTOM_CVAR(Float, transsouls, 0.75f, CVAR_ARCHIVE)
 		self = 1.f;
 	}
 }
-

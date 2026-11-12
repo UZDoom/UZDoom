@@ -1,0 +1,192 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-06-09 21:01+0000\n"
+"Last-Translator: Júlia Rosell Saldaña <contacte@juliars.cat>\n"
+"Language-Team: Latin <https://hosted.weblate.org/projects/doom-engine-games/tnt-evilution/la/>\n"
+"Language: la\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6\n"
+
+msgid "TXT_TNT_EP"
+msgstr "TNT: Evolutio"
+
+msgid "THUSTR_1"
+msgstr "Gradus I: Systema Imperium"
+
+msgid "THUSTR_2"
+msgstr "Gradus II: Humanum BBQ"
+
+msgid "THUSTR_3"
+msgstr "Gradus III: Potestas Imperium"
+
+msgid "THUSTR_4"
+msgstr "Gradus IV: Foramen vermis"
+
+# Not "Hangar"
+msgid "THUSTR_5"
+msgstr "Gradus V: Suspensorium"
+
+msgid "THUSTR_6"
+msgstr "Gradus VI: Tempus Apertum"
+
+msgid "THUSTR_7"
+msgstr "Gradus VII: Carcerem"
+
+msgid "THUSTR_8"
+msgstr "Gradus VIII: Metallum"
+
+msgid "THUSTR_9"
+msgstr "Gradus IX: Munitionem"
+
+msgid "THUSTR_10"
+msgstr "Gradus X: Redemptionis"
+
+msgid "THUSTR_11"
+msgstr "Gradus XI: Repono facilius"
+
+msgid "THUSTR_12"
+msgstr "Gradus XII: Crateri"
+
+msgid "THUSTR_13"
+msgstr "Gradus XIII: Nukage Processing"
+
+msgid "THUSTR_14"
+msgstr "Gradus XIV: Officinae Ferreae"
+
+msgid "THUSTR_15"
+msgstr "Gradus XV: Zona Mortuus"
+
+msgid "THUSTR_16"
+msgstr "Gradus XVI: Altissima Reaches"
+
+msgid "THUSTR_17"
+msgstr "Gradus XVII: Area Processus"
+
+msgid "THUSTR_18"
+msgstr "Gradus XVIII: Mola"
+
+msgid "THUSTR_19"
+msgstr "Gradus XIX: Shipping/revivisceing"
+
+msgid "THUSTR_20"
+msgstr "Gradus XX: Processus Centralis"
+
+msgid "THUSTR_21"
+msgstr "Gradus XXI: Centrum Administrationis"
+
+msgid "THUSTR_22"
+msgstr "Gradus XXII: Habitatio"
+
+msgid "THUSTR_23"
+msgstr "Gradus XXIII: Proiectum Fodinarum Lunarium"
+
+msgid "THUSTR_24"
+msgstr "Gradus XXIV: Lapicidinae"
+
+msgid "THUSTR_25"
+msgstr "Gradus XXV : Spelunca Baronis"
+
+msgid "THUSTR_26"
+msgstr "Gradus XXVI: Ballistyx"
+
+msgid "THUSTR_27"
+msgstr "Gradus XXVII: Mons Dolor"
+
+msgid "THUSTR_28"
+msgstr "Gradus XXVIII: Heck"
+
+msgid "THUSTR_29"
+msgstr "Gradus XXIX: Styx"
+
+msgid "THUSTR_30"
+msgstr "Gradus XXX: Last Call"
+
+msgid "THUSTR_31"
+msgstr "Gradus XXXI : Pharao"
+
+msgid "THUSTR_32"
+msgstr "Gradus XXXII: Caribica"
+
+# TNT after MAP06
+msgid "T1TEXT"
+msgstr ""
+"Tu de infestatis pugnavi viam tuam\n"
+"labs experimentalis. Videtur quod UAC\n"
+"iterum illinitur. Cum eorum\n"
+"princeps turnover, durum pro paupere oportet\n"
+"vetus UAC emere corporatum sanitariae\n"
+"hodie..\n"
+"\n"
+"Antecedens iacet complexus militaris, nunc\n"
+"scatens morbis horroribus calidum ad\n"
+"dentes eorum in te. Apud fortuna, the .\n"
+"complex tamen habet aliquam bellicosam tormenta\n"
+"circum- pono."
+
+# TNT after MAP11
+msgid "T2TEXT"
+msgstr ""
+"Molorem gravium machinarum audis\n"
+"praemisit. Certus es spes quod non sunt calcare\n"
+"de novo helloritur, sed paratus es to\n"
+"grex ream totum si ad.\n"
+"Convivium sanguinis parare possent, sed\n"
+"tibi quasi medium duo milia\n"
+"moechi referto in unum furiosum interfectorem.\n"
+"\n"
+"Descendere facile non cogitas."
+
+# TNT after MAP20
+msgid "T3TEXT"
+msgstr ""
+"Vista foramen praemisit spectat realis dampnas\n"
+"adsuetum. Odore etiam familiariter\n"
+"frixum excrementum. Non sic tibi\n"
+"pone ante, et certe sicut infernum non est\n"
+"consilio placet nunc. Magis te\n"
+"revolve, furens eges.\n"
+"Tuos sclopetum elidere, subridere malum\n"
+"faciem tuam onto. Tempus aliquam nomina."
+
+# TNT victory
+msgid "T4TEXT"
+msgstr ""
+"Subito omnia silent, ab uno horizonte\n"
+"ad alterum. Crudelis echo Inferni\n"
+"evanescit, caelum pessimo in\n"
+"caeruleum vertitur, acervi cadaverum monstrorum\n"
+"evaporare incipiunt una cum foetore malo\n"
+"qui aerem implebat. Mehercule, fortasse\n"
+"fecisti. Vere vicisti?\n"
+"\n"
+"Aliquid procul resonat.\n"
+"Lux caerulea in cranio\n"
+"confracto daemonum spuentis lucere incipit."
+
+# TNT before MAP31
+msgid "T5TEXT"
+msgstr ""
+"Quid nunc? Alia prorsus spectat. Benignus\n"
+"similium Rex Tut condo. hem,\n"
+"quidquid hic non potest esse peius\n"
+"praeter consuetudinem. Potestne? Vel maybe suus 'optimus\n"
+"ut dormientes deos mentiantur."
+
+# TNT before MAP32
+msgid "T6TEXT"
+msgstr ""
+"Tempus vacationis. Tu disrupisti\n"
+"visceribus inferni et golly es paratus\n"
+"for intermissum. Tu tibi mussas;\n"
+"Maybe aliquis potest alium stimulum calcitrare Inferni\n"
+"iterum circa. Ante levem urbem habitat ;\n"
+"placida fluens aqua, quant\n"
+"aedificia, nulla Helloritur.\n"
+"\n"
+"Ut recedas onerariam, audis\n"
+"allide calcei ferrei cyberdemonis."

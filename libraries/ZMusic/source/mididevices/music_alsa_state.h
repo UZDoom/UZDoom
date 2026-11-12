@@ -2,7 +2,7 @@
 ** Provides an implementation of an ALSA sequencer wrapper
 **
 **---------------------------------------------------------------------------
-** Copyright 2008-2010 Randy Heit
+** Copyright 2008-2010 Marisa Heit
 ** Copyright 2020 Petr Mrazek
 ** All rights reserved.
 **

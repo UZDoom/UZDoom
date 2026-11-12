@@ -64,7 +64,7 @@ class Shotgun : DoomWeapon
 		Stop;
 	}
 }
-	
+
 //===========================================================================
 //
 // Code (must be attached to StateProvider)
@@ -87,7 +87,7 @@ extend class StateProvider
 		{
 			if (!weap.DepleteAmmo (weap.bAltFire, true))
 				return;
-			
+
 			player.SetPsprite(PSP_FLASH, weap.FindState('Flash'), true);
 		}
 		player.mo.PlayAttacking2 ();
@@ -100,5 +100,4 @@ extend class StateProvider
 		}
 	}
 
-}	
-
+}

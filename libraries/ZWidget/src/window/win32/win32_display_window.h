@@ -10,7 +10,7 @@
 class Win32DisplayWindow : public DisplayWindow
 {
 public:
-	Win32DisplayWindow(DisplayWindowHost* windowHost, bool popupWindow, Win32DisplayWindow* owner, RenderAPI renderAPI);
+	Win32DisplayWindow(DisplayWindowHost* windowHost, Win32DisplayWindow* owner, RenderAPI renderAPI, struct WindowParams params);
 	~Win32DisplayWindow();
 
 	void SetWindowTitle(const std::string& text) override;
@@ -18,6 +18,7 @@ public:
 	void SetWindowFrame(const Rect& box) override;
 	void SetClientFrame(const Rect& box) override;
 	void Show() override;
+	void Restore() override;
 	void ShowFullscreen() override;
 	void ShowMaximized() override;
 	void ShowMinimized() override;
@@ -61,6 +62,8 @@ public:
 	std::vector<std::string> GetVulkanInstanceExtensions() override;
 	VkSurfaceKHR CreateVulkanSurface(VkInstance instance) override;
 
+	virtual void NotifyWindow() override;
+
 	static void ProcessEvents();
 	static void RunLoop();
 	static void ExitLoop();
@@ -95,4 +98,7 @@ public:
 	HICON LargeIcon = {};
 
 	StandardCursor CurrentCursor = StandardCursor::arrow;
+private:
+	bool resizable;
+	int minW, maxW, minH, maxH, padW, padH;
 };

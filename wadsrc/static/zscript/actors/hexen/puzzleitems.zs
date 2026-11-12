@@ -354,4 +354,3 @@ class PuzzGear4 : PuzzleItem
 		Loop;
 	}
 }
-

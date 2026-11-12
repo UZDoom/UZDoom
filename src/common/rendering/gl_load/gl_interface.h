@@ -42,4 +42,3 @@ extern RenderContext gl;
 EXTERN_FARG(glversion);
 
 #endif
-

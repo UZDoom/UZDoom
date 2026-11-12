@@ -26,33 +26,33 @@
 #include "fs_swap.h"
 
 namespace FileSys {
-    using namespace byteswap;
+	using namespace byteswap;
 
 
 
 static bool OpenMvl(FResourceFile* rf, LumpFilterInfo* filter)
 {
-    auto Reader = rf->GetContainerReader();
-    auto count = Reader->ReadUInt32();
-    auto Entries = rf->AllocateEntries(count);
-    size_t pos = 8 + (17 * count);   // files start after the directory
+	auto Reader = rf->GetContainerReader();
+	auto count = Reader->ReadUInt32();
+	auto Entries = rf->AllocateEntries(count);
+	size_t pos = 8 + (17 * count);   // files start after the directory
 
-    for (uint32_t i = 0; i < count; i++)
-    {
-        char name[13];
-        Reader->Read(&name, 13);
-        name[12] = 0;
-        uint32_t elength = Reader->ReadUInt32();
+	for (uint32_t i = 0; i < count; i++)
+	{
+		char name[13];
+		Reader->Read(&name, 13);
+		name[12] = 0;
+		uint32_t elength = Reader->ReadUInt32();
 
-        Entries[i].Position = pos;
-        Entries[i].CompressedSize = Entries[i].Length = elength;
-        Entries[i].ResourceID = -1;
-        Entries[i].FileName = rf->NormalizeFileName(name);
+		Entries[i].Position = pos;
+		Entries[i].CompressedSize = Entries[i].Length = elength;
+		Entries[i].ResourceID = -1;
+		Entries[i].FileName = rf->NormalizeFileName(name);
 
-        pos += elength;
-    }
+		pos += elength;
+	}
 
-    return true;
+	return true;
 }
 
 
@@ -64,21 +64,21 @@ static bool OpenMvl(FResourceFile* rf, LumpFilterInfo* filter)
 
 FResourceFile* CheckMvl(const char* filename, FileReader& file, LumpFilterInfo* filter, FileSystemMessageFunc Printf, StringPool* sp)
 {
-    char head[4];
+	char head[4];
 
-    if (file.GetLength() >= 20)
-    {
-        file.Seek(0, FileReader::SeekSet);
-        file.Read(&head, 4);
-        if (!memcmp(head, "DMVL", 4))
-        {
-            auto rf = new FResourceFile(filename, file, sp);
-            if (OpenMvl(rf, filter)) return rf;
-            file = rf->Destroy();
-        }
-        file.Seek(0, FileReader::SeekSet);
-    }
-    return nullptr;
+	if (file.GetLength() >= 20)
+	{
+		file.Seek(0, FileReader::SeekSet);
+		file.Read(&head, 4);
+		if (!memcmp(head, "DMVL", 4))
+		{
+			auto rf = new FResourceFile(filename, file, sp);
+			if (OpenMvl(rf, filter)) return rf;
+			file = rf->Destroy();
+		}
+		file.Seek(0, FileReader::SeekSet);
+	}
+	return nullptr;
 }
 
 

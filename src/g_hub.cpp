@@ -42,7 +42,7 @@
 struct FHubInfo
 {
 	int			levelnum;
-	
+
 	int			totalkills;
 	int			maxkills;
 	int			maxitems;

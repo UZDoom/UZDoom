@@ -388,7 +388,7 @@ public:
 		return Blocks->LastFrame;
 	}
   bool HasFrames() {
-    return Blocks != NULL && Blocks->LastFrame != NULL;
+	return Blocks != NULL && Blocks->LastFrame != NULL;
   }
 	static int OffsetLastFrame() { return (int)(ptrdiff_t)offsetof(BlockHeader, LastFrame); }
 private:

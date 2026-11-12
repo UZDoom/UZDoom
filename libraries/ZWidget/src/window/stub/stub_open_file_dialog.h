@@ -22,7 +22,7 @@ public:
 	void SetDefaultExtension(const std::string& extension) override;
 
 private:
-	DisplayWindow* owner = nullptr;
+	[[maybe_unused]] DisplayWindow* owner = nullptr;
 
 	std::string initial_directory;
 	std::string initial_filename;

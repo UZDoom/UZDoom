@@ -110,5 +110,3 @@ class AssaultGunStanding : WeaponGiver
 		Stop;
 	}
 }
-
-

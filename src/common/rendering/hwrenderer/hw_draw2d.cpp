@@ -33,12 +33,12 @@
 #include "v_draw.h"
 
 //===========================================================================
-// 
+//
 // Draws the 2D stuff. This is the version for OpenGL 3 and later.
 //
 //===========================================================================
 
-CVAR(Bool, gl_aalines, false, CVAR_ARCHIVE) 
+CVAR(Bool, gl_aalines, false, CVAR_ARCHIVE)
 CVAR(Bool, hw_2dmip, true, CVAR_ARCHIVE)
 
 void Draw2D(F2DDrawer* drawer, FRenderState& state)
@@ -121,7 +121,7 @@ void Draw2D(F2DDrawer* drawer, FRenderState& state, int x, int y, int width, int
 			sciY = screen->ScreenToWindowY(cmd.mScissor[3]);
 			sciW = screen->ScreenToWindowX(cmd.mScissor[2]) - sciX;
 			sciH = screen->ScreenToWindowY(cmd.mScissor[1]) - sciY;
-			// If coordinates turn out negative, clip to sceen here to avoid undefined behavior. 
+			// If coordinates turn out negative, clip to sceen here to avoid undefined behavior.
 			if (sciX < 0) sciW += sciX, sciX = 0;
 			if (sciY < 0) sciH += sciY, sciY = 0;
 		}
@@ -138,7 +138,7 @@ void Draw2D(F2DDrawer* drawer, FRenderState& state, int x, int y, int width, int
 			state.SetAddColor(cmd.mSpecialColormap[1]);
 		}
 		state.SetFog(cmd.mColor1, 0);
-		state.SetColor(1, 1, 1, 1, cmd.mDesaturate); 
+		state.SetColor(1, 1, 1, 1, cmd.mDesaturate);
 		if (cmd.mFlags & F2DDrawer::DTF_Indexed) state.SetSoftLightLevel(cmd.mLightLevel);
 		state.SetLightParms(0, 0);
 
@@ -146,7 +146,7 @@ void Draw2D(F2DDrawer* drawer, FRenderState& state, int x, int y, int width, int
 
 		if (cmd.useTransform)
 		{
-			FLOATTYPE m[16] = {
+			float m[16] = {
 				0.0, 0.0, 0.0, 0.0,
 				0.0, 0.0, 0.0, 0.0,
 				0.0, 0.0, 1.0, 0.0,
@@ -156,12 +156,12 @@ void Draw2D(F2DDrawer* drawer, FRenderState& state, int x, int y, int width, int
 			{
 				for (size_t j = 0; j < 2; j++)
 				{
-					m[4 * j + i] = (FLOATTYPE) cmd.transform.Cells[i][j];
+					m[4 * j + i] = (float) cmd.transform.Cells[i][j];
 				}
 			}
 			for (size_t i = 0; i < 2; i++)
 			{
-				m[4 * 3 + i] = (FLOATTYPE) cmd.transform.Cells[i][2];
+				m[4 * 3 + i] = (float) cmd.transform.Cells[i][2];
 			}
 			state.mModelMatrix.loadMatrix(m);
 			state.EnableModelMatrix(true);
@@ -172,7 +172,7 @@ void Draw2D(F2DDrawer* drawer, FRenderState& state, int x, int y, int width, int
 			auto flags = cmd.mTexture->GetUseType() >= ETextureType::Special? UF_None : cmd.mTexture->GetUseType() == ETextureType::FontChar? UF_Font : UF_Texture;
 
 			auto scaleflags = cmd.mFlags & F2DDrawer::DTF_Indexed ? CTF_Indexed : 0;
-			state.SetMaterial(cmd.mTexture, flags, scaleflags, cmd.mFlags & F2DDrawer::DTF_Wrap ? CLAMP_NONE : (cache_hw_2dmip ? CLAMP_XY : CLAMP_XY_NOMIP), cmd.mTranslationId, -1);
+			state.SetMaterial(cmd.mTexture, flags, scaleflags, cmd.mFlags & F2DDrawer::DTF_Wrap ? CLAMP_NONE : (cache_hw_2dmip ? CLAMP_XY : CLAMP_XY_NOMIP), cmd.mTranslationId, -1, nullptr);
 			state.EnableTexture(true);
 
 			// Canvas textures are stored upside down

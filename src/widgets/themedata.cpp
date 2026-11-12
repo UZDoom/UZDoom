@@ -20,8 +20,11 @@
 #include "sc_man.h"
 #include "themedata.h"
 #include "utility/colorspace.h"
+#include "zwidget/widgets/imagebox/imagebox.h"
 
 Colorf Theme::accent;
+ImageBoxAnchor Theme::anchor;
+ImageBoxScale Theme::scale;
 ThemeData Theme::dark = {};
 ThemeData Theme::light = {};
 ThemeData* Theme::theme = nullptr;
@@ -38,6 +41,8 @@ enum ThemeCommands
 	THEME_HOVER,
 	THEME_CLICK,
 	THEME_BORDER,
+	THEME_ANCHOR,
+	THEME_SCALE,
 };
 
 static const char *ThemeCommandStrings[] =
@@ -51,26 +56,88 @@ static const char *ThemeCommandStrings[] =
 	"hover",
 	"click",
 	"border",
+	"anchor",
+	"scale",
 	nullptr
 };
 
-void Theme::initilize(Mode mode)
+static const ImageBoxAnchor BannerAnchor[] = {
+	Center,
+	North,
+	South,
+	East,
+	West,
+	NorthEast,
+	NorthWest,
+	SouthEast,
+	SouthWest,
+};
+
+static const char* BannerAnchorStrings[2*(sizeof(BannerAnchor)/sizeof(BannerAnchor[0]))+1] = {
+	"Center", "C",
+	"North", "N",
+	"South", "S",
+	"East", "E",
+	"West", "W",
+	"NorthEast", "NE",
+	"NorthWest", "NW",
+	"SouthEast", "SE",
+	"SouthWest", "SW",
+	nullptr,
+};
+
+static const ImageBoxScale BannerScale[] = {
+	None,
+	Contain,
+	Cover,
+	StretchX,
+	GrowX,
+	ShrinkX,
+	StretchY,
+	GrowY,
+	ShrinkY,
+	Stretch,
+	Grow,
+	Shrink,
+};
+
+static const char* BannerScaleStrings[(sizeof(BannerScale)/sizeof(BannerScale[0]))+1] = {
+	"None",
+	"Contain",
+	"Cover",
+	"StretchX",
+	"GrowX",
+	"ShrinkX",
+	"StretchY",
+	"GrowY",
+	"ShrinkY",
+	"Stretch",
+	"Grow",
+	"Shrink",
+	nullptr,
+};
+
+void Theme::initilize(Mode mode, bool contrast)
 {
 	if (Theme::theme) return;
 
 	setMode(mode);
-	ThemeData *t;
+	
+	auto simple = [](ThemeData &t, uint32_t b1, uint32_t f1, uint32_t b2, uint32_t f2)
+	{
+		t.main.bg = t.header.bg = t.button.bg = Colorf::fromRgb(b1);
+		t.main.fg = t.header.fg = t.button.fg = Colorf::fromRgb(f1);
+		t.hover.fg = t.click.fg = t.border.bg = Colorf::fromRgb(f2);
+		t.hover.bg = t.click.bg = t.border.fg = Colorf::fromRgb(b2);
+	};
 
 	// basic fallback
-	Theme::accent = Colorf::fromRgb(0x7f7f7f);
-	t = &Theme::light;
-	t->main.bg = t->header.bg = t->button.bg = t->hover.bg = t->click.bg = Colorf::fromRgb(0xffffff);
-	t->main.fg = t->header.fg = t->button.fg = t->hover.fg = t->click.fg = Colorf::fromRgb(0x000000);
-	t->border.bg = t->border.fg = Colorf::fromRgb(0x7f7f7f);
-	t = &Theme::dark;
-	t->main.bg = t->header.bg = t->button.bg = t->hover.bg = t->click.bg = Colorf::fromRgb(0x000000);
-	t->main.fg = t->header.fg = t->button.fg = t->hover.fg = t->click.fg = Colorf::fromRgb(0xffffff);
-	t->border.bg = t->border.fg = Colorf::fromRgb(0x7f7f7f);
+	using Color::str;
+	Theme::accent = Colorf::fromRgb(str("#777"));
+	Theme::anchor = Center;
+	Theme::scale = Contain;
+	simple(Theme::light, str("#fff"), str("#000"), str("#ff0"), str("#000"));
+	simple(Theme::dark,  str("#000"), str("#fff"), str("#00f"), str("#fff"));
 
 	auto file = "ui/theme.txt";
 
@@ -106,24 +173,58 @@ void Theme::initilize(Mode mode)
 			auto command = sc.MatchString(ThemeCommandStrings);
 			switch (command)
 			{
+			default:
+				break;
 			case -1:
 				DPrintf(DMSG_WARNING, "Unknown theme command");
-				break;
+				continue;
 			case THEME_LIGHT:
 				t = &Theme::light;
-				break;
+				continue;
 			case THEME_DARK:
 				t = &Theme::dark;
-				break;
+				continue;
 			case THEME_ACCENT:
 				Theme::accent = Colorf::fromRgb(hex(sc));
-				break;
+				continue;
+			case THEME_ANCHOR:
+				{
+					sc.MustGetString();
+					auto anchor = sc.MatchString(BannerAnchorStrings);
+					if (anchor == -1) DPrintf(DMSG_WARNING, "Unknown anchor '%s'\n", sc.String);
+					else Theme::anchor = BannerAnchor[anchor/2];
+					continue;
+				}
+			case THEME_SCALE:
+				{
+					sc.MustGetString();
+					FString s = sc.String;
+					unsigned scale = None;
+					for (auto &ss: s.Split(','))
+					{
+						size_t i;
+						for (i = 0; BannerScaleStrings[i]; i++)
+						{
+							if (ss.CompareNoCase(BannerScaleStrings[i]) == 0) break;
+						}
+						if (!BannerScaleStrings[i])
+						{
+							DPrintf(DMSG_WARNING, "Unknown scale '%s'\n", ss.GetChars());
+							scale = Theme::scale;
+							break;
+						}
+						scale |= BannerScale[i];
+					}
+					Theme::scale = static_cast<ImageBoxScale>(scale);
+					continue;
+				}
 			}
 			if (!t)
 			{
-				DPrintf(DMSG_WARNING, "Theme not selected");
+				DPrintf(DMSG_WARNING, "Theme not selected\n");
 				continue;
 			}
+			if (contrast) continue;
 			switch (command)
 			{
 			case THEME_MAIN:   pair(sc, t->main);   break;
@@ -152,8 +253,6 @@ Colorf Theme::mix(const ColorLayers& color, float mix)
 	auto c = Color::mix(a, b, mix).rgb;
 	return { c.r, c.g, c.b };
 }
-
-Colorf Theme::getAccent() { return { Theme::accent }; }
 
 Colorf Theme::getMain  (float mix) { return Theme::mix(Theme::theme->main,   mix); }
 Colorf Theme::getHeader(float mix) { return Theme::mix(Theme::theme->header, mix); }

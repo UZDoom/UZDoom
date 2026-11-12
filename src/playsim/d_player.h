@@ -193,7 +193,7 @@ struct userinfo_t : TMap<FName,FBaseCVar *>
 		}
 
 		float aim = *static_cast<FFloatCVar *>(*CheckKey(NAME_Autoaim));
-		float bound = (dmflags & DF_NO_FREELOOK)? 35: 70;
+		float bound = (dmflags & DF_NO_FREELOOK)? 35.0f: 70.0f;
 		if (aim > bound || aim < 0)
 		{
 			return bound;
@@ -342,7 +342,7 @@ public:
 	uint32_t		original_oldbuttons = 0;
 
 	userinfo_t	userinfo;				// [RH] who is this?
-	
+
 	PClassActor *cls = nullptr;				// class of associated PlayerPawn
 
 	float		DesiredFOV = 0;				// desired field of vision
@@ -492,7 +492,7 @@ public:
 		FullbrightMode = mode;
 		bForceFullbright = force;
 	}
-	
+
 	int GetSpawnClass();
 
 	// PSprite layers

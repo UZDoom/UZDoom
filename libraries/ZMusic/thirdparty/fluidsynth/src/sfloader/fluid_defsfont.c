@@ -16,14 +16,12 @@
  * Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free
- * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
- * 02110-1301, USA
+ * License along with this library; if not, see
+ * <https://www.gnu.org/licenses/>.
  */
 
 
 #include "fluid_defsfont.h"
-#include "fluid_sfont.h"
 #include "fluid_sys.h"
 #include "fluid_synth.h"
 #include "fluid_samplecache.h"
@@ -444,6 +442,10 @@ int fluid_defsfont_load_all_sampledata(fluid_defsfont_t *defsfont, SFData *sfdat
     return sample_parsing_result;
 }
 
+// declared here so it can be used for default modulators in fluid_defsfont_load
+static int
+fluid_mod_import_sfont(fluid_mod_t **mod, fluid_list_t *sfmod);
+
 /*
  * fluid_defsfont_load
  */
@@ -451,6 +453,7 @@ int fluid_defsfont_load(fluid_defsfont_t *defsfont, const fluid_file_callbacks_t
 {
     SFData *sfdata;
     fluid_list_t *p;
+    fluid_list_t *dmod_data;
     SFPreset *sfpreset;
     SFSample *sfsample;
     fluid_sample_t *sample;
@@ -464,10 +467,10 @@ int fluid_defsfont_load(fluid_defsfont_t *defsfont, const fluid_file_callbacks_t
         return FLUID_FAILED;
     }
 
-    defsfont->fcbs = fcbs;
+    defsfont->fcbs = *fcbs;
 
     /* The actual loading is done in the sfont and sffile files */
-    sfdata = fluid_sffile_open(file, fcbs);
+    sfdata = fluid_sffile_open(file, &defsfont->fcbs);
 
     if(sfdata == NULL)
     {
@@ -479,6 +482,17 @@ int fluid_defsfont_load(fluid_defsfont_t *defsfont, const fluid_file_callbacks_t
     {
         FLUID_LOG(FLUID_ERR, "Couldn't parse presets from soundfont file");
         goto err_exit;
+    }
+
+    dmod_data = sfdata->default_mod_list;
+    if (dmod_data != NULL)
+    {
+        /* Load the default modulators*/
+        if (fluid_mod_import_sfont(&defsfont->sfont->default_mod_list, dmod_data) != FLUID_OK)
+        {
+            FLUID_LOG(FLUID_ERR, "Unable to load the default modulators");
+            goto err_exit;
+        }
     }
 
     /* Keep track of the position and size of the sample data because
@@ -1209,21 +1223,6 @@ new_fluid_preset_zone(char *name)
 }
 
 /*
- * delete list of modulators.
- */
-void delete_fluid_list_mod(fluid_mod_t *mod)
-{
-    fluid_mod_t *tmp;
-
-    while(mod)	/* delete the modulators */
-    {
-        tmp = mod;
-        mod = mod->next;
-        delete_fluid_mod(tmp);
-    }
-}
-
-/*
  * delete_fluid_preset_zone
  */
 void
@@ -1563,26 +1562,31 @@ fluid_zone_mod_source_import_sfont(unsigned char *src, unsigned char *flags, uns
     return TRUE;
 }
 
-/*
+/**
  * fluid_zone_mod_import_sfont
  * Imports modulators from sfzone to modulators list mod.
- * @param zone_name, zone name.
- * @param mod, address of pointer on modulators list to return.
- * @param sfzone, pointer on soundfont zone.
+ * @param mod -  address of pointer on modulators list to return.
+ * @param sfmod - pointer on the modulator list.
  * @return FLUID_OK if success, FLUID_FAILED otherwise.
  */
 static int
-fluid_zone_mod_import_sfont(char *zone_name, fluid_mod_t **mod, SFZone *sfzone)
+fluid_mod_import_sfont(fluid_mod_t **mod, fluid_list_t *sfmod)
 {
     fluid_list_t *r;
     int count;
 
     /* Import the modulators (only SF2.1 and higher) */
-    for(count = 0, r = sfzone->mod; r != NULL; count++)
+    for(count = 0, r = sfmod; r != NULL; count++)
     {
 
-        SFMod *mod_src = (SFMod *)fluid_list_get(r);
+        SFMod *mod_src = (SFMod*)(r->data);
         fluid_mod_t *mod_dest = new_fluid_mod();
+
+        if (mod_src == NULL)
+        {
+            // empty list (DMOD case) - nothing to do!
+            return FLUID_OK;
+        }
 
         if(mod_dest == NULL)
         {
@@ -1651,6 +1655,24 @@ fluid_zone_mod_import_sfont(char *zone_name, fluid_mod_t **mod, SFZone *sfzone)
 
         r = fluid_list_next(r);
     } /* foreach modulator */
+    return FLUID_OK;
+}
+
+/*
+ * fluid_zone_mod_import_sfont
+ * Imports modulators from sfzone to modulators list mod.
+ * @param zone_name, zone name.
+ * @param mod, address of pointer on modulators list to return.
+ * @param sfzone, pointer on soundfont zone.
+ * @return FLUID_OK if success, FLUID_FAILED otherwise.
+ */
+static int
+fluid_zone_mod_import_sfont(char *zone_name, fluid_mod_t **mod, SFZone *sfzone)
+{
+    if (fluid_mod_import_sfont(mod, sfzone->mod) != FLUID_OK)
+    {
+        return FLUID_FAILED;
+    }
 
     /* checks and removes invalid modulators in modulators list*/
     fluid_zone_check_mod(zone_name, mod);
@@ -2075,6 +2097,7 @@ fluid_sample_import_sfont(fluid_sample_t *sample, SFSample *sfsample, fluid_defs
     sample->origpitch = sfsample->origpitch;
     sample->pitchadj = sfsample->pitchadj;
     sample->sampletype = sfsample->sampletype;
+    sample->default_modulators = defsfont->sfont->default_mod_list;
 
     if(defsfont->dynamic_samples)
     {
@@ -2222,7 +2245,7 @@ static int load_preset_samples(fluid_defsfont_t *defsfont, fluid_preset_t *prese
                      * for a preset */
                     if(sffile == NULL)
                     {
-                        sffile = fluid_sffile_open(defsfont->filename, defsfont->fcbs);
+                        sffile = fluid_sffile_open(defsfont->filename, &defsfont->fcbs);
 
                         if(sffile == NULL)
                         {

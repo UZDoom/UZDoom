@@ -17,7 +17,9 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>Development Version</string>
+	<string>0.0.0</string>
+	<key>CFBundleVersion</key>
+	<string>0.0.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>LSApplicationCategoryType</key>
@@ -48,5 +50,7 @@
 	<string>NSApplication</string>
 	<key>NSSupportsAutomaticGraphicsSwitching</key>
 	<true/>
+	<key>NSPrefersDisplaySafeAreaCompatibilityMode</key>
+    <true/>
 </dict>
 </plist>

@@ -27,7 +27,7 @@ class SoundEnvironment : Actor
 		+DONTSPLASH
 		+NOTONAUTOMAP
 	}
-	
+
 	override void PostBeginPlay ()
 	{
 		Super.PostBeginPlay ();
@@ -50,5 +50,5 @@ class SoundEnvironment : Actor
 	{
 		bDormant = true;
 	}
-	
+
 }

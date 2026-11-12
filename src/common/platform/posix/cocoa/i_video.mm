@@ -21,19 +21,17 @@
 **
 */
 
-#include "gl_load.h"
-
 #ifdef HAVE_VULKAN
 #include <zvulkan/vulkanbuilders.h>
 #include <zvulkan/vulkansurface.h>
 #endif
 
-#include "i_common.h"
-
 #include "bitmap.h"
 #include "c_dispatch.h"
 #include "gl_framebuffer.h"
+#include "gl_load.h"
 #include "hardware.h"
+#include "i_common.h"
 #include "i_system.h"
 #include "m_argv.h"
 #include "m_png.h"
@@ -42,13 +40,16 @@
 #include "v_text.h"
 #include "v_video.h"
 #include "version.h"
+
 #ifdef HAVE_GLES2
 #include "gles_framebuffer.h"
 #endif
 
 #ifdef HAVE_VULKAN
 #include "vulkan/system/vk_renderdevice.h"
+#endif
 
+#ifdef HAVE_VULKAN
 bool I_CreateVulkanSurface(VkInstance instance, VkSurfaceKHR *surface);
 #endif
 
@@ -89,10 +90,11 @@ extern bool ToggleFullscreen;
 EXTERN_CVAR(Bool, vid_hidpi)
 EXTERN_CVAR(Int,  vid_defwidth)
 EXTERN_CVAR(Int,  vid_defheight)
+EXTERN_CVAR(Int,  vid_cursor_invert)
 EXTERN_CVAR(Bool, vk_debug)
 
 CVAR(Bool, mvk_debug, false, 0)
-CVAR(Bool, vid_nativefullscreen, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+CVAR(Bool, vid_nativefullscreen, true, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 
 CUSTOM_CVAR(Bool, vid_autoswitch, true, CVAR_ARCHIVE | CVAR_GLOBALCONFIG | CVAR_NOINITCALL)
 {
@@ -363,7 +365,7 @@ class CocoaVideo : public IVideo
 public:
 	CocoaVideo()
 	{
-		ms_isVulkanEnabled = V_GetBackend() == 1 && NSAppKitVersionNumber >= 1404; // NSAppKitVersionNumber10_11
+		ms_isVulkanEnabled = vid_preferbackend == BACKEND_VULKAN && NSAppKitVersionNumber >= 1404; // NSAppKitVersionNumber10_11
 	}
 
 	~CocoaVideo()
@@ -454,7 +456,7 @@ public:
 		if (fb == nullptr)
 		{
 #ifdef HAVE_GLES2
-			if(V_GetBackend() != 0)
+			if(vid_preferbackend != BACKEND_OPENGL)
 				fb = new OpenGLESRenderer::OpenGLFrameBuffer(0, vid_fullscreen);
 			else
 #endif
@@ -641,7 +643,7 @@ void SystemBaseFrameBuffer::SetMode(const bool fullscreen, const bool hiDPI)
 		[glView setWantsBestResolutionOpenGLSurface:hiDPI];
 	}
 	else
-    {
+	{
 		assert(m_window.screen != nil);
 		assert([m_window.contentView layer] != nil);
 		[m_window.contentView layer].contentsScale = hiDPI ? m_window.screen.backingScaleFactor : 1.0;
@@ -823,6 +825,7 @@ bool I_SetCursor(FGameTexture *cursorpic)
 
 		auto sbuffer = cursorpic->GetTexture()->CreateTexBuffer(0);
 
+		float xhot = 0, yhot = 0;
 		const NSInteger imageWidth  = sbuffer.mWidth;
 		const NSInteger imageHeight = sbuffer.mHeight;
 		const NSInteger imagePitch  = sbuffer.mWidth * 4;
@@ -844,6 +847,25 @@ bool I_SetCursor(FGameTexture *cursorpic)
 		uint8_t* buffer = [bitmapImageRep bitmapData];
 		memcpy(buffer, sbuffer.mBuffer, imagePitch * imageHeight);
 
+		// invert if needed
+		if (vid_cursor_invert)
+		{
+			xhot = imageWidth - 1;
+			for (NSInteger y = 0; y < imageHeight; y++)
+			{
+				for (NSInteger x = 0; x < imageWidth / 2; x++)
+				{
+					const NSInteger leftIdx = (y * imageWidth + x) * 4;
+					const NSInteger rightIdx = (y * imageWidth + (imageWidth - 1 - x)) * 4;
+
+					for (int c = 0; c < 4; c++)
+					{
+						std::swap(buffer[leftIdx + c], buffer[rightIdx + c]);
+					}
+				}
+			}
+		}
+
 		// Swap red and blue components in each pixel
 
 		for (size_t i = 0; i < size_t(imageWidth * imageHeight); ++i)
@@ -859,7 +881,7 @@ bool I_SetCursor(FGameTexture *cursorpic)
 		NSImage* cursorImage = [[NSImage alloc] initWithData:imageData];
 
 		cursor = [[NSCursor alloc] initWithImage:cursorImage
-										 hotSpot:NSMakePoint(0.0f, 0.0f)];
+										 hotSpot:NSMakePoint(xhot, yhot)];
 	}
 
 	SystemBaseFrameBuffer::SetCursor(cursor);

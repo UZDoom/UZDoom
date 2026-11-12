@@ -13,11 +13,11 @@
  * Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free
- * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
- * 02110-1301, USA
+ * License along with this library; if not, see
+ * <https://www.gnu.org/licenses/>.
  */
 
+#include "fluid_sys.h"
 #include "fluid_iir_filter.h"
 #include "fluid_conv.h"
 
@@ -25,7 +25,7 @@
 #include <cmath>
 
 
-// Calculating the sine and cosine coefficients for every possible cutoff frequency is too CPU expensive and can harm real-time playback.
+// Calculating the sine and cosine coefficients for every possible cutoff frequency is too CPU expensive and can harm realtime playback.
 // Therefore, we precalculate the coefficients with a precision of CENTS_STEP and store them in a table.
 extern "C" void fluid_iir_filter_init_table(fluid_iir_sincos_t *sincos_table, fluid_real_t sample_rate)
 {
@@ -310,7 +310,7 @@ void fluid_iir_filter_calc(fluid_iir_filter_t *iir_filter,
                            fluid_real_t output_rate,
                            fluid_real_t fres_mod)
 {
-    unsigned int calc_coeff_flag = false;
+    bool calc_coeff_flag = false;
     fluid_real_t fres, fres_diff;
     
     if(iir_filter->type == FLUID_IIR_DISABLED)
@@ -376,9 +376,13 @@ void fluid_iir_filter_calc(fluid_iir_filter_t *iir_filter,
     }
     else
     {
+        fluid_real_t last_fres = iir_filter->last_fres;
         // difference in fres is small, so set it directly
-        iir_filter->fres_incr_count = 0;
         iir_filter->last_fres = fres;
+        // disable fres interpolation
+        iir_filter->fres_incr_count = 0;
+        // Filter cutoff has changed, so don't forget to recalculate the coefficients! #1679
+        calc_coeff_flag = last_fres != fres;
         // We do not account for any change of Q here - if it was changed q_incro_count will be non-zero and recalculating the coeffs
         // will be taken care of in fluid_iir_filter_apply().
     }

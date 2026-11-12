@@ -24,14 +24,13 @@
 
 // HEADER FILES ------------------------------------------------------------
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-#include <ctype.h>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 
 #include "c_commandline.h"
 #include "c_cvars.h"
-#include "v_text.h"
+#include "printf.h"
 
 // ParseCommandLine
 //
@@ -43,7 +42,7 @@
 //
 // Special processing:
 //   Inside quoted strings, \" becomes just "
-//                          \\ becomes just a single backslash          
+//                          \\ becomes just a single backslash
 //							\c becomes just TEXTCOLOR_ESCAPE
 //   $<cvar> is replaced by the contents of <cvar>
 

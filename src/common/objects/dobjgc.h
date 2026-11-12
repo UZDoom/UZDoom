@@ -291,7 +291,7 @@ public:
 	{
 		return pp;
 	}
-	
+
 
 	DObject** ForceGetRaw() const noexcept	//for situations where the read barrier needs to be skipped.
 	{
@@ -312,7 +312,7 @@ public:
 	{
 		return GC::ReadBarrier(pp);
 	}
-	
+
 	constexpr const T operator->() const noexcept
 	{
 		return GC::ReadBarrier(pp);

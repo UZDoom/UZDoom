@@ -34,12 +34,12 @@ class FLightBuffer
 	int mPipelinePos = 0;
 
 	bool mBufferType;
-    std::atomic<unsigned int> mIndex;
+	std::atomic<unsigned int> mIndex;
 	unsigned int mBlockAlign;
 	unsigned int mBlockSize;
 	unsigned int mBufferSize;
 	unsigned int mByteSize;
-    unsigned int mMaxUploadSize;
+	unsigned int mMaxUploadSize;
 
 	void CheckSize();
 
@@ -65,4 +65,3 @@ public:
 
 
 #endif
-

@@ -21,11 +21,10 @@
 **
 */
 
-
-#ifndef __BITMAP_H__
-#define __BITMAP_H__
+#pragma once
 
 #include <cstring>
+
 #include "palentry.h"
 
 struct FCopyInfo;
@@ -61,9 +60,21 @@ enum ColorType
 	CF_PalEntry
 };
 
-
 class FBitmap
 {
+public:
+	enum class Transform: uint8_t
+	{
+		NONE       = 0,
+		ROT_90     = 1, // rotate 90°
+		ROT_180    = 2, // rotate 180°
+		ROT_270    = 3, // rotate 270°
+		MIRROR     = 4, // flip horizontally
+		MIRROR_90  = 5, // flip horizontally and rotate 90°
+		MIRROR_180 = 6, // flip horizontally and rotate 180°
+		MIRROR_270 = 7, // flip horizontally and rotate 270°
+	};
+
 protected:
 	uint8_t *data;
 	int Width;
@@ -226,32 +237,31 @@ public:
 
 
 	void CopyPixelDataRGB(int originx, int originy, const uint8_t *patch, int srcwidth,
-								int srcheight, int step_x, int step_y, int rotate, int ct, FCopyInfo *inf = NULL,
+								int srcheight, int step_x, int step_y, FBitmap::Transform rotate, int ct, FCopyInfo *inf = NULL,
 		/* for PNG tRNS */		int r=0, int g=0, int b=0);
 	void CopyPixelData(int originx, int originy, const uint8_t * patch, int srcwidth, int srcheight,
-								int step_x, int step_y, int rotate, const PalEntry * palette, FCopyInfo *inf = NULL);
+								int step_x, int step_y, FBitmap::Transform rotate, const PalEntry * palette, FCopyInfo *inf = NULL);
 
 
-	void Blit(int originx, int originy, const FBitmap &src, int width, int height, int rotate = 0, FCopyInfo *inf = NULL)
+	inline void Blit(int originx, int originy, const FBitmap &src, int width, int height, FBitmap::Transform rotate = FBitmap::Transform::NONE, FCopyInfo *inf = NULL)
 	{
 		CopyPixelDataRGB(originx, originy, src.GetPixels(),  width, height, 4, src.GetWidth()*4, rotate, CF_BGRA, inf);
 	}
 
-	void Blit(int originx, int originy, const FBitmap &src, FCopyInfo *inf = NULL)
+	inline void Blit(int originx, int originy, const FBitmap &src, FCopyInfo *inf = NULL)
 	{
-		CopyPixelDataRGB(originx, originy, src.GetPixels(), src.GetWidth(), src.GetHeight(), 4, src.GetWidth()*4, 0, CF_BGRA, inf);
+		Blit(originx, originy, src, src.GetWidth(), src.GetHeight(), FBitmap::Transform::NONE);
 	}
-
 
 	friend class FTexture;
 };
 
 bool ClipCopyPixelRect(const FClipRect *cr, int &originx, int &originy,
-						const uint8_t *&patch, int &srcwidth, int &srcheight, 
-						int &step_x, int &step_y, int rotate);
+						const uint8_t *&patch, int &srcwidth, int &srcheight,
+						int &step_x, int &step_y, FBitmap::Transform rotate);
 
 //===========================================================================
-// 
+//
 // True color conversion classes for the different pixel formats
 // used by the supported texture formats
 //
@@ -401,7 +411,7 @@ enum EBlend
 	BLEND_DESATURATE1 = 2,
 	BLEND_DESATURATE31 = 32,
 	BLEND_SPECIALCOLORMAP1 = 33,
-	BLEND_MODULATE = -1,	
+	BLEND_MODULATE = -1,
 	BLEND_OVERLAY = -2,
 };
 
@@ -458,7 +468,7 @@ struct bCopyAlpha
 };
 
 struct bOverlay
-{	
+{
 	static __forceinline void OpC(uint8_t &d, uint8_t s, uint8_t a, FCopyInfo *i) { d = (s*a + d*(255-a))/255; }
 	static __forceinline void OpA(uint8_t &d, uint8_t s, FCopyInfo *i) { d = std::max(s,d); }
 	static __forceinline bool ProcessAlpha0() { return false; }
@@ -498,6 +508,3 @@ struct bModulate
 	static __forceinline void OpA(uint8_t &d, uint8_t s, FCopyInfo *i) { d = s; }
 	static __forceinline bool ProcessAlpha0() { return false; }
 };
-
-
-#endif

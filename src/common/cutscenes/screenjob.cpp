@@ -73,13 +73,13 @@ void Job_Init()
 VMFunction* LookupFunction(const char* qname, bool validate)
 {
 	size_t p = strcspn(qname, ".");
-	if (p == 0) 
+	if (p == 0)
 		I_Error("Call to undefined function %s", qname);
 	FName clsname(qname, p, true);
 	FName funcname(qname + p + 1, true);
 
 	auto func = PClass::FindFunction(clsname, funcname);
-	if (func == nullptr) 
+	if (func == nullptr)
 		I_Error("Call to undefined function %s", qname);
 	if (validate)
 	{
@@ -340,7 +340,7 @@ DEFINE_ACTION_FUNCTION(DScreenJobRunner, setTransition)
 {
 	PARAM_PROLOGUE;
 	PARAM_INT(type);
-	
+
 	if (type && sysCallbacks.SetTransition) sysCallbacks.SetTransition(type);
 	return 0;
 }
@@ -390,6 +390,3 @@ CCMD(testcutscene)
 		Printf(TEXTCOLOR_RED "Unable to play cutscene: %s\n", err.what());
 	}
 }
-
-
-

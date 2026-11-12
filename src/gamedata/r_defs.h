@@ -41,7 +41,6 @@
 // We rely on the thinker data struct
 // to handle sound origins in sectors.
 // SECTORS do store MObjs anyway.
-struct FLightNode;
 struct FGLSection;
 class FSerializer;
 struct FSectorPortalGroup;
@@ -54,6 +53,7 @@ struct FSection;
 struct FLevelLocals;
 struct LightmapSurface;
 struct LightProbe;
+struct FDynamicLight;
 
 const uint16_t NO_INDEX = 0xffffu;
 const uint32_t NO_SIDE = 0xffffffffu;
@@ -319,7 +319,7 @@ public:
 	{
 		return D;
 	}
-	
+
 	bool isSlope() const
 	{
 		return !normal.XY().isZero();
@@ -507,7 +507,7 @@ enum
 	SECF_NORESPAWN		= 8,	// players can not respawn in this sector
 	SECF_FRICTION		= 16,	// sector has friction enabled
 	SECF_PUSH			= 32,	// pushers enabled
-	SECF_SILENTMOVE		= 64,	// Sector movement makes mo sound (Eternity got this so this may be useful for an extended cross-port standard.) 
+	SECF_SILENTMOVE		= 64,	// Sector movement makes mo sound (Eternity got this so this may be useful for an extended cross-port standard.)
 	SECF_DMGTERRAINFX	= 128,	// spawns terrain splash when inflicting damage
 	SECF_ENDGODMODE		= 256,	// getting damaged by this sector ends god mode
 	SECF_ENDLEVEL		= 512,	// ends level when health goes below 10
@@ -591,12 +591,12 @@ struct FTransform
 	// [RH] floor and ceiling texture rotation
 	DAngle Angle, baseAngle;
 
-	finline bool operator == (const FTransform &other) const
+	inline bool operator == (const FTransform &other) const
 	{
 		return xOffs == other.xOffs && yOffs + baseyOffs == other.yOffs + other.baseyOffs &&
 			xScale == other.xScale && yScale == other.yScale && Angle + baseAngle == other.Angle + other.baseAngle;
 	}
-	finline bool operator != (const FTransform &other) const
+	inline bool operator != (const FTransform &other) const
 	{
 		return !(*this == other);
 	}
@@ -932,7 +932,7 @@ public:
 		planes[pos].Flags |= Or;
 	}
 
-	int GetPlaneLight(int pos) const 
+	int GetPlaneLight(int pos) const
 	{
 		return planes[pos].Light;
 	}
@@ -1187,6 +1187,8 @@ enum
 	WALLF_ABSLIGHTING_MID		= WALLF_ABSLIGHTING_TIER << 1, 	// Mid tier light is absolute instead of relative
 	WALLF_ABSLIGHTING_BOTTOM 	= WALLF_ABSLIGHTING_TIER << 2,	// Bottom tier light is absolute instead of relative
 
+	WALLF_BLOCKRENDERING		= 4096,	// [XA] Do not render any geometry on the other side of this line (similar to 1-sided walls, but only when seeing through this side of the line)
+
 	WALLF_DITHERTRANS			= 8192,	// Render with dithering transparency shader (gets reset every frame)
 	WALLF_DITHERTRANS_TOP		= WALLF_DITHERTRANS << 0,	// Top tier (gets reset every frame)
 	WALLF_DITHERTRANS_MID		= WALLF_DITHERTRANS << 1,	// Mid tier (gets reset every frame)
@@ -1259,8 +1261,10 @@ struct side_t
 	int16_t		Light;
 	int16_t		TierLights[3];	// per-tier light levels
 	uint16_t	Flags;
+	double		alpha;
 	int			UDMFIndex;		// needed to access custom UDMF fields which are stored in loading order.
 	LightmapSurface* lightmap;
+	TArray<FDynamicLight*> dlist;
 	seg_t **segs;	// all segs belonging to this sidedef in ascending order. Used for precise rendering
 	int numsegs;
 	int sidenum;
@@ -1279,6 +1283,22 @@ struct side_t
 		TierLights[which] = l;
 	}
 
+	void SetAlpha(double a)
+	{
+		alpha = a;
+	}
+
+	void ClearAlpha()
+	{
+		// [XA] use DBL_MAX as a sentinel value for "alpha not set",
+		// instructing the renderer to use the linedef's alpha instead
+		alpha = DBL_MAX;
+	}
+
+	bool HasAlpha()
+	{
+		return alpha != DBL_MAX;
+	}
 
 	FLevelLocals *GetLevel()
 	{
@@ -1298,7 +1318,7 @@ struct side_t
 	{
 		textures[which].xOffset = offset;;
 	}
-	
+
 	void SetTextureXOffset(double offset)
 	{
 		textures[top].xOffset =
@@ -1607,7 +1627,7 @@ struct seg_t
 {
 	vertex_t*	v1;
 	vertex_t*	v2;
-	
+
 	side_t* 	sidedef;
 	line_t* 	linedef;
 
@@ -1622,7 +1642,7 @@ struct seg_t
 	int				segnum;
 
 	int Index() const { return segnum; }
-	
+
 	FLevelLocals *GetLevel() const
 	{
 		return frontsector->Level;
@@ -1682,7 +1702,7 @@ struct subsector_t
 };
 
 
-	
+
 
 //
 // BSP node.
@@ -1840,7 +1860,7 @@ inline void sector_t::SetColor(PalEntry pe, int desat) { ::SetColor(this, pe, de
 inline void sector_t::SetFade(PalEntry pe) { ::SetFade(this, pe); }
 inline int sector_t::GetFloorLight() const { return ::GetFloorLight(this); }
 inline int sector_t::GetCeilingLight() const { return ::GetCeilingLight(this); }
-inline int sector_t::GetSpriteLight() const 
+inline int sector_t::GetSpriteLight() const
 {
 	return GetTexture(ceiling) == skyflatnum ? GetCeilingLight() : GetFloorLight();
 }

@@ -67,4 +67,3 @@ protected:
 	short LastLight;
 	uint8_t Flags;
 };
-

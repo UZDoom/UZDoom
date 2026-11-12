@@ -20,7 +20,7 @@
 **
 **---------------------------------------------------------------------------
 **
-*/ 
+*/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -462,7 +462,7 @@ FSoundID DoomSoundEngine::ResolveSound(const void * ent, int type, FSoundID soun
 
 static bool VerifyActorSound(AActor* ent, FSoundID& sound_id, int& channel, EChanFlags flags)
 {
-	if (ent == nullptr || ent->ObjectFlags & OF_EuthanizeMe || ent->Sector->Flags & SECF_SILENT || 
+	if (ent == nullptr || ent->ObjectFlags & OF_EuthanizeMe || ent->Sector->Flags & SECF_SILENT ||
 		ent->Level != primaryLevel)
 		return false;
 
@@ -1179,7 +1179,7 @@ bool DoomSoundEngine::ValidatePosVel(int sourcetype, const void* source, const F
 //==========================================================================
 //
 // This is to avoid hardscoding the dependency on the file system into the sound engine
-// 
+//
 //==========================================================================
 
 TArray<uint8_t> DoomSoundEngine::ReadSound(int lumpnum)
@@ -1196,7 +1196,7 @@ TArray<uint8_t> DoomSoundEngine::ReadSound(int lumpnum)
 // S_PickReplacement
 //
 // This is overridden to use a synchronized RNG.
-// 
+//
 //==========================================================================
 
 static FCRandom pr_randsound("RandSound");
@@ -1445,4 +1445,3 @@ CCMD(snd_reset)
 {
 	S_SoundReset();
 }
-

@@ -41,7 +41,7 @@ class EggFX : MorphProjectile
 		Stop;
 	}
 }
-	
+
 
 // Morph Ovum ----------------------------------------------------------------
 
@@ -74,7 +74,7 @@ class ArtiEgg : CustomInventory
 		Stop;
 	}
 }
-	
+
 // Pork missile --------------------------------------------------------------
 
 class PorkFX : MorphProjectile
@@ -130,4 +130,3 @@ class ArtiPork : CustomInventory
 		Stop;
 	}
 }
-

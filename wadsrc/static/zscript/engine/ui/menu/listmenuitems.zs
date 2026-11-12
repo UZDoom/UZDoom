@@ -27,6 +27,7 @@ class ListMenuItem : MenuItemBase
 	{
 		int w = desc ? desc.DisplayWidth() : ListMenuDescriptor.CleanScale;
 		int h = desc ? desc.DisplayHeight() : -1;
+		fnt = fnt;
 		if (w == ListMenuDescriptor.CleanScale)
 		{
 			screen.DrawText(fnt, color, x, y, text, ontop? DTA_CleanTop : DTA_Clean, true);
@@ -165,7 +166,7 @@ class ListMenuItemStaticText : ListMenuItem
 	{
 		if (mText.Length() != 0)
 		{
-			let font = generic_ui? NewSmallFont : mFont;
+			let font = menuDelegate.PickFont(generic_ui? NewSmallFont : mFont);
 
 			String text = Stringtable.Localize(mText);
 
@@ -216,7 +217,7 @@ class ListMenuItemSelectable : ListMenuItem
 	}
 
 	override bool CheckHotkey(int c)
-	{ 
+	{
 		return c > 0 && c == mHotkey;
 	}
 
@@ -283,7 +284,7 @@ class ListMenuItemTextItem : ListMenuItemSelectable
 	{
 		let font = menuDelegate.PickFont(mFont);
 		double x = mXpos;
-		if (desc.mCenterText) 
+		if (desc.mCenterText)
 		{
 			x -= font.StringWidth(mText) / 2;
 		}
@@ -293,7 +294,7 @@ class ListMenuItemTextItem : ListMenuItemSelectable
 	override int GetWidth()
 	{
 		let font = menuDelegate.PickFont(mFont);
-		return max(1, font.StringWidth(StringTable.Localize(mText))); 
+		return max(1, font.StringWidth(StringTable.Localize(mText)));
 	}
 }
 
@@ -353,11 +354,10 @@ class ListMenuItemCaptionItem : ListMenuItem
 
 	override void Draw(bool selected, ListMenuDescriptor desc)
 	{
-		let font = menuDelegate.PickFont(desc.mFont);
+		let font = Font.GetTitleFont(menuDelegate.PickFont(desc.mFont));
 		if (font && mText.Length() > 0)
 		{
 			menuDelegate.DrawCaption(mText, font, 0, true);
 		}
 	}
 }
-

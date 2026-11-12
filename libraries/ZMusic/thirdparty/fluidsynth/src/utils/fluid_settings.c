@@ -13,14 +13,14 @@
  * Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free
- * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
- * 02110-1301, USA
+ * License along with this library; if not, see
+ * <https://www.gnu.org/licenses/>.
  */
 
 #include "fluid_sys.h"
 #include "fluid_hash.h"
 #include "fluid_synth.h"
+#include "fluid_cmd.h"
 #include "fluid_adriver.h"
 #include "fluid_mdriver.h"
 #include "fluid_settings.h"
@@ -329,7 +329,7 @@ fluid_settings_init(fluid_settings_t *settings)
     fluid_return_if_fail(settings != NULL);
 
     fluid_synth_settings(settings);
-    //fluid_shell_settings(settings);
+    fluid_shell_settings(settings);
     fluid_player_settings(settings);
     fluid_file_renderer_settings(settings);
     fluid_audio_driver_settings(settings);
@@ -904,11 +904,11 @@ fluid_settings_get_hints(fluid_settings_t *settings, const char *name, int *hint
 }
 
 /**
- * Ask whether the setting is changeable in real-time.
+ * Ask whether the setting is changeable in realtime.
  *
  * @param settings a settings object
  * @param name a setting's name
- * @return TRUE if the setting is changeable in real-time, FALSE otherwise
+ * @return TRUE if the setting is changeable in realtime, FALSE otherwise
  *
  * @note Before using this function, make sure the @p settings object has already been used to create
  * a synthesizer, a MIDI driver, an audio driver, a MIDI player, or a command handler (depending on

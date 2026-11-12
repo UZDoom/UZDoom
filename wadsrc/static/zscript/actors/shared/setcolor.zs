@@ -26,14 +26,14 @@ class ColorSetter : Actor
 		+DONTSPLASH
 		RenderStyle "None";
 	}
-	
+
 	override void PostBeginPlay()
 	{
 		Super.PostBeginPlay();
 		CurSector.SetColor(color(args[0], args[1], args[2]), args[3]);
 		Destroy();
 	}
-	
+
 }
 
 
@@ -46,7 +46,7 @@ class FadeSetter : Actor
 		+DONTSPLASH
 		RenderStyle "None";
 	}
-	
+
 	override void PostBeginPlay()
 	{
 		Super.PostBeginPlay();
@@ -54,5 +54,5 @@ class FadeSetter : Actor
 		Destroy();
 	}
 
-	
+
 }

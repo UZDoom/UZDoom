@@ -26,7 +26,7 @@ class HereticStatusBar : BaseStatusBar
 	InventoryBarState diparms;
 	InventoryBarState diparms_sbar;
 	private int wiggle;
-	
+
 
 	override void Init()
 	{
@@ -44,7 +44,7 @@ class HereticStatusBar : BaseStatusBar
 		diparms_sbar = InventoryBarState.CreateNoBox(mIndexFont, boxsize:(31, 31), arrowoffs:(0,-10));
 		mHealthInterpolator = DynamicValueInterpolator.Create(0, 0.25, 1, 8);
 	}
-	
+
 	override int GetProtrusion(double scaleratio) const
 	{
 		return scaleratio > 0.7? 8 : 0;
@@ -99,7 +99,7 @@ class HereticStatusBar : BaseStatusBar
 		DrawImage("CHAINBAC", (0, 190), DI_ITEM_OFFSETS);
 		// wiggle the chain if it moves
 		int inthealth =  mHealthInterpolator.GetValue();
-		DrawGem("CHAIN", "LIFEGEM2",inthealth, CPlayer.mo.GetMaxHealth(true), (2, 191 + wiggle), 15, 25, 16, (multiplayer? DI_TRANSLATABLE : 0) | DI_ITEM_LEFT_TOP); 
+		DrawGem("CHAIN", "LIFEGEM2",inthealth, CPlayer.mo.GetMaxHealth(true), (2, 191 + wiggle), 15, 25, 16, (multiplayer? DI_TRANSLATABLE : 0) | DI_ITEM_LEFT_TOP);
 		DrawImage("LTFACE", (0, 190), DI_ITEM_OFFSETS);
 		DrawImage("RTFACE", (276, 190), DI_ITEM_OFFSETS);
 		DrawShader(SHADER_HORZ, (19, 190), (16, 10));
@@ -201,7 +201,7 @@ class HereticStatusBar : BaseStatusBar
 				}
 			}
 		}
-		
+
 		//ammo
 		Ammo ammo1, ammo2;
 		[ammo1, ammo2] = GetCurrentAmmo();
@@ -222,7 +222,7 @@ class HereticStatusBar : BaseStatusBar
 		if (!isInventoryBarVisible() && !Level.NoInventoryBar && CPlayer.mo.InvSel != null)
 		{
 			// This code was changed to always fit the item into the box, regardless of alignment or sprite size.
-			// Heretic's ARTIBOX is 30x30 pixels. 
+			// Heretic's ARTIBOX is 30x30 pixels.
 			DrawImage("ARTIBOX", (-46, -1), 0, HX_SHADOW);
 			DrawInventoryIcon(CPlayer.mo.InvSel, (-46, -15), DI_ARTIFLASH|DI_ITEM_CENTER|DI_DIMDEPLETED, boxsize:(28, 28));
 			if (CPlayer.mo.InvSel.Amount > 1)

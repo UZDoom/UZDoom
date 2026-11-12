@@ -67,38 +67,38 @@ DEFINE_TFLAGS_OPERATORS(EChanFlags)
 // Since I can't very well #include system-specific stuff in the
 // main game files, I duplicate it here.
 struct REVERB_PROPERTIES
-{                
+{
 	int			 Instance;
-    int			 Environment;
-    float        EnvSize;
-    float        EnvDiffusion;
-    int          Room;
-    int          RoomHF;
-    int          RoomLF;
-    float        DecayTime;
-    float        DecayHFRatio;
-    float        DecayLFRatio;
-    int          Reflections;
-    float        ReflectionsDelay;
-    float        ReflectionsPan0;
+	int			 Environment;
+	float        EnvSize;
+	float        EnvDiffusion;
+	int          Room;
+	int          RoomHF;
+	int          RoomLF;
+	float        DecayTime;
+	float        DecayHFRatio;
+	float        DecayLFRatio;
+	int          Reflections;
+	float        ReflectionsDelay;
+	float        ReflectionsPan0;
 	float        ReflectionsPan1;
 	float        ReflectionsPan2;
-    int          Reverb;
-    float        ReverbDelay;
-    float        ReverbPan0;
+	int          Reverb;
+	float        ReverbDelay;
+	float        ReverbPan0;
 	float        ReverbPan1;
 	float        ReverbPan2;
-    float        EchoTime;
-    float        EchoDepth;
-    float        ModulationTime;
-    float        ModulationDepth;
-    float        AirAbsorptionHF;
-    float        HFReference;
-    float        LFReference;
-    float        RoomRolloffFactor;
-    float        Diffusion;
-    float        Density;
-    unsigned int Flags;
+	float        EchoTime;
+	float        EchoDepth;
+	float        ModulationTime;
+	float        ModulationDepth;
+	float        AirAbsorptionHF;
+	float        HFReference;
+	float        LFReference;
+	float        RoomRolloffFactor;
+	float        Diffusion;
+	float        Density;
+	unsigned int Flags;
 };
 
 enum EReverbFlags

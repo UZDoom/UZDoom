@@ -79,7 +79,7 @@ struct FTraceResults
 	F3DFloor *Crossed3DWater;	// For 3D floor-based deep water
 	DVector3 Crossed3DWaterPos;
 };
-	
+
 
 enum
 {

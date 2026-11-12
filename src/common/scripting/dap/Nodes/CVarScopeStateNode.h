@@ -67,4 +67,4 @@ public:
 	bool GetChildNames(std::vector<std::string> &names) override;
 	bool GetChildNode(std::string name, std::shared_ptr<StateNodeBase> &node) override;
 };
-} 
+}

@@ -108,7 +108,7 @@ class FlameSmall : SwitchableDecoration
 
 class FlameSmall2 : FlameSmall
 {
-}	
+}
 
 // Large Flame --------------------------------------------------------------
 
@@ -139,8 +139,7 @@ class FlameLarge : SwitchableDecoration
 		Wait;
 	}
 }
-		
+
 class FlameLarge2 : FlameLarge
 {
 }
-

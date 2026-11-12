@@ -229,12 +229,12 @@ public:
 	{
 		return X*X + Y*Y + Z*Z + W*W;
 	}
-	
+
 	double Sum() const
 	{
 		return abs(X) + abs(Y) + abs(Z) + abs(W);
 	}
-	
+
 
 	// Return a unit vector facing the same direction as this one
 	TQuaternion Unit() const
@@ -267,7 +267,7 @@ public:
 		return *this;
 	}
 
-	TQuaternion Resized(double len) const 
+	TQuaternion Resized(double len) const
 	{
 		double vlen = Length();
 		if (vlen != 0.)

@@ -26,7 +26,7 @@ class WaterZone : Actor
 		+NOGRAVITY
 		+DONTSPLASH
 	}
-	
+
 	override void PostBeginPlay ()
 	{
 		Super.PostBeginPlay ();
@@ -34,5 +34,5 @@ class WaterZone : Actor
 		Destroy ();
 	}
 
-	
+
 }

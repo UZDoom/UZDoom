@@ -78,17 +78,17 @@ class DVisualThinker;
 struct particle_t
 {
 	subsector_t* subsector; //+8 = 8
-    DVector3 Pos; //+24 = 32
-    FVector3 Vel; //+12 = 44
-    FVector3 Acc; //+12 = 56
+	DVector3 Pos; //+24 = 32
+	FVector3 Vel; //+12 = 44
+	FVector3 Acc; //+12 = 56
 	float    size, sizestep; //+8 = 64
-    float    fadestep, alpha; //+8 = 72
-    int32_t    ttl; // +4 = 76
-    int        color; //+4 = 80
-    FTextureID texture; // +4 = 84
-    ERenderStyle style; //+4 = 88
-    float Roll, RollVel, RollAcc; //+12 = 100
-    uint16_t    tnext, snext, tprev; //+6 = 106
+	float    fadestep, alpha; //+8 = 72
+	int32_t    ttl; // +4 = 76
+	int        color; //+4 = 80
+	FTextureID texture; // +4 = 84
+	ERenderStyle style; //+4 = 88
+	float Roll, RollVel, RollAcc; //+12 = 100
+	uint16_t    tnext, snext, tprev; //+6 = 106
 	// uint16_t padding; //+2 = 108
 	uint32_t flags; //+4 = 112
 	FStandaloneAnimation animData; //+16 = 128

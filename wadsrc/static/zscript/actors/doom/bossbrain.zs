@@ -126,7 +126,7 @@ class SpawnShot : Actor
 		Loop;
 	}
 }
-		
+
 //===========================================================================
 //
 // Spawn fire
@@ -165,7 +165,7 @@ extend class Actor
 	{
 		A_StartSound("brain/sight", CHAN_VOICE, CHANF_DEFAULT, 1, ATTN_NONE);
 	}
-	
+
 	void A_BrainPain()
 	{
 		A_StartSound("brain/pain", CHAN_VOICE, CHANF_DEFAULT, 1, ATTN_NONE);
@@ -186,7 +186,7 @@ extend class Actor
 			if (boom.tics < 1) boom.tics = 1;
 		}
 	}
-	
+
 	void A_BrainScream()
 	{
 		for (double x = -196; x < +320; x += 8)
@@ -196,7 +196,7 @@ extend class Actor
 		}
 		A_StartSound("brain/death", CHAN_VOICE, CHANF_DEFAULT, 1., ATTN_NONE);
 	}
-	
+
 	void A_BrainExplode()
 	{
 		double x = random2[BrainExplode]() / 32.;
@@ -249,7 +249,7 @@ extend class Actor
 
 		if (targ)
 		{
-			if (spawntype == null) 
+			if (spawntype == null)
 			{
 				spawntype = "SpawnShot";
 				isdefault = true;
@@ -263,7 +263,7 @@ extend class Actor
 				// Boss cubes should move freely to their destination so it's
 				// probably best to disable all collision detection for them.
 				spit.bNoInteraction = spit.bNoClip;
-		
+
 				spit.target = targ;
 				spit.master = self;
 				// [RH] Do this correctly for any trajectory. Doom would divide by 0
@@ -296,7 +296,7 @@ extend class Actor
 			}
 		}
 	}
-	
+
 	private void SpawnFly(class<Actor> spawntype, sound snd)
 	{
 		Actor newmobj;
@@ -310,7 +310,7 @@ extend class Actor
 			Destroy();
 			return;
 		}
-			
+
 		// [GZ] Should be more viable than a countdown...
 		if (special2 != 0)
 		{
@@ -322,7 +322,7 @@ extend class Actor
 			if (reactiontime == 0 || --reactiontime != 0)
 				return;		// still flying
 		}
-		
+
 		if (spawntype)
 		{
 			fog = Spawn (spawntype, targ.pos, ALLOW_REPLACE);
@@ -432,8 +432,8 @@ extend class Actor
 
 	void A_SpawnFly(class<Actor> spawntype = null)
 	{
-		sound snd; 
-		if (spawntype != null) 
+		sound snd;
+		if (spawntype != null)
 		{
 			snd = GetDefaultByType(spawntype).SeeSound;
 		}

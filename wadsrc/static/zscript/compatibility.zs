@@ -22,10 +22,10 @@
 extend class Object
 {
 	deprecated("2.4", "Use gameinfo.gametype instead") static int GameType()
-	{ 
-		return gameinfo.gametype; 
+	{
+		return gameinfo.gametype;
 	}
-	
+
 	deprecated("2.4", "Use Console.MidPrint() instead") static void C_MidPrint(string fontname, string textlabel, bool bold = false)
 	{
 		let f = Font.GetFont(fontname);
@@ -125,7 +125,7 @@ extend class Actor
 	// deprecated because direct access to the data is now possible.
 	//
 	//==========================================================================
-	
+
 	deprecated("3.7", "Use Actor.SpriteAngle instead") double GetSpriteAngle(int ptr = AAPTR_DEFAULT)
 	{
 		let target = GetPointer(ptr);

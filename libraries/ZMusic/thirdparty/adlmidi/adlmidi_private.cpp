@@ -2,7 +2,7 @@
  * libADLMIDI is a free Software MIDI synthesizer library with OPL3 emulation
  *
  * Original ADLMIDI code: Copyright (c) 2010-2014 Joel Yliluoma <bisqwit@iki.fi>
- * ADLMIDI Library API:   Copyright (c) 2015-2025 Vitaly Novichkov <admin@wohlnet.ru>
+ * ADLMIDI Library API:   Copyright (c) 2015-2026 Vitaly Novichkov <admin@wohlnet.ru>
  *
  * Library is based on the ADLMIDI, a MIDI player for Linux and Windows with OPL3 emulation:
  * http://iki.fi/bisqwit/source/adlmidi.html
@@ -24,7 +24,14 @@
 #include "adlmidi_midiplay.hpp"
 #include "adlmidi_opl3.hpp"
 #include "adlmidi_private.hpp"
+#include "adlmidi_bankmap.h"
 #include "wopl/wopl_file.h"
+
+#ifdef ENABLE_HW_OPL_DOS
+#   include <dpmi.h>
+#   include "chips/dos_hw_opl.h"
+#   include "adlmidi_dos.h"
+#endif
 
 
 std::string ADLMIDI_ErrorString;
@@ -123,5 +130,61 @@ void adlFromInstrument(const BanksDump::InstrumentEntry &instIn, OplInstMeta &in
 
     instOut.soundKeyOnMs  = instIn.delay_on_ms;
     instOut.soundKeyOffMs = instIn.delay_off_ms;
+}
+#endif
+
+#ifdef ENABLE_HW_OPL_DOS
+// Lock code of all known classes
+
+void adl_lock_code(void)
+{
+    adl_dpmi_lock_class_code<MIDIplay>();
+    adl_dpmi_lock_class_code<OPL3>();
+    adl_dpmi_lock_class_code<DOS_HW_OPL>();
+    adl_dpmi_lock_class_code<AdlMIDI_UPtr<BW_MidiRtInterface> >();
+    adl_dpmi_lock_class_code<AdlMIDI_UPtr<MidiSequencer> >();
+    adl_dpmi_lock_class_code<AdlMIDI_UPtr<Synth> >();
+    adl_dpmi_lock_class_code<BasicBankMap<OPL3::Bank> >();
+    adl_dpmi_lock_class_code<AdlMIDI_SPtrArray<BasicBankMap<OPL3::Bank>::Slot*> >();
+    adl_dpmi_lock_class_code<AdlMIDI_SPtr<OPLChipBase > >();
+
+    adl_dpmi_lock_class_code<adl_array<AdlMIDI_SPtr<OPLChipBase >, true> >();
+    adl_dpmi_lock_class_code<adl_array<const OplTimbre*> >();
+    adl_dpmi_lock_class_code<adl_array<bool> >();
+    adl_dpmi_lock_class_code<adl_array<uint32_t> >();
+    adl_dpmi_lock_class_code<adl_array<uint8_t> >();
+
+    adl_dpmi_lock_class_code<adl_array<MIDIplay::AdlChannel, true> >();
+    adl_dpmi_lock_class_code<adl_array<MIDIplay::MIDIchannel, true> >();
+
+    adl_dpmi_lock_code_region_fn(adl_pub_dpmi_lock_begin, adl_pub_dpmi_lock_end);
+    adl_dpmi_lock_code_region_fn(adl_seq_dpmi_lock_begin, adl_seq_dpmi_lock_end);
+}
+
+// Unlock code of all known classes
+
+void adl_unlock_code(void)
+{
+    adl_dpmi_unlock_class_code<MIDIplay>();
+    adl_dpmi_unlock_class_code<OPL3>();
+    adl_dpmi_unlock_class_code<DOS_HW_OPL>();
+    adl_dpmi_unlock_class_code<AdlMIDI_UPtr<BW_MidiRtInterface> >();
+    adl_dpmi_unlock_class_code<AdlMIDI_UPtr<MidiSequencer> >();
+    adl_dpmi_unlock_class_code<AdlMIDI_UPtr<Synth> >();
+    adl_dpmi_unlock_class_code<BasicBankMap<OPL3::Bank> >();
+    adl_dpmi_unlock_class_code<AdlMIDI_SPtrArray<BasicBankMap<OPL3::Bank>::Slot*> >();
+    adl_dpmi_unlock_class_code<AdlMIDI_SPtr<OPLChipBase > >();
+
+    adl_dpmi_unlock_class_code<adl_array<AdlMIDI_SPtr<OPLChipBase >, true> >();
+    adl_dpmi_unlock_class_code<adl_array<const OplTimbre*> >();
+    adl_dpmi_unlock_class_code<adl_array<bool> >();
+    adl_dpmi_unlock_class_code<adl_array<uint32_t> >();
+    adl_dpmi_unlock_class_code<adl_array<uint8_t> >();
+
+    adl_dpmi_unlock_class_code<adl_array<MIDIplay::AdlChannel, true> >();
+    adl_dpmi_unlock_class_code<adl_array<MIDIplay::MIDIchannel, true> >();
+
+    adl_dpmi_unlock_code_region_fn(adl_pub_dpmi_lock_begin, adl_pub_dpmi_lock_end);
+    adl_dpmi_unlock_code_region_fn(adl_seq_dpmi_lock_begin, adl_seq_dpmi_lock_end);
 }
 #endif

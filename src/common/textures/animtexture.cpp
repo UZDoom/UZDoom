@@ -79,7 +79,7 @@ void AnimTexture::SetFrame(const uint8_t* Palette, const void* data_)
 		else if(pixelformat == VPX)
 		{
 			const vpx_image_t *img = reinterpret_cast<const vpx_image_t *>(data_);
-			
+
 			uint8_t const* const yplane = img->planes[VPX_PLANE_Y];
 			uint8_t const* const uplane = img->planes[VPX_PLANE_U];
 			uint8_t const* const vplane = img->planes[VPX_PLANE_V];

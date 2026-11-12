@@ -41,4 +41,3 @@ public:
 
 	sector_t *RenderView(player_t *player);
 };
-

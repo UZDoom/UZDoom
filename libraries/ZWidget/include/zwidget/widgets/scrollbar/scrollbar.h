@@ -32,8 +32,8 @@ public:
 
 	void SetPosition(double pos);
 
-	double GetPreferredWidth() const { return 16.0; }
-	double GetPreferredHeight() const { return 16.0; }
+	double GetPreferredWidth() override { return 16.0; }
+	double GetPreferredHeight() override { return 16.0; }
 
 	std::function<void()> FuncScroll;
 	std::function<void()> FuncScrollMin;
@@ -56,6 +56,7 @@ protected:
 	void OnGeometryChanged() override;
 
 private:
+	void RequestUpdate(bool fromTimer = false);
 	bool UpdatePartPositions();
 	double CalculateThumbSize(double track_size);
 	double CalculateThumbPosition(double thumb_size, double track_size);
@@ -87,6 +88,8 @@ private:
 	double thumb_start_pixel_position = 0.0;
 
 	Timer* mouse_down_timer = nullptr;
+	Timer* update_timer = nullptr;
+	bool update_timer_running = false;
 	double last_step_size = 0.0;
 
 	Rect rect_button_decrement;

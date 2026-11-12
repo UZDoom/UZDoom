@@ -117,7 +117,7 @@ void FArgs::PrintHelpMessage(bool full)
 
 			sectionMap->Insert(pair->Key, *pair->Value);
 
-			int len = strlen(pair->Key.GetChars());
+			int len = static_cast<int>(strlen(pair->Key.GetChars()));
 			if (maxlen < len) maxlen = len;
 		}
 	}
@@ -189,7 +189,7 @@ void FArgs::PrintHelpMessage(bool full)
 
 				do
 				{
-					int nextBreak = desc.IndexOf("\n", nextSpace+1);
+					int nextBreak = static_cast<int>(desc.IndexOf("\n", nextSpace+1));
 
 					if (nextBreak != -1 || desc.Len() > unsigned(maxlen))
 					{
@@ -197,8 +197,8 @@ void FArgs::PrintHelpMessage(bool full)
 						{
 							space = nextSpace;
 
-							nextBreak = desc.IndexOf("\n", nextSpace+1);
-							nextSpace = desc.IndexOf(" ", nextSpace+1);
+							nextBreak = static_cast<int>(desc.IndexOf("\n", nextSpace+1));
+							nextSpace = static_cast<int>(desc.IndexOf(" ", nextSpace+1));
 
 							if (nextBreak > -1 && nextBreak < nextSpace)
 							{
@@ -619,19 +619,12 @@ void FArgs::AppendRawArgsString(FString argv)
 			lastQuoteType = argv[i];
 			tmp += argv.Mid(lastSection, i - lastSection);
 			has_tmp = true;
-			bool wasSlash = false;
 
-			for(i++; (argv[i] != lastQuoteType || wasSlash) && i < argv.Len(); i++)
+			for(i++; argv[i] != lastQuoteType && i < argv.Len(); i++)
 			{
-				if(i == '\\' && !wasSlash)
-				{
-					wasSlash = true;
-				}
-				else
-				{
-					tmp += argv[i];
-					wasSlash = false;
-				}
+				// Previously this attempted to support \ but did so in such an erroneous
+				// way that fixing it breaks the current parsing.
+				tmp += argv[i];
 			}
 			lastSection = i + 1;
 		}

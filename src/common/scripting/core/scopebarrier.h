@@ -93,4 +93,3 @@ struct FScopeBarrier
 	static void ValidateCall(PClass* selftype, VMFunction *calledfunc, int outerside);
 
 };
-

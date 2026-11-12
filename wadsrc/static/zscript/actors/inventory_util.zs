@@ -416,7 +416,7 @@ extend class Actor
 		{
 			receiver = receiver.GetPointer(setreceiver);
 			if (receiver == NULL)
-			{ 
+			{
 				return false;
 			}
 		}
@@ -769,7 +769,7 @@ extend class Actor
 
 		let you = PlayerPawn(other);
 		let me = PlayerPawn(self);
-		
+
 		if (you)
 		{
 			if (me)
@@ -781,14 +781,14 @@ extend class Actor
 			you.InvSel = NULL;
 		}
 
-		
+
 		for (let item = Inv; item != null; item = item.Inv)
 		{
 			item.Owner = self;
 		}
 	}
 
-	
+
 	//===========================================================================
 	//
 	// A_SelectWeapon
@@ -829,7 +829,7 @@ extend class Actor
 		}
 	}
 
-	
+
 	int GetAmmoCapacity(class<Ammo> type)
 	{
 		if (type != NULL)

@@ -33,11 +33,11 @@
 
 class InterpolationPoint : Actor
 {
-	
+
 	InterpolationPoint	Next;
 
 	bool bVisited;
-	
+
 	default
 	{
 		+NOBLOCKMAP
@@ -46,7 +46,7 @@ class InterpolationPoint : Actor
 		+NOTONAUTOMAP
 		RenderStyle "None";
 	}
-	
+
 	override void BeginPlay ()
 	{
 		Super.BeginPlay ();
@@ -58,7 +58,7 @@ class InterpolationPoint : Actor
 	void FormChain ()
 	{
 		let me = self;
-		
+
 		while (me != null)
 		{
 			if (me.bVisited) return;
@@ -73,7 +73,7 @@ class InterpolationPoint : Actor
 
 			int pt = (me.args[0] << 24) >> 24;	// this is for truncating the value to a byte, presumably because some old WAD needs it...
 			me.Pitch = clamp(pt, -89, 89);
-				
+
 			if (me.Next == null && (me.args[3] | me.args[4]))
 			{
 				A_Log("Can't find target for camera node " .. me.tid);
@@ -94,7 +94,7 @@ class InterpolationPoint : Actor
 		}
 		return node.Next == self ? node : null;
 	}
-	
+
 }
 
 /*
@@ -112,9 +112,9 @@ class InterpolationSpecial : Actor
 		+DONTSPLASH
 		+NOTONAUTOMAP
 	}
-	
+
 	override void Tick () {}		// Does absolutely nothing itself
-	
+
 }
 
 /*
@@ -133,7 +133,7 @@ class InterpolationSpecial : Actor
 ==	lastenemy = node prior to first node (if looped)
 */
 
-class PathFollower : Actor 
+class PathFollower : Actor
 {
 	default
 	{
@@ -142,12 +142,12 @@ class PathFollower : Actor
 		+NOGRAVITY
 		+DONTSPLASH
 	}
-	
+
 	bool bActive, bJustStepped;
 	InterpolationPoint PrevNode, CurrNode;
 	double Time;		// Runs from 0.0 to 1.0 between CurrNode and CurrNode.Next
 	int HoldTime;
-	
+
 	// Interpolate between p2 and p3 along a Catmull-Rom spline
 	// http://research.microsoft.com/~hollasch/cgindex/curves/catmull-rom.html
 	double Splerp (double p1, double p2, double p3, double p4)
@@ -407,7 +407,7 @@ class PathFollower : Actor
 
 		return true;
 	}
-	
+
 }
 
 /*
@@ -536,7 +536,7 @@ class MovingCamera : PathFollower
 	{
 		CameraHeight 0;
 	}
-	
+
 	override void PostBeginPlay ()
 	{
 		Super.PostBeginPlay ();
@@ -573,5 +573,5 @@ class MovingCamera : PathFollower
 		}
 		return false;
 	}
-	
+
 }

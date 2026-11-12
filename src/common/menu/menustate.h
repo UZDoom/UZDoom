@@ -28,5 +28,6 @@ enum EMenuState : int
 	MENU_On,			// Menu is opened
 	MENU_WaitKey,		// Menu is opened and waiting for a key in the controls menu
 	MENU_OnNoPause,		// Menu is opened but does not pause the game
+	MENU_GameplayMenu,	// Menu is opened but does not pause the game, and uses inputevents, and passes through non-consumed events to the playsim
 };
 extern	EMenuState		menuactive; 	// Menu overlayed?

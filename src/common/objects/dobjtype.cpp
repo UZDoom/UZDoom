@@ -24,16 +24,14 @@
 
 // HEADER FILES ------------------------------------------------------------
 
-#include <limits>
-
-#include "dobject.h"
-#include "serializer.h"
 #include "autosegs.h"
-#include "v_text.h"
 #include "c_cvars.h"
-#include "vm.h"
+#include "dobject.h"
+#include "printf.h"
+#include "serializer.h"
 #include "symbols.h"
 #include "types.h"
+#include "vm.h"
 
 // MACROS ------------------------------------------------------------------
 
@@ -276,7 +274,7 @@ void PClass::StaticShutdown ()
 	// This flags DObject::Destroy not to call any scripted OnDestroy methods anymore.
 	bVMOperational = false;
 
-	// Make a full garbage collection here so that all destroyed but uncollected higher level objects 
+	// Make a full garbage collection here so that all destroyed but uncollected higher level objects
 	// that still exist are properly taken down before the low level data is deleted.
 	GC::FullGC();
 	GC::FullGC();

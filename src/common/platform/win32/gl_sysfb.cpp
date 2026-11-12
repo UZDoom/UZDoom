@@ -54,7 +54,7 @@ PFNWGLSWAPINTERVALEXTPROC myWglSwapIntervalExtProc;
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -83,7 +83,7 @@ SystemGLFrameBuffer::SystemGLFrameBuffer(void *hMonitor, bool fullscreen) : Syst
 			wglext = myWglGetExtensionsStringEXT();
 		}
 	}
-	SwapInterval = 1; 
+	SwapInterval = 1;
 	if (wglext != nullptr)
 	{
 		if (strstr(wglext, "WGL_EXT_swap_control_tear"))
@@ -96,7 +96,7 @@ SystemGLFrameBuffer::SystemGLFrameBuffer(void *hMonitor, bool fullscreen) : Syst
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 EXTERN_CVAR(Bool, vid_vsync);
@@ -114,4 +114,3 @@ void SystemGLFrameBuffer::SwapBuffers()
 {
 	::SwapBuffers(static_cast<Win32GLVideo *>(Video)->m_hDC);
 }
-

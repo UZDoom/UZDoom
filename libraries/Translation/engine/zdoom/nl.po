@@ -2,17 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-24 17:00+0000\n"
-"Last-Translator: Boondorl <boondorl0@gmail.com>\n"
-"Language-Team: Dutch <https://hosted.weblate.org/projects/uzdoom/zdoom-"
-"engine-strings/nl/>\n"
+"PO-Revision-Date: 2026-08-10 23:42-0400\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Dutch <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15.1\n"
-"HeaderCode: nl\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
 
 msgid "PRESSKEY"
 msgstr "Druk op een toets."
@@ -21,7 +19,7 @@ msgid "SECRETMESSAGE"
 msgstr "Een geheim is onthuld!"
 
 msgid "D_DEVSTR"
-msgstr "Nutteloze modus AAN.\n"
+msgstr "Nutteloze modus: AAN"
 
 msgid "QUITMSG"
 msgstr ""
@@ -99,7 +97,7 @@ msgstr ""
 
 msgid "QUITMSG2"
 msgstr ""
-"Laten we ervoor gaan - dit wordt\n"
+"Laten we ervoor gaan—dit wordt\n"
 "een bloedbad!"
 
 msgid "QUITMSG3"
@@ -114,7 +112,7 @@ msgstr ""
 
 msgid "QUITMSG5"
 msgstr ""
-"Ga nog niet weg - er is een\n"
+"Ga nog niet weg—er is een\n"
 "demoon hier om de hoek!"
 
 msgid "QUITMSG6"
@@ -156,8 +154,8 @@ msgstr ""
 
 msgid "QUITMSG13"
 msgstr ""
-"Ga gewoon weg. Als je terugkomt,\n"
-"wacht ik met een knuppel op je."
+"Ga maar gewoon weg. Als je\n"
+"terugkomt, sta ik je op te wachten met een honkbalknuppel."
 
 msgid "QUITMSG14"
 msgstr ""
@@ -171,27 +169,27 @@ msgstr ""
 
 msgid "QUITMSG16"
 msgstr ""
-"De slachting geïnterrumpeerd...\n"
+"De slachting geïnterrumpeerd…\n"
 "Wat flauw!"
 
 msgid "QUITMSG17"
 msgstr ""
 "Maar jij bent de hoop\n"
-" -- Mijn enige kans!!"
+"—Mijn enige kans!!"
 
 msgid "QUITMSG18"
 msgstr "Niemand loopt weg van Blackbird."
 
 msgid "QUITMSG19"
-msgstr "Ik dacht dat je anders was...."
+msgstr "Ik dacht dat je anders was…"
 
 msgid "QUITMSG20"
 msgstr "Goed hoor, schieten en meteen wegrennen!"
 
 msgid "QUITMSG21"
 msgstr ""
-"Je kunt stoppen...\n"
-"Maar je kan je niet verbergen..."
+"Je kunt stoppen…\n"
+"Maar je kan je niet verbergen…"
 
 msgid "QUITMSG22"
 msgstr ""
@@ -205,7 +203,7 @@ msgstr ""
 
 msgid "QUITMSG24"
 msgstr ""
-"Geef niet op - de vlezerijen\n"
+"Geef niet op—de vlezerijen\n"
 "krijgen de overhand!"
 
 msgid "QUITMSG25"
@@ -216,7 +214,7 @@ msgstr ""
 msgid "QUITMSG26"
 msgstr ""
 "Ik hoop dat je gewoon een\n"
-"pauze neemt voor Chex(R) party mix."
+"pauze neemt voor Chex® party mix."
 
 msgid "QUITMSG27"
 msgstr ""
@@ -230,7 +228,7 @@ msgstr ""
 
 msgid "QUITMSG29"
 msgstr ""
-"De echte Chex(R) Krijger\n"
+"De echte Chex® Krijger\n"
 "zou niet zo snel opgeven!"
 
 msgid "TXT_DEFAULTPICKUPMSG"
@@ -273,7 +271,7 @@ msgid "HUSTR_TALKTOSELF4"
 msgstr "Je begint te razen"
 
 msgid "HUSTR_TALKTOSELF5"
-msgstr "Je bent gek geworden..."
+msgstr "Je bent gek geworden…"
 
 msgid "HUSTR_MESSAGESENT"
 msgstr "[Bericht verzonden]"
@@ -284,35 +282,11 @@ msgstr "Muziek veranderen"
 msgid "STSTR_NOMUS"
 msgstr "Onmogelijke selectie"
 
-msgid "STSTR_DQDON"
-msgstr "Gegradeloosheid modus AAN"
-
-msgid "STSTR_DQDOFF"
-msgstr "Gegradeloosheid modus UIT"
-
-msgid "STSTR_DQD2ON"
-msgstr "Uiteindelijke Gegradeloosheid modus AAN"
-
-msgid "STSTR_DQD2OFF"
-msgstr "Uiteindelijke Gegradeloosheid modus UIT"
-
 msgid "STSTR_KFAADDED"
 msgstr "Zeer gelukkige munitie toegevoegd"
 
 msgid "STSTR_FAADDED"
 msgstr "Munitie (geen sleutels) toegevoegd"
-
-msgid "STSTR_NCON"
-msgstr "Geen Clipping Modus AAN"
-
-msgid "STSTR_NCOFF"
-msgstr "Geen Clipping Modus OFF"
-
-msgid "STSTR_NC2ON"
-msgstr "Geen Clipping Modus 2 AAN"
-
-msgid "STSTR_NC2OFF"
-msgstr "Geen Clipping Modus 2 OFF"
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -329,28 +303,10 @@ msgstr "Versterking ingeschakeld"
 # Printed when entering the idchoppers cheat, which gives the player a
 # chainsaw
 msgid "STSTR_CHOPPERS"
-msgstr "... is niet slecht - GM"
+msgstr "… is niet slecht - GM"
 
 msgid "STSTR_CLEV"
-msgstr "Level veranderen..."
-
-msgid "TXT_BUDDHAON"
-msgstr "Boeddha-modus AAN"
-
-msgid "TXT_BUDDHAOFF"
-msgstr "Boeddha-modus UIT"
-
-msgid "TXT_BUDDHA2ON"
-msgstr "Ultieme Boeddha-modus AAN"
-
-msgid "TXT_BUDDHA2OFF"
-msgstr "Ultieme Boeddha-modus UIT"
-
-msgid "TXT_CHEATPOWERON"
-msgstr "Vermogen aan"
-
-msgid "TXT_CHEATPOWEROFF"
-msgstr "Vermogen uit"
+msgstr "Level veranderen…"
 
 msgid "TXT_CHEATHEALTH"
 msgstr "Volledige gezondheid"
@@ -358,23 +314,11 @@ msgstr "Volledige gezondheid"
 msgid "TXT_CHEATKEYS"
 msgstr "Alle sleutels"
 
-msgid "TXT_CHEATSOUNDON"
-msgstr "Geluid debug aan"
-
-msgid "TXT_CHEATSOUNDOFF"
-msgstr "Geluid debug uit"
-
 msgid "TXT_CHEATIDDQD"
 msgstr "Je wou valsspelen, hè? Nu ga je dood!"
 
 msgid "TXT_CHEATIDKFA"
-msgstr "Valsspeler - je verdient geen wapens"
-
-msgid "TXT_CHEATTICKERON"
-msgstr "Ticker aan"
-
-msgid "TXT_CHEATTICKEROFF"
-msgstr "Ticker uit"
+msgstr "Valsspeler—je verdient geen wapens"
 
 msgid "TXT_CHEATARTIFACTS3"
 msgstr "Je hebt het"
@@ -385,14 +329,8 @@ msgstr "Je hebt de Midas Touch, schatje"
 msgid "TXT_GOTSTUFF"
 msgstr "Je hebt het spul!"
 
-msgid "TXT_FREEZEON"
-msgstr "Bevriesmodus aan"
-
-msgid "TXT_FREEZEOFF"
-msgstr "Bevriesmodus uit"
-
 msgid "TXT_STRANGE"
-msgstr "Je voelt je vreemd..."
+msgstr "Je voelt je vreemd…"
 
 msgid "TXT_STRANGER"
 msgstr "Je voelt je nog vreemder."
@@ -400,35 +338,17 @@ msgstr "Je voelt je nog vreemder."
 msgid "TXT_NOTSTRANGE"
 msgstr "Je voelt je weer als jezelf."
 
-msgid "TXT_LEADBOOTSON"
-msgstr "Loden laarzen aan"
-
-msgid "TXT_LEADBOOTSOFF"
-msgstr "Loden laarzen uit"
-
 msgid "TXT_LIGHTER"
 msgstr "Je voelt je lichter"
 
 msgid "TXT_GRAVITY"
 msgstr "De zwaartekracht drukt je naar beneden"
 
-msgid "TXT_NOTARGET_ON"
-msgstr "Geen doelwit AAN"
-
-msgid "TXT_NOTARGET_OFF"
-msgstr "Geen doelwit UIT"
-
 msgid "TXT_ANUBIS_ON"
 msgstr "„Beving van angst!“"
 
 msgid "TXT_ANUBIS_OFF"
 msgstr "Geen Ogre Pantser meer"
-
-msgid "TXT_CHASECAM_ON"
-msgstr "chasecam AAN"
-
-msgid "TXT_CHASECAM_OFF"
-msgstr "chasecam UIT"
 
 msgid "TXT_BADDIE_KILLED"
 msgstr "1 slechterik gedood"
@@ -453,25 +373,7 @@ msgid "TXT_WHAT_KILL"
 msgstr "Wat wil je buiten een spel om doden?"
 
 msgid "TXT_NOT_FROZEN"
-msgstr "Eigenschappen van de bevroren speler uitgeschakeld"
-
-msgid "AMSTR_FOLLOWOFF"
-msgstr "Volgmodus UIT"
-
-msgid "AMSTR_FOLLOWON"
-msgstr "Volgmodus AAN"
-
-msgid "AMSTR_GRIDON"
-msgstr "Raster AAN"
-
-msgid "AMSTR_GRIDOFF"
-msgstr "Raster UIT"
-
-msgid "AMSTR_TEXON"
-msgstr "Textuurmodus AAN"
-
-msgid "AMSTR_TEXOFF"
-msgstr "Textuurmodus UIT"
+msgstr "Eigenschappen van de bevroren speler: UIT"
 
 msgid "AMSTR_MARKEDSPOT"
 msgstr "Gemarkeerde plek"
@@ -513,7 +415,7 @@ msgid "MULTI3"
 msgstr "Meervoudige kill!"
 
 msgid "MULTI4"
-msgstr "Ultra kill!"
+msgstr "Ultrakill!"
 
 msgid "MULTI5"
 msgstr "Monster gedood!"
@@ -530,9 +432,8 @@ msgstr "Geheim"
 msgid "SCORE_NAME"
 msgstr "Naam"
 
-#, fuzzy
 msgid "SCORE_DELAY"
-msgstr "Vertraging (ms)"
+msgstr "Vertraging"
 
 msgid "SCORE_FRAGS"
 msgstr "Frags"
@@ -672,7 +573,7 @@ msgid "GOTMEDIKIT"
 msgstr "Je hebt een verbandsdoos opgepakt."
 
 msgid "GOTSUPER"
-msgstr "Supercharge!"
+msgstr "Geef het een boost!"
 
 msgid "GOTBLUECARD"
 msgstr "Je hebt een blauwe sleutelkaart opgepakt."
@@ -711,7 +612,7 @@ msgid "GOTVISOR"
 msgstr "Lichtversterkingsvizier"
 
 msgid "GOTMSPHERE"
-msgstr "MegaSphere!"
+msgstr "MegaSfeer!"
 
 msgid "GOTCLIP"
 msgstr "Je hebt een patroon opgepakt."
@@ -1225,7 +1126,7 @@ msgid "FN_HERETICIMP"
 msgstr "Waterspuwer"
 
 msgid "FN_IRONLICH"
-msgstr "IJzeren Lijk"
+msgstr "IJzerlijk"
 
 msgid "FN_BONEKNIGHT"
 msgstr "Ondode Krijger"
@@ -1396,7 +1297,7 @@ msgid "TXT_KEY_AXE"
 msgstr "Bijlsleutel"
 
 msgid "TXT_KEY_FIRE"
-msgstr "Vuursleutel"
+msgstr "Brandknop"
 
 msgid "TXT_KEY_EMERALD"
 msgstr "Smaragden Sleutel"
@@ -1426,7 +1327,7 @@ msgid "TXT_ARTISUMMON"
 msgstr "Donkere Dienaar"
 
 msgid "TXT_ARTIEGG2"
-msgstr "Porkalator"
+msgstr "Varkalator"
 
 msgid "TXT_ARTIPOISONBAG"
 msgstr "Flechette"
@@ -1618,7 +1519,7 @@ msgid "FN_MBOSS"
 msgstr "Menelkir"
 
 msgid "FN_CBOSS"
-msgstr "Traductus"
+msgstr "Vertaling"
 
 msgid "FN_HERESIARCH"
 msgstr "Kettermeester"
@@ -1651,7 +1552,7 @@ msgid "TAG_FWEAPHAMMER"
 msgstr "Hamer van Vergelding"
 
 msgid "TAG_FWEAPQUIETUS"
-msgstr "Quietus"
+msgstr "Stilus"
 
 msgid "TAG_MWEAPWAND"
 msgstr "Saffieren Toverstok"
@@ -1693,7 +1594,7 @@ msgid "TAG_ARTIDEFENDER"
 msgstr "Icoon van de verdediger"
 
 msgid "TAG_ARTIPORK"
-msgstr "Porkalator"
+msgstr "Varkalator"
 
 msgid "TAG_ARTISPEED"
 msgstr "Snelheidslaarzen"
@@ -1928,7 +1829,7 @@ msgid "TXT_SCANNER"
 msgstr "Je hebt de scanner opgepakt."
 
 msgid "TXT_NEEDMAP"
-msgstr "De scanner werkt niet zonder een kaart!\n"
+msgstr "De scanner werkt niet zonder een kaart!"
 
 msgid "TXT_PRISONPASS"
 msgstr "Je hebt de gevangenispas opgepakt."
@@ -2072,13 +1973,13 @@ msgid "TXT_AMMOSATCHEL"
 msgstr "Je hebt de munitietas opgepakt."
 
 msgid "MSG_TALISMANRED"
-msgstr "Je hebt het gevoel dat het niet aangeraakt dient te worden..."
+msgstr "Je hebt het gevoel dat het niet aangeraakt dient te worden…"
 
 msgid "MSG_TALISMANGREEN"
-msgstr "Wat het ook is, het hoort niet thuis in deze wereld..."
+msgstr "Wat het ook is, het hoort niet thuis in deze wereld…"
 
 msgid "MSG_TALISMANBLUE"
-msgstr "Het moet iets doen...."
+msgstr "Het moet iets doen…"
 
 msgid "MSG_TALISMANPOWER"
 msgstr "Je hebt superkracht!"
@@ -2164,7 +2065,7 @@ msgstr "Toetakelaar"
 msgid "TAG_GLAUNCHER1"
 msgstr "Granaatwerper"
 
-# White phosphorous grenade launcher 
+# White phosphorous grenade launcher
 msgid "TAG_GLAUNCHER2"
 msgstr "Granaatwerper"
 
@@ -2184,7 +2085,7 @@ msgid "TAG_SURGERYKIT"
 msgstr "Chirurgiepakket"
 
 msgid "TAG_BELDINSRING"
-msgstr "Ring"
+msgstr "Circel"
 
 msgid "TAG_OFFERINGCHALICE"
 msgstr "Offerbeker"
@@ -2573,10 +2474,10 @@ msgid "TXT_GOAWAY"
 msgstr "Ga weg!"
 
 msgid "TXT_COMM0"
-msgstr "Inkomend bericht...."
+msgstr "Inkomend bericht…"
 
 msgid "TXT_COMM1"
-msgstr "Inkomend bericht van BlackBird...."
+msgstr "Inkomend bericht van BlackBird…"
 
 msgid "TXT_FINDHELP"
 msgstr "Zoek hulp"
@@ -2586,10 +2487,10 @@ msgid "TXT_TRADE"
 msgstr "voor %u"
 
 msgid "GOTCHEXARMOR"
-msgstr "Je hebt het Chex(R) harnas opgepakt."
+msgstr "Je hebt het Chex® harnas opgepakt."
 
 msgid "GOTSUPERCHEXARMOR"
-msgstr "Je hebt het Super-Chex(R) harnas opgehaald!"
+msgstr "Je hebt het Super-Chex® harnas opgehaald!"
 
 msgid "GOTWATER"
 msgstr "Je hebt een glas water opgepakt."
@@ -2774,7 +2675,7 @@ msgstr ""
 "\n"
 "\n"
 "\n"
-"Druk op de Escape-toets om verder te gaan...."
+"Druk op de Escape-toets om verder te gaan…"
 
 msgid "CE2TEXT"
 msgstr "Het is je gelukt!"
@@ -2785,6 +2686,7 @@ msgstr "Geweldig werk!"
 msgid "CE4TEXT"
 msgstr "Fantastisch"
 
+#, fuzzy
 msgid "CLOADNET"
 msgstr ""
 "Je kunt niet laden tijdens een netspel!\n"
@@ -2794,7 +2696,7 @@ msgstr ""
 msgctxt "chex"
 msgid "QSPROMPT"
 msgstr ""
-"Snel opslaan over je spel genaamd\n"
+"Snel opslaan over je missie genaamd\n"
 "\n"
 "'%s'?\n"
 "\n"
@@ -2810,7 +2712,7 @@ msgstr ""
 msgctxt "chex"
 msgid "QLPROMPT"
 msgstr ""
-"Wil je het spel snel laden met de naam\n"
+"Wil je de missie snel laden met de naam\n"
 "\n"
 "'%s'?\n"
 "\n"
@@ -2832,7 +2734,7 @@ msgstr ""
 
 msgid "CSWSTRING"
 msgstr ""
-"Dit is Chex(R) Quest. Zoek naar\n"
+"Dit is Chex® Quest. Zoek naar\n"
 "\n"
 "toekomstige niveaus op www.chexquest.com\n"
 "\n"
@@ -2848,17 +2750,9 @@ msgstr ""
 msgctxt "chex"
 msgid "ENDGAME"
 msgstr ""
-"Weet je zeker dat je het spel wilt beëindigen?\n"
+"Weet je zeker dat je de missie wilt beëindigen?\n"
 "\n"
 "Druk op Y of N."
-
-msgctxt "chex"
-msgid "STSTR_DQDON"
-msgstr "Onoverwinnelijke modus AAN"
-
-msgctxt "chex"
-msgid "STSTR_DQDOFF"
-msgstr "Onoverwinnelijke modus UIT"
 
 msgctxt "chex"
 msgid "STSTR_FAADDED"
@@ -2870,7 +2764,7 @@ msgstr "Super Zorch toegevoegd"
 
 msgctxt "chex"
 msgid "STSTR_CHOPPERS"
-msgstr "... Eet Chex(R)!"
+msgstr "…Eet Chex®!"
 
 msgctxt "chex"
 msgid "AMMO_CLIP"
@@ -3009,9 +2903,8 @@ msgstr "Tovenaar"
 msgid "MNU_WARLOCK"
 msgstr "Tovenaar"
 
-#, fuzzy
 msgid "MNU_ARCHMAGE"
-msgstr "Aartsbisschop"
+msgstr "Aartsmagiër"
 
 msgid "MNU_CHOOSECLASS"
 msgstr "Kies klasse:"
@@ -3081,13 +2974,13 @@ msgid "GMPLYMNU_NOMONSTERSTOEXIT"
 msgstr "Geen monsters om af te sluiten"
 
 msgid "GMPLYMNU_MONSTERSRESPAWN"
-msgstr "Monsters respawn"
+msgstr "Monsters verschijnen opnieuw"
 
 msgid "GMPLYMNU_NORESPAWN"
 msgstr "Geen respawn"
 
 msgid "GMPLYMNU_ITEMSRESPAWN"
-msgstr "Items respawn"
+msgstr "Voorwerpen verschijnen opnieuw"
 
 msgid "GMPLYMNU_SUPERRESPAWN"
 msgstr "Grote power-ups respawn"
@@ -3132,7 +3025,7 @@ msgid "GMPLYMNU_ALLOWSPYING"
 msgstr "Laat spionage toe"
 
 msgid "GMPLYMNU_CHASECAM"
-msgstr "Chasecam cheat"
+msgstr "Chasecam-hack"
 
 msgid "GMPLYMNU_DONTCHECKAMMO"
 msgstr "Controleer munitie voor wapenwissel"
@@ -3353,9 +3246,6 @@ msgstr "Direct bewegende vloeren zijn niet geruisloos"
 msgid "CMPTMNU_SECTORSOUNDS"
 msgstr "Sectorgeluiden gebruiken centrum als bron"
 
-msgid "CMPTMNU_SOUNDCUTOFF"
-msgstr "Geluiden stoppen wanneer de acteur verdwijnt"
-
 msgid "CMPTMNU_SOUNDTARGET"
 msgstr "Gebruik originele geluidsdoelwitverwerking"
 
@@ -3369,7 +3259,7 @@ msgid "CMPTMNU_CHECKSWITCHRANGE"
 msgstr "Buggy CheckSwitchSwitchRange gedrag inschakelen"
 
 msgid "CMPTMNU_RAILINGHACK"
-msgstr "Buggy mogelijk maken Strijk-reling"
+msgstr "Buggy Strife-reling inschakelen"
 
 msgid "CMPTMNU_EXPLODE1"
 msgstr "Geen verticale stuwkracht van explosies"
@@ -3615,7 +3505,7 @@ msgid "AUTOMAPMNU_CONTROLS"
 msgstr "Kaartcontroles aanpassen"
 
 msgid "AUTOMAPMNU_OVERLAY"
-msgstr "Overlay automap"
+msgstr "Overlay op de automatische kaart"
 
 msgid "AUTOMAPMNU_TEXTURED"
 msgstr "Structuurweergave inschakelen"
@@ -3827,9 +3717,6 @@ msgstr "Gebruik fuzz effect"
 msgid "DSPLYMNU_OLDTRANS"
 msgstr "Klassieke transparantie"
 
-msgid "DSPLYMNU_TRANSSOUL"
-msgstr "Verloren Ziel doorschijnendheid"
-
 msgid "DSPLYMNU_FAKECONTRAST"
 msgstr "Gebruik vals contrast"
 
@@ -3855,7 +3742,7 @@ msgid "DSPLYMNU_DEATHCAM"
 msgstr "Doodscamera"
 
 msgid "DSPLYMNU_TELEZOOM"
-msgstr "Teleporter zoom"
+msgstr "Zoom bij teleporter"
 
 msgid "DSPLYMNU_QUAKEINTENSITY"
 msgstr "Aardbevingsschoksintensiteit"
@@ -3945,7 +3832,7 @@ msgid "HUDMNU_POISONFLASHES"
 msgstr "Vergiftigingsschade knippert"
 
 msgid "HUDMNU_ICEFLASHES"
-msgstr "IJsdood knippert"
+msgstr "IJsdood knipperingen"
 
 msgid "HUDMNU_HAZARDFLASHES"
 msgstr "Vergiftiging Opbouw knippert"
@@ -3966,7 +3853,7 @@ msgid "MISCMNU_DEHLOAD"
 msgstr "*.deh/*.bex laden"
 
 msgid "MISCMNU_CACHENODES"
-msgstr "Cache nodes"
+msgstr "Cacheknooppunten"
 
 msgid "MISCMNU_CACHETIME"
 msgstr "Tijdsdrempel voor het cachen van nodes"
@@ -3983,9 +3870,6 @@ msgstr "Netwerkopties"
 msgid "NETMNU_LOCALOPTIONS"
 msgstr "Lokale opties"
 
-msgid "NETMNU_MOVEPREDICTION"
-msgstr "Voorspelling van bewegingen"
-
 msgid "NETMNU_LINESPECIALPREDICTION"
 msgstr "Voorspel lijnacties"
 
@@ -3993,22 +3877,13 @@ msgid "NETMNU_PREDICTIONLERPSCALE"
 msgstr "Voorspelling Lerp Scale"
 
 msgid "NETMNU_LERPTHRESHOLD"
-msgstr "Lerp Threshold"
+msgstr "Lerp-drempelwaarde"
 
 msgid "NETMNU_HOSTOPTIONS"
 msgstr "Verhuurders opties"
 
 msgid "NETMNU_EXTRATICS"
 msgstr "Extra tics"
-
-msgid "NETMNU_TICBALANCE"
-msgstr "Latency balans"
-
-msgid "OPTVAL_ORIGINAL"
-msgstr "Origineel"
-
-msgid "OPTVAL_OPTIMIZED"
-msgstr "Geoptimaliseerd"
 
 msgid "OPTVAL_CLASSIC"
 msgstr "Klassiek (sneller)"
@@ -4023,7 +3898,7 @@ msgid "OPTVAL_PARTICLES"
 msgstr "Deeltjes"
 
 msgid "OPTVAL_SPRITES"
-msgstr "Sprites"
+msgstr "Sprijten"
 
 msgid "OPTVAL_SPRITESPARTICLES"
 msgstr "Sprites & Deeltjes"
@@ -4035,7 +3910,7 @@ msgid "OPTVAL_BURN"
 msgstr "Verbranden"
 
 msgid "OPTVAL_CROSSFADE"
-msgstr "Crossfade"
+msgstr "Overvloeien"
 
 # This setting is duplicated in order to allow for different grammatical
 # gender endings in the Russian language (and any other language that depends
@@ -4076,15 +3951,6 @@ msgstr "Speler"
 
 msgid "OPTVAL_MAP"
 msgstr "Kaart"
-
-msgid "OPTVAL_SCALETO640X400"
-msgstr "Schaal tot 640x400"
-
-msgid "OPTVAL_PIXELDOUBLE"
-msgstr "Pixel dubbel"
-
-msgid "OPTVAL_PIXELQUADRUPLE"
-msgstr "Pixel viervoudig"
 
 msgid "OPTVAL_CURRENTWEAPON"
 msgstr "Huidig wapen"
@@ -4179,15 +4045,6 @@ msgstr "Alleen gedefinieerde kleuren op de kaart"
 msgid "OPTVAL_NODOORS"
 msgstr "Allemaal behalve deuren"
 
-msgid "OPTVAL_DOUBLE"
-msgstr "Dubbele"
-
-msgid "OPTVAL_TRIPLE"
-msgstr "Drievoudig"
-
-msgid "OPTVAL_QUADRUPLE"
-msgstr "Viervoudig"
-
 msgid "OPTVAL_ITEMPICKUP"
 msgstr "Puntafhaling"
 
@@ -4233,9 +4090,6 @@ msgstr "MBF21 (streng)"
 msgid "OPTVAL_ZDOOM2063"
 msgstr "ZDoom 2.0.63"
 
-msgid "OPTVAL_ALLUNACKNOWLEDGED"
-msgstr "Allemaal onbekend"
-
 msgid "OPTVAL_ERRORS"
 msgstr "Fouten"
 
@@ -4252,16 +4106,10 @@ msgid "OPTVAL_HWPOLY"
 msgstr "Hardware versneld"
 
 msgid "OPTVAL_SWDOOM"
-msgstr "Doom Software Renderer"
+msgstr "Doom Software-renderer"
 
 msgid "OPTVAL_SWDOOMTC"
 msgstr "True Color SW-renderer"
-
-msgid "OPTVAL_DEDICATED"
-msgstr "Hoogwaardige prestaties"
-
-msgid "OPTVAL_INTEGRATED"
-msgstr "Energiebesparing"
 
 msgid "OPTVAL_VANILLA"
 msgstr "Vanille"
@@ -4271,12 +4119,6 @@ msgstr "ZDoom (Gedwongen)"
 
 msgid "OPTVAL_VTFVANILLA"
 msgstr "Vanilla (Gedwongen)"
-
-msgid "OPTVAL_VTAZDOOM"
-msgstr "Auto (bij voorkeur ZDoom)"
-
-msgid "OPTVAL_VTAVANILLA"
-msgstr "Auto (bij voorkeur Vanilla)"
 
 msgid "OPTVAL_SMALL"
 msgstr "Klein"
@@ -4369,19 +4211,13 @@ msgid "OPTSTR_HERETIC"
 msgstr "Ketter"
 
 msgid "OPTSTR_CHEX"
-msgstr "Chex"
-
-msgid "OPTSTR_NOSOUND"
-msgstr "Geen geluid"
+msgstr "Chex®"
 
 msgid "OPTSTR_NOINTERPOLATION"
 msgstr "Geen interpolatie"
 
 msgid "OPTSTR_SPLINE"
 msgstr "Spline"
-
-msgid "OPTSTR_OPENAL"
-msgstr "OpenAL"
 
 msgid "DSPLYMNU_GLOPT"
 msgstr "Hardware-renderer"
@@ -4395,23 +4231,15 @@ msgstr "Hardware Rendering Opties"
 msgid "GLMNU_DYNLIGHT"
 msgstr "Dynamische Licht Opties"
 
-msgid "GLMNU_PREFS"
-msgstr "Voorkeuren"
-
-msgid "GLTEXMNU_TRIMSPREDGE"
-msgstr "Sprite-randen bijsnijden"
-
 msgid "GLTEXMNU_SORTDRAWLIST"
 msgstr "Tekeninglijsten sorteren op textuur"
 
 msgid "GLLIGHTMNU_TITLE"
 msgstr "Dynamische verlichting"
 
+#, fuzzy
 msgid "GLLIGHTMNU_LIGHTSENABLED"
 msgstr "Dynamische verlichting (hardware)"
-
-msgid "GLLIGHTMNU_LIGHTDEFS"
-msgstr "Lichtdefinities mogelijk maken"
 
 msgid "GLLIGHTMNU_LIGHTSPRITES"
 msgstr "Lichten beïnvloeden sprites"
@@ -4428,17 +4256,11 @@ msgstr "Schaduwkaart kwaliteit"
 msgid "GLLIGHTMNU_LIGHTSHADOWMAPFILTER"
 msgstr "Schaduwkaart filter"
 
-msgid "GLPREFMNU_FOGMODE"
-msgstr "Mistmodus"
-
 msgid "GLPREFMNU_FOGFORCEFULLBRIGHT"
 msgstr "Mistkrachten volle lichtsterkte"
 
 msgid "GLPREFMNU_WPNLIGHTSTR"
 msgstr "Sterkte van het wapenlicht"
-
-msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
-msgstr "Milieukaart op spiegels"
 
 msgid "GLPREFMNU_ENV"
 msgstr "Verbeterde nachtzicht modus"
@@ -4463,9 +4285,6 @@ msgstr "Sprites gezicht camera"
 
 msgid "GLPREFMNU_PARTICLESTYLE"
 msgstr "Deeltjes stijl"
-
-msgid "GLPREFMNU_RENDERQUALITY"
-msgstr "Het teruggeven van kwaliteit"
 
 msgid "GLPREFMNU_VRMODE"
 msgstr "Stereo 3D VR"
@@ -4516,9 +4335,6 @@ msgstr "Doom Legacy"
 msgid "OPTVAL_SOFTWARE"
 msgstr "Software"
 
-msgid "OPTVAL_OPTIMAL"
-msgstr "Optimaal"
-
 msgid "OPTVAL_YAXIS"
 msgstr "Y-as"
 
@@ -4531,11 +4347,8 @@ msgstr "Vierkant"
 msgid "OPTVAL_ROUND"
 msgstr "Rond"
 
-msgid "OPTVAL_RADIAL"
-msgstr "Radiaal"
-
 msgid "OPTVAL_PIXELFUZZ"
-msgstr "Pixel fuzz"
+msgstr "Pixelruis"
 
 msgid "OPTVAL_SMOOTHFUZZ"
 msgstr "Gladde fuzz"
@@ -4597,9 +4410,6 @@ msgstr "TrueColor Opties"
 msgid "TCMNU_TITLE"
 msgstr "TrueColor Opties"
 
-msgid "TCMNU_TRUECOLOR"
-msgstr "Ware kleurenoutput"
-
 msgid "TCMNU_MINFILTER"
 msgstr "Lineair filter voor downscaling"
 
@@ -4608,24 +4418,6 @@ msgstr "Lineair filter voor upscaling"
 
 msgid "TCMNU_MIPMAP"
 msgstr "Gebruik mipmapped texturen"
-
-msgid "TCMNU_DYNLIGHTS"
-msgstr "Dynamische verlichting (software)"
-
-msgid "OS_TITLE"
-msgstr "Optie zoeken"
-
-msgid "OS_ANY"
-msgstr "Zoek naar eender welke term"
-
-msgid "OS_ALL"
-msgstr "Zoek naar alle termen"
-
-msgid "OS_NO_RESULTS"
-msgstr "Geen resultaten gevonden."
-
-msgid "OS_LABEL"
-msgstr "Zoeken:"
 
 msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
 msgstr "Toon altijd de toetsen"
@@ -4663,18 +4455,16 @@ msgstr "Savegame '%s' is van een andere ZDoom-gebaseerde engine:"
 
 msgid "TXT_TOOOLDSG"
 msgstr ""
-"Savegame '%s' is van een oudere versie: %d "
-"(%e is de oudste ondersteunde versie)"
+"Savegame '%s' is van een oudere versie: %d (%e is de oudste ondersteunde "
+"versie)."
 
 # Shouldn’t this say “%e is the newest supported”?
-# 
 # — Undead
-# 
 # Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
 msgstr ""
-"Savegame '%s' is van een nieuwere versie: %d "
-"(%e is de hoogst ondersteunde versie)"
+"Savegame '%s' is van een nieuwere versie: %d (%e is de hoogst ondersteunde "
+"versie)."
 
 msgid "TXT_NOMAPSG"
 msgstr "Savegame '%s' mist de huidige kaart."
@@ -4707,10 +4497,6 @@ msgstr "Kon geen screenshot maken."
 msgid "TXT_BY"
 msgstr "Met %s"
 
-msgid "TXT_QUITENDOOM"
-msgstr ""
-"Druk op een willekeurige toets of klik ergens in het venster om te stoppen."
-
 msgid "HUDMNU_FLASH"
 msgstr "Opties voor schermmengsel"
 
@@ -4722,9 +4508,6 @@ msgstr "Draadkruis"
 
 msgid "MSGMNU_SUBTITLES"
 msgstr "Ondertitels"
-
-msgid "GLPREFMNU_PALTONENOGREY"
-msgstr "Voorkom grijze schaduwen"
 
 msgid "HUDMNU_FONTOPTIONS"
 msgstr "Lettertype opties"
@@ -4742,7 +4525,7 @@ msgid "DSPLYMNU_CUSTOMINVERTMAP"
 msgstr "Aangepaste inversiekleuren"
 
 msgid "DSPLYMNU_CUSTOMINVERTC1"
-msgstr "Aangepaste donkere inversiekleur\n"
+msgstr "Aangepaste donkere inversiekleur"
 
 msgid "DSPLYMNU_CUSTOMINVERTC2"
 msgstr "Aangepaste lichte inversiekleur"
@@ -4765,11 +4548,6 @@ msgstr "Schaalfactor"
 
 msgid "SCALEMNU_RATIO"
 msgstr "Beeldverhouding"
-
-# as in "Build engine". This should not be translated unless there is a
-# translated name for the engine
-msgid "OPTVAL_BUILD"
-msgstr "Bouw"
 
 # sv_alwaystally
 msgid "MISCMNU_ALWAYSTALLY"
@@ -4795,7 +4573,7 @@ msgid "OPTVAL_MODERN"
 msgstr "Modern (WASD)"
 
 msgid "OPTVAL_MODERNLEFT"
-msgstr "Modern (nummeriek toetsenbord)"
+msgstr "Modern (linkshandig / numeriek toetsenblok)"
 
 msgid "MISCMNU_SETSLOTSTRICT"
 msgstr "Strikte KEYCONF Wapens/Spelers"
@@ -4824,7 +4602,7 @@ msgid "TAG_PEASANT"
 msgstr "Onderdaan"
 
 msgid "TAG_REAVER"
-msgstr "Reaver"
+msgstr "Rever"
 
 msgid "TAG_SENTINEL"
 msgstr "Sentinel"
@@ -4921,11 +4699,11 @@ msgstr "Client-side pick ups van gedropte items uitschakelen"
 
 # Disables autoloading save on death
 msgid "MISCMNU_RESTARTONDEATH"
-msgstr "Level herstarten bij dood"
+msgstr "Start met een pistool bij overlijden"
 
 # Resets inventory on every map
 msgid "GMPLYMNU_PISTOLSTART"
-msgstr "Start met pistool"
+msgstr "Elke map begint met een pistoolstart"
 
 msgid "CMPTMNU_VOODOOZOMBIES"
 msgstr "Maak het mogelijk om zombie-spelers te creëren"
@@ -4975,10 +4753,10 @@ msgstr "Banshee"
 
 # Also known as Plasmaguy.
 msgid "ID24_CC_SHOCKTROOPER"
-msgstr "Shocktrooper"
+msgstr "Stoottroeper"
 
 msgid "ID24_CC_MINDWEAVER"
-msgstr "Mindweaver"
+msgstr "Gedachtenwever"
 
 msgid "ID24_CC_VASSAGO"
 msgstr "Vassago"
@@ -5088,9 +4866,6 @@ msgstr "Aftellen tot stemming (seconden)"
 msgid "NETMNU_CHATSLOMO"
 msgstr "Chat Slow Mode (seconden)"
 
-msgid "JOYMNU_HAPTRIGGERS"
-msgstr "Haptische triggers inschakelen"
-
 msgid "OPTMNU_HAPTICS"
 msgstr "Haptische opties"
 
@@ -5145,7 +4920,7 @@ msgid "TAG_SOULSPHERE"
 msgstr "Zielsbol"
 
 msgid "TAG_MEGAPSHERE"
-msgstr "Mega Sphere"
+msgstr "Mega Sfeer"
 
 msgid "TAG_INVISSPHERE"
 msgstr "Vervagingartefact"
@@ -5166,10 +4941,10 @@ msgid "TAG_HEALTHBONUS"
 msgstr "Gezondheidspotion"
 
 msgid "TAG_STIMPACK"
-msgstr "Stimpack"
+msgstr "Stimpak"
 
 msgid "TAG_MEDIKIT"
-msgstr "Medikit"
+msgstr "Medisetje"
 
 msgid "TAG_BLUECARD"
 msgstr "Blauwe sleutelkaart"
@@ -5205,10 +4980,10 @@ msgid "TAG_REPELLENT"
 msgstr "Slijmafstotend"
 
 msgid "TAG_CHEXARMOR"
-msgstr "Chex Armor"
+msgstr "Chex® Harnas"
 
 msgid "TAG_SUPERCHEXARMOR"
-msgstr "Super Chex-pantser"
+msgstr "Super Chex® Harnas"
 
 msgid "TAG_CHEXMAP"
 msgstr "Computergebiedkaart"
@@ -5268,3 +5043,290 @@ msgstr "Contrast"
 
 msgid "DSPLYMNU_SATURATION"
 msgstr "Verzadiging"
+
+msgid "OPTVAL_SMOOTH"
+msgstr "Glad"
+
+msgid "TAG_MAULER"
+msgstr "Mauler"
+
+msgid "TAG_GLAUNCHER"
+msgstr "Granaatwerper"
+
+msgid "JOYMNU_ANALOGRUN"
+msgstr "Analoge run"
+
+msgid "ACCMNU_TOOLTIP_LINES"
+msgstr "Tooltip-regels"
+
+msgid "ACCMNU_TOOLTIP_SPEED"
+msgstr "Scrolsnelheid van tooltips"
+
+msgid "ACCMNU_TOOLTIP_DELAY"
+msgstr "Vertraging bij het scrollen van tooltips"
+
+msgid "ACCMNU_TOOLTIP_ALPHA"
+msgstr "Doorzichtigheid achtergrond tooltip"
+
+msgid "ACCMNU_TOOLTIP_CAP"
+msgstr "Breedte van de tooltip beperken"
+
+msgid "ACCMNU_TOOLTIP_SCALE"
+msgstr "Grote tooltiptekst"
+
+msgid "ACCMNU_TOOLTIP_EXAMPLE"
+msgstr ""
+"Dit is een voorbeeld van een tooltip.\n"
+"Hier volgt wat aanvullende tekst.\n"
+"…\n"
+"Hier staat een erg lange tekstregel die maar doorgaat zonder ooit iets interessants te zeggen; hij lijkt alleen maar zo lang te zijn omdat de ontwikkelaars moeite hebben om uit te leggen wat een optie doet."
+
+msgid "ACCMNU_TOOLTIP"
+msgstr "Settips"
+
+msgid "ACCMNU_LIGHT_EXTRA"
+msgstr "Extra verlichting"
+
+msgid "ACCMNU_TOOLTIP_LIGHT_RADIUS"
+msgstr ""
+"Bepaalt de straal van de verlichting rondom de speler in kaarteenheden. Hoe "
+"hoger de waarde, hoe helderder de scène."
+
+msgid "ACCMNU_TOOLTIP_LIGHT_EXTRA"
+msgstr ""
+"De hoeveelheid sectorverlichting die bovenop de bestaande "
+"verlichtingsniveaus van de sector moet worden toegevoegd, met behoud van de "
+"bestaande verlichtingsmodus."
+
+msgid "ACCMNU_LIGHT_RADIUS"
+msgstr "Lichtstraal van de speler"
+
+msgid "ACCMNU_LIGHT"
+msgstr "Verlichting"
+
+msgid "DSPLYMNU_ROCKETEXPSTYLE"
+msgstr "Weergavestijl ‘Explosie’"
+
+msgid "OPTVAL_ROCKETEXP_STYLE_ADD"
+msgstr "Invoeging"
+
+msgid "OPTVAL_ROCKETEXP_STYLE_TRANS"
+msgstr "Transparant"
+
+msgid "OPTVAL_LAX"
+msgstr "Ontspannen"
+
+msgid "OPTVAL_STRICT"
+msgstr "Strikt"
+
+msgid "PICKER_FILELOADING"
+msgstr "Bestand wordt geladen"
+
+msgid "DSPLYMNU_IMAGEADJUST"
+msgstr "Beeldkalibratie"
+
+msgid "DSPLYMNU_IMAGEADJUST_TOP1"
+msgstr "Pas deze schuifregelaars aan vanaf een normale kijkafstand."
+
+msgid "DSPLYMNU_IMAGEADJUST_TOP2"
+msgstr "Opschalen/supersampling kan leiden tot onjuiste resultaten."
+
+msgid "DSPLYMNU_IMAGEADJUST_TOP3"
+msgstr "Schakel ze uit voordat u de instellingen aanpast."
+
+msgid "DSPLYMNU_TOOLTIP_GAMMA"
+msgstr ""
+"Compenseert de beperkingen van je beeldscherm. Pas de instelling aan totdat "
+"de verticale grijze blokken vervagen. Gebruik deze functie niet om het spel "
+"helderder te maken, maar alleen om ervoor te zorgen dat het beeld is "
+"afgestemd op jouw systeem."
+
+msgid "DSPLYMNU_BLACKPOINT"
+msgstr "Vergoeding van Blackpoint"
+
+msgid "DSPLYMNU_TOOLTIP_BLACKPOINT"
+msgstr ""
+"Compenseert voor beeldschermen die donkere pixels niet correct weergeven. "
+"Pas de instelling aan totdat de diagonale witte blokken vervagen. Gebruik "
+"deze functie niet om het spel helderder te maken, maar alleen om ervoor te "
+"zorgen dat het beeld is afgestemd op jouw opstelling."
+
+msgid "DSPLYMNU_TOOLTIP_IMAGEADJUST_RESET"
+msgstr ""
+"Hiermee worden alle opties in dit menu teruggezet naar de "
+"standaardinstellingen."
+
+msgid "DSPLYMNU_TOOLTIP_BRIGHTNESS"
+msgstr ""
+"Hiermee wordt een lineaire helderheidsaanpassing toegepast. Pas de "
+"helderheid aan naar eigen voorkeur, of om in het donker te kunnen zien."
+
+msgid "DSPLYMNU_TOOLTIP_CONTRAST"
+msgstr ""
+"Hiermee pas je het waargenomen verschil tussen vergelijkbare kleuren aan. "
+"Hiermee bepaal je hoe scherp of vaal de afbeeldingen eruitzien. Pas dit aan "
+"naar eigen smaak."
+
+msgid "DSPLYMNU_TOOLTIP_SATURATION"
+msgstr ""
+"Hiermee past u de kleurintensiteit aan, waardoor het beeld levendiger of "
+"juist wat gedempter wordt. Pas dit aan naar eigen smaak."
+
+msgid "DSPLYMNU_IMAGEADJUST_BOTTOM"
+msgstr "Pas dit aan totdat het eruitziet als een egale grijze kleur."
+
+msgid "ACTION_COPYTOCLIPBOARD"
+msgstr "Kopiëren naar klembord"
+
+msgid "ACTION_RESTART"
+msgstr "Herstart"
+
+msgid "ACTION_ABORT"
+msgstr "Afbreken"
+
+msgid "ACTION_STARTGAME"
+msgstr "Spel beginnen"
+
+msgid "ACTION_KICK"
+msgstr "Kicken"
+
+msgid "ACTION_BAN"
+msgstr "Verbannen"
+
+msgid "ERRORMNU_SAVE"
+msgstr "Rapport opslaan"
+
+msgid "ERROR_FATAL"
+msgstr "Fatale fout"
+
+msgid "ERROR_ABORT"
+msgstr "De uitvoering kon niet worden voortgezet."
+
+msgid "FILEPICKER_ANY"
+msgstr "Alle bestanden"
+
+msgid "FILEPICKER_REPORTS"
+msgstr "Zip-bestanden met crashrapporten"
+
+msgid "HAPMNU_TITLE"
+msgstr "Opties voor haptische feedback"
+
+msgid "CMPTMNU_AUTO"
+msgstr "Compatibiliteitsinstellingen automatisch detecteren"
+
+msgid "DSPLYMNU_POWERUPFADE"
+msgstr "Intensiteit van de Powerup-tint"
+
+msgid "PICKER_PLAYERCLASS"
+msgstr "Spelersklasse"
+
+msgid "OPTVAL_SBSLETTERBOX"
+msgstr "Naast elkaar in letterboxformaat"
+
+msgid "OPTVAL_DIRECTMIX"
+msgstr "Direct Mix"
+
+msgid "OPTVAL_SUPERSTEREO"
+msgstr "Super Stereo"
+
+msgid "OPENALMNU_MUSICMODE"
+msgstr "Muziekmodus"
+
+msgid "OPENALMNU_SUPERSTEREOWIDTH"
+msgstr "Superbreed stereobeeld"
+
+msgid "CNTRLMNU_ADJUST_LIGHTS"
+msgstr "Verlichting aanpassen"
+
+msgid "TAG_MACIL"
+msgstr "Macil"
+
+msgid "ACTION_OPENWADDIR"
+msgstr "WAD’s bekijken"
+
+msgid "ACTION_OPENCONFIGDIR"
+msgstr "Configuraties bekijken"
+
+msgid "OPTMNU_OPENWADS"
+msgstr "Blader door de IWAD-map"
+
+msgid "SNDMNU_NOMIDIOPTIONS"
+msgstr "Het MIDI-apparaat biedt geen instellingen."
+
+msgid "CMPTMNU_EMULATEMIKOPORTALS"
+msgstr "Mikoportals nabootsen"
+
+msgid "HUDMNU_CROSSHAIRCOLORFULL"
+msgstr "Kleur van het dradenkruis bij volledige gezondheid"
+
+msgid "HUDMNU_CROSSHAIRCOLORMAX"
+msgstr "Kleur van het dradenkruis bij maximale gezondheid"
+
+msgid "HUDMNU_CROSSHAIRCOLORS"
+msgstr "Dynamische kleuren voor het dradenkruis"
+
+msgid "HUDMNU_CROSSHAIRYOFFSET"
+msgstr "Verticale verschuiving van het dradenkruis"
+
+#, fuzzy
+msgid "OPTVAL_VTAVANILLA"
+msgstr "Auto (bij voorkeur Vanilla)"
+
+#, fuzzy
+msgid "OPTVAL_VTAZDOOM"
+msgstr "Auto (bij voorkeur ZDoom)"
+
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Gegradeloosheid modus: {AAN|UIT}"
+
+msgid "STSTR_DQD2{ON|OFF}"
+msgstr "Uiteindelijke Gegradeloosheid modus: {AAN|UIT}"
+
+msgid "STSTR_NC{ON|OFF}"
+msgstr "Geen Clipping Modus: {AAN|UIT}"
+
+msgid "STSTR_NC2{ON|OFF}"
+msgstr "3D-modus zonder clipping: {AAN|UIT}"
+
+msgid "TXT_BUDDHA{ON|OFF}"
+msgstr "Boeddha-modus: {AAN|UIT}"
+
+msgid "TXT_BUDDHA2{ON|OFF}"
+msgstr "Ultieme Boeddha-modus: {AAN|UIT}"
+
+msgid "TXT_CHEATPOWER{ON|OFF}"
+msgstr "Vermogen: {AAN|UIT}"
+
+msgid "TXT_CHEATSOUND{ON|OFF}"
+msgstr "Geluid debug: {AAN|UIT}"
+
+msgid "TXT_CHEATTICKER{ON|OFF}"
+msgstr "Ticker: {AAN|UIT}"
+
+msgid "TXT_FREEZE{ON|OFF}"
+msgstr "Bevriesmodus: {AAN|UIT}"
+
+msgid "TXT_LEADBOOTS{ON|OFF}"
+msgstr "Loden laarzen: {AAN|UIT}"
+
+msgid "TXT_NOTARGET_{ON|OFF}"
+msgstr "Geen doelwit: {AAN|UIT}"
+
+msgid "TXT_CHASECAM_{ON|OFF}"
+msgstr "Chasecam: {AAN|UIT}"
+
+msgid "AMSTR_FOLLOW{ON|OFF}"
+msgstr "Volgmodus: {AAN|UIT}"
+
+msgid "AMSTR_GRID{ON|OFF}"
+msgstr "Raster: {AAN|UIT}"
+
+msgid "AMSTR_TEX{ON|OFF}"
+msgstr "Textuurmodus: {AAN|UIT}"
+
+msgctxt "chex"
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Onoverwinnelijke modus: {AAN|UIT}"
+
+msgid "MSG{ON|OFF}"
+msgstr "Berichten: {AAN|UIT}"

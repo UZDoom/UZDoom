@@ -19,7 +19,7 @@
 
 class StrifeStatusBar : BaseStatusBar
 {
-	
+
 	// Number of tics to move the popscreen up and down.
 	const POP_TIME = (Thinker.TICRATE/8);
 
@@ -50,12 +50,12 @@ class StrifeStatusBar : BaseStatusBar
 		imgFONY_PERCENT,
 		imgNEGATIVE,
 	};
-	
+
 	TextureID Images[imgNEGATIVE + 1];
 	int CursorImage;
 	int CurrentPop, PendingPop, PopHeight, PopHeightChange;
 	int KeyPopPos, KeyPopScroll;
-	
+
 	HUDFont mYelFont, mGrnFont, mBigFont;
 
 	override void Init()
@@ -69,18 +69,18 @@ class StrifeStatusBar : BaseStatusBar
 			"INVFONY%", ""
 
 		};
-		
+
 		Super.Init();
 		SetSize(32, 320, 200);
 		Reset();
-		
+
 		for(int i = 0; i <= imgNEGATIVE; i++)
 		{
 			Images[i] = TexMan.CheckForTexture(strifeLumpNames[i], TexMan.TYPE_MiscPatch);
 		}
 
 		CursorImage = Images[imgINVCURS].IsValid() ? imgINVCURS : imgCURSOR01;
-		
+
 		mYelFont = HUDFont.Create("Indexfont_Strife_Yellow", 7, Mono_CellLeft, 1, 1);
 		mGrnFont = HUDFont.Create("Indexfont_Strife_Green", 7, Mono_CellLeft, 1, 1);
 		mBigFont = HUDFont.Create("BigFont", 0, Mono_Off, 2, 2);
@@ -228,7 +228,7 @@ class StrifeStatusBar : BaseStatusBar
 		Fill(color1, x, y, (stopp-start)*2, 1);
 		Fill(color2, x, y+1, (stopp-start)*2, 1);
 	}
-	
+
 	protected void DrawHealthBar(int health, int x, int y)
 	{
 		Color green1 = Color(255, 180, 228, 128);	// light green
@@ -242,7 +242,7 @@ class StrifeStatusBar : BaseStatusBar
 
 		Color red1 = Color(255, 216, 44,  44);	// light red
 		Color red2 = Color(255, 172, 28,  28);	// dark red
-		
+
 		if (health == 999)
 		{
 			FillBar (x, y, 0, 100, gold1, gold2);
@@ -465,7 +465,7 @@ class StrifeStatusBar : BaseStatusBar
 			// List the keys the player has.
 			int pos, endpos, leftcol;
 			int clipleft, clipright;
-			
+
 			pos = KeyPopPos;
 			endpos = pos + 10;
 			leftcol = 20;
@@ -483,7 +483,7 @@ class StrifeStatusBar : BaseStatusBar
 			{
 				if (!(item is "Key"))
 					continue;
-				
+
 				if (i < pos)
 				{
 					i++;
@@ -514,7 +514,7 @@ class StrifeStatusBar : BaseStatusBar
 
 		case POP_Status:
 			// Show miscellaneous status items.
-			
+
 			// Print stats
 			DrINumber2 (CPlayer.mo.accuracy, left+268*xscale, top+28*yscale, 7*xscale, imgFONY0);
 			DrINumber2 (CPlayer.mo.stamina, left+268*xscale, top+52*yscale, 7*xscale, imgFONY0);
@@ -542,16 +542,16 @@ class StrifeStatusBar : BaseStatusBar
 
 			// How much ammo does the player have?
 			static const class<Ammo> AmmoList[] = {
-				"ClipOfBullets",			
-				"PoisonBolts",				
-				"ElectricBolts",			
-				"HEGrenadeRounds",			
-				"PhosphorusGrenadeRounds",	
-				"MiniMissiles",			
-				"EnergyPod"};				
-				
+				"ClipOfBullets",
+				"PoisonBolts",
+				"ElectricBolts",
+				"HEGrenadeRounds",
+				"PhosphorusGrenadeRounds",
+				"MiniMissiles",
+				"EnergyPod"};
+
 			static const int AmmoY[] = {19, 35, 43, 59, 67, 75, 83};
-			
+
 			for (i = 0; i < 7; ++i)
 			{
 				item = CPlayer.mo.FindInventory (AmmoList[i]);
@@ -567,10 +567,10 @@ class StrifeStatusBar : BaseStatusBar
 					DrINumber2 (item.MaxAmount, left+239*xscale, top+AmmoY[i] * yscale, 7*xscale, imgFONY0);
 				}
 			}
-					
+
 
 			// What weapons does the player have?
-			static const class<Weapon> WeaponList[] = 
+			static const class<Weapon> WeaponList[] =
 			{
 				"StrifeCrossbow",
 				"AssaultGun",
@@ -618,4 +618,3 @@ class StrifeStatusBar : BaseStatusBar
 		}
 	}
 }
-

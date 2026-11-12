@@ -95,6 +95,12 @@ public:
 		return InternalGetTexture(i, animate);
 	}
 
+	inline FGameTexture* GetPlaceholderTexture() const
+	{ // faster version of GameByIndex(1)
+		assert(Textures.Size() >= 2);
+		return Textures[1].Texture;
+	}
+
 	FGameTexture* FindGameTexture(const char* texname, ETextureType usetype = ETextureType::MiscPatch, BITFIELD flags = TEXMAN_TryAny);
 
 	bool OkForLocalization(FTextureID texnum, const char *substitute, int locnum);
@@ -103,8 +109,8 @@ public:
 	void Listaliases();
 	FTextureID GetFrontSkyLayer(FTextureID);
 	FTextureID GetRawTexture(FTextureID tex, bool dontlookup = false);
-	void SetRawTexture(FTextureID texid) 
-	{ 
+	void SetRawTexture(FTextureID texid)
+	{
 		int texidx = texid.GetIndex();
 		if ((unsigned)texidx < Textures.Size())
 		{
@@ -163,6 +169,7 @@ public:
 	FTextureID CreateTexture (int lumpnum, ETextureType usetype=ETextureType::Any);	// Also calls AddTexture
 	FTextureID AddGameTexture(FGameTexture* texture, bool addtohash = true);
 	FTextureID GetDefaultTexture() const { return DefaultTexture; }
+	FTextureID GetWhiteTexture() const { return WhiteTexture; }
 
 	void LoadTextureX(int wadnum, FMultipatchTextureBuilder &build);
 	void AddTexturesForWad(int wadnum, FMultipatchTextureBuilder &build);
@@ -231,7 +238,7 @@ private:
 		FGameTexture* Texture;
 		int Paletted;		// redirection to paletted variant
 		int FrontSkyLayer;	// and front sky layer,
-		int RawTexture;		
+		int RawTexture;
 		int HashNext;
 		uint64_t Flags;
 	};
@@ -249,6 +256,7 @@ private:
 	TMap<uint64_t, int> LocalizedTextures;
 	int HashFirst[HASH_SIZE];
 	FTextureID DefaultTexture;
+	FTextureID WhiteTexture;
 	TArray<int> FirstTextureForFile;
 	TArray<TArray<uint8_t> > BuildTileData;
 	TArray<int> Translation;
@@ -272,4 +280,3 @@ public:
 };
 
 extern FTextureManager TexMan;
-

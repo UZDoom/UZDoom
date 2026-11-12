@@ -1,18 +1,39 @@
-/* Default keybindings (keypad) for all games */
+/* Default left-handled keybindings for all games */
+
+mouse2 +altattack
+mouse3 +zoom
+
+/* (keypad) */
 
 KP8 +forward
 KP5 +back
 KP4 +moveleft
 KP6 +moveright
-KP7 +jump
+
+KP-Enter +speed
+KP7 +use
+KP9 +reload
 KP1 crouch
-KP0 +use
+KP0 +jump
+
+/* (keyboard) */
+
+p +forward
+semicolon +back
+l +moveleft
+' +moveright
+
+rshift +speed
+o +use
+i +reload
+. crouch
+space +jump
+
+/* (arrows) */
+
 UpArrow +forward
 DownArrow +back
 LeftArrow +moveleft
 RightArrow +moveright
-mouse2 +altattack
 
-
-
-
+ctrl +use

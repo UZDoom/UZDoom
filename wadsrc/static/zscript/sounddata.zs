@@ -19,7 +19,7 @@
 
 class SeqNode native
 {
-	enum ESeqType 
+	enum ESeqType
 	{
 		PLATFORM,
 		DOOR,
@@ -35,4 +35,3 @@ class SeqNode native
 	native static Name GetSequenceSlot (int sequence, int type);
 	native static void MarkPrecacheSounds(int sequence, int type);
 }
-

@@ -1,0 +1,642 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-06-28 17:01+0000\n"
+"Last-Translator: தமிழ்நேரம் <tamilneram247@gmail.com>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/doom-engine-games/hacx-filter/ta/>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.7.dev0\n"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG1"
+msgstr "இந்த பிழைகள் உங்களுக்கு மிகவும் கடினமானதா?"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG"
+msgstr ""
+"நீங்கள் நிச்சயமாக விரும்புகிறீர்களா \n"
+"பலா செயலிலிருந்து வெளியேறவா?"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG2"
+msgstr "வெளியேற முயற்சிக்கிறீர்களா? நீங்கள் உங்களை ஒரு ஏக்கர் என்று அழைக்கிறீர்களா?"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG3"
+msgstr "நான் உங்கள் டெயில்பைப்பில் வைரசை அனுப்பும் முன் இங்கு திரும்பி வாருங்கள்!"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG4"
+msgstr "உண்மையான ஏக்கர்கள் ஒருபோதும் செயலில் இருந்து வெளியேற மாட்டார்கள்."
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG5"
+msgstr "வா! சிறந்த பகுதியை நீங்கள் இன்னும் பார்க்கவில்லை!"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG6"
+msgstr "இப்போது விட்டுவிடுங்கள், சைபர்ச்பேச் என்பது சிற்றுண்டி!"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG7"
+msgstr "GENIE தனது வாழ்த்துக்களை அனுப்புகிறது, அசிங்கம்!"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG8"
+msgstr "ம்ம். ஒரு ஈரோவாக இருப்பதற்கு இவ்வளவு, ஏக்கர்."
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG9"
+msgstr "என்ன? நீங்கள் பேனாவுக்குத் திரும்ப விரும்புகிறீர்களா?"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG10"
+msgstr "நீல மாத்திரை சாப்பிட வேண்டும்."
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG11"
+msgstr "விளையாட்டின் பெயர் ட்விச் என் ரன் அல்ல!"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG12"
+msgstr "கவலை இல்லை. உலகைக் காப்பாற்ற காத்திருக்கலாம், இல்லையா?"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG13"
+msgstr "'நெட் மற்றும் பிளவு' போன்றவற்றை உருவாக்குவதற்கான நேரம் இது என்று யூகிக்கவும்!"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG14"
+msgstr "இப்போது ஏக்எக்ச் பற்றி மறந்துவிடாதீர்கள்!"
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_SUICIDE"
+msgstr "%i பிரபஞ்சத்தில் இருந்து %தன்னை நீக்கியது."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_FALLING"
+msgstr "%o கன்சாச் அளவுள்ள ஒரு பள்ளத்தை உருவாக்கியது."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_CRUSH"
+msgstr "%o ஒரு மனித பான்கேக் ஆனது."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_EXIT"
+msgstr "%o வெளியேற முயன்றார்."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_WATER"
+msgstr "%o ஒரு செங்கல் போல் நீந்தினார்."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_SLIME"
+msgstr "%o அணுவுக்குச் சென்றது."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_LAVA"
+msgstr "%o சூடான குளியல் எடுத்தார்."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_BARREL"
+msgstr "நைட்ரோகிளிசரின் %i அளவுக்கு அதிகமாக இருந்தது."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_SPLASH"
+msgstr "%o சிறு துண்டுகளாக உரிக்கப்படுகிறது."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_R_SPLASH"
+msgstr "உள்ளே-வெளியே %g எப்படி இருக்கிறது என்பதைப் பார்க்க %o விரும்பினார்."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_ROCKET"
+msgstr "உள்ளே-வெளியே %g எப்படி இருக்கிறது என்பதைப் பார்க்க %o விரும்பினார்."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_KILLEDSELF"
+msgstr "%i பிரபஞ்சத்தில் இருந்து %தன்னை நீக்கியது."
+
+msgid "OB_THUG"
+msgstr "%o என்பது மேலாதிக்க இனம் அல்ல."
+
+msgid "OB_ANDROID"
+msgstr "%o தவறான இயந்திரத்தில் செருகப்பட்டுள்ளது."
+
+msgid "OB_MONSTRUCT"
+msgstr "%o தன்னை ஒரு சைபர்-சாக்கி-டெர்ரியர்-கிக்கிங்கின் அரக்கனாகப் பெற்றார்."
+
+msgid "OB_ICE"
+msgstr "%o ICEd கிடைத்தது."
+
+msgid "OB_BUZZER"
+msgstr "%o சற்று சலசலப்பதாக உணர்கிறார்."
+
+msgid "OB_STEALTH"
+msgstr "%o ஒரு அதிர்ச்சியூட்டும் வளர்ச்சியை வெளிப்படுத்துகிறது."
+
+msgid "OB_DMAN"
+msgstr "சைபர்ச்பேசில் இருந்து %o அழிக்கப்பட்டது."
+
+msgid "OB_GLASS"
+msgstr "%i தனக்கு ஒரு கண்ணாடி தாடையைக் கொடுத்தார்."
+
+msgid "OB_MANIAC"
+msgstr "%o இன் வாழ்நாள் உறுப்பினர் நிறுத்தப்பட்டது."
+
+msgid "OB_MANIACHIT"
+msgstr "%o சில சீரற்ற முறையில் இறந்துவிட்டார், என்னால் புரிந்து கொள்ள முடியவில்லை."
+
+msgid "OB_TERMIN"
+msgstr "%o ஃபெம்மே ஃபேடேல் ஃப்ரீக் மூலம் வறுக்கப்பட்டது."
+
+# This text is not gender neutral, obviously...
+msgid "OB_TERMINHIT"
+msgstr "%நான் எதிர் பாலினத்துடன் கொஞ்சம் நெருக்கமாகிவிட்டேன்."
+
+msgid "OB_REPLI"
+msgstr "%o ஒரு பழைய நண்பரிடம் விடைபெற்றார்."
+
+msgid "OB_REPLIHIT"
+msgstr "%i ஒரு பழைய நண்பரால் முதுகில் குத்தப்பட்டார்."
+
+msgid "OB_PHAGE"
+msgstr "இயற்கை தேர்வால் %o களையெடுக்கப்பட்டது."
+
+msgid "OB_THORN"
+msgstr "%o ஒரு முள் மரணத்திலிருந்து தப்ப முடியவில்லை."
+
+msgid "OB_SUMATIC"
+msgstr "%o இடுப்புக்கு ஒரு சுமோ பஞ்ச் எடுத்தார்."
+
+msgid "OB_GENIE"
+msgstr "%iக்கு %p மூன்று விருப்பங்கள் கிடைக்கவில்லை."
+
+msgid "OB_MINE"
+msgstr "%o ஒரு சுரங்கத்தில் செல்ல முயன்றார்."
+
+msgid "OB_MPKICK"
+msgstr "%o %k இன் புரூச் லீ ஃபு-கிக்கை முகத்தில் எடுத்தார்."
+
+msgid "OB_MPREZNATOR"
+msgstr "%k இன் அதிர்ச்சியூட்டும் வெளிப்பாடு மூலம் %o பிரிந்தது."
+
+msgid "OB_MPXPISTOL"
+msgstr "%k இன் தண்டனையின் இரட்டை டோசை %o எடுத்துக் கொண்டார்."
+
+msgid "OB_MPTAZER"
+msgstr "%k இன் சாக்-ச்டிக் மூலம் %o மூடப்பட்டது."
+
+msgid "OB_MPCRYOGUN"
+msgstr "%o க்கு %k இன் பனி-குளிர் சினம் நிறைந்த முகம்."
+
+msgid "OB_MPUZI"
+msgstr "%k, கேங்க்ச்டா பாணியில் %o துளைகள் நிறைந்தது."
+
+msgid "OB_MPZOOKA"
+msgstr "%k இன் ஃபோட்டான் குண்டை %o சாப்பிட்டார்."
+
+msgid "OB_MPZ_SPLASH"
+msgstr "%o ஆனது ஃபோட்டான்களின் நேர்த்தியான குவியலாக %k குறைக்கப்பட்டது."
+
+# Physically this is utter nonsense, of course.
+msgid "OB_MPANTIGUN"
+msgstr "%o was reduced பெறுநர் antimatter by %k."
+
+msgid "OB_MPNUKE"
+msgstr "%k இன் அணுவாயுதத்தை %o விழுங்கினார்."
+
+msgid "OB_MPNUKESPLASH"
+msgstr "%k இன் பேரழிவுக் களத்தில் இருந்து %o அணுசக்திக்குச் சென்றது."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_MPTELEFRAG"
+msgstr "%o ஆனது %k ஆல் உள்ளே-வெளியே மாற்றப்பட்டது."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_MONTELEFRAG"
+msgstr "%o இன் அணு அமைப்பு பிரிக்கப்பட்டது."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_DEFAULT"
+msgstr "%o தன்னிச்சையாக காலாவதியானது."
+
+msgid "GOTNUKER"
+msgstr "நீங்கள் ஒரு NUKER ஐ எடுத்துக் கொள்ளுங்கள்! இதை உறிஞ்சு!"
+
+msgid "GOTUZI"
+msgstr "உங்களுக்கு UZI கிடைத்தது!!"
+
+msgid "GOTREZNATOR"
+msgstr "ஒரு HOIG ரெச்னேட்டர் - சிறிது பிட்டத்தை வறுக்கவும்"
+
+msgid "GOTPHOTONZOOKA"
+msgstr "உங்களுக்கு ஃபோட்டான் 'சூகா!"
+
+msgid "GOTBIGSTICK"
+msgstr "நீங்கள் ஒரு பெரிய குச்சியை எடுத்துச் செல்கிறீர்கள்!"
+
+msgid "GOTTAZER"
+msgstr "உங்களுக்கு ஒரு டேசர் கிடைத்துள்ளது!!"
+
+msgid "GOTCRYOGUN"
+msgstr "நீங்கள் ஒரு கிரையோகனை எடுத்துக் கொள்ளுங்கள்! முடக்கு!"
+
+msgid "GOTROUNDS"
+msgstr "நீ சில ரவுண்டுகளை பிடி!"
+
+msgid "GOTROUNDSCASE"
+msgstr "நீங்கள் ரவுண்ட்ச் ஒரு கேச் கைப்பற்றி!"
+
+# Was "grap" for some reason.
+msgid "GOTTORPEDO"
+msgstr "நீங்கள் ஒரு டார்பிடோவைப் பிடி!"
+
+msgid "GOTTORPEDOS"
+msgstr "நீங்கள் டார்பிடோச் கேசைப் பிடிக்கிறீர்கள்!"
+
+msgid "GOTMOLECULES"
+msgstr "நீங்கள் ஒரு மூலக்கூறு தொகுதியைப் பிடிக்கிறீர்கள்!"
+
+msgid "GOTMOLECULESTANK"
+msgstr "நீங்கள் மூலக்கூறுகள் நிறைந்த தொட்டியைப் பிடிக்கிறீர்கள்!"
+
+msgid "GOTCARTRIDGES"
+msgstr "நீங்கள் சில தோட்டாக்களை எடுத்துக் கொள்ளுங்கள்!"
+
+msgid "GOTCARTRIDGESCASE"
+msgstr "நீங்கள் கேட்ரிட்ச்களின் கேசைப் பிடிக்கிறீர்கள்!"
+
+msgid "GOTVALISE"
+msgstr "நீங்கள் பொருட்கள் நிரப்பப்பட்ட ஒரு Valise கைப்பற்றி!"
+
+msgid "GOTFORCEFIELD"
+msgstr "படை களம்!"
+
+msgid "GOTMICROTEL"
+msgstr "007மைக்ரோடெல்"
+
+msgid "GOTENKBLIND"
+msgstr "நீங்கள் என்கே பார்வையற்றவர்!"
+
+msgid "GOTRUBBERBOOTS"
+msgstr "வல்கன் ரப்பர் பூட்ச்!"
+
+msgid "GOTSIARRAY"
+msgstr "ஆம் வரிசை மேப்பிங்!"
+
+msgid "GOTINFRARED"
+msgstr "அகச்சிவப்பு விசர்!"
+
+msgid "GOTINHALER"
+msgstr "ஆழமாக சுவாசிக்கவும், இன்ஏலர்!"
+
+msgid "GOTHYPONEED"
+msgstr "ஐப்போவில் இருந்து ஒரு டோச் ஐடர்சின் உங்களைக் காப்பாற்றும்!"
+
+msgid "GOTHYPO"
+msgstr "நீங்கள் ஒரு ஐப்போவைப் பிடிக்கிறீர்கள்!"
+
+msgid "GOTKEYCARD"
+msgstr "நீங்கள் ஒரு கீகார்டைக் கண்டுபிடித்தீர்கள்!"
+
+msgid "GOTCKEY"
+msgstr "நீங்கள் ஒரு சி-விசையைக் கண்டுபிடித்தீர்கள்!"
+
+msgid "GOTPASSWORD"
+msgstr "கடவுச்சொல்லை கண்டுபிடித்துள்ளீர்கள்!"
+
+msgid "GOTBLUEZKEY"
+msgstr "நீல நிற Z-விசையைக் கண்டுபிடித்தீர்கள்!"
+
+msgid "GOTYELWZKEY"
+msgstr "மஞ்சள் நிற Z-விசையைக் கண்டுபிடித்தீர்கள்!"
+
+msgid "GOTREDZKEY"
+msgstr "நீங்கள் ஒரு சிவப்பு Z-விசையைக் கண்டுபிடித்தீர்கள்!"
+
+msgid "GOTBODYARMOR"
+msgstr "உடல் கவசம்!"
+
+msgid "GOTCENTROPHENOXINE"
+msgstr "சென்ட்ரோபெனாக்சின்"
+
+msgid "GOTKEVLARVEST"
+msgstr "நீங்கள் ஒரு கெவ்லர் வேச்டியை எடுத்துக் கொள்ளுங்கள்!"
+
+msgid "GOTSKEVLARVEST"
+msgstr "நீங்கள் ஒரு சூப்பர் கெவ்லர் உடையை எடுத்துக் கொள்ளுங்கள்!"
+
+msgid "GOTMICROKIT"
+msgstr "நீங்கள் ஒரு மைக்ரோகிட்டை எடுத்துக் கொள்ளுங்கள்!"
+
+msgid "GOTDAMPENER"
+msgstr "நீங்கள் ஒரு டம்பெனரை எடுத்துக் கொள்ளுங்கள்!"
+
+msgid "PD_CKEY"
+msgstr "இந்த உருப்படியை அணுக உங்களுக்கு C-Key தேவை!"
+
+msgid "PD_KEYCARD"
+msgstr "இந்த உருப்படியை அணுக உங்களுக்கு கீகார்டு தேவை!"
+
+msgid "PD_PASSWORD"
+msgstr "இந்த உருப்படியை அணுக உங்களுக்கு கடவுச்சொல் தேவை!"
+
+msgid "PD_BLUEZKEY"
+msgstr "இதைச் செய்ய, உங்களுக்கு நீல Z-கீ தேவை"
+
+msgid "PD_REDZKEY"
+msgstr "இதைச் செய்ய உங்களுக்கு சிவப்பு Z-விசை தேவை!"
+
+msgid "PD_YELWZKEY"
+msgstr "இதைச் செய்ய உங்களுக்கு மஞ்சள் Z-விசை தேவை!"
+
+msgid "X1TEXT"
+msgstr ""
+"இருபது மில் தங்கம் மதிப்புக்குரியதாகத் தெரியவில்லை \n"
+"இந்த தீவிரம், அது, ஏக்கர்? செய்கிறது \n"
+"பேனா ஒரு வினோதமான பிக்னிக் போல் இருக்கிறது! \n"
+"\n"
+"பட்-அசிங்கமான உயிர்-பிறழ்வுகள் மற்றும் உங்கள் தம \n"
+"மனிதர்கள் கூரையிலிருந்து தொங்குவது போல \n"
+"உணவுப் பைகள். \n"
+"\n"
+"என்ன கொடுமை இந்த GENIE? இல்லை போல \n"
+"நீங்கள் எப்போதாவது ஏக் செய்த கணினி! \n"
+"\n"
+"அடுத்த டெர்மினலைக் கண்டுபிடிப்பது நல்லது \n"
+"சி-ச்பேச் வழியாக ஒரு சவாரி, சில விகாரிகளை டைச் செய்யவும் \n"
+"பட், மற்றும் டாட்சில் இருந்து நரகத்தை வெளியேற்றுங்கள்!\n"
+"\n"
+
+msgid "X2TEXT"
+msgstr ""
+"எல்லா மக்களும் எங்கே?! \n"
+"\n"
+"நீங்கள் கருத்தில் கொள்ளாத வரை பாரிச் ஒரு பேய் நகரம் \n"
+"பிறழ்ந்த பிழைகள் சிறந்த குடிமக்கள். \n"
+"\n"
+"நீங்கள் இரத்தக்களரி எதிர்ப்பைத் தாக்கியுள்ளீர்கள். மனிதனே, முடியும் \n"
+"இந்த பிழைகள் போராடுகின்றன! உங்கள் அதிர்ச்டம் அவர்கள் இல்லை \n"
+"தொகுதியில் பிரகாசமான தாழ்வார விளக்குகள். \n"
+"\n"
+"ஆனால் நீங்கள் சில தகவல்களைப் பெற்றுள்ளீர்கள் \n"
+"துணைக்குழு விரும்புகிறது. மற்றும் அது மோசமானது! \n"
+"\n"
+"மனித நரம்பு திரவங்கள் இந்த பிழைகளுக்கு உணவளிக்கின்றன! இல்லை \n"
+"அக்கம் பக்கத்தினர் எப்படி இருக்கிறார்கள் என்று ஆச்சரியமாக இருக்கிறது \n"
+"அரிதான. துணைக்குழுவுக்கு அறிக்கை. மற்றும் \n"
+"உன் முதுகைப் பார்…\n"
+
+msgid "X3TEXT"
+msgstr ""
+"நாகரிகம் நீ அறிந்தது நாடா! \n"
+"\n"
+"நண்பர்கள் இல்லை, குடும்பம் இல்லை. இனி மக்கள் இல்லை. \n"
+"எப்படியும் சாதாரண மக்கள் அல்ல. \n"
+"\n"
+"ஒன்று மட்டும் பாக்கி...செனி! \n"
+"மற்றும் நீங்கள் இறுதியில் செல்ல வேண்டும் என்றால் \n"
+"பிரபஞ்சத்தில் நீங்கள் அதன் பிறழ்ந்த பிட்டத்தைக் காண்பீர்கள்! \n"
+"ஏனென்றால் இப்போது நீங்கள் கோபமாக இருக்கிறீர்கள்! \n"
+"\n"
+"மற்றும் தங்கம்? அளறு, இது இலவசம். \n"
+"\n"
+"…….(தொடரும்)……"
+
+msgid "X5TEXT"
+msgstr ""
+"நீங்கள் உயிருடன் இருக்கிறீர்கள்! \n"
+"\n"
+"அந்த முரண்பாடுகள் என்ன, ஏக்கரே?! \n"
+"'ஏனெனில் அது பிழைகளுடன் ஊர்ந்து கொண்டிருக்கிறது. \n"
+"\n"
+"நீங்கள் துணைக்குழுவை அணுக முடியாது \n"
+"வேறுபாடின்மை செய்யப்பட்டுள்ளது என்று பொருள். \n"
+"\n"
+"\n"
+"நீங்கள்... தனியாக இருக்கிறீர்கள்."
+
+msgid "TXT_HACXMAP01"
+msgstr "GenEmp நிறுவனம்."
+
+msgid "TXT_HACXMAP02"
+msgstr "சுரங்கப்பாதை நகரம்"
+
+msgid "TXT_HACXMAP03"
+msgstr "லாவா இணைப்பு"
+
+msgid "TXT_HACXMAP04"
+msgstr "அல்காட்ராச்"
+
+msgid "TXT_HACXMAP05"
+msgstr "சைபர் சர்க்கச்"
+
+msgid "TXT_HACXMAP06"
+msgstr "டிசி-ஓடா"
+
+msgid "TXT_HACXMAP07"
+msgstr "பெரிய சுவர்"
+
+msgid "TXT_HACXMAP08"
+msgstr "மகிழ்ச்சியின் தோட்டம்"
+
+msgid "TXT_HACXMAP09"
+msgstr "மறைக்கப்பட்ட கோட்டை"
+
+msgid "TXT_HACXMAP10"
+msgstr "அராசகக் கனவு"
+
+msgid "TXT_HACXMAP11"
+msgstr "நம்மை அறிந்தவர்!"
+
+msgid "TXT_HACXMAP12"
+msgstr "கோதிக் காண்ட்லெட்"
+
+msgid "TXT_HACXMAP13"
+msgstr "சாக்கடைகள்"
+
+msgid "TXT_HACXMAP14"
+msgstr "ட்ரேட் வார்ச்"
+
+msgid "TXT_HACXMAP15"
+msgstr "என்கின் அந்தி"
+
+msgid "TXT_HACXMAP16"
+msgstr "புரோட்டீன் சைபெக்ச்"
+
+msgid "TXT_HACXMAP17"
+msgstr "இரத்த ஆறு"
+
+msgid "TXT_HACXMAP18"
+msgstr "பிசாரோ"
+
+msgid "TXT_HACXMAP19"
+msgstr "போர் அறைகள்"
+
+msgid "TXT_HACXMAP20"
+msgstr "ஊடுருவும் நபர் எச்சரிக்கை!"
+
+msgid "TXT_HACXMAP31"
+msgstr "டெசிகண்ட் அறை"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_CLEV"
+msgstr "இப்போது வரும்…"
+
+# Printed when entering the idchoppers cheat, which gives the player a
+# chainsaw
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_CHOPPERS"
+msgstr "உங்கள் கழுதையை வறுக்கப் போகிறேன்!"
+
+# Hacx's content here was totally useless so it got removed. However, this
+# string has to be defined and minimally altered so that the Dehacked
+# replacement is not being triggered.
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_BEHOLD"
+msgstr "inVuln, Str, Inviso, Rad, Allmap அல்லது Lite-amp?"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_BEHOLDX"
+msgstr "லெட்ச் கெட் சீரியச்!"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_NCON"
+msgstr "சைபர்ச்லைசர் பயன்முறை இயக்கப்பட்டது"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_NCOFF"
+msgstr "சைபர்ச்லைசர் பயன்முறை முடக்கப்பட்டுள்ளது"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_NOMUS"
+msgstr "தேர்வு: சாத்தியமற்றது "
+
+# Should probably not be translated...
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_MUS"
+msgstr "வால்யூம் பம்ப் அப்\n"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_KFAADDED"
+msgstr "INIT-Twitch n'Kill பயன்முறை"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_FAADDED"
+msgstr "அப்படியே ஆகட்டும், ஏக்கர்."
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_DQDON"
+msgstr "சைபர்போடென்ச் மோட் ஆன்"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_DQDOFF"
+msgstr "சைபர்போடென்ச் பயன்முறை முடக்கப்பட்டுள்ளது"
+
+msgctxt "doom hacx.hacx1"
+msgid "AMSTR_FOLLOWON"
+msgstr "கண்காணிப்பு இயக்கத்தில் உள்ளது"
+
+msgctxt "doom hacx.hacx1"
+msgid "AMSTR_FOLLOWOFF"
+msgstr "டிராக்கிங் ஆஃப்"
+
+msgctxt "doom hacx.hacx1"
+msgid "DOSY"
+msgstr "- ஓடுவதற்கு ஒய் ஐ அழுத்தவும்! -"
+
+msgctxt "doom hacx.hacx1"
+msgid "ENDGAME"
+msgstr ""
+"நீங்கள் பைத்தியக்காரரா அல்லது ஒழுங்கற்றவரா? \n"
+"சரி? ஆம் அல்லது இல்லை!"
+
+msgctxt "doom hacx.hacx1"
+msgid "NIGHTMARE"
+msgstr ""
+"நீங்கள் உறுதியாக இருக்கிறீர்களா? உன்னால் கையாள முடியாது \n"
+"இந்த திறமை, ஏக்கர்! \n"
+"\n"
+"இறக்க ஒய் ஐ அழுத்தவும். \n"
+
+# For most languages the original Doom text should suffice.
+msgctxt "doom hacx.hacx1"
+msgid "QSPROMPT"
+msgstr ""
+"பெயரிடப்பட்ட உங்கள் தரவை விரைவாக சேமிக்கவும் \n"
+"\n"
+"'%s'? \n"
+"\n"
+"Y அல்லது N ஐ அழுத்தவும்."
+
+msgctxt "doom hacx.hacx1"
+msgid "QLPROMPT"
+msgstr ""
+"பெயரிடப்பட்ட தரவை விரைவாக ஏற்ற விரும்புகிறீர்களா \n"
+"\n"
+"'%s'? \n"
+"\n"
+"Y அல்லது N ஐ அழுத்தவும்."
+
+msgid "CC_THUG"
+msgstr "குண்டர்"
+
+msgid "CC_ANDROID"
+msgstr "ஆண்ட்ராய்டு"
+
+msgid "CC_ICE"
+msgstr "ICE"
+
+msgid "CC_BUZZER"
+msgstr "பசர்"
+
+msgid "CC_DMAN"
+msgstr "டி-மேன்"
+
+msgid "CC_PHAGE"
+msgstr "பேச்"
+
+msgid "CC_MONSTRUCT"
+msgstr "மான்ச்ட்ரக்ட்"
+
+msgid "CC_MECH"
+msgstr "மெக்கா வெறி பிடித்தவன்"
+
+msgid "CC_TERMI"
+msgstr "டெர்மினாட்ரிக்ச்"
+
+msgid "CC_THORN"
+msgstr "முள் சேதி"
+
+msgid "CC_MAJONG"
+msgstr "மஅ்சோங் 7"
+
+msgctxt "doom hacx.hacx1"
+msgid "CC_HERO"
+msgstr "டான் எவாங்கர்"
+
+msgctxt "doom hacx.hacx1"
+msgid "SKILL_BABY"
+msgstr "தயவுசெய்து சுடாதீர்கள்!"
+
+msgctxt "doom hacx.hacx1"
+msgid "SKILL_EASY"
+msgstr "ஆரோ, எனக்கு உடல்நலம் வேண்டும்!"
+
+msgctxt "doom hacx.hacx1"
+msgid "SKILL_NORMAL"
+msgstr "அவற்றைப் பிரிப்போம்!"
+
+msgctxt "doom hacx.hacx1"
+msgid "SKILL_HARD"
+msgstr "நான் அழியாதவன்!"
+
+msgctxt "doom hacx.hacx1"
+msgid "SKILL_NIGHTMARE"
+msgstr "பைத்தியம்!"

@@ -147,7 +147,7 @@ namespace swrenderer
 
 		// New visplane algorithm uses hash table -- killough
 		hash = isskybox ? ((unsigned)MAXVISPLANES) : CalcHash(picnum.GetIndex(), lightlevel, height);
-		
+
 		for (check = visplanes[hash]; check; check = check->next)	// killough
 		{
 			if (isskybox)
@@ -366,7 +366,7 @@ namespace swrenderer
 
 		DVector3 oViewPos = Thread->Viewport->viewpoint.Pos;
 		DAngle oViewAngle = Thread->Viewport->viewpoint.Angles.Yaw;
-		
+
 		RenderPortal *renderportal = Thread->Portal.get();
 
 		for (i = 0; i < MAXVISPLANES; i++)

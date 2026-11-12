@@ -720,7 +720,7 @@ void PPAmbientOcclusion::UpdateTextures(int width, int height)
 
 void PPAmbientOcclusion::Render(PPRenderState *renderstate, float m5, int sceneWidth, int sceneHeight)
 {
-	if (gl_ssao == 0 || sceneWidth == 0 || sceneHeight == 0)
+	if (gl_ssao == 0 || sceneWidth == 0 || sceneHeight == 0 || level_noAmbientOcclusion)
 	{
 		return;
 	}
@@ -1002,7 +1002,7 @@ PPCustomShaderInstance::PPCustomShaderInstance(PostProcessShader *desc, std::uni
 		pipelineInOut += "layout(location=0) in vec2 TexCoord;\n";
 		pipelineInOut += "layout(location=0) out vec4 FragColor;\n";
 	}
-	else 
+	else
 	{
 		pipelineInOut += "in vec2 TexCoord;\n";
 		pipelineInOut += "out vec4 FragColor;\n";
@@ -1146,7 +1146,7 @@ void PPCustomShaderInstance::SetUniforms(PPRenderState *renderstate)
 	if (timeDeltaOffset != FieldOffset.end())
 	{
 		if (uniforms.Size() < timeDeltaOffset->second + sizeof(float))
-			uniforms.Resize(timeDeltaOffset->second + sizeof(float));
+			uniforms.Resize(static_cast<unsigned>(timeDeltaOffset->second + sizeof(float)));
 		memcpy(&uniforms[timeDeltaOffset->second], &renderstate->TimeDelta, sizeof(float));
 	}
 
@@ -1154,7 +1154,7 @@ void PPCustomShaderInstance::SetUniforms(PPRenderState *renderstate)
 	if (timeOffset != FieldOffset.end())
 	{
 		if (uniforms.Size() < timeOffset->second + sizeof(float))
-			uniforms.Resize(timeOffset->second + sizeof(float));
+			uniforms.Resize(static_cast<unsigned>(timeOffset->second + sizeof(float)));
 		memcpy(&uniforms[timeOffset->second], &renderstate->Time, sizeof(float));
 	}
 
@@ -1162,7 +1162,7 @@ void PPCustomShaderInstance::SetUniforms(PPRenderState *renderstate)
 	if (timeGameOffset != FieldOffset.end())
 	{
 		if (uniforms.Size() < timeGameOffset->second + sizeof(float))
-			uniforms.Resize(timeGameOffset->second + sizeof(float));
+			uniforms.Resize(static_cast<unsigned>(timeGameOffset->second + sizeof(float)));
 		memcpy(&uniforms[timeGameOffset->second], &renderstate->TimeGame, sizeof(float));
 	}
 

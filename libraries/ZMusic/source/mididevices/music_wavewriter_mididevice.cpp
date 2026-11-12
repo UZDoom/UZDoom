@@ -3,7 +3,7 @@
 ** Dumps a MIDI to a wave file by using one of the other software synths.
 **
 **---------------------------------------------------------------------------
-** Copyright 2008 Randy Heit
+** Copyright 2008 Marisa Heit
 ** Copyright 2018 Christoph Oelckers
 ** All rights reserved.
 **

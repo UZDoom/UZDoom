@@ -344,7 +344,7 @@ void SetDefaultColormap (const char *name)
 			DPrintf (DMSG_NOTIFY, "Make colormap\n");
 			FDynamicColormap foo;
 
-			foo.Color = 0xFFFFFF;
+			foo.Color = Color::str("#fff");
 			foo.Fade = 0;
 			foo.Maps = realcolormaps.Maps;
 			foo.Desaturate = 0;

@@ -24,23 +24,26 @@
 
 // HEADER FILES ------------------------------------------------------------
 
-#include "c_console.h"
+#include <SDL2/SDL.h>
+
+#ifdef HAVE_VULKAN
+#include <SDL2/SDL_vulkan.h>
+#include <zvulkan/vulkanbuilders.h>
+#include <zvulkan/vulkandevice.h>
+#include <zvulkan/vulkaninstance.h>
+#include <zvulkan/vulkansurface.h>
+#endif
+
+#include "basics.h"
 #include "c_dispatch.h"
-#include "i_module.h"
+#include "gl_framebuffer.h"
+#include "gl_sysfb.h"
 #include "i_soundinternal.h"
-#include "i_system.h"
 #include "i_video.h"
 #include "m_argv.h"
 #include "printf.h"
 #include "v_video.h"
 #include "version.h"
-
-#include "gl_sysfb.h"
-#include "gl_system.h"
-#include "hardware.h"
-
-#include "gl_framebuffer.h"
-#include "gl_renderer.h"
 
 #ifdef HAVE_GLES2
 #include "gles_framebuffer.h"
@@ -48,17 +51,9 @@
 
 #ifdef HAVE_VULKAN
 #include "vulkan/system/vk_renderdevice.h"
-#include <zvulkan/vulkanbuilders.h>
-#include <zvulkan/vulkandevice.h>
-#include <zvulkan/vulkaninstance.h>
-#include <zvulkan/vulkansurface.h>
 #endif
 
 // MACROS ------------------------------------------------------------------
-
-#if defined HAVE_VULKAN
-#include <SDL2/SDL_vulkan.h>
-#endif // HAVE_VULKAN
 
 // TYPES -------------------------------------------------------------------
 
@@ -67,6 +62,7 @@
 // PRIVATE FUNCTION PROTOTYPES ---------------------------------------------
 
 // EXTERNAL DATA DECLARATIONS ----------------------------------------------
+
 extern IVideo *Video;
 
 EXTERN_CVAR (Int, vid_adapter)
@@ -160,7 +156,7 @@ namespace Priv
 		int xWindowPos = (win_x <= 0) ? SDL_WINDOWPOS_CENTERED_DISPLAY(vid_adapter) : win_x;
 		int yWindowPos = (win_y <= 0) ? SDL_WINDOWPOS_CENTERED_DISPLAY(vid_adapter) : win_y;
 		Printf("Creating window [%dx%d] on adapter %d\n", (*win_w), (*win_h), (*vid_adapter));
-		
+
 		FString caption;
 		caption.Format(GAMENAME " %s (%s)", GetVersionString(), GetGitTime());
 
@@ -231,7 +227,7 @@ CUSTOM_CVAR(Int, vid_adapter, 0, CVAR_ARCHIVE | CVAR_GLOBALCONFIG | CVAR_NOINITC
 		// Get displays and default display size
 		Priv::updateDisplayInfo();
 
-    int display = (*self) % Priv::numberOfDisplays;
+	int display = (*self) % Priv::numberOfDisplays;
 
 		// TODO control better when updateDisplayInfo fails
 		SDL_Rect* bounds = &Priv::displayBounds[vid_adapter % Priv::numberOfDisplays];
@@ -272,8 +268,8 @@ CUSTOM_CVAR(Int, vid_adapter, 0, CVAR_ARCHIVE | CVAR_GLOBALCONFIG | CVAR_NOINITC
 			SDL_SetWindowPosition(Priv::window, SDL_WINDOWPOS_CENTERED_DISPLAY(display), SDL_WINDOWPOS_CENTERED_DISPLAY(display));
 		}
 
-    display = SDL_GetWindowDisplayIndex(Priv::window);
-    if (display >= 0) {
+	display = SDL_GetWindowDisplayIndex(Priv::window);
+	if (display >= 0) {
 			Printf("New display is %d\n", display );
 		} else {
 			Printf("A problem occured trying to change of display %s\n", SDL_GetError());
@@ -288,7 +284,7 @@ public:
 	~SDLVideo ();
 
 	void DumpAdapters();
-	
+
 	DFrameBuffer *CreateFrameBuffer ();
 
 private:
@@ -338,7 +334,7 @@ SDLVideo::SDLVideo ()
 	}
 
 #ifdef HAVE_VULKAN
-	Priv::vulkanEnabled = V_GetBackend() == 1;
+	Priv::vulkanEnabled = vid_preferbackend == BACKEND_VULKAN;
 
 	if (Priv::vulkanEnabled)
 	{
@@ -363,14 +359,14 @@ void SDLVideo::DumpAdapters()
 {
 	Priv::updateDisplayInfo();
   for (int i=0; i < Priv::numberOfDisplays; i++) {
-    Printf("%s%d. [%dx%d @ (%d,%d)]\n",
-        vid_adapter == i ? TEXTCOLOR_BOLD : "",
-        i,
-        Priv::displayBounds[i].w,
-        Priv::displayBounds[i].h,
-        Priv::displayBounds[i].x,
-        Priv::displayBounds[i].y
-      );
+	Printf("%s%d. [%dx%d @ (%d,%d)]\n",
+		vid_adapter == i ? TEXTCOLOR_BOLD : "",
+		i,
+		Priv::displayBounds[i].w,
+		Priv::displayBounds[i].h,
+		Priv::displayBounds[i].x,
+		Priv::displayBounds[i].y
+	  );
   }
 }
 
@@ -420,7 +416,7 @@ DFrameBuffer *SDLVideo::CreateFrameBuffer ()
 	if (fb == nullptr)
 	{
 #ifdef HAVE_GLES2
-		if (V_GetBackend() != 0)
+		if (vid_preferbackend != BACKEND_OPENGL)
 			fb = new OpenGLESRenderer::OpenGLFrameBuffer(0, vid_fullscreen);
 		else
 #endif
@@ -516,7 +512,7 @@ void SystemBaseFrameBuffer::SetWindowSize(int w, int h)
 		SDL_GetWindowPosition(Priv::window, &x, &y);
 		win_x = x;
 		win_y = y;
-		
+
 	}
 }
 
@@ -543,7 +539,7 @@ SystemGLFrameBuffer::SystemGLFrameBuffer(void *hMonitor, bool fullscreen)
 		int vermin = (int)(gl_version*10.0) % 10;
 
 		while (glvers[glveridx][0] > vermaj || (glvers[glveridx][0] == vermaj &&
-		        glvers[glveridx][1] > vermin))
+				glvers[glveridx][1] > vermin))
 		{
 			glveridx++;
 			if (glvers[glveridx][0] == 0)
@@ -690,4 +686,3 @@ void I_SetWindowTitle(const char* caption)
 		SDL_SetWindowTitle(Priv::window, default_caption.GetChars());
 	}
 }
-

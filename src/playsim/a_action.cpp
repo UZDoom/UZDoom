@@ -120,4 +120,3 @@ DEFINE_ACTION_FUNCTION(AActor, A_DeQueueCorpse)
 	}
 	return 0;
 }
-

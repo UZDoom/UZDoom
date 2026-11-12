@@ -748,6 +748,116 @@ bool SetTextureParms(F2DDrawer * drawer, DrawParms *parms, FGameTexture *img, do
 	return false;
 }
 
+bool SetTextureParmsSubrect(F2DDrawer *drawer, DrawParms *parms, FGameTexture *img, double xx, double yy, double srcx, double srcy, double w, double h)
+{
+	auto GetWidth  = [=]() { return parms->viewport.width; };
+	auto GetHeight = [=]() { return parms->viewport.height; };
+	if (img != NULL)
+	{
+		parms->x         = xx;
+		parms->y         = yy;
+		parms->texwidth  = img->GetDisplayWidth();
+		parms->texheight = img->GetDisplayHeight();
+		parms->srcx      = srcx;
+		parms->srcy      = srcy;
+		parms->srcwidth  = w;
+		parms->srcheight = h;
+		if (parms->top == INT_MAX || parms->fortext)
+		{
+			parms->top = img->GetDisplayTopOffset();
+		}
+		if (parms->left == INT_MAX || parms->fortext)
+		{
+			parms->left = img->GetDisplayLeftOffset();
+		}
+		if (parms->destwidth == INT_MAX || parms->fortext)
+		{
+			parms->destwidth = parms->texwidth * w;
+		}
+		if (parms->destheight == INT_MAX || parms->fortext)
+		{
+			parms->destheight = parms->texheight * h;
+		}
+		parms->destwidth *= parms->patchscalex;
+		parms->destheight *= parms->patchscaley;
+
+		if (parms->flipoffsets && parms->flipY)
+			parms->top = parms->texheight - parms->top;
+		if (parms->flipoffsets && parms->flipX)
+			parms->left = parms->texwidth - parms->left;
+
+		switch (parms->cleanmode)
+		{
+		default:
+			break;
+
+		case DTA_Clean:
+			parms->x          = (parms->x - 160.0) * CleanXfac + (GetWidth() * 0.5);
+			parms->y          = (parms->y - 100.0) * CleanYfac + (GetHeight() * 0.5);
+			parms->destwidth  = parms->texwidth * w * CleanXfac;
+			parms->destheight = parms->texheight * h * CleanYfac;
+			break;
+
+		case DTA_CleanTop:
+			parms->x          = (parms->x - 160.0) * CleanXfac + (GetWidth() * 0.5);
+			parms->y          = (parms->y) * CleanYfac;
+			parms->destwidth  = parms->texwidth * w * CleanXfac;
+			parms->destheight = parms->texheight * h * CleanYfac;
+			break;
+
+		case DTA_CleanNoMove:
+			parms->destwidth  = parms->texwidth * w * CleanXfac;
+			parms->destheight = parms->texheight * h * CleanYfac;
+			break;
+
+		case DTA_CleanNoMove_1:
+			parms->destwidth  = parms->texwidth * w * CleanXfac_1;
+			parms->destheight = parms->texheight * h * CleanYfac_1;
+			break;
+
+		case DTA_Base:
+			if (parms->fsscalemode > 0)
+			{
+				// First calculate the destination rect for an image of the given size and then reposition this object
+				// in it.
+				DoubleRect rect;
+				CalcFullscreenScale(parms, parms->virtWidth, parms->virtHeight, parms->fsscalemode, rect);
+				double adder      = parms->keepratio < 0 ? 0 : parms->keepratio == 0 ? rect.left : 2 * rect.left;
+				parms->x          = parms->viewport.left + adder + parms->x * rect.width / parms->virtWidth;
+				parms->y          = parms->viewport.top + rect.top + parms->y * rect.height / parms->virtHeight;
+				parms->destwidth  = (parms->destwidth) * rect.width / parms->virtWidth;
+				parms->destheight = (parms->destheight) * rect.height / parms->virtHeight;
+				return false;
+			}
+			break;
+
+		case DTA_Fullscreen:
+		case DTA_FullscreenEx: {
+			DoubleRect rect;
+			CalcFullscreenScale(parms, parms->texwidth, parms->texheight, parms->fsscalemode, rect);
+			parms->keepratio  = -1;
+			parms->x          = parms->viewport.left + rect.left;
+			parms->y          = parms->viewport.top + rect.top;
+			parms->destwidth  = rect.width;
+			parms->destheight = rect.height;
+			parms->top = parms->left = 0;
+			return false; // Do not call VirtualToRealCoords for this!
+		}
+
+		}
+		if (parms->virtWidth != GetWidth() || parms->virtHeight != GetHeight())
+		{
+			VirtualToRealCoords(drawer, GetWidth(), GetHeight(), parms->x, parms->y, parms->destwidth,
+			                    parms->destheight, parms->virtWidth, parms->virtHeight, parms->virtBottom,
+			                    !parms->keepratio);
+		}
+		parms->x += parms->viewport.left;
+		parms->y += parms->viewport.top;
+	}
+
+	return false;
+}
+
 //==========================================================================
 //
 // template helpers

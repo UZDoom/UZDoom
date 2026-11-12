@@ -38,39 +38,39 @@ typedef struct { unsigned char b, g, r, a; } _BGRA;
 
 class CImage
 {
-  public:
-    DLL CImage();
-    DLL ~CImage();
+	public:
+		DLL CImage();
+		DLL ~CImage();
 
-  enum CImageErrors
-  {
-    eConvUnknownFormat   = 10,
-    eConvSourceMemory    = 11,
-    eConvDestMemory      = 12,
+	enum CImageErrors
+	{
+		eConvUnknownFormat   = 10,
+		eConvSourceMemory    = 11,
+		eConvDestMemory      = 12,
 
-  };
+	};
 
 
-  public:
-    int  DLL Init( int Xres, int Yres, unsigned short BitPerPixel );
-    int  DLL SetImage(unsigned char *img, int width, int height, int bpp);
-    int  DLL Destroy();
-    int  DLL Convert32To17( void );
+	public:
+		int  DLL Init( int Xres, int Yres, unsigned short BitPerPixel );
+		int  DLL SetImage(unsigned char *img, int width, int height, int bpp);
+		int  DLL Destroy();
+		int  DLL Convert32To17( void );
 
-  private:
+	private:
 
-  public:
-    int              m_Xres, m_Yres;
-    unsigned short   m_BitPerPixel;
-    unsigned short   m_BytePerPixel;
-    unsigned char  * m_pBitmap;
-    _BGR             m_Pal[256];
+	public:
+		int              m_Xres, m_Yres;
+		unsigned short   m_BitPerPixel;
+		unsigned short   m_BytePerPixel;
+		unsigned char  * m_pBitmap;
+		_BGR             m_Pal[256];
 
-  private:
-    int              m_NumPixel;
-    FILE             * f;
-    int              m_nCount;
-    char             m_cBuf[32768];
+	private:
+		int              m_NumPixel;
+		FILE             * f;
+		int              m_nCount;
+		char             m_cBuf[32768];
 };
 
 #pragma pack()

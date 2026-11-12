@@ -105,4 +105,3 @@ protected:
 
 	friend struct FLevelLocals;
 };
-

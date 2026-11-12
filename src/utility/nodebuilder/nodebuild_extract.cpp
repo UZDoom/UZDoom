@@ -38,7 +38,7 @@
 
 void FNodeBuilder::Extract (FLevelLocals &theLevel)
 {
-	auto &outVerts = theLevel.vertexes; 
+	auto &outVerts = theLevel.vertexes;
 	int vertCount = Vertices.Size ();
 	outVerts.Alloc(vertCount);
 

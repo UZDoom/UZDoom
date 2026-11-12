@@ -51,7 +51,7 @@ enum
 	STAT_EARTHQUAKE,						// Earthquake actors
 	STAT_MAPMARKER,							// Map marker actors
 	STAT_DLIGHT,
-	
+
 	STAT_USER = 70,
 	STAT_USER_MAX = 90,
 

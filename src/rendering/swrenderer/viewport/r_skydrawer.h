@@ -27,7 +27,7 @@ struct FLightNode;
 namespace swrenderer
 {
 	class RenderThread;
-	
+
 	class SkyDrawerArgs : public DrawerArgs
 	{
 	public:

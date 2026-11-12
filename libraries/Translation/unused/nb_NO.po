@@ -1,0 +1,237 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-07-30 16:57-0400\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/uzdoom/unused/nb_NO/>\n"
+"Language: nb_NO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
+
+msgid "ADVSNDMNU_ADLOPLCORES"
+msgstr "OPL-emulatorkjerne"
+
+msgid "ADVSNDMNU_FLUIDPATCHSET"
+msgstr "Patch-sett"
+
+msgid "ADVSNDMNU_GUSCONFIG"
+msgstr "GUS konfigurasjonsfil"
+
+# Jargon.
+msgid "ADVSNDMNU_TIMIDITYCONFIG"
+msgstr "Timidity konfigurasjonsfil"
+
+msgid "ADVSNDMNU_TIMIDITYVOLUME"
+msgstr "Relativt volum"
+
+# Jargon.
+msgid "ADVSNDMNU_WILDMIDICONFIG"
+msgstr "WildMidi konfigurasjonsfil"
+
+msgid "CNTRLMNU_ADJUST_GAMMA"
+msgstr "Juster gamma"
+
+msgid "CNTRLMNU_CHAT"
+msgstr "Nettprat"
+
+msgid "CNTRLMNU_CHAT_TITLE"
+msgstr "Tilpass chattekontroller"
+
+msgid "DSPLYMNU_ADVANCED"
+msgstr "Avanserte visningsalternativer"
+
+msgid "DSPLYMNU_APPEARANCE"
+msgstr "Utseende"
+
+msgid "DSPLYMNU_CROSSHAIRSCALE"
+msgstr "Skalere trådkors"
+
+msgid "DSPLYMNU_MESSAGES"
+msgstr "Meldinger"
+
+msgid "DSPLYMNU_SBSCALE"
+msgstr "Statuslinjeskala"
+
+msgid "GLTEXMNU_ENABLEHIRES"
+msgstr "Aktivere høyoppløselige teksturer"
+
+msgid "GLTEXMNU_TEXENABLED"
+msgstr "Teksturer aktivert"
+
+msgid "MOUSEMNU_SMOOTHMOUSE"
+msgstr "Jevn musebevegelse"
+
+msgid "MSGMNU_MESSAGESCALE"
+msgstr "Meldingsskala"
+
+msgid "NOTSET"
+msgstr "Ikke innstilt"
+
+msgid "OPTMNU_INPUT"
+msgstr "Alternativer for inndata"
+
+msgid "OPTMNU_LIGHT"
+msgstr "Alternativer for lys"
+
+msgid "OPTMNU_MULTIPLAYER"
+msgstr "Alternativer for flerspiller"
+
+msgid "OPTMNU_SPRITE"
+msgstr "Sprite-alternativer"
+
+msgid "OPTMNU_SYSTEM"
+msgstr "Systemalternativer"
+
+msgid "OPTVAL_4000HZ"
+msgstr ""
+
+msgid "OPTVAL_AUTOMAP"
+msgstr ""
+
+msgid "OPTVAL_HUD"
+msgstr ""
+
+msgid "OPTVAL_HUDANDMAP"
+msgstr ""
+
+msgid "OPTVAL_PMDWINOPNA"
+msgstr ""
+
+msgid "OPTVAL_SCALENEAREST"
+msgstr "Skalert (nærmeste)"
+
+msgid "OPTVAL_SCALELINEAR"
+msgstr "Skalert (lineær)"
+
+msgid "PICKER_NETAUTO"
+msgstr ""
+
+msgid "PICKER_NETMODE"
+msgstr ""
+
+# Players connect to each other individually.
+msgid "PICKER_NETPEER"
+msgstr ""
+
+# Connections are routed through the host instead of all players connecting to
+# each other individually.
+msgid "PICKER_NETSERVER"
+msgstr ""
+
+msgid "SNDMNU_BACKEND"
+msgstr "Lyd backend"
+
+msgid "SNDMNU_MENUSOUND"
+msgstr "Lyd i menyer"
+
+msgid "SNDMNU_MUSENABLED"
+msgstr "Musikk aktivert"
+
+msgid "SNDMNU_SNDENABLED"
+msgstr "Lyd aktivert"
+
+msgid "VIDMNU_5X4ASPECTRATIO"
+msgstr "Aktiver 5:4 sideforhold"
+
+msgid "VIDMNU_ASPECTRATIO"
+msgstr "Bildeforhold"
+
+msgid "VKMNU_DEVICESELECT"
+msgstr "Velg Vulkan-enhet"
+
+msgid "VKMNU_ENABLE"
+msgstr "Aktiver Vulkan"
+
+msgid "CMPTMNU_SOUNDCUTOFF"
+msgstr "Lyder stopper når skuespilleren forsvinner"
+
+msgid "DSPLYMNU_TOOLTIP_WHITEPOINT"
+msgstr ""
+
+msgid "DSPLYMNU_TRANSSOUL"
+msgstr "Lost Soul gjennomskinnelighet"
+
+msgid "DSPLYMNU_WHITEPOINT"
+msgstr ""
+
+msgid "GLLIGHTMNU_LIGHTDEFS"
+msgstr "Aktiver lysdefinisjoner"
+
+msgid "GLMNU_PREFS"
+msgstr "Innstillinger"
+
+msgid "GLPREFMNU_PALTONENOGREY"
+msgstr "Forhindre grå skygger"
+
+msgid "GLTEXMNU_TRIMSPREDGE"
+msgstr "Trim sprite kanter"
+
+msgid "JOYMNU_HAPTRIGGERS"
+msgstr ""
+
+msgid "NETMNU_MOVEPREDICTION"
+msgstr "Forutsigelse av bevegelse"
+
+msgid "NETMNU_TICBALANCE"
+msgstr "Balansering av ventetid"
+
+msgid "OPTSTR_NOSOUND"
+msgstr "Ingen lyd"
+
+msgid "OPTSTR_OPENAL"
+msgstr ""
+
+msgid "OPTVAL_ALLUNACKNOWLEDGED"
+msgstr "Alle ubekreftet"
+
+msgid "OPTVAL_DEDICATED"
+msgstr "Høy ytelse"
+
+msgid "OPTVAL_DOUBLE"
+msgstr "Dobbel"
+
+msgid "OPTVAL_INTEGRATED"
+msgstr "Strømsparende"
+
+msgid "OPTVAL_OPTIMAL"
+msgstr "Best mulig"
+
+msgid "OPTVAL_OPTIMIZED"
+msgstr "Optimalisert"
+
+msgid "OPTVAL_ORIGINAL"
+msgstr "Original"
+
+msgid "OPTVAL_PIXELDOUBLE"
+msgstr "Dobbel piksel"
+
+msgid "OPTVAL_PIXELQUADRUPLE"
+msgstr "Piksel firedoblet"
+
+msgid "OPTVAL_QUADRUPLE"
+msgstr "Firedoblet"
+
+msgid "OPTVAL_SCALETO640X400"
+msgstr "Skala til 640x400"
+
+msgid "OPTVAL_TRIPLE"
+msgstr "Trippel"
+
+msgid "OPTVAL_VTAVANILLA"
+msgstr "Auto (Vanilla foretrukket)"
+
+msgid "OPTVAL_VTAZDOOM"
+msgstr "Auto (ZDoom foretrukket)"
+
+msgid "TCMNU_TRUECOLOR"
+msgstr "Ekte fargeutgang"
+
+msgid "TCMNU_DYNLIGHTS"
+msgstr "Dynamiske lys (programvare)"
+
+msgid "PICKER_FULLSCREEN"
+msgstr "Fullskjerm"

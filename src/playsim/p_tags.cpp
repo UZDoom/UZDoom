@@ -315,8 +315,8 @@ int FTagManager::CountSectorTags(const sector_t *sector)
 	if (SectorHasTags(i))
 	{
 		const int n = allTags.Size();
-		
-		int j = startForSector[i]; 
+
+		int j = startForSector[i];
 		int c = 0;
 
 		while(j < n && allTags[j].target == i)
@@ -462,4 +462,3 @@ int FLineIdIterator::Next()
 	start = tagManager.allIDs[start].nexttag;
 	return ret;
 }
-

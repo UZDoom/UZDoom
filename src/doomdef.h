@@ -42,7 +42,7 @@ typedef enum
 	// DOOM 2 german edition not handled
 	retail,			// DOOM 1 retail, E4, M36
 	undetermined	// Well, no IWAD found.
-  
+
 } GameMode_t;
 
 // If rangecheck is undefined, most parameter validation debugging code
@@ -161,7 +161,7 @@ enum : unsigned
 	DF2_RESPAWN_SUPER		= 1 << 27,	// Respawn invulnerability and invisibility
 	DF2_NO_COOP_THING_SPAWN	= 1 << 28,	// Don't spawn multiplayer things in coop games
 	DF2_ALWAYS_SPAWN_MULTI	= 1 << 29,	// Always spawn multiplayer items
-	DF2_NOVERTSPREAD		= 1 << 30,	// Don't allow vertical spread for hitscan weapons (excluding ssg)
+//	DF2_NOVERTSPREAD		= 1 << 30,	// Removed
 	DF2_NO_EXTRA_AMMO		= 1u << 31,	// Don't add extra ammo when picking up weapons (like in original Doom)
 };
 
@@ -233,12 +233,15 @@ enum ELevelCompatFlag2 : uint32_t
 	COMPATF2_SCRIPTWAIT		= 1 << 11,	// Use old scriptwait implementation where it doesn't wait on a non-running script.
 	COMPATF2_AVOID_HAZARDS	= 1 << 12,	// another MBF thing.
 	COMPATF2_STAYONLIFT		= 1 << 13,	// yet another MBF thing.
-	COMPATF2_NOMBF21		= 1 << 14,	// disable MBF21 features that may clash with certain maps
+	COMPATF2_NOMBF21		= 1 << 14,	// Unused. Kept for backwards compatibility.
 	COMPATF2_VOODOO_ZOMBIES = 1 << 15,	// [RL0] allow playerinfo, playerpawn, and voodoo health to all be different, and skip killing the player's mobj if a voodoo doll dies to allow voodoo zombies
 	COMPATF2_FDTELEPORT		= 1 << 16,	// Emulate Final Doom's teleporter z glitch.
 	COMPATF2_NOACSARGCHECK	= 1 << 17,	// Disable arg count checking for ACS
 	COMPATF2_NOVDOLLLOCKMSG = 1 << 18,	// Voodoo dolls no longer trigger lock messages
-	COMPATF2_NOCOUNTLOST    = 1 << 19,  // Lost souls no longer count towards total monster count in a map
+	COMPATF2_EMULATEMIKOPORTALS = 1 << 19, // Emulate Mikoportals Z Underflow
+	COMPATF2_RESERVEDLINEFLAG	= 1 << 20, // disable certain linedef flag features that may clash with certain maps
+	COMPATF2_TRANSFERSECRET	= 1 << 21, // Allow Boom's Transfer Specials to transfer Secrets
+	COMPATF2_NOCOUNTLOST    = 1 << 22,  // Lost souls no longer count towards total monster count in a map
 };
 using ELevelCompatFlags2 = TFlags<ELevelCompatFlag2>;
 DEFINE_TFLAGS_OPERATORS(ELevelCompatFlags2)
@@ -256,7 +259,7 @@ enum ELevelBugCompatFlag : uint32_t
 	BCOMPATF_FLOATBOB			= 1 << 8,	// Use Hexen's original method of preventing floatbobbing items from falling down
 	BCOMPATF_NOSLOPEID			= 1 << 9,	// disable line IDs on slopes.
 	BCOMPATF_CLIPMIDTEX			= 1 << 10,	// Always Clip midtex's in the software renderer (required to run certain GZDoom maps, has no effect in the hardware renderer)
-	BCOMPATF_NOSECTIONMERGE		= 1 << 11,	// (for IWAD maps) keep separate sections for sectors with intra-sector linedefs. 
+	BCOMPATF_NOSECTIONMERGE		= 1 << 11,	// (for IWAD maps) keep separate sections for sectors with intra-sector linedefs.
 	BCOMPATF_NOMIRRORS			= 1 << 12,	// disable mirrors, for maps that have broken setups.
 };
 using ELevelBugCompatFlags = TFlags<ELevelBugCompatFlag>;

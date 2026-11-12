@@ -49,7 +49,7 @@ class SectorAction : Actor
 		+DONTSPLASH
 		+NOTONAUTOMAP
 	}
-	
+
 	override void OnDestroy ()
 	{
 		if (CurSector != null)
@@ -317,7 +317,7 @@ class MusicChanger : SectorAction
 		}
 		return false;
 	}
-	 
+
 	override void PostBeginPlay()
 	{
 		// The music changer should consider itself activated if the player
@@ -332,5 +332,3 @@ class MusicChanger : SectorAction
 		}
 	}
 }
-
-

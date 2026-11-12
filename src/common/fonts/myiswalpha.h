@@ -520,5 +520,5 @@ static const uint8_t MYISWALPHA_DATA[] =
 
 inline int myiswalpha(wint_t ch)
 {
-    return MYISWALPHA_DATA[ch / 8] & (1 << (ch & 7));
+	return MYISWALPHA_DATA[ch / 8] & (1 << (ch & 7));
 }

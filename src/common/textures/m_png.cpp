@@ -1055,7 +1055,7 @@ bool M_SaveBitmap(const uint8_t *from, ESSType color_type, int width, int height
 			{
 				I_Error("save png buffer too large");
 			}
-			
+
 			stream.avail_out = (unsigned int) buffer.size();
 		}
 	}

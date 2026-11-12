@@ -44,7 +44,7 @@ bool OpenWHRes(FResourceFile* file, LumpFilterInfo*)
 	Reader->Read(directory, 4096);
 
 	int nl =1024/3;
-	
+
 	int k;
 	for (k = 0; k < nl; k++)
 	{
@@ -66,7 +66,7 @@ bool OpenWHRes(FResourceFile* file, LumpFilterInfo*)
 		char num[6];
 		snprintf(num, 6, "/%04d", k);
 		std::string synthname = BaseName + num;
-		
+
 		Entries[i].Position = offset;
 		Entries[i].CompressedSize = Entries[i].Length = length;
 		Entries[i].Flags = RESFF_FULLPATH;
@@ -112,5 +112,5 @@ FResourceFile *CheckWHRes(const char *filename, FileReader &file, LumpFilterInfo
 	}
 	return NULL;
 }
- 
+
 }

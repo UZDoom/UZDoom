@@ -917,7 +917,7 @@ DEFINE_ACTION_FUNCTION_NATIVE(_Sector, SetXOffset, SetXOffset)
  {
 	 return self->PortalBlocksView(pos);
  }
- 
+
  DEFINE_ACTION_FUNCTION_NATIVE(_Sector, PortalBlocksView, PortalBlocksView)
  {
 	 PARAM_SELF_STRUCT_PROLOGUE(sector_t);
@@ -1332,7 +1332,7 @@ DEFINE_ACTION_FUNCTION_NATIVE(_Sector, SetXOffset, SetXOffset)
 
  //===========================================================================
  //
- // side_t exports 
+ // side_t exports
  //
  //===========================================================================
 
@@ -1737,7 +1737,7 @@ DEFINE_ACTION_FUNCTION_NATIVE(_Sector, SetXOffset, SetXOffset)
 	 PARAM_SELF_STRUCT_PROLOGUE(FLevelLocals);
 	 ACTION_RETURN_BOOL(self->IsFreelookAllowed());
  }
- 
+
  //==========================================================================
 //
 // ZScript counterpart to ACS ChangeSky, uses TextureIDs
@@ -2530,18 +2530,18 @@ template <typename T>
 inline T VecDiff(FLevelLocals *Level, const T& v1, const T& v2)
 {
 	T result = v2 - v1;
-	
+
 	if (Level->subsectors.Size() > 0)
 	{
 		const sector_t * sec1 = Level->PointInSector(v1);
 		const sector_t * sec2 = Level->PointInSector(v2);
-		
+
 		if (nullptr != sec1 && nullptr != sec2)
 		{
 			result += Level->Displacements.getOffset(sec2->PortalGroup, sec1->PortalGroup);
 		}
 	}
-	
+
 	return result;
 }
 
@@ -2602,11 +2602,11 @@ DEFINE_ACTION_FUNCTION(FLevelLocals, GetPortalGroupCount)
 
 void SphericalCoords(FLevelLocals *self, double vpX, double vpY, double vpZ, double tX, double tY, double tZ, double viewYaw, double viewPitch, int absolute, DVector3 *result)
 {
-	
+
 	DVector3 viewpoint(vpX, vpY, vpZ);
 	DVector3 target(tX, tY, tZ);
 	auto vecTo = absolute ? target - viewpoint : VecDiff(self, viewpoint, target);
-	
+
 	*result = (DVector3(
 								deltaangle(vecTo.Angle(), DAngle::fromDeg(viewYaw)).Degrees(),
 								deltaangle(vecTo.Pitch(), DAngle::fromDeg(viewPitch)).Degrees(),

@@ -4,7 +4,12 @@ w +forward
 s +back
 a +moveleft
 d +moveright
+
 space +jump
+ctrl +crouch
 x crouch
 e +use
+r +reload
+
 mouse2 +altattack
+mouse3 +zoom

@@ -22,22 +22,21 @@
 **
 */
 
-#include "menu.h"
-#include "version.h"
-#include "m_png.h"
 #include "filesystem.h"
-#include "v_text.h"
 #include "gstrings.h"
-#include "serializer.h"
-#include "vm.h"
-#include "i_system.h"
-#include "v_video.h"
-#include "findfile.h"
-#include "v_draw.h"
-#include "savegamemanager.h"
-#include "m_argv.h"
-#include "i_specialpaths.h"
 #include "i_interface.h"
+#include "i_specialpaths.h"
+#include "i_system.h"
+#include "m_argv.h"
+#include "m_png.h"
+#include "menu.h"
+#include "printf.h"
+#include "savegamemanager.h"
+#include "serializer.h"
+#include "v_draw.h"
+#include "v_video.h"
+#include "version.h"
+#include "vm.h"
 
 CVAR(String, save_dir, "", CVAR_ARCHIVE | CVAR_GLOBALCONFIG | CVAR_SYSTEM_ONLY);
 FString SavegameFolder;
@@ -49,7 +48,7 @@ extern bool netgame;
 
 //=============================================================================
 //
-// Save data maintenance 
+// Save data maintenance
 //
 //=============================================================================
 
@@ -70,7 +69,7 @@ FSavegameManagerBase::~FSavegameManagerBase()
 
 //=============================================================================
 //
-// Save data maintenance 
+// Save data maintenance
 //
 //=============================================================================
 
@@ -248,7 +247,7 @@ DEFINE_ACTION_FUNCTION(FSavegameManager, LoadSavegame)
 
 //=============================================================================
 //
-// 
+//
 //
 //=============================================================================
 
@@ -673,4 +672,3 @@ FString G_BuildSaveName(const char* prefix)
 	name.Substitute("\\", "/");
 	return name;
 }
-

@@ -52,7 +52,7 @@ namespace OpenGLRenderer
 {
 
 //===========================================================================
-// 
+//
 // Renderer interface
 //
 //===========================================================================
@@ -63,7 +63,7 @@ namespace OpenGLRenderer
 //
 //-----------------------------------------------------------------------------
 
-FGLRenderer::FGLRenderer(OpenGLFrameBuffer *fb) 
+FGLRenderer::FGLRenderer(OpenGLFrameBuffer *fb)
 {
 	framebuffer = fb;
 }
@@ -91,7 +91,7 @@ void FGLRenderer::Initialize(int width, int height)
 	mSamplerManager = new FSamplerManager;
 }
 
-FGLRenderer::~FGLRenderer() 
+FGLRenderer::~FGLRenderer()
 {
 	FlushModels();
 	TexMan.FlushAll();
@@ -113,7 +113,7 @@ FGLRenderer::~FGLRenderer()
 }
 
 //===========================================================================
-// 
+//
 //
 //
 //===========================================================================
@@ -131,14 +131,14 @@ bool FGLRenderer::StartOffscreen()
 }
 
 //===========================================================================
-// 
+//
 //
 //
 //===========================================================================
 
 void FGLRenderer::EndOffscreen()
 {
-	glBindFramebuffer(GL_FRAMEBUFFER, mOldFBID); 
+	glBindFramebuffer(GL_FRAMEBUFFER, mOldFBID);
 }
 
 //===========================================================================

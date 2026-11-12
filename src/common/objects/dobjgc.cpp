@@ -146,7 +146,7 @@ static cycle_t GCTime;			// Track time spent in GC
 //==========================================================================
 //
 // CheckGC
-// 
+//
 // Check if it's time to collect, and do a collection step if it is.
 // Also does some bookkeeping. Should be called fairly consistantly.
 //
@@ -397,7 +397,7 @@ static void Atomic()
 //==========================================================================
 //
 // SweepDone
-// 
+//
 // Sets up the Destroy phase, if there are any dead objects that haven't
 // been destroyed yet, or skips to the Done state.
 //
@@ -856,4 +856,3 @@ CCMD(gc)
 		}
 	}
 }
-

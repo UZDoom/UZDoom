@@ -8,10 +8,13 @@
 #include "core/truetypefont.h"
 #include "core/pathfill.h"
 #include "window/window.h"
-#include <vector>
-#include <unordered_map>
-#include <stdexcept>
+
+#include <algorithm>
+#include <cmath>
 #include <cstring>
+#include <stdexcept>
+#include <unordered_map>
+#include <vector>
 
 #if defined(__SSE2__) || defined(_M_X64)
 #include <immintrin.h>
@@ -377,7 +380,16 @@ void Canvas::line(const Point& p0, const Point& p1, const Colorf& color)
 	}
 }
 
-void Canvas::drawText(const Point& pos, const Colorf& color, const std::string& text)
+inline std::unique_ptr<CanvasFontGroup>& Canvas::WithFont(const std::shared_ptr<Font> &font)
+{
+	if (!fonts.contains(font))
+	{
+		fonts.emplace(font, std::make_unique<CanvasFontGroup>(font->GetName(), font->GetHeight() * uiscale));
+	}
+	return fonts.at(font);
+}
+
+inline void Canvas::drawText(const std::unique_ptr<CanvasFontGroup> &font, const Point& pos, const Colorf& color, const std::string& text)
 {
 	double x = std::round((origin.x + pos.x) * uiscale);
 	double y = std::round((origin.y + pos.y) * uiscale);
@@ -403,9 +415,14 @@ void Canvas::drawText(const Point& pos, const Colorf& color, const std::string& 
 	}
 }
 
+void Canvas::drawText(const Point& pos, const Colorf& color, const std::string& text)
+{
+	drawText(font, pos, color, text);
+}
+
 void Canvas::drawText(const std::shared_ptr<Font>& font, const Point& pos, const std::string& text, const Colorf& color)
 {
-	drawText(pos, color, text);
+	drawText(WithFont(font), pos, color, text);
 }
 
 void Canvas::drawTextEllipsis(const std::shared_ptr<Font>& font, const Point& pos, const Rect& clipBox, const std::string& text, const Colorf& color)
@@ -413,12 +430,7 @@ void Canvas::drawTextEllipsis(const std::shared_ptr<Font>& font, const Point& po
 	drawText(pos, color, text);
 }
 
-Rect Canvas::measureText(const std::shared_ptr<Font>& font, const std::string& text)
-{
-	return measureText(text);
-}
-
-Rect Canvas::measureText(const std::string& text)
+Rect Canvas::measureText(const std::unique_ptr<CanvasFontGroup> &font, const std::string_view& text)
 {
 	double x = 0.0;
 	double y = font->GetTextMetrics().ascender - font->GetTextMetrics().descender;
@@ -437,6 +449,16 @@ Rect Canvas::measureText(const std::string& text)
 	}
 
 	return Rect::xywh(0.0, 0.0, x / uiscale, y / uiscale);
+}
+
+Rect Canvas::measureText(const std::shared_ptr<Font>& font, const std::string_view& text)
+{
+	return measureText(WithFont(font), text);
+}
+
+Rect Canvas::measureText(const std::string_view& text)
+{
+	return measureText(font, text);
 }
 
 FontMetrics Canvas::getFontMetrics(const std::shared_ptr<Font>& font)
@@ -467,38 +489,27 @@ VerticalTextPosition Canvas::verticalTextAlign()
 
 void Canvas::drawLineUnclipped(const Point& p0, const Point& p1, const Colorf& color)
 {
-	if (p0.x == p1.x)
-	{
-		fillTile((float)((p0.x - 0.5) * uiscale), (float)(p0.y * uiscale), (float)uiscale, (float)((p1.y - p0.y) * uiscale), color);
-	}
-	else if (p0.y == p1.y)
-	{
-		fillTile((float)(p0.x * uiscale), (float)((p0.y - 0.5) * uiscale), (float)((p1.x - p0.x) * uiscale), (float)uiscale, color);
-	}
-	else
-	{
-		drawLineAntialiased((float)(p0.x * uiscale), (float)(p0.y * uiscale), (float)(p1.x * uiscale), (float)(p1.y * uiscale), color);
-	}
+	drawLineAntialiased((float)(p0.x * uiscale), (float)(p0.y * uiscale), (float)(p1.x * uiscale), (float)(p1.y * uiscale), color);
 }
 
 int Canvas::getClipMinX() const
 {
-	return clipStack.empty() ? 0 : (int)std::round(std::max(clipStack.back().x * uiscale, 0.0));
+	return clipStack.empty() ? 0 : (int)std::floor(std::max(clipStack.back().x * uiscale, 0.0));
 }
 
 int Canvas::getClipMinY() const
 {
-	return clipStack.empty() ? 0 : (int)std::round(std::max(clipStack.back().y * uiscale, 0.0));
+	return clipStack.empty() ? 0 : (int)std::floor(std::max(clipStack.back().y * uiscale, 0.0));
 }
 
 int Canvas::getClipMaxX() const
 {
-	return clipStack.empty() ? width : (int)std::round(std::min((clipStack.back().x + clipStack.back().width) * uiscale, (double)width));
+	return clipStack.empty() ? width : (int)std::ceil(std::min((clipStack.back().x + clipStack.back().width) * uiscale, (double)width));
 }
 
 int Canvas::getClipMaxY() const
 {
-	return clipStack.empty() ? height : (int)std::round(std::min((clipStack.back().y + clipStack.back().height) * uiscale, (double)height));
+	return clipStack.empty() ? height : (int)std::ceil(std::min((clipStack.back().y + clipStack.back().height) * uiscale, (double)height));
 }
 
 /////////////////////////////////////////////////////////////////////////////

@@ -106,6 +106,15 @@ void DFrameBuffer::SetClearColor(int color)
 	mSceneClearColor[3] = 1.f;
 }
 
+void DFrameBuffer::SetClearColorPal(PalEntry pe)
+{
+	float factor = 1.0f / 255.f;
+	mSceneClearColor[0] = pe.r * factor;
+	mSceneClearColor[1] = pe.g * factor;
+	mSceneClearColor[2] = pe.b * factor;
+	mSceneClearColor[3] = 1.f;
+}
+
 //==========================================================================
 //
 // DFrameBuffer :: SetVSync
@@ -144,7 +153,7 @@ FTexture *DFrameBuffer::WipeStartScreen()
 
 FTexture *DFrameBuffer::WipeEndScreen()
 {
-    return nullptr;
+	return nullptr;
 }
 
 //==========================================================================
@@ -214,7 +223,7 @@ void DFrameBuffer::SetViewportRects(IntRect *bounds)
 }
 
 //===========================================================================
-// 
+//
 // Calculates the OpenGL window coordinates for a zdoom screen position
 //
 //===========================================================================
@@ -309,4 +318,3 @@ DEFINE_ACTION_FUNCTION(_Screen, PaletteColor)
 	else index = GPalette.BaseColors[index];
 	ACTION_RETURN_INT(index);
 }
-

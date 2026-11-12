@@ -154,4 +154,3 @@ class StealthZombieMan : ZombieMan
 		Obituary "$OB_STEALTHZOMBIE";
 	}
 }
-

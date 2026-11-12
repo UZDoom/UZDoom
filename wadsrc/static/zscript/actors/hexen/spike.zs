@@ -37,7 +37,7 @@ class DirtClump : Actor
 
 // Spike (thrust floor) -----------------------------------------------------
 
-class ThrustFloor : Actor 
+class ThrustFloor : Actor
 {
 	Default
 	{
@@ -94,7 +94,7 @@ class ThrustFloor : Actor
 		TSPK B 2 A_ThrustImpale;
 		Loop;
 	}
-	
+
 	override void Activate (Actor activator)
 	{
 		if (args[0] == 0)
@@ -119,7 +119,7 @@ class ThrustFloor : Actor
 				SetStateLabel("ThrustLower");
 		}
 	}
-	
+
 	//===========================================================================
 	//
 	// Thrust floor stuff
@@ -191,7 +191,7 @@ class ThrustFloor : Actor
 		}
 	}
 
-	
+
 	void A_ThrustImpale()
 	{
 		BlockThingsIterator it = BlockThingsIterator.Create(self);

@@ -36,7 +36,7 @@ class MeshArmor : HexenArmor
 		Stop;
 	}
 }
-	
+
 // Falcon Shield (2) --------------------------------------------------------
 
 class FalconShield : HexenArmor
@@ -93,4 +93,3 @@ class AmuletOfWarding : HexenArmor
 		Stop;
 	}
 }
-

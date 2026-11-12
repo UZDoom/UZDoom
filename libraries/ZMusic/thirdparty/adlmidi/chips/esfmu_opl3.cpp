@@ -1,7 +1,7 @@
 /*
- * Interfaces over Yamaha OPL3 (YMF262) chip emulators
+ * Interfaces over Yamaha OPL2 (YM3812) and Yamaha OPL3 (YMF262) chip emulators
  *
- * Copyright (c) 2017-2025 Vitaly Novichkov (Wohlstand)
+ * Copyright (c) 2017-2026 Vitaly Novichkov (Wohlstand)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -59,11 +59,8 @@ void ESFMuOPL3::writeReg(uint16_t addr, uint8_t data)
 
 void ESFMuOPL3::writePan(uint16_t addr, uint8_t data)
 {
-    // FIXME: Implement panning support
-    // esfm_chip *chip_r = reinterpret_cast<esfm_chip*>(m_chip);
-    // ESFM_write?pan(chip_r, addr, data);
-    (void)(addr);
-    (void)(data);
+    esfm_chip *chip_r = reinterpret_cast<esfm_chip*>(m_chip);
+    ESFM_write_pan(chip_r, addr, data);
 }
 
 void ESFMuOPL3::nativeGenerate(int16_t *frame)
@@ -79,7 +76,7 @@ const char *ESFMuOPL3::emulatorName()
 
 bool ESFMuOPL3::hasFullPanning()
 {
-    return false;
+    return true;
 }
 
 OPLChipBase::ChipType ESFMuOPL3::chipType()

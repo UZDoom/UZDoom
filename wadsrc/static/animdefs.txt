@@ -140,7 +140,7 @@ texture optional M_SKL00
 	pic M_SKL15 tics 3
 	pic M_SKL16 tics 3
 	pic M_SKL17 tics 3
-	
+
 texture optional M_SKL01
 	pic M_SKL17 tics 3
 	pic M_SKL16 tics 3
@@ -160,7 +160,7 @@ texture optional M_SKL01
 	pic M_SKL02 tics 3
 	pic M_SKL01 tics 3
 	pic M_SKL00 tics 3
-	
+
 // Hexen's Fire Bulls
 texture optional FBULA0
 	pic FBULA0 tics 5
@@ -186,11 +186,11 @@ texture optional FBULB0
 texture optional INVGEML1
 	pic INVGEML1 tics 4
 	pic INVGEML2 tics 4
-	
+
 texture optional INVGEMR1
 	pic INVGEMR1 tics 4
 	pic INVGEMR2 tics 4
-	
+
 switch doom 1 SW1BRCOM on pic SW2BRCOM tics 0
 switch doom 1 SW1BRN1 on pic SW2BRN1 tics 0
 switch doom 1 SW1BRN2 on pic SW2BRN2 tics 0
@@ -323,85 +323,85 @@ switch strife BRNSCN01 quest on sound switches/sizzle pic BRNSCN05 tics 0
 animateddoor  SIGLDR01
 	opensound DoorOpenLargeMetal
 	closesound DoorCloseLargeMetal
-	pic SIGLDR01 
-	pic SIGLDR02 
-	pic SIGLDR03 
-	pic SIGLDR04 
-	pic SIGLDR05 
-	pic SIGLDR06 
-	pic SIGLDR07 
-	pic SIGLDR08 
-	
+	pic SIGLDR01
+	pic SIGLDR02
+	pic SIGLDR03
+	pic SIGLDR04
+	pic SIGLDR05
+	pic SIGLDR06
+	pic SIGLDR07
+	pic SIGLDR08
+
 animateddoor DORSTN01
 	opensound DoorOpenStone
 	closesound DoorCloseStone
-	pic DORSTN01 
-	pic DORSTN02 
-	pic DORSTN03 
-	pic DORSTN04 
-	pic DORSTN05 
-	pic DORSTN06 
-	pic DORSTN07 
-	pic DORSTN08 
+	pic DORSTN01
+	pic DORSTN02
+	pic DORSTN03
+	pic DORSTN04
+	pic DORSTN05
+	pic DORSTN06
+	pic DORSTN07
+	pic DORSTN08
 
 animateddoor DORQTR01
 	opensound DoorOpenAirlock
 	closesound DoorCloseAirlock
-	pic DORQTR01 
-	pic DORQTR02 
-	pic DORQTR03 
-	pic DORQTR04 
-	pic DORQTR05 
-	pic DORQTR06 
-	pic DORQTR07 
-	pic DORQTR08 
-	
+	pic DORQTR01
+	pic DORQTR02
+	pic DORQTR03
+	pic DORQTR04
+	pic DORQTR05
+	pic DORQTR06
+	pic DORQTR07
+	pic DORQTR08
+
 animateddoor DORCRG01
 	opensound DoorOpenSmallMetal
 	closesound DoorCloseSmallMetal
-	pic DORCRG01 
-	pic DORCRG02 
-	pic DORCRG03 
-	pic DORCRG04 
-	pic DORCRG05 
-	pic DORCRG06 
-	pic DORCRG07 
-	pic DORCRG08 
-	
+	pic DORCRG01
+	pic DORCRG02
+	pic DORCRG03
+	pic DORCRG04
+	pic DORCRG05
+	pic DORCRG06
+	pic DORCRG07
+	pic DORCRG08
+
 animateddoor DORCHN01
 	opensound DoorOpenChain
 	closesound DoorCloseChain
-	pic DORCHN01 
-	pic DORCHN02 
-	pic DORCHN03 
-	pic DORCHN04 
-	pic DORCHN05 
-	pic DORCHN06 
-	pic DORCHN07 
-	pic DORCHN08 
-	
+	pic DORCHN01
+	pic DORCHN02
+	pic DORCHN03
+	pic DORCHN04
+	pic DORCHN05
+	pic DORCHN06
+	pic DORCHN07
+	pic DORCHN08
+
 animateddoor DORIRS01
 	opensound DoorOpenAirlock
 	closesound DoorCloseAirlock
-	pic DORIRS01 
-	pic DORIRS02 
-	pic DORIRS03 
-	pic DORIRS04 
-	pic DORIRS05 
-	pic DORIRS06 
-	pic DORIRS07 
-	pic DORIRS08 
-	
+	pic DORIRS01
+	pic DORIRS02
+	pic DORIRS03
+	pic DORIRS04
+	pic DORIRS05
+	pic DORIRS06
+	pic DORIRS07
+	pic DORIRS08
+
 animateddoor DORALN01
 	opensound DoorOpenAirlock
 	closesound DoorCloseAirlock
-	pic DORALN01 
-	pic DORALN02 
-	pic DORALN03 
-	pic DORALN04 
-	pic DORALN05 
-	pic DORALN06 
-	pic DORALN07 
-	pic DORALN08 
+	pic DORALN01
+	pic DORALN02
+	pic DORALN03
+	pic DORALN04
+	pic DORALN05
+	pic DORALN06
+	pic DORALN07
+	pic DORALN08
 
 warp texture b@ckdrop 0.83445

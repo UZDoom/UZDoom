@@ -44,7 +44,7 @@ public:
 	virtual const FDecalTemplate *GetDecal () const;
 	virtual void ReplaceDecalRef (FDecalBase *from, FDecalBase *to) = 0;
 	FName GetDecalName() const;
-	
+
 protected:
 	FDecalBase ();
 	virtual ~FDecalBase ();

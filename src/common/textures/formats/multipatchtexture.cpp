@@ -21,12 +21,17 @@
 **
 */
 
-#include <ctype.h>
-#include "files.h"
-#include "filesystem.h"
+#include <cstring>
+
+#include "basics.h"
+#include "colormatcher.h"
 #include "image.h"
-#include "multipatchtexture.h"
 #include "imagehelpers.h"
+#include "memarena.h"
+#include "multipatchtexture.h"
+#include "palettecontainer.h"
+#include "palutil.h"
+#include "textures.h"
 
 //==========================================================================
 //
@@ -102,7 +107,7 @@ static uint8_t *GetBlendMap(PalEntry blend, uint8_t *blendwork)
 		{
 			return DesaturateColormap[blend - BLEND_DESATURATE1];
 		}
-		else 
+		else
 		{
 			blendwork[0]=0;
 			if (blend.a == 255)
@@ -136,11 +141,11 @@ static uint8_t *GetBlendMap(PalEntry blend, uint8_t *blendwork)
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
-void FMultiPatchTexture::CopyToBlock(uint8_t *dest, int dwidth, int dheight, FImageSource *source, int xpos, int ypos, int rotate, const uint8_t *translation, int style)
+void FMultiPatchTexture::CopyToBlock(uint8_t *dest, int dwidth, int dheight, FImageSource *source, int xpos, int ypos, FBitmap::Transform rotate, const uint8_t *translation, int style)
 {
 	auto cimage = source->GetCachedPalettedPixels(style);	// should use composition cache
 	auto &image = cimage.Pixels;
@@ -220,7 +225,7 @@ PalettedPixels FMultiPatchTexture::CreatePalettedPixels(int conversion, int fram
 	}
 
 	if (!buildrgb)
-	{	
+	{
 		for (int i = 0; i < NumParts; ++i)
 		{
 			uint8_t *trans = Parts[i].Translation? Parts[i].Translation->Remap : nullptr;
@@ -343,5 +348,3 @@ void FMultiPatchTexture::CollectForPrecache(PrecacheInfo &info, bool requiretrue
 		Parts[i].Image->CollectForPrecache(info, requiretruecolor);
 	}
 }
-
-

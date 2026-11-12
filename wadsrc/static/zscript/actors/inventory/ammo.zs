@@ -28,7 +28,7 @@ class Ammo : Inventory
 	int BackpackMaxAmount;
 	meta int DropAmount;
 	meta double DropAmmoFactorMultiplier;
-	
+
 	property BackpackAmount: BackpackAmount;
 	property BackpackMaxAmount: BackpackMaxAmount;
 	property DropAmount: DropAmount;
@@ -39,7 +39,7 @@ class Ammo : Inventory
 		+INVENTORY.KEEPDEPLETED
 		+WEAPONSPAWN
 		Inventory.PickupSound "misc/ammo_pkup";
-		
+
 		Ammo.DropAmmoFactorMultiplier 1;
 	}
 
@@ -187,19 +187,19 @@ class Ammo : Inventory
 	// settings (also called by ADehackedPickup::TryPickup)
 	//
 	//---------------------------------------------------------------------------
-	
+
 	override void ModifyDropAmount(int dropamount)
 	{
 		bool ignoreskill = true;
 		double dropammofactor = G_SkillPropertyFloat(SKILLP_DropAmmoFactor);
 		// Default drop amount is half of regular amount * regular ammo multiplication
-		if (dropammofactor == -1) 
+		if (dropammofactor == -1)
 		{
 			dropammofactor = 0.5;
 			ignoreskill = false;
 		}
-        
-        dropammofactor *= DropAmmoFactorMultiplier;
+
+		dropammofactor *= DropAmmoFactorMultiplier;
 
 		if (dropamount > 0)
 		{
@@ -225,7 +225,7 @@ class Ammo : Inventory
 			bIgnoreSkill = ignoreskill;
 		}
 	}
-	
+
 }
 
 class BackpackItem : Inventory
@@ -236,7 +236,7 @@ class BackpackItem : Inventory
 	{
 		+WEAPONSPAWN
 	}
-	
+
 	//===========================================================================
 	//
 	// ABackpackItem :: CreateCopy
@@ -250,7 +250,7 @@ class BackpackItem : Inventory
 	{
 		if (IsCreatingLocalCopy())
 			return Super.CreateCopy(other);
-			
+
 		// Find every unique type of ammoitem. Give it to the player if
 		// he doesn't have it already, and double its maximum capacity.
 		uint end = AllActorClasses.Size();
@@ -389,4 +389,3 @@ class BackpackItem : Inventory
 		}
 	}
 }
-

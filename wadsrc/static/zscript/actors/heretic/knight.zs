@@ -42,7 +42,7 @@ class Knight : Actor
 		Tag "$FN_BONEKNIGHT";
 		DropItem "CrossbowAmmo", 84, 5;
 	}
-	
+
 	States
 	{
 	Spawn:
@@ -121,7 +121,7 @@ class KnightGhost : Knight
 
 // Knight axe ---------------------------------------------------------------
 
-class KnightAxe : Actor 
+class KnightAxe : Actor
 {
 	Default
 	{
@@ -178,7 +178,7 @@ class RedAxe : KnightAxe
 	// PROC A_DripBlood
 	//
 	//----------------------------------------------------------------------------
-	
+
 	void A_DripBlood ()
 	{
 		double xo = random2[DripBlood]() / 32.0;

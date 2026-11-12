@@ -50,13 +50,6 @@
 
 EXTERN_CVAR(Bool, sv_autocompat)
 
-struct FGlobalDLightLists
-{
-	//TODO add TSet and switch from TMap to TSet
-	TArray<TMap<FDynamicLight*, std::unique_ptr<FLightNode>>> flat_dlist;
-	TArray<TMap<FDynamicLight*, std::unique_ptr<FLightNode>>> wall_dlist;
-};
-
 //============================================================================
 //
 // This is used to mark processed portals for some collection functions.
@@ -143,7 +136,7 @@ struct FLevelLocals
 	int GetConversation(FName classname);
 	void SetConversation(int convid, PClassActor *Class, int dlgindex);
 	int FindNode (const FStrifeDialogueNode *node);
-    int GetInfighting();
+	int GetInfighting();
 	void SetCompatLineOnSide(bool state);
 	ELevelCompatFlags GetCompatibility(ELevelCompatFlags mask);
 	ELevelCompatFlags2 GetCompatibility2(ELevelCompatFlags2 mask);
@@ -383,7 +376,7 @@ public:
 		auto it = GetSectorTagIterator(tag);
 		return it.Next();
 	}
-	
+
 	int FindFirstLineFromID(int tag)
 	{
 		auto it = GetLineIdIterator(tag);
@@ -425,7 +418,7 @@ public:
 	{
 		return PointInRenderSubsector(FloatToFixed(pos.X), FloatToFixed(pos.Y));
 	}
-	
+
 	FPolyObj *GetPolyobj (int polyNum)
 	{
 		auto index = Polyobjects.FindEx([=](const auto &poly) { return poly.tag == polyNum; });
@@ -485,7 +478,7 @@ public:
 		thinker->Construct(std::forward<Args>(args)...);
 		return thinker;
 	}
-	
+
 	void SetMusic();
 
 	TArray<vertex_t> vertexes;
@@ -586,6 +579,7 @@ public:
 	int			lumpnum;
 	FString		LevelName;
 	FString		MapName;			// the lump name (E1M1, MAP01, etc)
+	FName		MapFName;			// cache name index for lump
 	FString		NextMap;			// go here when using the regular exit
 	FString		NextSecretMap;		// map to go to when used secret exit
 	FString		AuthorName;
@@ -601,19 +595,19 @@ public:
 	TObjPtr<AActor*> bodyque[BODYQUESIZE];
 	TObjPtr<DAutomapBase*> automap = MakeObjPtr<DAutomapBase*>(nullptr);
 	int bodyqueslot;
-	
+
 	// For now this merely points to the global player array, but with this in place, access to this array can be moved over to the level.
 	// As things progress each level needs to be able to point to different players, even if they are just null if the second level is merely a skybox or camera target.
 	// But even if it got a real player, the level will not own it - the player merely links to the level.
 	// This should also be made a real object eventually.
 	player_t *Players[MAXPLAYERS];
-	
+
 	// This is to allow refactoring without refactoring the data right away.
 	bool PlayerInGame(int pnum)
 	{
 		return playeringame[pnum];
 	}
-	
+
 	// This needs to be done better, but for now it should be good enough.
 	bool PlayerInGame(player_t *player)
 	{
@@ -632,18 +626,18 @@ public:
 		}
 		return -1;
 	}
-	
+
 	bool isPrimaryLevel() const
 	{
 		return true;
 	}
-	
+
 	// Gets the console player without having the calling code be aware of the level's state.
 	player_t *GetConsolePlayer() const
 	{
 		return isPrimaryLevel()? Players[consoleplayer] : nullptr;
 	}
-	
+
 	bool isConsolePlayer(AActor *mo) const
 	{
 		auto p = GetConsolePlayer();
@@ -656,12 +650,6 @@ public:
 		auto p = GetConsolePlayer();
 		if (!p) return false;
 		return p->camera == mo;
-	}
-
-	bool MBF21Enabled() const
-	{
-		// The affected features only are a problem with Doom format maps - the flag should have no effect in Hexen and UDMF format.
-		return !(i_compatflags2 & COMPATF2_NOMBF21) || maptype != MAPTYPE_DOOM;
 	}
 
 	int NumMapSections;
@@ -689,6 +677,8 @@ public:
 	float		skyspeed2;
 	float		skymistspeed;
 	float		skymistyscale;			// Y-scale for skymist layer. Scales from horizon as midpoint. Doesn't tile.
+	float		culldist;				// Some functions (SegFog() in hw_setcolor.cpp) don't have access to Viewpoint->culldistsq
+	PalEntry	cullcolor;
 
 	double		sky1pos, sky2pos;
 	float		hw_sky1pos, hw_sky2pos, hw_skymistpos, hw_skymistyscale;
@@ -782,7 +772,6 @@ public:
 
 	int                LocalWorldTimer = 0;	// For client-sided actions that are still bound to world processing.
 	int                LocalTimer = 0;		// For client-sided actions independent of any world state.
-	FGlobalDLightLists lightlists;
 
 	FDynamicLight *lights;
 	DVisualThinker* VisualThinkerHead = nullptr;

@@ -1,0 +1,414 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-06-28 17:01+0000\n"
+"Last-Translator: தமிழ்நேரம் <tamilneram247@gmail.com>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/doom-engine-games/hexen/ta/>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.7.dev0\n"
+
+msgid "TXT_HEXEN_MAP01"
+msgstr "வினோவிங் ஆல்"
+
+msgid "TXT_HEXEN_MAP02"
+msgstr "ஏழு போர்ட்டல்கள்"
+
+msgid "TXT_HEXEN_MAP03"
+msgstr "பனியின் பாதுகாவலர்"
+
+msgid "TXT_HEXEN_MAP04"
+msgstr "நெருப்பின் காவலர்"
+
+msgid "TXT_HEXEN_MAP05"
+msgstr "எஃகு காப்பாளர்"
+
+msgid "TXT_HEXEN_MAP06"
+msgstr "பிரகாசமான சிலுவை"
+
+msgid "TXT_HEXEN_MAP13"
+msgstr "நிழல் மரம்"
+
+msgid "TXT_HEXEN_MAP08"
+msgstr "இருண்டது"
+
+msgid "TXT_HEXEN_MAP09"
+msgstr "சர்க்கின் குகைகள்"
+
+msgid "TXT_HEXEN_MAP10"
+msgstr "தரிசு நிலங்கள்"
+
+msgid "TXT_HEXEN_MAP11"
+msgstr "புனித தோப்பு"
+
+msgid "TXT_HEXEN_MAP12"
+msgstr "ஐப்போச்டைல்"
+
+msgid "TXT_HEXEN_MAP27"
+msgstr "இரேசியார்ச் செமினரி"
+
+msgid "TXT_HEXEN_MAP28"
+msgstr "டிராகன் சேப்பல்"
+
+msgid "TXT_HEXEN_MAP30"
+msgstr "கிரிஃபின் சேப்பல்"
+
+msgid "TXT_HEXEN_MAP31"
+msgstr "டெத்விண்ட் சேப்பல்"
+
+msgid "TXT_HEXEN_MAP32"
+msgstr "புலம்பல் பழத்தோட்டம்"
+
+msgid "TXT_HEXEN_MAP33"
+msgstr "சைலண்ட் ரெஃபெக்டரி"
+
+msgid "TXT_HEXEN_MAP34"
+msgstr "ஓநாய் சேப்பல்"
+
+msgid "TXT_HEXEN_MAP21"
+msgstr "கைவிடப்பட்ட புறக்காவல் நிலையம்"
+
+msgid "TXT_HEXEN_MAP22"
+msgstr "துக்கத்தின் கோட்டை"
+
+msgid "TXT_HEXEN_MAP23"
+msgstr "கிபெட்"
+
+msgid "TXT_HEXEN_MAP24"
+msgstr "எஃப்ளூவியம்"
+
+msgid "TXT_HEXEN_MAP25"
+msgstr "நிலவறைகள்"
+
+msgid "TXT_HEXEN_MAP26"
+msgstr "பாழடைந்த தோட்டம்"
+
+msgid "TXT_HEXEN_MAP35"
+msgstr "நெக்ரோபோலிச்"
+
+msgid "TXT_HEXEN_MAP36"
+msgstr "Zedek கல்லறை"
+
+msgid "TXT_HEXEN_MAP37"
+msgstr "மெனெல்கிரின் கல்லறை"
+
+msgid "TXT_HEXEN_MAP38"
+msgstr "மொழிபெயர்க்கப்பட்டது' கல்லறை"
+
+msgid "TXT_HEXEN_MAP39"
+msgstr "விவாரியம்"
+
+msgid "TXT_HEXEN_MAP40"
+msgstr "டார்க் க்ரூசிபிள்"
+
+# intermission
+msgid "TXT_HEXEN_CLUS1MSG"
+msgstr ""
+"ஏழு நுழைவாயில்களை கடந்து \n"
+"இந்த சாம்ராச்யத்தை அடைத்தது, ஒரு பரந்த \n"
+"கடுமையான வனப்பகுதி நீண்டுள்ளது \n"
+"உங்களுக்கு முன். நெருப்பு, பனி மற்றும் எஃகு உள்ளது \n"
+"உங்களை சோதித்தேன், ஆனால் பெரிய சவால்கள் \n"
+"முன்னால் இருங்கள். என்ற அடர்த்தியான சிக்கு \n"
+"காடு நிச்சயமாக விரோதமான கண்களை மறைக்கிறது \n"
+"ஆனால் அதற்கு அப்பால் இருப்பது மோசமாக இருக்கும். \n"
+"\n"
+"தரிசு பாலைவனம், அடர்ந்த சதுப்பு நிலங்கள் மற்றும் \n"
+"கடுமையான குகைகள் உங்கள் வழியைத் தடுக்கின்றன, ஆனால் நீங்கள் \n"
+"எதுவும் உங்களைத் தடுக்க முடியாது \n"
+"நீங்கள் வந்தாலும் உங்கள் விதி \n"
+"அது வேண்டும் என்று ஆசைப்பட வேண்டும். \n"
+"\n"
+"மற்றும் அப்பால், மினுமினுப்பு \n"
+"தூரம், எப்போதும் மாறும் சுவர்கள் \n"
+"ஐப்போச்டைல் கேலி செய்வது போல் தெரிகிறது \n"
+"உங்கள் ஒவ்வொரு முயற்சியும்."
+
+# intermission
+msgid "TXT_HEXEN_CLUS2MSG"
+msgstr ""
+"உங்கள் மனம் இன்னும் உங்களிடமிருந்து விலகிக் கொண்டிருக்கிறது \n"
+"ஐப்போச்டைலுக்குள் சந்திக்கிறது, நீங்கள் \n"
+"எதிர்பார்ப்பதை நோக்கி தள்ளாட \n"
+"ஒரு வழி. விசயங்கள் வேகமாக நகர்வது போல் தெரிகிறது \n"
+"மேலும் வேகமாக, உங்கள் பார்வை மங்கலாகிறது \n"
+"மங்கத் தொடங்குகிறது… \n"
+"உங்களைச் சுற்றி உலகம் அழிந்து வரும்போது, \n"
+"ஒரு டெலிபோர்ட்டலின் ஒளி \n"
+"உன்னை மூழ்கடிக்கிறது. ஒரு ஃப்ளாச் ஒளி, பின்னர் \n"
+"நீங்கள் சோர்வுடன் உங்கள் காலடியில் ஏறுகிறீர்கள். \n"
+"\n"
+"நீங்கள் ஒரு உயர்ந்த கோபுரத்தின் மேல் நிற்கிறீர்கள், மற்றும் \n"
+"என்ற அலறல் கீழே இருந்து வருகிறது \n"
+"திண்ணம். நீங்கள் முன்னேறுங்கள், மற்றும் \n"
+"உடனே பேய் ஒலி \n"
+"கோசமிடுவது உங்கள் இரத்தத்தை குளிர்விக்கிறது. \n"
+"மரணத்தின் அனைத்து தெய்வங்களால்! என்ன இடம் \n"
+"நீங்கள் வந்தீர்களா? அனைத்து கடவுள்களால் \n"
+"வலி, நீ எப்படி உன்னுடையதைக் கண்டுபிடிப்பாய் \n"
+"வெளியேற வழி?"
+
+# intermission
+msgid "TXT_HEXEN_CLUS3MSG"
+msgstr ""
+"வலிமையான ஆயுதங்கள் மற்றும் கலைப்பொருட்கள் \n"
+"பழங்காலங்களில் இது போதுமானதாக இல்லை \n"
+"துரோகி மற்றும் அவரது தோல்வி \n"
+"கூட்டாளிகள், ஆனால் இப்போது அவர்களின் தவறு உள்ளது \n"
+"உன் காலடியில் படர்ந்திருக்கும். கூட்டம் \n"
+"உங்கள் வலிமையின் கடைசி, நீங்கள் \n"
+"போர்ட்டலுக்குள் நுழைய ஆயத்தம் \n"
+"மதவெறியின் உள்ளத்திலிருந்து வழிநடத்துகிறது \n"
+"கருவறை. \n"
+"\n"
+"உங்களுக்கு மேலே, ஒரு அரண்மனை \n"
+"மகத்தான கோட்டை தறி. அமைதியான கோபுரங்கள் \n"
+"மற்றும் வெற்று சுவர்கள் ஒரு ஒற்றை சுற்றி \n"
+"கருங்கற்களால் ஆன கோபுரம், இது குந்தும் \n"
+"ஒரு போன்ற கோட்டையின் மையத்தில் \n"
+"அடைகாக்கும் மாபெரும். நெருப்பு மற்றும் நிழல் \n"
+"இடைவெளி சன்னல்கள் பின்னால் திருப்பம், டசன் கணக்கான \n"
+"வெறித்தனமான கண்கள் கீழே பளபளத்தன \n"
+"நீ. \n"
+"உள்ளே எங்கோ உங்கள் எதிரிகள் இருக்கிறார்கள் \n"
+"காத்திருக்கிறது…"
+
+# intermission
+msgid "TXT_HEXEN_CLUS4MSG"
+msgstr ""
+"\"... மேலும் அவர் உள்ளே பயணிப்பார் \n"
+"இறந்தவர்களின் சாம்ராச்யங்கள், மற்றும் போட்டி \n"
+"அதில் உள்ள சக்திகள், மிகவும் வரை \n"
+"விரக்தியின் வாயில்கள். ஆனால் அவர் \n"
+"மீண்டும் உலகிற்கு திரும்பும் \n"
+"ஒளி, யாருக்கும் தெரியாது.\" \n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"அடடா."
+
+# intermission
+msgid "TXT_HEXEN_WIN1MSG"
+msgstr ""
+"வேதனையின் அலறலுடன் நீ \n"
+"இந்த உலகத்தில் இருந்து நசுக்கப்பட்டது \n"
+"மற்றொன்று, உங்கள் உடலின் ஒவ்வொரு பகுதியும் \n"
+"மாய தீயில் மாலையிடப்பட்டது. போது உங்கள் \n"
+"பார்வை தெளிவடைகிறது, உங்களை நீங்களே கண்டுபிடிப்பீர்கள் \n"
+"ஒரு பெரிய மண்டபத்தில் நின்று, நிரம்பியது \n"
+"பேய் எதிரொலிகள் மற்றும் அச்சுறுத்தல்களுடன் \n"
+"நிழல்கள். தொலைவில் உங்களால் முடியும் \n"
+"உயர்த்தப்பட்ட மேடையைப் பார்க்கவும், அதன் மீது \n"
+"இந்த உலகில் ஒளியின் ஒரே சான்று."
+
+# intermission
+msgid "TXT_HEXEN_WIN2MSG"
+msgstr ""
+"இது குழப்பக் கோளமாக மட்டுமே இருக்க முடியும், \n"
+"கோராக்சின் சக்தியின் சான்று. உடன் \n"
+"இது, நீங்கள் உலகங்களை உருவாக்கலாம்... அல்லது \n"
+"அவர்களை அழிக்க. போரின் உரிமைகளால் \n"
+"மற்றும் வெற்றி அது உன்னுடையது, மற்றும் \n"
+"நடுங்கும் கைகளை நீங்கள் புரிந்து கொள்ள அடையுங்கள் \n"
+"அது. ஒருவேளை, இப்போது, ஒரு புதிய வீரர் வருவார் \n"
+"சக்தியின் அண்ட விளையாட்டில் சேரவும். பிடிக்கும் \n"
+"ராணியாக பதவி உயர்வு பெற்ற சிப்பாய், \n"
+"திடீரென்று மிகவும் அடையும் \n"
+"பலகை உங்கள் பிடியில் இருப்பதாக தெரிகிறது."
+
+# intermission
+msgid "TXT_HEXEN_WIN3MSG"
+msgstr ""
+"ஆனால் வலிமையான மற்ற வீரர்கள் உள்ளனர் \n"
+"உங்களை விட, யார் அவர்களை அறிய முடியும் \n"
+"அடுத்த நகர்வுகள்?"
+
+# script texts
+msgid "TXT_ACS_MAP01_5_THEDO"
+msgstr "கதவு பூட்டப்பட்டுள்ளது"
+
+# script texts
+msgid "TXT_ACS_MAP02_9_GREET"
+msgstr "வாழ்த்துக்கள், இறப்பு"
+
+# script texts
+msgid "TXT_ACS_MAP02_11_AREYO"
+msgstr "நீங்கள் இறக்கத் தயாரா?"
+
+# script texts
+msgid "TXT_ACS_MAP02_20_ADOOR"
+msgstr "கார்டியன் ஆஃப் ஐச் மீது ஒரு கதவு திறக்கப்பட்டது"
+
+# script texts
+msgid "TXT_ACS_MAP03_12_THISP"
+msgstr "இந்த பாதை தடை செய்யப்பட்டுள்ளது"
+
+# script texts
+msgid "TXT_ACS_MAP04_9_ONEHA"
+msgstr "புதிரின் ஒரு பாதி தீர்ந்தது"
+
+# script texts
+msgid "TXT_ACS_MAP04_10_ONTHE"
+msgstr "ஏழு போர்ட்டல்களில்"
+
+# script texts
+msgid "TXT_ACS_MAP04_11_ONETH"
+msgstr "புதிரில் மூன்றில் ஒரு பங்கு தீர்க்கப்பட்டுள்ளது"
+
+# script texts
+msgid "TXT_ACS_MAP04_12_STAIR"
+msgstr "ஏழு வாசல்களில் படிக்கட்டுகள் உயர்ந்துள்ளன"
+
+# script texts
+msgid "TXT_ACS_MAP05_6_ONETH"
+msgstr "புதிரில் மூன்றில் ஒரு பங்கு தீர்க்கப்பட்டுள்ளது"
+
+# script texts
+msgid "TXT_ACS_MAP05_7_ONTHE"
+msgstr "ஏழு போர்ட்டல்களில்"
+
+# script texts
+msgid "TXT_ACS_MAP05_8_STAIR"
+msgstr ""
+
+# script texts
+msgid "TXT_ACS_MAP05_9_YOUHA"
+msgstr "நீங்கள் மற்றொரு சுவிட்சைக் கண்டுபிடிக்க வேண்டும்…"
+
+# script texts
+msgid "TXT_ACS_MAP05_10_STONE"
+msgstr "ஏழு வாசல்களில் கற்கள் அரைக்கப்படுகின்றன"
+
+# script texts
+msgid "TXT_ACS_MAP08_6_ONESI"
+msgstr "புதிரின் ஆறில் ஒரு பங்கு தீர்க்கப்பட்டது"
+
+# script texts
+msgid "TXT_ACS_MAP08_7_ONTHE"
+msgstr "நிழல் மரத்தின் மீது"
+
+# script texts
+msgid "TXT_ACS_MAP08_10_THEDO"
+msgstr "கதவு உள்பக்கமாகத் தடுக்கப்பட்டுள்ளது"
+
+# script texts
+msgid "TXT_ACS_MAP08_11_YOUHE"
+msgstr "தூரத்தில் கதவு திறக்கும் ஒலி கேட்கிறது"
+
+# script texts
+msgid "TXT_ACS_MAP09_6_ONESI"
+msgstr "புதிரின் ஆறில் ஒரு பங்கு தீர்க்கப்பட்டது"
+
+# script texts
+msgid "TXT_ACS_MAP09_7_ONTHE"
+msgstr "நிழல் மரத்தின் மீது"
+
+# script texts
+msgid "TXT_ACS_MAP10_6_ONESI"
+msgstr "புதிரின் ஆறில் ஒரு பங்கு தீர்க்கப்பட்டது"
+
+# script texts
+msgid "TXT_ACS_MAP10_7_ONTHE"
+msgstr "நிழல் மரத்தின் மீது"
+
+# script texts
+msgid "TXT_ACS_MAP11_0_ETTIN"
+msgstr "\\ ettins விட்டு"
+
+# script texts
+msgid "TXT_ACS_MAP11_1_YOUWA"
+msgstr "நீங்கள் நீண்ட நேரம் காத்திருந்தீர்கள், இப்போது நீங்கள் இறந்துவிட்டீர்கள்!"
+
+# script texts
+msgid "TXT_ACS_MAP11_7_ADOOR"
+msgstr "பார்சேகன் அவுட்போச்ட்டில் ஒரு கதவு திறக்கப்பட்டது"
+
+# script texts
+msgid "TXT_ACS_MAP12_9_THISD"
+msgstr "இந்தக் கதவு இன்னும் திறக்கப்படாது"
+
+# script texts
+msgid "TXT_ACS_MAP13_11_MYSER"
+msgstr "மனிதனே, என் அடியார்கள் உங்கள் இரத்தத்தை மணக்கிறார்கள்"
+
+# script texts
+msgid "TXT_ACS_MAP21_0_ADOOR"
+msgstr "கிபெட்டில் ஒரு கதவு திறக்கப்பட்டது"
+
+# script texts
+msgid "TXT_ACS_MAP21_2_THEDO"
+msgstr "கதவு உள்பக்கமாகத் தடுக்கப்பட்டுள்ளது"
+
+# script texts
+msgid "TXT_ACS_MAP22_3_APLAT"
+msgstr "கோபுரத்தில் ஒரு தளம் தாழ்ந்தது"
+
+# script texts
+msgid "TXT_ACS_MAP22_27_YOUHA"
+msgstr "நீங்கள் இந்த விளையாட்டை நீண்ட நேரம் விளையாடியுள்ளீர்கள், மரணம்…"
+
+# script texts
+msgid "TXT_ACS_MAP22_29_ITHIN"
+msgstr "நான் உங்களை குழுவிலிருந்து நீக்கிவிடுவேன் என்று நினைக்கிறேன்"
+
+# script texts
+msgid "TXT_ACS_MAP23_10_YOUHE"
+msgstr "மாடியில் கதவு திறக்கும் ஒலி கேட்கிறது"
+
+# script texts
+msgid "TXT_ACS_MAP27_8_WORSH"
+msgstr "என்னை வணங்குங்கள், நான் இன்னும் இரக்கமுள்ளவனாக இருக்கலாம்"
+
+# script texts
+msgid "TXT_ACS_MAP27_10_THENA"
+msgstr "மீண்டும், ஒருவேளை இல்லை"
+
+# script texts
+msgid "TXT_ACS_MAP28_6_ONENI"
+msgstr "புதிரின் ஒன்பதில் ஒரு பங்கு தீர்க்கப்பட்டது"
+
+# script texts
+msgid "TXT_ACS_MAP28_7_ONTHE"
+msgstr "மடாலயத்தின் மீது"
+
+# script texts
+msgid "TXT_ACS_MAP30_6_ONENI"
+msgstr "புதிரின் ஒன்பதில் ஒரு பங்கு தீர்க்கப்பட்டது"
+
+# script texts
+msgid "TXT_ACS_MAP30_7_ONTHE"
+msgstr "மடாலயத்தின் மீது"
+
+# script texts
+msgid "TXT_ACS_MAP34_1_ONENI"
+msgstr "புதிரின் ஒன்பதில் ஒரு பங்கு தீர்க்கப்பட்டது"
+
+# script texts
+msgid "TXT_ACS_MAP34_2_ONTHE"
+msgstr "மடாலயத்தின் மீது"
+
+# script texts
+msgid "TXT_ACS_MAP35_0_THEPO"
+msgstr "போர்டல் சீல் வைக்கப்பட்டுள்ளது"
+
+# script texts
+msgid "TXT_ACS_MAP35_1_CHOOS"
+msgstr "உங்கள் விதியைத் தேர்ந்தெடுங்கள்"
+
+# script texts
+msgid "TXT_ACS_MAP35_3_THEDO"
+msgstr "கதவு உள்பக்கமாகத் தடுக்கப்பட்டுள்ளது"
+
+# script texts
+msgid "TXT_ACS_MAP35_12_AREYO"
+msgstr "நீங்கள் போதுமான வலிமையானவரா"
+
+# script texts
+msgid "TXT_ACS_MAP35_14_TOFAC"
+msgstr "உங்கள் சொந்த எசமானர்களை எதிர்கொள்ளவா?"

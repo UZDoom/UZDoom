@@ -1,6 +1,5 @@
 
 #include "widgets/scrollbar/scrollbar.h"
-#include "core/colorf.h"
 #include <stdexcept>
 
 #define HIDE_SMALL_BAR false
@@ -13,6 +12,9 @@ Scrollbar::Scrollbar(Widget* parent) : Widget(parent)
 
 	mouse_down_timer = new Timer(this);
 	mouse_down_timer->FuncExpired = [this]() { OnTimerExpired(); };
+
+	update_timer = new Timer(this);
+	update_timer->FuncExpired = [this]() { RequestUpdate(true); };
 }
 
 Scrollbar::~Scrollbar()
@@ -58,14 +60,14 @@ void Scrollbar::SetVertical()
 {
 	vertical = true;
 	if (UpdatePartPositions())
-		Update();
+		RequestUpdate();
 }
 
 void Scrollbar::SetHorizontal()
 {
 	vertical = false;
 	if (UpdatePartPositions())
-		Update();
+		RequestUpdate();
 }
 
 void Scrollbar::SetMin(double new_scroll_min)
@@ -101,7 +103,7 @@ void Scrollbar::SetRanges(double new_scroll_min, double new_scroll_max, double n
 	if (position < scroll_min)
 		position = scroll_min;
 	if (UpdatePartPositions())
-		Update();
+		RequestUpdate();
 }
 
 void Scrollbar::SetRanges(double view_size, double total_size)
@@ -127,7 +129,7 @@ void Scrollbar::SetPosition(double pos)
 		position = scroll_min;
 
 	if (UpdatePartPositions())
-		Update();
+		RequestUpdate();
 }
 
 void Scrollbar::OnMouseMove(const Point& pos)
@@ -170,7 +172,21 @@ void Scrollbar::OnMouseMove(const Point& pos)
 		}
 	}
 
-	Update();
+	RequestUpdate();
+}
+
+void Scrollbar::RequestUpdate(bool fromTimer)
+{
+	if (fromTimer)
+	{
+		update_timer_running = false;
+		Update();
+	}
+	else if (!update_timer_running)
+	{
+		update_timer_running = true;
+		update_timer->Start(1, false);
+	}
 }
 
 bool Scrollbar::OnMouseDown(const Point& pos, InputKey key)
@@ -256,7 +272,7 @@ bool Scrollbar::OnMouseDown(const Point& pos, InputKey key)
 
 	UpdatePartPositions();
 
-	Update();
+	RequestUpdate();
 	SetPointerCapture();
 	return true;
 }
@@ -272,14 +288,14 @@ bool Scrollbar::OnMouseUp(const Point& pos, InputKey key)
 	mouse_down_mode = mouse_down_none;
 	mouse_down_timer->Stop();
 
-	Update();
+	RequestUpdate();
 	ReleasePointerCapture();
 	return true;
 }
 
 void Scrollbar::OnMouseLeave()
 {
-	Update();
+	RequestUpdate();
 }
 
 void Scrollbar::OnGeometryChanged()
@@ -389,13 +405,13 @@ void Scrollbar::OnTimerExpired()
 		InvokeScrollEvent(FuncScrollOnMouseDown);
 
 		if (UpdatePartPositions())
-			Update();
+			RequestUpdate();
 	}
 }
 
 void Scrollbar::OnEnableChanged()
 {
-	Update();
+	RequestUpdate();
 }
 
 void Scrollbar::InvokeScrollEvent(std::function<void()>* event_ptr)

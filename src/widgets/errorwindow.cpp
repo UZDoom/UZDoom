@@ -23,6 +23,7 @@
 
 #include "errorwindow.h"
 #include "gstrings.h"
+#include "m_misc.h"
 #include "printf.h"
 #include "utf8.h"
 #include "v_font.h"
@@ -30,13 +31,8 @@
 
 bool ErrorWindow::ExecModal(const std::string& text, const std::string& log, std::vector<uint8_t> minidump)
 {
-	Size screenSize = GetScreenSize();
-	double windowWidth = 1200.0;
-	double windowHeight = 700.0;
-
 	auto window = std::make_unique<ErrorWindow>(std::move(minidump));
 	window->SetText(text, log);
-	window->SetFrameGeometry((screenSize.width - windowWidth) * 0.5, (screenSize.height - windowHeight) * 0.5, windowWidth, windowHeight);
 	window->Show();
 
 	DisplayWindow::RunLoop();
@@ -44,26 +40,40 @@ bool ErrorWindow::ExecModal(const std::string& text, const std::string& log, std
 	return window->Restart;
 }
 
-ErrorWindow::ErrorWindow(std::vector<uint8_t> initminidump) : Widget(nullptr, WidgetType::Window), minidump(std::move(initminidump))
+ErrorWindow::ErrorWindow(std::vector<uint8_t> initminidump) : Widget(nullptr, WidgetType::Window, RenderAPI::Unspecified, WindowParams{
+	.size={ 1200, 700 },
+	.resizable=true,
+	.minSize={ 640, 480 },
+	.centered=true
+}), minidump(std::move(initminidump))
 {
+	GetCanvas()->setLanguage(GStrings.GetLangScript().GetChars());
+
 	FStringf caption("%s - " GAMENAME " %s (%s)", GStrings.GetString("ERROR_FATAL"), GetVersionString(), GetGitTime());
 	SetWindowTitle(caption.GetChars());
 
 	LogView = new LogViewer(this);
 	ClipboardButton = new PushButton(this);
-	ClipboardButton->OnClick = [=]() { OnClipboardButtonClicked(); };
+	ClipboardButton->OnClick = [=,this]() { OnClipboardButtonClicked(); };
 	ClipboardButton->SetText(GStrings.GetString("ACTION_COPYTOCLIPBOARD"));
+
+	WadDirButton = new PushButton(this);
+	WadDirButton->OnClick = [=]() { M_OpenWadDir(); };
+	WadDirButton->SetText(GStrings.GetString("ACTION_OPENWADDIR"));
+	ConfigDirButton = new PushButton(this);
+	ConfigDirButton->OnClick = [=]() { M_OpenConfigDir(); };
+	ConfigDirButton->SetText(GStrings.GetString("ACTION_OPENCONFIGDIR"));
 
 	if (minidump.empty())
 	{
 		RestartButton = new PushButton(this);
-		RestartButton->OnClick = [=]() { OnRestartButtonClicked(); };
+		RestartButton->OnClick = [=,this]() { OnRestartButtonClicked(); };
 		RestartButton->SetText(GStrings.GetString("ACTION_RESTART"));
 	}
 	else
 	{
 		SaveReportButton = new PushButton(this);
-		SaveReportButton->OnClick = [=]() { OnSaveReportButtonClicked(); };
+		SaveReportButton->OnClick = [=,this]() { OnSaveReportButtonClicked(); };
 		SaveReportButton->SetText(GStrings.GetString("ERRORMNU_SAVE"));
 	}
 
@@ -150,12 +160,21 @@ void ErrorWindow::OnGeometryChanged()
 	double w = GetWidth();
 	double h = GetHeight();
 
-	double y = GetHeight() - 15.0 - ClipboardButton->GetPreferredHeight();
-	ClipboardButton->SetFrameGeometry(20.0, y, 170.0, ClipboardButton->GetPreferredHeight());
-	if (RestartButton)
-		RestartButton->SetFrameGeometry(GetWidth() - 20.0 - 100.0, y, 100.0, RestartButton->GetPreferredHeight());
-	else if (SaveReportButton)
-		SaveReportButton->SetFrameGeometry(GetWidth() - 20.0 - 100.0, y, 100.0, SaveReportButton->GetPreferredHeight());
+	double x = w;
+	double y = h - 15.0 - ClipboardButton->GetPreferredHeight();
+
+	ClipboardButton->SetFrameGeometry(20.0, y, ClipboardButton->GetPreferredWidth(), ClipboardButton->GetPreferredHeight());
+	auto rButton = [&x, y](PushButton *button)
+	{
+		if (!button) return;
+		auto w = button->GetPreferredWidth();
+		x -= 10.0 + w;
+		button->SetFrameGeometry(x - 10, y, w, button->GetPreferredHeight());
+	};
+	rButton(RestartButton);
+	rButton(SaveReportButton);
+	rButton(ConfigDirButton);
+	rButton(WadDirButton);
 	y -= 20.0;
 
 	LogView->SetFrameGeometry(Rect::xywh(0.0, 0.0, w, y));
@@ -168,7 +187,7 @@ LogViewer::LogViewer(Widget* parent) : Widget(parent)
 	SetNoncontentSizes(8.0, 8.0, 3.0, 8.0);
 
 	scrollbar = new Scrollbar(this);
-	scrollbar->FuncScroll = [=]() { OnScrollbarScroll(); };
+	scrollbar->FuncScroll = [=,this]() { OnScrollbarScroll(); };
 }
 
 void LogViewer::SetText(const std::string& text, const std::string& log)

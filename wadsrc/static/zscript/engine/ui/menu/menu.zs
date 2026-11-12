@@ -23,7 +23,7 @@
 
 struct KeyBindings native version("2.4")
 {
-	native static String NameKeys(int k1, int k2);
+	native static String NameKeys(int k1, int k2, bool colors = true);
 	native static String NameAllKeys(array<int> list, bool colors = true);
 
 	native int, int GetKeysForCommand(String cmd);
@@ -165,6 +165,7 @@ class Menu : Object native ui version("2.4")
 		On,				// Menu is opened
 		WaitKey,		// Menu is opened and waiting for a key in the controls menu
 		OnNoPause,		// Menu is opened but does not pause the game
+		GameplayMenu,	// Menu is opened but does not pause the game, and uses inputevents, and passes through non-consumed events to the playsim
 	};
 
 	native Menu mParentMenu;
@@ -204,7 +205,7 @@ class Menu : Object native ui version("2.4")
 		DontBlur = false;
 		AnimatedTransition = false;
 		Animated = false;
-		mTooltipFont = NewConsoleFont;
+		mTooltipFont = Font.GetDescriptionFont(NewConsoleFont);
 		mCurrentTooltip = "";
 		mTooltipScrollTimer = m_tooltip_delay;
 		mTooltipScrollOffset = 0.0;
@@ -320,17 +321,18 @@ class Menu : Object native ui version("2.4")
 
 		int w = Screen.GetWidth();
 		int h = Screen.GetHeight();
-		if (m_tooltip_capwidth && double(w) / h > 16.0 / 9.0)
+		double minratio = 0.4; // if this gets changed, change it in the menudef too
+		if (m_tooltip_capratio > minratio+double.equal_epsilon && double(w) / h > m_tooltip_capratio)
 		{
-			// Cap it to 16:9 to prevent it from stretching to the far corners of the screen.
-			int width = int(h * 16.0 / 9.0) - xPad * 2;
+			// Cap it to prevent it from stretching to the far corners of the screen. Defaults to 4:3
+			int width = int(h * m_tooltip_capratio) - xPad * 2;
 			body.SetArea((w - width) / 2, h - textHeight - yPad * 3, width, textHeight + yPad * 2);
 		}
 		else
 		{
 			body.SetArea(xPad, h - textHeight - yPad * 3, w - xPad * 2, textHeight + yPad * 2);
 		}
-		
+
 		if (text)
 			text.SetArea(body.x + xPad, body.y + yPad, body.width - xPad * 2, body.height - yPad * 2);
 	}
@@ -354,6 +356,8 @@ class Menu : Object native ui version("2.4")
 		Color col = (int(255 * m_tooltip_alpha) << 24) | 0x404040;
 		Screen.DrawLineFrame(col, box.x, box.y, box.width, box.height, CleanXFac_1);
 
+		let font = Font.GetDescriptionFont(mTooltipFont);
+
 		if (mCurrentTooltip.IsEmpty())
 			return;
 
@@ -372,7 +376,7 @@ class Menu : Object native ui version("2.4")
 			scaleType = DTA_CleanNoMove;
 		}
 
-		BrokenLines bl = mTooltipFont.BreakLines(StringTable.Localize(mCurrentTooltip), text.width / textXScale);
+		BrokenLines bl = font.BreakLines(StringTable.Localize(mCurrentTooltip), text.width / textXScale);
 		int maxOffset;
 		if (bl.Count() > m_tooltip_lines)
 		{
@@ -400,13 +404,13 @@ class Menu : Object native ui version("2.4")
 
 		let [cx, cy, cw, ch] = Screen.GetClipRect();
 		Screen.SetClipRect(text.x, text.y, text.width, text.height);
-		
-		int height = mTooltipFont.GetHeight() * textYScale;
+
+		int height = font.GetHeight() * textYScale;
 		int curY = text.y - int(mTooltipScrollOffset * height);
 		for (int i; i < bl.Count(); ++i)
 		{
 			int xPos = text.x + (text.width - bl.StringWidth(i) * textXScale) / 2;
-			Screen.DrawText(mTooltipFont, Font.CR_UNTRANSLATED, xPos, curY, bl.StringAt(i), scaleType, true);
+			Screen.DrawText(font, Font.CR_UNTRANSLATED, xPos, curY, bl.StringAt(i), scaleType, true);
 			curY += height;
 		}
 
@@ -417,7 +421,7 @@ class Menu : Object native ui version("2.4")
 			int xPos = box.x + box.width - mTooltipFont.StringWidth(".") * textXScale;
 			int yPos = text.y - height / 2;
 			for (int i = 0; i < 3; ++i)
-				Screen.DrawText(mTooltipFont, Font.CR_UNTRANSLATED, xPos, yPos + height / 3 * i, ".", scaleType, true);
+				Screen.DrawText(font, Font.CR_UNTRANSLATED, xPos, yPos + height / 3 * i, ".", scaleType, true);
 		}
 	}
 
@@ -504,12 +508,12 @@ class Menu : Object native ui version("2.4")
 
 	deprecated("4.0") static void DrawConText (int color, int x, int y, String str)
 	{
-		screen.DrawText (ConFont, color, x, y, str, DTA_CellX, 8 * CleanXfac, DTA_CellY, 8 * CleanYfac);
+		screen.DrawText (Font.GetConsoleFont(ConFont), color, x, y, str, DTA_CellX, 8 * CleanXfac, DTA_CellY, 8 * CleanYfac);
 	}
 
 	static Font OptionFont()
 	{
-		return NewSmallFont;
+		return Font.GetSmallTextFont(NewSmallFont);
 	}
 
 	static int OptionHeight()

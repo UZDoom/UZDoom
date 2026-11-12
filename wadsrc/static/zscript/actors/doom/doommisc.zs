@@ -96,7 +96,7 @@ class BulletPuff : Actor
 		Stop;
 	}
 }
-	
+
 // Container for an unused state -------------------------------------------
 
 /* Doom defined the states S_STALAG, S_DEADTORSO, and S_DEADBOTTOM but never

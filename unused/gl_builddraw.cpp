@@ -97,10 +97,10 @@ static int WallInFront(FGLSectionLine *wal1, FGLSectionLine *wal2)
 
 	t1 = (x12-x11)*dy - (y12-y11)*dx;
 	t2 = (x22-x11)*dy - (y22-y11)*dx;
-	if (t1 == 0) 
-	{ 
-		t1 = t2; 
-		if (t1 == 0) return(-1); 
+	if (t1 == 0)
+	{
+		t1 = t2;
+		if (t1 == 0) return(-1);
 	}
 	if (t2 == 0) t2 = t1;
 
@@ -113,10 +113,10 @@ static int WallInFront(FGLSectionLine *wal1, FGLSectionLine *wal2)
 	dx = x22-x12; dy = y22-y12;
 	t1 = (x11-x12)*dy - (y11-y12)*dx;
 	t2 = (x21-x12)*dy - (y21-y12)*dx;
-	if (t1 == 0) 
-	{ 
-		t1 = t2; 
-		if (t1 == 0) return(-1); 
+	if (t1 == 0)
+	{
+		t1 = t2;
+		if (t1 == 0) return(-1);
 	}
 	if (t2 == 0) t2 = t1;
 	if ((t1*t2) >= 0)
@@ -186,7 +186,7 @@ static int BunchInFront(FBunch *b1, FBunch *b2)
 			if (endang > anglecheck)
 			{
 				assert (startang <= anglecheck);
-				
+
 				// found a line
 				int ret = WallInFront(&SectionLines[i], &SectionLines[b1->startline]);
 
@@ -307,12 +307,12 @@ private:
 		*pbacksector = NULL;
 
 		// Back side, i.e. backface culling	- read: endAngle >= startAngle!
-		if (startAngle-endAngle<ANGLE_180)  
+		if (startAngle-endAngle<ANGLE_180)
 		{
 			return CL_Skip;
 		}
 
-		if (!clipper.SafeCheckRange(startAngle, endAngle)) 
+		if (!clipper.SafeCheckRange(startAngle, endAngle))
 		{
 			return CL_Skip;
 		}
@@ -334,7 +334,7 @@ private:
 			if (sector->sectornum == line->refseg->backsector->sectornum)
 			{
 				FTexture *tex = TexMan(line->sidedef->GetTexture(side_t::mid));
-				if (!tex || tex->UseType==FTexture::TEX_Null) 
+				if (!tex || tex->UseType==FTexture::TEX_Null)
 				{
 					// no mid texture: nothing to do here
 					return CL_Pass;
@@ -397,7 +397,7 @@ private:
 			{
 				ln->linedef->flags |= ML_MAPPED;
 
-				if (ln->linedef->validcount!=validcount) 
+				if (ln->linedef->validcount!=validcount)
 				{
 					ln->linedef->validcount=validcount;
 
@@ -505,7 +505,7 @@ private:
 				}
 			}
 		#endif
-		
+
 		//Todo: process subsectors
 		for(int i=0; i<sect->numloops; i++)
 		{
@@ -519,13 +519,13 @@ private:
 				angle_t ang1 = ln->start->GetClipAngle();
 				angle_t ang2 = ln->end->GetClipAngle();
 
-				if (ang2 - ang1 < ANGLE_180) 
+				if (ang2 - ang1 < ANGLE_180)
 				{
 					// Backside
 					D(Printf(PRINT_LOG, "line %d facing backwards\n", ln->linedef - lines));
 					inbunch = false;
 				}
-				else if (!clipper.SafeCheckRange(ang2, ang1)) 
+				else if (!clipper.SafeCheckRange(ang2, ang1))
 				{
 					// is it visible?
 					D(Printf(PRINT_LOG, "line %d not in view\n", ln->linedef - lines));
@@ -536,7 +536,7 @@ private:
 					// don't let a bunch span more than 180° to avoid problems.
 					// This limitation ensures that the combined range of 2
 					// bunches will always be less than 360° which simplifies
-					// the distance comparison code because it prevents a 
+					// the distance comparison code because it prevents a
 					// situation where 2 bunches may overlap at both ends.
 					D(Printf(PRINT_LOG, "Starting bunch %d at line %d\n",Bunches.Size(), ln->linedef - lines));
 
@@ -548,7 +548,7 @@ private:
 				else
 				{
 					D(Printf(PRINT_LOG, "    Adding line %d\n", ln->linedef - lines));
-					AddLineToBunch(0 - ang2); 
+					AddLineToBunch(0 - ang2);
 				}
 			}
 		}

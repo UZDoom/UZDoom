@@ -61,7 +61,7 @@ FSoftwareTexture::FSoftwareTexture(FGameTexture *tex)
 	// calculate the real size after running the scaler.
 	auto info = mSource->CreateTexBuffer(0, CTF_CheckOnly| mBufferFlags);
 	mPhysicalWidth = info.mWidth;
-	mPhysicalHeight = info.mHeight; 
+	mPhysicalHeight = info.mHeight;
 	mPhysicalScale = tex->GetTexelWidth() > 0 ? mPhysicalWidth / tex->GetTexelWidth() : mPhysicalWidth;
 	Scale.X = (double)tex->GetTexelWidth() / tex->GetDisplayWidth();
 	Scale.Y = (double)tex->GetTexelHeight() / tex->GetDisplayHeight();
@@ -78,12 +78,12 @@ void FSoftwareTexture::CalcBitSize ()
 {
 	// WidthBits is rounded down, and HeightBits is rounded up
 	int i;
-	
+
 	for (i = 0; (1 << i) < GetPhysicalWidth(); ++i)
 	{ }
-	
+
 	WidthBits = i;
-	
+
 	// Having WidthBits that would allow for columns past the end of the
 	// texture is not allowed, even if it means the entire texture is
 	// not drawn.
@@ -92,18 +92,18 @@ void FSoftwareTexture::CalcBitSize ()
 		WidthBits--;
 	}
 	WidthMask = (1 << WidthBits) - 1;
-	
+
 	// <hr>The minimum height is 2, because we cannot shift right 32 bits.</hr>
 	// Scratch that. Somebody actually made a 1x1 texture, so now we have to handle it.
 	for (i = 0; (1 << i) < GetPhysicalHeight(); ++i)
 	{ }
-	
+
 	HeightBits = i;
 }
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -208,7 +208,7 @@ void FSoftwareTexture::UpdatePixels(int index)
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -324,7 +324,7 @@ void FSoftwareTexture::FreeSpans (FSoftwareTextureSpan **spans)
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -372,7 +372,7 @@ int FSoftwareTexture::MipmapLevels()
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -557,4 +557,3 @@ FSoftwareTexture* GetPalettedSWTexture(FTextureID texid, bool animate, bool chec
 	}
 	return GetSoftwareTexture(tex);
 }
-

@@ -35,6 +35,7 @@ struct FState;
 class DThinker;
 class FSerializer;
 struct FLevelLocals;
+struct ProfileInfo;
 
 class FThinkerIterator;
 
@@ -49,11 +50,11 @@ struct FThinkerList
 	DThinker *GetTail() const;
 	bool IsEmpty() const;
 	void DestroyThinkers();
-	bool DoDestroyThinkers();
+	bool DoDestroyThinkers(bool& destroyed);
 	void RemoveTravellers(bool saveGame);
 	void OnLoad();
-	int TickThinkers(FThinkerList *dest);	// Returns: # of thinkers ticked
-	int ProfileThinkers(FThinkerList *dest);
+	int TickThinkers(FThinkerList *dest, int& counter);	// Returns: # of thinkers ticked
+	int ProfileThinkers(FThinkerList *dest, int& counter, TMap<FName, ProfileInfo>& profiles);
 	void SaveList(FSerializer &arc);
 
 private:
@@ -103,7 +104,7 @@ public:
 	virtual void PostSerialize();
 	void Serialize(FSerializer &arc) override;
 	size_t PropagateMark();
-	
+
 	void ChangeStatNum (int statnum);
 	inline int GetStatNum() const { return _statNum; }
 	// This is temporary and should only be used with the rollback functionality.

@@ -52,7 +52,7 @@ class MapMarker : Actor
 		AMRK A -1;
 		Stop;
 	}
-	
+
 	override void BeginPlay ()
 	{
 		ChangeStatNum (STAT_MAPMARKER);
@@ -67,5 +67,5 @@ class MapMarker : Actor
 	{
 		bDormant = false;
 	}
-	
+
 }

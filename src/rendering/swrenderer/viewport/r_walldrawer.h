@@ -29,7 +29,7 @@ namespace swrenderer
 {
 	class RenderThread;
 	class RenderViewport;
-	
+
 	class WallDrawerArgs : public DrawerArgs
 	{
 	public:
@@ -49,7 +49,7 @@ namespace swrenderer
 		short* dwal;
 		FWallCoords WallC;
 		ProjectedWallTexcoords texcoords;
-		TMap<FDynamicLight*, std::unique_ptr<FLightNode>>* lightlist = nullptr;
+		TArray<FDynamicLight*> *lightlist = nullptr;
 
 		float lightpos;
 		float lightstep;

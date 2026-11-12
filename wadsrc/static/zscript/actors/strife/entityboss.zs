@@ -65,7 +65,7 @@ class EntityPod : Actor
 		PODD E -1;
 		Stop;
 	}
-	
+
 	void A_SpawnEntity ()
 	{
 		Actor entity = Spawn("EntityBoss", pos + (0,0,70), ALLOW_REPLACE);
@@ -77,7 +77,7 @@ class EntityPod : Actor
 			entity.tracer = self;
 		}
 	}
-	
+
 }
 
 
@@ -158,7 +158,7 @@ class EntityBoss : SpectralMonster
 		MNAL Q 6 Bright A_EntityDeath;
 		Stop;
 	}
-	
+
 	//  --------------------------------------------------------------
 
 	private void A_SpectralMissile (class<Actor> missilename)
@@ -230,7 +230,7 @@ class EntityBoss : SpectralMonster
 			}
 		}
 	}
-	
+
 }
 
 // Second Entity Boss -------------------------------------------------------
@@ -303,7 +303,7 @@ class EntitySecond : SpectralMonster
 		MDTH O 3 Bright A_SubEntityDeath;
 		Stop;
 	}
-	
+
 	//  --------------------------------------------------------------
 
 	void A_SubEntityDeath ()
@@ -314,9 +314,3 @@ class EntitySecond : SpectralMonster
 		}
 	}
 }
-
-
-
-
-
-

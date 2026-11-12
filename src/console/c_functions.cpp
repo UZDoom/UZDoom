@@ -70,4 +70,3 @@ void C_PrintInv(AActor *target)
 	}
 	Printf ("  List count: %d\n", count);
 }
-

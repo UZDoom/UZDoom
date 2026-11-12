@@ -1,7 +1,7 @@
 /*
- * Interfaces over Yamaha OPL3 (YMF262) chip emulators
+ * Interfaces over Yamaha OPL2 (YM3812) and Yamaha OPL3 (YMF262) chip emulators
  *
- * Copyright (c) 2017-2025 Vitaly Novichkov (Wohlstand)
+ * Copyright (c) 2017-2026 Vitaly Novichkov (Wohlstand)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -27,6 +27,12 @@
 class DOS_HW_OPL : public OPLChipBaseT<DOS_HW_OPL>
 {
 public:
+    void dpmi_lock_begin();
+
+private:
+    friend void adl_lock_code();
+    friend void adl_unlock_code();
+public:
     DOS_HW_OPL();
     virtual ~DOS_HW_OPL() override;
 
@@ -43,6 +49,9 @@ public:
     const char *emulatorName() override;
     ChipType chipType() override;
     bool hasFullPanning() override;
+
+public:
+    void dpmi_lock_end();
 };
 
 #endif // DOS_HW_OPL_H

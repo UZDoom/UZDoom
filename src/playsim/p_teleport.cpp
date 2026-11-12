@@ -572,7 +572,7 @@ bool FLevelLocals::EV_SilentLineTeleport (line_t *line, int side, AActor *thing,
 
 			// Is this really still necessary with real math instead of imprecise trig tables?
 #if 1
-			const double fudgeamount = 1. / 65536.;
+			const double fudgeamount = EQUAL_EPSILON;
 
 			int side = reverse || (player && stepdown);
 			int fudge = FUDGEFACTOR;

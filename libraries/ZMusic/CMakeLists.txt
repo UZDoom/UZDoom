@@ -4,6 +4,10 @@ set(CMAKE_C_VISIBILITY_PRESET hidden)
 set(CMAKE_CXX_VISIBILITY_PRESET hidden)
 set(CMAKE_VISIBILITY_INLINES_HIDDEN ON)
 
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF) 
+
 if (VCPKG_LIBSNDFILE)
 	list(APPEND VCPKG_MANIFEST_FEATURES "vcpkg-libsndfile")
 endif()
@@ -24,10 +28,6 @@ else()
 endif()
 
 list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
-
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS OFF) 
 
 include(CMakePackageConfigHelpers)
 include(GNUInstallDirs)
@@ -117,40 +117,16 @@ if(MSVC)
 	# The CMake configurations set /GR by default, which conflict with our settings.
 	# CMake 3.20 fixes the need to do this
 	string(REPLACE " /GR" " " CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} )
-
-	check_cxx_compiler_flag("/std:c++14" COMPILER_SUPPORTS_CXX14)
-	if(COMPILER_SUPPORTS_CXX14)
-		set(FLAG_CPP14 "/std:c++14")
-	endif()
-	if(MSVC_VERSION LESS 1910)
-		unset(COMPILER_SUPPORTS_CXX14) # MSVC older than 2017 fails to build YMFM
-	endif()
 else()
 	add_compile_options("-ffp-contract=off")
 
 	if(APPLE)
-		set(CMAKE_OSX_DEPLOYMENT_TARGET "10.9")
-		if(CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
-			# With standard Apple tools -stdlib=libc++ needs to be specified in order to get
-			# C++11 support using SDKs 10.7 and 10.8.
-			add_compile_options("-stdlib=libc++")
-			add_link_options("-stdlib=libc++")
-		elseif(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+		set(CMAKE_OSX_DEPLOYMENT_TARGET "11.0")
+		if(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
 			# If we're compiling with a custom GCC on the Mac (which we know since g++-4.2 doesn't support C++11) statically link libgcc.
 			add_compile_options("-static-libgcc")
 		endif()
 	endif()
-
-	check_cxx_compiler_flag("-std=c++14" COMPILER_SUPPORTS_CXX14)
-	if(COMPILER_SUPPORTS_CXX14)
-		set(FLAG_CPP14 "-std=c++14")
-	endif()
-endif()
-
-if(COMPILER_SUPPORTS_CXX14)
-	message("== Your C++ compiler supports C++14, YMFM emulators will be ENABLED")
-else()
-	message("== Your C++ compiler does NOT supports C++14, YMFM emulators will be DISABLED")
 endif()
 
 # Initialize our list of find_package dependencies for configure_package_config_file

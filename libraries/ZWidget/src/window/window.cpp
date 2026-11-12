@@ -7,9 +7,9 @@
 #include "core/widget.h"
 #include <stdexcept>
 
-std::unique_ptr<DisplayWindow> DisplayWindow::Create(DisplayWindowHost* windowHost, bool popupWindow, DisplayWindow* owner, RenderAPI renderAPI)
+std::unique_ptr<DisplayWindow> DisplayWindow::Create(DisplayWindowHost* windowHost, DisplayWindow* owner, RenderAPI renderAPI, struct WindowParams params)
 {
-	return DisplayBackend::Get()->Create(windowHost, popupWindow, owner, renderAPI);
+	return DisplayBackend::Get()->Create(windowHost, owner, renderAPI, params);
 }
 
 void DisplayWindow::ProcessEvents()
@@ -93,10 +93,6 @@ std::unique_ptr<DisplayBackend> DisplayBackend::TryCreateBackend()
 		{
 			backend = TryCreateWin32();
 		}
-		else if (backendSelectionStr == "X11")
-		{
-			backend = TryCreateX11();
-		}
 		else if (backendSelectionStr == "SDL2")
 		{
 			backend = TryCreateSDL2();
@@ -106,8 +102,6 @@ std::unique_ptr<DisplayBackend> DisplayBackend::TryCreateBackend()
 	if (!backend)
 	{
 		backend = TryCreateWin32();
-		if (!backend) backend = TryCreateWayland();
-		if (!backend) backend = TryCreateX11();
 		if (!backend) backend = TryCreateSDL2();
 	}
 
@@ -144,56 +138,6 @@ std::unique_ptr<DisplayBackend> DisplayBackend::TryCreateSDL2()
 #else
 
 std::unique_ptr<DisplayBackend> DisplayBackend::TryCreateSDL2()
-{
-	return nullptr;
-}
-
-#endif
-
-#ifdef USE_X11
-
-#include "x11/x11_display_backend.h"
-
-std::unique_ptr<DisplayBackend> DisplayBackend::TryCreateX11()
-{
-	try
-	{
-		return std::make_unique<X11DisplayBackend>();
-	}
-	catch (...)
-	{
-		return nullptr;
-	}
-}
-
-#else
-
-std::unique_ptr<DisplayBackend> DisplayBackend::TryCreateX11()
-{
-	return nullptr;
-}
-
-#endif
-
-#ifdef USE_WAYLAND
-
-#include "wayland/wayland_display_backend.h"
-
-std::unique_ptr<DisplayBackend> DisplayBackend::TryCreateWayland()
-{
-	try
-	{
-		return std::make_unique<WaylandDisplayBackend>();
-	}
-	catch (...)
-	{
-		return nullptr;
-	}
-}
-
-#else
-
-std::unique_ptr<DisplayBackend> DisplayBackend::TryCreateWayland()
 {
 	return nullptr;
 }

@@ -42,6 +42,7 @@ struct dsda_options
 	int comp_stairs = -1;
 	int comp_ledgeblock = -1;
 	int comp_friendlyspawn = -1;
+	int comp_reservedlineflag = -1;
 };
 
 struct dsda_option_t
@@ -73,6 +74,7 @@ static dsda_option_t option_list[] = {
   { "comp_stairs", &dsda_options::comp_stairs, 0, 1 },
   { "comp_ledgeblock", &dsda_options::comp_ledgeblock, 0, 1 },
   { "comp_friendlyspawn", &dsda_options::comp_friendlyspawn, 0, 1 },
+  { "comp_reservedlineflag", &dsda_options::comp_reservedlineflag, 0, 1 },
   { 0 }
 };
 
@@ -89,7 +91,7 @@ static const char* dsda_ReadOption(char* buf, size_t size, options_lump_t* lump)
 	if (lump->length <= 0)
 		return nullptr;
 
-	while (size > 1 && *lump->data && lump->length) 
+	while (size > 1 && *lump->data && lump->length)
 	{
 		size--;
 		lump->length--;
@@ -117,7 +119,7 @@ static struct dsda_options dsda_LumpOptions(int lumpnum)
 	auto data = fileSystem.ReadFile(lumpnum);
 	lump.data = (char*)data.GetMem();
 
-	while (dsda_ReadOption(buf, OPTIONS_LINE_LENGTH, &lump)) 
+	while (dsda_ReadOption(buf, OPTIONS_LINE_LENGTH, &lump))
 	{
 		if (buf[0] == '#')
 			continue;
@@ -128,9 +130,9 @@ static struct dsda_options dsda_LumpOptions(int lumpnum)
 		if (count != 2)
 			continue;
 
-		for (option = option_list; option->value; option++) 
+		for (option = option_list; option->value; option++)
 		{
-			if (!strncmp(key, option->key, OPTIONS_LINE_LENGTH)) 
+			if (!strncmp(key, option->key, OPTIONS_LINE_LENGTH))
 			{
 				mbf_options.*option->value = clamp(option->min, option->max, value);
 
@@ -144,7 +146,7 @@ static struct dsda_options dsda_LumpOptions(int lumpnum)
 }
 
 
-void parseOptions() 
+void parseOptions()
 {
 	int lumpnum = fileSystem.FindFile("OPTIONS");
 
@@ -189,6 +191,8 @@ void parseOptions()
 		setflag(lev.compatmask, COMPATF_STAIRINDEX, opt.comp_stairs);
 		setflag(lev.compatflags, COMPATF_CROSSDROPOFF, opt.comp_ledgeblock);
 		setflag(lev.compatmask, COMPATF_CROSSDROPOFF, opt.comp_ledgeblock);
+		setflag(lev.compatflags2, COMPATF2_RESERVEDLINEFLAG, opt.comp_reservedlineflag);
+		setflag(lev.compatmask2, COMPATF2_RESERVEDLINEFLAG, opt.comp_reservedlineflag);
 
 		/* later. these should be supported but are not implemented yet.
 		if (opt.monsters_remember == 0)
@@ -201,4 +205,3 @@ void parseOptions()
 
 	}
 }
-

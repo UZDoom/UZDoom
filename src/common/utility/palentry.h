@@ -23,6 +23,8 @@
 
 #pragma once
 
+#include "colorspace.h"
+
 #include <algorithm>
 #include <stdint.h>
 
@@ -60,7 +62,7 @@ struct PalEntry
 			return other;
 		}
 	}
-	constexpr int Luminance() const 
+	constexpr int Luminance() const
 	{
 		return (r * 77 + g * 143 + b * 37) >> 8;
 	}
@@ -77,11 +79,11 @@ struct PalEntry
 	}
 	constexpr bool isBlack() const
 	{
-		return (d & 0xffffff) == 0;
+		return (d & 0xffffff) == Color::str("#000");
 	}
 	constexpr bool isWhite() const
 	{
-		return (d & 0xffffff) == 0xffffff;
+		return (d & 0xffffff) == Color::str("#fff");
 	}
 	PalEntry &operator= (const PalEntry &other) = default;
 	constexpr PalEntry &operator= (uint32_t other) { d = other; return *this; }
@@ -119,6 +121,6 @@ constexpr inline int Luminance(int r, int g, int b)
 #define APART(c)			(((c)>>24)&0xff)
 #define RPART(c)			(((c)>>16)&0xff)
 #define GPART(c)			(((c)>>8)&0xff)
-#define BPART(c)			((c)&0xff) 
+#define BPART(c)			((c)&0xff)
 #define MAKERGB(r,g,b)		uint32_t(((r)<<16)|((g)<<8)|(b))
-#define MAKEARGB(a,r,g,b)	uint32_t(((a)<<24)|((r)<<16)|((g)<<8)|(b)) 
+#define MAKEARGB(a,r,g,b)	uint32_t(((a)<<24)|((r)<<16)|((g)<<8)|(b))

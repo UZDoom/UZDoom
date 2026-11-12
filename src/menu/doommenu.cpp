@@ -29,6 +29,7 @@
 #include "doommenu.h"
 #include "g_game.h"
 #include "g_level.h"
+#include "colorspace.h"
 #include "gameconfigfile.h"
 #include "gamestate.h"
 #include "gi.h"
@@ -39,6 +40,7 @@
 #include "i_soundinternal.h"
 #include "i_time.h"
 #include "menu.h"
+#include "name.h"
 #include "p_tick.h"
 #include "r_utility.h"
 #include "s_music.h"
@@ -47,7 +49,7 @@
 #include "teaminfo.h"
 #include "texturemanager.h"
 #include "v_draw.h"
-#include "v_video.h"
+#include "v_font.h"
 #include "vm.h"
 
 EXTERN_CVAR(Int, cl_gfxlocalization)
@@ -71,10 +73,11 @@ EXTERN_CVAR(Int, m_tooltip_lines)
 EXTERN_CVAR(Float, m_tooltip_speed)
 EXTERN_CVAR(Float, m_tooltip_delay)
 EXTERN_CVAR(Float, m_tooltip_alpha)
-EXTERN_CVAR(Bool, m_tooltip_capwidth)
+EXTERN_CVAR(Float, m_tooltip_capratio)
 EXTERN_CVAR(Bool, m_tooltip_small)
 EXTERN_CVAR(Int, r_extralight)
 EXTERN_CVAR(Float, r_visibility)
+EXTERN_CVAR(Int, snd_mididevice)
 
 CVAR(Bool, m_simpleoptions, false, CVAR_ARCHIVE|CVAR_GLOBALCONFIG);
 CVAR(Bool, m_simpleoptions_view, true, 0);
@@ -147,6 +150,15 @@ DEFINE_ACTION_FUNCTION_NATIVE(DMenu, StartGameDirect, StartGameDirect)
 	return 0;
 }
 
+int GetSpacing(const DListMenuDescriptor &desc)
+{
+	if (desc.mFont->IsValidDynamicFont())
+	{
+		return std::max(desc.mLinespacing, desc.mFont->GetHeight());
+	}
+	return desc.mLinespacing;
+}
+
 bool M_SetSpecialMenu(FName& menu, int param)
 {
 	// some menus need some special treatment
@@ -155,7 +167,9 @@ bool M_SetSpecialMenu(FName& menu, int param)
 	case NAME_MainMenu:
 		if (gameinfo.gametype & GAME_DoomStrifeChex)	// Raven's games always used text based menus
 		{
-			if (gameinfo.forcetextinmenus)	// If text is forced, this overrides any check.
+			FFont *desiredMenuFont = FFont::GetBigTextFont(BigUpper);
+			const bool isDynamicFont   = (desiredMenuFont && desiredMenuFont->IsValidDynamicFont());
+			if (generic_ui || gameinfo.forcetextinmenus)	// If text is forced, this overrides any check.
 			{
 				menu = NAME_MainMenuTextOnly;
 			}
@@ -163,22 +177,16 @@ bool M_SetSpecialMenu(FName& menu, int param)
 			{
 				// For these games we must check up-front if they get localized because in that case another template must be used.
 				DMenuDescriptor **desc = MenuDescriptors.CheckKey(NAME_MainMenu);
-				if (desc != nullptr)
+				if (desc == nullptr) break;
+				if (!(*desc)->IsKindOf(RUNTIME_CLASS(DListMenuDescriptor))) break;
+				DListMenuDescriptor *ld = static_cast<DListMenuDescriptor*>(*desc);
+				if (!ld->mFromEngine) break;
+				// This assumes that replacing one graphic will replace all of them.
+				// So this only checks the "New game" entry for localization capability.
+				FTextureID texid = TexMan.CheckForTexture("M_NGAME", ETextureType::MiscPatch);
+				if (!OkForLocalization(texid, "$MNU_NEWGAME"))
 				{
-					if ((*desc)->IsKindOf(RUNTIME_CLASS(DListMenuDescriptor)))
-					{
-						DListMenuDescriptor *ld = static_cast<DListMenuDescriptor*>(*desc);
-						if (ld->mFromEngine)
-						{
-							// This assumes that replacing one graphic will replace all of them.
-							// So this only checks the "New game" entry for localization capability.
-							FTextureID texid = TexMan.CheckForTexture("M_NGAME", ETextureType::MiscPatch);
-							if (!OkForLocalization(texid, "$MNU_NEWGAME"))
-							{
-								menu = NAME_MainMenuTextOnly;
-							}
-						}
-					}
+					menu = NAME_MainMenuTextOnly;
 				}
 			}
 		}
@@ -287,6 +295,21 @@ bool M_SetSpecialMenu(FName& menu, int param)
 		// [MK] allow us to override the ReadThisMenu class
 		menu = gameinfo.HelpMenuClass;
 		break;
+
+	case NAME_MidiPlayerOptions:
+		switch (snd_mididevice)
+		{
+			// magic numbers from: ZMusic/configuration.cpp:MidiDeviceList.Build()
+			case -8: menu = NAME_OPNOptions; break;
+			case -7: menu = NAME_ADLOptions; break;
+			case -6: menu = NAME_WildMidiOptions;  break;
+			case -5: menu = NAME_FluidsynthOptions; break;
+			case -4: menu = NAME_GUSOptions; break;
+			case -3: menu = NAME_OPLOptions; break;
+			case -2: menu = NAME_TimidityOptions; break;
+			default: break;
+		}
+		break;
 	}
 
 	DMenuDescriptor** desc = MenuDescriptors.CheckKey(menu);
@@ -346,7 +369,7 @@ CUSTOM_CVAR(Float, dimamount, 0.8f, CVAR_ARCHIVE)
 		self = 1.f;
 	}
 }
-CVAR(Color, dimcolor, 0x000000, CVAR_ARCHIVE)
+CVAR(Color, dimcolor, Color::str("#000000"), CVAR_ARCHIVE)
 
 void System_M_Dim()
 {
@@ -422,10 +445,15 @@ CCMD (menu_quit)
 	{
 		if (!netgame)
 		{
-			if (gameinfo.quitSound.IsNotEmpty() && S_FindSound(gameinfo.quitSound).isvalid())
+			FSoundID quitSound = NO_SOUND;
+			if (gameinfo.quitSound.IsNotEmpty())
 			{
-				S_Sound(CHAN_VOICE, CHANF_UI|(haptics_do_menus?CHANF_RUMBLE:CHANF_NORUMBLE), gameinfo.quitSound, snd_menuvolume, ATTN_NONE);
-				I_WaitVBL(clamp(S_GetMSLength(S_FindSound(gameinfo.quitSound))*0.0735, 105.0, 350.0)); // Aim for 5% over length of sound, to a maximum 5 seconds
+				quitSound = S_FindSound(gameinfo.quitSound);
+			}
+			if (quitSound.isvalid())
+			{
+				S_Sound(CHAN_VOICE, CHANF_UI|(haptics_do_menus?CHANF_RUMBLE:CHANF_NORUMBLE), quitSound, snd_menuvolume, ATTN_NONE);
+				I_WaitVBL(static_cast<int>(clamp(S_GetMSLength(quitSound)*0.0735, 105.0, 350.0))); // Aim for 5% over length of sound, to a maximum 5 seconds, and a minimum of 1.5 seconds like in vanilla
 			}
 		}
 		M_Quit();
@@ -464,7 +492,7 @@ CCMD (menu_endgame)
 		S_Sound (CHAN_VOICE, CHANF_UI|(haptics_do_menus?CHANF_RUMBLE:CHANF_NORUMBLE), "menu/invalid", snd_menuvolume, ATTN_NONE);
 		return;
 	}
-		
+
 	//M_StartControlPanel (true);
 	S_Sound (CHAN_VOICE, CHANF_UI|(haptics_do_menus?CHANF_RUMBLE:CHANF_NORUMBLE), "menu/activate", snd_menuvolume, ATTN_NONE);
 
@@ -494,7 +522,7 @@ CCMD (quicksave)
 		G_DoQuickSave();
 		return;
 	}
-		
+
 	if (savegameManager.quickSaveSlot == NULL || savegameManager.quickSaveSlot == (FSaveGameNode*)1)
 	{
 		S_Sound(CHAN_VOICE, CHANF_UI|(haptics_do_menus?CHANF_RUMBLE:CHANF_NORUMBLE), "menu/activate", snd_menuvolume, ATTN_NONE);
@@ -502,7 +530,7 @@ CCMD (quicksave)
 		M_SetMenu(NAME_SavegameMenu);
 		return;
 	}
-	
+
 	// [mxd]. Just save the game, no questions asked.
 	if (!saveloadconfirmation)
 	{
@@ -540,7 +568,7 @@ CCMD (quickload)
 		M_StartMessage (GStrings.GetString("QLOADNET"), 1);
 		return;
 	}
-		
+
 	if (savegameManager.quickSaveSlot == NULL || savegameManager.quickSaveSlot == (FSaveGameNode*)1)
 	{
 		M_StartControlPanel(true);
@@ -633,7 +661,7 @@ CCMD(acc_reset2defaults)
 	m_tooltip_speed->ResetToDefault();
 	m_tooltip_delay->ResetToDefault();
 	m_tooltip_alpha->ResetToDefault();
-	m_tooltip_capwidth->ResetToDefault();
+	m_tooltip_capratio->ResetToDefault();
 	m_tooltip_small->ResetToDefault();
 	r_extralight->ResetToDefault();
 	r_visibility->ResetToDefault();
@@ -677,7 +705,7 @@ void M_StartupEpisodeMenu(FNewGameStartup *gs)
 		if ((*desc)->IsKindOf(RUNTIME_CLASS(DListMenuDescriptor)))
 		{
 			DListMenuDescriptor *ld = static_cast<DListMenuDescriptor*>(*desc);
-			
+
 			// Delete previous contents
 			for(unsigned i=0; i<ld->mItems.Size(); i++)
 			{
@@ -690,7 +718,7 @@ void M_StartupEpisodeMenu(FNewGameStartup *gs)
 				}
 			}
 
-			
+
 			int posx = (int)ld->mXpos;
 			int posy = (int)ld->mYpos;
 			int topy = posy;
@@ -702,7 +730,7 @@ void M_StartupEpisodeMenu(FNewGameStartup *gs)
 				if (y < topy) topy = y;
 			}
 
-			int spacing = ld->mLinespacing;
+			int spacing = GetSpacing(*ld);
 			for (unsigned i = 0; i < AllEpisodes.Size(); i++)
 			{
 				if (AllEpisodes[i].mPicName.IsNotEmpty())
@@ -753,7 +781,7 @@ void M_StartupEpisodeMenu(FNewGameStartup *gs)
 				for(unsigned i = 0; i < AllEpisodes.Size(); i++)
 				{
 					DMenuItemBase *it = nullptr;
-					if (AllEpisodes[i].mPicName.IsNotEmpty())
+					if (AllEpisodes[i].mPicName.IsNotEmpty() && !generic_ui)
 					{
 						FTextureID tex = GetMenuTexture(AllEpisodes[i].mPicName.GetChars());
 						if (AllEpisodes[i].mEpisodeName.IsEmpty() || OkForLocalization(tex, AllEpisodes[i].mEpisodeName.GetChars()))
@@ -761,7 +789,7 @@ void M_StartupEpisodeMenu(FNewGameStartup *gs)
 					}
 					if (it == nullptr)
 					{
-						it = CreateListMenuItemText(posx, posy, spacing, AllEpisodes[i].mShortcut, 
+						it = CreateListMenuItemText(posx, posy, spacing, AllEpisodes[i].mShortcut,
 							AllEpisodes[i].mEpisodeName.GetChars(), ld->mFont, ld->mFontColor, ld->mFontColor2, NAME_SkillMenu, i);
 					}
 					ld->mItems.Push(it);
@@ -829,7 +857,7 @@ static void BuildPlayerclassMenu()
 			// add player display
 
 			ld->mSelectedItem = ld->mItems.Size();
-			
+
 			int posy = (int)ld->mYpos;
 			int topy = posy;
 
@@ -855,12 +883,12 @@ static void BuildPlayerclassMenu()
 			}
 
 			// center the menu on the screen if the top space is larger than the bottom space
-			int totalheight = posy + (numclassitems+1) * ld->mLinespacing - topy;
+			int totalheight = posy + (numclassitems + 1) * GetSpacing(*ld) - topy;
 
 			if (numclassitems <= 1)
 			{
 				// create a dummy item that auto-chooses the default class.
-				auto it = CreateListMenuItemText(0, 0, 0, 'p', "player", 
+				auto it = CreateListMenuItemText(0, 0, 0, 'p', "player",
 					ld->mFont,ld->mFontColor, ld->mFontColor2, NAME_EpisodeMenu, -1000);
 				ld->mAutoselect = ld->mItems.Push(it);
 				success = true;
@@ -889,7 +917,7 @@ static void BuildPlayerclassMenu()
 							auto it = CreateListMenuItemText(ld->mXpos, ld->mYpos, ld->mLinespacing, *pname,
 								pname, ld->mFont,ld->mFontColor,ld->mFontColor2, NAME_EpisodeMenu, i);
 							ld->mItems.Push(it);
-							ld->mYpos += ld->mLinespacing;
+							ld->mYpos += GetSpacing(*ld);
 							n++;
 						}
 					}
@@ -972,7 +1000,7 @@ static void InitCrosshairsList()
 	lastlump = 0;
 
 	FOptionValues **opt = OptionValues.CheckKey(NAME_Crosshairs);
-	if (opt == nullptr) 
+	if (opt == nullptr)
 	{
 		return;	// no crosshair value list present. No need to go on.
 	}
@@ -1067,7 +1095,7 @@ void M_CreateGameMenus()
 	auto opt = OptionValues.CheckKey(NAME_PlayerTeam);
 	if (opt != nullptr)
 	{
-		auto op = *opt; 
+		auto op = *opt;
 		op->mValues.Resize(Teams.Size() + 1);
 		op->mValues[0].Value = 0;
 		op->mValues[0].Text = "$OPTVAL_NONE";
@@ -1162,6 +1190,8 @@ DEFINE_ACTION_FUNCTION(DNewPlayerMenu, UpdateSkinOptions)
 
 extern int restart;
 
+
+
 void M_StartupSkillMenu(FNewGameStartup *gs)
 {
 	static int done = -1;
@@ -1216,14 +1246,14 @@ void M_StartupSkillMenu(FNewGameStartup *gs)
 			for(unsigned i=0; i<ld->mItems.Size(); i++)
 			{
 				FName n = ld->mItems[i]->mAction;
-				if (n == NAME_Startgame || n == NAME_StartgameConfirm) 
+				if (n == NAME_Startgame || n == NAME_StartgameConfirm)
 				{
 					ld->mItems.Resize(i);
 					break;
 				}
 			}
 
-			int spacing = ld->mLinespacing;
+			int spacing = GetSpacing(*ld);
 			//if (done != restart)
 			{
 				//done = restart;
@@ -1248,6 +1278,7 @@ void M_StartupSkillMenu(FNewGameStartup *gs)
 							continue;
 					}
 					if ((gameinfo.gametype & GAME_DoomStrifeChex) && spacing == 16) spacing = 18;
+					//spacing = ld->mFont->GetHeight();
 					break;
 				}
 
@@ -1316,7 +1347,7 @@ void M_StartupSkillMenu(FNewGameStartup *gs)
 
 				EColorRange color = (EColorRange)skill.GetTextColor();
 				if (color == CR_UNTRANSLATED) color = ld->mFontColor;
-				if (skill.PicName.Len() != 0 && pItemText == nullptr)
+				if (!generic_ui && skill.PicName.Len() != 0 && pItemText == nullptr)
 				{
 					FTextureID tex = GetMenuTexture(skill.PicName.GetChars());
 					if (skill.MenuName.IsEmpty() || OkForLocalization(tex, skill.MenuName.GetChars()))
@@ -1484,7 +1515,7 @@ CCMD (menu_game)
 	M_StartControlPanel (true);
 	M_SetMenu(NAME_PlayerclassMenu, -1);	// The playerclass menu is the first in the 'start game' chain
 }
-								
+
 CCMD (menu_options)
 {
 	M_StartControlPanel (true);

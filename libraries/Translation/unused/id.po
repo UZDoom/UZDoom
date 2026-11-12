@@ -1,0 +1,237 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-07-30 16:57-0400\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Indonesian <https://hosted.weblate.org/projects/uzdoom/unused/id/>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
+
+msgid "ADVSNDMNU_ADLOPLCORES"
+msgstr "Inti Emulator OPL"
+
+msgid "ADVSNDMNU_FLUIDPATCHSET"
+msgstr "Set patch"
+
+msgid "ADVSNDMNU_GUSCONFIG"
+msgstr "File konfigurasi GUS"
+
+# Jargon.
+msgid "ADVSNDMNU_TIMIDITYCONFIG"
+msgstr "File konfigurasi Timidity"
+
+msgid "ADVSNDMNU_TIMIDITYVOLUME"
+msgstr "Volume relatif"
+
+# Jargon.
+msgid "ADVSNDMNU_WILDMIDICONFIG"
+msgstr "File konfigurasi WildMidi"
+
+msgid "CNTRLMNU_ADJUST_GAMMA"
+msgstr "Atur Gamma"
+
+msgid "CNTRLMNU_CHAT"
+msgstr "Obrolan"
+
+msgid "CNTRLMNU_CHAT_TITLE"
+msgstr "Sesuaikan Kontrol Obrolan"
+
+msgid "DSPLYMNU_ADVANCED"
+msgstr "Opsi tampilan lanjutan"
+
+msgid "DSPLYMNU_APPEARANCE"
+msgstr "Tampilan"
+
+msgid "DSPLYMNU_CROSSHAIRSCALE"
+msgstr "Skala bidikan"
+
+msgid "DSPLYMNU_MESSAGES"
+msgstr "Pesan"
+
+msgid "DSPLYMNU_SBSCALE"
+msgstr "Skala Bilah Status"
+
+msgid "GLTEXMNU_ENABLEHIRES"
+msgstr "Aktifkan tekstur resolusi tinggi"
+
+msgid "GLTEXMNU_TEXENABLED"
+msgstr "Tekstur diaktifkan"
+
+msgid "MOUSEMNU_SMOOTHMOUSE"
+msgstr "Gerakan mouse halus"
+
+msgid "MSGMNU_MESSAGESCALE"
+msgstr "Skala Pesan"
+
+msgid "NOTSET"
+msgstr "Belum diatur"
+
+msgid "OPTMNU_INPUT"
+msgstr "Opsi input"
+
+msgid "OPTMNU_LIGHT"
+msgstr "Opsi pencahayaan"
+
+msgid "OPTMNU_MULTIPLAYER"
+msgstr "Opsi multipemain"
+
+msgid "OPTMNU_SPRITE"
+msgstr "Opsi sprite"
+
+msgid "OPTMNU_SYSTEM"
+msgstr "Opsi sistem"
+
+msgid "OPTVAL_4000HZ"
+msgstr "4000 Hz"
+
+msgid "OPTVAL_AUTOMAP"
+msgstr "Peta otomatis"
+
+msgid "OPTVAL_HUD"
+msgstr "HUD"
+
+msgid "OPTVAL_HUDANDMAP"
+msgstr "HUD + Peta otomatis"
+
+msgid "OPTVAL_PMDWINOPNA"
+msgstr "PMDWin OPNA"
+
+msgid "OPTVAL_SCALENEAREST"
+msgstr "Skala (Terdekat)"
+
+msgid "OPTVAL_SCALELINEAR"
+msgstr "Skala (Linear)"
+
+msgid "PICKER_NETAUTO"
+msgstr "Otomatis (disarankan)"
+
+msgid "PICKER_NETMODE"
+msgstr "Mode jaringan:"
+
+# Players connect to each other individually.
+msgid "PICKER_NETPEER"
+msgstr "Peer-to-Peer"
+
+# Connections are routed through the host instead of all players connecting to
+# each other individually.
+msgid "PICKER_NETSERVER"
+msgstr "Server paket"
+
+msgid "SNDMNU_BACKEND"
+msgstr "Backend suara"
+
+msgid "SNDMNU_MENUSOUND"
+msgstr "Suara di Menu"
+
+msgid "SNDMNU_MUSENABLED"
+msgstr "Musik diaktifkan"
+
+msgid "SNDMNU_SNDENABLED"
+msgstr "Suara diaktifkan"
+
+msgid "VIDMNU_5X4ASPECTRATIO"
+msgstr "Aktifkan rasio aspek 5:4"
+
+msgid "VIDMNU_ASPECTRATIO"
+msgstr "Rasio aspek"
+
+msgid "VKMNU_DEVICESELECT"
+msgstr "Pilih perangkat Vulkan"
+
+msgid "VKMNU_ENABLE"
+msgstr "Aktifkan Vulkan"
+
+msgid "CMPTMNU_SOUNDCUTOFF"
+msgstr ""
+
+msgid "DSPLYMNU_TOOLTIP_WHITEPOINT"
+msgstr ""
+
+msgid "DSPLYMNU_TRANSSOUL"
+msgstr ""
+
+msgid "DSPLYMNU_WHITEPOINT"
+msgstr ""
+
+msgid "GLLIGHTMNU_LIGHTDEFS"
+msgstr ""
+
+msgid "GLMNU_PREFS"
+msgstr "Preferensi"
+
+msgid "GLPREFMNU_PALTONENOGREY"
+msgstr ""
+
+msgid "GLTEXMNU_TRIMSPREDGE"
+msgstr ""
+
+msgid "JOYMNU_HAPTRIGGERS"
+msgstr ""
+
+msgid "NETMNU_MOVEPREDICTION"
+msgstr ""
+
+msgid "NETMNU_TICBALANCE"
+msgstr ""
+
+msgid "OPTSTR_NOSOUND"
+msgstr ""
+
+msgid "OPTSTR_OPENAL"
+msgstr ""
+
+msgid "OPTVAL_ALLUNACKNOWLEDGED"
+msgstr ""
+
+msgid "OPTVAL_DEDICATED"
+msgstr ""
+
+msgid "OPTVAL_DOUBLE"
+msgstr "Ganda"
+
+msgid "OPTVAL_INTEGRATED"
+msgstr ""
+
+msgid "OPTVAL_OPTIMAL"
+msgstr "Optimal"
+
+msgid "OPTVAL_OPTIMIZED"
+msgstr ""
+
+msgid "OPTVAL_ORIGINAL"
+msgstr "Asli"
+
+msgid "OPTVAL_PIXELDOUBLE"
+msgstr ""
+
+msgid "OPTVAL_PIXELQUADRUPLE"
+msgstr ""
+
+msgid "OPTVAL_QUADRUPLE"
+msgstr ""
+
+msgid "OPTVAL_SCALETO640X400"
+msgstr ""
+
+msgid "OPTVAL_TRIPLE"
+msgstr "Tiga"
+
+msgid "OPTVAL_VTAVANILLA"
+msgstr ""
+
+msgid "OPTVAL_VTAZDOOM"
+msgstr ""
+
+msgid "TCMNU_TRUECOLOR"
+msgstr ""
+
+msgid "TCMNU_DYNLIGHTS"
+msgstr "Cahaya dinamis (Perangkat Lunak)"
+
+msgid "PICKER_FULLSCREEN"
+msgstr "Layar penuh"

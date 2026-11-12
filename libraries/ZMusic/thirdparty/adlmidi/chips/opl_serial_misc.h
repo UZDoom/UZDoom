@@ -1,7 +1,7 @@
 /*
- * Interfaces over Yamaha OPL3 (YMF262) chip emulators
+ * Interfaces over Yamaha OPL2 (YM3812) and Yamaha OPL3 (YMF262) chip emulators
  *
- * Copyright (c) 2017-2025 Vitaly Novichkov (Wohlstand)
+ * Copyright (c) 2017-2026 Vitaly Novichkov (Wohlstand)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -291,6 +291,7 @@ public:
                                           (int)portPath.size(),
                                           (wchar_t *)wportPath.c_str(),
                                           (int)wportPath.size());
+        wportPath.resize(newSize);
         m_port = CreateFile2(wportPath.c_str(), GENERIC_WRITE, 0, OPEN_EXISTING, NULL);
 #else
         m_port = CreateFileA(portPath.c_str(), GENERIC_WRITE, 0, NULL, OPEN_EXISTING, 0, NULL);

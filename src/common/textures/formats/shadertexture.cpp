@@ -22,12 +22,15 @@
 **
 */
 
-#include "filesystem.h"
-#include "bitmap.h"
-#include "imagehelpers.h"
-#include "image.h"
-#include "textures.h"
+#include <cstring>
 
+#include "basics.h"
+#include "bitmap.h"
+#include "gametexture.h"
+#include "image.h"
+#include "palettecontainer.h"
+#include "textureid.h"
+#include "zstring.h"
 
 class FBarShader : public FImageSource
 {
@@ -96,7 +99,7 @@ public:
 		else
 		{
 			// Since this presents itself to the game as a regular named texture
-			// it can easily be used on walls and flats and should work as such, 
+			// it can easily be used on walls and flats and should work as such,
 			// even if it makes little sense.
 			for (int i = 0; i < 512; i++)
 			{
@@ -108,7 +111,7 @@ public:
 
 	int CopyPixels(FBitmap *bmp, int conversion, int frame = 0) override
 	{
-		bmp->CopyPixelData(0, 0, Pixels, Width, Height, Height, 1, 0, GPalette.GrayRamp.Palette);
+		bmp->CopyPixelData(0, 0, Pixels, Width, Height, Height, 1, FBitmap::Transform::NONE, GPalette.GrayRamp.Palette);
 		return 0;
 	}
 

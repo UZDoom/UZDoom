@@ -23,7 +23,7 @@ class Minotaur : Actor
 	const MAULATORTICS = 25 * TICRATE;
 	const MNTR_CHARGE_SPEED =13.;
 	const MINOTAUR_LOOK_DIST = 16*54.;
-	
+
 	Default
 	{
 		Health 3000;
@@ -118,7 +118,7 @@ class Minotaur : Actor
 		MNTR E 10 A_BossDeath;
 		Stop;
 	}
-	
+
 	//---------------------------------------------------------------------------
 	//
 	// FUNC P_MinotaurSlam
@@ -139,17 +139,17 @@ class Minotaur : Actor
 		}
 	}
 
-	
+
 	//----------------------------------------------------------------------------
 	//
-	// 
+	//
 	//
 	//----------------------------------------------------------------------------
 
 	override void Tick ()
 	{
 		Super.Tick ();
-		
+
 		// The unfriendly Minotaur (Heretic's) is invulnerable while charging
 		if (!bSummonedMonster)
 		{
@@ -369,7 +369,7 @@ class Minotaur : Actor
 		{
 			if (Floorclip > 0 && (Level.compatflags & COMPATF_MINOTAUR))
 			{
-				// only play the sound. 
+				// only play the sound.
 				A_StartSound ("minotaur/fx2hit", CHAN_WEAPON);
 			}
 			else
@@ -591,7 +591,7 @@ class Minotaur : Actor
 class MinotaurFriend : Minotaur
 {
 	int StartTime;
-	
+
 	Default
 	{
 		Health 2500;
@@ -619,10 +619,10 @@ class MinotaurFriend : Minotaur
 	Death:
 		Goto FadeOut;
 	}
-	
+
 	//----------------------------------------------------------------------------
 	//
-	// 
+	//
 	//
 	//----------------------------------------------------------------------------
 
@@ -663,7 +663,7 @@ class MinotaurFriend : Minotaur
 		}
 	}
 
-	
+
 }
 
 // Minotaur FX 1 ------------------------------------------------------------
@@ -711,7 +711,7 @@ class MinotaurFX2 : MinotaurFX1
 		ExplosionDamage 24;
 		DeathSound "minotaur/fx2hit";
 	}
-	
+
 	states
 	{
 	Spawn:
@@ -722,7 +722,7 @@ class MinotaurFX2 : MinotaurFX1
 		FX13 JKLM 4 Bright;
 		Stop;
 	}
-	
+
 	//----------------------------------------------------------------------------
 	//
 	// PROC A_MntrFloorFire
@@ -734,7 +734,7 @@ class MinotaurFX2 : MinotaurFX1
 		SetZ(floorz);
 		double x = Random2[MntrFloorFire]() / 64.;
 		double y = Random2[MntrFloorFire]() / 64.;
-		
+
 		Actor mo = Spawn("MinotaurFX3", Vec2OffsetZ(x, y, floorz), ALLOW_REPLACE);
 		if (mo != null)
 		{

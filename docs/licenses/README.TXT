@@ -2,7 +2,7 @@ The original Doom source code was released by id Software under the
 GPL v2, but has been relicensed under the GPL v3 for GZDoom.
 See gpl.txt
 
-Parts of the voxel code in the software renderer use code from the 
+Parts of the voxel code in the software renderer use code from the
 BUILD engine by Ken Silverman and are used under the terms of the
 GPL v3 with permission.
 
@@ -20,7 +20,7 @@ however, has been heavily modified from its original form and is the same
 version used by the foobar2000 component foo_dumb as of mid-2008, found at
 http://kode54.foobar2000.org/.
 
-All script code in uzdoom.pk3 is licensed under the GPL v3 unless noted 
+All script code in uzdoom.pk3 is licensed under the GPL v3 unless noted
 otherwise.
 
 Please note that the content of brightmaps.pk3, game_support.pk3 and game_widescreen_gfx.pk3

@@ -30,6 +30,7 @@
 #include <dap/protocol.h>
 
 #include "printf.h"
+#include "tarray.h"
 
 namespace DebugServer
 {
@@ -144,25 +145,25 @@ template <typename... Args>
 PRINTF_FORMAT(1, 2)
 void LogInternal(const char *fmt, Args... args)
 {
-	Printf(PRINT_HIGH | PRINT_NODAPEVENT | PRINT_NONOTIFY, "%s\n", StringFormat(fmt, args...).c_str());
+	Printf(static_cast<PrintFlag>(PRINT_NODAPEVENT | PRINT_NONOTIFY), "%s\n", StringFormat(fmt, args...).c_str());
 }
 template <typename... Args>
 PRINTF_FORMAT(1, 2)
 void LogInternalError(const char *fmt, Args... args)
 {
-	Printf(PRINT_HIGH | PRINT_NODAPEVENT | PRINT_NONOTIFY, TEXTCOLOR_RED "%s\n", StringFormat(fmt, args...).c_str());
+	Printf(static_cast<PrintFlag>(PRINT_NODAPEVENT | PRINT_NONOTIFY), TEXTCOLOR_RED "%s\n", StringFormat(fmt, args...).c_str());
 }
 template <typename... Args>
 PRINTF_FORMAT(1, 2)
 void Log(const char *fmt, Args... args)
 {
-	Printf(PRINT_HIGH | PRINT_NONOTIFY, "%s\n", StringFormat(fmt, args...).c_str());
+	Printf(PRINT_NONOTIFY, "%s\n", StringFormat(fmt, args...).c_str());
 }
 template <typename... Args>
 PRINTF_FORMAT(1, 2)
 void LogError(const char *fmt, Args... args)
 {
-	Printf(PRINT_HIGH | PRINT_NONOTIFY, TEXTCOLOR_RED "%s\n", StringFormat(fmt, args...).c_str());
+	Printf(PRINT_NONOTIFY, TEXTCOLOR_RED "%s\n", StringFormat(fmt, args...).c_str());
 }
 
 #if defined(__GNUC__) || defined(__clang__)
@@ -177,9 +178,9 @@ void LogError(const char *fmt, Args... args)
 	return dap::Error(message);
 
 #define RETURN_COND_DAP_ERROR(cond, message) \
-  if (cond) { \
-    RETURN_DAP_ERROR(message); \
-  }
+	if (cond) { \
+		RETURN_DAP_ERROR(message); \
+	}
 
 template <typename T> T ByteSwap(T val)
 {
@@ -257,23 +258,50 @@ inline std::string ToLowerCopy(const std::string &p_str)
 	return r_str;
 }
 
-inline std::string DemangleName(std::string name)
+inline std::string NormalizePath(const std::string &path)
 {
-	if (name.front() == ':')
-	{
-		return name.substr(2, name.length() - 6);
-	}
+	std::string normalizedPath = path;
+	std::transform(normalizedPath.begin(), normalizedPath.end(), normalizedPath.begin(), [](int c) { return c == '\\' ? '/' : c; });
+	return normalizedPath;
+}
 
-	return name;
+inline int GetScriptReference(std::string &&name)
+{
+	constexpr std::hash<std::string> hasher {};
+	std::transform(name.begin(), name.end(), name.begin(), [](int c) { return c == '\\' ? '/' : ::tolower(c); });
+
+	return std::abs(static_cast<int>(hasher(name))) + 1;
 }
 
 inline int GetScriptReference(const std::string &scriptName)
 {
 	constexpr std::hash<std::string> hasher {};
 	std::string name = scriptName;
-	std::transform(name.begin(), name.end(), name.begin(), ::tolower);
+	std::transform(name.begin(), name.end(), name.begin(), [](int c) { return c == '\\' ? '/' : ::tolower(c); });
 
 	return std::abs(static_cast<int>(hasher(name))) + 1;
+}
+
+inline std::string GetScriptPathFromSource(const dap::Source &src)
+{
+	if (!src.path.has_value())
+	{
+		return "";
+	}
+	std::string path = NormalizePath(src.path.value());
+	std::string origin = NormalizePath(src.origin.value(""));
+	if (!origin.empty())
+	{
+		if (path.starts_with(origin)) {
+			path = path.substr(origin.size());
+		}
+		if (path.starts_with(':'))
+		{
+			path = path.substr(1);
+		}
+		path = origin + ":" + path;
+	}
+	return path;
 }
 
 inline int GetSourceReference(const dap::Source &src)
@@ -287,12 +315,7 @@ inline int GetSourceReference(const dap::Source &src)
 	{
 		return -1;
 	}
-	std::string path = src.path.value();
-	if (src.origin.has_value())
-	{
-		path = src.origin.value() + ":" + path;
-	}
-	return GetScriptReference(path);
+	return GetScriptReference(GetScriptPathFromSource(src));
 }
 
 inline std::string GetSourceModfiedTime(const dap::Source &src)

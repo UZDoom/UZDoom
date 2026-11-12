@@ -478,5 +478,3 @@ FVoxel* VOX_GetVoxel(int lumpnum)
 	}
 	return vox;
 }
-
-

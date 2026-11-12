@@ -81,5 +81,3 @@ inline void DeleteStartupScreen()
 		StartWindow = nullptr;
 	}
 }
-
-

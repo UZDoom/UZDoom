@@ -145,7 +145,7 @@ void GLBuffer::Unlock()
 
 void GLBuffer::Resize(size_t newsize)
 {
-	assert(!nomap);	// only mappable buffers can be resized. 
+	assert(!nomap);	// only mappable buffers can be resized.
 	if (newsize > buffersize && !nomap)
 	{
 		// reallocate the buffer with twice the size

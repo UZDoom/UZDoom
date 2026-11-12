@@ -62,7 +62,7 @@ class Pod : Actor
 		PPOD IJKLMNOP 3;
 		Goto Spawn;
 	}
-	
+
 	//----------------------------------------------------------------------------
 	//
 	// PROC A_PodPain
@@ -148,7 +148,7 @@ class PodGenerator : Actor
 		TNT1 A 35 A_MakePod;
 		Loop;
 	}
-	
+
 	//----------------------------------------------------------------------------
 	//
 	// PROC A_MakePod
@@ -185,7 +185,7 @@ class TeleGlitterGenerator1 : Actor
 {
 	Default
 	{
-		+NOBLOCKMAP 
+		+NOBLOCKMAP
 		+NOGRAVITY
 		+DONTSPLASH
 		+MOVEWITHSECTOR
@@ -204,7 +204,7 @@ class TeleGlitterGenerator2 : Actor
 {
 	Default
 	{
-		+NOBLOCKMAP 
+		+NOBLOCKMAP
 		+NOGRAVITY
 		+DONTSPLASH
 		+MOVEWITHSECTOR
@@ -240,7 +240,7 @@ class TeleGlitter1 : Actor
 		TGLT E 2 BRIGHT;
 		Loop;
 	}
-	
+
 	//----------------------------------------------------------------------------
 	//
 	// PROC A_AccTeleGlitter
@@ -283,7 +283,7 @@ class Volcano : Actor
 		Height 20;
 		+SOLID
 	}
-	
+
 	States
 	{
 	Spawn:
@@ -293,7 +293,7 @@ class Volcano : Actor
 		VLCO E 10 A_VolcanoBlast;
 		Goto Spawn+1;
 	}
-	
+
 	//----------------------------------------------------------------------------
 	//
 	// PROC A_VolcanoSet
@@ -350,7 +350,7 @@ class VolcanoBlast : Actor
 	States
 	{
 	Spawn:
-		VFBL AB 4 BRIGHT A_SpawnItemEx("Puffy", random2[BeastPuff]()*0.015625, random2[BeastPuff]()*0.015625, random2[BeastPuff]()*0.015625, 
+		VFBL AB 4 BRIGHT A_SpawnItemEx("Puffy", random2[BeastPuff]()*0.015625, random2[BeastPuff]()*0.015625, random2[BeastPuff]()*0.015625,
 									0,0,0,0,SXF_ABSOLUTEPOSITION, 64);
 		Loop;
 
@@ -359,7 +359,7 @@ class VolcanoBlast : Actor
 		XPL1 BCDEF 4 BRIGHT;
 		Stop;
 	}
-	
+
 	//----------------------------------------------------------------------------
 	//
 	// PROC A_VolcBallImpact
@@ -415,4 +415,3 @@ class VolcanoTBlast : Actor
 		Stop;
 	}
 }
-

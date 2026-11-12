@@ -2,7 +2,7 @@
  * libADLMIDI is a free Software MIDI synthesizer library with OPL3 emulation
  *
  * Original ADLMIDI code: Copyright (c) 2010-2014 Joel Yliluoma <bisqwit@iki.fi>
- * ADLMIDI Library API:   Copyright (c) 2015-2025 Vitaly Novichkov <admin@wohlnet.ru>
+ * ADLMIDI Library API:   Copyright (c) 2015-2026 Vitaly Novichkov <admin@wohlnet.ru>
  *
  * Library is based on the ADLMIDI, a MIDI player for Linux and Windows with OPL3 emulation:
  * http://iki.fi/bisqwit/source/adlmidi.html
@@ -26,10 +26,9 @@
 
 #include "oplinst.h"
 #include "adlmidi_ptr.hpp"
+#include "adlmidi_arr.hpp"
 #include "adlmidi_private.hpp"
 #include "adlmidi_bankmap.h"
-
-#define BEND_COEFFICIENT                172.4387
 
 #define OPL3_CHANNELS_MELODIC_BASE      0
 #define OPL3_CHANNELS_RHYTHM_BASE       18
@@ -46,6 +45,13 @@
  */
 class OPL3
 {
+#if defined(__DJGPP__)
+public:
+    void dpmi_lock_begin() {}
+private:
+    DPMILocker<OPL3> m_dpmi_locker;
+#endif
+
     friend class MIDIplay;
     friend class AdlInstrumentTester;
     friend int adlCalculateFourOpChannels(MIDIplay *play, bool silent);
@@ -61,19 +67,20 @@ public:
     //! Just a padding. Reserved.
     char _padding[4];
     //! Running chip emulators
-    std::vector<AdlMIDI_SPtr<OPLChipBase > > m_chips;
+    adl_array<AdlMIDI_SPtr<OPLChipBase >, true> m_chips;
 
 private:
     //! Cached patch data, needed by Touch()
-    std::vector<OplTimbre>    m_insCache;
+    adl_array<const OplTimbre*> m_insCache;
+    adl_array<bool> m_insCacheModified;
     //! Value written to B0, cached, needed by NoteOff.
     /*! Contains Key on/off state, octave block and frequency number values
      */
-    std::vector<uint32_t>   m_keyBlockFNumCache;
+    adl_array<uint32_t>   m_keyBlockFNumCache;
     //! Cached BD registry value (flags register: DeepTremolo, DeepVibrato, and RhythmMode)
-    std::vector<uint32_t>   m_regBD;
+    adl_array<uint32_t>   m_regBD;
     //! Cached C0 register value (primarily for the panning state)
-    std::vector<uint8_t>    m_regC0;
+    adl_array<uint8_t>    m_regC0;
 
 #ifdef ADLMIDI_ENABLE_HW_SERIAL
     bool        m_serial;
@@ -218,8 +225,24 @@ public:
         //! HMI Sound Operating System volume scale table
         VOLUME_HMI,
         //! HMI Sound Operating System volume scale model, older variant
-        VOLUME_HMI_OLD
+        VOLUME_HMI_OLD,
+        //! Volume model from the AdLib driver for Windows 3.1
+        VOLUME_MS_ADLIB,
+        //! Uses DMX fixed volume model and "same-instrument" channel allocation
+        VOLUME_IMF_CREATOR,
+        //! Jamie O'Connell's FM Synth driver
+        VOLUME_OCONNELL,
+
+        /* !! Insert new PUBLIC enum leafs to HERE, NOT BELOW! !! */
+
+        //! [PRIVATE] Volume model specific to RSXX format playing, should never being refered in WOPL file!
+        VOLUME_RSXX
     } m_volumeScale;
+
+    //! Frequency computation function
+    uint16_t (*m_getFreq)(double tone, uint32_t *mul_offset);
+    //! OPL Volume computation function
+    void (*m_getVolume)(struct OPLVolume_t *v);
 
     //! Channel allocation algorithm
     ADLMIDI_ChannelAlloc m_channelAlloc;
@@ -263,7 +286,7 @@ public:
         7 = percussion Hihat
         8 = percussion Secondary
     */
-    std::vector<uint32_t> m_channelCategory;
+    adl_array<uint32_t> m_channelCategory;
 
 
     /**
@@ -283,10 +306,21 @@ public:
     bool setupLocked();
 
     /**
+     * @brief Changes the volume model and assigns frequency formula
+     * @param model
+     */
+    void setFrequencyModel(VolumesScale model);
+
+    /**
      * @brief Choose one of embedded banks
      * @param bank ID of the bank
      */
     void setEmbeddedBank(uint32_t bank);
+
+    /**
+     * @brief Clears the selected instruments cache
+     */
+    void clearInstCache();
 
     /**
      * @brief Write data to OPL3 chip register
@@ -347,7 +381,7 @@ public:
      * @param c Channel of chip (Emulated chip choosing by next formula: [c = ch + (chipId * 23)])
      * @param instrument Instrument data to set into the chip channel
      */
-    void setPatch(size_t c, const OplTimbre &instrument);
+    void setPatch(size_t c, const OplTimbre *instrument);
 
     /**
      * @brief Set panpot position
@@ -411,6 +445,11 @@ public:
      * @param audioTickHandler
      */
     void resetSerial(const std::string &serialName, unsigned int baud, unsigned int protocol);
+#endif
+
+#if defined(__DJGPP__)
+public:
+    void dpmi_lock_end() {}
 #endif
 };
 

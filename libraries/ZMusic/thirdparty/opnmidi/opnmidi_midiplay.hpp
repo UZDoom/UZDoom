@@ -2,7 +2,7 @@
  * libOPNMIDI is a free Software MIDI synthesizer library with OPN2 (YM2612) emulation
  *
  * MIDI parser and player (Original code from ADLMIDI): Copyright (c) 2010-2014 Joel Yliluoma <bisqwit@iki.fi>
- * OPNMIDI Library and YM2612 support:   Copyright (c) 2017-2025 Vitaly Novichkov <admin@wohlnet.ru>
+ * OPNMIDI Library and YM2612 support:   Copyright (c) 2017-2026 Vitaly Novichkov <admin@wohlnet.ru>
  *
  * Library is based on the ADLMIDI, a MIDI player for Linux and Windows with OPL3 emulation:
  * http://iki.fi/bisqwit/source/adlmidi.html
@@ -205,17 +205,22 @@ public:
             {
                 //! Destination chip channel
                 uint16_t chip_chan;
-                //! ins, inde to adl[]
-                OpnTimbre ains;
+                //! Instrument entry
+                const OpnTimbre *ains;
+                //! Should we play the second voice?
+                bool dbl_voice;
 
                 void assign(const Phys &oth)
                 {
                     ains = oth.ains;
+                    dbl_voice = oth.dbl_voice;
                 }
+
                 bool operator==(const Phys &oth) const
                 {
                     return (ains == oth.ains);
                 }
+
                 bool operator!=(const Phys &oth) const
                 {
                     return !operator==(oth);
@@ -230,36 +235,47 @@ public:
             Phys *phys_find(unsigned chip_chan)
             {
                 Phys *ph = NULL;
-                for(unsigned i = 0; i < chip_channels_count && !ph; ++i)
+
+                for(unsigned i = 0; i < chip_channels_count && !ph && i < MaxNumPhysItemCount; ++i)
+                {
                     if(chip_channels[i].chip_chan == chip_chan)
                         ph = &chip_channels[i];
+                }
+
                 return ph;
             }
+
             Phys *phys_find_or_create(uint16_t chip_chan)
             {
                 Phys *ph = phys_find(chip_chan);
-                if(!ph) {
-                    if(chip_channels_count < MaxNumPhysItemCount) {
-                        ph = &chip_channels[chip_channels_count++];
-                        ph->chip_chan = chip_chan;
-                    }
+
+                if(!ph && chip_channels_count < MaxNumPhysItemCount)
+                {
+                    ph = &chip_channels[chip_channels_count++];
+                    ph->chip_chan = chip_chan;
                 }
+
                 return ph;
             }
+
             Phys *phys_ensure_find_or_create(uint16_t chip_chan)
             {
                 Phys *ph = phys_find_or_create(chip_chan);
                 assert(ph);
                 return ph;
             }
+
             void phys_erase_at(const Phys *ph)
             {
                 intptr_t pos = ph - chip_channels;
-                assert(pos < static_cast<intptr_t>(chip_channels_count));
-                for(intptr_t i = pos + 1; i < static_cast<intptr_t>(chip_channels_count); ++i)
+                assert(pos >= 0 && pos < static_cast<intptr_t>(chip_channels_count));
+
+                for(intptr_t i = pos + 1; i < static_cast<intptr_t>(chip_channels_count) && i < MaxNumPhysItemCount; ++i)
                     chip_channels[i - 1] = chip_channels[i];
+
                 --chip_channels_count;
             }
+
             void phys_erase(unsigned chip_chan)
             {
                 Phys *ph = phys_find(chip_chan);
@@ -347,6 +363,53 @@ public:
         }
 
         /**
+         * @brief Emergency attempt to retrieve a free active note slot by clean-up from the junk
+         * @return true if got one extra free channel, otherwise it's a dead end
+         */
+        bool drop_oldest_blank_note(OPNMIDIplay *play, size_t midCh)
+        {
+            // Attempt to clean blank notes
+            for(notes_iterator it = activenotes.begin(); it != activenotes.end(); ++it)
+            {
+                if(it->value.isBlank)
+                {
+                    activenotes.erase(it);
+                    return true;
+                }
+            }
+
+            // Then attempt to clean MIDI notes that has no active chip voices
+            for(notes_iterator it = activenotes.begin(); it != activenotes.end(); ++it)
+            {
+                if(it->value.chip_channels_count == 0)
+                {
+                    activenotes.erase(it);
+                    return true;
+                }
+            }
+
+            // And then attempt to off one of working notes
+            for(notes_iterator it = activenotes.begin(); it != activenotes.end(); ++it)
+            {
+                play->noteUpdate(midCh, it, Upd_Off);
+                return true;
+            }
+
+            return false;
+        }
+
+        bool has_free_active_notes(OPNMIDIplay *play, size_t midCh)
+        {
+            if(activenotes.size() >= activenotes.capacity())
+            {
+                if(!drop_oldest_blank_note(play, midCh)) // Attempt to rescue the situation
+                    return false; // Overflow!
+            }
+
+            return true;
+        }
+
+        /**
          * @brief Reset channel into initial state
          */
         void reset()
@@ -362,7 +425,9 @@ public:
             is_xg_percussion = false;
         }
 
-
+        /**
+         * @brief Reset all MIDI controllers into initial state
+         */
         void resetAllControllers()
         {
             volume  = def_volume;
@@ -373,7 +438,7 @@ public:
         }
 
         /**
-         * @brief Reset all MIDI controllers into initial state
+         * @brief Reset all MIDI controllers into initial state (CC121)
          */
         void resetAllControllers121()
         {
@@ -448,12 +513,11 @@ public:
         {
             uint16_t    MidCh;
             uint8_t     note;
-            bool operator==(const Location &l) const
-                { return MidCh == l.MidCh && note == l.note; }
-            bool operator!=(const Location &l) const
-                { return !operator==(l); }
-            char _padding[1];
+
+            bool operator==(const Location &l) const { return MidCh == l.MidCh && note == l.note; }
+            bool operator!=(const Location &l) const { return !operator==(l); }
         };
+
         struct LocationData
         {
             Location loc;
@@ -464,7 +528,6 @@ public:
                 Sustain_ANY         = Sustain_Pedal | Sustain_Sostenuto
             };
             uint32_t sustained;
-            char _padding[3];
             MIDIchannel::NoteInfo::Phys ins;  // a copy of that in phys[]
             //! Has fixed sustain, don't iterate "on" timeout
             bool    fixed_sustain;
@@ -474,10 +537,9 @@ public:
 
             struct FindPredicate
             {
-                explicit FindPredicate(Location loc)
-                    : loc(loc) {}
-                bool operator()(const LocationData &ld) const
-                    { return ld.loc == loc; }
+                explicit FindPredicate(Location loc) : loc(loc) {}
+                bool operator()(const LocationData &ld) const { return ld.loc == loc; }
+
                 Location loc;
             };
         };
@@ -543,6 +605,11 @@ public:
      * @brief Interface between MIDI sequencer and this library
      */
     AdlMIDI_UPtr<BW_MidiRtInterface> m_sequencerInterface;
+
+    /**
+     * @brief Devices filter mask state (#OPNMIDI_DeviceFilter)
+     */
+    uint32_t m_sequencerDeviceMask;
 
     /**
      * @brief Initialize MIDI sequencer interface
@@ -618,9 +685,19 @@ public:
 
 private:
     //! Per-track MIDI devices map
-    std::map<std::string, size_t> m_midiDevices;
+    struct MidiDeviceEntry
+    {
+        char name[100];
+        size_t track;
+    } m_midiDevices[127];
+    static const size_t m_midiDevicesSize = 127;
+
+    //! Number of used MIDI devices (up to 100)
+    size_t m_midiDevicesUsed;
+
     //! Current MIDI device per track
-    std::map<size_t /*track*/, size_t /*channel begin index*/> m_currentMidiDevice;
+    size_t m_currentMidiDevice[127];
+    static const size_t m_currentMidiDeviceMax = 127;
 
     //! Chip channels map
     std::vector<OpnChannel> m_chipChannels;
@@ -800,7 +877,7 @@ public:
     /**
      * @brief MSB Bank Change CC
      * @param channel MIDI channel
-     * @param lsb MSB value of bank number
+     * @param msb MSB value of bank number
      */
     void realTime_BankChangeMSB(uint8_t channel, uint8_t msb);
 
@@ -925,6 +1002,18 @@ private:
         Upd_OffMute = Upd_Off + Upd_Mute
     };
 
+    void noteUpdPatch(const OpnChannel::Location &loc, const MIDIchannel::NoteInfo::Phys &ins, const OpnInstMeta *ains);
+
+    void noteUpdOff(size_t midCh,
+                    MIDIchannel::NoteInfo &info,
+                    const OpnChannel::Location &loc,
+                    const MIDIchannel::NoteInfo::Phys &ins,
+                    bool mute);
+
+    void noteUpdVolume(size_t midCh, MIDIchannel::NoteInfo &info, const MIDIchannel::NoteInfo::Phys &ins);
+
+    void noteUpdFreq(size_t midCh, const OpnChannel::Location &loc, MIDIchannel::NoteInfo &info, const MIDIchannel::NoteInfo::Phys &ins);
+
     /**
      * @brief Update active note
      * @param MidCh MIDI Channel where note is processing
@@ -937,6 +1026,11 @@ private:
                     unsigned props_mask,
                     int32_t select_adlchn = -1);
 
+    /**
+     * @brief Update all notes in specified MIDI channel
+     * @param midCh MIDI channel to update all notes in it
+     * @param props_mask Properties to update
+     */
     void noteUpdateAll(size_t midCh, unsigned props_mask);
 
     /**
@@ -1029,10 +1123,11 @@ private:
 public:
     /**
      * @brief Checks was device name used or not
-     * @param name Name of MIDI device
+     * @param name Non-null-terminated name of MIDI device
+     * @param len Length of string
      * @return Offset of the MIDI Channels, multiple to 16
      */
-    size_t chooseDevice(const std::string &name);
+    size_t chooseDevice(const char *name, size_t len);
 
     /**
      * @brief Gets a textual description of the state of chip channels

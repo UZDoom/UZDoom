@@ -60,7 +60,7 @@ public:
 void FScriptLoader::ParseInfoCmd(char *line, FString &scriptsrc)
 {
 	char *temp;
-	
+
 	// clear any control chars
 	for(temp=line; *temp; temp++) if (*temp<32) *temp=32;
 
@@ -71,17 +71,17 @@ void FScriptLoader::ParseInfoCmd(char *line, FString &scriptsrc)
 		// strip spaces at the beginning and end of the line
 		while(*temp == ' ')	*temp-- = 0;
 		while(*line == ' ') line++;
-		
+
 		if(!*line) return;
-		
+
 		if((line[0] == '/' && line[1] == '/') ||     // comment
 			line[0] == '#' || line[0] == ';') return;
 	}
-	
+
 	if(*line == '[')                // a new section seperator
 	{
 		line++;
-		
+
 		if(!strnicmp(line, "scripts", 7))
 		{
 			readtype = RT_SCRIPT;
@@ -93,14 +93,14 @@ void FScriptLoader::ParseInfoCmd(char *line, FString &scriptsrc)
 		}
 		return;
 	}
-	
+
 	if (readtype==RT_SCRIPT)
 	{
 		scriptsrc << line << '\n';
 	}
 	else if (readtype==RT_INFO)
 	{
-		// Read the usable parts of the level info header 
+		// Read the usable parts of the level info header
 		// and ignore the rest.
 		FScanner sc;
 		sc.OpenMem("LEVELINFO", line, (int)strlen(line));
@@ -135,7 +135,7 @@ void FScriptLoader::ParseInfoCmd(char *line, FString &scriptsrc)
 		{
 			sc.MustGetStringName("=");
 			sc.MustGetString();
-		
+
 			Level->skytexture1 = Level->skytexture2 = TexMan.GetTextureID (sc.String, ETextureType::Wall, FTextureManager::TEXMAN_Overridable|FTextureManager::TEXMAN_ReturnFirst);
 			InitSkyMap (Level);
 		}
@@ -206,7 +206,7 @@ bool FScriptLoader::ParseInfo(MapData * map)
 
 	// Global initializazion if not done yet.
 	static bool done=false;
-					
+
 	// Load the script lump
 	IgnoreInfo = false;
 	lumpsize = map->Size(0);
@@ -231,14 +231,14 @@ bool FScriptLoader::ParseInfo(MapData * map)
 	lump[lumpsize+1]='\r';
 	lump[lumpsize+2]=0;
 	lumpsize+=2;
-	
+
 	rover = startofline = lump;
 	HasScripts=false;
 	drownflag=-1;
 
 	readtype = RT_OTHER;
 	while(rover < lump+lumpsize)
-    {
+	{
 		if(*rover == '\n') // end of line
 		{
 			*rover = 0;               // make it an end of string (0)
@@ -247,8 +247,8 @@ bool FScriptLoader::ParseInfo(MapData * map)
 			*rover = '\n';            // back to end of line
 		}
 		rover++;
-    }
-	if (HasScripts) 
+	}
+	if (HasScripts)
 	{
 		if (Level->FraggleScriptThinker)
 		{
@@ -284,7 +284,7 @@ void T_LoadScripts(FLevelLocals *Level, MapData *map)
 	// Hack for Legacy compatibility: Since 272 is normally an MBF sky transfer we have to patch it.
 	// It could be done with an additional translator but that would be sub-optimal for the user.
 	// To handle this the default translator defines the proper Legacy type at index 270.
-	// This code then then swaps 270 and 272 - but only if this is either Doom or Heretic and 
+	// This code then then swaps 270 and 272 - but only if this is either Doom or Heretic and
 	// the default translator is being used.
 	// Custom translators will not be patched.
 	if ((gameinfo.gametype == GAME_Doom || gameinfo.gametype == GAME_Heretic) && Level->info->Translator.IsEmpty() &&

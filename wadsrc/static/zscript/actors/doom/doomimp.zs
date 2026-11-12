@@ -53,7 +53,7 @@ class DoomImp : Actor
 	Melee:
 	Missile:
 		TROO EF 8 A_FaceTarget;
-		TROO G 6 A_TroopAttack ;
+		TROO G 6 A_TroopAttack;
 		Goto See;
 	Pain:
 		TROO H 2;

@@ -50,7 +50,10 @@
 #include "v_video.h"
 #include "version.h"
 #include "vm.h"
+#include "zstring.h"
 #include <array>
+#include <string_view>
+#include <vector>
 
 namespace Console::Defaults
 {
@@ -63,7 +66,7 @@ namespace Console::Defaults
 	static inline constexpr uint8_t scroll_up = 1;
 	static inline constexpr uint8_t scroll_down = 2;
 	static inline constexpr uint8_t scroll_no = 0;
-	
+
 	static inline constexpr uint8_t min_con_lines_for_cursor = 20;
 	static inline constexpr uint8_t min_con_lines_for_text = 12;
 	static inline constexpr uint64_t ms_between_cursor_ticks = 500;
@@ -235,12 +238,12 @@ void C_InitConback(FTextureID fallback, bool tile, double brightness)
 void C_InitConsole (int width, int height, bool ingame)
 {
 	int cwidth, cheight;
-
+	FFont *ourConsoleFont = CurrentConsoleFont ? FFont::GetConsoleFont(CurrentConsoleFont) : nullptr;
 	vidactive = ingame;
-	if (CurrentConsoleFont != NULL)
+	if (ourConsoleFont != NULL)
 	{
-		cwidth = CurrentConsoleFont->GetCharWidth ('M');
-		cheight = CurrentConsoleFont->GetHeight();
+		cwidth  = ourConsoleFont->GetCharWidth('M');
+		cheight = ourConsoleFont->GetHeight();
 	}
 	else
 	{
@@ -363,7 +366,7 @@ static void setmsgcolor (int index, int color)
 }
 
 
-void AddToConsole (int printlevel, const char *text)
+void AddToConsole (PrintFlag printlevel, const char *text)
 {
 	conbuffer->AddText(printlevel, MakeUTF8(text));
 }
@@ -406,59 +409,88 @@ void WriteLineToLog(FILE *LogFile, const char *outline)
 	fflush(LogFile);
 }
 
-extern bool gameisdead;
+namespace detail
+{
+inline int PrintString(PrintFlag iprintlevel, const char *outline)
+{
+	PrintFlag printlevel = static_cast<PrintFlag>(iprintlevel & PRINT_TYPES);
+	bool toScreen = printlevel != PRINT_LOG;
+	bool toFile = Logfile != nullptr && !(iprintlevel & PRINT_NOLOG);
+	bool toDebugger = !(iprintlevel & PRINT_NODAPEVENT);
+	int count = 0;
 
-int PrintString (int iprintlevel, const char *outline)
+	if (toScreen || toFile || toDebugger)
+	{
+		// Convert everything coming through here to UTF-8 so that all console text is in a consistent format
+		outline = MakeUTF8(outline, &count);
+	}
+	if (count == 0) return 0;
+
+	if (toScreen)
+	{
+		I_PrintStr(outline);
+		if (!(iprintlevel & PRINT_NOCONSOLE))
+			conbuffer->AddText(printlevel, outline);
+		if (vidactive && screen && !(iprintlevel & PRINT_NONOTIFY) && NotifyStrings)
+		{
+			if (printlevel >= msglevel)
+			{
+				NotifyStrings->AddString(iprintlevel, outline);
+			}
+		}
+	}
+	if (toFile)
+	{
+		WriteLineToLog(Logfile, outline);
+	}
+	if (toDebugger)
+	{
+		DebugServer::RuntimeEvents::EmitLogEvent(iprintlevel, outline);
+	}
+
+	return count;
+}
+}
+
+
+extern bool gameisdead;
+struct BufferedWrite { PrintFlag l; std::string s; };
+std::unique_ptr<std::vector<BufferedWrite>> prebuffer;
+
+int PrintString (PrintFlag iprintlevel, const char *outline)
 {
 	if (gameisdead)
 		return 0;
 
-	if (!conbuffer) return 0;	// when called too early
-	int printlevel = iprintlevel & PRINT_TYPES;
-	if (*outline == '\0')
+	if (!conbuffer)
 	{
+		if (!prebuffer) prebuffer = std::make_unique<std::vector<BufferedWrite>>();
+		if (prebuffer) prebuffer->push_back({iprintlevel, outline});
 		return 0;
 	}
-	if (printlevel != PRINT_LOG || !(iprintlevel & PRINT_NODAPEVENT) || Logfile != nullptr)
-	{
-		// Convert everything coming through here to UTF-8 so that all console text is in a consistent format
-		int count;
-		outline = MakeUTF8(outline, &count);
 
-		if (printlevel != PRINT_LOG)
+	auto ret = ::detail::PrintString(iprintlevel, outline);
+
+	if (prebuffer) // we want the version string to be the first thing printed
+	{
+		for (auto &line: *prebuffer)
 		{
-			I_PrintStr(outline);
-			if (!(iprintlevel & PRINT_NOCONSOLE))
-				conbuffer->AddText(printlevel, outline);
-			if (vidactive && screen && !(iprintlevel & PRINT_NONOTIFY) && NotifyStrings)
-			{
-				if (printlevel >= msglevel)
-				{
-					NotifyStrings->AddString(iprintlevel, outline);
-				}
-			}
+			::detail::PrintString(line.l, line.s.c_str());
 		}
-		if (Logfile != nullptr && !(iprintlevel & PRINT_NOLOG))
-		{
-			WriteLineToLog(Logfile, outline);
-		}
-		if (!(iprintlevel & PRINT_NODAPEVENT))
-		{
-			DebugServer::RuntimeEvents::EmitLogEvent(iprintlevel, outline);
-		}
-		return count;
+		prebuffer.reset();
 	}
-	return 0;	// Don't waste time on calculating this if nothing at all was printed...
+
+	return ret;
 }
 
-int VPrintf (int printlevel, const char *format, va_list parms)
+int VPrintf (PrintFlag printlevel, const char *format, va_list parms)
 {
 	FString outline;
 	outline.VFormat (format, parms);
 	return PrintString (printlevel, outline.GetChars());
 }
 
-int Printf (int printlevel, const char *format, ...)
+int Printf (PrintFlag printlevel, const char *format, ...)
 {
 	va_list argptr;
 	int count;
@@ -482,22 +514,58 @@ int Printf (const char *format, ...)
 	return count;
 }
 
-int DPrintf (int level, const char *format, ...)
+namespace detail
+{
+inline int DPrintf(DPrintLevel level, PrintFlag printlevel, const char *format, va_list argptr)
+{
+	return (!developer.get() || developer >= level)? VPrintf(printlevel, format, argptr): 0;
+}
+}
+
+int DPrintf (DPrintLevel level, PrintFlag printlevel, const char *format, ...)
 {
 	va_list argptr;
-	int count;
+	va_start(argptr, format);
+	int count = ::detail::DPrintf(level, printlevel, format, argptr);
+	va_end(argptr);
+	return count;
+}
 
-	if (developer >= level)
+int DPrintf(DPrintLevel level, const char *format, ...)
+{
+	va_list argptr;
+	va_start(argptr, format);
+	int count = ::detail::DPrintf(level, PRINT_HIGH, format, argptr);
+	va_end(argptr);
+	return count;
+}
+
+namespace detail
+{
+void DebugLog(std::string_view file, size_t line, const char * format, ...)
+{
+	static const size_t start = [&file]() {
+		std::string here = __FILE__;
+		std::string target = "common/console/c_console.cpp";
+#ifdef _WIN32
+		for (char &c: target) if (c == '/') c = '\\';
+#endif
+		size_t size = here.size() - target.size();
+		std::string prefix = here.substr(0, size);
+		if (!here.ends_with(target) || !file.starts_with(prefix)) size = 0; // target need to be updated
+		return size;
+	}();
+	if (start < file.size())
 	{
-		va_start (argptr, format);
-		count = VPrintf (PRINT_HIGH, format, argptr);
-		va_end (argptr);
-		return count;
+		file.remove_prefix(start);
 	}
-	else
-	{
-		return 0;
-	}
+	va_list argptr;
+	va_start(argptr, format);
+	FString data;
+	data.VFormat(format, argptr);
+	va_end(argptr);
+	DPrintf(DMSG_SPAMMY, PRINT_HIGH, "%s:%lu : %s\n", file.data(), line, data.GetChars());
+}
 }
 
 void C_FlushDisplay ()
@@ -566,17 +634,19 @@ void C_DrawConsole ()
 	int lines, left, offset;
 
 	int textScale = active_con_scale(twod);
+	FFont *ourConsoleFont = FFont::GetConsoleFont(CurrentConsoleFont);
 
 	left = Defaults::left_margin;
-	lines = (ConBottom/textScale-CurrentConsoleFont->GetHeight()*2)/CurrentConsoleFont->GetHeight();
-	if (-CurrentConsoleFont->GetHeight() + lines*CurrentConsoleFont->GetHeight() > ConBottom/textScale - CurrentConsoleFont->GetHeight()*7/2)
+	lines = (ConBottom / textScale - ourConsoleFont->GetHeight() * 2) / ourConsoleFont->GetHeight();
+	if (-ourConsoleFont->GetHeight() + lines * ourConsoleFont->GetHeight() >
+	    ConBottom / textScale - ourConsoleFont->GetHeight() * 7 / 2)
 	{
-		offset = -CurrentConsoleFont->GetHeight()/2;
+		offset = -ourConsoleFont->GetHeight() / 2;
 		lines--;
 	}
 	else
 	{
-		offset = -CurrentConsoleFont->GetHeight();
+		offset = -ourConsoleFont->GetHeight();
 	}
 
 	oldbottom = ConBottom;
@@ -625,14 +695,15 @@ void C_DrawConsole ()
 		if (ConBottom >= Defaults::min_con_lines_for_text)
 		{
 			if (textScale == 1)
-				DrawText(twod, CurrentConsoleFont, CR_ORANGE, twod->GetWidth() - Defaults::left_margin -
-					CurrentConsoleFont->StringWidth (GetVersionString()),
-					round((float)ConBottom / textScale) - CurrentConsoleFont->GetHeight() - Defaults::bottom_margin,
+				DrawText(twod, ourConsoleFont, CR_ORANGE,
+				         twod->GetWidth() - Defaults::left_margin - ourConsoleFont->StringWidth(GetVersionString()),
+				         round((float)ConBottom / textScale) - ourConsoleFont->GetHeight() - Defaults::bottom_margin,
 					GetVersionString(), TAG_DONE);
 			else
-				DrawText(twod, CurrentConsoleFont, CR_ORANGE, (float)twod->GetWidth() / textScale - Defaults::left_margin -
-					CurrentConsoleFont->StringWidth(GetVersionString()),
-					round((float)ConBottom / textScale) - CurrentConsoleFont->GetHeight() - Defaults::bottom_margin,
+				DrawText(twod, ourConsoleFont, CR_ORANGE,
+				         (float)twod->GetWidth() / textScale - Defaults::left_margin -
+				             ourConsoleFont->StringWidth(GetVersionString()),
+				         round((float)ConBottom / textScale) - ourConsoleFont->GetHeight() - Defaults::bottom_margin,
 					GetVersionString(),
 					DTA_VirtualWidth, twod->GetWidth() / textScale,
 					DTA_VirtualHeight, twod->GetHeight() / textScale,
@@ -642,7 +713,7 @@ void C_DrawConsole ()
 
 	}
 
-	if (menuactive != MENU_Off)
+	if (menuactive != MENU_Off && menuactive != MENU_GameplayMenu)
 	{
 		return;
 	}
@@ -650,24 +721,26 @@ void C_DrawConsole ()
 	if (lines > 0)
 	{
 		// No more enqueuing because adding new text to the console won't touch the actual print data.
-		conbuffer->FormatText(CurrentConsoleFont, ConWidth / textScale);
+		conbuffer->FormatText(ourConsoleFont, ConWidth / textScale);
 		unsigned int consolelines = conbuffer->GetFormattedLineCount();
 		FBrokenLines *blines = conbuffer->GetLines();
 		if (blines != nullptr)
 		{
 			FBrokenLines* printline = blines + consolelines - 1 - RowAdjust;
 
-			int bottomline = ConBottom / textScale - CurrentConsoleFont->GetHeight() * 2 - 4;
+			int bottomline = ConBottom / textScale - ourConsoleFont->GetHeight() * 2 - 4;
 
 			for (FBrokenLines* p = printline; p >= blines && lines > 0; p--, lines--)
 			{
 				if (textScale == 1)
 				{
-					DrawText(twod, CurrentConsoleFont, CR_TAN, Defaults::left_margin, offset + lines * CurrentConsoleFont->GetHeight(), p->Text.GetChars(), TAG_DONE);
+					DrawText(twod, ourConsoleFont, CR_TAN, Defaults::left_margin,
+					         offset + lines * ourConsoleFont->GetHeight(), p->Text.GetChars(), TAG_DONE);
 				}
 				else
 				{
-					DrawText(twod, CurrentConsoleFont, CR_TAN, Defaults::left_margin, offset + lines * CurrentConsoleFont->GetHeight(), p->Text.GetChars(),
+					DrawText(twod, ourConsoleFont, CR_TAN, Defaults::left_margin,
+					         offset + lines * ourConsoleFont->GetHeight(), p->Text.GetChars(),
 						DTA_VirtualWidth, twod->GetWidth() / textScale,
 						DTA_VirtualHeight, twod->GetHeight() / textScale,
 						DTA_KeepRatio, true, TAG_DONE);
@@ -686,14 +759,16 @@ void C_DrawConsole ()
 					}
 					CmdLine.Draw(left, bottomline, textScale, cursoron);
 				}
-				if (RowAdjust && ConBottom >= CurrentConsoleFont->GetHeight() * 7 / 2)
+				if (RowAdjust && ConBottom >= ourConsoleFont->GetHeight() * 7 / 2)
 				{
 					// Indicate that the view has been scrolled up (10)
 					// and if we can scroll no further (12)
 					if (textScale == 1)
-						DrawChar(twod, CurrentConsoleFont, CR_GREEN, 0, bottomline, RowAdjust == conbuffer->GetFormattedLineCount() ? 12 : 10, TAG_DONE);
+						DrawChar(twod, ourConsoleFont, CR_GREEN, 0, bottomline,
+						         RowAdjust == conbuffer->GetFormattedLineCount() ? 12 : 10, TAG_DONE);
 					else
-						DrawChar(twod, CurrentConsoleFont, CR_GREEN, 0, bottomline, RowAdjust == conbuffer->GetFormattedLineCount() ? 12 : 10,
+						DrawChar(twod, ourConsoleFont, CR_GREEN, 0, bottomline,
+						         RowAdjust == conbuffer->GetFormattedLineCount() ? 12 : 10,
 							DTA_VirtualWidth, twod->GetWidth() / textScale,
 							DTA_VirtualHeight, twod->GetHeight() / textScale,
 							DTA_KeepRatio, true, TAG_DONE);
@@ -725,7 +800,7 @@ void C_ToggleConsole ()
 		if (sysCallbacks.ToggleFullConsole) sysCallbacks.ToggleFullConsole();
 		togglestate = c_down;
 	}
-	else if (!chatmodeon && (ConsoleState == c_up || ConsoleState == c_rising) && menuactive == MENU_Off)
+	else if (!chatmodeon && (ConsoleState == c_up || ConsoleState == c_rising) && (menuactive == MENU_Off || menuactive == MENU_GameplayMenu))
 	{
 		ConsoleState = c_falling;
 		HistPos = NULL;
@@ -785,7 +860,7 @@ static bool C_HandleKey (event_t *ev, FCommandBuffer &buffer)
 			}
 		}
 		// Add keypress to command line
-		buffer.AddChar(data1);
+		buffer.AddChar((uint16_t)data1);
 		HistPos = NULL;
 		TabbedLast = false;
 		TabbedList = false;
@@ -961,7 +1036,7 @@ static bool C_HandleKey (event_t *ev, FCommandBuffer &buffer)
 			FString bufferText = buffer.GetText();
 
 			bufferText.StripLeftRight();
-			Printf(127, TEXTCOLOR_WHITE "]%s\n", bufferText.GetChars());
+			Printf(static_cast<PrintFlag>(127), TEXTCOLOR_WHITE "]%s\n", bufferText.GetChars()); // FIXME: wtf is 127 here?
 
 			if (bufferText.Len() == 0)
 			{
@@ -1139,7 +1214,7 @@ bool C_Responder (event_t *ev)
 	if (ev->type != EV_GUI_Event ||
 		ConsoleState == c_up ||
 		ConsoleState == c_rising ||
-		menuactive != MENU_Off)
+		(menuactive != MENU_Off && menuactive != MENU_GameplayMenu))
 	{
 		return false;
 	}
@@ -1166,12 +1241,14 @@ CCMD (clear)
 
 CCMD (echo)
 {
-	int last = argv.argc()-1;
-	for (int i = 1; i <= last; ++i)
+	int count = argv.argc();
+	FString str = (count <= 1)? "": argv[1];
+	for (auto i = 2; i < count; i++)
 	{
-		FString formatted = strbin1 (argv[i]);
-		Printf ("%s%s", formatted.GetChars(), i!=last ? " " : "\n");
+		str.AppendCharacter(' ');
+		str += argv[i];
 	}
+	Printf("%s\n", str.GetChars());
 }
 
 CCMD(toggleconsole)

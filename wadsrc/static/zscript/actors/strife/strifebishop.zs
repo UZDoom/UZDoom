@@ -116,4 +116,3 @@ class BishopMissile : Actor
 		Stop;
 	}
 }
-

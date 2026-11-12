@@ -221,4 +221,3 @@ const CORONA_SPR = 1;
 const DYNLIGHT_SPR = 2;
 const LIGHT_SPR = 3;
 const ROCKET_SPR = 19;
- 

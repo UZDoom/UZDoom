@@ -31,8 +31,8 @@ Changes in v2.1
 I. Grammar / Syntax
 =======================================
 
-The grammar and syntax is similar to that of UDMF.  A compliant UDMF parser 
-should be applyable to the USDF.  However, it will need to be capable of 
+The grammar and syntax is similar to that of UDMF.  A compliant UDMF parser
+should be applyable to the USDF.  However, it will need to be capable of
 handling sub-blocks.  Unknown sub-blocks should be skipped.
 
 =======================================
@@ -49,26 +49,26 @@ This is the same as in UDMF.
 II.B : Storage Within Archive Files
 -----------------------------------
 
-There are two options for the USDF lump placement.  This can either be a part 
-of the UDMF lump list or standalone.  If used stand alone the lump name 
-DIALOGXY is used corresponding with MAPXY.  For UDMF the lump shall be called 
+There are two options for the USDF lump placement.  This can either be a part
+of the UDMF lump list or standalone.  If used stand alone the lump name
+DIALOGXY is used corresponding with MAPXY.  For UDMF the lump shall be called
 "DIALOGUE".
 
 --------------------------------
 II.C : Implementation Dependence
 --------------------------------
 
-USDF also implements the namespace statement.  This has all the same 
+USDF also implements the namespace statement.  This has all the same
 requirements as UDMF.
 
 =======================================
 III. Standardized Fields
 =======================================
 
-The following are required for all USDF complient implementations.  Like UDMF, 
+The following are required for all USDF complient implementations.  Like UDMF,
 any unknown field/function should be ignored and not treated as an error.
 
-NOTE: "mobj" refers to Strife's conversationIDs and not doom editor numbers or 
+NOTE: "mobj" refers to Strife's conversationIDs and not doom editor numbers or
       Hexen's spawnids.  A valid mobj value is any positive integer greater
       than or equal to 1.
 
@@ -77,12 +77,12 @@ III.A : Conversations
 ---------------------
 
 Conversations are groups of pages that can be assigned to a particular object.
-Implementors should preserve the IDs to allow for dynamic reassignment through 
+Implementors should preserve the IDs to allow for dynamic reassignment through
 scripting although this is not a requirement.
 
 conversation // Starts a dialog.
 {
-    actor = <integer>; // mobj for this conversation's actor.  If previously 
+    actor = <integer>; // mobj for this conversation's actor.  If previously
                        // used, this will override the previous conversation.
 
     page // Starts a new page.  Pages are automatically numbered starting at 1.
@@ -91,12 +91,12 @@ conversation // Starts a dialog.
         panel  = <string>;  // Name of lump to render as the background.
         voice  = <string>;  // Narration sound lump.
         dialog = <string>;  // Dialog of the page.
-        drop   = <integer>; // mobj for the object to drop if the actor is 
+        drop   = <integer>; // mobj for the object to drop if the actor is
                             // killed.
         link   = <integer>; // Page to jump to if all ifitem conditions are
                             // satisified.
 
-        // jumps to the specified page if the player has the specified amount 
+        // jumps to the specified page if the player has the specified amount
         // or more of item in their inventory.  This can be repeated as many
         // times as the author wants, all conditions must be met for the
         // jump to occur.
@@ -112,7 +112,7 @@ conversation // Starts a dialog.
             text            = <string>;  // Name of the choice.
 
             // The amount of an item needed to successfully pick this option.
-            // This can be repeated, but only the first will be shown (provided 
+            // This can be repeated, but only the first will be shown (provided
             // displaycost is true).  All costs must be satisfied for success.
             cost
             {
@@ -153,10 +153,10 @@ conversation // Starts a dialog.
 III.B : Including Other Dialogs
 -------------------------------
 
-Unlike the original Strife dialog format.  The lump "SCRIPT00" should not be 
-included automatically.  Instead the user must specify this behavior by using 
-the include function, which takes the name of a lump to include.  Include only 
-needs to be available in the global scope and for compatibility reasons, must 
+Unlike the original Strife dialog format.  The lump "SCRIPT00" should not be
+included automatically.  Instead the user must specify this behavior by using
+the include function, which takes the name of a lump to include.  Include only
+needs to be available in the global scope and for compatibility reasons, must
 include the result of the script and not act like a preprocessor statement.
 
 include = <string>;

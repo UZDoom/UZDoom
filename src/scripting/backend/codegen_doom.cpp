@@ -387,7 +387,7 @@ static bool UnravelVarArgAJump(FxVMFunctionCall *func, FCompileContext &ctx)
 	x = x->Resolve(ctx);
 	// This cannot be done with a cast because that interprets the value as an index.
 	// All we want here is to take the literal value and change its type.
-	if (x) x->ValueType = TypeStateLabel;	
+	if (x) x->ValueType = TypeStateLabel;
 	ArgList[1] = x;
 	ArgList.Clamp(2);
 	return x != nullptr;
@@ -396,7 +396,7 @@ static bool UnravelVarArgAJump(FxVMFunctionCall *func, FCompileContext &ctx)
 static bool AJumpProcessing(FxVMFunctionCall *func, FCompileContext &ctx)
 {
 	// Unfortunately the PrintableName is the only safe thing to catch this special case here.
-    // [RL0] It's not valid to access Variant::Implementation on function pointer calls, so skip this
+	// [RL0] It's not valid to access Variant::Implementation on function pointer calls, so skip this
 	if (!func->FnPtrCall && stricmp(func->Function->Variants[0].Implementation->QualifiedName, "Actor.A_Jump") == 0)
 	{
 		// Unravel the varargs part of this function here so that the VM->native interface does not have to deal with it anymore.
@@ -433,7 +433,7 @@ static FxExpression *ResolveGlobalCustomFunction(FxFunctionCall *func, FCompileC
 			return newfunc->Resolve(ctx);
 		}
 	}
-	
+
 	int min, max, special;
 	if (func->MethodName == NAME_ACS_NamedExecuteWithResult || func->MethodName == NAME_CallACS)
 	{
@@ -458,14 +458,14 @@ static FxExpression *ResolveGlobalCustomFunction(FxFunctionCall *func, FCompileC
 		}
 		else if (paramcount < min)
 		{
-			ScriptPosition.Message(MSG_ERROR, "Not enough parameters for '%s' (expected %d, got %d)", 
+			ScriptPosition.Message(MSG_ERROR, "Not enough parameters for '%s' (expected %d, got %d)",
 				func->MethodName.GetChars(), min, paramcount);
 			delete func;
 			return nullptr;
 		}
 		else if (paramcount > max)
 		{
-			ScriptPosition.Message(MSG_ERROR, "too many parameters for '%s' (expected %d, got %d)", 
+			ScriptPosition.Message(MSG_ERROR, "too many parameters for '%s' (expected %d, got %d)",
 				func->MethodName.GetChars(), max, paramcount);
 			delete func;
 			return nullptr;
@@ -581,7 +581,7 @@ FxExpression *FxActionSpecialCall::Resolve(FCompileContext& ctx)
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -774,7 +774,7 @@ ExpEmit FxGetDefaultByType::Emit(VMFunctionBuilder *build)
 
 //==========================================================================
 //
-// Symbolic state labels. 
+// Symbolic state labels.
 // Conversion will not happen inside the compiler anymore because it causes
 // just too many problems.
 //
@@ -793,7 +793,7 @@ FxExpression *FxStateByIndex::Resolve(FCompileContext &ctx)
 
 	if (aclass->GetStateCount() <= index)
 	{
-		ScriptPosition.Message(MSG_ERROR, "%s: Attempt to jump to non existing state index %d", 
+		ScriptPosition.Message(MSG_ERROR, "%s: Attempt to jump to non existing state index %d",
 			ctx.Class->TypeName.GetChars(), index);
 		delete this;
 		return nullptr;
@@ -1179,7 +1179,7 @@ class FxBlockIteratorForEachLoop : public FxThreeArgForEachLoop
 {
 public:
 	using FxThreeArgForEachLoop::FxThreeArgForEachLoop;
-	
+
 	FxExpression *Resolve(FCompileContext&);
 	//ExpEmit Emit(VMFunctionBuilder *build); This node is transformed, so it won't ever be emitted itself
 };
@@ -1292,7 +1292,7 @@ bool IsGameSpecificForEachLoop(FxForEachLoop * loop)
 {
 	auto * vt = loop->Array->ValueType;
 	return (vt->isObjectPointer() && (
-			    ((PObjectPointer*)vt)->PointedClass()->TypeName == NAME_BlockLinesIterator
+				((PObjectPointer*)vt)->PointedClass()->TypeName == NAME_BlockLinesIterator
 			 || ((PObjectPointer*)vt)->PointedClass()->TypeName == NAME_BlockThingsIterator
 			 || ((PObjectPointer*)vt)->PointedClass()->TypeName == NAME_ActorIterator
 			 || ((PObjectPointer*)vt)->PointedClass()->TypeName == NAME_ThinkerIterator

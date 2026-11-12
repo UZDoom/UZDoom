@@ -34,13 +34,13 @@ class FConfigFile;
 
 enum EFileRequirements
 {
-    REQUIRE_NONE    = 0,
-    REQUIRE_IWAD    = 1,
-    REQUIRE_FILE    = 2,
-    REQUIRE_OPTFILE = 4,
+	REQUIRE_NONE    = 0,
+	REQUIRE_IWAD    = 1,
+	REQUIRE_FILE    = 2,
+	REQUIRE_OPTFILE = 4,
 
-    REQUIRE_DEFAULT = REQUIRE_IWAD|REQUIRE_FILE,
-    REQUIRE_ALL = REQUIRE_IWAD|REQUIRE_FILE|REQUIRE_OPTFILE
+	REQUIRE_DEFAULT = REQUIRE_IWAD|REQUIRE_FILE,
+	REQUIRE_ALL = REQUIRE_IWAD|REQUIRE_FILE|REQUIRE_OPTFILE
 };
 
 bool D_AddFile(std::vector<FileSys::ResourceName>& wadfiles, const char* file, bool check, int position, FConfigFile* config, bool optional);

@@ -66,7 +66,7 @@ class BloodSplatter : Actor
 		Stop;
 	}
 }
-	
+
 // Axe Blood ----------------------------------------------------------------
 
 class AxeBlood : Actor
@@ -92,5 +92,3 @@ class AxeBlood : Actor
 		Stop;
 	}
 }
-
-	

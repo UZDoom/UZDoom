@@ -106,7 +106,7 @@ class StrifeMap : MapRevealer
 		Loop;
 	}
 }
-		
+
 
 // Beldin's Ring ------------------------------------------------------------
 
@@ -298,11 +298,11 @@ class OfficersUniform : Inventory
 		Stop;
 	}
 }
-	
-	
+
+
 // Flame Thrower Parts ------------------------------------------------------
 
-class FlameThrowerParts : Inventory 
+class FlameThrowerParts : Inventory
 {
 	Default
 	{
@@ -386,7 +386,7 @@ class Targeter : PowerupGiver
 		Stop;
 	}
 }
-	
+
 // Communicator -----------------------------------------------------------------
 
 class Communicator : Inventory
@@ -412,7 +412,7 @@ class Communicator : Inventory
 class DegninOre : Inventory
 {
 	Default
-	{	
+	{
 		Health 10;
 		Radius 16;
 		Height 16;
@@ -441,7 +441,7 @@ class DegninOre : Inventory
 		BNG3 BCDEFGH 3 Bright;
 		Stop;
 	}
-	
+
 	override bool Use (bool pickup)
 	{
 		if (pickup)
@@ -466,7 +466,7 @@ class DegninOre : Inventory
 			return true;
 		}
 	}
-	
+
 }
 
 // Gun Training -------------------------------------------------------------
@@ -509,7 +509,7 @@ class HealthTraining : Inventory
 		HELT A -1;
 		Stop;
 	}
-	
+
 	override bool TryPickup (in out Actor toucher)
 	{
 		if (Super.TryPickup(toucher))
@@ -520,12 +520,12 @@ class HealthTraining : Inventory
 		}
 		return false;
 	}
-	
+
 }
 
 // Scanner ------------------------------------------------------------------
 
-class Scanner : PowerupGiver 
+class Scanner : PowerupGiver
 {
 	Default
 	{
@@ -544,7 +544,7 @@ class Scanner : PowerupGiver
 		PMUP AB 6;
 		Loop;
 	}
-	
+
 	override bool Use (bool pickup)
 	{
 		if (!level.AllMap)
@@ -557,7 +557,7 @@ class Scanner : PowerupGiver
 		}
 		return Super.Use (pickup);
 	}
-	
+
 }
 
 // Prison Pass --------------------------------------------------------------
@@ -576,7 +576,7 @@ class PrisonPass : Key
 		TOKN A -1;
 		Stop;
 	}
-	
+
 	override bool TryPickup (in out Actor toucher)
 	{
 		bool res = Super.TryPickup (toucher);
@@ -601,7 +601,7 @@ class PrisonPass : Key
 		Destroy ();
 		return true;
 	}
-	
+
 }
 
 //---------------------------------------------------------------------------
@@ -624,10 +624,10 @@ class DummyStrifeItem : Inventory
 class RaiseAlarm : DummyStrifeItem
 {
 	Default
-	{	
+	{
 		Tag "$TAG_ALARM";
 	}
-	
+
 	override bool TryPickup (in out Actor toucher)
 	{
 		toucher.SoundAlert (toucher);
@@ -658,7 +658,7 @@ class RaiseAlarm : DummyStrifeItem
 		Destroy ();
 		return true;
 	}
-	
+
 }
 
 // Open door tag 222 --------------------------------------------------------
@@ -671,7 +671,7 @@ class OpenDoor222 : DummyStrifeItem
 		GoAwayAndDie ();
 		return true;
 	}
-	
+
 }
 
 // Close door tag 222 -------------------------------------------------------
@@ -699,12 +699,12 @@ class CloseDoor222 : DummyStrifeItem
 		Destroy ();
 		return true;
 	}
-	
+
 }
 
 // Open door tag 224 --------------------------------------------------------
 
-class OpenDoor224 : DummyStrifeItem 
+class OpenDoor224 : DummyStrifeItem
 {
 	override bool TryPickup (in out Actor toucher)
 	{
@@ -712,14 +712,14 @@ class OpenDoor224 : DummyStrifeItem
 		GoAwayAndDie ();
 		return true;
 	}
-	
+
 	override bool SpecialDropAction (Actor dropper)
 	{
 		Door_Open(224, 16);
 		Destroy ();
 		return true;
 	}
-	
+
 }
 
 // Ammo ---------------------------------------------------------------------
@@ -730,7 +730,7 @@ class AmmoFillup : DummyStrifeItem
 	{
 		Tag "$TAG_AMMOFILLUP";
 	}
-	
+
 	override bool TryPickup (in out Actor toucher)
 	{
 		Inventory item = toucher.FindInventory("ClipOfBullets");
@@ -753,7 +753,7 @@ class AmmoFillup : DummyStrifeItem
 		GoAwayAndDie ();
 		return true;
 	}
-	
+
 }
 
 // Health -------------------------------------------------------------------
@@ -764,7 +764,7 @@ class HealthFillup : DummyStrifeItem
 	{
 		Tag "$TAG_HEALTHFILLUP";
 	}
-	
+
 	override bool TryPickup (in out Actor toucher)
 	{
 		static const int skillhealths[] = { -100, -75, -50, -50, -100 };
@@ -777,7 +777,7 @@ class HealthFillup : DummyStrifeItem
 		GoAwayAndDie ();
 		return true;
 	}
-	
+
 }
 
 // Upgrade Stamina ----------------------------------------------------------
@@ -789,26 +789,26 @@ class UpgradeStamina : DummyStrifeItem
 		Inventory.Amount 10;
 		Inventory.MaxAmount 100;
 	}
-	
+
 	override bool TryPickup (in out Actor toucher)
 	{
 		if (toucher.player == NULL)
 			return false;
-			
+
 		toucher.player.mo.stamina += Amount;
 		if (toucher.player.mo.stamina >= MaxAmount)
 			toucher.player.mo.stamina = MaxAmount;
-			
+
 		toucher.GiveBody (-100);
 		GoAwayAndDie ();
 		return true;
 	}
-	
+
 }
 
 // Upgrade Accuracy ---------------------------------------------------------
 
-class UpgradeAccuracy : DummyStrifeItem 
+class UpgradeAccuracy : DummyStrifeItem
 {
 	override bool TryPickup (in out Actor toucher)
 	{
@@ -818,7 +818,7 @@ class UpgradeAccuracy : DummyStrifeItem
 		GoAwayAndDie ();
 		return true;
 	}
-	
+
 }
 
 // Start a slideshow --------------------------------------------------------
@@ -835,7 +835,5 @@ class SlideshowStarter : DummyStrifeItem
 		GoAwayAndDie ();
 		return true;
 	}
-	
+
 }
-
-

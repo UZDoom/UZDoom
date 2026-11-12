@@ -54,7 +54,7 @@ static void LoadKeys (const char *modname, bool dbl)
 	}
 }
 
-static void DoSaveKeys (FConfigFile *config, const char *section, FKeySection *keysection, bool dbl)
+static void DoSaveKeys (FConfigFile *config, FString section, FKeySection *keysection, bool dbl)
 {
 	config->SetSection (section, true);
 	config->ClearCurrentSection ();
@@ -65,14 +65,12 @@ static void DoSaveKeys (FConfigFile *config, const char *section, FKeySection *k
 	}
 }
 
-void M_SaveCustomKeys (FConfigFile *config, char *section, char *subsection, size_t sublen)
+void M_SaveCustomKeys (FConfigFile *config, FString section)
 {
 	for (unsigned i=0; i<KeySections.Size(); i++)
 	{
-		mysnprintf (subsection, sublen, "%s.Bindings", KeySections[i].mSection.GetChars());
-		DoSaveKeys (config, section, &KeySections[i], false);
-		mysnprintf (subsection, sublen, "%s.DoubleBindings", KeySections[i].mSection.GetChars());
-		DoSaveKeys (config, section, &KeySections[i], true);
+		DoSaveKeys (config, section + "." + KeySections[i].mSection + ".Bindings", &KeySections[i], false);
+		DoSaveKeys (config, section + "." + KeySections[i].mSection + ".DoubleBindings", &KeySections[i], true);
 	}
 }
 
@@ -241,7 +239,7 @@ void ClearIWADPlayerClasses (PClassActor *ti)
 CCMD(clearplayerclasses)
 {
 	if (ParsingKeyConf)
-	{	
+	{
 		// Only clear the playerclasses first if setslotstrict is true
 		// If not, we'll only remove the IWAD playerclasses
 		if(setslotstrict)
@@ -275,8 +273,8 @@ CCMD(addplayerclass)
 
 			newclass.Type = ti;
 			newclass.Flags = 0;
-			
-			// If this class was already added, don't add it again			
+
+			// If this class was already added, don't add it again
 			for(unsigned i = 0; i < PlayerClasses.Size(); i++)
 			{
 				if(PlayerClasses[i].Type == ti)
@@ -284,7 +282,7 @@ CCMD(addplayerclass)
 					return;
 				}
 			}
-			
+
 
 			int arg = 2;
 			while (arg < argv.argc())
@@ -304,4 +302,3 @@ CCMD(addplayerclass)
 		}
 	}
 }
-

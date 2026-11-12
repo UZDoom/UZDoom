@@ -224,4 +224,3 @@ void InitImports()
 		qsort(&FieldTable[0], FieldTable.Size(), sizeof(FieldTable[0]), fieldcmp);
 	}
 }
-

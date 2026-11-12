@@ -65,5 +65,3 @@ FImageSource *CreateStartScreenTexture(FBitmap& srcdata)
 {
 	return new FStartScreenTexture(srcdata);
 }
-
-

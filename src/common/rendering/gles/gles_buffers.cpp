@@ -196,7 +196,7 @@ void GLBuffer::Unlock()
 }
 
 void GLBuffer::Resize(size_t newsize)
-{ 
+{
 	if (newsize > buffersize)
 	{
 		if (isData)
@@ -316,7 +316,7 @@ void GLDataBuffer::BindRange(FRenderState *state, size_t start, size_t length)
 	if (mBindingPoint == 3)// VIEWPOINT_BINDINGPOINT
 	{
 		static_cast<FGLRenderState*>(state)->ApplyViewport(memory + start);
-	} 
+	}
 }
 
 void GLDataBuffer::BindBase()

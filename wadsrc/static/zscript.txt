@@ -1,4 +1,4 @@
-version "4.15.1"
+version "5.0.0"
 
 // Generic engine code
 #include "zscript/engine/base.zs"
@@ -317,3 +317,4 @@ version "4.15.1"
 #include "zscript/compatibility.zs"
 #include "zscript/scriptutil/scriptutil.zs"
 #include "zscript/actors/mbf21.zs"
+#include "zscript/engine/ui/menu/advancedfontmenu.zs"

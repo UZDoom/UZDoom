@@ -17,6 +17,7 @@
 #include <cstring>
 
 #include <rapidxml/rapidxml.hpp>
+#include <string_view>
 #include <zwidget/widgets/checkboxlabel/checkboxlabel.h>
 #include <zwidget/widgets/textedit/textedit.h>
 
@@ -29,14 +30,21 @@
 #include "name.h"
 #include "releasepage.h"
 #include "version.h"
+#include "versioninfo.h"
 #include "zstring.h"
+#include "textblock.h"
 
 constexpr unsigned NUMBER_OF_RELEASES_TO_DISPLAY = 3;
+constexpr VersionInfo FIRST_UZDOOM{4, 14, 3};
+
+bool ReleasePage::show_upcoming = false;
 
 ReleasePage::ReleasePage(LauncherWindow* launcher, const FStartupSelectionInfo& info) : Widget(nullptr), Launcher(launcher)
 {
 	ShowThis = new CheckboxLabel(this);
-	Notes = new TextEdit(this);
+	Notes = new TextBlock(this);
+
+	show_upcoming = info.displayRelease >= 3;
 
 	auto text = GetReleaseNotes();
 
@@ -70,8 +78,7 @@ void ReleasePage::OnGeometryChanged()
 	Launcher->UpdatePlayButton();
 }
 
-
-FString ReleasePage::_ParseReleaseNotes(rapidxml::xml_node<char> * release)
+FString ReleasePage::_ParseReleaseNotes(rapidxml::xml_node<char> * release, VersionInfo *versioninfo)
 {
 	// braindead html to plaintext parser
 
@@ -83,76 +90,132 @@ FString ReleasePage::_ParseReleaseNotes(rapidxml::xml_node<char> * release)
 	auto url = release->first_node("url");
 	FString text;
 
-	auto append = [&text](FName type, char * value)
-	{
-		if (type == "p")
-		{
-			text.AppendFormat("%s\n\n", value);
-		}
-		else if (type == "li")
-		{
-			text.AppendFormat(" - %s\n", value);
-		}
-		else if (type == "hr")
-		{
-			text.AppendFormat("---\n");
-		}
-		else
-		{
-			text.AppendFormat("%s", value);
-		}
-	};
+	*versioninfo = VersionInfo{version? version->value(): "0.0.0"};
 
-	auto node = description;
-	while (node)
-	{
-		// Only append the value if it's a data/text node with content
-		if (node->type() == rapidxml::node_data && node->value_size() > 0)
-		{
-			append(node->parent()->name(), node->value());
-		}
+	if (!show_upcoming && *versioninfo > GetCurrentVersionForUpdater()) return "";
 
-		if (node->first_node())
+	// https://docs.flathub.org/docs/for-app-authors/metainfo-guidelines#description
+	//
+	// Only the following child tags are supported:
+	// p (paragraph), ol, ul (ordered and unordered list) with li (list items) child tags,
+	// em for italicized emphasis and code for inline code in monospace. **bold** is also
+
+	auto block = [&text](const char *prefix, rapidxml::xml_node<char> *node)
+	{
+		FString block;
+
+		while (node)
 		{
-			node = node->first_node();
-		}
-		else if (node->next_sibling())
-		{
+			rapidxml::xml_node<char> *text = nullptr;
+			const char *l = "", *r = "";
+			if (node->type() == rapidxml::node_element)
+			{
+				auto name = std::string_view(node->name());
+				if (name == "em")
+				{
+					l = r = "*";
+				}
+				else if (name == "code")
+				{
+					l = r = "`";
+				}
+				text = node;
+			}
+			else if (node->type() == rapidxml::node_data)
+			{
+				text = node;
+			}
+			if (text)
+			{
+				block.AppendFormat("%s%s%s", l, node->value(), r);
+			}
 			node = node->next_sibling();
 		}
-		else
-		{
-			while (node->parent() && node->parent() != description && !node->parent()->next_sibling())
-				node = node->parent();
 
-			node = (node->parent() != description)
-				? node->parent()->next_sibling()
-				: nullptr;
+		text.AppendFormat("%s%s\n", prefix, block.GetChars());
+	};
+
+	if (description)
+	{
+		auto blocknode = description->first_node();
+		std::string_view prev = "";
+		while (blocknode)
+		{
+			std::string_view name = blocknode->name();
+
+			// Flathub doesn't want headers, so this is a hack
+			// TODO: embed raw markdown, generate metainfo from that
+			if (auto node = blocknode->first_node(); node && name == "p" && node == blocknode->last_node() && node->type() == rapidxml::node_data)
+			{
+				if (const char *data = node->value(); data && data[0] == '*')
+				{
+					std::string str{data};
+					if (str.starts_with("**") && str.ends_with("**"))
+					{
+						text.AppendFormat("\n## %s\n", str.substr(2, str.size()-4).c_str());
+						prev = "h2";
+						blocknode = blocknode->next_sibling();
+						continue;
+					}
+				}
+			}
+
+			if (prev != "" && (name == "p" || name != prev))
+				text.AppendCharacter('\n');
+			prev = name;
+
+			if (name == "p")
+			{
+				block("", blocknode->first_node());
+			}
+			else if (name == "ul")
+			{
+				auto node = blocknode->first_node();
+				while (node)
+				{
+					block("-  ", node->first_node());
+					node = node->next_sibling();
+				}
+			}
+			else if (name == "ol")
+			{
+				auto count = 0;
+				auto node = blocknode->first_node();
+				while (node)
+				{
+					FString pfx = FStringf("%d. ", ++count);
+					block(pfx.GetChars(), node->first_node());
+					node = node->next_sibling();
+				}
+			}
+
+			blocknode = blocknode->next_sibling();
 		}
 	}
-	text.StripRight();
 
-	return FStringf{
-		GAMENAME " %s %s, %s %s\n\n%s\n%s",
-		GStrings.GetString("NOTES_VERSION"), // "version"
+	FString result;
+	result.AppendFormat(
+		"# %s version %s, released %s",
+		*versioninfo >= FIRST_UZDOOM? GAMENAME: "GZDoom",
 		version
 			? version->value()
 			: GStrings.GetString("NOTES_UNKNOWN"), // "Unknown"
-		GStrings.GetString("NOTES_RELEASED"), // "released"
 		date
 			? date->value()
-			: GStrings.GetString("NOTES_UNKNOWN"), // "Unknown"
+			: GStrings.GetString("NOTES_UNKNOWN") // "Unknown"
+	);
+	result.AppendFormat(
+		"\n\n%s",
 		description
 			? text.GetChars()
-			: GStrings.GetString("NOTES_EMPTY"), // "No description provided."
-		url
-			? FStringf(
-				"\n%s %s",
-				GStrings.GetString("NOTES_DETAILS"), // "For more details see:"
-				url->value()
-			).GetChars()
-			: ""
-	};
+			: GStrings.GetString("NOTES_EMPTY") // "No description provided."
+	);
+	if (url)
+	{
+		result.AppendCharacter('\n');
+		result.AppendFormat("For more details see: %s", url->value());
+	}
+	return result;
 }
 
 FString ReleasePage::_BuildReleaseNotes(rapidxml::xml_document<> &doc)
@@ -167,15 +230,19 @@ FString ReleasePage::_BuildReleaseNotes(rapidxml::xml_document<> &doc)
 	release = release->first_node("release");
 
 	FString text;
+	VersionInfo version;
 
-	for (unsigned i = 1; ; i++)
+	for (unsigned i = 1; release; )
 	{
-		release->type();
-		text.AppendFormat("%s", _ParseReleaseNotes(release).GetChars());
+		if (auto notes = _ParseReleaseNotes(release, &version); !notes.IsEmpty())
+		{
+			text.AppendFormat("%s", notes.GetChars());
 
-		if (!release || i >= NUMBER_OF_RELEASES_TO_DISPLAY) break;
+			if (version.revision == 0 && ++i > NUMBER_OF_RELEASES_TO_DISPLAY) break;
 
-		text.AppendFormat("\n\n---\n\n");
+			text.AppendFormat("\n\n---\n\n");
+		}
+
 		release = release->next_sibling("release");
 	}
 

@@ -26,6 +26,7 @@
 struct FColormap;
 class IVertexBuffer;
 class IIndexBuffer;
+class PClass;
 
 enum EClearTarget
 {
@@ -176,7 +177,7 @@ struct FVector4PalEntry
 		return *this;
 	}
 
-	FVector4PalEntry& SetFlt(float v1, float v2, float v3, float v4)	
+	FVector4PalEntry& SetFlt(float v1, float v2, float v3, float v4)
 	{
 		r = v1;
 		g = v2;
@@ -626,7 +627,7 @@ public:
 	}
 
 private:
-	void SetMaterial(FMaterial *mat, int clampmode, int translation, int overrideshader)
+	void SetMaterial(FMaterial *mat, int clampmode, int translation, int overrideshader, PClass * cls)
 	{
 		mMaterial.mMaterial = mat;
 		mMaterial.mClampMode = clampmode;
@@ -639,7 +640,7 @@ private:
 	}
 
 public:
-	void SetMaterial(FGameTexture* tex, EUpscaleFlags upscalemask, int scaleflags, int clampmode, int translation, int overrideshader)
+	void SetMaterial(FGameTexture* tex, EUpscaleFlags upscalemask, int scaleflags, int clampmode, int translation, int overrideshader, PClass *cls)
 	{
 		tex->setSeen();
 		if (!sysCallbacks.PreBindTexture || !sysCallbacks.PreBindTexture(this, tex, upscalemask, scaleflags, clampmode, translation, overrideshader))
@@ -648,12 +649,12 @@ public:
 		}
 		auto mat = FMaterial::ValidateTexture(tex, scaleflags);
 		assert(mat);
-		SetMaterial(mat, clampmode, translation, overrideshader);
+		SetMaterial(mat, clampmode, translation, overrideshader, cls);
 	}
 
-	void SetMaterial(FGameTexture* tex, EUpscaleFlags upscalemask, int scaleflags, int clampmode, FTranslationID translation, int overrideshader)
+	void SetMaterial(FGameTexture* tex, EUpscaleFlags upscalemask, int scaleflags, int clampmode, FTranslationID translation, int overrideshader, PClass *cls)
 	{
-		SetMaterial(tex, upscalemask, scaleflags, clampmode, translation.index(), overrideshader);
+		SetMaterial(tex, upscalemask, scaleflags, clampmode, translation.index(), overrideshader, cls);
 	}
 
 
@@ -694,7 +695,7 @@ public:
 
 	template <class T> void SetVertexBuffer(T *buffer)
 	{
-		auto ptrs = buffer->GetBufferObjects(); 
+		auto ptrs = buffer->GetBufferObjects();
 		SetVertexBuffer(ptrs.first, 0, 0);
 		SetIndexBuffer(ptrs.second);
 	}
@@ -766,4 +767,3 @@ public:
 	}
 
 };
-

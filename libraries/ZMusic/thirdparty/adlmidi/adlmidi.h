@@ -2,7 +2,7 @@
  * libADLMIDI is a free Software MIDI synthesizer library with OPL3 emulation
  *
  * Original ADLMIDI code: Copyright (c) 2010-2014 Joel Yliluoma <bisqwit@iki.fi>
- * ADLMIDI Library API:   Copyright (c) 2015-2025 Vitaly Novichkov <admin@wohlnet.ru>
+ * ADLMIDI Library API:   Copyright (c) 2015-2026 Vitaly Novichkov <admin@wohlnet.ru>
  *
  * Library is based on the ADLMIDI, a MIDI player for Linux and Windows with OPL3 emulation:
  * http://iki.fi/bisqwit/source/adlmidi.html
@@ -30,7 +30,7 @@ extern "C" {
 
 #define ADLMIDI_VERSION_MAJOR       1
 #define ADLMIDI_VERSION_MINOR       6
-#define ADLMIDI_VERSION_PATCHLEVEL  1
+#define ADLMIDI_VERSION_PATCHLEVEL  3
 
 #define ADLMIDI_TOSTR_I(s) #s
 #define ADLMIDI_TOSTR(s) ADLMIDI_TOSTR_I(s)
@@ -47,13 +47,16 @@ extern "C" {
 #include <stdint.h>
 typedef uint8_t         ADL_UInt8;
 typedef uint16_t        ADL_UInt16;
+typedef uint32_t        ADL_UInt32;
 typedef int8_t          ADL_SInt8;
 typedef int16_t         ADL_SInt16;
 #else
 typedef unsigned char   ADL_UInt8;
 typedef unsigned short  ADL_UInt16;
+typedef unsigned int    ADL_UInt32;
 typedef char            ADL_SInt8;
 typedef short           ADL_SInt16;
+typedef int             ADL_SInt32;
 #endif
 
 /* == Deprecated function markers == */
@@ -126,6 +129,12 @@ enum ADLMIDI_VolumeModels
     ADLMIDI_VolumeModel_HMI = 10,
     /*! HMI Sound Operating System volume scaling model, older variant with bugs */
     ADLMIDI_VolumeModel_HMI_OLD = 11,
+    /*! Volume model from the AdLib driver for Windows 3.1 */
+    ADLMIDI_VolumeModel_MS_ADLIB = 12,
+    /*! Volume model used by IMF Creator utility */
+    ADLMIDI_VolumeModel_IMF_Creator = 13,
+    /*! Volume model used by Jamie O'Connell's FM Synth driver for Windows 3.x */
+    ADLMIDI_VolumeModel_OConnell = 14,
     /*! Count of available volume model modes */
     ADLMIDI_VolumeModel_Count
 };
@@ -145,6 +154,34 @@ enum ADLMIDI_ChannelAlloc
     ADLMIDI_ChanAlloc_AnyReleased,
     /*! Count of available channel allocation modes */
     ADLMIDI_ChanAlloc_Count
+};
+
+/**
+ * @brief Device types to filter incompatible MIDI tracks, primarily used by HMI/HMP and EMIDI.
+ * Can be combined to enable more tracks.
+ */
+enum ADLMIDI_DeviceFilter
+{
+    ADLMIDI_Device_GeneralMidi      = 0x0001, /* MPU-401 counted as here */
+    ADLMIDI_Device_OPL2             = 0x0002,
+    ADLMIDI_Device_OPL3             = 0x0004,
+    ADLMIDI_Device_MT32             = 0x0008,
+    ADLMIDI_Device_AWE32            = 0x0010,
+    ADLMIDI_Device_WaveBlaster      = 0x0020,
+    ADLMIDI_Device_ProAudioSpectrum = 0x0040,
+    ADLMIDI_Device_SoundMan16       = 0x0080,
+    ADLMIDI_Device_DIGI             = 0x0100, /* Digital samples controlled by MIDI */
+    ADLMIDI_Device_SoundScape       = 0x0200,
+    ADLMIDI_Device_WaveTable        = 0x0400,
+    ADLMIDI_Device_GravisUltrasound = 0x0800,
+    ADLMIDI_Device_PCSpeaker        = 0x1000,
+    ADLMIDI_Device_Callback         = 0x2000,
+    ADLMIDI_Device_SoundMasterII    = 0x4000,
+
+    ADLMIDI_Device_FM               = ADLMIDI_Device_OPL2|ADLMIDI_Device_OPL3|ADLMIDI_Device_ProAudioSpectrum|ADLMIDI_Device_SoundMan16,
+    ADLMIDI_Device_AdLib            = ADLMIDI_Device_OPL2,
+    ADLMIDI_Device_SoundBlaster     = ADLMIDI_Device_OPL2|ADLMIDI_Device_OPL3,
+    ADLMIDI_Device_ANY              = 0xFFFF
 };
 
 /**
@@ -594,6 +631,15 @@ extern ADLMIDI_DECLSPEC void adl_setAutoArpeggio(struct ADL_MIDIPlayer *device, 
 extern ADLMIDI_DECLSPEC int adl_getAutoArpeggio(struct ADL_MIDIPlayer *device);
 
 /**
+ * @brief Enable or disable the handling of events according Apogee Sound System's EMIDI standard for MIDI files
+ * @param device Instance of the library
+ * @param emidiEn 0 - disabled, 1 - enabled
+ *
+ * Note: The mode must be set before loading the MIDI file, otherwise this option will take no effect
+ */
+extern ADLMIDI_DECLSPEC void adl_setModeEMIDI(struct ADL_MIDIPlayer *device, int emidiEn);
+
+/**
  * @brief Enable or disable built-in loop (built-in loop supports 'loopStart' and 'loopEnd' tags to loop specific part)
  * @param device Instance of the library
  * @param loopEn 0 - disabled, 1 - enabled
@@ -661,6 +707,18 @@ extern ADLMIDI_DECLSPEC void adl_setChannelAllocMode(struct ADL_MIDIPlayer *devi
 extern ADLMIDI_DECLSPEC int adl_getChannelAllocMode(struct ADL_MIDIPlayer *device);
 
 /**
+ * @brief Assigns the device filter to enable/disable tracks in special formats like HMI/HMP or EMIDI
+ *
+ * The value must be assigned before loading a file, otherwise it will not work as intended.
+ *
+ * When library was built without MIDI sequencer, this function gives no effect.
+ *
+ * @param device Instance of the library
+ * @param mask Mask of the device (#ADLMIDI_DeviceFilter)
+ */
+extern ADLMIDI_DECLSPEC void adl_setDeviceFilterMask(struct ADL_MIDIPlayer *device, ADL_UInt32 mask);
+
+/**
  * @brief Load WOPL bank file from File System
  *
  * Is recommended to call adl_reset() to apply changes to already-loaded file player or real-time.
@@ -708,8 +766,8 @@ enum ADL_Emulator
 {
     /*! Nuked OPL3 v. 1.8 */
     ADLMIDI_EMU_NUKED = 0,
-    /*! Nuked OPL3 v. 1.7.4 */
-    ADLMIDI_EMU_NUKED_174,
+    /*! Nuked OPL3 Fast (Optimised fork by tgies) */
+    ADLMIDI_EMU_NUKED_FAST,
     /*! DosBox */
     ADLMIDI_EMU_DOSBOX,
     /*! Opal */
@@ -728,8 +786,17 @@ enum ADL_Emulator
     ADLMIDI_EMU_NUKED_OPL2_LLE,
     /*! Nuked OPL3 LLE*/
     ADLMIDI_EMU_NUKED_OPL3_LLE,
+    /*! Nuked OPL2 Lite */
+    ADLMIDI_EMU_NUKED_OPL2_LITE,
+    /*! Nuked CQM */
+    ADLMIDI_EMU_NUKED_CQM,
+    /*! DosBox ran in OPL2 mode */
+    ADLMIDI_EMU_DOSBOX_OPL2,
     /*! Count instrument on the level */
-    ADLMIDI_EMU_end
+    ADLMIDI_EMU_end,
+
+    /* Fallbacks */
+    ADLMIDI_EMU_NUKED_174 = ADLMIDI_EMU_NUKED_FAST
 };
 
 /**
@@ -1216,7 +1283,7 @@ extern ADLMIDI_DECLSPEC int  adl_generateFormat(struct ADL_MIDIPlayer *device, i
  * @param device Instance of the library
  * @param seconds Previous delay. On a first moment, pass the `0.0`
  * @param granulality Minimal size of one MIDI tick in seconds.
- * @return desired number of seconds until next call. Pass this value into `seconds` field in next time
+ * @return desired number of seconds until next call. On error the <0 value gets returned, =0 at end of the song with disabled loop.
  */
 extern ADLMIDI_DECLSPEC double adl_tickEvents(struct ADL_MIDIPlayer *device, double seconds, double granulality);
 
@@ -1372,6 +1439,71 @@ extern ADLMIDI_DECLSPEC void adl_rt_bankChange(struct ADL_MIDIPlayer *device, AD
  * @return 1 when SysEx message was successfully processed, 0 when SysEx message was rejected by any reason
  */
 extern ADLMIDI_DECLSPEC int adl_rt_systemExclusive(struct ADL_MIDIPlayer *device, const ADL_UInt8 *msg, size_t size);
+
+/**
+ * @brief Write a raw OPL3 register on a specific chip, bypassing the MIDI driver.
+ *
+ * Exposes libADLMIDI's internal raw-OPL routing (the same path used internally
+ * by IMF/KLM playback) so callers can render formats that store raw OPL
+ * register streams alongside MIDI playback on the same chip. The caller is
+ * fully responsible for the state of the targeted channels (key-on, envelopes,
+ * pan / connection register bits, etc.); libADLMIDI will not patch or manage
+ * it. Because libADLMIDI runs chips in OPL3-extended mode for stereo, callers
+ * feeding an OPL2-only register stream must set the 0x30 bits on 0xC0..0xC8
+ * connection registers themselves, or use adl_rt_rawOPL2Command() which
+ * applies the fixup automatically.
+ *
+ * To avoid the MIDI voice allocator stepping on your raw writes, reserve the
+ * chip channels you intend to use via adl_reserveChipChannels().
+ *
+ * @param device  Instance of the library (from adl_init()).
+ * @param chipId  Zero-based chip index (0..adl_getNumChipsObtained()-1).
+ * @param reg     OPL3 register address. The upper 0x100 bit selects the
+ *                secondary register bank. Valid range 0x000..0x1FF.
+ * @param value   Register value to write (0..255).
+ * @return 1 on success, 0 if chipId is out of range or the device is invalid.
+ */
+extern ADLMIDI_DECLSPEC int adl_rt_rawOPL3(struct ADL_MIDIPlayer *device,
+                                           int chipId,
+                                           ADL_UInt16 reg,
+                                           ADL_UInt8 value);
+
+/**
+ * @brief Reserve chip channels on a given chip so the MIDI driver will not
+ *        allocate voices on them.
+ *
+ * After reservation, adl_rt_rawOplCommand() can be used to drive those
+ * channels directly without MIDI playback stealing their voices. Rhythm-mode
+ * channels (per-chip indices 18..22) may also be reserved.
+ *
+ * Channel indices are per-chip (not global): bit N of channelMask corresponds
+ * to per-chip channel N in [0..NUM_OF_CHANNELS-1] (currently 23, matching the
+ * internal MIDIplay channel count for a single OPL3 chip). For pseudo-4-op
+ * voices reserving the primary 4-op master channel (indices 0..5) is enough
+ * to block the whole voice pair — the passive secondary is only reached via
+ * its primary, so the allocator never acquires it in isolation.
+ *
+ * The reservation persists across partialReset() / resetMIDI() / file loads;
+ * pass channelMask = 0 to release.
+ *
+ * @param device       Instance of the library.
+ * @param chipId       Zero-based chip index (0..adl_getNumChipsObtained()-1).
+ * @param channelMask  Bitmask of per-chip channels to reserve.
+ * @return 0 on success, -1 on invalid device, -2 on chipId out of range.
+ */
+extern ADLMIDI_DECLSPEC int adl_reserveChipChannels(struct ADL_MIDIPlayer *device,
+                                                    int chipId,
+                                                    unsigned int channelMask);
+
+/**
+ * @brief Read back the chip-channel reservation mask previously set via
+ *        adl_reserveChipChannels().
+ * @param device  Instance of the library.
+ * @param chipId  Zero-based chip index.
+ * @return The reservation mask, or 0 if device is null / chipId is out of range.
+ */
+extern ADLMIDI_DECLSPEC unsigned int adl_getReservedChipChannels(struct ADL_MIDIPlayer *device,
+                                                                 int chipId);
 
 
 

@@ -499,7 +499,7 @@ void VMDisasm(FILE *out, const VMOP *code, int codesize, const VMScriptFunction 
 				col += printf_wrapper(out, " => *!*!*!*\n");
 			}
 			else
-			{ 
+			{
 				col += printf_wrapper(out, " => %08llx", starting_offset + ((i + 2 + code[i+1].i24) << 2));
 			}
 		}
@@ -678,4 +678,3 @@ void DumpFunction(FILE *dump, VMScriptFunction *sfunc, const char *label, int la
 	fprintf(dump, "\nDisassembly @ %p:\n", sfunc->Code);
 	VMDisasm(dump, sfunc->Code, sfunc->CodeSize, sfunc);
 }
-

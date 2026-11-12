@@ -110,7 +110,7 @@ namespace swrenderer
 		ShadeConstants ColormapConstants() const { return wallargs->ColormapConstants(); }
 		fixed_t Light() const { return LIGHTSCALE(mLight, mShade); }
 
-		TMap<FDynamicLight*, std::unique_ptr<FLightNode>>* LightList() const { return wallargs->lightlist; }
+		TArray<FDynamicLight*>* LightList() const { return wallargs->lightlist; }
 
 		const WallDrawerArgs* wallargs;
 
@@ -142,7 +142,7 @@ namespace swrenderer
 	{
 	public:
 		using SWPixelFormatDrawers::SWPixelFormatDrawers;
-		
+
 		void DrawWall(const WallDrawerArgs &args) override { DrawWallColumns<DrawWallModeNormal>(args); }
 		void DrawWallMasked(const WallDrawerArgs &args) override { DrawWallColumns<DrawWallModeMasked>(args); }
 		void DrawWallAdd(const WallDrawerArgs &args) override { DrawWallColumns<DrawWallModeAdd>(args); }

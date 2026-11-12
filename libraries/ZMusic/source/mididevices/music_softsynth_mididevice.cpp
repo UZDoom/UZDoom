@@ -3,7 +3,7 @@
 ** Common base class for software synthesis MIDI devices.
 **
 **---------------------------------------------------------------------------
-** Copyright 2008-2010 Randy Heit
+** Copyright 2008-2010 Marisa Heit
 ** All rights reserved.
 **
 ** Redistribution and use in source and binary forms, with or without
@@ -285,44 +285,56 @@ int SoftSynthMIDIDevice::PlayTick()
 	while (delay == 0 && Events != NULL)
 	{
 		uint32_t *event = (uint32_t *)(Events->lpData + Position);
-		if (MEVENT_EVENTTYPE(event[2]) == MEVENT_TEMPO)
+		switch (MEVENT_EVENTTYPE(event[2]))
 		{
+		case MEVENT_TEMPO:
 			SetTempo(MEVENT_EVENTPARM(event[2]));
-		}
-		else if (MEVENT_EVENTTYPE(event[2]) == MEVENT_LONGMSG)
-		{
-			HandleLongEvent((uint8_t *)&event[3], MEVENT_EVENTPARM(event[2]));
-		}
-		else if (MEVENT_EVENTTYPE(event[2]) == 0)
-		{ // Short MIDI event
-			int status = event[2] & 0xff;
-			int parm1 = (event[2] >> 8) & 0x7f;
-			int parm2 = (event[2] >> 16) & 0x7f;
-			HandleEvent(status, parm1, parm2);
+			break;
+		case MEVENT_LONGMSG:
+			{
+				int long_msg_len = MEVENT_EVENTPARM(event[2]);
+				uint8_t* long_msg_data = (uint8_t*)&event[3];
+				// Ensure valid sysex message
+				if (long_msg_len > 2 && long_msg_data[0] == 0xF0 && long_msg_data[long_msg_len - 1] == 0xF7)
+				{
+					HandleLongEvent(long_msg_data, long_msg_len);
+				}
+				break;
+			}
+		case MEVENT_SHORTMSG:
+			{
+				int status = event[2] & 0xff;
+				int parm1 = (event[2] >> 8) & 0x7f;
+				int parm2 = (event[2] >> 16) & 0x7f;
+				HandleEvent(status, parm1, parm2);
 
 #if 0
-			if (synth_watch)
-			{
-				static const char *const commands[8] =
+				if (synth_watch)
 				{
-					"Note off",
-					"Note on",
-					"Poly press",
-					"Ctrl change",
-					"Prgm change",
-					"Chan press",
-					"Pitch bend",
-					"SysEx"
-				};
-				char buffer[128];
-				mysnprintf(buffer, countof(buffer), "C%02d: %11s %3d %3d\n", (status & 15) + 1, commands[(status >> 4) & 7], parm1, parm2);
+					static const char *const commands[8] =
+					{
+						"Note off",
+						"Note on",
+						"Poly press",
+						"Ctrl change",
+						"Prgm change",
+						"Chan press",
+						"Pitch bend",
+						"SysEx"
+					};
+					char buffer[128];
+					mysnprintf(buffer, countof(buffer), "C%02d: %11s %3d %3d\n", (status & 15) + 1, commands[(status >> 4) & 7], parm1, parm2);
 #ifdef _WIN32
-				I_DebugPrint(buffer);
+					I_DebugPrint(buffer);
 #else
-				fputs(buffer, stderr);
+					fputs(buffer, stderr);
 #endif
+				}
+#endif
+				break;
 			}
-#endif
+		default:
+			;
 		}
 
 		// Advance to next event.

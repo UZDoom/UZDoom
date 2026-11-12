@@ -113,4 +113,3 @@ inline const char* S_GetSoundName(FSoundID id)
 {
 	return soundEngine->GetSoundName(id);
 }
-

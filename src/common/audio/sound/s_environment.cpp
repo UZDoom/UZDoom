@@ -640,4 +640,3 @@ void S_UnloadReverbDef ()
 	}
 	Environments = &Off;
 }
-

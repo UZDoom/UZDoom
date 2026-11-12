@@ -33,7 +33,7 @@
 
 #include <stdint.h>
 
-	
+
 #pragma pack(1)
 // FZipCentralInfo
 struct FZipEndOfCentralDirectory

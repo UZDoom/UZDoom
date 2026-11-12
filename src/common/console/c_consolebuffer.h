@@ -23,11 +23,12 @@
 
 #pragma once
 
-#include <limits.h>
-#include <stdio.h>
-#include "zstring.h"
+#include <cstdio>
+
+#include "printf.h"
 #include "tarray.h"
 #include "v_text.h"
+#include "zstring.h"
 
 enum EAddType
 {
@@ -40,7 +41,7 @@ class FConsoleBuffer
 {
 	TArray<FString> mConsoleText;
 	TArray<TArray<FBrokenLines>> m_BrokenConsoleText;	// This holds the structures returned by V_BreakLines and is used for memory management.
-	TArray<unsigned int> mBrokenStart;		
+	TArray<unsigned int> mBrokenStart;
 	TArray<FBrokenLines> mBrokenLines;		// This holds the single lines, indexed by mBrokenStart and is used for printing.
 	FILE * mLogFile;
 	EAddType mAddType;
@@ -54,7 +55,7 @@ class FConsoleBuffer
 
 public:
 	FConsoleBuffer();
-	void AddText(int printlevel, const char *string);
+	void AddText(PrintFlag printlevel, const char *string);
 	void FormatText(FFont *formatfont, int displaywidth);
 	void ResizeBuffer(unsigned newsize);
 	void Clear()
@@ -65,4 +66,3 @@ public:
 	int GetFormattedLineCount() { return mTextLines; }
 	FBrokenLines *GetLines() { return &mBrokenLines[0]; }
 };
-

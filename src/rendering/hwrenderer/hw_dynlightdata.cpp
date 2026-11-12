@@ -72,12 +72,12 @@ void AddLightToList(FDynLightData &dld, int group, FDynamicLight * light, bool f
 	float radius = light->GetRadius();
 
 	float cs;
-	if (light->IsAdditive()) 
+	if (light->IsAdditive())
 	{
 		cs = 0.2f;
 		i = 2;
 	}
-	else 
+	else
 	{
 		cs = 1.0f;
 	}
@@ -96,7 +96,7 @@ void AddLightToList(FDynLightData &dld, int group, FDynamicLight * light, bool f
 	{
 		DVector3 v(r, g, b);
 		float length = (float)v.Length();
-		
+
 		r = length - r;
 		g = length - g;
 		b = length - b;
@@ -121,15 +121,15 @@ void AddLightToList(FDynLightData &dld, int group, FDynamicLight * light, bool f
 	if (light->IsSpot())
 	{
 		lightType = 1.0f;
-		spotInnerAngle = (float)light->pSpotInnerAngle->Cos();
-		spotOuterAngle = (float)light->pSpotOuterAngle->Cos();
+		spotInnerAngle = (float)light->pSpotInnerAngle->FastCos();
+		spotOuterAngle = (float)light->pSpotOuterAngle->FastCos();
 
 		DAngle negPitch = -light->Pitch;
 		DAngle Angle = light->Yaw;
-		double xzLen = negPitch.Cos();
-		spotDirX = float(-Angle.Cos() * xzLen);
-		spotDirY = float(-negPitch.Sin());
-		spotDirZ = float(-Angle.Sin() * xzLen);
+		double xzLen = negPitch.FastCos();
+		spotDirX = float(-Angle.FastCos() * xzLen);
+		spotDirY = float(-negPitch.FastSin());
+		spotDirZ = float(-Angle.FastSin() * xzLen);
 	}
 
 	float *data = &dld.arrays[i][dld.arrays[i].Reserve(16)];
@@ -150,4 +150,3 @@ void AddLightToList(FDynLightData &dld, int group, FDynamicLight * light, bool f
 	data[14] = 0.0f; // unused
 	data[15] = 0.0f; // unused
 }
-

@@ -61,7 +61,7 @@ typedef enum {
 
 	Stairs_Special1 = 26,
 	Stairs_Special2 = 27,
-	
+
 	Wind_East_Weak=40,
 	Wind_East_Medium,
 	Wind_East_Strong,
@@ -107,7 +107,7 @@ typedef enum {
 	sDamage_SuperHellslime = 116,
 	Scroll_StrifeCurrent = 118,
 
-	
+
 	Sector_Hidden = 195,
 	Sector_Heal = 196, // Caverns of Darkness healing sector
 

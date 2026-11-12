@@ -94,6 +94,7 @@ void TabWidget::OnBarCurrentChanged()
 {
 	int pageIndex = Bar->GetCurrentIndex();
 	PageStack->SetCurrentWidget(Pages[pageIndex]);
+	GetCurrentWidget()->SetFocus();
 	if (OnCurrentChanged)
 		OnCurrentChanged();
 }
@@ -266,7 +267,7 @@ void TabBarTab::SetCurrent(bool value)
 	}
 }
 
-double TabBarTab::GetPreferredWidth() const
+double TabBarTab::GetPreferredWidth()
 {
 	double x = Icon ? 32.0 + 5.0 : 0.0;
 	if (Label) x += Label->GetPreferredWidth();

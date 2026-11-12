@@ -47,7 +47,7 @@ class Ironlich : Actor
 		DropItem "ArtiEgg", 51, 0;
 	}
 
-	
+
 	States
 	{
 	Spawn:
@@ -73,7 +73,7 @@ class Ironlich : Actor
 		LICH I -1 A_BossDeath;
 		Stop;
 	}
-	
+
 	//----------------------------------------------------------------------------
 	//
 	// PROC A_LichAttack
@@ -147,7 +147,7 @@ class Ironlich : Actor
 			}
 		}
 	}
-	
+
 }
 
 // Head FX 1 ----------------------------------------------------------------
@@ -180,7 +180,7 @@ class HeadFX1 : Actor
 		FX05 EFG 5 BRIGHT;
 		Stop;
 	}
-	
+
 	//----------------------------------------------------------------------------
 	//
 	// PROC A_LichIceImpact
@@ -245,7 +245,7 @@ class HeadFX3 : Actor
 		FastSpeed 18;
 		Damage 5;
 		Projectile;
-		+WINDTHRUST	
+		+WINDTHRUST
 		+ZDOOMTRANS
 		-ACTIVATEIMPACT
 		-ACTIVATEPCROSS
@@ -265,7 +265,7 @@ class HeadFX3 : Actor
 		FX06 DEFG 5 BRIGHT;
 		Stop;
 	}
-	
+
 	//----------------------------------------------------------------------------
 	//
 	// PROC A_LichFireGrow
@@ -317,7 +317,7 @@ class Whirlwind : Actor
 		FX07 GFED 4;
 		Stop;
 	}
-	
+
 	override int DoSpecialDamage (Actor victim, int damage, Name damagetype)
 	{
 		int randVal;
@@ -373,8 +373,5 @@ class Whirlwind : Actor
 		}
 		A_SeekerMissile(10, 30);
 	}
-	
+
 }
-
-
-

@@ -1,0 +1,649 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-05-18 05:12+0000\n"
+"Last-Translator: hawkwind3 <hawkwinds_messages@hotmail.com>\n"
+"Language-Team: German <https://hosted.weblate.org/projects/doom-engine-games/hacx-filter/de/>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6.dev0\n"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG1"
+msgstr "Sind diese Bugs zu viel für dich?"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG"
+msgstr ""
+"Bist du sicher, dass du den\n"
+"Stecker ziehen willst?"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG2"
+msgstr "Du willst gehen? Bist du wirklich ein Hacker?"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG3"
+msgstr "Komm zurück, oder ich schick dir 'nen Virus!"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG4"
+msgstr "Echte Hacker geben nicht auf."
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG5"
+msgstr "Komm schon. Du hast das Beste noch gar nicht gesehen!"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG6"
+msgstr "Wenn du jetzt aufgibst ist der Cyberspace am Ende!"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG7"
+msgstr "GENIE sendet seine besten Grüße, Mistkerl!"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG8"
+msgstr "Hmm. So viel zum Thema \"Held\", Hacker."
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG9"
+msgstr "Was? Du willst in den Knast zurück?"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG10"
+msgstr "Du hättest die blaue Pille nehmen sollen..."
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG11"
+msgstr "Das Spiel heißt nicht \"wegrennen\"!"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG12"
+msgstr "Also, die Welt zu retten kann warten, richtig?"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG13"
+msgstr "Also ist es soweit, dass sich unsere Wege trennen!"
+
+msgctxt "doom hacx.hacx1"
+msgid "QUITMSG14"
+msgstr "Bitte vergesse HacX nicht!"
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_SUICIDE"
+msgstr "%o entfernte sich aus dem Universum."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_FALLING"
+msgstr "%o formte einen Krater der Größe von Kansas."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_CRUSH"
+msgstr "%o wurde zu einem menschlichen Pfannkuchen."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_EXIT"
+msgstr "%o hat sich ausgeloggt."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_WATER"
+msgstr "%o schwamm wie ein Stein."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_SLIME"
+msgstr "%o wurde verstrahlt."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_LAVA"
+msgstr "%o nahm ein heißes Bad."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_BARREL"
+msgstr "%o nahm eine Überdosis Nitroglyzerin."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_SPLASH"
+msgstr "%o wurde zerkleinert."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_R_SPLASH"
+msgstr "%o wollte @[pp_de] Innereien sehen."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_ROCKET"
+msgstr "%o wollte @[pp_de] Innereien sehen."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_KILLEDSELF"
+msgstr "%o entfernte sich aus dem Universum."
+
+msgid "OB_THUG"
+msgstr "%o ist nicht länger die dominante Spezies."
+
+msgid "OB_ANDROID"
+msgstr "%o verband sich mit der falschen Maschine."
+
+msgid "OB_MONSTRUCT"
+msgstr "%o bekam einen monströsen Cyber-Arschtritt verpasst."
+
+msgid "OB_ICE"
+msgstr "%o wurde verEISt."
+
+msgid "OB_BUZZER"
+msgstr "%o fühlt sich etwas gekitzelt."
+
+msgid "OB_STEALTH"
+msgstr "%o machte eine schockierende Entdeckung."
+
+msgid "OB_DMAN"
+msgstr "%o wurde aus dem Cyberspace gelöscht."
+
+msgid "OB_GLASS"
+msgstr "%o bekam ein Glaskinn."
+
+msgid "OB_MANIAC"
+msgstr "%os Mitgliedschaft im Leben wurde beendet."
+
+msgid "OB_MANIACHIT"
+msgstr "%o starb auf eine unvorstellbare Art und Weise."
+
+msgid "OB_TERMIN"
+msgstr "%o wurde von einem Femme-Fatale Freak gebraten."
+
+# This text is not gender neutral, obviously...
+msgid "OB_TERMINHIT"
+msgstr "%o kam dem anderen Geschlecht zu nahe."
+
+msgid "OB_REPLI"
+msgstr "%o verabschiedete sich von einem alten Freund."
+
+msgid "OB_REPLIHIT"
+msgstr "%o wurde von einem alten Freund in den Rücken gestochen."
+
+msgid "OB_PHAGE"
+msgstr "%o fiel der natürlichen Auslese zum Opfer."
+
+msgid "OB_THORN"
+msgstr "%o konnte einem dornigen Tod nicht entkommen."
+
+msgid "OB_SUMATIC"
+msgstr "%o bekam einen Sumo-Schlag an @[pp_de] empfindlichste Stelle."
+
+msgid "OB_GENIE"
+msgstr "%o bekam @[pp_de] drei Wünsche nicht erfüllt."
+
+msgid "OB_MINE"
+msgstr "%o versuchte, eine Mine zu streicheln."
+
+msgid "OB_MPKICK"
+msgstr "%o bekam einen Bruce-Lee-Fußtritt ins Gesicht."
+
+msgid "OB_MPREZNATOR"
+msgstr "%o erhielt eine schockierende Enthüllung von %k."
+
+msgid "OB_MPXPISTOL"
+msgstr "%o bekam eine doppelte Dosis von %ks Bestrafung."
+
+msgid "OB_MPTAZER"
+msgstr "%o wurde von %ks Schockstab ausgeschaltet."
+
+msgid "OB_MPCRYOGUN"
+msgstr "%o bekam eine Ladung von %ks eiskaltem Zorn ins Gesicht."
+
+msgid "OB_MPUZI"
+msgstr "%o wurde von %k im Gangsta-Stil perforiert."
+
+msgid "OB_MPZOOKA"
+msgstr "%o nahm %ks Photonenbombe."
+
+msgid "OB_MPZ_SPLASH"
+msgstr "%o wurde von %k zu einem Haufen Photonen verarbeitet."
+
+# Physically this is utter nonsense, of course.
+msgid "OB_MPANTIGUN"
+msgstr "%o wurde von %k zu Antimaterie reduziert."
+
+msgid "OB_MPNUKE"
+msgstr "%o verschluckte sich an %ks Atomrakete."
+
+msgid "OB_MPNUKESPLASH"
+msgstr "%o wurde von %ks Massenzerstörungsaktion verstrahlt."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_MPTELEFRAG"
+msgstr "%o wurde von %k zerfetzt."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_MONTELEFRAG"
+msgstr "%os Atomstruktur wurde vernichtet."
+
+msgctxt "doom hacx.hacx1"
+msgid "OB_DEFAULT"
+msgstr "%o hörte spontan auf zu existieren."
+
+msgid "GOTNUKER"
+msgstr "Ein NUKER! Verschluck daran!"
+
+msgid "GOTUZI"
+msgstr "UZI genommen!"
+
+msgid "GOTREZNATOR"
+msgstr "Ein HOIG Reznator - Grill paar Hintern"
+
+msgid "GOTPHOTONZOOKA"
+msgstr "Photonen-'zooka genommen!"
+
+msgid "GOTBIGSTICK"
+msgstr "Du trägst einen großen Stock!"
+
+msgid "GOTTAZER"
+msgstr "Tazer genommen!"
+
+msgid "GOTCRYOGUN"
+msgstr "Cryowaffe genommen! GEFRIER!"
+
+msgid "GOTROUNDS"
+msgstr "Munition genommen!"
+
+msgid "GOTROUNDSCASE"
+msgstr "Munitionskiste genommen!"
+
+# Was "grap" for some reason.
+msgid "GOTTORPEDO"
+msgstr "Torpedo genommen!"
+
+#, fuzzy
+msgid "GOTTORPEDOS"
+msgstr "Torpedokiste genommen!"
+
+msgid "GOTMOLECULES"
+msgstr "Molekülmodul genommen!"
+
+msgid "GOTMOLECULESTANK"
+msgstr "Tank mit Molekülmodulen genommen!"
+
+msgid "GOTCARTRIDGES"
+msgstr "Magazine genommen!"
+
+msgid "GOTCARTRIDGESCASE"
+msgstr "Magazinkiste genommen!"
+
+msgid "GOTVALISE"
+msgstr "Koffer mit Zeug genommen!"
+
+msgid "GOTFORCEFIELD"
+msgstr "Kraftfeld!"
+
+msgid "GOTMICROTEL"
+msgstr "007Microtel"
+
+msgid "GOTENKBLIND"
+msgstr "Du bist EnK-blind!"
+
+msgid "GOTRUBBERBOOTS"
+msgstr "Gummistiefel!"
+
+msgid "GOTSIARRAY"
+msgstr "SI-Feld Karte!"
+
+msgid "GOTINFRARED"
+msgstr "Infrarotbrille!"
+
+msgid "GOTINHALER"
+msgstr "Atme tief, Inhalierer!"
+
+msgid "GOTHYPONEED"
+msgstr "Eine Dosis Hydergine rettet dich!"
+
+msgid "GOTHYPO"
+msgstr "Hypo!"
+
+msgid "GOTKEYCARD"
+msgstr "Schlüsselkarte gefunden!"
+
+msgid "GOTCKEY"
+msgstr "C-Schlüssel gefunden!"
+
+msgid "GOTPASSWORD"
+msgstr "Passwort gefunden!"
+
+msgid "GOTBLUEZKEY"
+msgstr "Blauen Z-Schlüssel gefunden!"
+
+msgid "GOTYELWZKEY"
+msgstr "Gelben Z-Schlüssel gefunden!"
+
+msgid "GOTREDZKEY"
+msgstr "Roten Z-Schlüssel gefunden!"
+
+msgid "GOTBODYARMOR"
+msgstr "Körperpanzerung!"
+
+msgid "GOTCENTROPHENOXINE"
+msgstr "Centrophenoxin"
+
+msgid "GOTKEVLARVEST"
+msgstr "Kevlarweste!"
+
+#, fuzzy
+msgid "GOTSKEVLARVEST"
+msgstr "Super-Kevlarweste!"
+
+msgid "GOTMICROKIT"
+msgstr "MicroKit genommen!"
+
+msgid "GOTDAMPENER"
+msgstr "Dämpfer genommen!"
+
+msgid "PD_CKEY"
+msgstr "Du brauchst einen C-Schlüssel um das hier zu bedienen!"
+
+msgid "PD_KEYCARD"
+msgstr "Du brauchst eine Schlüsselkarte um das hier zu bedienen!"
+
+msgid "PD_PASSWORD"
+msgstr "Du brauchst eine Passwort um das hier zu bedienen!"
+
+msgid "PD_BLUEZKEY"
+msgstr "Du brauchst einen blauen Z-Schlüssel um das hier zu bedienen"
+
+msgid "PD_REDZKEY"
+msgstr "Du brauchst einen roten Z-Schlüssel um das hier zu bedienen!"
+
+msgid "PD_YELWZKEY"
+msgstr "Du brauchst einen gelben Z-Schlüssel um das hier zu bedienen!"
+
+msgid "X1TEXT"
+msgstr ""
+"Zwanzig Millionen in Gold sind nicht\n"
+"wirklich so viel wert, Hacker, nicht wahr?\n"
+"Das hier lässt den Knast wie ein Picknick erscheinen.\n"
+"\n"
+"Hässliche Bio-Mutationen und deine\n"
+"menschlichen Artgenossen hängen von\n"
+"der Decke wir Futtersäcke.\n"
+"\n"
+"Was zur Hölle ist dieses GENIE? Das ist\n"
+"wie kein anderer Computer den du jemals gehackt hast.\n"
+"\n"
+"Du findest besser das nächste Terminal,\n"
+"erledigst einige Mutantenärsche und\n"
+"siehst zu, aus Dodge herauszukommen!\n"
+"\n"
+
+#, fuzzy
+msgid "X2TEXT"
+msgstr ""
+"Wo sind all die Menschen!?\n"
+"\n"
+"Paris ist eine Geisterstadt, es sei denn,\n"
+"du zählst die Mutanten als Musterbürger.\n"
+"\n"
+"Du bist auf blutigen Widerstand getroffen.\n"
+"Mann können diese Viecher kämpfen.\n"
+"Glücklicherweise sind sie nicht die hellsten Leuchten.\n"
+"\n"
+"Aber du hast einige Informationen, die\n"
+"das Subkommitee haben will. Und es ist übel.\n"
+"\n"
+"Menschliche Nervenflüssigkeit ist was\n"
+"diese Viecher antreibt. Kein Wunder, dass\n"
+"die Nachbarschaft am Aussterben ist.\n"
+"Das musst du dem Subkommitee mitteilen. Und pass auf...\n"
+
+#, fuzzy
+msgid "X3TEXT"
+msgstr ""
+"Die Zivilisation, wie du sie kanntest,\n"
+"\n"
+"ist Nada. Keine Freunde, keine Familie.\n"
+"Keine Menschen mehr. Zumindest keine normalen.\n"
+"\n"
+"Nur eine Sache verbleibt: GENIE!\n"
+"Und wenn du ans Ende des Universum\n"
+"reisen müsstest, du wirst seinen\n"
+"Mutantenarsch finden, denn jetzt bist du sauer!\n"
+"\n"
+"Und das Gold? Das gibt's als Zugabe...\n"
+"\n"
+"... (Fortsetzung folgt) ..."
+
+#, fuzzy
+msgid "X5TEXT"
+msgstr ""
+"Du lebst!\n"
+"\n"
+"War waren die Chancen, Hacker?!\n"
+"weil es nur von Insekten wimmelt.\n"
+"\n"
+"Du kannst das Subkommitee nicht\n"
+"erreichen, was bedeutet, dass es kompromittiert ist.\n"
+"\n"
+"\n"
+"Du... bist alleine."
+
+msgid "TXT_HACXMAP01"
+msgstr "GenEmp A.G."
+
+msgid "TXT_HACXMAP02"
+msgstr "Tunnelstadt"
+
+msgid "TXT_HACXMAP03"
+msgstr "Lavaanbau"
+
+msgid "TXT_HACXMAP04"
+msgstr "Alcatraz"
+
+msgid "TXT_HACXMAP05"
+msgstr "Cyberzirkus"
+
+msgid "TXT_HACXMAP06"
+msgstr "Digitaler-Ota"
+
+msgid "TXT_HACXMAP07"
+msgstr "Die große Mauer"
+
+msgid "TXT_HACXMAP08"
+msgstr "Lustgarten"
+
+msgid "TXT_HACXMAP09"
+msgstr "Versteckte Festung"
+
+msgid "TXT_HACXMAP10"
+msgstr "Anarchistentraum"
+
+msgid "TXT_HACXMAP11"
+msgstr "Notus Uns!"
+
+msgid "TXT_HACXMAP12"
+msgstr "Gothischer Handschuh"
+
+msgid "TXT_HACXMAP13"
+msgstr "Die Kanäle"
+
+msgid "TXT_HACXMAP14"
+msgstr "Elektrodenkrieg"
+
+msgid "TXT_HACXMAP15"
+msgstr "Zwielicht von EnK"
+
+msgid "TXT_HACXMAP16"
+msgstr "Proteanischer Cybex"
+
+msgid "TXT_HACXMAP17"
+msgstr "Blutfluss"
+
+msgid "TXT_HACXMAP18"
+msgstr "Bizarro"
+
+msgid "TXT_HACXMAP19"
+msgstr "Kriegsräume"
+
+msgid "TXT_HACXMAP20"
+msgstr "Eindringlingsalarm!"
+
+msgid "TXT_HACXMAP31"
+msgstr "Trocknungsraum"
+
+#, fuzzy
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_CLEV"
+msgstr "Nächster Halt...\n"
+
+# Printed when entering the idchoppers cheat, which gives the player a
+# chainsaw
+#, fuzzy
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_CHOPPERS"
+msgstr "...ich brate deinen Arsch!"
+
+# Hacx's content here was totally useless so it got removed. However, this
+# string has to be defined and minimally altered so that the Dehacked
+# replacement is not being triggered.
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_BEHOLD"
+msgstr "inVuln, Str, Inviso, Rad, Allmap, oder Lite-amp?"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_BEHOLDX"
+msgstr "Es wird ernst!"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_NCON"
+msgstr "Cyberschnetzelmodus AN"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_NCOFF"
+msgstr "Cyberschnetzelmodus AUS"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_NOMUS"
+msgstr "Falsche Auswahl "
+
+# Should probably not be translated...
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_MUS"
+msgstr "Pump Up The Volume\n"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_KFAADDED"
+msgstr "Initiiere Twitch'n Kill-Modus"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_FAADDED"
+msgstr "So sei es, Hacker."
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_DQDON"
+msgstr "Cyberpotenzmodus AN"
+
+msgctxt "doom hacx.hacx1"
+msgid "STSTR_DQDOFF"
+msgstr "Cyberpotenzmodus AUS"
+
+msgctxt "doom hacx.hacx1"
+msgid "AMSTR_FOLLOWON"
+msgstr "Verfolgung AN"
+
+msgctxt "doom hacx.hacx1"
+msgid "AMSTR_FOLLOWOFF"
+msgstr "Verfolgung AUS"
+
+msgctxt "doom hacx.hacx1"
+msgid "DOSY"
+msgstr "- drücke Y um wegzurennen -"
+
+msgctxt "doom hacx.hacx1"
+msgid "ENDGAME"
+msgstr ""
+"Bist du verrückt oder mies gelaunt?\n"
+"Also? Ja oder Nein!"
+
+msgctxt "doom hacx.hacx1"
+msgid "NIGHTMARE"
+msgstr ""
+"Bist du sicher? Du kannst das\n"
+"nicht bewältigen, Hacker!\n"
+"\n"
+"Drücke Y um zu sterben. \n"
+
+# For most languages the original Doom text should suffice.
+msgctxt "doom hacx.hacx1"
+msgid "QSPROMPT"
+msgstr ""
+"Überschreibe einem Schnellspeicherdatenstand names\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Drücke Y oder N."
+
+msgctxt "doom hacx.hacx1"
+msgid "QLPROMPT"
+msgstr ""
+"Möchtest du den Datenstand schnellladen namens\n"
+"\n"
+"'%s'?\n"
+"\n"
+"Drücke Y oder N."
+
+msgid "CC_THUG"
+msgstr "Scherge"
+
+msgid "CC_ANDROID"
+msgstr "Android"
+
+msgid "CC_ICE"
+msgstr "Eis"
+
+msgid "CC_BUZZER"
+msgstr "Summer"
+
+msgid "CC_DMAN"
+msgstr "D-Mann"
+
+msgid "CC_PHAGE"
+msgstr "Bakteriophage"
+
+msgid "CC_MONSTRUCT"
+msgstr "Monstrukt"
+
+msgid "CC_MECH"
+msgstr "Verrückter Mecha"
+
+msgid "CC_TERMI"
+msgstr "Terminatrix"
+
+msgid "CC_THORN"
+msgstr "Dornending"
+
+msgid "CC_MAJONG"
+msgstr "Mahjong 7"
+
+msgctxt "doom hacx.hacx1"
+msgid "CC_HERO"
+msgstr "Dan Evanger"
+
+msgctxt "doom hacx.hacx1"
+msgid "SKILL_BABY"
+msgstr "Bitte schieß nicht!"
+
+msgctxt "doom hacx.hacx1"
+msgid "SKILL_EASY"
+msgstr "Ich brauche Gesundheit!"
+
+msgctxt "doom hacx.hacx1"
+msgid "SKILL_NORMAL"
+msgstr "Lass uns sie zerfetzen!"
+
+msgctxt "doom hacx.hacx1"
+msgid "SKILL_HARD"
+msgstr "Ich bin unsterblich!"
+
+msgctxt "doom hacx.hacx1"
+msgid "SKILL_NIGHTMARE"
+msgstr "Wahnsinn!"

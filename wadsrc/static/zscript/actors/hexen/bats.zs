@@ -40,14 +40,14 @@ class BatSpawner : SwitchableDecoration
 		TNT1 A -1;
 		Stop;
 	}
-	
+
 	//===========================================================================
 	// Bat Spawner Variables
 	//	special1	frequency counter
-	//	special2	
+	//	special2
 	//	args[0]		frequency of spawn (1=fastest, 10=slowest)
 	//	args[1]		spread angle (0..255)
-	//	args[2]		
+	//	args[2]
 	//	args[3]		duration of bats (in octics)
 	//	args[4]		turn amount per move (in degrees)
 	//
@@ -81,7 +81,7 @@ class BatSpawner : SwitchableDecoration
 			mo.target = self;
 		}
 	}
-	
+
 }
 
 // Bat ----------------------------------------------------------------------
@@ -106,7 +106,7 @@ class Bat : Actor
 		ABAT A 2;
 		Stop;
 	}
-	
+
 	void A_BatMove()
 	{
 		if (special2 < 0)
@@ -135,10 +135,6 @@ class Bat : Actor
 
 		// Handle Z movement
 		SetZ(target.pos.Z + 2 * BobSin(args[0]));
-		args[0] = (args[0] + 3) & 63;	
+		args[0] = (args[0] + 3) & 63;
 	}
 }
-
-
-
-

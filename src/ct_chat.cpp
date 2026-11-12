@@ -194,7 +194,7 @@ bool CT_Responder (event_t *ev)
 			}
 			else
 			{
-				CT_AddChar (ev->data1);
+				CT_AddChar((uint16_t)ev->data1);
 			}
 			return true;
 		}
@@ -253,7 +253,7 @@ void CT_Drawer (void)
 {
 	auto &vp = r_viewpoint;
 	auto drawer = twod;
-	FFont *displayfont = NewConsoleFont;
+	FFont *displayfont = FFont::GetConsoleFont(NewConsoleFont);
 
 	HU_DrawScores(vp.TicFrac);
 
@@ -291,6 +291,11 @@ void CT_Drawer (void)
 		promptwidth = displayfont->StringWidth (prompt) * scalex;
 		x = displayfont->GetCharWidth (displayfont->GetCursor()) * scalex * 2 + promptwidth;
 
+		if (displayfont->IsValidDynamicFont())
+		{
+			y -= displayfont->GetHeight();
+		}
+
 		FString printstr = ChatQueue;
 		// figure out if the text is wider than the screen
 		// if so, only draw the right-most portion of it.
@@ -303,7 +308,7 @@ void CT_Drawer (void)
 		}
 		printstr += displayfont->GetCursor();
 
-		DrawText(drawer, displayfont, CR_GREEN, 0, y, prompt.GetChars(), 
+		DrawText(drawer, displayfont, CR_GREEN, 0, y, prompt.GetChars(),
 			DTA_VirtualWidth, screen_width, DTA_VirtualHeight, screen_height, DTA_KeepRatio, true, TAG_DONE);
 		DrawText(drawer, displayfont, CR_GREY, promptwidth, y, printstr.GetChars(),
 			DTA_VirtualWidth, screen_width, DTA_VirtualHeight, screen_height, DTA_KeepRatio, true, TAG_DONE);
@@ -534,9 +539,14 @@ static bool DoSubstitution (FString &out, const char *in)
 	return true;
 }
 
+bool CanChat()
+{
+	return gamestate == GS_LEVEL && !demoplayback && (menuactive == MENU_Off || menuactive == MENU_GameplayMenu);
+}
+
 CCMD (messagemode)
 {
-	if (menuactive != MENU_Off)
+	if (!CanChat())
 		return;
 
 	const uint64_t time = I_msTime();
@@ -580,6 +590,12 @@ CCMD (say)
 		return;
 	}
 
+	if (!CanChat())
+	{
+		Printf("Game is not in a valid state to send messages.\n");
+		return;
+	}
+
 	const uint64_t time = I_msTime();
 	if (ChatCoolDown > time)
 	{
@@ -612,7 +628,7 @@ CCMD (say)
 
 CCMD (messagemode2)
 {
-	if (menuactive != MENU_Off)
+	if (!CanChat())
 		return;
 
 	const uint64_t time = I_msTime();
@@ -653,6 +669,12 @@ CCMD (say_team)
 	if (argv.argc() == 1)
 	{
 		Printf ("Usage: say_team <message>\n");
+		return;
+	}
+
+	if (!CanChat())
+	{
+		Printf("Game is not in a valid state to send messages.\n");
 		return;
 	}
 

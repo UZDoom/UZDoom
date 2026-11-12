@@ -36,7 +36,7 @@ class Staff : HereticWeapon
 
 	States
 	{
-	Ready:	
+	Ready:
 		STFF A 1 A_WeaponReady;
 		Loop;
 	Deselect:
@@ -51,7 +51,7 @@ class Staff : HereticWeapon
 		STFF B 8 A_ReFire;
 		Goto Ready;
 	}
-	
+
 	//----------------------------------------------------------------------------
 	//
 	// PROC A_StaffAttackPL1
@@ -100,7 +100,7 @@ class StaffPowered : Staff
 
 	States
 	{
-	Ready:	
+	Ready:
 		STFF DEF 4 A_WeaponReady;
 		Loop;
 	Deselect:
@@ -162,7 +162,4 @@ class StaffPuff2 : Actor
 		PUF4 ABCDEF 4 BRIGHT;
 		Stop;
 	}
-}	
-
-
-
+}

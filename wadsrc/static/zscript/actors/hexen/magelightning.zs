@@ -66,7 +66,7 @@ class MWeapLightning : MageWeapon
 		MLNG B 2 Bright Offset (0, 40);
 		Goto Ready;
 	}
-	
+
 	//============================================================================
 	//
 	// A_LightningReady
@@ -116,7 +116,7 @@ class MWeapLightning : MageWeapon
 		}
 	}
 
-	
+
 }
 
 // Ceiling Lightning --------------------------------------------------------
@@ -130,7 +130,7 @@ class Lightning : Actor
 		ActiveSound "MageLightningContinuous";
 		Obituary "$OB_MPMWEAPLIGHTNING";
 	}
-	
+
 	override int SpecialMissileHit (Actor thing)
 	{
 		if (thing.bShootable && thing != target)
@@ -168,7 +168,7 @@ class Lightning : Actor
 		}
 		return MHIT_PASS; // lightning zaps through all sprites
 	}
-	
+
 }
 
 class LightningCeiling : Lightning
@@ -209,7 +209,7 @@ class LightningCeiling : Lightning
 		ACLO E 1050;
 		Stop;
 	}
-	
+
 	//============================================================================
 	//
 	// A_LightningClip
@@ -328,7 +328,7 @@ class LightningCeiling : Lightning
 			mo.ExplodeMissile ();
 		}
 	}
-	
+
 }
 
 // Floor Lightning ----------------------------------------------------------
@@ -361,7 +361,7 @@ class LightningFloor : LightningCeiling
 		MLF2 P 1 Bright A_HideThing;
 		Goto Super::Death + 19;
 	}
-	
+
 	//============================================================================
 	//
 	// A_LastZap
@@ -372,7 +372,7 @@ class LightningFloor : LightningCeiling
 	{
 		Class<Actor> lightning = MissileName;
 		if (lightning == NULL) lightning = "LightningZap";
-		
+
 		Actor mo = Spawn(lightning, self.Pos, ALLOW_REPLACE);
 		if (mo)
 		{
@@ -409,13 +409,13 @@ class LightningZap : Actor
 		MLFX NOPQRSTU 2 Bright;
 		Stop;
 	}
-	
+
 	override int SpecialMissileHit (Actor thing)
 	{
 		Actor lmo;
 
 		if (thing.bShootable && thing != target)
-		{			
+		{
 			lmo = lastenemy;
 			if (lmo)
 			{
@@ -438,7 +438,7 @@ class LightningZap : Actor
 		}
 		return MHIT_DEFAULT;
 	}
-	
+
 	//============================================================================
 	//
 	// A_ZapMimic
@@ -462,5 +462,5 @@ class LightningZap : Actor
 		}
 	}
 
-	
+
 }

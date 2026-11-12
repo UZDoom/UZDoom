@@ -85,7 +85,7 @@ inline unsigned int BigLong(unsigned int x)
 #elif defined __BIG_ENDIAN__
 
 // Swap 16bit, that is, MSB and LSB byte.
-// No masking with 0xFF should be necessary. 
+// No masking with 0xFF should be necessary.
 inline short LittleShort (short x)
 {
 	return (short)((((unsigned short)x)>>8) | (((unsigned short)x)<<8));

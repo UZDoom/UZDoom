@@ -132,7 +132,7 @@ static void CenterMouse(int x, int y, LONG *centx, LONG *centy);
 
 extern LPDIRECTINPUT8 g_pdi;
 extern bool GUICapture;
-extern int BlockMouseMove; 
+extern int BlockMouseMove;
 
 // PRIVATE DATA DEFINITIONS ------------------------------------------------
 
@@ -253,7 +253,7 @@ void I_CheckNativeMouse(bool preferNative, bool eventhandlerresult)
 
 	if (!windowed)
 	{
-		// ungrab mouse when in the menu with mouse control on.		
+		// ungrab mouse when in the menu with mouse control on.
 		want_native = m_use_mouse && (menuactive == MENU_On || menuactive == MENU_OnNoPause);
 	}
 	else
@@ -524,17 +524,25 @@ void FRawMouse::Grab()
 
 		rid.usUsagePage = HID_GENERIC_DESKTOP_PAGE;
 		rid.usUsage = HID_GDP_MOUSE;
-		rid.dwFlags = RIDEV_CAPTUREMOUSE | RIDEV_NOLEGACY;
+		rid.dwFlags = RIDEV_NOLEGACY;
 		rid.hwndTarget = mainwindow.GetHandle();
 		if (RegisterRawInputDevices(&rid, 1, sizeof(rid)))
 		{
 			GetCursorPos(&UngrabbedPointerPos);
-			Grabbed = true;
-			SetCursorState(false);
+			ClipCursor(NULL);
+
+			// Manually create the window rect for the cursor to grab
+			RECT rect;
+			GetClientRect(rid.hwndTarget, &rect);
+
 			// By setting the cursor position, we force the pointer image
 			// to change right away instead of having it delayed until
 			// some time in the future.
 			CenterMouse(-1, -1, NULL, NULL);
+			
+			ClipCursor(&rect);
+			Grabbed = true;
+			SetCursorState(false);
 		}
 	}
 }
@@ -560,6 +568,7 @@ void FRawMouse::Ungrab()
 			Grabbed = false;
 			ClearButtonState();
 		}
+		ClipCursor(NULL); // this releases the cursor again
 		SetCursorState(true);
 		SetCursorPos(UngrabbedPointerPos.x, UngrabbedPointerPos.y);
 	}

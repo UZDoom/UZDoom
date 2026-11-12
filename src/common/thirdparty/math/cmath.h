@@ -1,7 +1,7 @@
 #ifndef __CMATH_H
 #define __CMATH_H
 
-#include "xs_Float.h"
+#include "m_round.h"
 
 #define USE_CUSTOM_MATH	// we want repreducably reliable results, even at the cost of performance
 #define USE_FAST_MATH	// use faster table-based sin and cos variants with limited precision (sufficient for Doom gameplay)
@@ -49,10 +49,8 @@ public:
 
 extern FFastTrig fasttrig;
 
-// This must use xs_Float to guarantee proper integer wraparound.
-#define DEG2BAM(f)		((unsigned)xs_CRoundToInt((f) * (0x40000000/90.)))
-#define RAD2BAM(f)		((unsigned)xs_CRoundToInt((f) * (0x80000000/3.14159265358979323846)))
-
+#define DEG2BAM(f) ((unsigned)RoundHalfEven((f) * (0x40000000/90.)))
+#define RAD2BAM(f) ((unsigned)RoundHalfEven((f) * (0x80000000/3.14159265358979323846)))
 
 inline double fastcosbam(unsigned int v)
 {

@@ -66,4 +66,3 @@ class Clink : Actor
 		Stop;
 	}
 }
-

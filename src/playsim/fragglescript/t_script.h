@@ -47,7 +47,7 @@ class DRunningScript;
 
 inline bool isop(int c)
 {
-	return !( ( (c)<='Z' && (c)>='A') || ( (c)<='z' && (c)>='a') || 
+	return !( ( (c)<='Z' && (c)>='A') || ( (c)<='z' && (c)>='a') ||
 		( (c)<='9' && (c)>='0') || ( (c)=='_') );
 }
 
@@ -163,7 +163,7 @@ public:
 	{
 		int32_t i;
 		fsfix fixed;          // haleyjd: fixed-point
-		
+
 		// the following are only used in the global script so we don't need to bother with them
 		// when serializing variables.
 		int *pI;                // pointer to game int
@@ -189,9 +189,9 @@ public:
 
 inline int variable_hash(const char *n)
 {
-	return 
-              (n[0]? (   ( n[0] + n[1] +   
-                   (n[1] ? n[2] +   
+	return
+			  (n[0]? (   ( n[0] + n[1] +
+				   (n[1] ? n[2] +
 				   (n[2] ? n[3]  : 0) : 0) ) % VARIABLESLOTS ) :0);
 }
 
@@ -321,7 +321,7 @@ public:
 
 	TObjPtr<AActor*> trigger;        // object which triggered this script
 
-	bool lastiftrue;     // haleyjd: whether last "if" statement was 
+	bool lastiftrue;     // haleyjd: whether last "if" statement was
 	// true or false
 
 	DFsScript();
@@ -637,7 +637,7 @@ struct FParser
 
 enum waittype_e
 {
-    wt_none,        // not waiting
+	wt_none,        // not waiting
 	wt_delay,       // wait for a set amount of time
 	wt_tagwait,     // wait for sector to stop moving
 	wt_scriptwait,  // wait for script to finish
@@ -655,16 +655,16 @@ public:
 	void Serialize(FSerializer &arc);
 
 	TObjPtr<DFsScript*> script;
-	
+
 	// where we are
 	int save_point;
-	
+
 	int wait_type;
 	int wait_data;  // data for wait: tagnum, counter, script number etc
-	
+
 	// saved variables
 	TObjPtr<DFsVariable*> variables[VARIABLESLOTS];
-	
+
 	TObjPtr<DRunningScript*> prev, next;  // for chain
 	TObjPtr<AActor*> trigger;
 };
@@ -715,4 +715,3 @@ void script_error(const char *s, ...) GCCPRINTF(1,2);
 void FS_EmulateCmd(FLevelLocals *l, char * string);
 
 #endif
-

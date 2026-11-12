@@ -57,10 +57,10 @@ class MessageBoxMenu : Menu
 
 		if (!generic_ui)
 		{
-			if (SmallFont && SmallFont.CanPrint(message) && SmallFont.CanPrint("$TXT_YES") && SmallFont.CanPrint("$TXT_NO")) textFont = SmallFont;
-			else if (OriginalSmallFont && OriginalSmallFont.CanPrint(message) && OriginalSmallFont.CanPrint("$TXT_YES") && OriginalSmallFont.CanPrint("$TXT_NO")) textFont = OriginalSmallFont;
+			if (SmallFont && SmallFont.CanPrint(message) && SmallFont.CanPrint("$TXT_YES") && SmallFont.CanPrint("$TXT_NO")) textFont = Font.GetSmallTextFont(SmallFont);
+			else if (OriginalSmallFont && OriginalSmallFont.CanPrint(message) && OriginalSmallFont.CanPrint("$TXT_YES") && OriginalSmallFont.CanPrint("$TXT_NO")) textFont = Font.GetSmallTextFont(OriginalSmallFont);
 		}
-
+		textFont = Font.GetSmallTextFont(textFont);
 		if (!textFont)
 		{
 			arrowFont = textFont = NewSmallFont;
@@ -109,7 +109,7 @@ class MessageBoxMenu : Menu
 
 		for (i = 0; i < c; i++)
 		{
-			screen.DrawText (textFont, Font.CR_UNTRANSLATED, destWidth/2 - mMessage.StringWidth(i)*NotifyFontScale/2, y, mMessage.StringAt(i), DTA_VirtualWidth, destWidth, DTA_VirtualHeight, destHeight, DTA_KeepRatio, true, 
+			screen.DrawText (textFont, Font.CR_UNTRANSLATED, destWidth/2 - mMessage.StringWidth(i)*NotifyFontScale/2, y, mMessage.StringAt(i), DTA_VirtualWidth, destWidth, DTA_VirtualHeight, destHeight, DTA_KeepRatio, true,
 				DTA_ScaleX, NotifyFontScale, DTA_ScaleY, NotifyFontScale);
 			y += fontheight;
 		}
@@ -125,8 +125,11 @@ class MessageBoxMenu : Menu
 			{
 				if ((MenuTime() % 8) < 6)
 				{
+					bool centerVerticalAlignment = textFont.IsValidDynamicFont();
+					float dynamicAlignment = (y + (fontheight * 0.5)) + (fontheight * messageSelection);
+					float staticAlignment = y + fontheight * messageSelection;
 					screen.DrawText(arrowFont, OptionMenuSettings.mFontColorSelection,
-						destWidth/2 - 3 - arrowFont.StringWidth(selector), y + fontheight * messageSelection, selector, DTA_VirtualWidth, destWidth, DTA_VirtualHeight, destHeight, DTA_KeepRatio, true);
+						destWidth/2 - 3 - arrowFont.StringWidth(selector), centerVerticalAlignment? dynamicAlignment : staticAlignment , selector, DTA_VirtualWidth, destWidth, DTA_VirtualHeight, destHeight, DTA_KeepRatio, true);
 				}
 			}
 		}
@@ -154,7 +157,7 @@ class MessageBoxMenu : Menu
 	{
 		if (Handler != null)
 		{
-			if (res) 
+			if (res)
 			{
 				CallHandler();
 			}
@@ -168,12 +171,12 @@ class MessageBoxMenu : Menu
 		{
 			if (mMessageMode == 0)
 			{
-				if (mAction == 'None') 
+				if (mAction == 'None')
 				{
 					mParentMenu.MenuEvent(res? MKEY_MBYes : MKEY_MBNo, false);
 					Close();
 				}
-				else 
+				else
 				{
 					Close();
 					if (res) SetMenu(mAction, -1);
@@ -199,12 +202,12 @@ class MessageBoxMenu : Menu
 				int ch = ev.KeyChar;
 				ch = ch >= 65 && ch <91? ch + 32 : ch;
 
-				if (ch == 110 /*'n'*/ || ch == 32) 
+				if (ch == 110 /*'n'*/ || ch == 32)
 				{
-					HandleResult(false);		
+					HandleResult(false);
 					return true;
 				}
-				else if (ch == 121 /*'y'*/) 
+				else if (ch == 121 /*'y'*/)
 				{
 					HandleResult(true);
 					return true;
@@ -307,6 +310,3 @@ class MessageBoxMenu : Menu
 
 
 }
-
-
-

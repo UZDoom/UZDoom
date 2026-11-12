@@ -107,7 +107,7 @@ static int BuildPaletteTranslation(int lump)
 	// The last entry is transparent.
 	opal.Palette[255] = 0;
 	opal.Remap[255] = 0;
-	// Store the remap table in the translation manager so that we do not need to keep track of it ourselves. 
+	// Store the remap table in the translation manager so that we do not need to keep track of it ourselves.
 	// Slot 0 for internal translations is a convenient location because normally it only contains a small number of translations.
 	return GetTranslationIndex(GPalette.StoreTranslation(TRANSLATION_Standard, &opal));
 }
@@ -233,7 +233,7 @@ void InitBuildTiles()
 	int numtiles;
 	int totaltiles = 0;
 
-	// The search rules are as follows: 
+	// The search rules are as follows:
 	// - scan the entire lump directory for palette.dat files.
 	// - if one is found, process the directory for .ART files and add textures for them.
 	// - once all have been found, process all directories that may contain Build data.
@@ -288,4 +288,3 @@ void InitBuildTiles()
 		}
 	}
 }
-

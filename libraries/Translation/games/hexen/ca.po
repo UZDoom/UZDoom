@@ -1,0 +1,415 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-06-07 01:01+0000\n"
+"Last-Translator: Júlia Rosell Saldaña <contacte@juliars.cat>\n"
+"Language-Team: Catalan <https://hosted.weblate.org/projects/doom-engine-games/hexen/ca/>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6\n"
+
+msgid "TXT_HEXEN_MAP01"
+msgstr "Sala de Ventatge"
+
+msgid "TXT_HEXEN_MAP02"
+msgstr "Set portals"
+
+msgid "TXT_HEXEN_MAP03"
+msgstr "Guardià del gel"
+
+msgid "TXT_HEXEN_MAP04"
+msgstr "Guardià del Foc"
+
+msgid "TXT_HEXEN_MAP05"
+msgstr "Guardià de l'acer"
+
+msgid "TXT_HEXEN_MAP06"
+msgstr "Crisol brillant"
+
+msgid "TXT_HEXEN_MAP13"
+msgstr "Bosc d'Ombres"
+
+msgid "TXT_HEXEN_MAP08"
+msgstr "Darkmere"
+
+msgid "TXT_HEXEN_MAP09"
+msgstr "Coves de Circe"
+
+msgid "TXT_HEXEN_MAP10"
+msgstr "Terres ermes"
+
+msgid "TXT_HEXEN_MAP11"
+msgstr "Bosquet Sagrat"
+
+msgid "TXT_HEXEN_MAP12"
+msgstr "Hipòstila"
+
+msgid "TXT_HEXEN_MAP27"
+msgstr "Seminari de l'Heresiarca"
+
+msgid "TXT_HEXEN_MAP28"
+msgstr "Capella del drac"
+
+msgid "TXT_HEXEN_MAP30"
+msgstr "Capella del grif"
+
+msgid "TXT_HEXEN_MAP31"
+msgstr "Capella del Vent Mortal"
+
+msgid "TXT_HEXEN_MAP32"
+msgstr "Hort de Lamentacions"
+
+msgid "TXT_HEXEN_MAP33"
+msgstr "Refectori Silenciós"
+
+msgid "TXT_HEXEN_MAP34"
+msgstr "Capella del llop"
+
+msgid "TXT_HEXEN_MAP21"
+msgstr "Post avançat abandonat"
+
+msgid "TXT_HEXEN_MAP22"
+msgstr "Castell del Dolor"
+
+msgid "TXT_HEXEN_MAP23"
+msgstr "Gàbia de penjats"
+
+msgid "TXT_HEXEN_MAP24"
+msgstr "Efluvi"
+
+msgid "TXT_HEXEN_MAP25"
+msgstr "Masmorres"
+
+msgid "TXT_HEXEN_MAP26"
+msgstr "Jardí desolat"
+
+msgid "TXT_HEXEN_MAP35"
+msgstr "Necròpoli"
+
+msgid "TXT_HEXEN_MAP36"
+msgstr "La tomba de Zedek"
+
+msgid "TXT_HEXEN_MAP37"
+msgstr "La tomba de Menelkir"
+
+msgid "TXT_HEXEN_MAP38"
+msgstr "La tomba de Traductus"
+
+msgid "TXT_HEXEN_MAP39"
+msgstr "Vivari"
+
+msgid "TXT_HEXEN_MAP40"
+msgstr "El crisol fosc"
+
+# intermission
+msgid "TXT_HEXEN_CLUS1MSG"
+msgstr ""
+"Havent passat els set portals\n"
+"que va segellar aquest regne, un vast\n"
+"domini d'extrems durs deserts\n"
+"davant teu. El foc, el gel i l'acer tenen\n"
+"t'ha provat, però reptes més grans\n"
+"seguir per davant. L'embolic dens de\n"
+"Segurament el bosc amaga ulls hostils,\n"
+"però el que hi ha més enllà serà pitjor.\n"
+"\n"
+"Desert àrid, pantans humits i\n"
+"les cavernes humides us barren el camí, però vosaltres\n"
+"no pots deixar que res t'eviti\n"
+"el teu destí, encara que poguessis venir\n"
+"desitjar que ho fos.\n"
+"\n"
+"I més enllà, parpellejant al\n"
+"distància, les parets sempre canviants\n"
+"de l'hipòstila semblen burlar-se\n"
+"tots els teus esforços."
+
+# intermission
+msgid "TXT_HEXEN_CLUS2MSG"
+msgstr ""
+"La teva ment encara se'n va\n"
+"trobades dins de l'hipòstila, tu\n"
+"trontolla't cap al que esperes\n"
+"una sortida. Sembla que les coses es mouen més ràpid\n"
+"i més ràpid, la teva visió es difumina i\n"
+"comença a esvair-seâ¦\n"
+"A mesura que el món s'enfonsa al teu voltant,\n"
+"la brillantor d'un teleportal\n"
+"t'engoleix. Un llampec de llum, i després\n"
+"puges cansat a peus.\n"
+"\n"
+"Estàs dalt d'una torre alta, i\n"
+"de baix venen els crits de la\n"
+"maleït. Tu fas un pas endavant, i\n"
+"a l'instant el so demoníac\n"
+"cantar et fa calfreds la sang.\n"
+"Per tots els déus de la mort! quin lloc\n"
+"has vingut? Per tots els déus de\n"
+"dolor, com trobaràs el teu\n"
+"sortida?"
+
+# intermission
+msgid "TXT_HEXEN_CLUS3MSG"
+msgstr ""
+"Les armes i artefactes més poderosos\n"
+"dels antics amb prou feines n'hi havia prou\n"
+"derrotar l'heresiarca i els seus\n"
+"minions, però ara la seva falta continua\n"
+"estireu escampats als vostres peus. Aplec\n"
+"l'última de les teves forces, tu\n"
+"prepareu-vos per entrar al portal que\n"
+"condueix des de l'interior de l'Heresiarca\n"
+"santuari.\n"
+"\n"
+"Damunt teu, les muralles d'an\n"
+"immens teler del castell. Torres silencioses\n"
+"i les parets nues envolten una sola\n"
+"agulla de pedra negra, que s'ajupi\n"
+"al centre del castell com a\n"
+"gegant cova. Foc i ombra\n"
+"gir darrere de les finestres obertes, desenes\n"
+"d'ulls malignes mirant cap avall\n"
+"tu.\n"
+"En algun lloc dins, els teus enemics són\n"
+"esperant…"
+
+# intermission
+msgid "TXT_HEXEN_CLUS4MSG"
+msgstr ""
+"\"â¦ i ell viatjarà cap al\n"
+"regnes dels morts, i competir amb\n"
+"les forces que hi ha, fins al mateix temps\n"
+"portes de la desesperació. Però si ell\n"
+"tornarà de nou al món de\n"
+"llum, ningú ho sap\".\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"Maleït."
+
+# intermission
+msgid "TXT_HEXEN_WIN1MSG"
+msgstr ""
+"Amb un crit d'agonia ets\n"
+"arrasat d'aquest món cap a dins\n"
+"un altre, cada part del teu cos\n"
+"envoltat de foc místic. Quan el teu\n"
+"la visió s'aclareix, et trobes\n"
+"dempeus en un gran saló, ple\n"
+"amb ecos fantasmals i amenaçadors\n"
+"ombres. A la distància pots\n"
+"veure una tarima elevada, i sobre ella la\n"
+"única font de llum en aquest món."
+
+# intermission
+msgid "TXT_HEXEN_WIN2MSG"
+msgstr ""
+"Això només pot ser l'esfera del caos,\n"
+"la font del poder de korax. amb\n"
+"això, pots crear mons... o\n"
+"destruir-los. Per drets de batalla\n"
+"i la conquesta és teva, i amb\n"
+"mans tremolants que arribes per agafar\n"
+"això. Potser, ara, ho farà un nou jugador\n"
+"uneix-te al joc còsmic del poder. M'agrada\n"
+"el peó que és ascendit a reina,\n"
+"de sobte els mateixos abasts de la\n"
+"el tauler sembla estar al teu abast."
+
+# intermission
+msgid "TXT_HEXEN_WIN3MSG"
+msgstr ""
+"\\n"
+"però hi ha altres jugadors més poderosos\n"
+"que tu, i qui pot saber-ne\n"
+"propers moviments?"
+
+# script texts
+msgid "TXT_ACS_MAP01_5_THEDO"
+msgstr "La porta està tancada"
+
+# script texts
+msgid "TXT_ACS_MAP02_9_GREET"
+msgstr "Salutacions, mortal"
+
+# script texts
+msgid "TXT_ACS_MAP02_11_AREYO"
+msgstr "Estàs preparat per morir?"
+
+# script texts
+msgid "TXT_ACS_MAP02_20_ADOOR"
+msgstr "Es va obrir una porta al Guardià del Gel"
+
+# script texts
+msgid "TXT_ACS_MAP03_12_THISP"
+msgstr "Aquest camí està barrat"
+
+# script texts
+msgid "TXT_ACS_MAP04_9_ONEHA"
+msgstr "La meitat del trencaclosques s'ha resolt"
+
+# script texts
+msgid "TXT_ACS_MAP04_10_ONTHE"
+msgstr "als Set Portals"
+
+# script texts
+msgid "TXT_ACS_MAP04_11_ONETH"
+msgstr "S'ha resolt un terç del trencaclosques"
+
+# script texts
+msgid "TXT_ACS_MAP04_12_STAIR"
+msgstr "Les escales han pujat als Set Portals"
+
+# script texts
+msgid "TXT_ACS_MAP05_6_ONETH"
+msgstr "S'ha resolt un terç del trencaclosques"
+
+# script texts
+msgid "TXT_ACS_MAP05_7_ONTHE"
+msgstr "als Set Portals"
+
+# script texts
+msgid "TXT_ACS_MAP05_8_STAIR"
+msgstr "Les escales han pujat als Set Portals"
+
+# script texts
+msgid "TXT_ACS_MAP05_9_YOUHA"
+msgstr "Heu de trobar un altre interruptor…"
+
+# script texts
+msgid "TXT_ACS_MAP05_10_STONE"
+msgstr "Les pedres molen als Set Portals"
+
+# script texts
+msgid "TXT_ACS_MAP08_6_ONESI"
+msgstr "S'ha resolt una sisena part del trencaclosques"
+
+# script texts
+msgid "TXT_ACS_MAP08_7_ONTHE"
+msgstr "al bosc de les ombres"
+
+# script texts
+msgid "TXT_ACS_MAP08_10_THEDO"
+msgstr "La porta està barrada des de dins"
+
+# script texts
+msgid "TXT_ACS_MAP08_11_YOUHE"
+msgstr "Se sent una porta obrir-se a la llunyania"
+
+# script texts
+msgid "TXT_ACS_MAP09_6_ONESI"
+msgstr "S'ha resolt una sisena part del trencaclosques"
+
+# script texts
+msgid "TXT_ACS_MAP09_7_ONTHE"
+msgstr "al bosc de les ombres"
+
+# script texts
+msgid "TXT_ACS_MAP10_6_ONESI"
+msgstr "S'ha resolt una sisena part del trencaclosques"
+
+# script texts
+msgid "TXT_ACS_MAP10_7_ONTHE"
+msgstr "al bosc de les ombres"
+
+# script texts
+msgid "TXT_ACS_MAP11_0_ETTIN"
+msgstr "\\ ettins a l'esquerra"
+
+# script texts
+msgid "TXT_ACS_MAP11_1_YOUWA"
+msgstr "Has esperat massa, ara et mors!"
+
+# script texts
+msgid "TXT_ACS_MAP11_7_ADOOR"
+msgstr "Es va obrir una porta al lloc avançat dels abandonats"
+
+# script texts
+msgid "TXT_ACS_MAP12_9_THISD"
+msgstr "Aquesta porta encara no s'obrirà"
+
+# script texts
+msgid "TXT_ACS_MAP13_11_MYSER"
+msgstr "Els meus servents poden olorar la teva sang, humà"
+
+# script texts
+msgid "TXT_ACS_MAP21_0_ADOOR"
+msgstr "Es va obrir una porta al Gibbet"
+
+# script texts
+msgid "TXT_ACS_MAP21_2_THEDO"
+msgstr "La porta està barrada des de dins"
+
+# script texts
+msgid "TXT_ACS_MAP22_3_APLAT"
+msgstr "S'ha baixat una plataforma a la torre"
+
+# script texts
+msgid "TXT_ACS_MAP22_27_YOUHA"
+msgstr "Has jugat massa temps a aquest joc, mortal…"
+
+# script texts
+msgid "TXT_ACS_MAP22_29_ITHIN"
+msgstr "Crec que et retiraré del tauler"
+
+# script texts
+msgid "TXT_ACS_MAP23_10_YOUHE"
+msgstr "Sents una porta obrir-se a dalt"
+
+# script texts
+msgid "TXT_ACS_MAP27_8_WORSH"
+msgstr "Adora'm, i encara puc ser misericordiós"
+
+# script texts
+msgid "TXT_ACS_MAP27_10_THENA"
+msgstr "Aleshores, potser no"
+
+# script texts
+msgid "TXT_ACS_MAP28_6_ONENI"
+msgstr "S'ha resolt una novena part del trencaclosques"
+
+# script texts
+msgid "TXT_ACS_MAP28_7_ONTHE"
+msgstr "Sobre el Monestir"
+
+# script texts
+msgid "TXT_ACS_MAP30_6_ONENI"
+msgstr "S'ha resolt una novena part del trencaclosques"
+
+# script texts
+msgid "TXT_ACS_MAP30_7_ONTHE"
+msgstr "Sobre el Monestir"
+
+# script texts
+msgid "TXT_ACS_MAP34_1_ONENI"
+msgstr "S'ha resolt una novena part del trencaclosques"
+
+# script texts
+msgid "TXT_ACS_MAP34_2_ONTHE"
+msgstr "Sobre el Monestir"
+
+# script texts
+msgid "TXT_ACS_MAP35_0_THEPO"
+msgstr "El portal ha estat segellat"
+
+# script texts
+msgid "TXT_ACS_MAP35_1_CHOOS"
+msgstr "Tria el teu destí"
+
+# script texts
+msgid "TXT_ACS_MAP35_3_THEDO"
+msgstr "La porta està barrada des de dins"
+
+# script texts
+msgid "TXT_ACS_MAP35_12_AREYO"
+msgstr "Ets prou fort"
+
+# script texts
+msgid "TXT_ACS_MAP35_14_TOFAC"
+msgstr "Per enfrontar-se als teus propis mestres?"

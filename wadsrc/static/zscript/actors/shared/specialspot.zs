@@ -28,7 +28,7 @@ class SpotState : Object native play
 	native SpecialSpot GetRandomSpot(class<Actor> type, bool onlyonce);
 	native void AddSpot(SpecialSpot spot);
 	native void RemoveSpot(SpecialSpot spot);
-	
+
 }
 
 class SpecialSpot : Actor
@@ -52,7 +52,7 @@ class SpecialSpot : Actor
 		if (sstate != NULL) sstate.RemoveSpot(self);
 		Super.OnDestroy();
 	}
-	
+
 	// Mace spawn spot ----------------------------------------------------------
 
 	// Every mace spawn spot will execute this action. The first one

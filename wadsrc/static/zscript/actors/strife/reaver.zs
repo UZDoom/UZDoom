@@ -41,7 +41,7 @@ class Reaver : Actor
 		HitObituary "$OB_REAVERHIT";
 		Obituary "$OB_REAVER";
 	}
-	
+
 	States
 	{
 	Spawn:
@@ -82,11 +82,11 @@ class Reaver : Actor
 	}
 
 }
-		
+
 extend class Actor
 {
 	// The Inquisitor also uses this function
-	
+
 	void A_ReaverRanged ()
 	{
 		if (target != null)

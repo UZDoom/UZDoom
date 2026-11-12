@@ -197,12 +197,12 @@ RetailOnly		= 121
  26 = USE|REP,		Door_LockedRaise (0, D_SLOW, VDOORWAIT, 4, tag)
  27 = USE|REP,		Door_LockedRaise (0, D_SLOW, VDOORWAIT, 3, tag)
  28 = USE|REP,		Door_LockedRaise (0, D_SLOW, VDOORWAIT, 10, tag)
- 
+
  31 = USE|MONST,	Door_Open (0, D_SLOW, tag)
  32 = USE,		Door_LockedRaise (0, D_SLOW, 0, 4, tag)
  33 = USE,		Door_LockedRaise (0, D_SLOW, 0, 10, tag)
  34 = USE,		Door_LockedRaise (0, D_SLOW, 0, 3, tag)
- 
+
 117 = USE|REP,		Door_Raise (0, D_FAST, VDOORWAIT, tag)
 118 = USE,		Door_Open (0, D_FAST, tag)
 
@@ -365,4 +365,3 @@ lineflag 9 = ML_RAILING;
 lineflag 10 = ML_BLOCK_FLOATERS;
 lineflag 11 = ML_TRANSPARENT;
 lineflag 12 = ML_TRANSLUCENT;
-

@@ -58,7 +58,7 @@ class Blaster : HereticWeapon
 		BLSR A 0 A_ReFire;
 		Goto Ready;
 	}
-	
+
 	//----------------------------------------------------------------------------
 	//
 	// PROC A_FireBlasterPL1
@@ -85,11 +85,6 @@ class Blaster : HereticWeapon
 		if (player.refire)
 		{
 			ang += Random2[FireBlaster]() * (5.625 / 256);
-
-			if (GetCVar ("vertspread") && !sv_novertspread)
-			{
-				pitch += Random2[FireBlaster]() * (3.549 / 256);
-			}
 		}
 		LineAttack (ang, PLAYERMISSILERANGE, pitch, damage, 'Hitscan', "BlasterPuff");
 		A_StartSound ("weapons/blastershoot", CHAN_WEAPON);
@@ -146,10 +141,10 @@ class BlasterFX1 : FastProjectile
 		FX18 CDEFG 4 BRIGHT;
 		Stop;
 	}
-	
+
 	//----------------------------------------------------------------------------
 	//
-	// 
+	//
 	//
 	//----------------------------------------------------------------------------
 
@@ -244,7 +239,7 @@ class Ripper : Actor
 		FX18 OPQRS 4 BRIGHT;
 		Stop;
 	}
-	
+
 	override int DoSpecialDamage (Actor target, int damage, Name damagetype)
 	{
 		if (target is "Ironlich")
@@ -257,7 +252,7 @@ class Ripper : Actor
 		}
 		return damage;
 	}
-	
+
 }
 
 // Blaster Puff -------------------------------------------------------------
@@ -285,4 +280,3 @@ class BlasterPuff : Actor
 		Stop;
 	}
 }
-

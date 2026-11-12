@@ -35,7 +35,7 @@ extend struct _
 	native readonly Weapon WP_NOCHANGE;
 	deprecated("3.8", "Use Actor.isFrozen() or Level.isFrozen() instead") native readonly bool globalfreeze;
 	native int LocalViewPitch;
-	
+
 	// sandbox state in multi-level setups:
 	native play @PlayerInfo players[MAXPLAYERS];
 	native readonly bool playeringame[MAXPLAYERS];
@@ -220,7 +220,7 @@ class Thinker : Object native play
 {
 	enum EStatnums
 	{
- 		// Thinkers that don't actually think
+		// Thinkers that don't actually think
 		STAT_INFO,								// An info queue
 		STAT_DECAL,								// A decal
 		STAT_AUTODECAL,							// A decal that can be automatically deleted
@@ -255,14 +255,14 @@ class Thinker : Object native play
 
 
 	native LevelLocals Level;
-	
+
 	virtual native void Tick();
 	virtual native void PostBeginPlay();
 	virtual void OnLoad() {}
 	native void AddToTravellingList();
 	native void ChangeStatNum(int stat);
 	native clearscope int GetStatNum() const;
-	
+
 	static clearscope int Tics2Seconds(int tics)
 	{
 		return int(tics / TICRATE);
@@ -310,7 +310,7 @@ class BlockThingsIterator : Object native
 	native Actor thing;
 	native Vector3 position;
 	native int portalflags;
-	
+
 	native static BlockThingsIterator Create(Actor origin, double checkradius = -1, bool ignorerestricted = false);
 	native static BlockThingsIterator CreateFromPos(double checkx, double checky, double checkz, double checkh, double checkradius, bool ignorerestricted);
 	native bool Next();
@@ -321,7 +321,7 @@ class BlockLinesIterator : Object native
 	native Line CurLine;
 	native Vector3 position;
 	native int portalflags;
-	
+
 	native static BlockLinesIterator Create(Actor origin, double checkradius = -1);
 	native static BlockLinesIterator CreateFromPos(Vector3 pos, double checkh, double checkradius, Sector sec = null);
 	native bool Next();
@@ -488,7 +488,7 @@ struct FSpawnParticleParams
 	native Vector3 pos;
 	native Vector3 vel;
 	native Vector3 accel;
-	
+
 	native double startalpha;
 	native double fadestep;
 	native double fadeoutstep; // unlike fadestep, this is always expected to be a positive value.
@@ -507,7 +507,7 @@ struct LevelLocals native
 		UDMF_Sector,
 		//UDMF_Thing // not implemented
 	};
-	
+
 	const CLUSTER_HUB = 0x00000001;	// Cluster uses hub behavior
 
 
@@ -517,7 +517,7 @@ struct LevelLocals native
 	native readonly Array<@Vertex> Vertexes;
 	native readonly Array<@LinePortal> LinePortals;
 	native internal readonly Array<@SectorPortal> SectorPortals;
-	
+
 	native readonly int time;
 	native readonly int maptime;
 	native readonly int totaltime;
@@ -605,7 +605,7 @@ struct LevelLocals native
 	native clearscope int FindUniqueTid(int start = 0, int limit = 0, bool clientSide = false);
 	native uint GetSkyboxPortal(Actor actor);
 	native void ReplaceTextures(String from, String to, int flags);
-    clearscope native HealthGroup FindHealthGroup(int id);
+	clearscope native HealthGroup FindHealthGroup(int id);
 	native vector3, int PickDeathmatchStart();
 	native vector3, int PickPlayerStart(int pnum, int flags = 0);
 	native int isFrozen() const;
@@ -623,7 +623,7 @@ struct LevelLocals native
 	native clearscope vector2 Vec2Diff(vector2 v1, vector2 v2) const;
 	native clearscope vector3 Vec3Diff(vector3 v1, vector3 v2) const;
 	native clearscope vector3 SphericalCoords(vector3 viewpoint, vector3 targetPos, vector2 viewAngles = (0, 0), bool absolute = false) const;
-	
+
 	native clearscope vector2 Vec2Offset(vector2 pos, vector2 dir, bool absolute = false) const;
 	native clearscope vector3 Vec2OffsetZ(vector2 pos, vector2 dir, double atz, bool absolute = false) const;
 	native clearscope vector3 Vec3Offset(vector3 pos, vector3 dir, bool absolute = false) const;
@@ -651,7 +651,7 @@ struct LevelLocals native
 
 	String TimeFormatted(bool totals = false)
 	{
-		int sec = Thinker.Tics2Seconds(totals? totaltime : time); 
+		int sec = Thinker.Tics2Seconds(totals? totaltime : time);
 		return String.Format("%02d:%02d:%02d", sec / 3600, (sec % 3600) / 60, sec % 60);
 	}
 
@@ -691,8 +691,8 @@ struct State native
 	native readonly int sprite;
 	native readonly int16 Tics;
 	native readonly uint16 TicRange;
-	native readonly uint8 Frame;		
-	native readonly uint8 UseFlags;	
+	native readonly uint8 Frame;
+	native readonly uint8 UseFlags;
 	native readonly int Misc1;
 	native readonly int Misc2;
 	native readonly uint16 bSlow;
@@ -702,7 +702,7 @@ struct State native
 	native readonly bool bSameFrame;
 	native readonly bool bCanRaise;
 	native readonly bool bDehacked;
-	
+
 	native int DistanceTo(state other) const;
 	native bool ValidateSpriteFrame() const;
 	native TextureID, bool, Vector2 GetSpriteTexture(int rotation, int skin = 0, Vector2 scale = (0,0), int spritenum = -1, int framenum = -1) const;
@@ -839,7 +839,7 @@ class Door : MovingCeiling native
 	native readonly double	m_BotDist, m_OldFloorDist;
 	native readonly Vertex	m_BotSpot;
 	native readonly double	m_Speed;
-	
+
 	// 1 = up, 0 = waiting at top, -1 = down
 	enum EDirection
 	{
@@ -912,7 +912,7 @@ class Floor : MovingFloor native
 		stairSync = 2,
 		stairCrush = 4,
 	};
-	
+
 	native readonly EFloor			m_Type;
 	native readonly int				m_Crush;
 	native readonly bool			m_Hexencrush;
@@ -1003,7 +1003,7 @@ class Ceiling : MovingCeiling native
 	{
 		return level.CreateCeiling(sec, type, ln, speed, speed2, height, crush, silent, change, crushmode);
 	}
-	
+
 }
 
 struct LookExParams
@@ -1022,7 +1022,7 @@ class Lighting : SectorEffect native
 
 struct Shader native
 {
-	// This interface was deprecated for the pointless player dependency 
+	// This interface was deprecated for the pointless player dependency
 	private static bool IsConsolePlayer(PlayerInfo player)
 	{
 		return player && player.mo && player == players[consoleplayer];

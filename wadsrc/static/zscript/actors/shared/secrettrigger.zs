@@ -40,6 +40,5 @@ class SecretTrigger : Actor
 		Destroy ();
 	}
 
-	
-}
 
+}

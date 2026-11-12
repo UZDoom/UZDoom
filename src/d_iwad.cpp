@@ -24,6 +24,7 @@
 
 #include "c_cvars.h"
 #include "cmdlib.h"
+#include "c_console.h"
 #include "d_main.h"
 #include "d_steam.h"
 #include "engineerrors.h"
@@ -49,18 +50,30 @@ EXTERN_CVAR(Bool, autoloadwidescreen);
 EXTERN_CVAR(String, language);
 EXTERN_CVAR(Int, i_exit_on_not_found);
 
-CVAR(Bool, i_loadsupportwad, true, CVAR_ARCHIVE|CVAR_GLOBALCONFIG) // Disabled in net games.
-CVAR(Bool, i_is_new_release, true, 0)
-CVAR(Int, i_display_new_release, 1, CVAR_ARCHIVE|CVAR_GLOBALCONFIG) // 0:no, 1: yes, 2: always for testing
-
+// Disabled in net games.
+CVARD(Bool, i_loadsupportwad, true, CVAR_ARCHIVE|CVAR_GLOBALCONFIG, "Load id24.wad");
+// Does this run open the release notes?
+CVARD(Bool, i_is_new_release, true, CVAR_HIDDEN, "");
 // Search game distributors' (Steam, GOG, Bethesda) paths for installed IWADs
-CVAR(Bool, i_searchdistributors, true, CVAR_ARCHIVE|CVAR_GLOBALCONFIG)
+CVARD(Bool, i_searchdistributors, true, CVAR_ARCHIVE|CVAR_GLOBALCONFIG, "Search storefront intallations for IWADS");
+// Show release notes upon update 0:no, 1: yes, 2: always for testing, 3: always plus upcoming
+CVARD(Int, i_display_new_release, 1, CVAR_ARCHIVE|CVAR_GLOBALCONFIG, "Show release notes upon update");
+
+CVARD(Bool, ui_remember_size, true,  CVAR_ARCHIVE|CVAR_GLOBALCONFIG, "Launcher retains size between launches");
+CVARD(Int, ui_launcher_width, 0,  CVAR_ARCHIVE|CVAR_GLOBALCONFIG, "Launcher width");
+CVARD(Int, ui_launcher_height, 0,  CVAR_ARCHIVE|CVAR_GLOBALCONFIG, "Launcher height");
 
 EXTERN_FARG(iwad);
 EXTERN_FARG(host);
 EXTERN_FARG(join);
 
 bool foundprio = false; // global to prevent iwad box from appearing
+
+#ifdef _WIN32
+static constexpr char PATH_LIST_SEPARATOR = ';';
+#else
+static constexpr char PATH_LIST_SEPARATOR = ':';
+#endif
 
 //==========================================================================
 //
@@ -261,10 +274,10 @@ void FIWadManager::ParseIWadInfo(const char *fn, const char *data, int datasize,
 					iwad->LoadWidescreen = sc.Number;
 				}
 				else if (sc.Compare("DiscordAppId"))
-				{
+				{ // TODO readd discordrpc with better library
 					sc.MustGetStringName("=");
 					sc.MustGetString();
-					iwad->DiscordAppId = sc.String;
+					//iwad->DiscordAppId = sc.String;
 				}
 				else if (sc.Compare("SteamAppId"))
 				{
@@ -360,7 +373,7 @@ int FIWadManager::ScanIWAD (const char *iwad)
 
 	mLumpsFound.Resize(mIWadInfos.Size());
 
-	auto CheckFileName = [=](const char *name)
+	auto CheckFileName = [=,this](const char *name)
 	{
 		for (unsigned i = 0; i< mIWadInfos.Size(); i++)
 		{
@@ -477,6 +490,18 @@ void FIWadManager::CollectSearchPaths()
 			{
 				FString nice = NicePath(value);
 				if (nice.Len() > 0) mRecursiveSearchPaths.Push(nice);
+			}
+			else if (stricmp(key, "PathList") == 0)
+			{
+				FString nice = NicePath(value);
+				if (nice.Len() > 0)
+				{
+					TArray<FString> niceList = nice.Split(PATH_LIST_SEPARATOR);
+					for (const FString &path : niceList)
+					{
+						if (path.Len() > 0) mSearchPaths.Push(path);
+					}
+				}
 			}
 		}
 	}
@@ -626,6 +651,7 @@ int FIWadManager::IdentifyVersion (std::vector<FileSys::ResourceName>&wadfiles, 
 	// Collect all IWADs in the search path
 	for (auto &dir : mSearchPaths)
 	{
+		DEBUG_LOG("Using IWAD search path %s", dir.GetChars());
 		AddIWADCandidates(dir.GetChars());
 	}
 	for (auto& dir : mRecursiveSearchPaths)
@@ -795,7 +821,7 @@ int FIWadManager::IdentifyVersion (std::vector<FileSys::ResourceName>&wadfiles, 
 		gamedir = "~/Library/Application Support/" GAMENAMELOWERCASE "/";
 		cfgfile = "~/Library/Preferences/" GAMENAMELOWERCASE ".ini";
 #else
-		auto gd = FStringf("%s/games/" GAMENAMELOWERCASE, GetDataPath());
+		auto gd = M_GetAppDataPath(true);
 		auto cd = FStringf("%s/" GAMENAMELOWERCASE ".ini", GetConfigPath());
 		gd.Substitute("$HOME/", "~/");
 		cd.Substitute("$HOME/", "~/");
@@ -820,7 +846,8 @@ int FIWadManager::IdentifyVersion (std::vector<FileSys::ResourceName>&wadfiles, 
 	int pick = 0;
 
 	// Present the IWAD selection box.
-	bool alwaysshow = (queryiwad && !Args->CheckParm(FArg_iwad) && !foundprio);
+	bool showlauncher = Args->CheckParm(FArg_showlauncher);
+	bool alwaysshow = (queryiwad && !Args->CheckParm(FArg_iwad) && !foundprio) || showlauncher;
 
 	if (!havepicked && (alwaysshow || picks.Size() > 1))
 	{
@@ -843,25 +870,34 @@ int FIWadManager::IdentifyVersion (std::vector<FileSys::ResourceName>&wadfiles, 
 		FStartupSelectionInfo info = FStartupSelectionInfo(wads, *Args, flags);
 
 		info.DefaultFileLoadBehaviour = i_exit_on_not_found;
-		info.isNewRelease = (i_display_new_release>1) || i_is_new_release;
+		info.displayRelease = (i_display_new_release != 1)? i_display_new_release: i_is_new_release? 1: 0;
 		info.notifyNewRelease = !!i_display_new_release;
 
-		if (I_PickIWad((queryiwad || Args->CheckParm(FArg_showlauncher)) || HoldingQueryKey(queryiwad_key), info))
+		if (ui_remember_size)
 		{
-			pick = info.SaveInfo();
-			disableautoload = !!(info.DefaultStartFlags & 1);
-			autoloadlights = !!(info.DefaultStartFlags & 2);
-			autoloadbrightmaps = !!(info.DefaultStartFlags & 4);
-			autoloadwidescreen = !!(info.DefaultStartFlags & 8);
-			i_loadsupportwad = !!(info.DefaultStartFlags & 16);
-			i_exit_on_not_found = info.DefaultFileLoadBehaviour;
-			if (!info.notifyNewRelease)
-				i_display_new_release = 0; // don't change truthy values
+			info.LauncherWidth = ui_launcher_width;
+			info.LauncherHeight = ui_launcher_height;
 		}
-		else
+
+		const bool pickRes = I_PickIWad(queryiwad || showlauncher || HoldingQueryKey(queryiwad_key), info);
+		pick = info.SaveInfo();
+		disableautoload = !!(info.DefaultStartFlags & 1);
+		autoloadlights = !!(info.DefaultStartFlags & 2);
+		autoloadbrightmaps = !!(info.DefaultStartFlags & 4);
+		autoloadwidescreen = !!(info.DefaultStartFlags & 8);
+		i_loadsupportwad = !!(info.DefaultStartFlags & 16);
+		i_exit_on_not_found = info.DefaultFileLoadBehaviour;
+		if (!info.notifyNewRelease)
+			i_display_new_release = 0; // don't change truthy values
+		if (ui_remember_size)
 		{
+			ui_launcher_width = info.LauncherWidth;
+			ui_launcher_height = info.LauncherHeight;
+		}
+
+		if (!pickRes)
 			return -1;
-		}
+
 		havepicked = true;
 	}
 
@@ -961,7 +997,7 @@ const FIWADInfo *FIWadManager::FindIWAD(std::vector<FileSys::ResourceName>& wadf
 		GameStartupInfo.LoadBrightmaps = iwad_info->LoadBrightmaps;
 	if (GameStartupInfo.Type == 0) GameStartupInfo.Type = iwad_info->StartupType;
 	if (GameStartupInfo.Song.IsEmpty()) GameStartupInfo.Song = iwad_info->Song;
-	if (GameStartupInfo.DiscordAppId.IsEmpty()) GameStartupInfo.DiscordAppId = iwad_info->DiscordAppId;
+	//if (GameStartupInfo.DiscordAppId.IsEmpty()) GameStartupInfo.DiscordAppId = iwad_info->DiscordAppId;
 	if (GameStartupInfo.SteamAppId.IsEmpty()) GameStartupInfo.SteamAppId = iwad_info->SteamAppId;
 	I_SetIWADInfo();
 	return iwad_info;

@@ -1,6 +1,8 @@
 #pragma once
 
 #include <unordered_map>
+#include <atomic>
+#include <mutex>
 #include <zwidget/window/window.h>
 #include <zwidget/window/sdl2nativehandle.h>
 #include <SDL2/SDL.h>
@@ -8,7 +10,7 @@
 class SDL2DisplayWindow : public DisplayWindow
 {
 public:
-	SDL2DisplayWindow(DisplayWindowHost* windowHost, bool popupWindow, SDL2DisplayWindow* owner, RenderAPI renderAPI, double uiscale);
+	SDL2DisplayWindow(DisplayWindowHost* windowHost, SDL2DisplayWindow* owner, RenderAPI renderAPI, double uiscale, struct WindowParams);
 	~SDL2DisplayWindow();
 
 	void SetWindowTitle(const std::string& text) override;
@@ -16,6 +18,7 @@ public:
 	void SetWindowFrame(const Rect& box) override;
 	void SetClientFrame(const Rect& box) override;
 	void Show() override;
+	void Restore() override;
 	void ShowFullscreen() override;
 	void ShowMaximized() override;
 	void ShowMinimized() override;
@@ -54,6 +57,8 @@ public:
 
 	std::vector<std::string> GetVulkanInstanceExtensions() override;
 	VkSurfaceKHR CreateVulkanSurface(VkInstance instance) override;
+	
+	virtual void NotifyWindow() override;
 
 	static void DispatchEvent(const SDL_Event& event);
 	static SDL2DisplayWindow* FindEventWindow(const SDL_Event& event);
@@ -68,6 +73,7 @@ public:
 	void OnMouseMotion(const SDL_MouseMotionEvent& event);
 	void OnJoyButtonUp(const SDL_ControllerButtonEvent& event);
 	void OnJoyButtonDown(const SDL_ControllerButtonEvent& event);
+	void OnFileDrop(const SDL_DropEvent& event);
 	void OnPaintEvent();
 	static void OnTimerEvent(const SDL_UserEvent& event);
 
@@ -93,6 +99,7 @@ public:
 	static Uint32 ExecTimer(Uint32 interval, void* id);
 
 	DisplayWindowHost* WindowHost = nullptr;
+	SDL2DisplayWindow* Owner = nullptr;
 	SDL2NativeHandle Handle;
 	SDL_Renderer* RendererHandle = nullptr;
 	SDL_Texture* BackBufferTexture = nullptr;
@@ -103,6 +110,7 @@ public:
 
 	bool CursorLocked = false;
 	bool isFullscreen = false;
+	bool updating = false;
 
 	static bool ExitRunLoop;
 	static Uint32 PaintEventNumber;
@@ -110,6 +118,6 @@ public:
 
 	static std::unordered_map<void *, void *> TimerHandles;
 	static std::unordered_map<void *, std::function<void()>> Timers;
-	static unsigned long TimerIDs;
-	static Uint32 TimerEventNumber;
+	static std::atomic<uintptr_t> TimerIDs;
+	static std::mutex TimerMutex;
 };

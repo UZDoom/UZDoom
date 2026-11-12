@@ -111,7 +111,7 @@ class PropulsorMissile : Rocket
 		Obituary "$OB_MPPROPULSOR";
 		Alpha 0.75;
 	}
-}	
+}
 
 class PhasingZorcher : PlasmaRifle
 {
@@ -146,7 +146,7 @@ class PhaseZorchMissile : PlasmaBall
 		Obituary "$OB_MPPHASEZORCH";
 		Alpha 0.75;
 	}
-}	
+}
 
 class LAZDevice : BFG9000
 {

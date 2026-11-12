@@ -1,0 +1,4515 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-06-15 16:01+0000\n"
+"Last-Translator: Júlia Rosell Saldaña <contacte@juliars.cat>\n"
+"Language-Team: Latin <https://hosted.weblate.org/projects/doom-engine-games/strife/la/>\n"
+"Language: la\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.7.dev0\n"
+
+msgid "TXT_STRIFE_MAP01"
+msgstr "AREA I: Sanctuarium"
+
+msgid "TXT_STRIFE_MAP02"
+msgstr "AREA II: Urbs"
+
+msgid "TXT_STRIFE_MAP03"
+msgstr "AREA III: Basis Anterior"
+
+msgid "TXT_STRIFE_MAP04"
+msgstr "AREA IV: Statio Power"
+
+msgid "TXT_STRIFE_MAP05"
+msgstr "AREA V: Carcerem"
+
+msgid "TXT_STRIFE_MAP06"
+msgstr "AREA VI: Cloacae"
+
+msgid "TXT_STRIFE_MAP07"
+msgstr "AREA VII: Castellum"
+
+msgid "TXT_STRIFE_MAP08"
+msgstr "AREA VIII: Camera Auditorii"
+
+msgid "TXT_STRIFE_MAP09"
+msgstr "AREA IX: Castellum: Arx Programmatoris"
+
+msgid "TXT_STRIFE_MAP10"
+msgstr "AREA X: Novum Front Base"
+
+msgid "TXT_STRIFE_MAP11"
+msgstr "AREA XI: Terrae Limitaneae"
+
+msgid "TXT_STRIFE_MAP12"
+msgstr "AREA XII: Templum Oraculi"
+
+msgid "TXT_STRIFE_MAP13"
+msgstr "AREA XIII: Catacombae"
+
+msgid "TXT_STRIFE_MAP14"
+msgstr "AREA XIV: Fodinae"
+
+msgid "TXT_STRIFE_MAP15"
+msgstr "AREA XV: Arx: Administratio"
+
+msgid "TXT_STRIFE_MAP16"
+msgstr "AREA XVI: Arx: Turris Episcopi"
+
+msgid "TXT_STRIFE_MAP17"
+msgstr "AREA XVII: Arx: Bailey"
+
+msgid "TXT_STRIFE_MAP18"
+msgstr "AREA XVIII: Arce: Store"
+
+msgid "TXT_STRIFE_MAP19"
+msgstr "AREA XIX: Arce: Securitatis complexu"
+
+msgid "TXT_STRIFE_MAP20"
+msgstr "AREA XX: Factory, accipientes"
+
+msgid "TXT_STRIFE_MAP21"
+msgstr "AREA XXI: Factory: Vestibulum"
+
+msgid "TXT_STRIFE_MAP22"
+msgstr "AREA XXII: Factory: Forge"
+
+msgid "TXT_STRIFE_MAP23"
+msgstr "AREA XXIII: Ordo Communium"
+
+msgid "TXT_STRIFE_MAP24"
+msgstr "AREA XXIV: Factory: Conversio Capella"
+
+msgid "TXT_STRIFE_MAP25"
+msgstr "AREA XXV: Catacombae: Templum Diruitum"
+
+msgid "TXT_STRIFE_MAP26"
+msgstr "AREA XXVI: Probatio Fundationis"
+
+msgid "TXT_STRIFE_MAP27"
+msgstr "AREA XXVII: Laboratorium"
+
+msgid "TXT_STRIFE_MAP28"
+msgstr "AREA XXVIII: Aliena Navis"
+
+msgid "TXT_STRIFE_MAP29"
+msgstr "AREA XXIX: Entity's Lair"
+
+msgid "TXT_STRIFE_MAP30"
+msgstr "AREA XXX: relicta Ante Base"
+
+msgid "TXT_STRIFE_MAP31"
+msgstr "AREA XXXI: Lorem facilius"
+
+msgid "TXT_STRIFE_MAP32"
+msgstr "AREA I: Sanctuarium"
+
+msgid "TXT_STRIFE_MAP33"
+msgstr "AREA II: Urbs"
+
+msgid "TXT_STRIFE_MAP34"
+msgstr "AREA III: Basis Motus"
+
+msgid "TXT_STRIFE_MAP35"
+msgstr "AREA XXXV: Factory: Productio"
+
+msgid "TXT_STRIFE_MAP36"
+msgstr "AREA XXXVI: Conflictus Castelli"
+
+msgid "TXT_STRIFE_MAP37"
+msgstr "AREA XXXVII: Mors Fundamentis"
+
+msgid "TXT_STRIFE_MAP38"
+msgstr "AREA XXXVIII: Chaos Ordinatum"
+
+# MAP01: Beldin.
+msgid "TXT_DLG_SCRIPT01_D0_IDONT"
+msgstr "Nolo ullam molestiam a me abesse. Satis mihi negotii fuit quam mihi Harris ille nothus fecit. Pecuniam mihi promisit, sed exspecto ut ab Programmatore interrogatus."
+
+# MAP02: Guy next to Norwall Prison.
+msgid "TXT_DLG_SCRIPT02_D0_ILLHE"
+msgstr "Adiuvabo te si mihi auxilium feras. Quinque aureos nummos et omnia quae scio narrabo."
+
+msgid "TXT_RPLY0_SCRIPT02_D0_HERES"
+msgstr "Hic est aurum."
+
+# (This text is only four seconds on screen)
+msgid "TXT_RYES0_SCRIPT02_D0_BESTE"
+msgstr "Furtive esto cum occideris, terrores non pones."
+
+# (Four seconds)
+msgid "TXT_RNO0_SCRIPT02_D0_WELLI"
+msgstr "Bene, non dicam tibi quidquam gratis!"
+
+msgid "TXT_DLG_SCRIPT02_D1516_HAVEY"
+msgstr "Ecquis possibilitas nactus es aliam 5 aurum in te?"
+
+msgid "TXT_RPLY0_SCRIPT02_D1516_5GOLD"
+msgstr "Quinque auri."
+
+# (Four seconds)
+msgid "TXT_RYES0_SCRIPT02_D1516_WELLP"
+msgstr "Bene, venenum fulmina custodes statim occidere possunt et terrores non excutere."
+
+# (Four seconds)
+msgid "TXT_RNO0_SCRIPT02_D1516_NOSIR"
+msgstr "Non domine, nihil tibi gratis narrabo!"
+
+msgid "TXT_DLG_SCRIPT02_D3032_YOUVE"
+msgstr "Ultimum rumorem de me iam expressisti!"
+
+# MAP02: Irale.
+msgid "TXT_DLG_SCRIPT02_D4548_WHATC"
+msgstr "Quid possum tibi?"
+
+msgid "TXT_RPLY0_SCRIPT02_D4548_ASSAU"
+msgstr "Gun impetum"
+
+msgid "TXT_RYES0_SCRIPT02_D4548_HEREY"
+msgstr "Hic tu."
+
+msgid "TXT_RNO0_SCRIPT02_D4548_YOUCA"
+msgstr "Quod nunc praestare non potes."
+
+msgid "TXT_RPLY1_SCRIPT02_D4548_CLIPO"
+msgstr "Tonde glandibus"
+
+msgid "TXT_RYES1_SCRIPT02_D4548_THANK"
+msgstr "Deo gratias."
+
+msgid "TXT_RNO1_SCRIPT02_D4548_COMEO"
+msgstr "Agedum, 10 aurum."
+
+msgid "TXT_RPLY2_SCRIPT02_D4548_AMMOB"
+msgstr "Ammo arca"
+
+msgid "TXT_RYES2_SCRIPT02_D4548_HERES"
+msgstr "Hic est animus tuus."
+
+msgid "TXT_RNO2_SCRIPT02_D4548_MAYBE"
+msgstr "Aliquam interdum tempus aliquam."
+
+# (After destroying the crystal in the Power Station)
+msgid "TXT_DLG_SCRIPT02_D6064_GOODN"
+msgstr "Evangelium a Fronte ob mutatio. Macil pro mercede et disciplina misit te. Praecepit mihi ut darem tibi."
+
+msgid "TXT_RPLY0_SCRIPT02_D6064_THANK"
+msgstr "Deo gratias."
+
+msgid "TXT_RYES0_SCRIPT02_D6064_GLADT"
+msgstr "Libenter inservire."
+
+msgid "TXT_DLG_SCRIPT02_D7580_ALLRI"
+msgstr "Recte, hic pauca quae agenda monstrant: Peregrinus ne sis: incendium breve erumpit ab impetu sclopetorum in clypeo."
+
+msgid "TXT_RPLY0_SCRIPT02_D7580_ISTHA"
+msgstr "Hoccine est?"
+
+msgid "TXT_RYES0_SCRIPT02_D7580_LOOKY"
+msgstr "En plura scies postea."
+
+msgid "TXT_DLG_SCRIPT02_D9096_ITHIN"
+msgstr "Puto me flammeum unum e crucesignatorum usui humano converti posse. Oh, quid aliud possum te accipere?"
+
+msgid "TXT_RPLY0_SCRIPT02_D9096_FLAME"
+msgstr "Flammae iaculator."
+
+msgid "TXT_RYES0_SCRIPT02_D9096_IKNEW"
+msgstr "Sciebam quod laboras! Hic tu eam pro spinis sume!"
+
+msgid "TXT_RNO0_SCRIPT02_D9096_LISTE"
+msgstr "Audi, nihil possum facere sine partibus rectis!"
+
+msgid "TXT_RPLY1_SCRIPT02_D9096_ASSAU"
+msgstr "Gun impetum"
+
+msgid "TXT_RYES1_SCRIPT02_D9096_WELLH"
+msgstr "Hem, hic pergis domine!"
+
+msgid "TXT_RNO1_SCRIPT02_D9096_OBVIO"
+msgstr "Patet, quod nunc praestare non potes."
+
+msgid "TXT_RPLY2_SCRIPT02_D9096_CLIPO"
+msgstr "Tonde glandibus"
+
+msgid "TXT_RYES2_SCRIPT02_D9096_THANK"
+msgstr "Deo gratias."
+
+msgid "TXT_RNO2_SCRIPT02_D9096_COMEO"
+msgstr "Agedum, 10 aurum."
+
+msgid "TXT_RPLY3_SCRIPT02_D9096_AMMOB"
+msgstr "Ammo arca"
+
+msgid "TXT_RYES3_SCRIPT02_D9096_HERES"
+msgstr "Hic est animus tuus."
+
+msgid "TXT_RNO3_SCRIPT02_D9096_MAYBE"
+msgstr "Aliquam interdum tempus aliquam. vale!"
+
+# (With flamethrower)
+msgid "TXT_DLG_SCRIPT02_D10612_NOWTH"
+msgstr "Iam quod habes flammatorem, numquid aliud possum te accipere?"
+
+msgid "TXT_RPLY0_SCRIPT02_D10612_ASSAU"
+msgstr "Gun impetum"
+
+msgid "TXT_RYES0_SCRIPT02_D10612_HEREY"
+msgstr "Hic tu."
+
+msgid "TXT_RNO0_SCRIPT02_D10612_YOUCA"
+msgstr "Quod nunc praestare non potes."
+
+msgid "TXT_RPLY1_SCRIPT02_D10612_CLIPO"
+msgstr "Tonde glandibus"
+
+msgid "TXT_RYES1_SCRIPT02_D10612_THANK"
+msgstr "Deo gratias."
+
+msgid "TXT_RNO1_SCRIPT02_D10612_COMEO"
+msgstr "Agedum, 10 aurum."
+
+msgid "TXT_RPLY2_SCRIPT02_D10612_AMMOB"
+msgstr "Ammo arca"
+
+msgid "TXT_RYES2_SCRIPT02_D10612_HERES"
+msgstr "Hic est animus tuus."
+
+msgid "TXT_RNO2_SCRIPT02_D10612_MAYBE"
+msgstr "Aliquam interdum tempus aliquam."
+
+msgid "TXT_DLG_SCRIPT02_D12128_NOWTH"
+msgstr "Iam quod habes flammatorem, numquid aliud possum te accipere?"
+
+msgid "TXT_RPLY0_SCRIPT02_D12128_CLIPO"
+msgstr "Tonde glandibus"
+
+msgid "TXT_RYES0_SCRIPT02_D12128_THANK"
+msgstr "Deo gratias."
+
+msgid "TXT_RNO0_SCRIPT02_D12128_COMEO"
+msgstr "Agedum, 10 aurum."
+
+msgid "TXT_RPLY1_SCRIPT02_D12128_AMMOB"
+msgstr "Ammo arca"
+
+msgid "TXT_RYES1_SCRIPT02_D12128_HERES"
+msgstr "Hic est animus tuus."
+
+msgid "TXT_RNO1_SCRIPT02_D12128_MAYBE"
+msgstr "Aliquam interdum tempus aliquam."
+
+msgid "TXT_RPLY2_SCRIPT02_D12128_PHOSP"
+msgstr "Phosphor tasque"
+
+msgid "TXT_RYES2_SCRIPT02_D12128_THANK"
+msgstr "Deo gratias."
+
+msgid "TXT_RNO2_SCRIPT02_D12128_YOUDO"
+msgstr "Non satis"
+
+msgid "TXT_RPLY3_SCRIPT02_D12128_POISO"
+msgstr "Venenum fulmina"
+
+msgid "TXT_RYES3_SCRIPT02_D12128_WORTH"
+msgstr "Valet omnis aurum!"
+
+msgid "TXT_RNO3_SCRIPT02_D12128_COMEO"
+msgstr "Agedum, CC aurum!"
+
+# MAP02: Between governor's mansion and town hall.
+msgid "TXT_DLG_SCRIPT02_D13644_ICANT"
+msgstr "Non possum credere me hoc officio adhaesisse. Dicunt aliquid mali ex cloaca porta escendisse... Nunc hic stare, donec iterum redeat!"
+
+msgid "TXT_RPLY0_SCRIPT02_D13644_WHATG"
+msgstr "Quae porta?"
+
+msgid "TXT_RYES0_SCRIPT02_D13644_THESE"
+msgstr "Cloaca porta redundat."
+
+# MAP02: Weapons.
+msgid "TXT_DLG_SCRIPT02_D15160_HELLO"
+msgstr "Salve amice. Quid possum tibi?"
+
+msgid "TXT_RPLY0_SCRIPT02_D15160_ELECT"
+msgstr "Electric fulmina"
+
+msgid "TXT_RYES0_SCRIPT02_D15160_YOUGO"
+msgstr "Clava electrica emisti."
+
+msgid "TXT_RPLY1_SCRIPT02_D15160_AMMOS"
+msgstr "Ammo pera"
+
+msgid "TXT_RNO0_SCRIPT02_D15160_NOYOU"
+msgstr "Non. Non habes quod volo per electrica fulmina!"
+
+msgid "TXT_RNO0_SCRIPT02_D16676_NOYOU"
+msgstr "Non. Non habes quod volo per electrica fulmina!"
+
+msgid "TXT_RYES1_SCRIPT02_D15160_THANK"
+msgstr "Gratias agimus tibi. Quid aliud?"
+
+msgid "TXT_RNO1_SCRIPT02_D15160_YOUCA"
+msgstr "Diem illum praestare non potes."
+
+msgid "TXT_DLG_SCRIPT02_D16676_WHATC"
+msgstr "Quid possum tibi?"
+
+msgid "TXT_RPLY0_SCRIPT02_D16676_ELECT"
+msgstr "Electric fulmina"
+
+msgid "TXT_RYES0_SCRIPT02_D16676_YOUGO"
+msgstr "Clava electrica emisti."
+
+msgid "TXT_RPLY1_SCRIPT02_D16676_AMMOS"
+msgstr "Ammo pera"
+
+msgid "TXT_RYES1_SCRIPT02_D16676_THANK"
+msgstr "Gratias tibi, quid aliud?"
+
+msgid "TXT_RNO1_SCRIPT02_D16676_YOUCA"
+msgstr "Bonum diem tibi praestare non potes!"
+
+# MAP02: Armory.
+msgid "TXT_DLG_SCRIPT02_D18192_WELCO"
+msgstr "Gratus. Quid tibi ego ostendam?"
+
+msgid "TXT_RPLY0_SCRIPT02_D18192_ENVIR"
+msgstr "Environmental sectam"
+
+msgid "TXT_RYES0_SCRIPT02_D18192_WELLH"
+msgstr "Hem, hic es."
+
+msgid "TXT_RNO0_SCRIPT02_D18192_IMSOR"
+msgstr "Paenitet me sed non satis pecuniae habes."
+
+msgid "TXT_RPLY1_SCRIPT02_D18192_LEATH"
+msgstr "Corium lorica"
+
+msgid "TXT_RYES1_SCRIPT02_D18192_HEREY"
+msgstr "Hic es tu."
+
+msgid "TXT_RNO1_SCRIPT02_D18192_PERHA"
+msgstr "Fortasse alio tempore?"
+
+msgid "TXT_RPLY2_SCRIPT02_D18192_METAL"
+msgstr "Armatura metallica"
+
+# (in good health = enjoy)
+msgid "TXT_RYES2_SCRIPT02_D18192_WEARI"
+msgstr "Bene valentem induere."
+
+msgid "TXT_RNO2_SCRIPT02_D18192_COMEB"
+msgstr "Redi, cum aliquid emere potes, quod eximium habes!"
+
+msgid "TXT_DLG_SCRIPT02_D19708_WELCO"
+msgstr "Gratus. Quid tibi ego ostendam?"
+
+msgid "TXT_RPLY0_SCRIPT02_D19708_ENVIR"
+msgstr "Environmental sectam"
+
+msgid "TXT_RYES0_SCRIPT02_D19708_WELLH"
+msgstr "Hem, hic es."
+
+msgid "TXT_RNO0_SCRIPT02_D19708_IMSOR"
+msgstr "Paenitet me sed non satis pecuniae habes."
+
+msgid "TXT_RPLY1_SCRIPT02_D19708_LEATH"
+msgstr "Corium lorica"
+
+msgid "TXT_RYES1_SCRIPT02_D19708_HEREY"
+msgstr "Hic es tu."
+
+msgid "TXT_RNO1_SCRIPT02_D19708_PERHA"
+msgstr "Fortasse alio tempore?"
+
+msgid "TXT_RPLY2_SCRIPT02_D19708_METAL"
+msgstr "Armatura metallica"
+
+# (in good health = enjoy)
+msgid "TXT_RYES2_SCRIPT02_D19708_WEARI"
+msgstr "Bene valentem induere."
+
+msgid "TXT_RNO2_SCRIPT02_D19708_COMEB"
+msgstr "Redi, cum aliquid emere potes, quod eximium habes!"
+
+# MAP02: Hospital.
+msgid "TXT_DLG_SCRIPT02_D21224_HOWMA"
+msgstr "Quomodo te adiuvare possim?"
+
+msgid "TXT_RPLY0_SCRIPT02_D21224_MEDPA"
+msgstr "Emplastrum medicum"
+
+msgid "TXT_RYES0_SCRIPT02_D21224_HERES"
+msgstr "Hic lacus tuum est."
+
+msgid "TXT_RNO0_SCRIPT02_D21224_YOUNE"
+msgstr "10 Aurum pro eo debes."
+
+msgid "TXT_RPLY1_SCRIPT02_D21224_MEDIC"
+msgstr "Medicamentum ornamentum"
+
+msgid "TXT_RYES1_SCRIPT02_D21224_THANK"
+msgstr "Gratias agimus tibi."
+
+msgid "TXT_RNO1_SCRIPT02_D21224_IWISH"
+msgstr "Illos donare vellem, sed constant 25 aurum."
+
+msgid "TXT_RPLY2_SCRIPT02_D21224_FIELD"
+msgstr "Field surgery ornamentum"
+
+msgid "TXT_RYES2_SCRIPT02_D21224_THERE"
+msgstr "Ibi tu ibis. Cura nunc."
+
+msgid "TXT_RNO2_SCRIPT02_D21224_WELLM"
+msgstr "Bene, fortasse aliquid med pannis praestare potes?"
+
+# (After destroying the crystal in the Power Station)
+msgid "TXT_DLG_SCRIPT02_D22740_IHOPE"
+msgstr "Spero Macil scit quid agat. Si Ordinem reperit, me ad Frontem adiuvandum me tam bene emortuum… Non hoc ad te quicquam refert. Medicorum Frontonis mihi an upgrade chip pro te dedit, paratus es?"
+
+msgid "TXT_RPLY0_SCRIPT02_D22740_YESIM"
+msgstr "Ita, paratus sum."
+
+msgid "TXT_RYES0_SCRIPT02_D22740_WELLT"
+msgstr "Non igitur alterum tantum accipiet. Ibi iam."
+
+msgid "TXT_DLG_SCRIPT02_D24256_HOWMA"
+msgstr "Quomodo te adiuvare possim?"
+
+msgid "TXT_RPLY0_SCRIPT02_D24256_MEDPA"
+msgstr "Emplastrum medicum"
+
+msgid "TXT_RYES0_SCRIPT02_D24256_HERES"
+msgstr "Hic lacus tuum est."
+
+msgid "TXT_RNO0_SCRIPT02_D24256_YOUNE"
+msgstr "10 Aurum pro eo debes."
+
+msgid "TXT_RPLY1_SCRIPT02_D24256_MEDIC"
+msgstr "Medicamentum ornamentum"
+
+msgid "TXT_RYES1_SCRIPT02_D24256_THANK"
+msgstr "Gratias agimus tibi."
+
+msgid "TXT_RNO1_SCRIPT02_D24256_IWISH"
+msgstr "Illos donare vellem, sed constant 25 aurum."
+
+msgid "TXT_RPLY2_SCRIPT02_D24256_FIELD"
+msgstr "Field surgery ornamentum"
+
+msgid "TXT_RYES2_SCRIPT02_D24256_THERE"
+msgstr "Ibi tu ibis. Cura nunc."
+
+msgid "TXT_RNO2_SCRIPT02_D24256_WELLM"
+msgstr "Bene, fortasse aliquid med pannis praestare potes?"
+
+# MAP02: Barkeep.
+msgid "TXT_DLG_SCRIPT02_D25772_HELLO"
+msgstr "Salve peregrine, ego te circumactum hic non prius vidi. Da mihi consilium gratis. Cavere vellem si esses. Ordo liberum arbitrium non tolerat, et iustitia eorum velocissima est."
+
+msgid "TXT_RPLY0_SCRIPT02_D25772_WHATS"
+msgstr "Quid est verbum?"
+
+# (This text is only four seconds on screen)
+msgid "TXT_RYES0_SCRIPT02_D25772_THEWO"
+msgstr "Verbum est… Cloacas plus quam mures et robots tenent."
+
+msgid "TXT_DLG_SCRIPT02_D27288_WHATC"
+msgstr "Quid nunc tibi faciam?"
+
+msgid "TXT_RPLY0_SCRIPT02_D27288_MOREI"
+msgstr "Plura notitia."
+
+# (Four seconds)
+msgid "TXT_RYES0_SCRIPT02_D27288_THEGO"
+msgstr "Praefectus nobis simplex est admonitio quod homines liberi non sumus amplius."
+
+msgid "TXT_RNO0_SCRIPT02_D27288_COMEB"
+msgstr "Redi, cum aliquam aurum."
+
+msgid "TXT_DLG_SCRIPT02_D28804_WELLY"
+msgstr "Bene rogas multam interrogationem pro aliquo qui mori non conatur. Fac ne abeas et te ipsum interficias, vel peius."
+
+msgid "TXT_RPLY0_SCRIPT02_D28804_MOREI"
+msgstr "Plura notitia."
+
+# (Four seconds)
+msgid "TXT_RYES0_SCRIPT02_D28804_THERE"
+msgstr "Ibi plus ordinis quam oculo conspicitur."
+
+msgid "TXT_RNO0_SCRIPT02_D28804_WELLT"
+msgstr "Aurum cum veneris loquemur!"
+
+msgid "TXT_DLG_SCRIPT02_D30320_THATS"
+msgstr "Hoc est, amice, puteus scientiae exaruit. Plus tibi narravi quam debui. Bene sit tibi... Et noli redire."
+
+# MAP02: Power Station guard.
+msgid "TXT_DLG_SCRIPT02_D31836_HEYIM"
+msgstr "Heus, solus hic sum in casu tempori. Si nucleus ruptus est, fac ne quis ingrediatur... vel extra."
+
+# MAP02: Rust guards.
+msgid "TXT_DLG_SCRIPT02_D33352_WATCH"
+msgstr "Videte gradum, rustice!"
+
+# MAP02: Gray guards.
+msgid "TXT_DLG_SCRIPT02_D34868_WEREG"
+msgstr "Imus te occidere! "
+
+# MAP02: Green guard.
+msgid "TXT_DLG_SCRIPT02_D36384_WHOIN"
+msgstr "Quis in incendio es? Non quis in hac provincia morari putat!"
+
+# MAP02: Golden guards.
+msgid "TXT_DLG_SCRIPT02_D37900_YOUTH"
+msgstr "Tu illic, nemo huc licet. Move per!"
+
+# MAP02: Irale's shop.
+msgid "TXT_DLG_SCRIPT02_D39416_IRALE"
+msgstr "Irale te ius suscitabit!"
+
+# MAP02: Harris.
+msgid "TXT_DLG_SCRIPT02_D40932_IMKIN"
+msgstr "Ingenium pro rebellibus sector sum pius. A guy qui tam bonus est quam multum aurum… facere potuisti, si cum populo dextro aduncum es."
+
+msgid "TXT_RPLY0_SCRIPT02_D40932_IMINT"
+msgstr "Im quaero."
+
+msgid "TXT_RPLY1_SCRIPT02_D40932_SCREW"
+msgstr "Screw rebelles!"
+
+msgid "TXT_DLG_SCRIPT02_D42448_NONOS"
+msgstr "Non, non secundum possibilitas. O custodes, interficite eum."
+
+msgid "TXT_DLG_SCRIPT02_D43964_GOODC"
+msgstr "Bona electio. Sanctuarium Ordinis iuxta flumen est cubiculum eorum privatim cruciatus. Intus absconditus calix aureus est. Tolles et metes mercedem tuam."
+
+msgid "TXT_RPLY0_SCRIPT02_D43964_HOWAM"
+msgstr "Quomodo ego volo facere?"
+
+msgid "TXT_DLG_SCRIPT02_D45480_HERES"
+msgstr "Hic est arcuballista, iustus recta et --splat--. Memento, poculum lubidinis arripe et ad taberna."
+
+msgid "TXT_RPLY0_SCRIPT02_D45480_COOLI"
+msgstr "Frigus. Ego istuc capiam."
+
+msgid "TXT_DLG_SCRIPT02_D46996_WHATA"
+msgstr "Quid moraris? Afferte mihi calicem illum."
+
+msgid "TXT_DLG_SCRIPT02_D48512_HEYIK"
+msgstr "Heus, scio, pius spectat sicut paro- sursum. Numquam id facerem tantae machinae. Possedi item? Magna! Nunc para, aurum et gloria sicut promisi. Cape hanc clavem, et retribuet tibi Gubernator."
+
+msgid "TXT_RPLY0_SCRIPT02_D48512_HEDBE"
+msgstr "Melius mallem. Tua causa!"
+
+msgid "TXT_RPLY1_SCRIPT02_D48512_WHATW"
+msgstr "Quid! Ubi pecunia mea est?"
+
+msgid "TXT_DLG_SCRIPT02_D50028_GETLO"
+msgstr "Hedum impetro lost, mihi molestus es."
+
+msgid "TXT_DLG_SCRIPT02_D51544_NOSEC"
+msgstr "Non secundum possibilitas. O custodes, interficite eum."
+
+# MAP02: Mourel.
+msgid "TXT_DLG_SCRIPT02_D53060_FIRST"
+msgstr "Mille trucidant primum, nunc omnes robustos agrestes Expertus non specificatis cupiunt. Quomodo ordo me exspectat ut pax servet? Quid infernum vis?"
+
+msgid "TXT_RPLY0_SCRIPT02_D53060_APRIS"
+msgstr "Carcer esto, agamus."
+
+msgid "TXT_DLG_SCRIPT02_D54576_ILIKE"
+msgstr "Placet jam tibi. Habeo duas chores quas nolo me facere. Alter nuntius est, alter cruentus."
+
+msgid "TXT_RPLY0_SCRIPT02_D54576_CALLM"
+msgstr "Me lautus"
+
+msgid "TXT_RPLY1_SCRIPT02_D54576_IMNOT"
+msgstr "Im 'non fastidiosa"
+
+# ("messy" chore)
+msgid "TXT_DLG_SCRIPT02_D56092_ONEOF"
+msgstr "Unus of my satellites is furandi potestatem cum sonum in aliqua parte mains. Inveni eam et trunca eius copia, et dabo tibi quod vis. Affer mihi aliquid in signum."
+
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D56092_WHERE"
+msgstr "Ubi ego hunc sonum invenio?"
+
+# (〃)
+msgid "TXT_DLG_SCRIPT02_D57608_IFIKN"
+msgstr "Si scirem, nunc chora non esset? Utere lepore, sed copia interclusit."
+
+# ("bloody" chore)
+msgid "TXT_DLG_SCRIPT02_D59124_TELLY"
+msgstr "Dic quid, saccus mendax Derwin nomine, qui liberos Ordine venditavit. Non feram id improbitatis genus. Non sine meo incidi. Derwin in horreis operatur. Interfice illum, et affer mihi aurem, et videam quid possum."
+
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D59124_HOWDO"
+msgstr "Quomodo ingredior?"
+
+# (〃)
+msgid "TXT_DLG_SCRIPT02_D60640_THISK"
+msgstr "Haec clavis te in stationem obtinebit potestatem. Altero cogitatione aurem praecidit et occidit. Multo melius."
+
+# (after completing "messy" chore)
+msgid "TXT_DLG_SCRIPT02_D62156_OHIJU"
+msgstr "Oh, amabo modo eget. Hic, hoc te in carcerem perveniet. Loqui custodi Montag. Quicquid postea agas, scire nolo."
+
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D62156_THANK"
+msgstr "Deo gratias."
+
+msgid "TXT_DLG_SCRIPT02_D63672_GIVEY"
+msgstr "Da admonitus. Cum desino tibi loqui, exeatis."
+
+# (after completing "bloody" chore)
+msgid "TXT_DLG_SCRIPT02_D65188_DOYOU"
+msgstr "Habesne bonum nuntium pro me? Omnes sum aures."
+
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D65188_THEDE"
+msgstr "Quod factum est!"
+
+# (〃)
+msgid "TXT_DLG_SCRIPT02_D66704_OHIJU"
+msgstr "Oh, amabo modo eget. Hic, hoc te in carcerem perveniet. Loqui custodi Montag. Quicquid postea agas, scire nolo."
+
+# (〃)
+msgid "TXT_RPLY0_SCRIPT02_D66704_FINEB"
+msgstr "Bene a me."
+
+msgid "TXT_DLG_SCRIPT02_D68220_SOYOU"
+msgstr "Esne igitur stultus qui calicem furatus es? Eo comprehensus es ut rebellem fur... Ex quo Ordinem meam dignitatem auges. Quomodo sentit arrhabonem ignarum esse? Monitum dabo, laedet amet."
+
+msgid "TXT_RPLY0_SCRIPT02_D68220_ITSUC"
+msgstr "Sugit!"
+
+msgid "TXT_RYES0_SCRIPT02_D68220_FORYO"
+msgstr "Pro te facit."
+
+msgid "TXT_RPLY1_SCRIPT02_D68220_HARRI"
+msgstr "Harris mihi pecuniam promisit!"
+
+msgid "TXT_RYES1_SCRIPT02_D68220_TOOBA"
+msgstr "Nimis nocens. Sola res es questus est mortuus!"
+
+# MAP02: Rowan.
+msgid "TXT_DLG_SCRIPT02_D69736_INASM"
+msgstr "In parvo mundo sermo celeriter percurrit. Audio te modo aliqua impedimenta e via tua removisse. Nice. Esne es interested in aliqua incepta quaestuosiora?"
+
+msgid "TXT_RPLY0_SCRIPT02_D69736_SUREW"
+msgstr "Certo, cur non."
+
+msgid "TXT_RPLY1_SCRIPT02_D69736_NOTHA"
+msgstr "Non gratias."
+
+msgid "TXT_RYES1_SCRIPT02_D69736_THENG"
+msgstr "Tunc deerrare!"
+
+# Rowan.
+msgid "TXT_DLG_SCRIPT02_D71252_FOOLG"
+msgstr "Stulte! Custodes, abice me hoc machinulae curiosae."
+
+msgid "TXT_DLG_SCRIPT02_D72768_GOODS"
+msgstr "Bonum est. Quidam uh, amici mei egent aliquem silentium. Beldin ab Ordine in suo sancto tenebatur. Raro aditus est per parvam columpnam de flumine qui incustolatus est. Ingredere, claude eum, ac redde mihi probationem suam anulus."
+
+msgid "TXT_RPLY0_SCRIPT02_D72768_WILLI"
+msgstr "Numquid operae pretium erit?"
+
+msgid "TXT_DLG_SCRIPT02_D74284_ILLGU"
+msgstr "Ego 50 aurum spondeam et si sine omni terrore in urbe redieris, multum est possibilitas mereri, multo magis, et hic paululum adiutorem, qui tibi marginem det."
+
+msgid "TXT_RPLY0_SCRIPT02_D74284_THANK"
+msgstr "Gratias, opus est."
+
+msgid "TXT_DLG_SCRIPT02_D75800_GOODR"
+msgstr "Bonum est. Memento, silentium aureum."
+
+msgid "TXT_RPLY0_SCRIPT02_D75800_ILLGE"
+msgstr "Ego eum."
+
+msgid "TXT_DLG_SCRIPT02_D77316_MISSI"
+msgstr "Missio perfecit? Habesne proditoris anulus?"
+
+msgid "TXT_RPLY0_SCRIPT02_D77316_HESDE"
+msgstr "Mortuus est, ubi pecunia mea?"
+
+msgid "TXT_RNO0_SCRIPT02_D77316_LIARG"
+msgstr "Mendax! Vade anulus!"
+
+msgid "TXT_DLG_SCRIPT02_D78832_HEREY"
+msgstr "Hic, merui. Proditor occisus erat, locum Frontonis indicaturus. Tu vitam servasti. Quid vis plura mereri aurum, et futura a tyrannide libera?"
+
+msgid "TXT_RPLY0_SCRIPT02_D78832_TELLM"
+msgstr "Dic mihi plura."
+
+msgid "TXT_RPLY1_SCRIPT02_D78832_NOTMY"
+msgstr "Non me accusas."
+
+msgid "TXT_DLG_SCRIPT02_D80348_IHAVE"
+msgstr "Negotium mihi cum duce Fronte Macil. Scio te ut te ipsum inciso indigere homine, et bene reddit. Recepta com unit cape, et te ad dicemus occasiones."
+
+msgid "TXT_RPLY0_SCRIPT02_D80348_THANK"
+msgstr "Deo gratias."
+
+msgid "TXT_DLG_SCRIPT02_D81864_GETGO"
+msgstr "Eia igitur. Si hic suspendas, ambo mortui sumus."
+
+msgid "TXT_DLG_SCRIPT02_D83380_APITY"
+msgstr "Misericordia est, sed nunc, ut scis de amicis meis, oportet te occidere. Custodes, tollite hoc nugas!"
+
+msgid "TXT_DLG_SCRIPT02_D84896_FOOLG"
+msgstr "Fatuus est. Custodes! Pelle me curiosi peon."
+
+# Geoff.
+msgid "TXT_DLG_SCRIPT02_D86412_WALKA"
+msgstr "Abi, puer, abi."
+
+msgid "TXT_DLG_SCRIPT02_D87928_WHATA"
+msgstr "Quid hic agis?"
+
+msgid "TXT_RPLY0_SCRIPT02_D87928_HEYIN"
+msgstr "Heus, aurum opus est!"
+
+msgid "TXT_DLG_SCRIPT02_D89444_BLACK"
+msgstr "Merula tibi codicem indicavit, huh? Me terrorem occludam. Macil is quis fuga sunt."
+
+msgid "TXT_RPLY0_SCRIPT02_D89444_THANK"
+msgstr "Deo gratias."
+
+msgid "TXT_DLG_SCRIPT02_D90960_WALKA"
+msgstr "Abi, puer, abi."
+
+# Arion.
+msgid "TXT_DLG_SCRIPT02_D92476_DOYOU"
+msgstr "Habesne constitutum cum Praefecto? "
+
+msgid "TXT_RPLY0_SCRIPT02_D92476_OFCOU"
+msgstr "Scilicet!"
+
+msgid "TXT_RPLY1_SCRIPT02_D92476_NOAND"
+msgstr "Non, et non opus est uno!"
+
+msgid "TXT_DLG_SCRIPT02_D93992_SORRY"
+msgstr "Ignosce! Non intelliguntur ... Cede usque."
+
+msgid "TXT_RPLY0_SCRIPT02_D93992_IKNEW"
+msgstr "Sciebam te dicere."
+
+msgid "TXT_DLG_SCRIPT02_D95508_IFYOU"
+msgstr "Si properas es, noli mecum perdis operam."
+
+# MAP02: MacGuffin
+msgid "TXT_DLG_SCRIPT02_D97024_RELEA"
+msgstr "Dimitte me, relinque senem solum."
+
+# (after accepting "messy" chore)
+msgid "TXT_DLG_SCRIPT02_D98540_YOUSE"
+msgstr "Sapientia Quaeris, fili mi? Ordo viderit ut unum tantum interrogemus, \"Quare?\""
+
+msgid "TXT_RPLY0_SCRIPT02_D98540_WHERE"
+msgstr "Ubi potestas coniunctio?"
+
+msgid "TXT_RPLY1_SCRIPT02_D98540_WHERE"
+msgstr "Ubi est principalis Ordinis?"
+
+msgid "TXT_RPLY2_SCRIPT02_D98540_WHERE"
+msgstr "Ubi illicita ictus?"
+
+msgid "TXT_DLG_SCRIPT02_D100056_ILLTE"
+msgstr "Dicam ubi sit, sed nescio cuius coitus sollicitare debeas. Plant purgamentorum hic est."
+
+msgid "TXT_RPLY0_SCRIPT02_D100056_THANK"
+msgstr "Gratias"
+
+msgid "TXT_DLG_SCRIPT02_D101572_THATS"
+msgstr "Hic in statione cloacarum est. Sed nexus Frontis est. Quicumque tibi dixit id Ordinis esse, erravit."
+
+msgid "TXT_RPLY0_SCRIPT02_D101572_THANK"
+msgstr "Gratias"
+
+msgid "TXT_DLG_SCRIPT02_D103088_IFYOU"
+msgstr "Si dixeris nefas esse, nihil volo tibi facere. Mihi satis molestum est."
+
+msgid "TXT_RPLY0_SCRIPT02_D103088_THANK"
+msgstr "Gratias"
+
+msgid "TXT_DLG_SCRIPT02_D104604_RELEA"
+msgstr "Dimitte me, relinque senem solum."
+
+# MAP03: Macil.
+msgid "TXT_DLG_SCRIPT03_D0_WELCO"
+msgstr "Grata novissima spe micantem. Solummodo liberum arbitrium habemus Ordini obsistere. Mentes scientias acutissimas habemus et corpora valida multa, sed caremus uno reali, uh… Problemsolver, qui nobis dabit extremam necessitatem. Auxilium nobis."
+
+msgid "TXT_RPLY0_SCRIPT03_D0_ALLRI"
+msgstr "Recte, accipio."
+
+msgid "TXT_RPLY1_SCRIPT03_D0_NOTHA"
+msgstr "Non gratias!"
+
+msgid "TXT_DLG_SCRIPT03_D1516_YOUMI"
+msgstr "Retractare fortasse velis, cum sis graviter armatis iratis rebellibus circumdatus."
+
+msgid "TXT_RPLY0_SCRIPT03_D1516_ALLRI"
+msgstr "Recte, ego in!"
+
+msgid "TXT_RPLY1_SCRIPT03_D1516_NOTHA"
+msgstr "Non gratias."
+
+msgid "TXT_DLG_SCRIPT03_D3032_THEND"
+msgstr "Tunc moriar in ignominia et ignobilitate."
+
+msgid "TXT_DLG_SCRIPT03_D4548_GOODB"
+msgstr "Bene, Merula ductor tuus erit. Illa satis luceat tibi. Una habuisti secreta Ordinis et eorum inhumani famulis reserare. Ingredere et tolle eas."
+
+msgid "TXT_RPLY0_SCRIPT03_D4548_WHERE"
+msgstr "Unde incipiam?"
+
+# (Prison mission)
+msgid "TXT_DLG_SCRIPT03_D6064_FRANK"
+msgstr "Ingenue se habet pulmentum. Plures missiones peragere debes ad iter praeparandum plures impetus in Ordine. Ultima praeda nostra clades fuit ac plerique capti sunt. Hos captivos liberare peto."
+
+msgid "TXT_RPLY0_SCRIPT03_D6064_ITHIN"
+msgstr "Puto me tractare."
+
+msgid "TXT_DLG_SCRIPT03_D7580_TAKET"
+msgstr "Cape hanc pecuniam et Irale visita qui arma nostra suppetiae. Tum haec clavis te ad praefectum videndum erit. Ordinis pupula corrupta est, sed agit facere amat. Liberare fratres nostros in armis quodcumque debes."
+
+msgid "TXT_RPLY0_SCRIPT03_D7580_ILLSE"
+msgstr "Istuc videro."
+
+msgid "TXT_DLG_SCRIPT03_D9096_FIGHT"
+msgstr "Pro Fronte et Libertate Certa. Movere manum."
+
+# (Crystal mission)
+msgid "TXT_DLG_SCRIPT03_D10612_THEPR"
+msgstr "Recepti sunt captivi, gratias tibi. Hic est aliquis aurum, vade visere medic arma et lanistam et deinde, superiores tibi propositas habeo."
+
+msgid "TXT_RPLY0_SCRIPT03_D10612_IWILL"
+msgstr "Volo. Quid postea?"
+
+msgid "TXT_DLG_SCRIPT03_D12128_ASING"
+msgstr "Unius cristallus decurrit ad potentiam egetis quae Ordinis scuta inpellit. Dissipate illam crystallum, et tu ferrum ingentia foramina in ordinis munimentis feres. Merula te exploratorem ducet qui viam habet, bone fortuna."
+
+msgid "TXT_RPLY0_SCRIPT03_D12128_WELLG"
+msgstr "Dabimus hoc."
+
+msgid "TXT_DLG_SCRIPT03_D13644_FIGHT"
+msgstr "Pro Fronte et Libertate Certa. Movere manum."
+
+# (Progammer mission)
+msgid "TXT_DLG_SCRIPT03_D15160_YOUVE"
+msgstr "Omnes exspectationes nostras vicisti. Propter audaciam vestram milites nostri moventur. Cupio te duos cum certo signo ad oppugnandum iungere. Programmatorem eximito. Tempus est detegere quid de hac Ordinis lavacro repperimus."
+
+msgid "TXT_RPLY0_SCRIPT03_D15160_TELLM"
+msgstr "Dic quod scimus."
+
+msgid "TXT_DLG_SCRIPT03_D16676_THEPR"
+msgstr "Cubile programmatis in castellum est. Nunc, vide medic, arripe aliquem ammo et tolle eum."
+
+msgid "TXT_RPLY0_SCRIPT03_D16676_LETME"
+msgstr "Fiat mihi ad em!"
+
+msgid "TXT_DLG_SCRIPT03_D18192_FIGHT"
+msgstr "Pro Fronte et Libertate Certa. Movere manum."
+
+# MAP03: Barracks.
+msgid "TXT_DLG_SCRIPT03_D19708_REMEM"
+msgstr "Memento quid prytaneum simile? Lenis admonitio id est quod nos facere cupiunt. Cave."
+
+# MAP03: Upstairs, corridor.
+msgid "TXT_DLG_SCRIPT03_D21224_TALKT"
+msgstr "Loqui Macil. Ipse te adiuvare poterit."
+
+# MAP03: Barracks.
+# (dead meat = corpse)
+msgid "TXT_DLG_SCRIPT03_D22740_IVEHE"
+msgstr "Audivi Macilum consilium inivisse ut Ordinem subverteret. Melius fuerat bonum esse. Unum defectum magis et omnes iusti sumus carnes mortuae."
+
+msgid "TXT_DLG_SCRIPT03_D24256_AFEWO"
+msgstr "Paucae ex his doliis in aquam suam copia etiam paulum dissidentes proiecerunt."
+
+msgid "TXT_DLG_SCRIPT03_D25772_SOYOU"
+msgstr "Esne igitur nova operativa? Gratias, sine te, omnes nunc mortui sumus."
+
+# MAP03: Gerald (no implant)
+msgid "TXT_DLG_SCRIPT03_D27288_IMWOR"
+msgstr "Laboro in aliquid quod nobis ora dabit. vigor augebit ac penitus te iacebis. Prope omnes cimices laboravi. Quid possum facere vobis?"
+
+msgid "TXT_RPLY0_SCRIPT03_D27288_PATCH"
+msgstr "Repeciare me."
+
+msgid "TXT_RYES0_SCRIPT03_D27288_BOYYO"
+msgstr "Puer, pulmentum verum es. Videam quid possum."
+
+msgid "TXT_RPLY1_SCRIPT03_D27288_STAMI"
+msgstr "Vigor inserendi?"
+
+msgid "TXT_RYES1_SCRIPT03_D27288_ALLRI"
+msgstr "Recte, non modo hoc capiet."
+
+msgid "TXT_RNO1_SCRIPT03_D27288_ITSNO"
+msgstr "Non tamen factum est."
+
+# (one upgrade)
+msgid "TXT_DLG_SCRIPT03_D28804_HEYIM"
+msgstr "Heus, in renovatione versionis tuae inserendi laboro. Numquid aliud possum facere?"
+
+msgid "TXT_RPLY0_SCRIPT03_D28804_PATCH"
+msgstr "Repeciare me."
+
+msgid "TXT_RYES0_SCRIPT03_D28804_WELLA"
+msgstr "Bene certe videndi actionem tuam."
+
+msgid "TXT_RPLY1_SCRIPT03_D28804_IMPLA"
+msgstr "Upgrade indere?"
+
+msgid "TXT_RYES1_SCRIPT03_D28804_GOODT"
+msgstr "Bene, numquam nimium tutus esse potest."
+
+msgid "TXT_RNO1_SCRIPT03_D28804_IMALM"
+msgstr "Paene finitus sum, sed non satis."
+
+# (two upgrades)
+msgid "TXT_DLG_SCRIPT03_D30320_ALLRI"
+msgstr "Recte, paene omnia perfecte operata sum. Paucae quaestiones ad tollendum relictae fuerunt. Num quid aliud opus est? "
+
+msgid "TXT_RPLY0_SCRIPT03_D30320_PATCH"
+msgstr "Repeciare me."
+
+msgid "TXT_RYES0_SCRIPT03_D30320_WHATH"
+msgstr "Quid facere voluisti? Perge caput in caput Peregrinus?"
+
+msgid "TXT_RPLY1_SCRIPT03_D30320_IMPLA"
+msgstr "Upgrade indere?."
+
+msgid "TXT_RYES1_SCRIPT03_D30320_THATS"
+msgstr "Quod faciendum est tibi."
+
+msgid "TXT_RNO1_SCRIPT03_D30320_LETME"
+msgstr "Aliquam volutpat cursus ante."
+
+# (?)
+msgid "TXT_DLG_SCRIPT03_D31836_THATS"
+msgstr "Id omnia possum nunc indere. Forsitan sanitatem aliquam?"
+
+msgid "TXT_RPLY0_SCRIPT03_D31836_YEAH"
+msgstr "Ita."
+
+msgid "TXT_RYES0_SCRIPT03_D31836_BOYYO"
+msgstr "Puer, pulmentum verum es. Videam quid possum."
+
+# MAP03: Feris (no training).
+msgid "TXT_DLG_SCRIPT03_D33352_WHATC"
+msgstr "Quid faciam tibi?"
+
+msgid "TXT_RPLY0_SCRIPT03_D33352_IMOUT"
+msgstr "Im e glandibus."
+
+msgid "TXT_RYES0_SCRIPT03_D33352_HERES"
+msgstr "Hic est quidam ammo tibi. Don't waste it."
+
+msgid "TXT_RPLY1_SCRIPT03_D33352_TEACH"
+msgstr "Doce me."
+
+msgid "TXT_RYES1_SCRIPT03_D33352_ALLRI"
+msgstr "Recte, paucis tantum monstrabo tibi indices."
+
+msgid "TXT_RNO1_SCRIPT03_D33352_YOURE"
+msgstr "Nondum paratus es."
+
+# (one training)
+msgid "TXT_DLG_SCRIPT03_D34868_BACKA"
+msgstr "Retro iterum? Quid opus est tibi?"
+
+msgid "TXT_RPLY0_SCRIPT03_D34868_IMOUT"
+msgstr "Im e glandibus."
+
+msgid "TXT_RYES0_SCRIPT03_D34868_HERES"
+msgstr "Hic est quidam ammo tibi. Don't waste it."
+
+msgid "TXT_RNO0_SCRIPT03_D34868_YOUVE"
+msgstr "Satis ammo habes."
+
+msgid "TXT_RPLY1_SCRIPT03_D34868_TEACH"
+msgstr "Doce me."
+
+msgid "TXT_RYES1_SCRIPT03_D34868_ALLRI"
+msgstr "Recte, hoc te ad tempus conservet."
+
+msgid "TXT_RNO1_SCRIPT03_D34868_SORRY"
+msgstr "Paenitet, non potest. Im 'iustus Macil secutus mox."
+
+# (two trainings)
+msgid "TXT_DLG_SCRIPT03_D36384_WELLW"
+msgstr "Quid est, glandes aut disciplina? Non possum exspectare ut ad nova illa arma quae cepimus manus meas accipiam. Exigua disciplina et multum deinde ultio."
+
+msgid "TXT_RPLY0_SCRIPT03_D36384_IMOUT"
+msgstr "Ego sum ex animo."
+
+msgid "TXT_RYES0_SCRIPT03_D36384_HERES"
+msgstr "Hic est quidam ammo tibi. Don't waste it."
+
+msgid "TXT_RNO0_SCRIPT03_D36384_YOUVE"
+msgstr "Satis ammo habes."
+
+msgid "TXT_RPLY1_SCRIPT03_D36384_TEACH"
+msgstr "Doce me."
+
+msgid "TXT_RYES1_SCRIPT03_D36384_OKTAK"
+msgstr "O.K. Accipe quod hic didiceris, et monstras Ordine glebas ad inferna viam."
+
+msgid "TXT_RNO1_SCRIPT03_D36384_COMEB"
+msgstr "Postea redi, cum Macil tempus dicit."
+
+# (three trainings)
+msgid "TXT_DLG_SCRIPT03_D37900_IVETA"
+msgstr "Docui tibi omnia quae nunc possum. Da mihi aliquod tempus nova tela per passum ponere. Cras id nisi ex."
+
+msgid "TXT_RPLY0_SCRIPT03_D37900_YESIA"
+msgstr "Ita Ego sum."
+
+msgid "TXT_RYES0_SCRIPT03_D37900_HEREY"
+msgstr "Hic tu."
+
+# MAP03: Upstairs.
+msgid "TXT_DLG_SCRIPT03_D39416_DONTG"
+msgstr "Noli felis felices in oppido accipere. Tu terrorem pones et a castellum custodias incipient mittere. "
+
+# MAP03: Near Macil.
+msgid "TXT_DLG_SCRIPT03_D40932_WELCO"
+msgstr "Grata, semper maiore auxilio uti possumus."
+
+msgid "TXT_DLG_SCRIPT03_D42448_WHENI"
+msgstr "Cum adhuc in actu essem possibilitas examinandi acolythi antequam auxilia advenissent. Audi, homines non sunt."
+
+# MAP03: Downstairs.
+msgid "TXT_DLG_SCRIPT03_D43964_WERET"
+msgstr "Conamur invenire ubi castellum machinae portae sunt, sed tantum nullas habuimus fortuna."
+
+msgid "TXT_DLG_SCRIPT03_D45480_DONTG"
+msgstr "Ne capiaris. Audivi horrorem fabulas de iis quae nostris faciunt postquam incarcerati sunt. Iustus evanescet… Sine vestigio."
+
+msgid "TXT_DLG_SCRIPT03_D46996_HERES"
+msgstr "Aliquid hic est consilium, si quando aliquos ex Ordine Tinsoldios in alteram partem ire videris. Ieiunium et ferum sunt."
+
+msgid "TXT_DLG_SCRIPT03_D48512_LEAVE"
+msgstr "Sinite me esse. Ego Macil aliquid facio."
+
+# MAP04: Reactor Core red guard.
+msgid "TXT_DLG_SCRIPT04_D0_SORRY"
+msgstr "Ignosce, no. Alvi non habes."
+
+msgid "TXT_DLG_SCRIPT04_D1516_STOPS"
+msgstr "Desine! Ostende mihi signum ID tuum."
+
+msgid "TXT_RPLY0_SCRIPT04_D1516_HERES"
+msgstr "Hic mihi I.D."
+
+msgid "TXT_DLG_SCRIPT04_D3032_OHOKS"
+msgstr "Oh, ok. Certus perge. Bonum diem habeas."
+
+# MAP04: Warehouse red guard.
+msgid "TXT_DLG_SCRIPT04_D4548_DERWI"
+msgstr "Derwin? Yeah, descendit in horreis, sed non intras nisi purgatus es."
+
+msgid "TXT_RPLY0_SCRIPT04_D4548_IVEGO"
+msgstr "Habeo alvi."
+
+msgid "TXT_DLG_SCRIPT04_D6064_GOON"
+msgstr "Perge."
+
+msgid "TXT_RPLY0_SCRIPT04_D6064_DOYOU"
+msgstr "Scin' ubi sit?"
+
+msgid "TXT_DLG_SCRIPT04_D7580_IDONT"
+msgstr "Nescio ubi quis sit. Modo custodiant operculum in mus captionem."
+
+msgid "TXT_DLG_SCRIPT04_D9096_YOUAR"
+msgstr "Ingratus es distractio."
+
+# MAP04: Reactor Core gray guard.
+msgid "TXT_DLG_SCRIPT04_D10612_MOVEA"
+msgstr "Recedunt vel gustus metalli."
+
+msgid "TXT_DLG_SCRIPT04_D12128_PASSY"
+msgstr "ID tuum transi per huc ad accessum."
+
+# MAP04: Green guard.
+msgid "TXT_DLG_SCRIPT04_D13644_GETBA"
+msgstr "Redi ad opus, nunc!"
+
+msgid "TXT_DLG_SCRIPT04_D15160_GETBA"
+msgstr "Redi ad opus, nunc!"
+
+# MAP04: Warehouse → Northeast (worker in red)
+msgid "TXT_DLG_SCRIPT04_D16676_WEVEB"
+msgstr "Circum horologium per septimanas discurrimus nullo demisso tempore. Dicere vellem Ordinem suppressionem incursionum ante frontem moliri."
+
+# MAP04: Derwin.
+msgid "TXT_DLG_SCRIPT04_D18192_OHDAM"
+msgstr "Oh, perduint. Praeses te misit. Ibam ei daturus sum excisus, vere essem. Bene, Audi. Fasciculum habeo stashed. Tuum est si aliter spectes."
+
+msgid "TXT_RPLY0_SCRIPT04_D18192_ALLRI"
+msgstr "Recte, ego te dimittam."
+
+msgid "TXT_RPLY1_SCRIPT04_D18192_SORRY"
+msgstr "Ignoscas, nihil personale."
+
+msgid "TXT_DLG_SCRIPT04_D19708_NUTSI"
+msgstr "Nuces si descendo, sic es. Custodes!!"
+
+msgid "TXT_DLG_SCRIPT04_D21224_BUSIN"
+msgstr "Negotium meum asinum. Auxilium, servat, vivo vivo."
+
+# MAP04: Worner.
+msgid "TXT_DLG_SCRIPT04_D22740_AHIGO"
+msgstr "Ah, e Macilo verbum feci ut venires. Iter habeo ad te intra stationem virtutis, sed in periculo est."
+
+msgid "TXT_RPLY0_SCRIPT04_D22740_ILLTA"
+msgstr "Casus mea ducam."
+
+msgid "TXT_DLG_SCRIPT04_D24256_ALLRI"
+msgstr "Recte, surripui an I.D. a cadavere alicujus stulti, qui in foveam reactoris incidit. --blat-- instant deep fry."
+
+msgid "TXT_RPLY0_SCRIPT04_D24256_WHATS"
+msgstr "Quid ego aliquando sum in?"
+
+msgid "TXT_DLG_SCRIPT04_D25772_TELLW"
+msgstr "Dic quicumque rogat te esse adiutorem subrogatum pro Domino Crispy. Muta satis est ad operandum. Oh, et gazophylacium quod supra nos est rectum velis inspicere."
+
+msgid "TXT_RPLY0_SCRIPT04_D25772_BOYIH"
+msgstr "Puerum hoc spero I.D. Opera omnia."
+
+msgid "TXT_DLG_SCRIPT04_D27288_GETOU"
+msgstr "Exi hinc, nisi Dno Mortuo finire vis."
+
+# MAP04: Warehouse → Dock Worker.
+msgid "TXT_DLG_SCRIPT04_D28804_HEYLE"
+msgstr "Heus, me solum relinquas. Si tempus terendo nos capiunt, emortui sumus, vel extra laborem."
+
+# MAP04: Reactor Core → Northern alarm green door → Level 2 door
+msgid "TXT_DLG_SCRIPT04_D30320_SUCHP"
+msgstr "Talis pressio, in hac rate ad normales vices mox revertemur. In castellum tons potentiae flare sumus et paene consummata sum nova illa tela colligationem."
+
+msgid "TXT_RPLY0_SCRIPT04_D30320_WEAPO"
+msgstr "Armis?"
+
+msgid "TXT_DLG_SCRIPT04_D31836_WHATD"
+msgstr "Quid censes nos soccis subnixos?"
+
+msgid "TXT_RPLY0_SCRIPT04_D31836_WHATK"
+msgstr "Qualia arma?"
+
+msgid "TXT_DLG_SCRIPT04_D33352_AREYO"
+msgstr "Surdus es? Ego iustus dixi vobis quam occupatus sum. Redi ad opus."
+
+# MAP04: Reactor Core → Southern alarm green door
+msgid "TXT_DLG_SCRIPT04_D34868_WHOAR"
+msgstr "Quis es? Tantum alvi gradus in hac provincia permittuntur duae personae."
+
+msgid "TXT_RPLY0_SCRIPT04_D34868_IMTHE"
+msgstr "Ego operarius postea."
+
+msgid "TXT_DLG_SCRIPT04_D36384_ABOUT"
+msgstr "Circa tempus demonstrasti. Ite colloqui cum Ketrick in core. Oh, card et hanc clavem accipe. Nolo te in primo die iecisse, huh?"
+
+msgid "TXT_RPLY0_SCRIPT04_D36384_WHERE"
+msgstr "Ubi crystallus vis?"
+
+msgid "TXT_DLG_SCRIPT04_D37900_IFYOU"
+msgstr "Si non laboras, usquam iactum feres. Tunicam move."
+
+# MAP04: Reactor Core → Northern alarm green door
+msgid "TXT_DLG_SCRIPT04_D39416_IDONT"
+msgstr "Non dico clangere terrorist, sed si vim crystalli servant impellentes hoc vitium durum suus amet, et frange, et tunc *bom*! …Sicut cogitatio."
+
+# MAP04: Reactor Core → Southern alarm green door
+msgid "TXT_DLG_SCRIPT04_D40932_LETME"
+msgstr "Fac ut satis liquet. Si haec terminatio iterum se clausit, coolant gradus stillabunt et nos omnes programmatori respondere debebimus. si vixerimus."
+
+# MAP04: Ketrick.
+msgid "TXT_DLG_SCRIPT04_D42448_YOUYE"
+msgstr "Tu! Yeah, tu. Non purgatur haec regio. Fac ut clavem tuam habeas, celeriter. Ita malus sum in mente!"
+
+msgid "TXT_RPLY0_SCRIPT04_D42448_HEREH"
+msgstr "Hic, hic est meus card."
+
+msgid "TXT_DLG_SCRIPT04_D43964_THISI"
+msgstr "Purgamentum init! Hic expecta. Oh stupra est. Custodes hunc intrusorem necant!"
+
+# MAP04: Reactor Core → Sammis
+msgid "TXT_DLG_SCRIPT04_D45480_WORKS"
+msgstr "Labore, dormi, excrucior, qualis vita est. Dic, tu diver- sorum incautae subrogandi?"
+
+msgid "TXT_RPLY0_SCRIPT04_D45480_YEAHC"
+msgstr "Ita, incipiam vix exspecto."
+
+msgid "TXT_DLG_SCRIPT04_D46996_YEAHR"
+msgstr "Yeah, right. Bene, asinum ad operandum age."
+
+msgid "TXT_RPLY0_SCRIPT04_D46996_WHERE"
+msgstr "Ubi crystallus?"
+
+msgid "TXT_DLG_SCRIPT04_D48512_GOTAL"
+msgstr "Perge loqui ad Ketrick. Deambulatorium utens virgas adhibe, tum hac I.D. Nam in suscipit eros."
+
+msgid "TXT_RPLY0_SCRIPT04_D48512_WHERE"
+msgstr "Ubi crystallus iterum?"
+
+msgid "TXT_DLG_SCRIPT04_D50028_NONEO"
+msgstr "Nihil negotii tui, Ketrick loquere."
+
+msgid "TXT_RPLY0_SCRIPT04_D50028_OK"
+msgstr "Bene."
+
+# (bored to tears = extremely bored)
+msgid "TXT_DLG_SCRIPT04_D51544_IFITS"
+msgstr "Si opus est occupatus vis, in illo velo paulisper conspexeris, te lachrymas feret."
+
+# MAP04: Reactor Core → Southern alarm green door
+msgid "TXT_DLG_SCRIPT04_D53060_THEAL"
+msgstr "Programmator omnipotentis tam paranoidis infiltrationis est ut nucleum computatrum incluserit. Quomodo ego volo impetro opus meum factum? Uno modo in mortem currere est."
+
+msgid "TXT_RPLY0_SCRIPT04_D53060_SUICI"
+msgstr "Mortem currere? Quid id est?"
+
+msgid "TXT_DLG_SCRIPT04_D54576_ITSAS"
+msgstr "Ignis certo modo est ut occidatur, sed nunc non magni momenti est. Descende levare, si proclivis es."
+
+# MAP05: Door Guard.
+msgid "TXT_DLG_SCRIPT05_D0_HALTN"
+msgstr "Claudum. Non hic permittitur sine licentia custodis vel gubernatoris."
+
+msgid "TXT_RPLY0_SCRIPT05_D0_HERES"
+msgstr "Hic est saltus meus, sine me in."
+
+msgid "TXT_DLG_SCRIPT05_D1516_OKBUT"
+msgstr "Bene, sed tantum cum Custodi."
+
+# (After killing Montag)
+msgid "TXT_DLG_SCRIPT05_D3032_DOILO"
+msgstr "Egone aspicio ut Custodem ad te? Movere, haec regio limites desinit."
+
+# MAP05: Prison Guard.
+msgid "TXT_DLG_SCRIPT05_D4548_THEOR"
+msgstr "Iram in hos servos pluet Ordinis, donec mortem petant."
+
+# MAP05: Montag.
+msgid "TXT_DLG_SCRIPT05_D6064_IDONT"
+msgstr "Non curo si Mourellus tibi transitum dedit. Carcer meus est. Meus clavem tantum modo in vel extra, nec ullum casum sumens. Ordo errata non tolerat."
+
+msgid "TXT_RPLY0_SCRIPT05_D6064_GIVEM"
+msgstr "Da mihi clavem damn!"
+
+msgid "TXT_DLG_SCRIPT05_D7580_OVERM"
+msgstr "Super mortuum corpus meum!"
+
+msgid "TXT_RPLY0_SCRIPT05_D7580_GREAT"
+msgstr "Magna idea!"
+
+msgid "TXT_DLG_SCRIPT05_D9096_SHACK"
+msgstr "Compedes vel compedes, volo te pendere circa."
+
+# MAP05: Wolenick.
+msgid "TXT_DLG_SCRIPT05_D10612_IDONT"
+msgstr "Nescio quomodo antea custodes et custódis essátus es, sed spero te sicut décora, quia in movísti modo."
+
+msgid "TXT_RPLY0_SCRIPT05_D10612_FREEM"
+msgstr "Liberate socios, an moriar!"
+
+msgid "TXT_DLG_SCRIPT05_D12128_KILLM"
+msgstr "Nullam nec posuere mi, et posuere libero. Ego unicum habeo clavem exemplaris qui cellulas reserabit."
+
+msgid "TXT_RPLY0_SCRIPT05_D12128_CANYO"
+msgstr "Potesne igitur mihi manum dare?"
+
+msgid "TXT_DLG_SCRIPT05_D13644_MOVEA"
+msgstr "Movere vel iungere amicos."
+
+# MAP05: Prisoner.
+msgid "TXT_DLG_SCRIPT05_D15160_DONTJ"
+msgstr "Non modo ibi sta, nos hinc exi!"
+
+msgid "TXT_DLG_SCRIPT05_D16676_THESK"
+msgstr "Caelum, caelum videre volo."
+
+msgid "TXT_DLG_SCRIPT05_D18192_FIVEF"
+msgstr "Pedes quattuor pedes quinque, pedes quattuor pedes quinque, pedes quattuor."
+
+msgid "TXT_DLG_SCRIPT05_D19708_DONTR"
+msgstr "Noli me absolvere si adhuc Ordinis praeest. terrorem ferre nequeo."
+
+msgid "TXT_DLG_SCRIPT05_D21224_IDONT"
+msgstr "Canem nolo, sed est circa tempus Macil misit aliquem ut nos exiret."
+
+msgid "TXT_DLG_SCRIPT05_D22740_IDGIV"
+msgstr "Aliquid darem pro frustulum panis. Ita sum esuriens."
+
+# MAP06: Weran.
+msgid "TXT_DLG_SCRIPT06_D0_AHASU"
+msgstr "Ah superficies beneficio indiget. Descende hic, tu fac gratiam, ut accipias gratiam, et egeo introitus oppidi, qui est nobis via ad esculenta aperienda. Ordo signavit et custodivit."
+
+msgid "TXT_RPLY0_SCRIPT06_D0_WHERE"
+msgstr "Ubi est porta mechanism?"
+
+msgid "TXT_DLG_SCRIPT06_D1516_DOMYF"
+msgstr "Fac prius gratiam, aut a me habebis salaputium."
+
+msgid "TXT_RPLY0_SCRIPT06_D1516_HOWWI"
+msgstr "Quomodo scis illud apertum?"
+
+msgid "TXT_DLG_SCRIPT06_D3032_BRING"
+msgstr "Custos uniforme reduc me. Ita unus ex ratibus meis eam uti potest et nemo ianuam denuo claudere conabitur."
+
+msgid "TXT_RPLY0_SCRIPT06_D3032_YOUWA"
+msgstr "Uniformis eius vis?"
+
+msgid "TXT_DLG_SCRIPT06_D4548_OPENT"
+msgstr "Aperi ianuam, fer aequabilem et nos commercium. Alioquin defricatus urina."
+
+msgid "TXT_DLG_SCRIPT06_D6064_HAVEY"
+msgstr "Edexisti quid volo?"
+
+msgid "TXT_RPLY0_SCRIPT06_D6064_HOWAB"
+msgstr "Quid de hoc uniforme?"
+
+msgid "TXT_RNO0_SCRIPT06_D6064_BRING"
+msgstr "Confer mihi aequalem."
+
+# MAP06: Weran.
+msgid "TXT_DLG_SCRIPT06_D7580_GOODH"
+msgstr "Bonum est. Ecce aliquid extra. Socii hunc Peregrinum deiecerunt Peregrinus, id est quod flammeum conflat. Nunc Irale unum tibi facere potest. Tale fun habere potes."
+
+msgid "TXT_RPLY0_SCRIPT06_D7580_WHERE"
+msgstr "Ubi porta mechanism?"
+
+#
+# https://en.wikipedia.org/wiki/Reclaimed_water
+msgid "TXT_DLG_SCRIPT06_D9096_YOUHA"
+msgstr "Habes in aliam partem cloacas. Ut illuc castellum ex cloaca sustentationis ianuam ingredi debeas et umorem reclamationis piscinam exhauriat. In fundo est aditus cloacarum absconditus, et ultra portam manualem est imperium."
+
+msgid "TXT_RPLY0_SCRIPT06_D9096_ANYTH"
+msgstr "Quid aliud facere potes?"
+
+msgid "TXT_DLG_SCRIPT06_D10612_GOODL"
+msgstr "Bene sit tibi. Plures cuniculos nostros tibi aperui. Hoc tibi negotium faciliorem reddere debet. Oh, magnitudo decem, perfecta! ...Sed colores pessimi."
+
+msgid "TXT_RPLY0_SCRIPT06_D10612_THANK"
+msgstr "Gratias pro auxilio tuo."
+
+msgid "TXT_DLG_SCRIPT06_D12128_YOUGI"
+msgstr "Nihil mihi das, nihil accipis."
+
+# MAP06: Beggar.
+msgid "TXT_DLG_SCRIPT06_D13644_WERAN"
+msgstr "Weran salvabit nos. Nobis adhuc numquam defuit."
+
+msgid "TXT_DLG_SCRIPT06_D15160_IFYOU"
+msgstr "Si responsum quaestionis tuae quaeris, Weran invenies. "
+
+msgid "TXT_DLG_SCRIPT06_D16676_LONGL"
+msgstr "Vivat Front? Tota crap. Omnes iusti sumus exspectantes mori. "
+
+msgid "TXT_DLG_SCRIPT06_D18192_WITHO"
+msgstr "Cum transitu ad superficiem signatum, nec nos ipsos pascere possumus."
+
+msgid "TXT_DLG_SCRIPT06_D19708_FOODD"
+msgstr "Cibus habes cibum? Adiuva nos."
+
+# MAP06: Gray acolyte.
+msgid "TXT_DLG_SCRIPT06_D21224_THISI"
+msgstr "Haec mea merces est, ut captivos dimittam, cloacas custodiens. Si unquam invenero guy qui erupit, ego illum necabo."
+
+# MAP06: Red acolyte.
+msgid "TXT_DLG_SCRIPT06_D22740_WEVEG"
+msgstr "Mendicos istos compendii modo ubi volumus. Paucis hoc diebus, et se inedia macerant."
+
+# MAP06: Near storage.
+msgid "TXT_DLG_SCRIPT06_D24256_WHATS"
+msgstr "Quid purgationem tuam? Hic nullae sunt personae alienae permissae."
+
+# MAP07: Red acolyte at the main entrance.
+msgid "TXT_DLG_SCRIPT07_D0_WHATT"
+msgstr "Quid infernum? Quis portas aperuit? Clange terrorem!!!"
+
+# MAP07
+msgid "TXT_DLG_SCRIPT07_D1516_THERE"
+msgstr "Alia via est in cloacas, mitte illam switch et deinde ascende et reclamationem piscinam purga."
+
+# MAP07: Hospital.
+msgid "TXT_DLG_SCRIPT07_D3032_WHATT"
+msgstr "Quid est tibi quaestio inferorum. Si Programmator ex auditorio suo thalamo exit, mortuus es."
+
+msgid "TXT_DLG_SCRIPT07_D4548_HEYYO"
+msgstr "Heus, non purgaris illuc descendere."
+
+# MAP07: Computer room (northwest building).
+msgid "TXT_DLG_SCRIPT07_D6064_PROGR"
+msgstr "Programmator? Quis tibi hoc dixit? Nulla elit. Ista fabula saeculis abhinc pervulgata est. Ne dicas frontem credebat lutum. Idiota."
+
+msgid "TXT_RPLY0_SCRIPT07_D6064_WELLW"
+msgstr "Quid vero tum?"
+
+msgid "TXT_DLG_SCRIPT07_D7580_ITOLD"
+msgstr "Haec omnia tibi dixi, scio. Perdis operam."
+
+# MAP07: Font soldier.
+msgid "TXT_DLG_SCRIPT07_D9096_FIGHT"
+msgstr "Pugnate, triumphabimus. Hic dies nobis erit!"
+
+msgid "TXT_DLG_SCRIPT07_D10612_FIGHT"
+msgstr "Pugnate, triumphabimus. Hic dies nobis erit!"
+
+msgid "TXT_DLG_SCRIPT07_D12128_FIGHT"
+msgstr "Pugnate, triumphabimus. Hic dies nobis erit!"
+
+msgid "TXT_DLG_SCRIPT07_D13644_FIGHT"
+msgstr "Pugnate, triumphabimus. Hic dies nobis erit!"
+
+msgid "TXT_DLG_SCRIPT07_D15160_FIGHT"
+msgstr "Pugnate, triumphabimus. Hic dies nobis erit!"
+
+msgid "TXT_DLG_SCRIPT07_D16676_FIGHT"
+msgstr "Pugnate, triumphabimus. Hic dies nobis erit!"
+
+# MAP08: Northeast room.
+msgid "TXT_DLG_SCRIPT08_D0_YOUKI"
+msgstr "Omnes custodes occidisti. Noli me laedere. Dicebam ei hanc ideam mutam fuisse. Programmator verus in custodia est. Hic, hanc clavem tolle."
+
+msgid "TXT_RPLY0_SCRIPT08_D0_YOURE"
+msgstr "Programmator es!"
+
+msgid "TXT_DLG_SCRIPT08_D1516_DOILO"
+msgstr "Viden'ne me ut ultimam virtutem feram? Ordo nobis omnibus utitur. Nunc ite, iam perii."
+
+msgid "TXT_DLG_SCRIPT08_D3032_POWER"
+msgstr "Clavis est potentia!"
+
+# MAP10: Macil.
+msgid "TXT_DLG_SCRIPT10_D0_GOODY"
+msgstr "Bene, iterum conscius es. Cum illud programmatorem item adprehendisses excidisse, quaedam horribilia secreta emisisti."
+
+msgid "TXT_RPLY0_SCRIPT10_D0_WHATK"
+msgstr "Qualia sunt secreta. "
+
+msgid "TXT_DLG_SCRIPT10_D1516_WEHAV"
+msgstr "Nescimus unde telum hoc venit, sed quaerendum est. Eripuisti unum ex Ordine, sed omnes quinque habere debemus. Limites cognitionis mee pervenimus. Oraculum pete et auxilium pete."
+
+msgid "TXT_RPLY0_SCRIPT10_D1516_IMGON"
+msgstr "Im 'agnus dei pluribus commeatibus opus est."
+
+msgid "TXT_DLG_SCRIPT10_D3032_HERES"
+msgstr "Aurum Hic est quidam. Ite visitate medicum et lanistam arma et deinde egredere!"
+
+msgid "TXT_RPLY0_SCRIPT10_D3032_RIGHT"
+msgstr "Recte!"
+
+msgid "TXT_DLG_SCRIPT10_D4548_FIGHT"
+msgstr "Pro Fronte et Libertate Certa. Movere manum."
+
+# MAP10: Macil → The Oracle said to kill him
+msgid "TXT_DLG_SCRIPT10_D6064_WHATP"
+msgstr "Quid reditum tuum suggerit? Num laeditur? Tempus non est quod perdas, perge cum missio. Perficere Sigil."
+
+msgid "TXT_RPLY0_SCRIPT10_D6064_THEOR"
+msgstr "Oraculum dicit te moriendum esse!"
+
+msgid "TXT_DLG_SCRIPT10_D7580_IHAVE"
+msgstr "Juravi me libertati. Oraculum est qui tertiam partem tenet. Illic proditor tuus est."
+
+msgid "TXT_RPLY0_SCRIPT10_D7580_THEOR"
+msgstr "Oraculum ergo morietur!"
+
+msgid "TXT_RPLY1_SCRIPT10_D7580_ITHIN"
+msgstr "Proditorem te esse arbitror!"
+
+# MAP10: Macil → You chose to kill Macil
+msgid "TXT_DLG_SCRIPT10_D9096_SPIRI"
+msgstr "Spiritus Unius Dei vindica me et vicis hunc mundum in pulverem."
+
+# MAP10: Macil → You chose to kill the Oracle
+msgid "TXT_DLG_SCRIPT10_D10612_YOUHA"
+msgstr "Tu recte iudicasti. Patet oraculum regi quocunque malo Ordine gubernat. Revertere et vindica tertiam petiam Sigil."
+
+# MAP10: Macil → After killing the Oracle
+msgid "TXT_DLG_SCRIPT10_D12128_THERE"
+msgstr "Non videtur finis horrori faciei. Invenimus Ordinem nostros homines non occidere. Eos in milites bio-mechanicos transformat. Facilitatem, ubi hoc agitur, et claude illud, in perpetuum."
+
+msgid "TXT_RPLY0_SCRIPT10_D12128_WHERE"
+msgstr "Ubi est hic locus?"
+
+msgid "TXT_DLG_SCRIPT10_D13644_ONEOF"
+msgstr "Unus ducum nostrorum, Richter, te exspectat in cataracta in plebe. Facilitatem vidit et te intus dirigere potest. desine nunc hoc scelus."
+
+msgid "TXT_RPLY0_SCRIPT10_D13644_THEYL"
+msgstr "Hoc luent!"
+
+msgid "TXT_DLG_SCRIPT10_D15160_FIGHT"
+msgstr "Pro Fronte et Libertate Certa. Movere manum."
+
+# MAP10: Macil → After destroying the converter in MAP24.
+msgid "TXT_DLG_SCRIPT10_D16676_IAMTH"
+msgstr "Ego sum Deus unus... Animum eius liberum esse debeo ut corpus meum linquam et eum fuga iungam. Nescis quid habes… Et quem timorem facies… Liberum esse debet Deus unus… Et reddet mihi… Ero unus…"
+
+msgid "TXT_RPLY0_SCRIPT10_D16676_IWILL"
+msgstr "Perdam te!"
+
+# MAP10: Gerald (no upgrade).
+msgid "TXT_DLG_SCRIPT10_D18192_GLADT"
+msgstr "Gaudeo te videre factum est. Quid opus est tibi? "
+
+msgid "TXT_RPLY0_SCRIPT10_D18192_HEALM"
+msgstr "Sana me."
+
+msgid "TXT_RYES0_SCRIPT10_D18192_WELLL"
+msgstr "Bene, permittit te fixa."
+
+msgid "TXT_RNO0_SCRIPT10_D18192_YOURE"
+msgstr "Bene es."
+
+msgid "TXT_RPLY1_SCRIPT10_D18192_ANYTH"
+msgstr "Quid novi?"
+
+msgid "TXT_RYES1_SCRIPT10_D18192_YESIV"
+msgstr "Ita, Novi ferramenta tibi habeo."
+
+msgid "TXT_RNO1_SCRIPT10_D18192_NOPEI"
+msgstr "Minime, sed in eo laboro."
+
+# (one upgrade: Mission to talk to the Oracle)
+msgid "TXT_DLG_SCRIPT10_D19708_WHATC"
+msgstr "Quid nunc tibi faciam? Feris aliquas tabulas implicatas vere decryptas est, sed pretium actum est. Iam aliqua indicia sunt me applicari posse ad proximam versionem vigor implantandi."
+
+msgid "TXT_RPLY0_SCRIPT10_D19708_HEALM"
+msgstr "Sana me."
+
+msgid "TXT_RYES0_SCRIPT10_D19708_YOUSH"
+msgstr "Paulo diligentior esse disces."
+
+msgid "TXT_RPLY1_SCRIPT10_D19708_WHENW"
+msgstr "Quando paratos?"
+
+msgid "TXT_RYES1_SCRIPT10_D19708_ITSRE"
+msgstr "Nunc praesent paratus. Hoc modo non erit."
+
+msgid "TXT_RNO1_SCRIPT10_D19708_SOON"
+msgstr "Mox."
+
+# (two upgrades: Mission to decide between Macil or the Oracle)
+msgid "TXT_DLG_SCRIPT10_D21224_ITHIN"
+msgstr "Puto inveni glitch in ferramentis inserendi. Feris me adiuvat ad excogitandum retrofitum quod illius curam habebit et celeritas ferramentorum tuorum paulo boost. Estne aliquid quod possum facere vobis?"
+
+msgid "TXT_RPLY0_SCRIPT10_D21224_PATCH"
+msgstr "Repeciare me."
+
+msgid "TXT_RYES0_SCRIPT10_D21224_THERE"
+msgstr "Ibi pro novo opinor."
+
+msgid "TXT_RPLY1_SCRIPT10_D21224_RETRO"
+msgstr "Renovatio?"
+
+# (during sad/bad ending)
+msgid "TXT_RYES1_SCRIPT10_D21224_AHNOW"
+msgstr "Ah, nunc coquimus."
+
+msgid "TXT_RNO1_SCRIPT10_D21224_ILLHA"
+msgstr "Ego eam habebo quam primum Feris perficiat."
+
+# (three upgrades: Mission to kill the Loremaster with the Oracle alive).
+msgid "TXT_DLG_SCRIPT10_D22740_HOWSI"
+msgstr "Quid agis? Homo quidam ex hoc novo ars solum mirabile est. Hoc etiam debet iuvare tuis indere. Habeo duas notiones quas ego adumbrat, et statim promptam habebo. Quid faciam tibi, fortasse sanitatem?"
+
+msgid "TXT_RPLY0_SCRIPT10_D22740_YESHE"
+msgstr "Ita, sana me."
+
+msgid "TXT_RYES0_SCRIPT10_D22740_ALLRI"
+msgstr "Recte, hic tu."
+
+msgid "TXT_RPLY1_SCRIPT10_D22740_HOWAB"
+msgstr "Quomodo tech nova illa?"
+
+msgid "TXT_RYES1_SCRIPT10_D22740_LETME"
+msgstr "Fac ut sciam opera haec."
+
+msgid "TXT_RNO1_SCRIPT10_D22740_IMNOT"
+msgstr "Nondum perfeci designandum."
+
+# (four upgrades).
+msgid "TXT_DLG_SCRIPT10_D24256_BACKA"
+msgstr "Retro iterum, ecquid umquam hoc piget? Aliquid boni habeo nuntium, Feris viam inveni, ut incrementi tuae implantationis invenias. Specimen mihi dedit, et id studeo cum tua physiologia miscere. Vim sum textus augere aliquid, hic prorsus novam supellectilem, spero capit. Egesne medendo?"
+
+msgid "TXT_RPLY0_SCRIPT10_D24256_YESHE"
+msgstr "Ita, sana me."
+
+msgid "TXT_RYES0_SCRIPT10_D24256_DONEN"
+msgstr "Actum, nunc cura ut valeas."
+
+msgid "TXT_RPLY1_SCRIPT10_D24256_WHENW"
+msgstr "Quando fiet?"
+
+msgid "TXT_RYES1_SCRIPT10_D24256_NOWHE"
+msgstr "Nunc. Heus magna, operata est!"
+
+msgid "TXT_RNO1_SCRIPT10_D24256_IMWAI"
+msgstr "Exspecto in texta ut cursum suum perficiat."
+
+# (five upgrades).
+msgid "TXT_DLG_SCRIPT10_D25772_WELLI"
+msgstr "Bene, iterum ad veteres dolis revertor, adhuc laboro in tuis insitis. Scisne Macilum nunc illis omnibus dedisse? Non, huh? Est quod bene evasit. Quid tibi possum facere?"
+
+msgid "TXT_RPLY0_SCRIPT10_D25772_HELPM"
+msgstr "Auxilium hic mihi ex."
+
+msgid "TXT_RYES0_SCRIPT10_D25772_THATS"
+msgstr "Id possum facere omnia."
+
+msgid "TXT_RPLY1_SCRIPT10_D25772_NEWIM"
+msgstr "Novum inserendi?"
+
+msgid "TXT_RYES1_SCRIPT10_D25772_YEPMY"
+msgstr "Vidi, mi optime tamen."
+
+msgid "TXT_RNO1_SCRIPT10_D25772_SORRY"
+msgstr "Dolemus, sed solum exspectandum est."
+
+# (six upgrades).
+msgid "TXT_DLG_SCRIPT10_D27288_THISI"
+msgstr "Hoc est, Feris attigerit omnia quae ex omnibus notitiis habemus exhaurire potuit, hoc erit optimum, ac novissime upgrade implantare. Triste genus erit, quandoquidem optima creatio Ad culmen pertingit mea. Me certe cetera turba huiusce occupatam servabit."
+
+msgid "TXT_RPLY0_SCRIPT10_D27288_COULD"
+msgstr "Sana me?"
+
+msgid "TXT_RYES0_SCRIPT10_D27288_THERE"
+msgstr "Ibi, nunc omnia pone."
+
+# MAP10: Feris (no training).
+msgid "TXT_DLG_SCRIPT10_D28804_ITSTH"
+msgstr "Heros est. Optime factum! Quid tibi afferre possum? Paulo maiorem delectum habemus nunc, cum omnia instrumenta ex castello habeamus. Si tibi opus est tormenta emere, cum Iustino loquere. Ille te curabit. "
+
+msgid "TXT_RPLY0_SCRIPT10_D28804_IMOUT"
+msgstr "Im e glandibus."
+
+msgid "TXT_RYES0_SCRIPT10_D28804_HERES"
+msgstr "Hic est quidam ammo tibi. Don't waste it."
+
+msgid "TXT_RPLY1_SCRIPT10_D28804_TEACH"
+msgstr "Doce me."
+
+msgid "TXT_RYES1_SCRIPT10_D28804_NOWAF"
+msgstr "Nunc, magna tormenta in paucis tips."
+
+msgid "TXT_RNO1_SCRIPT10_D28804_YOURE"
+msgstr "Nondum paratus es."
+
+# (one training)
+msgid "TXT_DLG_SCRIPT10_D30320_HOWST"
+msgstr "Quid est bellum conatus? Nunquam, si adhuc hic sumus, finis erit necesse. quid faciam tibi?"
+
+msgid "TXT_RPLY0_SCRIPT10_D30320_IRANO"
+msgstr "Excussi glandes."
+
+msgid "TXT_RYES0_SCRIPT10_D30320_THATS"
+msgstr "Quod ut adiuvet."
+
+msgid "TXT_RNO0_SCRIPT10_D30320_YOUVE"
+msgstr "Satis ammo habes."
+
+msgid "TXT_RPLY1_SCRIPT10_D30320_TEACH"
+msgstr "Doce me."
+
+msgid "TXT_RYES1_SCRIPT10_D30320_HEREI"
+msgstr "Hic tibi paucas stropharum commercium monstrabo."
+
+msgid "TXT_RNO1_SCRIPT10_D30320_YOURE"
+msgstr "Nondum paratus es."
+
+# (two trainings)
+msgid "TXT_DLG_SCRIPT10_D31836_WELLH"
+msgstr "Bene in tutelam venissti, an ex animo aliquo quem petis? Nondum putes me fieri tecum. Manicas meas adhuc habeo paucis praestigiis."
+
+msgid "TXT_RPLY0_SCRIPT10_D31836_ITSAM"
+msgstr "Ammo est nunc."
+
+msgid "TXT_RYES0_SCRIPT10_D31836_HERES"
+msgstr "Hic est quidam ammo tibi. Don't waste it."
+
+msgid "TXT_RNO0_SCRIPT10_D31836_YOUVE"
+msgstr "Satis ammo habes."
+
+msgid "TXT_RPLY1_SCRIPT10_D31836_TEACH"
+msgstr "Doce me."
+
+msgid "TXT_RYES1_SCRIPT10_D31836_TIMEF"
+msgstr "Tempus provectior lectionum."
+
+msgid "TXT_RNO1_SCRIPT10_D31836_YOURE"
+msgstr "Nondum paratus es."
+
+# (three trainings)
+msgid "TXT_DLG_SCRIPT10_D33352_WELLW"
+msgstr "Hem, quid nunc est? Tu semper intermissum? Gaudeo te spirare adhuc. Odi vellem meum studiosum meum ut reverteretur ab interiore corporis sacculi prospiciens."
+
+msgid "TXT_RPLY0_SCRIPT10_D33352_INEED"
+msgstr "Aliquam volutpat egestas sagittis."
+
+msgid "TXT_RYES0_SCRIPT10_D33352_THERE"
+msgstr "Ibi, ne perdis."
+
+msgid "TXT_RNO0_SCRIPT10_D33352_YOUHA"
+msgstr "Satis habes."
+
+msgid "TXT_RPLY1_SCRIPT10_D33352_WHATC"
+msgstr "Quid me doces?"
+
+msgid "TXT_RYES1_SCRIPT10_D33352_DONTG"
+msgstr "Noli esse mordax, adhuc tibi spatium est ad crescendum."
+
+msgid "TXT_RNO1_SCRIPT10_D33352_NOTHI"
+msgstr "Nihil usque dum paratus sis."
+
+# (four trainings)
+msgid "TXT_DLG_SCRIPT10_D34868_LOOKW"
+msgstr "Vide quis terga, quid in animo est? Duram scio, sed omnes bene opera tua, mihi crede."
+
+msgid "TXT_RPLY0_SCRIPT10_D34868_IVERU"
+msgstr "Ego glandes excurrere."
+
+msgid "TXT_RYES0_SCRIPT10_D34868_WHATE"
+msgstr "Quid aliud novum est, hic pergitis."
+
+msgid "TXT_RNO0_SCRIPT10_D34868_YOUHA"
+msgstr "Plus habes, quam possum tibi dare."
+
+msgid "TXT_RPLY1_SCRIPT10_D34868_TEACH"
+msgstr "Doce quid potes."
+
+msgid "TXT_RYES1_SCRIPT10_D34868_ALLRI"
+msgstr "Recte, hic indicia quaedam."
+
+msgid "TXT_RNO1_SCRIPT10_D34868_NOTRI"
+msgstr "Nunc non elit."
+
+# (five trainings)
+msgid "TXT_DLG_SCRIPT10_D36384_WHATI"
+msgstr "Quid est quod debes? Spero te Ordini dare gustum doloris quem per annos fuimus."
+
+msgid "TXT_RPLY0_SCRIPT10_D36384_SOMEA"
+msgstr "Quidam ammo."
+
+msgid "TXT_RYES0_SCRIPT10_D36384_THERE"
+msgstr "Ibi abis, ne perdis."
+
+msgid "TXT_RNO0_SCRIPT10_D36384_YOUVE"
+msgstr "Satis ammo habes."
+
+msgid "TXT_RPLY1_SCRIPT10_D36384_TEACH"
+msgstr "Doce me."
+
+msgid "TXT_RYES1_SCRIPT10_D36384_AFEWM"
+msgstr "Lectiones paucas et scies omnia quae possum docere."
+
+msgid "TXT_RNO1_SCRIPT10_D36384_YOURE"
+msgstr "Nondum paratus es."
+
+# (six trainings)
+msgid "TXT_DLG_SCRIPT10_D37900_ICANT"
+msgstr "Non possum credere nos circum adhuc sumus, tu et ego. Nimis multi sumus qui ab initio elapsi sunt. Quid faciam tibi, amice?"
+
+msgid "TXT_RPLY0_SCRIPT10_D37900_IMOUT"
+msgstr "Im e glandibus."
+
+# (in good health = enjoy)
+msgid "TXT_RYES0_SCRIPT10_D37900_HEREU"
+msgstr "Hic utere ut valeas."
+
+msgid "TXT_RNO0_SCRIPT10_D37900_YOUHA"
+msgstr "Satis habes."
+
+msgid "TXT_RPLY1_SCRIPT10_D37900_TEACH"
+msgstr "Doce me."
+
+msgid "TXT_RYES1_SCRIPT10_D37900_WELLT"
+msgstr "Bene est, factum es. Plura docere non possum."
+
+msgid "TXT_RNO1_SCRIPT10_D37900_RETUR"
+msgstr "Redi post Macil tempus narrat tibi."
+
+# (seven trainings)
+msgid "TXT_DLG_SCRIPT10_D39416_IVETA"
+msgstr "Docui tibi omnia quae nunc possum. Tibi omnia dedi, ut semper indigeas, nisi sis ex glandibus. Eos adhuc possum te."
+
+msgid "TXT_RPLY0_SCRIPT10_D39416_YESIA"
+msgstr "Ita Ego sum."
+
+msgid "TXT_RYES0_SCRIPT10_D39416_HEREY"
+msgstr "Hic tu. "
+
+# MAP10: Justin.
+msgid "TXT_DLG_SCRIPT10_D40932_CHECK"
+msgstr "Perscribe quid novum est, pharus teleportarius. Cum pharus uteris, signum indabimus et auxilium mittimus. Estne aliquid quod possum te accipere?"
+
+msgid "TXT_RPLY0_SCRIPT10_D40932_BOXOF"
+msgstr "Arca nisl"
+
+msgid "TXT_RYES0_SCRIPT10_D40932_THERE"
+msgstr "Ibi tu ibis."
+
+msgid "TXT_RNO0_SCRIPT10_D40932_YOUCA"
+msgstr "Quod praestare non potes!"
+
+msgid "TXT_RPLY1_SCRIPT10_D40932_HEGRE"
+msgstr "H-E tasque."
+
+msgid "TXT_RYES1_SCRIPT10_D40932_HEREY"
+msgstr "Hic tu."
+
+msgid "TXT_RNO1_SCRIPT10_D40932_COMEB"
+msgstr "Redi, cum satis pecuniae habes."
+
+msgid "TXT_RPLY2_SCRIPT10_D40932_ENERG"
+msgstr "Capsula energiae"
+
+msgid "TXT_RYES2_SCRIPT10_D40932_HERES"
+msgstr "En industria pod"
+
+msgid "TXT_RNO2_SCRIPT10_D40932_YOUDO"
+msgstr "Non habes satis."
+
+msgid "TXT_RPLY3_SCRIPT10_D40932_TELEP"
+msgstr "Pharus teleporter"
+
+msgid "TXT_RYES3_SCRIPT10_D40932_HELPW"
+msgstr "Auxilium, quando et ubi opus est."
+
+msgid "TXT_RNO3_SCRIPT10_D40932_SORRY"
+msgstr "Ignosce, nulla caritas."
+
+# MAP10: Rebels in Macil's room.
+msgid "TXT_DLG_SCRIPT10_D42448_NOWTH"
+msgstr "Nunc ut in potestate castellum actu habendo, extra vigilantes custodiendum esse debemus. Probabiliter procinctu Ordinis nunc rursus repercutiendum est."
+
+# MAP10: Castle's entrance.
+msgid "TXT_DLG_SCRIPT10_D43964_BECAR"
+msgstr "Cave ibi."
+
+# MAP10: Rebel in Hospital.
+msgid "TXT_DLG_SCRIPT10_D45480_KEEPU"
+msgstr "Magnum opus serva, sine te id facere non potuimus."
+
+# MAP11: Commons (no token).
+msgid "TXT_DLG_SCRIPT11_D0_IMTHE"
+msgstr "Ego sum magister."
+
+# (Oracle's token)
+msgid "TXT_DLG_SCRIPT11_D1516_ALOTO"
+msgstr "Multi homines hoc ingratum et vile officium dicturi sunt. Sed non enim…"
+
+msgid "TXT_RPLY0_SCRIPT11_D1516_GIVEM"
+msgstr "Da mihi clavem!"
+
+msgid "TXT_DLG_SCRIPT11_D3032_OKBUT"
+msgstr "Bene, sed memento, ego sum claviger."
+
+msgid "TXT_RPLY0_SCRIPT11_D3032_OKPAL"
+msgstr "Bene amice, quidquid."
+
+msgid "TXT_DLG_SCRIPT11_D4548_IMTHE"
+msgstr "Ego sum magister."
+
+# MAP11: Red acolyte at temple's entrance.
+msgid "TXT_DLG_SCRIPT11_D6064_DIETR"
+msgstr "Mori proditor!"
+
+msgid "TXT_DLG_SCRIPT11_D7580_DIETR"
+msgstr "Mori proditor!"
+
+# MAP11: Prisoner.
+msgid "TXT_DLG_SCRIPT11_D9096_HAVEY"
+msgstr "Venisti ut gaudeam? Etsi post hos catenas sumus, dum retinemus, tamen amittis."
+
+msgid "TXT_DLG_SCRIPT11_D10612_LETUS"
+msgstr "Exeamus hinc!"
+
+msgid "TXT_DLG_SCRIPT11_D12128_LEAVE"
+msgstr "Me solum relinquite!"
+
+# MAP12: Oracle.
+msgid "TXT_DLG_SCRIPT12_D0_WHATI"
+msgstr "Quid sapientia quaeris, simplex?"
+
+msgid "TXT_RPLY0_SCRIPT12_D0_THESI"
+msgstr "Signum unius Dei."
+
+msgid "TXT_DLG_SCRIPT12_D1516_IFEEL"
+msgstr "Sentio fragmentum unum resonare in te. Secunda in corde purpureo et obsiano turris. Ibi pugnandum est Episcopum, qui te novit et te exspectat. Invenies eum secundum symbolum potestatis. Hoc signum magistri sume. Revertimini ad me, postquam iumenta occidistis."
+
+msgid "TXT_RPLY0_SCRIPT12_D1516_ILLBE"
+msgstr "Redibo."
+
+msgid "TXT_DLG_SCRIPT12_D3032_ALTHO"
+msgstr "Quamvis Episcopus formidolosus sit, hoc quaestio leve est. Redi ad me, cum proximum fragmentum habeas."
+
+# MAP12: Oracle → After killing the Bishop
+msgid "TXT_DLG_SCRIPT12_D4548_YOURN"
+msgstr "Proxima provocatio spiritum tuum probabit. Tertia petia tenet a duce tuo. Idem est quod ad occidendum te mittit."
+
+msgid "TXT_RPLY0_SCRIPT12_D4548_MACIL"
+msgstr "Macil? Proditor?"
+
+msgid "TXT_DLG_SCRIPT12_D6064_YOURB"
+msgstr "Fides tua caeca permisit ut ad propositum suum cum singulis quaestibus ingrederetur. Illum oppone et fata resolve tua."
+
+msgid "TXT_RPLY0_SCRIPT12_D6064_ALLRI"
+msgstr "Recte, Macil."
+
+msgid "TXT_RPLY1_SCRIPT12_D6064_ITSYO"
+msgstr "Est tibi non habeat fiduciam."
+
+msgid "TXT_DLG_SCRIPT12_D7580_WHATE"
+msgstr "Unius Dei voluntas, quidquid genus tuum eligis, peribit."
+
+# MAP12: Choose to kill Macil.
+msgid "TXT_RPLY0_SCRIPT12_D7580_ILLBE"
+msgstr "Macil redibo cum mortuus est."
+
+# MAP12: Choose to not kill Macil.
+msgid "TXT_RPLY1_SCRIPT12_D7580_ICANT"
+msgstr "Fieri non possum."
+
+# MAP12: You chose to kill Macil.
+msgid "TXT_DLG_SCRIPT12_D9096_THERI"
+msgstr "Flumen temporis tendit usque in aeternum, dum statis."
+
+# MAP12: Oracle → After killing Macil
+msgid "TXT_DLG_SCRIPT12_D10612_YOUHA"
+msgstr "Tu cancer e corpore excidisti, sed cor adhuc verberat. Deinde chirurgum quaerendum est, qui carnifices et populum tuum, Loremasterem moderetur. Desine eum, et altera pars tua erit."
+
+msgid "TXT_RPLY0_SCRIPT12_D10612_WHERE"
+msgstr "Ubi eum invenio?"
+
+msgid "TXT_DLG_SCRIPT12_D12128_USETH"
+msgstr "Ianuarius utere post ianuam quam aperui modo ut ad loremasteriam pervenias. Eo mortuo utere eadem arte ad me ut redeas."
+
+msgid "TXT_RPLY0_SCRIPT12_D12128_ILLBE"
+msgstr "Redibo, cum fragmento!"
+
+msgid "TXT_DLG_SCRIPT12_D13644_THERI"
+msgstr "Flumen temporis tendit usque in aeternum, dum statis."
+
+# MAP12: Oracle → After killing the Loremaster with Macil dead.
+msgid "TXT_DLG_SCRIPT12_D15160_PITIF"
+msgstr "Miseri, fecisti quae milia defecerunt… Tu mihi vim sigil, uox unius dei."
+
+msgid "TXT_RPLY0_SCRIPT12_D15160_IDONT"
+msgstr "Non intelligo."
+
+msgid "TXT_DLG_SCRIPT12_D16676_THESI"
+msgstr "Sigil aperiet ostium, et spiritum liberabit, qui hanc planetam mundabit et me in aeternum vivet. Hunc mundum viribus suis spoliabo et novos orbes ad vincendum invenio."
+
+msgid "TXT_RPLY0_SCRIPT12_D16676_ICANT"
+msgstr "Non possum te facere."
+
+# MAP12: Oracle → Fight with the Oracle.
+msgid "TXT_DLG_SCRIPT12_D18192_YOUCA"
+msgstr "Potes si mortuus es."
+
+# MAP14: James
+msgid "TXT_DLG_SCRIPT14_D0_AREYO"
+msgstr "Esne hic nos liberare? Quia bonus fui, tulerunt meum indere manum. Hic manere adhuc habeo et faecem quamvis deleas."
+
+msgid "TXT_RPLY0_SCRIPT14_D0_YESIM"
+msgstr "Ita, hic sum ut te expediam."
+
+msgid "TXT_RYES0_SCRIPT14_D0_YOUME"
+msgstr "Istuc tibi est?"
+
+# (conveyors = conveyor belts)
+msgid "TXT_DLG_SCRIPT14_D1516_ICANT"
+msgstr "Neminem alium adiuvare possum. Non donec transfusor conflare. Id quod est post forcfield cenaculum. Meum officium est vectores inhibere efficere ut certo non sint impediti. Non amplius!"
+
+msgid "TXT_RPLY0_SCRIPT14_D1516_THATS"
+msgstr "Sic est, salvus es!"
+
+msgid "TXT_RYES0_SCRIPT14_D1516_OHTHA"
+msgstr "Oh gratias!"
+
+msgid "TXT_DLG_SCRIPT14_D3032_WEREF"
+msgstr "Liberi sumus!! Liberi sumus!! Liberi sumus!!"
+
+# MAP14: Drone
+msgid "TXT_DLG_SCRIPT14_D4548_MUSTM"
+msgstr "Mine plus debet minere!"
+
+# MAP14: Peasant (ex-drone)
+msgid "TXT_DLG_SCRIPT14_D6064_WEREF"
+msgstr "Liberi sumus!! Liberi sumus!! Liberi sumus!!"
+
+msgid "TXT_DLG_SCRIPT14_D7580_MUSTM"
+msgstr "Mine plus debet minere!"
+
+msgid "TXT_DLG_SCRIPT14_D9096_WEREF"
+msgstr "Liberi sumus!! Liberi sumus!! Liberi sumus!!"
+
+msgid "TXT_DLG_SCRIPT14_D10612_MUSTM"
+msgstr "Mine plus debet minere!"
+
+msgid "TXT_DLG_SCRIPT14_D12128_WEREF"
+msgstr "Liberi sumus!! Liberi sumus!! Liberi sumus!!"
+
+# MAP15: Red acolytes.
+msgid "TXT_DLG_SCRIPT15_D0_WHATA"
+msgstr "Quid hic agis?"
+
+msgid "TXT_RPLY0_SCRIPT15_D0_ROUTI"
+msgstr "Consuetudinis inspectione."
+
+msgid "TXT_RYES0_SCRIPT15_D0_ALLRI"
+msgstr "Recte, gerere."
+
+# MAP15: Red acolytes + Technician at the beginning.
+msgid "TXT_DLG_SCRIPT15_D1516_NOTHI"
+msgstr "Nihil hie referre. Omne opus bene. Si quid siet, certum erit referre."
+
+# MAP15: Technician at the beginning.
+msgid "TXT_DLG_SCRIPT15_D3032_SIRTH"
+msgstr "Domine, quaestio prior fuit, sed cura fuit."
+
+# MAP17: Bailey (if you don't have Order's key)
+msgid "TXT_DLG_SCRIPT17_D0_MOVEA"
+msgstr "Recedunt vel gustus metalli."
+
+# (if you have it)
+msgid "TXT_DLG_SCRIPT17_D1516_IDCHE"
+msgstr "I.D. reprehendo."
+
+msgid "TXT_RPLY0_SCRIPT17_D1516_HEREI"
+msgstr "Hem propero."
+
+msgid "TXT_DLG_SCRIPT17_D3032_STOPW"
+msgstr "Desine ID tuum iactare in faciem meam et vade in."
+
+# MAP17: Green guards.
+msgid "TXT_DLG_SCRIPT17_D4548_NOTHI"
+msgstr "Nihil hic videre. Reptant."
+
+# MAP17: Hospital → Quincy
+msgid "TXT_DLG_SCRIPT17_D6064_WHATA"
+msgstr "Quod sanum specimen. Non indiges auxilio meo?"
+
+msgid "TXT_RPLY0_SCRIPT17_D6064_WELLY"
+msgstr "Bene, etiam. Macil me misit."
+
+msgid "TXT_DLG_SCRIPT17_D7580_SHHHH"
+msgstr "Shhhh… Quiescas, nisi ambos occidi vis. Nunc quid faciam tibi?"
+
+msgid "TXT_RPLY0_SCRIPT17_D7580_TELLM"
+msgstr "Dic quomodo inueniat Episcopum."
+
+msgid "TXT_DLG_SCRIPT17_D9096_OHHHI"
+msgstr "Ohhh, scivi me pro eo quaerere. Respicite post te. Id introitus arcis episcopi. Vim agri custoditus est qui tantum interclusus est pro visitatoribus officialibus, non tu."
+
+msgid "TXT_RPLY0_SCRIPT17_D9096_IMUST"
+msgstr "Episcopum occidere debeo."
+
+msgid "TXT_DLG_SCRIPT17_D10612_OHSUR"
+msgstr "Oh, cave facias. Primum, pugna viam tuam in complexu securitatis et teleportori utere. Quod fortasse magis placet, computatorium in administratione centrali dele. Non computatio, nulla vis campi."
+
+msgid "TXT_RPLY0_SCRIPT17_D10612_GREAT"
+msgstr "Magna, id facilisis sonat."
+
+# (five-finger discount = theft)
+msgid "TXT_DLG_SCRIPT17_D12128_THERE"
+msgstr "Commodum est ad delendum computatorium ubi consilia ad turris servantur. Potesne dicere, digitum quinque oem? Heh heh!"
+
+msgid "TXT_RPLY0_SCRIPT17_D12128_ANYTH"
+msgstr "Quid aliud?"
+
+msgid "TXT_DLG_SCRIPT17_D13644_OHWEL"
+msgstr "Oh bene, verbum habet ut horrea baiuli receptacula sit amet, hoc est telum quod exhalat."
+
+msgid "TXT_RPLY0_SCRIPT17_D13644_ISTHA"
+msgstr "Estne nunc?"
+
+msgid "TXT_DLG_SCRIPT17_D15160_DONTY"
+msgstr "An nescitis quid sit verborum \"deerrare\"?"
+
+# MAP17: Hospital → Assistant
+msgid "TXT_DLG_SCRIPT17_D16676_TALKT"
+msgstr "Loqui Quincy primus. Im 'non licet aliquem adiuvare nisi qui dixit suus' ok."
+
+msgid "TXT_DLG_SCRIPT17_D18192_HOWHO"
+msgstr "Quomodo possum adiuvare vos hodie?"
+
+msgid "TXT_RPLY0_SCRIPT17_D18192_MEDPA"
+msgstr "Emplastrum medicum"
+
+msgid "TXT_RYES0_SCRIPT17_D18192_HERES"
+msgstr "Hic lacus tuum est."
+
+msgid "TXT_RNO0_SCRIPT17_D18192_THATI"
+msgstr "Id est 15 aurum amici mei."
+
+msgid "TXT_RPLY1_SCRIPT17_D18192_MEDIC"
+msgstr "Medicamentum ornamentum"
+
+msgid "TXT_RYES1_SCRIPT17_D18192_HERES"
+msgstr "Ecce ornamentum medicinae tuum."
+
+msgid "TXT_RNO1_SCRIPT17_D18192_YOURE"
+msgstr "In pecunia pro isto es aliquantulus humilis."
+
+msgid "TXT_RPLY2_SCRIPT17_D18192_FIELD"
+msgstr "Field surgery ornamentum"
+
+msgid "TXT_RYES2_SCRIPT17_D18192_ONEFI"
+msgstr "Chirurgiae unum agri ornamentum, factum."
+
+msgid "TXT_RNO2_SCRIPT17_D18192_COMEB"
+msgstr "Redite, cum pecuniam habetis!"
+
+# MAP18: Yellow guard
+msgid "TXT_DLG_SCRIPT18_D0_WHATI"
+msgstr "Quid est?"
+
+msgid "TXT_RPLY0_SCRIPT18_D0_JUSTL"
+msgstr "Iustus circumspiciens."
+
+msgid "TXT_RYES0_SCRIPT18_D0_JUSTK"
+msgstr "Modo cavete a modo."
+
+msgid "TXT_DLG_SCRIPT18_D1516_THETE"
+msgstr "Templarii mox aderunt ut novos capiant latrones. Si in viam ingredieris mortuus es."
+
+msgid "TXT_RPLY0_SCRIPT18_D1516_MAULE"
+msgstr "Latrones?"
+
+msgid "TXT_RYES0_SCRIPT18_D1516_THETE"
+msgstr "Telum ventus Templarii."
+
+msgid "TXT_DLG_SCRIPT18_D3032_THEYC"
+msgstr "Antea venerunt. Id est de omni securitate. possibilitas quaesivi ut eas viderem cum inclusi. Nemo putatur ingredi vel exire donec reliqui epheborum arma sua vendicant."
+
+# Appears in MAP19 and is supposed to be spoken by the Peasant1 actor (named
+# “Security Comple”). However, no such actor is spawned in the map, rendering
+# this line unused.
+msgid "TXT_DLG_SCRIPT19_D0_THISI"
+msgstr "Hoc est ubi consilia administrationis centralis obtines."
+
+# SVE.WAD
+# MAP22: C-shaped building → Master Smithy.
+msgid "TXT_DLG_SCRIPT22_D0_IRUNT"
+msgstr "Hunc locum curro. Meum officium est partes rudis construere quae ad consilia robot loremasterii requiruntur. Si hic non es in re publica, timeo ne tempus loquatur."
+
+msgid "TXT_RPLY0_SCRIPT22_D0_IAMON"
+msgstr "Ego sum in negotiis publicis."
+
+# (After giving the blue chalice to Timothy).
+msgid "TXT_DLG_SCRIPT22_D1516_SOYOU"
+msgstr "Cum Timotheo ita locutus es, ut video. Ipse et unanimiter elaboravi ut mysteria Ordinis explicare conarentur, antequam nobis omnibus serum est. Fortasse potes adiuva nos. Ostium aperui ad sectorem productionis."
+
+msgid "TXT_RPLY0_SCRIPT22_D1516_DOYOU"
+msgstr "Scin' quid intus?"
+
+msgid "TXT_DLG_SCRIPT22_D3032_ITSAT"
+msgstr "Est area summa secreta. Non solum est ordo generans aliquod genus ... creaturae ibi, artificium mirabile quod dicitur Talisman oculis meis vidi. nulli licet iuxta eam. Fama est magnam vim habere, si cum duobus aliis sui generis coniuncta sit."
+
+msgid "TXT_RPLY0_SCRIPT22_D3032_ISUPP"
+msgstr "Opinor hanc rem vis?"
+
+msgid "TXT_DLG_SCRIPT22_D4548_NOIFY"
+msgstr "Non! Si inveneris, tuum est custodire. Fortasse uti potes ad adiuvandum nos ab oppressione nostra libera. fortuna te vellem, sed multo magis indiges quam si illuc ibis…"
+
+msgid "TXT_RPLY0_SCRIPT22_D4548_WHATS"
+msgstr "Quid haec de praeterito?"
+
+msgid "TXT_DLG_SCRIPT22_D6064_YOUVE"
+msgstr "Certe alterum ruinae prope vidisti. Videtur quod Cometa, quae in nostram planetam ingruat, actu spatium navis sit, et credas vel non, iam olim in hoc ipso mundo ortam esse."
+
+msgid "TXT_RPLY0_SCRIPT22_D6064_SOTHE"
+msgstr "Ita spectra, Deus Unus…"
+
+msgid "TXT_DLG_SCRIPT22_D7580_THEYA"
+msgstr "Creaturae sunt quae hunc mundum olim regebant et vitam eius consumunt. Antiqui curaverunt obsignare, sed in processu vitam dederunt. Vereor ne id scio."
+
+msgid "TXT_RPLY0_SCRIPT22_D7580_THANK"
+msgstr "Gratias ... Faciam quod possum."
+
+msgid "TXT_DLG_SCRIPT22_D9096_GODSP"
+msgstr "Di, amice."
+
+# SVE.WAD
+# MAP22: C-shaped building → Apprentice.
+msgid "TXT_DLG_SCRIPT22_D10612_TALKT"
+msgstr "Loquere magistro Smithy si quaestiones habes. Omnia facio ponatur pittacia in tectoriis."
+
+# MAP23: Weapons
+msgid "TXT_DLG_SCRIPT23_D0_WHATC"
+msgstr "Quid ego te, civis?"
+
+msgid "TXT_RPLY0_SCRIPT23_D0_AMMOB"
+msgstr "Ammo arca"
+
+msgid "TXT_RYES0_SCRIPT23_D0_HERES"
+msgstr "Hic est animus tuus."
+
+msgid "TXT_RNO0_SCRIPT23_D0_YOUDO"
+msgstr "Non satis habes!"
+
+msgid "TXT_RPLY1_SCRIPT23_D0_CRATE"
+msgstr "Telorum cistam"
+
+msgid "TXT_RYES1_SCRIPT23_D0_HEREC"
+msgstr "Hic, civis."
+
+msgid "TXT_RNO1_SCRIPT23_D0_ITS85"
+msgstr "S 85 aurum, civis!"
+
+msgid "TXT_RPLY2_SCRIPT23_D0_HEGRE"
+msgstr "H-E tasque"
+
+msgid "TXT_RYES2_SCRIPT23_D0_HEREA"
+msgstr "Hic sunt tasque tuae."
+
+msgid "TXT_RNO2_SCRIPT23_D0_THEYA"
+msgstr "Illi sunt 100 aurum, amici."
+
+msgid "TXT_RPLY3_SCRIPT23_D0_ENERG"
+msgstr "Capsula energiae"
+
+msgid "TXT_RYES3_SCRIPT23_D0_HEREY"
+msgstr "Hic es tu."
+
+msgid "TXT_RNO3_SCRIPT23_D0_THATS"
+msgstr "135 Aurum, doleo."
+
+# MAP23: Armory (with Tevick locked).
+msgid "TXT_DLG_SCRIPT23_D1516_WHATC"
+msgstr "Quid tibi possum adiuvare?"
+
+msgid "TXT_RPLY0_SCRIPT23_D1516_LEATH"
+msgstr "Corium lorica"
+
+msgid "TXT_RYES0_SCRIPT23_D1516_HEREI"
+msgstr "Hic est civis."
+
+msgid "TXT_RNO0_SCRIPT23_D1516_THERE"
+msgstr "Nulla hic datur caritas!"
+
+msgid "TXT_RPLY1_SCRIPT23_D1516_METAL"
+msgstr "Armatura metallica"
+
+msgid "TXT_RYES1_SCRIPT23_D1516_ANEXC"
+msgstr "Egregius civis optio."
+
+msgid "TXT_RNO1_SCRIPT23_D1516_YOUDO"
+msgstr "Hoc satis non est!"
+
+msgid "TXT_RPLY2_SCRIPT23_D1516_ENVIR"
+msgstr "Environmental sectam"
+
+msgid "TXT_RYES2_SCRIPT23_D1516_HEREY"
+msgstr "Hic es tu."
+
+msgid "TXT_RNO2_SCRIPT23_D1516_NOMON"
+msgstr "Non, aes, litem."
+
+msgid "TXT_RPLY3_SCRIPT23_D1516_SOMET"
+msgstr "Quid aliud?"
+
+msgid "TXT_RYES3_SCRIPT23_D1516_GOTHR"
+msgstr "Ite per ianuam deprimite praetorium."
+
+msgid "TXT_RNO3_SCRIPT23_D1516_YOUMU"
+msgstr "Redde si vis ludere."
+
+# MAP23: Armory (with Tevick unlocked).
+msgid "TXT_DLG_SCRIPT23_D3032_WHATC"
+msgstr "Quid possum tibi?"
+
+msgid "TXT_RPLY0_SCRIPT23_D3032_LEATH"
+msgstr "Corium lorica"
+
+msgid "TXT_RYES0_SCRIPT23_D3032_HEREI"
+msgstr "Hic est civis."
+
+msgid "TXT_RNO0_SCRIPT23_D3032_THERE"
+msgstr "Nulla hic datur caritas!"
+
+msgid "TXT_RPLY1_SCRIPT23_D3032_METAL"
+msgstr "Armatura metallica"
+
+msgid "TXT_RYES1_SCRIPT23_D3032_ANEXC"
+msgstr "Egregius civis optio."
+
+msgid "TXT_RNO1_SCRIPT23_D3032_YOUDO"
+msgstr "Hoc satis non est!"
+
+msgid "TXT_RPLY2_SCRIPT23_D3032_ENVIR"
+msgstr "Environmental sectam"
+
+msgid "TXT_RYES2_SCRIPT23_D3032_HEREY"
+msgstr "Hic es tu."
+
+msgid "TXT_RNO2_SCRIPT23_D3032_NOMON"
+msgstr "Non, aes, litem."
+
+# MAP23: Hospital
+msgid "TXT_DLG_SCRIPT23_D4548_HOWCA"
+msgstr "Quomodo te adiuvare possum hodie?"
+
+msgid "TXT_RPLY0_SCRIPT23_D4548_MEDPA"
+msgstr "Emplastrum medicum"
+
+msgid "TXT_RYES0_SCRIPT23_D4548_HERES"
+msgstr "Hic lacus tuum est."
+
+msgid "TXT_RNO0_SCRIPT23_D4548_THATI"
+msgstr "Id est 15 aurum amici mei."
+
+msgid "TXT_RPLY1_SCRIPT23_D4548_MEDIC"
+msgstr "Medicamentum ornamentum"
+
+msgid "TXT_RYES1_SCRIPT23_D4548_HERES"
+msgstr "Ecce ornamentum medicinae tuum."
+
+msgid "TXT_RNO1_SCRIPT23_D4548_YOURA"
+msgstr "Tuus paulo humilis in pecunia pro illo."
+
+msgid "TXT_RPLY2_SCRIPT23_D4548_FIELD"
+msgstr "Field surgery ornamentum"
+
+msgid "TXT_RYES2_SCRIPT23_D4548_ONEFI"
+msgstr "Unum campi chirurgica ornamentum."
+
+msgid "TXT_RNO2_SCRIPT23_D4548_COMEB"
+msgstr "Redite, cum pecuniam habetis!"
+
+# MAP23: Barkeep.
+msgid "TXT_DLG_SCRIPT23_D6064_HELLO"
+msgstr "Amice salve, quid possum tibi?"
+
+msgid "TXT_RPLY0_SCRIPT23_D6064_INFOR"
+msgstr "Informationes"
+
+msgid "TXT_RYES0_SCRIPT23_D6064_IVENE"
+msgstr "Nunquam vidi aliquem introire vel extra officinam, semper est forcis."
+
+msgid "TXT_RNO0_SCRIPT23_D6064_NOMON"
+msgstr "Non Pecunia, nulla info."
+
+msgid "TXT_DLG_SCRIPT23_D7580_YESWH"
+msgstr "Ita, quid vis?"
+
+# (dot not recommended)
+msgid "TXT_RPLY0_SCRIPT23_D7580_MOREI"
+msgstr "Plura notitia."
+
+msgid "TXT_RYES0_SCRIPT23_D7580_THEFA"
+msgstr "Fabricae aedificatae sunt in situs impulsus cometae. Non puto possibilitas esse."
+
+msgid "TXT_RNO0_SCRIPT23_D7580_COMEO"
+msgstr "Age, multum est 5 aurum."
+
+msgid "TXT_DLG_SCRIPT23_D9096_HELLO"
+msgstr "Iterum salve, quid erit?"
+
+# (dot not recommended)
+msgid "TXT_RPLY0_SCRIPT23_D9096_MOREI"
+msgstr "Plura notitia."
+
+msgid "TXT_RYES0_SCRIPT23_D9096_THEFA"
+msgstr "Officina clausa cum ordo novum horrorem detexit: Inquisitor."
+
+msgid "TXT_RNO0_SCRIPT23_D9096_5GOLD"
+msgstr "5 aurum placet."
+
+# STRIFE1.WAD
+# MAP23: Barkeep
+msgid "TXT_DLG_SCRIPT23_D10612_THATS"
+msgstr "Id scio. Etiam pincernae currunt vasa dicere, paenitet."
+
+# STRIFE1.WAD
+# MAP23: Timothy
+msgid "TXT_DLG_SCRIPT23_D12128_HELLO"
+msgstr "Salve."
+
+msgid "TXT_RPLY0_SCRIPT23_D12128_WHATA"
+msgstr "Quid agitis?"
+
+msgid "TXT_RYES0_SCRIPT23_D12128_IMDOI"
+msgstr "Vasa ego facio, abi!"
+
+# STRIFE1.WAD
+# MAP23: Tevick.
+msgid "TXT_DLG_SCRIPT23_D13644_NOWWH"
+msgstr "Nunc quid te adiuvare possum?"
+
+msgid "TXT_RPLY0_SCRIPT23_D13644_SHADO"
+msgstr "Vmbra lorica?"
+
+msgid "TXT_RYES0_SCRIPT23_D13644_AHHTO"
+msgstr "Ahh audiri, sed non videri!"
+
+msgid "TXT_RNO0_SCRIPT23_D13644_GETOU"
+msgstr "Exi hinc, redi, cum nummum habes."
+
+# STRIFE1.WAD
+# MAP23: Richter.
+msgid "TXT_DLG_SCRIPT23_D15160_THANK"
+msgstr "Gratias tibi Deus hic adfers. Ad officinam intrare debes clavis. Hanc furati sumus, sed procurator noster in tela catacumbarum sub præsidio Ordinis deest. decem viros bonos in cuniculos istos misi ut eum invenirent, et nemo reverteretur. Aliquid ibi est!"
+
+msgid "TXT_RPLY0_SCRIPT23_D15160_WHATI"
+msgstr "Quid est? Humanum vel… ?"
+
+msgid "TXT_DLG_SCRIPT23_D16676_NOTDE"
+msgstr "Non. Certus non est. Quidquid id est, certandum est ut clavem capias. Aperiam catacumborum introitum. Cum hoc habes, officinas metallis proxima est. Festinate, alterutrum comitum."
+
+msgid "TXT_RPLY0_SCRIPT23_D16676_SOMET"
+msgstr "Inhumanum, eh?, magnum."
+
+msgid "TXT_DLG_SCRIPT23_D18192_YOURE"
+msgstr "Tempus teris et vivit! Move!"
+
+# SVE.WAD
+# MAP23: Barkeep.
+msgid "TXT_DLG_SCRIPT23_D10612_CANIB"
+msgstr "Possumne plus esse auxilii?"
+
+# (dot not recommended)
+msgid "TXT_RPLY0_SCRIPT23_D10612_MOREI"
+msgstr "Plura notitia."
+
+msgid "TXT_RYES0_SCRIPT23_D10612_LOOKF"
+msgstr "Vide Timotheum. Audivi quaedam scire secreta Ordinis."
+
+msgid "TXT_RNO0_SCRIPT23_D10612_JUSTA"
+msgstr "Mox alii 5 aurum."
+
+msgid "TXT_DLG_SCRIPT23_D12128_THATS"
+msgstr "Id scio. Etiam pincernae currunt vasa dicere, paenitet."
+
+# SVE.WAD
+# MAP23: Timothy (Talking with him for the very first time without the
+# chalice).
+msgid "TXT_DLG_SCRIPT23_D13644_HELLO"
+msgstr "Salve."
+
+msgid "TXT_RPLY0_SCRIPT23_D13644_WHATA"
+msgstr "Quid agitis?"
+
+msgid "TXT_RYES0_SCRIPT23_D13644_IMDOI"
+msgstr "Vasa ego facio, abi!"
+
+msgid "TXT_DLG_SCRIPT23_D15160_IFYOU"
+msgstr "Si hoc multum tempus terere habes, vide si calicem caeruleum inveneris. Studia mea in Ordine suadeant ea alicubi occultasse in fabricandis officinarum partibus. Hoc artificium mihi permagni erit, affer ergo mihi, et te adiuvabo."
+
+msgid "TXT_DLG_SCRIPT23_D16676_YOUFO"
+msgstr "Calicem caeruleum invenisti! Bene, da mihi primum, ac feres commercium."
+
+msgid "TXT_RPLY0_SCRIPT23_D16676_TAKEI"
+msgstr "Accipe, mali fortuna usquam est."
+
+msgid "TXT_RPLY1_SCRIPT23_D16676_SCREW"
+msgstr "Screw te, teneo."
+
+# (If you keep the chalice)
+msgid "TXT_RYES1_SCRIPT23_D16676_THENI"
+msgstr "Tunc ego non tibi quicquam dabo. Get perii!"
+
+# (If you give the chalice away)
+msgid "TXT_DLG_SCRIPT23_D18192_LOCAT"
+msgstr "Locare ferrariam. Indicium modo dedi ut te adiuvet te officinam secretivam partem ingredi. Unus e ferrariis operarios ianuam aperire potest."
+
+msgid "TXT_RPLY0_SCRIPT23_D18192_WHATC"
+msgstr "Quid ibi invenire possum?"
+
+msgid "TXT_DLG_SCRIPT23_D19708_MYRES"
+msgstr "Investigatio mea suggerit obscuram aliquam vim ibi ex vetustis praeteritis occultari. Cave!"
+
+# SVE.WAD
+# MAP23: Timothy (Talking with him for the very first time with the chalice).
+msgid "TXT_DLG_SCRIPT23_D21224_THATB"
+msgstr "Calicem illum caeruleum sciebas venis? Ordinem eorumque nexus ad longinquum praeteritum investigavi, et artificium me adiuvaret. Inebriemur a paciscor. Da mihi calicem, et dabo tibi aliquid info."
+
+msgid "TXT_RPLY0_SCRIPT23_D21224_TAKEI"
+msgstr "Accipe, mali fortuna usquam est."
+
+msgid "TXT_RPLY1_SCRIPT23_D21224_SCREW"
+msgstr "Screw te, teneo."
+
+msgid "TXT_RYES1_SCRIPT23_D21224_THENI"
+msgstr "Tunc ego non tibi quicquam dabo. Get perii!"
+
+# SVE.WAD
+# MAP23: Tevick.
+msgid "TXT_DLG_SCRIPT23_D22740_NOWWH"
+msgstr "Nunc quid te adiuvare possum?"
+
+msgid "TXT_RPLY0_SCRIPT23_D22740_SHADO"
+msgstr "Vmbra lorica?"
+
+msgid "TXT_RYES0_SCRIPT23_D22740_AHHTO"
+msgstr "Ahh audiri, sed non videri!"
+
+msgid "TXT_RNO0_SCRIPT23_D22740_GETOU"
+msgstr "Exi hinc, redi, cum nummum habes."
+
+# SVE.WAD
+# MAP23: Richter.
+msgid "TXT_DLG_SCRIPT23_D24256_THANK"
+msgstr "Gratias tibi Deus hic adfers. Ad officinam intrare debes clavis. Hanc furati sumus, sed procurator noster in tela catacumbarum sub præsidio Ordinis deest. decem viros bonos in cuniculos istos misi ut eum invenirent, et nemo reverteretur. Aliquid ibi est!"
+
+msgid "TXT_RPLY0_SCRIPT23_D24256_WHATI"
+msgstr "Quid est? Humanum vel… ?"
+
+msgid "TXT_DLG_SCRIPT23_D25772_NOTDE"
+msgstr "Non. Certus non est. Quidquid id est, certandum est ut clavem capias. Aperiam catacumborum introitum. Cum hoc habes, officinas metallis proxima est. Festinate, alterutrum comitum."
+
+msgid "TXT_RPLY0_SCRIPT23_D25772_SOMET"
+msgstr "Inhumanum, eh?, magnum."
+
+msgid "TXT_DLG_SCRIPT23_D27288_YOURE"
+msgstr "Tempus teris et vivit! Move!"
+
+# MAP27: Peasant → Northeastern room (after the lift).
+msgid "TXT_DLG_SCRIPT27_D0_THEMA"
+msgstr "Dominus visitatores non placet. Libet omnia ejus opera inconvulsa manere. Habeo ut novas partes e cella repono. Dictum puto crus et bracchium. Oh, bene non vacat amplius loqui. Discederem priusquam te inveniat."
+
+msgid "TXT_RPLY0_SCRIPT27_D0_WHYST"
+msgstr "Quid id est."
+
+msgid "TXT_RYES0_SCRIPT27_D0_BECAU"
+msgstr "Quia dixi tibi non placet visitatores!"
+
+msgid "TXT_DLG_SCRIPT27_D1516_YOUKN"
+msgstr "Scis, te esse de magnitudine unius acolythi vestem."
+
+# MAP31: Programmer.
+msgid "TXT_DLG_SCRIPT31_D0_OHNOI"
+msgstr "Oh non, non sum programmator verus, latitat. Perge transiit ad custos palaestra, praedura. Si superstites, loqui cum eo possis. Vel occidere eum."
+
+msgid "TXT_RPLY0_SCRIPT31_D0_WHOAR"
+msgstr "Quis es?"
+
+msgid "TXT_DLG_SCRIPT31_D1516_YOULL"
+msgstr "Nunquam quicquam invenies si hic pendeas."
+
+# MAP32: Red acolyte.
+msgid "TXT_DLG_SCRIPT32_D0_PISSO"
+msgstr "Piss rusticus off!"
+
+# Appears in MAP32 and is supposed to be spoken by the AcolyteRust actor
+# (named “Interrogator”). However, no such actor is spawned in the map,
+# rendering this line unused.
+msgid "TXT_DLG_SCRIPT32_D1516_DIELI"
+msgstr "Mori homunculum!"
+
+# MAP32: Cell.
+msgid "TXT_DLG_SCRIPT32_D3032_FINAL"
+msgstr "Tandem ex hac cellula exire possum."
+
+msgid "TXT_RPLY0_SCRIPT32_D3032_WHYAR"
+msgstr "Cur huc venisti?"
+
+msgid "TXT_RYES0_SCRIPT32_D3032_IWASF"
+msgstr "Gignitur i."
+
+msgid "TXT_DLG_SCRIPT32_D4548_HARRI"
+msgstr "Harris dixit me insidiantem gubernatorem interficere. Animam nunquam laedere."
+
+msgid "TXT_DLG_SCRIPT33_D0_BECAR"
+msgstr "Cave ibi."
+
+# MAP33: Guy next to Norwall Prison.
+msgid "TXT_DLG_SCRIPT33_D1516_SAYFR"
+msgstr "Dic amice, te adiuvabo, si me adiuvas. Da mihi V aurum ac dicam quod scio."
+
+msgid "TXT_RPLY0_SCRIPT33_D1516_HERES"
+msgstr "Hic est aurum."
+
+msgid "TXT_RYES0_SCRIPT33_D1516_IFYOU"
+msgstr "Si aliquem pertundis, terrores non pones."
+
+msgid "TXT_RNO0_SCRIPT33_D1516_IWONT"
+msgstr "Non dicam tibi quidquam gratis!"
+
+msgid "TXT_DLG_SCRIPT33_D3032_IVEAL"
+msgstr "Dixi iam tibi quod scio."
+
+# MAP33: Weapons.
+msgid "TXT_DLG_SCRIPT33_D4548_HELLO"
+msgstr "Salve amice. Quid possum tibi?"
+
+msgid "TXT_RPLY0_SCRIPT33_D4548_ELECT"
+msgstr "Electric fulmina"
+
+msgid "TXT_RYES0_SCRIPT33_D4548_ONEQU"
+msgstr "Una discordia est."
+
+msgid "TXT_RNO0_SCRIPT33_D4548_YOURE"
+msgstr "Fregisti es!"
+
+msgid "TXT_RPLY1_SCRIPT33_D4548_10ROU"
+msgstr "Tonde glandibus"
+
+msgid "TXT_RYES1_SCRIPT33_D4548_HERES"
+msgstr "Hic tuum animo"
+
+msgid "TXT_RNO1_SCRIPT33_D4548_SORRY"
+msgstr "Nullam pretium cursus mi non sagittis."
+
+msgid "TXT_RPLY2_SCRIPT33_D4548_50ROU"
+msgstr "Ammo arca"
+
+msgid "TXT_RYES2_SCRIPT33_D4548_HEREY"
+msgstr "Hic tu"
+
+msgid "TXT_RNO2_SCRIPT33_D4548_YOUDO"
+msgstr "Aurum satis non habes!"
+
+msgid "TXT_RPLY3_SCRIPT33_D4548_AMMOS"
+msgstr "Ammo pera"
+
+msgid "TXT_RYES3_SCRIPT33_D4548_THANK"
+msgstr "Gratias tibi, quid aliud?"
+
+msgid "TXT_RNO3_SCRIPT33_D4548_YOUCA"
+msgstr "Diem illum praestare non potes."
+
+# MAP33: Armory
+msgid "TXT_DLG_SCRIPT33_D6064_WELCO"
+msgstr "Gratus. Quid tibi ego ostendam?"
+
+msgid "TXT_RPLY0_SCRIPT33_D6064_ENVIR"
+msgstr "Environmental sectam"
+
+msgid "TXT_RYES0_SCRIPT33_D6064_HEREY"
+msgstr "Hic es tu."
+
+msgid "TXT_RNO0_SCRIPT33_D6064_YOUDO"
+msgstr "Satis pecuniae non habes."
+
+msgid "TXT_RPLY1_SCRIPT33_D6064_LEATH"
+msgstr "Corium lorica."
+
+msgid "TXT_RYES1_SCRIPT33_D6064_HEREY"
+msgstr "Hic es tu."
+
+msgid "TXT_RNO1_SCRIPT33_D6064_PERHA"
+msgstr "Fortasse alio tempore?"
+
+msgid "TXT_RPLY2_SCRIPT33_D6064_METAL"
+msgstr "Armatura metallica"
+
+msgid "TXT_RYES2_SCRIPT33_D6064_WEARI"
+msgstr "Bene valentem induere."
+
+msgid "TXT_RNO2_SCRIPT33_D6064_COMEB"
+msgstr "Redi, cum id praestare potes."
+
+# MAP33: Hospital
+msgid "TXT_DLG_SCRIPT33_D7580_HOWMA"
+msgstr "Quomodo te adiuvare possim?"
+
+msgid "TXT_RPLY0_SCRIPT33_D7580_MEDPA"
+msgstr "Emplastrum medicum"
+
+msgid "TXT_RYES0_SCRIPT33_D7580_HERES"
+msgstr "Ecce ornamentum tuum commissuram."
+
+msgid "TXT_RNO0_SCRIPT33_D7580_YOUNE"
+msgstr "10 Aurum pro eo debes."
+
+msgid "TXT_RPLY1_SCRIPT33_D7580_FIELD"
+msgstr "Field surgery ornamentum"
+
+msgid "TXT_RYES1_SCRIPT33_D7580_THANK"
+msgstr "Gratias agimus tibi."
+
+msgid "TXT_RNO1_SCRIPT33_D7580_IWISH"
+msgstr "Illos donare vellem, sed constant 25 aurum."
+
+msgid "TXT_RPLY2_SCRIPT33_D7580_HEALI"
+msgstr "Sanatio"
+
+msgid "TXT_RYES2_SCRIPT33_D7580_THERE"
+msgstr "Ibi tu ibis. Cura nunc."
+
+msgid "TXT_RNO2_SCRIPT33_D7580_WELLM"
+msgstr "Bene, fortasse aliquid med pannis praestare potes?"
+
+# MAP33: Barkeep.
+msgid "TXT_DLG_SCRIPT33_D9096_HELLO"
+msgstr "Amice salve, non vidi te hic prius. Omnia possum dicere me cavere si te essem, multum agitur et melius est si obvium non possis."
+
+msgid "TXT_RPLY0_SCRIPT33_D9096_INFOR"
+msgstr "Informationes"
+
+msgid "TXT_RYES0_SCRIPT33_D9096_THESE"
+msgstr "Cloacae plus quam mures et robots tenent."
+
+msgid "TXT_RNO0_SCRIPT33_D9096_HEYAG"
+msgstr "Hey a guy's got to make some money. Hos iocos putes bene dormire?"
+
+msgid "TXT_DLG_SCRIPT33_D10612_BACKA"
+msgstr "Retro iterum huh? Bene, at certe satis scis tuam cutem integram servare. quid nunc tibi faciam?"
+
+msgid "TXT_RPLY0_SCRIPT33_D10612_MOREI"
+msgstr "Plus info"
+
+msgid "TXT_RYES0_SCRIPT33_D10612_THEGO"
+msgstr "Praefectus simplex admonitio auctoritatis Ordinis est."
+
+msgid "TXT_RNO0_SCRIPT33_D10612_COMEB"
+msgstr "Redi, si animum mutaveris."
+
+msgid "TXT_DLG_SCRIPT33_D12128_WELLY"
+msgstr "Bene, certe multum quaesitum es pro aliquo qui hoc diu vixit. Bene quidem est, mallem tibi aliquem similem loqui quam huius sortis maxime."
+
+msgid "TXT_RPLY0_SCRIPT33_D12128_MOREI"
+msgstr "Plura notitia."
+
+msgid "TXT_RYES0_SCRIPT33_D12128_THERE"
+msgstr "Plus est ad Ordinem quam quod hic agitur."
+
+msgid "TXT_RNO0_SCRIPT33_D12128_COMEB"
+msgstr "Redi, si animum mutaveris."
+
+msgid "TXT_DLG_SCRIPT33_D13644_THATS"
+msgstr "Is est amicus, bene scientia percussus est. Dixi tibi plus quam debeam usquam."
+
+# MAP33: Harris (beginning).
+msgid "TXT_DLG_SCRIPT33_D15160_HARDT"
+msgstr "Difficile est taberna novas nugas… cum fregit es. Currite mihi pauca verba et plus feres quam umquam expendere posses. Faciam te divitem."
+
+msgid "TXT_RPLY0_SCRIPT33_D15160_IGOTN"
+msgstr "Ego nihil melius facere."
+
+msgid "TXT_RPLY1_SCRIPT33_D15160_NOTHA"
+msgstr "Non gratias."
+
+msgid "TXT_RYES1_SCRIPT33_D15160_NOBOD"
+msgstr "Nemo a me discedit!"
+
+msgid "TXT_DLG_SCRIPT33_D16676_GOODC"
+msgstr "Bona electio. Sanctuarium Ordinis iuxta flumen est camera tormentorum non officialis. Intus latet calix aureus. Si eum rapis, me in taberna convenies, et praemium tuum metes."
+
+msgid "TXT_RPLY0_SCRIPT33_D16676_HOWAM"
+msgstr "Quomodo ego volo facere?"
+
+msgid "TXT_RPLY1_SCRIPT33_D16676_LETME"
+msgstr "Cogitem."
+
+msgid "TXT_RYES1_SCRIPT33_D16676_SORRY"
+msgstr "Ignoscas, non casus secundus. O custodes, interficite eum!"
+
+msgid "TXT_DLG_SCRIPT33_D18192_HERES"
+msgstr "Hic est arcuballista, iustus directus et - splat!-. Memento, calicem libentissime arripe et me in taberna congredi."
+
+msgid "TXT_RPLY0_SCRIPT33_D18192_ILLSE"
+msgstr "Visam te ibi."
+
+msgid "TXT_DLG_SCRIPT33_D19708_WHATA"
+msgstr "Quid moraris? Ne cures, corpora mundabo, calicem illum me duc modo!"
+
+msgid "TXT_DLG_SCRIPT33_D21224_GUARD"
+msgstr "Custodes! Interfice proditorem!"
+
+# MAP33: Harris (tavern).
+msgid "TXT_DLG_SCRIPT33_D22740_HEYIK"
+msgstr "Heus, scio quid cogitas, pius instar paroeciae, nunquam id facerem machinae tam homicidii, id dico. Hui, omnia fuss super poculum, fatum. Nunc para, aurum et gloriam, ut promisi. Hanc clavem sume, et ipse tibi praeses reddet."
+
+msgid "TXT_RPLY0_SCRIPT33_D22740_GREAT"
+msgstr "Magna, non possum exspectare!"
+
+# (if accepting without having the chalice)
+msgid "TXT_RNO0_SCRIPT33_D22740_NOCHA"
+msgstr "Non calix nulla pecunia!"
+
+msgid "TXT_RPLY1_SCRIPT33_D22740_ILLKE"
+msgstr "Calicem servabo, gratias ago."
+
+msgid "TXT_RYES1_SCRIPT33_D22740_KEEPI"
+msgstr "Serva? Non puto!"
+
+msgid "TXT_DLG_SCRIPT33_D24256_WHATA"
+msgstr "Quid moraris? Praeses ipse reddet tibi."
+
+msgid "TXT_DLG_SCRIPT33_D25772_DIETR"
+msgstr "Mori proditor! "
+
+# MAP33: Mourel.
+msgid "TXT_DLG_SCRIPT33_D27288_SOYOU"
+msgstr "Esne igitur stultus qui calicem furatus es? Eo comprehensus es ut rebellem fur... Ex quo Ordinem meam dignitatem auges. Quomodo sentit arrhabonem ignarum esse?"
+
+msgid "TXT_RPLY0_SCRIPT33_D27288_ITSUC"
+msgstr "Sugit!"
+
+msgid "TXT_RYES0_SCRIPT33_D27288_FORYO"
+msgstr "Pro te facit."
+
+msgid "TXT_RPLY1_SCRIPT33_D27288_HARRI"
+msgstr "Harris mihi pecuniam promisit!"
+
+msgid "TXT_RYES1_SCRIPT33_D27288_TOOBA"
+msgstr "Nimis nocens. Sola res es questus est mors!"
+
+msgid "TXT_DLG_SCRIPT33_D28804_WEREG"
+msgstr "Imus te occidere!"
+
+msgid "TXT_DLG_SCRIPT33_D30320_GETOU"
+msgstr "Exi hinc!"
+
+# MAP33: Green acolytes (beginning).
+msgid "TXT_DLG_SCRIPT33_D31836_WEREG"
+msgstr "Imus te occidere!"
+
+# MAP33: Yellow acolytes.
+msgid "TXT_DLG_SCRIPT33_D33352_GETOU"
+msgstr "Exi hinc!"
+
+# MAP34: Barracks.
+msgid "TXT_DLG_SCRIPT34_D0_WHATA"
+msgstr "Quam perfectus locus nobis in veteri Prytaneo. Ordo putat se nos exstinxisse, sed totum id admonet nobis quid fieri possit cum incautus fies. "
+
+# MAP34
+msgid "TXT_DLG_SCRIPT34_D1516_TALKT"
+msgstr "Loquere cum Macil, ipse te adiuvare poterit."
+
+# MAP34: Barracks.
+msgid "TXT_DLG_SCRIPT34_D3032_IVEHE"
+msgstr "Audivi Macilum aliquid mox iterum incipere. Magna nobis ictus post novissimum fasciculum opus est. Unum magis placet et nos nimis debiles pergere erimus."
+
+msgid "TXT_DLG_SCRIPT34_D4548_AFEWO"
+msgstr "Paucae ex his doliis in aquam suam copia etiam paulum dissidentes proiecerunt. "
+
+# MAP34: Gerald.
+# (Except for row 1335, everything in rows 1323-1343 is identical to 725-745)
+msgid "TXT_DLG_SCRIPT34_D6064_IMWOR"
+msgstr "Laboro in aliquid quod nobis ora dabit. vigor augebit ac penitus te iacebis. Prope omnes cimices laboravi. Quid possum facere vobis? "
+
+msgid "TXT_RPLY0_SCRIPT34_D6064_PATCH"
+msgstr "Repeciare me."
+
+msgid "TXT_RYES0_SCRIPT34_D6064_BOYYO"
+msgstr "Puer, pulmentum verum es. Videam quid possum."
+
+msgid "TXT_RPLY1_SCRIPT34_D6064_STAMI"
+msgstr "Vigor inserendi?"
+
+msgid "TXT_RYES1_SCRIPT34_D6064_ALLRI"
+msgstr "Recte, non modo hoc capiet."
+
+msgid "TXT_RNO1_SCRIPT34_D6064_ITSNO"
+msgstr "Non tamen factum est."
+
+msgid "TXT_DLG_SCRIPT34_D7580_HEYIM"
+msgstr "Heus, in renovatione versionis tuae inserendi laboro. Numquid aliud possum facere?"
+
+msgid "TXT_RPLY0_SCRIPT34_D7580_PATCH"
+msgstr "Repeciare me."
+
+msgid "TXT_RYES0_SCRIPT34_D7580_WELLA"
+msgstr "Bene certe actum vides."
+
+msgid "TXT_RPLY1_SCRIPT34_D7580_IMPLA"
+msgstr "Upgrade indere?"
+
+msgid "TXT_RYES1_SCRIPT34_D7580_GOODT"
+msgstr "Bene, numquam nimium tutus esse potest."
+
+msgid "TXT_RNO1_SCRIPT34_D7580_IMALM"
+msgstr "Paene finitus sum, sed non satis."
+
+msgid "TXT_DLG_SCRIPT34_D9096_ALLRI"
+msgstr "Recte, hoc est. Prope habeo omnia operando perfecte. Paucae difficultates relicti erant figere, quid aliud eges? "
+
+msgid "TXT_RPLY0_SCRIPT34_D9096_PATCH"
+msgstr "Repeciare me."
+
+msgid "TXT_RYES0_SCRIPT34_D9096_WHATH"
+msgstr "Quid facere voluisti? Perge caput in caput Peregrinus?"
+
+msgid "TXT_RPLY1_SCRIPT34_D9096_IMPLA"
+msgstr "Upgrade indere?"
+
+msgid "TXT_RYES1_SCRIPT34_D9096_THATS"
+msgstr "Quod faciendum est tibi."
+
+msgid "TXT_RNO1_SCRIPT34_D9096_LETME"
+msgstr "Aliquam volutpat cursus ante."
+
+msgid "TXT_DLG_SCRIPT34_D10612_THATS"
+msgstr "Id omnia possum nunc indere. Forsitan sanitatem aliquam?"
+
+msgid "TXT_RPLY0_SCRIPT34_D10612_YEAH"
+msgstr "Ita."
+
+msgid "TXT_RYES0_SCRIPT34_D10612_BOYYO"
+msgstr "Puer, pulmentum verum es. Videam quid possum."
+
+# MAP34: Feris (identical to rows 746-768, except for row 1357).
+msgid "TXT_DLG_SCRIPT34_D12128_WHATC"
+msgstr "Quid faciam tibi?"
+
+msgid "TXT_RPLY0_SCRIPT34_D12128_IMOUT"
+msgstr "Im e glandibus."
+
+msgid "TXT_RYES0_SCRIPT34_D12128_HERES"
+msgstr "Hic est quidam ammo tibi. Don't waste it."
+
+msgid "TXT_RPLY1_SCRIPT34_D12128_TEACH"
+msgstr "Doce me."
+
+msgid "TXT_RYES1_SCRIPT34_D12128_ALLRI"
+msgstr "Recte, paucis tantum monstrabo tibi indices."
+
+msgid "TXT_RNO1_SCRIPT34_D12128_YOURE"
+msgstr "Nondum paratus es."
+
+msgid "TXT_DLG_SCRIPT34_D13644_BACKA"
+msgstr "Retro iterum? Quid opus est tibi?"
+
+msgid "TXT_RPLY0_SCRIPT34_D13644_IMOUT"
+msgstr "Im e glandibus."
+
+msgid "TXT_RYES0_SCRIPT34_D13644_HERES"
+msgstr "Hic est quidam ammo tibi. Don't waste it."
+
+msgid "TXT_RNO0_SCRIPT34_D13644_YOUVE"
+msgstr "Satis ammo habes."
+
+msgid "TXT_RPLY1_SCRIPT34_D13644_TEACH"
+msgstr "Doce me."
+
+msgid "TXT_RYES1_SCRIPT34_D13644_ALLRI"
+msgstr "Recte, hoc te ad tempus conservet."
+
+msgid "TXT_RNO1_SCRIPT34_D13644_SORRY"
+msgstr "Paenitet, non potest. Im 'iustus Macil secutus mox."
+
+msgid "TXT_DLG_SCRIPT34_D15160_WELLW"
+msgstr "Quid est, glandes aut disciplina? Non possum exspectare ut ad nova illa arma quae cepimus manus meas accipiam. Postquam cum illis peregero, omnes alios instituere potero."
+
+msgid "TXT_RPLY0_SCRIPT34_D15160_IMOUT"
+msgstr "Ego sum ex animo."
+
+msgid "TXT_RYES0_SCRIPT34_D15160_HERES"
+msgstr "Hic est quidam ammo tibi. Don't waste it."
+
+msgid "TXT_RNO0_SCRIPT34_D15160_YOUVE"
+msgstr "Satis ammo habes."
+
+msgid "TXT_RPLY1_SCRIPT34_D15160_TEACH"
+msgstr "Doce me."
+
+msgid "TXT_RYES1_SCRIPT34_D15160_OKTAK"
+msgstr "O.K. Accipe quod didicisti, et nothos illos Ordine monstra via ad infernum."
+
+msgid "TXT_RNO1_SCRIPT34_D15160_COMEB"
+msgstr "Postea redi, cum Macil tempus dicit."
+
+msgid "TXT_DLG_SCRIPT34_D16676_IVETA"
+msgstr "Docui tibi omnia quae nunc possum. Da mihi aliquod tempus nova tela per passum ponere. Cras id nisi ex."
+
+msgid "TXT_RPLY0_SCRIPT34_D16676_YESIA"
+msgstr "Ita Ego sum."
+
+msgid "TXT_RYES0_SCRIPT34_D16676_HEREY"
+msgstr "Hic tu."
+
+# MAP34: Upstairs.
+# (Identical to row 769)
+msgid "TXT_DLG_SCRIPT34_D18192_DONTG"
+msgstr "Noli in oppido laetus sclopeti esse, nam signum excitabis et custodes ex arce immittentur."
+
+# (Identical to row 770)
+msgid "TXT_DLG_SCRIPT34_D19708_WELCO"
+msgstr "Grata, semper maiore auxilio uti possumus."
+
+# (Similar to row 771)
+msgid "TXT_DLG_SCRIPT34_D21224_WHENI"
+msgstr "Cum adhuc in actu essemus possibilitas examinandi acolythi antequam subsidia venirent, homo non es inquam."
+
+# MAP34: Downstairs.
+# (Identical to row 772)
+msgid "TXT_DLG_SCRIPT34_D22740_WERET"
+msgstr "Conamur invenire ubi castellum machinae portae sunt, sed tantum nullas habuimus fortuna."
+
+# (Similar to row 773)
+msgid "TXT_DLG_SCRIPT34_D24256_DONTG"
+msgstr "Ne capiaris. Audivi horrorem fabulas de iis quae nostris faciunt postquam incarcerati sunt. Iusti evanescunt, nulla vestigia, nihil. "
+
+# (Similar to row 774)
+msgid "TXT_DLG_SCRIPT34_D25772_HERES"
+msgstr "Hic consilium aliquod est, si unquam aliquos milites ordinis stanni videris, aliter currite. Maxime mihi non placet Reavers, illa mox damnanda celeriter!"
+
+# MAP34: Macil.
+msgid "TXT_DLG_SCRIPT34_D27288_WELCO"
+msgstr "Grata novissima spe micantem. Solummodo liberum arbitrium habemus Ordini obsistere. Mentes scientias acerrimas habemus, et corpora valida multa. Sed caremus unam quaestionem solvendam realem, quae nobis extremam necessitatem dabit."
+
+msgid "TXT_RPLY0_SCRIPT34_D27288_WHATW"
+msgstr "Quid opus est facere? "
+
+msgid "TXT_DLG_SCRIPT34_D28804_HELPU"
+msgstr "Adiuvate nos. Adiuvate nos ut eorum technologiam furemur. Liberate socios nostros. Contra hos psychopathas perversos usque ad mortem pugnate. Vos rogo ut vitam vestram pro veritate periclitetis."
+
+msgid "TXT_RPLY0_SCRIPT34_D28804_IMWIT"
+msgstr "Sum apud te!"
+
+msgid "TXT_DLG_SCRIPT34_D30320_GOODB"
+msgstr "Bonum est. Merula pergat ad ducem tuum. Illa satis luceat tibi. Simul secreta Ordinis et inhumanos famulos tuos reserare necesse est. Est praesentia quae extra intellectum nostrum latet quae eorum terrorem ducit. Ingredere et tolle eas. "
+
+msgid "TXT_RPLY0_SCRIPT34_D30320_LETME"
+msgstr "Fiat mihi ad em!"
+
+msgid "TXT_RYES0_SCRIPT34_D30320_THATS"
+msgstr "Id spiritus."
+
+msgid "TXT_DLG_SCRIPT34_D31836_WELCO"
+msgstr "Gratus amicus!"
+
+msgid "TXT_RANDOM_PEASANT_01"
+msgstr "Quaeso mihi non nocuerunt."
+
+msgid "TXT_RANDOM_PEASANT_02"
+msgstr "Si me laedere cupis, non sum operae pretium."
+
+msgid "TXT_RANDOM_PEASANT_03"
+msgstr "Nescio quid."
+
+msgid "TXT_RANDOM_PEASANT_04"
+msgstr "Abi, vel ego te custodes vocabo!"
+
+msgid "TXT_RANDOM_PEASANT_05"
+msgstr "Opto interdum ut omnes isti rebelles modo locum suum cognoscant ac deliramenta desinant."
+
+msgid "TXT_RANDOM_PEASANT_06"
+msgstr "Modo me solum, Bene?"
+
+msgid "TXT_RANDOM_PEASANT_07"
+msgstr "Non sum certus, sed interdum acolytos aliquos me scire puto."
+
+msgid "TXT_RANDOM_PEASANT_08"
+msgstr "Ordinem omnia circa hic bene inclusa sunt."
+
+msgid "TXT_RANDOM_PEASANT_09"
+msgstr "Nullo modo haec est vis securitatis."
+
+msgid "TXT_RANDOM_PEASANT_10"
+msgstr "Audivi Ordinem vere timidum esse circa actiones Frontis hic circum."
+
+msgid "TXT_RANDOM_REBEL_01"
+msgstr "Ordo nullo modo contra nos stabit."
+
+msgid "TXT_RANDOM_REBEL_02"
+msgstr "Prope parati sumus ad percutiendum. Consilia Macil in loco cadunt."
+
+msgid "TXT_RANDOM_REBEL_03"
+msgstr "Omnes post te sumus, ne solliciti."
+
+msgid "TXT_RANDOM_REBEL_04"
+msgstr "Noli nimis appropinquare alicui illorum magnorum robotorum. Confringent te pro faece!"
+
+msgid "TXT_RANDOM_REBEL_05"
+msgstr "Veniet cito dies gloriae nostrae, et opprimentur adversantes nos!"
+
+msgid "TXT_RANDOM_REBEL_06"
+msgstr "Noli nimis comfortable. Opus nostrum adhuc excidit pro nobis."
+
+msgid "TXT_RANDOM_REBEL_07"
+msgstr "Macil dicit spem novam te esse. Animo perfer."
+
+msgid "TXT_RANDOM_REBEL_08"
+msgstr "Hos charlatos semel cepimus, hunc mundum ut decet reficere poterimus."
+
+msgid "TXT_RANDOM_REBEL_09"
+msgstr "Memento te non solum pro te pugnare, sed pro omnibus hic et extra."
+
+msgid "TXT_RANDOM_REBEL_10"
+msgstr "Dum adhuc unus nostrum stat, vincemus."
+
+msgid "TXT_RANDOM_AGUARD_01"
+msgstr "Reptant, rusticus."
+
+msgid "TXT_RANDOM_AGUARD_02"
+msgstr "Sequere veram fidem, tunc solum incipies intelligere."
+
+msgid "TXT_RANDOM_AGUARD_03"
+msgstr "Nonnisi per mortem vere renasci potest."
+
+msgid "TXT_RANDOM_AGUARD_04"
+msgstr "Im 'non quaero in tua inutilia coegi."
+
+msgid "TXT_RANDOM_AGUARD_05"
+msgstr "Si ego tecum loqui voluissem, sic tibi dixissem."
+
+msgid "TXT_RANDOM_AGUARD_06"
+msgstr "Vade, et alium vexare!"
+
+msgid "TXT_RANDOM_AGUARD_07"
+msgstr "Moveri!"
+
+msgid "TXT_RANDOM_AGUARD_08"
+msgstr "Si terror abit, modo discedite a via!"
+
+msgid "TXT_RANDOM_AGUARD_09"
+msgstr "Ordo mundum mundabit et eam in novam adducet aetatem."
+
+msgid "TXT_RANDOM_AGUARD_10"
+msgstr "Queritur? Non, non cogitavi."
+
+msgid "TXT_RANDOM_BEGGAR_01"
+msgstr "Eleemosyna pro pauperibus?"
+
+msgid "TXT_RANDOM_BEGGAR_02"
+msgstr "Quid spectatis, superficies?"
+
+msgid "TXT_RANDOM_BEGGAR_03"
+msgstr "Non haberes aliquem cibum extra, visne?"
+
+msgid "TXT_RANDOM_BEGGAR_04"
+msgstr "Tu superficies hominum numquam nos intellige."
+
+msgid "TXT_RANDOM_BEGGAR_05"
+msgstr "Ha, custodes nos invenire non possunt. Isti fatui ne nos quidem sciunt."
+
+msgid "TXT_RANDOM_BEGGAR_06"
+msgstr "Unus dies omnes, praeter eos qui Ordini serviunt, nos adiungere cogentur."
+
+msgid "TXT_RANDOM_BEGGAR_07"
+msgstr "Contemplare nunc, sed scias hanc tuam faciem fore una die."
+
+msgid "TXT_RANDOM_BEGGAR_08"
+msgstr "Nihil est gravius quam superficies habitu!"
+
+msgid "TXT_RANDOM_BEGGAR_09"
+msgstr "Ordo brevem faciet frontem tuam patheticam."
+
+msgid "TXT_RANDOM_BEGGAR_10"
+msgstr "Vide te ipsum, superficies. inimicos nostros novimus!"
+
+msgid "TXT_RANDOM_PGUARD_01"
+msgstr "Nos manus fati sumus. Merere iram nostram est oblivio!"
+
+msgid "TXT_RANDOM_PGUARD_02"
+msgstr "Ordo mundi infirma et corrupta emundabit!"
+
+msgid "TXT_RANDOM_PGUARD_03"
+msgstr "Obedite voluntati dominorum!"
+
+msgid "TXT_RANDOM_PGUARD_04"
+msgstr "Longa vita fratribus Ordinis!"
+
+msgid "TXT_RANDOM_PGUARD_05"
+msgstr "Liberum arbitrium est illusio, qua infirmos mentes obligat."
+
+msgid "TXT_RANDOM_PGUARD_06"
+msgstr "Virtus via ad gloriam est. Ordinem sequi est illud iter ingredi!"
+
+msgid "TXT_RANDOM_PGUARD_07"
+msgstr "Tecum constitue inter justos, iunge nos!"
+
+msgid "TXT_RANDOM_PGUARD_08"
+msgstr "Ordo suum tuetur."
+
+msgid "TXT_RANDOM_PGUARD_09"
+msgstr "Acolytes? Habent adhuc plenam Ordinis gloriam."
+
+msgid "TXT_RANDOM_PGUARD_10"
+msgstr "Si quis honos intra flebilem illam corporis putamen, Ordinis arma intrabis."
+
+msgid "TXT_RANDOMGOODBYE_1"
+msgstr "Vale!"
+
+msgid "TXT_RANDOMGOODBYE_2"
+msgstr "Gratias, vale!"
+
+msgid "TXT_RANDOMGOODBYE_3"
+msgstr "Vide te postea!"
+
+# MAP33: After getting the hidden com unit in the tavern.
+msgid "TXT_ILOG1"
+msgstr "Salve? Impera, unitas com modo excitata… Accipio visualia et sonum ab…aliquem… Heus tu, exi nunc… et calicem stilla!"
+
+# MAP02: After getting the com unit from Rowan and leaving his room.
+msgid "TXT_ILOG2"
+msgstr "Audi, haec com unitas mihi narrat te esse 100% humanum. Iussus sum ut te introducam, hic confido loquimur. Trade me et redde. Oh, et obiter me merulam vocas."
+
+# MAP33: After getting the hidden com unit in the tavern.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG2"
+msgstr "Audi, haec com-unitas mihi narrat te esse 100% humanum. Ut unus ex nobis sis, et fortasse mutuo conemur et confidimus. Hoc experimentum considera, est flammeus in mansione Praefecti. Accipe, et te ad nos perducam."
+
+# MAP02: On the bridge with the com unit.
+msgid "TXT_ILOG3"
+msgstr "Caput ad vetus Prytaneum. Macilum cuniculum aedificatum habuit quod sine acolytorum cognitione ingrediamur et extrahamus."
+
+# MAP02: In town hall with the com unit.
+msgid "TXT_ILOG4"
+msgstr "Vade per ostium sinistrae tuae, et unum ad dextram. custos nomen est Geoff. Dic ei opus aurum."
+
+msgctxt "strifeteaser"
+msgid "TXT_ILOG5"
+msgstr "Praetorium non intrant. Iam tutum non est, operculum nostrum inflatum est. Omnes magnas robotas, \"Crusaderos\" interfice et te ad nos ducam."
+
+# MAP33: In front of "Irale's shop" with the com unit and the Crusaders dead.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG6"
+msgstr "Ianua arma iuxta taberna aperta semel omnes Peregrinus mortui sunt. In cubiculis intra teleportarium est, utere, et te ad nos adducet"
+
+# MAP33: In front of "Irale's shop" with the com unit and the Crusaders alive.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG7"
+msgstr "Ianua arma iuxta taberna aperta semel omnes Peregrinus mortui sunt. Intra cellarium est teleportarium, utere, et te ad nos adducet."
+
+# MAP33: Room with the flamethrower.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG8"
+msgstr "Totidem magnas robots, Peregrinus, quantum potes, interfice. Cum factum es, ego te ducam ad Macilum"
+
+# MAP34: After leaving the teleporter.
+msgctxt "strifeteaser"
+msgid "TXT_ILOG9"
+msgstr "Vade per ostium, et loquere ad Macilum."
+
+# MAP02: After accepting "messy" chore and leaving Mourel's room.
+msgid "TXT_ILOG10"
+msgstr "Invenire potestatem ictus in maius, et occludere. Reduc aliquid ad Praefectum pro probatione. MacGuffin reperi, et cum eo loquere."
+
+# MAP02: After accepting "messy" chore and leaving Mourel's mansion.
+msgid "TXT_ILOG11"
+msgstr "Invenire potestatem ictus in maius, et occludere. Reduc aliquid ad Praefectum pro probatione. MacGuffin reperi, et cum eo loquere. A purgamentorum curatione herba ascendit, in \"bum foramen\", per scalas."
+
+# MAP02: After destroying Front's power coupling.
+msgid "TXT_ILOG13"
+msgstr "Idiota! Potestatem circumclusisti ad vallum gyros, quo utimur ab Ordine turpia celare. Caput in praetorium ad praetorium depone et turbam intuens, nunc! Tum ad Praefectum redi, et ei fractas copulas."
+
+# MAP02: After destroying Front's power coupling and killing all blue acolytes
+# in the town hall.
+msgid "TXT_ILOG14"
+msgstr "Bene \"Fides nemini\" ludi nomen est! Carcerem demus a gubernatore. Contritam sume copulam ei."
+
+# MAP02: After finding the broken power coupling.
+msgid "TXT_ILOG15"
+msgstr "Bene move! Praefectus mendax. Potestas nostra est coniunctio. Uteris turpia ab Ordine abscondere. Accipe hanc copulam fractam ad eum reduc et transitum abeamus."
+
+# MAP05: After crossing the alarm green door.
+msgid "TXT_ILOG18"
+msgstr "Clavis custodis utere ut in carcerem carceris caudices et viam invenias ad captivos liberandos."
+
+# MAP05: After getting to Main Control.
+msgid "TXT_ILOG19"
+msgstr "Iter captivi liberandi. Inveniam viam ut aperias manus scanner transibit."
+
+# MAP05: After cutting Wolenick's hand off.
+msgid "TXT_ILOG20"
+msgstr "Iter captivi liberandi. Manus iudicis utere ad transitum operandum manu scanner."
+
+# MAP05: After setting the prisoners free.
+msgid "TXT_ILOG21"
+msgstr "Iter ibo amicum meum. Bonum opus captivis liberandis. Salire in unum e teleportis et ad basim reducet te."
+
+msgid "TXT_ILOG22"
+msgstr "Virtutem cristallum destrue, quod volat potentia eget que clypeis Ordinis inpellit. Ite visita Worner, speculator nos in cella statione virtutis reparate."
+
+# MAP04: After leaving Reactor Core.
+msgid "TXT_ILOG24"
+msgstr "Let's get lost. Illic magis fun venire."
+
+# MAP02: After destroying the crystal in the Power Station.
+msgid "TXT_ILOG25"
+msgstr "Plus unus casus ante imperium sentit tutum esse ad impetus in castellum. Macil's pro Irale comparatus est tibi dare aurum et aliquam disciplinam. Postquam eum visitas, vide medic in urbe pro robur."
+
+msgid "TXT_ILOG26"
+msgstr "Visita Irale et medic in urbe pro aurum et disciplina, deinde cloacas invenies. Caput per flumen contra mansionem Praefecti."
+
+# MAP06: Entrance.
+msgid "TXT_ILOG28"
+msgstr "Quaerimus Weran, qui se vocat Rat Rex. Certus sum descriptivus ac coloratus."
+
+# MAP06: After giving the guard's uniform to Weran.
+msgid "TXT_ILOG33"
+msgstr "Partes flammiferae in Iralem sume. Exhaurire reclamatio lacus. In fundo est cloacas occultus introitus. Porta moderatur ibi, alicubi. Conterere eos."
+
+# MAP06: After destroying the gate controls.
+msgid "TXT_ILOG37"
+msgstr "Manda, factum est! patent portae. Immitte turmas in concursu et dic Macil nos intrasse! Ad frontem redeamus basim."
+
+# MAP07: Entrace.
+msgid "TXT_ILOG38"
+msgstr "Iunge impetum in castellum. Inveni et eximito programmatorem. Diversas relationes de suo loco habemus. Alius dicit in conclavi computatorio, alius in sub-gradus templum abscondit, et tamen alius in fine porticus longi."
+
+# MAP09: Entrance.
+msgid "TXT_ILOG45"
+msgstr "Programmatorem reperi et eum interfice."
+
+msgid "TXT_ILOG46"
+msgstr "Oraculum exquirite, et de aliis sigilibus argenteis petatis. Oraculum in finibus extra oppidum residet. Transite flumen, caput versus castellum et sinister per arcum."
+
+msgid "TXT_ILOG47"
+msgstr "Oraculum exquirite, et de aliis sigilibus argenteis petatis. Oraculum templum in finibus est, in extrema parte oppidi."
+
+# MAP10: After killing the Programmer, talking to Macil and moving a bit.
+msgid "TXT_ILOG48"
+msgstr "Oraculum exquirite, et de aliis sigilibus argenteis petatis. Mercedem sume tuam et transi ad medic et arma exercitator salutis et disciplinae. Oraculum templum in finibus est, in extrema parte oppidi."
+
+# MAP11: Entrance to cave.
+msgid "TXT_ILOG50"
+msgstr "Exquire oraculum templum et pete de aliis fragmentis Sigilorum. Hic est. Im 'omnia memorare. Non est quod fidem non habeam te superstes. Suus 'iustum est quod ordinem Sigilium regere non possumus."
+
+# MAP12: After talking to the Oracle.
+msgid "TXT_ILOG56"
+msgstr "Secunda pecia ad cor purpureum et obsianum turris iacet. Ibi invenies Episcopum. Episcopus est dux militaris Ordinis. Nos ab eo et bis ustulo. Oraculi signum clavem magistri in confiniis sume."
+
+# MAP11: Officer's uniform room.
+msgid "TXT_ILOG57"
+msgstr "Episcopus graviter custodiendus est, quare nos non aequabili ac temperamento volvimus? Episcopi nei. Postquam eum perdidisti, ad oraculum redi."
+
+# MAP17: Bailey → Upstairs.
+msgid "TXT_ILOG59"
+msgstr "Modo verbum teneo nos delatorem intra arcem habere. Caput valetudinarium fiat. Ibi operatur. Deinde Episcopum locate et perdat. Postquam mortuus est ad oraculum revertitur."
+
+# MAP19: Last room (southwestern).
+msgid "TXT_ILOG64"
+msgstr "Noli tradere. Hoc est. Recta ante. Salire in teleportori ad administrationem centralem et nucleum computatrum perdere. Haec vis segetem interficiet in introitu Episcopi turris. Postquam mortuus est, ad oraculum redi."
+
+# MAP15: After pressing the switch to reveal the computer.
+msgid "TXT_ILOG70"
+msgstr "Gravissimo. Lets succendam eum. Quod vi agrorum curam habere debet. Redeamus ad vadimonium, deinde ad turris et Episcopum."
+
+# MAP16: After killing the Bishop.
+msgid "TXT_ILOG74"
+msgstr "Bravo, aliam petiam sigil! Videsne fatum spectrum quod de Episcopi corpore prodiit? Unde id ante vidi? Redeamus ad oraculum."
+
+# MAP11: After killing the Bishop and going to MAP12's entrance.
+msgid "TXT_ILOG76"
+msgstr "Renuntiamus industriam larvalem apud Episcopum inventam etiam ab Oraculo adesse, caveamus."
+
+# MAP10: After killing Macil (Spectre) without having destroyed the converter
+# in MAP24.
+msgid "TXT_ILOG79"
+msgstr "Turnebus copias nostras occupavit. Apparet ut Macil nos omnes per decipit. Vera fidelitas eius fuit ad Ordinem. Qualis anguis. Redeamus ad oraculum."
+
+# MAP27: After killing the Loremaster with either Macil or the Oracle alive.
+msgid "TXT_ILOG83"
+msgstr "Alius Sigilis fragmentum. Uno gradu propius ad libertatem sumus. Ac propius es gradum ad me. Redeamus ad Oraculum!"
+
+# MAP27/MAP12: Remark at TXT_SUB_LOG85
+msgid "TXT_ILOG85"
+msgstr "Integra sigila geris potestatem. Quod scribis nos clausuram aliquam accipere. Videamus quid protector suus lorem."
+
+# MAP12: After killing the Oracle with Macil alive.
+msgid "TXT_ILOG87"
+msgstr "Sed haec hactenus prognostica. Tene, Macil nos revocat. Exeamus hinc in unam partem."
+
+# MAP23: After talking with Richter and leaving his room.
+msgid "TXT_ILOG89"
+msgstr "Officinas iuxta metalla. fodinas de Degnin intelligendum esse Richter. Degnin chalcitis magnetica et explosiva est, res ad vim camporum claudendam. Demus clavem illam e catacumbis, et deinde ad fodinas aliquot chalcitidis."
+
+# MAP25: Entrance.
+msgid "TXT_ILOG93"
+msgstr "Officinas iuxta metalla. Degnin chalcitis magnetica et explosiva est, res ad vim camporum claudendam. Demus clavem illam e catacumbis, et inde ad chalcitiam descendimus. Hanc rationem ruinae Richter explorabant, diligenter."
+
+# MAP25: After killing the Spectre.
+msgid "TXT_ILOG95"
+msgstr "Officinas iuxta metalla. Degnin chalcitis magnetica et explosiva est, res ad vim camporum claudendam. Amice, quicquid pugnamus, plus iusto est Ordo. Retro plebi deinde ad metalla deduci. Vivamus eget ore."
+
+# MAP14: Entrance.
+msgid "TXT_ILOG96"
+msgstr "Officinas iuxta metalla. Degnin chalcitis magnetica et explosiva est, res ad vim camporum claudendam. Sine demissione custos, vide deposita chalcitidis."
+
+# MAP14: After crossing the entrance yard.
+# (drone ≈ slave)
+msgid "TXT_ILOG97"
+msgstr "Sine demissione custos, vide deposita chalcitidis. Hae miserae animae fuci sunt. Eorum functiones synaptic a RC inserit stipata. Transfusor perimus, et liber es."
+
+# MAP14: After James's room.
+msgid "TXT_ILOG99"
+msgstr "Officinas iuxta metalla. Sine demissione custos, vide deposita chalcitidis. Mea sententia est, chalcitidem in vi campi iactare et deinde illum efflare, compressio inde magneticam stragulum et vicis lumina inter se creare debet."
+
+# MAP14: After destroying the transmitter.
+msgid "TXT_ILOG100"
+msgstr "Nunc ad officinam. fodinas Exitus et non desideres. Machinam inveniamus et eam claudam!"
+
+# MAP20: Path to Conversion Chapel (MAP24).
+# ("neural oscillation" or "brainwave")
+msgid "TXT_ILOG102"
+msgstr "Neuralem undam deprauationem a recta fronte ingentes lego. repperimus puto. Let's get in there and shut it!"
+
+# MAP24: Converter room.
+msgid "TXT_ILOG103"
+msgstr "Quemadmodum cum cogito, omnia te vidimus! Hominem eunt et exeunt… Ne quidem cogitare de eo volo. Solvite hunc horrorem!"
+
+# MAP24: After destroying the converter.
+msgid "TXT_ILOG104"
+msgstr "Macil insanit. Sciens modo ducentos viros ad mortem misit. Ultionem volo! Pro mortuis et pro viventibus mortuis! Revertamur et inveniamus quid agatur."
+
+# MAP10: After killing Macil while having destroyed the converter in MAP24.
+msgid "TXT_ILOG106"
+msgstr "Officina ad \"laboratorium\" ducit, et signum potentiae Sigil ab intus accipiunt. Reditus ad officinam et gradus noster proximus ad libertatem."
+
+# MAP16: Entrance → Central door.
+msgid "TXT_ILOG120"
+msgstr "Episcopum reperi et eum perdes! Postquam mortuus est, ad oraculum redi."
+
+# MAP12?
+msgid "TXT_ILOG122"
+msgstr "Labium loremasterii est extra teleportarium quod modo aperitur. Eamus, experiamur quid mox latrant. Ac deinde ad libertatem accedimus."
+
+# MAP15: Computer destroyed + Room 1
+msgid "TXT_ILOG211"
+msgstr "Agite, hinc celerrime abeamus. Campus virium deiectus est, ad turrim Episcopi. Ubi mortuus erit, ad Oraculum revertemini."
+
+# MAP33?
+msgid "TXT_ILOG1001"
+msgstr "Sanctuarium iuxta flumen. Calix ab intus furatur. Confer illud Harrii in taberna."
+
+# MAP33?
+msgid "TXT_ILOG1002"
+msgstr "Praefectum reperi. Loquere ei de mercede tua."
+
+# MAP02: After accepting Rowan's chore.
+msgid "TXT_ILOG1003"
+msgstr "Sanctuarium iuxta flumen. Intus quidam nomine Beldin detinetur. Claudite eum, et Rowanum probationem reducite anulus."
+
+# MAP02: After getting the com unit from Rowan.
+msgid "TXT_ILOG1004"
+msgstr "Locum frontis reperi et loqui Macil."
+
+# MAP02?
+msgid "TXT_ILOG1005"
+msgstr "Descende per gradus, invenire et loqui ad Macilum."
+
+# MAP03: After joining the Front.
+msgid "TXT_ILOG1006"
+msgstr "Visit Irale, arma frontis elit in urbe. Post ostium est iuxta arma taberna. Tum utere clavem Macil cum Praefecto colloqui tibi dedit."
+
+# MAP02: After accepting "messy" chore.
+msgid "TXT_ILOG1007"
+msgstr "Invenire potestatem ictus in maius, et occludere. Reduc aliquid ad Praefectum pro probatione."
+
+# MAP02: After accepting "bloody" chore.
+msgid "TXT_ILOG1008"
+msgstr "Inveni Derwin in statio ferriviaria. Interfice eum, et mourel aurem eius adduc."
+
+# MAP03: After completing Mourel's chore.
+msgid "TXT_ILOG1009"
+msgstr "Utere fauces Mourel tibi dedit ut in carcerem pervenias. Cum intus loquere ad Custodem Montag. Iter captivi liberandi."
+
+# MAP05
+msgid "TXT_ILOG1010"
+msgstr "Clavis custodis utere ut in carcerem carceris caudices et viam invenias ad captivos liberandos."
+
+# MAP03: After accepting Macil's second mission.
+msgid "TXT_ILOG1011"
+msgstr "Virtutem cristallum destrue, quod volat potentia eget que clypeis Ordinis inpellit. Ite visita Worner, speculator nos in cella statione virtutis reparate. Noli oblivisci videre medicum et lanistam arma ante quam abis."
+
+# MAP04: After talking to Worner.
+msgid "TXT_ILOG1012"
+msgstr "Virtutem cristallum destrue, quod volat potentia eget que clypeis Ordinis inpellit. Utere I.D. ut in statione virtutis. De cellario supra Worner reprimere possis."
+
+# MAP04: After talking to "Mr. Crispy".
+msgid "TXT_ILOG1013"
+msgstr "Virtutem cristallum destrue, quod volat potentia eget que clypeis Ordinis inpellit. Vade loqui ad Ketrick in media area."
+
+# MAP04: After talking to Sammis.
+msgid "TXT_ILOG1014"
+msgstr "Virtutem crystallo perdere. Vade ad sermonem Ketrick, ambula ambulationem utens virgas, hoc utere id pro elevatore."
+
+msgid "TXT_ILOG1015"
+msgstr "Oppidum introitum reperi, quem ordo custodivit. Aperi ianuam et custos uniforme reduc ad Weran."
+
+msgid "TXT_ILOG1016"
+msgstr "Partes flammiferae in Iralem sume. Cloaca sustentationem ostium invenire. Reperio et reclamationem piscinam intra castellum exhaurire. In fundo est cloacas occultus introitus. Introitus ille descendit ubi portae sunt, alicubi."
+
+# MAP03: After destroying the gate controls and talking to Macil.
+msgid "TXT_ILOG1017"
+msgstr "Iunge impetum in castellum. Inveni et eximito programmatorem. Vide medic et tela fatigat. Habe omnia quae habes. Hoc futurum est infernum pugnae."
+
+msgid "TXT_ILOG1018"
+msgstr "Clavis utere programmate falso, tibi dedit aditum ad custodiam Programmarii aperiendi. Esse habet ubi latitat. Programmatorem reperi et eum interfice."
+
+# MAP10: After killing the Programmer and talking to Macil.
+msgid "TXT_ILOG1019"
+msgstr "Oraculum exquirite, et de aliis sigilibus argenteis petatis. Mercedem sume tuam et transi ad medic et arma exercitator salutis et disciplinae."
+
+msgid "TXT_ILOG1020"
+msgstr "Secunda pecia ad cor purpureum et obsianum turris iacet. Episcopum ibi quaere, qui te exspectat. Oraculi signum clavem magistri in confiniis sume. Postquam Episcopum destruxisti, ad Oraculum redi."
+
+# MAP11: After getting the Military ID from the keymaster.
+msgid "TXT_ILOG1021"
+msgstr "Reperio purpuram et obsianum turris. Utere clavis clavibus magistri tui ad turris ingredi. Cum intus oportet Episcopum collocare. Postquam Episcopum destruxisti, ad Oraculum redi."
+
+# MAP17: After talking to Quincy.
+msgid "TXT_ILOG1022"
+msgstr "Securitatem complexam invenire, ibi pugnare et teleportori utere ad administrationem centralem. In administratione centralis nucleum computatrum perdere. Hoc vis segetem interficiet Episcopi turris. Mortuo Episcopo, ad Oraculum redi."
+
+msgid "TXT_ILOG1023"
+msgstr "Proxima provocatio spiritum tuum probabit. Tertia petia tenet a duce tuo. Idem est quod ad occidendum te mittit. Illum oppone et fata resolve tua."
+
+# MAP10: You chose to kill the Oracle.
+msgid "TXT_ILOG1024"
+msgstr "Oraculum est qui tertiam partem tenet. Illic proditor tuus est. Redi ad oraculum, et detrahe eum. Redi ad me cum mortuus est."
+
+msgid "TXT_ILOG1025"
+msgstr "Tu cancer e corpore excidisti, sed cor adhuc verberat. Deinde quaerendum est chirurgum qui carnifices et populum tuum regit… The Loremaster. Desine eum, et altera pars tua erit."
+
+msgid "TXT_ILOG1026"
+msgstr "Deinde quaerendum est chirurgum qui carnifices et populum tuum regit… The Loremaster. Desine eum, et altera pars tua erit. Usu ad aperiri adipisci. Cum is mortuus est, eadem utere ad me arte ut ad me redeas."
+
+# MAP12: You chose to kill Macil.
+msgid "TXT_ILOG1027"
+msgstr "Prudenter elegi. Tertia petia tenet a duce tuo. Dele quod in corde tuo latet et ad me converte."
+
+# MAP10: After killing the Oracle and talking to Macil.
+msgid "TXT_ILOG1028"
+msgstr "Invenimus Ordinem nostros homines in milites bio-mechanicos transformare. Facilitatem reperi, ubi hoc agitur, et claude, perpetuo! Invenias Richterium in plebe prope cataractam, et hoc flagitium tibi desistere narrabit."
+
+# MAP23: After talking with Richter.
+msgid "TXT_ILOG1029"
+msgstr "Ad officinam ingredi, clavis debes. Subripui unum, sed is qui deerat in catacumbis sub plebe agente. Est aliquid ibi nostros capientes. Quidquid id est, id invenias et clavem capias. Cum hoc habes, officinas metallis proxima est."
+
+msgid "TXT_ILOG1101"
+msgstr "Calicem in sacello sanctuarii reperi et eum ad Harris susum affer in taberna."
+
+msgid "TXT_ILOG1102"
+msgstr "Reperio mansionem Praefecti et loqui ad Praefectum ut mercedem tuam"
+
+msgid "TXT_ILOG1201"
+msgstr "Macte! Gratiam tuam merui. Visita medicum et telam lanistam et te paratum habebunt ad ea quae praecedunt. Intra basim libere vagari."
+
+msgid "TXT_SPEAKER_ORDER_SERGEANT"
+msgstr "Ordo opificie"
+
+msgid "TXT_SPEAKER_ROWAN"
+msgstr "Rowan"
+
+msgid "TXT_SPEAKER_FERIS"
+msgstr "Feris"
+
+msgid "TXT_SPEAKER_PRISON_GUARD"
+msgstr "Custos Carceris"
+
+msgid "TXT_SPEAKER_JUSTIN"
+msgstr "Justin"
+
+msgid "TXT_SPEAKER_MACIL"
+msgstr "Macil"
+
+msgid "TXT_SPEAKER_ASSISTANT"
+msgstr "Adiutor"
+
+msgid "TXT_SPEAKER_KEY_MASTER"
+msgstr "Magister Clavium"
+
+msgid "TXT_SPEAKER_BODYGUARD"
+msgstr "Custos corporis"
+
+# Intended to appear in MAP01 of the Strife teaser, but does not spawn.
+msgid "TXT_SPEAKER_INTERROGATOR"
+msgstr "Interrogator"
+
+msgid "TXT_SPEAKER_WARDEN_MONTAG"
+msgstr "Custos Montag"
+
+msgid "TXT_SPEAKER_RICHTER"
+msgstr "Richter"
+
+msgid "TXT_SPEAKER_MACIL_S_ADVISOR"
+msgstr "Consiliarius Macil"
+
+msgid "TXT_SPEAKER_JUDGE_WOLENICK"
+msgstr "Iudex Wolenick"
+
+msgid "TXT_SPEAKER_TEVICK"
+msgstr "Tevick"
+
+msgid "TXT_SPEAKER_HARRIS"
+msgstr "Harris"
+
+msgid "TXT_SPEAKER_FOREMAN"
+msgstr "Praefectus"
+
+msgid "TXT_SPEAKER_PRISONER"
+msgstr "Captivus"
+
+msgid "TXT_SPEAKER_SAMMIS"
+msgstr "Sammis"
+
+msgid "TXT_SPEAKER_WEAPON_SMITH"
+msgstr "Fabrus Armorum"
+
+msgid "TXT_SPEAKER_REACTOR_GUARD"
+msgstr "Custos Reactoris"
+
+msgid "TXT_SPEAKER_APPRENTICE"
+msgstr "Discipulus"
+
+msgid "TXT_SPEAKER_DOOR_GUARD"
+msgstr "Custos Ostii"
+
+msgid "TXT_SPEAKER_MASTER_SMITHY"
+msgstr "Magister Ferrarius"
+
+msgid "TXT_SPEAKER_WAREHOUSE_GUARD"
+msgstr "Custos Horrei"
+
+msgid "TXT_SPEAKER_BARKEEP"
+msgstr "Caupo"
+
+msgid "TXT_SPEAKER_TIMOTHY"
+msgstr "Timothy"
+
+msgid "TXT_SPEAKER_JAMES"
+msgstr "James"
+
+msgid "TXT_SPEAKER_WORNER"
+msgstr "Worner"
+
+msgid "TXT_SPEAKER_BAILEY_GUARD"
+msgstr "Custos Bailey"
+
+# drone ≈ slave
+msgid "TXT_SPEAKER_DRONE"
+msgstr "Servus"
+
+msgid "TXT_SPEAKER_FRONT_GUARD"
+msgstr "Custos Frontis"
+
+msgid "TXT_SPEAKER_QUINCY"
+msgstr "Quincy"
+
+msgid "TXT_SPEAKER_SERGEANT"
+msgstr "Opifice"
+
+msgid "TXT_SPEAKER_TEMPLE_GUARD"
+msgstr "Custos Templi"
+
+msgid "TXT_SPEAKER_ORACLE"
+msgstr "Oraculum"
+
+msgid "TXT_SPEAKER_ULAINE"
+msgstr "Ulaine"
+
+msgid "TXT_SPEAKER_FRONT_SOLDIER"
+msgstr "Miles Frontis"
+
+msgid "TXT_SPEAKER_PROGRAMMER"
+msgstr "Programmator"
+
+msgid "TXT_SPEAKER_MEDIC"
+msgstr "Medicus"
+
+msgid "TXT_SPEAKER_WATCHMAN"
+msgstr "Custos"
+
+msgid "TXT_SPEAKER_KETRICK"
+msgstr "Ketrick"
+
+msgid "TXT_SPEAKER_WERAN"
+msgstr "Weran"
+
+msgid "TXT_SPEAKER_ADVISOR"
+msgstr "Consiliarius"
+
+msgid "TXT_SPEAKER_GEOFF"
+msgstr "Geoff"
+
+msgid "TXT_SPEAKER_OVERSEER"
+msgstr "Inspector"
+
+# Intended to appear in MAP19, but does not spawn.
+#
+msgid "TXT_SPEAKER_SECURITY_COMPLE"
+msgstr "Complexus Securitatis"
+
+msgid "TXT_SPEAKER_COMPUTER_TECH"
+msgstr "Technologia Computatralis"
+
+msgid "TXT_SPEAKER_MACGUFFIN"
+msgstr "MacGuffin"
+
+msgid "TXT_SPEAKER_ARION"
+msgstr "Arion"
+
+# This is a compound word. Some languages express this in one word.
+msgid "TXT_SPEAKER_DOCK_WORKER"
+msgstr "Portuarius"
+
+msgid "TXT_SPEAKER_IRALE"
+msgstr "Irale"
+
+msgid "TXT_SPEAKER_CORE_GUARD"
+msgstr "Custos Nuclei"
+
+msgid "TXT_SPEAKER_SEWER_GUARD"
+msgstr "Custos Cloacarum"
+
+msgid "TXT_SPEAKER_TECHNICIAN"
+msgstr "Technicus"
+
+msgid "TXT_SPEAKER_GUARD"
+msgstr "Custos"
+
+msgid "TXT_SPEAKER_PEASANT"
+msgstr "Rusticus"
+
+msgid "TXT_SPEAKER_ARMORER"
+msgstr "Armista"
+
+msgid "TXT_SPEAKER_BELDIN"
+msgstr "Beldin"
+
+msgid "TXT_SPEAKER_GERARD"
+msgstr "Gerard"
+
+msgid "TXT_SPEAKER_GOVERNOR_MOUREL"
+msgstr "Gubernator Mourel"
+
+msgid "TXT_SPEAKER_BOWYER"
+msgstr "Bowyer"
+
+msgid "TXT_SPEAKER_DERWIN"
+msgstr "Derwin"
+
+# Menu's intro.
+msgid "TXT_SUB_INTRO1"
+msgstr "Cometa nostram planetae improvise percussit. Uno vehementi ictu paradisum amisimus."
+
+msgid "TXT_SUB_INTRO2"
+msgstr "Ictum virus emisit, quod per terram rapitur et decies centena occidit. Evenit ut beatiores."
+
+msgid "TXT_SUB_INTRO3"
+msgstr "Qui enim non mortui sunt, mutationes factae sunt humanitatis. Quidam fanatici facti sunt, qui vocem dei maligni in capitibus suis audiverunt et Ordinem se vocabant."
+
+msgid "TXT_SUB_INTRO4"
+msgstr "Qui ad hanc vocem nos surdi sunt, horrende patiuntur, et his immitibus animi servire coguntur, qui potentiora arma feriunt, quam nihil nos conuenire possumus."
+
+msgid "TXT_SUB_INTRO5"
+msgstr "Nostras mulieres et parvulos destruunt ut eas sub terra abscondamus et sicut animalia in timore pro animabus nostris semper vivamus."
+
+msgid "TXT_SUB_INTRO6"
+msgstr "Sed murmura malcontentiae audiuntur. Si nos ordinamus, dominos nostros vincere possumus? Arma furantur, milites exercentur. Motus nascitur: natus ex certamine perenni!"
+
+# Best ending.
+msgid "TXT_SUB_GOOD1"
+msgstr "Adtendite omnes turmae Frontonis: hoc fecit! Super illud. Malum Merula miles occidit. Ordo amplius non est. Merula, legisne me?"
+
+msgid "TXT_SUB_GOOD2"
+msgstr "Sciebam te vincere, mi vir fortissime, heros. Omnes pugnae cessaverunt. Tua victoria vaccinum creare nos permittet ut virus a corporibus nostris purget."
+
+msgid "TXT_SUB_GOOD3"
+msgstr "Salvasti nos planetae et liberasti nos. Nunc libet ... personaliter gratias agere. Oh, et obiter nomen est Shauna."
+
+# Sad ending.
+msgid "TXT_SUB_SAD1"
+msgstr "Ita, abiit malum, sed futurum erat incerto et dubio obnubilatum."
+
+msgid "TXT_SUB_SAD2"
+msgstr "Generationes ad virus purgandum a nostris. Si diu supervixerit."
+
+msgid "TXT_SUB_SAD3"
+msgstr "Quidquid mali deerat, unum nobis exhausit opus: sine spe nobis reliquit."
+
+# Worst ending.
+msgid "TXT_SUB_BAD1"
+msgstr "Virus sentiens nos percussit quasi unda aestuosa, omnesque nos ad insaniam impellit. Sirenes cantum mortis audivimus et saltavimus."
+
+msgid "TXT_SUB_BAD2"
+msgstr "Hoc malum nos exhausit omnem humanam vitam ac, contemptum procreationis, familias nostras reduxit."
+
+msgid "TXT_SUB_BAD3"
+msgstr "Uno deinde die malum discessit. Nihil aliud fuit quam quod depasceretur. Extincti sumus."
+
+# MAP03: After destroying the gate controls.
+msgid "TXT_SUB_MAP03_1"
+msgstr "Mutationes geneticae per virus non solum psyches Ordinis inflexerunt, sed corpora eorum debilitaverunt."
+
+msgid "TXT_SUB_MAP03_2"
+msgstr "Sine procreatione, Ordo amplificationes biomechanicae inuenit una via ad suas vires et numeros conservandas."
+
+msgid "TXT_SUB_MAP03_3"
+msgstr "Ruina ita progressa est ut pleraeque copiae quibus obviam imus magis machinae quam homines sint, sed credimus eorum conscientiam collectivam ab una fonte regi…"
+
+msgid "TXT_SUB_MAP03_4"
+msgstr "programmator: creator AI qui Acolythi moderatur. Programmatorem dissolve et uno ictu copias ordinis debilitare possumus. Sed cautio est: nos rumores adiuuare possumus oppugnatores."
+
+# MAP10: Macil.
+msgid "TXT_SUB_MAP10_1"
+msgstr "Fragmenta collecta ex tabulariorum programmatibus narrant Ordinem telum intelligentem adorare. \"Sigil\" vocant."
+
+msgid "TXT_SUB_MAP10_2"
+msgstr "Pars una est de quinque, quam attigisti et recepi. Vim propriae vivendum corrumpit ex. Dum vivis, imperium ejus tu obtines."
+
+msgid "TXT_SUB_MAP10_3"
+msgstr "Quassatio, qua te pulsavit, Sigilium ipsum tibi incedit, pulsus tuus et fluctus cerebri. Ferare potes, sed pretio: siccabit te."
+
+msgid "TXT_SUB_MAP10_4"
+msgstr "Una pars terribilis virtus constituit. Possessio omnium quinque partium devastare esset et in totali potestate usoris planetae daturum."
+
+# MAP02: After getting the com unit from Rowan and leaving his room.
+msgid "TXT_SUB_LOG2"
+msgstr "Audi, haec com unitas mihi narrat te esse 100% humanum. Iussus sum ut te introducam, hic confido loquimur. Trade me et redde. Oh, et obiter me merulam vocas."
+
+# MAP02: On the bridge with the com unit.
+msgid "TXT_SUB_LOG3"
+msgstr "Caput ad vetus Prytaneum. Postquam Ordo eum emittebat, Macil cuniculum aedificavit quod sine cognitione acolytorum ingredi et exire sinit."
+
+# MAP02: In hall town with the com unit.
+msgid "TXT_SUB_LOG4"
+msgstr "Vade per ostium sinistrae tuae, et unum ad dextram. custos nomen est Geoff. Dic ei opus aurum."
+
+# MAP03: After joining the Front.
+msgid "TXT_SUB_LOG5"
+msgstr "Irale est frontis \"fixer\". Post ostia non signata est iuxta arma taberna."
+
+# MAP02
+msgid "TXT_SUB_LOG6"
+msgstr "Memento: pro vi furtim occidite. Non terret."
+
+# MAP03: After joining the Front and going to Mourel's mansion.
+msgid "TXT_SUB_LOG7"
+msgstr "Omnes de praeside scio esse quod utrinque ad medium ludit. Hic est eius dicta \"mansio.\""
+
+msgid "TXT_SUB_LOG8"
+msgstr "Ugh. Faeces humanitatis certe domum invenerunt."
+
+# MAP02: After accepting "bloody" chore.
+msgid "TXT_SUB_LOG9"
+msgstr "Vocans Mourellum splenium honori reddit. Spurius turd in baculo est."
+
+# MAP02: After accepting "messy" chore and leaving Mourel's room.
+msgid "TXT_SUB_LOG10"
+msgstr "Loqui necesse est cum aliquo qui oppidum vetus novit et ubi haec copulatio est. Mandatum dicit: invenio MacGuffin. "
+
+# MAP02: After accepting "messy" chore and leaving Mourel's mansion.
+msgid "TXT_SUB_LOG11"
+msgstr "In eo est quod \"bum foramen\" vocatur urbane. Sume per viam purgamentorum plantae et per scalas caput."
+
+# MAP02: During "messy" chore.
+msgid "TXT_SUB_LOG12"
+msgstr "Accipe tempus tuum cum hoc missio. Non possum hoc ex praecepto intel."
+
+# MAP02: After destroying Front's power coupling.
+msgid "TXT_SUB_LOG13"
+msgstr "Idiota! Potestatem circumclusisti ad vallum gyros, quo utimur ab Ordine turpia celare. Caput ad praetorium mittis et turbam intuens tolle, nunc!"
+
+# MAP02: After destroying Front's power coupling and killing all blue acolytes
+# in the town hall.
+msgid "TXT_SUB_LOG14"
+msgstr "Bene \"Fides nemini\" ludi nomen est! Transeamus a Praeside et captivos liberamus."
+
+# MAP02: After finding the broken power coupling.
+msgid "TXT_SUB_LOG15"
+msgstr "Bene move! Praefectus est pessima mendax. Potestas nostra est coniunctio. Nunc transeamus transitum."
+
+# MAP02: After accepting "bloody" chore.
+msgid "TXT_SUB_LOG16"
+msgstr "Horreum in statione electrica est. Breviter et iucunde dicamus."
+
+# MAP02: About to enter Norwall Prison.
+msgid "TXT_SUB_LOG17"
+msgstr "Numquam putavi me in carcerem irrumpere…"
+
+# MAP05: After crossing the alarm green door.
+msgid "TXT_SUB_LOG18"
+msgstr "Coniecto non est liberum prandium. Tempus cohibere et onerare."
+
+# MAP05: After getting to Main Control.
+msgid "TXT_SUB_LOG19"
+msgstr "Bene. Praetori placuisti, custode aspersus... Nunc spectat ut parvam manum facere debeamus."
+
+# MAP05: After cutting Wolenick's hand off.
+msgid "TXT_SUB_LOG20"
+msgstr "O manum abscindere! Et cogitavi eras a nice guy… pius. Eamus."
+
+# MAP05: After setting the prisoners free.
+msgid "TXT_SUB_LOG21"
+msgstr "Ire, mi amice. Salire in unum e teleportis et ad basim reducet te."
+
+msgid "TXT_SUB_LOG22"
+msgstr "Worbitor est speculator qui nos in horreis stationis virtutis conscripsimus."
+
+# MAP04: After entering Ketrick's room.
+msgid "TXT_SUB_LOG23"
+msgstr "Verbum e umbone restitit cum crystallum whack, alioquin etiam mesquite sapidum finies."
+
+# MAP02: After destroying the crystal in the Power Station.
+msgid "TXT_SUB_LOG25"
+msgstr "Plus unus casus ante imperium sentit tutum esse impetus. Macil's pro Irale comparatus est tibi dare aurum et aliquam disciplinam. ET VISITA MEDIC PRO robur."
+
+msgid "TXT_SUB_LOG26"
+msgstr "Ordo securum putat in suo castellum. Nefas! Si portas aperias, facile legendi erunt. Et pro eo habebis in cloacas descendere. Caput iuxta flumen per mansionem Praefecti. "
+
+msgid "TXT_SUB_LOG27"
+msgstr "Bene, anatis huc. Cloacae incolae horrendae mutantes sunt, sed retis cuniculis aditum ad secreta praebet. Nasum tuum tene… Descendimus."
+
+# MAP06: Entrance.
+msgid "TXT_SUB_LOG28"
+msgstr "Quaerimus Weran, qui se vocat Rat Rex. Certus sum descriptivus ac coloratus."
+
+# MAP06: Down → Left.
+msgid "TXT_SUB_LOG29"
+msgstr "Oh, yuck. Nolo etiam cogitare quid ingrediaris!"
+
+# MAP06: Down → Left → Upstairs → Left.
+msgid "TXT_SUB_LOG30"
+msgstr "Ut eget justo quam. Plus brunneis goo!"
+
+msgid "TXT_SUB_LOG31"
+msgstr "Heus, ecce! Puto quod ostium Weran velit abar!"
+
+msgid "TXT_SUB_LOG32"
+msgstr "Occlude oculos tuos! Non wanna! Oh, nimium sero… Yuck. Non est simile corpus humanum. Quid fecit ordo? Redditus sum referre hoc ad mandatum."
+
+# MAP06: After giving the guard's uniform.
+msgid "TXT_SUB_LOG33"
+msgstr "Cur missio in campo florum semel facere non possumus?"
+
+# MAP06: Weran's hideout.
+msgid "TXT_SUB_LOG34"
+msgstr "Odi dicere, sed hoc me commemorat domi. Sub terra non procul hinc."
+
+# MAP06: Exit of the secret entrance.
+msgid "TXT_SUB_LOG35"
+msgstr "Noli me interrogare ubi sumus. Perii quoque. Dolemus."
+
+# MAP06: Secret entrance from the castle.
+msgid "TXT_SUB_LOG36"
+msgstr "Ille laterem… Nonne laterem istum praeterimus? Non…"
+
+# MAP06: After destroying the gate controls.
+msgid "TXT_SUB_LOG37"
+msgstr "Manda, factum est! patent portae. Immitte turmas in concursu et dic Macil nos intrasse! "
+
+# MAP07: Entrace.
+msgid "TXT_SUB_LOG38"
+msgstr "Diversas relationes de locatione programmarii habemus. Alter in cubiculum computatrale esse dicit, alium in custodia esse, et tamen alium qui longi temporis mentionem facit. Dolemus. "
+
+# MAP07: Near the crusaders.
+msgid "TXT_SUB_LOG39"
+msgstr "Ah iterum inferrent bonum est. Infernum da, guys!"
+
+# MAP07: Computer room.
+msgid "TXT_SUB_LOG40"
+msgstr "Hoc bonum spectat. Computers… Programmer… Quid censes?"
+
+# MAP07: Building before the brigde.
+msgid "TXT_SUB_LOG41"
+msgstr "Longum hoc debet esse atrium. Aut ille aut sensus meus ad inferos emissa est scala."
+
+# MAP07: Northeast bulding.
+msgid "TXT_SUB_LOG42"
+msgstr "Templum mali haec omnia notot. Gravis architectura, magnum vexillum… Dicere vellem bingo!"
+
+msgid "TXT_SUB_LOG43"
+msgstr "Hic est Programmator omnipotentis? Non iter!"
+
+msgid "TXT_SUB_LOG44"
+msgstr "Nescio quid amplius credam. Restat, quod dicit \"arce\" mihi est illud monstrum ingens sinistrum. Sed ut nulla velit. "
+
+# MAP09: Entrance.
+# (Probably a reference to Hunter S. Thompson’s quote, “When the going gets
+# weird, the weird turn pro.”)
+msgid "TXT_SUB_LOG45"
+msgstr "Cum fatum fit, fatum est abiens. Te ipsum observa."
+
+msgid "TXT_SUB_LOG46"
+msgstr "Oraculum in finibus extra oppidum residet. Transite flumen, caput versus castellum et sinister per arcum."
+
+# MAP02: Castle's entrance (MAP10).
+msgid "TXT_SUB_LOG47"
+msgstr "Oraculum est summus sacerdos velut sympatheticus qui extra Ordinem operatur."
+
+# MAP10: After talking to Macil and moving a bit.
+msgid "TXT_SUB_LOG48"
+msgstr "Oraculum templum est in finibus oppidi."
+
+# MAP11: Entrance.
+msgid "TXT_SUB_LOG49"
+msgstr "Ordo planetam pulchram nostram assumpsit et in TUBER vertit."
+
+# MAP11: Entrance to cave.
+msgid "TXT_SUB_LOG50"
+msgstr "Hic est. Omnia recenseo, non est quod fidem non habeam quod superstes sis, verum est quod ordinem Sigilium regere non possumus."
+
+# MAP12: Bridge to sanctum's normal entrance.
+msgid "TXT_SUB_LOG51"
+msgstr "Fortis es, mi comes. Im 'superbus esse per agimus."
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG52"
+msgstr "Numquid in secunda mora? Aegrotus paulo questus sum."
+
+# MAP12: Downstairs.
+msgid "TXT_SUB_LOG53"
+msgstr "Cur tantum tempus sub terra habendum est? Sub terra vidi."
+
+# MAP12: Sanctum's normal entrance.
+msgid "TXT_SUB_LOG54"
+msgstr "Verene putamur credere homini sanctum, cuius interior sancti viridis est?"
+
+# MAP12: After talking to the Oracle.
+msgid "TXT_SUB_LOG55"
+msgstr "Vermiculus et Obsidian? Cur non dicit rubrum et nigrum."
+
+# MAP11: Afther talking to the Oracle and leaving the cave.
+msgid "TXT_SUB_LOG56"
+msgstr "Episcopus est dux militaris Ordinis. Eorum machinatur, exploratores currit et nos refrenat. Nos ab eo et bis ustulo."
+
+# MAP11: Officer's uniform room.
+msgid "TXT_SUB_LOG57"
+msgstr "Episcopus graviter custodiendus est cur nos non aequabile et mixtum volvamus?"
+
+msgid "TXT_SUB_LOG58"
+msgstr "Admone me, hanc rem vincimus, et in ornatum appellabo."
+
+# MAP17: Bailey → Upstairs.
+msgid "TXT_SUB_LOG59"
+msgstr "Modo verbum tenemus delatorem intra arcem. Caput ad quod hospitium vocant, ibi operatur."
+
+# MAP17: Security Complex
+msgid "TXT_SUB_LOG60"
+msgstr "Capto consilia et de computatro excusso, ok?"
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG61"
+msgstr "Licet, non queror, sed iterum conemur viam quae non situlis sanguinis."
+
+# MAP19: Cross-shaped room at the beginning.
+msgid "TXT_SUB_LOG62"
+msgstr "Fuimus per infinitas erro- res ante, sed iuro, haec moenibus transeuntibus moventur."
+
+# MAP16
+msgid "TXT_SUB_LOG63"
+msgstr "Bene, Redditus figuram. Dux militaris sortes malorum guys aequat."
+
+# MAP19: Last room (southwestern).
+msgid "TXT_SUB_LOG64"
+msgstr "Noli tradere. Hoc est. Recta ante."
+
+msgid "TXT_SUB_LOG65"
+msgstr "Iterum, in statione gasi insistimus et directiones quaerimus."
+
+# MAP19: After coming across an alarm green door.
+msgid "TXT_SUB_LOG66"
+msgstr "Oh no! Plures campanae et sibili et foedae latinae nos persequuntur."
+
+# MAP15: After using a big lift next to a Reaver.
+msgid "TXT_SUB_LOG67"
+msgstr "Scis, extra, locus iste pusillos spectat."
+
+msgid "TXT_SUB_LOG68"
+msgstr "Hostis Lectio nova questus sum. Noli prohibere et conspiciunt, modo perdere em."
+
+# STRIFE1.WAD: MAP15
+msgid "TXT_SUB_LOG69"
+msgstr "Has odi forcefields. Quaerite transitum clausis, Redditus est prope esse."
+
+# MAP15: Pressing the switch to reveal the PC.
+msgid "TXT_SUB_LOG70"
+msgstr "Ooh valde infigo. Let's blow it up!"
+
+msgid "TXT_SUB_LOG71"
+msgstr "Salire in teleportarium, ictu poplite siste."
+
+# MAP16: Entrance.
+msgid "TXT_SUB_LOG72"
+msgstr "Exspecta, oraculum dixit nos eum per symbolum virtutis cognoscere. Putasne quid cogito?"
+
+msgid "TXT_SUB_LOG73"
+msgstr "Guys guys ornans opinionem obtinuit quae operatur, et mox eam ad mortem verberavit."
+
+# MAP16: After killing the Bishop
+msgid "TXT_SUB_LOG74"
+msgstr "Videsne fatum spectrum quod de Episcopi corpore prodiit? Unde id ante vidi?"
+
+msgid "TXT_SUB_LOG75"
+msgstr "Judicium vocat tempus. Nunc duas partes assecuti sumus, ut turpia reddere volo. Quid tuus instinctus ad te?"
+
+# MAP11: After killing the Bishop and going to MAP12's entrance
+msgid "TXT_SUB_LOG76"
+msgstr "Renuntiamus industriam larvalem apud Episcopum inventam etiam ab Oraculo adesse, caveamus."
+
+msgid "TXT_SUB_LOG77"
+msgstr "Macil? Pars pulmentum? Nescio quid cogitem. Spero te recte iudicaturum."
+
+msgid "TXT_SUB_LOG78"
+msgstr "Egone credo Macilum, qui pro Fronte vitam suam submisit, aut aliquis deforme cuspidem? Nescio. Sed tu confido."
+
+# MAP10: After killing Macil (Spectre) without having destroyed the converter
+# in MAP24.
+msgid "TXT_SUB_LOG79"
+msgstr "Turnebus copias nostras occupavit. Apparet ut Macil nos omnes per decipit. Vera fidelitas eius fuit ad Ordinem. Qualis anguis."
+
+# MAP26: Entrance.
+msgid "TXT_SUB_LOG80"
+msgstr "Damnatorum impressio introitus. Sed quid quaerimus, aliud est gradus. Capite demisso."
+
+# MAP24: Hall to converter room.
+msgid "TXT_SUB_LOG81"
+msgstr "Quid dedecus. Nostri ars in tormentis pro vita teritur."
+
+# MAP21: Entrance to MAP26 near to an Inquisitor's banner.
+msgid "TXT_SUB_LOG82"
+msgstr "Vana pro inferno, magnis vexillis signant sua templa."
+
+# MAP27: After killing the Loremaster with either Macil or the Oracle alive.
+msgid "TXT_SUB_LOG83"
+msgstr "Alius Sigilis fragmentum. Uno gradu propius ad libertatem sumus. Ac propius es gradum ad me."
+
+# MAP27: Button to MAP28.
+msgid "TXT_SUB_LOG84"
+msgstr "Ex aspectu, necesse est plenam Sigilam ad hanc catulam reserandam. Aliquid mihi hoc est finis iridis."
+
+# STRIFE1.WAD: MAP12
+#
+# (After killing the Oracle and collecting the final Sigil piece with both
+# Macil and the Loremaster dead)
+#
+# OR
+#
+# MAP27
+#
+# (After defeating the Loremaster and collecting the final Sigil piece with
+# Macil and the Oracle dead)
+msgid "TXT_SUB_LOG85"
+msgstr "Integra sigila geris potestatem. Quod scribis itur clausuram aliquam."
+
+msgid "TXT_SUB_LOG86"
+msgstr "ALTISSIMUS NONAS, mi heros. Amplecti gloriam parate."
+
+# MAP12: After killing the Oracle with Macil alive.
+msgid "TXT_SUB_LOG87"
+msgstr "Sed haec hactenus prognostica. Tene, Macil nos revocat. Exeamus hinc in unam partem."
+
+msgid "TXT_SUB_LOG88"
+msgstr "Paenitet me, postquam in cruore coxis ad me attinet, nequeo quicquam lepide dicere nunc cogitare. Redeamus ad Macil."
+
+# MAP23: After talking with Richter and leaving his room.
+msgid "TXT_SUB_LOG89"
+msgstr "Officinas iuxta metalla. fodinas de Degnin intelligendum esse Richter. Degnin chalcitis magnetica et explosiva est, res ad vim camporum claudendam."
+
+# MAP13: Entrance.
+msgid "TXT_SUB_LOG90"
+msgstr "Cuniculi, catacumbae, cloacas… Quam primum date!"
+
+# MAP13: West (entrance with parkour to the northwest).
+msgid "TXT_SUB_LOG91"
+msgstr "Richter vellem subtilius tactum fuisse. Hem, hic conemur."
+
+# MAP13: Northwest (hall to the parkour room).
+msgid "TXT_SUB_LOG92"
+msgstr "Puto nos sumus… Oh, crap. Nescio ubi sumus."
+
+# MAP25: Entrance.
+msgid "TXT_SUB_LOG93"
+msgstr "Hoc debere esse ac procuratores ruinae Richter quaerebat. Oh, cavete! Peregrin!"
+
+msgid "TXT_SUB_LOG94"
+msgstr "Proh, regenerare conatur. Hercle antequam iaciat!"
+
+# MAP25: After killing the Spectre.
+msgid "TXT_SUB_LOG95"
+msgstr "Amice, quicquid pugnamus, plus est quam Ordo. Abite ad fodinas!"
+
+# MAP14: Entrance.
+msgid "TXT_SUB_LOG96"
+msgstr "Sine demissione custos, vide deposita chalcitidis."
+
+# MAP14: After crossing the entrance's yard.
+msgid "TXT_SUB_LOG97"
+msgstr "Animae pauperes fuci sunt, eorum functiones synaptic a RC inserit. Traditorem delemus et liberi sumus!"
+
+# MAP14: After the entrance's yard and before going down.
+msgid "TXT_SUB_LOG98"
+msgstr "Mandatum dicit transfusor campi vi munitum. Sic duae volucres, unum lapidem, fucos, aes usu."
+
+# MAP14: After James's room.
+msgid "TXT_SUB_LOG99"
+msgstr "Mea sententia est, aes in forcefield iactare et tunc eam succendere. Compressio consequens magneticam stragulum et vicis lumina inter se creare debet."
+
+# MAP14: After destroying the transmitter.
+msgid "TXT_SUB_LOG100"
+msgstr "Nunc ad officinam. fodinas Exitus et illud non potes!"
+
+# MAP20: Exit to Commons (MAP23).
+msgid "TXT_SUB_LOG101"
+msgstr "Ignosce, heros, haec omnia mihi nova sunt."
+
+# MAP20: Path to Conversion Chapel (MAP24).
+msgid "TXT_SUB_LOG102"
+msgstr "Neuralem undam deprauationem a recta fronte ingentes lego. repperimus puto."
+
+# MAP24: Converter room.
+msgid "TXT_SUB_LOG103"
+msgstr "Quemadmodum cum cogito, omnia te vidimus! Hominem eunt et exeunt… Ne quidem cogitare de eo volo."
+
+# MAP24: After destroying the converter.
+msgid "TXT_SUB_LOG104"
+msgstr "Oraculum rectum erat. Macil' Abiit nuces. Sciens mox CC viros ad mortem misit. Vindictam volo. pro mortuis ac pro vivis mortuis."
+
+msgid "TXT_SUB_LOG105"
+msgstr "Macil? Infici et cum Sigile fragmentum. Omnes isti anni sunt in causa. Et quid?"
+
+# MAP10: After killing Macil while having destroyed the converter in MAP24.
+msgid "TXT_SUB_LOG106"
+msgstr "Richter refert officinas quas destruximus in \"lab\" ducit, et signum potentiae Sigilli ab intus accipiuntur. Retro AD OFFICINAS ET NOSTRA LIBERTATIS."
+
+# MAP16: Entrance → Central door.
+msgid "TXT_SUB_LOG120"
+msgstr "Quis me audet exprobrare et introire munitionem meam? Homo nequam? Facie me et peream!"
+
+# MAP16: Boss room unlocked → Bishop
+msgid "TXT_SUB_LOG121"
+msgstr "Non potes me occidere. Homo iustus es. Et plus quam homo sum."
+
+# SVE.WAD
+# MAP12: If the player first kills Macil and then the Oracle's spectre before
+# killing the Loremaster with Classic Mode turned off. It talks the Loremaster
+# and BlackBird.
+msgid "TXT_SUB_LOG122"
+msgstr ""
+"Nulla mors, vita aeterna et plura. Multo plura! Hoc est munus meum: cyborgi, semicaro, semiferrei, omnes ad serviendum Uni Deo. Non servitis? Morimini!\n"
+"Hoc putz alterum fragmentum Sigilli habet."
+
+# MAP29: Entity (If the player is progressing through the mediocre ending)
+msgid "TXT_SUB_LOG128"
+msgstr "Ha ha! Gratus. hoc momento sustinui. Exspectavi stultum sicut tu, ut afferas mihi libertatem meam. Parva tua tellure mea est, ac numquam natus eras! "
+
+# MAP27: Entrance (It talks the Loremaster and BlackBird).
+msgid "TXT_SUB_LOG129"
+msgstr ""
+"Ergo veritas non potest inveniri nisi in universali voluntate. Procumbis ante Deum verum, unum lumen. Adiunge me et sigil complebo.\n"
+"De hoc mystico duplici colloquio aeger sum."
+
+# MAP29: Entity (If the player is progressing through the good ending)
+msgid "TXT_SUB_LOG130"
+msgstr "Tu... Ordinem meum contrivisti, per fraudes meas, et minas desiderii saeculis. Sed vincam, inficio te ac detorquebo ad voluntatem meam."
+
+msgid "TXT_SUB_LOG200"
+msgstr "Nonne officium somnii sonat?"
+
+msgid "TXT_SUB_LOG201"
+msgstr "Nimium te vidi. Ice eum, Macil!"
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG202"
+msgstr "Iterum, me audies."
+
+msgid "TXT_SUB_LOG203"
+msgstr "Proh, haec pretia post-apocalyptica."
+
+msgid "TXT_SUB_LOG204"
+msgstr "Magnam quis suscipit. Non obstabit."
+
+msgid "TXT_SUB_LOG205"
+msgstr "Noli dawdle. Recto ante!"
+
+msgid "TXT_SUB_LOG206"
+msgstr "Viden' tu quomodo iidem corridores videant?"
+
+msgid "TXT_SUB_LOG207"
+msgstr "Heus, interdum etiam coniectura!"
+
+msgid "TXT_SUB_LOG208"
+msgstr "O trepida et cave."
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG209"
+msgstr "Oh, jeez. Nunc vide quid feceris!"
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG210"
+msgstr "Shit. Nunc inflandum est!"
+
+# MAP15: Computer destroyed + Room 1
+msgid "TXT_SUB_LOG211"
+msgstr "Age! Eamus hinc infernum."
+
+msgid "TXT_SUB_LOG212"
+msgstr "Ooh. Non tatam circum."
+
+msgid "TXT_SUB_LOG213"
+msgstr "In murum ascendes! Prohibe!"
+
+msgid "TXT_SUB_LOG214"
+msgstr "Mm. brute es."
+
+msgid "TXT_SUB_LOG215"
+msgstr "Surrexit a nice numerus ad hic."
+
+msgid "TXT_SUB_LOG216"
+msgstr "Ooh. Amor qui baculum-boom-boom."
+
+msgid "TXT_SUB_LOG217"
+msgstr "Mm. Placet mihi quo te geras."
+
+msgid "TXT_SUB_LOG218"
+msgstr "Hercle! Non sunt human!"
+
+# (Strife: Veteran Edition)
+# When obtaining the “Spontaneous Combustion” achievement
+msgid "TXT_SUB_LOG219"
+msgstr "Proh! Denigrata Acolyte! Novus gustus sensus…"
+
+msgid "TXT_SUB_LOG220"
+msgstr "Hoc fac, et caecus eris... sed mihi placet."
+
+msgid "TXT_SUB_LOG221"
+msgstr "Conicere nolunt nos ad cenam invitare!"
+
+msgid "TXT_SUB_LOG222"
+msgstr "Nos postulo ut ad suprema."
+
+msgid "TXT_SUB_LOG223"
+msgstr "Exspecta… Haec interesting spectat. Reprehendo sicco."
+
+msgid "TXT_SUB_LOG224"
+msgstr "Ugh. Ille mihi repit. Eamus clarum."
+
+msgid "TXT_SUB_LOG225"
+msgstr "Relicto! Vicis reliquit!… Oh, alia supersunt!"
+
+msgid "TXT_SUB_LOG226"
+msgstr "Porcellus masculus pertinax typicus!… Nisi puella es."
+
+msgid "TXT_SUB_LOG227"
+msgstr "Fortis, truculentus et tacet. Socium genus meum."
+
+msgid "TXT_SUB_LOG228"
+msgstr "Bene! Erravi!"
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG229"
+msgstr "Nimis malum numquam convenimus… facie ad faciem."
+
+# (Strife: Veteran Edition)
+# Random comment when the player dies with Classic Mode turned off
+msgid "TXT_SUB_LOG230"
+msgstr "Somnia pro te habui… Lenta cacas."
+
+msgid "TXT_SUB_LOG231"
+msgstr "Non. Praetorium non intrant. Iam tutum non est. Nostra operculum inflandum est. Ideo grave metallum pluit. Quotquot illorum magnos pueros occide quantum potes. Dicuntur Peregrini. Cum factum es, ego te ducam ad Macilum."
+
+msgid "TXT_SUB_LOG232"
+msgstr "Bonum opus, amice! Tempus est ut te intro adducam."
+
+msgid "TXT_SUB_LOG233"
+msgstr "Videte illos Peregrinos. Magna sunt, robots venantes, et medium sicut infernum. Jack de armis eorum nescimus, sed dissident ... pares es. Cautus."
+
+msgid "TXT_SUB_LOG234"
+msgstr "Magnum officium. Tu mihi es idea boni temporis. Nunc, sine ullo vidente te, ad dextram per ostium, in susum caput, et homini obviam."
+
+msgid "TXT_SUB_LOG235"
+msgstr "Te videat quisque, nos caput habebimus."
+
+msgid "TXT_SUB_LOG236"
+msgstr "Stulte, offendiculum, clavam gibberosam, gibberosam! Davisti nos!"
+
+msgid "TXT_SUB_LOG237"
+msgstr "Opto te post ianuam illam exspectavi… sed habeo sub terra manere. Tempus est tibi ut nostro principi conveniam, Macil."
+
+# MAP02: Mourel.
+msgid "TXT_BBSUB_SCRIPT02_D57608_IFIKN"
+msgstr "Porcus tumidus. Nihil novi de hac copulatione virtutis sic dictae, ut tarde eamus."
+
+# MAP03: Macil.
+msgid "TXT_BBSUB_SCRIPT03_D4548_GOODB"
+msgstr "Nonne officium somnii sonat?"
+
+msgid "TXT_BBSUB_SCRIPT03_D7580_TAKET"
+msgstr "Et ibi ero tecum."
+
+msgid "TXT_BBSUB_SCRIPT03_D12128_ASING"
+msgstr "Worner's speculator nos in statio cinematographica refectas."
+
+msgid "TXT_BBSUB_SCRIPT03_D16676_THEPR"
+msgstr "Fac sis paratus ad pugnam vitae tuae. Non scri- bendi. Habe omnia quae habes."
+
+# MAP04: Derwin.
+msgid "TXT_BBSUB_SCRIPT04_D21224_BUSIN"
+msgstr "Ignosce, aeger sum amet."
+
+# MAP04: Worner.
+msgid "TXT_BBSUB_SCRIPT04_D25772_TELLW"
+msgstr "Mmm. Integer ut iaculis ante. Firepower plus semper uti possumus."
+
+# MAP04: Reactor Core → Northern alarm door
+msgid "TXT_BBSUB_SCRIPT04_D31836_WHATD"
+msgstr "Hoc nimis facile sonat, sed offa daremus."
+
+# MAP04: Reactor Core → Southern alarm door
+msgid "TXT_BBSUB_SCRIPT04_D40932_LETME"
+msgstr "Quis curat. Nemo programmatores usquam audit."
+
+msgid "TXT_BBSUB_SCRIPT04_D54576_ITSAS"
+msgstr "Ooh. Gaudeo in insidiis, si quid velim scias."
+
+# MAP05: Door Guard.
+msgid "TXT_BBSUB_SCRIPT05_D1516_OKBUT"
+msgstr "Quid grouch. Spero te ut eum postea interficias."
+
+msgid "TXT_BBSUB_SCRIPT05_D3032_DOILO"
+msgstr "\"Haec area procul fines!\" Pompous sic et sic."
+
+# MAP05: Prison Guard.
+msgid "TXT_BBSUB_SCRIPT05_D4548_THEOR"
+msgstr "Quid est guy."
+
+# MAP05: Montag.
+msgid "TXT_BBSUB_SCRIPT05_D7580_OVERM"
+msgstr "Fortasse est quod non dixisti \"placere\"."
+
+# MAP06: Weran.
+msgid "TXT_BBSUB_SCRIPT06_D1516_DOMYF"
+msgstr "Omnes tam egentes.\n"
+
+msgid "TXT_BBSUB_SCRIPT06_D3032_BRING"
+msgstr "Magna. Nunc shopping pro Rat Rex."
+
+msgid "TXT_BBSUB_SCRIPT06_D4548_OPENT"
+msgstr "Hoc guy bet male olet quoque."
+
+msgid "TXT_BBSUB_SCRIPT06_D9096_YOUHA"
+msgstr "Plures cloacarum…Magna. Miror quod illic habitat."
+
+# MAP07: Computer room.
+msgid "TXT_BBSUB_SCRIPT07_D6064_PROGR"
+msgstr "Mortuus hie finis. Melius nos aspicere volumus."
+
+# MAP10: Macil (Possible reference to a song of The Beatles).
+msgid "TXT_BBSUB_SCRIPT10_D10612_YOUHA"
+msgstr "Perge, mi propugnator. Turpis torquere ac clamorem faciamus Dominus.\n"
+
+msgid "TXT_BBSUB_SCRIPT10_D12128_THERE"
+msgstr "Biomechanical? Bene, quae explicat insensibilia copia latronum. Et mali habitus eorum.\n"
+
+msgid "TXT_BBSUB_SCRIPT10_D16676_IAMTH"
+msgstr "Aeger irrumabo… Eum perdis!"
+
+msgid "TXT_BBSUB_SCRIPT12_D12128_USETH"
+msgstr "Turpis est, sed nobis similis videtur."
+
+msgid "TXT_BBSUB_SCRIPT17_D10612_OHSUR"
+msgstr "Ex recenti historia diiudicans, ego coniecturam furtim e."
+
+# This remark is for information about the maulers in the warehouse.
+msgid "TXT_BBSUB_SCRIPT17_D13644_OHWEL"
+msgstr "Hmm. Non fuss, nulla muss, nihil pro mom ad mundandum… Accipe me unum, quaeso.\n"
+
+# MAP31
+msgid "TXT_BBSUB_SCRIPT31_D0_OHNOI"
+msgstr "Putas me omnium sarcinarum caedem taedium facere, sed scio me missurum cum iam est.\n"

@@ -7,4 +7,3 @@ graphic INTERPIC, 560, 200
 {
 	patch PLUINTER, 0, 0 { }
 }
-

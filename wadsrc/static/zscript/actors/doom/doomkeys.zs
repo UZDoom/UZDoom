@@ -140,4 +140,3 @@ class RedSkull : DoomKey
 		loop;
 	}
 }
-

@@ -1,0 +1,181 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-04-02 03:09+0000\n"
+"Last-Translator: Weblate Translation Memory <noreply-mt-weblate-translation-memory@weblate.org>\n"
+"Language-Team: Vietnamese <https://hosted.weblate.org/projects/uzdoom/glossary/vi/>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.17-dev\n"
+
+msgid "ON"
+msgstr "BẬT"
+
+msgid "OFF"
+msgstr "TẮT"
+
+msgid "MIDI"
+msgstr ""
+
+msgid "FluidSynth"
+msgstr ""
+
+msgid "Freeverb"
+msgstr ""
+
+msgid "ADLMidi"
+msgstr ""
+
+msgid "OPNMidi"
+msgstr ""
+
+msgid "WildMidi"
+msgstr ""
+
+msgid "Timidity"
+msgstr ""
+
+msgid "libXMP"
+msgstr ""
+
+msgid "Dumb"
+msgstr ""
+
+msgid "Chip-o-matic"
+msgstr ""
+
+msgid "MAME"
+msgstr ""
+
+msgid "OPL2"
+msgstr ""
+
+msgid "DOSBox"
+msgstr ""
+
+msgid "OPL3"
+msgstr ""
+
+msgid "Java"
+msgstr "Java"
+
+msgid "ESFMu"
+msgstr ""
+
+msgid "YMFM"
+msgstr ""
+
+msgid "Nuked"
+msgstr ""
+
+msgid "YM2612"
+msgstr ""
+
+msgid "Neko Project II Kai"
+msgstr ""
+
+msgid "OPNA"
+msgstr ""
+
+msgid "YM2608"
+msgstr ""
+
+msgid "Opal"
+msgstr ""
+
+msgid "YM3438"
+msgstr ""
+
+msgid "OPN2"
+msgstr ""
+
+msgid "YMF276"
+msgstr ""
+
+msgid "GENS"
+msgstr ""
+
+msgid "Uncharted 2"
+msgstr ""
+
+msgid "Reinhard"
+msgstr ""
+
+msgid "Hejl-Dawson"
+msgstr ""
+
+msgid "OpenGL"
+msgstr "OpenGL"
+
+msgid "Vulkan"
+msgstr "Vulkan"
+
+msgid "OpenGL ES"
+msgstr ""
+
+msgid "ScaleNx"
+msgstr ""
+
+msgid "ZDoom"
+msgstr ""
+
+msgid "NormalNx"
+msgstr ""
+
+msgid "hqNx"
+msgstr ""
+
+msgid "xBRZ"
+msgstr ""
+
+msgid "Doom"
+msgstr ""
+
+msgid "Boom"
+msgstr ""
+
+msgid "Strife"
+msgstr ""
+
+msgid "Hexen"
+msgstr ""
+
+msgid "Heretic"
+msgstr ""
+
+msgid "Chex"
+msgstr ""
+
+msgid "Press Y or N"
+msgstr ""
+
+msgid "Press a key"
+msgstr ""
+
+msgid "WOPN"
+msgstr ""
+
+msgid "WOPL"
+msgstr ""
+
+msgid "LLE"
+msgstr ""
+
+msgid "DMX"
+msgstr ""
+
+msgid "MMX"
+msgstr ""
+
+msgid "Discord"
+msgstr "Discord"
+
+msgid "MBF"
+msgstr ""
+
+msgid "MBF21"
+msgstr ""

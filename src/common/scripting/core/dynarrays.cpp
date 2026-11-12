@@ -80,7 +80,7 @@ template<class T, class U, int fill = 1> void ArrayInsert(T *self, int index, U 
 {
 	int oldSize = self->Size();
 	self->Insert(index, static_cast<typename T::value_type>(val));
-	if constexpr (fill) 
+	if constexpr (fill)
 	{
 		for (unsigned i = oldSize; i < self->Size() - 1; i++) (*self)[i] = 0;
 	}
@@ -1210,12 +1210,12 @@ DEFINE_ACTION_FUNCTION_NATIVE(FDynArray_TRS, Clear, ArrayClear<FDynArray_TRS>)
 }
 
 
-DEFINE_FIELD_NAMED_X(DynArray_I8, FArray, Count, Size)		
-DEFINE_FIELD_NAMED_X(DynArray_I16, FArray, Count, Size)		
-DEFINE_FIELD_NAMED_X(DynArray_I32, FArray, Count, Size)		
-DEFINE_FIELD_NAMED_X(DynArray_F32, FArray, Count, Size)		
-DEFINE_FIELD_NAMED_X(DynArray_F64, FArray, Count, Size)		
-DEFINE_FIELD_NAMED_X(DynArray_Ptr, FArray, Count, Size)	
+DEFINE_FIELD_NAMED_X(DynArray_I8, FArray, Count, Size)
+DEFINE_FIELD_NAMED_X(DynArray_I16, FArray, Count, Size)
+DEFINE_FIELD_NAMED_X(DynArray_I32, FArray, Count, Size)
+DEFINE_FIELD_NAMED_X(DynArray_F32, FArray, Count, Size)
+DEFINE_FIELD_NAMED_X(DynArray_F64, FArray, Count, Size)
+DEFINE_FIELD_NAMED_X(DynArray_Ptr, FArray, Count, Size)
 DEFINE_FIELD_NAMED_X(DynArray_Obj, FArray, Count, Size)
 DEFINE_FIELD_NAMED_X(DynArray_String, FArray, Count, Size)
 

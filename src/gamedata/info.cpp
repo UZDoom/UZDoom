@@ -23,28 +23,22 @@
 **
 */
 
-
-#include "doomstat.h"
-#include "info.h"
-#include "c_dispatch.h"
-#include "d_net.h"
-#include "v_text.h"
-
-#include "gi.h"
 #include "actor.h"
-#include "r_state.h"
-#include "p_local.h"
-#include "stats.h"
-#include "thingdef.h"
-#include "d_player.h"
+#include "c_dispatch.h"
+#include "d_main.h"
+#include "d_net.h"
+#include "doomstat.h"
 #include "events.h"
-#include "types.h"
 #include "filesystem.h"
 #include "g_levellocals.h"
+#include "gi.h"
+#include "info.h"
+#include "p_local.h"
+#include "r_state.h"
+#include "stats.h"
 #include "texturemanager.h"
-#include "d_main.h"
-#include "maps.h"
-#include "p_visualthinker.h"
+#include "thingdef.h"
+#include "types.h"
 
 extern void LoadActors ();
 extern void InitBotStuff();
@@ -118,7 +112,7 @@ void FState::SetAction(const char *name)
 
 void FState::CheckCallerType(AActor *self, AActor *stateowner)
 {
-	auto CheckType = [=](AActor *check, PType *requiredType)
+	auto CheckType = [this](AActor *check, PType *requiredType)
 	{
 		// This should really never happen. Any valid action function must have actor pointers here.
 		if (!requiredType->isObjectPointer())
@@ -135,13 +129,13 @@ void FState::CheckCallerType(AActor *self, AActor *stateowner)
 			ThrowAbortException(X_OTHER, "Invalid class %s in function call to %s. %s expected", check->GetClass()->TypeName.GetChars(), ActionFunc->PrintableName, cls->TypeName.GetChars());
 		}
 	};
-	
+
 	if (ActionFunc->ImplicitArgs >= 1)
 	{
 		auto argtypes = ActionFunc->Proto->ArgumentTypes;
-		
+
 		CheckType(self, argtypes[0]);
-		
+
 		if (ActionFunc->ImplicitArgs >= 2)
 		{
 			CheckType(stateowner, argtypes[1]);
@@ -543,7 +537,7 @@ void PClassActor::RegisterIDs()
 	if (ConversationID > 0)
 	{
 		StrifeTypes[ConversationID] = cls;
-		if (cls != this) 
+		if (cls != this)
 		{
 			Printf(TEXTCOLOR_RED"Conversation ID %d refers to hidden class type '%s'\n", ConversationID, cls->TypeName.GetChars());
 		}
@@ -554,7 +548,7 @@ void PClassActor::RegisterIDs()
 		if (SpawnID > 0)
 		{
 			SpawnableThings[SpawnID] = cls;
-			if (cls != this) 
+			if (cls != this)
 			{
 				Printf(TEXTCOLOR_RED"Spawn ID %d refers to hidden class type '%s'\n", SpawnID, cls->TypeName.GetChars());
 			}
@@ -572,7 +566,7 @@ void PClassActor::RegisterIDs()
 			ent.Type = cls;
 			ent.Special = -2;	// use -2 instead of -1 so that we can recognize DECORATE defined entries and print a warning message if duplicates occur.
 			DoomEdMap.Insert(DoomEdNum, ent);
-			if (cls != this) 
+			if (cls != this)
 			{
 				Printf(TEXTCOLOR_RED"Editor number %d refers to hidden class type '%s'\n", DoomEdNum, cls->TypeName.GetChars());
 			}
@@ -594,7 +588,7 @@ static bool VerifyClientSideReplacement(const PClass& replacee, const PClass& re
 PClassActor *PClassActor::GetReplacement(FLevelLocals *Level, bool lookskill)
 {
 	FName skillrepname = NAME_None;
-	
+
 	if (lookskill && AllSkills.Size() > (unsigned)gameskill)
 	{
 		skillrepname = AllSkills[gameskill].GetReplacement(TypeName);
@@ -675,7 +669,7 @@ PClassActor *PClassActor::GetReplacement(FLevelLocals *Level, bool lookskill)
 PClassActor *PClassActor::GetReplacee(FLevelLocals *Level, bool lookskill)
 {
 	FName skillrepname = NAME_None;
-	
+
 	if (lookskill && AllSkills.Size() > (unsigned)gameskill)
 	{
 		skillrepname = AllSkills[gameskill].GetReplacedBy(TypeName);
@@ -777,7 +771,7 @@ void PClassActor::SetPainChance(FName type, int chance)
 		}
 	}
 
-	if (chance >= 0) 
+	if (chance >= 0)
 	{
 		ActorInfo()->PainChances.Push({ type, min(chance, 256) });
 	}
@@ -871,18 +865,18 @@ CCMD (summonfoe)
 
 TMap<FName, DamageTypeDefinition> GlobalDamageDefinitions;
 
-void DamageTypeDefinition::Apply(FName type) 
-{ 
-	GlobalDamageDefinitions[type] = *this; 
+void DamageTypeDefinition::Apply(FName type)
+{
+	GlobalDamageDefinitions[type] = *this;
 }
 
-DamageTypeDefinition *DamageTypeDefinition::Get(FName type) 
-{ 
-	return GlobalDamageDefinitions.CheckKey(type); 
+DamageTypeDefinition *DamageTypeDefinition::Get(FName type)
+{
+	return GlobalDamageDefinitions.CheckKey(type);
 }
 
 bool DamageTypeDefinition::IgnoreArmor(FName type)
-{ 
+{
 	DamageTypeDefinition *dtd = Get(type);
 	if (dtd) return dtd->NoArmor;
 	return false;
@@ -932,10 +926,10 @@ double DamageTypeDefinition::GetMobjDamageFactor(FName type, DmgFactors const * 
 		// If this was nonspecific damage, don't fall back to nonspecific search
 		if (type == NAME_None) return 1.;
 	}
-	
+
 	// If this was nonspecific damage, don't fall back to nonspecific search
-	else if (type == NAME_None) 
-	{ 
+	else if (type == NAME_None)
+	{
 		return 1.;
 	}
 	else
@@ -944,7 +938,7 @@ double DamageTypeDefinition::GetMobjDamageFactor(FName type, DmgFactors const * 
 		DamageTypeDefinition *dtd = Get(type);
 		return dtd ? dtd->DefaultFactor : 1.;
 	}
-	
+
 	{
 		DamageTypeDefinition *dtd = Get(type);
 		// Here we are looking for modifications to untyped damage

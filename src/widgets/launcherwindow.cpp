@@ -30,15 +30,29 @@
 #include "releasepage.h"
 #include "settingspage.h"
 #include "version.h"
+#include "themedata.h"
+
+#ifdef HAS_UPDATER
+#include "updatebuttonbar.h"
+#include "curl_loader.h"
+#endif
 
 bool LauncherWindow::ExecModal(FStartupSelectionInfo& info)
 {
-	Size screenSize = GetScreenSize();
-	double windowWidth = 615.0;
-	double windowHeight = 700.0;
+#ifdef HAS_UPDATER
+	LoadCurl();
+#endif
 
-	auto launcher = std::make_unique<LauncherWindow>(info);
-	launcher->SetFrameGeometry((screenSize.width - windowWidth) * 0.5, (screenSize.height - windowHeight) * 0.5, windowWidth, windowHeight);
+	auto launcher = std::make_unique<LauncherWindow>(info, WindowParams{
+		.size = {
+			info.LauncherWidth>0? info.LauncherWidth: 650,
+			info.LauncherHeight>0? info.LauncherHeight: 800,
+		},
+		.resizable = true,
+		.minSize = { 550, 485 },
+		.centered = true,
+	});
+
 	launcher->Show();
 
 	DisplayWindow::RunLoop();
@@ -46,20 +60,32 @@ bool LauncherWindow::ExecModal(FStartupSelectionInfo& info)
 	return launcher->ExecResult;
 }
 
-LauncherWindow::LauncherWindow(FStartupSelectionInfo& info) : Widget(nullptr, WidgetType::Window), Info(&info)
+LauncherWindow::LauncherWindow(FStartupSelectionInfo& info, struct WindowParams params) : Widget(nullptr, WidgetType::Window, RenderAPI::Unspecified, params), Info(&info)
 {
 	SetWindowTitle(GAMENAME);
+	this->SetStyleColor("background-color", Theme::getHeader(COLOR_BACKGROUND));
 
-	Banner = new LauncherBanner(this);
+	Banner = new LauncherBanner(this, info.prideColors, info.prideMix);
 	Pages = new TabWidget(this);
+	Pages->SetStyleColor("background-color", Theme::getMain(COLOR_BACKGROUND));
 	Buttonbar = new LauncherButtonbar(this);
+	Buttonbar->SetStyleColor("background-color", Theme::getMain(COLOR_BACKGROUND));
 
-	bool releasenotes = info.isNewRelease && info.notifyNewRelease;
+	bool releasenotes = info.displayRelease && info.notifyNewRelease;
 
 	PlayGame = new PlayGamePage(this, info);
 	Settings = new SettingsPage(this, info);
 	Network = new NetworkPage(this, info);
 	About = new AboutPage(this, info);
+
+#ifdef HAS_UPDATER
+	if(IsCurlLoaded())
+	{
+		UpdateBar = new UpdateButtonBar(this, Settings);
+		UpdateBar->Subscribe(this);
+		UpdateBar->Hide();
+	}
+#endif
 
 	if (releasenotes)
 	{
@@ -78,7 +104,38 @@ LauncherWindow::LauncherWindow(FStartupSelectionInfo& info) : Widget(nullptr, Wi
 
 	Pages->SetCurrentIndex(0);
 	Pages->GetCurrentWidget()->SetFocus();
+
+#ifdef HAS_UPDATER
+	if(IsCurlLoaded())
+	{
+		UpdateBar->CheckForUpdate();
+	}
+#endif
 }
+
+void LauncherWindow::Notify(Widget* source, const WidgetEvent type)
+{
+#ifdef HAS_UPDATER  
+	if (source == UpdateBar && type==WidgetEvent::VisibilityChange) OnGeometryChanged();
+#endif
+}
+
+void LauncherWindow::ForceCheckUpdate()
+{
+#ifdef HAS_UPDATER
+	if(IsCurlLoaded())
+	{
+		UpdateBar->CheckForUpdate(true);
+	}
+#endif
+}
+
+#ifndef HAS_UPDATER
+void LauncherWindow::OnWindowClose()
+{
+	Close();
+}
+#endif
 
 void LauncherWindow::UpdatePlayButton()
 {
@@ -95,25 +152,27 @@ bool LauncherWindow::IsHosting() const
 	return IsInMultiplayer() && Network->IsInHost();
 }
 
-void LauncherWindow::Start()
+void LauncherWindow::SetValues()
 {
 	Info->bNetStart = IsInMultiplayer();
 
 	Settings->SetValues(*Info);
-	if (Info->bNetStart)
-		Network->SetValues(*Info);
-	else
-		PlayGame->SetValues(*Info);
-
+	Network->SetValues(*Info);
+	PlayGame->SetValues(*Info);
 	if (Release)
 		Release->SetValues(*Info);
+}
 
+void LauncherWindow::Start()
+{
+	SetValues();
 	ExecResult = true;
 	DisplayWindow::ExitLoop();
 }
 
 void LauncherWindow::Exit()
 {
+	SetValues();
 	ExecResult = false;
 	DisplayWindow::ExitLoop();
 }
@@ -134,6 +193,15 @@ void LauncherWindow::UpdateLanguage()
 		Release->UpdateLanguage();
 	}
 	Buttonbar->UpdateLanguage();
+
+#ifdef HAS_UPDATER
+	if(IsCurlLoaded())
+	{
+		UpdateBar->UpdateLanguage();
+	}
+#endif
+
+	OnGeometryChanged();
 }
 
 void LauncherWindow::OnClose()
@@ -143,11 +211,24 @@ void LauncherWindow::OnClose()
 
 void LauncherWindow::OnGeometryChanged()
 {
-	double top = 0.0;
+	Info->LauncherWidth = static_cast<int>(std::ceil(GetWidth()));
+	Info->LauncherHeight = static_cast<int>(std::ceil(GetHeight()));
+
+	double top = Banner->GetPreferredHeight();
 	double bottom = GetHeight();
 
-	Banner->SetFrameGeometry(0.0, top, GetWidth(), Banner->GetPreferredHeight());
-	top += Banner->GetPreferredHeight();
+	if (top > bottom*0.29) top = 0;
+
+	Banner->SetFrameGeometry(0, 0, GetWidth(), top);
+
+#ifdef HAS_UPDATER
+	if(IsCurlLoaded() && UpdateBar->IsVisible())
+	{
+		double updateBarHeight = UpdateBar->GetPreferredHeight();
+		UpdateBar->SetFrameGeometry(0.0, top, GetWidth(), updateBarHeight);
+		top += updateBarHeight + UpdateBar->GetMargin();
+	}
+#endif
 
 	bottom -= Buttonbar->GetPreferredHeight();
 	Buttonbar->SetFrameGeometry(0.0, bottom, GetWidth(), Buttonbar->GetPreferredHeight());

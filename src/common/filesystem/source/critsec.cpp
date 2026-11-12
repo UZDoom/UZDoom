@@ -135,7 +135,7 @@ void EnterCriticalSection(FInternalCriticalSection *c)
 void LeaveCriticalSection(FInternalCriticalSection *c)
 {
 	c->Leave();
-} 
+}
 
 #endif
 

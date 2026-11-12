@@ -15,26 +15,6 @@
 **
 */
 
-layout(location = 0) in vec4 vTexCoord;
-layout(location = 1) in vec4 vColor;
-layout(location = 2) in vec4 pixelpos;
-layout(location = 3) in vec3 glowdist;
-layout(location = 4) in vec3 gradientdist;
-layout(location = 5) in vec4 vWorldNormal;
-layout(location = 6) in vec4 vEyeNormal;
-layout(location = 9) in vec3 vLightmap;
-
-#ifdef NO_CLIPDISTANCE_SUPPORT
-layout(location = 7) in vec4 ClipDistanceA;
-layout(location = 8) in vec4 ClipDistanceB;
-#endif
-
-layout(location=0) out vec4 FragColor;
-#ifdef GBUFFER_PASS
-layout(location=1) out vec4 FragFog;
-layout(location=2) out vec4 FragNormal;
-#endif
-
 struct Material
 {
 	vec4 Base;
@@ -55,7 +35,30 @@ Material ProcessMaterial(); // note that this is deprecated. Use SetupMaterial!
 void SetupMaterial(inout Material mat);
 vec4 ProcessLight(Material mat, vec4 color);
 vec3 ProcessMaterialLight(Material material, vec3 color);
-vec2 GetTexCoord();
+
+#ifdef USE_GETTEXCOORD
+vec2 GetTexCoord()
+{
+	vec2 texCoord = vTexCoord.st;
+
+	const float pi = 3.14159265358979323846;
+	vec2 offset = vec2(0,0);
+	#ifdef SHADERTYPE_WARP1
+		offset.y = sin(pi * 2.0 * (texCoord.x + timer * 0.125)) * 0.1;
+		offset.x = sin(pi * 2.0 * (texCoord.y + timer * 0.125)) * 0.1;
+
+		return texCoord + offset;
+	#endif
+	#ifdef SHADERTYPE_WARP2
+		offset.y = 0.5 + sin(pi * 2.0 * (texCoord.y + timer * 0.61 + 900.0/8192.0)) + sin(pi * 2.0 * (texCoord.x * 2.0 + timer * 0.36 + 300.0/8192.0));
+		offset.x = 0.5 + sin(pi * 2.0 * (texCoord.y + timer * 0.49 + 700.0/8192.0)) + sin(pi * 2.0 * (texCoord.x * 2.0 + timer * 0.49 + 1200.0/8192.0));
+
+		return texCoord + offset * 0.025;
+	#endif
+	return texCoord;
+}
+#endif
+
 
 // These get Or'ed into uTextureMode because it only uses its 3 lowermost bits.
 const int TEXF_Brightmap = 0x10000;
@@ -88,7 +91,7 @@ vec3 rgb2hsv(vec3 c)
 
 float grayscale(vec4 color)
 {
-	return dot(color.rgb, vec3(0.3, 0.56, 0.14));
+	return dot(color.rgb, vec3(0.2126, 0.7152, 0.0722));
 }
 
 //===========================================================================
@@ -134,7 +137,7 @@ const int Tex_Blend_Hardlight = 4;
 
  vec4 ApplyTextureManipulation(vec4 texel, int blendflags)
  {
-	// Step 1: desaturate according to the material's desaturation factor. 
+	// Step 1: desaturate according to the material's desaturation factor.
 	texel = dodesaturate(texel, uTextureModulateColor.a);
 
 	// Step 2: Invert if requested
@@ -232,7 +235,7 @@ vec4 getTexel(vec2 st)
 			texel = vec4(1.0-texel.r, 1.0-texel.b, 1.0-texel.g, 1.0);
 			break;
 
-		case 7: //TM_FOGLAYER 
+		case 7: //TM_FOGLAYER
 			return texel;
 
 	}
@@ -247,7 +250,7 @@ vec4 getTexel(vec2 st)
 
 	// Apply the texture modification colors.
 	int blendflags = int(uTextureAddColor.a);	// this alpha is unused otherwise
-	if (blendflags != 0)	
+	if (blendflags != 0)
 	{
 		// only apply the texture manipulation if it contains something.
 		texel = ApplyTextureManipulation(texel, blendflags);
@@ -347,7 +350,7 @@ float R_DoomLightingEquation(float light)
 	{
 		z = distance(pixelpos.xyz, uCameraPos.xyz);
 	}
-	else 
+	else
 	{
 		z = pixelpos.w;
 	}
@@ -677,8 +680,8 @@ void SetMaterialProps(inout Material material, vec2 texCoord)
 		texCoord.s += uNpotEmulation.x * floor(mod(texCoord.t, uNpotEmulation.y));
 		texCoord.t = period + mod(texCoord.t, uNpotEmulation.y);
 	}
-#endif	
-	material.Base = getTexel(texCoord.st); 
+#endif
+	material.Base = getTexel(texCoord.st);
 	material.Normal = ApplyNormalMap(texCoord.st);
 
 // OpenGL doesn't care, but Vulkan pukes all over the place if these texture samplings are included in no-texture shaders, even though never called.
@@ -750,12 +753,12 @@ vec4 getLightColor(Material material, float fogdist, float fogfactor)
 	// these cannot be safely applied by the legacy format where the implementation cannot guarantee that the values are set.
 #if !defined LEGACY_USER_SHADER && !defined NO_LAYERS
 	//
-	// apply glow 
+	// apply glow
 	//
 	color.rgb = mix(color.rgb, material.Glow.rgb, material.Glow.a);
 
 	//
-	// apply brightmaps 
+	// apply brightmaps
 	//
 	color.rgb = min(color.rgb + material.Bright.rgb, 1.0);
 #endif
@@ -804,11 +807,11 @@ vec3 AmbientOcclusionColor()
 	//
 	// calculate fog factor
 	//
-	if (uFogEnabled == -1) 
+	if (uFogEnabled == -1)
 	{
 		fogdist = max(16.0, pixelpos.w);
 	}
-	else 
+	else
 	{
 		fogdist = max(16.0, distance(pixelpos.xyz, uCameraPos.xyz));
 	}
@@ -869,11 +872,11 @@ void main()
 		//
 		if (uFogEnabled != 0)
 		{
-			if (uFogEnabled == 1 || uFogEnabled == -1) 
+			if (uFogEnabled == 1 || uFogEnabled == -1)
 			{
 				fogdist = max(16.0, pixelpos.w);
 			}
-			else 
+			else
 			{
 				fogdist = max(16.0, distance(pixelpos.xyz, uCameraPos.xyz));
 			}
@@ -894,7 +897,7 @@ void main()
 			//
 			// colored fog
 			//
-			if (uFogEnabled < 0) 
+			if (uFogEnabled < 0)
 			{
 				frag = applyFog(frag, fogfactor);
 			}

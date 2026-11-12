@@ -123,7 +123,7 @@ void DLightningThinker::LightningFlash ()
 					tempSec->ChangeLightLevel(-4);
 				}
 			}
-		}					
+		}
 		else
 		{ // remove the alternate lightning flash special
 			tempSec = &Level->sectors[0];

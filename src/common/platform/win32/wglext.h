@@ -677,11 +677,11 @@ BOOL WINAPI wglDelayBeforeSwapNV (HDC hDC, GLfloat seconds);
 #define WGL_NV_gpu_affinity 1
 DECLARE_HANDLE(HGPUNV);
 struct _GPU_DEVICE {
-    DWORD  cb;
-    CHAR   DeviceName[32];
-    CHAR   DeviceString[128];
-    DWORD  Flags;
-    RECT   rcVirtualScreen;
+	DWORD  cb;
+	CHAR   DeviceName[32];
+	CHAR   DeviceString[128];
+	DWORD  Flags;
+	RECT   rcVirtualScreen;
 };
 typedef struct _GPU_DEVICE *PGPU_DEVICE;
 #define ERROR_INCOMPATIBLE_AFFINITY_MASKS_NV 0x20D0

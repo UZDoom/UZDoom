@@ -98,7 +98,7 @@ class RevenantTracer : Actor
 		Speed 10;
 		Damage 10;
 		Projectile;
-		+SEEKERMISSILE 
+		+SEEKERMISSILE
 		+RANDOMIZE
 		+ZDOOMTRANS
 		SeeSound "skeleton/attack";
@@ -136,7 +136,7 @@ class RevenantTracerSmoke : Actor
 		Alpha 0.5;
 	}
 	States
-	{	
+	{
 	Spawn:
 		PUFF ABABC 4;
 		Stop;
@@ -177,7 +177,7 @@ extend class Actor
 		let targ = target;
 		if (targ == null) return;
 		A_FaceTarget();
-		
+
 		if (CheckMeleeRange ())
 		{
 			int damage = random[SkelFist](1, 10) * 6;
@@ -192,14 +192,14 @@ extend class Actor
 		double dist;
 		double slope;
 		Actor dest;
-				
+
 		// adjust direction
 		dest = tracer;
-		
+
 		if (!dest || dest.health <= 0 || Speed == 0 || !CanSeek(dest))
 			return;
-	
-		// change angle 	
+
+		// change angle
 		double exact = AngleTo(dest);
 		double diff = deltaangle(angle, exact);
 
@@ -238,7 +238,7 @@ extend class Actor
 				Vel.Z += 1. / 8;
 		}
 	}
-	
+
 	void A_Tracer()
 	{
 		// killough 1/18/98: this is why some missiles do not have smoke
@@ -246,11 +246,11 @@ extend class Actor
 		// the bug in which revenants cause internal demos to go out of sync.
 
 		if (level.maptime & 3)	return;
-	
+
 		// spawn a puff of smoke behind the rocket
 		SpawnPuff ("BulletPuff", pos, angle, angle, 3);
 		Actor smoke = Spawn ("RevenantTracerSmoke", Vec3Offset(-Vel.X, -Vel.Y, 0.), ALLOW_REPLACE);
-	
+
 		if (smoke != null)
 		{
 			smoke.Vel.Z = 1.;
@@ -263,4 +263,3 @@ extend class Actor
 		A_Tracer2(16.875);
 	}
 }
-

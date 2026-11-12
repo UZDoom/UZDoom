@@ -81,7 +81,7 @@ void I_InitGraphics ()
 	}
 
 #ifdef HAVE_VULKAN
-	if (V_GetBackend() == 1)
+	if (vid_preferbackend == BACKEND_VULKAN)
 	{
 		// first try Vulkan, if that fails OpenGL
 		try

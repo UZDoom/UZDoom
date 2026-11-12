@@ -526,16 +526,16 @@ static int ParseMorphStyle (FScanner &sc)
 {
  	static const FParseValue morphstyles[]={
 		{ "MRF_ADDSTAMINA",			MORPH_ADDSTAMINA},
-		{ "MRF_FULLHEALTH",			MORPH_FULLHEALTH}, 
-		{ "MRF_UNDOBYTOMEOFPOWER",	MORPH_UNDOBYTOMEOFPOWER},  
+		{ "MRF_FULLHEALTH",			MORPH_FULLHEALTH},
+		{ "MRF_UNDOBYTOMEOFPOWER",	MORPH_UNDOBYTOMEOFPOWER},
 		{ "MRF_UNDOBYCHAOSDEVICE",	MORPH_UNDOBYCHAOSDEVICE},
-		{ "MRF_FAILNOTELEFRAG",		MORPH_FAILNOTELEFRAG}, 
-		{ "MRF_FAILNOLAUGH",		MORPH_FAILNOLAUGH}, 
-		{ "MRF_WHENINVULNERABLE",	MORPH_WHENINVULNERABLE}, 
+		{ "MRF_FAILNOTELEFRAG",		MORPH_FAILNOTELEFRAG},
+		{ "MRF_FAILNOLAUGH",		MORPH_FAILNOLAUGH},
+		{ "MRF_WHENINVULNERABLE",	MORPH_WHENINVULNERABLE},
 		{ "MRF_LOSEACTUALWEAPON",	MORPH_LOSEACTUALWEAPON},
-		{ "MRF_NEWTIDBEHAVIOUR",	MORPH_NEWTIDBEHAVIOUR}, 
-		{ "MRF_UNDOBYDEATH",		MORPH_UNDOBYDEATH}, 
-		{ "MRF_UNDOBYDEATHFORCED",	MORPH_UNDOBYDEATHFORCED},  
+		{ "MRF_NEWTIDBEHAVIOUR",	MORPH_NEWTIDBEHAVIOUR},
+		{ "MRF_UNDOBYDEATH",		MORPH_UNDOBYDEATH},
+		{ "MRF_UNDOBYDEATHFORCED",	MORPH_UNDOBYDEATHFORCED},
 		{ "MRF_UNDOBYDEATHSAVES",	MORPH_UNDOBYDEATHSAVES},
 		{ "MRF_UNDOALWAYS",			MORPH_UNDOALWAYS },
 		{ "MRF_TRANSFERTRANSLATION", MORPH_TRANSFERTRANSLATION },
@@ -620,7 +620,7 @@ static FState *CheckState(FScanner &sc, PClass *type)
 			state += v;
 			return state;
 		}
-		else 
+		else
 		{
 			sc.ScriptMessage("Invalid state assignment");
 			FScriptPosition::ErrorCounter++;
@@ -739,7 +739,7 @@ static bool ParsePropertyParams(FScanner &sc, FPropertyInfo *prop, AActor *defau
 			case 'M':	// special case. An expression-aware parser will not need this.
 				conv.i = ParseMorphStyle(sc);
 				break;
-				
+
 			case 'N':	// special case. An expression-aware parser will not need this.
 				conv.i = ParseThingActivation(sc);
 				break;
@@ -784,14 +784,14 @@ static bool ParsePropertyParams(FScanner &sc, FPropertyInfo *prop, AActor *defau
 			p++;
 			// Hack for some properties that have to allow comma less
 			// parameter lists for compatibility.
-			if ((optcomma = (*p == '_'))) 
+			if ((optcomma = (*p == '_')))
 				p++;
 
-			if (nocomma) 
+			if (nocomma)
 			{
 				continue;
 			}
-			else if (*p == 0) 
+			else if (*p == 0)
 			{
 				break;
 			}
@@ -807,7 +807,7 @@ static bool ParsePropertyParams(FScanner &sc, FPropertyInfo *prop, AActor *defau
 					else break;
 				}
 			}
-			else 
+			else
 			{
 				if (!optcomma) sc.MustGetStringName(",");
 				else sc.CheckString(",");
@@ -926,7 +926,7 @@ static void DispatchScriptProperty(FScanner &sc, PProperty *prop, AActor *defaul
 static void ParseActorProperty(FScanner &sc, Baggage &bag)
 {
 	static const char *statenames[] = {
-		"Spawn", "See", "Melee", "Missile", "Pain", "Death", "XDeath", "Burn", 
+		"Spawn", "See", "Melee", "Missile", "Pain", "Death", "XDeath", "Burn",
 		"Ice", "Raise", "Crash", "Crush", "Wound", "Disintegrate", "Heal", NULL };
 
 	FString propname = sc.String;
@@ -1036,7 +1036,7 @@ static PClassActor *ParseActorHeader(FScanner &sc, Baggage *bag)
 
 	// Get actor name
 	sc.MustGetString();
-	
+
 	char *colon = strchr(sc.String, ':');
 	if (colon != NULL)
 	{
@@ -1055,7 +1055,7 @@ static PClassActor *ParseActorHeader(FScanner &sc, Baggage *bag)
 			colon = sc.String + 1;
 		}
 	}
-		
+
 	if (colon != NULL)
 	{
 		if (colon[0] == 0)
@@ -1086,13 +1086,13 @@ static PClassActor *ParseActorHeader(FScanner &sc, Baggage *bag)
 		}
 	}
 
-	// Now, after the actor names have been parsed, it is time to switch to C-mode 
+	// Now, after the actor names have been parsed, it is time to switch to C-mode
 	// for the rest of the actor definition.
 	sc.SetCMode (true);
-	if (sc.CheckNumber()) 
+	if (sc.CheckNumber())
 	{
 		if (sc.Number>=-1 && sc.Number<32768) DoomEdNum = sc.Number;
-		else 
+		else
 		{
 			// does not need to be fatal.
 			sc.ScriptMessage ("DoomEdNum must be in the range [-1,32767]");
@@ -1143,7 +1143,7 @@ static void ParseActor(FScanner &sc, PNamespace *ns)
 	Baggage bag;
 
 	bag.Namespace = ns;
-	bag.Version = { 2, 0, 0 };	
+	bag.Version = { 2, 0, 0 };
 	bag.fromDecorate = true;
 	bag.ScriptPosition = sc;
 	info = ParseActorHeader(sc, &bag);
@@ -1292,7 +1292,7 @@ void ParseDecorate (FScanner &sc, PNamespace *ns)
 
 		case ';':
 			// ';' is the start of a comment in the non-cmode parser which
-			// is used to parse parts of the DECORATE lump. If we don't add 
+			// is used to parse parts of the DECORATE lump. If we don't add
 			// a check here the user will only get weird non-informative
 			// error messages if a semicolon is found.
 			sc.ScriptError("Unexpected ';'");

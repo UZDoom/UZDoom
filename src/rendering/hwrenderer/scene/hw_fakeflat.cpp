@@ -178,7 +178,7 @@ area_t hw_CheckViewArea(vertex_t *v1, vertex_t *v2, sector_t *frontsector, secto
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 static FMemArena FakeSectorAllocator(20 * sizeof(sector_t));
@@ -205,7 +205,7 @@ static sector_t *allocateSector(sector_t *sec)
 
 sector_t * hw_FakeFlat(sector_t * sec, area_t in_area, bool back, sector_t *localcopy)
 {
-	if (!sec->GetHeightSec() || sec->heightsec==sec) 
+	if (!sec->GetHeightSec() || sec->heightsec==sec)
 	{
 		// check for backsectors with the ceiling lower than the floor. These will create
 		// visual glitches because upper amd lower textures overlap.
@@ -244,7 +244,7 @@ sector_t * hw_FakeFlat(sector_t * sec, area_t in_area, bool back, sector_t *loca
 
 	int diffTex = (sec->heightsec->MoreFlags & SECMF_CLIPFAKEPLANES);
 	sector_t * s = sec->heightsec;
-	
+
 	auto dest = localcopy ? localcopy : allocateSector(sec);
 	*dest = *sec;
 
@@ -340,8 +340,8 @@ sector_t * hw_FakeFlat(sector_t * sec, area_t in_area, bool back, sector_t *loca
 			dest->planes[sector_t::floor].xform = s->planes[sector_t::floor].xform;
 
 			//dest->ceilingplane		= s->floorplane;
-			
-			if (s->GetTexture(sector_t::ceiling) == skyflatnum) 
+
+			if (s->GetTexture(sector_t::ceiling) == skyflatnum)
 			{
 				dest->SetTexture(sector_t::ceiling, dest->GetTexture(sector_t::floor), false);
 				//dest->floorplane			= dest->ceilingplane;
@@ -349,13 +349,13 @@ sector_t * hw_FakeFlat(sector_t * sec, area_t in_area, bool back, sector_t *loca
 				//dest->floorplane.ChangeHeight (+1);
 				dest->planes[sector_t::ceiling].xform = dest->planes[sector_t::floor].xform;
 
-			} 
-			else 
+			}
+			else
 			{
 				dest->SetTexture(sector_t::ceiling, diffTex ? s->GetTexture(sector_t::floor) : s->GetTexture(sector_t::ceiling), false);
 				dest->planes[sector_t::ceiling].xform = s->planes[sector_t::ceiling].xform;
 			}
-			
+
 			if (!(s->MoreFlags & SECMF_NOFAKELIGHT))
 			{
 				dest->SetPlaneLight(sector_t::floor, s->GetPlaneLight(sector_t::floor));
@@ -394,13 +394,13 @@ sector_t * hw_FakeFlat(sector_t * sec, area_t in_area, bool back, sector_t *loca
 			dest->SetTexture(sector_t::ceiling, diffTex ? sec->GetTexture(sector_t::ceiling) : s->GetTexture(sector_t::ceiling), false);
 			dest->SetTexture(sector_t::floor, s->GetTexture(sector_t::ceiling), false);
 			dest->planes[sector_t::ceiling].xform = dest->planes[sector_t::floor].xform = s->planes[sector_t::ceiling].xform;
-			
+
 			if (s->GetTexture(sector_t::floor) != skyflatnum)
 			{
 				dest->SetTexture(sector_t::floor, s->GetTexture(sector_t::floor), false);
 				dest->planes[sector_t::floor].xform = s->planes[sector_t::floor].xform;
 			}
-			
+
 			if (!(s->MoreFlags & SECMF_NOFAKELIGHT))
 			{
 				dest->lightlevel  = s->lightlevel;

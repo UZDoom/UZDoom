@@ -46,7 +46,7 @@ episode e4m1
 	name = "$TXT_D1E4"
 	key = "t"
 	optional
-} 
+}
 
 // Registered/Retail Episode 1
 
@@ -540,4 +540,3 @@ cluster 4
 	flat = "$bgflatE4"
 	exittext = lookup, "E4TEXT"
 }
-

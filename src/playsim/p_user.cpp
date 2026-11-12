@@ -256,8 +256,9 @@ struct FPhysicsLinkBackup
 			if (ValidBlockNodes.CheckKey(node->BlockIndex) == nullptr)
 			{
 				auto next = node->NextBlock;
-				if (node == mo.BlockNode)
-					mo.BlockNode = next;
+				if (next != nullptr)
+					next->PrevBlock = node->PrevBlock;
+				*(node->PrevBlock) = node->NextBlock;
 				if (node->NextActor != nullptr)
 					node->NextActor->PrevActor = node->PrevActor;
 				*(node->PrevActor) = node->NextActor;
@@ -709,7 +710,7 @@ void player_t::SetLogText (const char *text)
 	if (mo && mo->CheckLocalView())
 	{
 		// Print log text to console
-		Printf(PRINT_HIGH | PRINT_NONOTIFY, TEXTCOLOR_GOLD "%s\n", LogText[0] == '$' ? GStrings.GetString(text + 1) : text);
+		Printf(PRINT_NONOTIFY, TEXTCOLOR_GOLD "%s\n", LogText[0] == '$' ? GStrings.GetString(text + 1) : text);
 	}
 }
 

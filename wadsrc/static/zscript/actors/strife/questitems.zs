@@ -201,4 +201,3 @@ class QuestItem30 : QuestItem
 class QuestItem31 : QuestItem
 {
 }
-

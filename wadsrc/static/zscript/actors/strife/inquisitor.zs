@@ -94,8 +94,8 @@ class Inquisitor : Actor
 		RBB3 E -1;
 		Stop;
 	}
-	
-	
+
+
 	// Inquisitor ---------------------------------------------------------------
 
 	void A_InquisitorWalk ()
@@ -135,7 +135,7 @@ class Inquisitor : Actor
 	void A_InquisitorAttack ()
 	{
 		if (target == null)
-			return;
+			return; // FIXME: This prevents an abort. Reconsider if just returning early is the correct thing to do
 
 		A_FaceTarget ();
 
@@ -199,7 +199,7 @@ class Inquisitor : Actor
 		}
 	}
 
-	
+
 }
 
 // Inquisitor Shot ----------------------------------------------------------
@@ -263,6 +263,3 @@ class InquisitorArm : Actor
 		Stop;
 	}
 }
-
-
-

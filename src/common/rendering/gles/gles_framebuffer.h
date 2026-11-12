@@ -85,10 +85,13 @@ public:
 
 	bool HWGammaActive = false;			// Are we using hardware or software gamma?
 
-    FTexture *WipeStartScreen() override;
-    FTexture *WipeEndScreen() override;
+	FTexture *WipeStartScreen() override;
+	FTexture *WipeEndScreen() override;
 
 	int camtexcount = 0;
+
+	virtual bool HasNVidiaVRAMExt() override;
+	virtual bool HasATIVRAMExt() override;
 };
 
 }

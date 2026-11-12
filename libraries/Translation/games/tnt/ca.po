@@ -1,0 +1,192 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-06-07 01:01+0000\n"
+"Last-Translator: Júlia Rosell Saldaña <contacte@juliars.cat>\n"
+"Language-Team: Catalan <https://hosted.weblate.org/projects/doom-engine-games/tnt-evilution/ca/>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6\n"
+
+msgid "TXT_TNT_EP"
+msgstr "TNT: Evilució"
+
+msgid "THUSTR_1"
+msgstr "Nivell 1: Control del sistema"
+
+msgid "THUSTR_2"
+msgstr "Nivell 2: Barbacoa humana"
+
+msgid "THUSTR_3"
+msgstr "Nivell 3: Control de potència"
+
+msgid "THUSTR_4"
+msgstr "Nivell 4: forat de cuc"
+
+# Not "Hangar"
+msgid "THUSTR_5"
+msgstr "Nivell 5: penjador"
+
+msgid "THUSTR_6"
+msgstr "Nivell 6: Temporada Oberta"
+
+msgid "THUSTR_7"
+msgstr "Nivell 7: presó"
+
+msgid "THUSTR_8"
+msgstr "Nivell 8: Metall"
+
+msgid "THUSTR_9"
+msgstr "Nivell 9: Fortalesa"
+
+msgid "THUSTR_10"
+msgstr "Nivell 10: Redempció"
+
+msgid "THUSTR_11"
+msgstr "Nivell 11: magatzem"
+
+msgid "THUSTR_12"
+msgstr "Nivell 12: Cràter"
+
+msgid "THUSTR_13"
+msgstr "Nivell 13: Processament Nukage"
+
+msgid "THUSTR_14"
+msgstr "Nivell 14: Steel Works"
+
+msgid "THUSTR_15"
+msgstr "Nivell 15: Zona Morta"
+
+msgid "THUSTR_16"
+msgstr "Nivell 16: abasts més profunds"
+
+msgid "THUSTR_17"
+msgstr "Nivell 17: Àrea de Tramitació"
+
+msgid "THUSTR_18"
+msgstr "Nivell 18: Mill"
+
+msgid "THUSTR_19"
+msgstr "Nivell 19: enviament/reaparició"
+
+msgid "THUSTR_20"
+msgstr "Nivell 20: Processament centralitzat"
+
+msgid "THUSTR_21"
+msgstr "Nivell 21: Centre d'Administració"
+
+msgid "THUSTR_22"
+msgstr "Nivell 22: Hàbitat"
+
+msgid "THUSTR_23"
+msgstr "Nivell 23: Projecte de Mineria Lunar"
+
+msgid "THUSTR_24"
+msgstr "Nivell 24: Pedrera"
+
+msgid "THUSTR_25"
+msgstr "Nivell 25: Baron's Den"
+
+msgid "THUSTR_26"
+msgstr "Nivell 26: Ballistyx"
+
+msgid "THUSTR_27"
+msgstr "Nivell 27: Mount Pain"
+
+msgid "THUSTR_28"
+msgstr "Nivell 28: Heck"
+
+msgid "THUSTR_29"
+msgstr "Nivell 29: riu Styx"
+
+msgid "THUSTR_30"
+msgstr "Nivell 30: Última convocatòria"
+
+msgid "THUSTR_31"
+msgstr "Nivell 31: Faraó"
+
+msgid "THUSTR_32"
+msgstr "Nivell 32: Carib"
+
+# TNT after MAP06
+msgid "T1TEXT"
+msgstr ""
+"Has lluitat per sortir dels infestats\n"
+"laboratoris experimentals. Sembla que la UAC ho ha fet\n"
+"un cop més se'l va engolir. Amb els seus\n"
+"alta rotació, ha de ser difícil per als pobres\n"
+"antiga UAC per comprar una assegurança mèdica corporativa\n"
+"avui dia..\n"
+"\n"
+"Davant hi ha el complex militar, ara\n"
+"ple d'horrors malalts calents per aconseguir\n"
+"les seves dents en tu. Amb sort, el\n"
+"El complex encara té alguna artilleria bèl·lica\n"
+"estirat al voltant."
+
+# TNT after MAP11
+msgid "T2TEXT"
+msgstr ""
+"Se sent el triturat de maquinària pesada\n"
+"endavant. Segur que esperes que no estan estampant\n"
+"sortir nous inferns, però ja estàs preparat\n"
+"esborra un ramat sencer si cal.\n"
+"Podrien estar planejant un banquet de sang, però\n"
+"et sents tan dolent com dos mil\n"
+"maníacs empaquetats en un assassí boig.\n"
+"\n"
+"No penseu baixar fàcil."
+
+# TNT after MAP20
+msgid "T3TEXT"
+msgstr ""
+"La vista que s'obre davant sembla una merda\n"
+"familiar. També fa olor familiar, com\n"
+"excrements fregits. Això no t'ha agradat\n"
+"lloc abans, i segur que no ho és\n"
+"planejant agradar ara. Com més tu\n"
+"crieu-hi, més boig us poseu.\n"
+"Aixecant l'arma, un somriure malvat s'esgota\n"
+"a la teva cara. És hora de prendre alguns noms."
+
+# TNT victory
+msgid "T4TEXT"
+msgstr ""
+"De sobte, tot calla, des d'un horitzó\n"
+"a l'altre. El ressò agònic de l'infern\n"
+"s'esvaeix, el cel de malson es torna\n"
+"blau, comencen els munts de cadàvers de monstres \n"
+"per evaporar-se juntament amb la mala pudor \n"
+"que omplia l'aire. Jo, potser sí\n"
+"fet-ho. Has guanyat realment?\n"
+"\n"
+"Alguna cosa ressona a la distància.\n"
+"Una llum blava comença a brillar a l'interior\n"
+"crani arruïnat de l'escup de dimonis."
+
+# TNT before MAP31
+msgid "T5TEXT"
+msgstr ""
+"Què ara? Sembla totalment diferent. amable\n"
+"com el condominio del rei Tut. Bé,\n"
+"el que hi hagi aquí no pot ser pitjor\n"
+"del que és habitual. Es pot? O potser és el millor\n"
+"deixar mentir als déus adormits.."
+
+# TNT before MAP32
+msgid "T6TEXT"
+msgstr ""
+"Temps de vacances. Has rebentat el\n"
+"les entranyes de l'infern i per golly ja estàs llest\n"
+"per un descans. murmureu per a tu mateix,\n"
+"Potser algú altre pot donar una puntada de peu al cul de l'infern\n"
+"la propera vegada. Davant hi ha un poble tranquil,\n"
+"amb aigua corrent tranquil·la, pintoresca\n"
+"edificis, i presumiblement cap Hellspawn.\n"
+"\n"
+"Quan baixes del transport, escoltes\n"
+"la trepitjada de la sabata de ferro d'un ciberdimoni."

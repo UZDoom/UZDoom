@@ -251,4 +251,3 @@ void VkHardwareDataBuffer::BindRange(FRenderState* state, size_t start, size_t l
 {
 	static_cast<VkRenderState*>(state)->Bind(bindingpoint, (uint32_t)start);
 }
-

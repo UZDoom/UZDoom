@@ -35,7 +35,7 @@ FSWCanvasTexture* GetSWCamTex(FCanvasTexture* camtex)
 	return p ? *p : nullptr;
 }
 
-FSWCanvasTexture::FSWCanvasTexture(FGameTexture* source) : FSoftwareTexture(source) 
+FSWCanvasTexture::FSWCanvasTexture(FGameTexture* source) : FSoftwareTexture(source)
 {
 	// The SW renderer needs to link the canvas textures, but let's do that outside the texture manager.
 	auto camtex = static_cast<FCanvasTexture*>(source->GetTexture());
@@ -61,7 +61,7 @@ FSWCanvasTexture::~FSWCanvasTexture()
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 

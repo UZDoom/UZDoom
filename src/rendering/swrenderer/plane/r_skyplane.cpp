@@ -183,7 +183,7 @@ namespace swrenderer
 				// to allow sky rotation as well as careful positioning.
 				// However, the offset is scaled very small, so that it
 				// allows a long-period of sky rotation.
-				skyangle += xs_Fix<16>::ToFix(s->GetTextureXOffset(pos));
+				skyangle += FloatToFixed<16>(s->GetTextureXOffset(pos));
 
 				// Vertical offset allows careful sky positioning.
 				skymid = s->GetTextureYOffset(pos) - 28.0;

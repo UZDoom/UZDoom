@@ -98,7 +98,7 @@ struct FState
 	int16_t		Light;
 	uint16_t	StateFlags;
 	uint8_t		Frame;
-	uint8_t		UseFlags;		
+	uint8_t		UseFlags;
 	uint8_t		DefineFlags;
 	int32_t		Misc1;			// Was changed to int8_t, reverted to long for MBF compat
 	int32_t		Misc2;			// Was changed to uint8_t, reverted to long for MBF compat
@@ -168,7 +168,7 @@ public:
 	void ClearAction() { ActionFunc = NULL; }
 	void SetAction(const char *name);
 	bool CallAction(AActor *self, AActor *stateowner, FStateParamInfo *stateinfo, FState **stateret);
-    void CheckCallerType(AActor *self, AActor *stateowner);
+	void CheckCallerType(AActor *self, AActor *stateowner);
 
 	static PClassActor *StaticFindStateOwner (const FState *state);
 	static PClassActor *StaticFindStateOwner (const FState *state, PClassActor *info);

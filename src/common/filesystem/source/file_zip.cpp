@@ -60,7 +60,7 @@ static uint32_t Zip_FindCentralDir(FileReader &fin, bool* zip64)
 	{
 		uint32_t uReadSize, uReadPos;
 		int i;
-		if (uBackRead + BUFREADCOMMENT > uMaxBack) 
+		if (uBackRead + BUFREADCOMMENT > uMaxBack)
 			uBackRead = uMaxBack;
 		else
 			uBackRead += BUFREADCOMMENT;
@@ -144,7 +144,7 @@ bool FZipFile::Open(LumpFilterInfo* filter, FileSystemMessageFunc Printf)
 			Printf(FSMessageLevel::Error, "%s: Multipart Zip files are not supported.\n", FileName);
 			return false;
 		}
-		
+
 		NumLumps = LittleShort(info.NumEntries);
 		dirsize = LittleLong(info.DirectorySize);
 		DirectoryOffset = LittleLong(info.DirectoryOffset);
@@ -163,7 +163,7 @@ bool FZipFile::Open(LumpFilterInfo* filter, FileSystemMessageFunc Printf)
 			Printf(FSMessageLevel::Error, "%s: Multipart Zip files are not supported.\n", FileName);
 			return false;
 		}
-		
+
 		NumLumps = (uint32_t)info.NumEntries;
 		dirsize = info.DirectorySize;
 		DirectoryOffset = info.DirectoryOffset;
@@ -210,9 +210,9 @@ bool FZipFile::Open(LumpFilterInfo* filter, FileSystemMessageFunc Printf)
 
 		int len = LittleShort(zip_fh->NameLength);
 		std::string name(dirptr + sizeof(FZipCentralDirectoryInfo), len);
-		dirptr += sizeof(FZipCentralDirectoryInfo) + 
-				  LittleShort(zip_fh->NameLength) + 
-				  LittleShort(zip_fh->ExtraLength) + 
+		dirptr += sizeof(FZipCentralDirectoryInfo) +
+				  LittleShort(zip_fh->NameLength) +
+				  LittleShort(zip_fh->ExtraLength) +
 				  LittleShort(zip_fh->CommentLength);
 
 		if (dirptr > ((char*)directory) + dirsize)	// This directory entry goes beyond the end of the file.
@@ -259,7 +259,7 @@ bool FZipFile::Open(LumpFilterInfo* filter, FileSystemMessageFunc Printf)
 		{
 			uint8_t* rawext = (uint8_t*)zip_fh + sizeof(*zip_fh) + zip_fh->NameLength;
 			uint32_t ExtraLength = LittleLong(zip_fh->ExtraLength);
-			
+
 			while (ExtraLength > 0)
 			{
 				auto zip_64 = (FZipCentralDirectoryInfo64BitExt*)rawext;
@@ -334,7 +334,7 @@ FCompressedBuffer FZipFile::GetRawData(uint32_t entry)
 		Reader.Seek(e.Position, FileReader::SeekSet);
 		Reader.Read(cbuf.mBuffer, e.CompressedSize);
 	}
-	
+
 	return cbuf;
 }
 

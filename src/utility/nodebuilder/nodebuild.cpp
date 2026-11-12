@@ -580,7 +580,7 @@ int FNodeBuilder::Heuristic (node_t &node, uint32_t set, bool honorNoSplit)
 					specialSegs[side]++;
 				}
 				// Add some weight to the score for unsplit lines
-				score += SplitCost;	
+				score += SplitCost;
 			}
 			else
 			{

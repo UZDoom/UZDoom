@@ -43,6 +43,8 @@ EXTERN_CVAR (Int, gl_shadowmap_quality);
 EXTERN_CVAR(Int, gl_fogmode)
 EXTERN_CVAR(Bool,gl_mirror_envmap)
 
+EXTERN_CVAR(Int, r_portal_recursions)
+
 EXTERN_CVAR(Bool,gl_mirrors)
 EXTERN_CVAR(Bool,gl_mirror_envmap)
 EXTERN_CVAR(Bool, gl_seamless)
@@ -80,3 +82,9 @@ EXTERN_CVAR(Bool, gl_notexturefill)
 
 EXTERN_CVAR(Bool, r_radarclipper)
 EXTERN_CVAR(Bool, r_dithertransparency)
+
+EXTERN_CVAR(Bool, gl_portals)
+
+EXTERN_CVAR(Bool, gl_strict_gldefs_errors)
+
+EXTERN_CVAR(Int, gl_model_light_optimization_radius)

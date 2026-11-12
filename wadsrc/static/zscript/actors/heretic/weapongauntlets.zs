@@ -60,7 +60,7 @@ class Gauntlets : Weapon
 		GAUN B 4 A_Light0;
 		Goto Ready;
 	}
-	
+
 	//---------------------------------------------------------------------------
 	//
 	// PROC A_GauntletAttack
@@ -86,7 +86,7 @@ class Gauntlets : Weapon
 		{
 			if (!weapon.DepleteAmmo (weapon.bAltFire))
 				return;
-			
+
 			let psp = player.GetPSprite(PSP_WEAPON);
 			if (psp)
 			{
@@ -231,4 +231,3 @@ class GauntletPuff2 : GauntletPuff1
 		Stop;
 	}
 }
-

@@ -28,7 +28,7 @@
 #include "resourcefile.h"
 
 namespace FileSys {
-	
+
 union LumpShortName
 {
 	char		String[9];
@@ -75,7 +75,7 @@ public:
 
 	int GetFirstEntry(int wadnum) const noexcept;
 	int GetLastEntry(int wadnum) const noexcept;
-    int GetEntryCount(int wadnum) const noexcept;
+	int GetEntryCount(int wadnum) const noexcept;
 
 	int CheckNumForName (const char *name, int namespc) const;
 	int CheckNumForName (const char *name, int namespc, int wadfile, bool exact = true) const;

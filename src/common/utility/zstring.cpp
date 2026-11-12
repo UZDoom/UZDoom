@@ -30,10 +30,17 @@
 #include "utf8.h"
 #include "stb_sprintf.h"
 #include "vm.h"
+#include "printf.h"
 
 extern uint16_t lowerforupper[65536];
 extern uint16_t upperforlower[65536];
 
+/* I'm 90% sure we use '/' everywhere */
+// #ifdef _WIN32
+// constexpr char PATH_SEPARATOR = '\\';
+// #else
+constexpr char PATH_SEPARATOR = '/';
+// #endif
 
 void ThrowStringBoundsException(int64_t index, size_t len)
 {
@@ -82,6 +89,64 @@ void FString::AttachToOther (const FString &other)
 	{
 		Chars = const_cast<FString &>(other).Data()->AddRef();
 	}
+}
+
+FString FString::RemoveColorTags(const FString &srcString)
+{
+	FString newString = srcString;
+	newString.Substitute(TEXTCOLOR_BLACK, "");
+	newString.Substitute(TEXTCOLOR_BLUE, "");
+	newString.Substitute(TEXTCOLOR_TEAL, "");
+	newString.Substitute(TEXTCOLOR_SAPPHIRE, "");
+	newString.Substitute(TEXTCOLOR_FIRE, "");
+	newString.Substitute(TEXTCOLOR_ICE, "");
+	newString.Substitute(TEXTCOLOR_CYAN, "");
+	newString.Substitute(TEXTCOLOR_DARKGRAY, "");
+	newString.Substitute(TEXTCOLOR_PURPLE, "");
+	newString.Substitute(TEXTCOLOR_DARKBROWN, "");
+	newString.Substitute(TEXTCOLOR_DARKRED, "");
+	newString.Substitute(TEXTCOLOR_OLIVE, "");
+	newString.Substitute(TEXTCOLOR_CREAM, "");
+	newString.Substitute(TEXTCOLOR_LIGHTBLUE, "");
+	newString.Substitute(TEXTCOLOR_UNTRANSLATED, "");
+	newString.Substitute(TEXTCOLOR_RED, "");
+	newString.Substitute(TEXTCOLOR_YELLOW, "");
+	newString.Substitute(TEXTCOLOR_GREEN, "");
+	newString.Substitute(TEXTCOLOR_GREY, "");
+	newString.Substitute(TEXTCOLOR_GRAY, "");
+	newString.Substitute(TEXTCOLOR_WHITE, "");
+	newString.Substitute(TEXTCOLOR_BRICK, "");
+	newString.Substitute(TEXTCOLOR_TAN, "");
+	newString.Substitute(TEXTCOLOR_ESCAPE, "");
+
+	//also need to strip named color tags. Make sure everything in EColorRange is covered.
+	newString.Substitute("[BLACK]", "");
+	newString.Substitute("[BLUE]", "");
+	newString.Substitute("[TEAL]", "");
+	newString.Substitute("[ORANGE]", "");
+	newString.Substitute("[GOLD]", "");
+	newString.Substitute("[GREEN]", "");
+	newString.Substitute("[YELLOW]", "");
+	newString.Substitute("[PURPLE]", "");
+	newString.Substitute("[CYAN]", "");
+	newString.Substitute("[BRICK]", "");
+	newString.Substitute("[TAN]", "");
+	newString.Substitute("[GRAY]", "");
+	newString.Substitute("[GREY]", "");
+	newString.Substitute("[GREY]", "");
+	newString.Substitute("[BROWN]", "");
+	newString.Substitute("[RED]", "");
+	newString.Substitute("[WHITE]", "");
+	newString.Substitute("[UNTRANSLATED]", "");
+	newString.Substitute("[LIGHTBLUE]", "");
+	newString.Substitute("[CREAM]", "");
+	newString.Substitute("[OLIVE]", "");
+	newString.Substitute("[DARKGREEN]", "");
+	newString.Substitute("[DARKRED]", "");
+	newString.Substitute("[DARKBROWN]", "");
+	newString.Substitute("[DARKGRAY]", "");
+	newString.Substitute("[ICE]", "");
+	return newString;
 }
 
 FString::FString (const char *copyStr)
@@ -284,7 +349,7 @@ FString &FString::operator = (const char *copyStr)
 
 TArrayView<uint8_t> FString::GetTArrayView()
 {
-	return TArrayView((uint8_t*)Chars, Len() + 1);
+	return TArrayView((uint8_t*)Chars, static_cast<uint32_t>(Len() + 1));
 }
 
 void FString::Format (const char *fmt, ...)
@@ -409,6 +474,54 @@ FString &FString::CopyCStrPart(const char *tail, size_t tailLen)
 	return *this;
 }
 
+FString &FString::operator /= (const FString &tail)
+{
+	if (tail.IsEmpty()) return *this;
+	if (this->IsEmpty())
+	{
+		*this = tail;
+		return *this;
+	}
+	size_t offset = Len();
+	bool back = this->Back() == PATH_SEPARATOR;
+	bool front = tail.Front() == PATH_SEPARATOR;
+	bool insert = back == front;
+	if (insert)
+	{
+		insert = !back;
+		offset += insert? 1: -1;
+	}
+	size_t len = tail.Len() + offset;
+	ReallocBuffer(len);
+	if (insert) Chars[offset-1] = PATH_SEPARATOR;
+	StrCopy (Chars + offset, tail);
+	return *this;
+}
+
+FString &FString::operator /= (const char *tail)
+{
+	return *this /= FString{tail};
+}
+
+FString FString::operator / (const FString &tail) const
+{
+	if (tail.IsEmpty()) return *this;
+	if (this->IsEmpty()) return tail;
+	FString str = *this;
+	str /= tail;
+	return str;
+}
+
+FString FString::operator / (const char *tail) const
+{
+	return *this / FString{tail};
+}
+
+FString operator / (const char *head, const FString &tail)
+{
+	return FString{head} / tail;
+}
+
 size_t FString::CharacterCount() const
 {
 	// Counts string length in Unicode code points.
@@ -417,7 +530,6 @@ size_t FString::CharacterCount() const
 	while (GetCharFromString(cp)) len++;
 	return len;
 }
-
 
 int FString::GetNextCharacter(int &position) const
 {
@@ -1309,6 +1421,69 @@ void FString::Split(TArray<FString>& tokens, const char *delimiter, EmptyTokenTy
 		if (pos != lastPos || TOK_KEEPEMPTY == keepEmpty)
 		{
 			tokens.Push(FString(GetChars() + lastPos, pos - lastPos));
+		}
+
+		lastPos = pos + delimLen;
+	}
+}
+
+TArray<FString> FString::SplitNewLines(int minWrapLen, int maxLineLen, EmptyTokenType keepEmpty) const
+{
+	TArray<FString> tokens;
+	SplitNewLines(tokens, minWrapLen, maxLineLen, keepEmpty);
+	return tokens;
+}
+
+void FString::SplitNewLines(TArray<FString>& tokens, int minWrapLen, int maxLineLen, EmptyTokenType keepEmpty) const
+{
+	const auto selfLen = static_cast<ptrdiff_t>(Len());
+	ptrdiff_t lastPos = 0;
+
+	if (selfLen == 0) return;	// Empty strings do not contain tokens, even with TOK_KEEPEMPTY.
+
+	while (lastPos <= selfLen)
+	{
+		int delimLen = 1;
+		ptrdiff_t pos = lastPos;
+		bool isMidwordWrap = false;
+
+
+		for(; pos < selfLen; pos++)
+		{
+			if(Chars[pos] == '\n' || Chars[pos] == '\r') break; // find LF or CR
+		}
+
+		if(Chars[pos] == '\r' && (pos + 1) < selfLen && Chars[pos + 1] == '\n') delimLen = 2; // CRLF
+
+		if(minWrapLen > 0 && maxLineLen > 0 && pos > (lastPos + maxLineLen))
+		{
+			pos = lastPos + minWrapLen;
+
+			if(minWrapLen < maxLineLen)
+			{
+				for(;pos < (lastPos + maxLineLen); pos++)
+				{
+					if(Chars[pos] == ' ' || Chars[pos] == '\t') break; // wrap on space ideally, otherwise wrap on maxLineLen
+				}
+
+				if(Chars[pos] != ' ' && Chars[pos] != '\t')
+				{
+					isMidwordWrap = true;
+					pos--;
+				}
+			}
+
+			delimLen = 0;
+		}
+
+		if (pos != lastPos || TOK_KEEPEMPTY == keepEmpty)
+		{
+			tokens.Push(FString(GetChars() + lastPos, pos - lastPos));
+
+			if(isMidwordWrap)
+			{
+				tokens.back() += "-";
+			}
 		}
 
 		lastPos = pos + delimLen;

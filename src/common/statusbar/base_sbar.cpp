@@ -22,34 +22,49 @@
 **
 */
 
-#include <assert.h>
-
+#include <cassert>
 
 #include "base_sbar.h"
-#include "printf.h"
-#include "v_draw.h"
-#include "cmdlib.h"
-#include "texturemanager.h"
+#include "basics.h"
 #include "c_cvars.h"
-#include "v_font.h"
+#include "colorspace.h"
+#include "cmdlib.h"
+#include "i_interface.h"
+#include "printf.h"
+#include "r_videoscale.h"
+#include "texturemanager.h"
 #include "utf8.h"
+#include "v_draw.h"
+#include "v_font.h"
 #include "v_text.h"
 #include "vm.h"
-#include "i_interface.h"
-#include "r_videoscale.h"
 
 FGameTexture* CrosshairImage;
 static int CrosshairNum;
 
-
 IMPLEMENT_CLASS(DStatusBarCore, false, false)
 IMPLEMENT_CLASS(DHUDFont, false, false);
 
-
-CVAR(Color, crosshaircolor, 0xff0000, CVAR_ARCHIVE);
-CVAR(Int, crosshairhealth, 2, CVAR_ARCHIVE);
-CVARD(Float, crosshairscale, 0.5, CVAR_ARCHIVE, "changes the size of the crosshair");
-CVAR(Bool, crosshairgrow, false, CVAR_ARCHIVE);
+CVAR(Color, crosshaircolor,     Color::str("#ff0000"), CVAR_ARCHIVE);
+CVAR(Color, crosshaircolorFull, Color::str("#00ff00"), CVAR_ARCHIVE);
+CVAR(Color, crosshaircolorMax,  Color::str("#7f7fff"), CVAR_ARCHIVE);
+CVAR(Bool, crosshairshowshealth, false, CVAR_HIDDEN);
+CVAR(Bool, crosshairhascolor, false, CVAR_HIDDEN);
+DEPR_CVAR(Int, crosshairhealth, 0, "replaced by crosshaircolors/crosshairshowshealth/crosshairhascolor");
+CUSTOM_CVARD(Int, crosshaircolors, 2, CVAR_ARCHIVE, "0: basic, 1: show health, 2: show health bonus, 3: inverted")
+{
+	switch (self)
+	{
+		case 0: crosshairshowshealth = false; crosshairhascolor = true;  break;
+		case 1:
+		case 2: crosshairshowshealth = true;  crosshairhascolor = true;  break;
+		case 3: crosshairshowshealth = false; crosshairhascolor = false; break;
+		default: self = 2;
+	}
+	ALLOW_DEPRECATED((crosshairhealth = self), "for backwards compatibility");
+};
+CVARD(Float, crosshairscale, 1.0, CVAR_ARCHIVE, "changes the size of the crosshair");
+CVARD(Bool, crosshairgrow, false, CVAR_ARCHIVE, "grow crosshair upon pickup");
 
 CUSTOM_CVARD(Float, hud_scalefactor, 1.f, CVAR_ARCHIVE, "changes the hud scale")
 {
@@ -62,7 +77,6 @@ CUSTOM_CVARD(Bool, hud_aspectscale, true, CVAR_ARCHIVE, "enables aspect ratio co
 {
 	if (sysCallbacks.HudScaleChanged) sysCallbacks.HudScaleChanged();
 }
-
 
 void ST_LoadCrosshair(int num, bool alwaysload)
 {
@@ -107,7 +121,6 @@ void ST_UnloadCrosshair()
 	CrosshairNum = 0;
 }
 
-
 //---------------------------------------------------------------------------
 //
 // DrawCrosshair
@@ -116,6 +129,7 @@ void ST_UnloadCrosshair()
 
 void ST_DrawCrosshair(int phealth, double xpos, double ypos, double scale, DAngle angle)
 {
+	FRenderStyle style {{ STYLEOP_Add, STYLEALPHA_Src, STYLEALPHA_InvSrc, STYLEF_RedIsAlpha | STYLEF_ColorIsFixed }};
 	uint32_t color;
 	double size;
 	int w, h;
@@ -126,71 +140,55 @@ void ST_DrawCrosshair(int phealth, double xpos, double ypos, double scale, DAngl
 		return;
 	}
 
-	if (crosshairscale > 0.0f)
-	{
-		size = twod->GetHeight() * crosshairscale * 0.005;
-	}
-	else
-	{
-		size = 1.;
-	}
+	int mult = max(twod->Height/720, 1); // 1080p: 1, 1440p: 2, 4K: 3
 
-	if (crosshairgrow)
-	{
-		size *= scale;
-	}
+	size = ((crosshairscale > 0.0f)? crosshairscale: 1.0) * mult;
 
-	w = int(CrosshairImage->GetDisplayWidth() * size);
-	h = int(CrosshairImage->GetDisplayHeight() * size);
+	if (crosshairgrow) size *= scale;
 
-	if (crosshairhealth == 1)
-	{
-		// "Standard" crosshair health (green-red)
-		int health = phealth;
+	w = static_cast<int>(std::round(CrosshairImage->GetDisplayWidth() * size));
+	h = static_cast<int>(std::round(CrosshairImage->GetDisplayHeight() * size));
 
-		if (health >= 85)
-		{
-			color = 0x00ff00;
-		}
-		else
-		{
-			int red, green;
-			health -= 25;
-			if (health < 0)
-			{
-				health = 0;
-			}
-			if (health < 30)
-			{
-				red = 255;
-				green = health * 255 / 30;
-			}
-			else
-			{
-				red = (60 - health) * 255 / 30;
-				green = 255;
-			}
-			color = (red << 16) | (green << 8);
-		}
-	}
-	else if (crosshairhealth == 2)
-	{
-		// "Enhanced" crosshair health (blue-green-yellow-red)
-		int health = clamp(phealth, 0, 200);
-		float rr, gg, bb;
-
-		float saturation = health < 150 ? 1.f : 1.f - (health - 150) / 100.f;
-
-		HSVtoRGB(&rr, &gg, &bb, health * 1.2f, saturation, 1);
-		int red = int(rr * 255);
-		int green = int(gg * 255);
-		int blue = int(bb * 255);
-
-		color = (red << 16) | (green << 8) | blue;
-	}
-	else
+	if (crosshaircolors == 0)
 	{
 		color = crosshaircolor;
+	}
+	else if (crosshaircolors == 3)
+	{
+		style = {{ STYLEOP_Add, STYLEALPHA_InvDstCol, STYLEALPHA_InvSrcCol, STYLEF_RedIsAlpha }};
+		color = Color::str("#fff");
+	}
+	else
+	{
+		static int lastHealth = -1;
+		static int lastColor = -1;
+		int health = clamp(phealth, 0, (crosshaircolors == 1)? 100: 200);
+
+		if (health != lastHealth)
+		{
+			int hi = crosshaircolorFull, lo = crosshaircolor;
+			float mix = 1.0;
+
+			if (health > 100)
+			{
+				lo = hi;
+				hi = crosshaircolorMax;
+				mix = (health-100)/100.0f;
+			}
+			else if (health <= 85)
+			{
+				mix = health/85.0f;
+			}
+
+			auto a = Color::rgb((lo>>16&0xff)/255.0f, (lo>>8&0xff)/255.0f, (lo&0xff)/255.0f);
+			auto b = Color::rgb((hi>>16&0xff)/255.0f, (hi>>8&0xff)/255.0f, (hi&0xff)/255.0f);
+			auto c = Color::mix(a, b, mix);
+
+			lastHealth = health;
+			lastColor = (int)(c.rgb.r*255)<<16 | (int)(c.rgb.g*255)<<8 | (int)(c.rgb.b*255);
+		}
+
+		color = lastColor;
 	}
 
 	DrawTexture(twod, CrosshairImage,
@@ -199,10 +197,10 @@ void ST_DrawCrosshair(int phealth, double xpos, double ypos, double scale, DAngl
 		DTA_DestHeight, h,
 		DTA_Rotate, angle.Degrees(),
 		DTA_AlphaChannel, true,
+		DTA_RenderStyle, style,
 		DTA_FillColor, color & 0xFFFFFF,
 		TAG_DONE);
 }
-
 
 //---------------------------------------------------------------------------
 //
@@ -381,8 +379,8 @@ void DStatusBarCore::SetScale()
 	int sby = vert - int(RelTop * hud_scalefactor * aspectscale * ViewportAspect);
 	// Use full pixels for destination size.
 
-	ST_X = xs_CRoundToInt((w - refw) / 2);
-	ST_Y = xs_CRoundToInt(h - refh);
+	ST_X = RoundHalfEven((w - refw) / 2);
+	ST_Y = RoundHalfEven(h - refh);
 	SBarTop = Scale(sby, h, vert);
 	SBarScale.X = refw / horz;
 	SBarScale.Y = refh / vert;
@@ -401,7 +399,7 @@ DVector2 DStatusBarCore::GetHUDScale() const
 
 //---------------------------------------------------------------------------
 //
-//  
+//
 //
 //---------------------------------------------------------------------------
 
@@ -414,7 +412,7 @@ void DStatusBarCore::BeginStatusBar(int resW, int resH, int relTop, bool forceSc
 
 //---------------------------------------------------------------------------
 //
-//  
+//
 //
 //---------------------------------------------------------------------------
 
@@ -458,16 +456,16 @@ void DStatusBarCore::StatusbarToRealCoords(double& x, double& y, double& w, doub
 //
 //============================================================================
 
-void DStatusBarCore::DrawGraphic(FTextureID texture, double x, double y, int flags, double Alpha, double boxwidth, double boxheight, double scaleX, double scaleY, ERenderStyle style, PalEntry color, int translation, double clipwidth)
+void DStatusBarCore::DrawGraphic(FTextureID texture, double x, double y, int flags, double Alpha, double boxwidth, double boxheight, double scaleX, double scaleY, ERenderStyle style, PalEntry color, int translation, double clipwidth, double clipheight)
 {
 	if (!texture.isValid())
 		return;
 
 	FGameTexture* tex = TexMan.GetGameTexture(texture, !(flags & DI_DONTANIMATE));
-	DrawGraphic(tex, x, y, flags, Alpha, boxwidth, boxheight, scaleX, scaleY, style, color, translation, clipwidth);
+	DrawGraphic(tex, x, y, flags, Alpha, boxwidth, boxheight, scaleX, scaleY, style, color, translation, clipwidth, clipheight);
 }
 
-void DStatusBarCore::DrawGraphic(FGameTexture* tex, double x, double y, int flags, double Alpha, double boxwidth, double boxheight, double scaleX, double scaleY, ERenderStyle style, PalEntry color, int translation, double clipwidth)
+void DStatusBarCore::DrawGraphic(FGameTexture* tex, double x, double y, int flags, double Alpha, double boxwidth, double boxheight, double scaleX, double scaleY, ERenderStyle style, PalEntry color, int translation, double clipwidth, double clipheight)
 {
 	double texwidth = tex->GetDisplayWidth() * scaleX;
 	double texheight = tex->GetDisplayHeight() * scaleY;
@@ -586,7 +584,7 @@ void DStatusBarCore::DrawGraphic(FGameTexture* tex, double x, double y, int flag
 		DTA_DestWidthF, boxwidth,
 		DTA_DestHeightF, boxheight,
 		DTA_ClipLeft, 0,
-		DTA_ClipTop, 0,
+		DTA_ClipTop, clipheight < 0? 0 : int(y + boxheight * (1.0 - clipheight)),
 		DTA_ClipBottom, twod->GetHeight(),
 		DTA_ClipRight, clipwidth < 0? twod->GetWidth() : int(x + boxwidth * clipwidth),
 		DTA_Color, color,
@@ -744,94 +742,105 @@ void DStatusBarCore::DrawString(FFont* font, const FString& cstring, double x, d
 	{
 		Scale = { 1.,1. };
 	}
-	int ch;
-	while (ch = GetCharFromString(str), ch != '\0')
+
+	//In the case of HUD, the old char-by-char text shaping is used
+	//since doom-based huds are extremely sensitive to the placement of character glyphs.
+	//so, do the old text shaping, but substitute the font char-by-char after placement and try to match the original size.
 	{
-		if (ch == ' ')
+		int ch;
+		while (ch = GetCharFromString(str), ch != '\0')
 		{
-			x += (monospaced ? spacing : font->GetSpaceWidth() + spacing) * scaleX;
-			continue;
+			if (ch == ' ')
+			{
+				x += (monospaced ? spacing : font->GetSpaceWidth() + spacing) * scaleX;
+				continue;
+			}
+			else if (ch == TEXTCOLOR_ESCAPE)
+			{
+				EColorRange newColor = V_ParseFontColor(str, translation, boldTranslation);
+				if (newColor != CR_UNDEFINED)
+					fontcolor = newColor;
+				continue;
+			}
+
+			int           width;
+			FGameTexture *c = font->GetChar(ch, fontcolor, &width);
+			if (c == NULL) // missing character.
+			{
+				continue;
+			}
+			width += font->GetDefaultKerning();
+
+			if (!monospaced)                                   // If we are monospaced lets use the offset
+				x += (c->GetDisplayLeftOffset() * scaleX + 1); // ignore x offsets since we adapt to character size
+
+			double rx, ry, rw, rh;
+			rx = x + drawOffset.X;
+			ry = y + drawOffset.Y;
+			rw = c->GetDisplayWidth();
+			rh = c->GetDisplayHeight();
+
+			if (monospacing == EMonospacing::CellCenter)
+				rx += (spacing - rw) / 2;
+			else if (monospacing == EMonospacing::CellRight)
+				rx += (spacing - rw);
+
+			if (!fullscreenOffsets)
+			{
+				StatusbarToRealCoords(rx, ry, rw, rh);
+			}
+			else
+			{
+				rx *= Scale.X;
+				ry *= Scale.Y;
+				rw *= Scale.X;
+				rh *= Scale.Y;
+
+				rx += orgx;
+				ry += orgy;
+			}
+
+			// Apply text scale
+			// if the font is going to be dynamically substituted, do the scaling a little different. 
+			if (FFont *dynamicSub = FFont::GetDynamicSubstitutionForStaticFont(font))
+			{
+				//try to match the size of the old text.
+				double sizeMatchScale = (double)dynamicSub->GetHeight() / (double)font->GetHeight();
+				rw *= sizeMatchScale;
+				rh *= sizeMatchScale;
+				rw /= dynamicSub->GetInvSupersampleScale();
+				rh /= dynamicSub->GetInvSupersampleScale();
+			}
+			else
+			{
+				rw *= scaleX;
+				rh *= scaleY;
+			}
+			
+
+			// This is not really such a great way to draw shadows because they can overlap with previously drawn
+			// characters. This may have to be changed to draw the shadow text up front separately.
+			if ((shadowX != 0 || shadowY != 0) && !(flags & DI_NOSHADOW))
+			{
+				DrawChar(twod, font, CR_UNTRANSLATED, rx + shadowX, ry + shadowY, ch, DTA_DestWidthF, rw,
+				         DTA_DestHeightF, rh, DTA_Alpha, (Alpha * 0.4), DTA_FillColor, 0, TAG_DONE);
+			}
+			DrawChar(twod, font, pt == NO_TRANSLATION ? fontcolor : CR_NATIVEPAL, rx, ry, ch, DTA_DestWidthF, rw,
+			         DTA_DestHeightF, rh, DTA_Alpha, Alpha, DTA_TranslationIndex, pt.index(), DTA_LegacyRenderStyle,
+			         ERenderStyle(style), TAG_DONE);
+
+			// Take text scale into account
+			dx = monospaced ? spacing * scaleX : (double(width) + spacing - c->GetDisplayLeftOffset()) * scaleX - 1;
+
+			x += dx;
 		}
-		else if (ch == TEXTCOLOR_ESCAPE)
-		{
-			EColorRange newColor = V_ParseFontColor(str, translation, boldTranslation);
-			if (newColor != CR_UNDEFINED)
-				fontcolor = newColor;
-			continue;
-		}
-
-		int width;
-		FGameTexture* c = font->GetChar(ch, fontcolor, &width);
-		if (c == NULL) //missing character.
-		{
-			continue;
-		}
-		width += font->GetDefaultKerning();
-
-		if (!monospaced) //If we are monospaced lets use the offset
-			x += (c->GetDisplayLeftOffset() * scaleX + 1); //ignore x offsets since we adapt to character size
-
-		double rx, ry, rw, rh;
-		rx = x + drawOffset.X;
-		ry = y + drawOffset.Y;
-		rw = c->GetDisplayWidth();
-		rh = c->GetDisplayHeight();
-
-		if (monospacing == EMonospacing::CellCenter)
-			rx += (spacing - rw) / 2;
-		else if (monospacing == EMonospacing::CellRight)
-			rx += (spacing - rw);
-
-		if (!fullscreenOffsets)
-		{
-			StatusbarToRealCoords(rx, ry, rw, rh);
-		}
-		else
-		{
-			rx *= Scale.X;
-			ry *= Scale.Y;
-			rw *= Scale.X;
-			rh *= Scale.Y;
-
-			rx += orgx;
-			ry += orgy;
-		}
-
-		// Apply text scale
-		rw *= scaleX;
-		rh *= scaleY;
-
-		// This is not really such a great way to draw shadows because they can overlap with previously drawn characters.
-		// This may have to be changed to draw the shadow text up front separately.
-		if ((shadowX != 0 || shadowY != 0) && !(flags & DI_NOSHADOW))
-		{
-			DrawChar(twod, font, CR_UNTRANSLATED, rx + shadowX, ry + shadowY, ch,
-				DTA_DestWidthF, rw,
-				DTA_DestHeightF, rh,
-				DTA_Alpha, (Alpha * 0.4),
-				DTA_FillColor, 0,
-				TAG_DONE);
-		}
-		DrawChar(twod, font, pt == NO_TRANSLATION? fontcolor : CR_NATIVEPAL, rx, ry, ch,
-			DTA_DestWidthF, rw,
-			DTA_DestHeightF, rh,
-			DTA_Alpha, Alpha,
-			DTA_TranslationIndex, pt.index(),
-			DTA_LegacyRenderStyle, ERenderStyle(style),
-			TAG_DONE);
-
-		// Take text scale into account
-		dx = monospaced
-			? spacing * scaleX
-			: (double(width) + spacing - c->GetDisplayLeftOffset()) * scaleX - 1;
-
-		x += dx;
 	}
 }
-
+extern bool DrawFSHUD;
 void SBar_DrawString(DStatusBarCore* self, DHUDFont* font, const FString& string, double x, double y, int flags, int trans, double alpha, int wrapwidth, int linespacing, double scaleX, double scaleY, int pt_, int style)
 {
-	if (font == nullptr || font->mFont == nullptr) ThrowAbortException(X_READ_NIL, nullptr);
+	if (font == nullptr || font->mFont == nullptr)
+		ThrowAbortException(X_READ_NIL, nullptr);
 	if (!twod->HasBegun2D()) ThrowAbortException(X_OTHER, "Attempt to draw to screen outside a draw function");
 	auto pt = FTranslationID::fromInt(pt_);
 
@@ -843,19 +852,23 @@ void SBar_DrawString(DStatusBarCore* self, DHUDFont* font, const FString& string
 		if (y < 0) flags |= DI_SCREEN_BOTTOM;
 		else flags |= DI_SCREEN_TOP;
 	}
+	FFont *renderFont = font->mFont;
+	assert(renderFont);
 
 	if (wrapwidth > 0)
 	{
-		auto brk = V_BreakLines(font->mFont, int(wrapwidth * scaleX), string, true);
-		for (auto& line : brk)
+		auto brk = V_BreakLines(renderFont, int(wrapwidth * scaleX), string, true);
+		for (auto &line : brk)
 		{
-			self->DrawString(font->mFont, line.Text, x, y, flags, alpha, trans, font->mSpacing, font->mMonospacing, font->mShadowX, font->mShadowY, scaleX, scaleY, pt, style);
-			y += (font->mFont->GetHeight() + linespacing) * scaleY;
+			self->DrawString(renderFont, line.Text, x, y, flags, alpha, trans, font->mSpacing, font->mMonospacing,
+			                 font->mShadowX, font->mShadowY, scaleX, scaleY, pt, style);
+			y += (renderFont->GetHeight() + linespacing) * scaleY;
 		}
 	}
 	else
 	{
-		self->DrawString(font->mFont, string, x, y, flags, alpha, trans, font->mSpacing, font->mMonospacing, font->mShadowX, font->mShadowY, scaleX, scaleY, pt, style);
+		self->DrawString(renderFont, string, x, y, flags, alpha, trans, font->mSpacing, font->mMonospacing,
+		                 font->mShadowX, font->mShadowY, scaleX, scaleY, pt, style);
 	}
 }
 
@@ -929,7 +942,7 @@ void DStatusBarCore::Fill(PalEntry color, double x, double y, double w, double h
 
 	int x1 = int(x);
 	int y1 = int(y);
-	int ww = int(x + w - x1);	// account for scaling to non-integers. Truncating the values separately would fail for cases like 
+	int ww = int(x + w - x1);	// account for scaling to non-integers. Truncating the values separately would fail for cases like
 	int hh = int(y + h - y1);	// y=3.5, height = 5.5 where adding both values gives a larger integer than adding the two integers.
 
 	Dim(twod, color, float(Alpha), x1, y1, ww, hh);
@@ -947,9 +960,7 @@ void DStatusBarCore::SetClipRect(double x, double y, double w, double h, int fla
 	TransformRect(x, y, w, h, flags);
 	int x1 = int(x);
 	int y1 = int(y);
-	int ww = int(x + w - x1);	// account for scaling to non-integers. Truncating the values separately would fail for cases like 
+	int ww = int(x + w - x1);	// account for scaling to non-integers. Truncating the values separately would fail for cases like
 	int hh = int(y + h - y1); // y=3.5, height = 5.5 where adding both values gives a larger integer than adding the two integers.
 	twod->SetClipRect(x1, y1, ww, hh);
 }
-
-

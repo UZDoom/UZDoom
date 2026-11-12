@@ -1,7 +1,7 @@
 /*
- * Interfaces over Yamaha OPL3 (YMF262) chip emulators
+ * Interfaces over Yamaha OPL2 (YM3812) and Yamaha OPL3 (YMF262) chip emulators
  *
- * Copyright (c) 2017-2025 Vitaly Novichkov (Wohlstand)
+ * Copyright (c) 2017-2026 Vitaly Novichkov (Wohlstand)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -75,8 +75,15 @@ void DosBoxOPL3::writePan(uint16_t addr, uint8_t data)
 void DosBoxOPL3::nativeGenerateN(int16_t *output, size_t frames)
 {
     DBOPL::Handler *chip_r = reinterpret_cast<DBOPL::Handler*>(m_chip);
-    Bitu frames_i = frames;
-    chip_r->GenerateArr(output, &frames_i);
+    Bitu frames_i;
+
+    while(frames > 0)
+    {
+        frames_i = frames;
+        chip_r->GenerateArr(output, &frames_i);
+        frames -= frames_i;
+        output += frames_i;
+    }
 }
 
 const char *DosBoxOPL3::emulatorName()

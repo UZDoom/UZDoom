@@ -113,7 +113,7 @@ bool P_CheckTickerPaused ()
 	// pause if in menu or console and at least one tic has been run
 	if ( !netgame
 		 && gamestate != GS_TITLELEVEL
-		 && ((menuactive != MENU_Off && menuactive != MENU_OnNoPause) ||
+		 && ((menuactive != MENU_Off && menuactive != MENU_OnNoPause && menuactive != MENU_GameplayMenu) ||
 			 ConsoleState == c_down || ConsoleState == c_falling)
 		 && !demoplayback
 		 && !demorecording

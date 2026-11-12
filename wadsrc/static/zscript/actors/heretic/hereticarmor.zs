@@ -59,4 +59,3 @@ Class EnchantedShield : BasicArmorPickup
 		stop;
 	}
 }
-

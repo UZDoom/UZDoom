@@ -431,7 +431,7 @@ FStateDefine *FStateDefinitions::FindStateLabelInList(TArray<FStateDefine> & lis
 
 //==========================================================================
 //
-// Finds the address of a state label given by name. 
+// Finds the address of a state label given by name.
 // Adds the state label if it doesn't exist
 //
 //==========================================================================
@@ -593,7 +593,7 @@ void FStateDefinitions::InstallStates(PClassActor *info, AActor *defaults)
 	}
 
 	auto &sl = info->ActorInfo()->StateList;
-	if (sl != NULL) 
+	if (sl != NULL)
 	{
 		sl->Destroy();
 		M_Free(sl);

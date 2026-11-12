@@ -22,16 +22,14 @@
 **
 */
 
-#ifndef __V_TEXT_H__
-#define __V_TEXT_H__
+#pragma once
 
 #include "v_font.h"
-#include "printf.h"
 
 struct FBrokenLines
 {
-	unsigned	Width;
-	FString		Text;
+	unsigned Width;
+	FString  Text;
 };
 
 TArray<FBrokenLines> V_BreakLines (FFont *font, int maxwidth, const uint8_t *str, bool preservecolor = false);
@@ -39,5 +37,3 @@ inline TArray<FBrokenLines> V_BreakLines (FFont *font, int maxwidth, const char 
  { return V_BreakLines (font, maxwidth, (const uint8_t *)str, preservecolor); }
 inline TArray<FBrokenLines> V_BreakLines (FFont *font, int maxwidth, const FString &str, bool preservecolor = false)
  { return V_BreakLines (font, maxwidth, (const uint8_t *)str.GetChars(), preservecolor); }
-
-#endif //__V_TEXT_H__

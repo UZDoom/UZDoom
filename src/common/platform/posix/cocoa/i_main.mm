@@ -157,6 +157,7 @@ FString I_DetectOS()
 	case 14: name = "Sonoma";              break;
 	case 15: name = "Sequoia";             break;
 	case 26: name = "Tahoe";               break;
+	case 27: name = "Golden Gate";         break;
 	}
 
 	char release[16] = "unknown";
@@ -169,7 +170,7 @@ FString I_DetectOS()
 
 	const char* const architecture =
 #ifdef __x86_64__
-		"64-bit Intel";	
+		"64-bit Intel";
 #elif defined __aarch64__
 		"64-bit ARM";
 #else
@@ -200,9 +201,6 @@ int DoMain(int argc, char** argv)
 	signal(SIGTERM, SignalHandler);
 	// signal(SIGHUP, SignalHandler);
 	// signal(SIGQUIT, SignalHandler);
-
-	printf(GAMENAME" %s - %s - Cocoa version\nCompiled on %s\n\n",
-		GetVersionString(), GetGitTime(), __DATE__);
 
 	seteuid(getuid());
 

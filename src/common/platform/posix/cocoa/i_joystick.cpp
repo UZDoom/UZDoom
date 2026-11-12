@@ -1367,4 +1367,3 @@ void I_Rumble(double high_freq, double low_freq, double left_trig, double right_
 
 	// stub
 }
-

@@ -79,9 +79,9 @@ vec3 ProcessMaterialLight(Material material, vec3 color)
 			}
 		}
 	}
-	
+
 	if ( uLightBlendMode == 1 )
-	{	// COLOR_CORRECT_CLAMPING 
+	{	// COLOR_CORRECT_CLAMPING
 		dynlight.rgb = color + desaturate(dynlight).rgb;
 		specular.rgb = desaturate(specular).rgb;
 
@@ -89,7 +89,7 @@ vec3 ProcessMaterialLight(Material material, vec3 color)
 		specular.rgb = ((specular.rgb / max(max(max(specular.r, specular.g), specular.b), 1.4) * 1.4));
 	}
 	else if ( uLightBlendMode == 2 )
-	{	// UNCLAMPED 
+	{	// UNCLAMPED
 		dynlight.rgb = color + desaturate(dynlight).rgb;
 		specular.rgb = desaturate(specular).rgb;
 	}

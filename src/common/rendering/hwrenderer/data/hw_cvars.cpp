@@ -42,20 +42,21 @@ CVAR(Bool,gl_mirrors,true,0)	// This is for debugging only!
 CVAR(Bool,gl_mirror_envmap, true, CVAR_GLOBALCONFIG|CVAR_ARCHIVE)
 CVAR(Bool, gl_seamless, true, CVAR_ARCHIVE|CVAR_GLOBALCONFIG)
 
-CUSTOM_CVAR(Int, r_mirror_recursions,4,CVAR_GLOBALCONFIG|CVAR_ARCHIVE)
+CUSTOM_CVAR(Int, r_portal_recursions, 4, CVAR_ARCHIVE)
 {
-	if (self<0) self=0;
-	if (self>10) self=10;
+	if (self > 16) self = 16;
+	if (self < 0) self = 0;
 }
+
 bool gl_plane_reflection_i;	// This is needed in a header that cannot include the CVAR stuff...
 CUSTOM_CVAR(Bool, gl_plane_reflection, true, CVAR_GLOBALCONFIG|CVAR_ARCHIVE)
 {
 	gl_plane_reflection_i = self;
 }
 
-constexpr float GAMMA_DEFAULT = 2.2;
-constexpr float GAMMA_HIGH = 3.0;
-constexpr float GAMMA_LOW = 0.1;
+constexpr float GAMMA_DEFAULT = 2.2f;
+constexpr float GAMMA_HIGH = 3.0f;
+constexpr float GAMMA_LOW = 0.1f;
 
 constexpr float GAMMA_LOW_FIX = (GAMMA_LOW-GAMMA_DEFAULT) / (GAMMA_HIGH-GAMMA_DEFAULT);
 
@@ -83,7 +84,7 @@ CUSTOM_CVARD(Float, vid_saturation, 1.f, CVAR_ARCHIVE | CVAR_GLOBALCONFIG, "adju
 }
 
 #ifndef BW_GAP
-#define BW_GAP 0.2
+#define BW_GAP 0.2f
 #endif
 
 CVAR(Float, vid_i_blackpoint, 1.f, CVAR_VIRTUAL | CVAR_NOINITCALL | CVAR_SYSTEM_ONLY);
@@ -141,3 +142,7 @@ CUSTOM_CVAR(Int, gl_shadowmap_filter, 1, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 {
 	if (self < 0 || self > 8) self = 1;
 }
+
+CVAR(Bool, gl_strict_gldefs_errors, false, CVAR_GLOBALCONFIG | CVAR_ARCHIVE)
+
+CVARD(Int, gl_model_light_optimization_radius, 16, CVAR_ARCHIVE|CVAR_GLOBALCONFIG, "maximum radius for skipping model radius light gather (and just grab current subsector lights instead)")

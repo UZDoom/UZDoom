@@ -231,7 +231,7 @@ void FSoftwareRenderer::RenderTextureView (FCanvasTexture *camtex, AActor *viewp
 
 	auto tex = GetSWCamTex(camtex);
 	if (!tex) return;
-	
+
 	DCanvas *Canvas = renderTarget->IsBgra() ? tex->GetCanvasBgra() : tex->GetCanvas();
 
 	// curse Doom's overuse of global variables in the renderer.
@@ -269,4 +269,3 @@ void FSoftwareRenderer::SetColormap(FLevelLocals *Level)
 		SetDefaultColormap(Level->info->FadeTable.GetChars());
 	}
 }
-

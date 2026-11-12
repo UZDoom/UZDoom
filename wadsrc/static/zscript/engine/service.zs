@@ -116,10 +116,10 @@ class Service abstract
 	{
 		return '';
 	}
-    
-    static Service Find(class<Service> serviceName){
-        return AllServices.GetIfExists(serviceName.GetClassName());
-    }
+
+	static Service Find(class<Service> serviceName){
+		return AllServices.GetIfExists(serviceName.GetClassName());
+	}
 }
 
 /**

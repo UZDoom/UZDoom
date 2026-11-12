@@ -74,7 +74,7 @@ void MapLoader::parseEDLinedef(FScanner &sc, TMap<int, EDLinedef> &EDLines)
 			if (sc.CheckNumber())
 			{
 				// Oh joy, this is going to be fun...
-				// Here we cannot do anything because we need the tag to make this work. 
+				// Here we cannot do anything because we need the tag to make this work.
 				// For now just store a negative number and resolve this later.
 				ld.special = -sc.Number;
 			}

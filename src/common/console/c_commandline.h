@@ -47,4 +47,3 @@ private:
 	char **_argv;
 	size_t argsize;
 };
-

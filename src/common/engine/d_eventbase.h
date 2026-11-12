@@ -108,4 +108,3 @@ struct FInputEvent
 
 	FInputEvent(const event_t *ev);
 };
-

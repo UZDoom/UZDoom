@@ -62,7 +62,7 @@ class Merchant : Actor
 		Goto Spawn;
 	Yes:
 		MRYS A 20;
-		// Fall through	
+		// Fall through
 	Greetings:
 		MRGT ABCDEFGHI 5;
 		Goto Spawn;
@@ -125,4 +125,3 @@ class Medic : Merchant
 		Tag "$TAG_MEDIC";
 	}
 }
-

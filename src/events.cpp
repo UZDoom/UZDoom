@@ -277,7 +277,7 @@ bool EventManager::RegisterHandler(DStaticEventHandler* handler)
 
 	handler->OnRegister();
 	handler->owner = this;
-	
+
 	// link into normal list
 	// update: link at specific position based on order.
 	DStaticEventHandler* before = nullptr;
@@ -611,7 +611,7 @@ void EventManager::InitStaticHandlers(FLevelLocals *l, bool map)
 		InitHandler(type);
 	}
 
-	if (!map) 
+	if (!map)
 		return;
 
 	// initialize event handlers from mapinfo
@@ -719,7 +719,7 @@ bool EventManager::WorldHitscanPreFired(AActor* actor, DAngle angle, double dist
 		for (DStaticEventHandler* handler = FirstEventHandler; handler && ret == false; handler = handler->next)
 			ret = handler->WorldHitscanPreFired(actor, angle, distance, pitch, damage, damageType, pufftype, flags, sz, offsetforward, offsetside);
 	}
-	
+
 	return ret;
 }
 
@@ -1019,7 +1019,7 @@ bool EventManager::CheckUiProcessors()
 
 bool EventManager::CheckRequireMouse()
 {
-	if (ShouldCallStatic(false)) 
+	if (ShouldCallStatic(false))
 	{
 		if (staticEventManager.CheckRequireMouse()) return true;
 	}
@@ -2079,7 +2079,7 @@ void DStaticEventHandler::WorldTick()
 FRenderEvent EventManager::SetupRenderEvent()
 {
 	FRenderEvent e;
-    auto &vp = r_viewpoint;
+	auto &vp = r_viewpoint;
 	e.ViewPos = vp.Pos;
 	e.ViewAngle = vp.Angles.Yaw;
 	e.ViewPitch = vp.Angles.Pitch;
@@ -2095,7 +2095,7 @@ void DStaticEventHandler::RenderFrame()
 	IFVIRTUAL(DStaticEventHandler, RenderFrame)
 	{
 		// don't create excessive DObjects if not going to be processed anyway
-	 	if (isEmpty(func)) return;
+		if (isEmpty(func)) return;
 		FRenderEvent e = owner->SetupRenderEvent;
 		VMValue params[2] = { (DStaticEventHandler*)this, &e };
 		VMCall(func, params, 2, nullptr, 0);

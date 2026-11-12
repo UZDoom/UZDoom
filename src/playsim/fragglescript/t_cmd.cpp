@@ -37,7 +37,7 @@ static void FS_Gimme(const char * what)
 	char buffer[80];
 
 	// This is intentionally limited to the few items
-	// it can handle in Legacy. 
+	// it can handle in Legacy.
 	if (!strnicmp(what, "health", 6)) what="health";
 	else if (!strnicmp(what, "ammo", 4)) what="ammo";
 	else if (!strnicmp(what, "armor", 5)) what="greenarmor";

@@ -30,7 +30,7 @@ public:
 	static const int DEFAULT_STAT = STAT_SECTOREFFECT;
 	void Construct(sector_t *sector);
 
-	
+
 	void Serialize(FSerializer &arc);
 	void OnDestroy() override;
 

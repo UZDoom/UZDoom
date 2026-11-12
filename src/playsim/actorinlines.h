@@ -248,11 +248,11 @@ inline bool P_IsBlockedByLine(AActor* actor, line_t* line)
 		// the regular 'blockmonsters' flag.
 		if (line->flags & ML_BLOCKMONSTERS) return true;
 		// MBF21's flag for walking monsters
-		if ((line->flags2 & ML2_BLOCKLANDMONSTERS) && actor->Level->MBF21Enabled() && !(actor->flags & MF_FLOAT)) return true;
+		if ((line->flags2 & ML2_BLOCKLANDMONSTERS) && !(actor->flags & MF_FLOAT)) return true;
 	}
 
 	// Blocking players
-	if ((((actor->player != nullptr) || (actor->flags8 & MF8_BLOCKASPLAYER)) && (line->flags & ML_BLOCK_PLAYERS)) && actor->Level->MBF21Enabled()) return true;
+	if (((actor->player != nullptr) || (actor->flags8 & MF8_BLOCKASPLAYER)) && (line->flags & ML_BLOCK_PLAYERS)) return true;
 
 	// Blocking floaters.
 	if ((actor->flags & MF_FLOAT) && (line->flags & ML_BLOCK_FLOATERS)) return true;
@@ -263,7 +263,7 @@ inline bool P_IsBlockedByLine(AActor* actor, line_t* line)
 // For Dehacked modified actors we need to dynamically check the bounce factors because MBF didn't bother to implement this properly and with other flags changing this must adjust.
 inline double GetMBFBounceFactor(AActor* actor)
 {
-	if (actor->BounceFlags & BOUNCE_DEH) // only when modified through Dehacked. 
+	if (actor->BounceFlags & BOUNCE_DEH) // only when modified through Dehacked.
 	{
 		constexpr double MBF_BOUNCE_NOGRAVITY = 1;				// With NOGRAVITY: full momentum
 		constexpr double MBF_BOUNCE_FLOATDROPOFF = 0.85;		// With FLOAT and DROPOFF: 85%
@@ -279,7 +279,7 @@ inline double GetMBFBounceFactor(AActor* actor)
 
 inline double GetWallBounceFactor(AActor* actor)
 {
-	if (actor->BounceFlags & BOUNCE_DEH) // only when modified through Dehacked. 
+	if (actor->BounceFlags & BOUNCE_DEH) // only when modified through Dehacked.
 	{
 		constexpr double MBF_BOUNCE_NOGRAVITY = 1;				// With NOGRAVITY: full momentum
 		constexpr double MBF_BOUNCE_WALL = 0.5;					// Bouncing off walls: 50%

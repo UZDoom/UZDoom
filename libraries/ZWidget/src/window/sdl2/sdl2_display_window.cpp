@@ -1,14 +1,21 @@
 #include "sdl2_display_window.h"
+#include <SDL2/SDL_events.h>
+#include <SDL2/SDL_video.h>
 #include <stdexcept>
+#include <atomic>
+#include <mutex>
 #include <SDL2/SDL_vulkan.h>
+#include <SDL2/SDL_hints.h>
+
+#define EVENT_NOTIFY_WINDOW SDL_USEREVENT + 100
 
 Uint32 SDL2DisplayWindow::PaintEventNumber = 0xffffffff;
 bool SDL2DisplayWindow::ExitRunLoop;
 std::unordered_map<int, SDL2DisplayWindow*> SDL2DisplayWindow::WindowList;
 
-SDL2DisplayWindow::SDL2DisplayWindow(DisplayWindowHost* windowHost, bool popupWindow, SDL2DisplayWindow* owner, RenderAPI renderAPI, double uiscale) : WindowHost(windowHost), UIScale(uiscale)
+SDL2DisplayWindow::SDL2DisplayWindow(DisplayWindowHost* windowHost, SDL2DisplayWindow* owner, RenderAPI renderAPI, double uiscale, struct WindowParams params) : WindowHost(windowHost), UIScale(uiscale)
 {
-	unsigned int flags = SDL_WINDOW_HIDDEN | SDL_WINDOW_RESIZABLE /*| SDL_WINDOW_ALLOW_HIGHDPI*/;
+	unsigned int flags = SDL_WINDOW_HIDDEN /*| SDL_WINDOW_ALLOW_HIGHDPI*/;
 	if (renderAPI == RenderAPI::Vulkan)
 		flags |= SDL_WINDOW_VULKAN;
 	else if (renderAPI == RenderAPI::OpenGL)
@@ -17,20 +24,46 @@ SDL2DisplayWindow::SDL2DisplayWindow(DisplayWindowHost* windowHost, bool popupWi
 	else if (renderAPI == RenderAPI::Metal)
 		flags |= SDL_WINDOW_METAL;
 #endif
-	if (popupWindow)
-		flags |= SDL_WINDOW_BORDERLESS;
 
-	if (renderAPI == RenderAPI::Vulkan || renderAPI == RenderAPI::OpenGL || renderAPI == RenderAPI::Metal)
+	auto pos = params.centered? SDL_WINDOWPOS_CENTERED: SDL_WINDOWPOS_UNDEFINED;
+	if (params.resizable)
 	{
-		Handle.window = SDL_CreateWindow("", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 320, 200, flags);
-		if (!Handle.window)
-			throw std::runtime_error(std::string("Unable to create SDL window:") + SDL_GetError());
+		flags |= SDL_WINDOW_RESIZABLE;
 	}
-	else
+	if (params.popup)
+		flags |= SDL_WINDOW_BORDERLESS;
+	if (params.utility)
 	{
-		int result = SDL_CreateWindowAndRenderer(320, 200, flags, &Handle.window, &RendererHandle);
-		if (result != 0)
-			throw std::runtime_error(std::string("Unable to create SDL window:") + SDL_GetError());
+		Owner = owner;
+		flags |= (SDL_WINDOW_UTILITY | SDL_WINDOW_ALWAYS_ON_TOP | SDL_WINDOW_SKIP_TASKBAR);
+	}
+
+	Handle.window = SDL_CreateWindow("", pos, pos, params.size.width*uiscale, params.size.height*uiscale, flags);
+	if (!Handle.window)
+		throw std::runtime_error(std::string("Unable to create SDL window:") + SDL_GetError());
+
+	if (params.resizable)
+	{
+		SDL_SetWindowMinimumSize(Handle.window, params.minSize.width*uiscale, params.minSize.height*uiscale);
+		if (params.maxSize.width >= params.minSize.width && params.maxSize.height >= params.minSize.height)
+		{
+			SDL_SetWindowMinimumSize(Handle.window, params.maxSize.width*uiscale, params.maxSize.height*uiscale);
+		}
+	}
+
+	switch (renderAPI)
+	{
+		case RenderAPI::Vulkan:
+		case RenderAPI::OpenGL:
+		case RenderAPI::Metal:
+			break;
+		default: {
+			RendererHandle = SDL_CreateRenderer(Handle.window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+			if (!RendererHandle)
+				RendererHandle = SDL_CreateRenderer(Handle.window, -1, SDL_RENDERER_SOFTWARE);
+			if (!RendererHandle)
+				throw std::runtime_error(std::string("Unable to create renderer: ") + SDL_GetError());
+		}
 	}
 
 	WindowList[SDL_GetWindowID(Handle.window)] = this;
@@ -77,6 +110,14 @@ VkSurfaceKHR SDL2DisplayWindow::CreateVulkanSurface(VkInstance instance)
 	return surfaceHandle;
 }
 
+void SDL2DisplayWindow::NotifyWindow()
+{
+	SDL_Event e;
+	SDL_zero(e);
+	e.type = EVENT_NOTIFY_WINDOW;
+	SDL_PushEvent(&e);
+}
+
 void SDL2DisplayWindow::SetWindowTitle(const std::string& text)
 {
 	SDL_SetWindowTitle(Handle.window, text.c_str());
@@ -111,7 +152,26 @@ void SDL2DisplayWindow::SetClientFrame(const Rect& box)
 
 void SDL2DisplayWindow::Show()
 {
+	if (Owner)
+	{
+		SDL_SetWindowModalFor(Handle.window, Owner->Handle.window);
+		SDL_SetWindowAlwaysOnTop(Handle.window, SDL_TRUE);
+	}
+
+	// this is a hack, but it seems to prevent unpainted windows on my pc
 	SDL_ShowWindow(Handle.window);
+	SDL_RaiseWindow(Handle.window);
+	SDL_Delay(10);
+	WindowHost->OnWindowGeometryChanged();
+	WindowHost->OnWindowPaint();
+	SDL_Delay(10);
+	Update();
+	ProcessEvents();
+}
+
+void SDL2DisplayWindow::Restore()
+{
+	SDL_RestoreWindow(Handle.window);
 }
 
 void SDL2DisplayWindow::ShowFullscreen()
@@ -192,6 +252,7 @@ void SDL2DisplayWindow::SetCursor(StandardCursor cursor)
 
 void SDL2DisplayWindow::Update()
 {
+	if (updating) return;
 	SDL_Event event = {};
 	event.type = PaintEventNumber;
 	event.user.windowID = SDL_GetWindowID(Handle.window);
@@ -204,8 +265,14 @@ bool SDL2DisplayWindow::GetKeyState(InputKey key)
 	const Uint8* state = SDL_GetKeyboardState(&numkeys);
 	if (!state) return false;
 
-	SDL_Scancode index = InputKeyToScancode(key);
-	return (index < numkeys) ? state[index] != 0 : false;
+	auto test = [numkeys, state](InputKey key) {
+		SDL_Scancode index = InputKeyToScancode(key);
+		return (index < numkeys) ? state[index] != 0 : false;
+	};
+
+	if (key == InputKey::Ctrl) return test(key) || test(InputKey::LControl) || test(InputKey::RControl);
+	if (key == InputKey::Shift) return test(key) || test(InputKey::LShift) || test(InputKey::RShift);
+	return test(key);
 }
 
 Rect SDL2DisplayWindow::GetWindowFrame() const
@@ -354,13 +421,23 @@ void SDL2DisplayWindow::ProcessEvents()
 
 void SDL2DisplayWindow::RunLoop()
 {
+	SDL_Event event;
 	ExitRunLoop = false;
+	constexpr auto target = 1000 / 60;
+
 	while (!ExitRunLoop)
 	{
-		SDL_Event event = {};
-		int result = SDL_WaitEvent(&event);
-		if (result == 1)
-			DispatchEvent(event); // Silently ignore if it fails and pray it doesn't busy loop, because SDL and Linux utterly sucks!
+		const auto start = SDL_GetTicks();
+
+		while (SDL_PollEvent(&event))
+		{
+			DispatchEvent(event);
+		}
+
+		if (const auto elapsed = SDL_GetTicks() - start; elapsed < target)
+		{
+			SDL_Delay(target - elapsed);
+		}
 	}
 }
 
@@ -371,14 +448,18 @@ void SDL2DisplayWindow::ExitLoop()
 
 std::unordered_map<void *, std::function<void()>> SDL2DisplayWindow::Timers;
 std::unordered_map<void *, void *> SDL2DisplayWindow::TimerHandles;
-unsigned long SDL2DisplayWindow::TimerIDs = 0;
+std::atomic<uintptr_t> SDL2DisplayWindow::TimerIDs{0};
+std::mutex SDL2DisplayWindow::TimerMutex;
 Uint32 TimerEventID = SDL_RegisterEvents(1);
 
 Uint32 SDL2DisplayWindow::ExecTimer(Uint32 interval, void* execID)
 {
 	// cancel event and stop loop if function not found
-	if (Timers.find(execID) == Timers.end())
-		return 0;
+	{
+		std::lock_guard<std::mutex> lock(TimerMutex);
+		if (Timers.find(execID) == Timers.end())
+			return 0;
+	}
 
 	SDL_Event timerEvent;
 	SDL_zero(timerEvent);
@@ -393,21 +474,38 @@ Uint32 SDL2DisplayWindow::ExecTimer(Uint32 interval, void* execID)
 
 void* SDL2DisplayWindow::StartTimer(int timeoutMilliseconds, std::function<void()> onTimer)
 {
-	void* execID = (void*)(uintptr_t)++TimerIDs;
-	void* id = (void*)(uintptr_t)SDL_AddTimer(timeoutMilliseconds, SDL2DisplayWindow::ExecTimer, execID);
+	void *execID = reinterpret_cast<void*>(++TimerIDs);
 
-	if (!id) return id;
+	{
+		std::lock_guard<std::mutex> lock(TimerMutex);
+		Timers[execID] = std::move(onTimer);
+	}
 
-	Timers.insert({execID, onTimer});
-	TimerHandles.insert({id, execID});
+	SDL_TimerID id = SDL_AddTimer(timeoutMilliseconds, SDL2DisplayWindow::ExecTimer, execID);
 
-	return id;
+	if (!id) {
+		std::lock_guard<std::mutex> lock(TimerMutex);
+		Timers.erase(execID);
+		return nullptr;
+	}
+
+	void *handle = reinterpret_cast<void*>(id);
+
+	{
+		std::lock_guard<std::mutex> lock(TimerMutex);
+		TimerHandles[handle] = execID;
+	}
+
+	return handle;
 }
 
 void SDL2DisplayWindow::StopTimer(void* timerID)
 {
-	SDL_RemoveTimer((SDL_TimerID)(uintptr_t)timerID);
+	if (!timerID) return;
 
+	SDL_RemoveTimer(static_cast<SDL_TimerID>(reinterpret_cast<uintptr_t>(timerID)));
+
+	std::lock_guard<std::mutex> lock(TimerMutex);
 	auto execID = TimerHandles.find(timerID);
 	if (execID == TimerHandles.end())
 		return;
@@ -430,6 +528,7 @@ SDL2DisplayWindow* SDL2DisplayWindow::FindEventWindow(const SDL_Event& event)
 	case SDL_MOUSEBUTTONDOWN:      windowID = event.button.windowID; break;
 	case SDL_MOUSEWHEEL:           windowID = event.wheel.windowID;  break;
 	case SDL_MOUSEMOTION:          windowID = event.motion.windowID; break;
+	case SDL_DROPFILE:             windowID = event.drop.windowID;   break;
 	case SDL_CONTROLLERBUTTONUP:   break; // use last event
 	case SDL_CONTROLLERBUTTONDOWN: break; // use last event
 	default:
@@ -476,6 +575,7 @@ void SDL2DisplayWindow::DispatchEvent(const SDL_Event& event)
 	case SDL_MOUSEBUTTONDOWN:      window->OnMouseButtonDown(event.button);  break;
 	case SDL_MOUSEWHEEL:           window->OnMouseWheel     (event.wheel);   break;
 	case SDL_MOUSEMOTION:          window->OnMouseMotion    (event.motion);  break;
+	case SDL_DROPFILE:             window->OnFileDrop       (event.drop);    break;
 	case SDL_CONTROLLERBUTTONUP:   window->OnJoyButtonUp    (event.cbutton); break;
 	case SDL_CONTROLLERBUTTONDOWN: window->OnJoyButtonDown  (event.cbutton); break;
 	default:
@@ -487,6 +587,9 @@ void SDL2DisplayWindow::OnWindowEvent(const SDL_WindowEvent& event)
 {
 	switch (event.event)
 	{
+		case EVENT_NOTIFY_WINDOW:
+			WindowHost->OnWindowNotified();
+			break;
 		case SDL_WINDOWEVENT_CLOSE:
 			WindowHost->OnWindowClose();
 			break;
@@ -548,6 +651,14 @@ void SDL2DisplayWindow::OnKeyDown(const SDL_KeyboardEvent& event)
 	WindowHost->OnWindowKeyDown(ScancodeToInputKey(event.keysym.scancode));
 }
 
+void SDL2DisplayWindow::OnFileDrop(const SDL_DropEvent& event)
+{
+	if (event.file == nullptr) return;
+	std::string file{event.file};
+	WindowHost->OnFileDrop(file);
+	SDL_free(event.file);
+}
+
 InputKey SDL2DisplayWindow::GetMouseButtonKey(const SDL_MouseButtonEvent& event)
 {
 	switch (event.button)
@@ -606,6 +717,7 @@ void SDL2DisplayWindow::OnMouseMotion(const SDL_MouseMotionEvent& event)
 
 void SDL2DisplayWindow::OnPaintEvent()
 {
+	updating = false;
 	WindowHost->OnWindowPaint();
 }
 

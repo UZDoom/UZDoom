@@ -2,18 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2025-12-24 17:00+0000\n"
-"Last-Translator: Boondorl <boondorl0@gmail.com>\n"
-"Language-Team: Ukrainian <https://hosted.weblate.org/projects/uzdoom/zdoom-"
-"engine-strings/uk/>\n"
+"PO-Revision-Date: 2026-08-10 23:42-0400\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/uzdoom/zdoom-engine-strings/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.15.1\n"
-"HeaderCode: uk\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
 
 msgid "PRESSKEY"
 msgstr "Натисніть будь яку клавішу."
@@ -22,10 +19,12 @@ msgid "SECRETMESSAGE"
 msgstr "Знайдено схованку!"
 
 msgid "D_DEVSTR"
-msgstr "Увімкнено режим розробника"
+msgstr "Марний режим: УВІМК"
 
 msgid "QUITMSG"
-msgstr "Ти дійсно хочеш вийти з цієї прекрасної гри?"
+msgstr ""
+"Ти дійсно хочеш вийти з\n"
+"цієї прекрасної гри?"
 
 # In some languages, it may make more sense to translate “Press a key” as
 # “Press any key.”
@@ -49,13 +48,15 @@ msgstr ""
 
 msgid "NEWGAME"
 msgstr ""
-"Ви не можете розпочати нову гру під час мережевої гри.\n"
+"Ви не можете розпочати нову\n"
+"гру під час мережевої гри.\n"
 "\n"
 "Натисніть будь яку клавішу."
 
 msgid "NIGHTMARE"
 msgstr ""
-"Впевнений? Цей рівень складності навіть близько не стоїть до чесного.\n"
+"Впевнений?\n"
+"Тут про справедливий рівень важкості навіть не йдеться..\n"
 "\n"
 "Натисніть Y або N."
 
@@ -84,56 +85,82 @@ msgstr "Ви дійсно хочете вийти?"
 
 msgctxt "heretic"
 msgid "SWSTRING"
-msgstr "Доступно только в полной версии"
+msgstr "Доступно тільки в повній версії"
 
 msgid "DOSY"
 msgstr "(Натисніть Y для виходу)"
 
 msgid "QUITMSG1"
-msgstr "Будь ласка, не йди - тут ще купа демонів!"
+msgstr ""
+"Будь ласка, не йди - тут\n"
+"ще купа демонів!"
 
 msgid "QUITMSG2"
-msgstr "Споримо, що ця кривава баня тобі не по зубах!?"
+msgstr ""
+"Споримо, що ця кривава\n"
+"баня тобі не по зубах!"
 
 msgid "QUITMSG3"
-msgstr "Я б не йшов на твоєму місці. DOS значно нудніший."
+msgstr ""
+"Я б не йшов на твоєму місці.\n"
+"DOS значно нудніший."
 
 msgid "QUITMSG4"
-msgstr "Хочеш сказати, що DOS цікавіший за мене, так?"
+msgstr ""
+"Хочеш сказати, що DOS\n"
+"цікавіший за мене, так?"
 
 msgid "QUITMSG5"
-msgstr "Зачекай! Не йди - тут за куточком сховався ще один демон!"
+msgstr ""
+"Зачекай! Не йди—тут за куточком\n"
+"сховався ще один демон!"
 
 msgid "QUITMSG6"
-msgstr "Шоб знав, коли повернешся - я намилю тобі шию."
+msgstr ""
+"Шоб знав, коли повернешся\n"
+"я намилю тобі шию."
 
 msgid "QUITMSG7"
-msgstr "Давай, йди... ніби мені не все одно."
+msgstr "Давай, йди… ніби мені не все одно."
 
 # More info here.
 msgid "QUITMSG8"
-msgstr "Вийти? ВИЙТИ?! Це так не працює."
+msgstr ""
+"Вийти?\n"
+"Це так не працює!"
 
 # A “dimensional shambler” is a creature appearing in the works of H. P.
 # Lovecraft.
 msgid "QUITMSG9"
-msgstr "Підіжди трохи, між строками DOS причаївся міжпросторовий шамблер!"
+msgstr ""
+"Підіжди трохи, між\n"
+"строками DOS причаївся\n"
+"міжпросторовий шамблер!"
 
 msgid "QUITMSG10"
-msgstr "Ну і котись звідсіль, до своїх марудних програм."
+msgstr ""
+"Ну і котись звідсіль, до\n"
+"своїх марудних програм."
 
 msgid "QUITMSG11"
-msgstr "Був би я твоїм боссом - розніс у дедматчі за хвилину!"
+msgstr ""
+"Був би я твоїм боссом –\n"
+"розніс у дезматчі за хвилину!"
 
 msgid "QUITMSG12"
 msgstr ""
-"Слухай друже. Якщо підеш зараз - твій лічильник вбивств впаде до нуля!"
+"Слухай друже. Якщо підеш зараз –\n"
+"твій лічильник вбивств впаде до нуля!"
 
 msgid "QUITMSG13"
-msgstr "Давай, йди. Бита почекає тебе."
+msgstr ""
+"Давай, йди. Коли ти повернешся,\n"
+"я з битою чекатиму на тебе."
 
 msgid "QUITMSG14"
-msgstr "Тобі пощастило, що я не шибану тебе за вихід."
+msgstr ""
+"Тобі пощастило, що я не\n"
+"шибану тебе за вихід."
 
 msgid "QUITMSG15"
 msgstr ""
@@ -142,27 +169,27 @@ msgstr ""
 
 msgid "QUITMSG16"
 msgstr ""
-"Різанина затихає...\n"
+"Різанина затихає…\n"
 "Бісить!"
 
 msgid "QUITMSG17"
 msgstr ""
-"Ти ж моя єдина надія -\n"
-"мій останній шанс!"
+"Ти ж моя єдина надія\n"
+"—мій останній шанс!"
 
 msgid "QUITMSG18"
 msgstr "Ще ніхто не дав чосу від Чорного дрозда."
 
 msgid "QUITMSG19"
-msgstr "Я думав, що ти інший..."
+msgstr "Я думав, що ти інший…"
 
 msgid "QUITMSG20"
 msgstr "Прекрасно! Зробив амінь чортам і втік!"
 
 msgid "QUITMSG21"
 msgstr ""
-"Ти можеш вийти...\n"
-"але не сховатись..."
+"Ти можеш вийти…\n"
+"але не сховатись…"
 
 msgid "QUITMSG22"
 msgstr ""
@@ -170,10 +197,14 @@ msgstr ""
 "Мамуся покликала їстоньки?"
 
 msgid "QUITMSG23"
-msgstr "Не виходь поки, тут ще багато флемоїдів лишилось!"
+msgstr ""
+"Не виходь поки, тут ще\n"
+"багато флемоїдів лишилось!"
 
 msgid "QUITMSG24"
-msgstr "Не здавайся -- а то флемоїди візьмуть верх!"
+msgstr ""
+"Не здавайся—а то\n"
+"флемоїди візьмуть верх!"
 
 msgid "QUITMSG25"
 msgstr ""
@@ -181,7 +212,9 @@ msgstr ""
 "Нам потрібна твоя допомога!"
 
 msgid "QUITMSG26"
-msgstr "Маю надію, що ти робиш перерву на пластівці Chex(R)."
+msgstr ""
+"Маю надію, що ти робиш\n"
+"перерву на пластівці Chex®."
 
 msgid "QUITMSG27"
 msgstr ""
@@ -189,10 +222,14 @@ msgstr ""
 "Нам потрібна твоя допомога!"
 
 msgid "QUITMSG28"
-msgstr "Не покидай Міжгалактичну Федерацію Пластівців!"
+msgstr ""
+"Не покидай Міжгалактичну\n"
+"Федерацію Пластівців!"
 
 msgid "QUITMSG29"
-msgstr "Справжній воїн Chex(R) не здається так швидко!"
+msgstr ""
+"Справжній воїн Chex® не\n"
+"здається так швидко!"
 
 msgid "TXT_DEFAULTPICKUPMSG"
 msgstr "Ви щось підібрали"
@@ -234,7 +271,7 @@ msgid "HUSTR_TALKTOSELF4"
 msgstr "Ви починаєте марити"
 
 msgid "HUSTR_TALKTOSELF5"
-msgstr "Як сумно..."
+msgstr "Як сумно…"
 
 msgid "HUSTR_MESSAGESENT"
 msgstr "[Повідомлення відправлено]"
@@ -243,45 +280,13 @@ msgid "STSTR_MUS"
 msgstr "Зміна музики"
 
 msgid "STSTR_NOMUS"
-msgstr "НЕКОРЕКТНИЙ ВИБІР"
-
-msgid "STSTR_DQDON"
-msgstr "Безсмертя ввімкнено"
-
-msgid "STSTR_DQDOFF"
-msgstr "Безсмертя вимкнено"
-
-msgid "STSTR_DQD2ON"
-msgstr "Повне безсмертя ввімкнено"
-
-msgid "STSTR_DQD2OFF"
-msgstr "Повне безсмертя вимкнено"
+msgstr "Некоректний Вибір"
 
 msgid "STSTR_KFAADDED"
 msgstr "Спорядження поповнено"
 
 msgid "STSTR_FAADDED"
 msgstr "Спорядження поповнено (без ключів)"
-
-msgid "STSTR_NCON"
-msgstr ""
-"Прохід крізь стіни\n"
-"ВВІМКНЕНО"
-
-msgid "STSTR_NCOFF"
-msgstr ""
-"Прохід крізь стіни\n"
-"ВИМКНЕНО"
-
-msgid "STSTR_NC2ON"
-msgstr ""
-"Проліт крізь стіни\n"
-"ВВІМКНЕНО"
-
-msgid "STSTR_NC2OFF"
-msgstr ""
-"Проліт крізь стіни\n"
-"ВИМКНЕНО"
 
 # “inVuln”: Invulnerability sphere
 # “Str”: Berserk
@@ -290,7 +295,7 @@ msgstr ""
 # “Allmap”: Computer area map
 # “Lite-amp”: Light-amplification visor
 msgid "STSTR_BEHOLD"
-msgstr "Безсм. (V), берс. (S), нев. (I), кос. (R), карта (A), ПНВ (L)."
+msgstr "Безсм. (V), берс. (S), нев. (I), кос. (R), карта (A), Пнв (L)"
 
 msgid "STSTR_BEHOLDX"
 msgstr "Підсилення ввімкнено"
@@ -298,28 +303,10 @@ msgstr "Підсилення ввімкнено"
 # Printed when entering the idchoppers cheat, which gives the player a
 # chainsaw
 msgid "STSTR_CHOPPERS"
-msgstr "... непогано — г.м."
+msgstr "… непогано — гм"
 
 msgid "STSTR_CLEV"
-msgstr "Зміна рівня..."
-
-msgid "TXT_BUDDHAON"
-msgstr "Будда-мод ВВІМК."
-
-msgid "TXT_BUDDHAOFF"
-msgstr "Будда-мод ВИМК."
-
-msgid "TXT_BUDDHA2ON"
-msgstr "Ультимативний Будда-мод ВВІМК."
-
-msgid "TXT_BUDDHA2OFF"
-msgstr "Ультимативний Будда-мод ВИМК."
-
-msgid "TXT_CHEATPOWERON"
-msgstr "Сила активована"
-
-msgid "TXT_CHEATPOWEROFF"
-msgstr "Сила деактивована"
+msgstr "Зміна рівня…"
 
 msgid "TXT_CHEATHEALTH"
 msgstr "Повне здоров'я"
@@ -327,23 +314,11 @@ msgstr "Повне здоров'я"
 msgid "TXT_CHEATKEYS"
 msgstr "Усі ключі"
 
-msgid "TXT_CHEATSOUNDON"
-msgstr "Налагодження звуку УВІМКНЕНО"
-
-msgid "TXT_CHEATSOUNDOFF"
-msgstr "Налагодження звуку ВИМКНЕНО"
-
 msgid "TXT_CHEATIDDQD"
 msgstr "Хех, чітериш? Тепер помри!"
 
 msgid "TXT_CHEATIDKFA"
-msgstr "Пройдисвіт - ти не заслужив зброї"
-
-msgid "TXT_CHEATTICKERON"
-msgstr "Лічильник Ввімк."
-
-msgid "TXT_CHEATTICKEROFF"
-msgstr "Лічильник Вимк."
+msgstr "Пройдисвіт—ти не заслужив зброї"
 
 msgid "TXT_CHEATARTIFACTS3"
 msgstr "Ви отримали це"
@@ -354,14 +329,8 @@ msgstr "Дар Мідаса у твоїх руках, золотце"
 msgid "TXT_GOTSTUFF"
 msgstr "Отримано предмети!"
 
-msgid "TXT_FREEZEON"
-msgstr "Режим заморозки ВВІМКНЕНО"
-
-msgid "TXT_FREEZEOFF"
-msgstr "Режим заморозки ВИМКНЕНО"
-
 msgid "TXT_STRANGE"
-msgstr "Ви почуваєте себе дивно..."
+msgstr "Ви почуваєте себе дивно…"
 
 msgid "TXT_STRANGER"
 msgstr "Ви почуваєте себе ще дивніше."
@@ -369,35 +338,17 @@ msgstr "Ви почуваєте себе ще дивніше."
 msgid "TXT_NOTSTRANGE"
 msgstr "Ви почуваєтесь собою."
 
-msgid "TXT_LEADBOOTSON"
-msgstr "Одягнено свинцеві чоботи"
-
-msgid "TXT_LEADBOOTSOFF"
-msgstr "Знято свинцеві чоботи"
-
 msgid "TXT_LIGHTER"
 msgstr "Ви побороли гравітацію"
 
 msgid "TXT_GRAVITY"
 msgstr "Гравітація знову притискає вас до землі"
 
-msgid "TXT_NOTARGET_ON"
-msgstr "Невідчутність ввімкнено"
-
-msgid "TXT_NOTARGET_OFF"
-msgstr "Невідчутність вимкнено"
-
 msgid "TXT_ANUBIS_ON"
 msgstr "\"Трясись зі страху!\""
 
 msgid "TXT_ANUBIS_OFF"
 msgstr "Броню огра знято"
-
-msgid "TXT_CHASECAM_ON"
-msgstr "Камера від 3-го лиця активована"
-
-msgid "TXT_CHASECAM_OFF"
-msgstr "Камера від 3-го лиця деактивована"
 
 msgid "TXT_BADDIE_KILLED"
 msgstr "1 поганець вмер"
@@ -421,25 +372,7 @@ msgid "TXT_WHAT_KILL"
 msgstr "Що, хочеш вбивати в реальності?"
 
 msgid "TXT_NOT_FROZEN"
-msgstr "Властивості замороженого гравця вимкнено"
-
-msgid "AMSTR_FOLLOWOFF"
-msgstr "Прив'язка до гравца ВВІМК."
-
-msgid "AMSTR_FOLLOWON"
-msgstr "Прив'язка до гравца ВИМК."
-
-msgid "AMSTR_GRIDON"
-msgstr "Сітка ВВІМК."
-
-msgid "AMSTR_GRIDOFF"
-msgstr "Сітка ВИМК."
-
-msgid "AMSTR_TEXON"
-msgstr "Текстурний режим ВВІМК."
-
-msgid "AMSTR_TEXOFF"
-msgstr "Текстурний режим ВИМК."
+msgstr "Властивості замороженого гравця: ВИМК"
 
 msgid "AMSTR_MARKEDSPOT"
 msgstr "Позначка"
@@ -493,14 +426,13 @@ msgid "SCORE_COLOR"
 msgstr "Колір"
 
 msgid "SCORE_SECRET"
-msgstr "Схованки"
+msgstr "Схованка"
 
 msgid "SCORE_NAME"
 msgstr "Гравець"
 
-#, fuzzy
 msgid "SCORE_DELAY"
-msgstr "Затримка (мс)"
+msgstr "Затримка"
 
 msgid "SCORE_FRAGS"
 msgstr "Фраги"
@@ -526,6 +458,7 @@ msgstr "Вороги"
 msgid "TXT_IMITEMS"
 msgstr "Предмети"
 
+#, fuzzy
 msgid "TXT_IMSECRETS"
 msgstr "Схованки"
 
@@ -546,7 +479,7 @@ msgid "WI_ENTERING"
 msgstr "Просуваємось до:"
 
 msgid "AM_MONSTERS"
-msgstr "Монстри"
+msgstr "Монстри:"
 
 msgid "AM_SECRETS"
 msgstr "Схованки:"
@@ -700,10 +633,10 @@ msgid "GOTCELLBOX"
 msgstr "Взято велику енергетичну батарею."
 
 msgid "GOTSHELLS"
-msgstr "Взято 4 рушничні набої."
+msgstr "Взято 4 дробові набої."
 
 msgid "GOTSHELLBOX"
-msgstr "Взято коробку рушничних набоїв."
+msgstr "Взято коробку дробових набоїв."
 
 msgid "GOTBACKPACK"
 msgstr "Взято рюкзак повний набоїв!"
@@ -712,7 +645,7 @@ msgid "GOTBFG9000"
 msgstr "Взято БФГ9000! О так."
 
 msgid "GOTCHAINGUN"
-msgstr "Взято кулемета."
+msgstr "Взято кулемета!"
 
 msgid "GOTCHAINSAW"
 msgstr "Бензопила! Знайди трохи м'яса!"
@@ -745,13 +678,13 @@ msgid "BETA_BONUS4"
 msgstr "Взято нечестиву біблію."
 
 msgid "PD_BLUEO"
-msgstr "Вам потрібна синя ключ-карта, щоб активувати цей об'єкт"
+msgstr "Вам потрібен синій ключ, щоб активувати цей об'єкт"
 
 msgid "PD_REDO"
-msgstr "Вам потрібна червона ключ-карта, щоб активувати цей об'єкт"
+msgstr "Вам потрібен червоний ключ, щоб активувати цей об'єкт"
 
 msgid "PD_YELLOWO"
-msgstr "Вам потрібна жовта ключ-карта, щоб активувати цей об'єкт"
+msgstr "Вам потрібен жовтий ключ, щоб активувати цей об'єкт"
 
 msgid "PD_BLUEK"
 msgstr "Вам потрібна синя ключ-карта, щоб відкрити ці двері"
@@ -903,7 +836,7 @@ msgid "AMMO_CLIP"
 msgstr "Кулі"
 
 msgid "AMMO_SHELLS"
-msgstr "Рушничні набої"
+msgstr "Дробові набої"
 
 msgid "AMMO_ROCKETS"
 msgstr "Ракети"
@@ -1190,7 +1123,7 @@ msgid "FN_DSPARIL"
 msgstr "Д'Спаріл"
 
 msgid "FN_HERETICIMP"
-msgstr "Ґарґуйль."
+msgstr "Ґарґуйль"
 
 msgid "FN_IRONLICH"
 msgstr "Залізний Ліч"
@@ -1325,7 +1258,7 @@ msgid "OB_MPPSTAFF"
 msgstr "%o перечепи@[adj_2_ua] через заряджену палицю %k."
 
 msgid "OB_MPPGAUNTLETS"
-msgstr "%k висмокта@[adj_1_ua] дух %o через рукавиці. "
+msgstr "%k висмокта@[adj_1_ua] дух %o через рукавиці."
 
 msgid "OB_MPPGOLDWAND"
 msgstr "%o бу@[adj_1_ua] атакований ельфійським посохом %k."
@@ -1793,7 +1726,7 @@ msgid "OB_MPFWEAPHAMMERR"
 msgstr "Душа %o була наново перекована молотом %k."
 
 msgid "OB_MPFWEAPQUIETUS"
-msgstr "%k упокої@[adj_1_ua] %o. З миром?"
+msgstr "%k упокої@[adj_1_ua] %o. З миром."
 
 msgid "OB_MPCWEAPMACE"
 msgstr "%o отрима@[adj_1_ua] по пиці булавою %k."
@@ -1955,7 +1888,7 @@ msgid "TXT_IDCARD"
 msgstr "Взято ідентифікаційну карту."
 
 msgid "TXT_SILVERKEY"
-msgstr "Взято срібний ключ"
+msgstr "Взято срібний ключ."
 
 msgid "TXT_ORACLEKEY"
 msgstr "Взято ключ Оракула."
@@ -2039,13 +1972,13 @@ msgid "TXT_AMMOSATCHEL"
 msgstr "Взято сумку для набоїв."
 
 msgid "MSG_TALISMANRED"
-msgstr "Ви відчуваєте, що не слід це чіпати..."
+msgstr "Ви відчуваєте, що не слід це чіпати…"
 
 msgid "MSG_TALISMANGREEN"
-msgstr "Що б це не було, воно не належить цьому світу..."
+msgstr "Що б це не було, воно не належить цьому світу…"
 
 msgid "MSG_TALISMANBLUE"
-msgstr "Воно повинно мати якесь призначення..."
+msgstr "Воно повинно мати якесь призначення…"
 
 msgid "MSG_TALISMANPOWER"
 msgstr "Ви отримали суперсилу!"
@@ -2060,10 +1993,10 @@ msgid "TXT_NEED_PASSCARD_DOOR"
 msgstr "Вам потрібна карта доступу, щоб відкрити ці двері"
 
 msgid "TXT_NEED_IDCARD"
-msgstr "Вам потрібна ідентифікаційна карта."
+msgstr "Вам потрібна ідентифікаційна карта"
 
 msgid "TXT_NEED_PRISONKEY"
-msgstr "У вас немає ключа від в'язниці."
+msgstr "У вас немає ключа від в'язниці"
 
 msgid "TXT_NEED_HANDPRINT"
 msgstr "Відбиток руки не упізнано"
@@ -2131,7 +2064,7 @@ msgstr "Розсіювач"
 msgid "TAG_GLAUNCHER1"
 msgstr "Гранатомет"
 
-# White phosphorous grenade launcher 
+# White phosphorous grenade launcher
 msgid "TAG_GLAUNCHER2"
 msgstr "Гранатомет"
 
@@ -2226,7 +2159,7 @@ msgid "TAG_HEGRENADES"
 msgstr "В'язка гранат"
 
 msgid "TAG_PHGRENADES"
-msgstr "В'язка фосфорних гранат."
+msgstr "В'язка фосфорних гранат"
 
 msgid "TAG_CLIPOFBULLETS"
 msgstr "Набійниця"
@@ -2540,10 +2473,10 @@ msgid "TXT_GOAWAY"
 msgstr "Йди геть!"
 
 msgid "TXT_COMM0"
-msgstr "Вхідне повідомлення..."
+msgstr "Вхідне повідомлення…"
 
 msgid "TXT_COMM1"
-msgstr "Вхідне повідомлення від Чорного Дрозда..."
+msgstr "Вхідне повідомлення від Чорного Дрозда…"
 
 msgid "TXT_FINDHELP"
 msgstr "Знайди допомогу"
@@ -2553,10 +2486,10 @@ msgid "TXT_TRADE"
 msgstr "за %u"
 
 msgid "GOTCHEXARMOR"
-msgstr "Взято Chex(R) броню."
+msgstr "Взято Chex® броню."
 
 msgid "GOTSUPERCHEXARMOR"
-msgstr "Взято Chex(R) супер броню!"
+msgstr "Взято Chex® супер броню!"
 
 msgid "GOTWATER"
 msgstr "Взято стакан води."
@@ -2604,7 +2537,7 @@ msgid "GOTPROPULSORPACK"
 msgstr "Взято батарею Зорч-прискорювача."
 
 msgid "GOTPHASINGZORCHERRECHARGE"
-msgstr "Взято заряд фазового Зорчера."
+msgstr "Взято заряд фазового Зорчера"
 
 msgid "GOTPHASINGZORCHERPACK"
 msgstr "Взято батарею фазового Зорчера."
@@ -2741,7 +2674,7 @@ msgstr ""
 "\n"
 "\n"
 "\n"
-"Натисни клавішу escape, щоб продовжити..."
+"Натисни клавішу escape, щоб продовжити…"
 
 msgid "CE2TEXT"
 msgstr "У тебе вийшло!"
@@ -2765,14 +2698,14 @@ msgstr ""
 "\n"
 "'%s'?\n"
 "\n"
-"Натисни Y або N."
+"Натисніть Y або N."
 
 msgctxt "chex"
 msgid "QLOADNET"
 msgstr ""
 "Ти не можеш швидко завантажитись під час мережевого квесту!\n"
 "\n"
-"Натисни будь яку клавішу."
+"Натисніть будь яку клавішу."
 
 msgctxt "chex"
 msgid "QLPROMPT"
@@ -2781,48 +2714,43 @@ msgstr ""
 "\n"
 "'%s'?\n"
 "\n"
-"Натисни Y або N."
+"Натисніть Y або N."
 
 msgid "CNEWGAME"
 msgstr ""
-"Ти не можеш почати новий квест під час мережевого квесту!\n"
+"Ти не можеш почати новий квест\n"
+"під час мережевого квесту!\n"
 "\n"
-"Натисни будь яку клавішу."
+"Натисніть будь яку клавішу."
 
 msgid "CNIGHTMARE"
 msgstr ""
 "Бережись, тут буде скрутно.\n"
 "Хочеш продовжити?\n"
 "\n"
-"Натисни Y або N."
+"Натисніть Y або N."
 
 msgid "CSWSTRING"
 msgstr ""
-"Ти граєш в Chex(R) Quest. Інші рівні тут - www.chexquest.com.\n"
+"Ти граєш в Chex® Quest.\n"
 "\n"
-"Натисни Y або N."
+"Інші рівні тут - www.chexquest.com.\n"
+"\n"
+"Натисніть будь яку клавішу."
 
 msgctxt "chex"
 msgid "NETEND"
 msgstr ""
 "Ти не можеш завершити мережевий квест!\n"
 "\n"
-"Натисни будь яку клавішу."
+"Натисніть будь яку клавішу."
 
 msgctxt "chex"
 msgid "ENDGAME"
 msgstr ""
 "Ти дійсно хочеш завершити квест?\n"
 "\n"
-"Натисни Y або N."
-
-msgctxt "chex"
-msgid "STSTR_DQDON"
-msgstr "Невразливість увімкнено"
-
-msgctxt "chex"
-msgid "STSTR_DQDOFF"
-msgstr "Невразливість вимкнено"
+"Натисніть Y або N."
 
 msgctxt "chex"
 msgid "STSTR_FAADDED"
@@ -2834,7 +2762,7 @@ msgstr "Додано Супер Зорч"
 
 msgctxt "chex"
 msgid "STSTR_CHOPPERS"
-msgstr "... Їж Chex(R)!"
+msgstr "…Їж Chex®!"
 
 msgctxt "chex"
 msgid "AMMO_CLIP"
@@ -3086,7 +3014,7 @@ msgid "GMPLYMNU_BFGFREEAIM"
 msgstr "Дозволити прицілювання з BFG"
 
 msgid "GMPLYMNU_ALLOWAUTOMAP"
-msgstr "Дозволити автомапу"
+msgstr "Дозволити автокарту"
 
 msgid "GMPLYMNU_AUTOMAPALLIES"
 msgstr "Показувати союзників на автокарті"
@@ -3107,7 +3035,7 @@ msgid "GMPLYMNU_NOCOUNTENDMONSTER"
 msgstr "Враховувати до % вбивства монстрів в секторах виходу (Е1М8)"
 
 msgid "GMPLYMNU_DEATHMATCH"
-msgstr "Налаштування смертельної сутички"
+msgstr "Налаштування дезматчу"
 
 msgid "GMPLYMNU_WEAPONSSTAY"
 msgstr "Залишати зброю після підняття"
@@ -3218,7 +3146,7 @@ msgid "CMPTMNU_INVISIBILITY"
 msgstr "Монстри бачать невидимих гравців"
 
 msgid "CMPTMNU_MINOTAUR"
-msgstr "Мінотаури не створюють вогонь в воді"
+msgstr "Мінотаври не створюють вогонь в воді"
 
 msgid "CMPTMNU_NOTOSSDROPS"
 msgstr "Викинуті предмети з'являються на землі"
@@ -3269,10 +3197,10 @@ msgid "CMPTMNU_NOPASSOVER"
 msgstr "Всі об'єкти нескінченно високі"
 
 msgid "CMPTMNU_BOOMSCROLL"
-msgstr "BOOM-скролери є адитивними"
+msgstr "Boom-скролери є адитивними"
 
 msgid "CMPTMNU_BADANGLES"
-msgstr "Заборона руху прямо на Пн., Пд., Сх., Зх."
+msgstr "Заборона руху прямо на Пн., Пд., Сх., Зх"
 
 msgid "CMPTMNU_WALLRUN"
 msgstr "Увімкнути Wallrun (швидкий біг біля стін)"
@@ -3316,9 +3244,6 @@ msgstr "Підлога яка моментально рухається не б�
 msgid "CMPTMNU_SECTORSOUNDS"
 msgstr "Звуки секторів використовують центр як джерело звуку"
 
-msgid "CMPTMNU_SOUNDCUTOFF"
-msgstr "Зупиняти звуки при зникненні об'єкту"
-
 msgid "CMPTMNU_SOUNDTARGET"
 msgstr "Використовувати оригінальну обробку звуку"
 
@@ -3356,7 +3281,7 @@ msgid "PLYRMNU_PLAYERSKIN"
 msgstr "Скін"
 
 msgid "PLYRMNU_SWITCHONPICKUP"
-msgstr "Зміна зброї при підйомі"
+msgstr "Зміна зброї при піднятті"
 
 msgid "PLYRMNU_PRESSSPACE"
 msgstr "Натисніть \\cjПРОБІЛ"
@@ -3584,7 +3509,7 @@ msgid "AUTOMAPMNU_TEXTURED"
 msgstr "Дозволити текстури на автокарті"
 
 msgid "AUTOMAPMNU_SHOWITEMS"
-msgstr "Показати кількість предметів"
+msgstr "Показати лічильники предметів"
 
 msgid "AUTOMAPMNU_SHOWMONSTERS"
 msgstr "Показати кількість монстрів"
@@ -3614,7 +3539,7 @@ msgid "AUTOMAPMNU_SHOWTRIGGERLINES"
 msgstr "Показати трігер лінії"
 
 msgid "AUTOMAPMNU_SHOWTHINGSPRITES"
-msgstr "Показати спрайте об'єктів"
+msgstr "Показати спрайти об'єктів"
 
 msgid "AUTOMAPMNU_PTOVERLAY"
 msgstr "Показати портали в режимі оверлею"
@@ -3656,10 +3581,10 @@ msgid "SCRBRDMNU_OTHERPLAYERCOLOR"
 msgstr "Колір інших гравців"
 
 msgid "SCRBRDMNU_DEATHMATCH"
-msgstr "Параметри бою на смерть"
+msgstr "Параметри дезматчу"
 
 msgid "SCRBRDMNU_TEAMDEATHMATCH"
-msgstr "Параметри командного бою на смерть"
+msgstr "Параметри командного дезматчу"
 
 msgid "ALTHUDMNU_TITLE"
 msgstr "Альтернативний інтерфейс"
@@ -3790,9 +3715,6 @@ msgstr "Використовувати ефект шуму"
 msgid "DSPLYMNU_OLDTRANS"
 msgstr "Класична прозорість"
 
-msgid "DSPLYMNU_TRANSSOUL"
-msgstr "Прозорість втрачених душ"
-
 msgid "DSPLYMNU_FAKECONTRAST"
 msgstr "Імітація контрастного освітлення"
 
@@ -3917,7 +3839,7 @@ msgid "HUDMNU_SCALEOPT"
 msgstr "Налаштування масштабування"
 
 msgid "MISCMNU_QUERYIWAD"
-msgstr "Показувати вибір IWAD при запуску"
+msgstr "Показувати вікно вибору IWAD при запуску"
 
 msgid "MISCMNU_ALLCHEATS"
 msgstr "Використовувати чіти з усіх ігр"
@@ -3946,9 +3868,6 @@ msgstr "Налаштування мережі"
 msgid "NETMNU_LOCALOPTIONS"
 msgstr "Локальні налаштування"
 
-msgid "NETMNU_MOVEPREDICTION"
-msgstr "Прогнозування руху"
-
 msgid "NETMNU_LINESPECIALPREDICTION"
 msgstr "Прогнозування дій на карті"
 
@@ -3964,20 +3883,11 @@ msgstr "Налаштування сервера"
 msgid "NETMNU_EXTRATICS"
 msgstr "Додаткові тіки"
 
-msgid "NETMNU_TICBALANCE"
-msgstr "Балансування затримки"
-
-msgid "OPTVAL_ORIGINAL"
-msgstr "Початковий"
-
-msgid "OPTVAL_OPTIMIZED"
-msgstr "Оптимізований"
-
 msgid "OPTVAL_CLASSIC"
 msgstr "Класичний (швидше)"
 
 msgid "OPTVAL_PRECISE"
-msgstr "Точний"
+msgstr "Точне"
 
 msgid "OPTVAL_CAPPED"
 msgstr "Обмежений"
@@ -4039,15 +3949,6 @@ msgstr "Гравець"
 
 msgid "OPTVAL_MAP"
 msgstr "Карта"
-
-msgid "OPTVAL_SCALETO640X400"
-msgstr "Масштабувати до 640x400"
-
-msgid "OPTVAL_PIXELDOUBLE"
-msgstr "Подвійні пікселі"
-
-msgid "OPTVAL_PIXELQUADRUPLE"
-msgstr "Четверні пікселі"
 
 msgid "OPTVAL_CURRENTWEAPON"
 msgstr "поточної зброї"
@@ -4142,15 +4043,6 @@ msgstr "Тільки кольори, визначені картою"
 msgid "OPTVAL_NODOORS"
 msgstr "Все крім дверей"
 
-msgid "OPTVAL_DOUBLE"
-msgstr "Подвійний"
-
-msgid "OPTVAL_TRIPLE"
-msgstr "Потрійний"
-
-msgid "OPTVAL_QUADRUPLE"
-msgstr "Четверний"
-
 msgid "OPTVAL_ITEMPICKUP"
 msgstr "Підняття предметів"
 
@@ -4191,16 +4083,13 @@ msgid "OPTVAL_MBFSTRICT"
 msgstr "MBF (суворий)"
 
 msgid "OPTVAL_MBF21"
-msgstr ""
+msgstr "MBF21"
 
 msgid "OPTVAL_MBF21STRICT"
 msgstr "MBF21 (суворий)"
 
 msgid "OPTVAL_ZDOOM2063"
 msgstr "ZDoom 2.0.63"
-
-msgid "OPTVAL_ALLUNACKNOWLEDGED"
-msgstr "Всі невідомі"
 
 msgid "OPTVAL_ERRORS"
 msgstr "Помилки"
@@ -4223,12 +4112,6 @@ msgstr "Програмний рендер (Doom)"
 msgid "OPTVAL_SWDOOMTC"
 msgstr "True Color програмний рендер"
 
-msgid "OPTVAL_DEDICATED"
-msgstr "Високопродуктивний"
-
-msgid "OPTVAL_INTEGRATED"
-msgstr "Енергозбереження"
-
 msgid "OPTVAL_VANILLA"
 msgstr "Ванільний"
 
@@ -4237,12 +4120,6 @@ msgstr "ZDoom (примусово)"
 
 msgid "OPTVAL_VTFVANILLA"
 msgstr "Vanilla (примусово)"
-
-msgid "OPTVAL_VTAZDOOM"
-msgstr "Автоматично (переважно ZDoom)"
-
-msgid "OPTVAL_VTAVANILLA"
-msgstr "Автоматично (переважно Vanilla)"
 
 msgid "OPTVAL_SMALL"
 msgstr "Маленький"
@@ -4335,19 +4212,13 @@ msgid "OPTSTR_HERETIC"
 msgstr "Heretic"
 
 msgid "OPTSTR_CHEX"
-msgstr "Chex"
-
-msgid "OPTSTR_NOSOUND"
-msgstr "Без звуку"
+msgstr "Chex®"
 
 msgid "OPTSTR_NOINTERPOLATION"
 msgstr "Без інтерполяції"
 
 msgid "OPTSTR_SPLINE"
 msgstr "Сплайн"
-
-msgid "OPTSTR_OPENAL"
-msgstr "OpenAL"
 
 msgid "DSPLYMNU_GLOPT"
 msgstr "Апаратний рендер"
@@ -4361,12 +4232,6 @@ msgstr "Налаштування апаратного рендеру"
 msgid "GLMNU_DYNLIGHT"
 msgstr "Налаштування динамічного освітлення"
 
-msgid "GLMNU_PREFS"
-msgstr "Налаштування"
-
-msgid "GLTEXMNU_TRIMSPREDGE"
-msgstr "Обрізати краї спрайтів"
-
 msgid "GLTEXMNU_SORTDRAWLIST"
 msgstr "Сортувати списки текстур"
 
@@ -4374,10 +4239,7 @@ msgid "GLLIGHTMNU_TITLE"
 msgstr "Динамічне освітлення"
 
 msgid "GLLIGHTMNU_LIGHTSENABLED"
-msgstr "Динамічне освітлення (OpenGL)"
-
-msgid "GLLIGHTMNU_LIGHTDEFS"
-msgstr "Дозволити визначення світла"
+msgstr "Динамічне освітлення"
 
 msgid "GLLIGHTMNU_LIGHTSPRITES"
 msgstr "Освітлення впливає на спрайти"
@@ -4394,17 +4256,11 @@ msgstr "Якість проекцій тіней"
 msgid "GLLIGHTMNU_LIGHTSHADOWMAPFILTER"
 msgstr "Фільтр проекцій тіней"
 
-msgid "GLPREFMNU_FOGMODE"
-msgstr "Режим туману"
-
 msgid "GLPREFMNU_FOGFORCEFULLBRIGHT"
 msgstr "Туман вмикає режим максимальної яскравості"
 
 msgid "GLPREFMNU_WPNLIGHTSTR"
 msgstr "Сила спалахів зброї"
-
-msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
-msgstr "Карта оточення на дзеркалах"
 
 msgid "GLPREFMNU_ENV"
 msgstr "Покращений режим нічного бачення"
@@ -4429,9 +4285,6 @@ msgstr "Спрайти повертаються в камеру"
 
 msgid "GLPREFMNU_PARTICLESTYLE"
 msgstr "Тип частинок"
-
-msgid "GLPREFMNU_RENDERQUALITY"
-msgstr "Якість рендерингу"
 
 msgid "GLPREFMNU_VRMODE"
 msgstr "Стерео 3D VR"
@@ -4473,7 +4326,7 @@ msgid "OPTVAL_BRIGHT"
 msgstr "Яскраво"
 
 msgid "OPTVAL_DARK"
-msgstr "Темно"
+msgstr "Темна"
 
 # This refers to the Doom Legacy port, not a legacy lighting style!
 msgid "OPTVAL_LEGACY"
@@ -4481,9 +4334,6 @@ msgstr "Doom Legacy"
 
 msgid "OPTVAL_SOFTWARE"
 msgstr "Програмно"
-
-msgid "OPTVAL_OPTIMAL"
-msgstr "Оптимально"
 
 msgid "OPTVAL_YAXIS"
 msgstr "По горизонталі"
@@ -4496,9 +4346,6 @@ msgstr "Квадратні"
 
 msgid "OPTVAL_ROUND"
 msgstr "Круглі"
-
-msgid "OPTVAL_RADIAL"
-msgstr "Радіальний"
 
 msgid "OPTVAL_PIXELFUZZ"
 msgstr "Піксельний шум"
@@ -4563,9 +4410,6 @@ msgstr "Режим TrueColor"
 msgid "TCMNU_TITLE"
 msgstr "Налаштування TrueColor"
 
-msgid "TCMNU_TRUECOLOR"
-msgstr "Вивід TrueColor"
-
 msgid "TCMNU_MINFILTER"
 msgstr "Лінійний фільтр при зменшенні масштабу"
 
@@ -4574,24 +4418,6 @@ msgstr "Лінійний фільтр при збільшенні масштаб
 
 msgid "TCMNU_MIPMAP"
 msgstr "Міп-маппінг для текстур"
-
-msgid "TCMNU_DYNLIGHTS"
-msgstr "Динамічне освітлення (програмне)"
-
-msgid "OS_TITLE"
-msgstr "Пошук налаштувань"
-
-msgid "OS_ANY"
-msgstr "Пошук по слову"
-
-msgid "OS_ALL"
-msgstr "Пошук по усіх словах"
-
-msgid "OS_NO_RESULTS"
-msgstr "Результатів не знайдено."
-
-msgid "OS_LABEL"
-msgstr "Пошук:"
 
 msgid "AUTOMAPMNU_SHOWKEYS_ALWAYS"
 msgstr "Завжди показувати ключі"
@@ -4607,7 +4433,7 @@ msgid "TXT_LONER"
 msgstr "%s тепер наодинці."
 
 msgid "TXT_LEFTWITHFRAGS"
-msgstr "%s покидає гру з такими фрагами: %d "
+msgstr "%s покидає гру з такими фрагами: %d"
 
 msgid "TXT_LEFTTHEGAME"
 msgstr "%s покидає гру"
@@ -4628,7 +4454,7 @@ msgid "TXT_OTHERENGINESG"
 msgstr "Збереження \"%s\" з іншого двигуна на базі ZDoom:"
 
 msgid "TXT_TOOOLDSG"
-msgstr "Збереження \"%s\" з старішої версії: %d (%e остання сумісна)"
+msgstr "Збереження \"%s\" з старішої версії: %d (%e остання сумісна)."
 
 # Shouldn’t this say “%e is the newest supported”?
 # 
@@ -4636,7 +4462,7 @@ msgstr "Збереження \"%s\" з старішої версії: %d (%e о�
 # 
 # Ask Randi: The text is old. I won't change it.
 msgid "TXT_TOONEWSG"
-msgstr "Збереження \"%s\" з новіщої версії: %d (%e остання сумісна)"
+msgstr "Збереження \"%s\" з новіщої версії: %d (%e остання сумісна)."
 
 msgid "TXT_NOMAPSG"
 msgstr "В збереженні \"%s\" відстутня дана карта."
@@ -4645,7 +4471,7 @@ msgid "TXT_NOGLOBALSJSON"
 msgstr "\"%s\" є недійсним збереженням: Відсутній \"globals.json\"."
 
 msgid "TXT_SGINFOERR"
-msgstr "Неможливо отримати доступ до збереження в \"%s\"."
+msgstr "Неможливо отримати доступ до збереження в \"%s\""
 
 msgid "TXT_SAVEPENDING"
 msgstr "Збереження гри все ще очікується."
@@ -4669,9 +4495,6 @@ msgstr "Помилка створення знімку екрану."
 msgid "TXT_BY"
 msgstr "гравцем %s"
 
-msgid "TXT_QUITENDOOM"
-msgstr "Натисніть будь-яку клавішу або клацніть будь-де у вікні, щоб вийти."
-
 msgid "HUDMNU_FLASH"
 msgstr "Налаштування змішування екрану"
 
@@ -4683,9 +4506,6 @@ msgstr "Приціл"
 
 msgid "MSGMNU_SUBTITLES"
 msgstr "Субтитри"
-
-msgid "GLPREFMNU_PALTONENOGREY"
-msgstr "Прибрати сірі тіні"
 
 msgid "HUDMNU_FONTOPTIONS"
 msgstr "Налаштування шрифтів"
@@ -4727,11 +4547,6 @@ msgstr "Значення масштабування"
 msgid "SCALEMNU_RATIO"
 msgstr "Співвідношення сторін"
 
-# as in "Build engine". This should not be translated unless there is a
-# translated name for the engine
-msgid "OPTVAL_BUILD"
-msgstr "Build"
-
 # sv_alwaystally
 msgid "MISCMNU_ALWAYSTALLY"
 msgstr "Показати екран статистики після виходу з карти"
@@ -4756,13 +4571,13 @@ msgid "OPTVAL_MODERN"
 msgstr "Сучасна (WASD)"
 
 msgid "OPTVAL_MODERNLEFT"
-msgstr "Сучасна (цифрова клавіатура)"
+msgstr "Сучасна (Для лівшів / Нумпад)"
 
 msgid "MISCMNU_SETSLOTSTRICT"
 msgstr "Суворе налаштування клавіш для зброї/гравців"
 
 msgid "MISCMNU_WIPERCENT"
-msgstr "Використовуйте відсотки на екрані статистики"
+msgstr "Використовувати відсотки на екрані статистики"
 
 msgid "MISCMNU_CLEANSTAT"
 msgstr "Класичний розмір екрану статистики ZDoom"
@@ -4879,11 +4694,11 @@ msgstr "Вимкнути підбір випавших предметів на �
 
 # Disables autoloading save on death
 msgid "MISCMNU_RESTARTONDEATH"
-msgstr "Перезавантажувати карту після смерті гравця"
+msgstr "Старт з пістолета після смерті гравця"
 
 # Resets inventory on every map
 msgid "GMPLYMNU_PISTOLSTART"
-msgstr "Старт тільки з пістолетом"
+msgstr "Стартувати з пістолетом кожну карту"
 
 msgid "CMPTMNU_VOODOOZOMBIES"
 msgstr "Дозволити створення гравців-зомбі"
@@ -4936,7 +4751,7 @@ msgid "ID24_CC_SHOCKTROOPER"
 msgstr "Штурмовик"
 
 msgid "ID24_CC_MINDWEAVER"
-msgstr "Розумовий ткач"
+msgstr "Ткач розуму"
 
 msgid "ID24_CC_VASSAGO"
 msgstr "Вассаго"
@@ -4945,22 +4760,22 @@ msgid "ID24_CC_TYRANT"
 msgstr "Тиран"
 
 msgid "ID24_OB_GHOUL"
-msgstr ""
+msgstr "%o впійма@[adj_1_ua] енергетичну кулю гуля."
 
 msgid "ID24_OB_BANSHEE"
-msgstr ""
+msgstr "%o було ліквідовано банші."
 
 msgid "ID24_OB_SHOCKTROOPER"
-msgstr ""
+msgstr "%o було розплавлено штурмовиком."
 
 msgid "ID24_OB_MINDWEAVER"
-msgstr ""
+msgstr "%o було скошено ткачем розуму."
 
 msgid "ID24_OB_VASSAGO"
-msgstr ""
+msgstr "%o було спопелено вассаго."
 
 msgid "ID24_OB_TYRANT"
-msgstr ""
+msgstr "%o було підірвано на куски тираном."
 
 msgid "AUTOMAPMNU_SHOWLEVELNAME"
 msgstr "Показати назву рівня"
@@ -5048,17 +4863,13 @@ msgstr "Таймер голосування (секунди)"
 msgid "NETMNU_CHATSLOMO"
 msgstr "Повільний режим чату (секунди)"
 
-msgid "JOYMNU_HAPTRIGGERS"
-msgstr "Увімкнути тактильні курки"
-
 #, fuzzy
 msgid "OPTMNU_HAPTICS"
 msgstr "Налаштування тактильності"
 
 # How the engine should handle haptics in old mods
-#, fuzzy
 msgid "HAPMNU_COMPAT"
-msgstr "Рівень сумісності з тактильним зворотним зв'язком"
+msgstr "Рівень сумісності з тактильним зворотнім зв'язком"
 
 msgid "OPTVAL_MATCH"
 msgstr "Матч"
@@ -5067,9 +4878,8 @@ msgstr "Матч"
 msgid "OPTVAL_WARN"
 msgstr "Попередження"
 
-#, fuzzy
 msgid "HAPMNU_OPTIONS"
-msgstr "Налаштування джерел тактильного зворотного зв'язку"
+msgstr "Налаштування джерел тактильного зворотнього зв'язку"
 
 # Rumble when using ui elements
 #, fuzzy
@@ -5175,10 +4985,10 @@ msgid "TAG_REPELLENT"
 msgstr "Репелент проти слизняків"
 
 msgid "TAG_CHEXARMOR"
-msgstr "Chex-броня"
+msgstr "Chex®-броня"
 
 msgid "TAG_SUPERCHEXARMOR"
-msgstr "Супер Chex-броня"
+msgstr "Супер Chex®-броня"
 
 msgid "TAG_CHEXMAP"
 msgstr "Комп'ютерна карта району"
@@ -5242,3 +5052,481 @@ msgstr "Контраст"
 
 msgid "DSPLYMNU_SATURATION"
 msgstr "Насиченість"
+
+msgid "ACCMNU_TOOLTIP_LINES"
+msgstr "Лінії підказок"
+
+msgid "ACCMNU_TOOLTIP_SPEED"
+msgstr "Швидкість прокрутки підказок"
+
+msgid "ACCMNU_TOOLTIP_DELAY"
+msgstr "Затримка прокрутки підказок"
+
+msgid "ACCMNU_TOOLTIP_ALPHA"
+msgstr "Прозорість фону підказок"
+
+msgid "ACCMNU_TOOLTIP_CAP"
+msgstr "Обмежити ширину підказок"
+
+msgid "ACCMNU_TOOLTIP_SCALE"
+msgstr "Великий розмір підказок"
+
+msgid "ACCMNU_TOOLTIP_EXAMPLE"
+msgstr ""
+"Це приклад підказки.\n"
+"Ось додатковий текст.\n"
+"…\n"
+"Ось дуже довгий рядок тексту, який, здається, просто триває безкінечно та не має нічого, щоб розповісти і, мабуть, він такий довгий лише тому, що розробникам важко пояснити, що робить той чи інший параметр."
+
+msgid "ACCMNU_TOOLTIP"
+msgstr "Підказки"
+
+msgid "ACCMNU_TOOLTIP_LIGHT_RADIUS"
+msgstr ""
+"Контролює радіус світла навколо гравця в одиницях карти. Більші значення "
+"роблять оточення яскравішим."
+
+msgid "ACCMNU_TOOLTIP_LIGHT_EXTRA"
+msgstr ""
+"Кількість секторного освітлення, яку потрібно додати до існуючих рівнів "
+"секторного освітлення, зберігаючи при цьому існуючий режим освітлення."
+
+msgid "ACCMNU_LIGHT_RADIUS"
+msgstr "Радіус світла від гравця"
+
+msgid "DSPLYMNU_ROCKETEXPSTYLE"
+msgstr "Стиль відображення вибуху"
+
+msgid "OPTVAL_ROCKETEXP_STYLE_TRANS"
+msgstr "Прозорий"
+
+msgid "PICKER_FILELOADING"
+msgstr "Завантаження файлів"
+
+msgid "DSPLYMNU_IMAGEADJUST"
+msgstr "Калібрування зображення"
+
+msgid "DSPLYMNU_IMAGEADJUST_TOP1"
+msgstr "Зі звичайної відстані перегляду налаштуйте ці повзунки."
+
+msgid "DSPLYMNU_IMAGEADJUST_TOP2"
+msgstr ""
+"Збільшення масштабу/суперсемплінг може призвести до неправильного виводу."
+
+msgid "DSPLYMNU_IMAGEADJUST_TOP3"
+msgstr "Будь ласка, вимкніть їх перед налаштуванням."
+
+msgid "DSPLYMNU_TOOLTIP_GAMMA"
+msgstr ""
+"Компенсує обмеження вашого монітора. Налаштовуйте, доки вертикальні сірі "
+"блоки не зникнуть. Не використовуйте це для того, щоб зробити гру "
+"яскравішою, лише щоб переконатися, що зображення калібрується відповідно до "
+"вашого пристрою."
+
+msgid "DSPLYMNU_TOOLTIP_BLACKPOINT"
+msgstr ""
+"Компенсує монітори, які неправильно відображають темні пікселі. "
+"Налаштовуйте, доки діагональні білі блоки не зникнуть. Не використовуйте це "
+"для того, щоб зробити гру яскравішою, лише щоб переконатися, що зображення "
+"калібрується відповідно до вашого пристрою."
+
+#, fuzzy
+msgid "OPTVAL_SMOOTH"
+msgstr "Плавний"
+
+#, fuzzy
+msgid "TAG_MACIL"
+msgstr "Масіл"
+
+#, fuzzy
+msgid "TAG_MAULER"
+msgstr "Розсіювач"
+
+msgid "TAG_GLAUNCHER"
+msgstr "Гранатомет"
+
+msgid "CMPTMNU_AUTO"
+msgstr "Автоматично визначати налаштування сумісності"
+
+msgid "CMPTMNU_EMULATEMIKOPORTALS"
+msgstr "Емулювати Mikoportal-и"
+
+msgid "HAPMNU_TITLE"
+msgstr "Налаштування відгуку тактильності"
+
+msgid "OPENALMNU_MUSICMODE"
+msgstr "Режим музики"
+
+msgid "ACCMNU_LIGHT_EXTRA"
+msgstr "Додаткове освітлення"
+
+msgid "ACCMNU_LIGHT"
+msgstr "Освітлення"
+
+msgid "CNTRLMNU_ADJUST_LIGHTS"
+msgstr "Коригування освітлення"
+
+msgid "DSPLYMNU_TOOLTIP_IMAGEADJUST_RESET"
+msgstr "Скидає всі параметри в цьому меню до значень за замовчуванням."
+
+msgid "DSPLYMNU_TOOLTIP_BRIGHTNESS"
+msgstr ""
+"Застосовує лінійне регулювання яскравості. Налаштуйте відповідно до власних "
+"уподобань або для того, щоб бачити в темряві."
+
+msgid "DSPLYMNU_TOOLTIP_CONTRAST"
+msgstr ""
+"Регулює сприйняття відмінностей між схожими кольорами. Контролює, наскільки "
+"чіткими/розмитими виглядатимуть зображення. Налаштуйте відповідно до власних"
+" уподобань."
+
+msgid "DSPLYMNU_TOOLTIP_SATURATION"
+msgstr ""
+"Регулює інтенсивність кольорів, роблячи зображення більш яскравим або "
+"приглушеним. Налаштуйте відповідно до власних уподобань."
+
+msgid "DSPLYMNU_IMAGEADJUST_BOTTOM"
+msgstr "Регулюйте, поки колір не стане рівномірним сірим."
+
+msgid "ACTION_COPYTOCLIPBOARD"
+msgstr "Скопіювати в буфер обміну"
+
+msgid "ACTION_RESTART"
+msgstr "Рестарт"
+
+msgid "ACTION_ABORT"
+msgstr "Скасувати"
+
+msgid "ACTION_STARTGAME"
+msgstr "Почати гру"
+
+msgid "ACTION_KICK"
+msgstr "Викинути"
+
+msgid "ACTION_BAN"
+msgstr "Забанити"
+
+msgid "ERRORMNU_SAVE"
+msgstr "Зберегти звіт"
+
+msgid "ERROR_FATAL"
+msgstr "Критична помилка"
+
+msgid "ERROR_ABORT"
+msgstr "Не вдалося продовжити виконання."
+
+msgid "FILEPICKER_ANY"
+msgstr "Усі файли"
+
+msgid "FILEPICKER_REPORTS"
+msgstr "ZIP-архів із звітами про збої"
+
+msgid "PICKER_PLAYERCLASS"
+msgstr "Клас гравця"
+
+msgid "ACTION_OPENWADDIR"
+msgstr "Оглянути WAD-и"
+
+msgid "ACTION_OPENCONFIGDIR"
+msgstr "Оглянути файли конфігурацій"
+
+msgid "OPTMNU_OPENWADS"
+msgstr "Оглянути папку IWAD-ів"
+
+msgid "SNDMNU_NOMIDIOPTIONS"
+msgstr "Пристрій MIDI не надає жодних налаштувань."
+
+msgid "HUDMNU_CROSSHAIRCOLORFULL"
+msgstr "Колір прицілу при повному здоров'ї"
+
+msgid "HUDMNU_CROSSHAIRCOLORMAX"
+msgstr "Колір прицілу при максимальному здоров'ї"
+
+msgid "HUDMNU_CROSSHAIRCOLORS"
+msgstr "Динамічні кольори прицілу"
+
+msgid "HUDMNU_CROSSHAIRYOFFSET"
+msgstr "Вертикальне зміщення прицілу"
+
+#, fuzzy
+msgid "OPTVAL_VTAVANILLA"
+msgstr "Автоматично (переважно Vanilla)"
+
+#, fuzzy
+msgid "OPTVAL_VTAZDOOM"
+msgstr "Автоматично (переважно ZDoom)"
+
+#, fuzzy
+msgid "JOYMNU_ANALOGRUN"
+msgstr "Аналоговий запуск"
+
+msgid "OPTVAL_ROCKETEXP_STYLE_ADD"
+msgstr "Адаптивний"
+
+msgid "OPTVAL_LAX"
+msgstr "Гнучке"
+
+msgid "OPTVAL_STRICT"
+msgstr "Точний"
+
+#, fuzzy
+msgid "DSPLYMNU_BLACKPOINT"
+msgstr "Компенсація точки чорного"
+
+msgid "DSPLYMNU_POWERUPFADE"
+msgstr "Насиченість ефектів від супербонусів"
+
+#, fuzzy
+msgid "OPTVAL_SBSLETTERBOX"
+msgstr "Режим Side-by-Side (Letterbox)"
+
+#, fuzzy
+msgid "OPTVAL_DIRECTMIX"
+msgstr "Пряме змішування"
+
+#, fuzzy
+msgid "OPTVAL_SUPERSTEREO"
+msgstr "Супер-стерео"
+
+#, fuzzy
+msgid "OPENALMNU_SUPERSTEREOWIDTH"
+msgstr "Ширина суперстереоефекту"
+
+msgid "VALFORMAT_DB"
+msgstr "%s дБ"
+
+#, fuzzy
+msgid "VALFORMAT_DB_P_METER"
+msgstr "%s дБ/м"
+
+#, fuzzy
+msgid "VALFORMAT_DEGREES"
+msgstr "%s град"
+
+#, fuzzy
+msgid "VALFORMAT_FPS"
+msgstr "%s фпс"
+
+#, fuzzy
+msgid "VALFORMAT_HZ"
+msgstr "%s Гц"
+
+#, fuzzy
+msgid "VALFORMAT_METER"
+msgstr "%s м"
+
+#, fuzzy
+msgid "VALFORMAT_MSECOND"
+msgstr "%s мс"
+
+msgid "VALFORMAT_MULTIPLIER"
+msgstr "%s ×"
+
+msgid "VALFORMAT_PERCENT"
+msgstr "%s %%"
+
+msgid "VALFORMAT_SECOND"
+msgstr "%s с"
+
+#, fuzzy
+msgid "MAPCOLORMNU_SECTORFILLALPHA"
+msgstr "Заповнення альфа-каналу"
+
+#, fuzzy
+msgid "MAPCOLORMNU_SECTORFILLCOLOR"
+msgstr "Заповнення кольору"
+
+#, fuzzy
+msgid "ACCMNU_DOUBLECLICK_THRESHOLD"
+msgstr "Поріг подвійного кліку"
+
+#, fuzzy
+msgid "ACCMNU_TOOLTIP_DOUBLECLICK_THRESHOLD"
+msgstr "Час між послідовними натисканнями для реєстрації подвійного кліку"
+
+msgid "UPDATER_CHECK_FOR_UPDATES"
+msgstr "Перевірка оновлень"
+
+msgid "UPDATER_SETTINGS"
+msgstr "Налаштування оновлювача"
+
+msgid "UPDATER_PROMPT_TO_INSTALL"
+msgstr "Пропонувати встан."
+
+msgid "UPDATER_INTERVAL"
+msgstr "Перевіряти кожен:"
+
+msgid "UPDATER_UPDATE_AVAILABLE"
+msgstr "Доступне нове оновлення"
+
+msgid "UPDATER_UPDATE_SKIP"
+msgstr "Пропустити оновлення"
+
+msgid "UPDATER_TITLE"
+msgstr "Шукач оновлень"
+
+msgid "UPDATER_DISABLE"
+msgstr "Вимкнути шукач оновлень"
+
+msgid "UPDATER_CHECK_FAILED"
+msgstr "Не вдалось перевірити оновлення"
+
+msgid "UPDATER_UPDATE_FAILED"
+msgstr "Не вдалося оновити"
+
+msgid "UPDATER_YES_PROMPT"
+msgstr "Так і пропонувати встановлювати оновлення"
+
+msgid "UPDATER_DISMISS_UPDATE"
+msgstr "Відхилити оновлення?"
+
+msgid "UPDATER_ASK_AUTO"
+msgstr ""
+"Чи бажаєте ви автоматично перевіряти наявність оновлень?\n"
+"(це можна змінити пізніше на вкладці налаштувань)"
+
+msgid "UPDATER_ASK_INTERVAL"
+msgstr ""
+"Як часто ви хочете перевіряти наявність оновлень?\n"
+"(це можна змінити пізніше на вкладці налаштувань)"
+
+msgid "UPDATER_ZIP_FAIL"
+msgstr "Не вдалось відкрити zip-файл"
+
+msgid "UPDATER_ZIP_ERROR"
+msgstr "Не вдалось розпакувати zip, помилка: '{}' під час запису файлу '{}'"
+
+msgid "UPDATER_UPDATING"
+msgstr "Оновлення..."
+
+msgid "UPDATER_STARTING"
+msgstr "Початок завантаження..."
+
+#, fuzzy
+msgid "UPDATER_SUCCESS"
+msgstr "Оновлення успішне, перезапуск лаунчера."
+
+msgid "UPDATER_UP_TO_DATE"
+msgstr "Остання версія!"
+
+msgid "UPDATER_CANCELLED"
+msgstr "Оновлення було скасовано"
+
+#, fuzzy
+msgid "UPDATER_INVALID_JSON"
+msgstr "Помилка файлу оновлення (JSON)"
+
+#, fuzzy
+msgid "UPDATER_NOT_A_DIR"
+msgstr "Шлях '{}' не веде в папку"
+
+msgid "OPTVAL_DISABLE"
+msgstr "Вимкнути"
+
+msgid "OPTVAL_NOTIFY"
+msgstr "Повідомити"
+
+msgid "OPTVAL_DAILY"
+msgstr "Щодня"
+
+msgid "OPTVAL_WEEKLY"
+msgstr "Щотижня"
+
+msgid "OPTVAL_MONTHLY"
+msgstr "Щомісяця"
+
+msgid "TXT_DOWNLOADING"
+msgstr "Завантаження"
+
+#, fuzzy
+msgid "TXT_EXPERIMENTAL"
+msgstr "Експериментальне"
+
+msgid "TXT_UPDATE"
+msgstr "Оновити"
+
+msgid "TXT_UPDATED"
+msgstr "Оновлено"
+
+msgid "TXT_CANCELLED"
+msgstr "Скасовано"
+
+msgid "TXT_BACK"
+msgstr "Назад"
+
+msgid "TXT_DISMISS"
+msgstr "Відхилити"
+
+msgid "TXT_SKIP"
+msgstr "Пропустити"
+
+msgid "TXT_CONFIRM"
+msgstr "Підтвердити"
+
+msgid "TXT_OK"
+msgstr "OK"
+
+#, fuzzy
+msgid "CMPTMNU_TRANSFERSECRET"
+msgstr "Механізм зміни підлоги з передаванням секрету в BOOM"
+
+msgid "PICKER_THEME"
+msgstr "Тема"
+
+msgid "OPTVAL_LIGHT"
+msgstr "Світла"
+
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Безсмертя: {ВВІМК|ВИМК}"
+
+msgid "STSTR_DQD2{ON|OFF}"
+msgstr "Повне безсмертя: {ВВІМК|ВИМК}"
+
+msgid "STSTR_NC{ON|OFF}"
+msgstr "Прохід крізь стіни: {ВВІМК|ВИМК}"
+
+msgid "STSTR_NC2{ON|OFF}"
+msgstr "3D Проліт крізь стіни: {Увімк|Вимк}"
+
+msgid "TXT_BUDDHA{ON|OFF}"
+msgstr "Будда-мод: {ВВІМК|ВИМК}"
+
+msgid "TXT_BUDDHA2{ON|OFF}"
+msgstr "Ультимативний Будда-мод: {ВВІМК|ВИМК}"
+
+msgid "TXT_CHEATPOWER{ON|OFF}"
+msgstr "Сила: {УВІМК|ВИМК}"
+
+msgid "TXT_CHEATSOUND{ON|OFF}"
+msgstr "Налагодження звуку: {УВІМК|ВИМК}"
+
+msgid "TXT_CHEATTICKER{ON|OFF}"
+msgstr "Лічильник: {ВВІМК|ВИМК}"
+
+msgid "TXT_FREEZE{ON|OFF}"
+msgstr "Режим заморозки: {ВВІМК|ВИМК}"
+
+msgid "TXT_LEADBOOTS{ON|OFF}"
+msgstr "Свинцеві чоботи: {УВІМК|ВИМК}"
+
+msgid "TXT_NOTARGET_{ON|OFF}"
+msgstr "Невідчутність: {ВВІМК|ВИМК}"
+
+msgid "TXT_CHASECAM_{ON|OFF}"
+msgstr "Камера від 3-ї особи: {УВІМК|ВИМК}"
+
+msgid "AMSTR_FOLLOW{ON|OFF}"
+msgstr "Прив'язка до гравца: {УВІМК|ВИМК}"
+
+msgid "AMSTR_GRID{ON|OFF}"
+msgstr "Сітка: {ВВІМК|ВИМК}"
+
+msgid "AMSTR_TEX{ON|OFF}"
+msgstr "Текстурний режим: {ВВІМК|ВИМК}"
+
+msgctxt "chex"
+msgid "STSTR_DQD{ON|OFF}"
+msgstr "Невразливість: {УВІМК|ВИМК}"
+
+msgid "MSG{ON|OFF}"
+msgstr "Повідомлення: {УВІМК|ВИМК}"

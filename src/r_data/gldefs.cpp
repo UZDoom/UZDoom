@@ -31,6 +31,7 @@
 #include "skyboxtexture.h"
 #include "texturemanager.h"
 #include "v_video.h"
+#include "hw_cvars.h"
 
 void AddLightDefaults(FLightDefaults *defaults, double attnFactor);
 void AddLightAssociation(const char *actor, const char *frame, const char *light);
@@ -118,7 +119,7 @@ static void ParseVavoomSkybox()
 		sc.MustGetStringName("{");
 		while (!sc.CheckString("}"))
 		{
-			if (facecount<6) 
+			if (facecount<6)
 			{
 				sc.MustGetStringName("{");
 				sc.MustGetStringName("map");
@@ -374,7 +375,7 @@ class GLDefsParser
 		}
 	}
 
-	
+
 	//==========================================================================
 	//
 	//
@@ -1064,7 +1065,7 @@ class GLDefsParser
 			sc.ScriptError("Expected '{'.\n");
 		}
 	}
-	
+
 
 	//-----------------------------------------------------------------------------
 	//
@@ -1088,7 +1089,7 @@ class GLDefsParser
 		while (!sc.CheckString("}"))
 		{
 			sc.MustGetString();
-			if (facecount<6) 
+			if (facecount<6)
 			{
 				sb->faces[facecount] = TexMan.GetGameTexture(TexMan.GetTextureID(sc.String, ETextureType::Wall, FTextureManager::TEXMAN_TryAny|FTextureManager::TEXMAN_Overridable));
 			}
@@ -1103,7 +1104,7 @@ class GLDefsParser
 	}
 
 	//===========================================================================
-	// 
+	//
 	//	Reads glow definitions from GLDEFS
 	//
 	//===========================================================================
@@ -1226,7 +1227,7 @@ class GLDefsParser
 
 				bmtex = TexMan.FindGameTexture(sc.String, ETextureType::Any, FTextureManager::TEXMAN_TryAny);
 
-				if (bmtex == NULL) 
+				if (bmtex == NULL)
 					Printf("Brightmap '%s' not found in texture '%s'\n", sc.String, tex? tex->GetName().GetChars() : "(null)");
 			}
 		}
@@ -1250,7 +1251,7 @@ class GLDefsParser
 		if (bmtex != NULL)
 		{
 			tex->SetBrightmap(bmtex);
-		}	
+		}
 		tex->SetDisableFullbright(disable_fullbright);
 	}
 
@@ -1285,9 +1286,12 @@ class GLDefsParser
 		float speed = 1.f;
 
 		MaterialLayers mlay = { -1000, -1000 };
-		FGameTexture* textures[6] = {};
-		const char *keywords[7] = { "brightmap", "normal", "specular", "metallic", "roughness", "ao", nullptr };
-		const char *notFound[6] = { "Brightmap", "Normalmap", "Specular texture", "Metallic texture", "Roughness texture", "Ambient occlusion texture" };
+
+		#define GLDEFS_MATERIAL_NUM_TEXURE_PROPERTIES 6
+
+		FGameTexture* textures[GLDEFS_MATERIAL_NUM_TEXURE_PROPERTIES] = {};
+		const char *keywords[GLDEFS_MATERIAL_NUM_TEXURE_PROPERTIES] = { "brightmap", "normal", "specular", "metallic", "roughness", "ao" };
+		const char *notFound[GLDEFS_MATERIAL_NUM_TEXURE_PROPERTIES] = { "Brightmap", "Normalmap", "Specular texture", "Metallic texture", "Roughness texture", "Ambient occlusion texture" };
 
 		sc.MustGetString();
 		if (sc.Compare("texture")) type = ETextureType::Wall;
@@ -1301,9 +1305,27 @@ class GLDefsParser
 
 		if (tex == nullptr)
 		{
-			sc.ScriptMessage("Material definition refers nonexistent texture '%s'\n", sc.String);
+			if(gl_strict_gldefs_errors)
+			{
+				sc.ScriptError("Material definition refers nonexistent texture '%s'\n", sc.String);
+			}
+			else
+			{
+				sc.ScriptMessage("Material definition refers nonexistent texture '%s'\n", sc.String);
+			}
 		}
 		else tex->AddAutoMaterials();	// We need these before setting up the texture.
+
+		FString currentName;
+
+		if(tex)
+		{
+			currentName.AppendFormat("texture '%s'", tex->GetName().GetChars());
+		}
+		else
+		{
+			currentName.AppendFormat("missing texture '%s'", sc.String);
+		}
 
 		sc.MustGetToken('{');
 		while (!sc.CheckToken('}'))
@@ -1346,6 +1368,11 @@ class GLDefsParser
 				sc.MustGetFloat();
 				speed = float(sc.Float);
 			}
+			else if (sc.Compare("disablealphatest"))
+			{
+				if(tex) tex->SetTranslucent(true);
+				usershader.disablealphatest = true;
+			}
 			else if (sc.Compare("shader"))
 			{
 				sc.MustGetString();
@@ -1359,7 +1386,7 @@ class GLDefsParser
 				{
 					if (!texName.Compare(textureName))
 					{
-						sc.ScriptError("Trying to redefine custom hardware shader texture '%s' in texture '%s'\n", textureName.GetChars(), tex ? tex->GetName().GetChars() : "(null)");
+						sc.ScriptError("Trying to redefine custom hardware shader texture '%s' in %s\n", textureName.GetChars(), currentName.GetChars());
 					}
 				}
 				sc.MustGetString();
@@ -1373,7 +1400,7 @@ class GLDefsParser
 							mlay.CustomShaderTextures[i] = TexMan.FindGameTexture(sc.String, ETextureType::Any, FTextureManager::TEXMAN_TryAny);
 							if (!mlay.CustomShaderTextures[i])
 							{
-								sc.ScriptError("Custom hardware shader texture '%s' not found in texture '%s'\n", sc.String, tex->GetName().GetChars());
+								sc.ScriptError("Custom hardware shader texture '%s' not found in %s\n", sc.String, currentName.GetChars());
 							}
 
 							texNameList.Push(textureName);
@@ -1384,7 +1411,7 @@ class GLDefsParser
 					}
 					if (!okay)
 					{
-						sc.ScriptError("Error: out of texture units in texture '%s'", tex->GetName().GetChars());
+						sc.ScriptError("Error: out of texture units in %s", currentName.GetChars());
 					}
 				}
 			}
@@ -1402,17 +1429,50 @@ class GLDefsParser
 			}
 			else
 			{
-				for (int i = 0; keywords[i] != nullptr; i++)
+				bool isProperty = false;
+
+				for (int i = 0; i < GLDEFS_MATERIAL_NUM_TEXURE_PROPERTIES; i++)
 				{
 					if (sc.Compare (keywords[i]))
 					{
+						isProperty = true;
 						sc.MustGetString();
 						if (textures[i])
-							Printf("Multiple %s definitions in texture %s\n", keywords[i], tex? tex->GetName().GetChars() : "(null)");
+						{
+							if(gl_strict_gldefs_errors)
+							{
+								sc.ScriptError("Multiple %s definitions in %s\n", keywords[i], currentName.GetChars());
+							}
+							else
+							{
+								sc.ScriptMessage("Multiple %s definitions in %s\n", keywords[i], currentName.GetChars());
+							}
+						}
 						textures[i] = TexMan.FindGameTexture(sc.String, ETextureType::Any, FTextureManager::TEXMAN_TryAny);
 						if (!textures[i])
-							Printf("%s '%s' not found in texture '%s'\n", notFound[i], sc.String, tex? tex->GetName().GetChars() : "(null)");
+						{
+							if(gl_strict_gldefs_errors)
+							{
+								sc.ScriptError("%s '%s' not found in %s\n", notFound[i], sc.String, currentName.GetChars());
+							}
+							else
+							{
+								sc.ScriptMessage("%s '%s' not found in %s\n", notFound[i], sc.String, currentName.GetChars());
+							}
+						}
 						break;
+					}
+				}
+
+				if(!isProperty)
+				{
+					if(gl_strict_gldefs_errors)
+					{
+						sc.ScriptError("Unknown keyword '%s' in %s\n", sc.String, currentName.GetChars());
+					}
+					else
+					{
+						sc.ScriptMessage("Unknown keyword '%s' in %s\n", sc.String, currentName.GetChars());
 					}
 				}
 			}
@@ -1436,7 +1496,7 @@ class GLDefsParser
 
 		tex->SetNoMipmap(no_mipmap);
 
-		FGameTexture **bindings[6] =
+		FGameTexture **bindings[GLDEFS_MATERIAL_NUM_TEXURE_PROPERTIES] =
 		{
 			&mlay.Brightmap,
 			&mlay.Normal,
@@ -1445,7 +1505,7 @@ class GLDefsParser
 			&mlay.Roughness,
 			&mlay.AmbientOcclusion
 		};
-		for (int i = 0; keywords[i] != nullptr; i++)
+		for (int i = 0; i < GLDEFS_MATERIAL_NUM_TEXURE_PROPERTIES; i++)
 		{
 			if (textures[i])
 			{
@@ -1458,6 +1518,20 @@ class GLDefsParser
 
 		if (usershader.shader.IsNotEmpty())
 		{
+			int lump = fileSystem.CheckNumForFullName(usershader.shader.GetChars());
+			if (lump == -1)
+			{
+				if(gl_strict_gldefs_errors)
+				{
+					sc.ScriptError("inexistent shader lump '%s' in %s", usershader.shader.GetChars(), currentName.GetChars());
+				}
+				else
+				{
+					sc.ScriptMessage("inexistent shader lump '%s' in %s", usershader.shader.GetChars(), currentName.GetChars());
+				}
+				return;
+			}
+
 			int firstUserTexture;
 			if ((mlay.Normal || tex->GetNormalmap()) && (mlay.Specular || tex->GetSpecularmap()))
 			{
@@ -1777,6 +1851,7 @@ class GLDefsParser
 			int maplump = -1;
 			UserShaderDesc desc;
 			desc.shaderType = SHADER_Default;
+			desc.shaderFlags = SFlag_LegacyShader;
 			TArray<FString> texNameList;
 			TArray<int> texNameIndex;
 			float speed = 1.f;
@@ -1808,7 +1883,6 @@ class GLDefsParser
 						if (sc.Compare(typeName[i]))
 						{
 							desc.shaderType = typeIndex[i];
-							if (usesBrightmap[i]) desc.shaderFlags |= SFlag_Brightmap;
 							found = true;
 							break;
 						}
@@ -1912,7 +1986,7 @@ class GLDefsParser
 						!usershaders[i].defines.Compare(desc.defines))
 					{
 						SetShaderIndex(tex, i + FIRST_USER_SHADER);
-						tex->SetShaderLayers(mlay);		
+						tex->SetShaderLayers(mlay);
 						return;
 					}
 				}
@@ -1983,7 +2057,7 @@ class GLDefsParser
 			TexMan.RemoveTextureManipulation(cname);
 		}
 	}
-	
+
 
 public:
 	//==========================================================================
@@ -2085,7 +2159,7 @@ public:
 			}
 		}
 	}
-	
+
 	GLDefsParser(int lumpnum, TArray<FLightAssociation> &la)
 	 : sc(lumpnum), workingLump(lumpnum), LightAssociations(la)
 	{

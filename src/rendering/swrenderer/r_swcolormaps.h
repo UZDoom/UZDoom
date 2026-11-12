@@ -23,8 +23,8 @@
 
 #pragma once
 
-
 #include "g_levellocals.h"
+#include "colorspace.h"
 
 struct FSWColormap
 {
@@ -71,7 +71,7 @@ void SetDefaultColormap (const char *name);
 #endif
 
 // MSVC needs the forceinline here.
-FORCEINLINE FDynamicColormap *GetColorTable(const FColormap &cm, PalEntry SpecialColor = 0xffffff)
+FORCEINLINE FDynamicColormap *GetColorTable(const FColormap &cm, PalEntry SpecialColor = Color::str("#fff"))
 {
 	PalEntry c =  SpecialColor.Modulate(cm.LightColor);
 
@@ -93,11 +93,11 @@ FORCEINLINE FDynamicColormap *GetSpriteColorTable(const FColormap &cm, PalEntry 
 		c.Decolorize();
 		c = SpecialColor.Modulate(c);
 	}
-	
+
 	// First colormap is the default Doom colormap.
 	// testcolor and testfade CCMDs modifies the first colormap, so we have to do the check without looking at the actual values stored in NormalLight.
 	if (c == PalEntry(255, 255, 255) && cm.FadeColor == 0 && cm.Desaturation == 0)
 		return &NormalLight;
-	
+
 	return GetSpecialLights(c, cm.FadeColor, cm.Desaturation);
 }

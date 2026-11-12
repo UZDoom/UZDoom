@@ -22,13 +22,13 @@
 */
 
 #include "i_common.h"
-#include "startupinfo.h"
-#include "st_console.h"
-#include "v_text.h"
-#include "version.h"
 #include "palentry.h"
-#include "v_video.h"
+#include "printf.h"
+#include "st_console.h"
+#include "startupinfo.h"
 #include "v_font.h"
+#include "v_video.h"
+#include "version.h"
 
 static NSColor* RGB(const uint8_t red, const uint8_t green, const uint8_t blue)
 {

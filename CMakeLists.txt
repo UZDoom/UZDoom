@@ -1,35 +1,41 @@
 cmake_minimum_required( VERSION 3.16 )
 
-if( COMMAND cmake_policy )
-	if( POLICY CMP0011 )
-		cmake_policy( SET CMP0011 NEW )
-	endif()
-	if( POLICY CMP0054 )
-		cmake_policy( SET CMP0054 NEW )
-	endif()
-	if ( POLICY CMP0067 )
-		cmake_policy( SET CMP0067 NEW )
-	endif()
-	if ( POLICY CMP0091 )
-		cmake_policy( SET CMP0091 NEW )
-		set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
-	endif()
-endif()
-
-if (LIBVPX_VCPKG)
-	list(APPEND VCPKG_MANIFEST_FEATURES "vcpkg-libvpx")
-endif()
-
-if (OPENAL_SOFT_VCPKG)
-	list(APPEND VCPKG_MANIFEST_FEATURES "vcpkg-openal-soft")
-endif()
-
-if (CMAKE_SYSTEM_NAME STREQUAL "Windows" OR (NOT CMAKE_SYSTEM_NAME AND CMAKE_HOST_SYSTEM_NAME STREQUAL "Windows"))
-	# Force static triplet on Windows
-	set(VCPKG_TARGET_TRIPLET "x64-windows-static")
-endif()
+cmake_policy( SET CMP0067 NEW )
+cmake_policy( SET CMP0091 NEW )
+set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 
 project(UZDoom)
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+macro(FLAGS CONFIG CL_FLAGS CC_FLAGS)
+	if(MSVC)
+		set(CMAKE_C_FLAGS_${CONFIG} ${CL_FLAGS} CACHE STRING "${CONFIG} C flags" FORCE)
+		set(CMAKE_CXX_FLAGS_${CONFIG} ${CL_FLAGS} CACHE STRING "${CONFIG} C++ flags" FORCE)
+	else()
+		set(CMAKE_C_FLAGS_${CONFIG} ${CC_FLAGS} CACHE STRING "${CONFIG} C flags" FORCE)
+		set(CMAKE_CXX_FLAGS_${CONFIG} ${CC_FLAGS} CACHE STRING "${CONFIG} C++ flags" FORCE)
+	endif()
+endmacro()
+FLAGS(DEBUG           "/MTd /Zi /Od /RTC1"    "-g3")
+FLAGS(RELEASE         "/MT /Zi /O2 /DNDEBUG"  "-O2 -g1 -DNDEBUG")
+FLAGS(RELWITHDEBINFO  "/MT /Zi /O2"           "-O2 -g")
+FLAGS(MINSIZEREL      "/MT /O2 /Ob2 /DNDEBUG" "-O3 -DNDEBUG")
+if (NOT CMAKE_BUILD_TYPE)
+	message(STATUS "No build type selected.")
+	set(CMAKE_BUILD_TYPE "Release")
+endif()
+add_compile_definitions("CMAKE_BUILD_TYPE=\"${CMAKE_BUILD_TYPE}\"")
+string(TOUPPER "${CMAKE_BUILD_TYPE}" BUILD_TYPE)
+message(STATUS "CMAKE_C_FLAGS_${BUILD_TYPE}: ${CMAKE_C_FLAGS} ${CMAKE_C_FLAGS_${BUILD_TYPE}}")
+message(STATUS "CMAKE_CXX_FLAGS_${BUILD_TYPE}: ${CMAKE_CXX_FLAGS} ${CMAKE_CXX_FLAGS_${BUILD_TYPE}}")
+
+set(ABSL_BUILD_TESTING OFF) # don't build/run abseil tests
+
+# UZDoom itself has no libs. Ensure bundled dependencies are statically linked.
+set( BUILD_SHARED_LIBS OFF CACHE INTERNAL "" FORCE )
 
 # make all targets use LTO - want to do this early in the cmake to ensure it applies to any targets
 option( FORCE_NO_LTO "Turn off LTO even if it would be possible to use it." NO )
@@ -46,21 +52,26 @@ if(NOT FORCE_NO_LTO)
 	endif()
 endif()
 
-if (WIN32 AND VCPKG_TOOLCHAIN)
-	option(LIBVPX_VCPKG "Use libvpx from vcpkg" OFF)
+if(WIN32)
+	option( USE_UPDATER "enable auto-updater" OFF )
 endif()
 
-if (VCPKG_TOOLCHAIN)
-	option(OPENAL_SOFT_VCPKG "Use OpenAL from vcpkg" OFF)
-endif()
+if(USE_UPDATER)
+	set( CURL_REQUIRED TRUE )
 
-if (NOT VCPKG_TOOLCHAIN)
-	set(VCPKG_MANIFEST_FEATURES)
-endif()
+	if (WIN32)
+		option( LOAD_CURL_AT_RUNTIME "load curl at runtime instead of linking" ON )
 
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS OFF)
+		if (NOT MSVC)
+			# NOTE: not a big issue for now but will need to be fixed if we switch over to mingw as the
+			#       primary windows compiler (which we'll probably have to do eventually for C++26 support)
+			message( FATAL_ERROR "updater.exe currently only builds with msvc" )
+		endif()
+		add_executable( updater WIN32 src/win32/updater.c )
+	else()
+		message( FATAL_ERROR "Updater not available on this platform" )
+	endif()
+endif()
 
 find_package(Threads REQUIRED)
 find_package(Python3 3.6 REQUIRED)
@@ -152,21 +163,11 @@ function( add_pk3 PK3_NAME )
 	assort_pk3_source_folder("Source Files" ${ARGN})
 
 	# Phase 4: Create separate copy step, in order to make zdoom depend on pk3s without creating cycle
-	if(DEFINED CMAKE_RUNTIME_OUTPUT_DIRECTORY)
-		set(DEST_DIR "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}")
-	elseif(WIN32)
-		set(DEST_DIR "${PROJECT_BINARY_DIR}/$<CONFIG>")
-	elseif(APPLE)
-		set(DEST_DIR "${PROJECT_BINARY_DIR}/${ZDOOM_EXE_NAME}.app/Contents/Resources")
-	else()
-		set(DEST_DIR "${PROJECT_BINARY_DIR}")
-	endif()
-
 	set(COPY_TARGET_NAME "${PK3_TARGET}_copy")
 	add_custom_target(${COPY_TARGET_NAME} ALL
 		COMMAND ${CMAKE_COMMAND} -E copy_if_different
 			"${ZDOOM_OUTPUT_DIR}/${PK3_NAME}"
-			"${DEST_DIR}/${PK3_NAME}"
+			"${ZDOOM_RESOURCE_DIR}/${PK3_NAME}"
 		DEPENDS ${PK3_TARGET}
 	)
 	add_dependencies(zdoom ${COPY_TARGET_NAME})
@@ -182,22 +183,16 @@ function( add_pk3 PK3_NAME )
 		COMPONENT "Game resources")
 endfunction()
 
-macro( generate_language_files target destination )
+macro( generate_language_files target destination identifier )
 	# right now, this dumps temp files into the source tree and deletes them after build
 	# This should be re-worked to dump stuff into the build tree instead
 	set(lang_script "${CMAKE_CURRENT_SOURCE_DIR}/../libraries/Translation/scripts/compile.py")
 	set(lang_dst "${CMAKE_CURRENT_SOURCE_DIR}/${destination}")
 	set(lang_target "${target}_${destination}")
 
-	set(lang_sources_list "")
-	set(sources ${ARGN})
-	foreach( source_item ${sources} )
-		list(APPEND lang_sources_list "${CMAKE_CURRENT_SOURCE_DIR}/../libraries/Translation/${source_item}")
-	endforeach()
-
 	string( REGEX REPLACE "[^a-zA-Z0-9]" "_" lang_target ${lang_target} )
 
-	add_custom_target(${lang_target} COMMAND Python3::Interpreter -B -E -s "${lang_script}" ${lang_sources_list} "${lang_dst}")
+	add_custom_target(${lang_target} COMMAND Python3::Interpreter -B -E -s "${lang_script}" --recipe ${identifier} --output "${lang_dst}")
 	add_dependencies(${target} ${lang_target})
 	add_custom_command(TARGET ${target} POST_BUILD COMMAND ${CMAKE_COMMAND} -E remove "${lang_dst}")
 endmacro()
@@ -212,14 +207,18 @@ macro( make_release_only )
 	string( REPLACE "/MT " "/MTd " CMAKE_CXX_FLAGS_DEBUG ${CMAKE_CXX_FLAGS_RELEASE} )
 endmacro()
 
-IF( NOT CMAKE_BUILD_TYPE )
-	SET( CMAKE_BUILD_TYPE Debug CACHE STRING
-		"Choose the type of build, options are: Debug Release RelWithDebInfo MinSizeRel."
-		FORCE )
-ENDIF()
-
 set( ZDOOM_OUTPUT_DIR ${CMAKE_BINARY_DIR} CACHE PATH "Directory where zdoom.pk3 and the executable will be created." )
 set( ZDOOM_EXE_NAME "uzdoom" CACHE FILEPATH "Name of the executable to create" )
+
+if(DEFINED CMAKE_RUNTIME_OUTPUT_DIRECTORY)
+	set(ZDOOM_RESOURCE_DIR "${CMAKE_RUNTIME_OUTPUT_DIRECTORY}")
+elseif(WIN32)
+	set(ZDOOM_RESOURCE_DIR "${PROJECT_BINARY_DIR}/$<CONFIG>")
+elseif(APPLE)
+	set(ZDOOM_RESOURCE_DIR "${PROJECT_BINARY_DIR}/${ZDOOM_EXE_NAME}.app/Contents/Resources")
+else()
+	set(ZDOOM_RESOURCE_DIR "${PROJECT_BINARY_DIR}")
+endif()
 
 # Replacement variables for a possible long list of C/C++ compilers compatible with GCC
 if( "${CMAKE_C_COMPILER_ID}" STREQUAL "GNU" OR "${CMAKE_C_COMPILER_ID}" MATCHES "Clang" )
@@ -251,7 +250,6 @@ macro( use_fast_math )
 	set( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${ZD_FASTMATH_FLAG}" )
 endmacro()
 
-
 include( CheckFunctionExists )
 
 macro( gz_require_stricmp )
@@ -272,11 +270,25 @@ option( NO_OPENAL "Disable OpenAL sound support" OFF )
 
 find_package( BZip2 )
 find_package( VPX )
-if (NOT FORCE_INTERNAL_CPPDAP)
-	find_package( cppdap CONFIG )
+
+include( FindPkgConfig )
+if( PkgConfig_FOUND )
+	pkg_check_modules( WEBP IMPORTED_TARGET libwebpdecoder libwebpmux )
 endif()
-if (NOT FORCE_INTERNAL_ZMUSIC)
-	find_package( ZMusic )
+
+if (CURL_REQUIRED)
+	find_package( CURL )
+	if( MSVC AND NOT CURL_FOUND )
+		# Use prebuilt library
+		if ( ARM64 )
+			set( CURL_ROOT_PATH "${CMAKE_CURRENT_SOURCE_DIR}/bin/Windows/curl/arm64" )
+		else()
+			set( CURL_ROOT_PATH "${CMAKE_CURRENT_SOURCE_DIR}/bin/Windows/curl/x64" )
+		endif()
+		set( CURL_INCLUDE_DIRS ${CURL_ROOT_PATH}/include )
+		set( CURL_LIBRARIES ${CURL_ROOT_PATH}/lib/libcurl.dll.a )
+		set( CURL_FOUND TRUE )
+	endif()
 endif()
 
 include( TargetArch )
@@ -285,6 +297,9 @@ target_architecture(TARGET_ARCHITECTURE)
 
 if( ${TARGET_ARCHITECTURE} MATCHES "x86_64" )
 	set( HAVE_VM_JIT ON )
+	if( NOT MSVC )
+		add_compile_options(-msse3)
+	endif()
 endif()
 
 option (HAVE_VULKAN "Enable Vulkan support" ON)
@@ -294,17 +309,10 @@ else()
 	option (HAVE_GLES2 "Enable GLES2 support" ON)
 endif()
 
-# no, we're not using external asmjit for now, we made too many modifications to our's.
-# if the asmjit author uses our changes then we'll update this.
-
-#if( ${HAVE_VM_JIT} )
-#	find_package( asmjit )
-#endif()
-
 if( MSVC )
 	# Eliminate unreferenced functions and data
 	# Perform identical COMDAT folding
-	set( REL_LINKER_FLAGS "/opt:ref /opt:icf /nodefaultlib:msvcrt /TSAWARE /LARGEADDRESSAWARE" )
+	set( REL_LINKER_FLAGS "/opt:ref /opt:icf /nodefaultlib:msvcrt /TSAWARE /LARGEADDRESSAWARE /DEBUG" )
 
 	# String pooling
 	# Function-level linking
@@ -322,8 +330,6 @@ if( MSVC )
 	# Use SSE 2 as minimum always as the true color drawers needs it for __vectorcall
 	#set( ALL_C_FLAGS "${ALL_C_FLAGS} /arch:SSE2") # This is already the default
 
-
-
 	# Avoid CRT DLL dependancies in release builds, optionally generate assembly output for checking crash locations.
 	option( ZDOOM_GENERATE_ASM "Generate assembly output." OFF )
 	if( ZDOOM_GENERATE_ASM )
@@ -332,14 +338,27 @@ if( MSVC )
 		set( REL_C_FLAGS "/Oy /Oi /GS-" )
 	endif()
 
-
 	# Debug allocations in debug builds
 	set( DEB_C_FLAGS "/D _CRTDBG_MAP_ALLOC" )
 
 	# Disable warnings for unsecure CRT functions from VC8+
 	set( ALL_C_FLAGS "${ALL_C_FLAGS} /DUNICODE /D_UNICODE /D_WIN32_WINNT=0x0600 /D_CRT_SECURE_NO_DEPRECATE /D_CRT_SECURE_NO_WARNINGS /D_CRT_NONSTDC_NO_WARNINGS" )
 
-	string(REPLACE "/Ob1 " "/Ob2 " CMAKE_CXX_FLAGS_RELWITHDEBINFO ${CMAKE_CXX_FLAGS_RELWITHDEBINFO} )
+	if( WITH_ASAN )
+		set( ALL_C_FLAGS "${ALL_C_FLAGS} /fsanitize=address" )
+	endif()
+
+	string(REPLACE "/Ob1 " "/Ob2 " CMAKE_CXX_FLAGS_RELWITHDEBINFO "${CMAKE_CXX_FLAGS_RELWITHDEBINFO}" )
+
+	if( CMAKE_CXX_COMPILER_LAUNCHER OR CMAKE_C_COMPILER_LAUNCHER )
+		# For some reason, these cause rebuild issues on some installs of msvc.
+		# These lines are required for ccache to work.
+		# There might be a better way to do this, but I cannot find one.
+		string(REPLACE "/Zi" "/Z7" CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG}")
+		string(REPLACE "/Zi" "/Z7" CMAKE_CXX_FLAGS_RELWITHDEBINFO "${CMAKE_CXX_FLAGS_RELWITHDEBINFO}")
+		string(REPLACE "/Zi" "/Z7" CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG}")
+		string(REPLACE "/Zi" "/Z7" CMAKE_C_FLAGS_RELWITHDEBINFO "${CMAKE_C_FLAGS_RELWITHDEBINFO}")
+	endif()
 else()
 	set( REL_LINKER_FLAGS "" )
 	set( ALL_C_FLAGS "-ffp-contract=off" )
@@ -356,7 +375,6 @@ else()
 		include(CheckSymbolExists)
 		check_symbol_exists( "fts_set" "sys/types.h;sys/stat.h;fts.h" HAVE_FTS )
 		if ( NOT HAVE_FTS )
-			include ( FindPkgConfig )
 			pkg_check_modules( MUSL_FTS musl-fts )
 			if ( MUSL_FTS_FOUND )
 				list(JOIN MUSL_FTS_LDFLAGS " " MUSL_FTS_LDFLAGS_JOINED)
@@ -373,7 +391,11 @@ else()
 	if( APPLE )
 		list(PREPEND CMAKE_PREFIX_PATH "/opt/local")    # port
 		list(PREPEND CMAKE_PREFIX_PATH "/opt/homebrew") # brew
-		set(CMAKE_OSX_DEPLOYMENT_TARGET "10.13")
+		if(DEFINED XCODE_VERSION AND XCODE_VERSION VERSION_LESS 27.0)
+			set(CMAKE_OSX_DEPLOYMENT_TARGET "10.13") # This is the actual minimum...
+		else()
+			set(CMAKE_OSX_DEPLOYMENT_TARGET "12.0") # ...but XCode 27 has this as the minimum
+		endif()
 		if( CMAKE_CXX_COMPILER_ID STREQUAL "GNU" )
 			# If we're compiling with a custom GCC on the Mac (which we know since g++-4.2 doesn't support C++11) statically link libgcc.
 			set( ALL_C_FLAGS "-static-libgcc" )
@@ -392,21 +414,18 @@ set( CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO "${CMAKE_EXE_LINKER_FLAGS_RELWITHDEBI
 set( CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${ALL_C_FLAGS}" )
 set( CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} ${REL_C_FLAGS}" )
 set( CMAKE_C_FLAGS_MINSIZEREL "${CMAKE_C_FLAGS_MINSIZEREL} ${REL_C_FLAGS}" )
-set( CMAKE_C_FLAGS_RELWITHDEBINFO "${CMAKE_C_FLAGS_RELWITHDEBINFO} ${REL_C_FLAGS}" )
+set( CMAKE_C_FLAGS_RELWITHDEBINFO "${CMAKE_C_FLAGS_RELWITHDEBINFO} ${REL_C_FLAGS}" ) # Adding -D_DEBUG makes compilation fail
 set( CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} ${DEB_C_FLAGS} -D_DEBUG" )
 
 set( CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${ALL_C_FLAGS}" )
 set( CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} ${REL_C_FLAGS}" )
 set( CMAKE_CXX_FLAGS_MINSIZEREL "${CMAKE_CXX_FLAGS_MINSIZEREL} ${REL_C_FLAGS}" )
-set( CMAKE_CXX_FLAGS_RELWITHDEBINFO "${CMAKE_CXX_FLAGS_RELWITHDEBINFO} ${REL_C_FLAGS}" )
+set( CMAKE_CXX_FLAGS_RELWITHDEBINFO "${CMAKE_CXX_FLAGS_RELWITHDEBINFO} ${REL_C_FLAGS}" ) # Adding -D_DEBUG makes compilation fail
 set( CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} ${DEB_C_FLAGS} -D_DEBUG" )
 
 option(FORCE_INTERNAL_BZIP2 "Use internal bzip2")
-option(FORCE_INTERNAL_ZMUSIC "Use internal zmusic" ON)
-option(FORCE_INTERNAL_ASMJIT "Use internal asmjit" ON)
 option(FORCE_INTERNAL_CPPDAP "Use internal cppdap" ON)
-
-mark_as_advanced( FORCE_INTERNAL_ASMJIT )
+option(FORCE_INTERNAL_WEBP "Use internal webp" ON)
 
 if (HAVE_VULKAN)
 	add_subdirectory( libraries/ZVulkan )
@@ -419,13 +438,6 @@ add_subdirectory( libraries/abseil )
 
 set(ZWIDGET_BUILD_EXAMPLE OFF CACHE INTERNAL "" FORCE)
 add_subdirectory( libraries/ZWidget )
-
-add_subdirectory( libraries/webp )
-
-add_subdirectory( libraries/discordrpc EXCLUDE_FROM_ALL )
-set( DRPC_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libraries/discordrpc/include" )
-set( DRPC_LIBRARIES discord-rpc )
-set( DRPC_LIBRARY discord-rpc )
 
 if( HAVE_VM_JIT AND UNIX )
 	check_symbol_exists( "backtrace" "execinfo.h" HAVE_BACKTRACE )
@@ -442,16 +454,10 @@ if( HAVE_VM_JIT AND UNIX )
 endif( HAVE_VM_JIT AND UNIX )
 
 if( ${HAVE_VM_JIT} )
-	if( ASMJIT_FOUND AND NOT FORCE_INTERNAL_ASMJIT )
-		message( STATUS "Using system asmjit, includes found at ${ASMJIT_INCLUDE_DIR}" )
-	else()
-		message( STATUS "Using internal asmjit" )
-		set( SKIP_INSTALL_ALL TRUE ) # Avoid installing asmjit alongside zdoom
-		add_subdirectory( libraries/asmjit )
-		set( ASMJIT_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/libraries/asmjit )
-		set( ASMJIT_LIBRARIES asmjit )
-		set( ASMJIT_LIBRARY asmjit )
-	endif()
+	set( SKIP_INSTALL_ALL TRUE ) # Avoid installing asmjit alongside zdoom
+	add_subdirectory( libraries/asmjit )
+	set( ASMJIT_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/libraries/asmjit )
+	set( ASMJIT_LIBRARIES asmjit )
 endif()
 
 if( BZIP2_FOUND AND NOT FORCE_INTERNAL_BZIP2 )
@@ -468,28 +474,33 @@ if ( CPPDAP_FOUND AND NOT FORCE_INTERNAL_CPPDAP )
 	message( STATUS "Using system cppdap library, includes found at ${CPPDAP_INCLUDE_DIR}" )
 else()
 	message( STATUS "Using internal cppdap library" )
-	add_subdirectory( libraries/cppdap )
+	add_subdirectory( libraries/cppdap EXCLUDE_FROM_ALL )
 	set( CPPDAP_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libraries/cppdap" )
 	set( CPPDAP_LIBRARIES cppdap )
 	set( CPPDAP_LIBRARY cppdap )
 	set( CPPDAP_FOUND TRUE )
 endif()
 
-# ZMUSIC
-if( ZMUSIC_FOUND AND NOT FORCE_INTERNAL_ZMUSIC )
-	message( STATUS "Using system zmusic library, includes found at ${ZMUSIC_INCLUDE_DIR}" )
-	set( ZMUSIC_SYSTEM_INSTALL TRUE )
+if ( WEBP_FOUND AND NOT FORCE_INTERNAL_WEBP )
+	message( STATUS "Using system webp library, includes found at ${WEBP_libwebpdecoder_INCLUDEDIR}" )
+	set( WEBP_TARGET PkgConfig::WEBP )
 else()
-	message( STATUS "Using internal zmusic library" )
-	set( BUILD_SHARED_LIBS OFF CACHE INTERNAL "" FORCE )
-	add_subdirectory( libraries/ZMusic )
-	set( ZMUSIC_ROOT_PATH "${CMAKE_CURRENT_SOURCE_DIR}/libraries/zmusic" )
-	set( ZMUSIC_INCLUDE_DIR ${ZMUSIC_ROOT_PATH}/include )
-	set( ZMUSIC_LIBRARIES zmusic )
-	set( ZMUSIC_FOUND TRUE )
+	message( STATUS "Using internal webp library" )
+	add_subdirectory( libraries/webp )
+	set( WEBP_TARGET webp )
 endif()
 
+# ZMUSIC
+add_subdirectory( libraries/ZMusic )
+set( ZMUSIC_ROOT_PATH "${CMAKE_CURRENT_SOURCE_DIR}/libraries/zmusic" )
+set( ZMUSIC_INCLUDE_DIR ${ZMUSIC_ROOT_PATH}/include )
+set( ZMUSIC_LIBRARIES zmusic )
+
 set( LZMA_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libraries/lzma/C" )
+
+set( BOOST_PFR_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libraries/boost_pfr/include" )
+
+set( REFLECT_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/libraries/reflect" )
 
 if( NOT CMAKE_CROSSCOMPILING )
 	if( NOT CROSS_EXPORTS )
@@ -518,12 +529,6 @@ add_subdirectory( wadsrc_bm )
 add_subdirectory( wadsrc_lights )
 add_subdirectory( wadsrc_extra )
 add_subdirectory( wadsrc_widepix )
-
-if( ZMUSIC_SYSTEM_INSTALL )
-	# Internal ZMusic library provides miniz target, miniz.h file in partuclar
-	# It's not the case with system-wide ZMusic installation
-	add_subdirectory( libraries/miniz )
-endif()
 
 if( NOT CMAKE_CROSSCOMPILING )
 	export(TARGETS ${CROSS_EXPORTS} FILE "${CMAKE_BINARY_DIR}/ImportExecutables.cmake" )

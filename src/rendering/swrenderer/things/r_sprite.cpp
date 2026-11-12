@@ -122,7 +122,7 @@ namespace swrenderer
 					return;
 			}
 		}
-		
+
 
 		// [RH] Flip for mirrors
 		auto renderportal = thread->Portal.get();
@@ -165,9 +165,9 @@ namespace swrenderer
 		if (thing->flags5 & MF5_BRIGHT)
 			vis->renderflags |= RF_FULLBRIGHT;
 		vis->RenderStyle = thing->RenderStyle;
-		if (r_vanillatrans && (thing->renderflags & RF_ZDOOMTRANS))
+		if (r_UseVanillaTransparency && (thing->renderflags & RF_ZDOOMTRANS))
 		{
-			if (r_vanillatrans == 1 || AutoTrans.CheckKey(thing->GetClass()->TypeName) != nullptr)
+			if (r_UseVanillaTransparency == 1 || AutoTrans.CheckKey(thing->GetClass()->TypeName) != nullptr)
 				vis->RenderStyle = LegacyRenderStyles[STYLE_Normal];
 		}
 		vis->FillColor = thing->fillcolor;
@@ -208,45 +208,36 @@ namespace swrenderer
 			float lit_blue = 0;
 			auto Level = vis->sector->Level;
 
-			if (Level->lightlists.flat_dlist.SSize() > vis->section->Index())
+			for(FDynamicLight * light : vis->section->dlist)
 			{
-				TMap<FDynamicLight *, std::unique_ptr<FLightNode>>::Iterator it(Level->lightlists.flat_dlist[vis->section->Index()]);
-				TMap<FDynamicLight *, std::unique_ptr<FLightNode>>::Pair *pair;
-				while (it.NextPair(pair))
+				if (light->ShouldLightActor(thing))
 				{
-					auto node = pair->Value.get();
-					if (!node) continue;
-
-					FDynamicLight *light = node->lightsource;
-					if (light->ShouldLightActor(thing))
+					float lx = (float)(light->X() - thing->X());
+					float ly = (float)(light->Y() - thing->Y());
+					float lz = (float)(light->Z() - thing->Center());
+					float LdotL = lx * lx + ly * ly + lz * lz;
+					float radius = light->GetRadius();
+					if (radius * radius >= LdotL)
 					{
-						float lx = (float)(light->X() - thing->X());
-						float ly = (float)(light->Y() - thing->Y());
-						float lz = (float)(light->Z() - thing->Center());
-						float LdotL = lx * lx + ly * ly + lz * lz;
-						float radius = node->lightsource->GetRadius();
-						if (radius * radius >= LdotL)
+						float distance = sqrt(LdotL);
+						float attenuation = 1.0f - distance / radius;
+						if (attenuation > 0.0f)
 						{
-							float distance = sqrt(LdotL);
-							float attenuation = 1.0f - distance / radius;
-							if (attenuation > 0.0f)
-							{						
-								float red = light->GetRed() * (1.0f / 255.0f);
-								float green = light->GetGreen() * (1.0f / 255.0f);
-								float blue = light->GetBlue() * (1.0f / 255.0f);
-								/*if (light->IsSubtractive())
-								{
-									float bright = FVector3(lr, lg, lb).Length();
-									FVector3 lightColor(lr, lg, lb);
-									red = (bright - lr) * -1;
-									green = (bright - lg) * -1;
-									blue = (bright - lb) * -1;
-								}*/
-							
-								lit_red += red * attenuation;
-								lit_green += green * attenuation;
-								lit_blue += blue * attenuation;
-							}
+							float red = light->GetRed() * (1.0f / 255.0f);
+							float green = light->GetGreen() * (1.0f / 255.0f);
+							float blue = light->GetBlue() * (1.0f / 255.0f);
+							/*if (light->IsSubtractive())
+							{
+								float bright = FVector3(lr, lg, lb).Length();
+								FVector3 lightColor(lr, lg, lb);
+								red = (bright - lr) * -1;
+								green = (bright - lg) * -1;
+								blue = (bright - lb) * -1;
+							}*/
+
+							lit_red += red * attenuation;
+							lit_green += green * attenuation;
+							lit_blue += blue * attenuation;
 						}
 					}
 				}

@@ -57,7 +57,7 @@ class GoldWand : HereticWeapon
 		GWND D 0 A_ReFire;
 		Goto Ready;
 	}
-	
+
 
 	//----------------------------------------------------------------------------
 	//
@@ -84,16 +84,11 @@ class GoldWand : HereticWeapon
 		if (player.refire)
 		{
 			ang += Random2[FireGoldWand]() * (5.625 / 256);
-
-			if (GetCVar ("vertspread") && !sv_novertspread)
-			{
-				pitch += Random2[FireGoldWand]() * (3.549 / 256);
-			}
 		}
 		LineAttack(ang, PLAYERMISSILERANGE, pitch, damage, 'Hitscan', "GoldWandPuff1");
 		A_StartSound("weapons/wandhit", CHAN_WEAPON);
 	}
-	
+
 }
 
 class GoldWandPowered : GoldWand
@@ -116,7 +111,7 @@ class GoldWandPowered : GoldWand
 		GWND D 0 A_ReFire;
 		Goto Ready;
 	}
-	
+
 	//----------------------------------------------------------------------------
 	//
 	// PROC A_FireGoldWandPL2
@@ -151,9 +146,9 @@ class GoldWandPowered : GoldWand
 		A_StartSound("weapons/wandhit", CHAN_WEAPON);
 	}
 
-	
+
 }
-	
+
 
 // Gold wand FX1 ------------------------------------------------------------
 
@@ -241,4 +236,3 @@ class GoldWandPuff2 : GoldWandFX1
 		Goto Super::Death;
 	}
 }
-

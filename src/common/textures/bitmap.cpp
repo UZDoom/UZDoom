@@ -21,8 +21,10 @@
 **
 */
 
+#include "basics.h"
 #include "bitmap.h"
 #include "palutil.h"
+#include "tarray.h"
 
 uint8_t IcePalette[16][3] =
 {
@@ -45,7 +47,7 @@ uint8_t IcePalette[16][3] =
 };
 
 //===========================================================================
-// 
+//
 // multi-format pixel copy with colormap application
 // requires the previously defined conversion classes to work
 //
@@ -225,77 +227,82 @@ static const CopyFunc copyfuncs[][12]={
 //
 //===========================================================================
 bool ClipCopyPixelRect(const FClipRect *cr, int &originx, int &originy,
-						const uint8_t *&patch, int &srcwidth, int &srcheight, 
-						int &pstep_x, int &pstep_y, int rotate)
+						const uint8_t *&patch, int &srcwidth, int &srcheight,
+						int &pstep_x, int &pstep_y, FBitmap::Transform rotate)
 {
 	int pixxoffset;
 	int pixyoffset;
 
 	int step_x;
 	int step_y;
+	bool swap = false;
 
 	assert(cr != NULL);
 	// First adjust the settings for the intended rotation
 	switch (rotate)
 	{
 	default:
-	case 0:	// normal
+	case FBitmap::Transform::NONE:
 		pixxoffset = 0;
 		pixyoffset = 0;
 		step_x = pstep_x;
 		step_y = pstep_y;
 		break;
 
-	case 1: // rotate 90° right
+	case FBitmap::Transform::ROT_90:
 		pixxoffset = 0;
 		pixyoffset = srcheight - 1;
 		step_x = -pstep_y;
 		step_y = pstep_x;
+		swap = true;
 		break;
 
-	case 2:	// rotate 180°
+	case FBitmap::Transform::ROT_180:
 		pixxoffset = srcwidth - 1;
 		pixyoffset = srcheight - 1;
 		step_x = -pstep_x;
 		step_y = -pstep_y;
 		break;
 
-	case 3: // rotate 90° left
+	case FBitmap::Transform::ROT_270:
 		pixxoffset = srcwidth - 1;
 		pixyoffset = 0;
 		step_x = pstep_y;
 		step_y = -pstep_x;
+		swap = true;
 		break;
 
-	case 4:	// flip horizontally
+	case FBitmap::Transform::MIRROR:
 		pixxoffset = srcwidth - 1;
 		pixyoffset = 0;
 		step_x = -pstep_x;
 		step_y = pstep_y;
 		break;
 
-	case 5:	// flip horizontally and rotate 90° right
+	case FBitmap::Transform::MIRROR_90:
 		pixxoffset = srcwidth - 1;
 		pixyoffset = srcheight - 1;
 		step_x = -pstep_y;
 		step_y = -pstep_x;
+		swap = true;
 		break;
 
-	case 6:	// flip vertically
+	case FBitmap::Transform::MIRROR_180:
 		pixxoffset = 0;
 		pixyoffset = srcheight - 1;
 		step_x = pstep_x;
 		step_y = -pstep_y;
 		break;
 
-	case 7:	// flip horizontally and rotate 90° left
+	case FBitmap::Transform::MIRROR_270:
 		pixxoffset = 0;
 		pixyoffset = 0;
 		step_x = pstep_y;
 		step_y = pstep_x;
+		swap = true;
 		break;
 	}
-	if (rotate&1)
+	if (swap)
 	{
 		int v = srcwidth;
 		srcwidth = srcheight;
@@ -343,7 +350,7 @@ bool ClipCopyPixelRect(const FClipRect *cr, int &originx, int &originy,
 
 //===========================================================================
 //
-// 
+//
 //
 //===========================================================================
 
@@ -377,8 +384,8 @@ bool FClipRect::Intersect(int ix, int iy, int iw, int ih)
 // True Color texture copy function
 //
 //===========================================================================
-void FBitmap::CopyPixelDataRGB(int originx, int originy, const uint8_t *patch, int srcwidth, 
-							   int srcheight, int step_x, int step_y, int rotate, int ct, FCopyInfo *inf,
+void FBitmap::CopyPixelDataRGB(int originx, int originy, const uint8_t *patch, int srcwidth,
+							   int srcheight, int step_x, int step_y, FBitmap::Transform rotate, int ct, FCopyInfo *inf,
 							   int r, int g, int b)
 {
 	if (ClipCopyPixelRect(&ClipRect, originx, originy, patch, srcwidth, srcheight, step_x, step_y, rotate))
@@ -392,9 +399,9 @@ void FBitmap::CopyPixelDataRGB(int originx, int originy, const uint8_t *patch, i
 	}
 }
 
-template<class TDest, class TBlend> 
+template<class TDest, class TBlend>
 void iCopyPaletted(uint8_t *buffer, const uint8_t * patch, int srcwidth, int srcheight, int Pitch,
-					int step_x, int step_y, int rotate, const PalEntry * palette, FCopyInfo *inf)
+					int step_x, int step_y, FBitmap::Transform rotate, const PalEntry * palette, FCopyInfo *inf)
 {
 	int x,y,pos;
 
@@ -418,7 +425,7 @@ void iCopyPaletted(uint8_t *buffer, const uint8_t * patch, int srcwidth, int src
 }
 
 typedef void (*CopyPalettedFunc)(uint8_t *buffer, const uint8_t * patch, int srcwidth, int srcheight, int Pitch,
-					int step_x, int step_y, int rotate, const PalEntry * palette, FCopyInfo *inf);
+					int step_x, int step_y, FBitmap::Transform rotate, const PalEntry * palette, FCopyInfo *inf);
 
 
 static const CopyPalettedFunc copypalettedfuncs[]=
@@ -440,8 +447,8 @@ static const CopyPalettedFunc copypalettedfuncs[]=
 // Paletted to True Color texture copy function
 //
 //===========================================================================
-void FBitmap::CopyPixelData(int originx, int originy, const uint8_t * patch, int srcwidth, int srcheight, 
-										int step_x, int step_y, int rotate, const PalEntry * palette, FCopyInfo *inf)
+void FBitmap::CopyPixelData(int originx, int originy, const uint8_t * patch, int srcwidth, int srcheight,
+										int step_x, int step_y, FBitmap::Transform rotate, const PalEntry * palette, FCopyInfo *inf)
 {
 	if (ClipCopyPixelRect(&ClipRect, originx, originy, patch, srcwidth, srcheight, step_x, step_y, rotate))
 	{
@@ -462,7 +469,7 @@ void FBitmap::CopyPixelData(int originx, int originy, const uint8_t * patch, int
 			}
 		}
 
-		copypalettedfuncs[inf==NULL? OP_COPY : inf->op](buffer, patch, srcwidth, srcheight, Pitch, 
+		copypalettedfuncs[inf==NULL? OP_COPY : inf->op](buffer, patch, srcwidth, srcheight, Pitch,
 														step_x, step_y, rotate, palette, inf);
 	}
 }

@@ -804,6 +804,7 @@ bool FConfigFile::WriteConfigFile () const
 	{ // Pretend it was written anyway so that the user doesn't get
 	  // any "config not written" notifications, but only if the file
 	  // already existed. Otherwise, let it write out a default one.
+		QueueWrite = true;
 		return true;
 	}
 

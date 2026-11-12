@@ -222,7 +222,7 @@ bool IQMModel::Load(const char* path, int lumpnum, const char* buffer, int lengt
 			{
 				baseframe[i] = m;
 				inversebaseframe[i] = invm;
-			}			
+			}
 		}
 
 		TRSData.Resize(num_frames * num_poses);
@@ -495,9 +495,9 @@ double IQMModel::FindFramerate(FName name)
 	return FErr_NotFound;
 }
 
-void IQMModel::RenderFrame(FModelRenderer* renderer, FGameTexture* skin, int frame1, int frame2, double inter, FTranslationID translation, const FTextureID* surfaceskinids, int boneStartPosition)
+void IQMModel::RenderFrame(FModelRenderer* renderer, FGameTexture* skin, int frame1, int frame2, double inter, FTranslationID translation, const FTextureID* surfaceskinids, int boneStartPosition, AActor * act)
 {
-	
+
 	renderer->SetupFrame(this, 0, 0, NumVertices, boneStartPosition >= 0 ? boneStartPosition : screen->mBones->UploadBones(boneData));
 
 	FGameTexture* lastSkin = nullptr;
@@ -514,7 +514,7 @@ void IQMModel::RenderFrame(FModelRenderer* renderer, FGameTexture* skin, int fra
 			else if (Meshes[i].Skin.isValid())
 			{
 				meshSkin = TexMan.GetGameTexture(Meshes[i].Skin, true);
-			}	
+			}
 			else
 			{
 				continue;
@@ -525,7 +525,7 @@ void IQMModel::RenderFrame(FModelRenderer* renderer, FGameTexture* skin, int fra
 		{
 			if (meshSkin != lastSkin)
 			{
-				renderer->SetMaterial(meshSkin, false, translation);
+				renderer->SetMaterial(meshSkin, false, translation, act);
 				lastSkin = meshSkin;
 			}
 			renderer->DrawElements(Meshes[i].NumTriangles * 3, Meshes[i].FirstTriangle * 3 * sizeof(unsigned int));
@@ -581,7 +581,7 @@ FQuaternion InterpolateQuat(const FQuaternion &from, const FQuaternion &to, floa
 	}
 
 	rot += to * t;
-	
+
 	return rot.Unit();
 }
 
@@ -734,7 +734,7 @@ const TArray<VSMatrix>* IQMModel::CalculateBonesIQMSpecialized(int frame1, int f
 	float invt1 = 1.0f - inter1_prev;
 	float invt2 = 1.0f - inter2_prev;
 
-	constexpr const float swapYZ[16]
+	alignas(16) constexpr const float swapYZ[16]
 	{
 		1.0f, 0.0f, 0.0f, 0.0f,
 		0.0f, 0.0f, 1.0f, 0.0f,
@@ -876,7 +876,7 @@ const TArray<VSMatrix>* IQMModel::CalculateBonesOnlyOffsets(TArray<BoneOverride>
 		0.0f, 1.0f, 0.0f, 0.0f,
 		0.0f, 0.0f, 0.0f, 1.0f
 	};
-	
+
 	if(in)
 	{
 		if(out)
@@ -897,7 +897,7 @@ const TArray<VSMatrix>* IQMModel::CalculateBonesOnlyOffsets(TArray<BoneOverride>
 				out->bones_with_override[i] = bone;
 
 				out->positions[i].loadIdentity();
-				
+
 				VSMatrix m;
 				m.loadIdentity();
 				m.translate(bone.translation.X, bone.translation.Y, bone.translation.Z);

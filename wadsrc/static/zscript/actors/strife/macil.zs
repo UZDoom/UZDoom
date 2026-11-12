@@ -74,7 +74,7 @@ class Macil1 : Actor
 		Goto See;
 	}
 }
-		
+
 
 // Macil (version 2) ---------------------------------------------------------
 
@@ -110,5 +110,3 @@ class Macil2 : Macil1
 		Stop;
 	}
 }
-
-

@@ -2,18 +2,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
-"PO-Revision-Date: 2026-01-23 23:01+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Ukrainian <https://hosted.weblate.org/projects/uzdoom/common/"
-"uk/>\n"
+"PO-Revision-Date: 2026-08-10 23:42-0400\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/uzdoom/common/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.16-dev\n"
-"HeaderCode: uk\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: python 3.14.6 polib 1.2.0\n"
 
 msgid "PRESSYN"
 msgstr "Натисніть Y або N."
@@ -32,9 +29,6 @@ msgstr ""
 
 msgid "SAFEMESSAGE"
 msgstr "Ви дійсно хочете цього?"
-
-msgid "NOTSET"
-msgstr "Не встановлено"
 
 msgid "QSPROMPT"
 msgstr ""
@@ -56,17 +50,11 @@ msgstr ""
 msgid "TXT_X_CHEATS"
 msgstr "%s чітерить"
 
-msgid "MSGOFF"
-msgstr "Повідомлення: ВИМКНЕНІ"
-
-msgid "MSGON"
-msgstr "Повідомлення: УВІМКНЕНІ"
-
 msgid "TXT_SAY"
 msgstr "Чат:"
 
 msgid "TXT_QUITENDOOM"
-msgstr "Натисніть будь яку клавішу чи натисніть по вікну, щоб вийти."
+msgstr "Натисніть будь-яку клавішу або клацніть будь-де у вікні, щоб вийти."
 
 msgid "NEWSAVE"
 msgstr "<Нове збереження>"
@@ -108,16 +96,16 @@ msgid "OPTMNU_TITLE"
 msgstr "Налаштування"
 
 msgid "OPTMNU_CONTROLS"
-msgstr "Керування"
+msgstr "Налаштування керування"
 
 msgid "OPTMNU_MOUSE"
-msgstr "Миш"
+msgstr "Миша"
 
 msgid "OPTMNU_JOYSTICK"
 msgstr "Контролер"
 
 msgid "OPTMNU_PLAYER"
-msgstr "Гравець"
+msgstr "Налаштування гравця"
 
 msgid "OPTMNU_GAMEPLAY"
 msgstr "Ігрові механіки"
@@ -129,7 +117,7 @@ msgid "OPTMNU_HUD"
 msgstr "Ігровий інтерфейс"
 
 msgid "OPTMNU_MISCELLANEOUS"
-msgstr "Інше"
+msgstr "Інші налаштування"
 
 msgid "OPTMNU_SOUND"
 msgstr "Звук"
@@ -240,17 +228,11 @@ msgstr "Дії"
 msgid "CNTRLMNU_ACTION_TITLE"
 msgstr "Налаштування елементів дій"
 
-msgid "CNTRLMNU_CHAT"
-msgstr "Чат"
-
 msgid "MNU_MULTIPLAYER"
 msgstr "Гра в мережі"
 
 msgid "CNTRLMNU_SAY"
 msgstr "Написати повідомлення"
-
-msgid "CNTRLMNU_CHAT_TITLE"
-msgstr "Клавіші керування чатом"
 
 msgid "CNTRLMNU_WEAPONS_TITLE"
 msgstr "Клавіші керування зброєю"
@@ -275,7 +257,6 @@ msgid "CNTRLMNU_SLOT1"
 msgstr "Зброя 1"
 
 # only show appropriate slots per game
-# 
 msgid "CNTRLMNU_SLOT2"
 msgstr "Зброя 2"
 
@@ -319,11 +300,12 @@ msgid "CNTRLMNU_PREVIOUSITEM"
 msgstr "Попередній предмет"
 
 # most are not used yet but will be
+#, fuzzy
 msgid "MAPCNTRLMNU_TITLE"
-msgstr "Клавіші керування автомапою"
+msgstr "Клавіші керування автокартою"
 
 msgid "MAPCNTRLMNU_CONTROLS"
-msgstr "Автомапа"
+msgstr "Автокарта"
 
 msgid "MAPCNTRLMNU_PANLEFT"
 msgstr "Зсув вліво"
@@ -359,16 +341,13 @@ msgid "MAPCNTRLMNU_TOGGLETEXTURE"
 msgstr "Увімкнути текстури"
 
 msgid "CNTRLMNU_AUTOMAP"
-msgstr "Відкрити автомапу"
+msgstr "Відкрити автокарту"
 
 msgid "CNTRLMNU_CHASECAM"
 msgstr "Вид від третьої особи"
 
 msgid "CNTRLMNU_SCREENSHOT"
 msgstr "Скріншот"
-
-msgid "CNTRLMNU_CONSOLE"
-msgstr "Відкрити консоль"
 
 msgid "CNTRLMNU_PAUSE"
 msgstr "Пауза"
@@ -408,9 +387,6 @@ msgstr "Увімкнути повідомлення"
 
 msgid "CNTRLMNU_MENU_QUIT"
 msgstr "Вихід"
-
-msgid "CNTRLMNU_ADJUST_GAMMA"
-msgstr "Налаштування гамми"
 
 msgid "MOUSEMNU_ENABLEMOUSE"
 msgstr "Увімкнути миш"
@@ -503,14 +479,15 @@ msgid "JOYMNU_NOCON"
 msgstr "Контролерів не виявлено"
 
 msgid "JOYMNU_CONFIG"
-msgstr "Налаштувати контролери"
+msgstr "Налаштувати контролери:"
 
 msgid "JOYMNU_DISABLED1"
 msgstr "Включіть підтримку контролерів"
 
 # Supposed to be empty in Russian and Serbian.
+#, fuzzy
 msgid "JOYMNU_DISABLED2"
-msgstr ""
+msgstr "увімкнено для виявлення будь-яких"
 
 msgid "JOYMNU_INVALID"
 msgstr "Для меню вибрано невідповідний контролер"
@@ -530,21 +507,20 @@ msgstr "Мертва зона"
 msgid "JOYMNU_NOAXES"
 msgstr "Немає настроюваних осей"
 
-#, fuzzy
 msgid "OPTVAL_NONE"
-msgstr "Вимк."
+msgstr "Вимк"
 
 msgid "OPTVAL_TURNING"
-msgstr "Поворот"
+msgstr "Дивитися вліво/вправо"
 
 msgid "OPTVAL_LOOKINGUPDOWN"
 msgstr "Дивитись вгору"
 
 msgid "OPTVAL_MOVINGFORWARD"
-msgstr "Рухатись вперед"
+msgstr "Рухатись вперед/назад"
 
 msgid "OPTVAL_STRAFING"
-msgstr "Рухатись боком"
+msgstr "Рухатись вліво/вправо"
 
 msgid "OPTVAL_MOVINGUPDOWN"
 msgstr "Рухатись вгору/вниз"
@@ -593,9 +569,6 @@ msgstr "Темний жовто-зелений"
 
 msgid "TXT_COLOR_BEIGE"
 msgstr "Бежевий"
-
-msgid "TXT_COLOR_LIGHTGREEN"
-msgstr "Світло-зелений"
 
 msgid "TXT_COLOR_LIGHTBLUE"
 msgstr "Світло-синій"
@@ -663,23 +636,11 @@ msgstr "Вертикальна синхронізація"
 msgid "DSPLYMNU_MODELS"
 msgstr "3D Моделі"
 
-msgid "DSPLYMNU_CROSSHAIRSCALE"
-msgstr "Розмір прицілу"
-
-msgid "DSPLYMNU_SBSCALE"
-msgstr "Розмір строки стану"
-
-msgid "DSPLYMNU_MESSAGES"
-msgstr "Повідомлення"
-
 msgid "MSGMNU_CENTERMESSAGES"
 msgstr "Центрування повідомлень"
 
 msgid "MSGMNU_PULSEMESSAGES"
 msgstr "Пульсація повідомлень"
-
-msgid "MSGMNU_MESSAGESCALE"
-msgstr "Розмір повідомлень"
 
 msgid "MNU_COLORPICKER"
 msgstr "Вибір кольору"
@@ -701,15 +662,6 @@ msgstr "Налаштування кольорів автокарти"
 
 msgid "MAPCOLORMNU_DEFAULTMAPCOLORS"
 msgstr "Повернути стандартні кольори"
-
-msgid "SNDMNU_SNDENABLED"
-msgstr "Звук увімкнено"
-
-msgid "SNDMNU_MUSENABLED"
-msgstr "Музику увімкнено"
-
-msgid "OPTVAL_4000HZ"
-msgstr "4000 Гц"
 
 msgid "OPTVAL_8000HZ"
 msgstr "8000 Гц"
@@ -807,9 +759,6 @@ msgstr "Змінювати висоту звуків"
 msgid "SNDMNU_CHANNELS"
 msgstr "Кількість каналів"
 
-msgid "SNDMNU_BACKEND"
-msgstr "Звукова система"
-
 msgid "SNDMNU_OPENAL"
 msgstr "Параметри OpenAL"
 
@@ -823,10 +772,7 @@ msgid "SNDMNU_MODREPLAYER"
 msgstr "Параметри \"Module replayer\""
 
 msgid "SNDMNU_MIDIPLAYER"
-msgstr "Параметри MIDI-програвача"
-
-msgid "SNDMNU_MENUSOUND"
-msgstr "Звук в меню"
+msgstr "Параметри MIDI-пристрою"
 
 msgid "ADVSNDMNU_TITLE"
 msgstr "Розширені налаштування звуку"
@@ -867,9 +813,6 @@ msgstr "Freeverb"
 msgid "ADVSNDMNU_GLOBAL_FREEVERB"
 msgstr "Глобальний Freeverb"
 
-msgid "ADVSNDMNU_FLUIDPATCHSET"
-msgstr "Патч-набір"
-
 msgid "ADVSNDMNU_FLUIDGAIN"
 msgstr "Підсилення"
 
@@ -891,17 +834,8 @@ msgstr "ADLMidi"
 msgid "ADVSNDMNU_OPNMIDI"
 msgstr "OPNMidi"
 
-msgid "ADVSNDMNU_TIMIDITYCONFIG"
-msgstr "Файл конфігурації Timidity"
-
-msgid "ADVSNDMNU_TIMIDITYVOLUME"
-msgstr "Відносна гучність"
-
 msgid "ADVSNDMNU_WILDMIDI"
 msgstr "WildMidi"
-
-msgid "ADVSNDMNU_WILDMIDICONFIG"
-msgstr "Файл конфігурації WildMidi"
 
 msgid "ADVSNDMNU_SELCONFIG"
 msgstr "Вибір конфігурації"
@@ -911,9 +845,6 @@ msgstr "Розширений ресемплінг"
 
 msgid "ADVSNDMNU_OPLBANK"
 msgstr "Банк OPL"
-
-msgid "ADVSNDMNU_ADLOPLCORES"
-msgstr "Ядро емуляції OPL"
 
 msgid "ADVSNDMNU_RUNPCMRATE"
 msgstr "Використовувати з частотою PCM"
@@ -932,9 +863,6 @@ msgstr "Ядро емуляції OPN2"
 
 msgid "ADVSNDMNU_GUSEMULATION"
 msgstr "Емуляція GUS"
-
-msgid "ADVSNDMNU_GUSCONFIG"
-msgstr "Файл конфігурації для GUS"
 
 msgid "ADVSNDMNU_DMXGUS"
 msgstr "Читати файли DMXGUS"
@@ -1047,10 +975,9 @@ msgstr "DOSBox OPL3"
 msgid "OPTVAL_JAVAOPL3"
 msgstr "Java OPL3"
 
-msgid "OPTVAL_ESFMu"
+msgid "OPTVAL_ESFMU"
 msgstr "ESFMu OPL3"
 
-#, fuzzy
 msgid "OPTVAL_YMFMOPL2"
 msgstr "YMFM OPL2"
 
@@ -1068,9 +995,8 @@ msgstr "OPL2-LLE (Дуже важке!)"
 msgid "OPTVAL_LLENUKEDOPL3"
 msgstr "OPL3-LLE (Дуже важке!)"
 
-#, fuzzy
 msgid "OPTVAL_MAMEOPN2"
-msgstr "MAME YM2612"
+msgstr "MAME OPN2 (YM2612)"
 
 #, fuzzy
 msgid "OPTVAL_NP2OPNA"
@@ -1079,14 +1005,8 @@ msgstr "Neko Project II Kai OPNA"
 msgid "OPTVAL_MAMEOPNA"
 msgstr "MAME YM2608"
 
-msgid "OPTVAL_PMDWINOPNA"
-msgstr "PMDWin OPNA"
-
 msgid "OPTVAL_OPALOPL3"
 msgstr "Opal OPL3"
-
-msgid "OPTVAL_NUKEDOPL3174"
-msgstr "Nuked OPL3 v1.7.4"
 
 msgid "OPTVAL_NUKEDOPN2YM3438"
 msgstr "Nuked OPN2 (YM3438)"
@@ -1095,16 +1015,16 @@ msgid "OPTVAL_NUKEDOPN2YM2612"
 msgstr "Nuked OPN2 (YM2612)"
 
 msgid "OPTVAL_OPN2YM2612LLE"
-msgstr "OPN2-LLE (YM2612) (Дуже важке!)"
+msgstr "OPN2-LLE (YM2612) (вимогливе до продуктивності)"
 
 msgid "OPTVAL_OPN2YM3438LLE"
-msgstr "OPN2-LLE (YM3438) (Дуже важке!)"
+msgstr "OPN2-LLE (YM3438) (вимогливе до продуктивності)"
 
 msgid "OPTVAL_OPN2YMF276LLE"
-msgstr "OPN2-LLE (YMF276) (Дуже важке!)"
+msgstr "OPN2-LLE (YMF276) (вимогливе до продуктивності)"
 
 msgid "OPTVAL_GENSOPN2"
-msgstr "GENS YM2612"
+msgstr "GENS OPN2 (YM2612)"
 
 msgid "OPTVAL_YMFMOPN2"
 msgstr "YMFM OPN2"
@@ -1157,9 +1077,11 @@ msgstr "DMX (Без помилки АМ)"
 msgid "ADLVLMODEL_APOGEE_FIXED"
 msgstr "Apogee (Без помилки АМ)"
 
+#, fuzzy
 msgid "ADLVLMODEL_AIL"
 msgstr "IBM Audio Library Interface"
 
+#, fuzzy
 msgid "ADLVLMODEL_HMI"
 msgstr "HMI Sound Operating System"
 
@@ -1196,12 +1118,11 @@ msgstr "768K"
 msgid "OPTVAL_1024K"
 msgstr "1024K"
 
-#, fuzzy
 msgid "OPTVAL_UNCHARTED2"
 msgstr "Uncharted 2"
 
 msgid "OPTVAL_HEJLDAWSON"
-msgstr "Hejl Dawson"
+msgstr "Hejl-Dawson"
 
 msgid "OPTVAL_REINHARD"
 msgstr "Reinhard"
@@ -1210,23 +1131,24 @@ msgid "OPTVAL_PALETTE"
 msgstr "Палітра гри"
 
 msgid "OPTVAL_LOW"
-msgstr "Низьке"
+msgstr "Низька"
 
 msgid "OPTVAL_MEDIUM"
-msgstr "Середнє"
+msgstr "Середня"
 
 msgid "OPTVAL_HIGH"
-msgstr "Високе"
+msgstr "Висока"
 
 msgid "OPTVAL_EXTREME"
-msgstr "Максимальне"
+msgstr "Максимальна"
 
 msgid "OPTVAL_OBVERSEFIRST"
 msgstr "Прямий"
 
 msgid "OPTVAL_REVERSEFIRST"
-msgstr "Зворотний"
+msgstr "Зворотній"
 
+#, fuzzy
 msgid "GLMNU_POSTPROCESS"
 msgstr "Постобробка"
 
@@ -1267,7 +1189,7 @@ msgid "GLPREFMNU_ENVIRONMENTMAPMIRROR"
 msgstr "Карта оточення на дзеркалах"
 
 msgid "GLPREFMNU_RENDERQUALITY"
-msgstr "Якість візуалізації"
+msgstr "Якість рендерингу"
 
 msgid "OPTVAL_SPEED"
 msgstr "Швидкість"
@@ -1309,28 +1231,22 @@ msgid "OPTVAL_TRILINEAR"
 msgstr "Трилінійна"
 
 msgid "OPTVAL_2X"
-msgstr "2x"
+msgstr "2×"
 
 msgid "OPTVAL_4X"
-msgstr "4x"
+msgstr "4×"
 
 msgid "OPTVAL_8X"
-msgstr "8x"
+msgstr "8×"
 
 msgid "OPTVAL_16X"
-msgstr "16x"
+msgstr "16×"
 
 msgid "OPTVAL_32X"
-msgstr "32x"
+msgstr "32×"
 
 msgid "GLTEXMNU_TITLE"
 msgstr "Параметри текстур"
-
-msgid "GLTEXMNU_TEXENABLED"
-msgstr "Увімкнути текстури"
-
-msgid "GLTEXMNU_ENABLEHIRES"
-msgstr "Увімкнути текстури високого розширення"
 
 msgid "GLTEXMNU_HQRESIZE"
 msgstr "Масштабування текстур"
@@ -1359,12 +1275,6 @@ msgstr "Кешувати GL-текстури"
 msgid "VIDMNU_TITLE"
 msgstr "Налаштування відеорежиму"
 
-msgid "OPTVAL_SCALENEAREST"
-msgstr "Збільшення (ближнє)"
-
-msgid "OPTVAL_SCALELINEAR"
-msgstr "Збільшення (лінійне)"
-
 msgid "OPTVAL_LETTERBOX"
 msgstr "Техніка каше"
 
@@ -1380,17 +1290,11 @@ msgstr "Повноекранний"
 msgid "VIDMNU_HIDPI"
 msgstr "Підтримка Retina/HiDPI"
 
-msgid "VIDMNU_ASPECTRATIO"
-msgstr "Співвідношення сторін"
-
 msgid "VIDMNU_FORCEASPECT"
 msgstr "Примусове співвідношення сторін"
 
 msgid "VIDMNU_CROPASPECT"
 msgstr "Тип примусового співвідношення сторін"
-
-msgid "VIDMNU_5X4ASPECTRATIO"
-msgstr "Увімкнути співвідношення сторін 5:4"
 
 msgid "VIDMNU_SCALEMODE"
 msgstr "Масштабування"
@@ -1449,7 +1353,7 @@ msgid "OPTVAL_LOWEST"
 msgstr "Найменш можливий масштаб"
 
 msgid "OPTVAL_CUSTOM"
-msgstr "Корист."
+msgstr "Користувацьке"
 
 msgid "VIDMNU_MAXFPS"
 msgstr "Макс. частота кадрів"
@@ -1486,10 +1390,10 @@ msgid "OPTVAL_OPENGLES"
 msgstr "OpenGL ES"
 
 msgid "MISCMNU_MERGEKEYS"
-msgstr "Не розділяти лівий/правий ALT/CTRL/SHIFT"
+msgstr "Не розділяти лівий/правий Alt/Ctrl/Shift"
 
 msgid "MISCMNU_WINFULLSCREENTOGGLE"
-msgstr "Перемикання повного екрану на ALT+ENTER"
+msgstr "Перемикання повного екрану на Alt+Enter"
 
 msgid "MISCMNU_MACFULLSCREENTOGGLE"
 msgstr "Перемикання повного екрану на Command+F"
@@ -1513,19 +1417,16 @@ msgid "MISCMNU_QUICKSAVECOUNT"
 msgstr "Кількість слотів для швидких збережень"
 
 msgid "MISCMNU_CLEANMENU"
-msgstr "Вимкнути чисте масштабування меню"
+msgstr "Класичне масштабування меню ZDoom"
 
 msgid "MISCMNU_PAUSEINBACKGROUND"
-msgstr "Пауза при згортуванні вікна"
+msgstr "Пауза при згортанні вікна"
 
 msgid "HUDMNU_CROSSHAIR"
 msgstr "Типи прицілів"
 
 msgid "HUDMNU_CROSSHAIRCOLOR"
 msgstr "Колір прицілу"
-
-msgid "HUDMNU_CROSSHAIRHEALTH"
-msgstr "Колір прицілу за станом здоров'я"
 
 msgid "HUDMNU_CROSSHAIRSCALE"
 msgstr "Розмір прицілу"
@@ -1555,124 +1456,39 @@ msgstr "Редагувати оточення"
 msgid "REVMNU_NEW"
 msgstr "Нове оточення"
 
-msgid "REVMNU_REVERT"
-msgstr "Налаштування за замовчуванням"
+msgid "REVMNU_REFLECTIONS_SCALE"
+msgstr "Масштаб віддзеркалень"
 
-# Please translate only if you know how to properly name this technical
-# jargon!
-msgid "REVMNU_ENVIRONMENT_SIZE"
-msgstr ""
-
-msgid "REVMNU_ENVIRONMENT_DIFFUSION"
-msgstr ""
-
-msgid "REVMNU_ROOM"
-msgstr ""
-
-msgid "REVMNU_ROOM_HF"
-msgstr ""
-
-msgid "REVMNU_ROOM_LF"
-msgstr ""
-
-msgid "REVMNU_DECAY_TIME"
-msgstr ""
-
-msgid "REVMNU_DECAY_HF_RATIO"
-msgstr ""
-
-msgid "REVMNU_DECAY_LF_RATIO"
-msgstr ""
-
-msgid "REVMNU_REFLECTIONS"
-msgstr ""
-
-msgid "REVMNU_REFLECTIONS_DELAY"
-msgstr ""
-
-msgid "REVMNU_REFLECTIONS_PAN_X"
-msgstr ""
-
-msgid "REVMNU_REFLECTIONS_PAN_Y"
-msgstr ""
-
-msgid "REVMNU_REFLECTIONS_PAN_Z"
-msgstr ""
-
-msgid "REVMNU_REVERB"
-msgstr "Реверберація"
-
-msgid "REVMNU_REVERB_DELAY"
-msgstr ""
-
-msgid "REVMNU_REVERB_PAN_X"
-msgstr ""
-
-msgid "REVMNU_REVERB_PAN_Y"
-msgstr ""
-
-msgid "REVMNU_REVERB_PAN_Z"
-msgstr ""
-
-msgid "REVMNU_ECHO_TIME"
-msgstr ""
-
-msgid "REVMNU_ECHO_DEPTH"
-msgstr ""
-
-msgid "REVMNU_MODULATION_TIME"
-msgstr ""
-
-msgid "REVMNU_MODULATION_DEPTH"
-msgstr ""
-
-msgid "REVMNU_AIR_ABSORPTION_HF"
-msgstr ""
-
-msgid "REVMNU_HF_REFERENCE"
-msgstr ""
-
-msgid "REVMNU_LF_REFERENCE"
-msgstr ""
-
-msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
-msgstr ""
-
-msgid "REVMNU_DIFFUSION"
-msgstr "Дифузія"
+msgid "REVMNU_REFLECTIONS_DELAY_SCALE"
+msgstr "Масштаб затримки віддзеркалень"
 
 #, fuzzy
-msgid "REVMNU_DENSITY"
-msgstr "Щільність"
+msgid "REVMNU_DECAY_TIME_SCALE"
+msgstr "Шкала часу розпаду"
 
-msgid "REVMNU_Reflections_Scale"
-msgstr ""
+#, fuzzy
+msgid "REVMNU_DECAY_HF_LIMIT"
+msgstr "Граничне значення затухання HF"
 
-msgid "REVMNU_Reflections_Delay_Scale"
-msgstr ""
+#, fuzzy
+msgid "REVMNU_REVERB_SCALE"
+msgstr "Шкала реверберації"
 
-msgid "REVMNU_Decay_Time_Scale"
-msgstr ""
+msgid "REVMNU_REVERB_DELAY_SCALE"
+msgstr "Шкала затримки реверберації"
 
-msgid "REVMNU_Decay_HF_Limit"
-msgstr ""
+#, fuzzy
+msgid "REVMNU_ECHO_TIME_SCALE"
+msgstr "Шкала часу відлуння"
 
-msgid "REVMNU_Reverb_Scale"
-msgstr ""
+#, fuzzy
+msgid "REVMNU_MODULATION_TIME_SCALE"
+msgstr "Часова шкала модуляції"
 
-msgid "REVMNU_Reverb_Delay_Scale"
-msgstr ""
-
-msgid "REVMNU_Echo_Time_Scale"
-msgstr ""
-
-msgid "REVMNU_Modulation_Time_Scale"
-msgstr ""
-
-msgid "REVMNU_Based_on"
+msgid "REVMNU_BASED_ON"
 msgstr "На основі"
 
-msgid "REVMNU_Name"
+msgid "REVMNU_NAME"
 msgstr "Назва"
 
 msgid "REVMNU_ID_1"
@@ -1681,26 +1497,23 @@ msgstr "ID #1"
 msgid "REVMNU_ID_2"
 msgstr "ID #2"
 
-msgid "REVMNU_Create"
+msgid "REVMNU_CREATE"
 msgstr "Створити"
 
-msgid "REVMNU_Save"
-msgstr "Зберегти..."
+msgid "REVMNU_SAVE"
+msgstr "Зберегти…"
 
-msgid "REVMNU_File_name"
+msgid "REVMNU_FILE_NAME"
 msgstr "Назва файлу"
 
-msgid "REVMNU_Environments_to_save"
-msgstr "Зберегти оточення..."
+msgid "REVMNU_ENVIRONMENTS_TO_SAVE"
+msgstr "Зберегти оточення"
 
 msgid "DSPLYMNU_VKOPT"
 msgstr "Налаштування Vulkan (експериментальні)"
 
 msgid "VK_TITLE"
 msgstr "Налаштування Vulkan"
-
-msgid "VKMNU_ENABLE"
-msgstr "Увімкнути Vulkan"
 
 msgid "VKMNU_DEVICE"
 msgstr "ID пристрою Vulkan"
@@ -1714,165 +1527,38 @@ msgstr "Увага: рендер Vulkan на стадії тестування!"
 msgid "VK_RESTART"
 msgstr "Для застосування змін протрібно перезапустити гру."
 
-# This is not yet implemented - but it is planned
-msgid "VKMNU_DEVICESELECT"
-msgstr "Виберіть пристрій Vulkan"
-
 msgid "OPTVAL_SCALENX"
-msgstr ""
+msgstr "ScaleNx"
 
 msgid "OPTVAL_NORMALNX"
-msgstr ""
+msgstr "NormalNx"
 
 msgid "OPTVAL_HQNX"
-msgstr ""
+msgstr "hqNx"
 
 msgid "OPTVAL_HQNXMMX"
-msgstr ""
+msgstr "hqNx MMX"
 
 msgid "OPTVAL_NXBRZ"
-msgstr ""
+msgstr "xBRZ"
 
 msgid "OPTVAL_OLD_NXBRZ"
 msgstr "Старий xBRZ"
 
 msgid "OS_TITLE"
-msgstr "Пошук налаштування"
+msgstr "Пошук налаштувань"
 
 msgid "OS_ANY"
-msgstr "Шукати будь яке з слів"
+msgstr "Пошук по слову"
 
 msgid "OS_ALL"
-msgstr "Шукати всі слова"
+msgstr "Пошук по усіх словах"
 
 msgid "OS_NO_RESULTS"
-msgstr "Нічого не знайдено."
+msgstr "Результатів не знайдено."
 
 msgid "OS_LABEL"
 msgstr "Пошук:"
-
-msgid "TXT_OBITUARY1"
-msgstr "%k порахува@[adj_1_ua] ребра %o"
-
-msgid "TXT_OBITUARY2"
-msgstr "%k каструва@[adj_1_ua] %o"
-
-msgid "TXT_OBITUARY3"
-msgstr "%k розпуши@[adj_1_ua] %o"
-
-msgid "TXT_OBITUARY4"
-msgstr "%k зітну@[adj_1_ua] %o"
-
-msgid "TXT_OBITUARY5"
-msgstr "%k знищи@[adj_1_ua] %o"
-
-msgid "TXT_OBITUARY6"
-msgstr "%k наріза@[adj_1_ua] %o"
-
-msgid "TXT_OBITUARY7"
-msgstr "%k випотроши@[adj_1_ua] %o"
-
-msgid "TXT_OBITUARY8"
-msgstr "%k сплющи@[adj_1_ua] %o"
-
-msgid "TXT_OBITUARY9"
-msgstr "%k влаштува@[adj_1_ua] анальне правосуддя %o"
-
-msgid "TXT_OBITUARY10"
-msgstr "%k влаштува@[adj_1_ua] АнАЛ ГуЛяНнЯ %o"
-
-msgid "TXT_OBITUARY11"
-msgstr "%k вби@[adj_1_ua] %o"
-
-msgid "TXT_OBITUARY12"
-msgstr "%k зроби@[adj_1_ua] відбивну з %o"
-
-msgid "TXT_OBITUARY13"
-msgstr "%k влаштува@[adj_1_ua] для %o бійню"
-
-msgid "TXT_OBITUARY14"
-msgstr "%k знівечи@[adj_1_ua] %o"
-
-msgid "TXT_OBITUARY15"
-msgstr "%k просверли@[adj_1_ua] %o"
-
-msgid "TXT_OBITUARY16"
-msgstr "%k зроби@[adj_1_ua] в %o нову дірку"
-
-msgid "TXT_OBITUARY17"
-msgstr "%k прові@[adj_1_ua] різню %o"
-
-msgid "TXT_OBITUARY18"
-msgstr "%k розмаза@[adj_1_ua] %o"
-
-msgid "TXT_OBITUARY19"
-msgstr "%k зґвалтува@[adj_1_ua] %o"
-
-msgid "TXT_OBITUARY20"
-msgstr "%k розбризка@[adj_1_ua] %o"
-
-msgid "TXT_OBITUARY21"
-msgstr "%k розчави@[adj_1_ua] %o"
-
-msgid "TXT_OBITUARY22"
-msgstr "%k вдуши@[adj_1_ua] %o"
-
-msgid "TXT_OBITUARY23"
-msgstr "%k загна@[adj_1_ua] у могилу %o"
-
-msgid "TXT_OBITUARY24"
-msgstr "%k запакува@[adj_1_ua] %o в мішок для трупів"
-
-msgid "TXT_OBITUARY25"
-msgstr "%k посла@[adj_1_ua] %o до дідька лисого"
-
-msgid "TXT_OBITUARY26"
-msgstr "%k піджари@[adj_1_ua] %o"
-
-msgid "TXT_OBITUARY27"
-msgstr "%k загаси@[adj_1_ua] %o"
-
-msgid "TXT_OBITUARY28"
-msgstr "%o перепало від %k"
-
-msgid "TXT_OBITUARY29"
-msgstr "%k розпили@[adj_1_ua] %o"
-
-msgid "TXT_OBITUARY30"
-msgstr "%k зтовк@[adj_3_ua] %o до псєчих харчів"
-
-msgid "TXT_OBITUARY31"
-msgstr "%k відби@[adj_1_ua] печінки %o"
-
-msgid "TXT_SELFOBIT1"
-msgstr "%o тепер екскремент"
-
-msgid "TXT_SELFOBIT2"
-msgstr "%o тепер гамбургер"
-
-msgid "TXT_SELFOBIT3"
-msgstr "%o постражда@[adj_1_ua] від втрати мошонки"
-
-msgid "TXT_SELFOBIT4"
-msgstr "%o борется з перенаселенням"
-
-msgid "TXT_SELFOBIT5"
-msgstr "%o самовби@[adj_2_ua]"
-
-msgid "TXT_SELFOBIT6"
-msgstr "%o отрима@[adj_1_ua] премію Дарвіна"
-
-# This is not a text to be translated but an engine switch for complex
-# languages.
-msgid "USE_GENERIC_FONT"
-msgstr ""
-
-# This should list all uppercase characters that are REQUIRED for proper
-# language display. If it is acceptable that accents get omitted a character
-# should NOT be listed here!
-#, fuzzy
-msgid "REQUIRED_CHARACTERS"
-msgstr "АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯ"
 
 msgid "OPTMNU_FULLOPTIONS"
 msgstr "Повне меню налаштувань"
@@ -1881,7 +1567,7 @@ msgid "OPTMNU_SIMPLEON"
 msgstr "Спрощене меню налаштувань"
 
 msgid "OPTMNU_OPENCONFIG"
-msgstr "Перегляд налаштувань гри"
+msgstr "Перегляд файлу конфігурації"
 
 msgid "OPTMNU_OPENSCREENSHOTS"
 msgstr "Перегляд скріншотів"
@@ -1898,41 +1584,11 @@ msgstr "Тільки в модифікаціях"
 msgid "TXT_UNKNOWN"
 msgstr "Невідомо"
 
-msgid "OPTVAL_HUD"
-msgstr "Інтерфейс"
-
-msgid "OPTVAL_AUTOMAP"
-msgstr "Автокарта"
-
-msgid "OPTVAL_HUDANDMAP"
-msgstr "Інтерфейс + Автокарта"
-
 msgid "TXT_SAVEGAMENEEDS"
 msgstr "Цій грі потрібні такі файли"
 
-msgid "OPTMNU_MULTIPLAYER"
-msgstr "Параметри багатокористувацької гри"
-
-msgid "OPTMNU_INPUT"
-msgstr "Параметри введення"
-
-msgid "OPTMNU_SYSTEM"
-msgstr "Системні налаштування"
-
-msgid "OPTMNU_LIGHT"
-msgstr "Параметри освітлення"
-
-msgid "OPTMNU_SPRITE"
-msgstr "Параметри спрайтів"
-
 msgid "GLPREFMNU_CORONAS"
 msgstr "Корони"
-
-msgid "DSPLYMNU_APPEARANCE"
-msgstr "Зовнішній вигляд"
-
-msgid "DSPLYMNU_ADVANCED"
-msgstr "Додаткові параметри відображення"
 
 msgid "PICKER_SELECT"
 msgstr "Виберіть файл гри для запуску."
@@ -1949,20 +1605,17 @@ msgstr "Загальні"
 msgid "PICKER_EXTRA"
 msgstr "Додаткова графіка"
 
-msgid "PICKER_FULLSCREEN"
-msgstr "Повноекранний режим"
-
 msgid "PICKER_NOAUTOLOAD"
-msgstr "Вимкнути автозавантаження"
+msgstr "Вимкнути автозавант."
 
 msgid "PICKER_DONTASK"
 msgstr "Не запитуйте мене більше"
 
 msgid "PICKER_LIGHTS"
-msgstr "Освітлення"
+msgstr "Динамічне освітлення"
 
 msgid "PICKER_BRIGHTMAPS"
-msgstr "Яскраві карти"
+msgstr "Карти яскравості"
 
 msgid "PICKER_WIDESCREEN"
 msgstr "Широкоформатний"
@@ -2014,14 +1667,14 @@ msgid "PICKER_PLAYHOST"
 msgstr "Хостити гру"
 
 msgid "PICKER_PLAYJOIN"
-msgstr "Приєднатись до гри"
+msgstr "Приєднатись"
 
 msgid "PICKER_REMPARM"
 msgstr "Запам'ятати параметри"
 
 # For stuff like id24.
 msgid "PICKER_SUPPORTWADS"
-msgstr "Завантажити допоміжні вади"
+msgstr "Підключити доп. WADи"
 
 msgid "PICKER_TAB_MULTI"
 msgstr "Гра в мережі"
@@ -2038,22 +1691,6 @@ msgstr "Хост"
 
 msgid "PICKER_JOIN"
 msgstr "Приєднатись"
-
-msgid "PICKER_NETMODE"
-msgstr "Режим мережі:"
-
-msgid "PICKER_NETAUTO"
-msgstr "Автоматичний (рекомендовано)"
-
-# Connections are routed through the host instead of all players connecting to
-# each other individually.
-#, fuzzy
-msgid "PICKER_NETSERVER"
-msgstr "Пакетний сервер"
-
-# Players connect to each other individually.
-msgid "PICKER_NETPEER"
-msgstr "Однорангова мережа (Р2Р)"
 
 #, fuzzy
 msgid "PICKER_NETRATE"
@@ -2088,7 +1725,7 @@ msgid "PICKER_ALTDM"
 msgstr "Використовувати альтернативні правила дезматчу"
 
 msgid "PICKER_PLAYERS"
-msgstr "Максимум гравців:"
+msgstr "Макс. гравців:"
 
 #, fuzzy
 msgid "PICKER_PORT"
@@ -2134,3 +1771,152 @@ msgstr "Аналоговий стрейф-біг"
 
 msgid "ACCMNU_TITLE"
 msgstr "Параметри доступності"
+
+msgid "MSGMNU_MESSAGEQUEUE"
+msgstr "Розмір черги повідомлень"
+
+msgid "MSGMNU_STACKIDENTICAL"
+msgstr "Об'єднати повторювані повідомлення"
+
+msgid "NOTES_FAIL"
+msgstr "Не вдалося проаналізувати нотатки до випуску"
+
+msgid "NOTES_UNKNOWN"
+msgstr "Невідомо"
+
+msgid "NOTES_RELEASED"
+msgstr "%s версії %s, випущено %s"
+
+msgid "NOTES_EMPTY"
+msgstr "Опис не надано."
+
+#, fuzzy
+msgid "NOTES_DETAILS"
+msgstr "Для отримання додаткової інформації див.: %s"
+
+msgid "PICKER_SHOWTHIS"
+msgstr "Показувати цю сторінку після оновлень"
+
+msgid "PICKER_SHOWNOTES"
+msgstr "Нотатки до випуску"
+
+msgid "PICKER_TAB_ABOUT"
+msgstr "Про програму"
+
+msgid "PICKER_TAB_RELEASE"
+msgstr "Нотатки до випуску"
+
+msgid "MSGMNU_MESSAGEFADE"
+msgstr "Тривалість згасання повідомлення"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_SIZE"
+msgstr "Розмір оточення"
+
+# Jargon.
+msgid "REVMNU_ENVIRONMENT_DIFFUSION"
+msgstr "Дифузія оточення"
+
+# Jargon.
+msgid "REVMNU_ROOM"
+msgstr "Кімната"
+
+# Jargon.
+msgid "REVMNU_ROOM_HF"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ROOM_LF"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DECAY_TIME"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DECAY_HF_RATIO"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DECAY_LF_RATIO"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS"
+msgstr "Відображення"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_DELAY"
+msgstr "Відставання відображень"
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_X"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Y"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REFLECTIONS_PAN_Z"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB"
+msgstr "Реверберація"
+
+# Jargon.
+msgid "REVMNU_REVERB_DELAY"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_X"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Y"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_REVERB_PAN_Z"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ECHO_TIME"
+msgstr "Час ехо"
+
+# Jargon.
+msgid "REVMNU_ECHO_DEPTH"
+msgstr "Глибина ехо"
+
+# Jargon.
+msgid "REVMNU_MODULATION_TIME"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_MODULATION_DEPTH"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_AIR_ABSORPTION_HF"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_HF_REFERENCE"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_LF_REFERENCE"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_ROOM_ROLLOFF_FACTOR"
+msgstr ""
+
+# Jargon.
+msgid "REVMNU_DIFFUSION"
+msgstr "Дифузія"
+
+# Jargon.
+msgid "REVMNU_DENSITY"
+msgstr "Щільність"

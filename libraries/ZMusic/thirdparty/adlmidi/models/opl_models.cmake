@@ -1,0 +1,11 @@
+set(OPL_MODELS_SOURCES
+    ${CMAKE_CURRENT_LIST_DIR}/opl_models.h
+    ${CMAKE_CURRENT_LIST_DIR}/model_ail.c
+    ${CMAKE_CURRENT_LIST_DIR}/model_apogee.c
+    ${CMAKE_CURRENT_LIST_DIR}/model_dmx.c
+    ${CMAKE_CURRENT_LIST_DIR}/model_generic.c
+    ${CMAKE_CURRENT_LIST_DIR}/model_hmi_sos.c
+    ${CMAKE_CURRENT_LIST_DIR}/model_msadlib.c
+    ${CMAKE_CURRENT_LIST_DIR}/model_oconnell.c
+    ${CMAKE_CURRENT_LIST_DIR}/model_win9x.c
+)

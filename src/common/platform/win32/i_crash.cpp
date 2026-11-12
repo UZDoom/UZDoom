@@ -77,30 +77,30 @@
 #ifdef __GNUC__
 typedef enum _MINIDUMP_TYPE
 {
-    MiniDumpNormal
+	MiniDumpNormal
 	// Other types omitted.
 } MINIDUMP_TYPE;
 
 typedef struct _MINIDUMP_EXCEPTION_INFORMATION {
-    DWORD ThreadId;
-    PEXCEPTION_POINTERS ExceptionPointers;
-    BOOL ClientPointers;
+	DWORD ThreadId;
+	PEXCEPTION_POINTERS ExceptionPointers;
+	BOOL ClientPointers;
 } MINIDUMP_EXCEPTION_INFORMATION, *PMINIDUMP_EXCEPTION_INFORMATION;
 
 typedef struct _MINIDUMP_USER_STREAM_INFORMATION {
-    ULONG UserStreamCount;
-    void *UserStreamArray;			// Not really void *
+	ULONG UserStreamCount;
+	void *UserStreamArray;			// Not really void *
 } MINIDUMP_USER_STREAM_INFORMATION, *PMINIDUMP_USER_STREAM_INFORMATION;
 
 typedef BOOL (WINAPI * MINIDUMP_CALLBACK_ROUTINE) (
-    IN PVOID CallbackParam,
-    IN CONST void *CallbackInput,	// Not really void *
-    IN OUT void *CallbackOutput		// Not really void *
-    );
+	IN PVOID CallbackParam,
+	IN CONST void *CallbackInput,	// Not really void *
+	IN OUT void *CallbackOutput		// Not really void *
+	);
 
 typedef struct _MINIDUMP_CALLBACK_INFORMATION {
-    MINIDUMP_CALLBACK_ROUTINE CallbackRoutine;
-    PVOID CallbackParam;
+	MINIDUMP_CALLBACK_ROUTINE CallbackRoutine;
+	PVOID CallbackParam;
 } MINIDUMP_CALLBACK_INFORMATION, *PMINIDUMP_CALLBACK_INFORMATION;
 #endif
 
@@ -1788,7 +1788,7 @@ static INT_PTR CALLBACK OverviewDlgProc (HWND hDlg, UINT message, WPARAM wParam,
 		SetWindowTextW(edit, L"Please tell us about this problem.\n"
 			"The information will NOT be sent to Microsoft.\n\n"
 			"An error report has been created that you can submit to help improve " GAMENAME ". "
-			"You can either save it to disk and make a report in the bugs forum at " FORUM_URL ", "
+			"You can either save it to disk and make a report in the issue tracker at " BUGS_URL ", "
 			"or you can send it directly without letting other people know about it.");
 		SendMessageW(edit, EM_SETSEL, 0, 81);
 		SendMessageW(edit, EM_SETCHARFORMAT, SCF_SELECTION, (LPARAM)&charFormat);
@@ -1814,7 +1814,7 @@ static INT_PTR CALLBACK OverviewDlgProc (HWND hDlg, UINT message, WPARAM wParam,
 		{
 			if (link->msg == WM_LBUTTONDOWN)
 			{
-				ShellExecuteA (NULL, "open", BUGS_FORUM_URL, NULL, NULL, 0);
+				ShellExecuteA (NULL, "open", BUGS_URL, NULL, NULL, 0);
 				SetWindowLongPtrW (hDlg, DWLP_MSGRESULT, 1);
 				return TRUE;
 			}
@@ -2183,7 +2183,7 @@ static void SaveReport (HANDLE file)
 {
 	OPENFILENAME ofn = {
 #ifdef OPENFILENAME_SIZE_VERSION_400
-		OPENFILENAME_SIZE_VERSION_400
+		(DWORD)OPENFILENAME_SIZE_VERSION_400
 #else
 		sizeof(ofn)
 #endif

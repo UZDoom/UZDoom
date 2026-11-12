@@ -1,14 +1,39 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-# usage:
-# ./update-subtrees all
-# ./update-subtrees component
-# ./update-subtrees component commit
+print_usage() {
+	printf "Usage: "$0" [add | pull] (all | <component>) [<commit>]\n\n"
+	printf "\"pull\" is the default operation.\n\n"
+	printf "[<commit>] may not be set if \"all\" is specified\n"
+	exit
+}
+
+if [[ $# -eq 0 || "${1}" == "--help" || "${1}" == "-h" ]]
+then
+	print_usage
+fi
 
 export GITROOT="$(git rev-parse --show-toplevel)"
 
-pull() {
-	name=${1}; shift; dest=${1}; shift; repo=${1}; shift; ref=${1}; shift
+if [[ "${1}" == "--allow-empty" ]]
+then
+	EMPTY_COMMIT_FLAG="--allow-empty"
+	shift
+fi
+if [[ "${1}" == "add" || "${1}" == "pull" ]]
+then
+	operation="${1}"
+	shift
+else
+	operation="pull"
+fi
+
+if [[ "${1}" == "all" && $# -gt 1 || $# -gt 3 ]]
+then
+	print_usage
+fi
+
+subtree_action() {
+	name="${1}"; shift; dest="${1}"; shift; repo="${1}"; shift; ref="${1}"; shift
 
 	if [[ "${1}" == "${name}" || "${1}" == "all" ]]
 	then
@@ -18,14 +43,35 @@ pull() {
 	fi
 	shift
 
-	[[ -z ${1} ]] || ref=${1}
+	[[ -n "${1}" ]] && ref="${1}"
+	shift
+	[[ -n "${1}" ]] && repo="${1}"
 	shift
 
-	git -C $GITROOT subtree pull --prefix="${dest}" "${repo}" "${ref}" \
-		--squash --message "Update ${dest} to ${ref}" || exit
+	set -e
+	COMMIT_MESSAGE_TMP_FILE="$(mktemp)"
+	trap 'rm "${COMMIT_MESSAGE_TMP_FILE}"' EXIT
+	trap 'trap - EXIT && set +e && rm "${COMMIT_MESSAGE_TMP_FILE}"' RETURN
+	HEAD_BEFORE_OP="$(git rev-parse HEAD)"
+	git -C "${GITROOT}" subtree "${operation}" --prefix="${dest}" "${repo}" "${ref}" --squash --message "THIS SHOULD NOT BE IN COMMIT HISTORY!"
+	[[ "$(git rev-parse HEAD)" == "${HEAD_BEFORE_OP}" ]] && return
+	if [[ "${operation}" == "add" ]]
+	then
+		printf "Add ${dest} from ${ref}\n\n" > "${COMMIT_MESSAGE_TMP_FILE}"
+	else
+		printf "Update ${dest} to ${ref}\n\n" > "${COMMIT_MESSAGE_TMP_FILE}"
+	fi
+	cat <(git log --format=%B -n 1 HEAD^2) >> "${COMMIT_MESSAGE_TMP_FILE}"
+	git reset --soft HEAD^
+	if [[ -z "$(git status --porcelain)" ]]
+	then
+		echo "Fetched '${name}' has different commit hash but no actual changes!"
+		[[ -z "${EMPTY_COMMIT_FLAG}" ]] && return || echo "Creating empty commit..."
+	fi
+	git commit ${EMPTY_COMMIT_FLAG} -F "${COMMIT_MESSAGE_TMP_FILE}"
 }
 
-pull 'zwidget'     'libraries/ZWidget'     'https://github.com/UZDoom/ZWidget'     'trunk'  "${@}"
-pull 'zmusic'      'libraries/ZMusic'      'https://github.com/UZDoom/ZMusic'      'trunk'  "${@}"
-pull 'translation' 'libraries/Translation' 'https://github.com/UZDoom/Translation' 'main'   "${@}"
-pull 'zvulkan'     'libraries/ZVulkan'     'https://github.com/UZDoom/ZVulkan'     'legacy' "${@}"
+subtree_action 'zwidget'     'libraries/ZWidget'     'https://github.com/UZDoom/ZWidget'     'legacy' "${@}"
+subtree_action 'zmusic'      'libraries/ZMusic'      'https://github.com/UZDoom/ZMusic'      'trunk'  "${@}"
+subtree_action 'translation' 'libraries/Translation' 'https://github.com/UZDoom/Translation' 'main'   "${@}"
+subtree_action 'zvulkan'     'libraries/ZVulkan'     'https://github.com/UZDoom/ZVulkan'     'legacy' "${@}"

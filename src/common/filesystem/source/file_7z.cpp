@@ -34,7 +34,7 @@
 
 
 namespace FileSys {
-	
+
 //-----------------------------------------------------------------------
 //
 // Interface classes to 7z library
@@ -48,7 +48,7 @@ struct CZDFileInStream
 	ISeekInStream s;
 	FileReader &File;
 
-	CZDFileInStream(FileReader &_file) 
+	CZDFileInStream(FileReader &_file)
 		: File(_file)
 	{
 		s.Read = Read;
@@ -182,7 +182,7 @@ public:
 //==========================================================================
 
 F7ZFile::F7ZFile(const char * filename, FileReader &filer, StringPool* sp)
-	: FResourceFile(filename, filer, sp) 
+	: FResourceFile(filename, filer, sp)
 {
 	Archive = nullptr;
 }
@@ -286,7 +286,7 @@ bool F7ZFile::Open(LumpFilterInfo *filter, FileSystemMessageFunc Printf)
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 

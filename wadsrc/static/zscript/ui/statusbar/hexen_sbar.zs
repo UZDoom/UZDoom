@@ -26,7 +26,7 @@ class HexenStatusBar : BaseStatusBar
 	HUDFont mBigFont;
 	InventoryBarState diparms;
 	InventoryBarState diparms_sbar;
-	
+
 
 	override void Init()
 	{
@@ -45,7 +45,7 @@ class HexenStatusBar : BaseStatusBar
 		mHealthInterpolator = DynamicValueInterpolator.Create(0, 0.25, 1, 8);
 		mHealthInterpolator2 = DynamicValueInterpolator.Create(0, 0.25, 1, 6);	// the chain uses a maximum of 6, not 8.
 	}
-	
+
 	override void NewGame ()
 	{
 		Super.NewGame();
@@ -96,11 +96,11 @@ class HexenStatusBar : BaseStatusBar
 		{
 			DrawString(mHUDFont, FormatNumber(CPlayer.FragCount, 3), (70, -16));
 		}
-		
+
 		if (!isInventoryBarVisible() && !Level.NoInventoryBar && CPlayer.mo.InvSel != null)
 		{
 			// This code was changed to always fit the item into the box, regardless of alignment or sprite size.
-			// Heretic's ARTIBOX is 30x30 pixels. 
+			// Heretic's ARTIBOX is 30x30 pixels.
 			DrawImage("ARTIBOX", (-66, -1), 0, HX_SHADOW);
 			DrawInventoryIcon(CPlayer.mo.InvSel, (-66, -15), DI_ARTIFLASH|DI_ITEM_CENTER|DI_DIMDEPLETED, boxsize:(28, 28));
 			if (CPlayer.mo.InvSel.Amount > 1)
@@ -108,7 +108,7 @@ class HexenStatusBar : BaseStatusBar
 				DrawString(mIndexFont, FormatNumber(CPlayer.mo.InvSel.Amount, 3), (-52, -2 - mIndexFont.mFont.GetHeight()), DI_TEXT_ALIGN_RIGHT);
 			}
 		}
-		
+
 		Ammo ammo1, ammo2;
 		[ammo1, ammo2] = GetCurrentAmmo();
 		if ((ammo1 is "Mana1") || (ammo2 is "Mana1")) DrawImage("MANABRT1", (-17, -30), DI_ITEM_OFFSETS);
@@ -117,17 +117,17 @@ class HexenStatusBar : BaseStatusBar
 		else DrawImage("MANADIM2", (-17, -15), DI_ITEM_OFFSETS);
 		DrawString(mHUDFont, FormatNumber(GetAmount("Mana1"), 3), (-21, -30), DI_TEXT_ALIGN_RIGHT);
 		DrawString(mHUDFont, FormatNumber(GetAmount("Mana2"), 3), (-21, -15), DI_TEXT_ALIGN_RIGHT);
-		
+
 		if (isInventoryBarVisible())
 		{
 			DrawInventoryBar(diparms, (0, 0), 7, DI_SCREEN_CENTER_BOTTOM, HX_SHADOW);
 		}
 	}
-	
+
 	protected void DrawMainBar (double TicFrac)
 	{
 		DrawImage("H2BAR", (0, 134), DI_ITEM_OFFSETS);
-		
+
 		String Gem, Chain;
 		if (CPlayer.mo is "ClericPlayer")
 			{
@@ -146,11 +146,11 @@ class HexenStatusBar : BaseStatusBar
 			}
 
 		int inthealth =  mHealthInterpolator2.GetValue();
-		DrawGem(Chain, Gem, inthealth, CPlayer.mo.GetMaxHealth(true), (30, 193), -23, 49, 15, (multiplayer? DI_TRANSLATABLE : 0) | DI_ITEM_LEFT_TOP); 
-		
+		DrawGem(Chain, Gem, inthealth, CPlayer.mo.GetMaxHealth(true), (30, 193), -23, 49, 15, (multiplayer? DI_TRANSLATABLE : 0) | DI_ITEM_LEFT_TOP);
+
 		DrawImage("LFEDGE", (0, 193), DI_ITEM_OFFSETS);
 		DrawImage("RTEDGE", (277, 193), DI_ITEM_OFFSETS);
-		
+
 		if (!automapactive)
 		{
 			if (isInventoryBarVisible())
@@ -171,7 +171,7 @@ class HexenStatusBar : BaseStatusBar
 						DrawString(mIndexFont, FormatNumber(CPlayer.mo.InvSel.Amount, 3), (174, 184), DI_TEXT_ALIGN_RIGHT);
 					}
 				}
-				
+
 				if (deathmatch || teamplay)
 				{
 					DrawImage("KILLS", (38, 163), DI_ITEM_OFFSETS);
@@ -183,14 +183,14 @@ class HexenStatusBar : BaseStatusBar
 					// Note that this has been changed to use red only if the REAL health is below 25, not when an interpolated value is below 25!
 					DrawString(mHUDFont, FormatNumber(mHealthInterpolator.GetValue(), 3), (66, 176), DI_TEXT_ALIGN_RIGHT, CPlayer.Health < 25? Font.CR_RED : Font.CR_UNTRANSLATED);
 				}
-				
+
 				//armor
 				DrawImage("ARMCLS", (255, 178), DI_ITEM_OFFSETS);
 				DrawString(mHUDFont, FormatNumber(GetArmorSavePercent() / 5, 2), (276, 176), DI_TEXT_ALIGN_RIGHT);
-				
+
 				Ammo ammo1, ammo2;
 				[ammo1, ammo2] = GetCurrentAmmo();
-				
+
 				if (ammo1 != null && !(ammo1 is "Mana1") && !(ammo1 is "Mana2"))
 				{
 					DrawImage("HAMOBACK", (77, 164), DI_ITEM_OFFSETS);
@@ -212,22 +212,22 @@ class HexenStatusBar : BaseStatusBar
 					int amt1, maxamt1, amt2, maxamt2;
 					[amt1, maxamt1] = GetAmount("Mana1");
 					[amt2, maxamt2] = GetAmount("Mana2");
-					if ((ammo1 is "Mana1") || (ammo2 is "Mana1")) 
+					if ((ammo1 is "Mana1") || (ammo2 is "Mana1"))
 					{
 						DrawImage("MANABRT1", (77, 164), DI_ITEM_OFFSETS);
 						DrawBar("MANAVL1", "", amt1, maxamt1, (94, 164), 1, SHADER_VERT, DI_ITEM_OFFSETS);
 					}
-					else 
+					else
 					{
 						DrawImage("MANADIM1", (77, 164), DI_ITEM_OFFSETS);
 						DrawBar("MANAVL1D", "", amt1, maxamt1, (94, 164), 1, SHADER_VERT, DI_ITEM_OFFSETS);
 					}
-					if ((ammo1 is "Mana2") || (ammo2 is "Mana2")) 
+					if ((ammo1 is "Mana2") || (ammo2 is "Mana2"))
 					{
 						DrawImage("MANABRT2", (110, 164), DI_ITEM_OFFSETS);
 						DrawBar("MANAVL2", "", amt2, maxamt2, (102, 164), 1, SHADER_VERT, DI_ITEM_OFFSETS);
 					}
-					else 
+					else
 					{
 						DrawImage("MANADIM2", (110, 164), DI_ITEM_OFFSETS);
 						DrawBar("MANAVL2D", "", amt2, maxamt2, (102, 164), 1, SHADER_VERT, DI_ITEM_OFFSETS);
@@ -294,4 +294,3 @@ class HexenStatusBar : BaseStatusBar
 		}
 	}
 }
-

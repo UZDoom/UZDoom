@@ -21,6 +21,10 @@
 #include "tarray.h"
 #include "zstring.h"
 
+#ifdef HAS_UPDATER
+class UpdateButtonBar;
+#endif
+
 class TabWidget;
 class LauncherBanner;
 class LauncherButtonbar;
@@ -37,22 +41,31 @@ class LauncherWindow : public Widget
 public:
 	static bool ExecModal(FStartupSelectionInfo& info);
 
-	LauncherWindow(FStartupSelectionInfo& info);
+	LauncherWindow(FStartupSelectionInfo& info, struct WindowParams params);
 	void UpdateLanguage();
+
+	void UpdateSize();
 
 	void Start();
 	void Exit();
 	bool IsInMultiplayer() const;
 	bool IsHosting() const;
 	void UpdatePlayButton();
+	void ForceCheckUpdate();
 
 private:
+	void SetValues();
 	void OnClose() override;
 	void OnGeometryChanged() override;
+	void OnWindowClose() override;
+	void Notify(Widget* source, const WidgetEvent type) override;
 
 	LauncherBanner* Banner = nullptr;
 	TabWidget* Pages = nullptr;
 	LauncherButtonbar* Buttonbar = nullptr;
+#ifdef HAS_UPDATER
+	UpdateButtonBar* UpdateBar = nullptr;
+#endif
 
 	PlayGamePage* PlayGame = nullptr;
 	SettingsPage* Settings = nullptr;
@@ -63,6 +76,8 @@ private:
 	FStartupSelectionInfo* Info = nullptr;
 
 	bool ExecResult = false;
+
+	double topHeight = 0.0f;
 
 	friend AboutPage;
 };

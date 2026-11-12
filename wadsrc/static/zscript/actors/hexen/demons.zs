@@ -42,9 +42,9 @@ class Demon1 : Actor
 		HitObituary "$OB_DEMON1HIT";
 		Tag "$FN_DEMON1";
 	}
-	
+
 	const ChunkFlags = SXF_TRANSFERTRANSLATION | SXF_ABSOLUTEVELOCITY;
-	
+
 	States
 	{
 	Spawn:
@@ -431,4 +431,3 @@ class Demon2FX1 : Actor
 		Stop;
 	}
 }
-

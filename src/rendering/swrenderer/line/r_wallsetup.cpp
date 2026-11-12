@@ -42,6 +42,7 @@
 #include "swrenderer/scene/r_scene.h"
 #include "swrenderer/scene/r_light.h"
 #include "swrenderer/viewport/r_viewport.h"
+#include "m_round.h"
 
 namespace swrenderer
 {
@@ -115,8 +116,8 @@ namespace swrenderer
 
 		// Find screen range covered by the line:
 
-		sx1 = xs_RoundToInt(fsx1);
-		sx2 = xs_RoundToInt(fsx2);
+		sx1 = RoundHalfUp(fsx1);
+		sx2 = RoundHalfUp(fsx2);
 
 		if (sx2 <= sx1)
 			return true;
@@ -195,13 +196,13 @@ namespace swrenderer
 			return ProjectedWallCull::Visible;
 
 		float rcp_delta = 1.0f / (wallc->sx2 - wallc->sx1);
-		if (y1 >= 0.0f && y2 >= 0.0f && xs_RoundToInt(y1) <= viewheight && xs_RoundToInt(y2) <= viewheight)
+		if (y1 >= 0.0f && y2 >= 0.0f && RoundHalfUp(y1) <= viewheight && RoundHalfUp(y2) <= viewheight)
 		{
 			for (int x = wallc->sx1; x < wallc->sx2; x++)
 			{
 				float t = (x - wallc->sx1) * rcp_delta;
 				float y = y1 * (1.0f - t) + y2 * t;
-				ScreenY[x] = (short)xs_RoundToInt(y);
+				ScreenY[x] = (short)RoundHalfUp(y);
 			}
 		}
 		else
@@ -210,7 +211,7 @@ namespace swrenderer
 			{
 				float t = (x - wallc->sx1) * rcp_delta;
 				float y = y1 * (1.0f - t) + y2 * t;
-				ScreenY[x] = (short)clamp(xs_RoundToInt(y), 0, viewheight);
+				ScreenY[x] = (short)clamp(RoundHalfUp(y), 0, viewheight);
 			}
 		}
 
@@ -498,7 +499,7 @@ namespace swrenderer
 		double rowoffset = lineseg->sidedef->GetTextureYOffset(side_t::mid) + rover->master->sidedef[0]->GetTextureYOffset(side_t::mid);
 		double planez = rover->model->GetPlaneTexZ(sector_t::ceiling);
 
-		fixed_t xoffset = xs_Fix<16>::ToFix(lineseg->sidedef->GetTextureXOffset(side_t::mid) + rover->master->sidedef[0]->GetTextureXOffset(side_t::mid));
+		fixed_t xoffset = FloatToFixed<16>(lineseg->sidedef->GetTextureXOffset(side_t::mid) + rover->master->sidedef[0]->GetTextureXOffset(side_t::mid));
 		if (rowoffset < 0)
 		{
 			rowoffset += pic->GetHeight();
@@ -511,7 +512,7 @@ namespace swrenderer
 			// still be positioned in world units rather than texels.
 
 			texturemid = texturemid + rowoffset * yscale;
-			xoffset = xs_RoundToInt(xoffset * xscale);
+			xoffset = RoundHalfUp(xoffset * xscale);
 		}
 		else
 		{
@@ -630,13 +631,13 @@ namespace swrenderer
 
 	fixed_t ProjectedWallTexcoords::GetXOffset(seg_t* lineseg, FSoftwareTexture* tex, side_t::ETexpart texpart)
 	{
-		fixed_t TextureOffsetU = xs_Fix<16>::ToFix(lineseg->sidedef->GetTextureXOffset(texpart));
+		fixed_t TextureOffsetU = FloatToFixed<16>(lineseg->sidedef->GetTextureXOffset(texpart));
 		double xscale = GetXScale(lineseg->sidedef, tex, texpart);
 
 		fixed_t xoffset;
 		if (tex->useWorldPanning(lineseg->GetLevel()))
 		{
-			xoffset = xs_RoundToInt(TextureOffsetU * xscale);
+			xoffset = RoundHalfUp(TextureOffsetU * xscale);
 		}
 		else
 		{

@@ -48,9 +48,29 @@ class MenuDelegateBase ui
 
 	virtual Font PickFont(Font fnt)
 	{
-		if (generic_ui || !fnt) return NewSmallFont;
-		if (fnt == SmallFont) return AlternativeSmallFont;
-		if (fnt == BigFont) return AlternativeBigFont;
-		return fnt;
+		Font chosenFont = fnt;
+		
+		if (generic_ui || !fnt)
+		{
+			chosenFont = Font.GetSmallTextFont(NewSmallFont);
+		}
+		else if (fnt == SmallFont || fnt == NewSmallFont || fnt == SmallFont2)
+		{
+			chosenFont = Font.GetSmallTextFont(fnt);
+		}
+		else if (fnt == BigFont || fnt == BigUpper)
+		{
+			chosenFont = Font.GetBigTextFont(fnt);
+		}
+		else if (fnt == ConFont || fnt == NewConsoleFont)
+		{
+			chosenFont = Font.GetConsoleFont(fnt);
+		}
+		else if (fnt == IntermissionFont)
+		{
+			chosenFont = Font.GetDescriptionFont(fnt);
+		}
+
+		return chosenFont;
 	}
 }

@@ -55,7 +55,7 @@ class Crossbow : HereticWeapon
 		CRBW C 5 A_ReFire;
 		Goto Ready;
 	}
-	
+
 	//----------------------------------------------------------------------------
 	//
 	// PROC A_FireCrossbowPL1
@@ -105,7 +105,7 @@ class CrossbowPowered : Crossbow
 		CRBW C 4 A_ReFire;
 		Goto Ready;
 	}
-	
+
 	//----------------------------------------------------------------------------
 	//
 	// PROC A_FireCrossbowPL2
@@ -226,4 +226,3 @@ class CrossbowFX4 : Actor
 		Stop;
 	}
 }
-

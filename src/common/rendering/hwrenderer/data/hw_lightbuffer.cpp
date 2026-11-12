@@ -42,7 +42,7 @@ FLightBuffer::FLightBuffer(int pipelineNbr):
 	{
 		mBufferType = false;
 		mBlockSize = screen->maxuniformblock / ELEMENT_SIZE;
-		mBlockAlign = screen->uniformblockalignment / ELEMENT_SIZE;
+		mBlockAlign = screen->uniformblockalignment < ELEMENT_SIZE ? 1 : screen->uniformblockalignment / ELEMENT_SIZE;
 		mMaxUploadSize = (mBlockSize - mBlockAlign);
 
 		//mByteSize += screen->maxuniformblock;	// to avoid mapping beyond the end of the buffer. REMOVED this...This can try to allocate 100's of MB..
@@ -131,6 +131,3 @@ int FLightBuffer::GetBinding(unsigned int index, size_t* pOffset, size_t* pSize)
 	*pSize = mBlockSize * ELEMENT_SIZE;
 	return (index - offset);
 }
-
-
-

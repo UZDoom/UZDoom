@@ -77,5 +77,3 @@ CCMD (menu_resolution_commit_changes)
 		vid_scale_custompixelaspect = 1.0;
 	}
 }
-
-

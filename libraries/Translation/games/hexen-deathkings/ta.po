@@ -1,0 +1,485 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-06-28 17:01+0000\n"
+"Last-Translator: தமிழ்நேரம் <tamilneram247@gmail.com>\n"
+"Language-Team: Tamil <https://hosted.weblate.org/projects/doom-engine-games/hexen-deathkings/ta/>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.7.dev0\n"
+
+msgid "TXT_HEXDD_MAP41"
+msgstr "பாழடைந்த சிற்றூர்"
+
+msgid "TXT_HEXDD_MAP42"
+msgstr "ப்ளைட்"
+
+msgid "TXT_HEXDD_MAP43"
+msgstr "சம்ப்"
+
+msgid "TXT_HEXDD_MAP44"
+msgstr "கேடாகம்ப்"
+
+msgid "TXT_HEXDD_MAP45"
+msgstr "பேட்லாண்ட்ச்"
+
+msgid "TXT_HEXDD_MAP46"
+msgstr "பிராக்கன்வுட்"
+
+msgid "TXT_HEXDD_MAP47"
+msgstr "பைர்"
+
+msgid "TXT_HEXDD_MAP48"
+msgstr "கான்ச்டபிள் வாயில்"
+
+msgid "TXT_HEXDD_MAP49"
+msgstr "கருவூலம்"
+
+msgid "TXT_HEXDD_MAP50"
+msgstr "சந்தை இடம்"
+
+msgid "TXT_HEXDD_MAP51"
+msgstr "நிம்மதியாக இருங்கள்"
+
+msgid "TXT_HEXDD_MAP52"
+msgstr "சோதனை"
+
+msgid "TXT_HEXDD_MAP53"
+msgstr "ஆயுதக் கிடங்கு"
+
+msgid "TXT_HEXDD_MAP54"
+msgstr "நேவ்"
+
+msgid "TXT_HEXDD_MAP55"
+msgstr "சாந்த்ரி"
+
+msgid "TXT_HEXDD_MAP56"
+msgstr "இறைச்சி கூடம்"
+
+msgid "TXT_HEXDD_MAP57"
+msgstr "டார்க் வாட்ச்"
+
+msgid "TXT_HEXDD_MAP58"
+msgstr "க்ளோகா"
+
+msgid "TXT_HEXDD_MAP59"
+msgstr "ஐச் ஓல்ட்"
+
+msgid "TXT_HEXDD_MAP60"
+msgstr "இருண்ட கோட்டை"
+
+msgid "TXT_HEXDD_MAP33"
+msgstr "போக்குவரத்து"
+
+msgid "TXT_HEXDD_MAP34"
+msgstr "ஓவர்'என் அண்டர்"
+
+msgid "TXT_HEXDD_MAP35"
+msgstr "மரண மூடுபனி"
+
+msgid "TXT_HEXDD_MAP36"
+msgstr "வலியின் கோட்டை"
+
+msgid "TXT_HEXDD_MAP37"
+msgstr "கழிவுநீர் குழி"
+
+msgid "TXT_HEXDD_MAP38"
+msgstr "ரோசா"
+
+# intermission
+msgid "TXT_HEXDD_CLUS1MSG"
+msgstr ""
+"நடுங்கும் கையை உங்கள் குறுக்கே துடைப்பது \n"
+"முகத்தில் இரத்தம் கொட்டுகிறது, நீங்கள் அழிக்க முயற்சி செய்கிறீர்கள் \n"
+"உங்கள் மனம் வரவிருக்கிறது... \n"
+"\n"
+"… பின்னால் இருப்பதை மறந்து விடுங்கள். \n"
+"\n"
+"தொலைவில், அப்பட்டமான அரண்கள் \n"
+"ஒரு பெரிய கோட்டை வளாகம் தெரிகிறது \n"
+"மேலே வானத்தை கிழித்து, துர்நாற்றம் \n"
+"மீறப்பட்டதில் இருந்து சிதைவு அலைகிறது \n"
+"கணக்கிடப்படாத இறந்தவர்களின் கல்லறைகள். \n"
+"\n"
+"என்ன சிறியது என்பதை கவனமாக எண்ணுங்கள் \n"
+"உங்கள் கலைப்பொருட்களின் எச்சங்கள், நீங்கள் முயற்சி செய்யுங்கள் \n"
+"அது நடக்கும் என்று உங்களை உறுதிப்படுத்திக் கொள்ள \n"
+"போதுமானதாக இருக்கும். எல்லாவற்றிற்கும் மேலாக, அது இருக்க வேண்டும் \n"
+"போதும், இல்லையா? \n"
+"\n"
+"\n"
+"இல்லையா?"
+
+# intermission
+msgid "TXT_HEXDD_CLUS2MSG"
+msgstr ""
+"நிச்சயமாக இழிந்தவர்களின் ஆன்மாக்கள் வாழ்கின்றன \n"
+"இந்த உலகம், நியாயமான அல்லது நல்லது எதுவுமின்றி \n"
+"நீண்ட காலம் இங்கே வாழ முடியும். \n"
+"\n"
+"ஆனால் முன்பு கடந்தது மட்டுமே முடியும் \n"
+"உங்களைத் தடுக்கும் ஒரு வெளிர் நிழலாக இருங்கள் \n"
+"இப்போது பாதை: இருண்ட கோட்டையே. \n"
+"\n"
+"கதீட்ரல் தொகுதிகளின் கடுமையான பெரும்பகுதி \n"
+"அனைத்து ஆனால் துண்டு துண்டான பார்வைகள் \n"
+"கோட்டை சரியானது, ஆனால் என்ன பார்க்க முடியும் \n"
+"குளிர்ச்சியான கிசுகிசுக்களில் பேசுகிறார், \n"
+"நீடித்த மரணம்… \n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"… அதிர்ச்டசாலிகளுக்கு."
+
+# intermission
+msgid "TXT_HEXDD_WIN1MSG"
+msgstr ""
+"மீண்டும் ஒருமுறை நீங்கள் உங்களைக் காணலாம் \n"
+"குழப்பமான கோளத்தின் பெரிய மண்டபம், என \n"
+"எப்பொழுது இருந்து நேரம் கடக்கவில்லை என்றால் \n"
+"கடைசியாக நீ இந்த நிழல்களுக்கு மத்தியில் சென்றாய். \n"
+"\n"
+"ஆனால் ஏதோ வித்தியாசமானது, \n"
+"ஒரு காலத்தில் மென்மையாக இருந்த ஒரு அமைதி \n"
+"கிசுகிசுக்கள், கவனிக்கப்பட்ட உணர்வு \n"
+"மறைந்த கண்களால்... \n"
+"\n"
+"…ஒரு தீயவனைக் காக்கும் கண்கள் \n"
+"நோக்கம்."
+
+# intermission
+msgid "TXT_HEXDD_WIN2MSG"
+msgstr ""
+"ஒருமுறை நீங்கள் குழப்பத்தை புரிந்துகொண்டீர்கள் \n"
+"கோளம், நடுக்கத்திற்குள் அதை வைத்திருந்தது \n"
+"கைகள். இப்போது உங்கள் கைகள் நடுங்குகின்றன \n"
+"பேராசையை விட அதிகமான ஒன்று, மற்றும் \n"
+"பட்டினியால் அச்சம் \n"
+"ஆற்றல். \n"
+"\n"
+"கோளத்தின் ஆற்றல் கூட என்றால் \n"
+"இதிலிருந்து உங்களைப் பாதுகாக்க போதுமானதாக இல்லை \n"
+"இருளின் சக்திகள், ஒருவேளை அது \n"
+"தீண்டப்படாமல் விடுவது நல்லது, அதன் வாக்குறுதி \n"
+"பராமரிக்கப்படாமல் விடப்பட்டது. \n"
+"\n"
+"\n"
+"\n"
+"ஆனால், நீங்கள் ஒருபோதும் அப்படி இருக்கவில்லை \n"
+"சவாலில் இருந்து பின்வாங்க…"
+
+# intermission
+msgid "TXT_HEXDD_WIN3MSG"
+msgstr ""
+"\\n...மற்றும் மற்ற வீரர்கள் காத்திருக்கிறார்கள்.\n"
+"\n"
+
+# script texts
+msgid "TXT_ACS_MAP33_6_YOUDA"
+msgstr "நீங்கள் தயாராக அறையில் போர் செய்ய தைரியம்?"
+
+# script texts
+msgid "TXT_ACS_MAP33_7_FORTH"
+msgstr "அதற்காக, நீங்கள் இறக்க வேண்டும்!"
+
+# script texts
+msgid "TXT_ACS_MAP41_6_THEWA"
+msgstr "அருவி திறந்திருக்கும்"
+
+# script texts
+msgid "TXT_ACS_MAP41_7_THEWA"
+msgstr "அருவி தடைபட்டுள்ளது"
+
+# script texts
+msgid "TXT_ACS_MAP41_8_ADOOR"
+msgstr "தேவாலயத்தில் ஒரு கதவு திறக்கப்பட்டது"
+
+# script texts
+msgid "TXT_ACS_MAP42_4_NOWTH"
+msgstr "இப்போது அது விசித்திரமானது…"
+
+# script texts
+msgid "TXT_ACS_MAP44_1_THREE"
+msgstr "புதிரின் இன்னும் மூன்று பகுதிகள் எஞ்சியுள்ளன"
+
+# script texts
+msgid "TXT_ACS_MAP44_2_TWOMO"
+msgstr "புதிரின் இன்னும் இரண்டு பகுதிகள் எஞ்சியுள்ளன"
+
+# script texts
+msgid "TXT_ACS_MAP44_3_ONEMO"
+msgstr "புதிரின் இன்னும் ஒரு பகுதி உள்ளது"
+
+# script texts
+msgid "TXT_ACS_MAP44_4_THEPU"
+msgstr "புதிர் முடிந்தது"
+
+# script texts
+msgid "TXT_ACS_MAP44_6_YOUHA"
+msgstr "நீங்கள் புதிரை முடிக்கவில்லை"
+
+# script texts
+msgid "TXT_ACS_MAP44_8_THEFL"
+msgstr "தரை பாதுகாப்பாக இல்லை!"
+
+# script texts
+msgid "TXT_ACS_MAP44_10_ONETH"
+msgstr "புதிரில் மூன்றில் ஒரு பங்கு தீர்க்கப்படுகிறது"
+
+# script texts
+msgid "TXT_ACS_MAP44_11_TWOTH"
+msgstr "புதிரின் மூன்றில் இரண்டு பங்கு தீர்க்கப்படுகிறது"
+
+# script texts
+msgid "TXT_ACS_MAP45_1_YOUHE"
+msgstr "தூரத்தில் ஒரு மேடை நகரும் ஒலி கேட்கிறது"
+
+# script texts
+msgid "TXT_ACS_MAP46_0_ITISD"
+msgstr "இது செய்யப்படுகிறது…"
+
+# script texts
+msgid "TXT_ACS_MAP46_1_YOUHA"
+msgstr "நீங்கள் புதிரை முடிக்கவில்லை"
+
+# script texts
+msgid "TXT_ACS_MAP46_2_IMWAR"
+msgstr "நான் உன்னை எச்சரிக்கிறேன்…"
+
+# script texts
+msgid "TXT_ACS_MAP46_3_STUBB"
+msgstr "பிடிவாதக்காரன், இல்லையா?"
+
+# script texts
+msgid "TXT_ACS_MAP46_4_ANDST"
+msgstr "மற்றும் முட்டாள் கூட"
+
+# script texts
+msgid "TXT_ACS_MAP46_8_ONEFO"
+msgstr "இந்தப் புதிரில் நான்கில் ஒரு பங்கு முடிந்தது"
+
+# script texts
+msgid "TXT_ACS_MAP46_9_BADCH"
+msgstr "தவறான தேர்வு…"
+
+# script texts
+msgid "TXT_ACS_MAP47_2_THESY"
+msgstr "சின்னங்கள் சீரமைக்கப்படவில்லை"
+
+# script texts
+msgid "TXT_ACS_MAP48_2_THEDO"
+msgstr "இந்தப் பக்கத்திலிருந்து கதவு திறக்கப்படாது"
+
+# script texts
+msgid "TXT_ACS_MAP50_1_THEDO"
+msgstr "கதவு வெளிப்புறமாகத் தடுக்கப்பட்டுள்ளது"
+
+# script texts
+msgid "TXT_ACS_MAP51_5_SACRI"
+msgstr "கொடை !"
+
+# script texts
+msgid "TXT_ACS_MAP51_6_YOUHA"
+msgstr "எரிக் கல்லறையை தீட்டுப்படுத்தி விட்டாய் !!"
+
+# script texts
+msgid "TXT_ACS_MAP51_7_ANDNO"
+msgstr "இப்போது நீங்கள் இறந்துவிடுவீர்கள் !!!"
+
+# script texts
+msgid "TXT_ACS_MAP51_8_ONETH"
+msgstr "புதிரில் மூன்றில் ஒரு பங்கு தீர்க்கப்படுகிறது"
+
+# script texts
+msgid "TXT_ACS_MAP51_9_TWOTH"
+msgstr "புதிரின் மூன்றில் இரண்டு பங்கு தீர்க்கப்படுகிறது"
+
+# script texts
+msgid "TXT_ACS_MAP51_10_THECR"
+msgstr "கிரிப்ட் திறந்திருக்கிறது"
+
+# script texts
+msgid "TXT_ACS_MAP51_11_BEWAR"
+msgstr "சிலந்தியின் கல்லறையில் கவனமாக"
+
+# script texts
+msgid "TXT_ACS_MAP51_13_YOUHE"
+msgstr "வெளியே ஒரு மேடை எழுவதை நீங்கள் கேட்கிறீர்கள்"
+
+# script texts
+msgid "TXT_ACS_MAP51_14_DOYOU"
+msgstr "நீங்கள் அதிர்ச்டசாலி என்று நினைக்கிறீர்களா?"
+
+# script texts
+msgid "TXT_ACS_MAP51_15_YOUGU"
+msgstr "நீங்கள் தவறாக யூகித்தீர்கள்!"
+
+# script texts
+msgid "TXT_ACS_MAP51_16_GOODG"
+msgstr "நல்ல உய்த்துணர்தல்"
+
+# script texts
+msgid "TXT_ACS_MAP51_17_CANYO"
+msgstr "என் லெவலுக்கு எல்லா ச்கிரிப்டிங்கையும் உங்களால் செய்ய முடியுமா?"
+
+# script texts
+msgid "TXT_ACS_MAP51_18_DONTT"
+msgstr "என் க்ளோபியை தொடாதே"
+
+# script texts
+msgid "TXT_ACS_MAP51_19_VORPA"
+msgstr "வோர்பால் ?!?!?!"
+
+# script texts
+msgid "TXT_ACS_MAP51_20_GIMME"
+msgstr "கொஞ்சம் சர்க்கரை கொடு, குழந்தை"
+
+# script texts
+msgid "TXT_ACS_MAP51_21_DUHUH"
+msgstr "துஅ்-உஅ்அ்அ்…"
+
+# script texts
+msgid "TXT_ACS_MAP51_22_FILMI"
+msgstr "ஒரு மணி நேரத்தில் படமா?"
+
+# script texts
+msgid "TXT_ACS_MAP51_23_IDONT"
+msgstr "எனது சொந்த கல்லறை கூட எனக்கு கிடைக்கவில்லை - cf"
+
+# script texts
+msgid "TXT_ACS_MAP51_24_LETNO"
+msgstr "ரத்தம் சிந்தாமல் இருக்கட்டும்"
+
+# script texts
+msgid "TXT_ACS_MAP51_25_LETNO"
+msgstr "கோபத்தில் கையை உயர்த்த வேண்டாம்"
+
+# script texts
+msgid "TXT_ACS_MAP52_9_WHODA"
+msgstr "நம் தூக்கத்தைக் கெடுக்க யாருக்குத் துணிச்சல்?"
+
+# script texts
+msgid "TXT_ACS_MAP52_10_THEWA"
+msgstr "வழி திறந்திருக்கிறது"
+
+# script texts
+msgid "TXT_ACS_MAP53_2_YOUHA"
+msgstr "உங்களிடம் உள்ளது "
+
+# script texts
+msgid "TXT_ACS_MAP53_3_SWITC"
+msgstr "\\x20சுவிட்சுகள் இடதுபுறம்"
+
+# script texts
+msgid "TXT_ACS_MAP53_4_YOUHA"
+msgstr "உங்களிடம் மட்டுமே உள்ளது "
+
+# script texts
+msgid "TXT_ACS_MAP53_5_SWITC"
+msgstr "\\x20இடதுபுறம் மாறவும்"
+
+# script texts
+msgid "TXT_ACS_MAP53_6_THEEX"
+msgstr "வெளியேறும் பாதை திறக்கப்பட்டுள்ளது"
+
+# script texts
+msgid "TXT_ACS_MAP54_1_THEDO"
+msgstr "இந்தப் பக்கத்திலிருந்து கதவுகள் திறக்கப்படாது"
+
+# script texts
+msgid "TXT_ACS_MAP54_4_THEDO"
+msgstr "கதவுகள் திறந்திருக்கும்…"
+
+# script texts
+msgid "TXT_ACS_MAP54_5_IFYOU"
+msgstr "…நீங்கள் தயாராக இருந்தால்"
+
+# script texts
+msgid "TXT_ACS_MAP54_9_ADOOR"
+msgstr "ஒரு கதவு திறக்கப்பட்டது"
+
+# script texts
+msgid "TXT_ACS_MAP54_10_ONTHE"
+msgstr "சாந்த்ரி மீது"
+
+# script texts
+msgid "TXT_ACS_MAP54_11_ABRID"
+msgstr "ஒரு பாலம் கட்டப்பட்டுள்ளது"
+
+# script texts
+msgid "TXT_ACS_MAP54_12_ONTHE"
+msgstr "இறைச்சி கூடத்தில்"
+
+# script texts
+msgid "TXT_ACS_MAP54_13_ASTAI"
+msgstr "படிக்கட்டு கட்டப்பட்டுள்ளது"
+
+# script texts
+msgid "TXT_ACS_MAP54_14_ONTHE"
+msgstr "டார்க் வாட்ச் மீது"
+
+# script texts
+msgid "TXT_ACS_MAP54_15_ONEGE"
+msgstr "ஒரு கியர் வைக்கப்பட்டுள்ளது"
+
+# script texts
+msgid "TXT_ACS_MAP54_16_GEARS"
+msgstr "\\x20 கியர்கள் வைக்கப்பட்டுள்ளன"
+
+# script texts
+msgid "TXT_ACS_MAP54_17_ABARR"
+msgstr "ஒரு தடுப்பணை திறக்கப்பட்டுள்ளது"
+
+# script texts
+msgid "TXT_ACS_MAP54_18_ONTHE"
+msgstr "க்ளோகா மீது"
+
+# script texts
+msgid "TXT_ACS_MAP54_20_THEWA"
+msgstr "திரும்பும் வழி திறந்திருக்கிறது"
+
+# script texts
+msgid "TXT_ACS_MAP55_9_THEDO"
+msgstr "கதவு உள்பக்கமாகத் தடுக்கப்பட்டுள்ளது"
+
+# script texts
+msgid "TXT_ACS_MAP56_0_YOUDA"
+msgstr "நீங்கள் கல்லறையைக் கொள்ளையடிக்கத் துணிந்தீர்கள்"
+
+# script texts
+msgid "TXT_ACS_MAP56_1_OFTHE"
+msgstr "சாவுஒறுப்பு செய்பவரின்?"
+
+# script texts
+msgid "TXT_ACS_MAP56_2_PREPA"
+msgstr "இறக்க தயாராகுங்கள்"
+
+# script texts
+msgid "TXT_ACS_MAP59_1_YOUHA"
+msgstr "உங்களிடம் உள்ளது "
+
+# script texts
+msgid "TXT_ACS_MAP59_2_MORES"
+msgstr "\\x20மேலும் சுவிட்சுகள் கண்டுபிடிக்க"
+
+# script texts
+msgid "TXT_ACS_MAP59_3_YOUHA"
+msgstr "உங்களிடம் மட்டுமே உள்ளது "
+
+# script texts
+msgid "TXT_ACS_MAP59_4_SWITC"
+msgstr "\\x20இடதுபுறம் மாறவும்"
+
+# script texts
+msgid "TXT_ACS_MAP59_5_THEWA"
+msgstr "கோபுரத்திற்கு செல்லும் வழி திறந்தே உள்ளது"
+
+# script texts
+msgid "TXT_ACS_MAP60_3_THEWA"
+msgstr "வழி திறந்திருக்கிறது"

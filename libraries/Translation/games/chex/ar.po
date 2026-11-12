@@ -1,0 +1,251 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-05-09 12:56-0400\n"
+"Last-Translator: Marcus Minhorst <marcus.minhorst@gmail.com>\n"
+"Language-Team: none\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: python 3.14.4 polib 1.2.0\n"
+
+msgid "TXT_CHEX_EP"
+msgstr ""
+
+# Flem = phlegm
+msgid "GOTBLUEFLEM"
+msgstr ""
+
+msgid "GOTYELLOWFLEM"
+msgstr ""
+
+msgid "GOTREDFLEM"
+msgstr ""
+
+msgid "GOTGOGGLES"
+msgstr ""
+
+msgctxt "chex"
+msgid "PD_BLUECO"
+msgstr ""
+
+msgctxt "chex"
+msgid "PD_REDCO"
+msgstr ""
+
+msgctxt "chex"
+msgid "PD_YELLOWCO"
+msgstr ""
+
+msgid "PD_BLUEFO"
+msgstr ""
+
+msgid "PD_REDFO"
+msgstr ""
+
+msgid "PD_YELLOWFO"
+msgstr ""
+
+msgctxt "chex"
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr ""
+
+msgctxt "chex"
+msgid "HUSTR_E1M1"
+msgstr ""
+
+msgctxt "chex"
+msgid "HUSTR_E1M2"
+msgstr ""
+
+msgctxt "chex"
+msgid "HUSTR_E1M3"
+msgstr ""
+
+msgctxt "chex"
+msgid "HUSTR_E1M4"
+msgstr ""
+
+msgctxt "chex"
+msgid "HUSTR_E1M5"
+msgstr ""
+
+msgctxt "chex"
+msgid "HUSTR_E2M1"
+msgstr ""
+
+msgctxt "chex"
+msgid "HUSTR_E2M2"
+msgstr ""
+
+msgctxt "chex"
+msgid "HUSTR_E2M3"
+msgstr ""
+
+msgctxt "chex"
+msgid "HUSTR_E2M4"
+msgstr ""
+
+msgctxt "chex"
+msgid "HUSTR_E2M5"
+msgstr ""
+
+msgctxt "chex"
+msgid "HUSTR_E3M1"
+msgstr ""
+
+msgctxt "chex"
+msgid "HUSTR_E3M2"
+msgstr ""
+
+msgctxt "chex"
+msgid "HUSTR_E3M3"
+msgstr ""
+
+msgctxt "chex"
+msgid "HUSTR_E3M4"
+msgstr ""
+
+msgctxt "chex"
+msgid "HUSTR_E3M5"
+msgstr ""
+
+msgctxt "chex"
+msgid "CC_ZOMBIE"
+msgstr ""
+
+msgctxt "chex"
+msgid "CC_SHOTGUN"
+msgstr ""
+
+msgctxt "chex"
+msgid "CC_IMP"
+msgstr ""
+
+msgctxt "chex"
+msgid "CC_DEMON"
+msgstr ""
+
+msgctxt "chex"
+msgid "CC_LOST"
+msgstr ""
+
+msgctxt "chex"
+msgid "CC_CACO"
+msgstr ""
+
+msgctxt "chex"
+msgid "CC_BARON"
+msgstr ""
+
+msgctxt "chex"
+msgid "CC_SPIDER"
+msgstr ""
+
+msgctxt "chex"
+msgid "CC_CYBER"
+msgstr ""
+
+msgctxt "chex"
+msgid "CC_HERO"
+msgstr ""
+
+msgctxt "chex"
+msgid "PD_BLUEC"
+msgstr ""
+
+msgctxt "chex"
+msgid "PD_REDC"
+msgstr ""
+
+msgctxt "chex"
+msgid "PD_YELLOWC"
+msgstr ""
+
+msgid "PD_BLUEF"
+msgstr ""
+
+msgid "PD_REDF"
+msgstr ""
+
+msgid "PD_YELLOWF"
+msgstr ""
+
+msgctxt "chex"
+msgid "OB_SLIME"
+msgstr ""
+
+msgctxt "chex"
+msgid "OB_LAVA"
+msgstr ""
+
+msgid "OB_POWERSTRAND"
+msgstr ""
+
+msgctxt "chex"
+msgid "OB_KILLEDSELF"
+msgstr ""
+
+msgid "OB_STRIDICUS"
+msgstr ""
+
+msgid "OB_FLEMMINE"
+msgstr ""
+
+msgid "OB_SUPERCYCLOPTIS"
+msgstr ""
+
+msgid "OB_MAXIMUS"
+msgstr ""
+
+msgid "OB_LARVA"
+msgstr ""
+
+msgid "OB_QUADRUMPUS"
+msgstr ""
+
+msgid "OB_FLEMBOMINATION"
+msgstr ""
+
+msgid "OB_SNOTFOLUS"
+msgstr ""
+
+msgctxt "chex"
+msgid "OB_MPR_SPLASH"
+msgstr ""
+
+msgctxt "chex"
+msgid "E1TEXT"
+msgstr ""
+
+msgctxt "chex"
+msgid "E2TEXT"
+msgstr ""
+
+msgctxt "chex"
+msgid "E3TEXT"
+msgstr ""
+
+msgid "M_EPI1"
+msgstr ""
+
+msgid "M_EPI2"
+msgstr ""
+
+msgid "M_EPI3"
+msgstr ""
+
+msgid "TAG_GOGGLES"
+msgstr ""
+
+msgid "TAG_BLUEFLEMKEY"
+msgstr ""
+
+msgid "TAG_YELLOWFLEMKEY"
+msgstr ""
+
+msgid "TAG_REDFLEMKEY"
+msgstr ""

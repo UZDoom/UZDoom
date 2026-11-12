@@ -260,26 +260,26 @@ void ZCCCompiler::ProcessClass(ZCC_Class *cnode, PSymbolTreeNode *treenode)
 			{
 				switch (node->NodeType)
 				{
-				case AST_Enum:			
+				case AST_Enum:
 					enumType = static_cast<ZCC_Enum *>(node);
 					cls->Enums.Push(enumType);
 					break;
 
-				case AST_Struct:	
+				case AST_Struct:
 					if (static_cast<ZCC_Struct *>(node)->Flags & VARF_Native)
 					{
 						Error(node, "Cannot define native structs inside classes");
 						static_cast<ZCC_Struct *>(node)->Flags &= ~VARF_Native;
 					}
-					ProcessStruct(static_cast<ZCC_Struct *>(node), childnode, cls->cls);	
+					ProcessStruct(static_cast<ZCC_Struct *>(node), childnode, cls->cls);
 					break;
 
-				case AST_ConstantDef:	
-					cls->Constants.Push(static_cast<ZCC_ConstantDef *>(node));	
+				case AST_ConstantDef:
+					cls->Constants.Push(static_cast<ZCC_ConstantDef *>(node));
 					cls->Constants.Last()->Type = enumType;
 					break;
 
-				default: 
+				default:
 					assert(0 && "Default case is just here to make GCC happy. It should never be reached");
 				}
 			}
@@ -293,8 +293,8 @@ void ZCCCompiler::ProcessClass(ZCC_Class *cnode, PSymbolTreeNode *treenode)
 			cls->FlagDefs.Push(static_cast<ZCC_FlagDef*>(node));
 			break;
 
-		case AST_VarDeclarator: 
-			cls->Fields.Push(static_cast<ZCC_VarDeclarator *>(node)); 
+		case AST_VarDeclarator:
+			cls->Fields.Push(static_cast<ZCC_VarDeclarator *>(node));
 			break;
 
 		case AST_EnumTerminator:
@@ -438,8 +438,8 @@ void ZCCCompiler::ProcessStruct(ZCC_Struct *cnode, PSymbolTreeNode *treenode, ZC
 			}
 			break;
 
-		case AST_VarDeclarator: 
-			cls->Fields.Push(static_cast<ZCC_VarDeclarator *>(node)); 
+		case AST_VarDeclarator:
+			cls->Fields.Push(static_cast<ZCC_VarDeclarator *>(node));
 			break;
 
 		case AST_FuncDeclarator:
@@ -467,7 +467,7 @@ void ZCCCompiler::ProcessStruct(ZCC_Struct *cnode, PSymbolTreeNode *treenode, ZC
 			break;
 		}
 		node = node->SiblingNext;
-	} 
+	}
 	while (node != cnode->Body);
 }
 
@@ -970,7 +970,7 @@ void ZCCCompiler::CreateClassTypes()
 					c->Type()->TypeDeprecated = true;
 					c->Type()->mDeprecationMessage = c->cls->DeprecationMessage ? *c->cls->DeprecationMessage : "";
 				}
-				
+
 
 				if (c->cls->Flags & ZCC_Final)
 				{
@@ -989,7 +989,7 @@ void ZCCCompiler::CreateClassTypes()
 					}
 					while(it != c->cls->Sealed);
 				}
-				// 
+				//
 				if (mVersion >= MakeVersion(2, 4, 0))
 				{
 					static int incompatible[] = { ZCC_UIFlag, ZCC_Play, ZCC_ClearScope };
@@ -1538,7 +1538,7 @@ bool ZCCCompiler::CompileFields(PContainerType *type, TArray<ZCC_VarDeclarator *
 		PType *fieldtype = DetermineType(type, field, field->Names->Name, field->Type, true, true);
 
 		// For structs only allow 'deprecated', for classes exclude function qualifiers.
-		int notallowed = forstruct? 
+		int notallowed = forstruct?
 			ZCC_Latent | ZCC_Final | ZCC_Action | ZCC_Static | ZCC_FuncConst | ZCC_FuncConstUnsafe | ZCC_Abstract | ZCC_Virtual | ZCC_Override | ZCC_Meta | ZCC_Extension | ZCC_VirtualScope | ZCC_ClearScope :
 			ZCC_Latent | ZCC_Final | ZCC_Action | ZCC_Static | ZCC_FuncConst | ZCC_FuncConstUnsafe | ZCC_Abstract | ZCC_Virtual | ZCC_Override | ZCC_Extension | ZCC_VirtualScope | ZCC_ClearScope;
 
@@ -1670,7 +1670,7 @@ bool ZCCCompiler::CompileFields(PContainerType *type, TArray<ZCC_VarDeclarator *
 							Error(field, "The member variable '%s.%s' has not been exported from the executable.", type == nullptr? "" : type->TypeName.GetChars(), FName(name->Name).GetChars());
 						}
 						// For native structs a size check cannot be done because they normally have no size. But for a native reference they are still fine.
-						else if (thisfieldtype->Size != ~0u && fd->FieldSize != ~0u && thisfieldtype->Size != fd->FieldSize && fd->BitValue == 0 && 
+						else if (thisfieldtype->Size != ~0u && fd->FieldSize != ~0u && thisfieldtype->Size != fd->FieldSize && fd->BitValue == 0 &&
 							(!thisfieldtype->isStruct() || !static_cast<PStruct*>(thisfieldtype)->isNative))
 						{
 							Error(field, "The member variable '%s.%s' has mismatching sizes in internal and external declaration. (Internal = %d, External = %d)", type == nullptr ? "" : type->TypeName.GetChars(), FName(name->Name).GetChars(), fd->FieldSize, thisfieldtype->Size);
@@ -2131,7 +2131,7 @@ PType *ZCCCompiler::DetermineType(PType *outertype, ZCC_TreeNode *field, FName n
 			if(auto *t = fn->RetType; t != nullptr) do {
 				returns.Push(DetermineType(outertype, field, name, t, false, false));
 			} while( (t = (ZCC_Type *)t->SiblingNext) != fn->RetType);
-			
+
 			if(auto *t = fn->Params; t != nullptr) do {
 				PType * tt = DetermineType(outertype, field, name, t->Type, false, false);
 				int flags = 0;
@@ -2145,7 +2145,7 @@ PType *ZCCCompiler::DetermineType(PType *outertype, ZCC_TreeNode *field, FName n
 				args.Push(tt);
 				argflags.Push(t->Flags == ZCC_Out ? VARF_Out|flags : flags);
 			} while( (t = (ZCC_FuncPtrParamDecl *) t->SiblingNext) != fn->Params);
-			
+
 			auto proto = NewPrototype(returns,args);
 			switch(fn->Scope)
 			{ // only play/ui/clearscope functions are allowed, no data or virtual scope functions
@@ -2306,7 +2306,7 @@ PType *ZCCCompiler::ResolveUserType(PType *outertype, ZCC_BasicType *type, ZCC_I
 // ZCCCompiler :: UserTypeName										STATIC
 //
 // Returns the full name for a UserType node.
-// 
+//
 //==========================================================================
 
 FString ZCCCompiler::UserTypeName(ZCC_BasicType *type)
@@ -2658,7 +2658,7 @@ void ZCCCompiler::CompileFunction(ZCC_StructWork *c, ZCC_FuncDeclarator *f, bool
 		bool hasoptionals = false;
 		if (p != nullptr)
 		{
-            bool overridemsg = false;
+			bool overridemsg = false;
 			do
 			{
 				int elementcount = 1;
@@ -2881,7 +2881,7 @@ void ZCCCompiler::CompileFunction(ZCC_StructWork *c, ZCC_FuncDeclarator *f, bool
 			// [ZZ] unspecified virtual function inherits old scope. virtual function scope can't be changed.
 			sym->Variants[0].Implementation->VarFlags = sym->Variants[0].Flags;
 		}
-		
+
 		bool exactReturnType = mVersion < MakeVersion(4, 4);
 		PClass *clstype = forclass? static_cast<PClassType *>(c->Type())->Descriptor : nullptr;
 		if (varflags & VARF_Virtual)

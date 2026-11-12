@@ -315,6 +315,25 @@ bool RuntimeState::GetStackFrames(const uint32_t stackId, std::vector<VMFrame *>
 
 	return true;
 }
+
+int RuntimeState::GetStackFrameIndex(VMFrameStack *stack, VMFrame *p_frame)
+{
+	if (!stack->HasFrames())
+	{
+		return -1;
+	}
+	int i = 0;
+	for (VMFrame *frame = stack->TopFrame(); frame; frame = frame->ParentFrame)
+	{
+		if (frame == p_frame)
+		{
+			return i;
+		}
+		i++;
+	}
+	return -1;
+}
+
 void RuntimeState::Reset()
 {
 	m_paths->Clear();

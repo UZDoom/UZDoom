@@ -16,6 +16,7 @@
 #pragma once
 
 #include <zwidget/core/colorf.h>
+#include <zwidget/widgets/imagebox/imagebox.h>
 
 enum Mode { LIGHT, DARK };
 
@@ -42,6 +43,9 @@ class Theme
 private:
 	static Colorf accent; // UZDoom brand color
 
+	static ImageBoxAnchor anchor; // banner
+	static ImageBoxScale scale;
+
 	static ThemeData light;
 	static ThemeData dark;
 	static ThemeData *theme;
@@ -50,7 +54,7 @@ private:
 	static Colorf mix(const ColorLayers& color, float mix);
 
 public:
-	static void initilize(Mode mode);
+	static void initilize(Mode mode, bool contrast);
 
 	static Mode getMode() { return Theme::mode; }
 	static void setMode(Mode mode)
@@ -59,7 +63,9 @@ public:
 		theme = mode == LIGHT? &light: &dark;
 	}
 
-	static Colorf getAccent();
+	static Colorf getAccent() { return { Theme::accent }; }
+	static ImageBoxAnchor getAnchor() { return Theme::anchor; }
+	static ImageBoxScale getScale() { return Theme::scale; }
 
 	static Colorf getMain(float mix);
 	static Colorf getHeader(float mix);

@@ -51,7 +51,7 @@ class ClericPlayer : PlayerPawn
 		Player.WeaponSlot 3, "CWeapFlame";
 		Player.WeaponSlot 4, "CWeapWraithverge";
 		Player.FlechetteType "ArtiPoisonBag1";
-		
+
 		Player.ColorRange 146, 163;
 		Player.Colorset		0, "$TXT_COLOR_BLUE",		146, 163,    161;
 		Player.ColorsetFile 1, "$TXT_COLOR_RED",		"TRANTBL7",  0xB3;
@@ -62,7 +62,7 @@ class ClericPlayer : PlayerPawn
 		Player.ColorsetFile 6, "$TXT_COLOR_BROWN",		"TRANTBLC",  0x72;
 		Player.ColorsetFile 7, "$TXT_COLOR_PURPLE",		"TRANTBLD",  0xEE;
 	}
-	
+
 	States
 	{
 	Spawn:
@@ -86,7 +86,7 @@ class ClericPlayer : PlayerPawn
 		CLER M 6 A_NoBlocking;
 		CLER NOP 6;
 		CLER Q -1;
-		Stop;		
+		Stop;
 	XDeath:
 		CLER R 5 A_PlayerScream;
 		CLER S 5;
@@ -123,4 +123,3 @@ class ClericPlayer : PlayerPawn
 		Stop;
 	}
 }
-		

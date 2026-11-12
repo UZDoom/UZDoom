@@ -104,7 +104,7 @@ void ibm437_to_utf8(const char* in, std::vector<char>& buffer)
 		0x03b1,	0x00df,	0x0393,	0x03c0,	0x03a3,	0x03c3,	0x00b5,	0x03c4,	0x03a6,	0x0398,	0x03a9,	0x03b4,	0x221e,	0x03c6,	0x03b5,	0x2229,
 		0x2261,	0x00b1,	0x2265,	0x2264,	0x2320,	0x2321,	0x00f7,	0x2248,	0x00b0,	0x2219,	0x00b7,	0x221a,	0x207f,	0x00b2,	0x25a0,	0x00a0,
 	};
-	
+
 	buffer.clear();
 	if (!*in) return;
 
@@ -122,7 +122,7 @@ void ibm437_to_utf8(const char* in, std::vector<char>& buffer)
 //
 //==========================================================================
 
-char *tolower_normalize(const char *str) 
+char *tolower_normalize(const char *str)
 {
 	utf8proc_uint8_t *retval;
 	utf8proc_map((const uint8_t*)str, 0, &retval, (utf8proc_option_t)(UTF8PROC_NULLTERM | UTF8PROC_STABLE | UTF8PROC_COMPOSE | UTF8PROC_CASEFOLD));

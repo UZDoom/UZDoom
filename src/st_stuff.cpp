@@ -94,7 +94,7 @@ uint8_t CheatPowerup2[8][10] =
 	{ 'p','u','m','p','u','p',255 },
 };
 
-// Smashing Pumpkins Into Small Piles Of Putrid Debris. 
+// Smashing Pumpkins Into Small Piles Of Putrid Debris.
 static uint8_t CheatNoclip[] =		{ 'i','d','s','p','i','s','p','o','p','d',255 };
 static uint8_t CheatNoclip2[] =	{ 'i','d','c','l','i','p',255 };
 static uint8_t CheatMus[] =		{ 'i','d','m','u','s',0,0,255 };
@@ -346,7 +346,7 @@ bool ST_Responder (event_t *ev)
 	else
 	{
 		static cheatseq_t *cheatlists[] = { DoomCheats, HereticCheats, HexenCheats, StrifeCheats, ChexCheats, SpecialCheats };
-		static int counts[] = { countof(DoomCheats), countof(HereticCheats)-2, countof(HexenCheats), 
+		static int counts[] = { countof(DoomCheats), countof(HereticCheats)-2, countof(HexenCheats),
 								countof(StrifeCheats), countof(ChexCheats)-1, countof(SpecialCheats) };
 
 		for (size_t i=0; i<countof(cheatlists); i++)

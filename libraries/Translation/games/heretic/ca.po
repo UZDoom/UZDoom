@@ -1,0 +1,267 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-06-07 01:01+0000\n"
+"Last-Translator: Júlia Rosell Saldaña <contacte@juliars.cat>\n"
+"Language-Team: Catalan <https://hosted.weblate.org/projects/doom-engine-games/heretic/ca/>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6\n"
+
+msgid "HHUSTR_E1M1"
+msgstr "Els molls"
+
+msgid "HHUSTR_E1M2"
+msgstr "Les masmorres"
+
+msgid "HHUSTR_E1M3"
+msgstr "La guarnició"
+
+msgid "HHUSTR_E1M4"
+msgstr "La Torre de la Guàrdia"
+
+msgid "HHUSTR_E1M5"
+msgstr "La ciutadella"
+
+msgid "HHUSTR_E1M6"
+msgstr "La catedral"
+
+msgid "HHUSTR_E1M7"
+msgstr "Les criptes"
+
+msgid "HHUSTR_E1M8"
+msgstr "Bufes de l'infern"
+
+msgid "HHUSTR_E1M9"
+msgstr "El cementiri"
+
+msgid "HHUSTR_E2M1"
+msgstr "El cràter"
+
+msgid "HHUSTR_E2M2"
+msgstr "Els Pous de Lava"
+
+msgid "HHUSTR_E2M3"
+msgstr "El riu de foc"
+
+msgid "HHUSTR_E2M4"
+msgstr "La Gruta de Gel"
+
+msgid "HHUSTR_E2M5"
+msgstr "Les catacombes"
+
+msgid "HHUSTR_E2M6"
+msgstr "El laberint"
+
+msgid "HHUSTR_E2M7"
+msgstr "El Gran Saló"
+
+msgid "HHUSTR_E2M8"
+msgstr "Els portals del caos"
+
+msgid "HHUSTR_E2M9"
+msgstr "La glacera"
+
+msgid "HHUSTR_E3M1"
+msgstr "El magatzem"
+
+msgid "HHUSTR_E3M2"
+msgstr "El pou sèptic"
+
+msgid "HHUSTR_E3M3"
+msgstr "La confluència"
+
+msgid "HHUSTR_E3M4"
+msgstr "La fortalesa d'Azur"
+
+msgid "HHUSTR_E3M5"
+msgstr "El cau d'Ophidian"
+
+msgid "HHUSTR_E3M6"
+msgstr "Els Salons de la Por"
+
+msgid "HHUSTR_E3M7"
+msgstr "L'avenc"
+
+msgid "HHUSTR_E3M8"
+msgstr "El castell de D'Sparil"
+
+msgid "HHUSTR_E3M9"
+msgstr "L'aqüifer"
+
+msgid "HHUSTR_E4M1"
+msgstr "Catafalc"
+
+msgid "HHUSTR_E4M2"
+msgstr "Edifici de blocs"
+
+msgid "HHUSTR_E4M3"
+msgstr "Ambulatori"
+
+msgid "HHUSTR_E4M4"
+msgstr "Sepulcre"
+
+msgid "HHUSTR_E4M5"
+msgstr "Gran escalinata"
+
+msgid "HHUSTR_E4M6"
+msgstr "Salons de l'Apòstat"
+
+msgid "HHUSTR_E4M7"
+msgstr "Muralla de la perdició"
+
+msgid "HHUSTR_E4M8"
+msgstr "Pont esmicolat"
+
+msgid "HHUSTR_E4M9"
+msgstr "Mausoleu"
+
+msgid "HHUSTR_E5M1"
+msgstr "Penya-segats ocres"
+
+msgid "HHUSTR_E5M2"
+msgstr "Ràpids"
+
+msgid "HHUSTR_E5M3"
+msgstr "Moll"
+
+msgid "HHUSTR_E5M4"
+msgstr "Pati"
+
+msgid "HHUSTR_E5M5"
+msgstr "Hidratir"
+
+msgid "HHUSTR_E5M6"
+msgstr "Colonada"
+
+msgid "HHUSTR_E5M7"
+msgstr "Mansió fètida"
+
+msgid "HHUSTR_E5M8"
+msgstr "Camp del Judici"
+
+msgid "HHUSTR_E5M9"
+msgstr "Madeja de D'sparil"
+
+# Heretic Ep.1
+msgid "HE1TEXT"
+msgstr ""
+"Amb la destrucció del Ferro\n"
+"Liches i els seus esbirros, els últims\n"
+"dels no-morts queden eliminats d'això\n"
+"pla d'existència.\n"
+"\n"
+"Aquelles criatures havien de venir\n"
+"en algun lloc, però, i tens el\n"
+"sospita furtiva que el foc\n"
+"s'obre el portal de les fauces de l'infern\n"
+"la seva dimensió domèstica.\n"
+"\n"
+"Per assegurar-se que més no morts\n"
+"(o encara pitjor coses) no arriben\n"
+"a través, hauràs de segellar l'infern\n"
+"maw de l'altra banda. Per descomptat\n"
+"això vol dir que et pots quedar atrapat en un\n"
+"món molt hostil, però ningú\n"
+"He dit mai que ser heretge era fàcil!"
+
+# Heretic Ep.2
+msgid "HE2TEXT"
+msgstr ""
+"Els poderosos maulotaures ho han demostrat\n"
+"no ser igual per a tu, i com\n"
+"els seus cadàvers vaporosos llisquen cap al\n"
+"terra tens una sensació de tristor\n"
+"satisfacció que han estat\n"
+"destruït.\n"
+"\n"
+"Les portes que custodiaven\n"
+"han obert, revelant el que tu\n"
+"l'esperança és el camí a casa. Però com tu\n"
+"passa, burlant-se del riure\n"
+"sona a les orelles.\n"
+"\n"
+"Hi havia una altra força que controlava\n"
+"els maulotaures? Podria haver-hi fins i tot\n"
+"éssers més horribles a través d'això\n"
+"porta? L'escombrada d'una cúpula de cristall\n"
+"a dalt on hauria d'estar el cel\n"
+"sens dubte no és un bon senyal…"
+
+# Heretic Ep.3
+msgid "HE3TEXT"
+msgstr ""
+"La mort de D'Sparil s'ha perdut\n"
+"els llaços màgics que sostenen el seu\n"
+"criatures en aquest pla, la seva\n"
+"morint crits aclaparant els seus\n"
+"crits d'agonia.\n"
+"\n"
+"El teu jurament de venjança s'ha complert,\n"
+"entres al portal al teu\n"
+"món, uns instants abans de la cúpula\n"
+"es trenca en un milió de trossos.\n"
+"\n"
+"Però si es trenca el poder de D'Sparil\n"
+"per sempre, per què no et sents segur?\n"
+"Va ser l'últim crit abans?\n"
+"la seva mort, la que sonava\n"
+"com una maledicció? O una convocatòria? tu\n"
+"Realment no puc estar segur, però podria ser\n"
+"només ha estat un crit.\n"
+"\n"
+"Aleshores, què passa amb l'altre?\n"
+"Genets de serps?"
+
+# Heretic Ep.4
+msgid "HE4TEXT"
+msgstr ""
+"Vas pensar que tornaries al teu\n"
+"món després de la mort de D'Sparil, però\n"
+"el seu acte final et va desterrar al seu\n"
+"pròpi pla. Aquí vas entrar a les\n"
+"restes destrossades de terres\n"
+"conquerides per D'Sparil. Vas derrotar\n"
+"els últims guardians d'aquestes terres,\n"
+"però ara ets davant de les portes\n"
+"de la fortalesa de d'Sparil. Fins a aquest\n"
+"moment no tenies cap dubte sobre la teva\n"
+"capacitat per afrontar qualsevol cosa que poguessis\n"
+"trobar, però més enllà d'aquest portal\n"
+"hi ha el cor mateix del mal\n"
+"que va envair el teu món. D'Sparil\n"
+"potser és mort, però el pou on va\n"
+"ser engendrat roman. Ara has de\n"
+"entrar en aquest pou amb l'esperança de\n"
+"trobar una sortida. I en algun lloc,\n"
+"al racó més fosc de la finca de D'Sparil,\n"
+"els seus guardaespatlles personals\n"
+"esperen la teva arribada…"
+
+# Heretic Ep.5
+msgid "HE5TEXT"
+msgstr ""
+"Mentre el maulotaure final brama el seu\n"
+"agonia de la mort, t'adones que tu\n"
+"mai no t'has apropat tant al teu\n"
+"destrucció. Ni tan sols la baralla amb\n"
+"D'Sparil i els seus deixebles ho havien estat\n"
+"aquesta desesperada. T'ho mires tristament\n"
+"les portes que s'obren davant teu,\n"
+"preguntant-se si porten a casa, o si\n"
+"s'obren a alguns insomniats\n"
+"horror. Et trobes preguntant\n"
+"si tens força per continuar,\n"
+"si res més que la mort i el dolor esperen\n"
+"tu. Però què més pots fer, si\n"
+"la voluntat de lluitar ha desaparegut? Pots\n"
+"obligar-se a continuar en el\n"
+"davant de tanta desesperació? En tens\n"
+"el coratge? Trobeu, al final,\n"
+"que no està dins teu\n"
+"rendir-se sense lluitar. Ulls\n"
+"ample, vas a trobar el teu destí."

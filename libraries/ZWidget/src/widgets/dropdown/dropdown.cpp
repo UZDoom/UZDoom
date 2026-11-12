@@ -139,12 +139,12 @@ void Dropdown::SetSelectedItem(int index)
 	Update();
 }
 
-double Dropdown::GetPreferredHeight() const
+double Dropdown::GetPreferredHeight()
 {
 	return 20.0 + 2*5.0; // Text plus top/bottom padding
 }
 
-double Dropdown::GetPreferredWidth() const
+double Dropdown::GetPreferredWidth()
 {
 	Canvas* canvas = GetCanvas();
 

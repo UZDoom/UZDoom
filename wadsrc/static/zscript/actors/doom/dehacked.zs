@@ -122,7 +122,7 @@ class Deh_Actor_246 : Actor {}
 class Deh_Actor_247 : Actor {}
 class Deh_Actor_248 : Actor {}
 class Deh_Actor_249 : Actor {}
-class Deh_Actor_250 : Actor 
+class Deh_Actor_250 : Actor
 {
 	States
 	{
@@ -133,8 +133,8 @@ class Deh_Actor_250 : Actor
 		PLAY RSTUV 5;
 		PLAY W -1;							// 1084
 
-		TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; Wait; TNT1 A -1; Wait; 
-		TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; Wait; TNT1 A -1; Wait; 
+		TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; Wait; TNT1 A -1; Wait;
+		TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; Wait; TNT1 A -1; Wait;
 
 		TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait;
 		TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait; TNT1 A -1; Wait;
@@ -366,6 +366,5 @@ class Deh_Actor_250 : Actor
 		SP98 A 0;
 		SP99 A 0;
 		Stop;
-	}  
+	}
 }
-       

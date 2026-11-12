@@ -65,7 +65,7 @@ class GovsKey : StrifeKey
 		Stop;
 	}
 }
-	
+
 
 // Passcard -----------------------------------------------------------------
 
@@ -564,4 +564,3 @@ class OraclePass : Inventory
 		Stop;
 	}
 }
-

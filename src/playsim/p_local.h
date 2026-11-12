@@ -113,7 +113,7 @@ AActor *P_SpawnMissileAngleZSpeed(AActor *source, double z, PClassActor *type, D
 AActor *P_SpawnMissileZAimed(AActor *source, double z, AActor *dest, PClassActor *type);
 
 
-AActor *P_SpawnPlayerMissile (AActor *source, double x, double y, double z, PClassActor *type, DAngle angle, 
+AActor *P_SpawnPlayerMissile (AActor *source, double x, double y, double z, PClassActor *type, DAngle angle,
 							  FTranslatedLineTarget *pLineTarget = NULL, AActor **MissileActor = NULL, bool nofreeaim = false, bool noautoaim = false, int aimflags = 0);
 
 
@@ -371,7 +371,7 @@ struct FRailParams
 void P_RailAttack(FRailParams *params);
 
 enum	// P_RailAttack / A_RailAttack / A_CustomRailgun / P_DrawRailTrail flags
-{	
+{
 	RAF_SILENT = 1,
 	RAF_NOPIERCE = 2,
 	RAF_EXPLICITANGLE = 4,
@@ -404,7 +404,7 @@ enum
 	RADF_CIRCULARTHRUST = 512,
 };
 int P_GetRadiusDamage(AActor *self, AActor *thing, int damage, double distance, double fulldmgdistance, bool oldradiusdmg, bool circular);
-int	P_RadiusAttack (AActor *spot, AActor *source, int damage, double distance, 
+int	P_RadiusAttack (AActor *spot, AActor *source, int damage, double distance,
 						FName damageType, int flags, double fulldamagedistance=0.0, FName species = NAME_None);
 
 void	P_DelSeclist(msecnode_t *, msecnode_t *sector_t::*seclisthead);
@@ -420,7 +420,7 @@ msecnode_t *P_CreateSecNodeList(AActor *thing, double radius, msecnode_t *sector
 double	P_GetMoveFactor(const AActor *mo, double *frictionp);	// phares  3/6/98
 double		P_GetFriction(const AActor *mo, double *frictionfactor);
 
-// [RH] 
+// [RH]
 const secplane_t * P_CheckSlopeWalk(AActor *actor, DVector2 &move);
 
 //

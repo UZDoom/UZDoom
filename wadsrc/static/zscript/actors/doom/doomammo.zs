@@ -190,4 +190,3 @@ class Backpack : BackpackItem
 		Stop;
 	}
 }
-

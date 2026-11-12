@@ -30,7 +30,7 @@
 #include "fs_stringpool.h"
 
 namespace FileSys {
-	
+
 std::string FS_FullPath(const char* directory);
 
 //==========================================================================
@@ -58,7 +58,7 @@ public:
 
 //==========================================================================
 //
-// 
+//
 //
 //==========================================================================
 
@@ -119,7 +119,7 @@ int FDirectory::AddDirectory(const char *dirpath, LumpFilterInfo* filter, FileSy
 					}
 					// for accessing the file we need to retain the original unaltered path.
 					// On Linux this is important because its file system is case sensitive,
-					// but even on Windows the Unicode normalization is destructive 
+					// but even on Windows the Unicode normalization is destructive
 					// for some characters and cannot be used for file names.
 					// Examples for this are the Turkish 'i's or the German ß.
 					SystemFilePath[count] = stringpool->Strdup(entry.FilePathRel.c_str());

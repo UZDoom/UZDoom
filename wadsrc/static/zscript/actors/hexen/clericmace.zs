@@ -63,7 +63,7 @@ class CWeapMace : ClericWeapon
 		CMCE A 1 Offset (8, 45);
 		Goto Ready;
 	}
-	
+
 	//===========================================================================
 	//
 	// A_CMaceAttack

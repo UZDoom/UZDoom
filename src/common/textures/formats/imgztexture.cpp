@@ -191,4 +191,3 @@ int FIMGZTexture::CopyPixels(FBitmap *bmp, int conversion, int frame)
 	if (!isalpha) return FImageSource::CopyPixels(bmp, conversion, frame);
 	else return CopyTranslatedPixels(bmp, GPalette.GrayscaleMap.Palette, frame);
 }
-

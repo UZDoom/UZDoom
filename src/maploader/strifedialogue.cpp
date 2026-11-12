@@ -192,7 +192,7 @@ bool MapLoader::LoadScriptFile(const char *name, int lumpnum, FileReader &lump, 
 	{
 		ParseUSDF(lumpnum, lump, numnodes);
 	}
-	else 
+	else
 	{
 		if (!include)
 		{
@@ -561,4 +561,3 @@ void MapLoader::ParseReplies (const char *name, int pos, FStrifeDialogueReply **
 		replyptr = &reply->Next;
 	}
 }
-

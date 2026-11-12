@@ -140,6 +140,7 @@ public:
 	bool BeginObject(const char *name);
 	void EndObject();
 	bool HasKey(const char* name);
+	bool IsInt(const char* name);
 	bool HasObject(const char* name);
 	bool IsKeyNull(const char* name);
 	bool BeginArray(const char *name);
@@ -215,6 +216,12 @@ public:
 			EndArray();
 		}
 		return *this;
+	}
+
+	template<class T, size_t count>
+	FSerializer &Array(const char *key, std::array<T, count> &obj, bool fullcompare = false)
+	{
+		return Array(key, obj.data(), static_cast<int>(count), fullcompare);
 	}
 
 	template<class T>
@@ -327,8 +334,8 @@ FSerializer &Serialize(FSerializer &arc, const char *key, std::pair<A, B> &value
 	return arc;
 }
 
-template<class T, class TT>
-FSerializer &Serialize(FSerializer &arc, const char *key, TArray<T, TT> &value, TArray<T, TT> *def)
+template<class T>
+FSerializer &Serialize(FSerializer &arc, const char *key, TArray<T> &value, TArray<T> *def)
 {
 	if (arc.isWriting())
 	{
@@ -378,7 +385,7 @@ FSerializer& Serialize(FSerializer& arc, const char* key, TPointer<T>& value, TP
 }
 
 
-template<int size> 
+template<int size>
 FSerializer& Serialize(FSerializer& arc, const char* key, FixedBitArray<size>& value, FixedBitArray<size>* def)
 {
 	return arc.SerializeMemory(key, value.Storage(), value.StorageSize());

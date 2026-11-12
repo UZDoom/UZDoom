@@ -51,7 +51,7 @@ void PrintPickupMessage(bool localview, const FString &str)
 		StaticLastMessageTic = gametic;
 		StaticLastMessage = str;
 		const char *pstr = str.GetChars();
-		
+
 		if (pstr[0] == '$')	pstr = GStrings.GetString(pstr + 1);
 		if (pstr[0] != 0) Printf(PRINT_LOW, "%s\n", pstr);
 		StatusBar->FlashCrosshair();
@@ -85,14 +85,13 @@ bool CallTryPickup(AActor *item, AActor *toucher, AActor **toucher_return)
 {
 	static VMFunction *func = nullptr;
 	if (func == nullptr) PClass::FindFunction(&func, NAME_Inventory, NAME_CallTryPickup);
-	VMValue params[2] = { (DObject*)item, toucher };
+	VMValue params[3] = { (DObject*)item, toucher, false };
 	VMReturn ret[2];
 	int res;
 	AActor *tret;
 	ret[0].IntAt(&res);
 	ret[1].PointerAt((void**)&tret);
-	VMCall(func, params, 2, ret, 2);
+	VMCall(func, params, 3, ret, 2);
 	if (toucher_return) *toucher_return = tret;
 	return !!res;
 }
-

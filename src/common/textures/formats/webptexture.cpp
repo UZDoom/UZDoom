@@ -96,7 +96,7 @@ PalettedPixels FWebPTexture::CreatePalettedPixels(int conversion, int frame)
 	PalettedPixels Pixels(Width*Height);
 	dest_p = Pixels.Data();
 
-	bool doalpha = conversion == luminance; 
+	bool doalpha = conversion == luminance;
 	// Convert the source image from row-major to column-major format and remap it
 	for (int y = Height; y != 0; --y)
 	{
@@ -107,7 +107,7 @@ PalettedPixels FWebPTexture::CreatePalettedPixels(int conversion, int frame)
 			int r = *data++;
 			int a = *data++;
 			if (a < 128) *dest_p = 0;
-			else *dest_p = ImageHelpers::RGBToPalette(doalpha, r, g, b); 
+			else *dest_p = ImageHelpers::RGBToPalette(doalpha, r, g, b);
 			dest_p += dest_adv;
 		}
 		dest_p -= dest_rew;

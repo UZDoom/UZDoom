@@ -9,7 +9,7 @@
 # download-fonts.sh wad_root font_path font_name ...
 #
 # Example:
-# tools/download-fonts.sh wadsrc/static ui/noto 'Noto Sans' 'Noto Sans Armenian' 'Noto Sans Georgian' 'Noto Sans JP' 'Noto Sans KR'
+# tools/download-fonts.sh wadsrc/static ui/noto 'Noto Sans' 'Noto Sans Armenian' 'Noto Sans Georgian' 'Noto Sans JP' 'Noto Sans KR' 'Noto Sans SC' # 'Noto Sans TC'
 
 API='https://gwfh.mranftl.com/api/fonts/%s'
 FALLBACK='https://fonts.google.com/specimen/%s'
@@ -29,6 +29,7 @@ fi
 
 slugs=()
 requests=()
+subsets=()
 
 failed=0
 index=0
@@ -58,9 +59,19 @@ do
 	fi
 
 	printf -v request "%s?%s" "${slug}" "${COMMON}"
-	if subset=$(jq -r '.subsets | join(",")' <<< "${data}")
+	if _subsets=( $(jq -r '.subsets | join(" ")' <<< "${data}") )
 	then
-		printf -v request "%s&subsets=%s" "${request}" "${subset}"
+		subset=""
+		for s in "${_subsets[@]}"; do
+			if [[ ! " ${subsets[*]} " =~ [[:space:]]${s}[[:space:]] ]]; then
+				subsets+=("$s")
+				subset+=",$s"
+			fi
+		done
+		if [[ "$subset" == ,* ]]; then
+			echo
+			printf -v request "%s&subsets=%s" "${request}" "${subset:1}"
+		fi
 	fi
 
 	slugs[$index]="${slug}"

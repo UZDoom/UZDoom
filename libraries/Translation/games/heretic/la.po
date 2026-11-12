@@ -1,0 +1,267 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-06-09 04:01+0000\n"
+"Last-Translator: Júlia Rosell Saldaña <contacte@juliars.cat>\n"
+"Language-Team: Latin <https://hosted.weblate.org/projects/doom-engine-games/heretic/la/>\n"
+"Language: la\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2026.6\n"
+
+msgid "HHUSTR_E1M1"
+msgstr "Navalia"
+
+msgid "HHUSTR_E1M2"
+msgstr "Carceris"
+
+msgid "HHUSTR_E1M3"
+msgstr "Porta"
+
+msgid "HHUSTR_E1M4"
+msgstr "Custos Turris"
+
+msgid "HHUSTR_E1M5"
+msgstr "Arx"
+
+msgid "HHUSTR_E1M6"
+msgstr "Cathedralis"
+
+msgid "HHUSTR_E1M7"
+msgstr "Cryptae"
+
+msgid "HHUSTR_E1M8"
+msgstr "Fauces Inferni"
+
+msgid "HHUSTR_E1M9"
+msgstr "Coemeterium"
+
+msgid "HHUSTR_E2M1"
+msgstr "Crater"
+
+msgid "HHUSTR_E2M2"
+msgstr "Lava Pits"
+
+msgid "HHUSTR_E2M3"
+msgstr "Fluvius Ignis"
+
+msgid "HHUSTR_E2M4"
+msgstr "Ice Grotto"
+
+msgid "HHUSTR_E2M5"
+msgstr "Catacombae"
+
+msgid "HHUSTR_E2M6"
+msgstr "Labyrinthus"
+
+msgid "HHUSTR_E2M7"
+msgstr "Magnus Aula"
+
+msgid "HHUSTR_E2M8"
+msgstr "Portae Chaos"
+
+msgid "HHUSTR_E2M9"
+msgstr "Glacies"
+
+msgid "HHUSTR_E3M1"
+msgstr "Horreum"
+
+msgid "HHUSTR_E3M2"
+msgstr "Latrina"
+
+msgid "HHUSTR_E3M3"
+msgstr "Confluentia"
+
+msgid "HHUSTR_E3M4"
+msgstr "Caeruleus Arce"
+
+msgid "HHUSTR_E3M5"
+msgstr "The Ophian Lair"
+
+msgid "HHUSTR_E3M6"
+msgstr "Atria Timoris"
+
+msgid "HHUSTR_E3M7"
+msgstr "Chasmus"
+
+msgid "HHUSTR_E3M8"
+msgstr "Arx D'Sparili"
+
+msgid "HHUSTR_E3M9"
+msgstr "Aquifer"
+
+msgid "HHUSTR_E4M1"
+msgstr "Catafalcus"
+
+msgid "HHUSTR_E4M2"
+msgstr "Domus ex cubis"
+
+msgid "HHUSTR_E4M3"
+msgstr "Ambulatorius"
+
+msgid "HHUSTR_E4M4"
+msgstr "Sepulcrum"
+
+msgid "HHUSTR_E4M5"
+msgstr "Scala Magna"
+
+msgid "HHUSTR_E4M6"
+msgstr "Atria Apostatae"
+
+msgid "HHUSTR_E4M7"
+msgstr "Aggeres Perditionis"
+
+msgid "HHUSTR_E4M8"
+msgstr "Pons Fractus"
+
+msgid "HHUSTR_E4M9"
+msgstr "Mausoleum"
+
+msgid "HHUSTR_E5M1"
+msgstr "Rupes Ochrae"
+
+msgid "HHUSTR_E5M2"
+msgstr "Rapidi"
+
+msgid "HHUSTR_E5M3"
+msgstr "Portus"
+
+msgid "HHUSTR_E5M4"
+msgstr "Atrium"
+
+msgid "HHUSTR_E5M5"
+msgstr "Hydratyr"
+
+msgid "HHUSTR_E5M6"
+msgstr "Columna"
+
+msgid "HHUSTR_E5M7"
+msgstr "Foetidum Praetorium"
+
+msgid "HHUSTR_E5M8"
+msgstr "Ager Iudicii"
+
+msgid "HHUSTR_E5M9"
+msgstr "Skin of D'sparil"
+
+# Heretic Ep.1
+msgid "HE1TEXT"
+msgstr ""
+"Cum exitium ferrei\n"
+"Liches et eorum satellites ultimi\n"
+"de mortuus vivens expurgantur\n"
+"planum existendi.\n"
+"\n"
+"Illae erant ex\n"
+"alicubi, licet, et habes\n"
+"ausu suspicionem igneam\n"
+"portal inferni ingluviem opens onto\n"
+"suam domum attingit.\n"
+"\n"
+"Fac ut plura mortuus vivens\n"
+"(Vel res pejus) non veniet\n"
+"per, habebis signare Orci\n"
+"ingluviem trans. Scilicet\n"
+"id est ut adepto adhæsit in a\n"
+"valde inimica mundo, sed nemo\n"
+"facile umquam fuit haereticus!"
+
+# Heretic Ep.2
+msgid "HE2TEXT"
+msgstr ""
+"Probaverunt fortes maulotauri\n"
+"par esse tibi, atque\n"
+"fumantia cadavera labi ad \"\n"
+"atteritur sentis sensus truci\n"
+"satisfactio se fuisse\n"
+"destruitur.\n"
+"\n"
+"portae quas custodiebant\n"
+"aperui, ostendens quid\n"
+"spes est via domus. Sed ut\n"
+"per gradus, inludere ei\n"
+"annulos in auribus tuis.\n"
+"\n"
+"Erat alia vis moderandi\n"
+"maulotauri? Posset esse etiam\n"
+"magis horribile per hoc\n"
+"porta? Verrunt cristallum testudine\n"
+"caput ubi caelum sit\n"
+"certe non est bonum signum…"
+
+# Heretic Ep.3
+msgid "HE3TEXT"
+msgstr ""
+"Mors D'Sparil solvit\n"
+"ad magica vincula tenentes\n"
+"creaturae in hoc plano, eorum\n"
+"clamoribus superante suo mori\n"
+"vagitus.\n"
+"\n"
+"Tuum iusiurandum ultionis implevit;\n"
+"introitum portae tuae\n"
+"mundi, ante testudine momenta\n"
+"frangit in decies centena millia pieces.\n"
+"\n"
+"Sin autem D'Sparil potestas fracta est\n"
+"aeternum, cur securum non sentis?\n"
+"An illud extremum clamore sub\n"
+"morte, sonante\n"
+"tanquam maledictum? An evocatio? Tu\n"
+"non potest vere certus esse, sed potest\n"
+"sicut fuisse clamorem.\n"
+"\n"
+"Deinde quid de alio\n"
+"Serpens ascensores?"
+
+# Heretic Ep.4
+msgid "HE4TEXT"
+msgstr ""
+"Putasti te ad tuum rediturum\n"
+"suo mundo post D'Sparil mortuus est, sed\n"
+"ultimus actus eius te expulit\n"
+"proprium planum. Hic ingressus es\n"
+"quassataeque reliquiae terrarum\n"
+"victa a D'Sparil. Tu victus\n"
+"novissimi harum regionum custodes;\n"
+"sed nunc ante portas statis\n"
+"ad arcem d'Sparil. Donec id\n"
+"nunc dubitas tuum\n"
+"facultatem contra aliquid posses\n"
+"occursus, sed extra hanc portam\n"
+"in ipso corde malitiae\n"
+"quae orbem tuum invasit. D'Sparil\n"
+"mortuus esset, sed fovea ubi\n"
+"pariunt reliquiae. Nunc oportet\n"
+"intrare foveam spe\n"
+"exitum inveniendi. Et alicubi;\n"
+"in intumo anguli D'Sparil's\n"
+"dominium suum, suum custodes\n"
+"adventum tuum exspectare …"
+
+# Heretic Ep.5
+msgid "HE5TEXT"
+msgstr ""
+"Ut maulotaurus ultima follis his\n"
+"mortis agonia, scias te\n"
+"nunquam tam prope\n"
+"exitium. Ne pugna quidem cum\n"
+"D'Sparil et discipuli eius\n"
+"desperatis. Torve te conspiciunt in\n"
+"portae quae pandunt ante te;\n"
+"miratus si domum ducunt aut si\n"
+"ipsi aperiunt onto quidam unreamed-of\n"
+"horror. Quaerere admiratio\n"
+"si robur pergere habes;\n"
+"si nihil nisi mors et dolor insidiantur\n"
+"tibi. Sed quid aliud facere potes, si?\n"
+"voluntas certandi abiit? potesne\n"
+"opprimere te pergere in\n"
+"facie tantae desperationis? Habes\n"
+"animos? Invenis in fine:\n"
+"quod non est in te\n"
+"deditionem sine pugna. Oculi\n"
+"latis obviam itis fato tuo."

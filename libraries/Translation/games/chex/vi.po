@@ -1,0 +1,275 @@
+# UZDoom translation file
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"PO-Revision-Date: 2026-05-27 16:12+0000\n"
+"Last-Translator: pepper <2895954821@qq.com>\n"
+"Language-Team: Vietnamese <https://hosted.weblate.org/projects/doom-engine-games/chex-quest/vi/>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2026.6.dev0\n"
+
+#, fuzzy
+msgid "TXT_CHEX_EP"
+msgstr "Chex Quest"
+
+# Flem = phlegm
+msgid "GOTBLUEFLEM"
+msgstr "Nhặt được một chiếc chìa khóa flemkey màu xanh."
+
+msgid "GOTYELLOWFLEM"
+msgstr "Nhặt được một chiếc chìa khóa flemkey màu vàng."
+
+msgid "GOTREDFLEM"
+msgstr "Nhặt được một chiếc chìa khóa flemkey màu đỏ."
+
+msgid "GOTGOGGLES"
+msgstr "Tìm thấy Siêu cấp Kính bảo hộ"
+
+msgctxt "chex"
+msgid "PD_BLUECO"
+msgstr "Cần chìa khóa xanh để kính hoạt thiết bị này"
+
+msgctxt "chex"
+msgid "PD_REDCO"
+msgstr "Cần chìa khóa màu đỏ để kích hoạt thiết bị này"
+
+msgctxt "chex"
+msgid "PD_YELLOWCO"
+msgstr "Cần chìa khóa màu vàng để kích hoạt thiết bị này"
+
+msgid "PD_BLUEFO"
+msgstr "Cần flemkey màu xanh để kích hoạt thiết bị này"
+
+msgid "PD_REDFO"
+msgstr "Cần flemkey màu đỏ để kích hoạt thiết bị này"
+
+msgid "PD_YELLOWFO"
+msgstr "Cần flemkey màu vàng để kích hoạt thiết bị này"
+
+msgctxt "chex"
+msgid "PICKUP_PISTOL_DROPPED"
+msgstr "Nhặt được một cái zorcher."
+
+msgctxt "chex"
+msgid "HUSTR_E1M1"
+msgstr "E1M1:khu vực hạ cánh"
+
+msgctxt "chex"
+msgid "HUSTR_E1M2"
+msgstr "E1M2:kho chứa"
+
+msgctxt "chex"
+msgid "HUSTR_E1M3"
+msgstr "E1M3:phòng thí nghiệm"
+
+msgctxt "chex"
+msgid "HUSTR_E1M4"
+msgstr "E1M4:phòng thực vật"
+
+msgctxt "chex"
+msgid "HUSTR_E1M5"
+msgstr "E1M5:Hang động Bazoik"
+
+msgctxt "chex"
+msgid "HUSTR_E2M1"
+msgstr "E2M1:Cảng vũ trụ"
+
+msgctxt "chex"
+msgid "HUSTR_E2M2"
+msgstr "E2M2:Rạp chiếu phim"
+
+msgctxt "chex"
+msgid "HUSTR_E2M3"
+msgstr "E2M3:Bảo tàng Chex"
+
+msgctxt "chex"
+msgid "HUSTR_E2M4"
+msgstr "E2M4: Đường phố"
+
+msgctxt "chex"
+msgid "HUSTR_E2M5"
+msgstr "E2M5:Hệ thống cống ngầm"
+
+msgctxt "chex"
+msgid "HUSTR_E3M1"
+msgstr "E3M1:Bộ chỉ huy trung tâm"
+
+msgctxt "chex"
+msgid "HUSTR_E3M2"
+msgstr "E3M2:Cereals Thống nhất"
+
+msgctxt "chex"
+msgid "HUSTR_E3M3"
+msgstr "E3M3:Biệt thự Villa"
+
+msgctxt "chex"
+msgid "HUSTR_E3M4"
+msgstr "E3M4:Công viên tỉnh"
+
+msgctxt "chex"
+msgid "HUSTR_E3M5"
+msgstr "E3M5:Tàu vũ trụ sao băng"
+
+msgctxt "chex"
+msgid "CC_ZOMBIE"
+msgstr "Khu vực chung"
+
+msgctxt "chex"
+msgid "CC_SHOTGUN"
+msgstr "Sinh vật hai chân"
+
+msgctxt "chex"
+msgid "CC_IMP"
+msgstr "Sinh vật hai chân có giáp"
+
+msgctxt "chex"
+msgid "CC_DEMON"
+msgstr "Sinh vật bước dài"
+
+msgctxt "chex"
+msgid "CC_LOST"
+msgstr "Mìn Flem"
+
+msgctxt "chex"
+msgid "CC_CACO"
+msgstr "Siêu Cycloptis"
+
+msgctxt "chex"
+msgid "CC_BARON"
+msgstr "Tối đa"
+
+msgctxt "chex"
+msgid "CC_SPIDER"
+msgstr "Flembomination"
+
+msgctxt "chex"
+msgid "CC_CYBER"
+msgstr "Snotfolus Lãnh chúa"
+
+msgctxt "chex"
+msgid "CC_HERO"
+msgstr "Chiến binh Chẽ"
+
+msgctxt "chex"
+msgid "PD_BLUEC"
+msgstr "Cần chìa khóa màu xanh để mổ cừa"
+
+msgctxt "chex"
+msgid "PD_REDC"
+msgstr "Cần chìa khóa đỏ để mở cửa này"
+
+msgctxt "chex"
+msgid "PD_YELLOWC"
+msgstr "Cần chìa khóa vàng để mở cửa này"
+
+msgid "PD_BLUEF"
+msgstr "Cần chìa khóa xanh để mở cửa này"
+
+msgid "PD_REDF"
+msgstr "Cần chìa khóa đỏ để mở cửa này"
+
+msgid "PD_YELLOWF"
+msgstr "Cần chìa khóa vàng để mở cửa này"
+
+msgctxt "chex"
+msgid "OB_SLIME"
+msgstr "%o chìm xuống một đống chất nhờn."
+
+msgctxt "chex"
+msgid "OB_LAVA"
+msgstr "%o chìm xuống một đống chất nhờn."
+
+msgid "OB_POWERSTRAND"
+msgstr "%o trúng phải chất nhờn đa chiều!"
+
+msgctxt "chex"
+msgid "OB_KILLEDSELF"
+msgstr "%o trúng phải chất nhờn đa chiều!"
+
+msgid "OB_STRIDICUS"
+msgstr "%o bị tấn công bởi một Stridicus."
+
+msgid "OB_FLEMMINE"
+msgstr "%o bị trúng mìn Flem."
+
+msgid "OB_SUPERCYCLOPTIS"
+msgstr "%o bị trúng chất nhờn từ Siêu Cycloptis."
+
+msgid "OB_MAXIMUS"
+msgstr "%o bị đánh bại bởi một Maximus."
+
+msgid "OB_LARVA"
+msgstr "%o bị trúng chất nhờn từ một ấu trùng."
+
+msgid "OB_QUADRUMPUS"
+msgstr "%o bị trúng chất nhờn từ một Quadrumpus."
+
+msgid "OB_FLEMBOMINATION"
+msgstr "%o bị đánh bại bởi Flembomination."
+
+msgid "OB_SNOTFOLUS"
+msgstr "%o bị đánh bại bởi Snotfolus Lãnh chúa."
+
+msgctxt "chex"
+msgid "OB_MPR_SPLASH"
+msgstr "%o bị trúng bộ đẩy của %k."
+
+msgctxt "chex"
+msgid "E1TEXT"
+msgstr ""
+"Sau khi gửi con quái vật Flembrane khổng lồ về lại chiều không gian của nó, bạn giải thoát cho những người bị giam cầm. Nhưng flemoid ở khắp mọi nơi!\n"
+"Bạn và những người được giải thoát lao về phía tàu vũ trụ. Lũ flemoid làm bẩn tàu bạn, nhưng bạn suýt sao cũng thoát được lên quỹ đạo.\n"
+"Trong lúc trở về, bạn được chúc mừng vì chiến công giải cứu táo bạo, nhưng bạn đưa ra một lời cảnh báo…\n"
+"*\"Chúng ta chưa thấy kết cục của lũ Flemoid đâu.\" *\n"
+"Thật không may, bạn đã đúng. Bởi vì khi bạn trở về nhà, bạn phát hiện ra rằng lũ Flemoid bằng cách nào đó đã đi theo bạn tới đây.\n"
+"Hãy sẵn sàng cho Chex Quest 2: Khủng hoảng tại Thành phố Chex!"
+
+msgctxt "chex"
+msgid "E2TEXT"
+msgstr ""
+"Bạn dùng tia Zorch tiêu diệt lũ flemoid còn sót lại đang tụ tập trong cống ngầm. \n"
+"Thành phố Chex đã được cứu. Có vẻ như mối đe dọa từ lũ Flemoid cuối cùng đã kết thúc.\n"
+"Mười năm trôi qua trong hòa bình và thịnh vượng.\n"
+"\n"
+"\n"
+"Nhưng lũ Flemoid chưa bị đánh bại hoàn toàn, và ham muốn thống trị chiều không gian ngũ cốc giàu dinh dưỡng của chúng vẫn chưa hề suy giảm.\n"
+"Chúng tập hợp toàn bộ lực lượng, mở một vết nứt liên chiều khổng lồ trong không gian,\n"
+"và giờ đây một quả cầu chất nhờn khổng lồ đang lao thẳng về phía hành tinh của những hạt ngũ cốc!\n"
+"Hãy sẵn sàng cho\n"
+"Chex Quest 3: Cuộc xâm lăng!"
+
+msgctxt "chex"
+msgid "E3TEXT"
+msgstr ""
+"Với một tia công kích cuối cùng, bạn đã gửi trả Lord Snotfolus về lại chiều không gian của hắn!\n"
+"Vượt qua mọi khó khăn, một mình bạn đã ngăn chặn cuộc xâm lăng!\n"
+"Bạn thực sự hy vọng rằng lũ Flemoid cuối cùng đã học được bài học và sẽ không bao giờ quay trở lại chiều không gian ngũ cốc nữa.\n"
+"\n"
+"\n"
+"\n"
+"Nhưng nếu chúng có quay lại, bạn biết rằng mình sẽ luôn sẵn sàng để đối phó với chúng!"
+
+msgid "M_EPI1"
+msgstr "Giải cứu trên Bazoik"
+
+msgid "M_EPI2"
+msgstr "Khủng hoảng tại thành phố Chen"
+
+msgid "M_EPI3"
+msgstr "Cuộc xâm lăng!"
+
+msgid "TAG_GOGGLES"
+msgstr "Kính siêu cấp"
+
+msgid "TAG_BLUEFLEMKEY"
+msgstr "chìa khóa Flem xanh"
+
+msgid "TAG_YELLOWFLEMKEY"
+msgstr "chìa khóa Flem vàng"
+
+msgid "TAG_REDFLEMKEY"
+msgstr "chìa khóa Flem đỏ"

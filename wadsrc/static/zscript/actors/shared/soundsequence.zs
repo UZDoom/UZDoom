@@ -56,18 +56,18 @@ class AmbientSound : Actor
 		+DONTSPLASH
 		+NOTONAUTOMAP
 	}
-	
+
 	native void MarkAmbientSounds();
 	override native void Tick();
 	override native void Activate(Actor activator);
 	override native void Deactivate(Actor activator);
-	
+
 	override void BeginPlay ()
 	{
 		Super.BeginPlay ();
 		Activate (NULL);
 	}
-	
+
 	override void MarkPrecacheSounds()
 	{
 		Super.MarkPrecacheSounds();
@@ -92,7 +92,7 @@ class SoundSequenceSlot : Actor
 		+DONTSPLASH
 		+NOTONAUTOMAP
 	}
-	
+
 	SeqNode sequence;
 }
 
@@ -105,7 +105,7 @@ class SoundSequence : Actor
 		+DONTSPLASH
 		+NOTONAUTOMAP
 	}
-	
+
 	//==========================================================================
 	//
 	// ASoundSequence :: Destroy
@@ -184,7 +184,7 @@ class SoundSequence : Actor
 		StopSoundSequence ();
 	}
 
-	
+
 }
 
 // Heretic Sound sequences -----------------------------------------------------------
@@ -268,4 +268,3 @@ class HereticSoundSequence10 : SoundSequence
 		Args 9;
 	}
 }
-

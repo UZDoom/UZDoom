@@ -60,9 +60,8 @@ CUSTOM_CVAR (Int, turnspeedsprintslow, 320, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
 	if (self <= 0) self = 1;
 }
 
-
-
-CUSTOM_CVAR (Bool, gl_lights, true, CVAR_ARCHIVE | CVAR_GLOBALCONFIG | CVAR_NOINITCALL)
+DEPR_CVAR (Bool, gl_lights, true, "Use r_dynlights");
+CUSTOM_CVAR (Bool, r_dynlights, true, CVAR_ARCHIVE | CVAR_GLOBALCONFIG | CVAR_NOINITCALL)
 {
 	for (auto Level : AllLevels())
 	{

@@ -24,7 +24,7 @@
 namespace swrenderer
 {
 	class RenderThread;
-	
+
 	class RenderFogBoundary
 	{
 	public:

@@ -1,5 +1,5 @@
 # build artifacts
-/build*
+/*build*
 /wadsrc/*.pk3
 .flatpak-builder/
 *.AppImage
@@ -10,6 +10,8 @@ fmodapi*linux/
 gitinfo.h
 wadsrc*/**/language.csv
 wadsrc*/**/language.0
+wadsrc/static/contributors.txt
+wadsrc/static/meta.xml
 
 # editor/tooling/os files
 *~
@@ -20,6 +22,7 @@ wadsrc*/**/language.0
 .vscode
 .cache
 *.kate-swp
+.kate*
 *.geany
 
 # private dev files

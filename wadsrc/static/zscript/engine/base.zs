@@ -214,7 +214,7 @@ struct Vector3
 struct _ native unsafe(internal)	// These are the global variables, the struct is only here to avoid extending the parser for this.
 {
 	native readonly Array<class> AllClasses;
-    native internal readonly Map<Name , Service> AllServices;
+	native internal readonly Map<Name , Service> AllServices;
 	native readonly bool multiplayer;
 	native @KeyBindings Bindings;
 	native @KeyBindings DoubleBindings;
@@ -226,7 +226,9 @@ struct _ native unsafe(internal)	// These are the global variables, the struct i
 	native readonly Font smallfont;
 	native readonly Font smallfont2;
 	native readonly Font bigfont;
+	native readonly Font BigUpper;
 	native readonly Font confont;
+	native readonly Font SymbolsFont;
 	native readonly Font NewConsoleFont;
 	native readonly Font NewSmallFont;
 	native readonly Font AlternativeSmallFont;
@@ -341,7 +343,7 @@ struct TexMan
 	native static int CheckRealHeight(TextureID tex);
 	native static bool OkForLocalization(TextureID patch, String textSubstitute);
 	native static bool UseGamePalette(TextureID tex);
-	native static Canvas GetCanvas(String texture);
+	native static Canvas GetCanvas(String texture, int usetype = Type_Wall, int flags = 0);
 }
 
 /*
@@ -691,10 +693,17 @@ struct Font native
 	native double GetDisplayTopOffset(int code);
 	native static Font FindFont(Name fontname);
 	native static Font GetFont(Name fontname);
+	native int IsValidDynamicFont();
 	native BrokenLines BreakLines(String text, int maxlen);
 	native int GetGlyphHeight(int code);
 	native int GetDefaultKerning();
 	native TextureID, int GetChar(int c);
+
+	native static Font GetSmallTextFont(Font fallbackIfNoUserChoice);
+	native static Font GetTitleFont(Font fallbackIfNoUserChoice);
+	native static Font GetDescriptionFont(Font fallbackIfNoUserChoice);
+	native static Font GetConsoleFont(Font fallbackIfNoUserChoice);
+	native static Font GetBigTextFont(Font fallbackIfNoUserChoice);
 }
 
 struct Console native
@@ -736,27 +745,27 @@ struct CVar native
 
 class CustomIntCVar abstract
 {
-    abstract int ModifyValue(Name CVarName, int val);
+	abstract int ModifyValue(Name CVarName, int val);
 }
 
 class CustomFloatCVar abstract
 {
-    abstract double ModifyValue(Name CVarName, double val);
+	abstract double ModifyValue(Name CVarName, double val);
 }
 
 class CustomStringCVar abstract
 {
-    abstract String ModifyValue(Name CVarName, String val);
+	abstract String ModifyValue(Name CVarName, String val);
 }
 
 class CustomBoolCVar abstract
 {
-    abstract bool ModifyValue(Name CVarName, bool val);
+	abstract bool ModifyValue(Name CVarName, bool val);
 }
 
 class CustomColorCVar abstract
 {
-    abstract Color ModifyValue(Name CVarName, Color val);
+	abstract Color ModifyValue(Name CVarName, Color val);
 }
 
 struct GIFont version("2.4")
@@ -793,7 +802,7 @@ class Object native
 	private native static Class<Object> BuiltinNameToClass(Name nm, Class<Object> filter);
 	private native static Object BuiltinClassCast(Object inptr, Class<Object> test);
 	private native static Function<void> BuiltinFunctionPtrCast(Function<void> inptr, voidptr newtype);
-	private native static void HandleDeprecatedFlags(Object obj, bool set, int index);
+	private native static bool HandleDeprecatedFlags(Object obj, bool set, int index);
 	private native static bool CheckDeprecatedFlags(Object obj, int index);
 
 	native static Name ValidateNameIndex(int index);
@@ -879,6 +888,7 @@ class BrokenLines : Object native version("2.4")
 struct StringTable native
 {
 	native static String Localize(String val, bool prefixed = true);
+	native static String GetUnlocalizedString(String val, bool prefixed = true);
 }
 
 struct Wads	// todo: make FileSystem an alias to 'Wads'

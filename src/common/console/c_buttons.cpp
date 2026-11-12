@@ -88,7 +88,7 @@ int ButtonMap::ListActionCommands (const char *pattern)
 
 int ButtonMap::FindButtonIndex (const char *key, int funclen) const
 {
-    if (!key) return -1;
+	if (!key) return -1;
 
 	FName name = funclen == -1? FName(key, true) : FName(key, funclen, true);
 	if (name == NAME_None) return -1;
@@ -124,7 +124,7 @@ void ButtonMap::ResetButtonStates ()
 {
 	for (auto &btn : Buttons)
 	{
-		if (!btn.bReleaseLock) 
+		if (!btn.bReleaseLock)
 		{
 			btn.ReleaseKey (0);
 		}

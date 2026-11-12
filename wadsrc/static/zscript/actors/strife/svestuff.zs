@@ -88,14 +88,14 @@ class SVETalismanRed : Inventory
 		FLGR A -1 BRIGHT;
 		Stop;
 	}
-	
+
 	override bool TryPickup (in out Actor toucher)
 	{
 		let useok = Super.TryPickup (toucher);
 		if (useok)
 		{
-			if (toucher.FindInventory("SVETalismanRed") && 
-				toucher.FindInventory("SVETalismanGreen") && 
+			if (toucher.FindInventory("SVETalismanRed") &&
+				toucher.FindInventory("SVETalismanGreen") &&
 				toucher.FindInventory("SVETalismanBlue"))
 			{
 				toucher.A_Print("$MSG_TALISMANPOWER");
@@ -104,7 +104,7 @@ class SVETalismanRed : Inventory
 		}
 		return useok;
 	}
-	
+
 }
 
 class SVETalismanBlue : SVETalismanRed
@@ -153,7 +153,7 @@ class SVEOreSpawner : Actor
 		TNT1 A 175 A_OreSpawner;
 		loop;
 	}
-	
+
 	//
 	// A_OreSpawner
 	//
@@ -180,7 +180,7 @@ class SVEOreSpawner : Actor
 
 		let it = ThinkerIterator.Create("DegninOre");
 		Thinker ac;
-		
+
 		int numores = 0;
 		while (ac = it.Next())
 		{
@@ -190,7 +190,7 @@ class SVEOreSpawner : Actor
 	}
 }
 
-class SVEOpenDoor225 : DummyStrifeItem 
+class SVEOpenDoor225 : DummyStrifeItem
 {
 	override bool TryPickup (in out Actor toucher)
 	{
@@ -198,12 +198,12 @@ class SVEOpenDoor225 : DummyStrifeItem
 		GoAwayAndDie ();
 		return true;
 	}
-	
+
 	override bool SpecialDropAction (Actor dropper)
 	{
 		Door_Open(225, 16);
 		Destroy ();
 		return true;
 	}
-	
+
 }

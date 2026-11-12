@@ -44,7 +44,7 @@ class Beak : Weapon
 		Weapon.YAdjust 15;
 		Weapon.SisterWeapon "BeakPowered";
 	}
-	
+
 
 	States
 	{
@@ -61,7 +61,7 @@ class Beak : Weapon
 		BEAK A 18 A_BeakAttackPL1;
 		Goto Ready;
 	}
-	
+
 	//---------------------------------------------------------------------------
 	//
 	// PROC A_BeakRaise
@@ -135,7 +135,7 @@ class BeakPowered : Beak
 		BEAK A 12 A_BeakAttackPL2;
 		Goto Ready;
 	}
-	
+
 	//----------------------------------------------------------------------------
 	//
 	// PROC A_BeakAttackPL2
@@ -167,7 +167,7 @@ class BeakPowered : Beak
 			psp.Tics -= random[BeakAtk](0,3);
 		}
 	}
-	
+
 }
 
 // Chicken player -----------------------------------------------------------
@@ -223,7 +223,7 @@ class ChickenPlayer : PlayerPawn
 		CHKN L -1;
 		Stop;
 	}
-	
+
 	//---------------------------------------------------------------------------
 	//
 	// PROC P_UpdateBeak
@@ -315,7 +315,7 @@ class Chicken : MorphedMonster
 		CHKN L -1;
 		Stop;
 	}
-}		
+}
 
 
 // Feather ------------------------------------------------------------------

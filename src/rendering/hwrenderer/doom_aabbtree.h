@@ -37,4 +37,3 @@ private:
 	TArray<int> mapLines;
 	FLevelLocals *Level;
 };
-

@@ -89,9 +89,9 @@ static void AppendRenderTimes(FString &str)
 		"Main thread total=%2.3f, Main thread waiting=%2.3f Worker thread total=%2.3f, Worker thread waiting=%2.3f\n"
 		"All=%2.3f, Render=%2.3f, Setup=%2.3f, Portal=%2.3f, Drawcalls=%2.3f, Postprocess=%2.3f, Finish=%2.3f\n",
 		bsp, clipwall,
-		RenderWall.TimeMS(), setupwall, 
+		RenderWall.TimeMS(), setupwall,
 		RenderFlat.TimeMS(), SetupFlat.TimeMS(),
-		RenderSprite.TimeMS(), SetupSprite.TimeMS(), 
+		RenderSprite.TimeMS(), SetupSprite.TimeMS(),
 		twoD.TimeMS(), Flush3D.TimeMS() - twoD.TimeMS(),
 		MTWait.TimeMS() + Bsp.TimeMS(), MTWait.TimeMS(), WTTotal.TimeMS(), WTTotal.TimeMS() - setupwall - SetupFlat.TimeMS() - SetupSprite.TimeMS(),
 		All.TimeMS() + Finish.TimeMS(), RenderAll.TimeMS(),	ProcessAll.TimeMS(), PortalAll.TimeMS(), drawcalls.TimeMS(), PostProcess.TimeMS(), Finish.TimeMS());
@@ -107,22 +107,32 @@ static void AppendRenderStats(FString &out)
 
 static void AppendLightStats(FString &out)
 {
-	out.AppendFormat("DLight - Walls: %d processed, %d rendered - Flats: %d processed, %d rendered\n", 
+	out.AppendFormat("DLight - Walls: %d processed, %d rendered - Flats: %d processed, %d rendered\n",
 		iter_dlight, draw_dlight, iter_dlightf, draw_dlightf );
 }
 
-ADD_STAT(rendertimes)
+ADD_STAT_ONOFF(rendertimes)
 {
 	static FString buff;
 	static int64_t lasttime=0;
 	int64_t t=I_msTime();
-	if (t-lasttime>1000) 
+	if (t-lasttime>1000)
 	{
 		buff.Truncate(0);
 		AppendRenderTimes(buff);
 		lasttime=t;
 	}
 	return buff;
+}
+
+STAT_ON(rendertimes)
+{
+	doBench++;
+}
+
+STAT_OFF(rendertimes)
+{
+	doBench--;
 }
 
 ADD_STAT(renderstats)
@@ -148,7 +158,7 @@ void CheckBench()
 {
 	if (printstats && ConsoleState == c_up)
 	{
-		// if we started the FPS counter ourselves or ran from the console 
+		// if we started the FPS counter ourselves or ran from the console
 		// we need to wait for it to stabilize before using it.
 		if (waitstart > 0 && I_msTime() - waitstart < 5000) return;
 
@@ -176,7 +186,7 @@ void CheckBench()
 CCMD(bench)
 {
 	printstats = true;
-	if (vid_fps == 0) 
+	if (vid_fps == 0)
 	{
 		vid_fps = 1;
 		waitstart = I_msTime();
@@ -192,9 +202,9 @@ CCMD(bench)
 
 bool glcycle_t::active = false;
 
+int doBench = 0;
+
 void  checkBenchActive()
 {
-	FStat *stat = FStat::FindStat("rendertimes");
-	glcycle_t::active = ((stat != NULL && stat->isActive()) || printstats);
+	glcycle_t::active = (doBench || printstats);
 }
-

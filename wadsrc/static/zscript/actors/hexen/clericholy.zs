@@ -98,7 +98,7 @@ class WraithvergeDrop : Actor
 class CWeapWraithverge : ClericWeapon
 {
 	int CHolyCount;
-	
+
 	Default
 	{
 		Health 3;
@@ -227,10 +227,10 @@ class HolyMissile : Actor
 		SPIR P 1 Bright A_CHolyAttack2;
 		Stop;
 	}
-	
+
 	//============================================================================
 	//
-	// A_CHolyAttack2 
+	// A_CHolyAttack2
 	//
 	// 	Spawns the spirits
 	//============================================================================
@@ -355,7 +355,7 @@ class HolySpirit : Actor
 		SPIR FGHI 4;
 		Stop;
 	}
-	
+
 	//============================================================================
 	//
 	//
@@ -462,7 +462,7 @@ class HolySpirit : Actor
 		}
 		double ang = deltaangle(angle, AngleTo(target));
 		double delta = abs(ang);
-		
+
 		if (delta > thresh)
 		{
 			delta /= 2;
@@ -481,7 +481,7 @@ class HolySpirit : Actor
 		}
 		VelFromAngle();
 
-		if (!(Level.maptime&15) 
+		if (!(Level.maptime&15)
 			|| pos.z > target.pos.z + target.height
 			|| pos.z + height < target.pos.z)
 		{
@@ -577,7 +577,7 @@ class HolyTail : Actor
 		SPIR D -1;
 		Stop;
 	}
-	
+
 	//============================================================================
 	//
 	// SpawnSpiritTail

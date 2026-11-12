@@ -30,7 +30,7 @@ class ArtiDarkServant : Inventory
 		Inventory.RespawnTics 4230;
 		Inventory.DefMaxAmount;
 		Inventory.PickupFlash "PickupFlash";
-		+INVENTORY.INVBAR 
+		+INVENTORY.INVBAR
 		+INVENTORY.FANCYPICKUPSOUND
 		Inventory.Icon "ARTISUMN";
 		Inventory.PickupSound "misc/p_pkup";
@@ -43,7 +43,7 @@ class ArtiDarkServant : Inventory
 		SUMN A 350;
 		Loop;
 	}
-	
+
 	//============================================================================
 	//
 	// Activate the summoning artifact
@@ -62,7 +62,7 @@ class ArtiDarkServant : Inventory
 		return true;
 	}
 
-	
+
 }
 
 // Summoning Doll -----------------------------------------------------------
@@ -86,7 +86,7 @@ class SummoningDoll : Actor
 		SUMN A 4 A_Summon;
 		Stop;
 	}
-	
+
 	//============================================================================
 	//
 	// A_Summon
@@ -106,11 +106,11 @@ class SummoningDoll : Actor
 				return;
 			}
 
-			// Careful! The Minotaur might have been replaced 
+			// Careful! The Minotaur might have been replaced
 			// so only set the time if we got a genuine one.
 			MinotaurFriend m = MinotaurFriend(mo);
 			if (m) m.StartTime = level.maptime;
-			
+
 			if (tracer.bCorpse)
 			{	// Master dead
 				mo.tracer = null;		// No master
@@ -128,7 +128,7 @@ class SummoningDoll : Actor
 			A_StartSound(mo.ActiveSound, CHAN_VOICE);
 		}
 	}
-	
+
 }
 
 // Minotaur Smoke -----------------------------------------------------------
@@ -150,4 +150,3 @@ class MinotaurSmoke : Actor
 		Stop;
 	}
 }
-

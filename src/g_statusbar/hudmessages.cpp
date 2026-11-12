@@ -21,24 +21,24 @@
 **
 */
 
-
-#include "doomdef.h"
-#include "sbar.h"
-#include "c_cvars.h"
-#include "v_video.h"
-#include "cmdlib.h"
-#include "serializer_doom.h"
-#include "serialize_obj.h"
-#include "doomstat.h"
-#include "vm.h"
 #include "c_console.h"
+#include "c_cvars.h"
+#include "cmdlib.h"
+#include "doomdef.h"
+#include "doomstat.h"
+#include "printf.h"
+#include "sbar.h"
 #include "v_draw.h"
+#include "v_video.h"
+#include "vm.h"
+
+#include "serialize_obj.h" // IWYU pragma: keep
+#include "serializer_doom.h" // IWYU pragma: keep
 
 IMPLEMENT_CLASS(DHUDMessageBase, false, true)
 IMPLEMENT_POINTERS_START(DHUDMessageBase)
 IMPLEMENT_POINTER(Next)
 IMPLEMENT_POINTERS_END
-
 
 IMPLEMENT_CLASS(DHUDMessage, false, false)
 
@@ -160,7 +160,7 @@ DHUDMessage::DHUDMessage (FFont *font, const char *text, float x, float y, int h
 		Top = y;
 		HUDWidth = hudwidth;
 		HUDHeight = hudheight;
-		
+
 		float intpart;
 		int fracpart = (int)(fabsf (modff (x, &intpart)) * 10.f + 0.5f);
 		if (fracpart & 4)
@@ -190,10 +190,10 @@ DHUDMessage::DHUDMessage (FFont *font, const char *text, float x, float y, int h
 
 	// Try to find the optimal font if none is specified. Prefer SmallFont, but if that cannot handle this text use the IWAD's SmallFont and if that doesn't work either, use the VGA font.
 	if (font) Font = font;
-	else if (generic_ui) Font = NewSmallFont;
-	else if (SmallFont->CanPrint(text)) Font = SmallFont;
-	else if (OriginalSmallFont->CanPrint(text)) Font = OriginalSmallFont;
-	else Font = NewSmallFont;
+	else if (generic_ui) Font = FFont::GetSmallTextFont(NewSmallFont);
+	else if (SmallFont->CanPrint(text)) Font = FFont::GetSmallTextFont(SmallFont);
+	else if (OriginalSmallFont->CanPrint(text)) Font = FFont::GetSmallTextFont(OriginalSmallFont);
+	else Font = FFont::GetSmallTextFont(NewSmallFont);
 
 	TextColor = textColor;
 	State = 0;
@@ -305,7 +305,13 @@ void DHUDMessage::ResetText (const char *text)
 		width = twod->GetWidth() / active_con_scaletext(twod);
 	}
 
-	Lines = V_BreakLines (Font, NoWrap ? INT_MAX : width, (uint8_t *)text);
+	FFont *finalFont = Font;
+	if (auto dynamicSub = FFont::GetDynamicSubstitutionForStaticFont(Font))
+	{
+		finalFont = dynamicSub;
+	}
+
+	Lines = V_BreakLines (finalFont, NoWrap ? INT_MAX : width, (uint8_t *)text);
 
 	NumLines = Lines.Size();
 	Width = 0;
@@ -356,6 +362,15 @@ void DHUDMessage::Draw (int bottom, int visibility)
 	}
 
 	DrawSetup ();
+
+	int adjustedHeight = Height;
+	int adjustedWidth  = Width;
+
+	FFont *finalFont      = Font;
+	if (auto dynamicSub = FFont::GetDynamicSubstitutionForStaticFont(Font))
+	{
+		finalFont = dynamicSub;
+	}
 
 	int screen_width = twod->GetWidth();
 	int screen_height = twod->GetHeight();
@@ -424,7 +439,14 @@ void DHUDMessage::Draw (int bottom, int visibility)
 		x += Width * xscale / 2;
 	}
 
-	ystep = Font->GetHeight() * yscale;
+	if (auto dynamicSub = FFont::GetDynamicSubstitutionForStaticFont(Font))
+	{
+		ystep = (dynamicSub->GetHeight()) * yscale;
+	}
+	else
+	{
+		ystep = Font->GetHeight() * yscale;
+	}
 
 	if (HUDHeight < 0)
 	{ // A negative height means the HUD size covers the status bar
@@ -464,10 +486,17 @@ void DHUDMessage::DrawSetup ()
 
 void DHUDMessage::DoDraw (int linenum, int x, int y, bool clean, int hudheight)
 {
+	//because earlier code will have already done the alignment, do no rely on dynamic substitution to do repositioning.
+	FFont *finalFont = Font;
+	if (auto dynamicSub = FFont::GetDynamicSubstitutionForStaticFont(Font))
+	{
+		finalFont = dynamicSub;
+	}
+
 	if (hudheight == 0)
 	{
 		int scale = active_con_scaletext(twod);
-		DrawText(twod, Font, TextColor, x, y, Lines[linenum].Text.GetChars(),
+		DrawText(twod, finalFont, TextColor, x, y, Lines[linenum].Text.GetChars(),
 			DTA_VirtualWidth, twod->GetWidth() / scale,
 			DTA_VirtualHeight, twod->GetHeight() / scale,
 			DTA_Alpha, Alpha,
@@ -477,7 +506,7 @@ void DHUDMessage::DoDraw (int linenum, int x, int y, bool clean, int hudheight)
 	}
 	else
 	{
-		DrawText(twod, Font, TextColor, x, y, Lines[linenum].Text.GetChars(),
+		DrawText(twod, finalFont, TextColor, x, y, Lines[linenum].Text.GetChars(),
 			DTA_VirtualWidth, HUDWidth,
 			DTA_VirtualHeight, hudheight,
 			DTA_ClipLeft, ClipLeft,
@@ -501,7 +530,7 @@ void DHUDMessage::DoDraw (int linenum, int x, int y, bool clean, int hudheight)
 //============================================================================
 
 DHUDMessageFadeOut::DHUDMessageFadeOut (FFont *font, const char *text, float x, float y,
-	int hudwidth, int hudheight,									
+	int hudwidth, int hudheight,
 	EColorRange textColor, float holdTime, float fadeOutTime)
 	: DHUDMessage (font, text, x, y, hudwidth, hudheight, textColor, holdTime)
 {
@@ -595,7 +624,7 @@ void DHUDMessageFadeOut::DoDraw (int linenum, int x, int y, bool clean, int hudh
 //============================================================================
 
 DHUDMessageFadeInOut::DHUDMessageFadeInOut (FFont *font, const char *text, float x, float y,
-	int hudwidth, int hudheight,									
+	int hudwidth, int hudheight,
 	EColorRange textColor, float holdTime, float fadeInTime, float fadeOutTime)
 	: DHUDMessageFadeOut (font, text, x, y, hudwidth, hudheight, textColor, holdTime, fadeOutTime)
 {
@@ -745,6 +774,7 @@ bool DHUDMessageTypeOnFadeOut::Tick ()
 			int linevis = LineVisible;
 			int linedrawcount = linevis;
 			FString text = Lines[CurrLine].Text;
+			LineLen = (int)text.Len();
 			// Advance LineVisible by 'step' *visible* characters
 			while (step > 0 && State == 3)
 			{
@@ -767,7 +797,7 @@ bool DHUDMessageTypeOnFadeOut::Tick ()
 				if (State == 3 && --step >= 0)
 				{
 					linedrawcount++;
-					
+
 					if (text.GetNextCharacter(linevis) == TEXTCOLOR_ESCAPE)
 					{
 						if (text[linevis] == '[')
@@ -889,7 +919,7 @@ void C_MidPrint(FFont* font, const char* msg, bool bold)
 	if (msg != nullptr)
 	{
 		auto color = (EColorRange)PrintColors[bold ? PRINTLEVELS + 1 : PRINTLEVELS];
-		Printf(PRINT_HIGH | PRINT_NONOTIFY, TEXTCOLOR_ESCAPESTR "%c%s\n%s\n%s\n", color, console_bar, msg, console_bar);
+		Printf(PRINT_NONOTIFY, TEXTCOLOR_ESCAPESTR "%c%s\n%s\n%s\n", color, console_bar, msg, console_bar);
 
 		StatusBar->AttachMessage(Create<DHUDMessage>(font, msg, 1.5f, 0.375f, 0, 0, color, con_midtime), MAKE_ID('C', 'N', 'T', 'R'));
 	}
@@ -898,4 +928,3 @@ void C_MidPrint(FFont* font, const char* msg, bool bold)
 		StatusBar->DetachMessage(MAKE_ID('C', 'N', 'T', 'R'));
 	}
 }
-
