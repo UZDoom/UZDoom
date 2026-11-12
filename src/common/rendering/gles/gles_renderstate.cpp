@@ -689,11 +689,11 @@ void FGLRenderState::EnableLineSmooth(bool on)
 //
 //
 //==========================================================================
-void FGLRenderState::ClearScreen()
+void FGLRenderState::ClearScreen(PalEntry color)
 {
 
 	screen->mViewpoints->Set2D(*this, SCREENWIDTH, SCREENHEIGHT);
-	SetColor(0, 0, 0);
+	SetColor(color);
 	Apply();
 
 	glDisable(GL_DEPTH_TEST);
