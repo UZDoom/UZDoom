@@ -285,7 +285,7 @@ public:
 
 	~FShader();
 
-	bool Load(const char * name, const char * vert_prog_lump, const char * fragprog, const char * fragprog2, const char * light_fragprog, const char *defines, bool isGBuffer, AllShaderIndex type);
+	bool Load(const char * name, const char * vert_prog_lump, const char * fragprog, const char * fragprog2, const char * light_fragprog, const char *defines, const char * vert_prog_lump_user, bool isGBuffer, AllShaderIndex type, const TArray<VaryingFieldDesc> *varyings);
 
 	bool Bind();
 	unsigned int GetHandle() const { return hShader; }
@@ -329,7 +329,7 @@ class FShaderCollection
 public:
 	FShaderCollection(EPassType passType);
 	~FShaderCollection();
-	FShader *Compile(const char *ShaderName, const char *ShaderPath, const char *LightModePath, const char *shaderdefines, bool usediscard, EPassType passType, AllShaderIndex type);
+	FShader *Compile(const char *ShaderName, const char *ShaderPath, const char * VertShaderPath, const char *LightModePath, const char *shaderdefines, bool usediscard, EPassType passType, AllShaderIndex type, const TArray<VaryingFieldDesc> *varyings);
 	int Find(const char *mame);
 	bool CompileNextShader();
 	FShader *BindEffect(int effect);

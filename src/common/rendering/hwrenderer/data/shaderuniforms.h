@@ -178,15 +178,18 @@ struct VaryingFieldDesc
 enum
 {
 	SFlag_LegacyShader = 1, // legacy HardwareShader shader, DO NOT REUSE
+	SFlag_Global = 2,
 };
 
 struct UserShaderDesc
 {
 	FString shader;
+	FString vertshader;
 	MaterialShaderIndex shaderType;
 	FString defines;
 	bool disablealphatest = false;
 	uint8_t shaderFlags = 0;
+	TArray<VaryingFieldDesc> varyings;
 };
 
 extern TArray<UserShaderDesc> usershaders;

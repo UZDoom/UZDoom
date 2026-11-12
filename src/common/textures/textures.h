@@ -72,7 +72,8 @@ enum MaterialShaderIndex
 	SHADER_NoiseFuzz,
 	SHADER_SmoothNoiseFuzz,
 	SHADER_SoftwareFuzz,
-	FIRST_USER_SHADER
+	NUM_BUILTIN_SHADERS,
+	FIRST_USER_SHADER = NUM_BUILTIN_SHADERS
 };
 
 
@@ -108,10 +109,11 @@ enum AllShaderIndex
 enum texflags
 {
 	// These get Or'ed into uTextureMode because it only uses its 3 lowermost bits.
-	TEXF_Brightmap = 0x10000,
-	TEXF_Detailmap = 0x20000,
-	TEXF_Glowmap = 0x40000,
-	TEXF_ClampY = 0x80000,
+	TEXF_Brightmap =	0x010000,
+	TEXF_Detailmap =	0x020000,
+	TEXF_Glowmap =		0x040000,
+	TEXF_ClampY =		0x080000,
+	TEXF_Spheremap =	0x100000,
 };
 
 class FBitmap;

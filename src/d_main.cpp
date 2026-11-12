@@ -4511,6 +4511,8 @@ void D_Cleanup()
 		*(afunc->VMPointer) = NULL;
 	});
 
+	CleanupGlobalShaders();
+
 	GC::DelSoftRootHead();
 
 	for (auto& p : players)
