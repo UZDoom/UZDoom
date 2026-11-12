@@ -4186,11 +4186,18 @@ static int D_DoomMain_Internal (void)
 	C_InitConsole(80*8, 25*8, false);
 
 	Printf(
-		"%s version %s\nBuild: %s,%s dated %s\nOS: %s\n",
-		GAMENAME, GetVersionString(),
+		"%s version %s\nBuild: %s,%s dated %s\nOS: %s\n"
+#ifdef COMPILED_FEATURES
+		"Experiments enabled: " COMPILED_FEATURES "\n"
+#endif
+		, GAMENAME, GetVersionString(),
 		BACKEND, CMAKE_BUILD_TYPE, GetGitTime(),
 		I_DetectOS().GetChars()
 	);
+
+#ifdef FEATURE_FLAG_DEMO
+	Printf("Feature flags! :)\n");
+#endif
 
 	bool wantsVersion = Args->CheckParm(FArg_version)
 		|| Args->CheckParm(FArg_v);
