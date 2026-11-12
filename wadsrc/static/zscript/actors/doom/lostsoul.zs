@@ -35,7 +35,7 @@ class LostSoul : Actor
 		PainChance 256;
 		MissileChanceMult 0.5;
 		Monster;
-		+FLOAT +NOGRAVITY +DONTFALL +NOICEDEATH +ZDOOMTRANS +RETARGETAFTERSLAM
+		+FLOAT +NOGRAVITY +DONTFALL +NOICEDEATH +ZDOOMTRANS +RETARGETAFTERSLAM +COMPATCOUNT
 		AttackSound "skull/melee";
 		PainSound "skull/pain";
 		DeathSound "skull/death";
