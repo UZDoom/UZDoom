@@ -2529,6 +2529,7 @@ OptionMenu "CompatActorMenu" protected
 	Option "$CMPTMNU_MINOTAUR",						"compat_MINOTAUR", "YesNo"
 	Option "$CMPTMNU_NOTOSSDROPS",					"compat_NOTOSSDROPS", "YesNo"
 	Option "$CMPTMNU_VOODOOZOMBIES",				"compat_voodoozombies", "YesNo"
+	Option "$CMPTMNU_NOCOUNTLOST",					"compat_nocountlost", "YesNo"
 	Class "CompatibilityMenu"
 }
 
@@ -2560,7 +2561,6 @@ OptionMenu "CompatMapMenu" protected
 	Option "$CMPTMNU_CHECKSWITCHRANGE",				"compat_checkswitchrange", "YesNo"
 	Option "$CMPTMNU_RAILINGHACK",					"compat_railing", "YesNo"
 	Option "$CMPTMNU_TRANSFERSECRET",				"compat_transfersecret", "YesNo"
-	Option "$CMPTMNU_NOCOUNTLOST",					"compat_nocountlost", "YesNo"
 	Class "CompatibilityMenu"
 }
 
