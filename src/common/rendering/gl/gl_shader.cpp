@@ -458,8 +458,8 @@ bool FShader::Load(const char * name, const char * vert_prog_lump, const char * 
 	else
 		pre_placeholder << "#version 330 core\n";
 
-	bool lightbuffertype = screen->mLights->GetBufferType();
-	if (!lightbuffertype)
+	bool lightbufferssbo = screen->mLights->IsBufferSSBO();
+	if (!lightbufferssbo)
 		pre_placeholder.AppendFormat("#define NUM_UBO_LIGHTS %d\n#define NUM_UBO_BONES %d\n", screen->mLights->GetBlockSize(), screen->mBones->GetBlockSize());
 	else
 		pre_placeholder << "#define SHADER_STORAGE_LIGHTS\n#define SHADER_STORAGE_BONES\n";
@@ -748,7 +748,7 @@ bool FShader::Load(const char * name, const char * vert_prog_lump, const char * 
 	texturematrix_index = glGetUniformLocation(hShader, "TextureMatrix");
 	normalmodelmatrix_index = glGetUniformLocation(hShader, "NormalModelMatrix");
 
-	if (!lightbuffertype)
+	if (!lightbufferssbo)
 	{
 		int tempindex = glGetUniformBlockIndex(hShader, "LightBufferUBO");
 		if (tempindex != -1) glUniformBlockBinding(hShader, tempindex, LIGHTBUF_BINDINGPOINT);
