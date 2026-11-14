@@ -86,6 +86,7 @@ public:
 	void SetVSync(bool vsync) override;
 
 	void Draw2D() override;
+	void FlushGameUI() override;
 	void PostProcessScene(bool swscene, int fixedcm, float flash, const std::function<void()> &afterBloomDrawEndScene2D) override;
 
 	bool HWGammaActive = false;			// Are we using hardware or software gamma?
