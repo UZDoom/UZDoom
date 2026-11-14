@@ -9,12 +9,14 @@ if (UNIX AND NOT APPLE)
 	endif()
 endif()
 
-# SDL2 finding stuff
-# Optional on all platforms
-find_package(SDL2 QUIET)
-if(NOT ${SDL2_FOUND})
-	include(FindPkgConfig)
-	pkg_search_module(SDL2 sdl2)
+if(NOT WIN32)
+	# SDL2 finding stuff
+	# Optional on all platforms
+	find_package(SDL2 QUIET)
+	if(NOT ${SDL2_FOUND})
+		include(FindPkgConfig)
+		pkg_search_module(SDL2 sdl2)
+	endif()
 endif()
 
 set(ZWIDGET_SOURCES
