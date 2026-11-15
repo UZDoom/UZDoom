@@ -1,0 +1,985 @@
+/*
+** loader.cpp
+**
+**
+**
+**---------------------------------------------------------------------------
+**
+** Copyright 2025-2026 UZDoom Maintainers and Contributors
+**
+** SPDX-License-Identifier: GPL-3.0-or-later
+**
+**---------------------------------------------------------------------------
+**
+*/
+
+#include "loader.h"
+#include "const.h"
+
+#include <QCryptographicHash>
+#include <QDate>
+#include <QDir>
+#include <QDirIterator>
+#include <QFile>
+#include <QFileInfo>
+#include <QHash>
+#include <QImage>
+#include <QMutex>
+#include <QMutexLocker>
+#include <QProcess>
+#include <QRegularExpression>
+#include <QSet>
+#include <cmath>
+#include <cstring>
+#include <miniz.h>
+#include <unordered_set>
+
+namespace
+{
+	struct CachedMd5Entry
+	{
+		qint64 size = -1;
+		qint64 mtimeMs = 0;
+		std::string md5;
+	};
+
+	QMutex& md5CacheMutex()
+	{
+		static QMutex mutex;
+		return mutex;
+	}
+
+	QHash<QString, CachedMd5Entry>& md5Cache()
+	{
+		static QHash<QString, CachedMd5Entry> cache;
+		return cache;
+	}
+
+	QString normLower(const std::string& s)
+	{
+		return QDir::cleanPath(qStr(s)).replace('\\', '/').toLower();
+	}
+
+	bool hasGameFilePath(const std::vector<Profile>& profiles, const std::string& path)
+	{
+		const QString target = normLower(path);
+		for (const auto& p : profiles)
+		{
+			if (p.isIWAD && normLower(p.iwadPath) == target)
+				return true;
+			if (!p.isIWAD && normLower(p.pwadPath) == target)
+				return true;
+		}
+		return false;
+	}
+
+	bool hasExtension(const QString& path, const QStringList& exts)
+	{
+		const QString lower = path.toLower();
+		for (const auto& ext : exts)
+		{
+			if (lower.endsWith(ext))
+				return true;
+		}
+		return false;
+	}
+
+	void enrichFromTxtSidecar(const QString& filePath, Profile& prof)
+	{
+		const QFileInfo fi(filePath);
+		const QDir dir = fi.dir();
+		QStringList txtCandidates = dir.entryList({"*.txt", "readme*", "README*"}, QDir::Files);
+		if (txtCandidates.isEmpty())
+			return;
+
+		const QString stem = fi.completeBaseName().toLower();
+		QString chosen = dir.filePath(txtCandidates.first());
+		for (const QString& c : txtCandidates)
+		{
+			if (QFileInfo(c).completeBaseName().toLower() == stem)
+			{
+				chosen = dir.filePath(c);
+				break;
+			}
+		}
+
+		QFile tf(chosen);
+		if (!tf.open(QIODevice::ReadOnly | QIODevice::Text))
+			return;
+
+		const QString text = QString::fromUtf8(tf.read(16384));
+		auto matchField = [&](const QString& pattern) -> QString
+		{
+			QRegularExpression re(pattern, QRegularExpression::CaseInsensitiveOption | QRegularExpression::MultilineOption);
+			QRegularExpressionMatch m = re.match(text);
+			return m.hasMatch() ? m.captured(1).trimmed() : QString();
+		};
+
+		const QString title = matchField("^\\s*Title\\s*:\\s*(.+)$");
+		const QString author = matchField("^\\s*Author\\s*:\\s*(.+)$");
+		const QString releaseDate = matchField("^\\s*Release date\\s*:\\s*(.+)$");
+		if (!title.isEmpty())
+			prof.title = stdStr(title);
+		if (!author.isEmpty())
+			prof.author = stdStr(author);
+		if (!releaseDate.isEmpty())
+			prof.releaseDate = stdStr(releaseDate);
+		if (prof.description.empty() && !text.trimmed().isEmpty())
+			prof.description = stdStr(text.left(2000).trimmed());
+	}
+
+	struct WadLumpEntry
+	{
+		uint32_t filePos = 0;
+		uint32_t size = 0;
+		char name[9] = {};
+	};
+
+	uint16_t readLE16(const uint8_t* p)
+	{
+		return static_cast<uint16_t>(p[0] | (static_cast<uint16_t>(p[1]) << 8));
+	}
+
+	uint32_t readLE32(const uint8_t* p)
+	{
+		return static_cast<uint32_t>(p[0])
+			| (static_cast<uint32_t>(p[1]) << 8)
+			| (static_cast<uint32_t>(p[2]) << 16)
+			| (static_cast<uint32_t>(p[3]) << 24);
+	}
+
+	bool readWadDirectory(QFile& f, std::vector<WadLumpEntry>& outDir)
+	{
+		if (f.size() < 12 || !f.seek(0))
+			return false;
+
+		uint8_t hdr[12] = {};
+		if (f.read(reinterpret_cast<char*>(hdr), 12) != 12)
+			return false;
+		if (std::memcmp(hdr, "IWAD", 4) != 0 && std::memcmp(hdr, "PWAD", 4) != 0)
+			return false;
+
+		const uint32_t numLumps = readLE32(hdr + 4);
+		const uint32_t dirOfs = readLE32(hdr + 8);
+		if (numLumps == 0 || numLumps > 500000)
+			return false;
+
+		const uint64_t dirBytes = static_cast<uint64_t>(numLumps) * 16ull;
+		if (static_cast<uint64_t>(dirOfs) + dirBytes > static_cast<uint64_t>(f.size()))
+			return false;
+		if (!f.seek(dirOfs))
+			return false;
+
+		QByteArray rawDir = f.read(static_cast<qint64>(dirBytes));
+		if (static_cast<uint64_t>(rawDir.size()) != dirBytes)
+			return false;
+
+		outDir.resize(numLumps);
+		const auto* ptr = reinterpret_cast<const uint8_t*>(rawDir.constData());
+		for (uint32_t i = 0; i < numLumps; ++i)
+		{
+			const uint8_t* entry = ptr + static_cast<size_t>(i) * 16;
+			outDir[i].filePos = readLE32(entry);
+			outDir[i].size = readLE32(entry + 4);
+			std::memcpy(outDir[i].name, entry + 8, 8);
+			outDir[i].name[8] = '\0';
+		}
+		return true;
+	}
+
+	QByteArray readWadLumpByName(QFile& f, const std::vector<WadLumpEntry>& dir, const char* targetName, int maxBytes = 16 * 1024 * 1024)
+	{
+		const uint64_t fileSize = static_cast<uint64_t>(f.size());
+		for (int i = static_cast<int>(dir.size()) - 1; i >= 0; --i)
+		{
+			const WadLumpEntry& e = dir[i];
+			if (e.size == 0 || e.size > static_cast<uint32_t>(maxBytes))
+				continue;
+			if (static_cast<uint64_t>(e.filePos) + e.size > fileSize)
+				continue;
+			if (qstricmp(e.name, targetName) == 0)
+			{
+				if (!f.seek(e.filePos))
+					return {};
+				return f.read(e.size);
+			}
+		}
+		return {};
+	}
+
+	size_t zipFileReadCb(void* pOpaque, mz_uint64 file_ofs, void* pBuf, size_t n)
+	{
+		auto* f = static_cast<QFile*>(pOpaque);
+		if (!f)
+			return 0;
+		const qint64 ofs = static_cast<qint64>(file_ofs);
+		if (f->pos() != ofs && !f->seek(ofs))
+			return 0;
+		const qint64 r = f->read(static_cast<char*>(pBuf), static_cast<qint64>(n));
+		return r > 0 ? static_cast<size_t>(r) : 0;
+	}
+
+	QByteArray readZipEntryBytes(mz_zip_archive& zip, mz_uint index, size_t maxBytes = 16 * 1024 * 1024)
+	{
+		mz_zip_archive_file_stat st{};
+		if (!mz_zip_reader_file_stat(&zip, index, &st) || mz_zip_reader_is_file_a_directory(&zip, index))
+			return {};
+		if (st.m_uncomp_size == 0 || st.m_uncomp_size > maxBytes)
+			return {};
+
+		QByteArray buf(static_cast<int>(st.m_uncomp_size), Qt::Uninitialized);
+		if (!mz_zip_reader_extract_to_mem(&zip, index, buf.data(), buf.size(), 0))
+			return {};
+		return buf;
+	}
+
+	bool tryLoadPlaypalFromFile(const QString& filePath, uint8_t outPalette[768])
+	{
+		if (filePath.isEmpty() || !QFileInfo::exists(filePath))
+			return false;
+
+		QFile f(filePath);
+		if (!f.open(QIODevice::ReadOnly))
+			return false;
+
+		std::vector<WadLumpEntry> wadDir;
+		if (readWadDirectory(f, wadDir))
+		{
+			const QByteArray pal = readWadLumpByName(f, wadDir, "PLAYPAL", 65536);
+			if (pal.size() >= 768)
+			{
+				std::memcpy(outPalette, pal.constData(), 768);
+				return true;
+			}
+			return false;
+		}
+
+		mz_zip_archive zip{};
+		zip.m_pRead = zipFileReadCb;
+		zip.m_pIO_opaque = &f;
+		if (!mz_zip_reader_init(&zip, static_cast<mz_uint64>(f.size()), 0))
+			return false;
+
+		bool found = false;
+		const mz_uint count = mz_zip_reader_get_num_files(&zip);
+		for (mz_uint i = 0; i < count; ++i)
+		{
+			mz_zip_archive_file_stat st{};
+			if (!mz_zip_reader_file_stat(&zip, i, &st) || mz_zip_reader_is_file_a_directory(&zip, i))
+				continue;
+			const QString base = QFileInfo(QString::fromUtf8(st.m_filename)).completeBaseName();
+			if (base.compare("playpal", Qt::CaseInsensitive) == 0 && st.m_uncomp_size >= 768)
+			{
+				const QByteArray pal = readZipEntryBytes(zip, i, 65536);
+				if (pal.size() >= 768)
+				{
+					std::memcpy(outPalette, pal.constData(), 768);
+					found = true;
+					break;
+				}
+			}
+		}
+		mz_zip_reader_end(&zip);
+		return found;
+	}
+
+	void resolvePaletteForProfile(const Profile& prof, const QString& primaryFile, uint8_t outPalette[768])
+	{
+		for (int i = 0; i < 256; ++i)
+		{
+			outPalette[i * 3 + 0] = static_cast<uint8_t>(i);
+			outPalette[i * 3 + 1] = static_cast<uint8_t>(i);
+			outPalette[i * 3 + 2] = static_cast<uint8_t>(i);
+		}
+
+		if (tryLoadPlaypalFromFile(primaryFile, outPalette))
+			return;
+		for (int i = static_cast<int>(prof.mods.size()) - 1; i >= 0; --i)
+		{
+			if (tryLoadPlaypalFromFile(qStr(prof.mods[i]), outPalette))
+				return;
+		}
+		if (!prof.iwadPath.empty() && tryLoadPlaypalFromFile(qStr(prof.iwadPath), outPalette))
+			return;
+		for (const auto& w : g_discoveredEngineIWads)
+		{
+			if (tryLoadPlaypalFromFile(qStr(w.path), outPalette))
+				return;
+		}
+	}
+
+	QImage applyDoomAspectCorrection(QImage img)
+	{
+		if (img.isNull())
+			return img;
+		if (img.width() == 320 && img.height() == 200)
+		{
+			const QImage integerUpscaled = img.scaled(1600, 1200, Qt::IgnoreAspectRatio, Qt::FastTransformation);
+			return integerUpscaled.scaled(640, 480, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+		}
+		if (img.width() == 640 && img.height() == 400)
+			return img.scaled(640, 480, Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+		return img;
+	}
+
+	QImage decodeDoomPatchOrRaw(const QByteArray& data, const uint8_t palette[768])
+	{
+		if (data.isEmpty())
+			return {};
+
+		QImage stdImg = QImage::fromData(reinterpret_cast<const uchar*>(data.constData()), data.size());
+		if (!stdImg.isNull() && stdImg.width() > 0 && stdImg.height() > 0)
+			return applyDoomAspectCorrection(stdImg);
+
+		if (data.size() >= 13)
+		{
+			const auto* raw = reinterpret_cast<const uint8_t*>(data.constData());
+			const uint32_t totalLen = static_cast<uint32_t>(data.size());
+			const int width = readLE16(raw);
+			const int height = readLE16(raw + 2);
+			const int leftOffset = static_cast<int16_t>(readLE16(raw + 4));
+			const int topOffset = static_cast<int16_t>(readLE16(raw + 6));
+			const uint32_t minHeaderSize = static_cast<uint32_t>(width) * 4u + 8u;
+
+			if (width > 0 && width <= 2048 && height > 0 && height <= 2048
+				&& std::abs(leftOffset) < 4096 && std::abs(topOffset) < 4096
+				&& minHeaderSize < totalLen)
+			{
+				bool validColumns = true;
+				bool hasStartCol = false;
+				for (int x = 0; x < width; ++x)
+				{
+					const uint32_t colOfs = readLE32(raw + 8 + static_cast<size_t>(x) * 4);
+					if (colOfs == minHeaderSize)
+						hasStartCol = true;
+					else if (colOfs >= totalLen)
+					{
+						validColumns = false;
+						break;
+					}
+				}
+
+				if (validColumns && hasStartCol)
+				{
+					QImage img(width, height, QImage::Format_ARGB32);
+					img.fill(qRgba(0, 0, 0, 255));
+
+					for (int x = 0; x < width; ++x)
+					{
+						uint32_t colOfs = readLE32(raw + 8 + static_cast<size_t>(x) * 4);
+						int top = -1;
+						int safety = 0;
+						while (colOfs + 3 <= totalLen && safety++ < 4096)
+						{
+							const uint8_t topdelta = raw[colOfs];
+							if (topdelta == 0xFF)
+								break;
+							const uint8_t length = raw[colOfs + 1];
+							if (topdelta <= top)
+								top += topdelta;
+							else
+								top = topdelta;
+
+							const uint32_t pixelStart = colOfs + 3;
+							if (pixelStart + length > totalLen)
+								break;
+
+							for (int i = 0; i < length; ++i)
+							{
+								const int y = top + i;
+								if (y >= 0 && y < height)
+								{
+									const uint8_t idx = raw[pixelStart + i];
+									reinterpret_cast<QRgb*>(img.scanLine(y))[x] = qRgba(
+										palette[idx * 3 + 0],
+										palette[idx * 3 + 1],
+										palette[idx * 3 + 2],
+										255);
+								}
+							}
+							colOfs += static_cast<uint32_t>(length) + 4u;
+						}
+					}
+					return applyDoomAspectCorrection(img);
+				}
+			}
+		}
+
+		if (data.size() == 64000)
+		{
+			const auto* raw = reinterpret_cast<const uint8_t*>(data.constData());
+			QImage img(320, 200, QImage::Format_ARGB32);
+			for (int y = 0; y < 200; ++y)
+			{
+				auto* row = reinterpret_cast<QRgb*>(img.scanLine(y));
+				for (int x = 0; x < 320; ++x)
+				{
+					const uint8_t idx = raw[y * 320 + x];
+					row[x] = qRgba(palette[idx * 3 + 0], palette[idx * 3 + 1], palette[idx * 3 + 2], 255);
+				}
+			}
+			return applyDoomAspectCorrection(img);
+		}
+
+		return {};
+	}
+
+	QImage extractTitleImageFromSingleFile(const QString& filePath, const uint8_t palette[768])
+	{
+		if (filePath.isEmpty() || !QFileInfo::exists(filePath))
+			return {};
+
+		QFile f(filePath);
+		if (!f.open(QIODevice::ReadOnly))
+			return {};
+
+		static const char* const kTitleLumps[] = {
+			"TITLEPIC", "DMENUPIC", "TITLE", "INTERPIC", "BOSSBACK", "CREDIT"
+		};
+
+		std::vector<WadLumpEntry> wadDir;
+		if (readWadDirectory(f, wadDir))
+		{
+			for (const char* lumpName : kTitleLumps)
+			{
+				const QByteArray bytes = readWadLumpByName(f, wadDir, lumpName);
+				if (bytes.isEmpty())
+					continue;
+				QImage img = decodeDoomPatchOrRaw(bytes, palette);
+				if (!img.isNull())
+					return img;
+			}
+			return {};
+		}
+
+		mz_zip_archive zip{};
+		zip.m_pRead = zipFileReadCb;
+		zip.m_pIO_opaque = &f;
+		if (!mz_zip_reader_init(&zip, static_cast<mz_uint64>(f.size()), 0))
+			return {};
+
+		const mz_uint count = mz_zip_reader_get_num_files(&zip);
+		for (const char* lumpName : kTitleLumps)
+		{
+			for (int i = static_cast<int>(count) - 1; i >= 0; --i)
+			{
+				mz_zip_archive_file_stat st{};
+				if (!mz_zip_reader_file_stat(&zip, static_cast<mz_uint>(i), &st) || mz_zip_reader_is_file_a_directory(&zip, static_cast<mz_uint>(i)))
+					continue;
+
+				const QString entryPath = QString::fromUtf8(st.m_filename).replace('\\', '/');
+				const QFileInfo entryFi(entryPath);
+				const QString base = entryFi.completeBaseName();
+				if (base.compare(QLatin1String(lumpName), Qt::CaseInsensitive) != 0)
+					continue;
+
+				const QString dirPrefix = entryFi.path().toLower();
+				if (!dirPrefix.isEmpty() && dirPrefix != "." && !dirPrefix.startsWith("graphics") && !dirPrefix.startsWith("hires"))
+					continue;
+
+				const QByteArray bytes = readZipEntryBytes(zip, static_cast<mz_uint>(i));
+				QImage img = decodeDoomPatchOrRaw(bytes, palette);
+				if (!img.isNull())
+				{
+					mz_zip_reader_end(&zip);
+					return img;
+				}
+			}
+		}
+
+		for (mz_uint i = 0; i < count; ++i)
+		{
+			mz_zip_archive_file_stat st{};
+			if (!mz_zip_reader_file_stat(&zip, i, &st) || mz_zip_reader_is_file_a_directory(&zip, i))
+				continue;
+			const QString lower = QString::fromUtf8(st.m_filename).toLower();
+			if ((lower.contains("cover") || lower.contains("banner") || lower.contains("titlepic"))
+				&& (lower.endsWith(".png") || lower.endsWith(".jpg") || lower.endsWith(".jpeg")))
+			{
+				const QByteArray bytes = readZipEntryBytes(zip, i);
+				QImage img = decodeDoomPatchOrRaw(bytes, palette);
+				if (!img.isNull())
+				{
+					mz_zip_reader_end(&zip);
+					return img;
+				}
+			}
+		}
+
+		mz_zip_reader_end(&zip);
+		return {};
+	}
+
+	bool extractArchiveToDir(const QString& archivePath, const QString& destDir)
+	{
+		const QString lower = archivePath.toLower();
+		if (lower.endsWith(".zip"))
+			return extractZipArchiveToDir(archivePath, destDir);
+
+		const QStringList candidates = {"7z", "7za", "7zz"};
+		for (const QString& exe : candidates)
+		{
+			QProcess proc;
+			proc.start(exe, {"x", archivePath, "-o" + destDir, "-y"});
+			if (proc.waitForStarted(2000) && proc.waitForFinished(30000) && proc.exitCode() == 0)
+				return true;
+		}
+		return false;
+	}
+
+	bool checkIsIWADFile(const std::string& path, const QString& md5)
+	{
+		const auto& db = getWadDatabase();
+		if (auto it = db.find(md5.toStdString()); it != db.end())
+			return it->second.isIWAD;
+
+		const QString lower = normLower(path);
+		if (lower.endsWith(".ipk3") || lower.endsWith(".ipk7") || lower.endsWith(".iwad"))
+			return true;
+
+		for (const auto& w : g_discoveredEngineIWads)
+		{
+			if (normLower(w.path) == lower)
+				return true;
+		}
+
+		return isWadHeaderIWAD(path);
+	}
+}
+
+std::string calculateFileMD5(const std::string& filepath)
+{
+	const QString qPath = qStr(filepath);
+	const QFileInfo fi(qPath);
+	if (!fi.exists() || !fi.isFile())
+		return {};
+
+	const QString cacheKey = QDir::cleanPath(fi.absoluteFilePath()).replace('\\', '/').toLower();
+	const qint64 fileSize = fi.size();
+	const qint64 mtimeMs = fi.lastModified().isValid() ? fi.lastModified().toMSecsSinceEpoch() : 0;
+
+	{
+		QMutexLocker lock(&md5CacheMutex());
+		const auto it = md5Cache().constFind(cacheKey);
+		if (it != md5Cache().constEnd() && it->size == fileSize && it->mtimeMs == mtimeMs)
+			return it->md5;
+	}
+
+	QFile f(qPath);
+	if (!f.open(QIODevice::ReadOnly))
+		return {};
+
+	QCryptographicHash hash(QCryptographicHash::Md5);
+	if (!hash.addData(&f))
+		return {};
+	const std::string md5 = hash.result().toHex().toLower().toStdString();
+
+	{
+		QMutexLocker lock(&md5CacheMutex());
+		md5Cache().insert(cacheKey, CachedMd5Entry{fileSize, mtimeMs, md5});
+	}
+	return md5;
+}
+
+bool isWadHeaderIWAD(const std::string& filepath)
+{
+	QFile f(qStr(filepath));
+	if (!f.open(QIODevice::ReadOnly))
+		return false;
+	char magic[4] = {};
+	if (f.read(magic, 4) != 4)
+		return false;
+	return std::memcmp(magic, "IWAD", 4) == 0;
+}
+
+bool tryExtractCoverForProfile(Profile& prof)
+{
+	if (!prof.coverImagePath.empty() && QFileInfo::exists(qStr(prof.coverImagePath)))
+		return true;
+	if (prof.filePath.empty())
+		return false;
+
+	const QString profFolder = QFileInfo(qStr(prof.filePath)).absolutePath();
+	if (profFolder.isEmpty())
+		return false;
+
+	const QString primaryPath = qStr(prof.isIWAD ? prof.iwadPath : prof.pwadPath);
+	uint8_t palette[768] = {};
+	resolvePaletteForProfile(prof, primaryPath, palette);
+
+	QStringList sources;
+	if (!prof.isIWAD && !prof.pwadPath.empty())
+		sources << qStr(prof.pwadPath);
+	for (int i = static_cast<int>(prof.mods.size()) - 1; i >= 0; --i)
+	{
+		if (!prof.mods[i].empty())
+			sources << qStr(prof.mods[i]);
+	}
+	if (!prof.iwadPath.empty())
+		sources << qStr(prof.iwadPath);
+
+	for (const QString& src : sources)
+	{
+		QImage img = extractTitleImageFromSingleFile(src, palette);
+		if (!img.isNull())
+		{
+			QDir().mkpath(profFolder);
+			const QString outPath = QDir(profFolder).filePath("cover.png");
+			if (img.save(outPath, "PNG"))
+			{
+				prof.coverImagePath = stdStr(outPath);
+				return true;
+			}
+		}
+	}
+	return false;
+}
+
+ImportOutcome importGameFileIntoProfiles(const std::string& filePath, const std::vector<Profile>& existingProfiles)
+{
+	ImportOutcome out;
+	const QFileInfo fi(qStr(filePath));
+	if (!fi.exists() || !fi.isFile())
+	{
+		out.status = ImportResult::UnsupportedFile;
+		out.message = "Selected file does not exist.";
+		return out;
+	}
+
+	const QString lower = fi.fileName().toLower();
+	if (lower.endsWith(".uzdp"))
+	{
+		Profile imported;
+		std::string err;
+		if (!importProfileFromZip(filePath, imported, err))
+		{
+			out.status = ImportResult::ExtractionFailed;
+			out.message = err;
+			return out;
+		}
+		out.status = ImportResult::Success;
+		out.createdProfile = std::move(imported);
+		return out;
+	}
+
+	if (hasExtension(lower, {".zip", ".7z"}))
+	{
+		Profile prof;
+		prof.title = stdStr(fi.completeBaseName());
+		createDefaultDirectoryStructure(prof);
+		const QString profFolder = QFileInfo(qStr(prof.filePath)).absolutePath();
+		const QString extractDir = QDir(profFolder).filePath("content");
+		QDir().mkpath(extractDir);
+
+		if (!extractArchiveToDir(fi.absoluteFilePath(), extractDir))
+		{
+			QDir(profFolder).removeRecursively();
+			out.status = ImportResult::ExtractionFailed;
+			out.message = "Failed to extract archive (install 7z for .7z files).";
+			return out;
+		}
+
+		QString primaryFile;
+		QStringList extraMods;
+		QDirIterator it(extractDir, QDir::Files | QDir::NoDotAndDotDot, QDirIterator::Subdirectories);
+		while (it.hasNext())
+		{
+			const QString f = it.next();
+			const QString fl = f.toLower();
+			if (hasExtension(fl, {".wad", ".iwad", ".pk3", ".ipk3", ".pk7", ".ipk7"}))
+			{
+				if (primaryFile.isEmpty())
+					primaryFile = f;
+				else
+					extraMods << f;
+			}
+			else if (hasExtension(fl, {".deh", ".bex"}))
+			{
+				extraMods << f;
+			}
+		}
+
+		if (primaryFile.isEmpty() && extraMods.isEmpty())
+		{
+			QDir(profFolder).removeRecursively();
+			out.status = ImportResult::UnsupportedFile;
+			out.message = "Archive does not contain a runnable WAD, PK3, DEH, or BEX file.";
+			return out;
+		}
+
+		if (primaryFile.isEmpty())
+			primaryFile = extraMods.takeFirst();
+
+		const std::string primaryStd = stdStr(primaryFile);
+		const QString md5 = qStr(calculateFileMD5(primaryStd));
+		prof.isIWAD = checkIsIWADFile(primaryStd, md5);
+		const auto& db = getWadDatabase();
+		if (auto dbIt = db.find(md5.toStdString()); dbIt != db.end())
+		{
+			prof.title = dbIt->second.title;
+			prof.author = dbIt->second.author;
+			prof.releaseDate = dbIt->second.releaseDate;
+			prof.isIWAD = dbIt->second.isIWAD;
+		}
+		else
+		{
+			enrichFromTxtSidecar(primaryFile, prof);
+		}
+
+		if (prof.isIWAD)
+		{
+			prof.iwadPath = primaryStd;
+		}
+		else
+		{
+			prof.pwadPath = primaryStd;
+			prof.iwadPath = findBestDefaultIWADPath(existingProfiles);
+		}
+
+		for (const auto& m : extraMods)
+			prof.mods.push_back(stdStr(m));
+
+		tryExtractCoverForProfile(prof);
+		saveProfileToDisk(prof);
+		out.status = ImportResult::Success;
+		out.createdProfile = std::move(prof);
+		return out;
+	}
+
+	if (!hasExtension(lower, {".wad", ".iwad", ".pk3", ".ipk3", ".pk7", ".ipk7", ".deh", ".bex"}))
+	{
+		out.status = ImportResult::UnsupportedFile;
+		out.message = "Unsupported file type. Select a WAD, PK3, PK7, DEH, BEX, ZIP, 7Z, or UZDP file.";
+		return out;
+	}
+
+	if (hasGameFilePath(existingProfiles, filePath))
+	{
+		out.status = ImportResult::DuplicateProfile;
+		out.message = "A profile for this file already exists.";
+		return out;
+	}
+
+	Profile prof;
+	const std::string md5 = calculateFileMD5(filePath);
+	const auto& db = getWadDatabase();
+	if (auto dbIt = db.find(md5); dbIt != db.end())
+	{
+		prof.title = dbIt->second.title;
+		prof.author = dbIt->second.author;
+		prof.releaseDate = dbIt->second.releaseDate;
+		prof.isIWAD = dbIt->second.isIWAD;
+	}
+	else
+	{
+		prof.title = stdStr(fi.completeBaseName());
+		prof.isIWAD = checkIsIWADFile(filePath, qStr(md5));
+		for (const auto& w : g_discoveredEngineIWads)
+		{
+			if (normLower(w.path) == normLower(filePath) && !w.name.empty())
+			{
+				prof.title = w.name;
+				break;
+			}
+		}
+		if (fi.birthTime().isValid())
+			prof.releaseDate = stdStr(fi.birthTime().date().toString("dd-MM-yyyy"));
+		else if (fi.lastModified().isValid())
+			prof.releaseDate = stdStr(fi.lastModified().date().toString("dd-MM-yyyy"));
+		enrichFromTxtSidecar(fi.absoluteFilePath(), prof);
+	}
+
+	createDefaultDirectoryStructure(prof);
+	const QString profFolder = QFileInfo(qStr(prof.filePath)).absolutePath();
+	QString storedPath = fi.absoluteFilePath();
+
+	if (!normLower(filePath).startsWith(normLower(LauncherConst::PROFILE_DIR) + "/"))
+	{
+		const QString copyTarget = QDir(profFolder).filePath(fi.fileName());
+		if (QFile::copy(fi.absoluteFilePath(), copyTarget))
+			storedPath = copyTarget;
+	}
+
+	if (prof.isIWAD)
+	{
+		prof.iwadPath = stdStr(storedPath);
+	}
+	else
+	{
+		if (hasExtension(lower, {".deh", ".bex"}))
+			prof.mods.push_back(stdStr(storedPath));
+		else
+			prof.pwadPath = stdStr(storedPath);
+		prof.iwadPath = findBestDefaultIWADPath(existingProfiles);
+	}
+
+	tryExtractCoverForProfile(prof);
+	saveProfileToDisk(prof);
+	out.status = ImportResult::Success;
+	out.createdProfile = std::move(prof);
+	return out;
+}
+
+namespace
+{
+	std::unordered_set<std::string> buildExistingIwadHashSet(const std::vector<Profile>& profiles)
+	{
+		std::unordered_set<std::string> hashes;
+		hashes.reserve(profiles.size());
+		for (const auto& existing : profiles)
+		{
+			if (!existing.isIWAD || existing.iwadPath.empty())
+				continue;
+			const std::string h = calculateFileMD5(existing.iwadPath);
+			if (!h.empty())
+				hashes.insert(h);
+		}
+		return hashes;
+	}
+}
+
+std::vector<DiscoveredIWadCandidate> scanUnregisteredIWADs(
+	const std::vector<Profile>& existingProfiles,
+	const std::vector<DiscoveredIWad>& engineIWads,
+	const std::vector<std::string>& extraScanDirs,
+	const std::atomic<bool>* cancelFlag)
+{
+	std::vector<DiscoveredIWadCandidate> discovered;
+
+	QSet<QString> knownPaths;
+	knownPaths.reserve(static_cast<int>(existingProfiles.size()));
+	for (const auto& p : existingProfiles)
+	{
+		const std::string& primary = p.isIWAD ? p.iwadPath : p.pwadPath;
+		if (!primary.empty())
+			knownPaths.insert(normLower(primary));
+	}
+
+	QSet<QString> seenCandidatePaths;
+	std::unordered_set<std::string> existingHashes;
+	bool hashesBuilt = false;
+	const auto& db = getWadDatabase();
+
+	auto considerPath = [&](const QString& candidatePath, const std::string& engineName)
+	{
+		if (cancelFlag && cancelFlag->load(std::memory_order_relaxed))
+			return;
+
+		const QFileInfo fi(candidatePath);
+		if (!fi.exists() || !fi.isFile())
+			return;
+
+		const QString absQ = fi.absoluteFilePath();
+		const std::string absStd = stdStr(absQ);
+		const QString normAbs = normLower(absStd);
+
+		if (knownPaths.contains(normAbs) || seenCandidatePaths.contains(normAbs))
+			return;
+		seenCandidatePaths.insert(normAbs);
+
+		const std::string md5 = calculateFileMD5(absStd);
+		const auto dbIt = db.find(md5);
+
+		const bool isKnownIWad = (dbIt != db.end() && dbIt->second.isIWAD);
+		const QString lowerName = fi.fileName().toLower();
+		const bool looksLikeIWad = !engineName.empty() || isKnownIWad ||
+			lowerName.endsWith(".ipk3") ||
+			lowerName.endsWith(".ipk7") ||
+			isWadHeaderIWAD(absStd);
+
+		if (!looksLikeIWad)
+			return;
+
+		if (!md5.empty())
+		{
+			if (!hashesBuilt)
+			{
+				existingHashes = buildExistingIwadHashSet(existingProfiles);
+				hashesBuilt = true;
+			}
+			if (existingHashes.count(md5) > 0)
+				return;
+			existingHashes.insert(md5);
+		}
+
+		DiscoveredIWadCandidate cand;
+		cand.absPath = absStd;
+		cand.md5 = md5;
+		if (dbIt != db.end())
+		{
+			cand.title = dbIt->second.title;
+			cand.author = dbIt->second.author;
+			cand.releaseDate = dbIt->second.releaseDate;
+		}
+		else
+		{
+			cand.title = !engineName.empty() ? engineName : stdStr(fi.completeBaseName());
+			cand.author = "Unknown";
+			if (fi.lastModified().isValid())
+				cand.releaseDate = stdStr(fi.lastModified().date().toString("dd-MM-yyyy"));
+		}
+		discovered.push_back(std::move(cand));
+	};
+
+	for (const auto& w : engineIWads)
+		considerPath(qStr(w.path), w.name);
+
+	for (const auto& dirStd : extraScanDirs)
+	{
+		if (cancelFlag && cancelFlag->load(std::memory_order_relaxed))
+			break;
+		const QString dirPath = qStr(dirStd);
+		if (dirPath.isEmpty() || !QFileInfo::exists(dirPath))
+			continue;
+		const QDir dir(dirPath);
+		const QStringList entries = dir.entryList({"*.wad", "*.WAD", "*.ipk3", "*.IPK3", "*.ipk7", "*.IPK7", "*.iwad", "*.IWAD"}, QDir::Files);
+		for (const QString& file : entries)
+			considerPath(dir.filePath(file), {});
+	}
+
+	return discovered;
+}
+
+int commitDiscoveredIWADs(std::vector<Profile>& profiles, const std::vector<DiscoveredIWadCandidate>& candidates)
+{
+	if (candidates.empty())
+		return 0;
+
+	std::unordered_set<std::string> existingHashes = buildExistingIwadHashSet(profiles);
+	int addedCount = 0;
+
+	for (const auto& cand : candidates)
+	{
+		if (cand.absPath.empty() || hasGameFilePath(profiles, cand.absPath))
+			continue;
+		if (!cand.md5.empty() && existingHashes.count(cand.md5) > 0)
+			continue;
+
+		Profile prof;
+		prof.title = cand.title;
+		prof.author = cand.author;
+		prof.releaseDate = cand.releaseDate;
+		prof.isIWAD = true;
+		prof.iwadPath = cand.absPath;
+		createDefaultDirectoryStructure(prof);
+		tryExtractCoverForProfile(prof);
+		if (saveProfileToDisk(prof))
+		{
+			if (!cand.md5.empty())
+				existingHashes.insert(cand.md5);
+			profiles.push_back(std::move(prof));
+			++addedCount;
+		}
+	}
+
+	return addedCount;
+}
+
+int autoDetectAndImportIWADs(std::vector<Profile>& profiles)
+{
+	const std::vector<DiscoveredIWadCandidate> discovered = scanUnregisteredIWADs(
+		profiles,
+		g_discoveredEngineIWads,
+		{LauncherConst::EXEC_DIR, LauncherConst::ROOT_DIR});
+	return commitDiscoveredIWADs(profiles, discovered);
+}

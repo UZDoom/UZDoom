@@ -53,12 +53,8 @@
 #include "st_start.h"
 #include "v_font.h"
 #include "vm.h"
-#include "widgets/errorwindow.h"
-#include "widgets/launcherwindow.h"
-
-#if defined(__APPLE__)
-int I_PickIWad_Cocoa (WadStuff *wads, int numwads, bool showwin, int defaultiwad);
-#endif
+#include "launcher/errorwindow.h"
+#include "launcher/starter.h"
 
 double PerfToSec, PerfToMillisec;
 CVAR(String, queryiwad_key, "shift", CVAR_GLOBALCONFIG | CVAR_ARCHIVE);
@@ -341,17 +337,7 @@ bool I_PickIWad (bool showwin, FStartupSelectionInfo& info)
 		return true;
 	}
 
-#ifdef __APPLE__
-	const int ret = I_PickIWad_Cocoa(&(*info.Wads)[0], (int)info.Wads->Size(), showwin, info.DefaultIWAD);
-	if (ret >= 0)
-	{
-		info.DefaultIWAD = ret;
-		return true;
-	}
-	return false;
-#else
-	return LauncherWindow::ExecModal(info);
-#endif
+	return Starter::ExecModal(info);
 }
 
 void I_PutInClipboard (const char *str)

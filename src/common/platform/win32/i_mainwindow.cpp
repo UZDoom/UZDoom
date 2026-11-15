@@ -39,7 +39,7 @@
 #include "utf8.h"
 #include "v_font.h"
 #include "version.h"
-#include "widgets/errorwindow.h"
+#include "launcher/errorwindow.h"
 
 #pragma comment(lib, "dwmapi.lib")
 
