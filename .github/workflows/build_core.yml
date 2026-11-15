@@ -157,6 +157,16 @@ jobs:
       with:
         arch: x64
 
+    - name: Setup Qt6
+      if: runner.os == 'Windows' && !contains(inputs.name, 'MinGW')
+      uses: jurplel/install-qt-action@v4
+      with:
+        version: '6.12.0'
+        host: 'windows'
+        arch: 'win64_msvc2022_64'
+        aqtsource: 'git+https://github.com/miurahr/aqtinstall.git@5a49f2b391ae8ee1d3c0dd87f8b33c1d49a4deb7'
+        cache: 'true'
+
     - name: Setup MSYS2
       if: runner.os == 'Windows' && contains(inputs.name, 'MinGW')
       uses: msys2/setup-msys2@v2
