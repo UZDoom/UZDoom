@@ -402,6 +402,7 @@ public:
 	FGameTexture *texture;
 	AActor * actor;
 	particle_t * particle;
+	DVisualThinker * visualthinker;
 	TArray<lightlist_t> *lightlist;
 	DRotator Angles;
 
@@ -458,7 +459,7 @@ inline float Dist2(float x1,float y1,float x2,float y2)
 }
 
 bool hw_SetPlaneTextureRotation(const HWSectorPlane * secplane, FGameTexture * gltexture, VSMatrix &mat);
-void hw_GetDynModelLight(AActor *self, FDynLightData &modellightdata);
+void hw_GetDynModelLight(AActor *self, DVisualThinker* vt, FDynLightData &modellightdata);
 LightProbe* FindLightProbe(FLevelLocals* level, float x, float y, float z);
 
 extern const float LARGE_VALUE;

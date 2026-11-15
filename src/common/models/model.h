@@ -37,6 +37,7 @@ class PClass;
 class AActor;
 struct FSpriteModelFrame;
 struct FLevelLocals;
+class DVisualThinker;
 
 FTextureID LoadSkin(const char* path, const char* fn);
 void FlushModels();
@@ -81,6 +82,7 @@ public:
 	friend void ParseModelDefLump(int Lump);
 
 	VSMatrix ObjectToWorldMatrix(AActor * actor, float x, float y, float z, double ticFrac);
+	VSMatrix ObjectToWorldMatrix(DVisualThinker * vt, float x, float y, float z, double ticFrac);
 	VSMatrix ObjectToWorldMatrix(FLevelLocals *Level, DVector3 translation, DRotator rotation, DVector2 scaling, unsigned int flags, double tic);
 };
 

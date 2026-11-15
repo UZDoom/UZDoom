@@ -212,22 +212,22 @@ void HWDrawInfo::GetDynSpriteLight(AActor *thing, particle_t *particle, float *o
 // For multithread processing each worker thread needs its own copy, though.
 static thread_local TArray<FDynamicLight*> addedLightsArray;
 
-void hw_GetDynModelLight(AActor *self, FDynLightData &modellightdata)
+void hw_GetDynModelLight(AActor *self, DVisualThinker* vt, FDynLightData &modellightdata)
 {
 	modellightdata.Clear();
 
-	if (self && self->Sector)
+	if ((self && self->Sector) || (vt && vt->cursector && vt->PT.subsector))
 	{
-		float actorradius = (float)self->RenderRadius();
+		float actorradius = vt ? 0 : (float)self->RenderRadius();
 
-		if(actorradius <= gl_model_light_optimization_radius)
+		if(vt || actorradius <= gl_model_light_optimization_radius)
 		{
-			int group = self->Sector->PortalGroup;
-			FSection *sec = self->section;
+			int group = self ? self->Sector->PortalGroup : vt->cursector->PortalGroup;
+			FSection *sec = self ? self->section : vt->PT.subsector->section;
 
 			for(FDynamicLight * light : sec->dlist)
 			{
-				if (light->ShouldLightActor(self))
+				if (vt || light->ShouldLightActor(self))
 				{
 					AddLightToList(modellightdata, group, light, true);
 				}
