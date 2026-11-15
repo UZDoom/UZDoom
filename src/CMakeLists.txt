@@ -102,6 +102,8 @@ else()
 
 endif()
 
+find_package( Qt6 REQUIRED COMPONENTS Core Gui Widgets )
+
 if( NOT NO_OPENAL )
 	if ( "vcpkg-openal-soft" IN_LIST VCPKG_MANIFEST_FEATURES )
 		# Statically link to OpenAL from vcpkg
@@ -1323,7 +1325,7 @@ if( UNIX )
 	endif()
 endif()
 
-target_link_libraries( zdoom ${PROJECT_LIBRARIES} lzma ${ZMUSIC_LIBRARIES} absl::base absl::flat_hash_map absl::strings absl::hash )
+target_link_libraries( zdoom ${PROJECT_LIBRARIES} lzma ${ZMUSIC_LIBRARIES} absl::base absl::flat_hash_map absl::strings absl::hash Qt6::Core Qt6::Gui Qt6::Widgets )
 include_directories(
 	BEFORE
 	.
@@ -1391,8 +1393,13 @@ include_directories(
 	${SYSTEM_SOURCES_DIR}
 )
 
-set_target_properties( zdoom PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${ZDOOM_OUTPUT_DIR} )
-set_target_properties( zdoom PROPERTIES OUTPUT_NAME ${ZDOOM_EXE_NAME} )
+set_target_properties( zdoom PROPERTIES
+	RUNTIME_OUTPUT_DIRECTORY ${ZDOOM_OUTPUT_DIR}
+	OUTPUT_NAME ${ZDOOM_EXE_NAME}
+	AUTOMOC ON
+	AUTORCC ON
+	AUTOUIC ON
+)
 
 if(NOT MINGW AND CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 	set_target_properties(zdoom PROPERTIES LINK_FLAGS "-z nostart-stop-gc")
