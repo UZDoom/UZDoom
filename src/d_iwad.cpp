@@ -752,6 +752,41 @@ int FIWadManager::IdentifyVersion (std::vector<FileSys::ResourceName>&wadfiles, 
 			}
 		}
 	}
+	const bool forceLauncher = Args->CheckParm(FArg_showlauncher) != 0;
+	if (!iwadparm || forceLauncher)
+	{
+		TArray<WadStuff> wads;
+		for (auto& found : mFoundWads)
+		{
+			if (found.mInfoIndex >= 0)
+			{
+				WadStuff stuff;
+				stuff.Name = mIWadInfos[found.mInfoIndex].Name;
+				stuff.Path = found.mFullPath;
+				wads.Push(stuff);
+			}
+		}
+		FStartupSelectionInfo info2 = FStartupSelectionInfo(wads, *Args, 0);
+		info2.displayRelease = (i_display_new_release != 1) ? i_display_new_release : (i_is_new_release ? 1 : 0);
+		info2.notifyNewRelease = !!i_display_new_release;
+		if (ui_remember_size)
+		{
+			info2.LauncherWidth = ui_launcher_width;
+			info2.LauncherHeight = ui_launcher_height;
+		}
+		I_PickIWad(true, info2);
+		if (!info2.notifyNewRelease)
+			i_display_new_release = 0;
+		else if (i_display_new_release == 0)
+			i_display_new_release = 1;
+		if (ui_remember_size)
+		{
+			ui_launcher_width = info2.LauncherWidth;
+			ui_launcher_height = info2.LauncherHeight;
+		}
+		return -1;
+	}
+
 	TArray<FFoundWadInfo> picks;
 	if (numFoundWads < mFoundWads.Size())
 	{

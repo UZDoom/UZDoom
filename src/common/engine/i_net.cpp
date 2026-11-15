@@ -55,7 +55,7 @@
 #include "m_random.h"
 #include "printf.h"
 #include "version.h"
-#include "widgets/netstartwindow.h"
+#include "launcher/netstartwindow.h"
 #include "filesystem.h"
 
 /* [Petteri] Get more portable: */
