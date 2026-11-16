@@ -108,7 +108,8 @@ constexpr FSoundID INVALID_SOUND = FSoundID::fromInt(-1);
 
 	 float		Volume = 1.f;
 
-	 int			ResourceId = -1;					// Resource ID as implemented by Blood. Not used by Doom but added for completeness.
+	 int        SndinfoLump = 0;
+	 int		ResourceId = -1;					// Resource ID as implemented by Blood. Not used by Doom but added for completeness.
 	 float		LimitRange = 256 * 256;				// Range for sound limiting (squared for faster computations)
 	 float		DefPitch = 0.f;						// A defined pitch instead of a random one the sound plays at, similar to A_StartSound.
 	 float		DefPitchMax = 0.f;					// Randomized range with stronger control over pitch itself.
@@ -122,7 +123,6 @@ constexpr FSoundID INVALID_SOUND = FSoundID::fromInt(-1);
 	 bool		bUsed = false;
 	 bool		bSingular = false;
 	 bool		bTentative = true;
-	 bool		bExternal = false;
 
 	 int			RawRate = 0;				// Sample rate to use when bLoadRAW is true
 	 int			LoopStart = -1;				// -1 means no specific loop defined
