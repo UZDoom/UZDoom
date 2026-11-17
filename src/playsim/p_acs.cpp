@@ -2190,7 +2190,7 @@ void FBehavior::SerializeVarSet (FSerializer &arc, int32_t *vars, int max)
 			memset(vars, 0, max * sizeof(*vars));
 			arc("count", count);
 
-			if (count != 0)
+			if (count > 0)
 			{
 				arc("first", first);
 				if (first < 0 || first > max)
