@@ -13,9 +13,8 @@
  * Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free
- * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
- * 02110-1301, USA
+ * License along with this library; if not, see
+ * <https://www.gnu.org/licenses/>.
  */
 
 
@@ -111,7 +110,7 @@ struct _fluid_rvoice_dsp_t
     /* Stuff needed for phase calculations */
 
     fluid_real_t pitch;              /* the pitch in midicents */
-    fluid_real_t root_pitch_hz;
+    fluid_real_t root_pitch_hz;      /* the base note of the note in hz */
     fluid_real_t output_rate;
 
     /* Stuff needed for amplitude calculations */
@@ -156,7 +155,7 @@ struct _fluid_rvoice_buffers_t
 
 
 /*
- * Hard real-time parameters needed to synthesize a voice
+ * Hard realtime parameters needed to synthesize a voice
  */
 struct _fluid_rvoice_t
 {

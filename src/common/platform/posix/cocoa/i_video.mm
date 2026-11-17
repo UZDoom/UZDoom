@@ -90,6 +90,7 @@ extern bool ToggleFullscreen;
 EXTERN_CVAR(Bool, vid_hidpi)
 EXTERN_CVAR(Int,  vid_defwidth)
 EXTERN_CVAR(Int,  vid_defheight)
+EXTERN_CVAR(Int,  vid_cursor_invert)
 EXTERN_CVAR(Bool, vk_debug)
 
 CVAR(Bool, mvk_debug, false, 0)
@@ -824,6 +825,7 @@ bool I_SetCursor(FGameTexture *cursorpic)
 
 		auto sbuffer = cursorpic->GetTexture()->CreateTexBuffer(0);
 
+		float xhot = 0, yhot = 0;
 		const NSInteger imageWidth  = sbuffer.mWidth;
 		const NSInteger imageHeight = sbuffer.mHeight;
 		const NSInteger imagePitch  = sbuffer.mWidth * 4;
@@ -845,6 +847,25 @@ bool I_SetCursor(FGameTexture *cursorpic)
 		uint8_t* buffer = [bitmapImageRep bitmapData];
 		memcpy(buffer, sbuffer.mBuffer, imagePitch * imageHeight);
 
+		// invert if needed
+		if (vid_cursor_invert)
+		{
+			xhot = imageWidth - 1;
+			for (NSInteger y = 0; y < imageHeight; y++)
+			{
+				for (NSInteger x = 0; x < imageWidth / 2; x++)
+				{
+					const NSInteger leftIdx = (y * imageWidth + x) * 4;
+					const NSInteger rightIdx = (y * imageWidth + (imageWidth - 1 - x)) * 4;
+
+					for (int c = 0; c < 4; c++)
+					{
+						std::swap(buffer[leftIdx + c], buffer[rightIdx + c]);
+					}
+				}
+			}
+		}
+
 		// Swap red and blue components in each pixel
 
 		for (size_t i = 0; i < size_t(imageWidth * imageHeight); ++i)
@@ -860,7 +881,7 @@ bool I_SetCursor(FGameTexture *cursorpic)
 		NSImage* cursorImage = [[NSImage alloc] initWithData:imageData];
 
 		cursor = [[NSCursor alloc] initWithImage:cursorImage
-										 hotSpot:NSMakePoint(0.0f, 0.0f)];
+										 hotSpot:NSMakePoint(xhot, yhot)];
 	}
 
 	SystemBaseFrameBuffer::SetCursor(cursor);

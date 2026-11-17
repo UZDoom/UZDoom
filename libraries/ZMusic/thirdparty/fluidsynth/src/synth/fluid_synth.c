@@ -13,9 +13,8 @@
  * Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free
- * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
- * 02110-1301, USA
+ * License along with this library; if not, see
+ * <https://www.gnu.org/licenses/>.
  */
 
 #include "fluid_synth.h"
@@ -25,6 +24,7 @@
 #include "fluid_settings.h"
 #include "fluid_sfont.h"
 #include "fluid_defsfont.h"
+#include "fluid_dls.h"
 #include "fluid_instpatch.h"
 
 #ifdef TRAP_ON_FPE
@@ -43,7 +43,8 @@ extern int feenableexcept(int excepts);
   do { if (FLUID_LIKELY(synth->channel[chan]->mode & FLUID_CHANNEL_ENABLED)) \
        {} \
        else \
-       { FLUID_API_RETURN(return_value); } \
+       { FLUID_LOG(FLUID_INFO, "Channel %d is disabled, event dropped!", chan); FLUID_API_RETURN(return_value); \
+        } \
   } while (0)
 
 #define FLUID_API_ENTRY_CHAN(fail_value)  \
@@ -131,13 +132,15 @@ static int fluid_synth_set_important_channels(fluid_synth_t *synth, const char *
 
 static void fluid_synth_process_awe32_nrpn_LOCAL(fluid_synth_t *synth, int chan, int gen, int data, int data_lsb);
 
-/* Callback handlers for real-time settings */
+static int fluid_parse_portamento_time_str(const char* value);
+
+/* Callback handlers for realtime settings */
 static void fluid_synth_handle_gain(void *data, const char *name, double value);
 static void fluid_synth_handle_polyphony(void *data, const char *name, int value);
 static void fluid_synth_handle_device_id(void *data, const char *name, int value);
 static void fluid_synth_handle_overflow(void *data, const char *name, double value);
-static void fluid_synth_handle_important_channels(void *data, const char *name,
-        const char *value);
+static void fluid_synth_handle_important_channels(void *data, const char *name, const char *value);
+static void fluid_synth_handle_portamento_mode(void *data, const char *name, const char *value);
 static void fluid_synth_handle_reverb_chorus_num(void *data, const char *name, double value);
 static void fluid_synth_handle_reverb_chorus_int(void *data, const char *name, int value);
 
@@ -162,23 +165,27 @@ static fluid_atomic_int_t fluid_synth_initialized = {0};
  * explicitly overridden by the sound font in order to turn them off.
  */
 
-static fluid_mod_t default_vel2att_mod;        /* SF2.01 section 8.4.1  */
-/*not static */ fluid_mod_t default_vel2filter_mod;     /* SF2.01 section 8.4.2  */
-static fluid_mod_t default_at2viblfo_mod;      /* SF2.01 section 8.4.3  */
-static fluid_mod_t default_mod2viblfo_mod;     /* SF2.01 section 8.4.4  */
-static fluid_mod_t default_att_mod;            /* SF2.01 section 8.4.5  */
-static fluid_mod_t default_pan_mod;            /* SF2.01 section 8.4.6  */
-static fluid_mod_t default_expr_mod;           /* SF2.01 section 8.4.7  */
-static fluid_mod_t default_reverb_mod;         /* SF2.01 section 8.4.8  */
-static fluid_mod_t default_chorus_mod;         /* SF2.01 section 8.4.9  */
-static fluid_mod_t default_pitch_bend_mod;     /* SF2.01 section 8.4.10 */
-static fluid_mod_t custom_balance_mod;         /* Non-standard modulator */
+fluid_mod_t default_vel2att_mod;        /* SF2.01 section 8.4.1  */
+fluid_mod_t default_vel2filter_mod;     /* SF2.01 section 8.4.2  */
+fluid_mod_t default_at2viblfo_mod;      /* SF2.01 section 8.4.3  */
+fluid_mod_t default_mod2viblfo_mod;     /* SF2.01 section 8.4.4  */
+fluid_mod_t default_att_mod;            /* SF2.01 section 8.4.5  */
+fluid_mod_t default_pan_mod;            /* SF2.01 section 8.4.6  */
+fluid_mod_t default_expr_mod;           /* SF2.01 section 8.4.7  */
+fluid_mod_t default_reverb_mod;         /* SF2.01 section 8.4.8  */
+fluid_mod_t default_chorus_mod;         /* SF2.01 section 8.4.9  */
+fluid_mod_t default_pitch_bend_mod;     /* SF2.01 section 8.4.10 */
+fluid_mod_t custom_balance_mod;         /* Non-standard modulator */
 
+/* DLS specific modulators */
+fluid_mod_t DLS_default_reverb_mod;
+fluid_mod_t DLS_default_chorus_mod;
+fluid_mod_t DLS_default_pitch_bend_mod;
 
-/* custom_breath2att_modulator is not a default modulator specified in SF
-it is intended to replace default_vel2att_mod on demand using
-API fluid_set_breath_mode() or command shell setbreathmode.
-*/
+/* custom_breath2att_modulator is not a default modulator specified in SF2
+ * it is intended to replace default_vel2att_mod on demand using
+ * API fluid_set_breath_mode() or command shell setbreathmode.
+ */
 static fluid_mod_t custom_breath2att_mod;
 
 /* reverb presets */
@@ -239,7 +246,7 @@ void fluid_synth_settings(fluid_settings_t *settings)
 
     fluid_settings_register_int(settings, "synth.min-note-length", 10, 0, 65535, 0);
 
-    fluid_settings_register_int(settings, "synth.threadsafe-api", 1, 0, 1, FLUID_HINT_TOGGLED);
+    fluid_settings_register_int(settings, "synth.threadsafe-api", FLUID_THREAD_SAFE_CAPABLE, 0, 1, FLUID_HINT_TOGGLED);
 
     fluid_settings_register_num(settings, "synth.overflow.percussion", 4000, -10000, 10000, 0);
     fluid_settings_register_num(settings, "synth.overflow.sustained", -1000, -10000, 10000, 0);
@@ -257,6 +264,11 @@ void fluid_synth_settings(fluid_settings_t *settings)
 
     fluid_settings_register_int(settings, "synth.dynamic-sample-loading", 0, 0, 1, FLUID_HINT_TOGGLED);
     fluid_settings_register_int(settings, "synth.note-cut", 0, 0, 2, 0);
+    
+    fluid_settings_register_str(settings, "synth.portamento-time", "auto", 0);
+    fluid_settings_add_option(settings, "synth.portamento-time", "auto");
+    fluid_settings_add_option(settings, "synth.portamento-time", "xg-gs");
+    fluid_settings_add_option(settings, "synth.portamento-time", "linear");
 }
 
 /**
@@ -277,7 +289,7 @@ void fluid_version(int *major, int *minor, int *micro)
  * @return FluidSynth version string, which is internal and should not be
  *   modified or freed.
  */
-char *
+const char *
 fluid_version_str(void)
 {
     return FLUIDSYNTH_VERSION;
@@ -498,6 +510,20 @@ fluid_synth_init(void)
     /* Amount: 96 dB of attenuation (on the opposite channel) */
     fluid_mod_set_amount(&custom_balance_mod, FLUID_PEAK_ATTENUATION); /* Amount: 960 */
 
+    // DLS-specific default MODs below
+    // 
+    // CC 91 -> reverb send 100%
+    fluid_mod_clone(&DLS_default_reverb_mod, &default_reverb_mod);
+    fluid_mod_set_amount(&DLS_default_reverb_mod, 1000);
+
+    // CC 93 -> chorus send 100%
+    fluid_mod_clone(&DLS_default_chorus_mod, &default_chorus_mod);
+    fluid_mod_set_amount(&DLS_default_chorus_mod, 1000);
+
+    // pitch wheel --(rpn 0)-> pitch 12800 cents
+    fluid_mod_clone(&DLS_default_pitch_bend_mod, &default_pitch_bend_mod);
+    fluid_mod_set_amount(&DLS_default_pitch_bend_mod, 12800);
+
 #if defined(LIBINSTPATCH_SUPPORT)
     /* defer libinstpatch init to fluid_instpatch.c to avoid #include "libinstpatch.h" */
     if(!fluid_instpatch_supports_multi_init())
@@ -634,8 +660,8 @@ static FLUID_INLINE unsigned int fluid_synth_get_min_note_length_LOCAL(fluid_syn
  * @note The @p settings parameter is used directly, but the synth does not take ownership of it.
  * Hence, the caller is responsible for freeing it, when no longer needed.
  * Further note that you may modify FluidSettings of the
- * @p settings instance. However, only those FluidSettings marked as 'realtime' will
- * affect the synth immediately. See the \ref fluidsettings for more details.
+ * @p settings instance. However, only synth settings marked as realtime in \ref fluidsettings will
+ * affect the synth at runtime. fluid_settings_is_realtime() can be used to check this.
  *
  * @warning The @p settings object should only be used by a single synth at a time. I.e. creating
  * multiple synth instances with a single @p settings object causes undefined behavior. Once the
@@ -748,6 +774,8 @@ new_fluid_synth(fluid_settings_t *settings)
                                 fluid_synth_handle_reverb_chorus_num, synth);
     fluid_settings_callback_num(settings, "synth.chorus.speed",
                                 fluid_synth_handle_reverb_chorus_num, synth);
+    fluid_settings_callback_str(settings, "synth.portamento-time",
+                                fluid_synth_handle_portamento_mode, synth);
 
     /* do some basic sanity checking on the settings */
 
@@ -830,6 +858,29 @@ new_fluid_synth(fluid_settings_t *settings)
 
     synth->fromkey_portamento = INVALID_NOTE;		/* disable portamento */
 
+    /* Initialize portamento time mode */
+    {
+        char *portamento_mode_str;
+        if(fluid_settings_dupstr(settings, "synth.portamento-time", &portamento_mode_str) == FLUID_OK)
+        {
+            int res = fluid_parse_portamento_time_str(portamento_mode_str);
+            if(res == FLUID_FAILED)
+            {
+                synth->portamento_time_mode = FLUID_PORTAMENTO_TIME_MODE_AUTO;
+            }
+            else
+            {
+                synth->portamento_time_mode = res;
+            }
+            FLUID_FREE(portamento_mode_str);
+        }
+        else
+        {
+            synth->portamento_time_mode = FLUID_PORTAMENTO_TIME_MODE_AUTO;
+        }
+        synth->portamento_time_has_seen_lsb = 0; /* Start in xg-gs mode for auto */
+    }
+
     fluid_atomic_int_set(&synth->ticks_since_start, 0);
     synth->tuning = NULL;
     fluid_private_init(synth->tuning_iter);
@@ -897,6 +948,19 @@ new_fluid_synth(fluid_settings_t *settings)
     if(loader == NULL)
     {
         FLUID_LOG(FLUID_WARN, "Failed to create the instpatch SoundFont loader");
+    }
+    else
+    {
+        fluid_synth_add_sfloader(synth, loader);
+    }
+#endif
+
+#ifdef ENABLE_NATIVE_DLS
+    loader = new_fluid_dls_loader(synth, settings);
+    
+    if(loader == NULL)
+    {
+        FLUID_LOG(FLUID_WARN, "Failed to create the dls SoundFont loader");
     }
     else
     {
@@ -1052,7 +1116,7 @@ delete_fluid_synth(fluid_synth_t *synth)
 
     fluid_profiling_print();
 
-    /* unregister all real-time settings callback, to avoid a use-after-free when changing those settings after
+    /* unregister all realtime settings callback, to avoid a use-after-free when changing those settings after
      * this synth has been deleted*/
 
     fluid_settings_callback_num(synth->settings, "synth.gain",
@@ -1156,16 +1220,6 @@ delete_fluid_synth(fluid_synth_t *synth)
 
     delete_fluid_list(synth->sfont);
 
-    /* delete all the SoundFont loaders */
-
-    for(list = synth->loaders; list; list = fluid_list_next(list))
-    {
-        loader = (fluid_sfloader_t *) fluid_list_get(list);
-        fluid_sfloader_delete(loader);
-    }
-
-    delete_fluid_list(synth->loaders);
-
     /* wait for and delete all the lazy sfont unloading timers */
 
     for(list = synth->fonts_to_be_unloaded; list; list = fluid_list_next(list))
@@ -1178,6 +1232,16 @@ delete_fluid_synth(fluid_synth_t *synth)
     }
 
     delete_fluid_list(synth->fonts_to_be_unloaded);
+
+    /* delete all the SoundFont loaders */
+
+    for(list = synth->loaders; list; list = fluid_list_next(list))
+    {
+        loader = (fluid_sfloader_t *) fluid_list_get(list);
+        fluid_sfloader_delete(loader);
+    }
+
+    delete_fluid_list(synth->loaders);
 
     if(synth->channel != NULL)
     {
@@ -1663,6 +1727,7 @@ fluid_synth_cc(fluid_synth_t *synth, int chan, int num, int val)
         /* The channel chan is not a valid 'global channel' */
         else
         {
+            FLUID_LOG(FLUID_INFO, "Ignoring cc%d=%d - channel %d is disabled and not a valid global channel either!", num, val, chan);
             result = FLUID_FAILED;
         }
     }
@@ -1890,6 +1955,44 @@ fluid_synth_cc_LOCAL(fluid_synth_t *synth, int channum, int num)
                     }
                 }
             }
+            else if(fluid_channel_get_cc(chan, NRPN_MSB) == 1 && synth->bank_select == FLUID_BANK_STYLE_GS)
+            {
+                int nrpn2cc = -1;
+                int nrpn_lsb = fluid_channel_get_cc(chan, NRPN_LSB);
+                // cf. SC8850 owner's manual pages 227 + 228
+                switch(nrpn_lsb)
+                {
+                case 8:
+                    // vibrato rate
+                    nrpn2cc = SOUND_CTRL7;
+                    break;
+                case 9:
+                    // vibrato depth
+                    nrpn2cc = SOUND_CTRL8;
+                    break;
+                case 10:
+                    // vibrato rate
+                    nrpn2cc = SOUND_CTRL9;
+                    break;
+                default:
+                    break;
+                }
+                if(nrpn2cc != -1)
+                {
+                    if(synth->verbose)
+                    {
+                        FLUID_LOG(FLUID_INFO, "Translating Roland GS NRPN %d to CC %d", nrpn_lsb, nrpn2cc);
+                    }
+                    fluid_synth_cc(synth, channum, nrpn2cc, msb_value);
+                }
+                else
+                {
+                    if(synth->verbose)
+                    {
+                        FLUID_LOG(FLUID_INFO, "Ignoring unknown Roland GS NRPN %d", nrpn_lsb);
+                    }
+                }
+            }
         }
         else if(fluid_channel_get_cc(chan, RPN_MSB) == 0)      /* RPN is active: MSB = 0? */
         {
@@ -1931,12 +2034,15 @@ fluid_synth_cc_LOCAL(fluid_synth_t *synth, int channum, int num)
 
     case NRPN_MSB: /* not allowed to modulate (spec SF 2.01 - 8.2.1) */
         fluid_channel_set_cc(chan, NRPN_LSB, 0);
+        fluid_channel_set_cc(chan, DATA_ENTRY_MSB, 0);
+        fluid_channel_set_cc(chan, DATA_ENTRY_LSB, 0);
         chan->nrpn_select = 0;
         chan->nrpn_active = 1;
         break;
 
     case NRPN_LSB: /* not allowed to modulate (spec SF 2.01 - 8.2.1) */
-
+        fluid_channel_set_cc(chan, DATA_ENTRY_MSB, 0);
+        fluid_channel_set_cc(chan, DATA_ENTRY_LSB, 0);
         /* SontFont 2.01 NRPN Message (Sect. 9.6, p. 74)  */
         if(fluid_channel_get_cc(chan, NRPN_MSB) == 120)
         {
@@ -1964,6 +2070,8 @@ fluid_synth_cc_LOCAL(fluid_synth_t *synth, int channum, int num)
     case RPN_MSB: /* not allowed to modulate (spec SF 2.01 - 8.2.1) */
     case RPN_LSB: /* not allowed to modulate (spec SF 2.01 - 8.2.1) */
         chan->nrpn_active = 0;
+        fluid_channel_set_cc(chan, DATA_ENTRY_MSB, 0);
+        fluid_channel_set_cc(chan, DATA_ENTRY_LSB, 0);
         break;
 
     case BREATH_MSB:
@@ -1971,6 +2079,13 @@ fluid_synth_cc_LOCAL(fluid_synth_t *synth, int channum, int num)
         fluid_channel_cc_breath_note_on_off(chan, value);
 
     /* fall-through */
+    case PORTAMENTO_TIME_LSB:
+        /* Track LSB reception for auto portamento mode */
+        if(num == PORTAMENTO_TIME_LSB && synth->portamento_time_mode == FLUID_PORTAMENTO_TIME_MODE_AUTO)
+        {
+            synth->portamento_time_has_seen_lsb = 1;
+        }
+        /* fall-through */
     default:
         /* CC lsb shouldn't allowed to modulate (spec SF 2.01 - 8.2.1) */
         /* However, as long fluidsynth will use only CC 7 bits resolution, it
@@ -2129,10 +2244,6 @@ fluid_synth_sysex(fluid_synth_t *synth, const char *data, int len,
         result = fluid_synth_sysex_gs_dt1(synth, data, len, response,
                                           response_len, avail_response,
                                           handled, dryrun);
-        if(synth->verbose)
-        {
-            FLUID_LOG(FLUID_INFO, "Processing SysEX GS DT1 message, bank selection mode might have been changed.");
-        }
         FLUID_API_RETURN(result);
     }
 
@@ -2460,7 +2571,7 @@ fluid_synth_sysex_gs_dt1(fluid_synth_t *synth, const char *data, int len,
 
     if(len < 9) // at least one byte of data should be transmitted
     {
-        FLUID_LOG(FLUID_INFO, "SysEx DT1: message too short, dropping it.");
+        FLUID_LOG(FLUID_INFO, "SysEx GS DT1: message too short, dropping it.");
         return FLUID_FAILED;
     }
     len_data = len - 8;
@@ -2474,7 +2585,7 @@ fluid_synth_sysex_gs_dt1(fluid_synth_t *synth, const char *data, int len,
     // An intermediate checksum of 0x80 must be treated as zero! #1578
     if ((checksum & 0x7F) != data[len - 1])
     {
-        FLUID_LOG(FLUID_INFO, "SysEx DT1: dropping message on addr 0x%x due to incorrect checksum 0x%x. Correct checksum: 0x%x", addr, (int)data[len - 1], checksum);
+        FLUID_LOG(FLUID_INFO, "SysEx GS DT1: dropping message on addr 0x%x due to incorrect checksum 0x%x. Correct checksum: 0x%x", addr, (int)data[len - 1], checksum);
         return FLUID_FAILED;
     }
 
@@ -2482,16 +2593,18 @@ fluid_synth_sysex_gs_dt1(fluid_synth_t *synth, const char *data, int len,
     {
         if (len_data > 1 || (data[7] != 0 && data[7] != 0x7f))
         {
-            FLUID_LOG(FLUID_INFO, "SysEx DT1: dropping invalid mode set message");
+            FLUID_LOG(FLUID_INFO, "SysEx GS DT1: dropping invalid mode set message");
             return FLUID_FAILED;
         }
         if (handled)
         {
             *handled = TRUE;
         }
+
+        i = data[7];
         if (!dryrun)
         {
-            if (data[7] == 0)
+            if (i == 0)
             {
                 synth->bank_select = FLUID_BANK_STYLE_GS;
             }
@@ -2500,6 +2613,12 @@ fluid_synth_sysex_gs_dt1(fluid_synth_t *synth, const char *data, int len,
                 synth->bank_select = FLUID_BANK_STYLE_GM;
             }
             return fluid_synth_system_reset_LOCAL(synth);
+        }
+        if(synth->verbose)
+        {
+            FLUID_LOG(FLUID_INFO, "%sSysEX GS DT1: bank selection mode is now %s",
+            dryrun ? "[DRYRUN] " : "",
+            i == 0 ? "GS" : "GM");
         }
         return FLUID_OK;
     }
@@ -2513,7 +2632,7 @@ fluid_synth_sysex_gs_dt1(fluid_synth_t *synth, const char *data, int len,
     {
         if (len_data > 1 || data[7] > 0x02)
         {
-            FLUID_LOG(FLUID_INFO, "SysEx DT1: dropping invalid rhythm part message");
+            FLUID_LOG(FLUID_INFO, "SysEx GS DT1: dropping invalid rhythm part message");
             return FLUID_FAILED;
         }
         if (handled)
@@ -2522,15 +2641,25 @@ fluid_synth_sysex_gs_dt1(fluid_synth_t *synth, const char *data, int len,
         }
         if (!dryrun)
         {
-            int chan = (addr >> 8) & 0x0F;
+            int chan = (addr >> 8) & 0x0F, type;
             //See the Patch Part parameters section in SC-88Pro/8850 owner's manual
             chan = chan >= 0x0a ? chan : (chan == 0 ? 9 : chan - 1);
-            synth->channel[chan]->channel_type =
-                data[7] == 0x00 ? CHANNEL_TYPE_MELODIC : CHANNEL_TYPE_DRUM;
+            type = data[7] == 0x00 ? CHANNEL_TYPE_MELODIC : CHANNEL_TYPE_DRUM;
+            synth->channel[chan]->channel_type = type;
 
-            FLUID_LOG(FLUID_DBG, "SysEx DT1: setting MIDI channel %d to type %d", chan, (int)synth->channel[chan]->channel_type);
-            //Roland synths seem to "remember" the last instrument a channel
-            //used in the selected mode. This behavior is not replicated here.
+            FLUID_LOG(FLUID_DBG, "SysEx GS DT1: setting MIDI channel %d to type %d", chan, (int)synth->channel[chan]->channel_type);
+            // Roland synths seem to "remember" the last instrument a channel
+            // used in the selected mode. This behavior is not replicated here.
+            // Issue 1579: The preset selected for the channel needs to be forcibly changed. Therefore it is not sufficient
+            // to send a prog change, as the old bank is still active in the channel.
+            // MSGS selects the standard drum kit right after this message (which is equivalent to sending a prog change 0).
+            // However, this behavior is insonsistent with the note on site 60:
+            // "To select a drum set after setting the part mode, transmit a program change [...]"
+            fluid_synth_cc_LOCAL(synth, chan, ALL_CTRL_OFF);
+            fluid_channel_set_sfont_bank_prog(synth->channel[chan],
+                                              -1,
+                                              type == CHANNEL_TYPE_DRUM ? DRUM_INST_BANK : 0,
+                                              -1);
             fluid_synth_program_change(synth, chan, 0);
         }
         return FLUID_OK;
@@ -2753,6 +2882,12 @@ fluid_synth_system_reset_LOCAL(fluid_synth_t *synth)
 
     fluid_synth_update_mixer(synth, fluid_rvoice_mixer_reset_reverb, 0, 0.0f);
     fluid_synth_update_mixer(synth, fluid_rvoice_mixer_reset_chorus, 0, 0.0f);
+
+    /* Reset auto portamento mode tracking */
+    if(synth->portamento_time_mode == FLUID_PORTAMENTO_TIME_MODE_AUTO)
+    {
+        synth->portamento_time_has_seen_lsb = 0;
+    }
 
     return FLUID_OK;
 }
@@ -3281,8 +3416,10 @@ fluid_synth_sfont_select(fluid_synth_t *synth, int chan, int sfont_id)
 int
 fluid_synth_unset_program(fluid_synth_t *synth, int chan)
 {
+    int res;
     FLUID_API_ENTRY_CHAN(FLUID_FAILED);
-    FLUID_API_RETURN(fluid_synth_program_change(synth, chan, FLUID_UNSET_PROGRAM));
+    res = fluid_synth_program_change(synth, chan, FLUID_UNSET_PROGRAM);
+    FLUID_API_RETURN(res);
 }
 
 /**
@@ -3547,7 +3684,7 @@ fluid_synth_set_sample_rate_LOCAL(fluid_synth_t *synth, float sample_rate)
  * Set up an event to change the sample-rate of the synth during the next rendering call.
  * @warning This function is broken-by-design! Don't use it! Starting with fluidsynth 2.4.4 it's a no-op. Instead, specify the sample-rate when creating the synth.
  * @deprecated As of fluidsynth 2.1.0 this function has been deprecated.
- * Changing the sample-rate is generally not considered to be a real-time use-case, as it always produces some audible artifact ("click", "pop") on the dry sound and effects (because LFOs for chorus and reverb need to be reinitialized).
+ * Changing the sample-rate is generally not considered to be a realtime use-case, as it always produces some audible artifact ("click", "pop") on the dry sound and effects (because LFOs for chorus and reverb need to be reinitialized).
  * The sample-rate change may also require memory allocation deep down in the effect units.
  * However, this memory allocation may fail and there is no way for the caller to know that, because the actual change of the sample-rate is executed during rendering.
  * This function cannot (must not) do the sample-rate change itself, otherwise the synth needs to be locked down, causing rendering to block.
@@ -5185,10 +5322,12 @@ fluid_voice_t *
 fluid_synth_alloc_voice(fluid_synth_t *synth, fluid_sample_t *sample,
                         int chan, int key, int vel)
 {
+    fluid_voice_t *res;
     fluid_return_val_if_fail(sample != NULL, NULL);
     fluid_return_val_if_fail(sample->data != NULL, NULL);
     FLUID_API_ENTRY_CHAN(NULL);
-    FLUID_API_RETURN(fluid_synth_alloc_voice_LOCAL(synth, sample, chan, key, vel, NULL));
+    res = fluid_synth_alloc_voice_LOCAL(synth, sample, chan, key, vel, NULL);
+    FLUID_API_RETURN(res);
 
 }
 
@@ -5261,7 +5400,15 @@ fluid_synth_alloc_voice_LOCAL(fluid_synth_t *synth, fluid_sample_t *sample, int 
     */
     {
         int mono = fluid_channel_is_playing_mono(channel);
-        fluid_mod_t *default_mod = synth->default_mod;
+        fluid_mod_t *default_mod;
+        if (sample->default_modulators != NULL)
+        {
+            default_mod = sample->default_modulators;
+        }
+        else
+        {
+            default_mod = synth->default_mod;
+        }
 
         while(default_mod != NULL)
         {
@@ -7600,7 +7747,7 @@ fluid_synth_get_settings(fluid_synth_t *synth)
 /**
  * Apply an offset to a SoundFont generator on a MIDI channel.
  *
- * This function allows to set an offset for the specified destination generator in real-time.
+ * This function allows to set an offset for the specified destination generator in realtime.
  * The offset will be applied immediately to all voices that are currently and subsequently playing
  * on the given MIDI channel. This functionality works equivalent to using NRPN MIDI messages to
  * manipulate synthesis parameters. See SoundFont spec, paragraph 8.1.3, for details on SoundFont
@@ -7798,7 +7945,7 @@ static void fluid_synth_process_awe32_nrpn_LOCAL(fluid_synth_t *synth, int chan,
         case GEN_REVERBSEND:
             fluid_clip(data, 0, 255);
             /* transform the input value */
-            converted_sf2_generator_value = fluid_mod_transform_source_value(data, default_reverb_mod.flags1, 256);
+            converted_sf2_generator_value = fluid_mod_transform_source_value(&default_reverb_mod, data, 256, TRUE);
             FLUID_LOG(FLUID_DBG, "AWE32 Reverb: %f", converted_sf2_generator_value);
             converted_sf2_generator_value*= fluid_mod_get_amount(&default_reverb_mod);
             break;
@@ -7806,7 +7953,7 @@ static void fluid_synth_process_awe32_nrpn_LOCAL(fluid_synth_t *synth, int chan,
         case GEN_CHORUSSEND:
             fluid_clip(data, 0, 255);
             /* transform the input value */
-            converted_sf2_generator_value = fluid_mod_transform_source_value(data, default_chorus_mod.flags1, 256);
+            converted_sf2_generator_value = fluid_mod_transform_source_value(&default_chorus_mod, data, 256, TRUE);
             FLUID_LOG(FLUID_DBG, "AWE32 Chorus: %f", converted_sf2_generator_value);
             converted_sf2_generator_value*= fluid_mod_get_amount(&default_chorus_mod);
             break;
@@ -8250,6 +8397,41 @@ static void fluid_synth_handle_important_channels(void *data, const char *name,
     fluid_synth_api_exit(synth);
 }
 
+static int fluid_parse_portamento_time_str(const char* value)
+{
+    int mode;
+    if(FLUID_STRCMP(value, "auto") == 0)
+    {
+        mode = FLUID_PORTAMENTO_TIME_MODE_AUTO;
+    }
+    else if(FLUID_STRCMP(value, "xg-gs") == 0)
+    {
+        mode = FLUID_PORTAMENTO_TIME_MODE_XG_GS;
+    }
+    else if(FLUID_STRCMP(value, "linear") == 0)
+    {
+        mode = FLUID_PORTAMENTO_TIME_MODE_LINEAR;
+    }
+    else
+    {
+        FLUID_LOG(FLUID_ERR, "Invalid portamento time mode '%s'. Valid modes: auto, xg-gs, linear", value);
+        mode = FLUID_FAILED;
+    }
+    return mode;
+}
+
+static void fluid_synth_handle_portamento_mode(void *data, const char *name, const char *value)
+{
+    int mode;
+    fluid_synth_t *synth = (fluid_synth_t *)data;
+
+    mode = fluid_parse_portamento_time_str(value);
+    if(mode != FLUID_FAILED)
+    {
+        fluid_synth_set_portamento_time_mode(synth, mode);
+    }
+}
+
 
 /* API legato mode *********************************************************/
 
@@ -8354,6 +8536,63 @@ int fluid_synth_get_portamento_mode(fluid_synth_t *synth, int chan,
     /**/
     * portamentomode = synth->channel[chan]->portamentomode;
     /**/
+    FLUID_API_RETURN(FLUID_OK);
+}
+
+/*  API portamento time mode ************************************************/
+
+/**
+ * Sets the global portamento time mode of the synthesizer.
+ *
+ * @param synth the synth instance.
+ * @param mode The portamento time mode as indicated by #fluid_portamento_time_mode.
+ *
+ * @return
+ * - #FLUID_OK on success.
+ * - #FLUID_FAILED
+ *   - \a synth is NULL.
+ *   - \a mode is invalid.
+ */
+int fluid_synth_set_portamento_time_mode(fluid_synth_t *synth, int mode)
+{
+    /* checks parameters first */
+    fluid_return_val_if_fail(synth != NULL, FLUID_FAILED);
+    fluid_synth_api_enter(synth);
+
+    if(mode < 0 || mode >= FLUID_PORTAMENTO_TIME_MODE_LAST)
+    {
+        FLUID_API_RETURN(FLUID_FAILED);
+    }
+
+    synth->portamento_time_mode = (enum fluid_portamento_time_mode)mode;
+
+    /* Reset auto mode tracking when mode changes */
+    synth->portamento_time_has_seen_lsb = 0;
+
+    FLUID_API_RETURN(FLUID_OK);
+}
+
+/**
+ * Gets the global portamento time mode of the synthesizer.
+ *
+ * @param synth the synth instance.
+ * @param mode the address to store the portamento time mode to.
+ *
+ * @return
+ * - #FLUID_OK on success.
+ * - #FLUID_FAILED
+ *   - \a synth is NULL.
+ *   - \a mode is NULL.
+ */
+int fluid_synth_get_portamento_time_mode(fluid_synth_t *synth, int *mode)
+{
+    /* checks parameters first */
+    fluid_return_val_if_fail(mode != NULL, FLUID_FAILED);
+    fluid_return_val_if_fail(synth != NULL, FLUID_FAILED);
+    fluid_synth_api_enter(synth);
+    
+    *mode = synth->portamento_time_mode;
+    
     FLUID_API_RETURN(FLUID_OK);
 }
 

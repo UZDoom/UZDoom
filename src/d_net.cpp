@@ -584,15 +584,16 @@ void Net_SetWaiting()
 //		with our variable length Command.
 static size_t GetNetBufferSize()
 {
-	if (NetBuffer[0] & NCMD_EXIT)
+	const auto type = GetPacketType(NetBuffer[0]);
+	if (type == NCMD_DISCONNECT)
 		return 1 + (RemoteClient == Net_Arbitrator);
 	// TODO: Need a skipper for this.
-	if (NetBuffer[0] & NCMD_SETUP)
+	if (type == NCMD_CONNECT)
 		return NetBufferLength;
-	if (NetBuffer[0] & (NCMD_LATENCY | NCMD_LATENCYACK))
+	if (type == NCMD_LATENCY || type == NCMD_LATENCY_ACK)
 		return 2;
 
-	if (NetBuffer[0] & NCMD_LEVELREADY)
+	if (type == NCMD_LEVEL_READY)
 	{
 		int bytes = 2;
 		if (RemoteClient == Net_Arbitrator)
@@ -602,8 +603,9 @@ static size_t GetNetBufferSize()
 	}
 
 	// Header info
+	const auto flags = GetPacketFlags(NetBuffer[0]);
 	unsigned int totalBytes = 10;
-	if (NetBuffer[0] & NCMD_QUITTERS)
+	if (flags & NCMD_FLAG_QUITTERS)
 		totalBytes += NetBuffer[totalBytes] + 1;
 
 	const int playerCount = NetBuffer[totalBytes++];
@@ -771,7 +773,7 @@ static void CheckLevelStart(int client, int delayTics)
 		if (consoleplayer == Net_Arbitrator && client != consoleplayer)
 		{
 			// Someone might've missed the previous packet, so resend it just in case.
-			NetBuffer[0] = NCMD_LEVELREADY;
+			NetBuffer[0] = NCMD_LEVEL_READY;
 			NetBuffer[1] = CurrentLobbyID;
 			NetBuffer[2] = 0;
 			NetBuffer[3] = 0;
@@ -804,7 +806,7 @@ static void CheckLevelStart(int client, int delayTics)
 		// Beyond this point a player is likely lagging out anyway.
 		constexpr uint16_t LatencyCap = 350u;
 
-		NetBuffer[0] = NCMD_LEVELREADY;
+		NetBuffer[0] = NCMD_LEVEL_READY;
 		NetBuffer[1] = CurrentLobbyID;
 		uint16_t highestAvg = 0u;
 		// Wait for enough latency info to be accepted so a better average
@@ -855,20 +857,21 @@ static void GetPackets()
 	{
 		const int clientNum =  RemoteClient;
 		auto& clientState = ClientStates[clientNum];
+		const auto type = GetPacketType(NetBuffer[0]);
 
-		if (NetBuffer[0] & NCMD_EXIT)
+		if (type == NCMD_DISCONNECT)
 		{
 			ClientQuit(clientNum, clientNum == Net_Arbitrator ? NetBuffer[1] : -1);
 			continue;
 		}
 
-		if (NetBuffer[0] & NCMD_SETUP)
+		if (type == NCMD_CONNECT)
 		{
 			HandleIncomingConnection();
 			continue;
 		}
 
-		if (NetBuffer[0] & NCMD_LATENCY)
+		if (type == NCMD_LATENCY)
 		{
 			size_t i = 0u;
 			for (; i < latencyAcks.Size(); ++i)
@@ -883,7 +886,7 @@ static void GetPackets()
 			continue;
 		}
 
-		if (NetBuffer[0] & NCMD_LATENCYACK)
+		if (type == NCMD_LATENCY_ACK)
 		{
 			if (NetBuffer[1] == clientState.CurrentLatency)
 			{
@@ -894,7 +897,7 @@ static void GetPackets()
 			continue;
 		}
 
-		if (NetBuffer[0] & NCMD_LEVELREADY)
+		if (type == NCMD_LEVEL_READY)
 		{
 			if (NetBuffer[1] == CurrentLobbyID)
 			{
@@ -908,7 +911,8 @@ static void GetPackets()
 			continue;
 		}
 
-		if (NetBuffer[0] & NCMD_RETRANSMIT)
+		const auto flags = GetPacketFlags(NetBuffer[0]);
+		if (flags & NCMD_FLAG_RETRANSMIT)
 		{
 			clientState.ResendID = NetBuffer[1];
 			clientState.Flags |= CF_RETRANSMIT;
@@ -924,7 +928,7 @@ static void GetPackets()
 		const int consistencyAck = (NetBuffer[6] << 24) | (NetBuffer[7] << 16) | (NetBuffer[8] << 8) | NetBuffer[9];
 
 		int curByte = 10;
-		if (NetBuffer[0] & NCMD_QUITTERS)
+		if (flags & NCMD_FLAG_QUITTERS)
 		{
 			int numPlayers = NetBuffer[curByte++];
 			for (int i = 0; i < numPlayers; ++i)
@@ -1051,7 +1055,7 @@ static void GetPackets()
 
 	for (const auto& ack : latencyAcks)
 	{
-		NetBuffer[0] = NCMD_LATENCYACK;
+		NetBuffer[0] = NCMD_LATENCY_ACK;
 		NetBuffer[1] = ack.Seq;
 		HSendPacket(ack.Client, 2);
 	}
@@ -1347,7 +1351,7 @@ void NetUpdate(int tics)
 			{
 				if (consoleplayer != Net_Arbitrator && IsMapLoaded())
 				{
-					NetBuffer[0] = NCMD_LEVELREADY;
+					NetBuffer[0] = NCMD_LEVEL_READY;
 					NetBuffer[1] = CurrentLobbyID;
 					HSendPacket(Net_Arbitrator, 2);
 				}
@@ -1549,7 +1553,7 @@ void NetUpdate(int tics)
 			continue;
 
 		const bool isSelf = client == consoleplayer;
-		NetBuffer[0] = (curState.Flags & CF_MISSING) ? NCMD_RETRANSMIT : 0;
+		NetBuffer[0] = (curState.Flags & CF_MISSING) ? NCMD_FLAG_RETRANSMIT : 0;
 		curState.Flags &= ~CF_MISSING;
 
 		NetBuffer[1] = (curState.Flags & CF_RETRANSMIT_SEQ) ? curState.ResendID : CurrentLobbyID;
@@ -1615,7 +1619,7 @@ void NetUpdate(int tics)
 				size_t size = 10;
 				if (totalQuits > 0)
 				{
-					NetBuffer[0] |= NCMD_QUITTERS;
+					NetBuffer[0] |= NCMD_FLAG_QUITTERS;
 					NetBuffer[size++] = totalQuits;
 					for (int i = 0; i < totalQuits; ++i)
 						NetBuffer[size++] = quitNums[i];
@@ -1624,7 +1628,7 @@ void NetUpdate(int tics)
 				}
 				else
 				{
-					NetBuffer[0] &= ~NCMD_QUITTERS;
+					NetBuffer[0] &= ~NCMD_FLAG_QUITTERS;
 				}
 
 				int playerNums[MAXPLAYERS];
@@ -1972,7 +1976,7 @@ void D_QuitNetGame()
 		return;
 
 	// Send a bunch of packets for stability.
-	NetBuffer[0] = NCMD_EXIT;
+	NetBuffer[0] = NCMD_DISCONNECT;
 	if (consoleplayer == Net_Arbitrator)
 	{
 		// This currently doesn't really do anything, but it's being split off into its

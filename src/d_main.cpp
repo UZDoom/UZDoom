@@ -323,6 +323,14 @@ FARG(bots, "", "", "",
 FARG(debug, "", "", "",
 	"");
 
+FARG(complevel, "Play", "Sets the engine compatibility level.", "boom",
+	"Sets the engine compability level to more closely follow quirks of other engines."
+	"Valid Options:\n"
+	"vanilla: 2, 3, 4, 1.9, doom2, ultimate, udoom, final, tnt, plutonia, vanilla\n"
+	"boom: 9, boom\n"
+	"mbf: 11, mbf\n"
+	"mbf21: 21, mbf21");
+
 EXTERN_FARG(join);
 EXTERN_FARG(host);
 
@@ -474,7 +482,6 @@ CUSTOM_CVAR (String, vid_cursor, "None", CVAR_ARCHIVE | CVAR_NOINITCALL)
 {
 	bool res = false;
 
-
 	if (!stricmp(self, "None" ) && gameinfo.CursorPic.IsNotEmpty())
 	{
 		res = I_SetCursor(TexMan.GetGameTextureByName(gameinfo.CursorPic.GetChars()));
@@ -488,6 +495,11 @@ CUSTOM_CVAR (String, vid_cursor, "None", CVAR_ARCHIVE | CVAR_NOINITCALL)
 		I_SetCursor(TexMan.GetGameTextureByName("cursor"));
 	}
 }
+
+CUSTOM_CVARD(Bool, vid_cursor_invert, false, CVAR_ARCHIVE | CVAR_NOINITCALL, "Flips cursor along its y axis")
+{
+	vid_cursor = *vid_cursor;
+};
 
 // Controlled by startup dialog
 CVAR(Bool, disableautoload, false, CVAR_ARCHIVE | CVAR_NOINITCALL | CVAR_GLOBALCONFIG)
@@ -1522,7 +1534,6 @@ void D_Display ()
 				DrawTexture(twod, tex, 160 - tex->GetDisplayWidth()/2, 100 - tex->GetDisplayHeight()/2,
 					DTA_320x200, true, TAG_DONE);
 			}
-			NoWipe = 10;
 		}
 
 		if (snd_drawoutput)
@@ -4175,11 +4186,9 @@ static int D_DoomMain_Internal (void)
 	C_InitConsole(80*8, 25*8, false);
 
 	Printf(
-		"%s version %s\nBuild: %s dated %s\nOS: %s\n",
-		GAMENAME,
-		GetVersionString(),
-		BACKEND,
-		GetGitTime(),
+		"%s version %s\nBuild: %s,%s dated %s\nOS: %s\n",
+		GAMENAME, GetVersionString(),
+		BACKEND, CMAKE_BUILD_TYPE, GetGitTime(),
 		I_DetectOS().GetChars()
 	);
 

@@ -55,6 +55,18 @@ jobs:
           git tag ${{ inputs.tag-name }} ${{ inputs.commit }}
           git push origin ${{ inputs.tag-name }}
 
+      - name: Prepare Tarball
+        run: |
+          sudo apt-get update
+          sudo apt-get -q install -y tarlz
+
+          cmake -P cmake/UpdateRevision.cmake $PWD/src/gitinfo.h
+
+          git archive --format=tar HEAD > source.tar
+          tar --append src/gitinfo.h -f source.tar
+
+          tarlz -z source.tar
+
       - name: Download Artifacts
         uses: actions/download-artifact@v8
         with:
@@ -67,6 +79,7 @@ jobs:
         id: files
         run: |
           mkdir -p release
+          mv source.tar.lz release
 
           platforms=""
           function move() {
@@ -79,11 +92,19 @@ jobs:
             fi
           }
 
-          move artifacts/Windows\ Release/*.zip Windows-UZDoom-${{ inputs.title }}-x86_64.zip windows
-          move artifacts/MacOS\ Release/*.dmg MacOS-UZDoom-${{ inputs.title }}-ARM64.dmg macos
-          appimage=Linux-UZDoom-${{ inputs.title }}-x86_64.AppImage
-          move artifacts/Linux\ Release/*.AppImage ${appimage} linux
-          move artifacts/Linux\ Release/*.zsync ${appimage}.zsync _
+          artifact='artifacts/Windows Release'
+          name='Windows-UZDoom-${{ inputs.title }}-x86_64'
+          move "${artifact}"/*.pdb.zip "${name}.pdb.zip" _
+          move "${artifact}"/*.zip "${name}.zip" windows
+
+          artifact='artifacts/MacOS Release'
+          name='MacOS-UZDoom-${{ inputs.title }}-ARM64'
+          move "${artifact}"/*.dmg "${name}.dmg" macos
+
+          artifact='artifacts/Linux Release/'
+          name='Linux-UZDoom-${{ inputs.title }}-x86_64'
+          move "${artifact}"/*.zsync "${name}.AppImage.zsync" _
+          move "${artifact}"/*.AppImage "${name}.AppImage" linux
 
           echo "platforms=$platforms" >> $GITHUB_OUTPUT
 

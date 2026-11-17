@@ -200,12 +200,6 @@ int main (int argc, char **argv)
 
 	setlocale (LC_ALL, "C");
 
-/* currently this is causing issues in the appimage build
-#ifdef __linux
-	SDL_SETENV("SDL_VIDEODRIVER", "wayland,x11");
-#endif
-*/
-
 	// despite the name, this also sets the wayland app_id
 	SDL_SETENV("SDL_VIDEO_X11_WMCLASS", APPID);
 	if (SDL_Init (0) < 0)

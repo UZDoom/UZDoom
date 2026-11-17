@@ -48,12 +48,7 @@ if( NOT PROJECT_LIBRARIES )
 	set( PROJECT_LIBRARIES "" )
 endif()
 
-add_definitions( -DTHIS_IS_GZDOOM )
-
 if( WIN32 )
-
-	add_definitions( -D_WIN32 )
-
 	set( PROJECT_LIBRARIES
 		Xinput
 		advapi32
@@ -101,10 +96,8 @@ else()
 
 	# Non-Windows version also needs SDL except native OS X backend
 	if( NOT APPLE OR NOT OSX_COCOA_BACKEND )
-		find_package( SDL2 REQUIRED )
-		include_directories( SYSTEM "${SDL2_INCLUDE_DIR}" )
-		link_directories(${SDL2_LINK_DIR})
-		set( PROJECT_LIBRARIES ${PROJECT_LIBRARIES} "${SDL2_LIBRARY}" )
+		find_package( SDL2 CONFIG REQUIRED )
+		list( APPEND PROJECT_LIBRARIES SDL2::SDL2 )
 	endif()
 
 endif()
@@ -248,7 +241,6 @@ if( DEM_CMAKE_COMPILER_IS_GNUCXX_COMPATIBLE )
 	endif()
 
 	if( NOT NO_STRIP )
-		set (CMAKE_EXE_LINKER_FLAGS_RELEASE "${CMAKE_EXE_LINKER_FLAGS_RELEASE} -s" )
 		set (CMAKE_EXE_LINKER_FLAGS_MINSIZEREL "${CMAKE_EXE_LINKER_FLAGS_MINSIZEREL} -s" )
 	endif()
 endif()

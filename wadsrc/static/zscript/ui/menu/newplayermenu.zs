@@ -42,7 +42,6 @@ class OptionMenuItemPlayerNameField : OptionMenuItemTextField
 		if (i == 0)
 		{
 			return true, players[consoleplayer].GetUserName();
-;
 		}
 		return false, "";
 	}

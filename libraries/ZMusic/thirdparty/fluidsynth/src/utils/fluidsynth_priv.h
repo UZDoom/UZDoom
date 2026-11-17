@@ -13,9 +13,8 @@
  * Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free
- * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
- * 02110-1301, USA
+ * License along with this library; if not, see
+ * <https://www.gnu.org/licenses/>.
  */
 
 /*
@@ -31,7 +30,7 @@
 
 #include "config.h"
 
-#ifndef WITH_GLIB_STUBS
+#if OSAL_glib
 #include <glib.h>
 #endif
 
@@ -71,20 +70,21 @@ typedef double fluid_real_t;
 #if defined(SUPPORTS_VLA)
 #  define FLUID_DECLARE_VLA(_type, _name, _len) \
      _type _name[_len]
-#else
+#elif OSAL_glib
 #  define FLUID_DECLARE_VLA(_type, _name, _len) \
      _type* _name = g_newa(_type, (_len))
+#else
+#  ifdef _WIN32
+#    define alloca _alloca
+#  endif
+#  define FLUID_DECLARE_VLA(_type, _name, _len) \
+     _type *_name = (_type *)alloca(_len * sizeof(_type))
 #endif
 
 
 /** Atomic types  */
-#if defined(_WIN32) && defined(WITH_GLIB_STUBS)
-typedef long fluid_atomic_int_t;
-typedef unsigned long fluid_atomic_uint_t;
-#else
 typedef int fluid_atomic_int_t;
 typedef unsigned int fluid_atomic_uint_t;
-#endif
 typedef float fluid_atomic_float_t;
 
 
@@ -96,7 +96,7 @@ typedef struct _fluid_env_data_t fluid_env_data_t;
 typedef struct _fluid_adriver_definition_t fluid_adriver_definition_t;
 typedef struct _fluid_channel_t fluid_channel_t;
 typedef struct _fluid_tuning_t fluid_tuning_t;
-typedef struct _fluid_hashtable_t  fluid_hashtable_t;
+typedef struct _fluid_hashtable_t fluid_hashtable_t;
 typedef struct _fluid_client_t fluid_client_t;
 typedef struct _fluid_server_socket_t fluid_server_socket_t;
 typedef struct _fluid_sample_timer_t fluid_sample_timer_t;
@@ -210,12 +210,6 @@ void* fluid_alloc(size_t len);
 
 FILE *fluid_fopen(const char *filename, const char *mode);
 
-#ifdef _WIN32
-#define FLUID_FSEEK(_f,_n,_set)      _fseeki64(_f,_n,_set)
-#else
-#define FLUID_FSEEK(_f,_n,_set)      fseek(_f,_n,_set)
-#endif
-
 #define FLUID_FTELL(_f)              fluid_file_tell(_f)
 
 /* Memory functions */
@@ -246,20 +240,57 @@ do { strncpy(_dst,_src,_n-1); \
 #define FLUID_SPRINTF                sprintf
 #define FLUID_FPRINTF                fprintf
 
-#if (defined(_WIN32) && _MSC_VER < 1900) || defined(MINGW32)
-/* need to make sure we use a C99 compliant implementation of (v)snprintf(),
- * i.e. not microsofts non compliant extension _snprintf() as it doesn't
- * reliably null-terminate the buffer
+#if (defined(_WIN32) && defined(_MSC_VER) && _MSC_VER < 1500) || defined(MINGW32)
+/* Need to make sure we use a C99 compliant implementation of [v]snprintf(),
+ * i.e. not Microsofts non conformant extension _[v]snprintf() as it doesn't
+ * null-terminate the buffer when the formatted string does not fit into the
+ * buffer.
  */
-#define FLUID_SNPRINTF           g_snprintf
+#if OSAL_glib
+#define FLUID_VSNPRINTF        g_vsnprintf
 #else
-#define FLUID_SNPRINTF           snprintf
+
+#include <stdarg.h>
+
+#define FLUID_VSNPRINTF        _fluid_vsnprintf
+
+static inline int
+_fluid_vsnprintf(char *buffer, size_t count, const char *format, va_list args)
+{
+    /* This implementation ensures proper termination when a buffer was supplied
+     * and therefore makes it conformant.
+     */
+    int length = _vsnprintf(buffer, count, format, args);
+    if (count > 0)
+        buffer[count - 1] = 0;
+    return length;
+}
 #endif
 
-#if (defined(_WIN32) && _MSC_VER < 1500) || defined(MINGW32)
-#define FLUID_VSNPRINTF          g_vsnprintf
 #else
 #define FLUID_VSNPRINTF          vsnprintf
+#endif
+
+#if (defined(_WIN32) && defined(_MSC_VER) && _MSC_VER < 1900) || defined(MINGW32)
+#if OSAL_glib
+#define FLUID_SNPRINTF         g_snprintf
+#else
+#define FLUID_SNPRINTF         _fluid_snprintf
+
+static inline int
+_fluid_snprintf(char *buffer, size_t count, const char *format, ...)
+{
+    int length;
+    va_list args;
+    va_start(args, format);
+    length = FLUID_VSNPRINTF(buffer, count, format, args);
+    va_end(args);
+    return length;
+}
+#endif
+
+#else
+#define FLUID_SNPRINTF           snprintf
 #endif
 
 #if defined(_WIN32) && !defined(MINGW32)
@@ -298,15 +329,22 @@ do { strncpy(_dst,_src,_n-1); \
 #endif
 
 #if defined(DEBUG) && !defined(NDEBUG)
-#define FLUID_ASSERT(a) g_assert(a)
+#define FLUID_ASSERT(a) fluid_assert(a)
 #else
 #define FLUID_ASSERT(a)
 #endif
 
+#if OSAL_glib
 #define FLUID_LIKELY G_LIKELY
 #define FLUID_UNLIKELY G_UNLIKELY
+#else
+#define FLUID_LIKELY(x) (x)
+#define FLUID_UNLIKELY(x) (x)
+#endif
 
 /* Misc */
+#define FLUID_INLINE inline
+
 #if defined(__INTEL_COMPILER)
 #define FLUID_RESTRICT restrict
 #elif defined(__clang__) || defined(__GNUC__) || defined(__GNUG__)

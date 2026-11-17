@@ -24,22 +24,19 @@
 
 #pragma once
 
-#include <stdint.h>
-#include "tarray.h"
+#include <utility>
+
+#include "basics.h"
 #include "bitmap.h"
 #include "memarena.h"
+#include "tarray.h"
+#include "zstring.h"
 
-#include "common/utility/basics.h"
+class FTexture;
 
-#ifndef MAKE_ID
-#ifndef __BIG_ENDIAN__
-#define MAKE_ID(a,b,c,d)	((uint32_t)((a)|((b)<<8)|((c)<<16)|((d)<<24)))
-#else
-#define MAKE_ID(a,b,c,d)	((uint32_t)((d)|((c)<<8)|((b)<<16)|((a)<<24)))
-#endif
-#endif
+struct FRemapTable;
+struct PalEntry;
 
-class FImageSource;
 using PrecacheInfo = TMap<int, std::pair<int, int>>;
 extern FMemArena ImageArena;
 
@@ -200,13 +197,11 @@ public:
 	static void RegisterForPrecache(FImageSource *img, bool requiretruecolor);
 };
 
-
 //==========================================================================
 //
 // A texture defined in a Build TILESxxx.ART file
 //
 //==========================================================================
-struct FRemapTable;
 
 class FBuildTexture : public FImageSource
 {
@@ -219,8 +214,5 @@ protected:
 	const uint8_t* RawPixels;
 	FRemapTable* Translation;
 };
-
-
-class FTexture;
 
 FTexture* CreateImageTexture(FImageSource* img, int frame = 0) noexcept;

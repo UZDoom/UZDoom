@@ -1,0 +1,86 @@
+on:
+  # Trigger analysis when pushing in master or pull requests, and when creating
+  # a pull request. 
+  push:
+    branches:
+      - 'master'
+      - 'release/**'
+    paths-ignore:
+      - '.azure/**'
+      - '.circleci/**'
+      - '.github/workflows/linux.yml'
+      - '.github/workflows/solaris.yml'
+      - '.github/workflows/windows.yml'
+      - '.github/workflows/ios.yml'
+      - '.cirrus.yml'
+      - 'README.md'
+  pull_request:
+      types: [opened, synchronize, reopened]
+
+env:
+  # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
+  # Use Debug build for better code coverage results
+  BUILD_TYPE: Debug
+  BUILD_WRAPPER_OUT_DIR: build_wrapper_output_directory # Directory where build-wrapper output will be placed
+
+name: SonarCloud Workflow
+jobs:
+  sonarcloud:
+    runs-on: ubuntu-24.04
+    steps:
+    - uses: actions/checkout@v6
+      with:
+        # Disabling shallow clone is recommended for improving relevancy of reporting
+        fetch-depth: 0
+        submodules: recursive
+
+    - name: Update apt
+      run: sudo apt-get update -y
+
+    - name: Install Dependencies
+      run: sudo -E apt-get -yq --no-install-suggests --no-install-recommends install cmake-data cmake libglib2.0-0 libsndfile-dev libasound2-dev libjack-dev portaudio19-dev libsdl2-dev libpulse-dev libdbus-1-dev libsystemd-dev libinstpatch-dev libreadline-dev lcov gcovr
+
+    - name: Create Build Environment
+      # Some projects don't allow in-source building, so create a separate build directory
+      # We'll use this as our working directory for all subsequent commands
+      run: |
+        cmake -E make_directory ${{github.workspace}}/build
+        echo $PATH
+
+    - name: Install Build Wrapper
+      uses: SonarSource/sonarqube-scan-action/install-build-wrapper@v7
+
+    - name: Configure CMake
+      # Use a bash shell so we can use the same syntax for environment variable
+      # access regardless of the host operating system
+      shell: bash
+      run: cmake -S . -B build -DCMAKE_BUILD_TYPE=$BUILD_TYPE -Werror=dev -Denable-portaudio=1 -Denable-ladspa=1 -Denable-coverage=1 -DNO_GUI=1 $GITHUB_WORKSPACE
+
+    - name: Build
+      working-directory: ${{github.workspace}}/build
+      shell: bash
+      # Execute the build.  You can specify a specific target with "--target <NAME>"
+      run: |
+        build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} make
+
+    - name: Test
+      working-directory: ${{github.workspace}}/build
+      shell: bash
+      # Execute tests defined by the CMake configuration.
+      run: |
+        build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} make coverage
+
+# sonar-scanner does not like utf8 filenames
+    - name: Prepare for Sonar
+      run: |
+       rm -rf ${{ github.workspace }}/sf2
+       gcovr --version
+
+    - name: SonarQube Scan
+      uses: SonarSource/sonarqube-scan-action@v7
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      with:
+        args: >
+            -Dsonar.cfamily.build-wrapper-output=build/${{ env.BUILD_WRAPPER_OUT_DIR }}
+            -Dsonar.coverageReportPaths=${{github.workspace}}/build/coverage/sonarqube.report

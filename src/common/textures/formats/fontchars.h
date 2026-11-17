@@ -22,6 +22,12 @@
 **
 */
 
+#pragma once
+
+#include "image.h"
+
+struct PalEntry;
+
 // This is a font character that reads RLE compressed data.
 class FFontChar2 : public FImageSource
 {

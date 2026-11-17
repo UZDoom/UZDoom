@@ -13,9 +13,8 @@
  * Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free
- * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
- * 02110-1301, USA
+ * License along with this library; if not, see
+ * <https://www.gnu.org/licenses/>.
  */
 
 #ifndef _FLUIDSYNTH_MIDI_H
@@ -93,7 +92,7 @@ int handle_tick(void *data, int tick)
  * @endcode
  */
 typedef int (*handle_midi_tick_func_t)(void *data, int tick);
-/* @} */
+/** @} */
 
 /**
  * @defgroup midi_events MIDI Events
@@ -139,7 +138,7 @@ FLUIDSYNTH_API int fluid_midi_event_set_lyrics(fluid_midi_event_t *evt,
         void *data, int size, int dynamic);
 FLUIDSYNTH_API int fluid_midi_event_get_lyrics(fluid_midi_event_t *evt,
         void **data, int *size);
-/* @} */
+/** @} */
 
 /**
  * @defgroup midi_router MIDI Router
@@ -196,7 +195,7 @@ FLUIDSYNTH_API void fluid_midi_router_rule_set_param2(fluid_midi_router_rule_t *
 FLUIDSYNTH_API int fluid_midi_router_handle_midi_event(void *data, fluid_midi_event_t *event);
 FLUIDSYNTH_API int fluid_midi_dump_prerouter(void *data, fluid_midi_event_t *event);
 FLUIDSYNTH_API int fluid_midi_dump_postrouter(void *data, fluid_midi_event_t *event);
-/* @} */
+/** @} */
 
 /**
  * @defgroup midi_driver MIDI Driver
@@ -227,7 +226,7 @@ fluid_midi_driver_t *new_fluid_midi_driver(fluid_settings_t *settings,
 FLUIDSYNTH_API void delete_fluid_midi_driver(fluid_midi_driver_t *driver);
 /** @endlifecycle */
 
-/* @} */
+/** @} */
 
 /**
  * @defgroup midi_player MIDI File Player
@@ -286,7 +285,7 @@ FLUIDSYNTH_API int fluid_player_get_bpm(fluid_player_t *player);
 FLUIDSYNTH_API int fluid_player_get_division(fluid_player_t *player);
 FLUIDSYNTH_API int fluid_player_get_midi_tempo(fluid_player_t *player);
 FLUIDSYNTH_API int fluid_player_seek(fluid_player_t *player, int ticks);
-/* @} */
+/** @} */
 
 #ifdef __cplusplus
 }

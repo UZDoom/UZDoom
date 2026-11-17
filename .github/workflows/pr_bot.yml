@@ -89,7 +89,7 @@ jobs:
 
               temp.push([
                 "-",
-                "Welcome the community and thank you for your contribution!",
+                "Welcome to the community and thank you for your contribution!",
                 `Please take a moment to familiarize yourself with the resources available in our ${link("README.md")} file.`,
               ].join(" "));
 

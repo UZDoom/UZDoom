@@ -13,9 +13,8 @@
  * Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free
- * Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
- * 02110-1301, USA
+ * License along with this library; if not, see
+ * <https://www.gnu.org/licenses/>.
  */
 
 
@@ -56,6 +55,10 @@
 #define FLUID_CHORUS_DEFAULT_N 3                         /**< Default chorus voice count */
 #define FLUID_CHORUS_DEFAULT_SPEED 0.2f                  /**< Default chorus speed */
 #define FLUID_CHORUS_DEFAULT_TYPE FLUID_CHORUS_MOD_SINE  /**< Default chorus waveform type */
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 /***************************************************************
  *
@@ -172,8 +175,27 @@ struct _fluid_synth_t
     enum fluid_iir_filter_flags custom_filter_flags; /**< filter type of the user-defined filter currently used for all voices */
     enum fluid_msgs_note_cut msgs_note_cut_mode;
 
+    /** Portamento time mode settings */
+    enum fluid_portamento_time_mode portamento_time_mode; /**< Global portamento time mode */
+    int portamento_time_has_seen_lsb; /**< Flag to track if LSB has been seen (for auto mode) */
+
     fluid_iir_sincos_t iir_sincos_table[SINCOS_TAB_SIZE]; /**< Table of sin/cos values for IIR filter */
 };
+
+extern fluid_mod_t default_vel2att_mod;
+extern fluid_mod_t default_at2viblfo_mod;
+extern fluid_mod_t default_mod2viblfo_mod;
+extern fluid_mod_t default_vel2filter_mod;
+extern fluid_mod_t default_att_mod;
+extern fluid_mod_t default_pan_mod;
+extern fluid_mod_t default_expr_mod;
+extern fluid_mod_t default_pitch_bend_mod;
+extern fluid_mod_t default_chorus_mod;
+extern fluid_mod_t default_reverb_mod;
+extern fluid_mod_t custom_balance_mod;
+extern fluid_mod_t DLS_default_reverb_mod;
+extern fluid_mod_t DLS_default_chorus_mod;
+extern fluid_mod_t DLS_default_pitch_bend_mod;
 
 /**
  * Type definition of the synthesizer's audio callback function.
@@ -269,4 +291,9 @@ fluid_voice_t *
 fluid_synth_alloc_voice_LOCAL(fluid_synth_t *synth, fluid_sample_t *sample, int chan, int key, int vel, fluid_zone_range_t *zone_range);
 
 void fluid_synth_release_voice_on_same_note_LOCAL(fluid_synth_t *synth, int chan, int key);
+
+#ifdef __cplusplus
+}
+#endif
+
 #endif  /* _FLUID_SYNTH_H */
