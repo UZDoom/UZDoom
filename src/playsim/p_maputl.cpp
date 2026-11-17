@@ -1370,20 +1370,19 @@ void FPathTraverse::AddThingIntercepts (int bx, int by, FBlockThingsIterator &it
 intercept_t *FPathTraverse::Next()
 {
 	intercept_t *in = NULL;
-
 	double dist = FLT_MAX;
-	for (unsigned scanpos = intercept_index; scanpos < intercepts.Size (); scanpos++)
-	{
-		intercept_t *scan = &intercepts[scanpos];
-		if (scan->frac < dist && !scan->done)
-		{
-			dist = scan->frac;
-			in = scan;
-		}
-	}
 
+	if (intercept_count > 0 && intercept_index < intercept_count)
+	{
+		in = &intercepts[intercept_index++];
+		dist = in->frac;
+	}
+	else
+	{
+		return NULL;
+	}
 	if (dist > 1. || in == NULL) return NULL;	// checked everything in range
-	in->done = true;
+
 	return in;
 }
 
@@ -1601,6 +1600,14 @@ void FPathTraverse::init(double x1, double y1, double x2, double y2, int flags, 
 			break;
 		}
 	}
+
+	intercept_count = intercepts.Size();
+	if (intercept_count > intercept_index)
+	{
+		std::sort(intercepts.begin(), intercepts.end(), // [DVR] Can start from [intercept_index] instead of begin()??
+				  [](const intercept_t &a, const intercept_t &b) { return a.frac < b.frac; });
+	}
+	intercepts.end()->done = true;
 }
 
 //===========================================================================
@@ -1627,7 +1634,12 @@ int FPathTraverse::PortalRelocate(intercept_t *in, int flags, DVector3 *optpos)
 		P_TranslatePortalZ(in->d.line, optpos->Z);
 	}
 	line_t *saved = in->d.line;	// this gets overwritten by the init call.
-	intercepts.Resize(intercept_index);
+	if (intercept_index > 0) intercepts.Resize(--intercept_index);
+	if (flags & PT_DELTA)
+	{
+		endx -= hitx;
+		endy -= hity;
+	}
 	init(hitx, hity, endx, endy, flags, in->frac + EQUAL_EPSILON);
 	return saved->getPortal()->mType == PORTT_LINKED? 1:-1;
 }
@@ -1636,9 +1648,9 @@ void FPathTraverse::PortalRelocate(const DVector2 &displacement, int flags, doub
 {
 	double hitx = trace.x + displacement.X;
 	double hity = trace.y + displacement.Y;
-	double endx = hitx + trace.dx;
-	double endy = hity + trace.dy;
-	intercepts.Resize(intercept_index);
+	double endx = (flags & PT_DELTA ? trace.dx : hitx + trace.dx);
+	double endy = (flags & PT_DELTA ? trace.dy : hity + trace.dy);
+	if(intercept_index > 0) intercepts.Resize(--intercept_index);
 	init(hitx, hity, endx, endy, flags, hitfrac);
 }
 
@@ -1650,7 +1662,7 @@ void FPathTraverse::PortalRelocate(const DVector2 &displacement, int flags, doub
 
 FPathTraverse::~FPathTraverse()
 {
-	intercepts.Resize(intercept_index);
+	intercepts.Clear();
 }
 
 
