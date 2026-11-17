@@ -26,12 +26,17 @@
 #include <QImage>
 #include <QMutex>
 #include <QMutexLocker>
-#include <QProcess>
 #include <QRegularExpression>
 #include <QSet>
+#include <7z.h>
+#include <7zAlloc.h>
+#include <7zCrc.h>
+#include <algorithm>
 #include <cmath>
 #include <cstring>
+#include <limits>
 #include <miniz.h>
+#include <mutex>
 #include <unordered_set>
 
 namespace
@@ -233,6 +238,343 @@ namespace
 		return buf;
 	}
 
+	struct QFile7zInStream
+	{
+		ISeekInStream vt{};
+		QFile* file = nullptr;
+
+		QFile7zInStream() = default;
+
+		explicit QFile7zInStream(QFile* f)
+			: file(f)
+		{
+			vt.Read = readCb;
+			vt.Seek = seekCb;
+		}
+
+		static SRes readCb(ISeekInStreamPtr pp, void* buf, size_t* size)
+		{
+			auto* self = reinterpret_cast<QFile7zInStream*>(const_cast<ISeekInStream*>(pp));
+			if (!self || !self->file || !size)
+			{
+				if (size)
+					*size = 0;
+				return SZ_ERROR_READ;
+			}
+			const qint64 want = static_cast<qint64>(*size);
+			const qint64 got = self->file->read(static_cast<char*>(buf), want);
+			if (got < 0)
+			{
+				*size = 0;
+				return SZ_ERROR_READ;
+			}
+			*size = static_cast<size_t>(got);
+			return SZ_OK;
+		}
+
+		static SRes seekCb(ISeekInStreamPtr pp, Int64* pos, ESzSeek origin)
+		{
+			auto* self = reinterpret_cast<QFile7zInStream*>(const_cast<ISeekInStream*>(pp));
+			if (!self || !self->file || !pos)
+				return SZ_ERROR_READ;
+
+			qint64 target = *pos;
+			if (origin == SZ_SEEK_CUR)
+				target = self->file->pos() + *pos;
+			else if (origin == SZ_SEEK_END)
+				target = self->file->size() + *pos;
+			else if (origin != SZ_SEEK_SET)
+				return 1;
+
+			if (target < 0 || target > self->file->size() || !self->file->seek(target))
+				return 1;
+
+			*pos = self->file->pos();
+			return SZ_OK;
+		}
+	};
+
+	std::string sevenZipErrorString(SRes res)
+	{
+		switch (res)
+		{
+		case SZ_ERROR_UNSUPPORTED:
+			return "Unsupported 7z compression method or encrypted archive.";
+		case SZ_ERROR_CRC:
+			return "7z archive CRC check failed.";
+		case SZ_ERROR_MEM:
+			return "Out of memory while reading 7z archive.";
+		case SZ_ERROR_NO_ARCHIVE:
+		case SZ_ERROR_ARCHIVE:
+			return "Invalid or corrupted 7z archive.";
+		default:
+			return "Failed to extract 7z archive.";
+		}
+	}
+
+	class ArchiveReaderView
+	{
+	public:
+		virtual ~ArchiveReaderView() = default;
+		virtual uint32_t count() const = 0;
+		virtual bool statFile(uint32_t index, QString& outName, uint64_t& outSize) = 0;
+		virtual QByteArray readFile(uint32_t index, size_t maxBytes) = 0;
+	};
+
+	class ZipArchiveView final : public ArchiveReaderView
+	{
+	public:
+		~ZipArchiveView() override
+		{
+			if (opened)
+				mz_zip_reader_end(&zip);
+		}
+
+		bool open(QFile& f)
+		{
+			if (opened)
+			{
+				mz_zip_reader_end(&zip);
+				opened = false;
+			}
+			std::memset(&zip, 0, sizeof(zip));
+			zip.m_pRead = zipFileReadCb;
+			zip.m_pIO_opaque = &f;
+			if (!mz_zip_reader_init(&zip, static_cast<mz_uint64>(f.size()), 0))
+				return false;
+			opened = true;
+			return true;
+		}
+
+		uint32_t count() const override
+		{
+			return opened ? static_cast<uint32_t>(mz_zip_reader_get_num_files(const_cast<mz_zip_archive*>(&zip))) : 0;
+		}
+
+		bool statFile(uint32_t index, QString& outName, uint64_t& outSize) override
+		{
+			if (!opened)
+				return false;
+			mz_zip_archive_file_stat st{};
+			if (!mz_zip_reader_file_stat(&zip, index, &st) || mz_zip_reader_is_file_a_directory(&zip, index))
+				return false;
+			outName = QString::fromUtf8(st.m_filename);
+			outSize = st.m_uncomp_size;
+			return true;
+		}
+
+		QByteArray readFile(uint32_t index, size_t maxBytes) override
+		{
+			return opened ? readZipEntryBytes(zip, index, maxBytes) : QByteArray();
+		}
+
+	private:
+		mz_zip_archive zip{};
+		bool opened = false;
+	};
+
+	class SevenZipReader final : public ArchiveReaderView
+	{
+	public:
+		SevenZipReader() = default;
+		~SevenZipReader() override
+		{
+			close();
+		}
+
+		SevenZipReader(const SevenZipReader&) = delete;
+		SevenZipReader& operator=(const SevenZipReader&) = delete;
+
+		bool open(QFile& file, SRes* outRes = nullptr)
+		{
+			close();
+			static std::once_flag crcOnce;
+			std::call_once(crcOnce, CrcGenerateTable);
+
+			if (!file.seek(0))
+			{
+				if (outRes)
+					*outRes = SZ_ERROR_READ;
+				return false;
+			}
+
+			inStream = QFile7zInStream(&file);
+			LookToRead2_CreateVTable(&lookStream, false);
+			lookStream.realStream = &inStream.vt;
+			LookToRead2_INIT(&lookStream);
+			lookStream.bufSize = sizeof(streamBuf);
+			lookStream.buf = streamBuf;
+
+			SzArEx_Init(&db);
+			initialized = true;
+
+			const SRes res = SzArEx_Open(&db, &lookStream.vt, &allocMain, &allocTemp);
+			if (outRes)
+				*outRes = res;
+			if (res != SZ_OK)
+			{
+				close();
+				return false;
+			}
+			return true;
+		}
+
+		void close()
+		{
+			if (outBuffer)
+			{
+				IAlloc_Free(&allocMain, outBuffer);
+				outBuffer = nullptr;
+			}
+			outBufferSize = 0;
+			blockIndex = 0xFFFFFFFFu;
+			if (initialized)
+			{
+				SzArEx_Free(&db, &allocMain);
+				initialized = false;
+			}
+		}
+
+		uint32_t count() const override
+		{
+			return initialized ? static_cast<uint32_t>(db.NumFiles) : 0;
+		}
+
+		bool isDir(uint32_t index) const
+		{
+			return !initialized || index >= db.NumFiles || (db.IsDirs && SzArEx_IsDir(&db, index));
+		}
+
+		QString entryName(uint32_t index) const
+		{
+			if (!initialized || !db.FileNameOffsets || index >= db.NumFiles)
+				return {};
+			const size_t len = SzArEx_GetFileNameUtf16(&db, index, nullptr);
+			if (len == 0)
+				return {};
+			std::vector<UInt16> utf16(len);
+			SzArEx_GetFileNameUtf16(&db, index, utf16.data());
+			while (!utf16.empty() && utf16.back() == 0)
+				utf16.pop_back();
+			if (utf16.empty())
+				return {};
+			return QString::fromUtf16(reinterpret_cast<const char16_t*>(utf16.data()), static_cast<qsizetype>(utf16.size()));
+		}
+
+		bool statFile(uint32_t index, QString& outName, uint64_t& outSize) override
+		{
+			if (isDir(index))
+				return false;
+			outName = entryName(index);
+			if (outName.isEmpty())
+				return false;
+			outSize = SzArEx_GetFileSize(&db, index);
+			return true;
+		}
+
+		QByteArray readFile(uint32_t index, size_t maxBytes) override
+		{
+			if (!initialized || isDir(index))
+				return {};
+			const UInt64 sz = SzArEx_GetFileSize(&db, index);
+			if (sz == 0 || sz > maxBytes || sz > static_cast<UInt64>(std::numeric_limits<int>::max()))
+				return {};
+
+			size_t offset = 0;
+			size_t outSize = 0;
+			if (!extractCached(index, offset, outSize))
+				return {};
+			return QByteArray(reinterpret_cast<const char*>(outBuffer + offset), static_cast<int>(outSize));
+		}
+
+		bool extractEntryToFile(uint32_t index, QFile& outFile, SRes* outRes = nullptr)
+		{
+			if (!initialized || isDir(index))
+				return false;
+
+			size_t offset = 0;
+			size_t outSize = 0;
+			if (!extractCached(index, offset, outSize, outRes))
+				return false;
+
+			const char* dataPtr = reinterpret_cast<const char*>(outBuffer + offset);
+			size_t writtenTotal = 0;
+			while (writtenTotal < outSize)
+			{
+				const size_t step = std::min<size_t>(outSize - writtenTotal, 64 * 1024 * 1024);
+				const qint64 chunk = outFile.write(dataPtr + writtenTotal, static_cast<qint64>(step));
+				if (chunk <= 0)
+					return false;
+				writtenTotal += static_cast<size_t>(chunk);
+			}
+			return true;
+		}
+
+	private:
+		bool extractCached(uint32_t index, size_t& offset, size_t& outSize, SRes* outRes = nullptr)
+		{
+			const SRes res = SzArEx_Extract(
+				&db,
+				&lookStream.vt,
+				index,
+				&blockIndex,
+				&outBuffer,
+				&outBufferSize,
+				&offset,
+				&outSize,
+				&allocMain,
+				&allocTemp);
+			if (outRes)
+				*outRes = res;
+			if (res != SZ_OK)
+			{
+				if (outBuffer)
+				{
+					IAlloc_Free(&allocMain, outBuffer);
+					outBuffer = nullptr;
+				}
+				outBufferSize = 0;
+				blockIndex = 0xFFFFFFFFu;
+				return false;
+			}
+			return true;
+		}
+
+		ISzAlloc allocMain{ SzAlloc, SzFree };
+		ISzAlloc allocTemp{ SzAllocTemp, SzFreeTemp };
+		QFile7zInStream inStream;
+		CLookToRead2 lookStream{};
+		Byte streamBuf[1 << 14]{};
+		CSzArEx db{};
+		UInt32 blockIndex = 0xFFFFFFFFu;
+		Byte* outBuffer = nullptr;
+		size_t outBufferSize = 0;
+		bool initialized = false;
+	};
+
+	bool findPlaypalInArchive(ArchiveReaderView& arch, uint8_t outPalette[768])
+	{
+		const uint32_t count = arch.count();
+		for (uint32_t i = 0; i < count; ++i)
+		{
+			QString name;
+			uint64_t size = 0;
+			if (!arch.statFile(i, name, size) || size < 768)
+				continue;
+			const QString base = QFileInfo(name.replace('\\', '/')).completeBaseName();
+			if (base.compare("playpal", Qt::CaseInsensitive) == 0)
+			{
+				const QByteArray pal = arch.readFile(i, 65536);
+				if (pal.size() >= 768)
+				{
+					std::memcpy(outPalette, pal.constData(), 768);
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+
 	bool tryLoadPlaypalFromFile(const QString& filePath, uint8_t outPalette[768])
 	{
 		if (filePath.isEmpty() || !QFileInfo::exists(filePath))
@@ -254,33 +596,15 @@ namespace
 			return false;
 		}
 
-		mz_zip_archive zip{};
-		zip.m_pRead = zipFileReadCb;
-		zip.m_pIO_opaque = &f;
-		if (!mz_zip_reader_init(&zip, static_cast<mz_uint64>(f.size()), 0))
-			return false;
+		ZipArchiveView zip;
+		if (zip.open(f))
+			return findPlaypalInArchive(zip, outPalette);
 
-		bool found = false;
-		const mz_uint count = mz_zip_reader_get_num_files(&zip);
-		for (mz_uint i = 0; i < count; ++i)
-		{
-			mz_zip_archive_file_stat st{};
-			if (!mz_zip_reader_file_stat(&zip, i, &st) || mz_zip_reader_is_file_a_directory(&zip, i))
-				continue;
-			const QString base = QFileInfo(QString::fromUtf8(st.m_filename)).completeBaseName();
-			if (base.compare("playpal", Qt::CaseInsensitive) == 0 && st.m_uncomp_size >= 768)
-			{
-				const QByteArray pal = readZipEntryBytes(zip, i, 65536);
-				if (pal.size() >= 768)
-				{
-					std::memcpy(outPalette, pal.constData(), 768);
-					found = true;
-					break;
-				}
-			}
-		}
-		mz_zip_reader_end(&zip);
-		return found;
+		SevenZipReader sz;
+		if (sz.open(f))
+			return findPlaypalInArchive(sz, outPalette);
+
+		return false;
 	}
 
 	void resolvePaletteForProfile(const Profile& prof, const QString& primaryFile, uint8_t outPalette[768])
@@ -424,6 +748,60 @@ namespace
 		return {};
 	}
 
+	QImage extractTitleImageFromArchive(ArchiveReaderView& arch, const uint8_t palette[768])
+	{
+		static const char* const kTitleLumps[] = {
+			"TITLEPIC", "DMENUPIC", "TITLE", "INTERPIC", "BOSSBACK", "CREDIT"
+		};
+
+		const uint32_t count = arch.count();
+		for (const char* lumpName : kTitleLumps)
+		{
+			for (int i = static_cast<int>(count) - 1; i >= 0; --i)
+			{
+				QString entryPath;
+				uint64_t size = 0;
+				if (!arch.statFile(static_cast<uint32_t>(i), entryPath, size))
+					continue;
+
+				entryPath.replace('\\', '/');
+				const QFileInfo entryFi(entryPath);
+				const QString base = entryFi.completeBaseName();
+				if (base.compare(QLatin1String(lumpName), Qt::CaseInsensitive) != 0)
+					continue;
+
+				const QString dirPrefix = entryFi.path().toLower();
+				if (!dirPrefix.isEmpty() && dirPrefix != "." && !dirPrefix.startsWith("graphics") && !dirPrefix.startsWith("hires"))
+					continue;
+
+				const QByteArray bytes = arch.readFile(static_cast<uint32_t>(i), 16 * 1024 * 1024);
+				QImage img = decodeDoomPatchOrRaw(bytes, palette);
+				if (!img.isNull())
+					return img;
+			}
+		}
+
+		for (uint32_t i = 0; i < count; ++i)
+		{
+			QString entryPath;
+			uint64_t size = 0;
+			if (!arch.statFile(i, entryPath, size))
+				continue;
+
+			const QString lower = entryPath.toLower();
+			if ((lower.contains("cover") || lower.contains("banner") || lower.contains("titlepic"))
+				&& (lower.endsWith(".png") || lower.endsWith(".jpg") || lower.endsWith(".jpeg")))
+			{
+				const QByteArray bytes = arch.readFile(i, 16 * 1024 * 1024);
+				QImage img = decodeDoomPatchOrRaw(bytes, palette);
+				if (!img.isNull())
+					return img;
+			}
+		}
+
+		return {};
+	}
+
 	QImage extractTitleImageFromSingleFile(const QString& filePath, const uint8_t palette[768])
 	{
 		if (filePath.isEmpty() || !QFileInfo::exists(filePath))
@@ -452,78 +830,100 @@ namespace
 			return {};
 		}
 
-		mz_zip_archive zip{};
-		zip.m_pRead = zipFileReadCb;
-		zip.m_pIO_opaque = &f;
-		if (!mz_zip_reader_init(&zip, static_cast<mz_uint64>(f.size()), 0))
-			return {};
+		ZipArchiveView zip;
+		if (zip.open(f))
+			return extractTitleImageFromArchive(zip, palette);
 
-		const mz_uint count = mz_zip_reader_get_num_files(&zip);
-		for (const char* lumpName : kTitleLumps)
-		{
-			for (int i = static_cast<int>(count) - 1; i >= 0; --i)
-			{
-				mz_zip_archive_file_stat st{};
-				if (!mz_zip_reader_file_stat(&zip, static_cast<mz_uint>(i), &st) || mz_zip_reader_is_file_a_directory(&zip, static_cast<mz_uint>(i)))
-					continue;
+		SevenZipReader sz;
+		if (sz.open(f))
+			return extractTitleImageFromArchive(sz, palette);
 
-				const QString entryPath = QString::fromUtf8(st.m_filename).replace('\\', '/');
-				const QFileInfo entryFi(entryPath);
-				const QString base = entryFi.completeBaseName();
-				if (base.compare(QLatin1String(lumpName), Qt::CaseInsensitive) != 0)
-					continue;
-
-				const QString dirPrefix = entryFi.path().toLower();
-				if (!dirPrefix.isEmpty() && dirPrefix != "." && !dirPrefix.startsWith("graphics") && !dirPrefix.startsWith("hires"))
-					continue;
-
-				const QByteArray bytes = readZipEntryBytes(zip, static_cast<mz_uint>(i));
-				QImage img = decodeDoomPatchOrRaw(bytes, palette);
-				if (!img.isNull())
-				{
-					mz_zip_reader_end(&zip);
-					return img;
-				}
-			}
-		}
-
-		for (mz_uint i = 0; i < count; ++i)
-		{
-			mz_zip_archive_file_stat st{};
-			if (!mz_zip_reader_file_stat(&zip, i, &st) || mz_zip_reader_is_file_a_directory(&zip, i))
-				continue;
-			const QString lower = QString::fromUtf8(st.m_filename).toLower();
-			if ((lower.contains("cover") || lower.contains("banner") || lower.contains("titlepic"))
-				&& (lower.endsWith(".png") || lower.endsWith(".jpg") || lower.endsWith(".jpeg")))
-			{
-				const QByteArray bytes = readZipEntryBytes(zip, i);
-				QImage img = decodeDoomPatchOrRaw(bytes, palette);
-				if (!img.isNull())
-				{
-					mz_zip_reader_end(&zip);
-					return img;
-				}
-			}
-		}
-
-		mz_zip_reader_end(&zip);
 		return {};
 	}
 
-	bool extractArchiveToDir(const QString& archivePath, const QString& destDir)
+	bool extract7zArchiveToDir(const QString& archivePath, const QString& destDir, std::string* errOut)
+	{
+		QFile inFile(archivePath);
+		if (!inFile.open(QIODevice::ReadOnly))
+		{
+			if (errOut)
+				*errOut = "Failed to open archive.";
+			return false;
+		}
+
+		SevenZipReader sz;
+		SRes res = SZ_OK;
+		if (!sz.open(inFile, &res))
+		{
+			if (errOut)
+				*errOut = sevenZipErrorString(res);
+			return false;
+		}
+
+		const uint32_t numFiles = sz.count();
+		if (numFiles == 0)
+		{
+			if (errOut)
+				*errOut = "Archive is empty.";
+			return false;
+		}
+
+		const QString cleanDest = QDir::cleanPath(destDir);
+		const QString destPrefix = cleanDest.endsWith('/') ? cleanDest : (cleanDest + '/');
+		QDir().mkpath(cleanDest);
+
+		for (uint32_t i = 0; i < numFiles; ++i)
+		{
+			QString entryName = sz.entryName(i).replace('\\', '/');
+			while (entryName.startsWith('/'))
+				entryName.remove(0, 1);
+			if (entryName.isEmpty() || entryName.contains(':') || QFileInfo(entryName).isAbsolute())
+				continue;
+
+			const QStringList parts = entryName.split('/', Qt::SkipEmptyParts);
+			if (parts.isEmpty() || parts.contains(".."))
+				continue;
+
+			const QString outPath = QDir::cleanPath(QDir(cleanDest).filePath(entryName));
+			if (!outPath.startsWith(destPrefix))
+				continue;
+
+			if (sz.isDir(i))
+			{
+				QDir().mkpath(outPath);
+				continue;
+			}
+
+			QDir().mkpath(QFileInfo(outPath).absolutePath());
+			QFile outFile(outPath);
+			if (!outFile.open(QIODevice::WriteOnly | QIODevice::Truncate))
+			{
+				if (errOut)
+					*errOut = "Failed to extract archive entry: " + stdStr(entryName);
+				return false;
+			}
+
+			if (!sz.extractEntryToFile(i, outFile, &res))
+			{
+				if (errOut)
+					*errOut = sevenZipErrorString(res) + " (" + stdStr(entryName) + ")";
+				return false;
+			}
+		}
+
+		return true;
+	}
+
+	bool extractArchiveToDir(const QString& archivePath, const QString& destDir, std::string* errOut)
 	{
 		const QString lower = archivePath.toLower();
 		if (lower.endsWith(".zip"))
-			return extractZipArchiveToDir(archivePath, destDir);
+			return extractZipArchiveToDir(archivePath, destDir, nullptr, errOut);
+		if (lower.endsWith(".7z"))
+			return extract7zArchiveToDir(archivePath, destDir, errOut);
 
-		const QStringList candidates = {"7z", "7za", "7zz"};
-		for (const QString& exe : candidates)
-		{
-			QProcess proc;
-			proc.start(exe, {"x", archivePath, "-o" + destDir, "-y"});
-			if (proc.waitForStarted(2000) && proc.waitForFinished(30000) && proc.exitCode() == 0)
-				return true;
-		}
+		if (errOut)
+			*errOut = "Unsupported archive format.";
 		return false;
 	}
 
@@ -671,11 +1071,12 @@ ImportOutcome importGameFileIntoProfiles(const std::string& filePath, const std:
 		const QString extractDir = QDir(profFolder).filePath("content");
 		QDir().mkpath(extractDir);
 
-		if (!extractArchiveToDir(fi.absoluteFilePath(), extractDir))
+		std::string extractErr;
+		if (!extractArchiveToDir(fi.absoluteFilePath(), extractDir, &extractErr))
 		{
 			QDir(profFolder).removeRecursively();
 			out.status = ImportResult::ExtractionFailed;
-			out.message = "Failed to extract archive (install 7z for .7z files).";
+			out.message = extractErr.empty() ? "Failed to extract archive." : extractErr;
 			return out;
 		}
 
@@ -703,7 +1104,7 @@ ImportOutcome importGameFileIntoProfiles(const std::string& filePath, const std:
 		{
 			QDir(profFolder).removeRecursively();
 			out.status = ImportResult::UnsupportedFile;
-			out.message = "Archive does not contain a runnable WAD, PK3, DEH, or BEX file.";
+			out.message = "Archive does not contain a runnable WAD, PK3, PK7, DEH, or BEX file.";
 			return out;
 		}
 
