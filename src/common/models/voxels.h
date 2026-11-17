@@ -22,8 +22,7 @@
 **
 */
 
-#ifndef __RES_VOXEL_H
-#define __RES_VOXEL_H
+#pragma once
 
 #include <stdint.h>
 
@@ -111,5 +110,3 @@ FVoxel* VOX_GetVoxel(int lumpnum);
 
 FVoxel *R_LoadKVX(int lumpnum);
 FVoxelDef *R_LoadVoxelDef(int lumpnum, int spin);
-
-#endif

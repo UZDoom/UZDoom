@@ -183,8 +183,15 @@ FVoxel *R_LoadKVX(int lumpnum)
 		mipl->Pivot.Y = GetInt(rawmip + 16) / 256.;
 		mipl->Pivot.Z = GetInt(rawmip + 20) / 256.;
 
+		if (mipl->SizeX <= 0 || mipl->SizeX > 256 ||
+		    mipl->SizeY <= 0 || mipl->SizeY > 256 ||
+		    mipl->SizeZ <= 0 || mipl->SizeZ > 255) // SLAB6 can handle up to 256x256x255
+		{ // something's fucky.
+			break;
+		}
+
 		// How much space do we have for voxdata?
-		int offsetsize = (mipl->SizeX + 1) * 4 + mipl->SizeX * (mipl->SizeY + 1) * 2;
+		auto offsetsize = ((int64_t)mipl->SizeX + 1) * 4 + (int64_t)mipl->SizeX * ((int64_t)mipl->SizeY + 1) * 2;
 		int voxdatasize = numbytes - 24 - offsetsize;
 		if (voxdatasize < 0)
 		{ // Clearly, not enough.
