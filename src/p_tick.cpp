@@ -41,6 +41,15 @@ void C_Ticker();
 void M_Ticker();
 void D_RunCutscene();
 
+void P_RunParticleLogic()
+{
+	if ((gamestate != GS_LEVEL && gamestate != GS_TITLELEVEL) || WorldPaused(false))
+		return;
+
+	for (auto level : AllLevels())
+		P_ThinkParticles(level);	// [RH] make the particles think
+}
+
 //==========================================================================
 //
 // P_RunClientsideLogic
@@ -184,24 +193,7 @@ void P_Ticker (void)
 
 	// run the tic
 	if (paused || P_CheckTickerPaused())
-	{
-		// This must run even when the game is paused to catch changes from netevents before the frame is rendered.
-		for (auto Level : AllLevels())
-		{
-			auto it = Level->GetThinkerIterator<AActor>();
-			AActor* ac;
-
-			while ((ac = it.Next()))
-			{
-				if (ac->flags8 & MF8_RECREATELIGHTS)
-				{
-					ac->flags8 &= ~MF8_RECREATELIGHTS;
-					ac->SetDynamicLights();
-				}
-			}
-		}
 		return;
-	}
 
 	DPSprite::NewTick();
 
@@ -250,8 +242,6 @@ void P_Ticker (void)
 			ac->ClearInterpolation();
 			ac->ClearFOVInterpolation();
 		}
-
-		P_ThinkParticles(Level);	// [RH] make the particles think
 
 		for (i = 0; i < MAXPLAYERS; i++)
 			if (Level->PlayerInGame(i))
