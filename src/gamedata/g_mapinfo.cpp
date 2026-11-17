@@ -1957,6 +1957,7 @@ MapFlagHandlers[] =
 	{ "compat_noacsargcheck",			MITYPE_COMPATFLAG, 0, COMPATF2_NOACSARGCHECK },
 	{ "compat_novdolllockmsg",			MITYPE_COMPATFLAG, 0, COMPATF2_NOVDOLLLOCKMSG },
 	{ "compat_emulatemikoportals",		MITYPE_COMPATFLAG, 0, COMPATF2_EMULATEMIKOPORTALS },
+	{ "compat_nocountlost",             MITYPE_COMPATFLAG, 0, COMPATF2_NOCOUNTLOST },
 
 	{ "cd_start_track",					MITYPE_EATNEXT,	0, 0 },
 	{ "cd_end1_track",					MITYPE_EATNEXT,	0, 0 },

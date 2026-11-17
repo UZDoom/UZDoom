@@ -8666,6 +8666,16 @@ const char *AActor::GetCharacterName() const
 	return GetTag();
 }
 
+bool AActor::CountsAsKill() const
+{
+	if (!(flags & MF_COUNTKILL)) return false;
+	if (flags & MF_FRIENDLY) return false;
+	if ((flags9 & MF9_COMPATCOUNT) && Level != nullptr && (Level->i_compatflags2 & COMPATF2_NOCOUNTLOST))
+		return false; // do NOT count actor, if it has +COMPATCOUNT and the comp flag COMPATF2_NOCOUNTLOST is set
+
+	return true;
+}
+
 void AActor::ClearCounters()
 {
 	if (CountsAsKill() && health > 0)
