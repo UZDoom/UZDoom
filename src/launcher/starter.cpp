@@ -106,6 +106,7 @@ bool Starter::ExecModal(FStartupSelectionInfo& info)
 			cfg.language = info.DefaultLanguage.GetChars();
 		cfg.theme = engineThemeIdToName(info.DefaultPreferredTheme);
 		cfg.showReleaseNotes = info.notifyNewRelease;
+		cfg.maximized = info.LauncherMaximized;
 		saveLauncherConfig(cfg);
 	}
 
@@ -122,7 +123,10 @@ bool Starter::ExecModal(FStartupSelectionInfo& info)
 		if (info.LauncherWidth >= 780 && info.LauncherHeight >= 520)
 			mainWin.resize(static_cast<int>(info.LauncherWidth), static_cast<int>(info.LauncherHeight));
 
-		mainWin.show();
+		if (cfg.maximized)
+			mainWin.showMaximized();
+		else
+			mainWin.show();
 
 		if (cfg.detectOnStartup)
 		{
@@ -158,8 +162,18 @@ bool Starter::ExecModal(FStartupSelectionInfo& info)
 		info.notifyNewRelease = finalCfg.showReleaseNotes;
 		info.DefaultLanguage = finalCfg.language.c_str();
 		info.DefaultPreferredTheme = themeNameToEngineThemeId(finalCfg.theme);
-		info.LauncherWidth = static_cast<unsigned>(std::max(0, mainWin.width()));
-		info.LauncherHeight = static_cast<unsigned>(std::max(0, mainWin.height()));
+		const QRect normalGeom = mainWin.isMaximized() ? mainWin.normalGeometry() : mainWin.geometry();
+		if (normalGeom.width() >= 780 && normalGeom.height() >= 520)
+		{
+			info.LauncherWidth = static_cast<unsigned>(normalGeom.width());
+			info.LauncherHeight = static_cast<unsigned>(normalGeom.height());
+		}
+		else
+		{
+			info.LauncherWidth = static_cast<unsigned>(std::max(0, mainWin.width()));
+			info.LauncherHeight = static_cast<unsigned>(std::max(0, mainWin.height()));
+		}
+		info.LauncherMaximized = finalCfg.maximized;
 #ifdef HAS_UPDATER
 		if (IsCurlLoaded())
 			syncStartupUpdaterInfo(info);

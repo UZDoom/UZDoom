@@ -315,7 +315,13 @@ void AboutDialog::populateAbout()
 	{
 		md += "## Contributors\n\n";
 		const QStringList lines = contribTxt.split('\n', Qt::SkipEmptyParts);
-		md += lines.join("  \u00B7  ") + "\n\n";
+		for (const QString& rawLine : lines)
+		{
+			const QString name = rawLine.trimmed();
+			if (!name.isEmpty())
+				md += "- " + name + "\n";
+		}
+		md += "\n";
 	}
 
 	aboutView->setMarkdown(md);

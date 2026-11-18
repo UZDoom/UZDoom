@@ -44,6 +44,7 @@
 #include <QFrame>
 #include <QHeaderView>
 #include <QInputDialog>
+#include <QKeySequence>
 #include <QLabel>
 #include <QLineEdit>
 #include <QMenu>
@@ -321,6 +322,17 @@ void LauncherMainWindow::rebuildMenus()
 	actOpenExecDir = addMenu->addAction(QString(), this, &LauncherMainWindow::onOpenExecFolder);
 	addMenu->addSeparator();
 	actQuit = addMenu->addAction(QString(), this, &QWidget::close);
+#ifdef Q_OS_WIN
+	actQuit->setShortcuts({QKeySequence(Qt::CTRL | Qt::Key_W), QKeySequence(Qt::CTRL | Qt::Key_Q)});
+#else
+	{
+		QKeySequence quitSeq = QKeySequence(QKeySequence::Quit);
+		if (quitSeq.isEmpty())
+			quitSeq = QKeySequence(Qt::CTRL | Qt::Key_Q);
+		actQuit->setShortcut(quitSeq);
+	}
+#endif
+	actQuit->setShortcutContext(Qt::WindowShortcut);
 
 	prefMenu->clear();
 	langMenu = prefMenu->addMenu("Language");
@@ -359,6 +371,11 @@ void LauncherMainWindow::rebuildMenus()
 			act->setChecked(true);
 		themeGroup->addAction(act);
 	}
+
+	prefMenu->addSeparator();
+	actSetDefaultModsDir = prefMenu->addAction("Set Default Mods Folder...", this, &LauncherMainWindow::onSetDefaultModsDir);
+	actClearDefaultModsDir = prefMenu->addAction("Clear Default Mods Folder", this, &LauncherMainWindow::onClearDefaultModsDir);
+	updateDefaultModsMenuState();
 
 	prefMenu->addSeparator();
 	actDetectStartup = prefMenu->addAction("Auto-Detect IWADs on Startup");
@@ -834,10 +851,14 @@ void LauncherMainWindow::launchProfile(LaunchTargetMode mode)
 		[this](int, QProcess::ExitStatus) {
 			if (wasHiddenForLaunch)
 			{
-				showNormal();
+				if (wasMaximizedBeforeHide)
+					showMaximized();
+				else
+					showNormal();
 				raise();
 				activateWindow();
 				wasHiddenForLaunch = false;
+				wasMaximizedBeforeHide = false;
 			}
 
 			const qint64 elapsedSecs = playTimer.isValid() ? (playTimer.elapsed() / 1000) : 0;
@@ -875,6 +896,7 @@ void LauncherMainWindow::launchProfile(LaunchTargetMode mode)
 
 	if (launcherConfig.hideWhilePlaying)
 	{
+		wasMaximizedBeforeHide = isMaximized();
 		wasHiddenForLaunch = true;
 		hide();
 	}
@@ -886,7 +908,12 @@ void LauncherMainWindow::openSettingsForIndex(int profileIdx)
 		return;
 
 	Profile workingCopy = profiles[profileIdx];
-	ProfileSettingsDialog dlg(workingCopy, profiles, this);
+	ProfileSettingsDialog dlg(
+		workingCopy,
+		profiles,
+		QString::fromStdString(launcherConfig.defaultModsDir),
+		launcherConfig.language,
+		this);
 	dlg.exec();
 
 	switch (dlg.actionResult())
@@ -1011,7 +1038,7 @@ void LauncherMainWindow::handleImportedFiles(const QStringList& localPaths)
 			if (ans == QMessageBox::Yes)
 			{
 				QString finalModPath = localPath;
-				if (!profiles[curIdx].filePath.empty())
+				if (profiles[curIdx].copyModsToProfile && !profiles[curIdx].filePath.empty())
 				{
 					const QDir modsDir(QFileInfo(QString::fromStdString(profiles[curIdx].filePath)).absolutePath() + "/mods");
 					modsDir.mkpath(".");
@@ -1358,6 +1385,38 @@ void LauncherMainWindow::onThemeTriggered(QAction* action)
 	saveLauncherConfig(launcherConfig);
 }
 
+void LauncherMainWindow::updateDefaultModsMenuState()
+{
+	const bool hasDir = !launcherConfig.defaultModsDir.empty();
+	if (actSetDefaultModsDir)
+	{
+		actSetDefaultModsDir->setToolTip(hasDir
+			? QString("Current Default Mods Folder:\n%1").arg(QString::fromStdString(launcherConfig.defaultModsDir))
+			: QString("Choose a master folder that 'Add Mod File' opens in."));
+	}
+	if (actClearDefaultModsDir)
+		actClearDefaultModsDir->setEnabled(hasDir);
+}
+
+void LauncherMainWindow::onSetDefaultModsDir()
+{
+	const QString startDir = QString::fromStdString(
+		launcherConfig.defaultModsDir.empty() ? LauncherConst::EXEC_DIR : launcherConfig.defaultModsDir);
+	const QString picked = QFileDialog::getExistingDirectory(this, "Select Default Mods Folder", startDir);
+	if (picked.isEmpty())
+		return;
+	launcherConfig.defaultModsDir = QDir::cleanPath(picked).toStdString();
+	saveLauncherConfig(launcherConfig);
+	updateDefaultModsMenuState();
+}
+
+void LauncherMainWindow::onClearDefaultModsDir()
+{
+	launcherConfig.defaultModsDir.clear();
+	saveLauncherConfig(launcherConfig);
+	updateDefaultModsMenuState();
+}
+
 void LauncherMainWindow::onToggleDetectStartup(bool checked)
 {
 	launcherConfig.detectOnStartup = checked;
@@ -1470,6 +1529,7 @@ void LauncherMainWindow::closeEvent(QCloseEvent* event)
 		}
 	}
 
+	launcherConfig.maximized = isMaximized();
 	saveLauncherConfig(launcherConfig);
 	QMainWindow::closeEvent(event);
 }

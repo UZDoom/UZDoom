@@ -18,6 +18,9 @@
 #include "profile.h"
 
 #include <QDialog>
+#include <QSet>
+#include <QString>
+#include <string>
 #include <vector>
 
 class QCheckBox;
@@ -26,8 +29,10 @@ class QLabel;
 class QLineEdit;
 class QListWidget;
 class QPlainTextEdit;
+class QPushButton;
 class QRadioButton;
 class QSpinBox;
+class QTabWidget;
 class QWidget;
 
 class ProfileSettingsDialog : public QDialog
@@ -42,7 +47,12 @@ public:
 		Deleted = 3
 	};
 
-	explicit ProfileSettingsDialog(Profile& targetProfile, const std::vector<Profile>& profilesList, QWidget* parent = nullptr);
+	explicit ProfileSettingsDialog(
+		Profile& targetProfile,
+		const std::vector<Profile>& profilesList,
+		const QString& defaultModsDir = {},
+		const std::string& launcherLanguage = {},
+		QWidget* parent = nullptr);
 
 	ActionResult actionResult() const { return action; }
 	const Profile& clonedProfile() const { return cloned; }
@@ -69,15 +79,19 @@ private:
 	QWidget* buildAdvancedTab();
 
 	void loadFromProfile();
+	void writeToProfile(Profile& target) const;
 	void saveToProfile();
 	void rebuildModList(const std::vector<std::string>& mods, int selectRow = -1);
 	void appendModPath(const QString& filePath);
 	void syncCompatModeFromFlags();
 	void updateFlagSummary();
+	void updateCommandPreview();
 	QString browsePath(const QString& caption, const QString& filter, const QString& current, bool directory = false);
 
 	Profile& profile;
 	const std::vector<Profile>& allProfiles;
+	QString defaultModsDirectory;
+	std::string currentLauncherLanguage;
 	ActionResult action = ActionResult::Cancelled;
 	Profile cloned;
 
@@ -140,8 +154,10 @@ private:
 	QLineEdit* editSaveDir = nullptr;
 	QLineEdit* editShotDir = nullptr;
 	QLineEdit* editDemoDir = nullptr;
+	QCheckBox* chkCopyModsToProfile = nullptr;
 	QListWidget* listMods = nullptr;
 	std::vector<std::string> modPaths;
+	QSet<QString> disabledModKeys;
 
 	QCheckBox* chkFullscreen = nullptr;
 	QCheckBox* chkSupportWads = nullptr;
@@ -154,5 +170,9 @@ private:
 	QCheckBox* chkBrightmaps = nullptr;
 	QCheckBox* chkWidescreen = nullptr;
 
+	QTabWidget* tabs = nullptr;
 	QPlainTextEdit* editAppendArgs = nullptr;
+	QComboBox* comboPreviewMode = nullptr;
+	QPlainTextEdit* editCommandPreview = nullptr;
+	QPushButton* btnCopyCommand = nullptr;
 };

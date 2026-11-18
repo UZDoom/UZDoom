@@ -50,6 +50,8 @@
 #include <QPlainTextEdit>
 #include <QProgressBar>
 #include <QPushButton>
+#include <QStyle>
+#include <QTextBrowser>
 #include <QThread>
 #include <QToolButton>
 #include <QVBoxLayout>
@@ -113,6 +115,34 @@ namespace
 	bool isVersionInvalid(const VersionInfo& ver)
 	{
 		return ver.major == USHRT_MAX || ver.minor == USHRT_MAX || ver.revision == USHRT_MAX || ver == GetCurrentVersionForUpdater();
+	}
+
+	QWidget* makeUpdaterIconHeader(QDialog* dlg, QStyle::StandardPixmap iconType, const QString& text, bool bold = false)
+	{
+		QWidget* row = new QWidget(dlg);
+		QHBoxLayout* h = new QHBoxLayout(row);
+		h->setContentsMargins(0, 0, 0, 0);
+		h->setSpacing(12);
+
+		QLabel* iconLbl = new QLabel(row);
+		const int iconSize = dlg->style()->pixelMetric(QStyle::PM_MessageBoxIconSize, nullptr, dlg);
+		iconLbl->setPixmap(dlg->style()->standardIcon(iconType, nullptr, dlg).pixmap(iconSize, iconSize));
+		iconLbl->setAlignment(Qt::AlignTop | Qt::AlignHCenter);
+		iconLbl->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+
+		QLabel* textLbl = new QLabel(text, row);
+		textLbl->setWordWrap(true);
+		textLbl->setTextInteractionFlags(Qt::TextSelectableByMouse);
+		if (bold)
+		{
+			QFont f = textLbl->font();
+			f.setBold(true);
+			textLbl->setFont(f);
+		}
+
+		h->addWidget(iconLbl, 0, Qt::AlignTop);
+		h->addWidget(textLbl, 1, Qt::AlignVCenter);
+		return row;
 	}
 
 	QString shortenByteSize(uint64_t size)
@@ -419,9 +449,25 @@ namespace
 		const std::string downloadName = doc["platforms"][RELEASE_JSON_PLATFORM_NAME].GetString();
 		DEBUG_LOG("%s", downloadName.c_str());
 
+		std::vector<std::string> notes;
+		if (messageStr && *messageStr)
+			notes.emplace_back(messageStr);
+		if (HAS_MEMBER(doc, "notes", String))
+		{
+			const char* extra = doc["notes"].GetString();
+			if (extra && *extra)
+				notes.emplace_back(extra);
+		}
+		else if (HAS_MEMBER(doc, "body", String))
+		{
+			const char* extra = doc["body"].GetString();
+			if (extra && *extra)
+				notes.emplace_back(extra);
+		}
+
 		ok = true;
 		silentFail = false;
-		return UpdaterReleaseInfo{ver, false, {messageStr}, downloadName};
+		return UpdaterReleaseInfo{ver, false, std::move(notes), downloadName};
 
 #undef FAIL_WITH_ERROR
 #undef HAS_MEMBER
@@ -1066,15 +1112,15 @@ void LauncherUpdater::runOnboardingFlow(QWidget* dialogParent)
 			QDialog dlg(parent, Qt::Dialog | Qt::CustomizeWindowHint | Qt::WindowTitleHint);
 			dlg.setWindowTitle(LStr("UPDATER_TITLE", "Update Checker"));
 			dlg.setModal(true);
-			dlg.setMinimumWidth(460);
+			dlg.setMinimumWidth(380);
 
 			auto* layout = new QVBoxLayout(&dlg);
-			auto* lbl = new QLabel(LStr("UPDATER_ASK_AUTO", "Would you like to automatically check for updates?"), &dlg);
-			lbl->setWordWrap(true);
-			lbl->setAlignment(Qt::AlignCenter);
-			layout->addWidget(lbl);
+			layout->setSpacing(12);
+			layout->addWidget(makeUpdaterIconHeader(&dlg, QStyle::SP_MessageBoxQuestion,
+				LStr("UPDATER_ASK_AUTO", "Would you like to automatically check for updates?")));
 
 			auto* btnRow = new QHBoxLayout();
+			btnRow->addStretch();
 			auto* btnYes = new QPushButton(LStr("TXT_YES", "Yes"), &dlg);
 			auto* btnYesPrompt = new QPushButton(LStr("UPDATER_YES_PROMPT", "Yes, and prompt to install updates"), &dlg);
 			auto* btnNo = new QPushButton(LStr("TXT_NO", "No"), &dlg);
@@ -1114,13 +1160,12 @@ void LauncherUpdater::runOnboardingFlow(QWidget* dialogParent)
 			QDialog dlg(parent, Qt::Dialog | Qt::CustomizeWindowHint | Qt::WindowTitleHint);
 			dlg.setWindowTitle(LStr("UPDATER_TITLE", "Update Checker"));
 			dlg.setModal(true);
-			dlg.setMinimumWidth(460);
+			dlg.setMinimumWidth(380);
 
 			auto* layout = new QVBoxLayout(&dlg);
-			auto* lbl = new QLabel(LStr("UPDATER_ASK_INTERVAL", "How often would you like to check for updates?"), &dlg);
-			lbl->setWordWrap(true);
-			lbl->setAlignment(Qt::AlignCenter);
-			layout->addWidget(lbl);
+			layout->setSpacing(12);
+			layout->addWidget(makeUpdaterIconHeader(&dlg, QStyle::SP_MessageBoxQuestion,
+				LStr("UPDATER_ASK_INTERVAL", "How often would you like to check for updates?")));
 
 			auto* btnRow = new QHBoxLayout();
 			auto* btnDaily = new QPushButton(LStr("OPTVAL_DAILY", "Daily"), &dlg);
@@ -1191,13 +1236,12 @@ void LauncherUpdater::openFailedUpdateMenu(const std::string& err, bool checker,
 	QDialog dlg(parent, Qt::Dialog | Qt::CustomizeWindowHint | Qt::WindowTitleHint);
 	dlg.setWindowTitle(title);
 	dlg.setModal(true);
-	dlg.setMinimumWidth(460);
+	dlg.setMinimumWidth(380);
 
 	auto* layout = new QVBoxLayout(&dlg);
-	auto* lbl = new QLabel(QString("%1\n%2").arg(title).arg(qStr(err)), &dlg);
-	lbl->setWordWrap(true);
-	lbl->setAlignment(Qt::AlignCenter);
-	layout->addWidget(lbl);
+	layout->setSpacing(12);
+	const QString detailMsg = err.empty() ? title : QString("%1\n\n%2").arg(title).arg(qStr(err));
+	layout->addWidget(makeUpdaterIconHeader(&dlg, QStyle::SP_MessageBoxWarning, detailMsg));
 
 	auto* btnRow = new QHBoxLayout();
 	auto* btnDismiss = new QPushButton(LStr("TXT_DISMISS", "Dismiss"), &dlg);
@@ -1234,20 +1278,34 @@ void LauncherUpdater::openReleaseNotesDialog(QWidget* dialogParent) const
 	QDialog dlg(dialogParent);
 	dlg.setWindowTitle(LStr("PICKER_TAB_RELEASE", "Release Notes"));
 	dlg.setModal(true);
-	dlg.resize(520, 360);
+	dlg.resize(560, 400);
 
 	auto* layout = new QVBoxLayout(&dlg);
-	auto* view = new QPlainTextEdit(&dlg);
-	view->setReadOnly(true);
+	auto* view = new QTextBrowser(&dlg);
+	view->setOpenExternalLinks(true);
 
-	QString notes;
+	const QString versionStr = QString::fromUtf8(FString(currentUpdate->version).GetChars());
+	QString notesText;
 	for (size_t i = 0; i < currentUpdate->releaseNotes.size(); ++i)
 	{
 		if (i > 0)
-			notes += '\n';
-		notes += qStr(currentUpdate->releaseNotes[i]);
+			notesText += "\n\n";
+		notesText += qStr(currentUpdate->releaseNotes[i]).trimmed();
 	}
-	view->setPlainText(notes);
+
+	QString md = QString("# %1 %2\n\n").arg(GAMENAME).arg(versionStr);
+	if (!notesText.isEmpty())
+		md += notesText + "\n\n";
+	else
+		md += LStr("NOTES_EMPTY", "No description provided.") + "\n\n";
+
+	const QString releaseUrl = QString("https://github.com/UZDoom/UZDoom/releases/tag/%1").arg(versionStr);
+	md += "---\n\n";
+	md += QString("**GitHub Release Page:** [%1](%1)\n\n").arg(releaseUrl);
+	if (currentUpdate->releaseNotes.size() <= 1 && notesText.length() < 120)
+		md += "*Note: The update manifest only carries the short release commit summary; open the GitHub link above for the full changelog.*";
+
+	view->setMarkdown(md);
 	layout->addWidget(view, 1);
 
 	auto* btnRow = new QHBoxLayout();
@@ -1317,20 +1375,22 @@ void LauncherUpdater::openUpdateMenu(bool isAutoUpdate, QWidget* dialogParent)
 		? LStr("UPDATER_UPDATE_AVAILABLE", "New Update Available")
 		: LStr("TXT_UPDATE", "Update"));
 	dlg.setModal(true);
-	dlg.setMinimumWidth(460);
+	dlg.setMinimumWidth(360);
 
 	auto* layout = new QVBoxLayout(&dlg);
-	const QString versionLabel = QString("%1 %2")
+	layout->setSpacing(12);
+	const QString versionLabel = QString("%1 %2 %3")
 		.arg(GAMENAME)
-		.arg(QString::fromUtf8(FString(currentUpdate->version).GetChars()));
-	auto* lbl = new QLabel(versionLabel, &dlg);
-	lbl->setAlignment(Qt::AlignCenter);
-	layout->addWidget(lbl);
+		.arg(QString::fromUtf8(FString(currentUpdate->version).GetChars()))
+		.arg("is available.");
+	layout->addWidget(makeUpdaterIconHeader(&dlg, QStyle::SP_MessageBoxInformation, versionLabel, true));
 
 	auto* btnRow = new QHBoxLayout();
 	auto* btnNotes = new QPushButton(LStr("PICKER_SHOWNOTES", "Show Release Notes"), &dlg);
 	auto* btnUpdate = new QPushButton(LStr("TXT_UPDATE", "Update"), &dlg);
 	btnUpdate->setProperty("launcherRole", "primary");
+	if (!isAutoUpdate)
+		btnRow->addStretch();
 	btnRow->addWidget(btnNotes);
 	btnRow->addWidget(btnUpdate);
 
@@ -1404,10 +1464,14 @@ void LauncherUpdater::onDismissBannerClicked()
 	QDialog dlg(parentWindow.data());
 	dlg.setWindowTitle(LStr("UPDATER_DISMISS_UPDATE", "Dismiss Update?"));
 	dlg.setModal(true);
-	dlg.setMinimumWidth(420);
+	dlg.setMinimumWidth(360);
 
 	auto* layout = new QVBoxLayout(&dlg);
+	layout->setSpacing(12);
+	layout->addWidget(makeUpdaterIconHeader(&dlg, QStyle::SP_MessageBoxQuestion,
+		LStr("UPDATER_DISMISS_UPDATE", "Dismiss Update?")));
 	auto* btnRow = new QHBoxLayout();
+	btnRow->addStretch();
 	auto* btnDismiss = new QPushButton(LStr("TXT_DISMISS", "Dismiss"), &dlg);
 	auto* btnSkip = new QPushButton(LStr("UPDATER_UPDATE_SKIP", "Skip Update"), &dlg);
 	auto* btnDisable = new QPushButton(LStr("UPDATER_DISABLE", "Disable Update Checker"), &dlg);
@@ -1558,13 +1622,12 @@ void LauncherUpdater::startUpdate(QWidget* dialogParent)
 	QDialog doneDlg(parent, Qt::Dialog | Qt::CustomizeWindowHint | Qt::WindowTitleHint);
 	doneDlg.setWindowTitle(LStr("TXT_UPDATED", "Updated"));
 	doneDlg.setModal(true);
-	doneDlg.setMinimumWidth(420);
+	doneDlg.setMinimumWidth(360);
 
 	auto* doneLayout = new QVBoxLayout(&doneDlg);
-	auto* doneLbl = new QLabel(LStr("UPDATER_SUCCESS", "Update was successful, the launcher will now restart."), &doneDlg);
-	doneLbl->setWordWrap(true);
-	doneLbl->setAlignment(Qt::AlignCenter);
-	doneLayout->addWidget(doneLbl);
+	doneLayout->setSpacing(12);
+	doneLayout->addWidget(makeUpdaterIconHeader(&doneDlg, QStyle::SP_MessageBoxInformation,
+		LStr("UPDATER_SUCCESS", "Update was successful, the launcher will now restart.")));
 
 	auto* doneBtnRow = new QHBoxLayout();
 	doneBtnRow->addStretch();

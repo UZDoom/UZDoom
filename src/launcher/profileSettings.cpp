@@ -21,15 +21,19 @@
 #include "doomdef.h"
 #include "gstrings.h"
 
+#include <QApplication>
 #include <QButtonGroup>
 #include <QCheckBox>
+#include <QClipboard>
 #include <QComboBox>
+#include <QDesktopServices>
 #include <QDir>
 #include <QDragEnterEvent>
 #include <QDropEvent>
 #include <QFile>
 #include <QFileDialog>
 #include <QFileInfo>
+#include <QFontDatabase>
 #include <QFormLayout>
 #include <QGridLayout>
 #include <QGroupBox>
@@ -46,13 +50,14 @@
 #include <QRadioButton>
 #include <QSpinBox>
 #include <QTabWidget>
+#include <QTimer>
 #include <QToolButton>
 #include <QUrl>
 #include <QVBoxLayout>
 
 namespace
 {
-	QWidget* createPathBrowseRow(QLineEdit* edit, QPushButton* btn, QWidget* parent)
+	QWidget* createPathBrowseRow(QLineEdit* edit, QPushButton* btn, QWidget* parent, QPushButton* extraBtn = nullptr)
 	{
 		QWidget* w = new QWidget(parent);
 		QHBoxLayout* h = new QHBoxLayout(w);
@@ -61,12 +66,37 @@ namespace
 		h->addWidget(edit, 1);
 		btn->setFixedWidth(32);
 		h->addWidget(btn);
+		if (extraBtn)
+			h->addWidget(extraBtn);
 		return w;
+	}
+
+	QString normModKey(const QString& path)
+	{
+		return QDir::cleanPath(path).replace('\\', '/').toLower();
+	}
+
+	QString quoteAdditionalArg(const QString& arg)
+	{
+		if (!arg.contains(' ') && !arg.contains('\t') && !arg.contains('"'))
+			return arg;
+		QString escaped = arg;
+		escaped.replace('"', "\\\"");
+		return '"' + escaped + '"';
 	}
 }
 
-ProfileSettingsDialog::ProfileSettingsDialog(Profile& targetProfile, const std::vector<Profile>& profilesList, QWidget* parent)
-	: QDialog(parent), profile(targetProfile), allProfiles(profilesList)
+ProfileSettingsDialog::ProfileSettingsDialog(
+	Profile& targetProfile,
+	const std::vector<Profile>& profilesList,
+	const QString& defaultModsDir,
+	const std::string& launcherLanguage,
+	QWidget* parent)
+	: QDialog(parent)
+	, profile(targetProfile)
+	, allProfiles(profilesList)
+	, defaultModsDirectory(defaultModsDir)
+	, currentLauncherLanguage(launcherLanguage)
 {
 	setWindowTitle(LStr("LAUNCHER_PROFILE_SETTINGS", "Profile Settings"));
 	setAcceptDrops(true);
@@ -75,12 +105,13 @@ ProfileSettingsDialog::ProfileSettingsDialog(Profile& targetProfile, const std::
 
 	QVBoxLayout* mainLayout = new QVBoxLayout(this);
 
-	QTabWidget* tabs = new QTabWidget(this);
+	tabs = new QTabWidget(this);
 	tabs->addTab(buildGeneralTab(), LStr("PICKER_GENERAL", "General"));
 	tabs->addTab(buildLaunchTab(), LStr("LAUNCHER_TAB_LAUNCH", "Launch"));
 	tabs->addTab(buildFilesTab(), LStr("LAUNCHER_TAB_FILES", "Files"));
 	tabs->addTab(buildOutputTab(), LStr("LAUNCHER_TAB_OUTPUT", "Output"));
 	tabs->addTab(buildAdvancedTab(), LStr("LAUNCHER_TAB_ADVANCED", "Advanced"));
+	connect(tabs, &QTabWidget::currentChanged, this, [this](int) { updateCommandPreview(); });
 	mainLayout->addWidget(tabs, 1);
 
 	QHBoxLayout* bottomBar = new QHBoxLayout();
@@ -268,6 +299,7 @@ QWidget* ProfileSettingsDialog::buildLaunchTab()
 	chkNoMonsters = new QCheckBox(LStr("GMPLYMNU_NOMONSTERS", "No Monsters"), grpDiff);
 	chkMultiItems = new QCheckBox(LStr("GMPLYMNU_ALWAYSSPAWNMULTI", "Allow Multiplayer Items"), grpDiff);
 	chkPistolStart = new QCheckBox(LStr("LAUNCHER_PISTOL_START", "Pistol start all levels"), grpDiff);
+	chkPistolStart->setToolTip("Reset player inventory at every level transition (DF3_PISTOL_START / sv_pistolstart). Separate from 'Restart level on death'.");
 
 	connect(chkFast, &QCheckBox::toggled, this, [this](bool on)
 	{
@@ -442,11 +474,64 @@ QWidget* ProfileSettingsDialog::buildFilesTab()
 	QFormLayout* pathsForm = new QFormLayout();
 	pathsForm->setFieldGrowthPolicy(QFormLayout::AllNonFixedFieldsGrow);
 	editConfigFile = new QLineEdit(tab);
+	connect(editConfigFile, &QLineEdit::textChanged, editConfigFile, [this](const QString& text)
+	{
+		editConfigFile->setToolTip(text.trimmed());
+	});
 	QPushButton* btnCfg = new QPushButton("...", tab);
 	connect(btnCfg, &QPushButton::clicked, this, [this]()
 	{
 		const QString p = browsePath("Select Config File", "Config (*.ini);;All Files (*.*)", editConfigFile->text());
 		if (!p.isEmpty()) editConfigFile->setText(p);
+	});
+	QPushButton* btnOpenCfg = new QPushButton(LStr("LAUNCHER_OPEN_INI", "Open INI"), tab);
+	btnOpenCfg->setToolTip("Open the configured INI file in the system default editor (or locate its folder).");
+	connect(btnOpenCfg, &QPushButton::clicked, this, [this]()
+	{
+		const QString iniPath = editConfigFile->text().trimmed();
+		if (iniPath.isEmpty())
+		{
+			QMessageBox::information(this, LStr("LAUNCHER_OPEN_INI", "Open INI"),
+				"No INI config file path is configured for this profile yet.");
+			return;
+		}
+
+		const QFileInfo fi(iniPath);
+		if (fi.exists() && fi.isFile())
+		{
+			QDesktopServices::openUrl(QUrl::fromLocalFile(fi.absoluteFilePath()));
+			return;
+		}
+
+		QMessageBox box(this);
+		box.setIcon(QMessageBox::Information);
+		box.setWindowTitle(LStr("LAUNCHER_OPEN_INI", "Open INI"));
+		box.setText(QString("INI file does not exist yet:\n%1\n\nUZDoom creates this file automatically on first launch.")
+			.arg(QDir::toNativeSeparators(fi.absoluteFilePath())));
+		QPushButton* btnCreate = box.addButton("Create & Open", QMessageBox::AcceptRole);
+		QPushButton* btnFolder = box.addButton("Open Folder", QMessageBox::ActionRole);
+		box.addButton(QMessageBox::Cancel);
+		box.exec();
+
+		if (box.clickedButton() == btnCreate)
+		{
+			QDir().mkpath(fi.absolutePath());
+			QFile f(fi.absoluteFilePath());
+			if (f.open(QIODevice::WriteOnly))
+			{
+				f.close();
+				QDesktopServices::openUrl(QUrl::fromLocalFile(fi.absoluteFilePath()));
+			}
+			else
+			{
+				QMessageBox::warning(this, LStr("ERROR_FATAL", "Error"), "Could not create INI file at:\n" + fi.absoluteFilePath());
+			}
+		}
+		else if (box.clickedButton() == btnFolder)
+		{
+			QDir().mkpath(fi.absolutePath());
+			QDesktopServices::openUrl(QUrl::fromLocalFile(fi.absolutePath()));
+		}
 	});
 
 	editSaveDir = new QLineEdit(tab);
@@ -473,7 +558,7 @@ QWidget* ProfileSettingsDialog::buildFilesTab()
 		if (!p.isEmpty()) editDemoDir->setText(p);
 	});
 
-	pathsForm->addRow(LStr("LAUNCHER_CONFIG_FILE", "Config File:"), createPathBrowseRow(editConfigFile, btnCfg, tab));
+	pathsForm->addRow(LStr("LAUNCHER_CONFIG_FILE", "Config File:"), createPathBrowseRow(editConfigFile, btnCfg, tab, btnOpenCfg));
 	pathsForm->addRow(LStr("LAUNCHER_SAVE_DIR", "Save Directory:"), createPathBrowseRow(editSaveDir, btnSaveDir, tab));
 	pathsForm->addRow(LStr("LAUNCHER_SHOT_DIR", "Screenshot Dir:"), createPathBrowseRow(editShotDir, btnShotDir, tab));
 	pathsForm->addRow(LStr("LAUNCHER_DEMO_DIR", "Demo Directory:"), createPathBrowseRow(editDemoDir, btnDemoDir, tab));
@@ -485,6 +570,11 @@ QWidget* ProfileSettingsDialog::buildFilesTab()
 	f.setBold(true);
 	lblMods->setFont(f);
 	modsHeader->addWidget(lblMods);
+
+	chkCopyModsToProfile = new QCheckBox(LStr("LAUNCHER_COPY_MODS", "Copy added mods to profile"), tab);
+	chkCopyModsToProfile->setToolTip("When enabled, added mods are copied into this profile's mods/ folder.\nWhen disabled, mods are referenced from their original location without copying.");
+	modsHeader->addSpacing(12);
+	modsHeader->addWidget(chkCopyModsToProfile);
 	modsHeader->addStretch();
 
 	QPushButton* btnAddMod = new QPushButton("+ " + LStr("LAUNCHER_ADD_MOD", "Add Mod File"), tab);
@@ -512,8 +602,10 @@ QWidget* ProfileSettingsDialog::buildOutputTab()
 	grpGen->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Maximum);
 	QVBoxLayout* genBox = new QVBoxLayout(grpGen);
 	chkFullscreen = new QCheckBox(LStr("VIDMNU_FULLSCREEN", "Fullscreen"), grpGen);
-	chkSupportWads = new QCheckBox(LStr("PICKER_SUPPORTWADS", "Load Support WADs"), grpGen);
+	chkSupportWads = new QCheckBox(LStr("PICKER_SUPPORTWADS", "Load Support WADs") + " (ID24.res)", grpGen);
+	chkSupportWads->setToolTip("Loads optional ID24 support resources (id24res.wad) when available, adding Legacy of Rust / ID24 weapons and assets. Automatically disabled in multiplayer.");
 	chkDisableAutoload = new QCheckBox(LStr("PICKER_NOAUTOLOAD", "Disable Autoload"), grpGen);
+	chkDisableAutoload->setToolTip("Skips Global.Autoload, per-IWAD autoload sections, zvox.wad, and skins/ (-noautoload). Extra Graphics below are controlled separately.");
 	chkDynLights = new QCheckBox(LStr("GLLIGHTMNU_LIGHTSENABLED", "Dynamic Lights"), grpGen);
 
 	for (QCheckBox* c : {chkFullscreen, chkSupportWads, chkDisableAutoload, chkDynLights})
@@ -560,12 +652,79 @@ QWidget* ProfileSettingsDialog::buildAdvancedTab()
 	QWidget* tab = new QWidget(this);
 	QVBoxLayout* vbox = new QVBoxLayout(tab);
 
-	vbox->addWidget(new QLabel(LStr("LAUNCHER_APPEND_ARGS", "Append Additional Parameters"), tab));
+	QHBoxLayout* appendHeader = new QHBoxLayout();
+	appendHeader->addWidget(new QLabel(LStr("LAUNCHER_APPEND_ARGS", "Append Additional Parameters"), tab));
+	appendHeader->addStretch();
+	QPushButton* btnBrowseAppend = new QPushButton(LStr("PICKER_BROWSE", "Browse File..."), tab);
+	btnBrowseAppend->setToolTip("Pick a file and append its quoted path to Additional Parameters.");
+	connect(btnBrowseAppend, &QPushButton::clicked, this, [this]()
+	{
+		const QString startDir = !defaultModsDirectory.isEmpty() && QFileInfo::exists(defaultModsDirectory)
+			? defaultModsDirectory
+			: (profile.filePath.empty() ? qStr(LauncherConst::EXEC_DIR) : QFileInfo(qStr(profile.filePath)).absolutePath());
+		const QStringList picked = QFileDialog::getOpenFileNames(
+			this,
+			LStr("PICKER_BROWSE", "Select File(s) for Additional Parameters"),
+			startDir,
+			"Doom Files (*.wad *.pk3 *.pk7 *.ipk3 *.deh *.bex *.cfg *.lmp);;All Files (*.*)");
+		if (picked.isEmpty())
+			return;
+		QString current = editAppendArgs->toPlainText();
+		QStringList quoted;
+		for (const QString& p : picked)
+			quoted << quoteAdditionalArg(p);
+		if (!current.trimmed().isEmpty() && !current.endsWith(' ') && !current.endsWith('\n'))
+			current += ' ';
+		current += quoted.join(' ');
+		editAppendArgs->setPlainText(current);
+	});
+	appendHeader->addWidget(btnBrowseAppend);
+	vbox->addLayout(appendHeader);
+
 	editAppendArgs = new QPlainTextEdit(tab);
 	editAppendArgs->setFixedHeight(100);
 	editAppendArgs->setPlaceholderText("Parameters appended after profile options...");
+	connect(editAppendArgs, &QPlainTextEdit::textChanged, this, &ProfileSettingsDialog::updateCommandPreview);
 	vbox->addWidget(editAppendArgs);
-	vbox->addStretch();
+
+	vbox->addSpacing(8);
+
+	QGroupBox* grpCmd = new QGroupBox(LStr("LAUNCHER_COMMAND_PREVIEW", "Launch Command Preview"), tab);
+	QVBoxLayout* cmdLayout = new QVBoxLayout(grpCmd);
+
+	QHBoxLayout* cmdTopRow = new QHBoxLayout();
+	cmdTopRow->addWidget(new QLabel(LStr("LAUNCHER_PREVIEW_MODE", "Mode:"), grpCmd));
+	comboPreviewMode = new QComboBox(grpCmd);
+	comboPreviewMode->addItem(LStr("PICKER_PLAY", "Play Game"), static_cast<int>(LaunchTargetMode::Single));
+	comboPreviewMode->addItem(LStr("LAUNCHER_HOST_GAME", "Host Game"), static_cast<int>(LaunchTargetMode::Host));
+	comboPreviewMode->addItem(LStr("LAUNCHER_JOIN_GAME", "Join Game"), static_cast<int>(LaunchTargetMode::Join));
+	connect(comboPreviewMode, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [this](int) { updateCommandPreview(); });
+	cmdTopRow->addWidget(comboPreviewMode);
+	cmdTopRow->addStretch();
+
+	btnCopyCommand = new QPushButton(LStr("ACTION_COPYTOCLIPBOARD", "Copy to Clipboard"), grpCmd);
+	connect(btnCopyCommand, &QPushButton::clicked, this, [this]()
+	{
+		updateCommandPreview();
+		if (QClipboard* cb = QApplication::clipboard())
+			cb->setText(editCommandPreview->toPlainText());
+		btnCopyCommand->setText(LStr("LAUNCHER_COPIED", "Copied!"));
+		QTimer::singleShot(1400, btnCopyCommand, [this]()
+		{
+			if (btnCopyCommand)
+				btnCopyCommand->setText(LStr("ACTION_COPYTOCLIPBOARD", "Copy to Clipboard"));
+		});
+	});
+	cmdTopRow->addWidget(btnCopyCommand);
+	cmdLayout->addLayout(cmdTopRow);
+
+	editCommandPreview = new QPlainTextEdit(grpCmd);
+	editCommandPreview->setReadOnly(true);
+	editCommandPreview->setFont(QFontDatabase::systemFont(QFontDatabase::FixedFont));
+	editCommandPreview->setMinimumHeight(110);
+	cmdLayout->addWidget(editCommandPreview, 1);
+
+	vbox->addWidget(grpCmd, 1);
 
 	return tab;
 }
@@ -643,9 +802,18 @@ void ProfileSettingsDialog::loadFromProfile()
 	updateFlagSummary();
 
 	editConfigFile->setText(qStr(profile.configFilePath));
+	editConfigFile->setToolTip(qStr(profile.configFilePath));
 	editSaveDir->setText(qStr(profile.saveDirPath));
 	editShotDir->setText(qStr(profile.screenshotDirPath));
 	editDemoDir->setText(qStr(profile.demoDirPath));
+	if (chkCopyModsToProfile)
+		chkCopyModsToProfile->setChecked(profile.copyModsToProfile);
+	disabledModKeys.clear();
+	for (const auto& dm : profile.disabledMods)
+	{
+		if (!dm.empty())
+			disabledModKeys.insert(normModKey(qStr(dm)));
+	}
 	rebuildModList(profile.mods);
 
 	chkFullscreen->setChecked(profile.fullscreen);
@@ -664,87 +832,100 @@ void ProfileSettingsDialog::loadFromProfile()
 	chkWidescreen->setChecked(profile.extraWidescreen);
 
 	editAppendArgs->setPlainText(qStr(profile.appendAdditionalParameters));
+	updateCommandPreview();
+}
+
+void ProfileSettingsDialog::writeToProfile(Profile& target) const
+{
+	target.title = stdStr(editTitle->text().trimmed().isEmpty() ? QString("New Profile") : editTitle->text().trimmed());
+	target.author = stdStr(editAuthor->text().trimmed());
+	target.releaseDate = stdStr(editReleaseDate->text().trimmed());
+	target.coverImagePath = stdStr(editCoverImage->text().trimmed());
+	target.isIWAD = comboType->currentData().toBool();
+	target.iwadPath = stdStr(editIwadPath->text().trimmed());
+	target.pwadPath = stdStr(editPwadPath->text().trimmed());
+	target.description = stdStr(editDescription->toPlainText());
+
+	if (radioMap->isChecked())
+		target.launchParameters = 1;
+	else if (radioSavegame->isChecked())
+		target.launchParameters = 2;
+	else if (radioDemoPlay->isChecked())
+		target.launchParameters = 3;
+	else
+		target.launchParameters = 0;
+
+	target.selectedLaunchMap = stdStr(editMap->text().trimmed());
+	target.selectedLaunchSave = stdStr(editSavegame->text().trimmed());
+	target.selectedLaunchDemoPlayback = stdStr(editDemoPlay->text().trimmed());
+	target.recordDemo = chkRecordDemo->isChecked();
+	target.selectedLaunchDemoRecord = stdStr(editRecordDemo->text().trimmed());
+
+	target.difficulty = comboSkill->currentData().toInt();
+	target.fastMonsters = chkFast->isChecked();
+	target.respawnMonsters = chkRespawn->isChecked();
+	target.noMonsters = chkNoMonsters->isChecked();
+	target.allowMultiplayerItems = chkMultiItems->isChecked();
+	target.pistolStartAllLevels = chkPistolStart->isChecked();
+
+	target.playerName = stdStr(editPlayerName->text().trimmed());
+	target.playerClass = stdStr(editPlayerClass->text().trimmed());
+	target.playerGender = comboPlayerGender->currentIndex();
+	target.wadLanguage = stdStr(comboWadLang->currentData().toString());
+
+	target.remoteAddress = stdStr(editRemoteAddr->text().trimmed());
+	target.remotePort = spinRemotePort->value();
+	target.remoteTeam = spinRemoteTeam->value();
+
+	target.hostPort = spinHostPort->value();
+	target.maxPlayers = spinMaxPlayers->value();
+	target.hostTicRate = comboTicRate->currentIndex();
+	target.hostExtraTic = chkExtraTic->isChecked();
+	target.hostGamemode = comboGamemode->currentIndex();
+	target.hostTeam = spinHostTeam->value();
+
+	target.complevel = stdStr(comboEngineComplevel->currentData().toString());
+	target.compatLevel = comboCompatLevel->currentData().toInt();
+	target.alwaysApplyDMFlags = alwaysApplyDMFlags;
+	target.dmflags = dmflags;
+	target.dmflags2 = dmflags2;
+	target.dmflags3 = dmflags3;
+	target.compatflags = compatflags;
+	target.compatflags2 = compatflags2;
+
+	target.configFilePath = stdStr(editConfigFile->text().trimmed());
+	target.saveDirPath = stdStr(editSaveDir->text().trimmed());
+	target.screenshotDirPath = stdStr(editShotDir->text().trimmed());
+	target.demoDirPath = stdStr(editDemoDir->text().trimmed());
+	target.copyModsToProfile = chkCopyModsToProfile ? chkCopyModsToProfile->isChecked() : true;
+	target.mods = modPaths;
+	target.disabledMods.clear();
+	for (const auto& m : modPaths)
+	{
+		if (disabledModKeys.contains(normModKey(qStr(m))))
+			target.disabledMods.push_back(m);
+	}
+
+	target.fullscreen = chkFullscreen->isChecked();
+	target.loadSupportWads = chkSupportWads->isChecked();
+	target.disableAutoload = chkDisableAutoload->isChecked();
+	target.enableDynLights = chkDynLights->isChecked();
+	if (radioOpenGL->isChecked())
+		target.renderingAPI = 0;
+	else if (radioGLES->isChecked())
+		target.renderingAPI = 2;
+	else
+		target.renderingAPI = 1;
+	target.extraLights = chkLights->isChecked();
+	target.extraBrightmaps = chkBrightmaps->isChecked();
+	target.extraWidescreen = chkWidescreen->isChecked();
+
+	target.appendAdditionalParameters = stdStr(editAppendArgs->toPlainText().trimmed());
 }
 
 void ProfileSettingsDialog::saveToProfile()
 {
-	profile.title = stdStr(editTitle->text().trimmed().isEmpty() ? QString("New Profile") : editTitle->text().trimmed());
-	profile.author = stdStr(editAuthor->text().trimmed());
-	profile.releaseDate = stdStr(editReleaseDate->text().trimmed());
-	profile.coverImagePath = stdStr(editCoverImage->text().trimmed());
-	profile.isIWAD = comboType->currentData().toBool();
-	profile.iwadPath = stdStr(editIwadPath->text().trimmed());
-	profile.pwadPath = stdStr(editPwadPath->text().trimmed());
-	profile.description = stdStr(editDescription->toPlainText());
-
-	if (radioMap->isChecked())
-		profile.launchParameters = 1;
-	else if (radioSavegame->isChecked())
-		profile.launchParameters = 2;
-	else if (radioDemoPlay->isChecked())
-		profile.launchParameters = 3;
-	else
-		profile.launchParameters = 0;
-
-	profile.selectedLaunchMap = stdStr(editMap->text().trimmed());
-	profile.selectedLaunchSave = stdStr(editSavegame->text().trimmed());
-	profile.selectedLaunchDemoPlayback = stdStr(editDemoPlay->text().trimmed());
-	profile.recordDemo = chkRecordDemo->isChecked();
-	profile.selectedLaunchDemoRecord = stdStr(editRecordDemo->text().trimmed());
-
-	profile.difficulty = comboSkill->currentData().toInt();
-	profile.fastMonsters = chkFast->isChecked();
-	profile.respawnMonsters = chkRespawn->isChecked();
-	profile.noMonsters = chkNoMonsters->isChecked();
-	profile.allowMultiplayerItems = chkMultiItems->isChecked();
-	profile.pistolStartAllLevels = chkPistolStart->isChecked();
-
-	profile.playerName = stdStr(editPlayerName->text().trimmed());
-	profile.playerClass = stdStr(editPlayerClass->text().trimmed());
-	profile.playerGender = comboPlayerGender->currentIndex();
-	profile.wadLanguage = stdStr(comboWadLang->currentData().toString());
-
-	profile.remoteAddress = stdStr(editRemoteAddr->text().trimmed());
-	profile.remotePort = spinRemotePort->value();
-	profile.remoteTeam = spinRemoteTeam->value();
-
-	profile.hostPort = spinHostPort->value();
-	profile.maxPlayers = spinMaxPlayers->value();
-	profile.hostTicRate = comboTicRate->currentIndex();
-	profile.hostExtraTic = chkExtraTic->isChecked();
-	profile.hostGamemode = comboGamemode->currentIndex();
-	profile.hostTeam = spinHostTeam->value();
-
-	profile.complevel = stdStr(comboEngineComplevel->currentData().toString());
-	profile.compatLevel = comboCompatLevel->currentData().toInt();
-	profile.alwaysApplyDMFlags = alwaysApplyDMFlags;
-	profile.dmflags = dmflags;
-	profile.dmflags2 = dmflags2;
-	profile.dmflags3 = dmflags3;
-	profile.compatflags = compatflags;
-	profile.compatflags2 = compatflags2;
-
-	profile.configFilePath = stdStr(editConfigFile->text().trimmed());
-	profile.saveDirPath = stdStr(editSaveDir->text().trimmed());
-	profile.screenshotDirPath = stdStr(editShotDir->text().trimmed());
-	profile.demoDirPath = stdStr(editDemoDir->text().trimmed());
-	profile.mods = modPaths;
-
-	profile.fullscreen = chkFullscreen->isChecked();
-	profile.loadSupportWads = chkSupportWads->isChecked();
-	profile.disableAutoload = chkDisableAutoload->isChecked();
-	profile.enableDynLights = chkDynLights->isChecked();
-	if (radioOpenGL->isChecked())
-		profile.renderingAPI = 0;
-	else if (radioGLES->isChecked())
-		profile.renderingAPI = 2;
-	else
-		profile.renderingAPI = 1;
-	profile.extraLights = chkLights->isChecked();
-	profile.extraBrightmaps = chkBrightmaps->isChecked();
-	profile.extraWidescreen = chkWidescreen->isChecked();
-
-	profile.appendAdditionalParameters = stdStr(editAppendArgs->toPlainText().trimmed());
+	writeToProfile(profile);
 }
 
 void ProfileSettingsDialog::rebuildModList(const std::vector<std::string>& mods, int selectRow)
@@ -760,6 +941,8 @@ void ProfileSettingsDialog::rebuildModList(const std::vector<std::string>& mods,
 	for (int row = 0; row < static_cast<int>(modPaths.size()); ++row)
 	{
 		const QString fullPath = qStr(modPaths[row]);
+		const QString modKey = normModKey(fullPath);
+		const bool isEnabled = !disabledModKeys.contains(modKey);
 		const QString fileName = QFileInfo(fullPath).fileName();
 
 		QListWidgetItem* item = new QListWidgetItem(listMods);
@@ -768,11 +951,28 @@ void ProfileSettingsDialog::rebuildModList(const std::vector<std::string>& mods,
 		QWidget* rowWidget = new QWidget(listMods);
 		QHBoxLayout* h = new QHBoxLayout(rowWidget);
 		h->setContentsMargins(6, 2, 6, 2);
-		h->setSpacing(4);
+		h->setSpacing(6);
+
+		QCheckBox* chkEnabled = new QCheckBox(rowWidget);
+		chkEnabled->setChecked(isEnabled);
+		chkEnabled->setToolTip("Enable or disable this mod for launches without removing it.");
 
 		QLabel* lbl = new QLabel(fileName.isEmpty() ? fullPath : fileName, rowWidget);
 		lbl->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred);
 		lbl->setToolTip(fullPath);
+		lbl->setEnabled(isEnabled);
+
+		connect(chkEnabled, &QCheckBox::toggled, this, [this, modKey, lbl](bool on)
+		{
+			if (on)
+				disabledModKeys.remove(modKey);
+			else
+				disabledModKeys.insert(modKey);
+			lbl->setEnabled(on);
+			updateCommandPreview();
+		});
+
+		h->addWidget(chkEnabled);
 		h->addWidget(lbl, 1);
 
 		QToolButton* btnDel = new QToolButton(rowWidget);
@@ -780,10 +980,12 @@ void ProfileSettingsDialog::rebuildModList(const std::vector<std::string>& mods,
 		btnDel->setToolTip(LStr("LAUNCHER_REMOVE_MOD", "Remove Mod"));
 		btnDel->setToolButtonStyle(Qt::ToolButtonIconOnly);
 		btnDel->setAutoRaise(true);
-		connect(btnDel, &QToolButton::clicked, this, [this, row]()
+		connect(btnDel, &QToolButton::clicked, this, [this, row, modKey]()
 		{
+			disabledModKeys.remove(modKey);
 			modPaths.erase(modPaths.begin() + row);
 			rebuildModList(modPaths, std::min(row, static_cast<int>(modPaths.size()) - 1));
+			updateCommandPreview();
 		});
 
 		QToolButton* btnUp = new QToolButton(rowWidget);
@@ -797,6 +999,7 @@ void ProfileSettingsDialog::rebuildModList(const std::vector<std::string>& mods,
 			{
 				std::swap(modPaths[row], modPaths[row - 1]);
 				rebuildModList(modPaths, row - 1);
+				updateCommandPreview();
 			}
 		});
 
@@ -811,6 +1014,7 @@ void ProfileSettingsDialog::rebuildModList(const std::vector<std::string>& mods,
 			{
 				std::swap(modPaths[row], modPaths[row + 1]);
 				rebuildModList(modPaths, row + 1);
+				updateCommandPreview();
 			}
 		});
 
@@ -833,8 +1037,12 @@ void ProfileSettingsDialog::appendModPath(const QString& filePath)
 	if (filePath.isEmpty())
 		return;
 
-	QString finalPath = filePath;
-	if (!profile.filePath.empty())
+	QString finalPath = QFileInfo(filePath).absoluteFilePath();
+	if (finalPath.isEmpty())
+		finalPath = filePath;
+
+	const bool copyToProfile = chkCopyModsToProfile ? chkCopyModsToProfile->isChecked() : true;
+	if (copyToProfile && !profile.filePath.empty())
 	{
 		const QDir modsDir(QFileInfo(qStr(profile.filePath)).absolutePath() + "/mods");
 		modsDir.mkpath(".");
@@ -849,9 +1057,16 @@ void ProfileSettingsDialog::appendModPath(const QString& filePath)
 	}
 
 	const std::string addedStd = stdStr(finalPath);
-	if (std::find(modPaths.begin(), modPaths.end(), addedStd) == modPaths.end())
+	const QString addedKey = normModKey(finalPath);
+	const bool alreadyPresent = std::any_of(modPaths.begin(), modPaths.end(), [&](const std::string& existing)
+	{
+		return normModKey(qStr(existing)) == addedKey;
+	});
+	if (!alreadyPresent)
 		modPaths.push_back(addedStd);
+	disabledModKeys.remove(addedKey);
 	rebuildModList(modPaths, static_cast<int>(modPaths.size()) - 1);
+	updateCommandPreview();
 }
 
 void ProfileSettingsDialog::syncCompatModeFromFlags()
@@ -885,6 +1100,19 @@ void ProfileSettingsDialog::updateFlagSummary()
 		return;
 	lblFlagSummary->setText(QString("dmflags: %1 | dmflags2: %2 | dmflags3: %3\ncompatflags: %4 | compatflags2: %5")
 		.arg(dmflags).arg(dmflags2).arg(dmflags3).arg(compatflags).arg(compatflags2));
+}
+
+void ProfileSettingsDialog::updateCommandPreview()
+{
+	if (!editCommandPreview || !comboPreviewMode)
+		return;
+
+	Profile preview = profile;
+	writeToProfile(preview);
+	const LaunchTargetMode mode = static_cast<LaunchTargetMode>(comboPreviewMode->currentData().toInt());
+	const QString exe = quoteAdditionalArg(QDir::toNativeSeparators(QCoreApplication::applicationFilePath()));
+	const QString args = QString::fromStdString(preview.giveLaunchCommand(mode, currentLauncherLanguage));
+	editCommandPreview->setPlainText(args.isEmpty() ? exe : (exe + " " + args));
 }
 
 QString ProfileSettingsDialog::browsePath(const QString& caption, const QString& filter, const QString& current, bool directory)
@@ -944,7 +1172,9 @@ void ProfileSettingsDialog::onOpenFlagEditor()
 
 void ProfileSettingsDialog::onAddModFiles()
 {
-	const QString startDir = profile.filePath.empty() ? qStr(LauncherConst::PROFILE_DIR) : QFileInfo(qStr(profile.filePath)).absolutePath();
+	const QString startDir = (!defaultModsDirectory.isEmpty() && QFileInfo::exists(defaultModsDirectory))
+		? defaultModsDirectory
+		: (profile.filePath.empty() ? qStr(LauncherConst::PROFILE_DIR) : QFileInfo(qStr(profile.filePath)).absolutePath());
 	const QStringList files = QFileDialog::getOpenFileNames(this, LStr("LAUNCHER_ADD_MOD", "Add Mod Files"), startDir,
 		"Doom Mods (*.wad *.pk3 *.pk7 *.ipk3 *.zip *.deh *.bex);;All Files (*.*)");
 	for (const QString& f : files)

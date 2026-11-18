@@ -86,6 +86,8 @@ private slots:
 
 	void onLanguageTriggered(QAction* action);
 	void onThemeTriggered(QAction* action);
+	void onSetDefaultModsDir();
+	void onClearDefaultModsDir();
 	void onToggleDetectStartup(bool checked);
 	void onToggleHideWhilePlaying(bool checked);
 #ifdef HAS_UPDATER
@@ -98,6 +100,7 @@ private:
 	void buildUi();
 	void rebuildMenus();
 	void retranslateUi();
+	void updateDefaultModsMenuState();
 #ifdef HAS_UPDATER
 	void updateUpdaterMenuState();
 #endif
@@ -142,6 +145,8 @@ private:
 	QAction* actQuit = nullptr;
 	QAction* actDetectStartup = nullptr;
 	QAction* actHideWhilePlaying = nullptr;
+	QAction* actSetDefaultModsDir = nullptr;
+	QAction* actClearDefaultModsDir = nullptr;
 #ifdef HAS_UPDATER
 	std::unique_ptr<LauncherUpdater> updater;
 	QMenu* updaterModeMenu = nullptr;
@@ -172,6 +177,7 @@ private:
 	int runningProfileIndex = -1;
 	QElapsedTimer playTimer;
 	bool wasHiddenForLaunch = false;
+	bool wasMaximizedBeforeHide = false;
 
 	QPointer<QThread> detectThread;
 	bool detectInteractive = false;

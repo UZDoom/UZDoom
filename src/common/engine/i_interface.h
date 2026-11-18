@@ -90,6 +90,7 @@ struct FStartupSelectionInfo
 	float prideMix = 0;
 	unsigned LauncherWidth = 0;
 	unsigned LauncherHeight = 0;
+	bool LauncherMaximized = false;
 
 	// Local game info
 	int DefaultIWAD = 0;

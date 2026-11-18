@@ -2486,23 +2486,14 @@ static void AddAutoloadFiles(const char *autoname, std::vector<FileSys::Resource
 
 //==========================================================================
 //
-// CheckCmdLine
+// ApplyCmdLineGameModeFlags
 //
 //==========================================================================
 
-static void CheckCmdLine()
+static void ApplyCmdLineGameModeFlags()
 {
 	int flags = dmflags;
 	int flags3 = dmflags3;
-	int p;
-	const char *v;
-
-	if (!batchrun) Printf ("Checking cmd-line parameters...\n");
-	if (Args->CheckParm (FArg_nomonsters))	flags |= DF_NO_MONSTERS;
-	if (Args->CheckParm (FArg_respawn))		flags |= DF_MONSTERS_RESPAWN;
-	if (Args->CheckParm (FArg_fast))			flags |= DF_FAST_MONSTERS;
-
-	devparm = !!Args->CheckParm (FArg_devparm);
 
 	if (Args->CheckParm (FArg_altdeath))
 	{
@@ -2526,6 +2517,28 @@ static void CheckCmdLine()
 
 	dmflags = flags;
 	dmflags3 = flags3;
+}
+
+//==========================================================================
+//
+// CheckCmdLine
+//
+//==========================================================================
+
+static void CheckCmdLine()
+{
+	int flags = dmflags;
+	int p;
+	const char *v;
+
+	if (!batchrun) Printf ("Checking cmd-line parameters...\n");
+	if (Args->CheckParm (FArg_nomonsters))	flags |= DF_NO_MONSTERS;
+	if (Args->CheckParm (FArg_respawn))		flags |= DF_MONSTERS_RESPAWN;
+	if (Args->CheckParm (FArg_fast))			flags |= DF_FAST_MONSTERS;
+
+	devparm = !!Args->CheckParm (FArg_devparm);
+
+	dmflags = flags;
 
 	// get skill / episode / map from parms
 	setmap = false;
@@ -3708,6 +3721,9 @@ static int D_InitGame(const FIWADInfo* iwad_info, std::vector<FileSys::ResourceN
 
 	// Now that wads are loaded, define mod-specific cvars.
 	ParseCVarInfo();
+
+	// Apply -coop/-deathmatch/-altdeath defaults before +set/+dmflags commands so explicit flags win (#1717).
+	ApplyCmdLineGameModeFlags();
 
 	// Actually exec command line commands and exec files.
 	if (exec != NULL)

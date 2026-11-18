@@ -28,6 +28,7 @@
 #include <QJsonObject>
 #include <QProcess>
 #include <QRegularExpression>
+#include <QSet>
 #include <algorithm>
 #include <miniz.h>
 
@@ -188,12 +189,21 @@ QStringList Profile::buildLaunchArguments(LaunchTargetMode mode, const std::stri
 		}
 	}
 
+	QSet<QString> disabledSet;
+	for (const auto& dm : disabledMods)
+	{
+		if (!dm.empty())
+			disabledSet.insert(normalizeSlash(qStr(dm)).toLower());
+	}
+
 	for (const auto& m : mods)
 	{
 		if (m.empty())
 			continue;
 		const QString modQ = qStr(m);
 		const QString key = normalizeSlash(modQ).toLower();
+		if (disabledSet.contains(key))
+			continue;
 		if (!seenFiles.contains(key))
 		{
 			appendModArg(args, modQ);
@@ -209,6 +219,7 @@ QStringList Profile::buildLaunchArguments(LaunchTargetMode mode, const std::stri
 		args << "-shotdir" << qStr(screenshotDirPath);
 
 	args << "+set" << "vid_fullscreen" << (fullscreen ? "1" : "0");
+	args << (loadSupportWads ? "-supportwad" : "-nosupportwad");
 	args << "+set" << "i_loadsupportwad" << (loadSupportWads ? "1" : "0");
 	args << "+set" << "r_dynlights" << (enableDynLights ? "1" : "0");
 
@@ -287,6 +298,49 @@ QStringList Profile::buildLaunchArguments(LaunchTargetMode mode, const std::stri
 	if (!complevel.empty())
 		args << "-complevel" << qStr(complevel);
 
+	if (mode == LaunchTargetMode::Host)
+	{
+		const int players = std::clamp(maxPlayers, 1, 64);
+		args << "-host" << QString::number(players);
+		if (hostPort > 0 && hostPort <= 65535)
+			args << "-port" << QString::number(hostPort);
+		if (hostTicRate > 0)
+			args << "-dup" << QString::number(hostTicRate + 1);
+		if (hostExtraTic)
+			args << "-extratic";
+
+		switch (hostGamemode)
+		{
+		case 1:
+			args << "-coop";
+			break;
+		case 2:
+			args << "-deathmatch";
+			break;
+		case 3:
+			args << "-deathmatch";
+			args << "+set" << "teamplay" << "1";
+			args << "+set" << "team" << QString::number(std::clamp(hostTeam, 0, 255));
+			break;
+		case 4:
+			args << "-altdeath";
+			break;
+		default:
+			break;
+		}
+	}
+	else if (mode == LaunchTargetMode::Join)
+	{
+		QString target = qStr(remoteAddress).trimmed();
+		if (!target.isEmpty())
+		{
+			if (remotePort > 0 && remotePort <= 65535 && !target.contains(':'))
+				target += ":" + QString::number(remotePort);
+			args << "-join" << target;
+		}
+		args << "+set" << "team" << QString::number(std::clamp(remoteTeam, 0, 255));
+	}
+
 	uint32_t effDmflags2 = dmflags2;
 	uint32_t effDmflags3 = dmflags3;
 	if (allowMultiplayerItems)
@@ -295,13 +349,21 @@ QStringList Profile::buildLaunchArguments(LaunchTargetMode mode, const std::stri
 		effDmflags3 |= DF3_PISTOL_START;
 
 	if (alwaysApplyDMFlags)
+	{
 		args << "+set" << "alwaysapplydmflags" << "1";
-	if (dmflags != 0)
 		args << "+set" << "dmflags" << QString::number(dmflags);
-	if (effDmflags2 != 0)
 		args << "+set" << "dmflags2" << QString::number(effDmflags2);
-	if (effDmflags3 != 0)
 		args << "+set" << "dmflags3" << QString::number(effDmflags3);
+	}
+	else
+	{
+		if (dmflags != 0)
+			args << "+set" << "dmflags" << QString::number(dmflags);
+		if (effDmflags2 != 0)
+			args << "+set" << "dmflags2" << QString::number(effDmflags2);
+		if (effDmflags3 != 0)
+			args << "+set" << "dmflags3" << QString::number(effDmflags3);
+	}
 
 	const int matchedCompatMode = findMatchingCompatModeId(compatflags, compatflags2);
 	if (matchedCompatMode > 0)
@@ -328,49 +390,6 @@ QStringList Profile::buildLaunchArguments(LaunchTargetMode mode, const std::stri
 	if (effectiveLanguage.empty() || effectiveLanguage == "default")
 		effectiveLanguage = (!launcherLanguage.empty() && launcherLanguage != "default") ? launcherLanguage : "auto";
 	args << "+set" << "language" << qStr(effectiveLanguage);
-
-	if (mode == LaunchTargetMode::Host)
-	{
-		const int players = std::clamp(maxPlayers, 1, 64);
-		args << "-host" << QString::number(players);
-		if (hostPort > 0 && hostPort <= 65535)
-			args << "-port" << QString::number(hostPort);
-		if (hostTicRate > 0)
-			args << "-dup" << QString::number(hostTicRate + 1);
-		if (hostExtraTic)
-			args << "-extratic";
-
-		switch (hostGamemode)
-		{
-		case 1:
-			args << "-coop";
-			break;
-		case 2:
-			args << "-deathmatch";
-			break;
-		case 3:
-			args << "+set" << "teamplay" << "1";
-			args << "+set" << "team" << QString::number(std::clamp(hostTeam, 0, 255));
-			args << "-deathmatch";
-			break;
-		case 4:
-			args << "-altdeath";
-			break;
-		default:
-			break;
-		}
-	}
-	else if (mode == LaunchTargetMode::Join)
-	{
-		QString target = qStr(remoteAddress).trimmed();
-		if (!target.isEmpty())
-		{
-			if (remotePort > 0 && remotePort <= 65535 && !target.contains(':'))
-				target += ":" + QString::number(remotePort);
-			args << "-join" << target;
-		}
-		args << "+set" << "team" << QString::number(std::clamp(remoteTeam, 0, 255));
-	}
 
 	if (!appendAdditionalParameters.empty())
 		args << QProcess::splitCommand(qStr(appendAdditionalParameters));
@@ -410,8 +429,12 @@ LauncherConfig loadLauncherConfig()
 		cfg.hideWhilePlaying = obj["hideWhilePlaying"].toBool(false);
 	if (obj.contains("showReleaseNotes"))
 		cfg.showReleaseNotes = obj["showReleaseNotes"].toBool(true);
+	if (obj.contains("maximized"))
+		cfg.maximized = obj["maximized"].toBool(false);
 	if (obj.contains("lastSelectedRow"))
 		cfg.lastSelectedRow = obj["lastSelectedRow"].toInt(0);
+	if (obj.contains("defaultModsDir"))
+		cfg.defaultModsDir = stdStr(obj["defaultModsDir"].toString());
 	return cfg;
 }
 
@@ -424,7 +447,9 @@ void saveLauncherConfig(const LauncherConfig& cfg)
 	obj["detectOnStartup"] = cfg.detectOnStartup;
 	obj["hideWhilePlaying"] = cfg.hideWhilePlaying;
 	obj["showReleaseNotes"] = cfg.showReleaseNotes;
+	obj["maximized"] = cfg.maximized;
 	obj["lastSelectedRow"] = cfg.lastSelectedRow;
+	obj["defaultModsDir"] = qStr(cfg.defaultModsDir);
 
 	QFile f(qStr(LauncherConst::CONFIG_FILE));
 	if (f.open(QIODevice::WriteOnly | QIODevice::Truncate))
@@ -498,6 +523,11 @@ bool saveProfileToDisk(Profile& profile)
 	for (const auto& m : profile.mods)
 		modsArr.append(qStr(m));
 	obj["mods"] = modsArr;
+	QJsonArray disabledModsArr;
+	for (const auto& dm : profile.disabledMods)
+		disabledModsArr.append(qStr(dm));
+	obj["disabledMods"] = disabledModsArr;
+	obj["copyModsToProfile"] = profile.copyModsToProfile;
 
 	obj["launchParameters"] = profile.launchParameters;
 	obj["selectedLaunchMap"] = qStr(profile.selectedLaunchMap);
@@ -592,6 +622,13 @@ bool loadProfileFromDisk(const std::string& path, Profile& p)
 		if (v.isString() && !v.toString().isEmpty())
 			p.mods.push_back(stdStr(v.toString()));
 	}
+	const QJsonArray disabledModsArr = obj["disabledMods"].toArray();
+	for (const auto& v : disabledModsArr)
+	{
+		if (v.isString() && !v.toString().isEmpty())
+			p.disabledMods.push_back(stdStr(v.toString()));
+	}
+	p.copyModsToProfile = obj["copyModsToProfile"].toBool(true);
 
 	p.launchParameters = obj["launchParameters"].toInt(0);
 	if (obj["selectedLaunchMap"].isDouble())
@@ -753,6 +790,8 @@ void applyProfilePathMapping(Profile& profile, const std::string& oldBaseDir, co
 
 	for (auto& mod : profile.mods)
 		remapField(mod);
+	for (auto& dmod : profile.disabledMods)
+		remapField(dmod);
 }
 
 bool cloneProfile(const Profile& source, const std::string& newTitle, Profile& outClone)

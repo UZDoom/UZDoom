@@ -44,6 +44,8 @@ struct Profile
 	std::string iwadPath;
 	std::string pwadPath;
 	std::vector<std::string> mods;
+	std::vector<std::string> disabledMods;
+	bool copyModsToProfile = true;
 
 	int launchParameters = 0;
 	std::string selectedLaunchMap;
@@ -113,7 +115,9 @@ struct LauncherConfig
 	bool detectOnStartup = true;
 	bool hideWhilePlaying = false;
 	bool showReleaseNotes = true;
+	bool maximized = false;
 	int lastSelectedRow = 0;
+	std::string defaultModsDir;
 };
 
 QString formatPlaytime(uint64_t minutes);
