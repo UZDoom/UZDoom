@@ -626,7 +626,7 @@ std::vector<int> LauncherMainWindow::buildDisplayOrder() const
 		: -1;
 	const bool desc = launcherConfig.sortDescending;
 
-	std::stable_sort(order.begin(), order.end(), [&](int idxA, int idxB)
+	std::sort(order.begin(), order.end(), [&](int idxA, int idxB)
 	{
 		const Profile& a = profiles[idxA];
 		const Profile& b = profiles[idxB];

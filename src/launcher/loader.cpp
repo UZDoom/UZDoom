@@ -1338,6 +1338,8 @@ std::vector<DiscoveredIWadCandidate> scanUnregisteredIWADs(
 
 		const std::string md5 = calculateFileMD5(absStd);
 		const auto dbIt = db.find(md5);
+		if (dbIt != db.end() && !dbIt->second.isIWAD)
+			return;
 
 		const bool isKnownIWad = (dbIt != db.end() && dbIt->second.isIWAD);
 		const QString lowerName = fi.fileName().toLower();

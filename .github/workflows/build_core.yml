@@ -163,7 +163,7 @@ jobs:
       with:
         version: '6.12.0'
         host: 'windows'
-        arch: 'win64_msvc2022_64'
+        arch: ${{ contains(inputs.name, 'ARM') && 'win64_msvc2022_arm64' || 'win64_msvc2022_64' }}
         aqtsource: 'git+https://github.com/miurahr/aqtinstall.git@5a49f2b391ae8ee1d3c0dd87f8b33c1d49a4deb7'
         cache: 'true'
 
@@ -320,28 +320,37 @@ jobs:
       env:
         NAME: ${{ steps.package.outputs.name }}
       run: |
-        function unzip_to_package() {
+        rm -rf soundfonts fm_banks
+
+        mkdir -p package staging
+
+        function unzip_to_staging() {
           if [[ ! -f "$1" ]]; then
             echo "skipping $1"
             return
           fi
           f=$(unzip -l "$1" | awk -v pattern="$2" '$0 ~ pattern {print $NF; exit}')
           echo "$1: $f"
-          unzip -j "$1" "$f" -d package
+          unzip -j "$1" "$f" -d staging
         }
-        unzip_to_package oalsoft.zip 'bin/Win64/soft_oal.dll$'
-        unzip_to_package sndfile.zip 'bin/sndfile.dll$'
-        unzip_to_package libcurl.zip 'bin/libcurl.*.dll$'
+        unzip_to_staging oalsoft.zip 'bin/Win64/soft_oal.dll$'
+        unzip_to_staging sndfile.zip 'bin/sndfile.dll$'
+        unzip_to_staging libcurl.zip 'bin/libcurl.*.dll$'
 
-        rm -rf soundfonts fm_banks
-
-        mkdir -p package staging
         cd staging
 
         mkdir -p soundfonts fm_banks
         cp -f ../../soundfont/* soundfonts
         cp -f ../../fm_banks/* fm_banks
-        mv -f ../*.exe ../*.pk3 .
+
+        shopt -s nullglob
+        mv -f ../*.exe ../*.pk3 ../*.dll .
+        for dir in platforms styles imageformats iconengines generic networkinformation tls; do
+          if [ -d "../$dir" ]; then
+            mv -f "../$dir" .
+          fi
+        done
+
         mv ../package/licenses.zip .
         7z a -sdel -r "../package/${NAME}.zip" *
 
@@ -391,6 +400,7 @@ jobs:
         mkdir -p ${app}/Contents/Frameworks
         cp -L $(brew --prefix sdl3)/lib/libSDL3.dylib ${app}/Contents/Frameworks/libSDL3.dylib
         cp $(brew --prefix molten-vk)/lib/libMoltenVK.dylib ${app}/Contents/Frameworks/
+        $(brew --prefix qt)/bin/macdeployqt ./${app}
         dylibbundler -ns -of -cd -b \
           -x ./${app}/Contents/MacOS/uzdoom \
           -d ./${app}/Contents/Frameworks \
@@ -398,7 +408,7 @@ jobs:
 
         xattr -cr ${app}
 
-        find ${app}/Contents/Frameworks -type f -name "*.dylib" -print0 | while IFS= read -r -d '' file; do
+        find ${app}/Contents/Frameworks ${app}/Contents/PlugIns -type f -name "*.dylib" -print0 2>/dev/null | while IFS= read -r -d '' file; do
           codesign --remove-signature "$file"
           codesign --force $SIGN_OPTS -s "$SIGN_ID" "$file"
         done
@@ -443,6 +453,20 @@ jobs:
           find "${pfx}" -type d -empty -delete -print
         } | xargs printf 'deleting: %s\n'
 
+        # Bundle Qt6 plugins for AppImage
+        qt_plugins_dir=$(qmake6 -query QT_INSTALL_PLUGINS 2>/dev/null || qtpaths6 --plugin-dir 2>/dev/null || echo "/usr/lib/${arch}-linux-gnu/qt6/plugins")
+        deploy_plugin_args=()
+        if [ -d "${qt_plugins_dir}" ]; then
+          mkdir -p "${pfx}/plugins"
+          for dir in platforms platformthemes xcbglintegrations wayland-shell-integration wayland-decoration-client wayland-graphics-integration-client imageformats styles; do
+            if [ -d "${qt_plugins_dir}/${dir}" ]; then
+              cp -r "${qt_plugins_dir}/${dir}" "${pfx}/plugins/"
+              deploy_plugin_args+=(--deploy-deps-only "${pfx}/plugins/${dir}")
+            fi
+          done
+          printf '[Paths]\nPrefix = ..\nPlugins = plugins\n' > "${pfx}/bin/qt.conf"
+        fi
+
         # https://github.com/linuxdeploy/linuxdeploy-plugin-appimage
         export LDAI_UPDATE_INFORMATION="gh-releases-zsync|${OWNER}|${REPO}|${TAG}|Linux-UZDoom-*-${arch}.AppImage.zsync"
         export LDAI_RUNTIME_FILE=./appimage-runtime
@@ -466,6 +490,7 @@ jobs:
           --desktop-file="${pfx}/share/applications/org.zdoom.UZDoom.desktop" \
           --library "$(library libopenal.so.)" \
           --library "$SDL_PREFIX/lib/libSDL3.so.0" \
+          "${deploy_plugin_args[@]}" \
           --icon-file="${pfx}/share/icons/hicolor/scalable/apps/org.zdoom.UZDoom.svg"
 
         mv *.AppImage "package/${NAME}.AppImage"

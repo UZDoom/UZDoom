@@ -396,7 +396,7 @@ QWidget* ProfileSettingsDialog::buildGeneralTab()
 			editIwadPath->setText(p);
 	};
 	connect(btnIwad, &QPushButton::clicked, this, browseForIwad);
-	connect(comboQuickIwad, &QComboBox::activated, this, [this, browseForIwad](int index)
+	connect(comboQuickIwad, QOverload<int>::of(&QComboBox::activated), this, [this, browseForIwad](int index)
 	{
 		const QString data = comboQuickIwad->itemData(index).toString();
 		if (data == QStringLiteral("__browse__"))
@@ -662,7 +662,7 @@ QWidget* ProfileSettingsDialog::buildLaunchTab()
 	for (const CompatModeInfo& cm : getCompatModes())
 		comboCompatLevel->addItem(cm.label, cm.id);
 	comboCompatLevel->setToolTip("Selects a compatibility mode preset (-compatmode), updating compatflags and compatflags2.");
-	connect(comboCompatLevel, &QComboBox::activated, this, [this](int index)
+	connect(comboCompatLevel, QOverload<int>::of(&QComboBox::activated), this, [this](int index)
 	{
 		const int id = comboCompatLevel->itemData(index).toInt();
 		if (id < 0)

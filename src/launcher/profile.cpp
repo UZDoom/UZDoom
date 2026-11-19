@@ -777,7 +777,7 @@ std::vector<Profile> loadAllProfiles()
 		}
 	}
 
-	std::stable_sort(profiles.begin(), profiles.end(), [](const Profile& a, const Profile& b)
+	std::sort(profiles.begin(), profiles.end(), [](const Profile& a, const Profile& b)
 	{
 		if (a.orderIndex >= 0 && b.orderIndex >= 0)
 		{
@@ -792,7 +792,9 @@ std::vector<Profile> loadAllProfiles()
 		{
 			return false;
 		}
-		return a.title < b.title;
+		if (a.title != b.title)
+			return a.title < b.title;
+		return a.filePath < b.filePath;
 	});
 
 	return profiles;

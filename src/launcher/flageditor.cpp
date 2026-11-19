@@ -225,7 +225,7 @@ void FlagEditorDialog::populateCheckboxes(QVBoxLayout* container, bool isCompat,
 			boundFlags.push_back({def, isCompat, row, nullptr, combo});
 			sections.back().flagIndices.push_back(idx);
 
-			connect(combo, &QComboBox::currentIndexChanged, this, [this, idx](int comboIdx)
+			connect(combo, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [this, idx](int comboIdx)
 			{
 				if (updating || comboIdx < 0)
 					return;

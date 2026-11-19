@@ -228,7 +228,7 @@ if( DEM_CMAKE_COMPILER_IS_GNUCXX_COMPATIBLE )
 	if( WIN32 )
 		set( CMAKE_CXX_FLAGS "-Wno-unknown-pragmas -Wno-comment -Wno-format ${CMAKE_CXX_FLAGS}" )
 		set( CMAKE_CXX_FLAGS "-D_UNICODE -DUNICODE ${CMAKE_CXX_FLAGS}" )
-		set( CMAKE_CXX_FLAGS "-D_WIN32_WINNT=0x0600 ${CMAKE_CXX_FLAGS}" )
+		set( CMAKE_CXX_FLAGS "-U_WIN32_WINNT -D_WIN32_WINNT=0x0600 ${CMAKE_CXX_FLAGS}" )
 		set( CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -municode" )
 	endif()
 
@@ -1443,6 +1443,12 @@ if( MSVC )
 endif()
 
 if (WIN32)
+	if( TARGET Qt6::windeployqt AND NOT WINDEPLOYQT_EXECUTABLE )
+		get_target_property( WINDEPLOYQT_EXECUTABLE Qt6::windeployqt LOCATION )
+	endif()
+	if( NOT WINDEPLOYQT_EXECUTABLE )
+		find_program( WINDEPLOYQT_EXECUTABLE NAMES windeployqt windeployqt6 HINTS "${Qt6_DIR}/../../../bin" )
+	endif()
 	if( WINDEPLOYQT_EXECUTABLE )
 		add_custom_command( TARGET zdoom POST_BUILD
 			COMMAND "${WINDEPLOYQT_EXECUTABLE}"
@@ -1450,6 +1456,10 @@ if (WIN32)
 				$<$<NOT:$<CONFIG:Debug>>:--release>
 				--no-translations
 				--no-opengl-sw
+				--no-system-d3d-compiler
+				--no-system-dxc-compiler
+				--no-quick-import
+				--skip-plugin-types generic,iconengines,networkinformation,tls
 				"$<TARGET_FILE:zdoom>"
 			COMMENT "Deploying Qt6 runtime dependencies with windeployqt..."
 		)
