@@ -65,14 +65,40 @@ namespace
 		return QDir::cleanPath(qStr(s)).replace('\\', '/').toLower();
 	}
 
+	const std::string& primaryGameFileOf(const Profile& p)
+	{
+		static const std::string kEmpty;
+		if (p.isIWAD)
+			return p.iwadPath;
+		if (!p.pwadPath.empty())
+			return p.pwadPath;
+		if (p.mods.size() == 1)
+			return p.mods[0];
+		return kEmpty;
+	}
+
 	bool hasGameFilePath(const std::vector<Profile>& profiles, const std::string& path)
 	{
 		const QString target = normLower(path);
 		for (const auto& p : profiles)
 		{
-			if (p.isIWAD && normLower(p.iwadPath) == target)
+			const std::string& primary = primaryGameFileOf(p);
+			if (!primary.empty() && normLower(primary) == target)
 				return true;
-			if (!p.isIWAD && normLower(p.pwadPath) == target)
+		}
+		return false;
+	}
+
+	bool hasGameFilePathOrHash(const std::vector<Profile>& profiles, const std::string& path, const std::string& md5)
+	{
+		if (hasGameFilePath(profiles, path))
+			return true;
+		if (md5.empty())
+			return false;
+		for (const auto& p : profiles)
+		{
+			const std::string& primary = primaryGameFileOf(p);
+			if (!primary.empty() && calculateFileMD5(primary) == md5)
 				return true;
 		}
 		return false;
@@ -89,7 +115,7 @@ namespace
 		return false;
 	}
 
-	void enrichFromTxtSidecar(const QString& filePath, Profile& prof)
+	void enrichFromTxtSidecar(const QString& filePath, Profile& prof, bool allowAnyFallback)
 	{
 		const QFileInfo fi(filePath);
 		const QDir dir = fi.dir();
@@ -97,8 +123,13 @@ namespace
 		if (txtCandidates.isEmpty())
 			return;
 
+		std::sort(txtCandidates.begin(), txtCandidates.end(), [](const QString& a, const QString& b)
+		{
+			return a.compare(b, Qt::CaseInsensitive) < 0;
+		});
+
 		const QString stem = fi.completeBaseName().toLower();
-		QString chosen = dir.filePath(txtCandidates.first());
+		QString chosen;
 		for (const QString& c : txtCandidates)
 		{
 			if (QFileInfo(c).completeBaseName().toLower() == stem)
@@ -106,6 +137,12 @@ namespace
 				chosen = dir.filePath(c);
 				break;
 			}
+		}
+		if (chosen.isEmpty())
+		{
+			if (!allowAnyFallback)
+				return;
+			chosen = dir.filePath(txtCandidates.first());
 		}
 
 		QFile tf(chosen);
@@ -1080,14 +1117,29 @@ ImportOutcome importGameFileIntoProfiles(const std::string& filePath, const std:
 			return out;
 		}
 
-		QString primaryFile;
-		QStringList extraMods;
+		QStringList extractedAll;
 		QDirIterator it(extractDir, QDir::Files | QDir::NoDotAndDotDot, QDirIterator::Subdirectories);
 		while (it.hasNext())
+			extractedAll << it.next();
+
+		const QDir extractQDir(extractDir);
+		std::sort(extractedAll.begin(), extractedAll.end(), [&](const QString& a, const QString& b)
 		{
-			const QString f = it.next();
+			const QString relA = extractQDir.relativeFilePath(a).replace('\\', '/');
+			const QString relB = extractQDir.relativeFilePath(b).replace('\\', '/');
+			const int depthA = relA.count('/');
+			const int depthB = relB.count('/');
+			if (depthA != depthB)
+				return depthA < depthB;
+			return relA.compare(relB, Qt::CaseInsensitive) < 0;
+		});
+
+		QString primaryFile;
+		QStringList extraMods;
+		for (const QString& f : extractedAll)
+		{
 			const QString fl = f.toLower();
-			if (hasExtension(fl, {".wad", ".iwad", ".pk3", ".ipk3", ".pk7", ".ipk7"}))
+			if (hasExtension(fl, {".wad", ".iwad", ".pwad", ".pk3", ".ipk3", ".pk7", ".ipk7"}))
 			{
 				if (primaryFile.isEmpty())
 					primaryFile = f;
@@ -1108,33 +1160,39 @@ ImportOutcome importGameFileIntoProfiles(const std::string& filePath, const std:
 			return out;
 		}
 
-		if (primaryFile.isEmpty())
-			primaryFile = extraMods.takeFirst();
-
-		const std::string primaryStd = stdStr(primaryFile);
-		const QString md5 = qStr(calculateFileMD5(primaryStd));
-		prof.isIWAD = checkIsIWADFile(primaryStd, md5);
-		const auto& db = getWadDatabase();
-		if (auto dbIt = db.find(md5.toStdString()); dbIt != db.end())
+		if (!primaryFile.isEmpty())
 		{
-			prof.title = dbIt->second.title;
-			prof.author = dbIt->second.author;
-			prof.releaseDate = dbIt->second.releaseDate;
-			prof.isIWAD = dbIt->second.isIWAD;
+			const std::string primaryStd = stdStr(primaryFile);
+			const QString md5 = qStr(calculateFileMD5(primaryStd));
+			prof.isIWAD = checkIsIWADFile(primaryStd, md5);
+			const auto& db = getWadDatabase();
+			if (auto dbIt = db.find(md5.toStdString()); dbIt != db.end())
+			{
+				prof.title = dbIt->second.title;
+				prof.author = dbIt->second.author;
+				prof.releaseDate = dbIt->second.releaseDate;
+				prof.isIWAD = dbIt->second.isIWAD;
+			}
+			else
+			{
+				enrichFromTxtSidecar(primaryFile, prof, true);
+			}
+
+			if (prof.isIWAD)
+			{
+				prof.iwadPath = primaryStd;
+			}
+			else
+			{
+				prof.pwadPath = primaryStd;
+				prof.iwadPath = findBestDefaultIWADPath(existingProfiles);
+			}
 		}
 		else
 		{
-			enrichFromTxtSidecar(primaryFile, prof);
-		}
-
-		if (prof.isIWAD)
-		{
-			prof.iwadPath = primaryStd;
-		}
-		else
-		{
-			prof.pwadPath = primaryStd;
+			prof.isIWAD = false;
 			prof.iwadPath = findBestDefaultIWADPath(existingProfiles);
+			enrichFromTxtSidecar(extraMods.first(), prof, true);
 		}
 
 		for (const auto& m : extraMods)
@@ -1147,14 +1205,15 @@ ImportOutcome importGameFileIntoProfiles(const std::string& filePath, const std:
 		return out;
 	}
 
-	if (!hasExtension(lower, {".wad", ".iwad", ".pk3", ".ipk3", ".pk7", ".ipk7", ".deh", ".bex"}))
+	if (!hasExtension(lower, {".wad", ".iwad", ".pwad", ".pk3", ".ipk3", ".pk7", ".ipk7", ".deh", ".bex"}))
 	{
 		out.status = ImportResult::UnsupportedFile;
 		out.message = "Unsupported file type. Select a WAD, PK3, PK7, DEH, BEX, ZIP, 7Z, or UZDP file.";
 		return out;
 	}
 
-	if (hasGameFilePath(existingProfiles, filePath))
+	const std::string md5 = calculateFileMD5(filePath);
+	if (hasGameFilePathOrHash(existingProfiles, filePath, md5))
 	{
 		out.status = ImportResult::DuplicateProfile;
 		out.message = "A profile for this file already exists.";
@@ -1162,7 +1221,6 @@ ImportOutcome importGameFileIntoProfiles(const std::string& filePath, const std:
 	}
 
 	Profile prof;
-	const std::string md5 = calculateFileMD5(filePath);
 	const auto& db = getWadDatabase();
 	if (auto dbIt = db.find(md5); dbIt != db.end())
 	{
@@ -1187,7 +1245,7 @@ ImportOutcome importGameFileIntoProfiles(const std::string& filePath, const std:
 			prof.releaseDate = stdStr(fi.birthTime().date().toString("dd-MM-yyyy"));
 		else if (fi.lastModified().isValid())
 			prof.releaseDate = stdStr(fi.lastModified().date().toString("dd-MM-yyyy"));
-		enrichFromTxtSidecar(fi.absoluteFilePath(), prof);
+		enrichFromTxtSidecar(fi.absoluteFilePath(), prof, false);
 	}
 
 	createDefaultDirectoryStructure(prof);

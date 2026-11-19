@@ -35,6 +35,7 @@ class QLineEdit;
 class QMenu;
 class QProcess;
 class QPushButton;
+class QSplitter;
 class QTableWidget;
 class QTextEdit;
 class QThread;
@@ -69,8 +70,6 @@ private slots:
 
 	void onAddGameFiles();
 	void onCreateBlankProfile();
-	void onImportProfileArchive();
-	void onAutoDetectIWADs();
 	void onRefreshProfiles();
 	void onOpenLauncherFolder();
 	void onOpenExecFolder();
@@ -88,10 +87,8 @@ private slots:
 	void onThemeTriggered(QAction* action);
 	void onSetDefaultModsDir();
 	void onClearDefaultModsDir();
-	void onToggleDetectStartup(bool checked);
 	void onToggleHideWhilePlaying(bool checked);
 #ifdef HAS_UPDATER
-	void onCheckUpdatesClicked();
 	void onUpdaterModeTriggered(QAction* action);
 	void onUpdaterIntervalTriggered(QAction* action);
 #endif
@@ -117,6 +114,7 @@ private:
 	void handleImportedFiles(const QStringList& localPaths);
 	void openSettingsForIndex(int profileIdx);
 	void launchProfile(LaunchTargetMode mode);
+	void recordRunningSessionPlaytime();
 	void setRunningState(bool running, const QString& title = {});
 	void startIWadAutoDetect(bool interactive);
 	void onIWadScanFinished(const std::vector<DiscoveredIWadCandidate>& candidates);
@@ -137,13 +135,9 @@ private:
 
 	QAction* actAddFile = nullptr;
 	QAction* actCreateBlank = nullptr;
-	QAction* actImportZip = nullptr;
-	QAction* actAutoDetect = nullptr;
-	QAction* actRefresh = nullptr;
 	QAction* actOpenLauncherDir = nullptr;
 	QAction* actOpenExecDir = nullptr;
 	QAction* actQuit = nullptr;
-	QAction* actDetectStartup = nullptr;
 	QAction* actHideWhilePlaying = nullptr;
 	QAction* actSetDefaultModsDir = nullptr;
 	QAction* actClearDefaultModsDir = nullptr;
@@ -153,9 +147,9 @@ private:
 	QMenu* updaterIntervalMenu = nullptr;
 	QActionGroup* updaterModeGroup = nullptr;
 	QActionGroup* updaterIntervalGroup = nullptr;
-	QAction* actCheckUpdates = nullptr;
 #endif
 
+	QSplitter* verticalSplitter = nullptr;
 	QTableWidget* table = nullptr;
 	QPushButton* btnPlay = nullptr;
 	QPushButton* btnJoin = nullptr;
@@ -163,6 +157,7 @@ private:
 	QPushButton* btnSettings = nullptr;
 	QPushButton* btnMoveUp = nullptr;
 	QPushButton* btnMoveDown = nullptr;
+	QPushButton* btnRefresh = nullptr;
 
 	QLabel* coverLabel = nullptr;
 	QTextEdit* descView = nullptr;

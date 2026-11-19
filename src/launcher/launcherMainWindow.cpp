@@ -44,6 +44,7 @@
 #include <QFrame>
 #include <QHeaderView>
 #include <QInputDialog>
+#include <QKeyEvent>
 #include <QKeySequence>
 #include <QLabel>
 #include <QLineEdit>
@@ -57,6 +58,7 @@
 #include <QPushButton>
 #include <QResizeEvent>
 #include <QSet>
+#include <QShortcut>
 #include <QSplitter>
 #include <QStatusBar>
 #include <QTableWidget>
@@ -142,13 +144,16 @@ LauncherMainWindow::~LauncherMainWindow()
 		detectCancel->store(true, std::memory_order_relaxed);
 	if (detectThread)
 	{
-		detectThread->disconnect(this);
-		detectThread->wait();
+		QThread* t = detectThread.data();
 		detectThread = nullptr;
+		t->disconnect();
+		t->wait();
+		delete t;
 	}
 
 	if (gameProcess && gameProcess->state() != QProcess::NotRunning)
 	{
+		recordRunningSessionPlaytime();
 		gameProcess->disconnect(this);
 		gameProcess->kill();
 		gameProcess->waitForFinished(1500);
@@ -206,6 +211,7 @@ void LauncherMainWindow::buildUi()
 	connect(table, &QTableWidget::itemSelectionChanged, this, &LauncherMainWindow::onSelectionChanged);
 	connect(table, &QTableWidget::itemDoubleClicked, this, [this](QTableWidgetItem*) { onPlayClicked(); });
 	connect(table, &QTableWidget::customContextMenuRequested, this, &LauncherMainWindow::onTableContextMenu);
+	table->installEventFilter(this);
 	centerRow->addWidget(table, 1);
 
 	QWidget* rightButtonsWidget = new QWidget(central);
@@ -243,6 +249,10 @@ void LauncherMainWindow::buildUi()
 	btnMoveDown->setMinimumHeight(30);
 	connect(btnMoveDown, &QPushButton::clicked, this, &LauncherMainWindow::onMoveDownClicked);
 
+	btnRefresh = new QPushButton(rightButtonsWidget);
+	btnRefresh->setMinimumHeight(30);
+	connect(btnRefresh, &QPushButton::clicked, this, &LauncherMainWindow::onRefreshProfiles);
+
 	rightCol->addWidget(btnPlay);
 	rightCol->addWidget(btnJoin);
 	rightCol->addWidget(btnHost);
@@ -251,6 +261,7 @@ void LauncherMainWindow::buildUi()
 	rightCol->addWidget(btnMoveUp);
 	rightCol->addWidget(btnMoveDown);
 	rightCol->addStretch();
+	rightCol->addWidget(btnRefresh);
 
 	centerRow->addWidget(rightButtonsWidget);
 
@@ -280,13 +291,26 @@ void LauncherMainWindow::buildUi()
 	QWidget* centerContainer = new QWidget(central);
 	centerContainer->setLayout(centerRow);
 
-	QSplitter* verticalSplitter = new QSplitter(Qt::Vertical, central);
+	verticalSplitter = new QSplitter(Qt::Vertical, central);
 	verticalSplitter->setChildrenCollapsible(false);
 	verticalSplitter->addWidget(centerContainer);
 	verticalSplitter->addWidget(bottomRowWidget);
 	verticalSplitter->setStretchFactor(0, 3);
 	verticalSplitter->setStretchFactor(1, 1);
-	verticalSplitter->setSizes({360, 165});
+	if (launcherConfig.splitterTopSize > 0 && launcherConfig.splitterBottomSize > 0)
+		verticalSplitter->setSizes({launcherConfig.splitterTopSize, launcherConfig.splitterBottomSize});
+	else
+		verticalSplitter->setSizes({360, 165});
+
+	auto* scFind = new QShortcut(QKeySequence::Find, this);
+	connect(scFind, &QShortcut::activated, this, [this]() {
+		searchEdit->setFocus();
+		searchEdit->selectAll();
+	});
+	auto* scRefresh = new QShortcut(QKeySequence::Refresh, this);
+	connect(scRefresh, &QShortcut::activated, this, &LauncherMainWindow::onRefreshProfiles);
+	auto* scSettings = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_E), this);
+	connect(scSettings, &QShortcut::activated, this, &LauncherMainWindow::onProfileSettingsClicked);
 
 #ifdef HAS_UPDATER
 	if (IsCurlLoaded())
@@ -313,10 +337,6 @@ void LauncherMainWindow::rebuildMenus()
 	addMenu->clear();
 	actAddFile = addMenu->addAction(QString(), this, &LauncherMainWindow::onAddGameFiles);
 	actCreateBlank = addMenu->addAction(QString(), this, &LauncherMainWindow::onCreateBlankProfile);
-	actImportZip = addMenu->addAction(QString(), this, &LauncherMainWindow::onImportProfileArchive);
-	addMenu->addSeparator();
-	actAutoDetect = addMenu->addAction(QString(), this, &LauncherMainWindow::onAutoDetectIWADs);
-	actRefresh = addMenu->addAction(QString(), this, &LauncherMainWindow::onRefreshProfiles);
 	addMenu->addSeparator();
 	actOpenLauncherDir = addMenu->addAction(QString(), this, &LauncherMainWindow::onOpenLauncherFolder);
 	actOpenExecDir = addMenu->addAction(QString(), this, &LauncherMainWindow::onOpenExecFolder);
@@ -378,11 +398,6 @@ void LauncherMainWindow::rebuildMenus()
 	updateDefaultModsMenuState();
 
 	prefMenu->addSeparator();
-	actDetectStartup = prefMenu->addAction("Auto-Detect IWADs on Startup");
-	actDetectStartup->setCheckable(true);
-	actDetectStartup->setChecked(launcherConfig.detectOnStartup);
-	connect(actDetectStartup, &QAction::toggled, this, &LauncherMainWindow::onToggleDetectStartup);
-
 	actHideWhilePlaying = prefMenu->addAction("Hide Launcher While Playing");
 	actHideWhilePlaying->setCheckable(true);
 	actHideWhilePlaying->setChecked(launcherConfig.hideWhilePlaying);
@@ -425,7 +440,6 @@ void LauncherMainWindow::rebuildMenus()
 			updaterIntervalGroup->addAction(act);
 		}
 
-		actCheckUpdates = prefMenu->addAction("Check for Updates", this, &LauncherMainWindow::onCheckUpdatesClicked);
 		updateUpdaterMenuState();
 	}
 #endif
@@ -438,23 +452,24 @@ void LauncherMainWindow::retranslateUi()
 	const QString formattedDate = parsedDt.isValid() ? parsedDt.date().toString("dd-MM-yyyy") : rawGitTime;
 	setWindowTitle(QString("%1 (Version %2)[Build Date: %3]").arg(GAMENAME).arg(GetVersionString()).arg(formattedDate));
 
-	addMenu->setTitle(LStr("LAUNCHER_ADD_ENTRY", "+ Add New Entry"));
+	addMenu->setTitle(LStr("LAUNCHER_ADD_ENTRY", "Add/Import New Entry"));
 	prefMenu->setTitle(LStr("LAUNCHER_PREFERENCES", "Preferences"));
-	actAbout->setText(LStr("PICKER_TAB_ABOUT", "About"));
+	actAbout->setText(LStr("LAUNCHER_MENU_INFO", "Info"));
 	searchEdit->setPlaceholderText(LStr("LAUNCHER_SEARCH_PLACEHOLDER", "Filter profiles..."));
 
 	actAddFile->setText(LStr("LAUNCHER_MENU_ADD_FILE", "Add WAD / Mod / Archive..."));
 	actCreateBlank->setText(LStr("LAUNCHER_MENU_NEW_BLANK", "Create Blank Profile..."));
-	actImportZip->setText(LStr("LAUNCHER_MENU_IMPORT_UZDP", "Import Profile (.uzdp)..."));
-	actAutoDetect->setText(LStr("LAUNCHER_MENU_AUTODETECT", "Auto-Detect IWADs"));
-	actRefresh->setText(LStr("LAUNCHER_MENU_REFRESH", "Refresh Profiles"));
 	actOpenLauncherDir->setText(LStr("LAUNCHER_MENU_OPEN_LAUNCHER_DIR", "Open Launcher Data Folder"));
 	actOpenExecDir->setText(LStr("LAUNCHER_MENU_OPEN_APP_DIR", "Open Application Folder"));
 	actQuit->setText(LStr("PICKER_EXIT", "Exit"));
 
 	langMenu->setTitle(LStr("PICKER_LANGUAGE", "Language"));
 	themeMenu->setTitle(LStr("PICKER_THEME", "Theme"));
-	actDetectStartup->setText(LStr("LAUNCHER_PREF_DETECT_STARTUP", "Auto-Detect IWADs on Startup"));
+	if (actSetDefaultModsDir)
+		actSetDefaultModsDir->setText(LStr("LAUNCHER_PREF_SET_DEFAULT_MODS", "Set Default Mods Folder..."));
+	if (actClearDefaultModsDir)
+		actClearDefaultModsDir->setText(LStr("LAUNCHER_PREF_CLEAR_DEFAULT_MODS", "Clear Default Mods Folder"));
+	updateDefaultModsMenuState();
 	actHideWhilePlaying->setText(LStr("LAUNCHER_PREF_HIDE_ON_PLAY", "Hide Launcher While Playing"));
 
 	const QList<QAction*> themeActions = themeGroup->actions();
@@ -482,8 +497,6 @@ void LauncherMainWindow::retranslateUi()
 		for (int i = 0; i < intervalActions.size() && i < 3; ++i)
 			intervalActions[i]->setText(LStr(intervalKeys[i], intervalFallbacks[i]));
 	}
-	if (actCheckUpdates)
-		actCheckUpdates->setText(LStr("UPDATER_CHECK_FOR_UPDATES", "Check for Updates"));
 	if (updater)
 		updater->retranslateUi();
 #endif
@@ -508,7 +521,11 @@ void LauncherMainWindow::retranslateUi()
 	btnSettings->setText(LStr("LAUNCHER_PROFILE_SETTINGS", "Profile Settings ..."));
 	btnMoveUp->setText(LStr("LAUNCHER_MOVE_UP", "Move Up"));
 	btnMoveDown->setText(LStr("LAUNCHER_MOVE_DOWN", "Move Down"));
+	btnRefresh->setText(LStr("LAUNCHER_MENU_REFRESH", "Refresh Profiles"));
 
+	for (int i = 0; i < table->rowCount() && i < static_cast<int>(profiles.size()); ++i)
+		updateTableRow(i, i);
+	applyFilter();
 	updateDetailsPane();
 	updateButtonStates();
 }
@@ -552,7 +569,10 @@ void LauncherMainWindow::updateTableRow(int tableRow, int profileIdx)
 	table->setItem(tableRow, 1, makeItem(QString::fromStdString(p.title)));
 	table->setItem(tableRow, 2, makeItem(QString::fromStdString(p.author)));
 	table->setItem(tableRow, 3, makeItem(QString::fromStdString(p.releaseDate), Qt::AlignCenter));
-	table->setItem(tableRow, 4, makeItem(QString::fromStdString(p.lastPlayed), Qt::AlignCenter));
+	const QString lastPlayedText = (p.lastPlayed.empty() || p.lastPlayed == "Never")
+		? LStr("LAUNCHER_NEVER", "Never")
+		: QString::fromStdString(p.lastPlayed);
+	table->setItem(tableRow, 4, makeItem(lastPlayedText, Qt::AlignCenter));
 	table->setItem(tableRow, 5, makeItem(formatPlaytime(p.playtime), Qt::AlignCenter));
 }
 
@@ -629,7 +649,7 @@ void LauncherMainWindow::applyFilter()
 	if (filter.isEmpty())
 		statusCountLabel->setText(LStr("LAUNCHER_AVAILABLE_PROFILES", "Available Profiles:") + QString(" %1").arg(profiles.size()));
 	else
-		statusCountLabel->setText(QString("Showing %1 of %2 profiles").arg(visibleCount).arg(profiles.size()));
+		statusCountLabel->setText(LStr("LAUNCHER_SHOWING_PROFILES", "Showing %1 of %2 profiles").arg(visibleCount).arg(profiles.size()));
 }
 
 void LauncherMainWindow::updateCoverPixmapScale()
@@ -683,7 +703,7 @@ void LauncherMainWindow::updateDetailsPane()
 		coverLabel->setPixmap(QPixmap());
 		coverLabel->setText(profiles.empty() ? "UZDoom" : LStr("LAUNCHER_NO_SELECTION", "No Profile Selected"));
 		descView->setPlainText(profiles.empty()
-			? LStr("LAUNCHER_EMPTY_HINT", "No profiles found yet.\nDrop a .wad, .pk3, .ipk3, .zip, or .uzdp file here, or click '+ Add New Entry' above.")
+			? LStr("LAUNCHER_EMPTY_HINT", "No profiles found yet.\nDrop a .wad, .pk3, .ipk3, .zip, or .uzdp file here, or click 'Add/Import New Entry' above.")
 			: QString());
 		return;
 	}
@@ -721,6 +741,7 @@ void LauncherMainWindow::updateButtonStates()
 	btnSettings->setEnabled(!isRunning && hasSel);
 	btnMoveUp->setEnabled(!isRunning && canMove && idx > 0);
 	btnMoveDown->setEnabled(!isRunning && canMove && idx + 1 < static_cast<int>(profiles.size()));
+	btnRefresh->setEnabled(!isRunning);
 #ifdef HAS_UPDATER
 	if (updater)
 		updater->setBannerEnabled(!isRunning);
@@ -729,7 +750,7 @@ void LauncherMainWindow::updateButtonStates()
 
 void LauncherMainWindow::setRunningState(bool running, const QString& title)
 {
-	statusRunLabel->setText(running ? QString("Running: %1").arg(title) : QString());
+	statusRunLabel->setText(running ? (LStr("LAUNCHER_RUNNING", "Running:") + " " + title) : QString());
 	updateButtonStates();
 }
 
@@ -796,6 +817,21 @@ void LauncherMainWindow::onHostClicked()
 	launchProfile(LaunchTargetMode::Host);
 }
 
+void LauncherMainWindow::recordRunningSessionPlaytime()
+{
+	if (runningProfileIndex < 0 || runningProfileIndex >= static_cast<int>(profiles.size()))
+		return;
+
+	const qint64 elapsedSecs = playTimer.isValid() ? (playTimer.elapsed() / 1000) : 0;
+	Profile& prof = profiles[runningProfileIndex];
+	prof.lastPlayed = QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm").toStdString();
+	if (elapsedSecs >= 30)
+		prof.playtime += std::max<uint64_t>(1, static_cast<uint64_t>((elapsedSecs + 30) / 60));
+	saveProfileToDisk(prof);
+	updateTableRow(runningProfileIndex, runningProfileIndex);
+	runningProfileIndex = -1;
+}
+
 void LauncherMainWindow::launchProfile(LaunchTargetMode mode)
 {
 	if (gameProcess)
@@ -832,6 +868,9 @@ void LauncherMainWindow::launchProfile(LaunchTargetMode mode)
 		return;
 	}
 
+	if (p.recordDemo && !p.selectedLaunchDemoRecord.empty() && !p.demoDirPath.empty())
+		QDir().mkpath(QString::fromStdString(p.demoDirPath));
+
 	QStringList args = p.buildLaunchArguments(mode, launcherConfig.language);
 	args.removeAll("-showlauncher");
 
@@ -859,18 +898,10 @@ void LauncherMainWindow::launchProfile(LaunchTargetMode mode)
 				activateWindow();
 				wasHiddenForLaunch = false;
 				wasMaximizedBeforeHide = false;
+				QApplication::setQuitOnLastWindowClosed(true);
 			}
 
-			const qint64 elapsedSecs = playTimer.isValid() ? (playTimer.elapsed() / 1000) : 0;
-			if (runningProfileIndex >= 0 && runningProfileIndex < static_cast<int>(profiles.size()))
-			{
-				Profile& prof = profiles[runningProfileIndex];
-				prof.lastPlayed = QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm").toStdString();
-				if (elapsedSecs >= 30)
-					prof.playtime += std::max<uint64_t>(1, static_cast<uint64_t>((elapsedSecs + 30) / 60));
-				saveProfileToDisk(prof);
-				updateTableRow(runningProfileIndex, runningProfileIndex);
-			}
+			recordRunningSessionPlaytime();
 
 			if (gameProcess)
 			{
@@ -898,6 +929,7 @@ void LauncherMainWindow::launchProfile(LaunchTargetMode mode)
 	{
 		wasMaximizedBeforeHide = isMaximized();
 		wasHiddenForLaunch = true;
+		QApplication::setQuitOnLastWindowClosed(false);
 		hide();
 	}
 }
@@ -923,7 +955,8 @@ void LauncherMainWindow::openSettingsForIndex(int profileIdx)
 		profiles[profileIdx] = std::move(workingCopy);
 		cachedCoverPath.clear();
 		updateTableRow(profileIdx, profileIdx);
-		updateDetailsPane();
+		applyFilter();
+		selectProfileIndex(profileIdx);
 		break;
 
 	case ProfileSettingsDialog::ActionResult::Cloned:
@@ -959,7 +992,7 @@ void LauncherMainWindow::onAddGameFiles()
 		this,
 		LStr("LAUNCHER_MENU_ADD_FILE", "Add WAD / Mod / Archive"),
 		QString::fromStdString(LauncherConst::EXEC_DIR),
-		"Doom Files (*.wad *.pk3 *.ipk3 *.pk7 *.ipk7 *.deh *.bex *.zip *.7z *.uzdp);;All Files (*.*)");
+		"Doom Files (*.wad *.iwad *.pwad *.pk3 *.ipk3 *.pk7 *.ipk7 *.deh *.bex *.zip *.7z *.uzdp);;All Files (*.*)");
 	if (!files.isEmpty())
 		handleImportedFiles(files);
 }
@@ -994,19 +1027,6 @@ void LauncherMainWindow::onCreateBlankProfile()
 	openSettingsForIndex(launcherConfig.lastSelectedRow);
 }
 
-void LauncherMainWindow::onImportProfileArchive()
-{
-	if (gameProcess)
-		return;
-	const QString path = QFileDialog::getOpenFileName(
-		this,
-		LStr("LAUNCHER_MENU_IMPORT_UZDP", "Import Profile Archive"),
-		QString::fromStdString(LauncherConst::PROFILE_DIR),
-		"UZDoom Profile (*.uzdp *.zip);;All Files (*.*)");
-	if (!path.isEmpty())
-		handleImportedFiles({path});
-}
-
 void LauncherMainWindow::handleImportedFiles(const QStringList& localPaths)
 {
 	if (localPaths.isEmpty())
@@ -1038,19 +1058,72 @@ void LauncherMainWindow::handleImportedFiles(const QStringList& localPaths)
 			if (ans == QMessageBox::Yes)
 			{
 				QString finalModPath = localPath;
+				bool cancelledAttach = false;
 				if (profiles[curIdx].copyModsToProfile && !profiles[curIdx].filePath.empty())
 				{
 					const QDir modsDir(QFileInfo(QString::fromStdString(profiles[curIdx].filePath)).absolutePath() + "/mods");
 					modsDir.mkpath(".");
 					const QString dest = modsDir.filePath(fi.fileName());
-					if (fi.absoluteFilePath() != QFileInfo(dest).absoluteFilePath())
+					const QString srcAbs = fi.absoluteFilePath();
+					const QString destAbs = QFileInfo(dest).absoluteFilePath();
+					if (srcAbs.compare(destAbs, Qt::CaseInsensitive) != 0)
 					{
-						if (!QFile::exists(dest) && QFile::copy(localPath, dest))
-							finalModPath = dest;
-						else if (QFile::exists(dest))
-							finalModPath = dest;
+						if (!QFile::exists(dest))
+						{
+							if (QFile::copy(localPath, dest))
+								finalModPath = dest;
+						}
+						else
+						{
+							const std::string srcMd5 = calculateFileMD5(srcAbs.toStdString());
+							const std::string dstMd5 = calculateFileMD5(destAbs.toStdString());
+							if (!srcMd5.empty() && srcMd5 == dstMd5)
+							{
+								finalModPath = dest;
+							}
+							else
+							{
+								QMessageBox box(this);
+								box.setIcon(QMessageBox::Question);
+								box.setWindowTitle(LStr("LAUNCHER_MOD_EXISTS_TITLE", "Mod Already Exists"));
+								box.setText(QString("A different file named '%1' already exists in '%2''s mods folder.\n\nOverwrite it with the selected file?")
+									.arg(fi.fileName())
+									.arg(QString::fromStdString(profiles[curIdx].title)));
+								QPushButton* btnOverwrite = box.addButton(LStr("LAUNCHER_OVERWRITE", "Overwrite"), QMessageBox::AcceptRole);
+								QPushButton* btnKeep = box.addButton(LStr("LAUNCHER_KEEP_EXISTING", "Keep Existing"), QMessageBox::NoRole);
+								box.addButton(QMessageBox::Cancel);
+								box.setDefaultButton(btnOverwrite);
+								box.exec();
+
+								if (box.clickedButton() == btnOverwrite)
+								{
+									const QString tmpDest = dest + ".uztmp";
+									QFile::remove(tmpDest);
+									if (!QFile::copy(localPath, tmpDest) || !QFile::remove(dest) || !QFile::rename(tmpDest, dest))
+									{
+										QFile::remove(tmpDest);
+										errors << QString("%1: Could not overwrite existing mod in profile folder.").arg(fi.fileName());
+										cancelledAttach = true;
+									}
+									else
+									{
+										finalModPath = dest;
+									}
+								}
+								else if (box.clickedButton() == btnKeep)
+								{
+									finalModPath = dest;
+								}
+								else
+								{
+									cancelledAttach = true;
+								}
+							}
+						}
 					}
 				}
+				if (cancelledAttach)
+					continue;
 				const std::string modStd = finalModPath.toStdString();
 				if (std::find(profiles[curIdx].mods.begin(), profiles[curIdx].mods.end(), modStd) == profiles[curIdx].mods.end())
 					profiles[curIdx].mods.push_back(modStd);
@@ -1116,9 +1189,14 @@ void LauncherMainWindow::startIWadAutoDetect(bool interactive)
 {
 	if (detectThread)
 	{
-		if (interactive)
-			detectInteractive = true;
-		return;
+		if (detectThread->isRunning())
+		{
+			if (interactive)
+				detectInteractive = true;
+			return;
+		}
+		detectThread->wait();
+		detectThread = nullptr;
 	}
 
 	detectInteractive = interactive;
@@ -1151,12 +1229,17 @@ void LauncherMainWindow::startIWadAutoDetect(bool interactive)
 		{
 			if (cancelFlag->load(std::memory_order_relaxed))
 				return;
-			detectThread = nullptr;
 			onIWadScanFinished(candidates);
 		}, Qt::QueuedConnection);
 	});
 
 	detectThread = thread;
+	QPointer<QThread> threadGuard(thread);
+	connect(thread, &QThread::finished, this, [this, threadGuard]()
+	{
+		if (detectThread == threadGuard)
+			detectThread = nullptr;
+	});
 	connect(thread, &QThread::finished, thread, &QObject::deleteLater);
 	thread->start();
 }
@@ -1188,13 +1271,6 @@ void LauncherMainWindow::onIWadScanFinished(const std::vector<DiscoveredIWadCand
 	}
 }
 
-void LauncherMainWindow::onAutoDetectIWADs()
-{
-	if (gameProcess)
-		return;
-	startIWadAutoDetect(true);
-}
-
 void LauncherMainWindow::onRefreshProfiles()
 {
 	if (gameProcess)
@@ -1202,6 +1278,7 @@ void LauncherMainWindow::onRefreshProfiles()
 	const int prev = selectedProfileIndex();
 	profiles = loadAllProfiles();
 	refreshTable(prev);
+	startIWadAutoDetect(false);
 }
 
 void LauncherMainWindow::onOpenLauncherFolder()
@@ -1395,7 +1472,10 @@ void LauncherMainWindow::updateDefaultModsMenuState()
 			: QString("Choose a master folder that 'Add Mod File' opens in."));
 	}
 	if (actClearDefaultModsDir)
+	{
+		actClearDefaultModsDir->setVisible(hasDir);
 		actClearDefaultModsDir->setEnabled(hasDir);
+	}
 }
 
 void LauncherMainWindow::onSetDefaultModsDir()
@@ -1415,12 +1495,6 @@ void LauncherMainWindow::onClearDefaultModsDir()
 	launcherConfig.defaultModsDir.clear();
 	saveLauncherConfig(launcherConfig);
 	updateDefaultModsMenuState();
-}
-
-void LauncherMainWindow::onToggleDetectStartup(bool checked)
-{
-	launcherConfig.detectOnStartup = checked;
-	saveLauncherConfig(launcherConfig);
 }
 
 void LauncherMainWindow::onToggleHideWhilePlaying(bool checked)
@@ -1448,12 +1522,6 @@ void LauncherMainWindow::updateUpdaterMenuState()
 		for (QAction* act : updaterIntervalGroup->actions())
 			act->setChecked(act->data().toInt() == days);
 	}
-}
-
-void LauncherMainWindow::onCheckUpdatesClicked()
-{
-	if (updater && !gameProcess)
-		updater->checkForUpdate(true, this);
 }
 
 void LauncherMainWindow::onUpdaterModeTriggered(QAction* action)
@@ -1502,6 +1570,23 @@ bool LauncherMainWindow::eventFilter(QObject* watched, QEvent* event)
 		if (!cachedCoverPixmap.isNull() || usingFallbackCover)
 			updateCoverPixmapScale();
 	}
+	else if (watched == table && event->type() == QEvent::KeyPress)
+	{
+		const auto* keyEv = static_cast<QKeyEvent*>(event);
+		if (!gameProcess && selectedProfileIndex() >= 0)
+		{
+			if (keyEv->key() == Qt::Key_Return || keyEv->key() == Qt::Key_Enter)
+			{
+				onPlayClicked();
+				return true;
+			}
+			if (keyEv->key() == Qt::Key_Delete)
+			{
+				onDeleteSelectedProfile();
+				return true;
+			}
+		}
+	}
 	return QMainWindow::eventFilter(watched, event);
 }
 
@@ -1530,6 +1615,15 @@ void LauncherMainWindow::closeEvent(QCloseEvent* event)
 	}
 
 	launcherConfig.maximized = isMaximized();
+	if (verticalSplitter)
+	{
+		const QList<int> sizes = verticalSplitter->sizes();
+		if (sizes.size() >= 2 && sizes[0] > 0 && sizes[1] > 0)
+		{
+			launcherConfig.splitterTopSize = sizes[0];
+			launcherConfig.splitterBottomSize = sizes[1];
+		}
+	}
 	saveLauncherConfig(launcherConfig);
 	QMainWindow::closeEvent(event);
 }

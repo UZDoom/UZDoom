@@ -16,6 +16,7 @@
 #pragma once
 
 #include <QDialog>
+#include <deque>
 #include <exception>
 #include <string>
 #include <vector>
@@ -25,6 +26,7 @@ class QLabel;
 class QPushButton;
 class QTableWidget;
 class QTimer;
+class QToolButton;
 
 class NetStartWindow : public QDialog
 {
@@ -56,6 +58,7 @@ private:
 	~NetStartWindow() override;
 
 	void ensureRowCount(int limit);
+	void setRowActionsEnabled(int row, bool enabled);
 	void updateRowStatus(int client, int status);
 	void queueKick(int client);
 	void queueBan(int client);
@@ -72,8 +75,10 @@ private:
 	void* userdata = nullptr;
 	std::exception_ptr callbackException;
 
-	std::vector<int> kickQueue;
-	std::vector<int> banQueue;
+	std::deque<int> kickQueue;
+	std::deque<int> banQueue;
+	std::vector<QToolButton*> kickButtons;
+	std::vector<QToolButton*> banButtons;
 
 	QLabel* msgLabel = nullptr;
 	QLabel* progressLabel = nullptr;

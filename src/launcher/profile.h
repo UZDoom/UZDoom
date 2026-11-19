@@ -104,6 +104,8 @@ struct Profile
 
 	std::string filePath;
 
+	bool operator==(const Profile&) const = default;
+
 	QStringList buildLaunchArguments(LaunchTargetMode mode, const std::string& launcherLanguage = {}) const;
 	std::string giveLaunchCommand(LaunchTargetMode mode, const std::string& launcherLanguage = {}) const;
 };
@@ -112,11 +114,12 @@ struct LauncherConfig
 {
 	std::string language = "auto";
 	std::string theme = "auto";
-	bool detectOnStartup = true;
 	bool hideWhilePlaying = false;
 	bool showReleaseNotes = true;
 	bool maximized = false;
 	int lastSelectedRow = 0;
+	int splitterTopSize = 0;
+	int splitterBottomSize = 0;
 	std::string defaultModsDir;
 };
 

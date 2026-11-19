@@ -20,15 +20,20 @@
 #include "findfile.h"
 #include "gameconfigfile.h"
 #include "gstrings.h"
+#include "i_specialpaths.h"
 #include "m_argv.h"
 #include "resourcefile.h"
 #include "sc_man.h"
 #include "version.h"
 
 #include <QApplication>
+#include <QDir>
+#include <QFile>
 #include <QFont>
 #include <QGuiApplication>
 #include <QImage>
+#include <QJsonDocument>
+#include <QJsonObject>
 #include <QPainter>
 #include <QPainterPath>
 #include <QPalette>
@@ -39,6 +44,41 @@
 #include <algorithm>
 #include <cmath>
 #include <memory>
+
+namespace
+{
+	std::string loadSavedLauncherTheme()
+	{
+		QString configPath;
+		if (!LauncherConst::CONFIG_FILE.empty())
+		{
+			configPath = QString::fromStdString(LauncherConst::CONFIG_FILE);
+		}
+		else
+		{
+			const FString appData = M_GetAppDataPath(false);
+			if (appData.IsNotEmpty())
+			{
+				const QString appDataRoot = QDir::cleanPath(QString::fromUtf8(appData.GetChars()));
+				configPath = QDir(appDataRoot).filePath("launcher/config.json");
+			}
+		}
+
+		if (configPath.isEmpty())
+			return LauncherConst::DEFAULT_THEME;
+
+		QFile f(configPath);
+		if (!f.open(QIODevice::ReadOnly))
+			return LauncherConst::DEFAULT_THEME;
+
+		const QJsonDocument doc = QJsonDocument::fromJson(f.readAll());
+		if (!doc.isObject())
+			return LauncherConst::DEFAULT_THEME;
+
+		const QString theme = doc.object().value("theme").toString().trimmed();
+		return theme.isEmpty() ? LauncherConst::DEFAULT_THEME : theme.toStdString();
+	}
+}
 
 QApplication* ensureLauncherQtApplication()
 {
@@ -83,7 +123,7 @@ QApplication* ensureLauncherQtApplication()
 		s_ownedApp->setFont(appFont);
 		s_ownedApp->setWindowIcon(QIcon(loadUZDoomLogoPixmap(64)));
 		QGuiApplication::setQuitOnLastWindowClosed(false);
-		applyLauncherTheme(LauncherConst::DEFAULT_THEME);
+		applyLauncherTheme(loadSavedLauncherTheme());
 	}
 
 	return s_ownedApp.get();
@@ -333,7 +373,7 @@ void applyLauncherTheme(const std::string& themeName)
 			"QPushButton[launcherRole=\"primary\"] { background-color: #ffff00; color: #000000; border: 2px solid #ffffff; font-weight: bold; }"
 			"QPushButton[launcherRole=\"primary\"]:hover { background-color: #ffffff; color: #000000; border-color: #ffff00; }"
 			"QPushButton[launcherRole=\"primary\"]:disabled { background-color: #202020; color: #8c8c8c; border-color: #8c8c8c; }"
-			"QPushButton[launcherRole=\"danger\"] { background-color: #000000; color: #ffff00; border: 2px solid #ffff00; font-weight: bold; padding: 5px 12px; }"
+			"QPushButton[launcherRole=\"danger\"] { background-color: #000000; color: #ffff00; border: 2px solid #ffff00; font-weight: bold; padding: 4px 10px; }"
 			"QPushButton[launcherRole=\"danger\"]:hover { background-color: #ffff00; color: #000000; }"
 		);
 	}
@@ -356,8 +396,9 @@ void applyLauncherTheme(const std::string& themeName)
 			"QPushButton[launcherRole=\"primary\"] { background-color: #2f6fde; color: #ffffff; border-radius: 4px; font-weight: bold; }"
 			"QPushButton[launcherRole=\"primary\"]:hover { background-color: #3d7ee8; }"
 			"QPushButton[launcherRole=\"primary\"]:disabled { background-color: #4f5765; color: #a6adb8; }"
-			"QPushButton[launcherRole=\"danger\"] { background-color: #a93226; color: #ffffff; font-weight: 600; padding: 5px 12px; border-radius: 4px; }"
-			"QPushButton[launcherRole=\"danger\"]:hover { background-color: #c0392b; }"
+			"QPushButton[launcherRole=\"danger\"] { background-color: #a93226; color: #ffffff; border: 1px solid #782016; border-radius: 3px; padding: 3px 10px; }"
+			"QPushButton[launcherRole=\"danger\"]:hover { background-color: #c0392b; border-color: #96281b; }"
+			"QPushButton[launcherRole=\"danger\"]:pressed { background-color: #87251c; }"
 		);
 	}
 	else
@@ -379,8 +420,9 @@ void applyLauncherTheme(const std::string& themeName)
 			"QPushButton[launcherRole=\"primary\"] { background-color: #2f6fde; color: #ffffff; border-radius: 4px; font-weight: bold; }"
 			"QPushButton[launcherRole=\"primary\"]:hover { background-color: #3d7ee8; }"
 			"QPushButton[launcherRole=\"primary\"]:disabled { background-color: #b4becd; color: #f0f2f5; }"
-			"QPushButton[launcherRole=\"danger\"] { background-color: #a93226; color: #ffffff; font-weight: 600; padding: 5px 12px; border-radius: 4px; }"
-			"QPushButton[launcherRole=\"danger\"]:hover { background-color: #c0392b; }"
+			"QPushButton[launcherRole=\"danger\"] { background-color: #c0392b; color: #ffffff; border: 1px solid #96281b; border-radius: 3px; padding: 3px 10px; }"
+			"QPushButton[launcherRole=\"danger\"]:hover { background-color: #d64536; border-color: #782016; }"
+			"QPushButton[launcherRole=\"danger\"]:pressed { background-color: #96281b; }"
 		);
 	}
 }

@@ -98,25 +98,32 @@ namespace
 		const QString normOrig = normalizeSlash(original);
 		const QString normOld = oldBase.isEmpty() ? QString() : normalizeSlash(oldBase);
 		const QString normNew = normalizeSlash(newBase);
-		if (!normOld.isEmpty() && normOrig.startsWith(normOld, Qt::CaseInsensitive))
-			return normNew + normOrig.mid(normOld.size());
-
-		const QString leafName = QFileInfo(normNew).fileName();
-		for (const QString& prefix : {QString("/profiles/"), QString("/launcher/")})
+		if (!normOld.isEmpty())
 		{
-			int idx = normOrig.indexOf(prefix, 0, Qt::CaseInsensitive);
-			if (idx >= 0)
+			if (normOrig.compare(normOld, Qt::CaseInsensitive) == 0)
+				return normNew;
+			const QString oldPrefix = normOld.endsWith('/') ? normOld : (normOld + '/');
+			if (normOrig.startsWith(oldPrefix, Qt::CaseInsensitive))
 			{
-				const int nextSlash = normOrig.indexOf('/', idx + prefix.size());
-				if (nextSlash >= 0)
-					return normNew + normOrig.mid(nextSlash);
+				const QString rel = normOrig.mid(oldPrefix.size());
+				return normNew.endsWith('/') ? (normNew + rel) : (normNew + '/' + rel);
 			}
-			if (!leafName.isEmpty())
+			return original;
+		}
+
+		// Fallback only when oldBase could not be inferred: remap a legacy /profiles/<dir>/<rel>
+		// entry only if the corresponding target file/dir actually exists under newBase.
+		const QString profilesToken = QStringLiteral("/profiles/");
+		const int idx = normOrig.indexOf(profilesToken, 0, Qt::CaseInsensitive);
+		if (idx >= 0)
+		{
+			const int nextSlash = normOrig.indexOf('/', idx + profilesToken.size());
+			if (nextSlash >= 0)
 			{
-				const QString leafToken = prefix + leafName + "/";
-				int lidx = normOrig.indexOf(leafToken, 0, Qt::CaseInsensitive);
-				if (lidx >= 0)
-					return normNew + "/" + normOrig.mid(lidx + leafToken.size());
+				const QString rel = normOrig.mid(nextSlash + 1);
+				const QString candidate = normNew.endsWith('/') ? (normNew + rel) : (normNew + '/' + rel);
+				if (QFileInfo::exists(candidate))
+					return candidate;
 			}
 		}
 		return original;
@@ -281,19 +288,11 @@ QStringList Profile::buildLaunchArguments(LaunchTargetMode mode, const std::stri
 
 	if (recordDemo && !selectedLaunchDemoRecord.empty())
 	{
-		if (!demoDirPath.empty())
-			QDir().mkpath(qStr(demoDirPath));
 		args << "-record" << resolveRelativeToDir(qStr(selectedLaunchDemoRecord), qStr(demoDirPath));
 	}
 
 	if (difficulty > 0)
 		args << "-skill" << QString::number(difficulty);
-	if (fastMonsters)
-		args << "-fast";
-	if (respawnMonsters)
-		args << "-respawn";
-	if (noMonsters)
-		args << "-nomonsters";
 
 	if (!complevel.empty())
 		args << "-complevel" << qStr(complevel);
@@ -341,8 +340,15 @@ QStringList Profile::buildLaunchArguments(LaunchTargetMode mode, const std::stri
 		args << "+set" << "team" << QString::number(std::clamp(remoteTeam, 0, 255));
 	}
 
+	uint32_t effDmflags = dmflags;
 	uint32_t effDmflags2 = dmflags2;
 	uint32_t effDmflags3 = dmflags3;
+	if (fastMonsters)
+		effDmflags |= DF_FAST_MONSTERS;
+	if (respawnMonsters)
+		effDmflags |= DF_MONSTERS_RESPAWN;
+	if (noMonsters)
+		effDmflags |= DF_NO_MONSTERS;
 	if (allowMultiplayerItems)
 		effDmflags2 |= DF2_ALWAYS_SPAWN_MULTI;
 	if (pistolStartAllLevels)
@@ -351,14 +357,26 @@ QStringList Profile::buildLaunchArguments(LaunchTargetMode mode, const std::stri
 	if (alwaysApplyDMFlags)
 	{
 		args << "+set" << "alwaysapplydmflags" << "1";
-		args << "+set" << "dmflags" << QString::number(dmflags);
+		args << "+set" << "dmflags" << QString::number(effDmflags);
 		args << "+set" << "dmflags2" << QString::number(effDmflags2);
 		args << "+set" << "dmflags3" << QString::number(effDmflags3);
 	}
 	else
 	{
-		if (dmflags != 0)
-			args << "+set" << "dmflags" << QString::number(dmflags);
+		constexpr uint32_t cliDmMask = DF_FAST_MONSTERS | DF_MONSTERS_RESPAWN | DF_NO_MONSTERS;
+		if ((effDmflags & ~cliDmMask) != 0)
+		{
+			args << "+set" << "dmflags" << QString::number(effDmflags);
+		}
+		else
+		{
+			if ((effDmflags & DF_FAST_MONSTERS) != 0)
+				args << "-fast";
+			if ((effDmflags & DF_MONSTERS_RESPAWN) != 0)
+				args << "-respawn";
+			if ((effDmflags & DF_NO_MONSTERS) != 0)
+				args << "-nomonsters";
+		}
 		if (effDmflags2 != 0)
 			args << "+set" << "dmflags2" << QString::number(effDmflags2);
 		if (effDmflags3 != 0)
@@ -384,8 +402,12 @@ QStringList Profile::buildLaunchArguments(LaunchTargetMode mode, const std::stri
 		args << "+set" << "name" << qStr(playerName);
 	if (!playerClass.empty())
 		args << "+playerclass" << qStr(playerClass);
-	if (playerGender > 0 && playerGender <= 3)
-		args << "+set" << "gender" << QString::number(playerGender);
+	if (playerGender == 1)
+		args << "+set" << "gender" << "male";
+	else if (playerGender == 2)
+		args << "+set" << "gender" << "female";
+	else if (playerGender == 3)
+		args << "+set" << "gender" << "neutral";
 	std::string effectiveLanguage = wadLanguage;
 	if (effectiveLanguage.empty() || effectiveLanguage == "default")
 		effectiveLanguage = (!launcherLanguage.empty() && launcherLanguage != "default") ? launcherLanguage : "auto";
@@ -423,8 +445,6 @@ LauncherConfig loadLauncherConfig()
 		cfg.language = stdStr(obj["language"].toString());
 	if (obj.contains("theme"))
 		cfg.theme = stdStr(obj["theme"].toString());
-	if (obj.contains("detectOnStartup"))
-		cfg.detectOnStartup = obj["detectOnStartup"].toBool(true);
 	if (obj.contains("hideWhilePlaying"))
 		cfg.hideWhilePlaying = obj["hideWhilePlaying"].toBool(false);
 	if (obj.contains("showReleaseNotes"))
@@ -433,6 +453,10 @@ LauncherConfig loadLauncherConfig()
 		cfg.maximized = obj["maximized"].toBool(false);
 	if (obj.contains("lastSelectedRow"))
 		cfg.lastSelectedRow = obj["lastSelectedRow"].toInt(0);
+	if (obj.contains("splitterTopSize"))
+		cfg.splitterTopSize = obj["splitterTopSize"].toInt(0);
+	if (obj.contains("splitterBottomSize"))
+		cfg.splitterBottomSize = obj["splitterBottomSize"].toInt(0);
 	if (obj.contains("defaultModsDir"))
 		cfg.defaultModsDir = stdStr(obj["defaultModsDir"].toString());
 	return cfg;
@@ -444,11 +468,12 @@ void saveLauncherConfig(const LauncherConfig& cfg)
 	QJsonObject obj;
 	obj["language"] = qStr(cfg.language);
 	obj["theme"] = qStr(cfg.theme);
-	obj["detectOnStartup"] = cfg.detectOnStartup;
 	obj["hideWhilePlaying"] = cfg.hideWhilePlaying;
 	obj["showReleaseNotes"] = cfg.showReleaseNotes;
 	obj["maximized"] = cfg.maximized;
 	obj["lastSelectedRow"] = cfg.lastSelectedRow;
+	obj["splitterTopSize"] = cfg.splitterTopSize;
+	obj["splitterBottomSize"] = cfg.splitterBottomSize;
 	obj["defaultModsDir"] = qStr(cfg.defaultModsDir);
 
 	QFile f(qStr(LauncherConst::CONFIG_FILE));
@@ -1017,12 +1042,15 @@ bool exportProfileToZip(const Profile& profile, const std::string& destZipPath, 
 		return false;
 	}
 
+	const QString destAbs = normalizeSlash(QFileInfo(qStr(destZipPath)).absoluteFilePath());
 	const QDir baseDir(profFolder);
 	QDirIterator it(profFolder, QDir::Files | QDir::NoDotAndDotDot, QDirIterator::Subdirectories);
 	bool ok = true;
 	while (it.hasNext())
 	{
 		const QString absFile = it.next();
+		if (normalizeSlash(QFileInfo(absFile).absoluteFilePath()).compare(destAbs, Qt::CaseInsensitive) == 0)
+			continue;
 		QString relPath = baseDir.relativeFilePath(absFile).replace('\\', '/');
 		QFile srcFile(absFile);
 		if (!srcFile.open(QIODevice::ReadOnly)
@@ -1078,16 +1106,30 @@ bool importProfileFromZip(const std::string& zipPath, Profile& outProfile, std::
 		return false;
 	}
 
-	QString foundMeta;
+	const QString cleanDestRoot = normalizeSlash(QFileInfo(destFolder).absoluteFilePath());
+	QString foundRootProfile;
+	QString foundNestedProfile;
+	QString foundRootJson;
 	for (const QString& outPath : extractedFiles)
 	{
 		const QString lower = outPath.toLower();
-		if (lower.endsWith(".uzdoomprofile") || lower.endsWith(".json"))
+		const QString parentDir = normalizeSlash(QFileInfo(outPath).absolutePath());
+		const bool isAtRoot = (parentDir.compare(cleanDestRoot, Qt::CaseInsensitive) == 0);
+		if (lower.endsWith(".uzdoomprofile"))
 		{
-			foundMeta = outPath;
-			break;
+			if (isAtRoot && foundRootProfile.isEmpty())
+				foundRootProfile = outPath;
+			else if (foundNestedProfile.isEmpty())
+				foundNestedProfile = outPath;
+		}
+		else if (isAtRoot && lower.endsWith(".json") && foundRootJson.isEmpty())
+		{
+			foundRootJson = outPath;
 		}
 	}
+	const QString foundMeta = !foundRootProfile.isEmpty()
+		? foundRootProfile
+		: (!foundNestedProfile.isEmpty() ? foundNestedProfile : foundRootJson);
 
 	if (foundMeta.isEmpty())
 	{
@@ -1104,9 +1146,31 @@ bool importProfileFromZip(const std::string& zipPath, Profile& outProfile, std::
 	}
 
 	const QString metaParent = QFileInfo(foundMeta).absolutePath();
-	QString oldDir;
-	if (!outProfile.configFilePath.empty())
-		oldDir = QFileInfo(qStr(outProfile.configFilePath)).absolutePath();
+	auto inferOldProfileDir = [&]() -> QString
+	{
+		auto parentIfNamed = [](const std::string& pathStr, const QString& expectedLeaf) -> QString
+		{
+			if (pathStr.empty())
+				return {};
+			const QString norm = normalizeSlash(qStr(pathStr));
+			const QFileInfo fi(norm);
+			if (!expectedLeaf.isEmpty() && fi.fileName().compare(expectedLeaf, Qt::CaseInsensitive) != 0)
+				return {};
+			return fi.absolutePath();
+		};
+		if (const QString d = parentIfNamed(outProfile.configFilePath, QString()); !d.isEmpty())
+			return d;
+		if (const QString d = parentIfNamed(outProfile.saveDirPath, QStringLiteral("saves")); !d.isEmpty())
+			return d;
+		if (const QString d = parentIfNamed(outProfile.screenshotDirPath, QStringLiteral("screenshots")); !d.isEmpty())
+			return d;
+		if (const QString d = parentIfNamed(outProfile.demoDirPath, QStringLiteral("demos")); !d.isEmpty())
+			return d;
+		if (const QString d = parentIfNamed(outProfile.coverImagePath, QString()); !d.isEmpty())
+			return d;
+		return {};
+	};
+	const QString oldDir = inferOldProfileDir();
 	applyProfilePathMapping(outProfile, stdStr(oldDir), stdStr(metaParent));
 	outProfile.orderIndex = -1;
 	if (!saveProfileToDisk(outProfile))

@@ -25,6 +25,7 @@
 
 #include <QApplication>
 #include <QClipboard>
+#include <QDir>
 #include <QFile>
 #include <QFileDialog>
 #include <QFontDatabase>
@@ -170,7 +171,8 @@ void ErrorWindow::onSaveReport()
 	const QString filter = QString("%1 (*.zip);;%2 (*.*)")
 		.arg(LStr("FILEPICKER_REPORTS", "Crash Reports"))
 		.arg(LStr("FILEPICKER_ANY", "All Files"));
-	const QString path = QFileDialog::getSaveFileName(this, LStr("ERRORMNU_SAVE", "Save Crash Report"), "CrashReport.zip", filter);
+	const QString defaultPath = QDir::home().filePath("CrashReport.zip");
+	const QString path = QFileDialog::getSaveFileName(this, LStr("ERRORMNU_SAVE", "Save Crash Report"), defaultPath, filter);
 	if (path.isEmpty())
 		return;
 
@@ -181,9 +183,18 @@ void ErrorWindow::onSaveReport()
 		return;
 	}
 
+	bool addedOk = true;
 	if (!minidump.empty())
-		mz_zip_writer_add_mem(&zip, "minidump.dmp", minidump.data(), minidump.size(), MZ_DEFAULT_COMPRESSION);
-	mz_zip_writer_add_mem(&zip, "log.txt", cleanReportText.data(), cleanReportText.size(), MZ_DEFAULT_COMPRESSION);
+		addedOk = mz_zip_writer_add_mem(&zip, "minidump.dmp", minidump.data(), minidump.size(), MZ_DEFAULT_COMPRESSION);
+	if (addedOk)
+		addedOk = mz_zip_writer_add_mem(&zip, "log.txt", cleanReportText.data(), cleanReportText.size(), MZ_DEFAULT_COMPRESSION);
+
+	if (!addedOk)
+	{
+		mz_zip_writer_end(&zip);
+		QMessageBox::warning(this, LStr("ERROR_FATAL", "Error"), "Failed to add crash report files to archive.");
+		return;
+	}
 
 	void* buffer = nullptr;
 	size_t bufferSize = 0;

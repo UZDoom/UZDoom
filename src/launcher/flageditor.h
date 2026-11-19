@@ -45,6 +45,9 @@ public:
 
 	FlagValues values() const { return flagValues; }
 
+protected:
+	bool eventFilter(QObject* watched, QEvent* event) override;
+
 private slots:
 	void onSearchTextChanged(const QString& text);
 	void onNumericFieldEdited();

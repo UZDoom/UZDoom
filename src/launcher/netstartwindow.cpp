@@ -25,6 +25,7 @@
 #include <QHBoxLayout>
 #include <QHeaderView>
 #include <QLabel>
+#include <QPointer>
 #include <QPushButton>
 #include <QTableWidget>
 #include <QTimer>
@@ -155,14 +156,27 @@ void NetStartWindow::ensureRowCount(int limit)
 			btnBan->setAutoRaise(true);
 			connect(btnBan, &QToolButton::clicked, this, [this, row]() { queueBan(row); });
 
-			btnKick->setEnabled(row != 0);
-			btnBan->setEnabled(row != 0);
+			btnKick->setEnabled(false);
+			btnBan->setEnabled(false);
 
 			actLayout->addWidget(btnKick);
 			actLayout->addWidget(btnBan);
 			table->setCellWidget(row, 4, actionCell);
+			kickButtons.push_back(btnKick);
+			banButtons.push_back(btnBan);
 		}
 	}
+}
+
+void NetStartWindow::setRowActionsEnabled(int row, bool enabled)
+{
+	if (!hosting || row < 0)
+		return;
+	const bool allow = enabled && row != 0;
+	if (static_cast<size_t>(row) < kickButtons.size() && kickButtons[row])
+		kickButtons[row]->setEnabled(allow);
+	if (static_cast<size_t>(row) < banButtons.size() && banButtons[row])
+		banButtons[row]->setEnabled(allow);
 }
 
 void NetStartWindow::updateRowStatus(int client, int status)
@@ -223,6 +237,7 @@ void NetStartWindow::NetConnect(int client, const char* name, unsigned flags, in
 	Instance->table->item(client, 1)->setText(flagStr);
 	Instance->table->item(client, 2)->setText(name ? QString::fromUtf8(name) : QString());
 	Instance->updateRowStatus(client, status);
+	Instance->setRowActionsEnabled(client, true);
 	QApplication::processEvents();
 }
 
@@ -241,6 +256,7 @@ void NetStartWindow::NetDisconnect(int client)
 	Instance->table->item(client, 1)->setText(QString());
 	Instance->table->item(client, 2)->setText(QString());
 	Instance->table->item(client, 3)->setText(QString());
+	Instance->setRowActionsEnabled(client, false);
 	QApplication::processEvents();
 }
 
@@ -262,9 +278,18 @@ void NetStartWindow::NetDone()
 		return;
 	NetStartWindow* win = Instance;
 	Instance = nullptr;
-	win->timer->stop();
+	if (win->timer)
+		win->timer->stop();
 	win->hide();
-	delete win;
+	if (win->loop)
+	{
+		win->loop->quit();
+		win->deleteLater();
+	}
+	else
+	{
+		delete win;
+	}
 }
 
 void NetStartWindow::NetClose()
@@ -282,8 +307,8 @@ int NetStartWindow::GetNetKickClient()
 {
 	if (!Instance || Instance->kickQueue.empty())
 		return -1;
-	int c = Instance->kickQueue.back();
-	Instance->kickQueue.pop_back();
+	int c = Instance->kickQueue.front();
+	Instance->kickQueue.pop_front();
 	return c;
 }
 
@@ -291,8 +316,8 @@ int NetStartWindow::GetNetBanClient()
 {
 	if (!Instance || Instance->banQueue.empty())
 		return -1;
-	int c = Instance->banQueue.back();
-	Instance->banQueue.pop_back();
+	int c = Instance->banQueue.front();
+	Instance->banQueue.pop_front();
 	return c;
 }
 
@@ -301,24 +326,31 @@ bool NetStartWindow::NetLoop(bool (*timer_callback)(void*), void* userdata)
 	if (!Instance)
 		return false;
 
-	Instance->callback = timer_callback;
-	Instance->userdata = userdata;
-	Instance->callbackException = {};
+	QPointer<NetStartWindow> win(Instance);
+	win->callback = timer_callback;
+	win->userdata = userdata;
+	win->callbackException = {};
 
 	QEventLoop eventLoop;
-	Instance->loop = &eventLoop;
-	Instance->timer->start();
+	win->loop = &eventLoop;
+	win->timer->start();
 	eventLoop.exec();
-	Instance->timer->stop();
-	Instance->loop = nullptr;
 
-	Instance->callback = nullptr;
-	Instance->userdata = nullptr;
+	if (!win)
+		return false;
 
-	if (Instance->callbackException)
-		std::rethrow_exception(Instance->callbackException);
+	win->timer->stop();
+	win->loop = nullptr;
 
-	return Instance->exitReason;
+	win->callback = nullptr;
+	win->userdata = nullptr;
+
+	const std::exception_ptr pendingEx = win->callbackException;
+	const bool result = win->exitReason;
+	if (pendingEx)
+		std::rethrow_exception(pendingEx);
+
+	return result;
 }
 
 void NetStartWindow::closeEvent(QCloseEvent* event)

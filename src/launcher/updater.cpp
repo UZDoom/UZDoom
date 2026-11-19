@@ -150,15 +150,19 @@ namespace
 		static const char* const units[4] = {"B", "KB", "MB", "GB"};
 		constexpr int maxStep = 3;
 
+		if (size < 1024)
+			return QString::fromStdString(std::format("{} {}", size, units[0]));
+
+		double val = static_cast<double>(size);
 		int steps = 0;
-		double remainder = 0.0;
-		while (size > 1024 && steps < maxStep)
+		while (val >= 1024.0 && steps < maxStep)
 		{
-			remainder = static_cast<double>(size % 1024);
-			size /= 1024;
+			val /= 1024.0;
 			++steps;
 		}
-		return QString::fromStdString(std::format("{:.3} {}", static_cast<double>(size) + (remainder / 1024.0), units[steps]));
+		if (val >= 100.0)
+			return QString::fromStdString(std::format("{:.1f} {}", val, units[steps]));
+		return QString::fromStdString(std::format("{:.2f} {}", val, units[steps]));
 	}
 
 	QString formatLocalizedWithArgs(const char* key, const char* fallback, const std::string& arg1)
@@ -529,8 +533,25 @@ namespace
 		if (!prepareDir(updateDirPath) || !prepareDir(backupDirPath))
 			return false;
 
+		bool replacedUpdaterExe = false;
+		bool hadExistingUpdaterExe = false;
+		const QString rootUpdaterPath = rootDir.filePath("updater.exe");
+		const QString backupUpdaterPath = QDir(backupDirPath).filePath("updater.exe");
+
 		auto cleanupStaging = [&]()
 		{
+			if (replacedUpdaterExe)
+			{
+				if (hadExistingUpdaterExe && QFileInfo::exists(backupUpdaterPath))
+				{
+					QFile::remove(rootUpdaterPath);
+					QFile::copy(backupUpdaterPath, rootUpdaterPath);
+				}
+				else if (!hadExistingUpdaterExe)
+				{
+					QFile::remove(rootUpdaterPath);
+				}
+			}
 			QDir(updateDirPath).removeRecursively();
 			QDir(backupDirPath).removeRecursively();
 		};
@@ -570,6 +591,8 @@ namespace
 					outError = stdStr(formatLocalizedWithArgs("UPDATER_ZIP_ERROR", "Failed to extract zip, error: '{}' while writing file '{}'", "Failed to back up existing file", stdStr(backupDest)));
 					return false;
 				}
+				if (isUpdaterExe)
+					hadExistingUpdaterExe = true;
 			}
 
 			const QString newPath = isUpdaterExe
@@ -591,6 +614,8 @@ namespace
 				outError = stdStr(formatLocalizedWithArgs("UPDATER_ZIP_ERROR", "Failed to extract zip, error: '{}' while writing file '{}'", errStr, stdStr(newPath)));
 				return false;
 			}
+			if (isUpdaterExe)
+				replacedUpdaterExe = true;
 
 			const FileSys::FileData data = zip->Read(i);
 			const qint64 totalBytes = static_cast<qint64>(data.size());
@@ -824,8 +849,11 @@ void LauncherUpdater::cancelPending()
 		checkCancel->store(true, std::memory_order_relaxed);
 	if (checkThread)
 	{
-		checkThread->wait();
+		QThread* t = checkThread.data();
 		checkThread = nullptr;
+		t->disconnect();
+		t->wait();
+		delete t;
 	}
 }
 
@@ -1065,28 +1093,40 @@ LauncherUpdater::FetchOutcome LauncherUpdater::fetchUpdateInfoInteractive(QWidge
 
 void LauncherUpdater::startBackgroundCheck(const VersionInfo& cachedVer, bool wasCached, const VersionInfo& skippedVer, uint64_t curTime)
 {
-	if (checkThread)
+	if (!parentWindow)
 		return;
+	if (checkThread)
+	{
+		if (checkThread->isRunning())
+			return;
+		checkThread->wait();
+		checkThread = nullptr;
+	}
 
 	checkCancel = std::make_shared<std::atomic<bool>>(false);
 	auto cancelFlag = checkCancel;
 	auto destroyedFlag = destroyed;
+	QWidget* targetWindow = parentWindow.data();
 
-	QThread* thread = QThread::create([this, cancelFlag, destroyedFlag, cachedVer, wasCached, skippedVer, curTime]() {
+	QThread* thread = QThread::create([this, targetWindow, cancelFlag, destroyedFlag, cachedVer, wasCached, skippedVer, curTime]() {
 		FetchOutcome outcome = fetchUpdateInfoSync(cancelFlag.get());
 
 		if (destroyedFlag->load(std::memory_order_relaxed) || cancelFlag->load(std::memory_order_relaxed))
 			return;
 
-		QMetaObject::invokeMethod(parentWindow, [this, destroyedFlag, cancelFlag, outcome = std::move(outcome), wasCached, cachedVer, skippedVer, curTime]() {
+		QMetaObject::invokeMethod(targetWindow, [this, destroyedFlag, cancelFlag, outcome = std::move(outcome), wasCached, cachedVer, skippedVer, curTime]() {
 			if (destroyedFlag->load(std::memory_order_relaxed) || cancelFlag->load(std::memory_order_relaxed))
 				return;
-			checkThread = nullptr;
 			handleCheckOutcome(outcome, false, wasCached, cachedVer, skippedVer, curTime, nullptr);
 		}, Qt::QueuedConnection);
 	});
 
 	checkThread = thread;
+	QPointer<QThread> threadGuard(thread);
+	QObject::connect(thread, &QThread::finished, targetWindow, [this, destroyedFlag, threadGuard]() {
+		if (!destroyedFlag->load(std::memory_order_relaxed) && checkThread == threadGuard)
+			checkThread = nullptr;
+	});
 	QObject::connect(thread, &QThread::finished, thread, &QObject::deleteLater);
 	thread->start();
 }
@@ -1109,7 +1149,7 @@ void LauncherUpdater::runOnboardingFlow(QWidget* dialogParent)
 	{
 		if (step == Step::AskAuto)
 		{
-			QDialog dlg(parent, Qt::Dialog | Qt::CustomizeWindowHint | Qt::WindowTitleHint);
+			QDialog dlg(parent);
 			dlg.setWindowTitle(LStr("UPDATER_TITLE", "Update Checker"));
 			dlg.setModal(true);
 			dlg.setMinimumWidth(380);
@@ -1134,11 +1174,9 @@ void LauncherUpdater::runOnboardingFlow(QWidget* dialogParent)
 			QObject::connect(btnYesPrompt, &QPushButton::clicked, &dlg, [&]() { choice = 1; dlg.accept(); });
 			QObject::connect(btnNo, &QPushButton::clicked, &dlg, [&]() { choice = 2; dlg.accept(); });
 
-			while (choice < 0)
-			{
-				if (dlg.exec() == QDialog::Rejected && choice < 0)
-					continue;
-			}
+			dlg.exec();
+			if (choice < 0)
+				return;
 
 			if (choice == 2)
 			{
@@ -1157,7 +1195,7 @@ void LauncherUpdater::runOnboardingFlow(QWidget* dialogParent)
 		}
 		else if (step == Step::AskInterval)
 		{
-			QDialog dlg(parent, Qt::Dialog | Qt::CustomizeWindowHint | Qt::WindowTitleHint);
+			QDialog dlg(parent);
 			dlg.setWindowTitle(LStr("UPDATER_TITLE", "Update Checker"));
 			dlg.setModal(true);
 			dlg.setMinimumWidth(380);
@@ -1185,11 +1223,9 @@ void LauncherUpdater::runOnboardingFlow(QWidget* dialogParent)
 			QObject::connect(btnMonthly, &QPushButton::clicked, &dlg, [&]() { choice = 2; dlg.accept(); });
 			QObject::connect(btnBack, &QPushButton::clicked, &dlg, [&]() { choice = 3; dlg.accept(); });
 
-			while (choice < 0)
-			{
-				if (dlg.exec() == QDialog::Rejected && choice < 0)
-					continue;
-			}
+			dlg.exec();
+			if (choice < 0)
+				return;
 
 			if (choice == 3)
 			{
@@ -1233,7 +1269,7 @@ void LauncherUpdater::openFailedUpdateMenu(const std::string& err, bool checker,
 	const char* titleFallback = checker ? "Checking for Update Failed" : "Update Failed";
 	const QString title = LStr(titleKey, titleFallback);
 
-	QDialog dlg(parent, Qt::Dialog | Qt::CustomizeWindowHint | Qt::WindowTitleHint);
+	QDialog dlg(parent);
 	dlg.setWindowTitle(title);
 	dlg.setModal(true);
 	dlg.setMinimumWidth(380);
@@ -1251,15 +1287,11 @@ void LauncherUpdater::openFailedUpdateMenu(const std::string& err, bool checker,
 	btnRow->addWidget(btnDisable);
 	layout->addLayout(btnRow);
 
-	int action = -1;
+	int action = 0;
 	QObject::connect(btnDismiss, &QPushButton::clicked, &dlg, [&]() { action = 0; dlg.accept(); });
 	QObject::connect(btnDisable, &QPushButton::clicked, &dlg, [&]() { action = 1; dlg.accept(); });
 
-	while (action < 0)
-	{
-		if (dlg.exec() == QDialog::Rejected && action < 0)
-			continue;
-	}
+	dlg.exec();
 
 	if (action == 1)
 	{
@@ -1619,7 +1651,7 @@ void LauncherUpdater::startUpdate(QWidget* dialogParent)
 		return;
 	}
 
-	QDialog doneDlg(parent, Qt::Dialog | Qt::CustomizeWindowHint | Qt::WindowTitleHint);
+	QDialog doneDlg(parent);
 	doneDlg.setWindowTitle(LStr("TXT_UPDATED", "Updated"));
 	doneDlg.setModal(true);
 	doneDlg.setMinimumWidth(360);
@@ -1637,17 +1669,8 @@ void LauncherUpdater::startUpdate(QWidget* dialogParent)
 	doneBtnRow->addStretch();
 	doneLayout->addLayout(doneBtnRow);
 
-	bool confirmed = false;
-	QObject::connect(btnConfirm, &QPushButton::clicked, &doneDlg, [&]() {
-		confirmed = true;
-		doneDlg.accept();
-	});
-
-	while (!confirmed)
-	{
-		if (doneDlg.exec() == QDialog::Rejected && !confirmed)
-			continue;
-	}
+	QObject::connect(btnConfirm, &QPushButton::clicked, &doneDlg, &QDialog::accept);
+	doneDlg.exec();
 
 	std::string launchErr;
 	if (!launchWindowsUpdaterAndRestart(launchErr))

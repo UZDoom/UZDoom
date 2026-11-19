@@ -17,16 +17,18 @@
 
 #include <QCheckBox>
 #include <QComboBox>
+#include <QEvent>
 #include <QFormLayout>
 #include <QGridLayout>
 #include <QHBoxLayout>
 #include <QLabel>
 #include <QLineEdit>
 #include <QPushButton>
+#include <QRegularExpression>
+#include <QRegularExpressionValidator>
 #include <QScrollArea>
 #include <QTabWidget>
 #include <QVBoxLayout>
-#include <QValidator>
 
 namespace
 {
@@ -55,6 +57,8 @@ namespace
 		QLineEdit* edit = new QLineEdit(parent);
 		edit->setPlaceholderText("0");
 		edit->setMaximumWidth(120);
+		edit->setValidator(new QRegularExpressionValidator(
+			QRegularExpression("^(0[xX][0-9a-fA-F]{0,8}|-?[0-9]{0,10})$"), edit));
 		return edit;
 	}
 }
@@ -115,7 +119,10 @@ FlagEditorDialog::FlagEditorDialog(const FlagValues& initial, QWidget* parent)
 	editCompat2 = makeUIntEdit(this);
 
 	for (QLineEdit* ed : {editDm1, editDm2, editDm3, editCompat1, editCompat2})
+	{
 		connect(ed, &QLineEdit::textEdited, this, &FlagEditorDialog::onNumericFieldEdited);
+		connect(ed, &QLineEdit::editingFinished, this, &FlagEditorDialog::syncNumericFromValues);
+	}
 
 	numGrid->addWidget(new QLabel("dmflags:", this), 0, 0);
 	numGrid->addWidget(editDm1, 0, 1);
@@ -201,6 +208,8 @@ void FlagEditorDialog::populateCheckboxes(QVBoxLayout* container, bool isCompat,
 			QLabel* lbl = new QLabel(def.label + ":", row);
 			QComboBox* combo = new QComboBox(row);
 			combo->setMinimumWidth(110);
+			combo->setFocusPolicy(Qt::StrongFocus);
+			combo->installEventFilter(this);
 			for (const FlagChoice& choice : def.choices)
 				combo->addItem(choice.label, static_cast<unsigned int>(choice.bitVal));
 			lbl->setToolTip(def.tooltip);
@@ -301,9 +310,21 @@ void FlagEditorDialog::syncCheckboxesFromValues(int filterIsCompat, int filterSe
 	updating = false;
 }
 
+bool FlagEditorDialog::eventFilter(QObject* watched, QEvent* event)
+{
+	if (event && event->type() == QEvent::Wheel && qobject_cast<QComboBox*>(watched))
+	{
+		event->ignore();
+		return true;
+	}
+	return QDialog::eventFilter(watched, event);
+}
+
 void FlagEditorDialog::syncNumericFromValues()
 {
 	updating = true;
+	for (QLineEdit* ed : {editDm1, editDm2, editDm3, editCompat1, editCompat2})
+		ed->setStyleSheet(QString());
 	editDm1->setText(QString::number(flagValues.dmflags));
 	editDm2->setText(QString::number(flagValues.dmflags2));
 	editDm3->setText(QString::number(flagValues.dmflags3));
@@ -317,18 +338,26 @@ void FlagEditorDialog::onNumericFieldEdited()
 	if (updating)
 		return;
 
-	bool ok1 = false, ok2 = false, ok3 = false, ok4 = false, ok5 = false;
-	const uint32_t d1 = parseUIntText(editDm1->text(), &ok1);
-	const uint32_t d2 = parseUIntText(editDm2->text(), &ok2);
-	const uint32_t d3 = parseUIntText(editDm3->text(), &ok3);
-	const uint32_t c1 = parseUIntText(editCompat1->text(), &ok4);
-	const uint32_t c2 = parseUIntText(editCompat2->text(), &ok5);
+	auto applyField = [](QLineEdit* edit, uint32_t& dst)
+	{
+		bool ok = false;
+		const uint32_t val = parseUIntText(edit->text(), &ok);
+		if (ok)
+		{
+			dst = val;
+			edit->setStyleSheet(QString());
+		}
+		else
+		{
+			edit->setStyleSheet("border: 1px solid #d94336;");
+		}
+	};
 
-	if (ok1) flagValues.dmflags = d1;
-	if (ok2) flagValues.dmflags2 = d2;
-	if (ok3) flagValues.dmflags3 = d3;
-	if (ok4) flagValues.compatflags = c1;
-	if (ok5) flagValues.compatflags2 = c2;
+	applyField(editDm1, flagValues.dmflags);
+	applyField(editDm2, flagValues.dmflags2);
+	applyField(editDm3, flagValues.dmflags3);
+	applyField(editCompat1, flagValues.compatflags);
+	applyField(editCompat2, flagValues.compatflags2);
 
 	syncCheckboxesFromValues();
 }

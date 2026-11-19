@@ -57,6 +57,9 @@ public:
 	ActionResult actionResult() const { return action; }
 	const Profile& clonedProfile() const { return cloned; }
 
+public slots:
+	void reject() override;
+
 protected:
 	void dragEnterEvent(QDragEnterEvent* event) override;
 	void dropEvent(QDropEvent* event) override;
@@ -81,6 +84,7 @@ private:
 	void loadFromProfile();
 	void writeToProfile(Profile& target) const;
 	void saveToProfile();
+	bool hasUnsavedChanges() const;
 	void rebuildModList(const std::vector<std::string>& mods, int selectRow = -1);
 	void appendModPath(const QString& filePath);
 	void syncCompatModeFromFlags();
@@ -89,6 +93,7 @@ private:
 	QString browsePath(const QString& caption, const QString& filter, const QString& current, bool directory = false);
 
 	Profile& profile;
+	Profile initialSnapshot;
 	const std::vector<Profile>& allProfiles;
 	QString defaultModsDirectory;
 	std::string currentLauncherLanguage;
@@ -118,7 +123,9 @@ private:
 	QRadioButton* radioSavegame = nullptr;
 	QRadioButton* radioDemoPlay = nullptr;
 	QLineEdit* editMap = nullptr;
+	QWidget* saveRowWidget = nullptr;
 	QLineEdit* editSavegame = nullptr;
+	QWidget* demoRowWidget = nullptr;
 	QLineEdit* editDemoPlay = nullptr;
 	QCheckBox* chkRecordDemo = nullptr;
 	QLineEdit* editRecordDemo = nullptr;

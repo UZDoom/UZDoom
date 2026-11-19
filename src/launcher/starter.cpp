@@ -128,12 +128,9 @@ bool Starter::ExecModal(FStartupSelectionInfo& info)
 		else
 			mainWin.show();
 
-		if (cfg.detectOnStartup)
-		{
-			QTimer::singleShot(0, &mainWin, [&mainWin]() {
-				mainWin.startStartupIWadDetection();
-			});
-		}
+		QTimer::singleShot(0, &mainWin, [&mainWin]() {
+			mainWin.startStartupIWadDetection();
+		});
 
 		if (info.displayRelease && info.notifyNewRelease && cfg.showReleaseNotes)
 		{
