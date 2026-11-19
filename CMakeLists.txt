@@ -455,8 +455,8 @@ if( HAVE_VM_JIT AND UNIX )
 	endif( NOT HAVE_BACKTRACE )
 endif( HAVE_VM_JIT AND UNIX )
 
+set( SKIP_INSTALL_ALL TRUE ) # Avoid installing bundled third-party libraries (asmjit, freetype, harfbuzz) alongside zdoom
 if( ${HAVE_VM_JIT} )
-	set( SKIP_INSTALL_ALL TRUE ) # Avoid installing asmjit alongside zdoom
 	add_subdirectory( libraries/asmjit )
 	set( ASMJIT_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/libraries/asmjit )
 	set( ASMJIT_LIBRARIES asmjit )

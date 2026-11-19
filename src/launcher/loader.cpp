@@ -149,7 +149,7 @@ namespace
 		if (!tf.open(QIODevice::ReadOnly | QIODevice::Text))
 			return;
 
-		const QString text = QString::fromUtf8(tf.read(16384));
+		const QString text = QString::fromUtf8(tf.read(65536));
 		auto matchField = [&](const QString& pattern) -> QString
 		{
 			QRegularExpression re(pattern, QRegularExpression::CaseInsensitiveOption | QRegularExpression::MultilineOption);
@@ -167,7 +167,7 @@ namespace
 		if (!releaseDate.isEmpty())
 			prof.releaseDate = normalizeReleaseDate(stdStr(releaseDate));
 		if (prof.description.empty() && !text.trimmed().isEmpty())
-			prof.description = stdStr(text.left(2000).trimmed());
+			prof.description = stdStr(text.left(16000).trimmed());
 	}
 
 	struct WadLumpEntry
