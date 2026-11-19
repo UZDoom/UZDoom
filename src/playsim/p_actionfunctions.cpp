@@ -6392,27 +6392,10 @@ FModel * FindFModel(AActor * self)
 	}
 }
 
-bool SetAnimationInternal(AActor * self, FName animName, double framerate, int startFrame, int loopFrame, int endFrame, int interpolateTics, int flags, double ticFrac, AnimInfo *anims = nullptr, TArray<TRS> * prevAnimOld = nullptr)
+template<typename Fn>
+bool SetAnimationInternal(FModel * animation, Fn &&calcBonesCallback, double tic, FName animName, double framerate, int startFrame, int loopFrame, int endFrame, int interpolateTics, int flags, double ticFrac, AnimInfo *anims, TArray<TRS> * prevAnimOld)
 {
-	if(!self) ThrowAbortException(X_READ_NIL, "In function parameter self");
-
-	if(!(self->flags9 & MF9_DECOUPLEDANIMATIONS))
-	{
-		ThrowAbortException(X_OTHER, "Cannot set animation for non-decoupled actors");
-	}
-
-	auto smf_class = (self->modelData && self->modelData->modelDef) ? self->modelData->modelDef : self->GetClass();
-
-	if(!BaseSpriteModelFrames.CheckKey(smf_class))
-	{
-		ThrowAbortException(X_OTHER, "Actor class is missing a MODELDEF definition or a MODELDEF BaseFrame");
-	}
-
 	if(interpolateTics <= 0) interpolateTics = 1;
-
-	EnsureModelData(self);
-
-	if(!anims) anims = &self->modelData->anims;
 
 	if(animName == NAME_None)
 	{
@@ -6420,20 +6403,10 @@ bool SetAnimationInternal(AActor * self, FName animName, double framerate, int s
 
 		anims->curAnim.flags = MODELANIM_NONE;
 
-		if(anims == &self->modelData->anims) self->CalcBones(true);
+		calcBonesCallback();
 
 		return false;
 	}
-
-	double tic = self->GetModelTimer();
-	if (!WorldPaused(true) && !self->Level->isFrozen())
-	{
-		tic += ticFrac;
-	}
-
-	FModel * animation = FindFModel(self);
-
-	if(!animation) return false;
 
 	int animStart = animation->FindFirstFrame(animName);
 
@@ -6444,7 +6417,7 @@ bool SetAnimationInternal(AActor * self, FName animName, double framerate, int s
 
 		anims->curAnim.flags = MODELANIM_NONE;
 
-		if(anims == &self->modelData->anims) self->CalcBones(true);
+		calcBonesCallback();
 
 		return false;
 	}
@@ -6471,7 +6444,7 @@ bool SetAnimationInternal(AActor * self, FName animName, double framerate, int s
 		if(anims->curAnim.flags & MODELANIM_NONE) return false;
 
 		anims->curAnim.flags = MODELANIM_NONE;
-		if(anims == &self->modelData->anims) self->CalcBones(true);
+		calcBonesCallback();
 
 		return false;
 	}
@@ -6481,7 +6454,7 @@ bool SetAnimationInternal(AActor * self, FName animName, double framerate, int s
 		if(anims->curAnim.flags & MODELANIM_NONE) return false;
 
 		anims->curAnim.flags = MODELANIM_NONE;
-		if(anims == &self->modelData->anims) self->CalcBones(true);
+		calcBonesCallback();
 
 		return false;
 	}
@@ -6491,11 +6464,10 @@ bool SetAnimationInternal(AActor * self, FName animName, double framerate, int s
 		if(anims->curAnim.flags & MODELANIM_NONE) return false;
 
 		anims->curAnim.flags = MODELANIM_NONE;
-		if(anims == &self->modelData->anims) self->CalcBones(true);
+		calcBonesCallback();
 
 		return false;
 	}
-
 
 	if(!(flags & SAF_INSTANT))
 	{
@@ -6563,8 +6535,44 @@ bool SetAnimationInternal(AActor * self, FName animName, double framerate, int s
 		anims->curAnim.switchOffset = 0;
 	}
 
-	if(anims == &self->modelData->anims) self->CalcBones(true);
+	calcBonesCallback();
 	return true;
+}
+
+bool SetAnimationInternal(AActor * self, FName animName, double framerate, int startFrame, int loopFrame, int endFrame, int interpolateTics, int flags, double ticFrac, AnimInfo *anims = nullptr, TArray<TRS> * prevAnimOld = nullptr)
+{
+	if(!self) ThrowAbortException(X_READ_NIL, "In function parameter self");
+
+	if(!(self->flags9 & MF9_DECOUPLEDANIMATIONS))
+	{
+		ThrowAbortException(X_OTHER, "Cannot set animation for non-decoupled actors");
+	}
+
+	EnsureModelData(self);
+
+	auto smf_class = (self->modelData && self->modelData->modelDef) ? self->modelData->modelDef : self->GetClass();
+
+	if(!BaseSpriteModelFrames.CheckKey(smf_class))
+	{
+		ThrowAbortException(X_OTHER, "Actor class is missing a MODELDEF definition or a MODELDEF BaseFrame");
+	}
+
+	if(!anims) anims = &self->modelData->anims;
+
+	double tic = self->GetModelTimer();
+	if (!WorldPaused(true) && !self->Level->isFrozen())
+	{
+		tic += ticFrac;
+	}
+
+	FModel * animation = FindFModel(self);
+
+	if(!animation) return false;
+
+	return SetAnimationInternal(animation, [self, anims]()
+	{
+		if(anims == &self->modelData->anims) self->CalcBones(true);
+	}, tic, animName, framerate, startFrame, loopFrame, endFrame, interpolateTics, flags, ticFrac, anims, prevAnimOld);
 }
 
 void SetAnimationNative(AActor * self, int i_animName, double framerate, int startFrame, int loopFrame, int endFrame, int interpolateTics, int flags)
