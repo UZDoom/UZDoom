@@ -57,6 +57,7 @@
 #include "shadowinlines.h"
 #include "i_time.h"
 #include "vm.h"
+#include "p_visualthinker.h"
 
 static FRandom pr_camissile ("CustomActorfire");
 static FRandom pr_cabullet ("CustomBullet");
@@ -6393,7 +6394,7 @@ FModel * FindFModel(AActor * self)
 }
 
 template<typename Fn>
-bool SetAnimationInternal(FModel * animation, Fn &&calcBonesCallback, double tic, FName animName, double framerate, int startFrame, int loopFrame, int endFrame, int interpolateTics, int flags, double ticFrac, AnimInfo *anims, TArray<TRS> * prevAnimOld)
+static bool SetAnimationInternal(FModel * animation, Fn &&calcBonesCallback, double tic, FName animName, double framerate, int startFrame, int loopFrame, int endFrame, int interpolateTics, int flags, double ticFrac, AnimInfo *anims, TArray<TRS> * prevAnimOld)
 {
 	if(interpolateTics <= 0) interpolateTics = 1;
 
@@ -6575,12 +6576,56 @@ bool SetAnimationInternal(AActor * self, FName animName, double framerate, int s
 	}, tic, animName, framerate, startFrame, loopFrame, endFrame, interpolateTics, flags, ticFrac, anims, prevAnimOld);
 }
 
+bool SetAnimationInternal(DVisualThinker * self, FName animName, double framerate, int startFrame, int loopFrame, int endFrame, int interpolateTics, int flags, double ticFrac)
+{
+	if(!self) ThrowAbortException(X_READ_NIL, "In function parameter self");
+
+	if(!(self->flags & VTF_AnimsDecoupled))
+	{
+		ThrowAbortException(X_OTHER, "Cannot set animation for non-decoupled visual thinkers");
+	}
+
+	if(!self->ModelClass)
+	{
+		ThrowAbortException(X_OTHER, "Visual thinker has no model set");
+	}
+
+	FSpriteModelFrame * smf = BaseSpriteModelFrames.CheckKey(self->ModelClass);
+	
+	if(!smf)
+	{
+		ThrowAbortException(X_OTHER, "Visual Thinker model is missing a MODELDEF definition or a MODELDEF BaseFrame");
+	}
+
+	FModel * animation = Models[smf->modelIDs[0]];
+
+	if(!animation) return false;
+
+	double tic = self->Level->LocalWorldTimer;
+	if (!WorldPaused(true))
+	{
+		tic += ticFrac;
+	}
+
+	return SetAnimationInternal(animation, [](){}, tic, animName, framerate, startFrame, loopFrame, endFrame, interpolateTics, flags, ticFrac, &self->DecoupledAnim, nullptr);
+}
+
 void SetAnimationNative(AActor * self, int i_animName, double framerate, int startFrame, int loopFrame, int endFrame, int interpolateTics, int flags)
 {
 	SetAnimationInternal(self, FName(ENamedName(i_animName)), framerate, startFrame, loopFrame, endFrame, interpolateTics, flags, 1);
 }
 
 void SetAnimationUINative(AActor * self, int i_animName, double framerate, int startFrame, int loopFrame, int endFrame, int interpolateTics, int flags)
+{
+	SetAnimationInternal(self, FName(ENamedName(i_animName)), framerate, startFrame, loopFrame, endFrame, interpolateTics, flags, I_GetTimeFrac());
+}
+
+void SetAnimationNativeVT(DVisualThinker * self, int i_animName, double framerate, int startFrame, int loopFrame, int endFrame, int interpolateTics, int flags)
+{
+	SetAnimationInternal(self, FName(ENamedName(i_animName)), framerate, startFrame, loopFrame, endFrame, interpolateTics, flags, 1);
+}
+
+void SetAnimationUINativeVT(DVisualThinker * self, int i_animName, double framerate, int startFrame, int loopFrame, int endFrame, int interpolateTics, int flags)
 {
 	SetAnimationInternal(self, FName(ENamedName(i_animName)), framerate, startFrame, loopFrame, endFrame, interpolateTics, flags, I_GetTimeFrac());
 }
@@ -6627,12 +6672,64 @@ void SetAnimationFrameRateInternal(AActor * self, double framerate, double ticFr
 	anims->curAnim.framerate = (float)framerate;
 }
 
+
+void SetAnimationFrameRateInternal(DVisualThinker * self, double framerate, double ticFrac)
+{
+	if(!self) ThrowAbortException(X_READ_NIL, "In function parameter self");
+
+	if(!(self->flags & VTF_AnimsDecoupled))
+	{
+		ThrowAbortException(X_OTHER, "Cannot set animation for non-decoupled visual thinkers");
+	}
+
+	if(!self->ModelClass)
+	{
+		ThrowAbortException(X_OTHER, "Visual thinker has no model set");
+	}
+
+	if(!BaseSpriteModelFrames.CheckKey(self->ModelClass))
+	{
+		ThrowAbortException(X_OTHER, "Visual Thinker model is missing a MODELDEF definition or a MODELDEF BaseFrame");
+	}
+
+	double tic = self->Level->LocalWorldTimer;
+	if (!WorldPaused(true))
+	{
+		tic += ticFrac;
+	}
+
+	if(self->DecoupledAnim.curAnim.startTic >= tic)
+	{
+		self->DecoupledAnim.curAnim.framerate = (float)framerate;
+		return;
+	}
+
+	self->DecoupledAnim.prevAnim = nullptr; // clear prev anim
+
+	double frame = getCurrentFrame(self->DecoupledAnim.curAnim, tic, nullptr);
+
+	self->DecoupledAnim.curAnim.startFrame = frame;
+	self->DecoupledAnim.curAnim.startTic = tic;
+	self->DecoupledAnim.curAnim.switchOffset = 0;
+	self->DecoupledAnim.curAnim.framerate = (float)framerate;
+}
+
 void SetAnimationFrameRateNative(AActor * self, double framerate)
 {
 	SetAnimationFrameRateInternal(self, framerate, 1);
 }
 
 void SetAnimationFrameRateUINative(AActor * self, double framerate)
+{
+	SetAnimationFrameRateInternal(self, framerate, I_GetTimeFrac());
+}
+
+void SetAnimationFrameRateNativeVT(DVisualThinker * self, double framerate)
+{
+	SetAnimationFrameRateInternal(self, framerate, 1);
+}
+
+void SetAnimationFrameRateUINativeVT(DVisualThinker * self, double framerate)
 {
 	SetAnimationFrameRateInternal(self, framerate, I_GetTimeFrac());
 }
@@ -6933,6 +7030,58 @@ DEFINE_ACTION_FUNCTION_NATIVE(AActor, SetAnimationFrameRate, SetAnimationFrameRa
 DEFINE_ACTION_FUNCTION_NATIVE(AActor, SetAnimationFrameRateUI, SetAnimationFrameRateUINative)
 {
 	PARAM_SELF_PROLOGUE(AActor);
+	PARAM_FLOAT(framerate);
+
+	SetAnimationFrameRateInternal(self, framerate, I_GetTimeFrac());
+
+	return 0;
+}
+
+DEFINE_ACTION_FUNCTION_NATIVE(DVisualThinker, SetAnimation, SetAnimationNativeVT)
+{
+	PARAM_SELF_PROLOGUE(DVisualThinker);
+	PARAM_NAME(animName);
+	PARAM_FLOAT(framerate);
+	PARAM_INT(startFrame);
+	PARAM_INT(loopFrame);
+	PARAM_INT(endFrame);
+	PARAM_INT(interpolateTics);
+	PARAM_INT(flags);
+
+	SetAnimationInternal(self, animName, framerate, startFrame, loopFrame, endFrame, interpolateTics, flags, 1);
+
+	return 0;
+}
+
+DEFINE_ACTION_FUNCTION_NATIVE(DVisualThinker, SetAnimationUI, SetAnimationUINativeVT)
+{
+	PARAM_SELF_PROLOGUE(DVisualThinker);
+	PARAM_NAME(animName);
+	PARAM_FLOAT(framerate);
+	PARAM_INT(startFrame);
+	PARAM_INT(loopFrame);
+	PARAM_INT(endFrame);
+	PARAM_INT(interpolateTics);
+	PARAM_INT(flags);
+
+	SetAnimationInternal(self, animName, framerate, startFrame, loopFrame, endFrame, interpolateTics, flags, I_GetTimeFrac());
+
+	return 0;
+}
+
+DEFINE_ACTION_FUNCTION_NATIVE(DVisualThinker, SetAnimationFrameRate, SetAnimationFrameRateNativeVT)
+{
+	PARAM_SELF_PROLOGUE(DVisualThinker);
+	PARAM_FLOAT(framerate);
+
+	SetAnimationFrameRateInternal(self, framerate, 1);
+
+	return 0;
+}
+
+DEFINE_ACTION_FUNCTION_NATIVE(DVisualThinker, SetAnimationFrameRateUI, SetAnimationFrameRateUINativeVT)
+{
+	PARAM_SELF_PROLOGUE(DVisualThinker);
 	PARAM_FLOAT(framerate);
 
 	SetAnimationFrameRateInternal(self, framerate, I_GetTimeFrac());
