@@ -80,11 +80,19 @@ private:
 	QWidget* buildFilesTab();
 	QWidget* buildOutputTab();
 	QWidget* buildAdvancedTab();
+	QWidget* buildLogsTab();
 
 	void loadFromProfile();
 	void writeToProfile(Profile& target) const;
 	void saveToProfile();
 	bool hasUnsavedChanges() const;
+	void populateQuickIwadCombo();
+	void syncQuickIwadFromPath(const QString& path);
+	QString profileLogsDirPath() const;
+	QString selectedLogFilePath() const;
+	void refreshLogView();
+	void loadSelectedLogFile();
+	void applyLogFilter();
 	void rebuildModList(const std::vector<std::string>& mods, int selectRow = -1);
 	void appendModPath(const QString& filePath);
 	void syncCompatModeFromFlags();
@@ -182,4 +190,15 @@ private:
 	QComboBox* comboPreviewMode = nullptr;
 	QPlainTextEdit* editCommandPreview = nullptr;
 	QPushButton* btnCopyCommand = nullptr;
+
+	QComboBox* comboLogFiles = nullptr;
+	QCheckBox* chkLogProblemsOnly = nullptr;
+	QLineEdit* editLogFilter = nullptr;
+	QPlainTextEdit* editLogView = nullptr;
+	QPushButton* btnCopyLog = nullptr;
+	QPushButton* btnOpenLogFile = nullptr;
+	QPushButton* btnOpenLogsDir = nullptr;
+	QPushButton* btnDeleteLog = nullptr;
+	QPushButton* btnClearAllLogs = nullptr;
+	QString fullLogText;
 };

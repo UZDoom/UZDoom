@@ -38,6 +38,7 @@ struct Profile
 	std::string lastPlayed = "Never";
 	uint64_t playtime = 0;
 	int orderIndex = -1;
+	bool favorite = false;
 	std::string coverImagePath;
 
 	bool isIWAD = false;
@@ -118,6 +119,8 @@ struct LauncherConfig
 	bool showReleaseNotes = true;
 	bool maximized = false;
 	int lastSelectedRow = 0;
+	int sortColumn = -1;
+	bool sortDescending = false;
 	int splitterTopSize = 0;
 	int splitterBottomSize = 0;
 	std::string defaultModsDir;

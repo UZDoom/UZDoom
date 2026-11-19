@@ -27,6 +27,7 @@
 
 class QAction;
 class QActionGroup;
+class QComboBox;
 class QDragEnterEvent;
 class QDropEvent;
 class QCloseEvent;
@@ -74,12 +75,16 @@ private slots:
 	void onOpenLauncherFolder();
 	void onOpenExecFolder();
 	void onOpenSelectedProfileFolder();
+	void onToggleSelectedFavorite();
 	void onCloneSelectedProfile();
 	void onExportSelectedProfile();
 	void onDeleteSelectedProfile();
 
 	void onAboutClicked();
 	void onFilterTextChanged(const QString& text);
+	void onFilterCategoryChanged(int index);
+	void onHeaderSectionClicked(int logicalIndex);
+	void onTableCellClicked(int row, int column);
 	void onSelectionChanged();
 	void onTableContextMenu(const QPoint& pos);
 
@@ -107,6 +112,11 @@ private:
 	void updateCoverPixmapScale();
 	void updateButtonStates();
 	void applyFilter();
+	void syncSortIndicator();
+	std::vector<int> buildDisplayOrder() const;
+	int profileIndexForTableRow(int tableRow) const;
+	int tableRowForProfileIndex(int profileIdx) const;
+	bool canMoveSelectedBy(int delta) const;
 
 	int selectedProfileIndex() const;
 	void selectProfileIndex(int profileIdx);
@@ -115,6 +125,7 @@ private:
 	void openSettingsForIndex(int profileIdx);
 	void launchProfile(LaunchTargetMode mode);
 	void recordRunningSessionPlaytime();
+	void appendLaunchLogFooter(const QString& footerLine);
 	void setRunningState(bool running, const QString& title = {});
 	void startIWadAutoDetect(bool interactive);
 	void onIWadScanFinished(const std::vector<DiscoveredIWadCandidate>& candidates);
@@ -123,6 +134,7 @@ private:
 	std::vector<Profile> profiles;
 	bool showUpcomingReleaseNotes = false;
 
+	QComboBox* filterCategoryCombo = nullptr;
 	QLineEdit* searchEdit = nullptr;
 
 	QMenu* addMenu = nullptr;
@@ -170,6 +182,7 @@ private:
 
 	QProcess* gameProcess = nullptr;
 	int runningProfileIndex = -1;
+	QString activeLogFilePath;
 	QElapsedTimer playTimer;
 	bool wasHiddenForLaunch = false;
 	bool wasMaximizedBeforeHide = false;

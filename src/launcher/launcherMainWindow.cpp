@@ -32,7 +32,9 @@
 #include <QActionGroup>
 #include <QApplication>
 #include <QCloseEvent>
+#include <QComboBox>
 #include <QCoreApplication>
+#include <QDate>
 #include <QDateTime>
 #include <QDesktopServices>
 #include <QDir>
@@ -56,6 +58,7 @@
 #include <QPalette>
 #include <QProcess>
 #include <QPushButton>
+#include <QRegularExpression>
 #include <QResizeEvent>
 #include <QSet>
 #include <QShortcut>
@@ -108,6 +111,37 @@ namespace
 		}
 		return paths;
 	}
+
+	QDate parseProfileReleaseDate(const std::string& raw)
+	{
+		const QString s = QString::fromStdString(raw).trimmed();
+		if (s.isEmpty() || s.compare("Unknown", Qt::CaseInsensitive) == 0)
+			return {};
+		if (QDate d = QDate::fromString(s, "dd-MM-yyyy"); d.isValid())
+			return d;
+		if (QDate d = QDate::fromString(s, "yyyy-MM-dd"); d.isValid())
+			return d;
+		if (QDate d = QDate::fromString(s, "d-M-yyyy"); d.isValid())
+			return d;
+		static const QRegularExpression yearRe("\\b(19\\d\\d|20\\d\\d)\\b");
+		const QRegularExpressionMatch m = yearRe.match(s);
+		if (m.hasMatch())
+			return QDate(m.captured(1).toInt(), 1, 1);
+		return {};
+	}
+
+	QDateTime parseProfileLastPlayed(const std::string& raw)
+	{
+		const QString s = QString::fromStdString(raw).trimmed();
+		if (s.isEmpty() || s.compare("Never", Qt::CaseInsensitive) == 0)
+			return {};
+		return QDateTime::fromString(s, "yyyy-MM-dd HH:mm");
+	}
+
+	QString normalizePathKey(const QString& p)
+	{
+		return QDir::cleanPath(p).replace('\\', '/').toLower();
+	}
 }
 
 LauncherMainWindow::LauncherMainWindow(const LauncherConfig& initialConfig, std::vector<Profile> initialProfiles, bool showUpcomingNotes, QWidget* parent)
@@ -157,6 +191,7 @@ LauncherMainWindow::~LauncherMainWindow()
 		gameProcess->disconnect(this);
 		gameProcess->kill();
 		gameProcess->waitForFinished(1500);
+		appendLaunchLogFooter(QStringLiteral("=== Process terminated by launcher ==="));
 	}
 }
 
@@ -171,12 +206,24 @@ void LauncherMainWindow::buildUi()
 	QWidget* searchContainer = new QWidget(mb);
 	QHBoxLayout* searchLayout = new QHBoxLayout(searchContainer);
 	searchLayout->setContentsMargins(4, 2, 6, 2);
-	searchLayout->setSpacing(0);
+	searchLayout->setSpacing(6);
+
+	filterCategoryCombo = new QComboBox(searchContainer);
+	filterCategoryCombo->setMinimumHeight(24);
+	filterCategoryCombo->addItem(QString(), 0);
+	filterCategoryCombo->addItem(QString(), 1);
+	filterCategoryCombo->addItem(QString(), 2);
+	filterCategoryCombo->addItem(QString(), 3);
+	connect(filterCategoryCombo, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &LauncherMainWindow::onFilterCategoryChanged);
+
 	searchEdit = new QLineEdit(searchContainer);
 	searchEdit->setClearButtonEnabled(true);
 	searchEdit->setFixedWidth(220);
 	searchEdit->setMinimumHeight(24);
+	searchEdit->setToolTip("Search by title, author, description, IWAD, or mod filenames (space-separated terms).");
 	connect(searchEdit, &QLineEdit::textChanged, this, &LauncherMainWindow::onFilterTextChanged);
+
+	searchLayout->addWidget(filterCategoryCombo);
 	searchLayout->addWidget(searchEdit);
 	mb->setCornerWidget(searchContainer, Qt::TopRightCorner);
 
@@ -189,7 +236,7 @@ void LauncherMainWindow::buildUi()
 	centerRow->setContentsMargins(0, 0, 0, 4);
 	centerRow->setSpacing(10);
 
-	table = new QTableWidget(0, 6, central);
+	table = new QTableWidget(0, 7, central);
 	table->setSelectionBehavior(QAbstractItemView::SelectRows);
 	table->setSelectionMode(QAbstractItemView::SingleSelection);
 	table->setEditTriggers(QAbstractItemView::NoEditTriggers);
@@ -199,17 +246,26 @@ void LauncherMainWindow::buildUi()
 	table->verticalHeader()->setVisible(false);
 	table->verticalHeader()->setDefaultSectionSize(28);
 	table->horizontalHeader()->setStretchLastSection(false);
-	table->horizontalHeader()->setMinimumSectionSize(75);
+	table->horizontalHeader()->setMinimumSectionSize(28);
 	table->horizontalHeader()->setHighlightSections(false);
-	table->horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
-	table->horizontalHeader()->setSectionResizeMode(1, QHeaderView::Stretch);
+	table->horizontalHeader()->setSectionsClickable(true);
+	table->horizontalHeader()->setSectionResizeMode(0, QHeaderView::Fixed);
+	table->setColumnWidth(0, 32);
+	table->horizontalHeader()->setSectionResizeMode(1, QHeaderView::ResizeToContents);
 	table->horizontalHeader()->setSectionResizeMode(2, QHeaderView::Stretch);
-	table->horizontalHeader()->setSectionResizeMode(3, QHeaderView::ResizeToContents);
+	table->horizontalHeader()->setSectionResizeMode(3, QHeaderView::Stretch);
 	table->horizontalHeader()->setSectionResizeMode(4, QHeaderView::ResizeToContents);
 	table->horizontalHeader()->setSectionResizeMode(5, QHeaderView::ResizeToContents);
+	table->horizontalHeader()->setSectionResizeMode(6, QHeaderView::ResizeToContents);
 
+	connect(table->horizontalHeader(), &QHeaderView::sectionClicked, this, &LauncherMainWindow::onHeaderSectionClicked);
+	connect(table, &QTableWidget::cellClicked, this, &LauncherMainWindow::onTableCellClicked);
 	connect(table, &QTableWidget::itemSelectionChanged, this, &LauncherMainWindow::onSelectionChanged);
-	connect(table, &QTableWidget::itemDoubleClicked, this, [this](QTableWidgetItem*) { onPlayClicked(); });
+	connect(table, &QTableWidget::itemDoubleClicked, this, [this](QTableWidgetItem* item) {
+		if (item && item->column() == 0)
+			return;
+		onPlayClicked();
+	});
 	connect(table, &QTableWidget::customContextMenuRequested, this, &LauncherMainWindow::onTableContextMenu);
 	table->installEventFilter(this);
 	centerRow->addWidget(table, 1);
@@ -452,10 +508,17 @@ void LauncherMainWindow::retranslateUi()
 	const QString formattedDate = parsedDt.isValid() ? parsedDt.date().toString("dd-MM-yyyy") : rawGitTime;
 	setWindowTitle(QString("%1 (Version %2)[Build Date: %3]").arg(GAMENAME).arg(GetVersionString()).arg(formattedDate));
 
-	addMenu->setTitle(LStr("LAUNCHER_ADD_ENTRY", "Add/Import New Entry"));
+	addMenu->setTitle(LStr("LAUNCHER_ADD_ENTRY", "New Entry"));
 	prefMenu->setTitle(LStr("LAUNCHER_PREFERENCES", "Preferences"));
 	actAbout->setText(LStr("LAUNCHER_MENU_INFO", "Info"));
 	searchEdit->setPlaceholderText(LStr("LAUNCHER_SEARCH_PLACEHOLDER", "Filter profiles..."));
+	if (filterCategoryCombo && filterCategoryCombo->count() >= 4)
+	{
+		filterCategoryCombo->setItemText(0, LStr("LAUNCHER_FILTER_ALL", "All"));
+		filterCategoryCombo->setItemText(1, QString::fromUtf8("\u2605 ") + LStr("LAUNCHER_FILTER_FAVORITES", "Favorites"));
+		filterCategoryCombo->setItemText(2, QStringLiteral("IWADs"));
+		filterCategoryCombo->setItemText(3, QStringLiteral("(P)WADs"));
+	}
 
 	actAddFile->setText(LStr("LAUNCHER_MENU_ADD_FILE", "Add WAD / Mod / Archive..."));
 	actCreateBlank->setText(LStr("LAUNCHER_MENU_NEW_BLANK", "Create Blank Profile..."));
@@ -502,6 +565,7 @@ void LauncherMainWindow::retranslateUi()
 #endif
 
 	table->setHorizontalHeaderLabels({
+		QString::fromUtf8("\u2605"),
 		LStr("LAUNCHER_COL_TYPE", "Type"),
 		LStr("LAUNCHER_COL_TITLE", "Title"),
 		LStr("LAUNCHER_COL_AUTHOR", "Author(s)"),
@@ -509,11 +573,16 @@ void LauncherMainWindow::retranslateUi()
 		LStr("LAUNCHER_COL_LAST_PLAYED", "Last Played"),
 		LStr("LAUNCHER_COL_PLAYTIME", "Playtime")
 	});
-	for (int col = 0; col < 6; ++col)
+	for (int col = 0; col < 7; ++col)
 	{
 		if (QTableWidgetItem* hItem = table->horizontalHeaderItem(col))
-			hItem->setTextAlignment((col == 1 || col == 2) ? (Qt::AlignLeft | Qt::AlignVCenter) : Qt::AlignCenter);
+		{
+			hItem->setTextAlignment((col == 2 || col == 3) ? (Qt::AlignLeft | Qt::AlignVCenter) : Qt::AlignCenter);
+			if (col == 0)
+				hItem->setToolTip(LStr("LAUNCHER_SORT_RESET_TIP", "Pinned favorites stay at the top. Click to reset column sort to custom order."));
+		}
 	}
+	syncSortIndicator();
 
 	btnPlay->setText(LStr("PICKER_PLAY", "Play Game"));
 	btnJoin->setText(LStr("LAUNCHER_JOIN_GAME", "Join Game"));
@@ -523,27 +592,181 @@ void LauncherMainWindow::retranslateUi()
 	btnMoveDown->setText(LStr("LAUNCHER_MOVE_DOWN", "Move Down"));
 	btnRefresh->setText(LStr("LAUNCHER_MENU_REFRESH", "Refresh Profiles"));
 
-	for (int i = 0; i < table->rowCount() && i < static_cast<int>(profiles.size()); ++i)
-		updateTableRow(i, i);
+	for (int r = 0; r < table->rowCount(); ++r)
+	{
+		const int idx = profileIndexForTableRow(r);
+		if (idx >= 0)
+			updateTableRow(r, idx);
+	}
 	applyFilter();
 	updateDetailsPane();
 	updateButtonStates();
 }
 
+void LauncherMainWindow::syncSortIndicator()
+{
+	const bool sorted = (launcherConfig.sortColumn >= 1 && launcherConfig.sortColumn <= 6);
+	table->horizontalHeader()->setSortIndicatorShown(sorted);
+	if (sorted)
+	{
+		table->horizontalHeader()->setSortIndicator(
+			launcherConfig.sortColumn,
+			launcherConfig.sortDescending ? Qt::DescendingOrder : Qt::AscendingOrder);
+	}
+}
+
+std::vector<int> LauncherMainWindow::buildDisplayOrder() const
+{
+	std::vector<int> order(profiles.size());
+	for (size_t i = 0; i < profiles.size(); ++i)
+		order[i] = static_cast<int>(i);
+
+	const int sortCol = (launcherConfig.sortColumn >= 1 && launcherConfig.sortColumn <= 6)
+		? launcherConfig.sortColumn
+		: -1;
+	const bool desc = launcherConfig.sortDescending;
+
+	std::stable_sort(order.begin(), order.end(), [&](int idxA, int idxB)
+	{
+		const Profile& a = profiles[idxA];
+		const Profile& b = profiles[idxB];
+
+		if (a.favorite != b.favorite)
+			return a.favorite;
+
+		if (sortCol < 0)
+			return idxA < idxB;
+
+		auto cmpTitle = [&]() -> int
+		{
+			return QString::fromStdString(a.title).compare(QString::fromStdString(b.title), Qt::CaseInsensitive);
+		};
+
+		int cmp = 0;
+		switch (sortCol)
+		{
+		case 1: // Type
+			if (a.isIWAD != b.isIWAD)
+				cmp = a.isIWAD ? -1 : 1;
+			else
+				cmp = cmpTitle();
+			break;
+		case 2: // Title
+			cmp = cmpTitle();
+			break;
+		case 3: // Author
+			cmp = QString::fromStdString(a.author).compare(QString::fromStdString(b.author), Qt::CaseInsensitive);
+			if (cmp == 0)
+				cmp = cmpTitle();
+			break;
+		case 4: // Release Date
+		{
+			const QDate da = parseProfileReleaseDate(a.releaseDate);
+			const QDate db = parseProfileReleaseDate(b.releaseDate);
+			if (da.isValid() != db.isValid())
+				return da.isValid();
+			if (da.isValid() && db.isValid())
+				cmp = (da < db) ? -1 : ((da > db) ? 1 : cmpTitle());
+			else
+				cmp = cmpTitle();
+			break;
+		}
+		case 5: // Last Played
+		{
+			const QDateTime ta = parseProfileLastPlayed(a.lastPlayed);
+			const QDateTime tb = parseProfileLastPlayed(b.lastPlayed);
+			if (ta.isValid() != tb.isValid())
+				return ta.isValid();
+			if (ta.isValid() && tb.isValid())
+				cmp = (ta < tb) ? -1 : ((ta > tb) ? 1 : cmpTitle());
+			else
+				cmp = cmpTitle();
+			break;
+		}
+		case 6: // Playtime
+			if (a.playtime != b.playtime)
+				cmp = (a.playtime < b.playtime) ? -1 : 1;
+			else
+				cmp = cmpTitle();
+			break;
+		default:
+			break;
+		}
+
+		if (cmp == 0)
+			return idxA < idxB;
+		return desc ? (cmp > 0) : (cmp < 0);
+	});
+
+	return order;
+}
+
+int LauncherMainWindow::profileIndexForTableRow(int tableRow) const
+{
+	if (tableRow < 0 || tableRow >= table->rowCount())
+		return -1;
+	const QTableWidgetItem* item = table->item(tableRow, 0);
+	if (!item)
+		return -1;
+	const int idx = item->data(Qt::UserRole).toInt();
+	if (idx < 0 || idx >= static_cast<int>(profiles.size()))
+		return -1;
+	return idx;
+}
+
+int LauncherMainWindow::tableRowForProfileIndex(int profileIdx) const
+{
+	if (profileIdx < 0 || profileIdx >= static_cast<int>(profiles.size()))
+		return -1;
+	for (int r = 0; r < table->rowCount(); ++r)
+	{
+		if (profileIndexForTableRow(r) == profileIdx)
+			return r;
+	}
+	return -1;
+}
+
+bool LauncherMainWindow::canMoveSelectedBy(int delta) const
+{
+	if (gameProcess != nullptr)
+		return false;
+	if (launcherConfig.sortColumn >= 1 && launcherConfig.sortColumn <= 6)
+		return false;
+	if (!searchEdit->text().trimmed().isEmpty())
+		return false;
+	if (filterCategoryCombo && filterCategoryCombo->currentData().toInt() != 0)
+		return false;
+
+	const int curRow = table->currentRow();
+	if (curRow < 0 || table->isRowHidden(curRow))
+		return false;
+	const int targetRow = curRow + delta;
+	if (targetRow < 0 || targetRow >= table->rowCount() || table->isRowHidden(targetRow))
+		return false;
+
+	const int idxA = profileIndexForTableRow(curRow);
+	const int idxB = profileIndexForTableRow(targetRow);
+	if (idxA < 0 || idxB < 0)
+		return false;
+	return profiles[idxA].favorite == profiles[idxB].favorite;
+}
+
 void LauncherMainWindow::refreshTable(int selectProfileIndexValue)
 {
+	const std::vector<int> order = buildDisplayOrder();
 	table->blockSignals(true);
-	table->setRowCount(static_cast<int>(profiles.size()));
-	for (int i = 0; i < static_cast<int>(profiles.size()); ++i)
-		updateTableRow(i, i);
+	table->setRowCount(static_cast<int>(order.size()));
+	for (int r = 0; r < static_cast<int>(order.size()); ++r)
+		updateTableRow(r, order[r]);
 	table->blockSignals(false);
+	syncSortIndicator();
 
 	applyFilter();
 
 	if (selectProfileIndexValue >= 0 && selectProfileIndexValue < static_cast<int>(profiles.size()))
 		selectProfileIndex(selectProfileIndexValue);
-	else if (!profiles.empty())
-		selectProfileIndex(0);
+	else if (!order.empty())
+		selectProfileIndex(order.front());
 	else
 	{
 		updateDetailsPane();
@@ -565,15 +788,32 @@ void LauncherMainWindow::updateTableRow(int tableRow, int profileIdx)
 		return item;
 	};
 
-	table->setItem(tableRow, 0, makeItem(p.isIWAD ? "IWAD" : "(P)WAD", Qt::AlignCenter));
-	table->setItem(tableRow, 1, makeItem(QString::fromStdString(p.title)));
-	table->setItem(tableRow, 2, makeItem(QString::fromStdString(p.author)));
-	table->setItem(tableRow, 3, makeItem(QString::fromStdString(p.releaseDate), Qt::AlignCenter));
+	auto* starItem = makeItem(p.favorite ? QString::fromUtf8("\u2605") : QString::fromUtf8("\u2606"), Qt::AlignCenter);
+	const LauncherTheme theme = parseThemeName(launcherConfig.theme);
+	if (p.favorite)
+	{
+		const QColor starColor = (theme == LauncherTheme::HighContrast)
+			? QColor(255, 255, 0)
+			: (isDarkThemeActive(theme) ? QColor(245, 197, 66) : QColor(214, 148, 0));
+		starItem->setForeground(starColor);
+		starItem->setToolTip(LStr("LAUNCHER_UNPIN_FAVORITE", "Unpin Favorite"));
+	}
+	else
+	{
+		starItem->setForeground(palette().color(QPalette::Disabled, QPalette::Text));
+		starItem->setToolTip(LStr("LAUNCHER_PIN_FAVORITE", "Pin to Top (Favorite)"));
+	}
+
+	table->setItem(tableRow, 0, starItem);
+	table->setItem(tableRow, 1, makeItem(p.isIWAD ? "IWAD" : "(P)WAD", Qt::AlignCenter));
+	table->setItem(tableRow, 2, makeItem(QString::fromStdString(p.title)));
+	table->setItem(tableRow, 3, makeItem(QString::fromStdString(p.author)));
+	table->setItem(tableRow, 4, makeItem(QString::fromStdString(p.releaseDate), Qt::AlignCenter));
 	const QString lastPlayedText = (p.lastPlayed.empty() || p.lastPlayed == "Never")
 		? LStr("LAUNCHER_NEVER", "Never")
 		: QString::fromStdString(p.lastPlayed);
-	table->setItem(tableRow, 4, makeItem(lastPlayedText, Qt::AlignCenter));
-	table->setItem(tableRow, 5, makeItem(formatPlaytime(p.playtime), Qt::AlignCenter));
+	table->setItem(tableRow, 5, makeItem(lastPlayedText, Qt::AlignCenter));
+	table->setItem(tableRow, 6, makeItem(formatPlaytime(p.playtime), Qt::AlignCenter));
 }
 
 int LauncherMainWindow::selectedProfileIndex() const
@@ -581,22 +821,16 @@ int LauncherMainWindow::selectedProfileIndex() const
 	const int row = table->currentRow();
 	if (row < 0 || table->isRowHidden(row))
 		return -1;
-	const QTableWidgetItem* item = table->item(row, 0);
-	if (!item)
-		return -1;
-	const int idx = item->data(Qt::UserRole).toInt();
-	if (idx < 0 || idx >= static_cast<int>(profiles.size()))
-		return -1;
-	return idx;
+	return profileIndexForTableRow(row);
 }
 
 void LauncherMainWindow::selectProfileIndex(int profileIdx)
 {
-	if (profileIdx < 0 || profileIdx >= table->rowCount())
+	if (table->rowCount() <= 0)
 		return;
 
-	int targetRow = profileIdx;
-	if (table->isRowHidden(targetRow))
+	int targetRow = tableRowForProfileIndex(profileIdx);
+	if (targetRow < 0 || table->isRowHidden(targetRow))
 	{
 		targetRow = -1;
 		for (int r = 0; r < table->rowCount(); ++r)
@@ -626,27 +860,70 @@ void LauncherMainWindow::selectProfileIndex(int profileIdx)
 void LauncherMainWindow::applyFilter()
 {
 	const QString filter = searchEdit->text().trimmed();
+	const QStringList terms = filter.split(QRegularExpression("\\s+"), Qt::SkipEmptyParts);
+	const int category = filterCategoryCombo ? filterCategoryCombo->currentData().toInt() : 0;
 	int visibleCount = 0;
 
-	for (int r = 0; r < table->rowCount() && r < static_cast<int>(profiles.size()); ++r)
+	for (int r = 0; r < table->rowCount(); ++r)
 	{
-		const Profile& p = profiles[r];
-		bool match = filter.isEmpty();
-		if (!match)
+		const int idx = profileIndexForTableRow(r);
+		if (idx < 0)
+		{
+			table->setRowHidden(r, true);
+			continue;
+		}
+		const Profile& p = profiles[idx];
+
+		bool match = true;
+		if (category == 1)
+			match = p.favorite;
+		else if (category == 2)
+			match = p.isIWAD;
+		else if (category == 3)
+			match = !p.isIWAD;
+
+		if (match && !terms.isEmpty())
 		{
 			const QString title = QString::fromStdString(p.title);
 			const QString author = QString::fromStdString(p.author);
-			const QString type = p.isIWAD ? QString("IWAD") : QString("(P)WAD");
-			match = title.contains(filter, Qt::CaseInsensitive)
-				|| author.contains(filter, Qt::CaseInsensitive)
-				|| type.contains(filter, Qt::CaseInsensitive);
+			const QString desc = QString::fromStdString(p.description);
+			const QString type = p.isIWAD ? QStringLiteral("IWAD") : QStringLiteral("(P)WAD PWAD");
+			const QString iwadFile = QFileInfo(QString::fromStdString(p.iwadPath)).fileName();
+			const QString pwadFile = QFileInfo(QString::fromStdString(p.pwadPath)).fileName();
+
+			for (const QString& term : terms)
+			{
+				bool termHit = title.contains(term, Qt::CaseInsensitive)
+					|| author.contains(term, Qt::CaseInsensitive)
+					|| desc.contains(term, Qt::CaseInsensitive)
+					|| type.contains(term, Qt::CaseInsensitive)
+					|| iwadFile.contains(term, Qt::CaseInsensitive)
+					|| pwadFile.contains(term, Qt::CaseInsensitive);
+				if (!termHit)
+				{
+					for (const std::string& modPath : p.mods)
+					{
+						if (QFileInfo(QString::fromStdString(modPath)).fileName().contains(term, Qt::CaseInsensitive))
+						{
+							termHit = true;
+							break;
+						}
+					}
+				}
+				if (!termHit)
+				{
+					match = false;
+					break;
+				}
+			}
 		}
+
 		table->setRowHidden(r, !match);
 		if (match)
 			++visibleCount;
 	}
 
-	if (filter.isEmpty())
+	if (terms.isEmpty() && category == 0)
 		statusCountLabel->setText(LStr("LAUNCHER_AVAILABLE_PROFILES", "Available Profiles:") + QString(" %1").arg(profiles.size()));
 	else
 		statusCountLabel->setText(LStr("LAUNCHER_SHOWING_PROFILES", "Showing %1 of %2 profiles").arg(visibleCount).arg(profiles.size()));
@@ -703,7 +980,7 @@ void LauncherMainWindow::updateDetailsPane()
 		coverLabel->setPixmap(QPixmap());
 		coverLabel->setText(profiles.empty() ? "UZDoom" : LStr("LAUNCHER_NO_SELECTION", "No Profile Selected"));
 		descView->setPlainText(profiles.empty()
-			? LStr("LAUNCHER_EMPTY_HINT", "No profiles found yet.\nDrop a .wad, .pk3, .ipk3, .zip, or .uzdp file here, or click 'Add/Import New Entry' above.")
+			? LStr("LAUNCHER_EMPTY_HINT", "No profiles found yet.\nDrop a .wad, .pk3, .ipk3, .zip, or .uzdp file here, or click 'New Entry' above.")
 			: QString());
 		return;
 	}
@@ -731,7 +1008,10 @@ void LauncherMainWindow::updateButtonStates()
 	const bool isRunning = (gameProcess != nullptr);
 	const int idx = selectedProfileIndex();
 	const bool hasSel = (idx >= 0);
-	const bool canMove = hasSel && searchEdit->text().trimmed().isEmpty();
+	const bool isSorted = (launcherConfig.sortColumn >= 1 && launcherConfig.sortColumn <= 6);
+	const QString moveTip = isSorted
+		? LStr("LAUNCHER_MOVE_DISABLED_SORTED", "Reset column sort (click sorted header or \u2605) to reorder profiles manually.")
+		: QString();
 
 	addMenu->menuAction()->setEnabled(!isRunning);
 	prefMenu->menuAction()->setEnabled(!isRunning);
@@ -739,8 +1019,10 @@ void LauncherMainWindow::updateButtonStates()
 	btnJoin->setEnabled(!isRunning && hasSel);
 	btnHost->setEnabled(!isRunning && hasSel);
 	btnSettings->setEnabled(!isRunning && hasSel);
-	btnMoveUp->setEnabled(!isRunning && canMove && idx > 0);
-	btnMoveDown->setEnabled(!isRunning && canMove && idx + 1 < static_cast<int>(profiles.size()));
+	btnMoveUp->setEnabled(canMoveSelectedBy(-1));
+	btnMoveDown->setEnabled(canMoveSelectedBy(1));
+	btnMoveUp->setToolTip(moveTip);
+	btnMoveDown->setToolTip(moveTip);
 	btnRefresh->setEnabled(!isRunning);
 #ifdef HAS_UPDATER
 	if (updater)
@@ -775,21 +1057,87 @@ void LauncherMainWindow::onFilterTextChanged(const QString&)
 	}
 }
 
-void LauncherMainWindow::moveSelectedProfile(int delta)
+void LauncherMainWindow::onFilterCategoryChanged(int)
+{
+	onFilterTextChanged(searchEdit->text());
+}
+
+void LauncherMainWindow::onHeaderSectionClicked(int logicalIndex)
+{
+	if (logicalIndex == 0)
+	{
+		if (launcherConfig.sortColumn >= 1)
+		{
+			launcherConfig.sortColumn = -1;
+			launcherConfig.sortDescending = false;
+			saveLauncherConfig(launcherConfig);
+			refreshTable(selectedProfileIndex());
+		}
+		return;
+	}
+
+	if (logicalIndex < 1 || logicalIndex > 6)
+		return;
+
+	const bool defaultDesc = (logicalIndex == 5 || logicalIndex == 6);
+	if (launcherConfig.sortColumn != logicalIndex)
+	{
+		launcherConfig.sortColumn = logicalIndex;
+		launcherConfig.sortDescending = defaultDesc;
+	}
+	else if (launcherConfig.sortDescending == defaultDesc)
+	{
+		launcherConfig.sortDescending = !defaultDesc;
+	}
+	else
+	{
+		launcherConfig.sortColumn = -1;
+		launcherConfig.sortDescending = false;
+	}
+
+	saveLauncherConfig(launcherConfig);
+	refreshTable(selectedProfileIndex());
+}
+
+void LauncherMainWindow::onTableCellClicked(int row, int column)
+{
+	if (column != 0 || gameProcess)
+		return;
+	const int idx = profileIndexForTableRow(row);
+	if (idx < 0)
+		return;
+	profiles[idx].favorite = !profiles[idx].favorite;
+	saveProfileToDisk(profiles[idx]);
+	refreshTable(idx);
+}
+
+void LauncherMainWindow::onToggleSelectedFavorite()
 {
 	if (gameProcess)
 		return;
 	const int idx = selectedProfileIndex();
 	if (idx < 0)
 		return;
-	const int target = idx + delta;
-	if (target < 0 || target >= static_cast<int>(profiles.size()))
+	profiles[idx].favorite = !profiles[idx].favorite;
+	saveProfileToDisk(profiles[idx]);
+	refreshTable(idx);
+}
+
+void LauncherMainWindow::moveSelectedProfile(int delta)
+{
+	if (!canMoveSelectedBy(delta))
+		return;
+	const int curRow = table->currentRow();
+	const int targetRow = curRow + delta;
+	const int idxA = profileIndexForTableRow(curRow);
+	const int idxB = profileIndexForTableRow(targetRow);
+	if (idxA < 0 || idxB < 0)
 		return;
 
-	std::swap(profiles[idx], profiles[target]);
+	std::swap(profiles[idxA], profiles[idxB]);
 	persistProfileOrdering(profiles);
-	launcherConfig.lastSelectedRow = target;
-	refreshTable(target);
+	launcherConfig.lastSelectedRow = idxB;
+	refreshTable(idxB);
 }
 
 void LauncherMainWindow::onMoveUpClicked()
@@ -817,19 +1165,45 @@ void LauncherMainWindow::onHostClicked()
 	launchProfile(LaunchTargetMode::Host);
 }
 
+void LauncherMainWindow::appendLaunchLogFooter(const QString& footerLine)
+{
+	if (activeLogFilePath.isEmpty())
+		return;
+	QFile f(activeLogFilePath);
+	if (f.open(QIODevice::WriteOnly | QIODevice::Append | QIODevice::Text))
+	{
+		const QByteArray out = ("\n" + footerLine + "\n").toUtf8();
+		f.write(out);
+		f.close();
+	}
+	activeLogFilePath.clear();
+}
+
 void LauncherMainWindow::recordRunningSessionPlaytime()
 {
 	if (runningProfileIndex < 0 || runningProfileIndex >= static_cast<int>(profiles.size()))
 		return;
 
+	const int profIdx = runningProfileIndex;
+	runningProfileIndex = -1;
+
 	const qint64 elapsedSecs = playTimer.isValid() ? (playTimer.elapsed() / 1000) : 0;
-	Profile& prof = profiles[runningProfileIndex];
+	Profile& prof = profiles[profIdx];
 	prof.lastPlayed = QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm").toStdString();
 	if (elapsedSecs >= 30)
 		prof.playtime += std::max<uint64_t>(1, static_cast<uint64_t>((elapsedSecs + 30) / 60));
 	saveProfileToDisk(prof);
-	updateTableRow(runningProfileIndex, runningProfileIndex);
-	runningProfileIndex = -1;
+
+	if (launcherConfig.sortColumn == 5 || launcherConfig.sortColumn == 6)
+	{
+		refreshTable(selectedProfileIndex());
+	}
+	else
+	{
+		const int row = tableRowForProfileIndex(profIdx);
+		if (row >= 0)
+			updateTableRow(row, profIdx);
+	}
 }
 
 void LauncherMainWindow::launchProfile(LaunchTargetMode mode)
@@ -868,6 +1242,57 @@ void LauncherMainWindow::launchProfile(LaunchTargetMode mode)
 		return;
 	}
 
+	QStringList missingFiles;
+	if (!p.isIWAD && !p.pwadPath.empty())
+	{
+		const QString pwadQ = QString::fromStdString(p.pwadPath);
+		if (!QFileInfo::exists(pwadQ))
+			missingFiles << QString("(P)WAD: %1").arg(QDir::toNativeSeparators(pwadQ));
+	}
+	{
+		QSet<QString> disabledKeys;
+		for (const std::string& dm : p.disabledMods)
+		{
+			if (!dm.empty())
+				disabledKeys.insert(normalizePathKey(QString::fromStdString(dm)));
+		}
+		for (const std::string& m : p.mods)
+		{
+			if (m.empty())
+				continue;
+			const QString modQ = QString::fromStdString(m);
+			if (disabledKeys.contains(normalizePathKey(modQ)))
+				continue;
+			if (!QFileInfo::exists(modQ))
+				missingFiles << QString("Mod: %1").arg(QDir::toNativeSeparators(modQ));
+		}
+	}
+	if (!missingFiles.isEmpty())
+	{
+		constexpr int kMaxListed = 8;
+		QStringList listed = missingFiles.mid(0, kMaxListed);
+		if (missingFiles.size() > kMaxListed)
+			listed << QString("... and %1 more").arg(missingFiles.size() - kMaxListed);
+
+		QMessageBox box(this);
+		box.setIcon(QMessageBox::Warning);
+		box.setWindowTitle(LStr("LAUNCHER_MISSING_FILES_TITLE", "Missing Profile Files"));
+		box.setText(QString("Some files configured for '%1' could not be found:\n\n%2\n\nWould you like to open Profile Settings to fix them, or launch anyway?")
+			.arg(QString::fromStdString(p.title), listed.join('\n')));
+		QPushButton* btnOpenSettings = box.addButton(LStr("LAUNCHER_OPEN_SETTINGS", "Open Profile Settings"), QMessageBox::AcceptRole);
+		QPushButton* btnLaunchAnyway = box.addButton(LStr("LAUNCHER_LAUNCH_ANYWAY", "Launch Anyway"), QMessageBox::ActionRole);
+		box.addButton(QMessageBox::Cancel);
+		box.setDefaultButton(btnOpenSettings);
+		box.exec();
+		if (box.clickedButton() == btnOpenSettings)
+		{
+			openSettingsForIndex(idx);
+			return;
+		}
+		if (box.clickedButton() != btnLaunchAnyway)
+			return;
+	}
+
 	if (p.recordDemo && !p.selectedLaunchDemoRecord.empty() && !p.demoDirPath.empty())
 		QDir().mkpath(QString::fromStdString(p.demoDirPath));
 
@@ -878,16 +1303,68 @@ void LauncherMainWindow::launchProfile(LaunchTargetMode mode)
 	gameProcess = new QProcess(this);
 	gameProcess->setWorkingDirectory(QFileInfo(QCoreApplication::applicationFilePath()).absolutePath());
 
+	activeLogFilePath.clear();
+	if (!p.filePath.empty())
+	{
+		const QString profFolder = QFileInfo(QString::fromStdString(p.filePath)).absolutePath();
+		const QString logsDirPath = QDir(profFolder).filePath(QStringLiteral("logs"));
+		QDir().mkpath(logsDirPath);
+
+		const QDateTime now = QDateTime::currentDateTime();
+		const QString baseStamp = now.toString(QStringLiteral("yyyy-MM-dd_HH-mm-ss"));
+		QString candidate = QDir(logsDirPath).filePath(baseStamp + QStringLiteral(".log"));
+		int suffix = 1;
+		while (QFileInfo::exists(candidate))
+			candidate = QDir(logsDirPath).filePath(QString("%1_%2.log").arg(baseStamp).arg(++suffix));
+		activeLogFilePath = candidate;
+
+		QFile logHeaderFile(activeLogFilePath);
+		if (logHeaderFile.open(QIODevice::WriteOnly | QIODevice::Truncate | QIODevice::Text))
+		{
+			const QString header = QString("=== %1 Launch Log (%2) ===\nCommand: %3 %4\n================================================\n\n")
+				.arg(GAMENAME)
+				.arg(now.toString(QStringLiteral("yyyy-MM-dd HH:mm:ss")))
+				.arg(QDir::toNativeSeparators(QCoreApplication::applicationFilePath()))
+				.arg(QString::fromStdString(p.giveLaunchCommand(mode, launcherConfig.language)));
+			logHeaderFile.write(header.toUtf8());
+			logHeaderFile.close();
+
+			// Keep at most the 20 most recent logs per profile.
+			constexpr int kMaxKeptLogs = 20;
+			QDir logsDir(logsDirPath);
+			const QFileInfoList existingLogs = logsDir.entryInfoList(
+				{QStringLiteral("*.log")}, QDir::Files, QDir::Name | QDir::Reversed);
+			for (int i = kMaxKeptLogs; i < existingLogs.size(); ++i)
+				QFile::remove(existingLogs[i].absoluteFilePath());
+
+			gameProcess->setProcessChannelMode(QProcess::MergedChannels);
+			gameProcess->setStandardOutputFile(activeLogFilePath, QIODevice::Append);
+#ifdef Q_OS_WIN
+			if (!args.contains(QStringLiteral("-stdout"), Qt::CaseInsensitive))
+				args << QStringLiteral("-stdout");
+#endif
+		}
+		else
+		{
+			activeLogFilePath.clear();
+		}
+	}
+
 	connect(gameProcess, &QProcess::errorOccurred, this, [this](QProcess::ProcessError err) {
 		if (err == QProcess::FailedToStart)
 		{
+			appendLaunchLogFooter(QStringLiteral("=== Failed to start executable ==="));
 			QMessageBox::critical(this, "Launch Failed",
 				"Failed to launch UZDoom executable:\n" + QCoreApplication::applicationFilePath());
 		}
 	});
 
 	connect(gameProcess, qOverload<int, QProcess::ExitStatus>(&QProcess::finished), this,
-		[this](int, QProcess::ExitStatus) {
+		[this](int exitCode, QProcess::ExitStatus exitStatus) {
+			appendLaunchLogFooter(exitStatus == QProcess::CrashExit
+				? QString("=== Process crashed (exit code %1) ===").arg(exitCode)
+				: QString("=== Process exited (code %1) ===").arg(exitCode));
+
 			if (wasHiddenForLaunch)
 			{
 				if (wasMaximizedBeforeHide)
@@ -918,6 +1395,7 @@ void LauncherMainWindow::launchProfile(LaunchTargetMode mode)
 
 	if (gameProcess->state() == QProcess::NotRunning && gameProcess->error() == QProcess::FailedToStart)
 	{
+		appendLaunchLogFooter(QStringLiteral("=== Failed to start executable ==="));
 		gameProcess->deleteLater();
 		gameProcess = nullptr;
 		runningProfileIndex = -1;
@@ -954,9 +1432,7 @@ void LauncherMainWindow::openSettingsForIndex(int profileIdx)
 		saveProfileToDisk(workingCopy);
 		profiles[profileIdx] = std::move(workingCopy);
 		cachedCoverPath.clear();
-		updateTableRow(profileIdx, profileIdx);
-		applyFilter();
-		selectProfileIndex(profileIdx);
+		refreshTable(profileIdx);
 		break;
 
 	case ProfileSettingsDialog::ActionResult::Cloned:
@@ -1125,8 +1601,18 @@ void LauncherMainWindow::handleImportedFiles(const QStringList& localPaths)
 				if (cancelledAttach)
 					continue;
 				const std::string modStd = finalModPath.toStdString();
-				if (std::find(profiles[curIdx].mods.begin(), profiles[curIdx].mods.end(), modStd) == profiles[curIdx].mods.end())
+				const QString modKey = normalizePathKey(finalModPath);
+				const bool alreadyPresent = std::any_of(profiles[curIdx].mods.begin(), profiles[curIdx].mods.end(), [&](const std::string& existing)
+				{
+					return normalizePathKey(QString::fromStdString(existing)) == modKey;
+				});
+				if (!alreadyPresent)
 					profiles[curIdx].mods.push_back(modStd);
+				auto& dmods = profiles[curIdx].disabledMods;
+				dmods.erase(std::remove_if(dmods.begin(), dmods.end(), [&](const std::string& dm)
+				{
+					return normalizePathKey(QString::fromStdString(dm)) == modKey;
+				}), dmods.end());
 				saveProfileToDisk(profiles[curIdx]);
 				++addedCount;
 				lastCreatedIdx = curIdx;
@@ -1275,9 +1761,32 @@ void LauncherMainWindow::onRefreshProfiles()
 {
 	if (gameProcess)
 		return;
-	const int prev = selectedProfileIndex();
+	const int prevIdx = selectedProfileIndex();
+	const QString prevPathKey = (prevIdx >= 0 && !profiles[prevIdx].filePath.empty())
+		? normalizePathKey(QString::fromStdString(profiles[prevIdx].filePath))
+		: QString();
 	profiles = loadAllProfiles();
-	refreshTable(prev);
+	int nextSelectIdx = prevIdx;
+	if (!prevPathKey.isEmpty())
+	{
+		int matched = -1;
+		for (int i = 0; i < static_cast<int>(profiles.size()); ++i)
+		{
+			if (!profiles[i].filePath.empty()
+				&& normalizePathKey(QString::fromStdString(profiles[i].filePath)) == prevPathKey)
+			{
+				matched = i;
+				break;
+			}
+		}
+		if (matched >= 0)
+			nextSelectIdx = matched;
+		else if (!profiles.empty())
+			nextSelectIdx = std::clamp(prevIdx, 0, static_cast<int>(profiles.size()) - 1);
+		else
+			nextSelectIdx = -1;
+	}
+	refreshTable(nextSelectIdx);
 	startIWadAutoDetect(false);
 }
 
@@ -1374,7 +1883,14 @@ void LauncherMainWindow::onDeleteSelectedProfile()
 	if (ans != QMessageBox::Yes)
 		return;
 
-	deleteProfileDirectory(profiles[idx]);
+	if (!deleteProfileDirectory(profiles[idx]))
+	{
+		QMessageBox::warning(
+			this,
+			LStr("ERROR_FATAL", "Error"),
+			LStr("LAUNCHER_DELETE_PROFILE_FAILED", "Failed to remove profile directory. Make sure no files or folders inside it are open in another program."));
+		return;
+	}
 	profiles.erase(profiles.begin() + idx);
 	persistProfileOrdering(profiles);
 	launcherConfig.lastSelectedRow = std::min(idx, static_cast<int>(profiles.size()) - 1);
@@ -1393,7 +1909,6 @@ void LauncherMainWindow::onTableContextMenu(const QPoint& pos)
 		return;
 
 	const bool idle = (gameProcess == nullptr);
-	const bool canMove = idle && searchEdit->text().trimmed().isEmpty();
 
 	QMenu menu(this);
 	QAction* actPlay = menu.addAction(btnPlay->text(), this, &LauncherMainWindow::onPlayClicked);
@@ -1404,6 +1919,12 @@ void LauncherMainWindow::onTableContextMenu(const QPoint& pos)
 	actHost->setEnabled(idle);
 
 	menu.addSeparator();
+	QAction* actFav = menu.addAction(
+		profiles[idx].favorite
+			? LStr("LAUNCHER_UNPIN_FAVORITE", "Unpin Favorite")
+			: LStr("LAUNCHER_PIN_FAVORITE", "Pin to Top (Favorite)"),
+		this, &LauncherMainWindow::onToggleSelectedFavorite);
+	actFav->setEnabled(idle);
 	QAction* actSettings = menu.addAction(btnSettings->text(), this, &LauncherMainWindow::onProfileSettingsClicked);
 	QAction* actClone = menu.addAction(LStr("LAUNCHER_CLONE_PROFILE", "Clone Profile..."), this, &LauncherMainWindow::onCloneSelectedProfile);
 	menu.addAction(LStr("LAUNCHER_EXPORT_PROFILE", "Export Profile (.uzdp)..."), this, &LauncherMainWindow::onExportSelectedProfile);
@@ -1414,8 +1935,8 @@ void LauncherMainWindow::onTableContextMenu(const QPoint& pos)
 	menu.addSeparator();
 	QAction* actUp = menu.addAction(btnMoveUp->text(), this, &LauncherMainWindow::onMoveUpClicked);
 	QAction* actDown = menu.addAction(btnMoveDown->text(), this, &LauncherMainWindow::onMoveDownClicked);
-	actUp->setEnabled(canMove && idx > 0);
-	actDown->setEnabled(canMove && idx + 1 < static_cast<int>(profiles.size()));
+	actUp->setEnabled(canMoveSelectedBy(-1));
+	actDown->setEnabled(canMoveSelectedBy(1));
 
 	menu.addSeparator();
 	QAction* actDel = menu.addAction(LStr("LAUNCHER_DELETE_PROFILE", "Delete Profile..."), this, &LauncherMainWindow::onDeleteSelectedProfile);
@@ -1460,6 +1981,7 @@ void LauncherMainWindow::onThemeTriggered(QAction* action)
 	launcherConfig.theme = action->data().toString().toStdString();
 	applyLauncherTheme(launcherConfig.theme);
 	saveLauncherConfig(launcherConfig);
+	refreshTable(selectedProfileIndex());
 }
 
 void LauncherMainWindow::updateDefaultModsMenuState()

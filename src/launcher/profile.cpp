@@ -34,7 +34,7 @@
 
 namespace
 {
-	bool copyDirectoryRecursively(const QString& srcPath, const QString& dstPath)
+	bool copyDirectoryRecursively(const QString& srcPath, const QString& dstPath, bool skipRootLogs = false)
 	{
 		const QDir srcDir(srcPath);
 		if (!srcDir.exists())
@@ -46,10 +46,17 @@ namespace
 			QDir::Dirs | QDir::Files | QDir::NoDotAndDotDot | QDir::Hidden);
 		for (const QFileInfo& entry : entries)
 		{
+			if (skipRootLogs)
+			{
+				if (entry.isDir() && entry.fileName().compare(QStringLiteral("logs"), Qt::CaseInsensitive) == 0)
+					continue;
+				if (entry.isFile() && entry.fileName().compare(QStringLiteral("last_launch.log"), Qt::CaseInsensitive) == 0)
+					continue;
+			}
 			const QString target = QDir(dstPath).filePath(entry.fileName());
 			if (entry.isDir())
 			{
-				if (!copyDirectoryRecursively(entry.absoluteFilePath(), target))
+				if (!copyDirectoryRecursively(entry.absoluteFilePath(), target, false))
 					return false;
 			}
 			else
@@ -397,6 +404,10 @@ QStringList Profile::buildLaunchArguments(LaunchTargetMode mode, const std::stri
 		args << "+set" << "compatflags" << QString::number(compatflags);
 		args << "+set" << "compatflags2" << QString::number(compatflags2);
 	}
+	else
+	{
+		args << "-compatmode" << "0";
+	}
 
 	if (!playerName.empty())
 		args << "+set" << "name" << qStr(playerName);
@@ -453,6 +464,10 @@ LauncherConfig loadLauncherConfig()
 		cfg.maximized = obj["maximized"].toBool(false);
 	if (obj.contains("lastSelectedRow"))
 		cfg.lastSelectedRow = obj["lastSelectedRow"].toInt(0);
+	if (obj.contains("sortColumn"))
+		cfg.sortColumn = obj["sortColumn"].toInt(-1);
+	if (obj.contains("sortDescending"))
+		cfg.sortDescending = obj["sortDescending"].toBool(false);
 	if (obj.contains("splitterTopSize"))
 		cfg.splitterTopSize = obj["splitterTopSize"].toInt(0);
 	if (obj.contains("splitterBottomSize"))
@@ -472,6 +487,8 @@ void saveLauncherConfig(const LauncherConfig& cfg)
 	obj["showReleaseNotes"] = cfg.showReleaseNotes;
 	obj["maximized"] = cfg.maximized;
 	obj["lastSelectedRow"] = cfg.lastSelectedRow;
+	obj["sortColumn"] = cfg.sortColumn;
+	obj["sortDescending"] = cfg.sortDescending;
 	obj["splitterTopSize"] = cfg.splitterTopSize;
 	obj["splitterBottomSize"] = cfg.splitterBottomSize;
 	obj["defaultModsDir"] = qStr(cfg.defaultModsDir);
@@ -539,6 +556,7 @@ bool saveProfileToDisk(Profile& profile)
 	obj["lastPlayed"] = qStr(profile.lastPlayed);
 	obj["playtime"] = static_cast<qint64>(profile.playtime);
 	obj["orderIndex"] = profile.orderIndex;
+	obj["favorite"] = profile.favorite;
 	obj["coverImagePath"] = qStr(profile.coverImagePath);
 
 	obj["isIWAD"] = profile.isIWAD;
@@ -636,6 +654,7 @@ bool loadProfileFromDisk(const std::string& path, Profile& p)
 	p.lastPlayed = stdStr(obj["lastPlayed"].toString("Never"));
 	p.playtime = static_cast<uint64_t>(std::max<qint64>(0, obj["playtime"].toInteger(0)));
 	p.orderIndex = obj["orderIndex"].toInt(-1);
+	p.favorite = obj["favorite"].toBool(false);
 	p.coverImagePath = stdStr(obj["coverImagePath"].toString());
 
 	p.isIWAD = obj["isIWAD"].toBool(false);
@@ -829,6 +848,8 @@ bool cloneProfile(const Profile& source, const std::string& newTitle, Profile& o
 	outClone.title = newTitle.empty() ? (source.title + " (Copy)") : newTitle;
 	outClone.filePath.clear();
 	outClone.orderIndex = -1;
+	outClone.lastPlayed = "Never";
+	outClone.playtime = 0;
 
 	const std::string slug = sanitizeFolderName(outClone.title);
 	std::string folderName = slug;
@@ -842,7 +863,7 @@ bool cloneProfile(const Profile& source, const std::string& newTitle, Profile& o
 		folderName = slug + "_" + std::to_string(++suffix);
 	}
 
-	if (!copyDirectoryRecursively(srcFolder, destFolder))
+	if (!copyDirectoryRecursively(srcFolder, destFolder, true))
 		return false;
 
 	QDir destDir(destFolder);
@@ -1052,6 +1073,9 @@ bool exportProfileToZip(const Profile& profile, const std::string& destZipPath, 
 		if (normalizeSlash(QFileInfo(absFile).absoluteFilePath()).compare(destAbs, Qt::CaseInsensitive) == 0)
 			continue;
 		QString relPath = baseDir.relativeFilePath(absFile).replace('\\', '/');
+		if (relPath.compare(QStringLiteral("last_launch.log"), Qt::CaseInsensitive) == 0
+			|| relPath.startsWith(QStringLiteral("logs/"), Qt::CaseInsensitive))
+			continue;
 		QFile srcFile(absFile);
 		if (!srcFile.open(QIODevice::ReadOnly)
 			|| !mz_zip_writer_add_read_buf_callback(
@@ -1145,7 +1169,41 @@ bool importProfileFromZip(const std::string& zipPath, Profile& outProfile, std::
 		return false;
 	}
 
+	QString finalBaseDir = QFileInfo(destFolder).absoluteFilePath();
 	const QString metaParent = QFileInfo(foundMeta).absolutePath();
+	const QString normMetaParent = normalizeSlash(metaParent);
+	if (normMetaParent.compare(cleanDestRoot, Qt::CaseInsensitive) != 0)
+	{
+		// Hoist nested profile directory to the immediate child folder under PROFILE_DIR so loadAllProfiles() finds it on restart.
+		QString tempHoist = destFolder + QStringLiteral("_hoist");
+		int hoistSuffix = 1;
+		while (QFileInfo::exists(tempHoist))
+			tempHoist = destFolder + QStringLiteral("_hoist_") + QString::number(++hoistSuffix);
+
+		bool movedOut = QDir().rename(metaParent, tempHoist);
+		if (!movedOut)
+			movedOut = copyDirectoryRecursively(metaParent, tempHoist, false);
+
+		if (!movedOut)
+		{
+			QDir(tempHoist).removeRecursively();
+			QDir(destFolder).removeRecursively();
+			errOut = "Failed to flatten nested profile directory inside .uzdp archive.";
+			return false;
+		}
+
+		QDir(destFolder).removeRecursively();
+		if (QDir().rename(tempHoist, destFolder))
+		{
+			finalBaseDir = QFileInfo(destFolder).absoluteFilePath();
+		}
+		else
+		{
+			finalBaseDir = QFileInfo(tempHoist).absoluteFilePath();
+		}
+		outProfile.filePath = stdStr(QDir(finalBaseDir).filePath(QFileInfo(foundMeta).fileName()));
+	}
+
 	auto inferOldProfileDir = [&]() -> QString
 	{
 		auto parentIfNamed = [](const std::string& pathStr, const QString& expectedLeaf) -> QString
@@ -1171,10 +1229,11 @@ bool importProfileFromZip(const std::string& zipPath, Profile& outProfile, std::
 		return {};
 	};
 	const QString oldDir = inferOldProfileDir();
-	applyProfilePathMapping(outProfile, stdStr(oldDir), stdStr(metaParent));
+	applyProfilePathMapping(outProfile, stdStr(oldDir), stdStr(finalBaseDir));
 	outProfile.orderIndex = -1;
 	if (!saveProfileToDisk(outProfile))
 	{
+		QDir(finalBaseDir).removeRecursively();
 		errOut = "Failed to save imported profile.";
 		return false;
 	}
