@@ -1739,6 +1739,22 @@ DEFINE_ACTION_FUNCTION_NATIVE(_Sector, SetXOffset, SetXOffset)
  }
 
  //==========================================================================
+ //
+ //
+ //==========================================================================
+
+ static int IsSavingAllowed(FLevelLocals *self)
+ {
+	 return self->IsSavingAllowed();
+ }
+
+ DEFINE_ACTION_FUNCTION_NATIVE(FLevelLocals, IsSavingAllowed, IsSavingAllowed)
+ {
+	 PARAM_SELF_STRUCT_PROLOGUE(FLevelLocals);
+	 ACTION_RETURN_BOOL(self->IsSavingAllowed());
+ }
+
+ //==========================================================================
 //
 // ZScript counterpart to ACS ChangeSky, uses TextureIDs
 //
