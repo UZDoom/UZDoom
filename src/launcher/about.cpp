@@ -64,6 +64,18 @@ namespace
 		return docs;
 	}
 
+	QString formatPrintfStrings(QString fmt, const QStringList& args)
+	{
+		for (const QString& a : args)
+		{
+			const qsizetype pos = fmt.indexOf(QStringLiteral("%s"));
+			if (pos < 0)
+				break;
+			fmt.replace(pos, 2, a);
+		}
+		return fmt;
+	}
+
 	QString parseSingleReleaseNode(rapidxml::xml_node<char>* release, bool showUpcoming, VersionInfo* outVersion)
 	{
 		if (!release)
@@ -87,10 +99,14 @@ namespace
 			return {};
 
 		constexpr VersionInfo firstUzdoom{4, 14, 3};
-		md += QString("# %1 version %2, released %3\n\n")
-			.arg(verInfo >= firstUzdoom ? GAMENAME : "GZDoom")
-			.arg(version ? QString::fromUtf8(version->value()) : LStr("NOTES_UNKNOWN", "Unknown"))
-			.arg(date ? QString::fromUtf8(date->value()) : LStr("NOTES_UNKNOWN", "Unknown"));
+		const QString relHeader = formatPrintfStrings(
+			LStr("NOTES_RELEASED", "%s version %s, released %s"),
+			{
+				QString::fromUtf8(verInfo >= firstUzdoom ? GAMENAME : "GZDoom"),
+				version ? QString::fromUtf8(version->value()) : LStr("NOTES_UNKNOWN", "Unknown"),
+				date ? QString::fromUtf8(date->value()) : LStr("NOTES_UNKNOWN", "Unknown")
+			});
+		md += "# " + relHeader + "\n\n";
 
 		auto appendInlineNodes = [&](const QString& prefix, rapidxml::xml_node<char>* node)
 		{
@@ -167,7 +183,11 @@ namespace
 		}
 
 		if (url && url->value())
-			md += QString("\nFor more details see: [%1](%1)\n").arg(QString::fromUtf8(url->value()));
+		{
+			const QString urlStr = QString::fromUtf8(url->value());
+			const QString linkMd = QString("[%1](%1)").arg(urlStr);
+			md += "\n" + formatPrintfStrings(LStr("NOTES_DETAILS", "For more details see: %s"), {linkMd}) + "\n";
+		}
 
 		return md;
 	}
@@ -305,15 +325,15 @@ void AboutDialog::populateAbout()
 
 	QString md;
 	md += QString("# %1 %2\n\n").arg(GAMENAME).arg(GetVersionString());
-	md += QString("**Build Date:** %1\n\n").arg(formattedDate);
+	md += QString("**%1** %2\n\n").arg(LStr("LAUNCHER_BUILD_DATE", "Build Date:"), formattedDate);
 	if (!aboutTxt.isEmpty())
 		md += aboutTxt + "\n\n";
 	else
-		md += "UZDoom is a feature-rich source port for Doom, Heretic, Hexen, Strife, and Chex Quest.\n\n";
+		md += LStr("LAUNCHER_ABOUT_FALLBACK", "UZDoom is a feature-rich source port for Doom, Heretic, Hexen, Strife, and Chex Quest.") + "\n\n";
 
 	if (!contribTxt.isEmpty())
 	{
-		md += "## Contributors\n\n";
+		md += "## " + LStr("LAUNCHER_CONTRIBUTORS", "Contributors") + "\n\n";
 		const QStringList lines = contribTxt.split('\n', Qt::SkipEmptyParts);
 		for (const QString& rawLine : lines)
 		{

@@ -42,11 +42,11 @@ namespace
 		switch (status)
 		{
 		case 1:
-			return "CONNECTING";
+			return LStr("NETMENU_STATUS_CONNECTING", "CONNECTING");
 		case 2:
-			return "WAITING";
+			return LStr("NETMENU_STATUS_WAITING", "WAITING");
 		case 3:
-			return "READY";
+			return LStr("NETMENU_STATUS_READY", "READY");
 		default:
 			return {};
 		}
@@ -57,8 +57,8 @@ NetStartWindow::NetStartWindow(bool host, QWidget* parent)
 	: QDialog(parent), hosting(host)
 {
 	setWindowTitle(host
-		? QString("%1 - Server Control").arg(GAMENAME)
-		: QString("%1 - Lobby").arg(GAMENAME));
+		? QString("%1 - %2").arg(GAMENAME, LStr("NETMENU_SERVER_CONTROL", "Server Control"))
+		: QString("%1 - %2").arg(GAMENAME, LStr("NETMENU_LOBBY", "Lobby")));
 	setMinimumSize(460, 420);
 	resize(540, 500);
 
@@ -78,9 +78,14 @@ NetStartWindow::NetStartWindow(bool host, QWidget* parent)
 	mainLayout->addLayout(headerRow);
 
 	table = new QTableWidget(0, host ? 5 : 4, this);
-	QStringList headers = {"#", "Flags", "Player", "Status"};
+	QStringList headers = {
+		QStringLiteral("#"),
+		LStr("NETMENU_COL_FLAGS", "Flags"),
+		LStr("NETMENU_COL_PLAYER", "Player"),
+		LStr("NETMENU_COL_STATUS", "Status")
+	};
 	if (host)
-		headers << "Actions";
+		headers << LStr("NETMENU_COL_ACTIONS", "Actions");
 	table->setHorizontalHeaderLabels(headers);
 	table->verticalHeader()->setVisible(false);
 	table->verticalHeader()->setDefaultSectionSize(28);

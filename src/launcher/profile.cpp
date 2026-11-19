@@ -33,6 +33,7 @@
 #include <QSet>
 #include <algorithm>
 #include <miniz.h>
+#include <optional>
 
 namespace
 {
@@ -75,6 +76,242 @@ namespace
 	QString normalizeSlash(const QString& p)
 	{
 		return QDir::cleanPath(p).replace('\\', '/');
+	}
+
+	Qt::CaseSensitivity pathCaseSensitivity()
+	{
+#ifdef Q_OS_WIN
+		return Qt::CaseInsensitive;
+#else
+		return Qt::CaseSensitive;
+#endif
+	}
+
+	bool isPathInsideBase(const QString& normPath, const QString& normBase, QString& outRelative)
+	{
+		if (normPath.isEmpty() || normBase.isEmpty())
+			return false;
+		const Qt::CaseSensitivity cs = pathCaseSensitivity();
+		if (normPath.compare(normBase, cs) == 0)
+		{
+			outRelative = QStringLiteral(".");
+			return true;
+		}
+		const QString prefix = normBase.endsWith('/') ? normBase : (normBase + '/');
+		if (normPath.startsWith(prefix, cs))
+		{
+			outRelative = normPath.mid(prefix.size());
+			return true;
+		}
+		return false;
+	}
+
+	QString toStoredPath(const std::string& rawPath, const QString& profFolder)
+	{
+		const QString trimmed = qStr(rawPath).trimmed();
+		if (trimmed.isEmpty())
+			return {};
+
+		if (trimmed.startsWith(QStringLiteral("${LAUNCHER_DIR}"), Qt::CaseInsensitive)
+			|| trimmed.startsWith(QStringLiteral("${EXEC_DIR}"), Qt::CaseInsensitive))
+		{
+			return normalizeSlash(trimmed);
+		}
+		if (!QFileInfo(trimmed).isAbsolute())
+			return normalizeSlash(trimmed);
+
+		const QString normPath = normalizeSlash(QFileInfo(trimmed).absoluteFilePath());
+		QString rel;
+		if (!profFolder.isEmpty())
+		{
+			const QString normProf = normalizeSlash(QFileInfo(profFolder).absoluteFilePath());
+			if (isPathInsideBase(normPath, normProf, rel))
+				return rel;
+		}
+		if (!LauncherConst::ROOT_DIR.empty())
+		{
+			const QString normRoot = normalizeSlash(QFileInfo(qStr(LauncherConst::ROOT_DIR)).absoluteFilePath());
+			if (isPathInsideBase(normPath, normRoot, rel))
+				return (rel == QStringLiteral("."))
+					? QStringLiteral("${LAUNCHER_DIR}")
+					: (QStringLiteral("${LAUNCHER_DIR}/") + rel);
+		}
+		if (!LauncherConst::EXEC_DIR.empty())
+		{
+			const QString normExec = normalizeSlash(QFileInfo(qStr(LauncherConst::EXEC_DIR)).absoluteFilePath());
+			if (isPathInsideBase(normPath, normExec, rel))
+				return (rel == QStringLiteral("."))
+					? QStringLiteral("${EXEC_DIR}")
+					: (QStringLiteral("${EXEC_DIR}/") + rel);
+		}
+		return normPath;
+	}
+
+	QString remapSinglePath(const QString& original, const QString& oldBase, const QString& newBase);
+
+	std::string fromStoredPath(const QString& storedRaw, const QString& profFolder, bool keepBareRelative = false)
+	{
+		const QString trimmed = storedRaw.trimmed();
+		if (trimmed.isEmpty())
+			return {};
+
+		const QString norm = normalizeSlash(trimmed);
+
+		auto expandToken = [&](const QString& token, const std::string& baseDir) -> std::optional<std::string>
+		{
+			if (baseDir.empty())
+				return std::nullopt;
+			const QString cleanBase = normalizeSlash(QFileInfo(qStr(baseDir)).absoluteFilePath());
+			if (norm.compare(token, Qt::CaseInsensitive) == 0)
+				return stdStr(cleanBase);
+			const QString prefix = token + '/';
+			if (norm.startsWith(prefix, Qt::CaseInsensitive))
+			{
+				const QString rel = norm.mid(prefix.size());
+				return stdStr(normalizeSlash(QDir(cleanBase).filePath(rel)));
+			}
+			return std::nullopt;
+		};
+
+		if (auto expanded = expandToken(QStringLiteral("${LAUNCHER_DIR}"), LauncherConst::ROOT_DIR))
+			return *expanded;
+		if (auto expanded = expandToken(QStringLiteral("${EXEC_DIR}"), LauncherConst::EXEC_DIR))
+			return *expanded;
+
+		if (!QFileInfo(norm).isAbsolute())
+		{
+			if (keepBareRelative && !norm.contains('/'))
+			{
+				if (!profFolder.isEmpty())
+				{
+					const QString direct = normalizeSlash(QDir(profFolder).filePath(norm));
+					if (QFileInfo::exists(direct))
+						return stdStr(direct);
+				}
+				return stdStr(norm);
+			}
+			if (!profFolder.isEmpty())
+				return stdStr(normalizeSlash(QDir(profFolder).filePath(norm)));
+			if (!LauncherConst::ROOT_DIR.empty())
+				return stdStr(normalizeSlash(QDir(qStr(LauncherConst::ROOT_DIR)).filePath(norm)));
+			return stdStr(norm);
+		}
+
+		// Self-heal legacy absolute paths from a moved profile directory if the target exists in profFolder.
+		if (!profFolder.isEmpty() && !QFileInfo::exists(norm))
+		{
+			const QString remapped = remapSinglePath(norm, {}, profFolder);
+			if (remapped != norm)
+				return stdStr(remapped);
+		}
+
+		return stdStr(norm);
+	}
+
+	void resolveProfilePathsInPlace(Profile& profile, const QString& profFolder)
+	{
+		auto resolveField = [&](std::string& field, bool keepBareRelative = false)
+		{
+			if (!field.empty())
+				field = fromStoredPath(qStr(field), profFolder, keepBareRelative);
+		};
+
+		resolveField(profile.coverImagePath);
+		resolveField(profile.iwadPath);
+		resolveField(profile.pwadPath);
+		for (auto& mod : profile.mods)
+			resolveField(mod);
+		for (auto& dmod : profile.disabledMods)
+			resolveField(dmod);
+		resolveField(profile.selectedLaunchSave, true);
+		resolveField(profile.selectedLaunchDemoPlayback, true);
+		resolveField(profile.configFilePath);
+		resolveField(profile.saveDirPath);
+		resolveField(profile.screenshotDirPath);
+		resolveField(profile.demoDirPath);
+	}
+
+	QJsonObject serializeProfileToJson(const Profile& profile, const QString& profFolder)
+	{
+		QJsonObject obj;
+		obj["title"] = qStr(profile.title);
+		obj["author"] = qStr(profile.author);
+		obj["releaseDate"] = qStr(profile.releaseDate);
+		obj["description"] = qStr(profile.description);
+		obj["lastPlayed"] = qStr(profile.lastPlayed);
+		obj["playtime"] = static_cast<qint64>(profile.playtime);
+		obj["orderIndex"] = profile.orderIndex;
+		obj["favorite"] = profile.favorite;
+		obj["coverImagePath"] = toStoredPath(profile.coverImagePath, profFolder);
+
+		obj["isIWAD"] = profile.isIWAD;
+		obj["iwadPath"] = toStoredPath(profile.iwadPath, profFolder);
+		obj["pwadPath"] = toStoredPath(profile.pwadPath, profFolder);
+		QJsonArray modsArr;
+		for (const auto& m : profile.mods)
+			modsArr.append(toStoredPath(m, profFolder));
+		obj["mods"] = modsArr;
+		QJsonArray disabledModsArr;
+		for (const auto& dm : profile.disabledMods)
+			disabledModsArr.append(toStoredPath(dm, profFolder));
+		obj["disabledMods"] = disabledModsArr;
+		obj["copyModsToProfile"] = profile.copyModsToProfile;
+
+		obj["launchParameters"] = profile.launchParameters;
+		obj["selectedLaunchMap"] = qStr(profile.selectedLaunchMap);
+		obj["selectedLaunchSave"] = toStoredPath(profile.selectedLaunchSave, profFolder);
+		obj["selectedLaunchDemoPlayback"] = toStoredPath(profile.selectedLaunchDemoPlayback, profFolder);
+		obj["recordDemo"] = profile.recordDemo;
+		obj["selectedLaunchDemoRecord"] = qStr(profile.selectedLaunchDemoRecord);
+
+		obj["difficulty"] = profile.difficulty;
+		obj["fastMonsters"] = profile.fastMonsters;
+		obj["respawnMonsters"] = profile.respawnMonsters;
+		obj["noMonsters"] = profile.noMonsters;
+		obj["allowMultiplayerItems"] = profile.allowMultiplayerItems;
+		obj["pistolStartAllLevels"] = profile.pistolStartAllLevels;
+
+		obj["playerName"] = qStr(profile.playerName);
+		obj["playerClass"] = qStr(profile.playerClass);
+		obj["playerGender"] = profile.playerGender;
+		obj["wadLanguage"] = qStr(profile.wadLanguage);
+
+		obj["compatLevel"] = profile.compatLevel;
+		obj["complevel"] = qStr(profile.complevel);
+		obj["alwaysApplyDMFlags"] = profile.alwaysApplyDMFlags;
+		obj["dmflags"] = static_cast<qint64>(profile.dmflags);
+		obj["dmflags2"] = static_cast<qint64>(profile.dmflags2);
+		obj["dmflags3"] = static_cast<qint64>(profile.dmflags3);
+		obj["compatflags"] = static_cast<qint64>(profile.compatflags);
+		obj["compatflags2"] = static_cast<qint64>(profile.compatflags2);
+
+		obj["remoteAddress"] = qStr(profile.remoteAddress);
+		obj["remotePort"] = profile.remotePort;
+		obj["remoteTeam"] = profile.remoteTeam;
+
+		obj["hostPort"] = profile.hostPort;
+		obj["maxPlayers"] = profile.maxPlayers;
+		obj["hostTicRate"] = profile.hostTicRate;
+		obj["hostExtraTic"] = profile.hostExtraTic;
+		obj["hostGamemode"] = profile.hostGamemode;
+		obj["hostTeam"] = profile.hostTeam;
+
+		obj["configFilePath"] = toStoredPath(profile.configFilePath, profFolder);
+		obj["saveDirPath"] = toStoredPath(profile.saveDirPath, profFolder);
+		obj["screenshotDirPath"] = toStoredPath(profile.screenshotDirPath, profFolder);
+		obj["demoDirPath"] = toStoredPath(profile.demoDirPath, profFolder);
+
+		obj["fullscreen"] = profile.fullscreen;
+		obj["loadSupportWads"] = profile.loadSupportWads;
+		obj["disableAutoload"] = profile.disableAutoload;
+		obj["enableDynLights"] = profile.enableDynLights;
+		obj["renderingAPI"] = profile.renderingAPI;
+		obj["extraLights"] = profile.extraLights;
+		obj["extraBrightmaps"] = profile.extraBrightmaps;
+		obj["extraWidescreen"] = profile.extraWidescreen;
+
+		obj["appendAdditionalParameters"] = qStr(profile.appendAdditionalParameters);
+		return obj;
 	}
 
 	void appendModArg(QStringList& args, const QString& path)
@@ -152,7 +389,7 @@ QString formatPlaytime(uint64_t minutes)
 {
 	const uint64_t hours = minutes / 60;
 	const uint64_t mins = minutes % 60;
-	return QString("%1h:%2min").arg(hours).arg(mins);
+	return LStr("LAUNCHER_PLAYTIME_FMT", "%1h:%2min").arg(hours).arg(mins);
 }
 
 std::string normalizeReleaseDate(const std::string& raw)
@@ -536,7 +773,7 @@ LauncherConfig loadLauncherConfig()
 	if (obj.contains("splitterBottomSize"))
 		cfg.splitterBottomSize = obj["splitterBottomSize"].toInt(0);
 	if (obj.contains("defaultModsDir"))
-		cfg.defaultModsDir = stdStr(obj["defaultModsDir"].toString());
+		cfg.defaultModsDir = fromStoredPath(obj["defaultModsDir"].toString(), {});
 	return cfg;
 }
 
@@ -554,7 +791,7 @@ void saveLauncherConfig(const LauncherConfig& cfg)
 	obj["sortDescending"] = cfg.sortDescending;
 	obj["splitterTopSize"] = cfg.splitterTopSize;
 	obj["splitterBottomSize"] = cfg.splitterBottomSize;
-	obj["defaultModsDir"] = qStr(cfg.defaultModsDir);
+	obj["defaultModsDir"] = toStoredPath(cfg.defaultModsDir, {});
 
 	QFile f(qStr(LauncherConst::CONFIG_FILE));
 	if (f.open(QIODevice::WriteOnly | QIODevice::Truncate))
@@ -609,86 +846,11 @@ bool saveProfileToDisk(Profile& profile)
 		createDefaultDirectoryStructure(profile);
 
 	QFileInfo fi(qStr(profile.filePath));
-	QDir().mkpath(fi.absolutePath());
+	const QString profFolder = fi.absolutePath();
+	QDir().mkpath(profFolder);
 
-	QJsonObject obj;
-	obj["title"] = qStr(profile.title);
-	obj["author"] = qStr(profile.author);
-	obj["releaseDate"] = qStr(profile.releaseDate);
-	obj["description"] = qStr(profile.description);
-	obj["lastPlayed"] = qStr(profile.lastPlayed);
-	obj["playtime"] = static_cast<qint64>(profile.playtime);
-	obj["orderIndex"] = profile.orderIndex;
-	obj["favorite"] = profile.favorite;
-	obj["coverImagePath"] = qStr(profile.coverImagePath);
-
-	obj["isIWAD"] = profile.isIWAD;
-	obj["iwadPath"] = qStr(profile.iwadPath);
-	obj["pwadPath"] = qStr(profile.pwadPath);
-	QJsonArray modsArr;
-	for (const auto& m : profile.mods)
-		modsArr.append(qStr(m));
-	obj["mods"] = modsArr;
-	QJsonArray disabledModsArr;
-	for (const auto& dm : profile.disabledMods)
-		disabledModsArr.append(qStr(dm));
-	obj["disabledMods"] = disabledModsArr;
-	obj["copyModsToProfile"] = profile.copyModsToProfile;
-
-	obj["launchParameters"] = profile.launchParameters;
-	obj["selectedLaunchMap"] = qStr(profile.selectedLaunchMap);
-	obj["selectedLaunchSave"] = qStr(profile.selectedLaunchSave);
-	obj["selectedLaunchDemoPlayback"] = qStr(profile.selectedLaunchDemoPlayback);
-	obj["recordDemo"] = profile.recordDemo;
-	obj["selectedLaunchDemoRecord"] = qStr(profile.selectedLaunchDemoRecord);
-
-	obj["difficulty"] = profile.difficulty;
-	obj["fastMonsters"] = profile.fastMonsters;
-	obj["respawnMonsters"] = profile.respawnMonsters;
-	obj["noMonsters"] = profile.noMonsters;
-	obj["allowMultiplayerItems"] = profile.allowMultiplayerItems;
-	obj["pistolStartAllLevels"] = profile.pistolStartAllLevels;
-
-	obj["playerName"] = qStr(profile.playerName);
-	obj["playerClass"] = qStr(profile.playerClass);
-	obj["playerGender"] = profile.playerGender;
-	obj["wadLanguage"] = qStr(profile.wadLanguage);
-
-	obj["compatLevel"] = profile.compatLevel;
-	obj["complevel"] = qStr(profile.complevel);
-	obj["alwaysApplyDMFlags"] = profile.alwaysApplyDMFlags;
-	obj["dmflags"] = static_cast<qint64>(profile.dmflags);
-	obj["dmflags2"] = static_cast<qint64>(profile.dmflags2);
-	obj["dmflags3"] = static_cast<qint64>(profile.dmflags3);
-	obj["compatflags"] = static_cast<qint64>(profile.compatflags);
-	obj["compatflags2"] = static_cast<qint64>(profile.compatflags2);
-
-	obj["remoteAddress"] = qStr(profile.remoteAddress);
-	obj["remotePort"] = profile.remotePort;
-	obj["remoteTeam"] = profile.remoteTeam;
-
-	obj["hostPort"] = profile.hostPort;
-	obj["maxPlayers"] = profile.maxPlayers;
-	obj["hostTicRate"] = profile.hostTicRate;
-	obj["hostExtraTic"] = profile.hostExtraTic;
-	obj["hostGamemode"] = profile.hostGamemode;
-	obj["hostTeam"] = profile.hostTeam;
-
-	obj["configFilePath"] = qStr(profile.configFilePath);
-	obj["saveDirPath"] = qStr(profile.saveDirPath);
-	obj["screenshotDirPath"] = qStr(profile.screenshotDirPath);
-	obj["demoDirPath"] = qStr(profile.demoDirPath);
-
-	obj["fullscreen"] = profile.fullscreen;
-	obj["loadSupportWads"] = profile.loadSupportWads;
-	obj["disableAutoload"] = profile.disableAutoload;
-	obj["enableDynLights"] = profile.enableDynLights;
-	obj["renderingAPI"] = profile.renderingAPI;
-	obj["extraLights"] = profile.extraLights;
-	obj["extraBrightmaps"] = profile.extraBrightmaps;
-	obj["extraWidescreen"] = profile.extraWidescreen;
-
-	obj["appendAdditionalParameters"] = qStr(profile.appendAdditionalParameters);
+	resolveProfilePathsInPlace(profile, profFolder);
+	const QJsonObject obj = serializeProfileToJson(profile, profFolder);
 
 	QFile out(qStr(profile.filePath));
 	if (!out.open(QIODevice::WriteOnly | QIODevice::Truncate))
@@ -706,6 +868,7 @@ bool loadProfileFromDisk(const std::string& path, Profile& p)
 	if (!doc.isObject())
 		return false;
 	const QJsonObject obj = doc.object();
+	const QString profFolder = QFileInfo(qStr(path)).absolutePath();
 
 	p = Profile{};
 	p.filePath = path;
@@ -718,22 +881,22 @@ bool loadProfileFromDisk(const std::string& path, Profile& p)
 	p.playtime = static_cast<uint64_t>(std::max<qint64>(0, obj["playtime"].toInteger(0)));
 	p.orderIndex = obj["orderIndex"].toInt(-1);
 	p.favorite = obj["favorite"].toBool(false);
-	p.coverImagePath = stdStr(obj["coverImagePath"].toString());
+	p.coverImagePath = fromStoredPath(obj["coverImagePath"].toString(), profFolder);
 
 	p.isIWAD = obj["isIWAD"].toBool(false);
-	p.iwadPath = stdStr(obj["iwadPath"].toString());
-	p.pwadPath = stdStr(obj["pwadPath"].toString());
+	p.iwadPath = fromStoredPath(obj["iwadPath"].toString(), profFolder);
+	p.pwadPath = fromStoredPath(obj["pwadPath"].toString(), profFolder);
 	const QJsonArray modsArr = obj["mods"].toArray();
 	for (const auto& v : modsArr)
 	{
 		if (v.isString() && !v.toString().isEmpty())
-			p.mods.push_back(stdStr(v.toString()));
+			p.mods.push_back(fromStoredPath(v.toString(), profFolder));
 	}
 	const QJsonArray disabledModsArr = obj["disabledMods"].toArray();
 	for (const auto& v : disabledModsArr)
 	{
 		if (v.isString() && !v.toString().isEmpty())
-			p.disabledMods.push_back(stdStr(v.toString()));
+			p.disabledMods.push_back(fromStoredPath(v.toString(), profFolder));
 	}
 	p.copyModsToProfile = obj["copyModsToProfile"].toBool(true);
 
@@ -748,8 +911,8 @@ bool loadProfileFromDisk(const std::string& path, Profile& p)
 	{
 		p.selectedLaunchMap = stdStr(obj["selectedLaunchMap"].toString());
 	}
-	p.selectedLaunchSave = stdStr(obj["selectedLaunchSave"].toString());
-	p.selectedLaunchDemoPlayback = stdStr(obj["selectedLaunchDemoPlayback"].toString());
+	p.selectedLaunchSave = fromStoredPath(obj["selectedLaunchSave"].toString(), profFolder, true);
+	p.selectedLaunchDemoPlayback = fromStoredPath(obj["selectedLaunchDemoPlayback"].toString(), profFolder, true);
 	p.recordDemo = obj["recordDemo"].toBool(false);
 	p.selectedLaunchDemoRecord = stdStr(obj["selectedLaunchDemoRecord"].toString());
 
@@ -785,10 +948,10 @@ bool loadProfileFromDisk(const std::string& path, Profile& p)
 	p.hostGamemode = obj["hostGamemode"].toInt(0);
 	p.hostTeam = obj["hostTeam"].toInt(255);
 
-	p.configFilePath = stdStr(obj["configFilePath"].toString());
-	p.saveDirPath = stdStr(obj["saveDirPath"].toString());
-	p.screenshotDirPath = stdStr(obj["screenshotDirPath"].toString());
-	p.demoDirPath = stdStr(obj["demoDirPath"].toString());
+	p.configFilePath = fromStoredPath(obj["configFilePath"].toString(), profFolder);
+	p.saveDirPath = fromStoredPath(obj["saveDirPath"].toString(), profFolder);
+	p.screenshotDirPath = fromStoredPath(obj["screenshotDirPath"].toString(), profFolder);
+	p.demoDirPath = fromStoredPath(obj["demoDirPath"].toString(), profFolder);
 
 	p.fullscreen = obj["fullscreen"].toBool(true);
 	p.loadSupportWads = obj["loadSupportWads"].toBool(true);
@@ -1003,7 +1166,7 @@ bool extractZipArchiveToDir(const QString& zipPath, const QString& destDir, std:
 	if (!inFile.open(QIODevice::ReadOnly))
 	{
 		if (errOut)
-			*errOut = "Failed to open archive.";
+			*errOut = stdStr(LStr("LAUNCHER_ERR_ARCHIVE_OPEN", "Failed to open archive."));
 		return false;
 	}
 
@@ -1013,7 +1176,7 @@ bool extractZipArchiveToDir(const QString& zipPath, const QString& destDir, std:
 	if (!mz_zip_reader_init(&zip, static_cast<mz_uint64>(inFile.size()), 0))
 	{
 		if (errOut)
-			*errOut = "Failed to read archive central directory.";
+			*errOut = stdStr(LStr("LAUNCHER_ERR_ARCHIVE_DIR", "Failed to read archive central directory."));
 		return false;
 	}
 
@@ -1022,7 +1185,7 @@ bool extractZipArchiveToDir(const QString& zipPath, const QString& destDir, std:
 	{
 		mz_zip_reader_end(&zip);
 		if (errOut)
-			*errOut = "Archive is empty.";
+			*errOut = stdStr(LStr("LAUNCHER_ERR_ARCHIVE_EMPTY", "Archive is empty."));
 		return false;
 	}
 
@@ -1057,7 +1220,7 @@ bool extractZipArchiveToDir(const QString& zipPath, const QString& destDir, std:
 		{
 			mz_zip_reader_end(&zip);
 			if (errOut)
-				*errOut = "Failed to extract archive entry: " + stdStr(entryName);
+				*errOut = stdStr(LStr("LAUNCHER_ERR_ARCHIVE_ENTRY", "Failed to extract archive entry: %1").arg(entryName));
 			return false;
 		}
 		if (extractedFiles)
@@ -1113,14 +1276,14 @@ bool exportProfileToZip(const Profile& profile, const std::string& destZipPath, 
 {
 	if (profile.filePath.empty())
 	{
-		errOut = "Profile has no directory on disk.";
+		errOut = stdStr(LStr("LAUNCHER_ERR_NO_PROFILE_DIR", "Profile has no directory on disk."));
 		return false;
 	}
 
 	QFile destFile(qStr(destZipPath));
 	if (!destFile.open(QIODevice::WriteOnly | QIODevice::Truncate))
 	{
-		errOut = "Could not create export archive.";
+		errOut = stdStr(LStr("LAUNCHER_ERR_EXPORT_CREATE", "Could not create export archive."));
 		return false;
 	}
 
@@ -1130,15 +1293,28 @@ bool exportProfileToZip(const Profile& profile, const std::string& destZipPath, 
 	zip.m_pIO_opaque = &destFile;
 	if (!mz_zip_writer_init(&zip, 0))
 	{
-		errOut = "Could not initialize export archive.";
+		errOut = stdStr(LStr("LAUNCHER_ERR_EXPORT_INIT", "Could not initialize export archive."));
 		return false;
 	}
+
+	// Write profile metadata directly from memory with clean relative paths so exports are always portable.
+	const QByteArray metaBytes = QJsonDocument(serializeProfileToJson(profile, profFolder)).toJson(QJsonDocument::Indented);
+	const QString metaFileName = QFileInfo(qStr(profile.filePath)).fileName().isEmpty()
+		? QStringLiteral("profile.Uzdoomprofile")
+		: QFileInfo(qStr(profile.filePath)).fileName();
+	bool ok = mz_zip_writer_add_mem(
+		&zip,
+		metaFileName.toUtf8().constData(),
+		metaBytes.constData(),
+		static_cast<size_t>(metaBytes.size()),
+		MZ_DEFAULT_COMPRESSION) != 0;
+	if (!ok)
+		errOut = stdStr(LStr("LAUNCHER_ERR_EXPORT_WRITE", "Failed writing file to export archive: %1").arg(metaFileName));
 
 	const QString destAbs = normalizeSlash(QFileInfo(qStr(destZipPath)).absoluteFilePath());
 	const QDir baseDir(profFolder);
 	QDirIterator it(profFolder, QDir::Files | QDir::NoDotAndDotDot, QDirIterator::Subdirectories);
-	bool ok = true;
-	while (it.hasNext())
+	while (ok && it.hasNext())
 	{
 		const QString absFile = it.next();
 		if (normalizeSlash(QFileInfo(absFile).absoluteFilePath()).compare(destAbs, Qt::CaseInsensitive) == 0)
@@ -1146,6 +1322,10 @@ bool exportProfileToZip(const Profile& profile, const std::string& destZipPath, 
 		QString relPath = baseDir.relativeFilePath(absFile).replace('\\', '/');
 		if (relPath.compare(QStringLiteral("last_launch.log"), Qt::CaseInsensitive) == 0
 			|| relPath.startsWith(QStringLiteral("logs/"), Qt::CaseInsensitive))
+			continue;
+		if (!relPath.contains('/')
+			&& (relPath.endsWith(QStringLiteral(".uzdoomprofile"), Qt::CaseInsensitive)
+				|| relPath.compare(metaFileName, Qt::CaseInsensitive) == 0))
 			continue;
 		QFile srcFile(absFile);
 		if (!srcFile.open(QIODevice::ReadOnly)
@@ -1165,7 +1345,7 @@ bool exportProfileToZip(const Profile& profile, const std::string& destZipPath, 
 				0))
 		{
 			ok = false;
-			errOut = "Failed writing file to export archive: " + stdStr(relPath);
+			errOut = stdStr(LStr("LAUNCHER_ERR_EXPORT_WRITE", "Failed writing file to export archive: %1").arg(relPath));
 			break;
 		}
 	}
@@ -1174,7 +1354,7 @@ bool exportProfileToZip(const Profile& profile, const std::string& destZipPath, 
 	{
 		ok = false;
 		if (errOut.empty())
-			errOut = "Failed to finalize archive.";
+			errOut = stdStr(LStr("LAUNCHER_ERR_EXPORT_FINALIZE", "Failed to finalize archive."));
 	}
 	mz_zip_writer_end(&zip);
 	return ok;
@@ -1229,18 +1409,22 @@ bool importProfileFromZip(const std::string& zipPath, Profile& outProfile, std::
 	if (foundMeta.isEmpty())
 	{
 		QDir(destFolder).removeRecursively();
-		errOut = "No profile metadata found inside .uzdp archive.";
+		errOut = stdStr(LStr("LAUNCHER_ERR_IMPORT_NO_META", "No profile metadata found inside .uzdp archive."));
 		return false;
 	}
 
-	if (!loadProfileFromDisk(stdStr(foundMeta), outProfile))
 	{
-		QDir(destFolder).removeRecursively();
-		errOut = "Profile metadata inside archive is invalid.";
-		return false;
+		QFile checkMeta(foundMeta);
+		if (!checkMeta.open(QIODevice::ReadOnly) || !QJsonDocument::fromJson(checkMeta.readAll()).isObject())
+		{
+			QDir(destFolder).removeRecursively();
+			errOut = stdStr(LStr("LAUNCHER_ERR_IMPORT_INVALID_META", "Profile metadata inside archive is invalid."));
+			return false;
+		}
 	}
 
 	QString finalBaseDir = QFileInfo(destFolder).absoluteFilePath();
+	QString finalMetaPath = foundMeta;
 	const QString metaParent = QFileInfo(foundMeta).absolutePath();
 	const QString normMetaParent = normalizeSlash(metaParent);
 	if (normMetaParent.compare(cleanDestRoot, Qt::CaseInsensitive) != 0)
@@ -1259,7 +1443,7 @@ bool importProfileFromZip(const std::string& zipPath, Profile& outProfile, std::
 		{
 			QDir(tempHoist).removeRecursively();
 			QDir(destFolder).removeRecursively();
-			errOut = "Failed to flatten nested profile directory inside .uzdp archive.";
+			errOut = stdStr(LStr("LAUNCHER_ERR_IMPORT_FLATTEN", "Failed to flatten nested profile directory inside .uzdp archive."));
 			return false;
 		}
 
@@ -1272,7 +1456,14 @@ bool importProfileFromZip(const std::string& zipPath, Profile& outProfile, std::
 		{
 			finalBaseDir = QFileInfo(tempHoist).absoluteFilePath();
 		}
-		outProfile.filePath = stdStr(QDir(finalBaseDir).filePath(QFileInfo(foundMeta).fileName()));
+		finalMetaPath = QDir(finalBaseDir).filePath(QFileInfo(foundMeta).fileName());
+	}
+
+	if (!loadProfileFromDisk(stdStr(finalMetaPath), outProfile))
+	{
+		QDir(finalBaseDir).removeRecursively();
+		errOut = stdStr(LStr("LAUNCHER_ERR_IMPORT_INVALID_META", "Profile metadata inside archive is invalid."));
+		return false;
 	}
 
 	auto inferOldProfileDir = [&]() -> QString
@@ -1300,12 +1491,16 @@ bool importProfileFromZip(const std::string& zipPath, Profile& outProfile, std::
 		return {};
 	};
 	const QString oldDir = inferOldProfileDir();
-	applyProfilePathMapping(outProfile, stdStr(oldDir), stdStr(finalBaseDir));
+	if (!oldDir.isEmpty()
+		&& normalizeSlash(oldDir).compare(normalizeSlash(finalBaseDir), pathCaseSensitivity()) != 0)
+	{
+		applyProfilePathMapping(outProfile, stdStr(oldDir), stdStr(finalBaseDir));
+	}
 	outProfile.orderIndex = -1;
 	if (!saveProfileToDisk(outProfile))
 	{
 		QDir(finalBaseDir).removeRecursively();
-		errOut = "Failed to save imported profile.";
+		errOut = stdStr(LStr("LAUNCHER_ERR_IMPORT_SAVE", "Failed to save imported profile."));
 		return false;
 	}
 	return true;

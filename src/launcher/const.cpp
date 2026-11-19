@@ -907,6 +907,6 @@ std::vector<FlagInfo> getCompatFlagsList()
 		{LStr("CMPTMNU_NOVDOLLLOCKMSG", "Voodoo dolls suppress lock messages"), "Voodoo dolls don't print locked-door messages.", 1, COMPATF2_NOVDOLLLOCKMSG, 0, false},
 		{LStr("CMPTMNU_EMULATEMIKOPORTALS", "Emulate Mikoportals"), "Emulate Z underflow below -32768 map units for Mikoportal setups.", 1, COMPATF2_EMULATEMIKOPORTALS, 0, false},
 		{LStr("CMPTMNU_TRANSFERSECRET", "BOOM's floor changing special transfers secret."), "Allow BOOM floor-changing specials to transfer sector secret flags.", 1, COMPATF2_TRANSFERSECRET, 0, false},
-		{"Disable reserved linedef flags", "Disable certain modern linedef flag features that may clash with older Doom maps.", 1, COMPATF2_RESERVEDLINEFLAG, 0, false},
+		{LStr("CMPTMNU_RESERVEDLINEFLAG", "Disable reserved linedef flags"), "Disable certain modern linedef flag features that may clash with older Doom maps.", 1, COMPATF2_RESERVEDLINEFLAG, 0, false},
 	};
 }

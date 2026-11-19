@@ -336,16 +336,16 @@ namespace
 		switch (res)
 		{
 		case SZ_ERROR_UNSUPPORTED:
-			return "Unsupported 7z compression method or encrypted archive.";
+			return stdStr(LStr("LAUNCHER_ERR_7Z_UNSUPPORTED", "Unsupported 7z compression method or encrypted archive."));
 		case SZ_ERROR_CRC:
-			return "7z archive CRC check failed.";
+			return stdStr(LStr("LAUNCHER_ERR_7Z_CRC", "7z archive CRC check failed."));
 		case SZ_ERROR_MEM:
-			return "Out of memory while reading 7z archive.";
+			return stdStr(LStr("LAUNCHER_ERR_7Z_MEM", "Out of memory while reading 7z archive."));
 		case SZ_ERROR_NO_ARCHIVE:
 		case SZ_ERROR_ARCHIVE:
-			return "Invalid or corrupted 7z archive.";
+			return stdStr(LStr("LAUNCHER_ERR_7Z_INVALID", "Invalid or corrupted 7z archive."));
 		default:
-			return "Failed to extract 7z archive.";
+			return stdStr(LStr("LAUNCHER_ERR_7Z_EXTRACT", "Failed to extract 7z archive."));
 		}
 	}
 
@@ -946,7 +946,7 @@ namespace
 		if (!inFile.open(QIODevice::ReadOnly))
 		{
 			if (errOut)
-				*errOut = "Failed to open archive.";
+				*errOut = stdStr(LStr("LAUNCHER_ERR_ARCHIVE_OPEN", "Failed to open archive."));
 			return false;
 		}
 
@@ -963,7 +963,7 @@ namespace
 		if (numFiles == 0)
 		{
 			if (errOut)
-				*errOut = "Archive is empty.";
+				*errOut = stdStr(LStr("LAUNCHER_ERR_ARCHIVE_EMPTY", "Archive is empty."));
 			return false;
 		}
 
@@ -998,7 +998,7 @@ namespace
 			if (!outFile.open(QIODevice::WriteOnly | QIODevice::Truncate))
 			{
 				if (errOut)
-					*errOut = "Failed to extract archive entry: " + stdStr(entryName);
+					*errOut = stdStr(LStr("LAUNCHER_ERR_ARCHIVE_ENTRY", "Failed to extract archive entry: %1").arg(entryName));
 				return false;
 			}
 
@@ -1022,7 +1022,7 @@ namespace
 			return extract7zArchiveToDir(archivePath, destDir, errOut);
 
 		if (errOut)
-			*errOut = "Unsupported archive format.";
+			*errOut = stdStr(LStr("LAUNCHER_ERR_UNSUPPORTED_ARCHIVE", "Unsupported archive format."));
 		return false;
 	}
 
@@ -1141,7 +1141,7 @@ ImportOutcome importGameFileIntoProfiles(const std::string& filePath, const std:
 	if (!fi.exists() || !fi.isFile())
 	{
 		out.status = ImportResult::UnsupportedFile;
-		out.message = "Selected file does not exist.";
+		out.message = stdStr(LStr("LAUNCHER_ERR_FILE_NOT_FOUND", "Selected file does not exist."));
 		return out;
 	}
 
@@ -1175,7 +1175,9 @@ ImportOutcome importGameFileIntoProfiles(const std::string& filePath, const std:
 		{
 			QDir(profFolder).removeRecursively();
 			out.status = ImportResult::ExtractionFailed;
-			out.message = extractErr.empty() ? "Failed to extract archive." : extractErr;
+			out.message = extractErr.empty()
+				? stdStr(LStr("LAUNCHER_ERR_ARCHIVE_EXTRACT", "Failed to extract archive."))
+				: extractErr;
 			return out;
 		}
 
@@ -1218,7 +1220,7 @@ ImportOutcome importGameFileIntoProfiles(const std::string& filePath, const std:
 		{
 			QDir(profFolder).removeRecursively();
 			out.status = ImportResult::UnsupportedFile;
-			out.message = "Archive does not contain a runnable WAD, PK3, PK7, DEH, or BEX file.";
+			out.message = stdStr(LStr("LAUNCHER_ERR_ARCHIVE_NO_RUNNABLE", "Archive does not contain a runnable WAD, PK3, PK7, DEH, or BEX file."));
 			return out;
 		}
 
@@ -1270,7 +1272,7 @@ ImportOutcome importGameFileIntoProfiles(const std::string& filePath, const std:
 	if (!hasExtension(lower, {".wad", ".iwad", ".pwad", ".pk3", ".ipk3", ".pk7", ".ipk7", ".deh", ".bex"}))
 	{
 		out.status = ImportResult::UnsupportedFile;
-		out.message = "Unsupported file type. Select a WAD, PK3, PK7, DEH, BEX, ZIP, 7Z, or UZDP file.";
+		out.message = stdStr(LStr("LAUNCHER_ERR_UNSUPPORTED_FILE", "Unsupported file type. Select a WAD, PK3, PK7, DEH, BEX, ZIP, 7Z, or UZDP file."));
 		return out;
 	}
 
@@ -1278,7 +1280,7 @@ ImportOutcome importGameFileIntoProfiles(const std::string& filePath, const std:
 	if (hasGameFilePathOrHash(existingProfiles, filePath, md5))
 	{
 		out.status = ImportResult::DuplicateProfile;
-		out.message = "A profile for this file already exists.";
+		out.message = stdStr(LStr("LAUNCHER_ERR_DUPLICATE_PROFILE", "A profile for this file already exists."));
 		return out;
 	}
 

@@ -179,7 +179,7 @@ void ErrorWindow::onSaveReport()
 	mz_zip_archive zip{};
 	if (!mz_zip_writer_init_heap(&zip, 0, 1024 * 1024))
 	{
-		QMessageBox::warning(this, LStr("ERROR_FATAL", "Error"), "Could not create archive in memory.");
+		QMessageBox::warning(this, LStr("ERROR_FATAL", "Error"), LStr("ERROR_ARCHIVE_INIT", "Could not create archive in memory."));
 		return;
 	}
 
@@ -192,7 +192,7 @@ void ErrorWindow::onSaveReport()
 	if (!addedOk)
 	{
 		mz_zip_writer_end(&zip);
-		QMessageBox::warning(this, LStr("ERROR_FATAL", "Error"), "Failed to add crash report files to archive.");
+		QMessageBox::warning(this, LStr("ERROR_FATAL", "Error"), LStr("ERROR_ARCHIVE_ADD", "Failed to add crash report files to archive."));
 		return;
 	}
 
@@ -205,7 +205,7 @@ void ErrorWindow::onSaveReport()
 	{
 		if (buffer)
 			mz_free(buffer);
-		QMessageBox::warning(this, LStr("ERROR_FATAL", "Error"), "Failed to finalize crash report archive.");
+		QMessageBox::warning(this, LStr("ERROR_FATAL", "Error"), LStr("ERROR_ARCHIVE_FINALIZE", "Failed to finalize crash report archive."));
 		return;
 	}
 
@@ -215,7 +215,7 @@ void ErrorWindow::onSaveReport()
 	mz_free(buffer);
 	if (!wrote)
 	{
-		QMessageBox::warning(this, LStr("ERROR_FATAL", "Error"), "Could not write archive to selected destination.");
+		QMessageBox::warning(this, LStr("ERROR_FATAL", "Error"), LStr("ERROR_ARCHIVE_WRITE", "Could not write archive to selected destination."));
 	}
 }
 

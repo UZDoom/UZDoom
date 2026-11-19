@@ -1061,7 +1061,7 @@ LauncherUpdater::FetchOutcome LauncherUpdater::fetchUpdateInfoInteractive(QWidge
 
 	auto* btnRow = new QHBoxLayout();
 	btnRow->addStretch();
-	auto* btnCancel = new QPushButton(QDialog::tr("Cancel"), &dlg);
+	auto* btnCancel = new QPushButton(LStr("OPTVAL_CANCEL", "Cancel"), &dlg);
 	btnRow->addWidget(btnCancel);
 
 	layout->addWidget(lbl);
@@ -1563,7 +1563,7 @@ void LauncherUpdater::startUpdate(QWidget* dialogParent)
 
 	auto* btnRow = new QHBoxLayout();
 	btnRow->addStretch();
-	auto* btnCancel = new QPushButton(QDialog::tr("Cancel"), &dlg);
+	auto* btnCancel = new QPushButton(LStr("OPTVAL_CANCEL", "Cancel"), &dlg);
 	btnRow->addWidget(btnCancel);
 
 	layout->addWidget(lblStatus);

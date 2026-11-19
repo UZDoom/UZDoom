@@ -217,7 +217,6 @@ void LauncherMainWindow::buildUi()
 	searchEdit->setClearButtonEnabled(true);
 	searchEdit->setFixedWidth(220);
 	searchEdit->setMinimumHeight(24);
-	searchEdit->setToolTip("Search by title, author, description, IWAD, or mod filenames (space-separated terms).");
 	connect(searchEdit, &QLineEdit::textChanged, this, &LauncherMainWindow::onFilterTextChanged);
 
 	searchLayout->addWidget(filterCategoryCombo);
@@ -504,12 +503,13 @@ void LauncherMainWindow::retranslateUi()
 	const QString rawGitTime = QString::fromUtf8(GetGitTime());
 	const QDateTime parsedDt = QDateTime::fromString(rawGitTime, Qt::ISODate);
 	const QString formattedDate = parsedDt.isValid() ? parsedDt.date().toString("dd-MM-yyyy") : rawGitTime;
-	setWindowTitle(QString("%1 (Version %2) [Build Date: %3]").arg(GAMENAME).arg(GetVersionString()).arg(formattedDate));
+	setWindowTitle(LStr("LAUNCHER_WINDOW_TITLE", "%1 (Version %2) [Build Date: %3]").arg(GAMENAME).arg(GetVersionString()).arg(formattedDate));
 
 	addMenu->setTitle(LStr("LAUNCHER_ADD_ENTRY", "New Entry"));
 	prefMenu->setTitle(LStr("LAUNCHER_PREFERENCES", "Preferences"));
 	actAbout->setText(LStr("LAUNCHER_MENU_INFO", "Info"));
 	searchEdit->setPlaceholderText(LStr("LAUNCHER_SEARCH_PLACEHOLDER", "Filter profiles..."));
+	searchEdit->setToolTip(LStr("LAUNCHER_SEARCH_TIP", "Search by title, author, description, IWAD, or mod filenames (space-separated terms)."));
 	if (filterCategoryCombo && filterCategoryCombo->count() >= 4)
 	{
 		filterCategoryCombo->setItemText(0, LStr("LAUNCHER_FILTER_ALL", "All"));
@@ -583,8 +583,8 @@ void LauncherMainWindow::retranslateUi()
 	syncSortIndicator();
 
 	btnPlay->setText(LStr("PICKER_PLAY", "Play Game"));
-	btnJoin->setText(LStr("LAUNCHER_JOIN_GAME", "Join Game"));
-	btnHost->setText(LStr("LAUNCHER_HOST_GAME", "Host Game"));
+	btnJoin->setText(LStr("PICKER_PLAYJOIN", "Join Game"));
+	btnHost->setText(LStr("PICKER_PLAYHOST", "Host Game"));
 	btnSettings->setText(LStr("LAUNCHER_PROFILE_SETTINGS", "Profile Settings ..."));
 	btnMoveUp->setText(LStr("LAUNCHER_MOVE_UP", "Move Up"));
 	btnMoveDown->setText(LStr("LAUNCHER_MOVE_DOWN", "Move Down"));
@@ -805,10 +805,16 @@ void LauncherMainWindow::updateTableRow(int tableRow, int profileIdx)
 	table->setItem(tableRow, 0, starItem);
 	table->setItem(tableRow, 1, makeItem(p.isIWAD ? "IWAD" : "(P)WAD", Qt::AlignCenter));
 	table->setItem(tableRow, 2, makeItem(QString::fromStdString(p.title)));
-	table->setItem(tableRow, 3, makeItem(QString::fromStdString(p.author)));
-	table->setItem(tableRow, 4, makeItem(QString::fromStdString(p.releaseDate), Qt::AlignCenter));
+	const QString authorText = (p.author.empty() || QString::fromStdString(p.author).compare("Unknown", Qt::CaseInsensitive) == 0)
+		? LStr("TXT_UNKNOWN", "Unknown")
+		: QString::fromStdString(p.author);
+	table->setItem(tableRow, 3, makeItem(authorText));
+	const QString releaseText = (p.releaseDate.empty() || QString::fromStdString(p.releaseDate).compare("Unknown", Qt::CaseInsensitive) == 0)
+		? LStr("TXT_UNKNOWN", "Unknown")
+		: QString::fromStdString(p.releaseDate);
+	table->setItem(tableRow, 4, makeItem(releaseText, Qt::AlignCenter));
 	const QString lastPlayedText = (p.lastPlayed.empty() || p.lastPlayed == "Never")
-		? LStr("LAUNCHER_NEVER", "Never")
+		? LStr("OPTVAL_NEVER", "Never")
 		: QString::fromStdString(p.lastPlayed);
 	table->setItem(tableRow, 5, makeItem(lastPlayedText, Qt::AlignCenter));
 	table->setItem(tableRow, 6, makeItem(formatPlaytime(p.playtime), Qt::AlignCenter));
@@ -1245,7 +1251,7 @@ void LauncherMainWindow::launchProfile(LaunchTargetMode mode)
 	{
 		const QString pwadQ = QString::fromStdString(p.pwadPath);
 		if (!QFileInfo::exists(pwadQ))
-			missingFiles << QString("(P)WAD: %1").arg(QDir::toNativeSeparators(pwadQ));
+			missingFiles << LStr("LAUNCHER_MISSING_PWAD_FMT", "(P)WAD: %1").arg(QDir::toNativeSeparators(pwadQ));
 	}
 	{
 		QSet<QString> disabledKeys;
@@ -1262,7 +1268,7 @@ void LauncherMainWindow::launchProfile(LaunchTargetMode mode)
 			if (disabledKeys.contains(normalizePathKey(modQ)))
 				continue;
 			if (!QFileInfo::exists(modQ))
-				missingFiles << QString("Mod: %1").arg(QDir::toNativeSeparators(modQ));
+				missingFiles << LStr("LAUNCHER_MISSING_MOD_FMT", "Mod: %1").arg(QDir::toNativeSeparators(modQ));
 		}
 	}
 	if (!missingFiles.isEmpty())
@@ -1270,12 +1276,13 @@ void LauncherMainWindow::launchProfile(LaunchTargetMode mode)
 		constexpr int kMaxListed = 8;
 		QStringList listed = missingFiles.mid(0, kMaxListed);
 		if (missingFiles.size() > kMaxListed)
-			listed << QString("... and %1 more").arg(missingFiles.size() - kMaxListed);
+			listed << LStr("LAUNCHER_AND_MORE", "... and %1 more").arg(missingFiles.size() - kMaxListed);
 
 		QMessageBox box(this);
 		box.setIcon(QMessageBox::Warning);
 		box.setWindowTitle(LStr("LAUNCHER_MISSING_FILES_TITLE", "Missing Profile Files"));
-		box.setText(QString("Some files configured for '%1' could not be found:\n\n%2\n\nWould you like to open Profile Settings to fix them, or launch anyway?")
+		box.setText(LStr("LAUNCHER_MISSING_FILES_MSG",
+			"Some files configured for '%1' could not be found:\n\n%2\n\nWould you like to open Profile Settings to fix them, or launch anyway?")
 			.arg(QString::fromStdString(p.title), listed.join('\n')));
 		QPushButton* btnOpenSettings = box.addButton(LStr("LAUNCHER_OPEN_SETTINGS", "Open Profile Settings"), QMessageBox::AcceptRole);
 		QPushButton* btnLaunchAnyway = box.addButton(LStr("LAUNCHER_LAUNCH_ANYWAY", "Launch Anyway"), QMessageBox::ActionRole);
@@ -1352,8 +1359,11 @@ void LauncherMainWindow::launchProfile(LaunchTargetMode mode)
 		if (err == QProcess::FailedToStart)
 		{
 			appendLaunchLogFooter(QStringLiteral("=== Failed to start executable ==="));
-			QMessageBox::critical(this, "Launch Failed",
-				"Failed to launch UZDoom executable:\n" + QCoreApplication::applicationFilePath());
+			QMessageBox::critical(
+				this,
+				LStr("LAUNCHER_LAUNCH_FAILED_TITLE", "Launch Failed"),
+				LStr("LAUNCHER_LAUNCH_FAILED_MSG", "Failed to launch %1 executable:\n%2")
+					.arg(GAMENAME, QCoreApplication::applicationFilePath()));
 		}
 	});
 
@@ -1462,11 +1472,13 @@ void LauncherMainWindow::onAddGameFiles()
 {
 	if (gameProcess)
 		return;
+	const QString filter = QString("%1 (*.wad *.iwad *.pwad *.pk3 *.ipk3 *.pk7 *.ipk7 *.deh *.bex *.zip *.7z *.uzdp);;%2 (*.*)")
+		.arg(LStr("LAUNCHER_FILTER_DOOM_FILES", "Doom Files"), LStr("FILEPICKER_ANY", "All Files"));
 	const QStringList files = QFileDialog::getOpenFileNames(
 		this,
 		LStr("LAUNCHER_MENU_ADD_FILE", "Add WAD / Mod / Archive"),
 		QString::fromStdString(LauncherConst::EXEC_DIR),
-		"Doom Files (*.wad *.iwad *.pwad *.pk3 *.ipk3 *.pk7 *.ipk7 *.deh *.bex *.zip *.7z *.uzdp);;All Files (*.*)");
+		filter);
 	if (!files.isEmpty())
 		handleImportedFiles(files);
 }
@@ -1482,7 +1494,7 @@ void LauncherMainWindow::onCreateBlankProfile()
 		LStr("LAUNCHER_MENU_NEW_BLANK", "Create Blank Profile"),
 		LStr("LAUNCHER_ENTER_PROFILE_NAME", "Profile title:"),
 		QLineEdit::Normal,
-		"New Profile",
+		LStr("LAUNCHER_NEW_PROFILE", "New Profile"),
 		&ok).trimmed();
 	if (!ok || title.isEmpty())
 		return;
@@ -1521,8 +1533,8 @@ void LauncherMainWindow::handleImportedFiles(const QStringList& localPaths)
 		{
 			const auto ans = QMessageBox::question(
 				this,
-				"Attach DeHackEd Patch",
-				QString("Attach '%1' as a mod to selected profile '%2'?\n\nClick 'No' to create a separate profile instead.")
+				LStr("LAUNCHER_ATTACH_DEH_TITLE", "Attach DeHackEd Patch"),
+				LStr("LAUNCHER_ATTACH_DEH_MSG", "Attach '%1' as a mod to selected profile '%2'?\n\nClick 'No' to create a separate profile instead.")
 					.arg(fi.fileName())
 					.arg(QString::fromStdString(profiles[curIdx].title)),
 				QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel,
@@ -1560,7 +1572,8 @@ void LauncherMainWindow::handleImportedFiles(const QStringList& localPaths)
 								QMessageBox box(this);
 								box.setIcon(QMessageBox::Question);
 								box.setWindowTitle(LStr("LAUNCHER_MOD_EXISTS_TITLE", "Mod Already Exists"));
-								box.setText(QString("A different file named '%1' already exists in '%2''s mods folder.\n\nOverwrite it with the selected file?")
+								box.setText(LStr("LAUNCHER_MOD_EXISTS_PROFILE_MSG",
+									"A different file named '%1' already exists in '%2''s mods folder.\n\nOverwrite it with the selected file?")
 									.arg(fi.fileName())
 									.arg(QString::fromStdString(profiles[curIdx].title)));
 								QPushButton* btnOverwrite = box.addButton(LStr("LAUNCHER_OVERWRITE", "Overwrite"), QMessageBox::AcceptRole);
@@ -1576,7 +1589,7 @@ void LauncherMainWindow::handleImportedFiles(const QStringList& localPaths)
 									if (!QFile::copy(localPath, tmpDest) || !QFile::remove(dest) || !QFile::rename(tmpDest, dest))
 									{
 										QFile::remove(tmpDest);
-										errors << QString("%1: Could not overwrite existing mod in profile folder.").arg(fi.fileName());
+										errors << LStr("LAUNCHER_MOD_OVERWRITE_ERR", "%1: Could not overwrite existing mod in profile folder.").arg(fi.fileName());
 										cancelledAttach = true;
 									}
 									else
@@ -1647,12 +1660,14 @@ void LauncherMainWindow::handleImportedFiles(const QStringList& localPaths)
 
 	if (!errors.isEmpty())
 	{
-		QMessageBox::warning(this, "Import Issue", errors.join("\n"));
+		QMessageBox::warning(this, LStr("LAUNCHER_IMPORT_ISSUE_TITLE", "Import Issue"), errors.join("\n"));
 	}
 	else if (skippedCount > 0 && addedCount == 0)
 	{
-		QMessageBox::information(this, "Duplicate Profile",
-			"The selected file already matches an existing profile.");
+		QMessageBox::information(
+			this,
+			LStr("LAUNCHER_DUPLICATE_PROFILE_TITLE", "Duplicate Profile"),
+			LStr("LAUNCHER_DUPLICATE_PROFILE_MSG", "The selected file already matches an existing profile."));
 	}
 }
 
@@ -1750,8 +1765,8 @@ void LauncherMainWindow::onIWadScanFinished(const std::vector<DiscoveredIWadCand
 			this,
 			LStr("LAUNCHER_MENU_AUTODETECT", "Auto-Detect IWADs"),
 			found > 0
-				? QString("Detected and imported %1 new IWAD profile(s).").arg(found)
-				: QString("No new IWADs were found."));
+				? LStr("LAUNCHER_IWADS_FOUND_MSG", "Detected and imported %1 new IWAD profile(s).").arg(found)
+				: LStr("LAUNCHER_IWADS_NONE_MSG", "No new IWADs were found."));
 	}
 }
 
@@ -1821,9 +1836,9 @@ void LauncherMainWindow::onCloneSelectedProfile()
 	const QString newTitle = QInputDialog::getText(
 		this,
 		LStr("LAUNCHER_CLONE_PROFILE", "Clone Profile"),
-		"New profile title:",
+		LStr("LAUNCHER_CLONE_PROMPT", "New profile title:"),
 		QLineEdit::Normal,
-		QString::fromStdString(profiles[idx].title) + " (Copy)",
+		QString::fromStdString(profiles[idx].title) + " " + LStr("LAUNCHER_COPY_SUFFIX", "(Copy)"),
 		&ok).trimmed();
 	if (!ok || newTitle.isEmpty())
 		return;
@@ -1831,7 +1846,10 @@ void LauncherMainWindow::onCloneSelectedProfile()
 	Profile cloned;
 	if (!cloneProfile(profiles[idx], newTitle.toStdString(), cloned))
 	{
-		QMessageBox::warning(this, "Clone Failed", "Could not clone the selected profile.");
+		QMessageBox::warning(
+			this,
+			LStr("LAUNCHER_CLONE_FAILED_TITLE", "Clone Failed"),
+			LStr("LAUNCHER_CLONE_FAILED_MSG", "Could not clone the selected profile."));
 		return;
 	}
 	profiles.push_back(std::move(cloned));
@@ -1848,19 +1866,27 @@ void LauncherMainWindow::onExportSelectedProfile()
 
 	const Profile& p = profiles[idx];
 	const QString suggested = QString::fromStdString(sanitizeFolderName(p.title)) + ".uzdp";
+	const QString filter = QString("%1 (*.uzdp)").arg(LStr("LAUNCHER_FILTER_UZDP", "UZDoom Profile Archive"));
 	const QString dest = QFileDialog::getSaveFileName(
 		this,
 		LStr("LAUNCHER_EXPORT_PROFILE", "Export Profile (.uzdp)"),
 		QDir::home().filePath(suggested),
-		"UZDoom Profile Archive (*.uzdp)");
+		filter);
 	if (dest.isEmpty())
 		return;
 
 	std::string err;
 	if (!exportProfileToZip(p, dest.toStdString(), err))
-		QMessageBox::warning(this, "Export Failed", QString::fromStdString(err));
+	{
+		QMessageBox::warning(this, LStr("LAUNCHER_EXPORT_FAILED_TITLE", "Export Failed"), QString::fromStdString(err));
+	}
 	else
-		QMessageBox::information(this, "Export Complete", "Exported profile to:\n" + dest);
+	{
+		QMessageBox::information(
+			this,
+			LStr("LAUNCHER_EXPORT_COMPLETE_TITLE", "Export Complete"),
+			LStr("LAUNCHER_EXPORT_COMPLETE_MSG", "Exported profile to:\n%1").arg(dest));
+	}
 }
 
 void LauncherMainWindow::onDeleteSelectedProfile()
@@ -1874,7 +1900,8 @@ void LauncherMainWindow::onDeleteSelectedProfile()
 	const auto ans = QMessageBox::warning(
 		this,
 		LStr("LAUNCHER_DELETE_PROFILE", "Delete Profile"),
-		QString("Delete profile '%1' and its profile folder?\nExternal IWAD files outside the profile folder are preserved.")
+		LStr("LAUNCHER_DELETE_PROFILE_MSG",
+			"Delete profile '%1' and its profile folder?\nExternal IWAD files outside the profile folder are preserved.")
 			.arg(QString::fromStdString(profiles[idx].title)),
 		QMessageBox::Yes | QMessageBox::No,
 		QMessageBox::No);
@@ -1988,8 +2015,8 @@ void LauncherMainWindow::updateDefaultModsMenuState()
 	if (actSetDefaultModsDir)
 	{
 		actSetDefaultModsDir->setToolTip(hasDir
-			? QString("Current Default Mods Folder:\n%1").arg(QString::fromStdString(launcherConfig.defaultModsDir))
-			: QString("Choose a master folder that 'Add Mod File' opens in."));
+			? LStr("LAUNCHER_DEFAULT_MODS_CURRENT_TIP", "Current Default Mods Folder:\n%1").arg(QString::fromStdString(launcherConfig.defaultModsDir))
+			: LStr("LAUNCHER_DEFAULT_MODS_EMPTY_TIP", "Choose a master folder that 'Add Mod File' opens in."));
 	}
 	if (actClearDefaultModsDir)
 	{
@@ -2002,7 +2029,10 @@ void LauncherMainWindow::onSetDefaultModsDir()
 {
 	const QString startDir = QString::fromStdString(
 		launcherConfig.defaultModsDir.empty() ? LauncherConst::EXEC_DIR : launcherConfig.defaultModsDir);
-	const QString picked = QFileDialog::getExistingDirectory(this, "Select Default Mods Folder", startDir);
+	const QString picked = QFileDialog::getExistingDirectory(
+		this,
+		LStr("LAUNCHER_SELECT_DEFAULT_MODS_TITLE", "Select Default Mods Folder"),
+		startDir);
 	if (picked.isEmpty())
 		return;
 	launcherConfig.defaultModsDir = QDir::cleanPath(picked).toStdString();
@@ -2123,8 +2153,8 @@ void LauncherMainWindow::closeEvent(QCloseEvent* event)
 	{
 		const auto ans = QMessageBox::question(
 			this,
-			"Game Running",
-			"UZDoom is currently running. Closing the launcher will terminate the active session.\nClose anyway?",
+			LStr("LAUNCHER_GAME_RUNNING_TITLE", "Game Running"),
+			LStr("LAUNCHER_GAME_RUNNING_MSG", "%1 is currently running. Closing the launcher will terminate the active session.\nClose anyway?").arg(GAMENAME),
 			QMessageBox::Yes | QMessageBox::No,
 			QMessageBox::No);
 		if (ans != QMessageBox::Yes)
