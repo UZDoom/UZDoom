@@ -338,8 +338,8 @@ if( MSVC )
 		set( REL_C_FLAGS "/Oy /Oi /GS-" )
 	endif()
 
-	# Debug allocations in debug builds
-	set( DEB_C_FLAGS "/D _CRTDBG_MAP_ALLOC" )
+	# Debug allocations in debug builds (disabled for C++ since _CRTDBG_MAP_ALLOC redefines free() as a macro, breaking Qt6 headers)
+	set( DEB_C_FLAGS "" )
 
 	# Disable warnings for unsecure CRT functions from VC8+
 	set( ALL_C_FLAGS "${ALL_C_FLAGS} /DUNICODE /D_UNICODE /D_WIN32_WINNT=0x0600 /D_CRT_SECURE_NO_DEPRECATE /D_CRT_SECURE_NO_WARNINGS /D_CRT_NONSTDC_NO_WARNINGS" )

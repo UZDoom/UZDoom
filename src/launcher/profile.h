@@ -127,6 +127,7 @@ struct LauncherConfig
 };
 
 QString formatPlaytime(uint64_t minutes);
+std::string normalizeReleaseDate(const std::string& raw);
 std::string sanitizeFolderName(const std::string& name);
 std::string findBestDefaultIWADPath(const std::vector<Profile>& existingProfiles);
 

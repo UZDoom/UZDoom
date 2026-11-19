@@ -18,6 +18,7 @@
 #include "loader.h"
 #include "doomdef.h"
 
+#include <QDate>
 #include <QDir>
 #include <QDirIterator>
 #include <QFile>
@@ -26,6 +27,7 @@
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QLocale>
 #include <QProcess>
 #include <QRegularExpression>
 #include <QSet>
@@ -151,6 +153,67 @@ QString formatPlaytime(uint64_t minutes)
 	const uint64_t hours = minutes / 60;
 	const uint64_t mins = minutes % 60;
 	return QString("%1h:%2min").arg(hours).arg(mins);
+}
+
+std::string normalizeReleaseDate(const std::string& raw)
+{
+	QString s = qStr(raw).trimmed();
+	if (s.isEmpty() || s.compare("Unknown", Qt::CaseInsensitive) == 0)
+		return "Unknown";
+
+	// Strip common trailing qualifiers/parentheticals only when parsing
+	QString cleaned = s;
+	cleaned.replace(QRegularExpression("\\b(\\d{1,2})(?:st|nd|rd|th)\\b", QRegularExpression::CaseInsensitiveOption), "\\1");
+	cleaned.replace(QRegularExpression("\\s+"), " ");
+
+	auto fmt = [](const QDate& d) -> std::string
+	{
+		return stdStr(d.toString(QStringLiteral("dd-MM-yyyy")));
+	};
+
+	// Numeric forms: YYYY[-/.]M[-/.]D or D[-/.]M[-/.]YYYY (or M[-/.]D[-/.]YYYY when month > 12)
+	static const QRegularExpression reYmd("^(\\d{4})[.\\-/\\s]+(\\d{1,2})[.\\-/\\s]+(\\d{1,2})(?:\\b.*)?$");
+	if (const auto m = reYmd.match(cleaned); m.hasMatch())
+	{
+		const QDate d(m.captured(1).toInt(), m.captured(2).toInt(), m.captured(3).toInt());
+		if (d.isValid())
+			return fmt(d);
+	}
+
+	static const QRegularExpression reDmy("^(\\d{1,2})[.\\-/]+(\\d{1,2})[.\\-/]+(\\d{2,4})(?:\\b.*)?$");
+	if (const auto m = reDmy.match(cleaned); m.hasMatch())
+	{
+		const int a = m.captured(1).toInt();
+		const int b = m.captured(2).toInt();
+		int y = m.captured(3).toInt();
+		if (m.captured(3).size() == 2)
+			y += (y >= 70 ? 1900 : 2000);
+		QDate d;
+		if (a > 12)
+			d = QDate(y, b, a);
+		else if (b > 12)
+			d = QDate(y, a, b);
+		else
+			d = QDate(y, b, a); // DD-MM-YYYY default
+		if (d.isValid())
+			return fmt(d);
+	}
+
+	// Textual English month dates (common in idgames .txt files: "May 10, 2011", "10 May 2011", "Oct 1 1996")
+	const QLocale cLoc = QLocale::c();
+	static const char* const kTextFormats[] = {
+		"MMMM d, yyyy", "MMM d, yyyy", "MMMM d yyyy", "MMM d yyyy",
+		"d MMMM yyyy", "d MMM yyyy", "d MMMM, yyyy", "d MMM, yyyy",
+		"d-MMM-yyyy", "d-MMMM-yyyy", "yyyy MMM d", "yyyy MMMM d"
+	};
+	for (const char* pat : kTextFormats)
+	{
+		const QDate d = cLoc.toDate(cleaned, QLatin1String(pat));
+		if (d.isValid())
+			return fmt(d);
+	}
+
+	return stdStr(s);
 }
 
 std::string sanitizeFolderName(const std::string& name)
@@ -649,7 +712,7 @@ bool loadProfileFromDisk(const std::string& path, Profile& p)
 
 	p.title = stdStr(obj["title"].toString("New Profile"));
 	p.author = stdStr(obj["author"].toString("Unknown"));
-	p.releaseDate = stdStr(obj["releaseDate"].toString("Unknown"));
+	p.releaseDate = normalizeReleaseDate(stdStr(obj["releaseDate"].toString("Unknown")));
 	p.description = stdStr(obj["description"].toString());
 	p.lastPlayed = stdStr(obj["lastPlayed"].toString("Never"));
 	p.playtime = static_cast<uint64_t>(std::max<qint64>(0, obj["playtime"].toInteger(0)));
@@ -767,6 +830,12 @@ std::vector<Profile> loadAllProfiles()
 				const QImage existingImg(covPath);
 				if (existingImg.width() == 320 && existingImg.height() == 240)
 				{
+					p.coverImagePath.clear();
+					needsExtract = true;
+				}
+				else if (!existingImg.isNull() && existingImg.allGray())
+				{
+					// Re-extract covers that previously fell back to a grayscale ramp palette.
 					p.coverImagePath.clear();
 					needsExtract = true;
 				}

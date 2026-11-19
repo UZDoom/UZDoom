@@ -43,6 +43,7 @@
 #include <QFile>
 #include <QFileDialog>
 #include <QFileInfo>
+#include <QFontDatabase>
 #include <QFrame>
 #include <QHeaderView>
 #include <QInputDialog>
@@ -114,14 +115,10 @@ namespace
 
 	QDate parseProfileReleaseDate(const std::string& raw)
 	{
-		const QString s = QString::fromStdString(raw).trimmed();
+		const QString s = QString::fromStdString(normalizeReleaseDate(raw)).trimmed();
 		if (s.isEmpty() || s.compare("Unknown", Qt::CaseInsensitive) == 0)
 			return {};
 		if (QDate d = QDate::fromString(s, "dd-MM-yyyy"); d.isValid())
-			return d;
-		if (QDate d = QDate::fromString(s, "yyyy-MM-dd"); d.isValid())
-			return d;
-		if (QDate d = QDate::fromString(s, "d-M-yyyy"); d.isValid())
 			return d;
 		static const QRegularExpression yearRe("\\b(19\\d\\d|20\\d\\d)\\b");
 		const QRegularExpressionMatch m = yearRe.match(s);
@@ -340,6 +337,7 @@ void LauncherMainWindow::buildUi()
 
 	descView = new QTextEdit(bottomRowWidget);
 	descView->setReadOnly(true);
+	descView->setFont(QFontDatabase::systemFont(QFontDatabase::FixedFont));
 
 	bottomRow->addWidget(coverLabel);
 	bottomRow->addWidget(descView, 1);
@@ -506,7 +504,7 @@ void LauncherMainWindow::retranslateUi()
 	const QString rawGitTime = QString::fromUtf8(GetGitTime());
 	const QDateTime parsedDt = QDateTime::fromString(rawGitTime, Qt::ISODate);
 	const QString formattedDate = parsedDt.isValid() ? parsedDt.date().toString("dd-MM-yyyy") : rawGitTime;
-	setWindowTitle(QString("%1 (Version %2)[Build Date: %3]").arg(GAMENAME).arg(GetVersionString()).arg(formattedDate));
+	setWindowTitle(QString("%1 (Version %2) [Build Date: %3]").arg(GAMENAME).arg(GetVersionString()).arg(formattedDate));
 
 	addMenu->setTitle(LStr("LAUNCHER_ADD_ENTRY", "New Entry"));
 	prefMenu->setTitle(LStr("LAUNCHER_PREFERENCES", "Preferences"));

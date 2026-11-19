@@ -438,6 +438,7 @@ QWidget* ProfileSettingsDialog::buildGeneralTab()
 
 	vbox->addWidget(new QLabel(LStr("LAUNCHER_DESCRIPTION", "Description:"), tab));
 	editDescription = new QPlainTextEdit(tab);
+	editDescription->setFont(QFontDatabase::systemFont(QFontDatabase::FixedFont));
 	vbox->addWidget(editDescription, 1);
 
 	return tab;
@@ -1585,7 +1586,7 @@ void ProfileSettingsDialog::writeToProfile(Profile& target) const
 {
 	target.title = stdStr(editTitle->text().trimmed().isEmpty() ? QString("New Profile") : editTitle->text().trimmed());
 	target.author = stdStr(editAuthor->text().trimmed());
-	target.releaseDate = stdStr(editReleaseDate->text().trimmed());
+	target.releaseDate = normalizeReleaseDate(stdStr(editReleaseDate->text().trimmed()));
 	target.coverImagePath = stdStr(editCoverImage->text().trimmed());
 	target.isIWAD = comboType->currentData().toBool();
 	target.iwadPath = stdStr(editIwadPath->text().trimmed());
