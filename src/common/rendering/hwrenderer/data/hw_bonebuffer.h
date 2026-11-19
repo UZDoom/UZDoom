@@ -25,12 +25,12 @@
 
 class FRenderState;
 
-class BoneBuffer : public FBufferContainer
+class FBoneBuffer : public FBufferContainer
 {
 public:
 	static constexpr int MAX_NUMBER_OF_BONES = 80000;
 
-	BoneBuffer(int pipelineNbr = 1)
+	FBoneBuffer(int pipelineNbr = 1)
 	:FBufferContainer(BufferType::Data, BufferUsageType::Persistent, MAX_NUMBER_OF_BONES, sizeof(VSMatrix), BONEBUF_BINDINGPOINT, pipelineNbr, false)
 	{
 	}
