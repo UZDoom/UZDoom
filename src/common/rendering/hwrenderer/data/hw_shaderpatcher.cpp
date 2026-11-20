@@ -280,23 +280,26 @@ FString RemoveLayoutLocationDecl(FString code, const char *inoutkeyword)
 // Note: the MaterialShaderIndex enum in gl_shader.h needs to be updated whenever this array is modified.
 const FDefaultShader defaultshaders[] =
 {
-	{"Default",	"shaders/glsl/func_normal.fp", "shaders/glsl/material_normal.fp", ""},
+	{"Default",	"shaders/glsl/func_normal.fp", "shaders/glsl/material_normal.fp", "#define SHADERTYPE_DEFAULT\n"},
 	{"Warp 1",	"shaders/glsl/func_warp.fp", "shaders/glsl/material_normal.fp", "#define SHADERTYPE_WARP1\n#define USE_GETTEXCOORD\n"},
 	{"Warp 2",	"shaders/glsl/func_warp.fp", "shaders/glsl/material_normal.fp", "#define SHADERTYPE_WARP2\n#define USE_GETTEXCOORD\n"},
-	{"Specular", "shaders/glsl/func_spec.fp", "shaders/glsl/material_specular.fp", "#define SPECULAR\n#define NORMALMAP\n"},
-	{"PBR","shaders/glsl/func_pbr.fp", "shaders/glsl/material_pbr.fp", "#define PBR\n#define NORMALMAP\n"},
-	{"Paletted",	"shaders/glsl/func_paletted.fp", "shaders/glsl/material_nolight.fp", "#define PALETTE_EMULATION\n"},
-	{"No Texture", "shaders/glsl/func_notexture.fp", "shaders/glsl/material_normal.fp", "#define NO_LAYERS\n"},
-	{"Basic Fuzz", "shaders/glsl/fuzz_standard.fp", "shaders/glsl/material_normal.fp", ""},
-	{"Smooth Fuzz", "shaders/glsl/fuzz_smooth.fp", "shaders/glsl/material_normal.fp", ""},
-	{"Swirly Fuzz", "shaders/glsl/fuzz_swirly.fp", "shaders/glsl/material_normal.fp", ""},
-	{"Translucent Fuzz", "shaders/glsl/fuzz_smoothtranslucent.fp", "shaders/glsl/material_normal.fp", ""},
-	{"Jagged Fuzz", "shaders/glsl/fuzz_jagged.fp", "shaders/glsl/material_normal.fp", ""},
-	{"Noise Fuzz", "shaders/glsl/fuzz_noise.fp", "shaders/glsl/material_normal.fp", ""},
-	{"Smooth Noise Fuzz", "shaders/glsl/fuzz_smoothnoise.fp", "shaders/glsl/material_normal.fp", ""},
-	{"Software Fuzz", "shaders/glsl/fuzz_software.fp", "shaders/glsl/material_normal.fp", ""},
+	{"Specular", "shaders/glsl/func_spec.fp", "shaders/glsl/material_specular.fp", "#define SHADERTYPE_SPECULAR\n#define SPECULAR\n#define NORMALMAP\n"},
+	{"PBR","shaders/glsl/func_pbr.fp", "shaders/glsl/material_pbr.fp", "#define SHADERTYPE_PBR\n#define PBR\n#define NORMALMAP\n"},
+	{"Paletted",	"shaders/glsl/func_paletted.fp", "shaders/glsl/material_nolight.fp", "#define SHADERTYPE_PALETTE\n#define PALETTE_EMULATION\n"},
+	{"No Texture", "shaders/glsl/func_notexture.fp", "shaders/glsl/material_normal.fp", "#define SHADERTYPE_NOTEXTURE\n#define NO_LAYERS\n"},
+	{"Basic Fuzz", "shaders/glsl/fuzz_standard.fp", "shaders/glsl/material_normal.fp", "#define SHADERTYPE_FUZZ\n#define SHADERTYPE_FUZZ_BASIC\n"},
+	{"Smooth Fuzz", "shaders/glsl/fuzz_smooth.fp", "shaders/glsl/material_normal.fp", "#define SHADERTYPE_FUZZ\n#define SHADERTYPE_FUZZ_SMOOTH\n"},
+	{"Swirly Fuzz", "shaders/glsl/fuzz_swirly.fp", "shaders/glsl/material_normal.fp", "#define SHADERTYPE_FUZZ\n#define SHADERTYPE_FUZZ_SWIRLY\n"},
+	{"Translucent Fuzz", "shaders/glsl/fuzz_smoothtranslucent.fp", "shaders/glsl/material_normal.fp", "#define SHADERTYPE_FUZZ\n#define SHADERTYPE_FUZZ_TRANSLUCENT\n"},
+	{"Jagged Fuzz", "shaders/glsl/fuzz_jagged.fp", "shaders/glsl/material_normal.fp", "#define SHADERTYPE_FUZZ\n#define SHADERTYPE_FUZZ_JAGGED\n"},
+	{"Noise Fuzz", "shaders/glsl/fuzz_noise.fp", "shaders/glsl/material_normal.fp", "#define SHADERTYPE_FUZZ\n#define SHADERTYPE_FUZZ_NOISE\n"},
+	{"Smooth Noise Fuzz", "shaders/glsl/fuzz_smoothnoise.fp", "shaders/glsl/material_normal.fp", "#define SHADERTYPE_FUZZ\n#define SHADERTYPE_FUZZ_SMOOTHNOISE\n"},
+	{"Software Fuzz", "shaders/glsl/fuzz_software.fp", "shaders/glsl/material_normal.fp", "#define SHADERTYPE_FUZZ\n#define SHADERTYPE_FUZZ_SOFTWARE\n"},
 	{nullptr,nullptr,nullptr,nullptr}
 };
+
+//TODO optimize stencil/burn vertex shaders
+//TODO extract spheremap/dithertrans into non-effect shaders, leaving only fogboundary/burn/stencil (and add YUVtoRGB as an effectshader for faster video rendering)
 
 const FEffectShader effectshaders[] =
 {
@@ -363,7 +366,7 @@ namespace ShaderInputsOutputs
 		{ShaderPosition::FOutput, {UniformType::Vec4, "", "FragNormal"}, GBufferPass, 0},
 	};
 
-	FString GenerateInputsOutputs(bool isVulkan, bool isFrag, int flags)
+	FString GenerateInputsOutputs(bool isVulkan, bool isFrag, int flags, const TArray<VaryingFieldDesc> *varyings)
 	{
 		using namespace ShaderInputsOutputs;
 
@@ -395,6 +398,23 @@ namespace ShaderInputsOutputs
 				generated.AppendFormat("layout(location=%d) ",index);
 			}
 			generated<<(isOut ? "out" : "in")<<" "<<entry.field.Property<<" "<<GetTypeStr(entry.field.Type)<<" "<<entry.field.Name<<";\n";
+		}
+
+		if(varyings)
+		{
+			for(int i = 0; i < varyings->SSize(); i++)
+			{
+				const auto &entry = (*varyings)[i];
+				bool isOut = !isFrag;
+
+				if(isVulkan)
+				{
+					int index = (isOut ? outputIndex : inputIndex)++;
+					generated.AppendFormat("layout(location=%d) ",index);
+				}
+
+				generated<<(isOut ? "out" : "in")<<" "<<entry.Property<<" "<<GetTypeStr(entry.Type)<<" "<<entry.Name<<";\n";
+			}
 		}
 
 		return generated;

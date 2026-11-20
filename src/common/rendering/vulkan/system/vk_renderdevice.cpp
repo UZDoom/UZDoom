@@ -187,7 +187,7 @@ void VulkanRenderDevice::InitializeState()
 	mSkyData = new FSkyVertexBuffer;
 	mViewpoints = new HWViewpointBuffer;
 	mLights = new FLightBuffer();
-	mBones = new BoneBuffer();
+	mBones = new FBoneBuffer();
 
 	mShaderManager.reset(new VkShaderManager(this));
 	mDescriptorSetManager->Init();

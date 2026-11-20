@@ -88,12 +88,12 @@ namespace ShaderInputsOutputs
 	extern TArray<ShaderIOEntry> ShaderFields;
 
 	//varying list must match between the frag and vertex shader of the same program
-	FString GenerateInputsOutputs(bool isVulkan, bool isFrag, int flags);
+	FString GenerateInputsOutputs(bool isVulkan, bool isFrag, int flags, const TArray<VaryingFieldDesc> *varyings);
 
-	inline FString GenerateInputsOutputs(bool isVulkan, bool isFrag, AllShaderIndex type, bool isGBuffer, bool hasClipDistance)
+	inline FString GenerateInputsOutputs(bool isVulkan, bool isFrag, AllShaderIndex type, bool isGBuffer, bool hasClipDistance, const TArray<VaryingFieldDesc> *varyings)
 	{
 		return GenerateInputsOutputs(isVulkan, isFrag,
-			ShaderProperties[static_cast<int>(type)] | (isGBuffer ? GBufferPass : 0) | (hasClipDistance ? HasClipDistance : 0));
+			ShaderProperties[static_cast<int>(type)] | (isGBuffer ? GBufferPass : 0) | (hasClipDistance ? HasClipDistance : 0), varyings);
 	}
 
 	template<typename T>
