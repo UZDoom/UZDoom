@@ -364,8 +364,8 @@ if( MSVC )
 		set( REL_C_FLAGS "/Oy /Oi /GS-" )
 	endif()
 
-	# Debug allocations in debug builds
-	set( DEB_C_FLAGS "/D _CRTDBG_MAP_ALLOC" )
+	# Debug allocations in debug builds (disabled for C++ since _CRTDBG_MAP_ALLOC redefines free() as a macro, breaking Qt6 headers)
+	set( DEB_C_FLAGS "" )
 
 	# Disable warnings for unsecure CRT functions from VC8+
 	set( ALL_C_FLAGS "${ALL_C_FLAGS} /DUNICODE /D_UNICODE /D_WIN32_WINNT=0x0600 /D_CRT_SECURE_NO_DEPRECATE /D_CRT_SECURE_NO_WARNINGS /D_CRT_NONSTDC_NO_WARNINGS" )
@@ -433,8 +433,10 @@ else()
 	set( DEB_C_FLAGS "" )
 
 	if( APPLE )
-		list(PREPEND CMAKE_PREFIX_PATH "/opt/local")    # port
-		list(PREPEND CMAKE_PREFIX_PATH "/opt/homebrew") # brew
+		list(PREPEND CMAKE_PREFIX_PATH "/opt/local")            # port
+		list(PREPEND CMAKE_PREFIX_PATH "/opt/homebrew")         # brew
+		list(PREPEND CMAKE_PREFIX_PATH "/opt/homebrew/opt/qt")  # brew qt6 (keg-only)
+		list(PREPEND CMAKE_PREFIX_PATH "/usr/local/opt/qt")     # intel brew qt6 (keg-only)
 		if(DEFINED XCODE_VERSION AND XCODE_VERSION VERSION_LESS 27.0)
 			set(CMAKE_OSX_DEPLOYMENT_TARGET "10.13") # This is the actual minimum...
 		else()
@@ -529,8 +531,8 @@ if( HAVE_VM_JIT AND UNIX )
 	endif( NOT HAVE_BACKTRACE )
 endif( HAVE_VM_JIT AND UNIX )
 
+set( SKIP_INSTALL_ALL TRUE ) # Avoid installing bundled third-party libraries (asmjit, freetype, harfbuzz) alongside zdoom
 if( ${HAVE_VM_JIT} )
-	set( SKIP_INSTALL_ALL TRUE ) # Avoid installing asmjit alongside zdoom
 	add_subdirectory( libraries/asmjit )
 	set( ASMJIT_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/libraries/asmjit )
 	set( ASMJIT_LIBRARIES asmjit )
@@ -596,6 +598,27 @@ install(DIRECTORY docs/
 
 option( DYN_OPENAL "Dynamically load OpenAL" ON )
 option( BUILD_NONFREE "Build non-free assets used by commercial games" ON )
+
+if( WIN32 AND NOT DEFINED Qt6_DIR AND NOT DEFINED ENV{Qt6_DIR} )
+	if( DEFINED ENV{QT_ROOT_DIR} )
+		list( APPEND CMAKE_PREFIX_PATH "$ENV{QT_ROOT_DIR}" )
+	else()
+		if( MSVC )
+			if( TARGET_ARCHITECTURE MATCHES "arm64" )
+				file( GLOB _qt6_candidates "C:/Qt/6.*/msvc*_arm64" )
+			else()
+				file( GLOB _qt6_candidates "C:/Qt/6.*/msvc*_64" )
+			endif()
+		elseif( MINGW )
+			file( GLOB _qt6_candidates "C:/Qt/6.*/mingw_64" "C:/Qt/6.*/llvm-mingw_64" )
+		endif()
+		if( _qt6_candidates )
+			list( SORT _qt6_candidates COMPARE NATURAL ORDER DESCENDING )
+			list( GET _qt6_candidates 0 _qt6_latest )
+			list( APPEND CMAKE_PREFIX_PATH "${_qt6_latest}" )
+		endif()
+	endif()
+endif()
 
 add_subdirectory( src )
 add_subdirectory( libraries/lzma )

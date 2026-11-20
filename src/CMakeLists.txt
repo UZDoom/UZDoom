@@ -102,6 +102,8 @@ else()
 
 endif()
 
+find_package( Qt6 REQUIRED COMPONENTS Core Gui Widgets )
+
 if( NOT NO_OPENAL )
 	if ( "vcpkg-openal-soft" IN_LIST VCPKG_MANIFEST_FEATURES )
 		# Statically link to OpenAL from vcpkg
@@ -226,7 +228,7 @@ if( DEM_CMAKE_COMPILER_IS_GNUCXX_COMPATIBLE )
 	if( WIN32 )
 		set( CMAKE_CXX_FLAGS "-Wno-unknown-pragmas -Wno-comment -Wno-format ${CMAKE_CXX_FLAGS}" )
 		set( CMAKE_CXX_FLAGS "-D_UNICODE -DUNICODE ${CMAKE_CXX_FLAGS}" )
-		set( CMAKE_CXX_FLAGS "-D_WIN32_WINNT=0x0600 ${CMAKE_CXX_FLAGS}" )
+		set( CMAKE_CXX_FLAGS "-U_WIN32_WINNT -D_WIN32_WINNT=0x0600 ${CMAKE_CXX_FLAGS}" )
 		set( CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -municode" )
 	endif()
 
@@ -580,6 +582,7 @@ file( GLOB HEADER_FILES
 	common/scripting/frontend/*.h
 
 	utility/*.h
+	launcher/*.h
 	widgets/*.h
 	scripting/*.h
 	scripting/backend/*.h
@@ -759,7 +762,7 @@ set (FASTMATH_SOURCES ${FASTMATH_SOURCES})
 
 if (DEFINED USE_UPDATER AND USE_UPDATER)
 	set (UPDATER_SOURCES
-		widgets/updatebuttonbar.cpp
+		launcher/updater.cpp
 	)
 
 	add_compile_definitions("HAS_UPDATER")
@@ -964,19 +967,8 @@ set (PCH_SOURCES
 	rendering/swrenderer/textures/warptexture.cpp
 	rendering/swrenderer/textures/swcanvastexture.cpp
 	events.cpp
-	widgets/aboutpage.cpp
-	widgets/errorwindow.cpp
-	widgets/launcherbanner.cpp
-	widgets/launcherbuttonbar.cpp
-	widgets/launcherwindow.cpp
-	widgets/netstartwindow.cpp
-	widgets/networkpage.cpp
-	widgets/playgamepage.cpp
-	widgets/releasepage.cpp
-	widgets/settingspage.cpp
 	widgets/themedata.cpp
 	widgets/widgetresourcedata.cpp
-	${UPDATER_SOURCES}
 	${CURL_SOURCES}
 
 	common/audio/sound/i_sound.cpp
@@ -1271,6 +1263,21 @@ set( GAME_SOURCES
 	common/filesystem/source/critsec.cpp
 )
 
+set( LAUNCHER_SOURCES
+	launcher/about.cpp
+	launcher/const.cpp
+	launcher/errorwindow.cpp
+	launcher/flageditor.cpp
+	launcher/launcherMainWindow.cpp
+	launcher/loader.cpp
+	launcher/netstartwindow.cpp
+	launcher/profile.cpp
+	launcher/profileSettings.cpp
+	launcher/starter.cpp
+	${UPDATER_SOURCES}
+)
+list( APPEND GAME_SOURCES ${LAUNCHER_SOURCES} )
+
 set( GAME_NONPCH_SOURCES ${GAME_SOURCES} )
 list( REMOVE_ITEM GAME_NONPCH_SOURCES ${PCH_SOURCES} )
 
@@ -1323,7 +1330,7 @@ if( UNIX )
 	endif()
 endif()
 
-target_link_libraries( zdoom ${PROJECT_LIBRARIES} lzma ${ZMUSIC_LIBRARIES} absl::base absl::flat_hash_map absl::strings absl::hash )
+target_link_libraries( zdoom ${PROJECT_LIBRARIES} lzma ${ZMUSIC_LIBRARIES} absl::base absl::flat_hash_map absl::strings absl::hash Qt6::Core Qt6::Gui Qt6::Widgets )
 include_directories(
 	BEFORE
 	.
@@ -1391,8 +1398,13 @@ include_directories(
 	${SYSTEM_SOURCES_DIR}
 )
 
-set_target_properties( zdoom PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${ZDOOM_OUTPUT_DIR} )
-set_target_properties( zdoom PROPERTIES OUTPUT_NAME ${ZDOOM_EXE_NAME} )
+set_target_properties( zdoom PROPERTIES
+	RUNTIME_OUTPUT_DIRECTORY ${ZDOOM_OUTPUT_DIR}
+	OUTPUT_NAME ${ZDOOM_EXE_NAME}
+	AUTOMOC ON
+	AUTORCC ON
+	AUTOUIC ON
+)
 
 if(NOT MINGW AND CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 	set_target_properties(zdoom PROPERTIES LINK_FLAGS "-z nostart-stop-gc")
@@ -1431,7 +1443,27 @@ if( MSVC )
 endif()
 
 if (WIN32)
-	# nothing
+	if( TARGET Qt6::windeployqt AND NOT WINDEPLOYQT_EXECUTABLE )
+		get_target_property( WINDEPLOYQT_EXECUTABLE Qt6::windeployqt LOCATION )
+	endif()
+	if( NOT WINDEPLOYQT_EXECUTABLE )
+		find_program( WINDEPLOYQT_EXECUTABLE NAMES windeployqt windeployqt6 HINTS "${Qt6_DIR}/../../../bin" )
+	endif()
+	if( WINDEPLOYQT_EXECUTABLE )
+		add_custom_command( TARGET zdoom POST_BUILD
+			COMMAND "${WINDEPLOYQT_EXECUTABLE}"
+				$<$<CONFIG:Debug>:--debug>
+				$<$<NOT:$<CONFIG:Debug>>:--release>
+				--no-translations
+				--no-opengl-sw
+				--no-system-d3d-compiler
+				--no-system-dxc-compiler
+				--no-quick-import
+				--skip-plugin-types generic,iconengines,networkinformation,tls
+				"$<TARGET_FILE:zdoom>"
+			COMMENT "Deploying Qt6 runtime dependencies with windeployqt..."
+		)
+	endif()
 elseif (APPLE)
 	IF ("${INSTALL_RPATH}" STREQUAL "")
 		set_target_properties(zdoom PROPERTIES MACOSX_RPATH TRUE)
@@ -1638,6 +1670,7 @@ source_group("Utility\\Smackerdec" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_D
 source_group("Utility\\Smackerdec\\Headers" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/libsmackerdec/include/.+")
 source_group("Utility\\Smackerdec\\Sources" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/libsmackerdec/src/.+")
 source_group("Statusbar" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/g_statusbar/.+")
+source_group("Launcher" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/launcher/.+")
 source_group("Widgets" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/widgets/.+")
 source_group("Versioning" FILES version.h win32/zdoom.rc)
 source_group("Xlat" REGULAR_EXPRESSION "^${CMAKE_CURRENT_SOURCE_DIR}/xlat/.+" FILES ${CMAKE_CURRENT_BINARY_DIR}/xlat_parser.c ${CMAKE_CURRENT_BINARY_DIR}/xlat_parser.h)

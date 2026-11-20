@@ -62,6 +62,12 @@ CVARD(Int, i_display_new_release, 1, CVAR_ARCHIVE|CVAR_GLOBALCONFIG, "Show relea
 CVARD(Bool, ui_remember_size, true,  CVAR_ARCHIVE|CVAR_GLOBALCONFIG, "Launcher retains size between launches");
 CVARD(Int, ui_launcher_width, 0,  CVAR_ARCHIVE|CVAR_GLOBALCONFIG, "Launcher width");
 CVARD(Int, ui_launcher_height, 0,  CVAR_ARCHIVE|CVAR_GLOBALCONFIG, "Launcher height");
+CVARD(Bool, ui_launcher_maximized, false, CVAR_ARCHIVE|CVAR_GLOBALCONFIG, "Launcher starts maximized");
+
+FARG(nosupportwad, "Loading", "Prevents loading optional support WADs (such as id24res.wad).", "",
+	"Disables loading optional SupportWAD files defined by IWADINFO for this session.");
+FARG(supportwad, "Loading", "Loads optional support WADs (such as id24res.wad).", "",
+	"Forces loading optional SupportWAD files defined by IWADINFO for singleplayer sessions.");
 
 EXTERN_FARG(iwad);
 EXTERN_FARG(host);
@@ -752,6 +758,43 @@ int FIWadManager::IdentifyVersion (std::vector<FileSys::ResourceName>&wadfiles, 
 			}
 		}
 	}
+	const bool forceLauncher = Args->CheckParm(FArg_showlauncher) != 0;
+	if (!iwadparm || forceLauncher)
+	{
+		TArray<WadStuff> wads;
+		for (auto& found : mFoundWads)
+		{
+			if (found.mInfoIndex >= 0)
+			{
+				WadStuff stuff;
+				stuff.Name = mIWadInfos[found.mInfoIndex].Name;
+				stuff.Path = found.mFullPath;
+				wads.Push(stuff);
+			}
+		}
+		FStartupSelectionInfo info2 = FStartupSelectionInfo(wads, *Args, 0);
+		info2.displayRelease = (i_display_new_release != 1) ? i_display_new_release : (i_is_new_release ? 1 : 0);
+		info2.notifyNewRelease = !!i_display_new_release;
+		if (ui_remember_size)
+		{
+			info2.LauncherWidth = ui_launcher_width;
+			info2.LauncherHeight = ui_launcher_height;
+			info2.LauncherMaximized = ui_launcher_maximized;
+		}
+		I_PickIWad(true, info2);
+		if (!info2.notifyNewRelease)
+			i_display_new_release = 0;
+		else if (i_display_new_release == 0)
+			i_display_new_release = 1;
+		if (ui_remember_size)
+		{
+			ui_launcher_width = info2.LauncherWidth;
+			ui_launcher_height = info2.LauncherHeight;
+			ui_launcher_maximized = info2.LauncherMaximized;
+		}
+		return -1;
+	}
+
 	TArray<FFoundWadInfo> picks;
 	if (numFoundWads < mFoundWads.Size())
 	{
@@ -877,6 +920,7 @@ int FIWadManager::IdentifyVersion (std::vector<FileSys::ResourceName>&wadfiles, 
 		{
 			info.LauncherWidth = ui_launcher_width;
 			info.LauncherHeight = ui_launcher_height;
+			info.LauncherMaximized = ui_launcher_maximized;
 		}
 
 		const bool pickRes = I_PickIWad(queryiwad || showlauncher || HoldingQueryKey(queryiwad_key), info);
@@ -893,6 +937,7 @@ int FIWadManager::IdentifyVersion (std::vector<FileSys::ResourceName>&wadfiles, 
 		{
 			ui_launcher_width = info.LauncherWidth;
 			ui_launcher_height = info.LauncherHeight;
+			ui_launcher_maximized = info.LauncherMaximized;
 		}
 
 		if (!pickRes)
@@ -919,7 +964,8 @@ int FIWadManager::IdentifyVersion (std::vector<FileSys::ResourceName>&wadfiles, 
 	{
 		// For net games all wads must be explicitly named to make it easier for the host to know
 		// exactly what's being loaded.
-		if (i_loadsupportwad && !Args->CheckParm(FArg_join) && !Args->CheckParm(FArg_host))
+		const bool loadSupport = (i_loadsupportwad || Args->CheckParm(FArg_supportwad)) && !Args->CheckParm(FArg_nosupportwad);
+		if (loadSupport && !Args->CheckParm(FArg_join) && !Args->CheckParm(FArg_host))
 		{
 			FString supportWAD = IWADPathFileSearch(info.SupportWAD);
 
