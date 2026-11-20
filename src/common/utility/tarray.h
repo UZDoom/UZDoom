@@ -2361,6 +2361,17 @@ public:
 		Count = count;
 		Array = data;
 	}
+	TArrayView(TArray<T> &arr)
+	{
+		Count = arr.Size();
+		Array = arr.Data();
+	}
+
+	TArrayView(const TArray<typename std::remove_const_t<T>> &arr) requires std::is_const_v<T>
+	{
+		Count = arr.Size();
+		Array = arr.Data();
+	}
 	TArrayView(const TArrayView<T> &other) = default;
 	TArrayView<T> &operator= (const TArrayView<T> &other) = default;
 

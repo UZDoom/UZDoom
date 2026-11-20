@@ -143,7 +143,7 @@ void OpenGLFrameBuffer::InitializeState()
 	mSkyData = new FSkyVertexBuffer;
 	mViewpoints = new HWViewpointBuffer(mPipelineNbr);
 	mLights = new FLightBuffer(mPipelineNbr);
-	mBones = new BoneBuffer(mPipelineNbr);
+	mBones = new FBoneBuffer(mPipelineNbr);
 	GLRenderer = new FGLRenderer(this);
 	GLRenderer->Initialize(GetWidth(), GetHeight());
 	static_cast<GLDataBuffer*>(mLights->GetBuffer())->BindBase();
