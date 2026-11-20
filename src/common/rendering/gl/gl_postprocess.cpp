@@ -68,9 +68,42 @@ void FGLRenderer::PostProcessScene(int fixedcm, float flash, const std::function
 	renderstate.TimeGame = static_cast<float>(primaryLevel->LocalWorldTimer / (double)GameTicRate);
 
 	hw_postprocess.Pass1(&renderstate, fixedcm, sceneWidth, sceneHeight);
-	mBuffers->BindCurrentFB();
-	if (afterBloomDrawEndScene2D) afterBloomDrawEndScene2D();
+	if (hw_postprocess.customShaders.HasWeaponShaders() || hw_postprocess.customShaders.HasUIShaders())
+	{
+		auto *weaponTex = hw_postprocess.customShaders.GetWeaponLayerTexture(mBuffers->GetWidth(), mBuffers->GetHeight());
+		renderstate.BindWeaponLayerFB(weaponTex);
+		if (afterBloomDrawEndScene2D) afterBloomDrawEndScene2D();
+		hw_postprocess.customShaders.RunWeapon(&renderstate);
+	}
+	else
+	{
+		mBuffers->BindCurrentFB();
+		if (afterBloomDrawEndScene2D) afterBloomDrawEndScene2D();
+	}
 	hw_postprocess.Pass2(&renderstate, fixedcm, flash, sceneWidth, sceneHeight);
+	mSceneRenderedThisFrame = true;
+}
+
+void FGLRenderer::RunUILayerPostProcess(const std::function<void()> &draw2D)
+{
+	if (!mSceneRenderedThisFrame)
+	{
+		mBuffers->BindCurrentFB();
+		draw2D();
+		return;
+	}
+	mSceneRenderedThisFrame = false;
+
+	GLPPRenderState renderstate(mBuffers);
+
+	renderstate.TimeDelta = static_cast<float>(GetDeltaTime());
+	renderstate.Time = static_cast<float>(screen->FrameTime / 1000.0);
+	renderstate.TimeGame = static_cast<float>(primaryLevel->LocalWorldTimer / (double)GameTicRate);
+
+	auto *uiTex = hw_postprocess.customShaders.GetUILayerTexture(mBuffers->GetWidth(), mBuffers->GetHeight());
+	renderstate.BindUILayerFB(uiTex);
+	draw2D();
+	hw_postprocess.customShaders.RunUI(&renderstate);
 }
 
 //-----------------------------------------------------------------------------
