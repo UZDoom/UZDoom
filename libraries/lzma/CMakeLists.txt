@@ -2,6 +2,10 @@ make_release_only()
 
 set( CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DZ7_PPMD_SUPPORT" )
 
+if (IS_MUSL)
+	set( CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DZ7_AFFINITY_DISABLE" )
+endif()
+
 find_package(Threads)
 
 add_library( lzma STATIC
