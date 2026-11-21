@@ -51,6 +51,7 @@
 #include "s_music.h"
 #include "s_sndseq.h"
 #include "s_sound.h"
+#include "s_trakinfo.h"
 #include "serializer_doom.h"
 #include "v_draw.h"
 #include "v_font.h"
@@ -223,6 +224,7 @@ void S_Init()
 void S_Shutdown()
 {
 	S_StopMusic(true);
+	S_ClearTrakInfo();
 
 	for (auto Level : AllLevels())
 	{
@@ -356,6 +358,7 @@ void S_InitData()
 	LastLocalSndInfo = LastLocalSndSeq = "";
 	S_ParseSndInfo(false);
 	S_ParseSndSeq(-1);
+	S_ParseTrakInfo();
 }
 
 //==========================================================================

@@ -35,6 +35,7 @@
 #include "filesystem.h"
 #include "cmdlib.h"
 #include "s_music.h"
+#include "s_trakinfo.h"
 #include "filereadermusicinterface.h"
 #include <zmusic.h>
 #include "md5.h"
@@ -85,6 +86,25 @@ EXTERN_CVAR(Float, opn_gain)
 CVAR(Bool, mus_calcgain, true, CVAR_ARCHIVE | CVAR_GLOBALCONFIG) // changing this will only take effect for the next song.
 CVAR(Bool, mus_usereplaygain, false, CVAR_ARCHIVE | CVAR_GLOBALCONFIG) // changing this will only take effect for the next song.
 CVAR(Int, mod_preferred_player, 0, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)// toggle between libXMP and Dumb. Unlike other sound CVARs this is not directly mapped to ZMusic's config.
+CUSTOM_CVAR(Int, mus_soundtrack, TRAKINFO_Original, CVAR_ARCHIVE | CVAR_GLOBALCONFIG)
+{
+	if (self < TRAKINFO_Original || self > TRAKINFO_Remixed)
+	{
+		self = TRAKINFO_Original;
+		return;
+	}
+	if (mus_playing.handle != nullptr && !mus_playing.name.IsEmpty())
+	{
+		bool wasPaused = MusicPaused;
+		auto mi = mus_playing;
+		S_StopMusic(true);
+		S_ChangeMusic(mi.name.GetChars(), mi.baseorder, mi.loop, true);
+		if (wasPaused)
+		{
+			S_PauseMusic();
+		}
+	}
+}
 
 // CODE --------------------------------------------------------------------
 
@@ -698,6 +718,7 @@ bool S_ChangeMusic(const char* musicname, int order, bool looping, bool force)
 		// Don't choke if the map doesn't have a song attached
 		S_StopMusic (true);
 		mus_playing.name = "";
+		mus_playing.actualName = "";
 		mus_playing.LastSong = "";
 		return true;
 	}
@@ -754,25 +775,53 @@ bool S_ChangeMusic(const char* musicname, int order, bool looping, bool force)
 	}
 
 	// load & register it
+	FString resolvedName = musicname;
 	if (handle != nullptr)
 	{
 		mus_playing.handle = handle;
 	}
 	else
 	{
-		int lumpnum = mus_cb.FindMusic(musicname);
+		int origLump = mus_cb.FindMusic(musicname);
+		int lumpnum = origLump;
+		float trakVol = -1.f;
+
+		if (S_HasTrakInfo())
+		{
+			if (const char* repl = S_TrakInfoFindReplacement(m.data(), m.size(), mus_soundtrack))
+			{
+				FileReader replReader = OpenMusic(repl);
+				if (replReader.isOpen())
+				{
+					reader = std::move(replReader);
+					m = reader.Read();
+					reader.Seek(0, FileReader::SeekSet);
+					resolvedName = repl;
+					lumpnum = mus_cb.FindMusic(repl);
+				}
+			}
+			trakVol = S_TrakInfoFindVolume(m.data(), m.size());
+		}
+
 		MidiDeviceSetting* devp = MidiDevices.CheckKey(lumpnum);
 		int* mplay = ModPlayers.CheckKey(lumpnum);
 
 		auto volp = MusicVolumes.CheckKey(lumpnum);
+		if (!volp && lumpnum != origLump)
+		{
+			volp = MusicVolumes.CheckKey(origLump);
+		}
 		if (volp)
 		{
 			mus_playing.musicVolume = *volp;
-
 		}
 		else
 		{
-			CheckReplayGain(musicname, devp ? (EMidiDevice)devp->device : MDEV_DEFAULT, devp ? devp->args.GetChars() : "");
+			CheckReplayGain(resolvedName.GetChars(), devp ? (EMidiDevice)devp->device : MDEV_DEFAULT, devp ? devp->args.GetChars() : "");
+			if (!mus_usereplaygain && trakVol > 0.f)
+			{
+				mus_playing.musicVolume = trakVol;
+			}
 		}
 		auto mreader = GetMusicReader(reader);	// this passes the file reader to the newly created wrapper.
 		int mod_player = mplay? *mplay : *mod_preferred_player;
@@ -784,12 +833,13 @@ bool S_ChangeMusic(const char* musicname, int order, bool looping, bool force)
 		mus_playing.handle = ZMusic_OpenSong(mreader, devp ? (EMidiDevice)devp->device : MDEV_DEFAULT, devp ? devp->args.GetChars() : "");
 		if (mus_playing.handle == nullptr)
 		{
-			Printf("Unable to load %s: %s\n", mus_playing.name.GetChars(), ZMusic_GetLastError());
+			Printf("Unable to load %s: %s\n", resolvedName.GetChars(), ZMusic_GetLastError());
 		}
 	}
 
 	mus_playing.loop = looping;
 	mus_playing.name = musicname;
+	mus_playing.actualName = (resolvedName.CompareNoCase(musicname) != 0) ? resolvedName : FString();
 	mus_playing.baseorder = 0;
 	mus_playing.LastSong = "";
 
@@ -894,6 +944,7 @@ void S_StopMusic (bool force)
 				ZMusic_Close(h);
 			}
 			mus_playing.LastSong = std::move(mus_playing.name);
+			mus_playing.actualName = "";
 		}
 	}
 	catch (const std::runtime_error& )
@@ -906,6 +957,7 @@ void S_StopMusic (bool force)
 			ZMusic_Close(h);
 		}
 		mus_playing.name = "";
+		mus_playing.actualName = "";
 	}
 }
 
@@ -1077,7 +1129,14 @@ CCMD(currentmusic)
 {
 	if (mus_playing.name.IsNotEmpty())
 	{
-		Printf("Currently playing music '%s'\n", mus_playing.name.GetChars());
+		if (mus_playing.actualName.IsNotEmpty())
+		{
+			Printf("Currently playing music '%s' (TRAKINFO: '%s')\n", mus_playing.name.GetChars(), mus_playing.actualName.GetChars());
+		}
+		else
+		{
+			Printf("Currently playing music '%s'\n", mus_playing.name.GetChars());
+		}
 	}
 	else
 	{
