@@ -103,6 +103,7 @@ extern MusicCallbacks mus_cb;
 struct MusPlayingInfo
 {
 	FString name;
+	FString actualName;			// TRAKINFO replacement lump name, if active.
 	ZMusic_MusicStream handle;
 	int   lumpnum;
 	int   baseorder;
