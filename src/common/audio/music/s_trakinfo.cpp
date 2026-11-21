@@ -21,6 +21,7 @@
 #include <string>
 #include <unordered_map>
 
+#include "c_cvars.h"
 #include "filesystem.h"
 #include "printf.h"
 #include "serializer_rapidjson.h"
@@ -188,9 +189,19 @@ const char *SoundtrackModeKey(int mode)
 
 } // namespace
 
+CVAR(Bool, mus_has_trakinfo, false, CVAR_NOSET | CVAR_HIDDEN)
+
+static void UpdateHasTrakInfoCVar()
+{
+	UCVarValue val;
+	val.Bool = !TrakInfoMap.empty();
+	mus_has_trakinfo->ForceSet(val, CVAR_Bool);
+}
+
 void S_ClearTrakInfo()
 {
 	TrakInfoMap.clear();
+	UpdateHasTrakInfoCVar();
 }
 
 void S_ParseTrakInfo()
@@ -206,6 +217,8 @@ void S_ParseTrakInfo()
 			ParseTrakInfoLump(lump);
 		}
 	}
+
+	UpdateHasTrakInfoCVar();
 }
 
 bool S_HasTrakInfo()

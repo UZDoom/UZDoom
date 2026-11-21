@@ -93,6 +93,10 @@ CUSTOM_CVAR(Int, mus_soundtrack, TRAKINFO_Original, CVAR_ARCHIVE | CVAR_GLOBALCO
 		self = TRAKINFO_Original;
 		return;
 	}
+	if (!S_HasTrakInfo() || PlayList.GetNumSongs() > 0)
+	{
+		return;
+	}
 	if (mus_playing.handle != nullptr && !mus_playing.name.IsEmpty())
 	{
 		bool wasPaused = MusicPaused;
@@ -788,6 +792,7 @@ bool S_ChangeMusic(const char* musicname, int order, bool looping, bool force)
 
 		if (S_HasTrakInfo())
 		{
+			trakVol = S_TrakInfoFindVolume(m.data(), m.size());
 			if (const char* repl = S_TrakInfoFindReplacement(m.data(), m.size(), mus_soundtrack))
 			{
 				FileReader replReader = OpenMusic(repl);
@@ -798,9 +803,14 @@ bool S_ChangeMusic(const char* musicname, int order, bool looping, bool force)
 					reader.Seek(0, FileReader::SeekSet);
 					resolvedName = repl;
 					lumpnum = mus_cb.FindMusic(repl);
+
+					float replVol = S_TrakInfoFindVolume(m.data(), m.size());
+					if (replVol > 0.f)
+					{
+						trakVol = replVol;
+					}
 				}
 			}
-			trakVol = S_TrakInfoFindVolume(m.data(), m.size());
 		}
 
 		MidiDeviceSetting* devp = MidiDevices.CheckKey(lumpnum);
