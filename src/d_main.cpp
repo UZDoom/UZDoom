@@ -2405,6 +2405,58 @@ static void D_DoomInit()
 
 	if (!batchrun) Printf ("M_LoadDefaults: Load system defaults.\n");
 	M_LoadDefaults ();			// load before initing other systems
+
+	// Apply +set / +<cvar> early for CVARs used during startup (before normal + commands run),
+	// so changing renderer, support WADs, autoloads, or language takes effect on this launch.
+	static const char* const kEarlyCVars[] = {
+		"i_loadsupportwad",
+		"vid_preferbackend",
+		"disableautoload",
+		"autoloadlights",
+		"autoloadbrightmaps",
+		"autoloadwidescreen",
+		"language",
+	};
+	auto isEarlyCVar = [&](const char* name) -> bool
+	{
+		for (const char* entry : kEarlyCVars)
+		{
+			if (stricmp(name, entry) == 0)
+				return true;
+		}
+		return false;
+	};
+	const int argc = Args->NumArgs();
+	for (int i = 1; i < argc; ++i)
+	{
+		const char* arg = Args->GetArg(i);
+		if (arg[0] != '+')
+			continue;
+
+		const char* cvarName = nullptr;
+		const char* cvarVal = nullptr;
+		if (stricmp(arg + 1, "set") == 0)
+		{
+			if (i + 2 < argc && isEarlyCVar(Args->GetArg(i + 1)))
+			{
+				cvarName = Args->GetArg(i + 1);
+				cvarVal = Args->GetArg(i + 2);
+				i += 2;
+			}
+		}
+		else if (arg[1] != '\0' && i + 1 < argc && isEarlyCVar(arg + 1))
+		{
+			cvarName = arg + 1;
+			cvarVal = Args->GetArg(i + 1);
+			++i;
+		}
+
+		if (cvarName && cvarVal && cvarVal[0] != '+')
+		{
+			if (FBaseCVar* cvar = FindCVar(cvarName, nullptr))
+				cvar->CmdSet(cvarVal);
+		}
+	}
 }
 
 //==========================================================================
@@ -4049,6 +4101,8 @@ static int D_InitGame(const FIWADInfo* iwad_info, std::vector<FileSys::ResourceN
 		if (v)
 		{
 			FString file = G_BuildSaveName(v);
+			if (!FileExists(file) && FileExists(v))
+				file = v;
 			if (!FileExists(file))
 			{
 				I_FatalError("Cannot find savegame %s", file.GetChars());

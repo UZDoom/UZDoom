@@ -86,10 +86,11 @@ namespace
 
 	QString quoteAdditionalArg(const QString& arg)
 	{
-		if (!arg.contains(' ') && !arg.contains('\t') && !arg.contains('"'))
+		if (!arg.isEmpty() && !arg.contains(' ') && !arg.contains('\t') && !arg.contains('"'))
 			return arg;
+		// QProcess::splitCommand() treats backslashes literally and uses """ for a literal quote.
 		QString escaped = arg;
-		escaped.replace('"', "\\\"");
+		escaped.replace('"', QStringLiteral("\"\"\""));
 		return '"' + escaped + '"';
 	}
 
@@ -204,7 +205,7 @@ namespace
 			const QPalette pal = edit ? edit->palette() : QApplication::palette();
 			const QColor base = pal.color(QPalette::Base);
 			const bool darkBg = base.lightness() < 128;
-			const bool highContrast = darkBg && base == QColor(0, 0, 0) && pal.color(QPalette::Text).lightness() > 240;
+			const bool highContrast = darkBg && base.lightness() <= 15 && pal.color(QPalette::Highlight) == QColor(255, 255, 0);
 
 			errorFmt = QTextCharFormat();
 			errorFmt.setFontWeight(QFont::Bold);
@@ -485,7 +486,24 @@ QWidget* ProfileSettingsDialog::buildLaunchTab()
 			.arg(LStr("LAUNCHER_FILTER_SAVES", "Savegames"), LStr("FILEPICKER_ANY", "All Files"));
 		const QString p = browsePath(LStr("LAUNCHER_SELECT_SAVE_TITLE", "Select Savegame"), filter, startDir);
 		if (!p.isEmpty())
-			editSavegame->setText(p);
+		{
+			QString displayed = p;
+			const QString saveDirText = editSaveDir->text().trimmed();
+			if (!saveDirText.isEmpty())
+			{
+				const QString cleanDir = QDir::cleanPath(QFileInfo(saveDirText).absoluteFilePath()).replace('\\', '/');
+				const QString cleanFile = QDir::cleanPath(QFileInfo(p).absoluteFilePath()).replace('\\', '/');
+				const QString prefix = cleanDir.endsWith('/') ? cleanDir : (cleanDir + '/');
+#ifdef _WIN32
+				constexpr Qt::CaseSensitivity cs = Qt::CaseInsensitive;
+#else
+				constexpr Qt::CaseSensitivity cs = Qt::CaseSensitive;
+#endif
+				if (cleanFile.startsWith(prefix, cs))
+					displayed = QDir(cleanDir).relativeFilePath(cleanFile).replace('\\', '/');
+			}
+			editSavegame->setText(displayed);
+		}
 	});
 
 	editDemoPlay = new QLineEdit(grpMode);
@@ -2065,7 +2083,7 @@ void ProfileSettingsDialog::onSaveAndReturn()
 		{
 			QDir().mkpath(profFolder);
 			const QString ext = covFi.suffix().isEmpty() ? QStringLiteral("png") : covFi.suffix().toLower();
-			const QString destCover = QDir(profFolder).filePath("cover." + ext);
+			const QString destCover = QDir(profFolder).filePath("custom_cover." + ext);
 			const QString tmpCover = destCover + ".uztmp";
 			QFile::remove(tmpCover);
 			if (QFile::copy(covAbs, tmpCover))

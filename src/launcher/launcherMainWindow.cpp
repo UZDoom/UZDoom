@@ -735,7 +735,7 @@ bool LauncherMainWindow::canMoveSelectedBy(int delta) const
 	if (filterCategoryCombo && filterCategoryCombo->currentData().toInt() != 0)
 		return false;
 
-	const int curRow = table->currentRow();
+	const int curRow = tableRowForProfileIndex(selectedProfileIndex());
 	if (curRow < 0 || table->isRowHidden(curRow))
 		return false;
 	const int targetRow = curRow + delta;
@@ -822,7 +822,10 @@ void LauncherMainWindow::updateTableRow(int tableRow, int profileIdx)
 
 int LauncherMainWindow::selectedProfileIndex() const
 {
-	const int row = table->currentRow();
+	const QModelIndexList sel = table->selectionModel() ? table->selectionModel()->selectedRows() : QModelIndexList{};
+	if (sel.isEmpty())
+		return -1;
+	const int row = sel.first().row();
 	if (row < 0 || table->isRowHidden(row))
 		return -1;
 	return profileIndexForTableRow(row);
@@ -856,6 +859,7 @@ void LauncherMainWindow::selectProfileIndex(int profileIdx)
 	else
 	{
 		table->clearSelection();
+		table->setCurrentCell(-1, -1);
 	}
 	updateDetailsPane();
 	updateButtonStates();
@@ -1131,7 +1135,7 @@ void LauncherMainWindow::moveSelectedProfile(int delta)
 {
 	if (!canMoveSelectedBy(delta))
 		return;
-	const int curRow = table->currentRow();
+	const int curRow = tableRowForProfileIndex(selectedProfileIndex());
 	const int targetRow = curRow + delta;
 	const int idxA = profileIndexForTableRow(curRow);
 	const int idxB = profileIndexForTableRow(targetRow);
@@ -1219,7 +1223,7 @@ void LauncherMainWindow::launchProfile(LaunchTargetMode mode)
 	if (idx < 0 || idx >= static_cast<int>(profiles.size()))
 		return;
 
-	const Profile& p = profiles[idx];
+	const Profile p = profiles[idx];
 	if (p.iwadPath.empty() || !QFileInfo::exists(QString::fromStdString(p.iwadPath)))
 	{
 		const auto choice = QMessageBox::warning(
@@ -1344,10 +1348,6 @@ void LauncherMainWindow::launchProfile(LaunchTargetMode mode)
 
 			gameProcess->setProcessChannelMode(QProcess::MergedChannels);
 			gameProcess->setStandardOutputFile(activeLogFilePath, QIODevice::Append);
-#ifdef Q_OS_WIN
-			if (!args.contains(QStringLiteral("-stdout"), Qt::CaseInsensitive))
-				args << QStringLiteral("-stdout");
-#endif
 		}
 		else
 		{
@@ -1535,8 +1535,7 @@ void LauncherMainWindow::handleImportedFiles(const QStringList& localPaths)
 				this,
 				LStr("LAUNCHER_ATTACH_DEH_TITLE", "Attach DeHackEd Patch"),
 				LStr("LAUNCHER_ATTACH_DEH_MSG", "Attach '%1' as a mod to selected profile '%2'?\n\nClick 'No' to create a separate profile instead.")
-					.arg(fi.fileName())
-					.arg(QString::fromStdString(profiles[curIdx].title)),
+					.arg(fi.fileName(), QString::fromStdString(profiles[curIdx].title)),
 				QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel,
 				QMessageBox::Yes);
 			if (ans == QMessageBox::Cancel)
@@ -1574,8 +1573,7 @@ void LauncherMainWindow::handleImportedFiles(const QStringList& localPaths)
 								box.setWindowTitle(LStr("LAUNCHER_MOD_EXISTS_TITLE", "Mod Already Exists"));
 								box.setText(LStr("LAUNCHER_MOD_EXISTS_PROFILE_MSG",
 									"A different file named '%1' already exists in '%2''s mods folder.\n\nOverwrite it with the selected file?")
-									.arg(fi.fileName())
-									.arg(QString::fromStdString(profiles[curIdx].title)));
+									.arg(fi.fileName(), QString::fromStdString(profiles[curIdx].title)));
 								QPushButton* btnOverwrite = box.addButton(LStr("LAUNCHER_OVERWRITE", "Overwrite"), QMessageBox::AcceptRole);
 								QPushButton* btnKeep = box.addButton(LStr("LAUNCHER_KEEP_EXISTING", "Keep Existing"), QMessageBox::NoRole);
 								box.addButton(QMessageBox::Cancel);
@@ -1647,7 +1645,7 @@ void LauncherMainWindow::handleImportedFiles(const QStringList& localPaths)
 		}
 		else if (outcome.status != ImportResult::Cancelled)
 		{
-			errors << QString("%1: %2").arg(fi.fileName()).arg(QString::fromStdString(outcome.message));
+			errors << QString("%1: %2").arg(fi.fileName(), QString::fromStdString(outcome.message));
 		}
 	}
 
@@ -1864,7 +1862,7 @@ void LauncherMainWindow::onExportSelectedProfile()
 	if (idx < 0)
 		return;
 
-	const Profile& p = profiles[idx];
+	const Profile p = profiles[idx];
 	const QString suggested = QString::fromStdString(sanitizeFolderName(p.title)) + ".uzdp";
 	const QString filter = QString("%1 (*.uzdp)").arg(LStr("LAUNCHER_FILTER_UZDP", "UZDoom Profile Archive"));
 	const QString dest = QFileDialog::getSaveFileName(

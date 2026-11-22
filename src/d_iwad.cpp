@@ -64,11 +64,6 @@ CVARD(Int, ui_launcher_width, 0,  CVAR_ARCHIVE|CVAR_GLOBALCONFIG, "Launcher widt
 CVARD(Int, ui_launcher_height, 0,  CVAR_ARCHIVE|CVAR_GLOBALCONFIG, "Launcher height");
 CVARD(Bool, ui_launcher_maximized, false, CVAR_ARCHIVE|CVAR_GLOBALCONFIG, "Launcher starts maximized");
 
-FARG(nosupportwad, "Loading", "Prevents loading optional support WADs (such as id24res.wad).", "",
-	"Disables loading optional SupportWAD files defined by IWADINFO for this session.");
-FARG(supportwad, "Loading", "Loads optional support WADs (such as id24res.wad).", "",
-	"Forces loading optional SupportWAD files defined by IWADINFO for singleplayer sessions.");
-
 EXTERN_FARG(iwad);
 EXTERN_FARG(host);
 EXTERN_FARG(join);
@@ -964,8 +959,7 @@ int FIWadManager::IdentifyVersion (std::vector<FileSys::ResourceName>&wadfiles, 
 	{
 		// For net games all wads must be explicitly named to make it easier for the host to know
 		// exactly what's being loaded.
-		const bool loadSupport = (i_loadsupportwad || Args->CheckParm(FArg_supportwad)) && !Args->CheckParm(FArg_nosupportwad);
-		if (loadSupport && !Args->CheckParm(FArg_join) && !Args->CheckParm(FArg_host))
+		if (i_loadsupportwad && !Args->CheckParm(FArg_join) && !Args->CheckParm(FArg_host))
 		{
 			FString supportWAD = IWADPathFileSearch(info.SupportWAD);
 

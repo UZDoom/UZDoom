@@ -533,7 +533,6 @@ QStringList Profile::buildLaunchArguments(LaunchTargetMode mode, const std::stri
 		args << "-shotdir" << qStr(screenshotDirPath);
 
 	args << "+set" << "vid_fullscreen" << (fullscreen ? "1" : "0");
-	args << (loadSupportWads ? "-supportwad" : "-nosupportwad");
 	args << "+set" << "i_loadsupportwad" << (loadSupportWads ? "1" : "0");
 	args << "+set" << "r_dynlights" << (enableDynLights ? "1" : "0");
 
@@ -586,7 +585,16 @@ QStringList Profile::buildLaunchArguments(LaunchTargetMode mode, const std::stri
 	}
 	else if (launchParameters == 2 && !selectedLaunchSave.empty())
 	{
-		args << "-loadgame" << resolveRelativeToDir(qStr(selectedLaunchSave), qStr(saveDirPath));
+		QString saveArg = normalizeSlash(qStr(selectedLaunchSave).trimmed());
+		if (QFileInfo(saveArg).isAbsolute() && !saveDirPath.empty())
+		{
+			const QString cleanSaveDir = normalizeSlash(QFileInfo(qStr(saveDirPath)).absoluteFilePath());
+			const QString cleanSaveFile = normalizeSlash(QFileInfo(saveArg).absoluteFilePath());
+			const QString saveDirPrefix = cleanSaveDir.endsWith('/') ? cleanSaveDir : (cleanSaveDir + '/');
+			if (cleanSaveFile.startsWith(saveDirPrefix, pathCaseSensitivity()))
+				saveArg = QDir(cleanSaveDir).relativeFilePath(cleanSaveFile).replace('\\', '/');
+		}
+		args << "-loadgame" << saveArg;
 	}
 	else if (launchParameters == 3 && !selectedLaunchDemoPlayback.empty())
 	{
@@ -661,19 +669,55 @@ QStringList Profile::buildLaunchArguments(LaunchTargetMode mode, const std::stri
 	if (pistolStartAllLevels)
 		effDmflags3 |= DF3_PISTOL_START;
 
+	const bool hasHostModeDefaults = (mode == LaunchTargetMode::Host && hostGamemode >= 1 && hostGamemode <= 4);
+	uint32_t hostDefaultDmflags = 0;
+	uint32_t hostDefaultDmflags3 = 0;
+	if (hasHostModeDefaults)
+	{
+		if (hostGamemode == 1)
+		{
+			hostDefaultDmflags |= DF_NO_COOP_WEAPON_SPAWN;
+			hostDefaultDmflags3 |= DF3_NO_PLAYER_CLIP | DF3_COOP_SHARE_KEYS | DF3_REMEMBER_LAST_WEAP;
+			const QString iwadLower = QFileInfo(qStr(iwadPath)).fileName().toLower();
+			if (!iwadLower.contains(QStringLiteral("hexen")))
+				hostDefaultDmflags3 |= DF3_LOCAL_ITEMS;
+		}
+		else if (hostGamemode == 2 || hostGamemode == 3)
+		{
+			hostDefaultDmflags |= DF_WEAPONS_STAY | DF_ITEMS_RESPAWN;
+		}
+		else if (hostGamemode == 4)
+		{
+			hostDefaultDmflags |= DF_ITEMS_RESPAWN;
+		}
+	}
+
 	if (alwaysApplyDMFlags)
 	{
 		args << "+set" << "alwaysapplydmflags" << "1";
-		args << "+set" << "dmflags" << QString::number(effDmflags);
-		args << "+set" << "dmflags2" << QString::number(effDmflags2);
-		args << "+set" << "dmflags3" << QString::number(effDmflags3);
+		if (!hasHostModeDefaults)
+		{
+			args << "+set" << "dmflags" << QString::number(effDmflags);
+			args << "+set" << "dmflags2" << QString::number(effDmflags2);
+			args << "+set" << "dmflags3" << QString::number(effDmflags3);
+		}
+		else
+		{
+			// Preserve -coop/-deathmatch/-altdeath defaults unless custom flags are present, and merge defaults when setting the bitmask.
+			if (effDmflags != 0)
+				args << "+set" << "dmflags" << QString::number(effDmflags | hostDefaultDmflags);
+			if (effDmflags2 != 0)
+				args << "+set" << "dmflags2" << QString::number(effDmflags2);
+			if (effDmflags3 != 0)
+				args << "+set" << "dmflags3" << QString::number(effDmflags3 | hostDefaultDmflags3);
+		}
 	}
 	else
 	{
 		constexpr uint32_t cliDmMask = DF_FAST_MONSTERS | DF_MONSTERS_RESPAWN | DF_NO_MONSTERS;
 		if ((effDmflags & ~cliDmMask) != 0)
 		{
-			args << "+set" << "dmflags" << QString::number(effDmflags);
+			args << "+set" << "dmflags" << QString::number(effDmflags | hostDefaultDmflags);
 		}
 		else
 		{
@@ -684,10 +728,15 @@ QStringList Profile::buildLaunchArguments(LaunchTargetMode mode, const std::stri
 			if ((effDmflags & DF_NO_MONSTERS) != 0)
 				args << "-nomonsters";
 		}
-		if (effDmflags2 != 0)
+		if (effDmflags2 == DF2_ALWAYS_SPAWN_MULTI)
+			args << "+set" << "sv_alwaysspawnmulti" << "1";
+		else if (effDmflags2 != 0)
 			args << "+set" << "dmflags2" << QString::number(effDmflags2);
-		if (effDmflags3 != 0)
-			args << "+set" << "dmflags3" << QString::number(effDmflags3);
+
+		if (effDmflags3 == DF3_PISTOL_START)
+			args << "+set" << "sv_pistolstart" << "1";
+		else if (effDmflags3 != 0)
+			args << "+set" << "dmflags3" << QString::number(effDmflags3 | hostDefaultDmflags3);
 	}
 
 	const int matchedCompatMode = findMatchingCompatModeId(compatflags, compatflags2);
@@ -978,7 +1027,9 @@ std::vector<Profile> loadAllProfiles()
 	for (const QFileInfo& sub : subDirs)
 	{
 		QDir subDir(sub.absoluteFilePath());
-		QStringList candidates = subDir.entryList({"*.Uzdoomprofile", "*.uzdoomprofile", "*.json"}, QDir::Files);
+		QStringList candidates = subDir.entryList({"*.Uzdoomprofile", "*.uzdoomprofile"}, QDir::Files);
+		if (candidates.isEmpty())
+			candidates = subDir.entryList({"*.json"}, QDir::Files);
 		if (candidates.isEmpty())
 			continue;
 
@@ -988,23 +1039,26 @@ std::vector<Profile> loadAllProfiles()
 		{
 			const QString covPath = qStr(p.coverImagePath);
 			bool needsExtract = covPath.isEmpty() || !QFileInfo::exists(covPath);
+			std::string fallbackCover;
 			if (!needsExtract && QFileInfo(covPath).fileName().compare("cover.png", Qt::CaseInsensitive) == 0)
 			{
 				const QImage existingImg(covPath);
-				if (existingImg.width() == 320 && existingImg.height() == 240)
+				if ((existingImg.width() == 320 && existingImg.height() == 240)
+					|| (!existingImg.isNull() && existingImg.allGray()))
 				{
-					p.coverImagePath.clear();
-					needsExtract = true;
-				}
-				else if (!existingImg.isNull() && existingImg.allGray())
-				{
-					// Re-extract covers that previously fell back to a grayscale ramp palette.
+					// Re-extract auto-generated covers that were saved at 320x240 or fell back to grayscale.
+					fallbackCover = p.coverImagePath;
 					p.coverImagePath.clear();
 					needsExtract = true;
 				}
 			}
-			if (needsExtract && tryExtractCoverForProfile(p))
-				saveProfileToDisk(p);
+			if (needsExtract)
+			{
+				if (tryExtractCoverForProfile(p))
+					saveProfileToDisk(p);
+				else if (!fallbackCover.empty())
+					p.coverImagePath = std::move(fallbackCover);
+			}
 			profiles.push_back(std::move(p));
 		}
 	}
@@ -1200,7 +1254,7 @@ bool extractZipArchiveToDir(const QString& zipPath, const QString& destDir, std:
 		QString entryName = QString::fromUtf8(st.m_filename).replace('\\', '/');
 		while (entryName.startsWith('/'))
 			entryName.remove(0, 1);
-		if (entryName.isEmpty() || entryName.contains(".."))
+		if (entryName.isEmpty() || entryName.split('/').contains(QStringLiteral("..")))
 			continue;
 
 		const QString outPath = QDir::cleanPath(QDir(cleanDest).filePath(entryName));
@@ -1468,7 +1522,31 @@ bool importProfileFromZip(const std::string& zipPath, Profile& outProfile, std::
 
 	auto inferOldProfileDir = [&]() -> QString
 	{
-		auto parentIfNamed = [](const std::string& pathStr, const QString& expectedLeaf) -> QString
+		const QString cleanFinalBase = normalizeSlash(finalBaseDir);
+		const QString cleanExecDir = normalizeSlash(qStr(LauncherConst::EXEC_DIR));
+		const QString cleanRootDir = normalizeSlash(qStr(LauncherConst::ROOT_DIR));
+		const QString cleanProfileRoot = normalizeSlash(qStr(LauncherConst::PROFILE_DIR));
+
+		auto isInsideFinalBase = [&](const std::string& pathStr) -> bool
+		{
+			if (pathStr.empty())
+				return false;
+			const QString norm = normalizeSlash(qStr(pathStr));
+			return norm.compare(cleanFinalBase, pathCaseSensitivity()) == 0
+				|| norm.startsWith(cleanFinalBase + QLatin1Char('/'), pathCaseSensitivity());
+		};
+
+		// Modern portable exports already resolve their profile-local paths inside finalBaseDir.
+		if (isInsideFinalBase(outProfile.saveDirPath)
+			|| isInsideFinalBase(outProfile.screenshotDirPath)
+			|| isInsideFinalBase(outProfile.demoDirPath)
+			|| isInsideFinalBase(outProfile.configFilePath)
+			|| isInsideFinalBase(outProfile.coverImagePath))
+		{
+			return {};
+		}
+
+		auto parentIfLocalCandidate = [&](const std::string& pathStr, const QString& expectedLeaf) -> QString
 		{
 			if (pathStr.empty())
 				return {};
@@ -1476,17 +1554,26 @@ bool importProfileFromZip(const std::string& zipPath, Profile& outProfile, std::
 			const QFileInfo fi(norm);
 			if (!expectedLeaf.isEmpty() && fi.fileName().compare(expectedLeaf, Qt::CaseInsensitive) != 0)
 				return {};
-			return fi.absolutePath();
+			const QString parent = normalizeSlash(fi.absolutePath());
+			if (parent.isEmpty()
+				|| (!cleanExecDir.isEmpty() && parent.compare(cleanExecDir, pathCaseSensitivity()) == 0)
+				|| (!cleanRootDir.isEmpty() && parent.compare(cleanRootDir, pathCaseSensitivity()) == 0)
+				|| (!cleanProfileRoot.isEmpty() && parent.compare(cleanProfileRoot, pathCaseSensitivity()) == 0))
+				return {};
+			// Only treat as an old profile root if the extracted archive actually contains that leaf.
+			if (!QFileInfo::exists(QDir(finalBaseDir).filePath(fi.fileName())))
+				return {};
+			return parent;
 		};
-		if (const QString d = parentIfNamed(outProfile.configFilePath, QString()); !d.isEmpty())
+		if (const QString d = parentIfLocalCandidate(outProfile.saveDirPath, QStringLiteral("saves")); !d.isEmpty())
 			return d;
-		if (const QString d = parentIfNamed(outProfile.saveDirPath, QStringLiteral("saves")); !d.isEmpty())
+		if (const QString d = parentIfLocalCandidate(outProfile.screenshotDirPath, QStringLiteral("screenshots")); !d.isEmpty())
 			return d;
-		if (const QString d = parentIfNamed(outProfile.screenshotDirPath, QStringLiteral("screenshots")); !d.isEmpty())
+		if (const QString d = parentIfLocalCandidate(outProfile.demoDirPath, QStringLiteral("demos")); !d.isEmpty())
 			return d;
-		if (const QString d = parentIfNamed(outProfile.demoDirPath, QStringLiteral("demos")); !d.isEmpty())
+		if (const QString d = parentIfLocalCandidate(outProfile.configFilePath, QString()); !d.isEmpty())
 			return d;
-		if (const QString d = parentIfNamed(outProfile.coverImagePath, QString()); !d.isEmpty())
+		if (const QString d = parentIfLocalCandidate(outProfile.coverImagePath, QString()); !d.isEmpty())
 			return d;
 		return {};
 	};

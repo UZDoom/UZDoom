@@ -309,8 +309,21 @@ void applyLauncherTheme(const std::string& themeName)
 	if (!app)
 		return;
 
-	app->setStyle(QStyleFactory::create("Fusion"));
 	const LauncherTheme theme = parseThemeName(themeName);
+
+#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
+	if (auto* hints = app->styleHints())
+	{
+		if (theme == LauncherTheme::Auto)
+			hints->unsetColorScheme();
+		else if (theme == LauncherTheme::Light)
+			hints->setColorScheme(Qt::ColorScheme::Light);
+		else
+			hints->setColorScheme(Qt::ColorScheme::Dark);
+	}
+#endif
+
+	app->setStyle(QStyleFactory::create("Fusion"));
 
 	QPalette pal;
 	if (theme == LauncherTheme::HighContrast)
@@ -357,10 +370,29 @@ void applyLauncherTheme(const std::string& themeName)
 	}
 	else
 	{
-		pal = app->style()->standardPalette();
+		pal.setColor(QPalette::Window, QColor(239, 239, 239));
+		pal.setColor(QPalette::WindowText, QColor(17, 19, 23));
+		pal.setColor(QPalette::Base, QColor(255, 255, 255));
+		pal.setColor(QPalette::AlternateBase, QColor(245, 247, 250));
+		pal.setColor(QPalette::ToolTipBase, QColor(250, 251, 253));
+		pal.setColor(QPalette::ToolTipText, QColor(17, 19, 23));
+		pal.setColor(QPalette::Text, QColor(17, 19, 23));
+		pal.setColor(QPalette::PlaceholderText, QColor(115, 122, 134));
+		pal.setColor(QPalette::Button, QColor(232, 235, 240));
+		pal.setColor(QPalette::ButtonText, QColor(17, 19, 23));
+		pal.setColor(QPalette::BrightText, QColor(175, 25, 25));
+		pal.setColor(QPalette::Link, QColor(30, 95, 190));
 		pal.setColor(QPalette::Highlight, QColor(42, 110, 200));
 		pal.setColor(QPalette::HighlightedText, QColor(255, 255, 255));
-		pal.setColor(QPalette::BrightText, QColor(175, 25, 25));
+		pal.setColor(QPalette::Light, QColor(255, 255, 255));
+		pal.setColor(QPalette::Midlight, QColor(227, 230, 235));
+		pal.setColor(QPalette::Mid, QColor(184, 191, 204));
+		pal.setColor(QPalette::Dark, QColor(145, 152, 165));
+		pal.setColor(QPalette::Shadow, QColor(90, 95, 105));
+		pal.setColor(QPalette::Disabled, QPalette::WindowText, QColor(135, 142, 152));
+		pal.setColor(QPalette::Disabled, QPalette::Text, QColor(135, 142, 152));
+		pal.setColor(QPalette::Disabled, QPalette::PlaceholderText, QColor(165, 172, 182));
+		pal.setColor(QPalette::Disabled, QPalette::ButtonText, QColor(135, 142, 152));
 	}
 	app->setPalette(pal);
 
@@ -418,7 +450,7 @@ void applyLauncherTheme(const std::string& themeName)
 	else
 	{
 		app->setStyleSheet(
-			"QMenuBar { background-color: #e6e9ef; border-bottom: 1px solid #c6ccd6; padding: 2px 4px; }"
+			"QMenuBar { background-color: #e6e9ef; color: #111317; border-bottom: 1px solid #c6ccd6; padding: 2px 4px; }"
 			"QMenuBar::item { padding: 5px 12px; border-radius: 4px; background: transparent; }"
 			"QMenuBar::item:selected { background-color: #d2d8e2; }"
 			"QGroupBox { border: 1px solid #b8bfcc; border-radius: 5px; margin-top: 8px; padding: 10px 6px 6px 6px; font-weight: 600; }"

@@ -128,27 +128,22 @@ bool Starter::ExecModal(FStartupSelectionInfo& info)
 		else
 			mainWin.show();
 
-		QTimer::singleShot(0, &mainWin, [&mainWin]() {
+		const bool shouldShowReleaseNotes = info.displayRelease && info.notifyNewRelease && cfg.showReleaseNotes;
+		QTimer::singleShot(0, &mainWin, [&mainWin, shouldShowReleaseNotes, showUpcoming]() {
 			mainWin.startStartupIWadDetection();
-		});
 
-		if (info.displayRelease && info.notifyNewRelease && cfg.showReleaseNotes)
-		{
-			QTimer::singleShot(0, &mainWin, [&mainWin, showUpcoming]() {
+			if (shouldShowReleaseNotes)
+			{
 				bool showAfter = mainWin.config().showReleaseNotes;
 				AboutDialog::showAdditionalInfo(showAfter, true, &mainWin, {}, showUpcoming);
 				mainWin.setShowReleaseNotes(showAfter);
-			});
-		}
+			}
 
 #ifdef HAS_UPDATER
-		if (IsCurlLoaded())
-		{
-			QTimer::singleShot(0, &mainWin, [&mainWin]() {
+			if (IsCurlLoaded())
 				mainWin.startStartupUpdateCheck();
-			});
-		}
 #endif
+		});
 
 		const bool prevQuitOnClose = QApplication::quitOnLastWindowClosed();
 		QApplication::setQuitOnLastWindowClosed(true);

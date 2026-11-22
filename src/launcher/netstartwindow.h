@@ -45,6 +45,9 @@ public:
 	static int GetNetBanClient();
 	static bool NetLoop(bool (*timer_callback)(void*), void* userdata);
 
+public slots:
+	void reject() override;
+
 protected:
 	void closeEvent(QCloseEvent* event) override;
 
@@ -68,6 +71,8 @@ private:
 	bool hosting = false;
 	bool shouldStart = false;
 	bool exitReason = false;
+	bool aborted = false;
+	bool inCallback = false;
 	int curPlayers = 0;
 	int maxPlayers = 0;
 

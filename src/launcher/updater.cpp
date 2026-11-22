@@ -239,23 +239,25 @@ namespace
 
 			if (updater_debug_throttle_download)
 			{
-				curl_easy_setopt(curl, CURLOPT_MAX_RECV_SPEED_LARGE, 1000000L);
+				curl_easy_setopt(curl, CURLOPT_MAX_RECV_SPEED_LARGE, static_cast<curl_off_t>(1000000));
 			}
 		}
 
-		bool perform(const std::string& url, const std::string& acceptEncoding, bool* outCancelled = nullptr)
+		bool perform(const std::string& url, bool* outCancelled = nullptr)
 		{
 			if (!curl)
 			{
 				if (outCancelled)
 					*outCancelled = isCancelled();
+				onError("curl_easy_init failed");
 				return false;
 			}
 
 			DEBUG_LOG("fetching %s", url.c_str());
 
 			curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
-			curl_easy_setopt(curl, CURLOPT_ACCEPT_ENCODING, acceptEncoding.c_str());
+			// Empty string enables all compression encodings supported by libcurl.
+			curl_easy_setopt(curl, CURLOPT_ACCEPT_ENCODING, "");
 
 			if (const CURLcode ret = curl_easy_perform(curl); ret != CURLE_OK)
 			{
@@ -346,7 +348,7 @@ namespace
 			outErrMsg.clear();
 			outCancelled = false;
 
-			if (!CurlEasy::perform(url, "application/json", &outCancelled))
+			if (!CurlEasy::perform(url, &outCancelled))
 			{
 				outTransportErr = !outCancelled;
 				outErrMsg = firstErr;
@@ -411,7 +413,7 @@ namespace
 
 		bool download(const std::string& url, std::vector<std::byte>& outData, std::string& outErr, bool& outCancelled)
 		{
-			const bool ok = CurlEasy::perform(url, "application/octet-stream", &outCancelled);
+			const bool ok = CurlEasy::perform(url, &outCancelled);
 			close();
 			if (ok)
 			{
@@ -642,6 +644,44 @@ namespace
 #endif
 	}
 
+#ifdef _WIN32
+	std::wstring quoteWindowsCommandLineArg(const std::wstring& arg)
+	{
+		if (!arg.empty() && arg.find_first_of(L" \t\n\v\"") == std::wstring::npos)
+			return arg;
+
+		std::wstring out;
+		out.push_back(L'"');
+		for (size_t i = 0; i < arg.size();)
+		{
+			size_t backslashes = 0;
+			while (i < arg.size() && arg[i] == L'\\')
+			{
+				++backslashes;
+				++i;
+			}
+			if (i == arg.size())
+			{
+				out.append(backslashes * 2, L'\\');
+			}
+			else if (arg[i] == L'"')
+			{
+				out.append(backslashes * 2 + 1, L'\\');
+				out.push_back(L'"');
+				++i;
+			}
+			else
+			{
+				out.append(backslashes, L'\\');
+				out.push_back(arg[i]);
+				++i;
+			}
+		}
+		out.push_back(L'"');
+		return out;
+	}
+#endif
+
 	bool launchWindowsUpdaterAndRestart(std::string& outError)
 	{
 #ifdef _WIN32
@@ -653,31 +693,30 @@ namespace
 			return false;
 		}
 
-		updater_cached_update = "";
-		updater_last_update_check = std::to_string(getCurrentDate()).c_str();
-		M_SaveDefaultsFinal();
-		CloseWidgetResources();
+		const std::wstring updaterFilenameW = updaterPathQt.toStdWString();
+		std::vector<std::wstring> quotedArgs;
+		quotedArgs.push_back(quoteWindowsCommandLineArg(updaterFilenameW));
 
 		int argc = 0;
-		LPWSTR* argv = CommandLineToArgvW(GetCommandLineW(), &argc);
-
-		std::wstring updaterFilenameW = updaterPathQt.toStdWString();
-		FString updaterQuoted(stdStr(updaterPathQt).c_str());
-		updaterQuoted.Substitute("\\", "\\\\");
-		updaterQuoted.Substitute("\"", "\\\"");
-		updaterQuoted = "\"" + updaterQuoted + "\"";
-
-		std::wstring updaterQuotedW = qStr(std::string(updaterQuoted.GetChars())).toStdWString();
-		if (argv && argc > 0)
+		if (LPWSTR* argv = CommandLineToArgvW(GetCommandLineW(), &argc))
 		{
-			argv[0] = const_cast<LPWSTR>(updaterQuotedW.c_str());
-			_wexecv(updaterFilenameW.c_str(), argv);
+			for (int i = 1; i < argc; ++i)
+				quotedArgs.push_back(quoteWindowsCommandLineArg(argv[i]));
+			LocalFree(argv);
 		}
-		else
-		{
-			const wchar_t* fallbackArgv[] = {updaterQuotedW.c_str(), nullptr};
-			_wexecv(updaterFilenameW.c_str(), fallbackArgv);
-		}
+
+		std::vector<const wchar_t*> execArgv;
+		execArgv.reserve(quotedArgs.size() + 1);
+		for (const std::wstring& arg : quotedArgs)
+			execArgv.push_back(arg.c_str());
+		execArgv.push_back(nullptr);
+
+		updater_cached_update = "";
+		updater_last_update_check = std::to_string(getCurrentDate()).c_str();
+		M_SaveDefaults(nullptr);
+		CloseWidgetResources();
+
+		_wexecv(updaterFilenameW.c_str(), execArgv.data());
 
 		outError = "Failed to launch updater.exe.";
 		return false;
@@ -1276,7 +1315,7 @@ void LauncherUpdater::openFailedUpdateMenu(const std::string& err, bool checker,
 
 	auto* layout = new QVBoxLayout(&dlg);
 	layout->setSpacing(12);
-	const QString detailMsg = err.empty() ? title : QString("%1\n\n%2").arg(title).arg(qStr(err));
+	const QString detailMsg = err.empty() ? title : QString("%1\n\n%2").arg(title, qStr(err));
 	layout->addWidget(makeUpdaterIconHeader(&dlg, QStyle::SP_MessageBoxWarning, detailMsg));
 
 	auto* btnRow = new QHBoxLayout();
@@ -1729,7 +1768,7 @@ void LauncherUpdater::handleCheckOutcome(
 			(currentUpdate->version > current),
 			skippedVer != currentUpdate->version);
 
-		if (shouldUpdate && (skippedVer != currentUpdate->version))
+		if (shouldUpdate && (force || skippedVer != currentUpdate->version))
 		{
 			if ((updater_auto_updates && newUpdate) || force)
 				openUpdateMenu(true, dialogParent);
@@ -1760,7 +1799,8 @@ void LauncherUpdater::checkForUpdate(bool force, QWidget* dialogParent)
 	{
 		DEBUG_LOG("onboarding");
 		runOnboardingFlow(dialogParent);
-		return;
+		if (!force)
+			return;
 	}
 
 	if (!updater_check_updates && !force)

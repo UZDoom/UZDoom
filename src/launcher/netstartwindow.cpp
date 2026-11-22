@@ -213,6 +213,13 @@ void NetStartWindow::NetInit(const char* message, bool host)
 		Instance = new NetStartWindow(host);
 		Instance->show();
 	}
+	else
+	{
+		Instance->aborted = false;
+		Instance->exitReason = false;
+		if (!Instance->isVisible())
+			Instance->show();
+	}
 	if (message)
 		Instance->msgLabel->setText(QString::fromUtf8(message));
 	QApplication::processEvents();
@@ -300,7 +307,10 @@ void NetStartWindow::NetDone()
 void NetStartWindow::NetClose()
 {
 	if (Instance)
+	{
 		Instance->onAbort();
+		Instance->hide();
+	}
 }
 
 bool NetStartWindow::ShouldStartNet()
@@ -328,13 +338,14 @@ int NetStartWindow::GetNetBanClient()
 
 bool NetStartWindow::NetLoop(bool (*timer_callback)(void*), void* userdata)
 {
-	if (!Instance)
+	if (!Instance || Instance->aborted)
 		return false;
 
 	QPointer<NetStartWindow> win(Instance);
 	win->callback = timer_callback;
 	win->userdata = userdata;
 	win->callbackException = {};
+	win->exitReason = false;
 
 	QEventLoop eventLoop;
 	win->loop = &eventLoop;
@@ -351,11 +362,17 @@ bool NetStartWindow::NetLoop(bool (*timer_callback)(void*), void* userdata)
 	win->userdata = nullptr;
 
 	const std::exception_ptr pendingEx = win->callbackException;
-	const bool result = win->exitReason;
+	const bool result = win->exitReason && !win->aborted;
 	if (pendingEx)
 		std::rethrow_exception(pendingEx);
 
 	return result;
+}
+
+void NetStartWindow::reject()
+{
+	onAbort();
+	QDialog::reject();
 }
 
 void NetStartWindow::closeEvent(QCloseEvent* event)
@@ -366,6 +383,7 @@ void NetStartWindow::closeEvent(QCloseEvent* event)
 
 void NetStartWindow::onAbort()
 {
+	aborted = true;
 	exitReason = false;
 	if (timer)
 		timer->stop();
@@ -380,8 +398,13 @@ void NetStartWindow::onForceStart()
 
 void NetStartWindow::onTimerTick()
 {
-	if (!callback)
+	if (!callback || inCallback || aborted)
 		return;
+
+	QPointer<NetStartWindow> self(this);
+	inCallback = true;
+	if (timer)
+		timer->stop();
 
 	bool finished = false;
 	try
@@ -390,19 +413,40 @@ void NetStartWindow::onTimerTick()
 	}
 	catch (...)
 	{
-		callbackException = std::current_exception();
-		exitReason = false;
-		timer->stop();
-		if (loop)
-			loop->quit();
+		if (self)
+		{
+			self->inCallback = false;
+			self->callbackException = std::current_exception();
+			self->exitReason = false;
+			if (self->timer)
+				self->timer->stop();
+			if (self->loop)
+				self->loop->quit();
+		}
+		return;
+	}
+
+	if (!self)
+		return;
+
+	self->inCallback = false;
+
+	if (self->aborted)
+	{
+		self->exitReason = false;
+		if (self->loop)
+			self->loop->quit();
 		return;
 	}
 
 	if (finished)
 	{
-		exitReason = true;
-		timer->stop();
-		if (loop)
-			loop->quit();
+		self->exitReason = true;
+		if (self->loop)
+			self->loop->quit();
+		return;
 	}
+
+	if (self->loop && self->timer)
+		self->timer->start();
 }

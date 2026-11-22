@@ -331,9 +331,12 @@ void AboutDialog::populateAbout()
 	else
 		md += LStr("LAUNCHER_ABOUT_FALLBACK", "UZDoom is a feature-rich source port for Doom, Heretic, Hexen, Strife, and Chex Quest.") + "\n\n";
 
+	const bool aboutEndsWithContributorsHeading = !aboutTxt.isEmpty()
+		&& aboutTxt.trimmed().endsWith(QStringLiteral("# Contributors"), Qt::CaseInsensitive);
 	if (!contribTxt.isEmpty())
 	{
-		md += "## " + LStr("LAUNCHER_CONTRIBUTORS", "Contributors") + "\n\n";
+		if (!aboutEndsWithContributorsHeading)
+			md += "## " + LStr("LAUNCHER_CONTRIBUTORS", "Contributors") + "\n\n";
 		const QStringList lines = contribTxt.split('\n', Qt::SkipEmptyParts);
 		for (const QString& rawLine : lines)
 		{
