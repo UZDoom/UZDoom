@@ -1624,7 +1624,7 @@ class Actor : Thinker native
 	// returns AnimationFrame frame1, InterpolatedFrame frame2, double inter
 	// frame1 is the frame to interpolate from, it may be either a PrecalculatedAnimationFrame or a InterpolatedFrame, if inter is -1, frame1 will be null, and frame2 should be used in full instead
 	// frame2 is the frame to interpolate to, always an InterpolatedFrame
-	// inter is the ratio between frame1 and frame2, if the animation isn't interpolating, it will be 1 and frame 1 will be null
+	// inter is the ratio between frame1 and frame2, if the animation isn't interpolating, it will be -1 and frame 1 will be null
 	// frame1/2 will both be null if an invalid tic or layer are passed
 	//
 	// NOTE: while interpolating, an animation may need to perform up to 4-way blending if both frame1 and frame2 are InterpolatedFrame
