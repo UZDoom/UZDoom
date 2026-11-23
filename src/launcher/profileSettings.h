@@ -51,7 +51,6 @@ public:
 	explicit ProfileSettingsDialog(
 		Profile& targetProfile,
 		const std::vector<Profile>& profilesList,
-		const QString& defaultModsDir = {},
 		const std::string& launcherLanguage = {},
 		QWidget* parent = nullptr);
 
@@ -105,7 +104,6 @@ private:
 	Profile& profile;
 	Profile initialSnapshot;
 	const std::vector<Profile>& allProfiles;
-	QString defaultModsDirectory;
 	std::string currentLauncherLanguage;
 	ActionResult action = ActionResult::Cancelled;
 	Profile cloned;

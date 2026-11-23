@@ -891,8 +891,6 @@ LauncherConfig loadLauncherConfig()
 		cfg.splitterTopSize = obj["splitterTopSize"].toInt(0);
 	if (obj.contains("splitterBottomSize"))
 		cfg.splitterBottomSize = obj["splitterBottomSize"].toInt(0);
-	if (obj.contains("defaultModsDir"))
-		cfg.defaultModsDir = fromStoredPath(obj["defaultModsDir"].toString(), {});
 	return cfg;
 }
 
@@ -916,7 +914,6 @@ void saveLauncherConfig(const LauncherConfig& cfg)
 	obj["sortDescending"] = cfg.sortDescending;
 	obj["splitterTopSize"] = cfg.splitterTopSize;
 	obj["splitterBottomSize"] = cfg.splitterBottomSize;
-	obj["defaultModsDir"] = toStoredPath(cfg.defaultModsDir, {});
 
 	QFile f(qStr(LauncherConst::CONFIG_FILE));
 	if (f.open(QIODevice::WriteOnly | QIODevice::Truncate))

@@ -129,7 +129,6 @@ struct LauncherConfig
 	bool sortDescending = false;
 	int splitterTopSize = 0;
 	int splitterBottomSize = 0;
-	std::string defaultModsDir;
 };
 
 QString formatPlaytime(uint64_t minutes);

@@ -366,13 +366,11 @@ namespace
 ProfileSettingsDialog::ProfileSettingsDialog(
 	Profile& targetProfile,
 	const std::vector<Profile>& profilesList,
-	const QString& defaultModsDir,
 	const std::string& launcherLanguage,
 	QWidget* parent)
 	: QDialog(parent)
 	, profile(targetProfile)
 	, allProfiles(profilesList)
-	, defaultModsDirectory(defaultModsDir)
 	, currentLauncherLanguage(launcherLanguage)
 {
 	setWindowTitle(LStr("LAUNCHER_PROFILE_SETTINGS", "Profile Settings"));
@@ -1080,9 +1078,9 @@ QWidget* ProfileSettingsDialog::buildAdvancedTab()
 	btnBrowseAppend->setToolTip(LStr("LAUNCHER_SELECT_FILE_TIP", "Pick file(s) and append them to Additional Parameters (auto-adds -file / -deh / +exec / -playdemo when no switch precedes them)."));
 	connect(btnBrowseAppend, &QPushButton::clicked, this, [this]()
 	{
-		const QString startDir = !defaultModsDirectory.isEmpty() && QFileInfo::exists(defaultModsDirectory)
-			? defaultModsDirectory
-			: (profile.filePath.empty() ? qStr(LauncherConst::EXEC_DIR) : QFileInfo(qStr(profile.filePath)).absolutePath());
+		const QString startDir = profile.filePath.empty()
+			? qStr(LauncherConst::EXEC_DIR)
+			: QFileInfo(qStr(profile.filePath)).absolutePath();
 		const QString filter = QString("%1 (*.wad *.iwad *.pwad *.pk3 *.pk7 *.ipk3 *.ipk7 *.deh *.bex *.cfg *.lmp);;%2 (*.*)")
 			.arg(LStr("LAUNCHER_FILTER_DOOM_FILES", "Doom Files"), LStr("FILEPICKER_ANY", "All Files"));
 		const QStringList picked = QFileDialog::getOpenFileNames(
@@ -2313,9 +2311,9 @@ void ProfileSettingsDialog::onOpenFlagEditor()
 
 void ProfileSettingsDialog::onAddModFiles()
 {
-	const QString startDir = (!defaultModsDirectory.isEmpty() && QFileInfo::exists(defaultModsDirectory))
-		? defaultModsDirectory
-		: (profile.filePath.empty() ? qStr(LauncherConst::PROFILE_DIR) : QFileInfo(qStr(profile.filePath)).absolutePath());
+	const QString startDir = profile.filePath.empty()
+		? qStr(LauncherConst::PROFILE_DIR)
+		: QFileInfo(qStr(profile.filePath)).absolutePath();
 	const QString filter = QString("%1 (*.wad *.pwad *.pk3 *.pk7 *.ipk3 *.ipk7 *.zip *.7z *.deh *.bex);;%2 (*.*)")
 		.arg(LStr("LAUNCHER_FILTER_DOOM_MODS", "Doom Mods"), LStr("FILEPICKER_ANY", "All Files"));
 	const QStringList files = QFileDialog::getOpenFileNames(this, LStr("LAUNCHER_ADD_MOD", "Add Mod File"), startDir, filter);

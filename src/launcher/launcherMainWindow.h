@@ -99,8 +99,6 @@ private slots:
 
 	void onLanguageTriggered(QAction* action);
 	void onThemeTriggered(QAction* action);
-	void onSetDefaultModsDir();
-	void onClearDefaultModsDir();
 	void onToggleHideWhilePlaying(bool checked);
 	void onToggleDontAskAgain(bool checked);
 #ifdef HAS_UPDATER
@@ -112,7 +110,6 @@ private:
 	void buildUi();
 	void rebuildMenus();
 	void retranslateUi();
-	void updateDefaultModsMenuState();
 #ifdef HAS_UPDATER
 	void updateUpdaterMenuState();
 #endif
@@ -168,8 +165,6 @@ private:
 	QAction* actQuit = nullptr;
 	QAction* actHideWhilePlaying = nullptr;
 	QAction* actDontAskAgain = nullptr;
-	QAction* actSetDefaultModsDir = nullptr;
-	QAction* actClearDefaultModsDir = nullptr;
 #ifdef HAS_UPDATER
 	std::unique_ptr<LauncherUpdater> updater;
 	QMenu* updaterModeMenu = nullptr;

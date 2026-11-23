@@ -854,11 +854,6 @@ void LauncherMainWindow::rebuildMenus()
 	syncBannerMenuState();
 
 	prefMenu->addSeparator();
-	actSetDefaultModsDir = prefMenu->addAction(QString(), this, &LauncherMainWindow::onSetDefaultModsDir);
-	actClearDefaultModsDir = prefMenu->addAction(QString(), this, &LauncherMainWindow::onClearDefaultModsDir);
-	updateDefaultModsMenuState();
-
-	prefMenu->addSeparator();
 	actHideWhilePlaying = prefMenu->addAction(QString());
 	actHideWhilePlaying->setCheckable(true);
 	actHideWhilePlaying->setChecked(launcherConfig.hideWhilePlaying);
@@ -939,11 +934,6 @@ void LauncherMainWindow::retranslateUi()
 
 	langMenu->setTitle(LStr("OPTMNU_LANGUAGE", "Language"));
 	themeMenu->setTitle(LStr("PICKER_THEME", "Theme"));
-	if (actSetDefaultModsDir)
-		actSetDefaultModsDir->setText(LStr("LAUNCHER_PREF_SET_DEFAULT_MODS", "Set Default Mods Folder") + QStringLiteral("..."));
-	if (actClearDefaultModsDir)
-		actClearDefaultModsDir->setText(LStr("LAUNCHER_PREF_CLEAR_DEFAULT_MODS", "Clear Default Mods Folder"));
-	updateDefaultModsMenuState();
 	actHideWhilePlaying->setText(LStr("LAUNCHER_PREF_HIDE_ON_PLAY", "Hide Launcher While Playing"));
 	if (actDontAskAgain)
 	{
@@ -1904,7 +1894,6 @@ void LauncherMainWindow::openSettingsForIndex(int profileIdx)
 	ProfileSettingsDialog dlg(
 		workingCopy,
 		profiles,
-		QString::fromStdString(launcherConfig.defaultModsDir),
 		launcherConfig.language,
 		this);
 	dlg.exec();
@@ -2646,44 +2635,6 @@ void LauncherMainWindow::onBannerTriggered(QAction* action)
 	applyBannerSelection(nextId);
 	launcherConfig.banner = nextId;
 	saveLauncherConfig(launcherConfig);
-}
-
-void LauncherMainWindow::updateDefaultModsMenuState()
-{
-	const bool hasDir = !launcherConfig.defaultModsDir.empty();
-	if (actSetDefaultModsDir)
-	{
-		actSetDefaultModsDir->setToolTip(hasDir
-			? LStr("LAUNCHER_DEFAULT_MODS_CURRENT_TIP", "Current Default Mods Folder:\n%1").arg(QString::fromStdString(launcherConfig.defaultModsDir))
-			: LStr("LAUNCHER_DEFAULT_MODS_EMPTY_TIP", "Choose a master folder that 'Add Mod File' opens in."));
-	}
-	if (actClearDefaultModsDir)
-	{
-		actClearDefaultModsDir->setVisible(hasDir);
-		actClearDefaultModsDir->setEnabled(hasDir);
-	}
-}
-
-void LauncherMainWindow::onSetDefaultModsDir()
-{
-	const QString startDir = QString::fromStdString(
-		launcherConfig.defaultModsDir.empty() ? LauncherConst::EXEC_DIR : launcherConfig.defaultModsDir);
-	const QString picked = QFileDialog::getExistingDirectory(
-		this,
-		LStr("LAUNCHER_SELECT_DEFAULT_MODS_TITLE", "Select Default Mods Folder"),
-		startDir);
-	if (picked.isEmpty())
-		return;
-	launcherConfig.defaultModsDir = QDir::cleanPath(picked).toStdString();
-	saveLauncherConfig(launcherConfig);
-	updateDefaultModsMenuState();
-}
-
-void LauncherMainWindow::onClearDefaultModsDir()
-{
-	launcherConfig.defaultModsDir.clear();
-	saveLauncherConfig(launcherConfig);
-	updateDefaultModsMenuState();
 }
 
 void LauncherMainWindow::onToggleHideWhilePlaying(bool checked)
