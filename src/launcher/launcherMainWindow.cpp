@@ -24,7 +24,11 @@
 #include "updater.h"
 #endif
 
+#include "findfile.h"
+#include "gameconfigfile.h"
 #include "gstrings.h"
+#include "printf.h"
+#include "resourcefile.h"
 #include "version.h"
 #include "versioninfo.h"
 
@@ -46,6 +50,7 @@
 #include <QFontDatabase>
 #include <QFrame>
 #include <QHeaderView>
+#include <QImageReader>
 #include <QInputDialog>
 #include <QKeyEvent>
 #include <QKeySequence>
@@ -56,6 +61,8 @@
 #include <QMessageBox>
 #include <QMetaObject>
 #include <QMimeData>
+#include <QPaintEvent>
+#include <QPainter>
 #include <QPalette>
 #include <QProcess>
 #include <QPushButton>
@@ -68,9 +75,11 @@
 #include <QTableWidget>
 #include <QTextEdit>
 #include <QThread>
+#include <QTimer>
 #include <QUrl>
 #include <QVBoxLayout>
 #include <algorithm>
+#include <chrono>
 
 namespace
 {
@@ -137,20 +146,384 @@ namespace
 
 	QString normalizePathKey(const QString& p)
 	{
-		return QDir::cleanPath(p).replace('\\', '/').toLower();
+		const QString clean = QDir::cleanPath(p).replace('\\', '/');
+#ifdef Q_OS_WIN
+		return clean.toLower();
+#else
+		return clean;
+#endif
 	}
+
+	struct StripeDef
+	{
+		int weight;
+		const char* hex;
+	};
+
+	struct FlagDef
+	{
+		const char* id;
+		const char* label;
+		std::initializer_list<StripeDef> stripes;
+	};
+
+	const FlagDef kPrideFlags[] = {
+		{ "aceflux",      "Aceflux",      { {1, "#C62253"}, {1, "#C12678"}, {1, "#C0279A"}, {1, "#A928AC"}, {1, "#8C26AE"} } },
+		{ "agender",      "Agender",      { {1, "#000000"}, {1, "#BCC4C7"}, {1, "#FFFFFF"}, {1, "#B7F684"}, {1, "#FFFFFF"}, {1, "#BCC4C7"}, {1, "#000000"} } },
+		{ "aroace",       "Aroace",       { {1, "#E28C00"}, {1, "#ECCD00"}, {1, "#FFFFFF"}, {1, "#62AEDC"}, {1, "#203856"} } },
+		{ "aroflux",      "Aroflux",      { {1, "#E7516A"}, {1, "#D86D65"}, {1, "#B7A55D"}, {1, "#A3C95A"}, {1, "#92E454"} } },
+		{ "aromantic",    "Aromantic",    { {1, "#3DA542"}, {1, "#A7D379"}, {1, "#FFFFFF"}, {1, "#A9A9A9"}, {1, "#000000"} } },
+		{ "asexual",      "Asexual",      { {1, "#000000"}, {1, "#A3A3A3"}, {1, "#FFFFFF"}, {1, "#800080"} } },
+		{ "bear",         "Bear",         { {1, "#613704"}, {1, "#D46300"}, {1, "#FDDC62"}, {1, "#FDE5B7"}, {1, "#FFFFFF"}, {1, "#545454"}, {1, "#000000"} } },
+		{ "bisexual",     "Bisexual",     { {2, "#D60270"}, {1, "#9B4F96"}, {2, "#0038A8"} } },
+		{ "demisexual",   "Demisexual",   { {5, "#FFFFFF"}, {1, "#6E0070"}, {1, "#000000"}, {1, "#6E0070"}, {5, "#D2D2D2"} } },
+		{ "diversity",    "Diversity",    { {1, "#CD66FF"}, {1, "#FF6599"}, {1, "#FF0000"}, {1, "#FF9900"}, {1, "#FFFF01"}, {1, "#009A00"}, {1, "#0099CB"}, {1, "#330099"}, {1, "#990099"} } },
+		{ "gay",          "Gay",          { {1, "#078D70"}, {1, "#26CEAA"}, {1, "#98E8C1"}, {1, "#FFFFFF"}, {1, "#7BADE2"}, {1, "#5049CC"}, {1, "#3D1A78"} } },
+		{ "genderfluid",  "Genderfluid",  { {1, "#FF76A4"}, {1, "#FFFFFF"}, {1, "#C011D7"}, {1, "#000000"}, {1, "#2F3CBE"} } },
+		{ "genderqueer",  "Genderqueer",  { {1, "#B57EDC"}, {1, "#FFFFFF"}, {1, "#4A8123"} } },
+		{ "intersex",     "Intersex",     { {5, "#FFD800"}, {1, "#7902AA"}, {5, "#FFD800"} } },
+		{ "lesbian",      "Lesbian",      { {1, "#D52D00"}, {1, "#EF7627"}, {1, "#FF9A56"}, {1, "#FFFFFF"}, {1, "#D162A4"}, {1, "#B55690"}, {1, "#A30262"} } },
+		{ "nonbinary",    "Non-binary",   { {1, "#FCF434"}, {1, "#FFFFFF"}, {1, "#9C59D1"}, {1, "#2C2C2C"} } },
+		{ "omnisexual",   "Omnisexual",   { {1, "#FE9ACE"}, {1, "#FF53BF"}, {1, "#200044"}, {1, "#6760FE"}, {1, "#8EA6FF"} } },
+		{ "pansexual",    "Pansexual",    { {1, "#FF218C"}, {1, "#FFD800"}, {1, "#21B1FF"} } },
+		{ "philadelphia", "Philadelphia", { {1, "#000000"}, {1, "#784F17"}, {1, "#D12229"}, {1, "#F68A1E"}, {1, "#FDE01A"}, {1, "#007940"}, {1, "#24408E"}, {1, "#732982"} } },
+		{ "polysexual",   "Polysexual",   { {1, "#F714BA"}, {1, "#01D66A"}, {1, "#1594F6"} } },
+		{ "queer",        "Queer",        { {1, "#000000"}, {1, "#99D9EA"}, {1, "#00A2E8"}, {1, "#B5E61D"}, {1, "#FFFFFF"}, {1, "#FFC90E"}, {1, "#FD6666"}, {1, "#FFAEC9"}, {1, "#000000"} } },
+		{ "rainbow",      "Rainbow",      { {1, "#E40303"}, {1, "#FF8C00"}, {1, "#FFED00"}, {1, "#008026"}, {1, "#004CFF"}, {1, "#732982"} } },
+		{ "transgender",  "Transgender",  { {1, "#5BCEFA"}, {1, "#F5A9B8"}, {1, "#FFFFFF"}, {1, "#F5A9B8"}, {1, "#5BCEFA"} } },
+	};
+
+	std::vector<QColor> resolvePrideFlagColors(const std::string& rawId)
+	{
+		const QString id = QString::fromStdString(rawId).trimmed().toLower();
+		if (id.isEmpty())
+			return {};
+
+		const size_t flagCount = std::size(kPrideFlags);
+		size_t chosen = flagCount;
+		if (id == "random" || id == "list")
+		{
+			const auto nowMs = std::chrono::duration_cast<std::chrono::milliseconds>(
+				std::chrono::system_clock::now().time_since_epoch()).count();
+			chosen = static_cast<size_t>(nowMs) % flagCount;
+			if (id == "list")
+			{
+				QString avail = QStringLiteral("Available flag colors: random");
+				for (const auto& f : kPrideFlags)
+					avail += QStringLiteral(", ") + QLatin1String(f.id);
+				avail += QStringLiteral("\nSelecting: ") + QLatin1String(kPrideFlags[chosen].id);
+				Printf("%s\nOpen an issue on our github if your flag is missing\n", avail.toUtf8().constData());
+			}
+		}
+		else
+		{
+			for (size_t i = 0; i < flagCount; ++i)
+			{
+				if (id == QLatin1String(kPrideFlags[i].id))
+				{
+					chosen = i;
+					break;
+				}
+			}
+		}
+
+		std::vector<QColor> colors;
+		if (chosen < flagCount)
+		{
+			for (const auto& s : kPrideFlags[chosen].stripes)
+			{
+				const QColor c(QLatin1String(s.hex));
+				for (int k = 0; k < s.weight; ++k)
+					colors.push_back(c);
+			}
+			return colors;
+		}
+
+		const QStringList parts = id.split(',', Qt::KeepEmptyParts);
+		for (const QString& part : parts)
+		{
+			bool ok = false;
+			if (part.size() != 6)
+			{
+				colors.clear();
+				break;
+			}
+			const uint32_t val = part.toUInt(&ok, 16);
+			if (!ok || val > 0xFFFFFFu)
+			{
+				colors.clear();
+				break;
+			}
+			colors.emplace_back((val >> 16) & 0xFF, (val >> 8) & 0xFF, val & 0xFF);
+		}
+		if (colors.empty())
+			Printf("Unknown flag '%s'\n", id.toUtf8().constData());
+		return colors;
+	}
+
+	QPixmap loadEngineBannerPixmap(bool lightBanner)
+	{
+		const char* baseWad = BaseFileSearch(BASEWAD, nullptr, true, GameConfig);
+		if (!baseWad)
+			return {};
+		std::unique_ptr<FileSys::FResourceFile> rf(FileSys::FResourceFile::OpenResourceFile(baseWad));
+		if (!rf)
+			return {};
+		const int lump = rf->FindEntry(lightBanner ? "ui/banner-light.png" : "ui/banner-dark.png");
+		if (lump < 0)
+			return {};
+		const FileSys::FileData data = rf->Read(lump);
+		QPixmap pm;
+		pm.loadFromData(reinterpret_cast<const uchar*>(data.data()), static_cast<uint>(data.size()));
+		return pm;
+	}
+
+	QPixmap loadCustomBannerPixmap(const QString& path)
+	{
+		if (path.isEmpty() || !QFileInfo::exists(path))
+			return {};
+		QImageReader reader(path);
+		reader.setAutoTransform(true);
+		const QImage img = reader.read();
+		return img.isNull() ? QPixmap() : QPixmap::fromImage(img);
+	}
+
+	QString buildBannerImageFilter()
+	{
+		QStringList patterns;
+		for (const QByteArray& fmt : QImageReader::supportedImageFormats())
+		{
+			const QString ext = QString::fromLatin1(fmt).trimmed().toLower();
+			if (!ext.isEmpty())
+				patterns << (QStringLiteral("*.") + ext);
+		}
+		if (patterns.isEmpty())
+		{
+			patterns = {
+				QStringLiteral("*.png"), QStringLiteral("*.jpg"), QStringLiteral("*.jpeg"),
+				QStringLiteral("*.webp"), QStringLiteral("*.bmp"), QStringLiteral("*.gif"),
+				QStringLiteral("*.svg"), QStringLiteral("*.tif"), QStringLiteral("*.tiff"),
+				QStringLiteral("*.ico"), QStringLiteral("*.avif"), QStringLiteral("*.tga")
+			};
+		}
+		patterns.removeDuplicates();
+		return QString("%1 (%2);;%3 (*.*)")
+			.arg(LStr("LAUNCHER_FILTER_IMAGES", "Image Files"),
+				patterns.join(' '),
+				LStr("FILEPICKER_ANY", "All Files"));
+	}
+
+	bool copyBannerToExecDir(const QString& sourcePath, QString& outDestPath)
+	{
+		const QFileInfo srcInfo(sourcePath);
+		QString ext = srcInfo.suffix().toLower();
+		if (ext.isEmpty())
+			ext = QString::fromLatin1(QImageReader(sourcePath).format()).toLower();
+		if (ext.isEmpty())
+			ext = QStringLiteral("png");
+
+		const QDir execDir(QString::fromStdString(LauncherConst::EXEC_DIR));
+		execDir.mkpath(QStringLiteral("."));
+		const QString destPath = QDir::cleanPath(execDir.filePath(QStringLiteral("banner.") + ext));
+		const QString srcKey = normalizePathKey(srcInfo.absoluteFilePath());
+		const QString destKey = normalizePathKey(QFileInfo(destPath).absoluteFilePath());
+
+		auto makeWritable = [](const QString& p)
+		{
+			if (QFileInfo::exists(p))
+				QFile::setPermissions(p, QFile::permissions(p) | QFileDevice::WriteOwner | QFileDevice::WriteUser);
+		};
+
+		if (srcKey != destKey)
+		{
+			const QString tmpDest = destPath + QStringLiteral(".uztmp");
+			const QString bakDest = destPath + QStringLiteral(".uzbak");
+			makeWritable(tmpDest);
+			makeWritable(bakDest);
+			QFile::remove(tmpDest);
+			QFile::remove(bakDest);
+
+			if (!QFile::copy(sourcePath, tmpDest))
+				return false;
+
+			const bool hadDest = QFileInfo::exists(destPath);
+			if (hadDest)
+			{
+				makeWritable(destPath);
+				if (!QFile::rename(destPath, bakDest))
+				{
+					makeWritable(tmpDest);
+					QFile::remove(tmpDest);
+					return false;
+				}
+			}
+
+			if (!QFile::rename(tmpDest, destPath))
+			{
+				makeWritable(tmpDest);
+				QFile::remove(tmpDest);
+				if (hadDest)
+					QFile::rename(bakDest, destPath);
+				return false;
+			}
+
+			if (hadDest)
+			{
+				makeWritable(bakDest);
+				QFile::remove(bakDest);
+			}
+		}
+
+		QSet<QString> imageExts = {
+			QStringLiteral("png"), QStringLiteral("jpg"), QStringLiteral("jpeg"),
+			QStringLiteral("webp"), QStringLiteral("bmp"), QStringLiteral("gif"),
+			QStringLiteral("svg"), QStringLiteral("tif"), QStringLiteral("tiff"),
+			QStringLiteral("ico"), QStringLiteral("avif"), QStringLiteral("tga")
+		};
+		for (const QByteArray& fmt : QImageReader::supportedImageFormats())
+			imageExts.insert(QString::fromLatin1(fmt).trimmed().toLower());
+
+		const QFileInfoList existing = execDir.entryInfoList({QStringLiteral("banner.*")}, QDir::Files);
+		for (const QFileInfo& fi : existing)
+		{
+			const QString otherPath = QDir::cleanPath(fi.absoluteFilePath());
+			if (normalizePathKey(otherPath) == destKey)
+				continue;
+			if (imageExts.contains(fi.suffix().toLower()))
+			{
+				makeWritable(otherPath);
+				QFile::remove(otherPath);
+			}
+		}
+
+		outDestPath = destPath;
+		return true;
+	}
+
+	class PrideBannerWidget final : public QWidget
+	{
+		std::vector<QColor> colors;
+		float mix = 0.0f;
+		bool showPlainLogo = false;
+		QPixmap customImage;
+		QPixmap logoLight;
+		QPixmap logoDark;
+
+	public:
+		PrideBannerWidget(std::vector<QColor> stripeColors, float mixVal, bool plainLogo = false, QWidget* parent = nullptr)
+			: QWidget(parent)
+			, colors(std::move(stripeColors))
+			, mix(mixVal)
+			, showPlainLogo(plainLogo)
+			, logoLight(loadEngineBannerPixmap(true))
+			, logoDark(loadEngineBannerPixmap(false))
+		{
+			setFixedHeight(104);
+			setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
+		}
+
+		QSize sizeHint() const override { return QSize(240, 104); }
+		QSize minimumSizeHint() const override { return QSize(0, 104); }
+
+		void setBanner(std::vector<QColor> stripeColors, bool plainLogo = false, QPixmap customBanner = {})
+		{
+			colors = std::move(stripeColors);
+			showPlainLogo = plainLogo;
+			customImage = std::move(customBanner);
+			const bool shouldShow = showPlainLogo || !colors.empty() || !customImage.isNull();
+			if (isHidden() == shouldShow)
+				setVisible(shouldShow);
+			updateGeometry();
+			update();
+		}
+
+	protected:
+		void paintEvent(QPaintEvent*) override
+		{
+			QPainter p(this);
+			const int W = width();
+			const int H = height();
+			if (W <= 0 || H <= 0)
+				return;
+
+			if (!customImage.isNull())
+			{
+				const qreal dpr = std::max<qreal>(1.0, devicePixelRatioF());
+				const QSize targetPhys(std::max(1, qRound(W * dpr)), std::max(1, qRound(H * dpr)));
+				QPixmap scaled = customImage.scaled(targetPhys, Qt::KeepAspectRatioByExpanding, Qt::SmoothTransformation);
+				const int sx = std::max(0, (scaled.width() - targetPhys.width()) / 2);
+				const int sy = std::max(0, (scaled.height() - targetPhys.height()) / 2);
+				QPixmap cropped = scaled.copy(sx, sy, targetPhys.width(), targetPhys.height());
+				cropped.setDevicePixelRatio(dpr);
+				p.drawPixmap(0, 0, cropped);
+				return;
+			}
+
+			if (!showPlainLogo && colors.empty())
+				return;
+
+			const bool positiveMix = (mix > 0.0f);
+			const float m = std::clamp(std::abs(mix), 0.0f, 1.0f);
+			const QColor bg = palette().color(QPalette::Window);
+			const QColor base = positiveMix ? QColor(255, 255, 255) : bg;
+			const bool useLightLogo = (!colors.empty() && positiveMix) || bg.lightness() > 127;
+			const QPixmap& logo = useLightLogo ? logoLight : logoDark;
+
+			const int logoW = !logo.isNull()
+				? std::min(W, static_cast<int>(std::round(static_cast<double>(logo.width()) * H / std::max(1, logo.height()))))
+				: 0;
+			const int logoX = (W - logoW) / 2;
+
+			if (!colors.empty())
+			{
+				const double stripeH = static_cast<double>(H) / static_cast<double>(colors.size());
+				for (size_t i = 0; i < colors.size(); ++i)
+				{
+					const int y0 = static_cast<int>(std::floor(stripeH * static_cast<double>(i)));
+					const int y1 = static_cast<int>(std::ceil(stripeH * static_cast<double>(i + 1)));
+					const QColor& c = colors[i];
+					p.fillRect(0, y0, W, std::max(1, y1 - y0), c);
+
+					if (logoW > 0)
+					{
+						const QColor mixed(
+							static_cast<int>(std::round(base.red() * (1.0f - m) + c.red() * m)),
+							static_cast<int>(std::round(base.green() * (1.0f - m) + c.green() * m)),
+							static_cast<int>(std::round(base.blue() * (1.0f - m) + c.blue() * m)));
+						p.fillRect(logoX, y0, logoW, std::max(1, y1 - y0), mixed);
+					}
+				}
+			}
+
+			if (!logo.isNull() && logoW > 0)
+			{
+				p.setRenderHint(QPainter::SmoothPixmapTransform, true);
+				p.drawPixmap(QRect(logoX, 0, logoW, H), logo);
+			}
+		}
+	};
 }
 
-LauncherMainWindow::LauncherMainWindow(const LauncherConfig& initialConfig, std::vector<Profile> initialProfiles, bool showUpcomingNotes, QWidget* parent)
+LauncherMainWindow::LauncherMainWindow(
+	const LauncherConfig& initialConfig,
+	std::vector<Profile> initialProfiles,
+	bool showUpcomingNotes,
+	const std::string& prideColors,
+	float prideMix,
+	QWidget* parent)
 	: QMainWindow(parent)
 	, launcherConfig(initialConfig)
 	, profiles(std::move(initialProfiles))
 	, showUpcomingReleaseNotes(showUpcomingNotes)
+	, prideBannerColors(prideColors)
+	, prideBannerMix(prideMix)
 {
 	setAcceptDrops(true);
 	resize(960, 660);
 	setMinimumSize(780, 520);
 
+	if (prideBannerColors.empty() && !launcherConfig.banner.empty())
+		prideBannerColors = launcherConfig.banner;
 	buildUi();
 	rebuildMenus();
 	retranslateUi();
@@ -227,6 +600,9 @@ void LauncherMainWindow::buildUi()
 	QVBoxLayout* rootLayout = new QVBoxLayout(central);
 	rootLayout->setContentsMargins(10, 8, 10, 8);
 	rootLayout->setSpacing(8);
+
+	prideBannerWidget = new PrideBannerWidget({}, prideBannerMix, false, central);
+	rootLayout->addWidget(prideBannerWidget);
 
 	QHBoxLayout* centerRow = new QHBoxLayout();
 	centerRow->setContentsMargins(0, 0, 0, 4);
@@ -378,6 +754,7 @@ void LauncherMainWindow::buildUi()
 	rootLayout->addWidget(verticalSplitter, 1);
 
 	setCentralWidget(central);
+	applyBannerSelection(prideBannerColors);
 
 	statusCountLabel = new QLabel(this);
 	statusRunLabel = new QLabel(this);
@@ -408,7 +785,7 @@ void LauncherMainWindow::rebuildMenus()
 	actQuit->setShortcutContext(Qt::WindowShortcut);
 
 	prefMenu->clear();
-	langMenu = prefMenu->addMenu("Language");
+	langMenu = prefMenu->addMenu(QString());
 	langGroup = new QActionGroup(this);
 	langGroup->setExclusive(true);
 	connect(langGroup, &QActionGroup::triggered, this, &LauncherMainWindow::onLanguageTriggered);
@@ -423,15 +800,15 @@ void LauncherMainWindow::rebuildMenus()
 		langGroup->addAction(act);
 	}
 
-	themeMenu = prefMenu->addMenu("Theme");
+	themeMenu = prefMenu->addMenu(QString());
 	themeGroup = new QActionGroup(this);
 	themeGroup->setExclusive(true);
 	connect(themeGroup, &QActionGroup::triggered, this, &LauncherMainWindow::onThemeTriggered);
 
 	const struct { const char* id; const char* key; const char* fallback; } themes[] = {
-		{"auto", "PICKER_THEME_AUTO", "Auto"},
-		{"dark", "PICKER_THEME_DARK", "Dark"},
-		{"light", "PICKER_THEME_LIGHT", "Light"},
+		{"auto", "OPTVAL_AUTO", "Auto"},
+		{"dark", "OPTVAL_DARK", "Dark"},
+		{"light", "OPTVAL_LIGHT", "Light"},
 		{"highcontrast", "PICKER_THEME_HIGHCONTRAST", "High Contrast"},
 	};
 	const std::string curTheme = themeToName(parseThemeName(launcherConfig.theme));
@@ -445,23 +822,59 @@ void LauncherMainWindow::rebuildMenus()
 		themeGroup->addAction(act);
 	}
 
+	bannerMenu = prefMenu->addMenu(QString());
+	bannerGroup = new QActionGroup(this);
+	bannerGroup->setExclusive(true);
+	connect(bannerGroup, &QActionGroup::triggered, this, &LauncherMainWindow::onBannerTriggered);
+
+	auto addBannerOption = [&](const QString& label, const QString& id)
+	{
+		QAction* act = bannerMenu->addAction(label);
+		act->setCheckable(true);
+		act->setData(id);
+		bannerGroup->addAction(act);
+		return act;
+	};
+
+	addBannerOption(LStr("OPTVAL_NONE", "None"), QString());
+	addBannerOption(LStr("OPTVAL_DEFAULT", "Default"), QStringLiteral("default"));
+	addBannerOption(LStr("OPTVAL_RANDOM", "Random"), QStringLiteral("random"));
+	bannerMenu->addSeparator();
+
+	for (const auto& f : kPrideFlags)
+		addBannerOption(QLatin1String(f.label), QLatin1String(f.id));
+
+	bannerMenu->addSeparator();
+	QAction* actCustomBanner = addBannerOption(
+		LStr("LAUNCHER_BANNER_CUSTOM_IMAGE", "Custom Banner Image") + QStringLiteral("..."),
+		QStringLiteral("__custom__"));
+	actCustomBanner->setToolTip(
+		LStr("LAUNCHER_BANNER_CUSTOM_TIP", "Recommended aspect ratio: ~9:1 (e.g. 940x104 px at default width; wider when maximized)."));
+
+	syncBannerMenuState();
+
 	prefMenu->addSeparator();
-	actSetDefaultModsDir = prefMenu->addAction("Set Default Mods Folder...", this, &LauncherMainWindow::onSetDefaultModsDir);
-	actClearDefaultModsDir = prefMenu->addAction("Clear Default Mods Folder", this, &LauncherMainWindow::onClearDefaultModsDir);
+	actSetDefaultModsDir = prefMenu->addAction(QString(), this, &LauncherMainWindow::onSetDefaultModsDir);
+	actClearDefaultModsDir = prefMenu->addAction(QString(), this, &LauncherMainWindow::onClearDefaultModsDir);
 	updateDefaultModsMenuState();
 
 	prefMenu->addSeparator();
-	actHideWhilePlaying = prefMenu->addAction("Hide Launcher While Playing");
+	actHideWhilePlaying = prefMenu->addAction(QString());
 	actHideWhilePlaying->setCheckable(true);
 	actHideWhilePlaying->setChecked(launcherConfig.hideWhilePlaying);
 	connect(actHideWhilePlaying, &QAction::toggled, this, &LauncherMainWindow::onToggleHideWhilePlaying);
+
+	actDontAskAgain = prefMenu->addAction(QString());
+	actDontAskAgain->setCheckable(true);
+	actDontAskAgain->setChecked(launcherConfig.dontAskAgain);
+	connect(actDontAskAgain, &QAction::toggled, this, &LauncherMainWindow::onToggleDontAskAgain);
 
 #ifdef HAS_UPDATER
 	if (IsCurlLoaded())
 	{
 		prefMenu->addSeparator();
 
-		updaterModeMenu = prefMenu->addMenu("Updater Settings");
+		updaterModeMenu = prefMenu->addMenu(QString());
 		updaterModeGroup = new QActionGroup(this);
 		updaterModeGroup->setExclusive(true);
 		connect(updaterModeGroup, &QActionGroup::triggered, this, &LauncherMainWindow::onUpdaterModeTriggered);
@@ -479,7 +892,7 @@ void LauncherMainWindow::rebuildMenus()
 			updaterModeGroup->addAction(act);
 		}
 
-		updaterIntervalMenu = prefMenu->addMenu("Check every:");
+		updaterIntervalMenu = prefMenu->addMenu(QString());
 		updaterIntervalGroup = new QActionGroup(this);
 		updaterIntervalGroup->setExclusive(true);
 		connect(updaterIntervalGroup, &QActionGroup::triggered, this, &LauncherMainWindow::onUpdaterIntervalTriggered);
@@ -506,38 +919,63 @@ void LauncherMainWindow::retranslateUi()
 	setWindowTitle(LStr("LAUNCHER_WINDOW_TITLE", "%1 (Version %2) [Build Date: %3]").arg(GAMENAME).arg(GetVersionString()).arg(formattedDate));
 
 	addMenu->setTitle(LStr("LAUNCHER_ADD_ENTRY", "New Entry"));
-	prefMenu->setTitle(LStr("LAUNCHER_PREFERENCES", "Preferences"));
-	actAbout->setText(LStr("LAUNCHER_MENU_INFO", "Info"));
+	prefMenu->setTitle(LStr("OPTMNU_TITLE", "Options"));
+	actAbout->setText(LStr("MNU_INFO", "Info"));
 	searchEdit->setPlaceholderText(LStr("LAUNCHER_SEARCH_PLACEHOLDER", "Filter profiles..."));
 	searchEdit->setToolTip(LStr("LAUNCHER_SEARCH_TIP", "Search by title, author, description, IWAD, or mod filenames (space-separated terms)."));
 	if (filterCategoryCombo && filterCategoryCombo->count() >= 4)
 	{
-		filterCategoryCombo->setItemText(0, LStr("LAUNCHER_FILTER_ALL", "All"));
+		filterCategoryCombo->setItemText(0, LStr("OPTVAL_ALL", "All"));
 		filterCategoryCombo->setItemText(1, QString::fromUtf8("\u2605 ") + LStr("LAUNCHER_FILTER_FAVORITES", "Favorites"));
 		filterCategoryCombo->setItemText(2, QStringLiteral("IWADs"));
 		filterCategoryCombo->setItemText(3, QStringLiteral("(P)WADs"));
 	}
 
-	actAddFile->setText(LStr("LAUNCHER_MENU_ADD_FILE", "Add WAD / Mod / Archive..."));
-	actCreateBlank->setText(LStr("LAUNCHER_MENU_NEW_BLANK", "Create Blank Profile..."));
+	actAddFile->setText(LStr("LAUNCHER_MENU_ADD_FILE", "Add WAD / Mod / Archive") + QStringLiteral("..."));
+	actCreateBlank->setText(LStr("LAUNCHER_MENU_NEW_BLANK", "Create Blank Profile") + QStringLiteral("..."));
 	actOpenLauncherDir->setText(LStr("LAUNCHER_MENU_OPEN_LAUNCHER_DIR", "Open Launcher Data Folder"));
 	actOpenExecDir->setText(LStr("LAUNCHER_MENU_OPEN_APP_DIR", "Open Application Folder"));
 	actQuit->setText(LStr("PICKER_EXIT", "Exit"));
 
-	langMenu->setTitle(LStr("PICKER_LANGUAGE", "Language"));
+	langMenu->setTitle(LStr("OPTMNU_LANGUAGE", "Language"));
 	themeMenu->setTitle(LStr("PICKER_THEME", "Theme"));
 	if (actSetDefaultModsDir)
-		actSetDefaultModsDir->setText(LStr("LAUNCHER_PREF_SET_DEFAULT_MODS", "Set Default Mods Folder..."));
+		actSetDefaultModsDir->setText(LStr("LAUNCHER_PREF_SET_DEFAULT_MODS", "Set Default Mods Folder") + QStringLiteral("..."));
 	if (actClearDefaultModsDir)
 		actClearDefaultModsDir->setText(LStr("LAUNCHER_PREF_CLEAR_DEFAULT_MODS", "Clear Default Mods Folder"));
 	updateDefaultModsMenuState();
 	actHideWhilePlaying->setText(LStr("LAUNCHER_PREF_HIDE_ON_PLAY", "Hide Launcher While Playing"));
+	if (actDontAskAgain)
+	{
+		actDontAskAgain->setText(LStr("PICKER_DONTASK", "Don't ask me this again"));
+		actDontAskAgain->setToolTip(LStr("LAUNCHER_DONTASK_TIP", "Skip the launcher on startup and launch directly. Hold Shift or pass -showlauncher to open the launcher again."));
+	}
 
 	const QList<QAction*> themeActions = themeGroup->actions();
-	const char* const themeKeys[] = {"PICKER_THEME_AUTO", "PICKER_THEME_DARK", "PICKER_THEME_LIGHT", "PICKER_THEME_HIGHCONTRAST"};
+	const char* const themeKeys[] = {"OPTVAL_AUTO", "OPTVAL_DARK", "OPTVAL_LIGHT", "PICKER_THEME_HIGHCONTRAST"};
 	const char* const themeFallbacks[] = {"Auto", "Dark", "Light", "High Contrast"};
 	for (int i = 0; i < themeActions.size() && i < 4; ++i)
 		themeActions[i]->setText(LStr(themeKeys[i], themeFallbacks[i]));
+
+	if (bannerMenu && bannerGroup)
+	{
+		bannerMenu->setTitle(LStr("LAUNCHER_BANNER", "Banner"));
+		for (QAction* act : bannerGroup->actions())
+		{
+			const QString id = act->data().toString();
+			if (id.isEmpty())
+				act->setText(LStr("OPTVAL_NONE", "None"));
+			else if (id == QStringLiteral("default"))
+				act->setText(LStr("OPTVAL_DEFAULT", "Default"));
+			else if (id == QStringLiteral("random"))
+				act->setText(LStr("OPTVAL_RANDOM", "Random"));
+			else if (id == QStringLiteral("__custom__"))
+			{
+				act->setText(LStr("LAUNCHER_BANNER_CUSTOM_IMAGE", "Custom Banner Image") + QStringLiteral("..."));
+				act->setToolTip(LStr("LAUNCHER_BANNER_CUSTOM_TIP", "Recommended aspect ratio: ~9:1 (e.g. 940x104 px at default width; wider when maximized)."));
+			}
+		}
+	}
 
 #ifdef HAS_UPDATER
 	if (updaterModeMenu && updaterModeGroup)
@@ -551,7 +989,7 @@ void LauncherMainWindow::retranslateUi()
 	}
 	if (updaterIntervalMenu && updaterIntervalGroup)
 	{
-		updaterIntervalMenu->setTitle(LStr("UPDATER_INTERVAL", "Check every:"));
+		updaterIntervalMenu->setTitle(stripTrailingColon(LStr("UPDATER_INTERVAL", "Check every:")));
 		const QList<QAction*> intervalActions = updaterIntervalGroup->actions();
 		const char* const intervalKeys[] = {"OPTVAL_DAILY", "OPTVAL_WEEKLY", "OPTVAL_MONTHLY"};
 		const char* const intervalFallbacks[] = {"Daily", "Weekly", "Monthly"};
@@ -585,7 +1023,7 @@ void LauncherMainWindow::retranslateUi()
 	btnPlay->setText(LStr("PICKER_PLAY", "Play Game"));
 	btnJoin->setText(LStr("PICKER_PLAYJOIN", "Join Game"));
 	btnHost->setText(LStr("PICKER_PLAYHOST", "Host Game"));
-	btnSettings->setText(LStr("LAUNCHER_PROFILE_SETTINGS", "Profile Settings ..."));
+	btnSettings->setText(LStr("LAUNCHER_PROFILE_SETTINGS", "Profile Settings") + QStringLiteral("..."));
 	btnMoveUp->setText(LStr("LAUNCHER_MOVE_UP", "Move Up"));
 	btnMoveDown->setText(LStr("LAUNCHER_MOVE_DOWN", "Move Down"));
 	btnRefresh->setText(LStr("LAUNCHER_MENU_REFRESH", "Refresh Profiles"));
@@ -1306,7 +1744,15 @@ void LauncherMainWindow::launchProfile(LaunchTargetMode mode)
 		QDir().mkpath(QString::fromStdString(p.demoDirPath));
 
 	QStringList args = p.buildLaunchArguments(mode, launcherConfig.language);
-	args.removeAll("-showlauncher");
+	args.erase(std::remove_if(args.begin(), args.end(), [](const QString& a)
+	{
+		return a.compare(QStringLiteral("-showlauncher"), Qt::CaseInsensitive) == 0;
+	}), args.end());
+
+#ifdef HAS_UPDATER
+	if (updater)
+		updater->cancelPending();
+#endif
 
 	runningProfileIndex = idx;
 	gameProcess = new QProcess(this);
@@ -1357,14 +1803,7 @@ void LauncherMainWindow::launchProfile(LaunchTargetMode mode)
 
 	connect(gameProcess, &QProcess::errorOccurred, this, [this](QProcess::ProcessError err) {
 		if (err == QProcess::FailedToStart)
-		{
-			appendLaunchLogFooter(QStringLiteral("=== Failed to start executable ==="));
-			QMessageBox::critical(
-				this,
-				LStr("LAUNCHER_LAUNCH_FAILED_TITLE", "Launch Failed"),
-				LStr("LAUNCHER_LAUNCH_FAILED_MSG", "Failed to launch %1 executable:\n%2")
-					.arg(GAMENAME, QCoreApplication::applicationFilePath()));
-		}
+			cleanupFailedLaunch(true);
 	});
 
 	connect(gameProcess, qOverload<int, QProcess::ExitStatus>(&QProcess::finished), this,
@@ -1401,13 +1840,12 @@ void LauncherMainWindow::launchProfile(LaunchTargetMode mode)
 	setRunningState(true, QString::fromStdString(p.title));
 	gameProcess->start(QCoreApplication::applicationFilePath(), args);
 
+	if (!gameProcess)
+		return;
+
 	if (gameProcess->state() == QProcess::NotRunning && gameProcess->error() == QProcess::FailedToStart)
 	{
-		appendLaunchLogFooter(QStringLiteral("=== Failed to start executable ==="));
-		gameProcess->deleteLater();
-		gameProcess = nullptr;
-		runningProfileIndex = -1;
-		setRunningState(false);
+		cleanupFailedLaunch(false);
 		return;
 	}
 
@@ -1417,6 +1855,43 @@ void LauncherMainWindow::launchProfile(LaunchTargetMode mode)
 		wasHiddenForLaunch = true;
 		QApplication::setQuitOnLastWindowClosed(false);
 		hide();
+	}
+}
+
+void LauncherMainWindow::cleanupFailedLaunch(bool showErrorDialog)
+{
+	if (!gameProcess)
+		return;
+
+	appendLaunchLogFooter(QStringLiteral("=== Failed to start executable ==="));
+
+	if (wasHiddenForLaunch)
+	{
+		if (wasMaximizedBeforeHide)
+			showMaximized();
+		else
+			showNormal();
+		raise();
+		activateWindow();
+		wasHiddenForLaunch = false;
+		wasMaximizedBeforeHide = false;
+		QApplication::setQuitOnLastWindowClosed(true);
+	}
+
+	QProcess* proc = gameProcess;
+	gameProcess = nullptr;
+	proc->disconnect(this);
+	proc->deleteLater();
+	runningProfileIndex = -1;
+	setRunningState(false);
+
+	if (showErrorDialog)
+	{
+		QMessageBox::critical(
+			this,
+			LStr("LAUNCHER_LAUNCH_FAILED_TITLE", "Launch Failed"),
+			LStr("LAUNCHER_LAUNCH_FAILED_MSG", "Failed to launch %1 executable:\n%2")
+				.arg(GAMENAME, QCoreApplication::applicationFilePath()));
 	}
 }
 
@@ -1508,9 +1983,10 @@ void LauncherMainWindow::onCreateBlankProfile()
 	saveProfileToDisk(p);
 
 	profiles.push_back(std::move(p));
-	launcherConfig.lastSelectedRow = static_cast<int>(profiles.size()) - 1;
-	refreshTable(launcherConfig.lastSelectedRow);
-	openSettingsForIndex(launcherConfig.lastSelectedRow);
+	const int newIdx = static_cast<int>(profiles.size()) - 1;
+	launcherConfig.lastSelectedRow = newIdx;
+	refreshTable(newIdx);
+	openSettingsForIndex(newIdx);
 }
 
 void LauncherMainWindow::handleImportedFiles(const QStringList& localPaths)
@@ -1551,7 +2027,7 @@ void LauncherMainWindow::handleImportedFiles(const QStringList& localPaths)
 					const QString dest = modsDir.filePath(fi.fileName());
 					const QString srcAbs = fi.absoluteFilePath();
 					const QString destAbs = QFileInfo(dest).absoluteFilePath();
-					if (srcAbs.compare(destAbs, Qt::CaseInsensitive) != 0)
+					if (normalizePathKey(srcAbs) != normalizePathKey(destAbs))
 					{
 						if (!QFile::exists(dest))
 						{
@@ -1583,10 +2059,49 @@ void LauncherMainWindow::handleImportedFiles(const QStringList& localPaths)
 								if (box.clickedButton() == btnOverwrite)
 								{
 									const QString tmpDest = dest + ".uztmp";
-									QFile::remove(tmpDest);
-									if (!QFile::copy(localPath, tmpDest) || !QFile::remove(dest) || !QFile::rename(tmpDest, dest))
+									const QString bakDest = dest + ".uzbak";
+									auto makeWritable = [](const QString& p)
 									{
-										QFile::remove(tmpDest);
+										if (QFileInfo::exists(p))
+											QFile::setPermissions(p, QFile::permissions(p) | QFileDevice::WriteOwner | QFileDevice::WriteUser);
+									};
+									makeWritable(tmpDest);
+									makeWritable(bakDest);
+									QFile::remove(tmpDest);
+									QFile::remove(bakDest);
+									bool replaced = false;
+									if (QFile::copy(localPath, tmpDest))
+									{
+										const bool hadDest = QFileInfo::exists(dest);
+										if (hadDest)
+											makeWritable(dest);
+										if (!hadDest || QFile::rename(dest, bakDest))
+										{
+											if (QFile::rename(tmpDest, dest))
+											{
+												if (hadDest)
+												{
+													makeWritable(bakDest);
+													QFile::remove(bakDest);
+												}
+												replaced = true;
+											}
+											else
+											{
+												makeWritable(tmpDest);
+												QFile::remove(tmpDest);
+												if (hadDest)
+													QFile::rename(bakDest, dest);
+											}
+										}
+										else
+										{
+											makeWritable(tmpDest);
+											QFile::remove(tmpDest);
+										}
+									}
+									if (!replaced)
+									{
 										errors << LStr("LAUNCHER_MOD_OVERWRITE_ERR", "%1: Could not overwrite existing mod in profile folder.").arg(fi.fileName());
 										cancelledAttach = true;
 									}
@@ -1867,7 +2382,7 @@ void LauncherMainWindow::onExportSelectedProfile()
 	const QString filter = QString("%1 (*.uzdp)").arg(LStr("LAUNCHER_FILTER_UZDP", "UZDoom Profile Archive"));
 	const QString dest = QFileDialog::getSaveFileName(
 		this,
-		LStr("LAUNCHER_EXPORT_PROFILE", "Export Profile (.uzdp)"),
+		LStr("LAUNCHER_EXPORT_PROFILE", "Export Profile"),
 		QDir::home().filePath(suggested),
 		filter);
 	if (dest.isEmpty())
@@ -1910,8 +2425,8 @@ void LauncherMainWindow::onDeleteSelectedProfile()
 	{
 		QMessageBox::warning(
 			this,
-			LStr("ERROR_FATAL", "Error"),
-			LStr("LAUNCHER_DELETE_PROFILE_FAILED", "Failed to remove profile directory. Make sure no files or folders inside it are open in another program."));
+			LStr("LAUNCHER_ERROR", "Error"),
+			LStr("LAUNCHER_DELETE_PROFILE_FAILED_OPEN", "Failed to remove profile directory. Make sure no files or folders inside it are open in another program."));
 		return;
 	}
 	profiles.erase(profiles.begin() + idx);
@@ -1949,8 +2464,8 @@ void LauncherMainWindow::onTableContextMenu(const QPoint& pos)
 		this, &LauncherMainWindow::onToggleSelectedFavorite);
 	actFav->setEnabled(idle);
 	QAction* actSettings = menu.addAction(btnSettings->text(), this, &LauncherMainWindow::onProfileSettingsClicked);
-	QAction* actClone = menu.addAction(LStr("LAUNCHER_CLONE_PROFILE", "Clone Profile..."), this, &LauncherMainWindow::onCloneSelectedProfile);
-	menu.addAction(LStr("LAUNCHER_EXPORT_PROFILE", "Export Profile (.uzdp)..."), this, &LauncherMainWindow::onExportSelectedProfile);
+	QAction* actClone = menu.addAction(LStr("LAUNCHER_CLONE_PROFILE", "Clone Profile") + QStringLiteral("..."), this, &LauncherMainWindow::onCloneSelectedProfile);
+	menu.addAction(LStr("LAUNCHER_EXPORT_PROFILE", "Export Profile") + QStringLiteral("..."), this, &LauncherMainWindow::onExportSelectedProfile);
 	menu.addAction(LStr("LAUNCHER_OPEN_PROFILE_DIR", "Open Profile Folder"), this, &LauncherMainWindow::onOpenSelectedProfileFolder);
 	actSettings->setEnabled(idle);
 	actClone->setEnabled(idle);
@@ -1962,7 +2477,7 @@ void LauncherMainWindow::onTableContextMenu(const QPoint& pos)
 	actDown->setEnabled(canMoveSelectedBy(1));
 
 	menu.addSeparator();
-	QAction* actDel = menu.addAction(LStr("LAUNCHER_DELETE_PROFILE", "Delete Profile..."), this, &LauncherMainWindow::onDeleteSelectedProfile);
+	QAction* actDel = menu.addAction(LStr("LAUNCHER_DELETE_PROFILE", "Delete Profile") + QStringLiteral("..."), this, &LauncherMainWindow::onDeleteSelectedProfile);
 	actDel->setEnabled(idle);
 
 	menu.exec(table->viewport()->mapToGlobal(pos));
@@ -2004,7 +2519,133 @@ void LauncherMainWindow::onThemeTriggered(QAction* action)
 	launcherConfig.theme = action->data().toString().toStdString();
 	applyLauncherTheme(launcherConfig.theme);
 	saveLauncherConfig(launcherConfig);
+	if (prideBannerWidget)
+		prideBannerWidget->update();
 	refreshTable(selectedProfileIndex());
+}
+
+void LauncherMainWindow::applyBannerSelection(const std::string &rawId)
+{
+	const std::string idCopy = rawId;
+	prideBannerColors = idCopy;
+	if (!prideBannerWidget)
+		return;
+
+	auto *banner = static_cast<PrideBannerWidget *>(prideBannerWidget);
+	const QString raw = QString::fromStdString(idCopy).trimmed();
+	const QString lower = raw.toLower();
+
+	if (lower.isEmpty())
+	{
+		banner->setBanner({}, false);
+	}
+	else if (lower == QStringLiteral("default"))
+	{
+		banner->setBanner({}, true);
+	}
+	else if (lower.startsWith(QStringLiteral("file:")))
+	{
+		const QString path = raw.mid(5).trimmed();
+		banner->setBanner({}, false, loadCustomBannerPixmap(path));
+	}
+	else if (QFileInfo::exists(raw))
+	{
+		banner->setBanner({}, false, loadCustomBannerPixmap(raw));
+	}
+	else
+	{
+		std::vector<QColor> stripeColors = resolvePrideFlagColors(idCopy);
+		banner->setBanner(std::move(stripeColors), false);
+	}
+}
+
+void LauncherMainWindow::syncBannerMenuState()
+{
+	if (!bannerGroup)
+		return;
+
+	const QString raw = QString::fromStdString(prideBannerColors).trimmed();
+	const QString cur = raw.toLower();
+	const QString lookup = (cur == QStringLiteral("list")) ? QStringLiteral("random") : cur;
+	QAction* matched = nullptr;
+	QAction* customAct = nullptr;
+
+	for (QAction* act : bannerGroup->actions())
+	{
+		const QString data = act->data().toString();
+		if (data == QStringLiteral("__custom__"))
+			customAct = act;
+		else if (data == lookup)
+			matched = act;
+	}
+
+	if (matched)
+		matched->setChecked(true);
+	else if (!cur.isEmpty() && customAct)
+		customAct->setChecked(true);
+}
+
+void LauncherMainWindow::onBannerTriggered(QAction* action)
+{
+	if (!action)
+		return;
+
+	const QString id = action->data().toString();
+	if (id == QStringLiteral("__custom__"))
+	{
+		QString startDir = QDir::homePath();
+		const QString cur = QString::fromStdString(prideBannerColors).trimmed();
+		if (cur.startsWith(QStringLiteral("file:"), Qt::CaseInsensitive))
+		{
+			const QFileInfo fi(cur.mid(5).trimmed());
+			if (fi.dir().exists())
+				startDir = fi.absolutePath();
+		}
+
+		const QString picked = QFileDialog::getOpenFileName(
+			this,
+			LStr("LAUNCHER_BANNER_CUSTOM_TITLE", "Select Custom Banner Image (Recommended ratio: ~9:1, e.g. 940x104)"),
+			startDir,
+			buildBannerImageFilter());
+		if (picked.isEmpty())
+		{
+			syncBannerMenuState();
+			return;
+		}
+
+		const QString cleanPath = QDir::cleanPath(picked);
+		if (loadCustomBannerPixmap(cleanPath).isNull())
+		{
+			QMessageBox::warning(
+				this,
+				LStr("LAUNCHER_BANNER_INVALID_IMAGE_TITLE", "Invalid Banner Image"),
+				LStr("LAUNCHER_BANNER_INVALID_IMAGE_MSG", "Could not load the selected image file."));
+			syncBannerMenuState();
+			return;
+		}
+
+		QString copiedPath;
+		if (!copyBannerToExecDir(cleanPath, copiedPath))
+		{
+			QMessageBox::warning(
+				this,
+				LStr("LAUNCHER_BANNER_COPY_FAILED_TITLE", "Banner Copy Failed"),
+				LStr("LAUNCHER_BANNER_COPY_FAILED_MSG", "Could not copy the banner image to the application folder."));
+			syncBannerMenuState();
+			return;
+		}
+
+		const std::string nextId = (QStringLiteral("file:") + copiedPath).toStdString();
+		applyBannerSelection(nextId);
+		launcherConfig.banner = nextId;
+		saveLauncherConfig(launcherConfig);
+		return;
+	}
+
+	const std::string nextId = id.toStdString();
+	applyBannerSelection(nextId);
+	launcherConfig.banner = nextId;
+	saveLauncherConfig(launcherConfig);
 }
 
 void LauncherMainWindow::updateDefaultModsMenuState()
@@ -2048,6 +2689,12 @@ void LauncherMainWindow::onClearDefaultModsDir()
 void LauncherMainWindow::onToggleHideWhilePlaying(bool checked)
 {
 	launcherConfig.hideWhilePlaying = checked;
+	saveLauncherConfig(launcherConfig);
+}
+
+void LauncherMainWindow::onToggleDontAskAgain(bool checked)
+{
+	launcherConfig.dontAskAgain = checked;
 	saveLauncherConfig(launcherConfig);
 }
 
@@ -2107,7 +2754,11 @@ void LauncherMainWindow::dropEvent(QDropEvent* event)
 	if (!files.isEmpty())
 	{
 		event->acceptProposedAction();
-		handleImportedFiles(files);
+		// Defer modal import dialogs / extraction so the OS drag source (Explorer/Finder) doesn't freeze.
+		QTimer::singleShot(0, this, [this, files]() {
+			if (!gameProcess)
+				handleImportedFiles(files);
+		});
 	}
 }
 

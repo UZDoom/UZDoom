@@ -343,6 +343,7 @@ void applyLauncherTheme(const std::string& themeName)
 		pal.setColor(QPalette::Highlight, QColor(255, 255, 0));
 		pal.setColor(QPalette::HighlightedText, QColor(0, 0, 0));
 		pal.setColor(QPalette::Mid, QColor(160, 160, 160));
+		pal.setColor(QPalette::Disabled, QPalette::WindowText, QColor(140, 140, 140));
 		pal.setColor(QPalette::Disabled, QPalette::Text, QColor(140, 140, 140));
 		pal.setColor(QPalette::Disabled, QPalette::PlaceholderText, QColor(115, 115, 115));
 		pal.setColor(QPalette::Disabled, QPalette::ButtonText, QColor(140, 140, 140));
@@ -364,6 +365,7 @@ void applyLauncherTheme(const std::string& themeName)
 		pal.setColor(QPalette::Highlight, QColor(52, 118, 209));
 		pal.setColor(QPalette::HighlightedText, QColor(255, 255, 255));
 		pal.setColor(QPalette::Mid, QColor(68, 73, 82));
+		pal.setColor(QPalette::Disabled, QPalette::WindowText, QColor(125, 130, 138));
 		pal.setColor(QPalette::Disabled, QPalette::Text, QColor(125, 130, 138));
 		pal.setColor(QPalette::Disabled, QPalette::PlaceholderText, QColor(95, 100, 108));
 		pal.setColor(QPalette::Disabled, QPalette::ButtonText, QColor(125, 130, 138));

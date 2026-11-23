@@ -245,7 +245,7 @@ AboutDialog::AboutDialog(
 	(void)checkUpdatesCallback;
 #endif
 	bottomBar->addStretch();
-	btnReturn = new QPushButton(LStr("LAUNCHER_RETURN", "Return"), this);
+	btnReturn = new QPushButton(LStr("TXT_BACK", "Back"), this);
 	btnReturn->setMinimumWidth(110);
 	connect(btnReturn, &QPushButton::clicked, this, &QDialog::accept);
 	bottomBar->addWidget(btnReturn);

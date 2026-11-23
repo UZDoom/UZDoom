@@ -46,13 +46,22 @@ class LauncherMainWindow : public QMainWindow
 {
 	Q_OBJECT
 public:
-	explicit LauncherMainWindow(const LauncherConfig& initialConfig, std::vector<Profile> initialProfiles, bool showUpcomingNotes = false, QWidget* parent = nullptr);
+	explicit LauncherMainWindow(
+		const LauncherConfig& initialConfig,
+		std::vector<Profile> initialProfiles,
+		bool showUpcomingNotes = false,
+		const std::string& prideColors = {},
+		float prideMix = 0.0f,
+		QWidget* parent = nullptr);
 	~LauncherMainWindow() override;
 
 	const LauncherConfig& config() const { return launcherConfig; }
 	void setShowReleaseNotes(bool show);
 	void startStartupIWadDetection();
 	void startStartupUpdateCheck();
+	void applyBannerSelection(const std::string& rawId);
+	void syncBannerMenuState();
+	void onBannerTriggered(QAction* action);
 
 protected:
 	bool eventFilter(QObject* watched, QEvent* event) override;
@@ -93,6 +102,7 @@ private slots:
 	void onSetDefaultModsDir();
 	void onClearDefaultModsDir();
 	void onToggleHideWhilePlaying(bool checked);
+	void onToggleDontAskAgain(bool checked);
 #ifdef HAS_UPDATER
 	void onUpdaterModeTriggered(QAction* action);
 	void onUpdaterIntervalTriggered(QAction* action);
@@ -124,6 +134,7 @@ private:
 	void handleImportedFiles(const QStringList& localPaths);
 	void openSettingsForIndex(int profileIdx);
 	void launchProfile(LaunchTargetMode mode);
+	void cleanupFailedLaunch(bool showErrorDialog);
 	void recordRunningSessionPlaytime();
 	void appendLaunchLogFooter(const QString& footerLine);
 	void setRunningState(bool running, const QString& title = {});
@@ -133,6 +144,11 @@ private:
 	LauncherConfig launcherConfig;
 	std::vector<Profile> profiles;
 	bool showUpcomingReleaseNotes = false;
+	QMenu* bannerMenu = nullptr;
+	QActionGroup* bannerGroup = nullptr;
+	std::string prideBannerColors;
+	float prideBannerMix = 0.0f;
+	QWidget* prideBannerWidget = nullptr;
 
 	QComboBox* filterCategoryCombo = nullptr;
 	QLineEdit* searchEdit = nullptr;
@@ -151,6 +167,7 @@ private:
 	QAction* actOpenExecDir = nullptr;
 	QAction* actQuit = nullptr;
 	QAction* actHideWhilePlaying = nullptr;
+	QAction* actDontAskAgain = nullptr;
 	QAction* actSetDefaultModsDir = nullptr;
 	QAction* actClearDefaultModsDir = nullptr;
 #ifdef HAS_UPDATER

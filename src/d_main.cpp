@@ -2410,6 +2410,7 @@ static void D_DoomInit()
 	// so changing renderer, support WADs, autoloads, or language takes effect on this launch.
 	static const char* const kEarlyCVars[] = {
 		"i_loadsupportwad",
+		"i_exit_on_not_found",
 		"vid_preferbackend",
 		"disableautoload",
 		"autoloadlights",

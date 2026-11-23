@@ -33,6 +33,11 @@
 #include <QVBoxLayout>
 #include <algorithm>
 
+#ifdef __APPLE__
+extern void I_CocoaSetQtModalActive(bool active);
+extern void I_CocoaSetQtQuitCallback(void (*cb)());
+#endif
+
 NetStartWindow* NetStartWindow::Instance = nullptr;
 
 namespace
@@ -81,7 +86,7 @@ NetStartWindow::NetStartWindow(bool host, QWidget* parent)
 	QStringList headers = {
 		QStringLiteral("#"),
 		LStr("NETMENU_COL_FLAGS", "Flags"),
-		LStr("NETMENU_COL_PLAYER", "Player"),
+		LStr("OPTVAL_PLAYER", "Player"),
 		LStr("NETMENU_COL_STATUS", "Status")
 	};
 	if (host)
@@ -207,6 +212,9 @@ void NetStartWindow::queueBan(int client)
 
 void NetStartWindow::NetInit(const char* message, bool host)
 {
+	if (Instance && Instance->hosting != host)
+		NetDone();
+
 	if (!Instance)
 	{
 		ensureLauncherQtApplication();
@@ -217,6 +225,15 @@ void NetStartWindow::NetInit(const char* message, bool host)
 	{
 		Instance->aborted = false;
 		Instance->exitReason = false;
+		Instance->shouldStart = false;
+		Instance->kickQueue.clear();
+		Instance->banQueue.clear();
+		Instance->curPlayers = 0;
+		Instance->maxPlayers = 0;
+		Instance->kickButtons.clear();
+		Instance->banButtons.clear();
+		Instance->table->setRowCount(0);
+		Instance->progressLabel->setText("0/0");
 		if (!Instance->isVisible())
 			Instance->show();
 	}
@@ -301,6 +318,7 @@ void NetStartWindow::NetDone()
 	else
 	{
 		delete win;
+		QApplication::processEvents();
 	}
 }
 
@@ -349,6 +367,21 @@ bool NetStartWindow::NetLoop(bool (*timer_callback)(void*), void* userdata)
 
 	QEventLoop eventLoop;
 	win->loop = &eventLoop;
+#ifdef __APPLE__
+	struct CocoaNetModalGuard
+	{
+		CocoaNetModalGuard()
+		{
+			I_CocoaSetQtModalActive(true);
+			I_CocoaSetQtQuitCallback([]() { NetStartWindow::NetClose(); });
+		}
+		~CocoaNetModalGuard()
+		{
+			I_CocoaSetQtQuitCallback(nullptr);
+			I_CocoaSetQtModalActive(false);
+		}
+	} cocoaGuard;
+#endif
 	win->timer->start();
 	eventLoop.exec();
 
@@ -387,6 +420,7 @@ void NetStartWindow::onAbort()
 	exitReason = false;
 	if (timer)
 		timer->stop();
+	hide();
 	if (loop)
 		loop->quit();
 }

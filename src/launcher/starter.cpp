@@ -39,6 +39,10 @@
 #include <memory>
 #include <vector>
 
+#ifdef __APPLE__
+extern void I_CocoaSetQtQuitCallback(void (*cb)());
+#endif
+
 namespace
 {
 	std::string engineThemeIdToName(int themeId)
@@ -107,7 +111,12 @@ bool Starter::ExecModal(FStartupSelectionInfo& info)
 		cfg.theme = engineThemeIdToName(info.DefaultPreferredTheme);
 		cfg.showReleaseNotes = info.notifyNewRelease;
 		cfg.maximized = info.LauncherMaximized;
+		cfg.dontAskAgain = !info.DefaultQueryIWAD;
 		saveLauncherConfig(cfg);
+	}
+	else
+	{
+		cfg.dontAskAgain = !info.DefaultQueryIWAD;
 	}
 
 	if (!cfg.language.empty())
@@ -119,7 +128,8 @@ bool Starter::ExecModal(FStartupSelectionInfo& info)
 
 	{
 		const bool showUpcoming = (info.displayRelease >= 3);
-		LauncherMainWindow mainWin(cfg, std::move(profiles), showUpcoming);
+		const std::string prideStr = (info.prideColors != NAME_None) ? std::string(info.prideColors.GetChars()) : std::string();
+		LauncherMainWindow mainWin(cfg, std::move(profiles), showUpcoming, prideStr, info.prideMix);
 		if (info.LauncherWidth >= 780 && info.LauncherHeight >= 520)
 			mainWin.resize(static_cast<int>(info.LauncherWidth), static_cast<int>(info.LauncherHeight));
 
@@ -147,11 +157,18 @@ bool Starter::ExecModal(FStartupSelectionInfo& info)
 
 		const bool prevQuitOnClose = QApplication::quitOnLastWindowClosed();
 		QApplication::setQuitOnLastWindowClosed(true);
+#ifdef __APPLE__
+		I_CocoaSetQtQuitCallback([]() { QApplication::closeAllWindows(); });
+#endif
 		app->exec();
+#ifdef __APPLE__
+		I_CocoaSetQtQuitCallback(nullptr);
+#endif
 		QApplication::setQuitOnLastWindowClosed(prevQuitOnClose);
 
 		const LauncherConfig& finalCfg = mainWin.config();
 		info.notifyNewRelease = finalCfg.showReleaseNotes;
+		info.DefaultQueryIWAD = !finalCfg.dontAskAgain;
 		info.DefaultLanguage = finalCfg.language.c_str();
 		info.DefaultPreferredTheme = themeNameToEngineThemeId(finalCfg.theme);
 		const QRect normalGeom = mainWin.isMaximized() ? mainWin.normalGeometry() : mainWin.geometry();

@@ -19,6 +19,7 @@
 #include "loader.h"
 
 #include "doomdef.h"
+#include "findfile.h"
 #include "gstrings.h"
 
 #include <QApplication>
@@ -81,7 +82,90 @@ namespace
 
 	QString normModKey(const QString& path)
 	{
-		return QDir::cleanPath(path).replace('\\', '/').toLower();
+		const QString clean = QDir::cleanPath(path).replace('\\', '/');
+#ifdef Q_OS_WIN
+		return clean.toLower();
+#else
+		return clean;
+#endif
+	}
+
+	QString expandProfilePathTokens(const QString& raw, const QString& baseDir)
+	{
+		QString norm = QDir::cleanPath(raw.trimmed()).replace('\\', '/');
+		if (norm.isEmpty())
+			return {};
+
+		auto tryExpand = [&](const QString& token, const std::string& base) -> bool
+		{
+			if (base.empty())
+				return false;
+			if (norm.compare(token, Qt::CaseInsensitive) == 0)
+			{
+				norm = QDir::cleanPath(QString::fromStdString(base)).replace('\\', '/');
+				return true;
+			}
+			if (norm.startsWith(token + QLatin1Char('/'), Qt::CaseInsensitive))
+			{
+				const QString baseNorm = QDir::cleanPath(QString::fromStdString(base)).replace('\\', '/');
+				norm = QDir::cleanPath(QDir(baseNorm).filePath(norm.mid(token.size() + 1))).replace('\\', '/');
+				return true;
+			}
+			return false;
+		};
+
+		if (!tryExpand(QStringLiteral("${LAUNCHER_DIR}"), LauncherConst::ROOT_DIR)
+			&& !tryExpand(QStringLiteral("${EXEC_DIR}"), LauncherConst::EXEC_DIR)
+			&& !QFileInfo(norm).isAbsolute() && !baseDir.isEmpty())
+		{
+			norm = QDir::cleanPath(QDir(baseDir).filePath(norm)).replace('\\', '/');
+		}
+		return norm;
+	}
+
+	void ensureWritableForRemoval(const QString& path)
+	{
+		if (QFileInfo::exists(path))
+			QFile::setPermissions(path, QFile::permissions(path) | QFileDevice::WriteOwner | QFileDevice::WriteUser);
+	}
+
+	bool safeReplaceFile(const QString& srcPath, const QString& destPath)
+	{
+		const QString tmpPath = destPath + QStringLiteral(".uztmp");
+		const QString bakPath = destPath + QStringLiteral(".uzbak");
+		ensureWritableForRemoval(tmpPath);
+		ensureWritableForRemoval(bakPath);
+		QFile::remove(tmpPath);
+		QFile::remove(bakPath);
+
+		if (!QFile::copy(srcPath, tmpPath))
+			return false;
+
+		const bool hadExisting = QFileInfo::exists(destPath);
+		if (hadExisting)
+		{
+			ensureWritableForRemoval(destPath);
+			if (!QFile::rename(destPath, bakPath))
+			{
+				ensureWritableForRemoval(tmpPath);
+				QFile::remove(tmpPath);
+				return false;
+			}
+		}
+		if (!QFile::rename(tmpPath, destPath))
+		{
+			ensureWritableForRemoval(tmpPath);
+			QFile::remove(tmpPath);
+			if (hadExisting)
+				QFile::rename(bakPath, destPath);
+			return false;
+		}
+		if (hadExisting)
+		{
+			ensureWritableForRemoval(bakPath);
+			QFile::remove(bakPath);
+		}
+		return true;
 	}
 
 	QString quoteAdditionalArg(const QString& arg)
@@ -315,15 +399,15 @@ ProfileSettingsDialog::ProfileSettingsDialog(
 
 	QHBoxLayout* bottomBar = new QHBoxLayout();
 
-	QPushButton* btnClone = new QPushButton(LStr("LAUNCHER_CLONE_PROFILE", "Clone Profile..."), this);
+	QPushButton* btnClone = new QPushButton(LStr("LAUNCHER_CLONE_PROFILE", "Clone Profile") + QStringLiteral("..."), this);
 	connect(btnClone, &QPushButton::clicked, this, &ProfileSettingsDialog::onCloneProfile);
 	bottomBar->addWidget(btnClone);
 
-	QPushButton* btnExport = new QPushButton(LStr("LAUNCHER_EXPORT_PROFILE", "Export (.uzdp)..."), this);
+	QPushButton* btnExport = new QPushButton(LStr("LAUNCHER_EXPORT_PROFILE", "Export Profile") + QStringLiteral("..."), this);
 	connect(btnExport, &QPushButton::clicked, this, &ProfileSettingsDialog::onExportProfile);
 	bottomBar->addWidget(btnExport);
 
-	QPushButton* btnDelete = new QPushButton(LStr("LAUNCHER_DELETE_PROFILE", "Delete Profile..."), this);
+	QPushButton* btnDelete = new QPushButton(LStr("LAUNCHER_DELETE_PROFILE", "Delete Profile") + QStringLiteral("..."), this);
 	btnDelete->setProperty("launcherRole", "danger");
 	connect(btnDelete, &QPushButton::clicked, this, &ProfileSettingsDialog::onDeleteProfile);
 	bottomBar->addWidget(btnDelete);
@@ -463,8 +547,8 @@ QWidget* ProfileSettingsDialog::buildLaunchTab()
 	QGridLayout* modeGrid = new QGridLayout(grpMode);
 	QButtonGroup* modeGroup = new QButtonGroup(grpMode);
 
-	radioNormal = new QRadioButton(LStr("LAUNCHER_MODE_NORMAL", "Normal"), grpMode);
-	radioMap = new QRadioButton(LStr("LAUNCHER_MODE_MAP", "Map"), grpMode);
+	radioNormal = new QRadioButton(LStr("OPTVAL_NORMAL", "Normal"), grpMode);
+	radioMap = new QRadioButton(LStr("OPTVAL_MAP", "Map"), grpMode);
 	radioSavegame = new QRadioButton(LStr("LAUNCHER_MODE_SAVE", "Savegame"), grpMode);
 	radioDemoPlay = new QRadioButton(LStr("LAUNCHER_MODE_DEMO", "Demo Playback"), grpMode);
 
@@ -481,17 +565,21 @@ QWidget* ProfileSettingsDialog::buildLaunchTab()
 	QPushButton* btnSave = new QPushButton("...", grpMode);
 	connect(btnSave, &QPushButton::clicked, this, [this]()
 	{
-		const QString startDir = editSavegame->text().isEmpty() ? editSaveDir->text() : editSavegame->text();
+		const QString profDir = profile.filePath.empty() ? QString() : QFileInfo(qStr(profile.filePath)).absolutePath();
+		const QString resolvedSaveDir = expandProfilePathTokens(editSaveDir->text(), profDir);
+		const QString curSave = editSavegame->text().trimmed();
+		const QString startDir = curSave.isEmpty()
+			? resolvedSaveDir
+			: expandProfilePathTokens(curSave, resolvedSaveDir.isEmpty() ? profDir : resolvedSaveDir);
 		const QString filter = QString("%1 (*.zds);;%2 (*.*)")
 			.arg(LStr("LAUNCHER_FILTER_SAVES", "Savegames"), LStr("FILEPICKER_ANY", "All Files"));
 		const QString p = browsePath(LStr("LAUNCHER_SELECT_SAVE_TITLE", "Select Savegame"), filter, startDir);
 		if (!p.isEmpty())
 		{
 			QString displayed = p;
-			const QString saveDirText = editSaveDir->text().trimmed();
-			if (!saveDirText.isEmpty())
+			if (!resolvedSaveDir.isEmpty())
 			{
-				const QString cleanDir = QDir::cleanPath(QFileInfo(saveDirText).absoluteFilePath()).replace('\\', '/');
+				const QString cleanDir = QDir::cleanPath(QFileInfo(resolvedSaveDir).absoluteFilePath()).replace('\\', '/');
 				const QString cleanFile = QDir::cleanPath(QFileInfo(p).absoluteFilePath()).replace('\\', '/');
 				const QString prefix = cleanDir.endsWith('/') ? cleanDir : (cleanDir + '/');
 #ifdef _WIN32
@@ -510,7 +598,12 @@ QWidget* ProfileSettingsDialog::buildLaunchTab()
 	QPushButton* btnDemo = new QPushButton("...", grpMode);
 	connect(btnDemo, &QPushButton::clicked, this, [this]()
 	{
-		const QString startDir = editDemoPlay->text().isEmpty() ? editDemoDir->text() : editDemoPlay->text();
+		const QString profDir = profile.filePath.empty() ? QString() : QFileInfo(qStr(profile.filePath)).absolutePath();
+		const QString resolvedDemoDir = expandProfilePathTokens(editDemoDir->text(), profDir);
+		const QString curDemo = editDemoPlay->text().trimmed();
+		const QString startDir = curDemo.isEmpty()
+			? resolvedDemoDir
+			: expandProfilePathTokens(curDemo, resolvedDemoDir.isEmpty() ? profDir : resolvedDemoDir);
 		const QString filter = QString("%1 (*.lmp);;%2 (*.*)")
 			.arg(LStr("LAUNCHER_FILTER_DEMOS", "Demos"), LStr("FILEPICKER_ANY", "All Files"));
 		const QString p = browsePath(LStr("LAUNCHER_SELECT_DEMO_TITLE", "Select Demo"), filter, startDir);
@@ -558,7 +651,7 @@ QWidget* ProfileSettingsDialog::buildLaunchTab()
 	chkRespawn = new QCheckBox(LStr("GMPLYMNU_MONSTERSRESPAWN", "Respawn Monsters"), grpDiff);
 	chkNoMonsters = new QCheckBox(LStr("GMPLYMNU_NOMONSTERS", "No Monsters"), grpDiff);
 	chkMultiItems = new QCheckBox(LStr("GMPLYMNU_ALWAYSSPAWNMULTI", "Allow Multiplayer Items"), grpDiff);
-	chkPistolStart = new QCheckBox(LStr("LAUNCHER_PISTOL_START", "Pistol start all levels"), grpDiff);
+	chkPistolStart = new QCheckBox(LStr("GMPLYMNU_PISTOLSTART", "Pistol start every map"), grpDiff);
 	chkPistolStart->setToolTip(LStr("LAUNCHER_PISTOL_START_TIP", "Reset player inventory at every level transition (DF3_PISTOL_START / sv_pistolstart). Separate from 'Restart level on death'."));
 
 	connect(chkFast, &QCheckBox::toggled, this, [this](bool on)
@@ -591,24 +684,24 @@ QWidget* ProfileSettingsDialog::buildLaunchTab()
 		diffLayout->addWidget(c);
 	leftCol->addWidget(grpDiff);
 
-	QGroupBox* grpPlayer = new QGroupBox(LStr("MNU_PLAYER", "Player"), tab);
+	QGroupBox* grpPlayer = new QGroupBox(LStr("OPTVAL_PLAYER", "Player"), tab);
 	grpPlayer->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Maximum);
 	QFormLayout* playerForm = new QFormLayout(grpPlayer);
 	playerForm->setFieldGrowthPolicy(QFormLayout::AllNonFixedFieldsGrow);
 	editPlayerName = new QLineEdit(grpPlayer);
 	editPlayerClass = new QLineEdit(grpPlayer);
 	comboPlayerGender = new QComboBox(grpPlayer);
-	comboPlayerGender->addItems({LStr("OPTVAL_DEFAULT", "Default"), LStr("PLYRMNU_MALE", "Male"), LStr("PLYRMNU_FEMALE", "Female"), LStr("PLYRMNU_OTHER", "Neutral / Other")});
+	comboPlayerGender->addItems({LStr("OPTVAL_DEFAULT", "Default"), LStr("OPTVAL_MALE", "Male"), LStr("OPTVAL_FEMALE", "Female"), LStr("OPTVAL_NEUTRAL", "Neutral")});
 
 	comboWadLang = new QComboBox(grpPlayer);
 	comboWadLang->addItem(LStr("LAUNCHER_LANG_DEFAULT", "Default (Launcher Language)"), "default");
 	for (const auto& lang : getLauncherLanguages())
 		comboWadLang->addItem(lang.name, lang.code);
 
-	playerForm->addRow(LStr("PLYRMNU_NAME", "Player Name:"), editPlayerName);
-	playerForm->addRow(LStr("PICKER_PLAYERCLASS", "Player Class:"), editPlayerClass);
-	playerForm->addRow(LStr("PLYRMNU_GENDER", "Gender:"), comboPlayerGender);
-	playerForm->addRow(LStr("OPTMNU_LANGUAGE", "Language:"), comboWadLang);
+	playerForm->addRow(ensureTrailingColon(LStr("PLYRMNU_NAME", "Name")), editPlayerName);
+	playerForm->addRow(ensureTrailingColon(LStr("PICKER_PLAYERCLASS", "Player Class")), editPlayerClass);
+	playerForm->addRow(ensureTrailingColon(LStr("PLYRMNU_PLAYERGENDER", "Gender")), comboPlayerGender);
+	playerForm->addRow(ensureTrailingColon(LStr("OPTMNU_LANGUAGE", "Language")), comboWadLang);
 	leftCol->addWidget(grpPlayer);
 	leftCol->addStretch();
 
@@ -622,13 +715,15 @@ QWidget* ProfileSettingsDialog::buildLaunchTab()
 	editRemoteAddr->setPlaceholderText("127.0.0.1");
 	spinRemotePort = new QSpinBox(grpRemote);
 	spinRemotePort->setRange(0, 65535);
-	spinRemotePort->setSpecialValueText(LStr("LAUNCHER_DEFAULT_PORT", "Default (5029)"));
+	spinRemotePort->setSpecialValueText(LStr("PICKER_PORTHINT", "Default 5029"));
+	spinRemotePort->setToolTip(LStr("PICKER_PORTHINT", "Default 5029"));
 	spinRemoteTeam = new QSpinBox(grpRemote);
 	spinRemoteTeam->setRange(0, 255);
+	spinRemoteTeam->setToolTip(LStr("PICKER_TEAMHINT", "255 = Random"));
 
-	remoteForm->addRow(LStr("PICKER_IP", "Remote Address:"), editRemoteAddr);
-	remoteForm->addRow(LStr("LAUNCHER_REMOTE_PORT", "Remote Port (Default 5029):"), spinRemotePort);
-	remoteForm->addRow(LStr("LAUNCHER_TEAM_NO", "Team No. (255 = Random):"), spinRemoteTeam);
+	remoteForm->addRow(ensureTrailingColon(LStr("PICKER_IP", "Host IP:")), editRemoteAddr);
+	remoteForm->addRow(ensureTrailingColon(LStr("PICKER_PORT", "Host Port:")), spinRemotePort);
+	remoteForm->addRow(ensureTrailingColon(LStr("PICKER_TEAM", "Team #:")), spinRemoteTeam);
 	rightCol->addWidget(grpRemote);
 
 	QGroupBox* grpHost = new QGroupBox(LStr("LAUNCHER_HOST_MP", "Host Multiplayer"), tab);
@@ -637,9 +732,11 @@ QWidget* ProfileSettingsDialog::buildLaunchTab()
 	hostForm->setFieldGrowthPolicy(QFormLayout::AllNonFixedFieldsGrow);
 	spinHostPort = new QSpinBox(grpHost);
 	spinHostPort->setRange(0, 65535);
-	spinHostPort->setSpecialValueText(LStr("LAUNCHER_DEFAULT_PORT", "Default (5029)"));
+	spinHostPort->setSpecialValueText(LStr("PICKER_PORTHINT", "Default 5029"));
+	spinHostPort->setToolTip(LStr("PICKER_PORTHINT", "Default 5029"));
 	spinMaxPlayers = new QSpinBox(grpHost);
 	spinMaxPlayers->setRange(1, 64);
+	spinMaxPlayers->setToolTip(LStr("PICKER_PLAYERHINT", "Max 64"));
 
 	comboTicRate = new QComboBox(grpHost);
 	comboTicRate->addItems({"35 Hz", "17.5 Hz", "11.6 Hz"});
@@ -650,12 +747,18 @@ QWidget* ProfileSettingsDialog::buildLaunchTab()
 	comboGamemode->addItem(LStr("PICKER_COOP", "Co-op"));
 	comboGamemode->addItem(LStr("PICKER_DM", "Deathmatch"));
 	comboGamemode->addItem(LStr("PICKER_TDM", "Team Deathmatch"));
-	comboGamemode->addItem(LStr("PICKER_ALTDM", "Alt Deathmatch"));
+
+	chkHostAltDM = new QCheckBox(LStr("PICKER_ALTDM", "Alt Deathmatch"), grpHost);
 
 	spinHostTeam = new QSpinBox(grpHost);
 	spinHostTeam->setRange(0, 255);
+	spinHostTeam->setToolTip(LStr("PICKER_TEAMHINT", "255 = Random"));
 	connect(comboGamemode, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [this](int idx)
 	{
+		const bool isDM = (idx == 2 || idx == 3);
+		chkHostAltDM->setEnabled(isDM);
+		if (!isDM)
+			chkHostAltDM->setChecked(false);
 		spinHostTeam->setEnabled(idx == 3);
 	});
 
@@ -665,12 +768,13 @@ QWidget* ProfileSettingsDialog::buildLaunchTab()
 	for (QSpinBox* spin : {spinRemotePort, spinRemoteTeam, spinHostPort, spinMaxPlayers, spinHostTeam})
 		spin->setMinimumHeight(dropdownHeight);
 
-	hostForm->addRow(LStr("LAUNCHER_HOST_PORT", "Host Port (Default 5029):"), spinHostPort);
-	hostForm->addRow(LStr("LAUNCHER_MAX_PLAYERS", "Max Players (Limit 64):"), spinMaxPlayers);
-	hostForm->addRow(LStr("PICKER_NETRATE", "Tickrate:"), comboTicRate);
+	hostForm->addRow(ensureTrailingColon(LStr("PICKER_PORT", "Host Port:")), spinHostPort);
+	hostForm->addRow(ensureTrailingColon(LStr("PICKER_PLAYERS", "Max Players:")), spinMaxPlayers);
+	hostForm->addRow(ensureTrailingColon(LStr("PICKER_NETRATE", "Packet Ticrate:")), comboTicRate);
 	hostForm->addRow(QString(), chkExtraTic);
-	hostForm->addRow(LStr("PICKER_GAMEMODE", "Gamemode:"), comboGamemode);
-	hostForm->addRow(LStr("LAUNCHER_HOST_TEAM", "Host Team (255 = Random):"), spinHostTeam);
+	hostForm->addRow(ensureTrailingColon(LStr("PICKER_GAMEMODE", "Game Mode:")), comboGamemode);
+	hostForm->addRow(QString(), chkHostAltDM);
+	hostForm->addRow(ensureTrailingColon(LStr("PICKER_TEAM", "Team #:")), spinHostTeam);
 	rightCol->addWidget(grpHost);
 
 	QGroupBox* grpCompat = new QGroupBox(LStr("LAUNCHER_COMPAT_AND_FLAGS", "Compatibility and Flags"), tab);
@@ -710,12 +814,8 @@ QWidget* ProfileSettingsDialog::buildLaunchTab()
 	compRow->addWidget(comboCompatLevel, 1);
 	compRow->addWidget(btnMoreFlags);
 
-	QString compatModeLabel = LStr("CMPTMNU_MODE", "Compatibility mode");
-	if (!compatModeLabel.endsWith(':'))
-		compatModeLabel += ':';
-
 	compatForm->addRow(LStr("LAUNCHER_COMPLEVEL", "Complevel:"), comboEngineComplevel);
-	compatForm->addRow(compatModeLabel, compatModeRow);
+	compatForm->addRow(ensureTrailingColon(LStr("CMPTMNU_MODE", "Compatibility mode")), compatModeRow);
 	compatLayout->addLayout(compatForm);
 
 	lblFlagSummary = new QLabel(grpCompat);
@@ -762,7 +862,8 @@ QWidget* ProfileSettingsDialog::buildFilesTab()
 			return;
 		}
 
-		const QFileInfo fi(iniPath);
+		const QString profDir = profile.filePath.empty() ? QString() : QFileInfo(qStr(profile.filePath)).absolutePath();
+		const QFileInfo fi(expandProfilePathTokens(iniPath, profDir));
 		if (fi.exists() && fi.isFile())
 		{
 			QDesktopServices::openUrl(QUrl::fromLocalFile(fi.absoluteFilePath()));
@@ -790,7 +891,7 @@ QWidget* ProfileSettingsDialog::buildFilesTab()
 			}
 			else
 			{
-				QMessageBox::warning(this, LStr("ERROR_FATAL", "Error"),
+				QMessageBox::warning(this, LStr("LAUNCHER_ERROR", "Error"),
 					LStr("LAUNCHER_CREATE_INI_ERR", "Could not create INI file at:\n%1").arg(fi.absoluteFilePath()));
 			}
 		}
@@ -807,7 +908,7 @@ QWidget* ProfileSettingsDialog::buildFilesTab()
 		{
 			dirEdit->setToolTip(text.trimmed());
 		});
-		QPushButton* btnOpen = new QPushButton(LStr("LAUNCHER_OPEN_FOLDER", "Open"), tab);
+		QPushButton* btnOpen = new QPushButton(LStr("LAUNCHER_OPEN", "Open"), tab);
 		btnOpen->setToolTip(LStr("LAUNCHER_OPEN_DIR_TIP", "Open the configured %1 in the system file manager (creates it if missing).").arg(labelName));
 		connect(btnOpen, &QPushButton::clicked, this, [this, dirEdit, labelName]()
 		{
@@ -818,10 +919,11 @@ QWidget* ProfileSettingsDialog::buildFilesTab()
 					LStr("LAUNCHER_NO_DIR_PATH_MSG", "No %1 path is configured for this profile yet.").arg(labelName));
 				return;
 			}
-			const QString absDir = QFileInfo(dirPath).absoluteFilePath();
+			const QString profDir = profile.filePath.empty() ? QString() : QFileInfo(qStr(profile.filePath)).absolutePath();
+			const QString absDir = QFileInfo(expandProfilePathTokens(dirPath, profDir)).absoluteFilePath();
 			if (!QFileInfo::exists(absDir) && !QDir().mkpath(absDir))
 			{
-				QMessageBox::warning(this, LStr("ERROR_FATAL", "Error"),
+				QMessageBox::warning(this, LStr("LAUNCHER_ERROR", "Error"),
 					LStr("LAUNCHER_CREATE_DIR_ERR", "Could not create folder:\n%1").arg(QDir::toNativeSeparators(absDir)));
 				return;
 			}
@@ -865,7 +967,7 @@ QWidget* ProfileSettingsDialog::buildFilesTab()
 
 	pathsForm->addRow(LStr("LAUNCHER_CONFIG_FILE", "Config File:"), createPathBrowseRow(editConfigFile, btnCfg, tab, btnOpenCfg));
 	pathsForm->addRow(LStr("LAUNCHER_SAVE_DIR", "Save Directory:"), createPathBrowseRow(editSaveDir, btnSaveDir, tab, btnOpenSaveDir));
-	pathsForm->addRow(LStr("LAUNCHER_SHOT_DIR", "Screenshot Dir:"), createPathBrowseRow(editShotDir, btnShotDir, tab, btnOpenShotDir));
+	pathsForm->addRow(LStr("LAUNCHER_SHOT_DIR", "Screenshot Directory:"), createPathBrowseRow(editShotDir, btnShotDir, tab, btnOpenShotDir));
 	pathsForm->addRow(LStr("LAUNCHER_DEMO_DIR", "Demo Directory:"), createPathBrowseRow(editDemoDir, btnDemoDir, tab, btnOpenDemoDir));
 	vbox->addLayout(pathsForm);
 
@@ -909,14 +1011,24 @@ QWidget* ProfileSettingsDialog::buildOutputTab()
 	grpGen->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Maximum);
 	QVBoxLayout* genBox = new QVBoxLayout(grpGen);
 	chkFullscreen = new QCheckBox(LStr("VIDMNU_FULLSCREEN", "Fullscreen"), grpGen);
-	chkSupportWads = new QCheckBox(LStr("PICKER_SUPPORTWADS", "Load Support WADs") + " (e.g. id24res.wad)", grpGen);
+	chkVsync = new QCheckBox(LStr("DSPLYMNU_VSYNC", "Vertical Sync"), grpGen);
+	chkSupportWads = new QCheckBox(LStr("PICKER_SUPPORTWADS", "Load Support WADs"), grpGen);
 	chkSupportWads->setToolTip(LStr("LAUNCHER_SUPPORTWADS_TIP", "Loads optional ID24 support resources (id24res.wad) when available, adding Legacy of Rust / ID24 weapons and assets. Automatically disabled in multiplayer."));
 	chkDisableAutoload = new QCheckBox(LStr("PICKER_NOAUTOLOAD", "Disable Autoload"), grpGen);
-	chkDisableAutoload->setToolTip(LStr("LAUNCHER_NOAUTOLOAD_TIP", "Skips Global.Autoload, per-IWAD autoload sections, zvox.wad, and skins/ (-noautoload). Extra Graphics below are controlled separately."));
-	chkDynLights = new QCheckBox(LStr("GLLIGHTMNU_LIGHTSENABLED", "Dynamic Lights"), grpGen);
+	chkDisableAutoload->setToolTip(LStr("LAUNCHER_NOAUTOLOAD_TIP", "Skips Global.Autoload, per-IWAD autoload sections, zvox.wad, and skins/ (-noautoload). Extra Graphics on the right are controlled separately."));
 
-	for (QCheckBox* c : {chkFullscreen, chkSupportWads, chkDisableAutoload, chkDynLights})
+	for (QCheckBox* c : {chkFullscreen, chkVsync, chkSupportWads, chkDisableAutoload})
 		genBox->addWidget(c);
+
+	QFormLayout* strictForm = new QFormLayout();
+	strictForm->setContentsMargins(0, 6, 0, 0);
+	comboFileLoadStrictness = new QComboBox(grpGen);
+	comboFileLoadStrictness->addItem(LStr("LAUNCHER_INHERIT_INI", "From INI"), -1);
+	comboFileLoadStrictness->addItem(LStr("OPTVAL_DEFAULT", "Default"), REQUIRE_DEFAULT);
+	comboFileLoadStrictness->addItem(LStr("OPTVAL_LAX", "Lax"), REQUIRE_NONE);
+	comboFileLoadStrictness->addItem(LStr("OPTVAL_STRICT", "Strict"), REQUIRE_ALL);
+	strictForm->addRow(ensureTrailingColon(LStr("PICKER_FILELOADING", "File Loading")), comboFileLoadStrictness);
+	genBox->addLayout(strictForm);
 	leftCol->addWidget(grpGen);
 	leftCol->addStretch();
 
@@ -941,7 +1053,9 @@ QWidget* ProfileSettingsDialog::buildOutputTab()
 	chkLights = new QCheckBox(LStr("PICKER_LIGHTS", "Lights"), grpExtra);
 	chkBrightmaps = new QCheckBox(LStr("PICKER_BRIGHTMAPS", "Brightmaps"), grpExtra);
 	chkWidescreen = new QCheckBox(LStr("PICKER_WIDESCREEN", "Widescreen"), grpExtra);
-	for (QCheckBox* c : {chkLights, chkBrightmaps, chkWidescreen})
+	chkDynLights = new QCheckBox(LStr("GLLIGHTMNU_LIGHTSENABLED", "Dynamic Lights"), grpExtra);
+	chkShadowmaps = new QCheckBox(LStr("GLLIGHTMNU_LIGHTSHADOWMAP", "Enable Shadowmaps"), grpExtra);
+	for (QCheckBox* c : {chkLights, chkBrightmaps, chkWidescreen, chkDynLights, chkShadowmaps})
 		extraBox->addWidget(c);
 
 	rightCol->addWidget(grpApi);
@@ -960,7 +1074,7 @@ QWidget* ProfileSettingsDialog::buildAdvancedTab()
 	QVBoxLayout* vbox = new QVBoxLayout(tab);
 
 	QHBoxLayout* appendHeader = new QHBoxLayout();
-	appendHeader->addWidget(new QLabel(LStr("LAUNCHER_APPEND_ARGS", "Append Additional Parameters"), tab));
+	appendHeader->addWidget(new QLabel(ensureTrailingColon(LStr("PICKER_ADDPARM", "Additional Parameters:")), tab));
 	appendHeader->addStretch();
 	QPushButton* btnBrowseAppend = new QPushButton(LStr("LAUNCHER_SELECT_FILE", "Select File..."), tab);
 	btnBrowseAppend->setToolTip(LStr("LAUNCHER_SELECT_FILE_TIP", "Pick file(s) and append them to Additional Parameters (auto-adds -file / -deh / +exec / -playdemo when no switch precedes them)."));
@@ -1132,7 +1246,7 @@ QWidget* ProfileSettingsDialog::buildLogsTab()
 	});
 	btnRow->addWidget(btnDeleteLog);
 
-	btnClearAllLogs = new QPushButton(LStr("LAUNCHER_CLEAR_ALL_LOGS", "Clear All"), tab);
+	btnClearAllLogs = new QPushButton(LStr("LAUNCHER_CLEAR_ALL", "Clear All"), tab);
 	connect(btnClearAllLogs, &QPushButton::clicked, this, [this]()
 	{
 		if (!comboLogFiles || comboLogFiles->count() == 0)
@@ -1214,7 +1328,7 @@ void ProfileSettingsDialog::populateQuickIwadCombo()
 		comboQuickIwad->setItemData(comboQuickIwad->count() - 1, e.path, Qt::ToolTipRole);
 	}
 
-	comboQuickIwad->addItem(LStr("LAUNCHER_IWAD_CUSTOM", "Custom"), QStringLiteral("__custom__"));
+	comboQuickIwad->addItem(LStr("OPTVAL_CUSTOM", "Custom"), QStringLiteral("__custom__"));
 	comboQuickIwad->addItem(LStr("LAUNCHER_BROWSE_IWAD", "Browse..."), QStringLiteral("__browse__"));
 }
 
@@ -1239,7 +1353,7 @@ void ProfileSettingsDialog::syncQuickIwadFromPath(const QString& path)
 			{
 				comboQuickIwad->setCurrentIndex(i);
 				if (customIdx >= 0)
-					comboQuickIwad->setItemText(customIdx, LStr("LAUNCHER_IWAD_CUSTOM", "Custom"));
+					comboQuickIwad->setItemText(customIdx, LStr("OPTVAL_CUSTOM", "Custom"));
 				return;
 			}
 		}
@@ -1249,14 +1363,14 @@ void ProfileSettingsDialog::syncQuickIwadFromPath(const QString& path)
 	{
 		if (trimmed.isEmpty())
 		{
-			comboQuickIwad->setItemText(customIdx, LStr("LAUNCHER_IWAD_NONE", "(None)"));
+			comboQuickIwad->setItemText(customIdx, QString("(%1)").arg(LStr("OPTVAL_NONE", "None")));
 		}
 		else
 		{
 			const QString fn = QFileInfo(trimmed).fileName();
 			comboQuickIwad->setItemText(customIdx, fn.isEmpty()
-				? LStr("LAUNCHER_IWAD_CUSTOM", "Custom")
-				: QString("%1 (%2)").arg(LStr("LAUNCHER_IWAD_CUSTOM", "Custom"), fn));
+				? LStr("OPTVAL_CUSTOM", "Custom")
+				: QString("%1 (%2)").arg(LStr("OPTVAL_CUSTOM", "Custom"), fn));
 		}
 		comboQuickIwad->setCurrentIndex(customIdx);
 	}
@@ -1529,9 +1643,13 @@ void ProfileSettingsDialog::loadFromProfile()
 	spinMaxPlayers->setValue(std::clamp(profile.maxPlayers, 1, 64));
 	comboTicRate->setCurrentIndex(std::clamp(profile.hostTicRate, 0, 2));
 	chkExtraTic->setChecked(profile.hostExtraTic);
-	comboGamemode->setCurrentIndex(std::clamp(profile.hostGamemode, 0, 4));
+	const int gm = (profile.hostGamemode == 4) ? 2 : std::clamp(profile.hostGamemode, 0, 3);
+	const bool altDm = profile.hostAltDeathmatch || (profile.hostGamemode == 4);
+	comboGamemode->setCurrentIndex(gm);
+	chkHostAltDM->setEnabled(gm == 2 || gm == 3);
+	chkHostAltDM->setChecked((gm == 2 || gm == 3) && altDm);
 	spinHostTeam->setValue(std::clamp(profile.hostTeam, 0, 255));
-	spinHostTeam->setEnabled(comboGamemode->currentIndex() == 3);
+	spinHostTeam->setEnabled(gm == 3);
 
 	const int clIdx = comboEngineComplevel->findData(qStr(profile.complevel));
 	comboEngineComplevel->setCurrentIndex(clIdx >= 0 ? clIdx : 0);
@@ -1594,9 +1712,21 @@ void ProfileSettingsDialog::loadFromProfile()
 	rebuildModList(profile.mods);
 
 	chkFullscreen->setChecked(profile.fullscreen);
+	chkVsync->setChecked(profile.vsync);
 	chkSupportWads->setChecked(profile.loadSupportWads);
 	chkDisableAutoload->setChecked(profile.disableAutoload);
 	chkDynLights->setChecked(profile.enableDynLights);
+	chkShadowmaps->setChecked(profile.enableShadowmaps);
+	{
+		const int targetStrict = profile.fileLoadStrictness;
+		int strictIdx = comboFileLoadStrictness->findData(targetStrict);
+		if (strictIdx < 0)
+		{
+			comboFileLoadStrictness->addItem(LStr("OPTVAL_CUSTOM", "Custom"), targetStrict);
+			strictIdx = comboFileLoadStrictness->count() - 1;
+		}
+		comboFileLoadStrictness->setCurrentIndex(strictIdx);
+	}
 	if (profile.renderingAPI == 0)
 		radioOpenGL->setChecked(true);
 	else if (profile.renderingAPI == 2)
@@ -1618,7 +1748,7 @@ void ProfileSettingsDialog::loadFromProfile()
 
 void ProfileSettingsDialog::writeToProfile(Profile& target) const
 {
-	target.title = stdStr(editTitle->text().trimmed().isEmpty() ? QString("New Profile") : editTitle->text().trimmed());
+	target.title = stdStr(editTitle->text().trimmed().isEmpty() ? LStr("LAUNCHER_NEW_PROFILE", "New Profile") : editTitle->text().trimmed());
 	target.author = stdStr(editAuthor->text().trimmed());
 	target.releaseDate = normalizeReleaseDate(stdStr(editReleaseDate->text().trimmed()));
 	target.coverImagePath = stdStr(editCoverImage->text().trimmed());
@@ -1663,6 +1793,7 @@ void ProfileSettingsDialog::writeToProfile(Profile& target) const
 	target.hostTicRate = comboTicRate->currentIndex();
 	target.hostExtraTic = chkExtraTic->isChecked();
 	target.hostGamemode = comboGamemode->currentIndex();
+	target.hostAltDeathmatch = chkHostAltDM->isEnabled() && chkHostAltDM->isChecked();
 	target.hostTeam = spinHostTeam->value();
 
 	target.complevel = stdStr(comboEngineComplevel->currentData().toString());
@@ -1688,9 +1819,12 @@ void ProfileSettingsDialog::writeToProfile(Profile& target) const
 	}
 
 	target.fullscreen = chkFullscreen->isChecked();
+	target.vsync = chkVsync->isChecked();
 	target.loadSupportWads = chkSupportWads->isChecked();
 	target.disableAutoload = chkDisableAutoload->isChecked();
 	target.enableDynLights = chkDynLights->isChecked();
+	target.enableShadowmaps = chkShadowmaps->isChecked();
+	target.fileLoadStrictness = comboFileLoadStrictness->currentData().toInt();
 	if (radioOpenGL->isChecked())
 		target.renderingAPI = 0;
 	else if (radioGLES->isChecked())
@@ -1799,6 +1933,7 @@ void ProfileSettingsDialog::rebuildModList(const std::vector<std::string>& mods,
 		connect(btnDel, &QToolButton::clicked, this, [this, row, modKey]()
 		{
 			disabledModKeys.remove(modKey);
+			pendingModCopies.remove(modKey);
 			modPaths.erase(modPaths.begin() + row);
 			rebuildModList(modPaths, std::min(row, static_cast<int>(modPaths.size()) - 1));
 			updateCommandPreview();
@@ -1861,24 +1996,67 @@ void ProfileSettingsDialog::appendModPath(const QString& filePath)
 	if (copyToProfile && !profile.filePath.empty())
 	{
 		const QDir modsDir(QFileInfo(qStr(profile.filePath)).absolutePath() + "/mods");
-		modsDir.mkpath(".");
 		const QString dest = modsDir.filePath(QFileInfo(filePath).fileName());
 		const QString srcAbs = QFileInfo(filePath).absoluteFilePath();
 		const QString destAbs = QFileInfo(dest).absoluteFilePath();
-		if (srcAbs.compare(destAbs, Qt::CaseInsensitive) != 0)
+		const QString srcKey = normModKey(srcAbs);
+		const QString destKey = normModKey(destAbs);
+		if (srcKey != destKey)
 		{
-			if (!QFile::exists(dest))
+			QString queuedSrcKey;
+			QString queuedSrcPath;
+			for (auto it = pendingModCopies.constBegin(); it != pendingModCopies.constEnd(); ++it)
 			{
-				if (QFile::copy(filePath, dest))
-					finalPath = dest;
+				if (normModKey(it.value()) == destKey && it.key() != srcKey)
+				{
+					queuedSrcKey = it.key();
+					for (const std::string& existing : modPaths)
+					{
+						if (normModKey(qStr(existing)) == queuedSrcKey)
+						{
+							queuedSrcPath = qStr(existing);
+							break;
+						}
+					}
+					break;
+				}
+			}
+
+			auto clearPendingForDest = [&]()
+			{
+				for (auto it = pendingModCopies.begin(); it != pendingModCopies.end();)
+				{
+					if (normModKey(it.value()) == destKey)
+						it = pendingModCopies.erase(it);
+					else
+						++it;
+				}
+			};
+
+			const bool existsOnDisk = QFile::exists(dest);
+			const bool hasConflict = existsOnDisk || !queuedSrcKey.isEmpty();
+			if (!hasConflict)
+			{
+				// Defer the actual disk copy until Save so Cancel -> Discard leaves the profile folder untouched.
+				pendingModCopies[srcKey] = destAbs;
+				finalPath = srcAbs;
 			}
 			else
 			{
+				const QString existingComparePath = !queuedSrcPath.isEmpty() ? queuedSrcPath : destAbs;
 				const std::string srcMd5 = calculateFileMD5(stdStr(srcAbs));
-				const std::string dstMd5 = calculateFileMD5(stdStr(destAbs));
-				if (!srcMd5.empty() && srcMd5 == dstMd5)
+				const std::string existingMd5 = calculateFileMD5(stdStr(existingComparePath));
+				if (!srcMd5.empty() && srcMd5 == existingMd5)
 				{
-					finalPath = dest;
+					if (!queuedSrcPath.isEmpty())
+					{
+						finalPath = queuedSrcPath;
+					}
+					else
+					{
+						clearPendingForDest();
+						finalPath = destAbs;
+					}
 				}
 				else
 				{
@@ -1895,20 +2073,29 @@ void ProfileSettingsDialog::appendModPath(const QString& filePath)
 
 					if (box.clickedButton() == btnOverwrite)
 					{
-						const QString tmpDest = dest + ".uztmp";
-						QFile::remove(tmpDest);
-						if (!QFile::copy(filePath, tmpDest) || !QFile::remove(dest) || !QFile::rename(tmpDest, dest))
+						clearPendingForDest();
+						modPaths.erase(std::remove_if(modPaths.begin(), modPaths.end(), [&](const std::string& existing)
 						{
-							QFile::remove(tmpDest);
-							QMessageBox::warning(this, LStr("ERROR_FATAL", "Error"),
-								LStr("LAUNCHER_MOD_OVERWRITE_PROFILE_ERR", "Could not overwrite '%1' in the profile's mods folder.").arg(QFileInfo(filePath).fileName()));
-							return;
-						}
-						finalPath = dest;
+							const QString k = normModKey(qStr(existing));
+							return k == destKey || (!queuedSrcKey.isEmpty() && k == queuedSrcKey);
+						}), modPaths.end());
+						disabledModKeys.remove(destKey);
+						if (!queuedSrcKey.isEmpty())
+							disabledModKeys.remove(queuedSrcKey);
+						pendingModCopies[srcKey] = destAbs;
+						finalPath = srcAbs;
 					}
 					else if (box.clickedButton() == btnKeep)
 					{
-						finalPath = dest;
+						if (!queuedSrcPath.isEmpty())
+						{
+							finalPath = queuedSrcPath;
+						}
+						else
+						{
+							clearPendingForDest();
+							finalPath = destAbs;
+						}
 					}
 					else
 					{
@@ -1930,6 +2117,75 @@ void ProfileSettingsDialog::appendModPath(const QString& filePath)
 	disabledModKeys.remove(addedKey);
 	rebuildModList(modPaths, static_cast<int>(modPaths.size()) - 1);
 	updateCommandPreview();
+}
+
+bool ProfileSettingsDialog::commitPendingModCopies(Profile& target, const QString& targetProfFolder, bool updateDialogState)
+{
+	if (pendingModCopies.isEmpty() || targetProfFolder.isEmpty())
+		return true;
+
+	const QDir modsDir(QDir(targetProfFolder).filePath(QStringLiteral("mods")));
+	modsDir.mkpath(".");
+
+	bool allOk = true;
+	QHash<QString, QString> committedPaths;
+	for (std::string& modPath : target.mods)
+	{
+		const QString srcQ = qStr(modPath);
+		const QString srcKey = normModKey(srcQ);
+		const auto it = pendingModCopies.constFind(srcKey);
+		if (it == pendingModCopies.constEnd())
+			continue;
+
+		const QString destAbs = QFileInfo(modsDir.filePath(QFileInfo(it.value()).fileName())).absoluteFilePath();
+		if (!safeReplaceFile(srcQ, destAbs))
+		{
+			allOk = false;
+			QMessageBox::warning(this, LStr("LAUNCHER_ERROR", "Error"),
+				LStr("LAUNCHER_MOD_OVERWRITE_PROFILE_ERR", "Could not overwrite '%1' in the profile's mods folder.")
+					.arg(QFileInfo(destAbs).fileName()));
+			continue;
+		}
+		modPath = stdStr(destAbs);
+		committedPaths[srcKey] = destAbs;
+	}
+
+	if (!committedPaths.isEmpty())
+	{
+		std::vector<std::string> deduped;
+		QSet<QString> seen;
+		for (const std::string& m : target.mods)
+		{
+			const QString key = normModKey(qStr(m));
+			if (!seen.contains(key))
+			{
+				seen.insert(key);
+				deduped.push_back(m);
+			}
+		}
+		target.mods = std::move(deduped);
+
+		for (std::string& dm : target.disabledMods)
+		{
+			const auto it = committedPaths.constFind(normModKey(qStr(dm)));
+			if (it != committedPaths.constEnd())
+				dm = stdStr(it.value());
+		}
+
+		if (updateDialogState)
+		{
+			for (auto it = committedPaths.constBegin(); it != committedPaths.constEnd(); ++it)
+				pendingModCopies.remove(it.key());
+			disabledModKeys.clear();
+			for (const std::string& dm : target.disabledMods)
+			{
+				if (!dm.empty())
+					disabledModKeys.insert(normModKey(qStr(dm)));
+			}
+			rebuildModList(target.mods);
+		}
+	}
+	return allOk;
 }
 
 void ProfileSettingsDialog::syncCompatModeFromFlags()
@@ -2062,7 +2318,7 @@ void ProfileSettingsDialog::onAddModFiles()
 		: (profile.filePath.empty() ? qStr(LauncherConst::PROFILE_DIR) : QFileInfo(qStr(profile.filePath)).absolutePath());
 	const QString filter = QString("%1 (*.wad *.pwad *.pk3 *.pk7 *.ipk3 *.ipk7 *.zip *.7z *.deh *.bex);;%2 (*.*)")
 		.arg(LStr("LAUNCHER_FILTER_DOOM_MODS", "Doom Mods"), LStr("FILEPICKER_ANY", "All Files"));
-	const QStringList files = QFileDialog::getOpenFileNames(this, LStr("LAUNCHER_ADD_MOD", "Add Mod Files"), startDir, filter);
+	const QStringList files = QFileDialog::getOpenFileNames(this, LStr("LAUNCHER_ADD_MOD", "Add Mod File"), startDir, filter);
 	for (const QString& f : files)
 		appendModPath(f);
 }
@@ -2070,29 +2326,35 @@ void ProfileSettingsDialog::onAddModFiles()
 void ProfileSettingsDialog::onSaveAndReturn()
 {
 	saveToProfile();
+
+	if (!pendingModCopies.isEmpty() && !profile.filePath.empty())
+	{
+		const QString profFolder = QFileInfo(qStr(profile.filePath)).absolutePath();
+		commitPendingModCopies(profile, profFolder, true);
+	}
+
 	if (!profile.coverImagePath.empty() && !profile.filePath.empty())
 	{
 		const QString profFolder = QDir::cleanPath(QFileInfo(qStr(profile.filePath)).absolutePath());
-		QString covPath = qStr(profile.coverImagePath);
-		if (!QFileInfo(covPath).isAbsolute())
-			covPath = QDir::cleanPath(QDir(profFolder).filePath(covPath));
+		const QString covPath = expandProfilePathTokens(qStr(profile.coverImagePath), profFolder);
 		const QFileInfo covFi(covPath);
 		const QString profPrefix = profFolder.endsWith('/') ? profFolder : (profFolder + '/');
-		const QString covAbs = QDir::cleanPath(covFi.absoluteFilePath());
-		if (covFi.exists() && covFi.isFile() && !covAbs.startsWith(profPrefix, Qt::CaseInsensitive))
+		const QString covAbs = QDir::cleanPath(covFi.absoluteFilePath()).replace('\\', '/');
+#ifdef Q_OS_WIN
+		constexpr Qt::CaseSensitivity pathCs = Qt::CaseInsensitive;
+#else
+		constexpr Qt::CaseSensitivity pathCs = Qt::CaseSensitive;
+#endif
+		if (covFi.exists() && covFi.isFile() && !covAbs.startsWith(profPrefix, pathCs))
 		{
 			QDir().mkpath(profFolder);
 			const QString ext = covFi.suffix().isEmpty() ? QStringLiteral("png") : covFi.suffix().toLower();
 			const QString destCover = QDir(profFolder).filePath("custom_cover." + ext);
-			const QString tmpCover = destCover + ".uztmp";
-			QFile::remove(tmpCover);
-			if (QFile::copy(covAbs, tmpCover))
+			if (safeReplaceFile(covAbs, destCover))
 			{
-				QFile::remove(destCover);
-				if (QFile::rename(tmpCover, destCover))
-					profile.coverImagePath = stdStr(destCover);
-				else
-					QFile::remove(tmpCover);
+				profile.coverImagePath = stdStr(destCover);
+				if (editCoverImage)
+					editCoverImage->setText(destCover);
 			}
 		}
 		else if (covFi.exists() && covFi.isFile())
@@ -2104,7 +2366,7 @@ void ProfileSettingsDialog::onSaveAndReturn()
 		tryExtractCoverForProfile(profile);
 	if (!saveProfileToDisk(profile))
 	{
-		QMessageBox::warning(this, LStr("ERROR_FATAL", "Error"), LStr("LAUNCHER_SAVE_FAILED_MSG", "Failed to save profile to disk."));
+		QMessageBox::warning(this, LStr("LAUNCHER_ERROR", "Error"), LStr("LAUNCHER_SAVE_FAILED_MSG", "Failed to save profile to disk."));
 		return;
 	}
 	action = ActionResult::Saved;
@@ -2125,8 +2387,14 @@ void ProfileSettingsDialog::onCloneProfile()
 
 	if (!cloneProfile(draft, stdStr(title.trimmed()), cloned))
 	{
-		QMessageBox::warning(this, LStr("ERROR_FATAL", "Error"), LStr("LAUNCHER_CLONE_FAILED_DIR_MSG", "Failed to clone profile directory."));
+		QMessageBox::warning(this, LStr("LAUNCHER_ERROR", "Error"), LStr("LAUNCHER_CLONE_FAILED_DIR_MSG", "Failed to clone profile directory."));
 		return;
+	}
+	if (!pendingModCopies.isEmpty() && !cloned.filePath.empty())
+	{
+		const QString clonedFolder = QFileInfo(qStr(cloned.filePath)).absolutePath();
+		commitPendingModCopies(cloned, clonedFolder, false);
+		saveProfileToDisk(cloned);
 	}
 	action = ActionResult::Cloned;
 	accept();
@@ -2134,6 +2402,26 @@ void ProfileSettingsDialog::onCloneProfile()
 
 void ProfileSettingsDialog::onExportProfile()
 {
+	if (!pendingModCopies.isEmpty() && !profile.filePath.empty())
+	{
+		const auto reply = QMessageBox::question(
+			this,
+			LStr("LAUNCHER_EXPORT_PROFILE", "Export Profile"),
+			LStr("LAUNCHER_EXPORT_COMMIT_MODS_MSG",
+				"You have newly added mod(s) queued to be copied into this profile.\n\nCopy them into the profile folder now so they are included in the exported archive?"),
+			QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel,
+			QMessageBox::Yes);
+		if (reply == QMessageBox::Cancel)
+			return;
+		if (reply == QMessageBox::Yes)
+		{
+			const QString profFolder = QFileInfo(qStr(profile.filePath)).absolutePath();
+			Profile temp = profile;
+			writeToProfile(temp);
+			commitPendingModCopies(temp, profFolder, true);
+		}
+	}
+
 	Profile draft = profile;
 	writeToProfile(draft);
 
@@ -2148,7 +2436,7 @@ void ProfileSettingsDialog::onExportProfile()
 	const bool exported = exportProfileToZip(draft, stdStr(dest), err);
 
 	if (!exported)
-		QMessageBox::warning(this, LStr("ERROR_FATAL", "Error"), qStr(err));
+		QMessageBox::warning(this, LStr("LAUNCHER_ERROR", "Error"), qStr(err));
 	else
 		QMessageBox::information(this, LStr("LAUNCHER_EXPORT_PROFILE", "Export Profile"), LStr("LAUNCHER_EXPORT_SUCCESS_MSG", "Profile exported successfully."));
 }
@@ -2164,7 +2452,7 @@ void ProfileSettingsDialog::onDeleteProfile()
 
 	if (!deleteProfileDirectory(profile))
 	{
-		QMessageBox::warning(this, LStr("ERROR_FATAL", "Error"), LStr("LAUNCHER_DELETE_PROFILE_FAILED", "Failed to remove profile directory."));
+		QMessageBox::warning(this, LStr("LAUNCHER_ERROR", "Error"), LStr("LAUNCHER_DELETE_PROFILE_FAILED", "Failed to remove profile directory."));
 		return;
 	}
 	action = ActionResult::Deleted;

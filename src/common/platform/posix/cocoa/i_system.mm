@@ -130,9 +130,13 @@ bool I_PickIWad(bool showwin, FStartupSelectionInfo &info)
 	// code in there
 
 	extern int I_PickIWad_Cocoa(FStartupSelectionInfo & info);
+	extern void I_CocoaSetQtModalActive(bool active);
+	I_CocoaSetQtModalActive(true);
 	auto       result = I_PickIWad_Cocoa(info);
+	I_CocoaSetQtModalActive(false);
 
-	I_SetMainWindowVisible(true);
+	if (result)
+		I_SetMainWindowVisible(true);
 
 	return result;
 }

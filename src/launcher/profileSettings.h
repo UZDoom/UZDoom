@@ -18,6 +18,7 @@
 #include "profile.h"
 
 #include <QDialog>
+#include <QHash>
 #include <QSet>
 #include <QString>
 #include <string>
@@ -95,6 +96,7 @@ private:
 	void applyLogFilter();
 	void rebuildModList(const std::vector<std::string>& mods, int selectRow = -1);
 	void appendModPath(const QString& filePath);
+	bool commitPendingModCopies(Profile& target, const QString& targetProfFolder, bool updateDialogState);
 	void syncCompatModeFromFlags();
 	void updateFlagSummary();
 	void updateCommandPreview();
@@ -159,6 +161,7 @@ private:
 	QComboBox* comboTicRate = nullptr;
 	QCheckBox* chkExtraTic = nullptr;
 	QComboBox* comboGamemode = nullptr;
+	QCheckBox* chkHostAltDM = nullptr;
 	QSpinBox* spinHostTeam = nullptr;
 
 	QComboBox* comboEngineComplevel = nullptr;
@@ -173,11 +176,15 @@ private:
 	QListWidget* listMods = nullptr;
 	std::vector<std::string> modPaths;
 	QSet<QString> disabledModKeys;
+	QHash<QString, QString> pendingModCopies;
 
 	QCheckBox* chkFullscreen = nullptr;
+	QCheckBox* chkVsync = nullptr;
 	QCheckBox* chkSupportWads = nullptr;
 	QCheckBox* chkDisableAutoload = nullptr;
 	QCheckBox* chkDynLights = nullptr;
+	QCheckBox* chkShadowmaps = nullptr;
+	QComboBox* comboFileLoadStrictness = nullptr;
 	QRadioButton* radioVulkan = nullptr;
 	QRadioButton* radioOpenGL = nullptr;
 	QRadioButton* radioGLES = nullptr;

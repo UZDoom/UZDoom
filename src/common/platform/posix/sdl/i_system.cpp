@@ -47,9 +47,11 @@
 #endif
 
 #include "c_cvars.h"
+#include "hardware.h"
 #include "i_interface.h"
 #include "palutil.h"
 #include "printf.h"
+#include "s_music.h"
 #include "st_start.h"
 #include "v_font.h"
 #include "vm.h"
@@ -104,6 +106,13 @@ void Mac_I_FatalError(const char* errortext);
 #ifdef __unix__
 void Unix_I_FatalError(const char* errortext)
 {
+	extern void I_NetDone();
+	I_NetDone();
+
+	// Cleanly tear down screen/Video and SDL video before showing the modal Qt error window.
+	I_ShutdownGraphics();
+	S_StopMusic(true);
+
 	if (CVMAbortException::stacktrace.IsNotEmpty())
 	{
 		Printf("%s", CVMAbortException::stacktrace.GetChars());
@@ -126,9 +135,6 @@ void Unix_I_FatalError(const char* errortext)
 	{
 		printf("\n%s\n", errortext);
 	}
-
-	// Close window or exit fullscreen and release mouse capture
-	SDL_QuitSubSystem(SDL_INIT_VIDEO);
 }
 #endif
 

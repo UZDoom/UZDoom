@@ -48,6 +48,8 @@ namespace LauncherConst
 
 	inline constexpr const char* DEFAULT_LANG = "auto";
 	inline constexpr const char* DEFAULT_THEME = "auto";
+	inline constexpr const char* DEFAULT_BANNER = "default";
+
 }
 
 struct WadInfo
@@ -105,6 +107,22 @@ enum class LauncherTheme
 
 QApplication* ensureLauncherQtApplication();
 QString LStr(const char* key, const char* fallback = nullptr);
+
+inline QString ensureTrailingColon(QString s)
+{
+	const QString trimmed = s.trimmed();
+	if (trimmed.isEmpty() || trimmed.endsWith(QLatin1Char(':')) || trimmed.endsWith(QChar(0xFF1A)))
+		return trimmed;
+	return trimmed + QLatin1Char(':');
+}
+
+inline QString stripTrailingColon(QString s)
+{
+	QString trimmed = s.trimmed();
+	while (trimmed.endsWith(QLatin1Char(':')) || trimmed.endsWith(QChar(0xFF1A)))
+		trimmed.chop(1);
+	return trimmed.trimmed();
+}
 
 const std::vector<LauncherLanguage>& getLauncherLanguages();
 LauncherTheme parseThemeName(const std::string& theme);

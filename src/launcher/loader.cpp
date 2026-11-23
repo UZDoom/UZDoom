@@ -62,7 +62,12 @@ namespace
 
 	QString normLower(const std::string& s)
 	{
-		return QDir::cleanPath(qStr(s)).replace('\\', '/').toLower();
+		const QString clean = QDir::cleanPath(qStr(s)).replace('\\', '/');
+#ifdef Q_OS_WIN
+		return clean.toLower();
+#else
+		return clean;
+#endif
 	}
 
 	const std::string& primaryGameFileOf(const Profile& p)
@@ -119,7 +124,13 @@ namespace
 	{
 		const QFileInfo fi(filePath);
 		const QDir dir = fi.dir();
-		QStringList txtCandidates = dir.entryList({"*.txt", "readme*", "README*"}, QDir::Files);
+		QStringList txtCandidates;
+		for (const QString& entry : dir.entryList(QDir::Files))
+		{
+			const QString lower = entry.toLower();
+			if (lower.endsWith(QStringLiteral(".txt")) || lower.startsWith(QStringLiteral("readme")))
+				txtCandidates << entry;
+		}
 		if (txtCandidates.isEmpty())
 			return;
 
@@ -1032,10 +1043,10 @@ namespace
 		if (auto it = db.find(md5.toStdString()); it != db.end())
 			return it->second.isIWAD;
 
-		const QString lower = normLower(path);
-		if (lower.endsWith(".ipk3") || lower.endsWith(".ipk7") || lower.endsWith(".iwad"))
+		if (hasExtension(qStr(path), {".ipk3", ".ipk7", ".iwad"}))
 			return true;
 
+		const QString lower = normLower(path);
 		for (const auto& w : g_discoveredEngineIWads)
 		{
 			if (normLower(w.path) == lower)
@@ -1053,7 +1064,7 @@ std::string calculateFileMD5(const std::string& filepath)
 	if (!fi.exists() || !fi.isFile())
 		return {};
 
-	const QString cacheKey = QDir::cleanPath(fi.absoluteFilePath()).replace('\\', '/').toLower();
+	const QString cacheKey = normLower(stdStr(fi.absoluteFilePath()));
 	const qint64 fileSize = fi.size();
 	const qint64 mtimeMs = fi.lastModified().isValid() ? fi.lastModified().toMSecsSinceEpoch() : 0;
 
@@ -1227,10 +1238,18 @@ ImportOutcome importGameFileIntoProfiles(const std::string& filePath, const std:
 		if (!primaryFile.isEmpty())
 		{
 			const std::string primaryStd = stdStr(primaryFile);
-			const QString md5 = qStr(calculateFileMD5(primaryStd));
+			const std::string md5Std = calculateFileMD5(primaryStd);
+			if (hasGameFilePathOrHash(existingProfiles, primaryStd, md5Std))
+			{
+				QDir(profFolder).removeRecursively();
+				out.status = ImportResult::DuplicateProfile;
+				out.message = stdStr(LStr("LAUNCHER_ERR_DUPLICATE_PROFILE", "A profile for this file already exists."));
+				return out;
+			}
+			const QString md5 = qStr(md5Std);
 			prof.isIWAD = checkIsIWADFile(primaryStd, md5);
 			const auto& db = getWadDatabase();
-			if (auto dbIt = db.find(md5.toStdString()); dbIt != db.end())
+			if (auto dbIt = db.find(md5Std); dbIt != db.end())
 			{
 				prof.title = dbIt->second.title;
 				prof.author = dbIt->second.author;
@@ -1254,6 +1273,18 @@ ImportOutcome importGameFileIntoProfiles(const std::string& filePath, const std:
 		}
 		else
 		{
+			if (extraMods.size() == 1)
+			{
+				const std::string soleModStd = stdStr(extraMods.first());
+				const std::string soleMd5 = calculateFileMD5(soleModStd);
+				if (hasGameFilePathOrHash(existingProfiles, soleModStd, soleMd5))
+				{
+					QDir(profFolder).removeRecursively();
+					out.status = ImportResult::DuplicateProfile;
+					out.message = stdStr(LStr("LAUNCHER_ERR_DUPLICATE_PROFILE", "A profile for this file already exists."));
+					return out;
+				}
+			}
 			prof.isIWAD = false;
 			prof.iwadPath = findBestDefaultIWADPath(existingProfiles);
 			enrichFromTxtSidecar(extraMods.first(), prof, true);
@@ -1263,7 +1294,13 @@ ImportOutcome importGameFileIntoProfiles(const std::string& filePath, const std:
 			prof.mods.push_back(stdStr(m));
 
 		tryExtractCoverForProfile(prof);
-		saveProfileToDisk(prof);
+		if (!saveProfileToDisk(prof))
+		{
+			QDir(profFolder).removeRecursively();
+			out.status = ImportResult::ExtractionFailed;
+			out.message = stdStr(LStr("LAUNCHER_ERR_IMPORT_SAVE", "Failed to save imported profile."));
+			return out;
+		}
 		out.status = ImportResult::Success;
 		out.createdProfile = std::move(prof);
 		return out;
@@ -1276,8 +1313,9 @@ ImportOutcome importGameFileIntoProfiles(const std::string& filePath, const std:
 		return out;
 	}
 
-	const std::string md5 = calculateFileMD5(filePath);
-	if (hasGameFilePathOrHash(existingProfiles, filePath, md5))
+	const std::string absFilePath = stdStr(fi.absoluteFilePath());
+	const std::string md5 = calculateFileMD5(absFilePath);
+	if (hasGameFilePathOrHash(existingProfiles, absFilePath, md5))
 	{
 		out.status = ImportResult::DuplicateProfile;
 		out.message = stdStr(LStr("LAUNCHER_ERR_DUPLICATE_PROFILE", "A profile for this file already exists."));
@@ -1296,10 +1334,10 @@ ImportOutcome importGameFileIntoProfiles(const std::string& filePath, const std:
 	else
 	{
 		prof.title = stdStr(fi.completeBaseName());
-		prof.isIWAD = checkIsIWADFile(filePath, qStr(md5));
+		prof.isIWAD = checkIsIWADFile(absFilePath, qStr(md5));
 		for (const auto& w : g_discoveredEngineIWads)
 		{
-			if (normLower(w.path) == normLower(filePath) && !w.name.empty())
+			if (normLower(w.path) == normLower(absFilePath) && !w.name.empty())
 			{
 				prof.title = w.name;
 				break;
@@ -1316,7 +1354,7 @@ ImportOutcome importGameFileIntoProfiles(const std::string& filePath, const std:
 	const QString profFolder = QFileInfo(qStr(prof.filePath)).absolutePath();
 	QString storedPath = fi.absoluteFilePath();
 
-	if (!normLower(filePath).startsWith(normLower(LauncherConst::PROFILE_DIR) + "/"))
+	if (!normLower(absFilePath).startsWith(normLower(LauncherConst::PROFILE_DIR) + "/"))
 	{
 		const QString copyTarget = QDir(profFolder).filePath(fi.fileName());
 		if (QFile::copy(fi.absoluteFilePath(), copyTarget))
@@ -1337,7 +1375,13 @@ ImportOutcome importGameFileIntoProfiles(const std::string& filePath, const std:
 	}
 
 	tryExtractCoverForProfile(prof);
-	saveProfileToDisk(prof);
+	if (!saveProfileToDisk(prof))
+	{
+		QDir(profFolder).removeRecursively();
+		out.status = ImportResult::ExtractionFailed;
+		out.message = stdStr(LStr("LAUNCHER_ERR_IMPORT_SAVE", "Failed to save imported profile."));
+		return out;
+	}
 	out.status = ImportResult::Success;
 	out.createdProfile = std::move(prof);
 	return out;
@@ -1408,6 +1452,7 @@ std::vector<DiscoveredIWadCandidate> scanUnregisteredIWADs(
 		const bool isKnownIWad = (dbIt != db.end() && dbIt->second.isIWAD);
 		const QString lowerName = fi.fileName().toLower();
 		const bool looksLikeIWad = !engineName.empty() || isKnownIWad ||
+			lowerName.endsWith(".iwad") ||
 			lowerName.endsWith(".ipk3") ||
 			lowerName.endsWith(".ipk7") ||
 			isWadHeaderIWAD(absStd);
@@ -1457,9 +1502,13 @@ std::vector<DiscoveredIWadCandidate> scanUnregisteredIWADs(
 		if (dirPath.isEmpty() || !QFileInfo::exists(dirPath))
 			continue;
 		const QDir dir(dirPath);
-		const QStringList entries = dir.entryList({"*.wad", "*.WAD", "*.ipk3", "*.IPK3", "*.ipk7", "*.IPK7", "*.iwad", "*.IWAD"}, QDir::Files);
+		const QStringList entries = dir.entryList(QDir::Files);
 		for (const QString& file : entries)
-			considerPath(dir.filePath(file), {});
+		{
+			const QString lowerFile = file.toLower();
+			if (hasExtension(lowerFile, {".wad", ".ipk3", ".ipk7", ".iwad"}))
+				considerPath(dir.filePath(file), {});
+		}
 	}
 
 	return discovered;

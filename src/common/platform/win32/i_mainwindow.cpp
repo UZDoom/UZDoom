@@ -122,10 +122,7 @@ void MainWindow::RestoreConView()
 // Shows an error message, preferably in the main window, but it can use a normal message box too.
 void MainWindow::ShowErrorPane(const char* text)
 {
-	if (StartWindow)	// Ensure that the network pane is hidden.
-	{
-		I_NetDone();
-	}
+	I_NetDone();
 
 	// PrintStr(text);
 

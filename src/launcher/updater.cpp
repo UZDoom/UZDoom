@@ -114,7 +114,7 @@ namespace
 
 	bool isVersionInvalid(const VersionInfo& ver)
 	{
-		return ver.major == USHRT_MAX || ver.minor == USHRT_MAX || ver.revision == USHRT_MAX || ver == GetCurrentVersionForUpdater();
+		return ver.major == USHRT_MAX || ver.minor == USHRT_MAX || ver.revision == USHRT_MAX || !(ver > GetCurrentVersionForUpdater());
 	}
 
 	QWidget* makeUpdaterIconHeader(QDialog* dlg, QStyle::StandardPixmap iconType, const QString& text, bool bold = false)
@@ -213,7 +213,7 @@ namespace
 		virtual void acceptData(TArrayView<std::byte> data) = 0;
 		virtual void onError(const char* err) { (void)err; }
 
-		CurlEasy(const char* userAgent, bool useProgress, const std::atomic<bool>* extCancel)
+		CurlEasy(const char* userAgent, bool useProgress, const std::atomic<bool>* extCancel, bool failOnError = false)
 			: externalCancel(extCancel)
 		{
 			curl = curl_easy_init();
@@ -236,6 +236,11 @@ namespace
 			curl_easy_setopt(curl, CURLOPT_USERAGENT, userAgent);
 			curl_easy_setopt(curl, CURLOPT_SSL_OPTIONS, CURLSSLOPT_NATIVE_CA);
 			curl_easy_setopt(curl, CURLOPT_FOLLOWLOCATION, 1L);
+			if (failOnError)
+				curl_easy_setopt(curl, CURLOPT_FAILONERROR, 1L);
+			curl_easy_setopt(curl, CURLOPT_CONNECTTIMEOUT, 15L);
+			curl_easy_setopt(curl, CURLOPT_LOW_SPEED_LIMIT, 1L);
+			curl_easy_setopt(curl, CURLOPT_LOW_SPEED_TIME, 30L);
 
 			if (updater_debug_throttle_download)
 			{
@@ -338,7 +343,7 @@ namespace
 
 	public:
 		explicit JsonDownloader(const std::atomic<bool>* cancelFlag)
-			: CurlEasy(GAMENAME " Updater", false, cancelFlag)
+			: CurlEasy(GAMENAME " Updater", false, cancelFlag, false)
 		{
 		}
 
@@ -406,7 +411,7 @@ namespace
 
 	public:
 		MemoryDownloader(const std::atomic<bool>* cancelFlag, std::function<void(uint64_t, uint64_t)> onProgressCb)
-			: CurlEasy(GAMENAME " Updater", true, cancelFlag)
+			: CurlEasy(GAMENAME " Updater", true, cancelFlag, true)
 			, progressCb(std::move(onProgressCb))
 		{
 		}
@@ -620,7 +625,15 @@ namespace
 				replacedUpdaterExe = true;
 
 			const FileSys::FileData data = zip->Read(i);
+			const qint64 expectedBytes = static_cast<qint64>(zip->Length(i));
 			const qint64 totalBytes = static_cast<qint64>(data.size());
+			if (expectedBytes >= 0 && totalBytes != expectedBytes)
+			{
+				outFile.close();
+				cleanupStaging();
+				outError = stdStr(formatLocalizedWithArgs("UPDATER_ZIP_ERROR", "Failed to extract zip, error: '{}' while writing file '{}'", std::string("truncated or corrupt archive entry"), stdStr(newPath)));
+				return false;
+			}
 			qint64 written = 0;
 			while (written < totalBytes)
 			{
@@ -686,9 +699,23 @@ namespace
 	{
 #ifdef _WIN32
 		const QString progDirStr = QString::fromUtf8(::progdir.GetChars());
-		const QString updaterPathQt = QDir::toNativeSeparators(QDir(progDirStr).filePath("updater.exe"));
+		const QDir progQDir(progDirStr);
+		const QString updaterPathQt = QDir::toNativeSeparators(progQDir.filePath("updater.exe"));
+		auto cleanupStagedUpdate = [&]()
+		{
+			const QString backupUpdater = progQDir.filePath("update_backup/updater.exe");
+			if (QFileInfo::exists(backupUpdater))
+			{
+				QFile::remove(updaterPathQt);
+				QFile::rename(backupUpdater, updaterPathQt);
+			}
+			QDir(progQDir.filePath("update")).removeRecursively();
+			QDir(progQDir.filePath("update_backup")).removeRecursively();
+		};
+
 		if (!QFileInfo::exists(updaterPathQt))
 		{
+			cleanupStagedUpdate();
 			outError = "Could not find updater.exe in application directory.";
 			return false;
 		}
@@ -711,12 +738,20 @@ namespace
 			execArgv.push_back(arg.c_str());
 		execArgv.push_back(nullptr);
 
+		const FString prevCachedUpdate = *updater_cached_update;
+		const FString prevLastCheck = *updater_last_update_check;
 		updater_cached_update = "";
 		updater_last_update_check = std::to_string(getCurrentDate()).c_str();
 		M_SaveDefaults(nullptr);
 		CloseWidgetResources();
 
 		_wexecv(updaterFilenameW.c_str(), execArgv.data());
+
+		// _wexecv only returns on failure; clean up staged update files and restore saved state.
+		cleanupStagedUpdate();
+		updater_cached_update = prevCachedUpdate.GetChars();
+		updater_last_update_check = prevLastCheck.GetChars();
+		M_SaveDefaults(nullptr);
 
 		outError = "Failed to launch updater.exe.";
 		return false;
@@ -1107,11 +1142,14 @@ LauncherUpdater::FetchOutcome LauncherUpdater::fetchUpdateInfoInteractive(QWidge
 	layout->addWidget(bar);
 	layout->addLayout(btnRow);
 
+	bool userCancelled = false;
 	QObject::connect(btnCancel, &QPushButton::clicked, &dlg, [&]() {
+		userCancelled = true;
 		cancelFlag->store(true, std::memory_order_relaxed);
 		btnCancel->setEnabled(false);
 	});
 	QObject::connect(&dlg, &QDialog::rejected, &dlg, [&]() {
+		userCancelled = true;
 		cancelFlag->store(true, std::memory_order_relaxed);
 	});
 
@@ -1123,9 +1161,12 @@ LauncherUpdater::FetchOutcome LauncherUpdater::fetchUpdateInfoInteractive(QWidge
 	}));
 
 	thread->start();
-	dlg.exec();
+	const int dlgRes = dlg.exec();
 	cancelFlag->store(true, std::memory_order_relaxed);
 	thread->wait();
+
+	if (userCancelled || dlgRes != QDialog::Accepted)
+		outcome.cancelled = true;
 
 	return outcome;
 }
@@ -1337,8 +1378,8 @@ void LauncherUpdater::openFailedUpdateMenu(const std::string& err, bool checker,
 		updater_check_updates = false;
 		M_SaveDefaults(nullptr);
 		notifySettingsChanged();
+		hideBanner();
 	}
-	hideBanner();
 }
 
 void LauncherUpdater::openReleaseNotesDialog(QWidget* dialogParent) const
@@ -1371,10 +1412,17 @@ void LauncherUpdater::openReleaseNotesDialog(QWidget* dialogParent) const
 		md += LStr("NOTES_EMPTY", "No description provided.") + "\n\n";
 
 	const QString releaseUrl = QString("https://github.com/UZDoom/UZDoom/releases/tag/%1").arg(versionStr);
+	const QString releaseLink = QString("[%1](%1)").arg(releaseUrl);
+	QString detailsLine = LStr("NOTES_DETAILS", "For more details see: %s");
+	if (detailsLine.contains(QStringLiteral("%s")))
+		detailsLine.replace(QStringLiteral("%s"), releaseLink);
+	else
+		detailsLine += QStringLiteral(" ") + releaseLink;
 	md += "---\n\n";
-	md += QString("**GitHub Release Page:** [%1](%1)\n\n").arg(releaseUrl);
+	md += detailsLine + "\n\n";
 	if (currentUpdate->releaseNotes.size() <= 1 && notesText.length() < 120)
-		md += "*Note: The update manifest only carries the short release commit summary; open the GitHub link above for the full changelog.*";
+		md += QString("*%1*").arg(LStr("LAUNCHER_UPDATER_SHORT_NOTES_HINT",
+			"Note: The update manifest only carries the short release commit summary; open the link above for the full changelog."));
 
 	view->setMarkdown(md);
 	layout->addWidget(view, 1);
@@ -1414,7 +1462,8 @@ bool LauncherUpdater::ensureFullUpdateInfo(QWidget* dialogParent)
 		return false;
 	}
 
-	if (!outcome.info.has_value())
+	if (!outcome.info.has_value()
+		|| (!updater_debug_always_update && !(outcome.info->version > GetCurrentVersionForUpdater())))
 	{
 		updater_cached_update = "";
 		M_SaveDefaults(nullptr);
@@ -1450,10 +1499,8 @@ void LauncherUpdater::openUpdateMenu(bool isAutoUpdate, QWidget* dialogParent)
 
 	auto* layout = new QVBoxLayout(&dlg);
 	layout->setSpacing(12);
-	const QString versionLabel = QString("%1 %2 %3")
-		.arg(GAMENAME)
-		.arg(QString::fromUtf8(FString(currentUpdate->version).GetChars()))
-		.arg("is available.");
+	const QString versionLabel = LStr("LAUNCHER_UPDATE_VERSION_AVAILABLE", "%1 %2 is available.")
+		.arg(GAMENAME, QString::fromUtf8(FString(currentUpdate->version).GetChars()));
 	layout->addWidget(makeUpdaterIconHeader(&dlg, QStyle::SP_MessageBoxInformation, versionLabel, true));
 
 	auto* btnRow = new QHBoxLayout();
@@ -1615,11 +1662,14 @@ void LauncherUpdater::startUpdate(QWidget* dialogParent)
 	std::string downloadErr;
 	std::vector<std::byte> downloadedData;
 
+	bool userCancelled = false;
 	QObject::connect(btnCancel, &QPushButton::clicked, &dlg, [&]() {
+		userCancelled = true;
 		cancelFlag->store(true, std::memory_order_relaxed);
 		btnCancel->setEnabled(false);
 	});
 	QObject::connect(&dlg, &QDialog::rejected, &dlg, [&]() {
+		userCancelled = true;
 		cancelFlag->store(true, std::memory_order_relaxed);
 	});
 
@@ -1633,15 +1683,12 @@ void LauncherUpdater::startUpdate(QWidget* dialogParent)
 					const int val = std::clamp(static_cast<int>((static_cast<double>(dlNow) / static_cast<double>(dlTotal)) * 1000.0), 0, 1000);
 					progressBar->setValue(val);
 					lblStatus->setText(QString("%1, %2 / %3")
-						.arg(LStr("TXT_DOWNLOADING", "Downloading"))
-						.arg(shortenByteSize(dlNow))
-						.arg(shortenByteSize(dlTotal)));
+						.arg(LStr("TXT_DOWNLOADING", "Downloading"), shortenByteSize(dlNow), shortenByteSize(dlTotal)));
 				}
 				else
 				{
 					lblStatus->setText(QString("%1, %2")
-						.arg(LStr("TXT_DOWNLOADING", "Downloading"))
-						.arg(shortenByteSize(dlNow)));
+						.arg(LStr("TXT_DOWNLOADING", "Downloading"), shortenByteSize(dlNow)));
 				}
 			}, Qt::QueuedConnection);
 		});
@@ -1653,11 +1700,11 @@ void LauncherUpdater::startUpdate(QWidget* dialogParent)
 	}));
 
 	thread->start();
-	dlg.exec();
+	const int dlgRes = dlg.exec();
 	cancelFlag->store(true, std::memory_order_relaxed);
 	thread->wait();
 
-	if (wasCancelled)
+	if (wasCancelled || userCancelled || dlgRes != QDialog::Accepted)
 	{
 		QMessageBox::information(
 			parent,

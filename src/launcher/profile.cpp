@@ -87,6 +87,28 @@ namespace
 #endif
 	}
 
+	bool isCrossPlatformAbsolute(const QString& normPath)
+	{
+		if (QFileInfo(normPath).isAbsolute())
+			return true;
+		// Recognize Windows drive-letter (C:/...) and UNC (//server/...) paths on POSIX too.
+		if (normPath.size() >= 3 && normPath[0].isLetter() && normPath[1] == QLatin1Char(':') && normPath[2] == QLatin1Char('/'))
+			return true;
+		if (normPath.startsWith(QStringLiteral("//")))
+			return true;
+		return false;
+	}
+
+	QString pathDedupKey(const QString& path)
+	{
+		const QString norm = normalizeSlash(path);
+#ifdef Q_OS_WIN
+		return norm.toLower();
+#else
+		return norm;
+#endif
+	}
+
 	bool isPathInsideBase(const QString& normPath, const QString& normBase, QString& outRelative)
 	{
 		if (normPath.isEmpty() || normBase.isEmpty())
@@ -178,9 +200,9 @@ namespace
 		if (auto expanded = expandToken(QStringLiteral("${EXEC_DIR}"), LauncherConst::EXEC_DIR))
 			return *expanded;
 
-		if (!QFileInfo(norm).isAbsolute())
+		if (!isCrossPlatformAbsolute(norm))
 		{
-			if (keepBareRelative && !norm.contains('/'))
+			if (keepBareRelative)
 			{
 				if (!profFolder.isEmpty())
 				{
@@ -210,12 +232,16 @@ namespace
 
 	void resolveProfilePathsInPlace(Profile& profile, const QString& profFolder)
 	{
-		auto resolveField = [&](std::string& field, bool keepBareRelative = false)
+		auto resolveField = [&](std::string& field, bool keepRelative = false)
 		{
 			if (!field.empty())
-				field = fromStoredPath(qStr(field), profFolder, keepBareRelative);
+				field = fromStoredPath(qStr(field), profFolder, keepRelative);
 		};
 
+		resolveField(profile.configFilePath);
+		resolveField(profile.saveDirPath);
+		resolveField(profile.screenshotDirPath);
+		resolveField(profile.demoDirPath);
 		resolveField(profile.coverImagePath);
 		resolveField(profile.iwadPath);
 		resolveField(profile.pwadPath);
@@ -225,10 +251,6 @@ namespace
 			resolveField(dmod);
 		resolveField(profile.selectedLaunchSave, true);
 		resolveField(profile.selectedLaunchDemoPlayback, true);
-		resolveField(profile.configFilePath);
-		resolveField(profile.saveDirPath);
-		resolveField(profile.screenshotDirPath);
-		resolveField(profile.demoDirPath);
 	}
 
 	QJsonObject serializeProfileToJson(const Profile& profile, const QString& profFolder)
@@ -294,6 +316,7 @@ namespace
 		obj["hostTicRate"] = profile.hostTicRate;
 		obj["hostExtraTic"] = profile.hostExtraTic;
 		obj["hostGamemode"] = profile.hostGamemode;
+		obj["hostAltDeathmatch"] = profile.hostAltDeathmatch;
 		obj["hostTeam"] = profile.hostTeam;
 
 		obj["configFilePath"] = toStoredPath(profile.configFilePath, profFolder);
@@ -302,9 +325,12 @@ namespace
 		obj["demoDirPath"] = toStoredPath(profile.demoDirPath, profFolder);
 
 		obj["fullscreen"] = profile.fullscreen;
+		obj["vsync"] = profile.vsync;
 		obj["loadSupportWads"] = profile.loadSupportWads;
 		obj["disableAutoload"] = profile.disableAutoload;
 		obj["enableDynLights"] = profile.enableDynLights;
+		obj["enableShadowmaps"] = profile.enableShadowmaps;
+		obj["fileLoadStrictness"] = profile.fileLoadStrictness;
 		obj["renderingAPI"] = profile.renderingAPI;
 		obj["extraLights"] = profile.extraLights;
 		obj["extraBrightmaps"] = profile.extraBrightmaps;
@@ -346,10 +372,13 @@ namespace
 		const QString normNew = normalizeSlash(newBase);
 		if (!normOld.isEmpty())
 		{
-			if (normOrig.compare(normOld, Qt::CaseInsensitive) == 0)
+			const Qt::CaseSensitivity cs = isCrossPlatformAbsolute(normOld) && normOld.size() >= 3 && normOld[1] == QLatin1Char(':')
+				? Qt::CaseInsensitive
+				: pathCaseSensitivity();
+			if (normOrig.compare(normOld, cs) == 0)
 				return normNew;
 			const QString oldPrefix = normOld.endsWith('/') ? normOld : (normOld + '/');
-			if (normOrig.startsWith(oldPrefix, Qt::CaseInsensitive))
+			if (normOrig.startsWith(oldPrefix, cs))
 			{
 				const QString rel = normOrig.mid(oldPrefix.size());
 				return normNew.endsWith('/') ? (normNew + rel) : (normNew + '/' + rel);
@@ -458,10 +487,29 @@ std::string sanitizeFolderName(const std::string& name)
 	QString clean = qStr(name).trimmed();
 	clean.replace(QRegularExpression("[<>:\"/\\\\|?*\\x00-\\x1F]"), "_");
 	clean.replace(QRegularExpression("\\s+"), "_");
-	while (clean.endsWith('.'))
+	while (clean.startsWith('.') || clean.startsWith(' '))
+		clean.remove(0, 1);
+	while (clean.endsWith('.') || clean.endsWith(' '))
+		clean.chop(1);
+	if (clean.size() > 120)
+		clean.truncate(120);
+	while (clean.endsWith('.') || clean.endsWith(' '))
 		clean.chop(1);
 	if (clean.isEmpty())
-		clean = "profile";
+		clean = QStringLiteral("profile");
+
+	// Guard Windows reserved device names (CON, PRN, AUX, NUL, COM1-9, LPT1-9).
+	const QString baseUpper = clean.section('.', 0, 0).toUpper();
+	static const QSet<QString> kReservedNames = {
+		QStringLiteral("CON"), QStringLiteral("PRN"), QStringLiteral("AUX"), QStringLiteral("NUL"),
+		QStringLiteral("COM1"), QStringLiteral("COM2"), QStringLiteral("COM3"), QStringLiteral("COM4"),
+		QStringLiteral("COM5"), QStringLiteral("COM6"), QStringLiteral("COM7"), QStringLiteral("COM8"), QStringLiteral("COM9"),
+		QStringLiteral("LPT1"), QStringLiteral("LPT2"), QStringLiteral("LPT3"), QStringLiteral("LPT4"),
+		QStringLiteral("LPT5"), QStringLiteral("LPT6"), QStringLiteral("LPT7"), QStringLiteral("LPT8"), QStringLiteral("LPT9")
+	};
+	if (kReservedNames.contains(baseUpper))
+		clean.prepend(QLatin1Char('_'));
+
 	return stdStr(clean);
 }
 
@@ -490,12 +538,12 @@ QStringList Profile::buildLaunchArguments(LaunchTargetMode mode, const std::stri
 
 	QStringList seenFiles;
 	if (!normIwad.isEmpty())
-		seenFiles << normIwad.toLower();
+		seenFiles << pathDedupKey(normIwad);
 
 	if (!isIWAD && !pwadPath.empty())
 	{
 		const QString pwad = qStr(pwadPath);
-		const QString key = normalizeSlash(pwad).toLower();
+		const QString key = pathDedupKey(pwad);
 		if (!seenFiles.contains(key))
 		{
 			appendModArg(args, pwad);
@@ -507,7 +555,7 @@ QStringList Profile::buildLaunchArguments(LaunchTargetMode mode, const std::stri
 	for (const auto& dm : disabledMods)
 	{
 		if (!dm.empty())
-			disabledSet.insert(normalizeSlash(qStr(dm)).toLower());
+			disabledSet.insert(pathDedupKey(qStr(dm)));
 	}
 
 	for (const auto& m : mods)
@@ -515,7 +563,7 @@ QStringList Profile::buildLaunchArguments(LaunchTargetMode mode, const std::stri
 		if (m.empty())
 			continue;
 		const QString modQ = qStr(m);
-		const QString key = normalizeSlash(modQ).toLower();
+		const QString key = pathDedupKey(modQ);
 		if (disabledSet.contains(key))
 			continue;
 		if (!seenFiles.contains(key))
@@ -533,8 +581,12 @@ QStringList Profile::buildLaunchArguments(LaunchTargetMode mode, const std::stri
 		args << "-shotdir" << qStr(screenshotDirPath);
 
 	args << "+set" << "vid_fullscreen" << (fullscreen ? "1" : "0");
+	args << "+set" << "vid_vsync" << (vsync ? "1" : "0");
 	args << "+set" << "i_loadsupportwad" << (loadSupportWads ? "1" : "0");
 	args << "+set" << "r_dynlights" << (enableDynLights ? "1" : "0");
+	args << "+set" << "gl_light_shadowmap" << (enableShadowmaps ? "1" : "0");
+	if (fileLoadStrictness >= 0)
+		args << "+set" << "i_exit_on_not_found" << QString::number(fileLoadStrictness);
 
 	if (disableAutoload)
 		args << "-noautoload";
@@ -629,10 +681,10 @@ QStringList Profile::buildLaunchArguments(LaunchTargetMode mode, const std::stri
 			args << "-coop";
 			break;
 		case 2:
-			args << "-deathmatch";
+			args << (hostAltDeathmatch ? "-altdeath" : "-deathmatch");
 			break;
 		case 3:
-			args << "-deathmatch";
+			args << (hostAltDeathmatch ? "-altdeath" : "-deathmatch");
 			args << "+set" << "teamplay" << "1";
 			args << "+set" << "team" << QString::number(std::clamp(hostTeam, 0, 255));
 			break;
@@ -684,7 +736,10 @@ QStringList Profile::buildLaunchArguments(LaunchTargetMode mode, const std::stri
 		}
 		else if (hostGamemode == 2 || hostGamemode == 3)
 		{
-			hostDefaultDmflags |= DF_WEAPONS_STAY | DF_ITEMS_RESPAWN;
+			if (hostAltDeathmatch)
+				hostDefaultDmflags |= DF_ITEMS_RESPAWN;
+			else
+				hostDefaultDmflags |= DF_WEAPONS_STAY | DF_ITEMS_RESPAWN;
 		}
 		else if (hostGamemode == 4)
 		{
@@ -805,12 +860,27 @@ LauncherConfig loadLauncherConfig()
 		cfg.language = stdStr(obj["language"].toString());
 	if (obj.contains("theme"))
 		cfg.theme = stdStr(obj["theme"].toString());
+	if (obj.contains("banner"))
+	{
+		const QString rawBanner = obj["banner"].toString();
+		if (rawBanner.startsWith(QStringLiteral("file:"), Qt::CaseInsensitive))
+		{
+			const std::string resolved = fromStoredPath(rawBanner.mid(5), {});
+			cfg.banner                 = resolved.empty() ? std::string() : ("file:" + resolved);
+		}
+		else
+		{
+			cfg.banner = stdStr(rawBanner);
+		}
+	}
 	if (obj.contains("hideWhilePlaying"))
 		cfg.hideWhilePlaying = obj["hideWhilePlaying"].toBool(false);
 	if (obj.contains("showReleaseNotes"))
 		cfg.showReleaseNotes = obj["showReleaseNotes"].toBool(true);
 	if (obj.contains("maximized"))
 		cfg.maximized = obj["maximized"].toBool(false);
+	if (obj.contains("dontAskAgain"))
+		cfg.dontAskAgain = obj["dontAskAgain"].toBool(false);
 	if (obj.contains("lastSelectedRow"))
 		cfg.lastSelectedRow = obj["lastSelectedRow"].toInt(0);
 	if (obj.contains("sortColumn"))
@@ -832,9 +902,15 @@ void saveLauncherConfig(const LauncherConfig& cfg)
 	QJsonObject obj;
 	obj["language"] = qStr(cfg.language);
 	obj["theme"] = qStr(cfg.theme);
+	const QString bannerQ = qStr(cfg.banner);
+	if (bannerQ.startsWith(QStringLiteral("file:"), Qt::CaseInsensitive))
+		obj["banner"] = QStringLiteral("file:") + toStoredPath(stdStr(bannerQ.mid(5)), {});
+	else
+		obj["banner"] = bannerQ;
 	obj["hideWhilePlaying"] = cfg.hideWhilePlaying;
 	obj["showReleaseNotes"] = cfg.showReleaseNotes;
 	obj["maximized"] = cfg.maximized;
+	obj["dontAskAgain"] = cfg.dontAskAgain;
 	obj["lastSelectedRow"] = cfg.lastSelectedRow;
 	obj["sortColumn"] = cfg.sortColumn;
 	obj["sortDescending"] = cfg.sortDescending;
@@ -995,6 +1071,13 @@ bool loadProfileFromDisk(const std::string& path, Profile& p)
 	p.hostTicRate = obj["hostTicRate"].toInt(0);
 	p.hostExtraTic = obj["hostExtraTic"].toBool(false);
 	p.hostGamemode = obj["hostGamemode"].toInt(0);
+	p.hostAltDeathmatch = obj["hostAltDeathmatch"].toBool(false);
+	if (p.hostGamemode == 4)
+	{
+		// Migrate legacy standalone Alt Deathmatch mode index to Deathmatch + Alt Deathmatch toggle.
+		p.hostGamemode = 2;
+		p.hostAltDeathmatch = true;
+	}
 	p.hostTeam = obj["hostTeam"].toInt(255);
 
 	p.configFilePath = fromStoredPath(obj["configFilePath"].toString(), profFolder);
@@ -1003,9 +1086,12 @@ bool loadProfileFromDisk(const std::string& path, Profile& p)
 	p.demoDirPath = fromStoredPath(obj["demoDirPath"].toString(), profFolder);
 
 	p.fullscreen = obj["fullscreen"].toBool(true);
+	p.vsync = obj["vsync"].toBool(false);
 	p.loadSupportWads = obj["loadSupportWads"].toBool(true);
 	p.disableAutoload = obj["disableAutoload"].toBool(false);
 	p.enableDynLights = obj["enableDynLights"].toBool(true);
+	p.enableShadowmaps = obj["enableShadowmaps"].toBool(false);
+	p.fileLoadStrictness = obj["fileLoadStrictness"].toInt(-1);
 	p.renderingAPI = obj["renderingAPI"].toInt(1);
 	p.extraLights = obj["extraLights"].toBool(false);
 	p.extraBrightmaps = obj["extraBrightmaps"].toBool(false);
@@ -1152,7 +1238,10 @@ bool cloneProfile(const Profile& source, const std::string& newTitle, Profile& o
 	}
 
 	if (!copyDirectoryRecursively(srcFolder, destFolder, true))
+	{
+		QDir(destFolder).removeRecursively();
 		return false;
+	}
 
 	QDir destDir(destFolder);
 	for (const QString& oldMeta : destDir.entryList({"*.Uzdoomprofile", "*.uzdoomprofile", "*.json"}, QDir::Files))
@@ -1160,7 +1249,12 @@ bool cloneProfile(const Profile& source, const std::string& newTitle, Profile& o
 
 	outClone.filePath = stdStr(destDir.filePath("profile.Uzdoomprofile"));
 	applyProfilePathMapping(outClone, stdStr(srcFolder), stdStr(destFolder));
-	return saveProfileToDisk(outClone);
+	if (!saveProfileToDisk(outClone))
+	{
+		QDir(destFolder).removeRecursively();
+		return false;
+	}
+	return true;
 }
 
 bool deleteProfileDirectory(const Profile& profile)
@@ -1172,7 +1266,8 @@ bool deleteProfileDirectory(const Profile& profile)
 	const QString normFolder = normalizeSlash(folder);
 	const QString normRoot = normalizeSlash(qStr(LauncherConst::PROFILE_DIR));
 
-	if (!normFolder.startsWith(normRoot + "/", Qt::CaseInsensitive) || normFolder == normRoot)
+	const Qt::CaseSensitivity cs = pathCaseSensitivity();
+	if (!normFolder.startsWith(normRoot + "/", cs) || normFolder.compare(normRoot, cs) == 0)
 		return QFile::remove(qStr(profile.filePath));
 
 	return QDir(folder).removeRecursively();
@@ -1404,13 +1499,16 @@ bool exportProfileToZip(const Profile& profile, const std::string& destZipPath, 
 		}
 	}
 
-	if (!mz_zip_writer_finalize_archive(&zip))
+	if (ok && !mz_zip_writer_finalize_archive(&zip))
 	{
 		ok = false;
 		if (errOut.empty())
 			errOut = stdStr(LStr("LAUNCHER_ERR_EXPORT_FINALIZE", "Failed to finalize archive."));
 	}
 	mz_zip_writer_end(&zip);
+	destFile.close();
+	if (!ok)
+		QFile::remove(qStr(destZipPath));
 	return ok;
 }
 
@@ -1467,14 +1565,19 @@ bool importProfileFromZip(const std::string& zipPath, Profile& outProfile, std::
 		return false;
 	}
 
+	QJsonObject rawMetaObj;
 	{
 		QFile checkMeta(foundMeta);
-		if (!checkMeta.open(QIODevice::ReadOnly) || !QJsonDocument::fromJson(checkMeta.readAll()).isObject())
+		const QJsonDocument doc = checkMeta.open(QIODevice::ReadOnly)
+			? QJsonDocument::fromJson(checkMeta.readAll())
+			: QJsonDocument();
+		if (!doc.isObject())
 		{
 			QDir(destFolder).removeRecursively();
 			errOut = stdStr(LStr("LAUNCHER_ERR_IMPORT_INVALID_META", "Profile metadata inside archive is invalid."));
 			return false;
 		}
+		rawMetaObj = doc.object();
 	}
 
 	QString finalBaseDir = QFileInfo(destFolder).absoluteFilePath();
@@ -1513,13 +1616,6 @@ bool importProfileFromZip(const std::string& zipPath, Profile& outProfile, std::
 		finalMetaPath = QDir(finalBaseDir).filePath(QFileInfo(foundMeta).fileName());
 	}
 
-	if (!loadProfileFromDisk(stdStr(finalMetaPath), outProfile))
-	{
-		QDir(finalBaseDir).removeRecursively();
-		errOut = stdStr(LStr("LAUNCHER_ERR_IMPORT_INVALID_META", "Profile metadata inside archive is invalid."));
-		return false;
-	}
-
 	auto inferOldProfileDir = [&]() -> QString
 	{
 		const QString cleanFinalBase = normalizeSlash(finalBaseDir);
@@ -1527,57 +1623,63 @@ bool importProfileFromZip(const std::string& zipPath, Profile& outProfile, std::
 		const QString cleanRootDir = normalizeSlash(qStr(LauncherConst::ROOT_DIR));
 		const QString cleanProfileRoot = normalizeSlash(qStr(LauncherConst::PROFILE_DIR));
 
-		auto isInsideFinalBase = [&](const std::string& pathStr) -> bool
+		auto isInsideFinalBase = [&](const QString& norm) -> bool
 		{
-			if (pathStr.empty())
+			if (norm.isEmpty())
 				return false;
-			const QString norm = normalizeSlash(qStr(pathStr));
 			return norm.compare(cleanFinalBase, pathCaseSensitivity()) == 0
 				|| norm.startsWith(cleanFinalBase + QLatin1Char('/'), pathCaseSensitivity());
 		};
 
-		// Modern portable exports already resolve their profile-local paths inside finalBaseDir.
-		if (isInsideFinalBase(outProfile.saveDirPath)
-			|| isInsideFinalBase(outProfile.screenshotDirPath)
-			|| isInsideFinalBase(outProfile.demoDirPath)
-			|| isInsideFinalBase(outProfile.configFilePath)
-			|| isInsideFinalBase(outProfile.coverImagePath))
+		auto parentIfLocalCandidate = [&](const QString& rawPath, const QString& expectedLeaf, bool requireExists) -> QString
 		{
-			return {};
-		}
-
-		auto parentIfLocalCandidate = [&](const std::string& pathStr, const QString& expectedLeaf) -> QString
-		{
-			if (pathStr.empty())
+			const QString trimmed = rawPath.trimmed();
+			if (trimmed.isEmpty())
 				return {};
-			const QString norm = normalizeSlash(qStr(pathStr));
-			const QFileInfo fi(norm);
-			if (!expectedLeaf.isEmpty() && fi.fileName().compare(expectedLeaf, Qt::CaseInsensitive) != 0)
+			const QString norm = normalizeSlash(trimmed);
+			if (isInsideFinalBase(norm) || !isCrossPlatformAbsolute(norm))
 				return {};
-			const QString parent = normalizeSlash(fi.absolutePath());
+			const int lastSlash = norm.lastIndexOf(QLatin1Char('/'));
+			if (lastSlash <= 0)
+				return {};
+			const QString leaf = norm.mid(lastSlash + 1);
+			if (!expectedLeaf.isEmpty() && leaf.compare(expectedLeaf, Qt::CaseInsensitive) != 0)
+				return {};
+			const QString parent = norm.left(lastSlash);
 			if (parent.isEmpty()
 				|| (!cleanExecDir.isEmpty() && parent.compare(cleanExecDir, pathCaseSensitivity()) == 0)
 				|| (!cleanRootDir.isEmpty() && parent.compare(cleanRootDir, pathCaseSensitivity()) == 0)
 				|| (!cleanProfileRoot.isEmpty() && parent.compare(cleanProfileRoot, pathCaseSensitivity()) == 0))
 				return {};
-			// Only treat as an old profile root if the extracted archive actually contains that leaf.
-			if (!QFileInfo::exists(QDir(finalBaseDir).filePath(fi.fileName())))
+			if (requireExists && !QFileInfo::exists(QDir(finalBaseDir).filePath(leaf)))
 				return {};
 			return parent;
 		};
-		if (const QString d = parentIfLocalCandidate(outProfile.saveDirPath, QStringLiteral("saves")); !d.isEmpty())
+
+		// Inspect the raw metadata BEFORE loadProfileFromDisk()'s self-healing rewrote existing paths to finalBaseDir.
+		if (const QString d = parentIfLocalCandidate(rawMetaObj["saveDirPath"].toString(), QStringLiteral("saves"), false); !d.isEmpty())
 			return d;
-		if (const QString d = parentIfLocalCandidate(outProfile.screenshotDirPath, QStringLiteral("screenshots")); !d.isEmpty())
+		if (const QString d = parentIfLocalCandidate(rawMetaObj["screenshotDirPath"].toString(), QStringLiteral("screenshots"), false); !d.isEmpty())
 			return d;
-		if (const QString d = parentIfLocalCandidate(outProfile.demoDirPath, QStringLiteral("demos")); !d.isEmpty())
+		if (const QString d = parentIfLocalCandidate(rawMetaObj["demoDirPath"].toString(), QStringLiteral("demos"), false); !d.isEmpty())
 			return d;
-		if (const QString d = parentIfLocalCandidate(outProfile.configFilePath, QString()); !d.isEmpty())
+		if (const QString d = parentIfLocalCandidate(rawMetaObj["configFilePath"].toString(), QStringLiteral("uzdoom.ini"), false); !d.isEmpty())
 			return d;
-		if (const QString d = parentIfLocalCandidate(outProfile.coverImagePath, QString()); !d.isEmpty())
+		if (const QString d = parentIfLocalCandidate(rawMetaObj["configFilePath"].toString(), QString(), true); !d.isEmpty())
+			return d;
+		if (const QString d = parentIfLocalCandidate(rawMetaObj["coverImagePath"].toString(), QString(), true); !d.isEmpty())
 			return d;
 		return {};
 	};
 	const QString oldDir = inferOldProfileDir();
+
+	if (!loadProfileFromDisk(stdStr(finalMetaPath), outProfile))
+	{
+		QDir(finalBaseDir).removeRecursively();
+		errOut = stdStr(LStr("LAUNCHER_ERR_IMPORT_INVALID_META", "Profile metadata inside archive is invalid."));
+		return false;
+	}
+
 	if (!oldDir.isEmpty()
 		&& normalizeSlash(oldDir).compare(normalizeSlash(finalBaseDir), pathCaseSensitivity()) != 0)
 	{

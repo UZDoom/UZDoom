@@ -85,6 +85,7 @@ struct Profile
 	int hostTicRate = 0;
 	bool hostExtraTic = false;
 	int hostGamemode = 0;
+	bool hostAltDeathmatch = false;
 	int hostTeam = 255;
 
 	std::string configFilePath;
@@ -93,9 +94,12 @@ struct Profile
 	std::string demoDirPath;
 
 	bool fullscreen = true;
+	bool vsync = false;
 	bool loadSupportWads = true;
 	bool disableAutoload = false;
 	bool enableDynLights = true;
+	bool enableShadowmaps = false;
+	int fileLoadStrictness = -1;
 	int renderingAPI = 1;
 	bool extraLights = false;
 	bool extraBrightmaps = false;
@@ -115,9 +119,11 @@ struct LauncherConfig
 {
 	std::string language = "auto";
 	std::string theme = "auto";
+	std::string banner = "default";
 	bool hideWhilePlaying = false;
 	bool showReleaseNotes = true;
 	bool maximized = false;
+	bool dontAskAgain = false;
 	int lastSelectedRow = 0;
 	int sortColumn = -1;
 	bool sortDescending = false;

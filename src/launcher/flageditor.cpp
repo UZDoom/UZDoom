@@ -79,7 +79,7 @@ FlagEditorDialog::FlagEditorDialog(const FlagValues& initial, QWidget* parent)
 	connect(editSearch, &QLineEdit::textChanged, this, &FlagEditorDialog::onSearchTextChanged);
 	topRow->addWidget(editSearch, 1);
 
-	QPushButton* btnReset = new QPushButton(LStr("MNU_RESET", "Reset"), this);
+	QPushButton* btnReset = new QPushButton(LStr("OPTMNU_DEFAULTS", "Reset to defaults"), this);
 	connect(btnReset, &QPushButton::clicked, this, &FlagEditorDialog::onResetDefaults);
 	topRow->addWidget(btnReset);
 	mainLayout->addLayout(topRow);
@@ -144,7 +144,7 @@ FlagEditorDialog::FlagEditorDialog(const FlagValues& initial, QWidget* parent)
 	actionCol->addStretch();
 	QHBoxLayout* btns = new QHBoxLayout();
 	QPushButton* btnCancel = new QPushButton(LStr("OPTVAL_CANCEL", "Cancel"), this);
-	QPushButton* btnReturn = new QPushButton(LStr("LAUNCHER_RETURN", "Return"), this);
+	QPushButton* btnReturn = new QPushButton(LStr("TXT_OK", "OK"), this);
 	btnReturn->setDefault(true);
 	connect(btnCancel, &QPushButton::clicked, this, &QDialog::reject);
 	connect(btnReturn, &QPushButton::clicked, this, &QDialog::accept);
@@ -205,7 +205,7 @@ void FlagEditorDialog::populateCheckboxes(QVBoxLayout* container, bool isCompat,
 			rowLayout->setContentsMargins(0, 1, 0, 1);
 			rowLayout->setSpacing(8);
 
-			QLabel* lbl = new QLabel(def.label + ":", row);
+			QLabel* lbl = new QLabel(ensureTrailingColon(def.label), row);
 			QComboBox* combo = new QComboBox(row);
 			combo->setMinimumWidth(110);
 			combo->setFocusPolicy(Qt::StrongFocus);

@@ -34,11 +34,75 @@
 #include <QMessageBox>
 #include <QPlainTextEdit>
 #include <QPushButton>
+#include <QTextCharFormat>
+#include <QTextCursor>
 #include <QVBoxLayout>
 #include <miniz.h>
 
 namespace
 {
+	QColor adaptDoomLogColor(const PalEntry& entry, bool darkBg)
+	{
+		QColor c(entry.r, entry.g, entry.b);
+		if (!darkBg && c.lightness() > 130)
+		{
+			int h = 0, s = 0, l = 0;
+			c.getHsl(&h, &s, &l);
+			c.setHsl(h, std::min(255, s + 30), std::min(l, 110));
+		}
+		else if (darkBg && c.lightness() < 70)
+		{
+			int h = 0, s = 0, l = 0;
+			c.getHsl(&h, &s, &l);
+			c.setHsl(h, s, std::max(l, 110));
+		}
+		return c;
+	}
+
+	void appendColorizedDoomText(QPlainTextEdit* edit, const std::string& raw, const QColor& defaultColor, bool darkBg, bool bold = false)
+	{
+		QTextCursor cursor = edit->textCursor();
+		cursor.movePosition(QTextCursor::End);
+
+		QTextCharFormat fmt;
+		fmt.setForeground(defaultColor);
+		if (bold)
+			fmt.setFontWeight(QFont::Bold);
+
+		std::string run;
+		run.reserve(256);
+		auto flushRun = [&]()
+		{
+			if (!run.empty())
+			{
+				cursor.insertText(QString::fromUtf8(run.c_str(), static_cast<int>(run.size())), fmt);
+				run.clear();
+			}
+		};
+
+		const uint8_t* ptr = reinterpret_cast<const uint8_t*>(raw.c_str());
+		while (int ch = GetCharFromString(ptr))
+		{
+			if (ch == TEXTCOLOR_ESCAPE)
+			{
+				const EColorRange range = V_ParseFontColor(ptr, CR_UNTRANSLATED, CR_YELLOW);
+				if (range != CR_UNDEFINED)
+				{
+					flushRun();
+					if (range == CR_UNTRANSLATED)
+						fmt.setForeground(defaultColor);
+					else
+						fmt.setForeground(adaptDoomLogColor(V_LogColorFromColorRange(range), darkBg));
+				}
+				continue;
+			}
+			if (ch >= 0x1D && ch <= 0x1F)
+				ch = 0x2550;
+			run += MakeUTF8(ch);
+		}
+		flushRun();
+	}
+
 	std::string stripDoomColorEscapes(const std::string& log)
 	{
 		std::string out;
@@ -70,9 +134,30 @@ namespace
 	}
 }
 
+#ifdef __APPLE__
+extern void I_CocoaSetQtModalActive(bool active);
+extern void I_CocoaSetQtQuitCallback(void (*cb)());
+#endif
+
 bool ErrorWindow::ExecModal(const std::string& text, const std::string& log, std::vector<uint8_t> minidump)
 {
 	ensureLauncherQtApplication();
+
+#ifdef __APPLE__
+	struct CocoaErrorModalGuard
+	{
+		CocoaErrorModalGuard()
+		{
+			I_CocoaSetQtModalActive(true);
+			I_CocoaSetQtQuitCallback([]() { QApplication::closeAllWindows(); });
+		}
+		~CocoaErrorModalGuard()
+		{
+			I_CocoaSetQtQuitCallback(nullptr);
+			I_CocoaSetQtModalActive(false);
+		}
+	} cocoaGuard;
+#endif
 
 	ErrorWindow dlg(text, log, std::move(minidump));
 	dlg.exec();
@@ -116,6 +201,7 @@ ErrorWindow::ErrorWindow(const std::string& text, const std::string& log, std::v
 	mainLayout->addWidget(header);
 
 	QLabel* errLabel = new QLabel(QString::fromUtf8(stripDoomColorEscapes(text).c_str()), this);
+	errLabel->setTextFormat(Qt::PlainText);
 	errLabel->setWordWrap(true);
 	errLabel->setTextInteractionFlags(Qt::TextSelectableByMouse);
 	mainLayout->addWidget(errLabel);
@@ -123,7 +209,17 @@ ErrorWindow::ErrorWindow(const std::string& text, const std::string& log, std::v
 	logView = new QPlainTextEdit(this);
 	logView->setReadOnly(true);
 	logView->setFont(QFontDatabase::systemFont(QFontDatabase::FixedFont));
-	logView->setPlainText(QString::fromUtf8(cleanReportText.c_str()));
+	{
+		const QPalette lp = logView->palette();
+		const bool darkBg = lp.color(QPalette::Base).lightness() < 128;
+		const QColor defaultText = lp.color(QPalette::Text);
+		const QColor abortColor = darkBg ? QColor(255, 130, 130) : QColor(175, 25, 25);
+		const QColor msgColor = darkBg ? QColor(255, 230, 130) : QColor(145, 85, 0);
+		appendColorizedDoomText(logView, log, defaultText, darkBg);
+		appendColorizedDoomText(logView, "\n" + stdStr(LStr("ERROR_ABORT", "Execution could not continue.")) + "\n", abortColor, darkBg, true);
+		appendColorizedDoomText(logView, text + "\n", msgColor, darkBg, true);
+		logView->moveCursor(QTextCursor::End);
+	}
 	mainLayout->addWidget(logView, 1);
 
 	QHBoxLayout* btnLayout = new QHBoxLayout();
@@ -179,7 +275,7 @@ void ErrorWindow::onSaveReport()
 	mz_zip_archive zip{};
 	if (!mz_zip_writer_init_heap(&zip, 0, 1024 * 1024))
 	{
-		QMessageBox::warning(this, LStr("ERROR_FATAL", "Error"), LStr("ERROR_ARCHIVE_INIT", "Could not create archive in memory."));
+		QMessageBox::warning(this, LStr("LAUNCHER_ERROR", "Error"), LStr("ERROR_ARCHIVE_INIT", "Could not create archive in memory."));
 		return;
 	}
 
@@ -192,7 +288,7 @@ void ErrorWindow::onSaveReport()
 	if (!addedOk)
 	{
 		mz_zip_writer_end(&zip);
-		QMessageBox::warning(this, LStr("ERROR_FATAL", "Error"), LStr("ERROR_ARCHIVE_ADD", "Failed to add crash report files to archive."));
+		QMessageBox::warning(this, LStr("LAUNCHER_ERROR", "Error"), LStr("ERROR_ARCHIVE_ADD", "Failed to add crash report files to archive."));
 		return;
 	}
 
@@ -205,7 +301,7 @@ void ErrorWindow::onSaveReport()
 	{
 		if (buffer)
 			mz_free(buffer);
-		QMessageBox::warning(this, LStr("ERROR_FATAL", "Error"), LStr("ERROR_ARCHIVE_FINALIZE", "Failed to finalize crash report archive."));
+		QMessageBox::warning(this, LStr("LAUNCHER_ERROR", "Error"), LStr("ERROR_ARCHIVE_FINALIZE", "Failed to finalize crash report archive."));
 		return;
 	}
 
@@ -215,7 +311,7 @@ void ErrorWindow::onSaveReport()
 	mz_free(buffer);
 	if (!wrote)
 	{
-		QMessageBox::warning(this, LStr("ERROR_FATAL", "Error"), LStr("ERROR_ARCHIVE_WRITE", "Could not write archive to selected destination."));
+		QMessageBox::warning(this, LStr("LAUNCHER_ERROR", "Error"), LStr("ERROR_ARCHIVE_WRITE", "Could not write archive to selected destination."));
 	}
 }
 
