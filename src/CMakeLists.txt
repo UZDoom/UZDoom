@@ -1274,6 +1274,7 @@ set( LAUNCHER_SOURCES
 	launcher/profile.cpp
 	launcher/profileSettings.cpp
 	launcher/starter.cpp
+	launcher/theme.cpp
 	${UPDATER_SOURCES}
 )
 list( APPEND GAME_SOURCES ${LAUNCHER_SOURCES} )

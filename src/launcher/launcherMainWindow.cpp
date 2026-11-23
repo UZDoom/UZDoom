@@ -18,6 +18,7 @@
 #include "const.h"
 #include "loader.h"
 #include "profileSettings.h"
+#include "theme.h"
 
 #ifdef HAS_UPDATER
 #include "curl_loader.h"
@@ -801,26 +802,7 @@ void LauncherMainWindow::rebuildMenus()
 	}
 
 	themeMenu = prefMenu->addMenu(QString());
-	themeGroup = new QActionGroup(this);
-	themeGroup->setExclusive(true);
-	connect(themeGroup, &QActionGroup::triggered, this, &LauncherMainWindow::onThemeTriggered);
-
-	const struct { const char* id; const char* key; const char* fallback; } themes[] = {
-		{"auto", "OPTVAL_AUTO", "Auto"},
-		{"dark", "OPTVAL_DARK", "Dark"},
-		{"light", "OPTVAL_LIGHT", "Light"},
-		{"highcontrast", "PICKER_THEME_HIGHCONTRAST", "High Contrast"},
-	};
-	const std::string curTheme = themeToName(parseThemeName(launcherConfig.theme));
-	for (const auto& t : themes)
-	{
-		QAction* act = themeMenu->addAction(LStr(t.key, t.fallback));
-		act->setCheckable(true);
-		act->setData(QString::fromLatin1(t.id));
-		if (curTheme == t.id)
-			act->setChecked(true);
-		themeGroup->addAction(act);
-	}
+	rebuildThemeMenu();
 
 	bannerMenu = prefMenu->addMenu(QString());
 	bannerGroup = new QActionGroup(this);
@@ -941,11 +923,7 @@ void LauncherMainWindow::retranslateUi()
 		actDontAskAgain->setToolTip(LStr("LAUNCHER_DONTASK_TIP", "Skip the launcher on startup and launch directly. Hold Shift or pass -showlauncher to open the launcher again."));
 	}
 
-	const QList<QAction*> themeActions = themeGroup->actions();
-	const char* const themeKeys[] = {"OPTVAL_AUTO", "OPTVAL_DARK", "OPTVAL_LIGHT", "PICKER_THEME_HIGHCONTRAST"};
-	const char* const themeFallbacks[] = {"Auto", "Dark", "Light", "High Contrast"};
-	for (int i = 0; i < themeActions.size() && i < 4; ++i)
-		themeActions[i]->setText(LStr(themeKeys[i], themeFallbacks[i]));
+	rebuildThemeMenu();
 
 	if (bannerMenu && bannerGroup)
 	{
@@ -1215,12 +1193,9 @@ void LauncherMainWindow::updateTableRow(int tableRow, int profileIdx)
 	};
 
 	auto* starItem = makeItem(p.favorite ? QString::fromUtf8("\u2605") : QString::fromUtf8("\u2606"), Qt::AlignCenter);
-	const LauncherTheme theme = parseThemeName(launcherConfig.theme);
 	if (p.favorite)
 	{
-		const QColor starColor = (theme == LauncherTheme::HighContrast)
-			? QColor(255, 255, 0)
-			: (isDarkThemeActive(theme) ? QColor(245, 197, 66) : QColor(214, 148, 0));
+		const QColor starColor = getActiveLauncherTheme().palette.favoriteStar;
 		starItem->setForeground(starColor);
 		starItem->setToolTip(LStr("LAUNCHER_UNPIN_FAVORITE", "Unpin Favorite"));
 	}
@@ -2501,6 +2476,50 @@ void LauncherMainWindow::onLanguageTriggered(QAction* action)
 	retranslateUi();
 }
 
+void LauncherMainWindow::rebuildThemeMenu()
+{
+	if (!themeMenu)
+		return;
+
+	themeMenu->clear();
+	delete themeGroup;
+	themeGroup = new QActionGroup(this);
+	themeGroup->setExclusive(true);
+	connect(themeGroup, &QActionGroup::triggered, this, &LauncherMainWindow::onThemeTriggered);
+
+	const std::string curTheme = normalizeThemeId(launcherConfig.theme);
+	const std::vector<LauncherThemeDefinition> allThemes = getAllLauncherThemes();
+
+	LauncherThemeCategory lastCat = LauncherThemeCategory::System;
+	bool hasAny = false;
+	for (const auto& def : allThemes)
+	{
+		if (hasAny && def.category != lastCat)
+			themeMenu->addSeparator();
+		lastCat = def.category;
+		hasAny = true;
+
+		QAction* act = themeMenu->addAction(getLauncherThemeDisplayName(def));
+		act->setCheckable(true);
+		act->setData(QString::fromStdString(def.id));
+		if (normalizeThemeId(def.id) == curTheme)
+			act->setChecked(true);
+		themeGroup->addAction(act);
+	}
+}
+
+void LauncherMainWindow::refreshThemeVisuals()
+{
+	if (prideBannerWidget)
+		prideBannerWidget->update();
+#ifdef HAS_UPDATER
+	if (updater)
+		updater->refreshTheme();
+#endif
+	refreshTable(selectedProfileIndex());
+	updateCoverPixmapScale();
+}
+
 void LauncherMainWindow::onThemeTriggered(QAction* action)
 {
 	if (!action)
@@ -2508,9 +2527,7 @@ void LauncherMainWindow::onThemeTriggered(QAction* action)
 	launcherConfig.theme = action->data().toString().toStdString();
 	applyLauncherTheme(launcherConfig.theme);
 	saveLauncherConfig(launcherConfig);
-	if (prideBannerWidget)
-		prideBannerWidget->update();
-	refreshTable(selectedProfileIndex());
+	refreshThemeVisuals();
 }
 
 void LauncherMainWindow::applyBannerSelection(const std::string &rawId)

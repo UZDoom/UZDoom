@@ -15,6 +15,7 @@
 
 #include "errorwindow.h"
 #include "const.h"
+#include "theme.h"
 
 #include "gstrings.h"
 #include "m_misc.h"
@@ -189,12 +190,9 @@ ErrorWindow::ErrorWindow(const std::string& text, const std::string& log, std::v
 	headerFont.setBold(true);
 	header->setFont(headerFont);
 	{
+		const LauncherThemeDefinition& theme = getActiveLauncherTheme();
 		QPalette hp = header->palette();
-		const QColor bg = hp.color(QPalette::Window);
-		const bool isHighContrast = (bg.lightness() < 15 && hp.color(QPalette::Highlight) == QColor(255, 255, 0));
-		const QColor errColor = isHighContrast
-			? QColor(255, 255, 0)
-			: (bg.lightness() > 127 ? QColor(175, 25, 25) : QColor(255, 110, 110));
+		const QColor errColor = theme.isHighContrast ? theme.palette.accent : theme.palette.logErrorFg;
 		hp.setColor(QPalette::WindowText, errColor);
 		header->setPalette(hp);
 	}
@@ -210,11 +208,12 @@ ErrorWindow::ErrorWindow(const std::string& text, const std::string& log, std::v
 	logView->setReadOnly(true);
 	logView->setFont(QFontDatabase::systemFont(QFontDatabase::FixedFont));
 	{
+		const LauncherThemeDefinition& theme = getActiveLauncherTheme();
 		const QPalette lp = logView->palette();
-		const bool darkBg = lp.color(QPalette::Base).lightness() < 128;
+		const bool darkBg = theme.isDark;
 		const QColor defaultText = lp.color(QPalette::Text);
-		const QColor abortColor = darkBg ? QColor(255, 130, 130) : QColor(175, 25, 25);
-		const QColor msgColor = darkBg ? QColor(255, 230, 130) : QColor(145, 85, 0);
+		const QColor abortColor = theme.palette.logErrorFg;
+		const QColor msgColor = theme.palette.logWarningFg;
 		appendColorizedDoomText(logView, log, defaultText, darkBg);
 		appendColorizedDoomText(logView, "\n" + stdStr(LStr("ERROR_ABORT", "Execution could not continue.")) + "\n", abortColor, darkBg, true);
 		appendColorizedDoomText(logView, text + "\n", msgColor, darkBg, true);

@@ -44,6 +44,7 @@ namespace LauncherConst
 	inline std::string ROOT_DIR;
 	inline std::string EXEC_DIR;
 	inline std::string PROFILE_DIR;
+	inline std::string THEMES_DIR;
 	inline std::string CONFIG_FILE;
 
 	inline constexpr const char* DEFAULT_LANG = "auto";
@@ -97,14 +98,6 @@ struct LauncherLanguage
 	QString name;
 };
 
-enum class LauncherTheme
-{
-	Auto = 0,
-	Dark = 1,
-	Light = 2,
-	HighContrast = 3
-};
-
 QApplication* ensureLauncherQtApplication();
 QString LStr(const char* key, const char* fallback = nullptr);
 
@@ -125,10 +118,6 @@ inline QString stripTrailingColon(QString s)
 }
 
 const std::vector<LauncherLanguage>& getLauncherLanguages();
-LauncherTheme parseThemeName(const std::string& theme);
-std::string themeToName(LauncherTheme theme);
-bool isDarkThemeActive(LauncherTheme theme);
-void applyLauncherTheme(const std::string& themeName);
 
 std::unordered_map<std::string, QByteArray> readBaseWadEntries(const std::vector<const char*>& entryNames);
 QByteArray readBaseWadEntry(const char* entryName);

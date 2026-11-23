@@ -32,6 +32,7 @@
 #include "m_misc.h"
 #include "resourcefile.h"
 #include "serializer_rapidjson.h"
+#include "theme.h"
 #include "version.h"
 #include "versioninfo.h"
 #include "zstring.h"
@@ -770,15 +771,6 @@ LauncherUpdater::LauncherUpdater(QWidget* parent, std::function<void()> settings
 	banner = new QFrame(parent);
 	banner->setObjectName("launcherUpdateBanner");
 	banner->setFixedHeight(32);
-	banner->setStyleSheet(
-		"#launcherUpdateBanner { background-color: #0b5394; border: 1px solid #073c6d; border-radius: 4px; }"
-		"#launcherUpdateBanner QToolButton { background-color: transparent; border: none; border-right: 1px solid #073c6d; border-top-left-radius: 3px; border-bottom-left-radius: 3px; }"
-		"#launcherUpdateBanner QToolButton:hover { background-color: #d94336; }"
-		"#launcherUpdateBanner QToolButton:pressed { background-color: #a82d24; }"
-		"#launcherUpdateBanner QPushButton { background-color: transparent; color: #ffffff; border: none; font-weight: bold; text-align: center; padding: 0 12px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; }"
-		"#launcherUpdateBanner QPushButton:hover { background-color: #1668b2; }"
-		"#launcherUpdateBanner QPushButton:pressed { background-color: #073c6d; }"
-	);
 
 	auto* layout = new QHBoxLayout(banner);
 	layout->setContentsMargins(0, 0, 0, 0);
@@ -786,7 +778,6 @@ LauncherUpdater::LauncherUpdater(QWidget* parent, std::function<void()> settings
 
 	btnDismiss = new QToolButton(banner);
 	btnDismiss->setFixedSize(32, 30);
-	btnDismiss->setIcon(makeLauncherIcon("delete", Qt::white, 13));
 	btnDismiss->setCursor(Qt::PointingHandCursor);
 	QObject::connect(btnDismiss, &QToolButton::clicked, banner, [this]() {
 		onDismissBannerClicked();
@@ -803,6 +794,7 @@ LauncherUpdater::LauncherUpdater(QWidget* parent, std::function<void()> settings
 	layout->addWidget(btnOpenUpdate, 1);
 
 	banner->hide();
+	refreshTheme();
 	retranslateUi();
 }
 
@@ -816,6 +808,15 @@ LauncherUpdater::~LauncherUpdater()
 QWidget* LauncherUpdater::bannerWidget() const
 {
 	return banner;
+}
+
+void LauncherUpdater::refreshTheme()
+{
+	if (btnDismiss)
+	{
+		const QColor iconCol = getActiveLauncherTheme().palette.updateBannerText;
+		btnDismiss->setIcon(makeLauncherIcon("delete", iconCol.isValid() ? iconCol : Qt::white, 13));
+	}
 }
 
 void LauncherUpdater::setBannerEnabled(bool enabled)

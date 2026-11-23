@@ -14,6 +14,7 @@
 */
 
 #include "const.h"
+#include "theme.h"
 
 #include "doomdef.h"
 #include "filesystem.h"
@@ -24,7 +25,6 @@
 #include "m_argv.h"
 #include "resourcefile.h"
 #include "sc_man.h"
-#include "system_theme.h"
 #include "version.h"
 
 #include <QApplication>
@@ -37,11 +37,7 @@
 #include <QJsonObject>
 #include <QPainter>
 #include <QPainterPath>
-#include <QPalette>
 #include <QPixmapCache>
-#include <QStyle>
-#include <QStyleFactory>
-#include <QStyleHints>
 #include <QtGlobal>
 #include <algorithm>
 #include <cmath>
@@ -251,230 +247,6 @@ const std::vector<LauncherLanguage>& getLauncherLanguages()
 	return cached;
 }
 
-LauncherTheme parseThemeName(const std::string& theme)
-{
-	QString lower = QString::fromStdString(theme).trimmed().toLower();
-	if (lower == "dark")
-		return LauncherTheme::Dark;
-	if (lower == "light")
-		return LauncherTheme::Light;
-	if (lower == "highcontrast" || lower == "high_contrast" || lower == "contrast")
-		return LauncherTheme::HighContrast;
-	return LauncherTheme::Auto;
-}
-
-std::string themeToName(LauncherTheme theme)
-{
-	switch (theme)
-	{
-	case LauncherTheme::Dark:
-		return "dark";
-	case LauncherTheme::Light:
-		return "light";
-	case LauncherTheme::HighContrast:
-		return "highcontrast";
-	case LauncherTheme::Auto:
-	default:
-		return "auto";
-	}
-}
-
-bool isDarkThemeActive(LauncherTheme theme)
-{
-	if (theme == LauncherTheme::Dark || theme == LauncherTheme::HighContrast)
-		return true;
-	if (theme == LauncherTheme::Light)
-		return false;
-
-#if QT_VERSION >= QT_VERSION_CHECK(6, 5, 0)
-	if (const auto* hints = QGuiApplication::styleHints())
-	{
-		const Qt::ColorScheme scheme = hints->colorScheme();
-		if (scheme != Qt::ColorScheme::Unknown)
-			return scheme == Qt::ColorScheme::Dark;
-	}
-#endif
-	// Cache GetSystemTheme() so Linux doesn't repeatedly spawn gdbus on UI refreshes.
-	static const InterfaceTheme sysTheme = GetSystemTheme();
-	if ((sysTheme & ColorScheme) == Light)
-		return false;
-	if ((sysTheme & ColorScheme) == Dark)
-		return true;
-	return true;
-}
-
-void applyLauncherTheme(const std::string& themeName)
-{
-	QApplication* app = qobject_cast<QApplication*>(QCoreApplication::instance());
-	if (!app)
-		return;
-
-	const LauncherTheme theme = parseThemeName(themeName);
-
-#if QT_VERSION >= QT_VERSION_CHECK(6, 8, 0)
-	if (auto* hints = app->styleHints())
-	{
-		if (theme == LauncherTheme::Auto)
-			hints->unsetColorScheme();
-		else if (theme == LauncherTheme::Light)
-			hints->setColorScheme(Qt::ColorScheme::Light);
-		else
-			hints->setColorScheme(Qt::ColorScheme::Dark);
-	}
-#endif
-
-	app->setStyle(QStyleFactory::create("Fusion"));
-
-	QPalette pal;
-	if (theme == LauncherTheme::HighContrast)
-	{
-		pal.setColor(QPalette::Window, QColor(0, 0, 0));
-		pal.setColor(QPalette::WindowText, QColor(255, 255, 255));
-		pal.setColor(QPalette::Base, QColor(10, 10, 10));
-		pal.setColor(QPalette::AlternateBase, QColor(24, 24, 24));
-		pal.setColor(QPalette::ToolTipBase, QColor(0, 0, 0));
-		pal.setColor(QPalette::ToolTipText, QColor(255, 255, 0));
-		pal.setColor(QPalette::Text, QColor(255, 255, 255));
-		pal.setColor(QPalette::PlaceholderText, QColor(170, 170, 170));
-		pal.setColor(QPalette::Button, QColor(20, 20, 20));
-		pal.setColor(QPalette::ButtonText, QColor(255, 255, 255));
-		pal.setColor(QPalette::BrightText, QColor(255, 255, 0));
-		pal.setColor(QPalette::Link, QColor(0, 255, 255));
-		pal.setColor(QPalette::Highlight, QColor(255, 255, 0));
-		pal.setColor(QPalette::HighlightedText, QColor(0, 0, 0));
-		pal.setColor(QPalette::Mid, QColor(160, 160, 160));
-		pal.setColor(QPalette::Disabled, QPalette::WindowText, QColor(140, 140, 140));
-		pal.setColor(QPalette::Disabled, QPalette::Text, QColor(140, 140, 140));
-		pal.setColor(QPalette::Disabled, QPalette::PlaceholderText, QColor(115, 115, 115));
-		pal.setColor(QPalette::Disabled, QPalette::ButtonText, QColor(140, 140, 140));
-	}
-	else if (isDarkThemeActive(theme))
-	{
-		pal.setColor(QPalette::Window, QColor(36, 39, 44));
-		pal.setColor(QPalette::WindowText, QColor(235, 238, 243));
-		pal.setColor(QPalette::Base, QColor(26, 29, 33));
-		pal.setColor(QPalette::AlternateBase, QColor(33, 36, 41));
-		pal.setColor(QPalette::ToolTipBase, QColor(24, 26, 30));
-		pal.setColor(QPalette::ToolTipText, QColor(235, 238, 243));
-		pal.setColor(QPalette::Text, QColor(235, 238, 243));
-		pal.setColor(QPalette::PlaceholderText, QColor(140, 148, 160));
-		pal.setColor(QPalette::Button, QColor(48, 52, 60));
-		pal.setColor(QPalette::ButtonText, QColor(235, 238, 243));
-		pal.setColor(QPalette::BrightText, QColor(255, 110, 110));
-		pal.setColor(QPalette::Link, QColor(90, 170, 255));
-		pal.setColor(QPalette::Highlight, QColor(52, 118, 209));
-		pal.setColor(QPalette::HighlightedText, QColor(255, 255, 255));
-		pal.setColor(QPalette::Mid, QColor(68, 73, 82));
-		pal.setColor(QPalette::Disabled, QPalette::WindowText, QColor(125, 130, 138));
-		pal.setColor(QPalette::Disabled, QPalette::Text, QColor(125, 130, 138));
-		pal.setColor(QPalette::Disabled, QPalette::PlaceholderText, QColor(95, 100, 108));
-		pal.setColor(QPalette::Disabled, QPalette::ButtonText, QColor(125, 130, 138));
-	}
-	else
-	{
-		pal.setColor(QPalette::Window, QColor(239, 239, 239));
-		pal.setColor(QPalette::WindowText, QColor(17, 19, 23));
-		pal.setColor(QPalette::Base, QColor(255, 255, 255));
-		pal.setColor(QPalette::AlternateBase, QColor(245, 247, 250));
-		pal.setColor(QPalette::ToolTipBase, QColor(250, 251, 253));
-		pal.setColor(QPalette::ToolTipText, QColor(17, 19, 23));
-		pal.setColor(QPalette::Text, QColor(17, 19, 23));
-		pal.setColor(QPalette::PlaceholderText, QColor(115, 122, 134));
-		pal.setColor(QPalette::Button, QColor(232, 235, 240));
-		pal.setColor(QPalette::ButtonText, QColor(17, 19, 23));
-		pal.setColor(QPalette::BrightText, QColor(175, 25, 25));
-		pal.setColor(QPalette::Link, QColor(30, 95, 190));
-		pal.setColor(QPalette::Highlight, QColor(42, 110, 200));
-		pal.setColor(QPalette::HighlightedText, QColor(255, 255, 255));
-		pal.setColor(QPalette::Light, QColor(255, 255, 255));
-		pal.setColor(QPalette::Midlight, QColor(227, 230, 235));
-		pal.setColor(QPalette::Mid, QColor(184, 191, 204));
-		pal.setColor(QPalette::Dark, QColor(145, 152, 165));
-		pal.setColor(QPalette::Shadow, QColor(90, 95, 105));
-		pal.setColor(QPalette::Disabled, QPalette::WindowText, QColor(135, 142, 152));
-		pal.setColor(QPalette::Disabled, QPalette::Text, QColor(135, 142, 152));
-		pal.setColor(QPalette::Disabled, QPalette::PlaceholderText, QColor(165, 172, 182));
-		pal.setColor(QPalette::Disabled, QPalette::ButtonText, QColor(135, 142, 152));
-	}
-	app->setPalette(pal);
-
-	if (theme == LauncherTheme::HighContrast)
-	{
-		app->setStyleSheet(
-			"QToolTip { color: #ffff00; background-color: #000000; border: 1px solid #ffff00; }"
-			"QMenuBar { background-color: #000000; color: #ffffff; border-bottom: 1px solid #ffffff; padding: 2px 4px; }"
-			"QMenuBar::item { padding: 5px 12px; background: transparent; }"
-			"QMenuBar::item:selected { background-color: #ffff00; color: #000000; }"
-			"QGroupBox { border: 1px solid #ffffff; border-radius: 4px; margin-top: 8px; padding: 10px 6px 6px 6px; }"
-			"QGroupBox::title { subcontrol-origin: margin; left: 8px; padding: 0 4px; }"
-			"QTableView, QListWidget, QTextEdit, QPlainTextEdit, QScrollArea, #launcherCoverLabel { border: 1px solid #ffffff; border-radius: 3px; }"
-			"QTableView:focus, QListWidget:focus, QTextEdit:focus, QPlainTextEdit:focus, QScrollArea:focus { border: 1px solid #ffff00; }"
-			"QHeaderView::section { background-color: #141414; color: #ffffff; padding: 5px 10px; font-weight: 600; border: none; border-right: 1px solid #ffffff; border-bottom: 1px solid #ffffff; }"
-			"QTableView::item { padding: 2px 8px; }"
-			"QTabWidget::pane { border: 1px solid #ffffff; border-radius: 4px; top: -1px; }"
-			"QTabBar::tab { background: #141414; color: #ffffff; padding: 6px 14px; border: 1px solid #ffffff; border-bottom: none; border-top-left-radius: 4px; border-top-right-radius: 4px; margin-right: 2px; }"
-			"QTabBar::tab:hover:!selected { border-color: #ffff00; }"
-			"QTabBar::tab:selected { background: #000000; color: #ffff00; border: 1px solid #ffff00; border-bottom: 1px solid #000000; font-weight: bold; }"
-			"QPushButton { border: 1px solid #ffffff; border-radius: 4px; padding: 4px 10px; }"
-			"QPushButton:hover { border-color: #ffff00; }"
-			"QPushButton:disabled { color: #8c8c8c; border-color: #707070; }"
-			"QPushButton[launcherRole=\"primary\"] { background-color: #ffff00; color: #000000; border: 2px solid #ffffff; font-weight: bold; }"
-			"QPushButton[launcherRole=\"primary\"]:hover { background-color: #ffffff; color: #000000; border-color: #ffff00; }"
-			"QPushButton[launcherRole=\"primary\"]:disabled { background-color: #202020; color: #8c8c8c; border-color: #8c8c8c; }"
-			"QPushButton[launcherRole=\"danger\"] { background-color: #000000; color: #ffff00; border: 2px solid #ffff00; font-weight: bold; padding: 4px 10px; }"
-			"QPushButton[launcherRole=\"danger\"]:hover { background-color: #ffff00; color: #000000; }"
-		);
-	}
-	else if (isDarkThemeActive(theme))
-	{
-		app->setStyleSheet(
-			"QToolTip { color: #ebeff5; background-color: #1c1f24; border: 1px solid #4c5360; padding: 4px; }"
-			"QMenuBar { background-color: #202328; color: #ebeff5; border-bottom: 1px solid #3c414a; padding: 2px 4px; }"
-			"QMenuBar::item { padding: 5px 12px; border-radius: 4px; background: transparent; }"
-			"QMenuBar::item:selected { background-color: #343942; color: #ffffff; }"
-			"QGroupBox { border: 1px solid #444952; border-radius: 5px; margin-top: 8px; padding: 10px 6px 6px 6px; font-weight: 600; }"
-			"QGroupBox::title { subcontrol-origin: margin; left: 10px; padding: 0 5px; }"
-			"QTableView, QListWidget, QTextEdit, QPlainTextEdit, QScrollArea, #launcherCoverLabel { border: 1px solid #444952; border-radius: 3px; }"
-			"QTableView:focus, QListWidget:focus, QTextEdit:focus, QPlainTextEdit:focus, QScrollArea:focus { border: 1px solid #3476d1; }"
-			"QHeaderView::section { background-color: #2c3037; color: #ebeff5; padding: 5px 10px; font-weight: 600; border: none; border-right: 1px solid #3f444e; border-bottom: 1px solid #3f444e; }"
-			"QTableView::item { padding: 2px 8px; }"
-			"QTabWidget::pane { border: 1px solid #444952; border-radius: 4px; }"
-			"QTabBar::tab { background: #2d3138; color: #c7cdd6; padding: 6px 14px; border: 1px solid #444952; border-bottom: none; border-top-left-radius: 4px; border-top-right-radius: 4px; margin-right: 2px; }"
-			"QTabBar::tab:selected { background: #3b4049; color: #ffffff; font-weight: 600; }"
-			"QPushButton[launcherRole=\"primary\"] { background-color: #2f6fde; color: #ffffff; border-radius: 4px; font-weight: bold; }"
-			"QPushButton[launcherRole=\"primary\"]:hover { background-color: #3d7ee8; }"
-			"QPushButton[launcherRole=\"primary\"]:disabled { background-color: #4f5765; color: #a6adb8; }"
-			"QPushButton[launcherRole=\"danger\"] { background-color: #a93226; color: #ffffff; border: 1px solid #782016; border-radius: 3px; padding: 3px 10px; }"
-			"QPushButton[launcherRole=\"danger\"]:hover { background-color: #c0392b; border-color: #96281b; }"
-			"QPushButton[launcherRole=\"danger\"]:pressed { background-color: #87251c; }"
-		);
-	}
-	else
-	{
-		app->setStyleSheet(
-			"QMenuBar { background-color: #e6e9ef; color: #111317; border-bottom: 1px solid #c6ccd6; padding: 2px 4px; }"
-			"QMenuBar::item { padding: 5px 12px; border-radius: 4px; background: transparent; }"
-			"QMenuBar::item:selected { background-color: #d2d8e2; }"
-			"QGroupBox { border: 1px solid #b8bfcc; border-radius: 5px; margin-top: 8px; padding: 10px 6px 6px 6px; font-weight: 600; }"
-			"QGroupBox::title { subcontrol-origin: margin; left: 10px; padding: 0 5px; }"
-			"QTableView, QListWidget, QTextEdit, QPlainTextEdit, QScrollArea, #launcherCoverLabel { border: 1px solid #b8bfcc; border-radius: 3px; }"
-			"QTableView:focus, QListWidget:focus, QTextEdit:focus, QPlainTextEdit:focus, QScrollArea:focus { border: 1px solid #2a6ec8; }"
-			"QHeaderView::section { padding: 5px 10px; font-weight: 600; }"
-			"QTableView::item { padding: 2px 8px; }"
-			"QTabWidget::pane { border: 1px solid #b8bfcc; border-radius: 4px; top: -1px; }"
-			"QTabBar::tab { background: #e2e5eb; color: #30343b; padding: 6px 14px; border: 1px solid #b8bfcc; border-bottom: 1px solid #b8bfcc; border-top-left-radius: 4px; border-top-right-radius: 4px; margin-right: 2px; }"
-			"QTabBar::tab:hover:!selected { background: #eaedf2; }"
-			"QTabBar::tab:selected { background: #efefef; color: #111317; border-bottom: 1px solid #efefef; font-weight: 600; }"
-			"QPushButton[launcherRole=\"primary\"] { background-color: #2f6fde; color: #ffffff; border-radius: 4px; font-weight: bold; }"
-			"QPushButton[launcherRole=\"primary\"]:hover { background-color: #3d7ee8; }"
-			"QPushButton[launcherRole=\"primary\"]:disabled { background-color: #b4becd; color: #f0f2f5; }"
-			"QPushButton[launcherRole=\"danger\"] { background-color: #c0392b; color: #ffffff; border: 1px solid #96281b; border-radius: 3px; padding: 3px 10px; }"
-			"QPushButton[launcherRole=\"danger\"]:hover { background-color: #d64536; border-color: #782016; }"
-			"QPushButton[launcherRole=\"danger\"]:pressed { background-color: #96281b; }"
-		);
-	}
-}
-
 QIcon makeLauncherIcon(const QString& iconKind, const QColor& color, int size)
 {
 	const qreal dpr = (qApp && qApp->devicePixelRatio() > 0.0) ? qApp->devicePixelRatio() : 1.0;
@@ -627,7 +399,18 @@ QPixmap loadUZDoomGenericThumbnailPixmap(int width, int height, qreal dpr)
 		: ((qApp && qApp->devicePixelRatio() > 0.0) ? qApp->devicePixelRatio() : 1.0);
 	const int physW = std::max(1, static_cast<int>(std::ceil(safeW * resolvedDpr)));
 	const int physH = std::max(1, static_cast<int>(std::ceil(safeH * resolvedDpr)));
-	const QString cacheKey = QString("uz_generic_thumb_%1_%2_%3_%4").arg(safeW).arg(safeH).arg(physW).arg(physH);
+
+	const LauncherThemePalette& pal = getActiveLauncherTheme().palette;
+	const QColor bgCol = pal.genericThumbBg.isValid() ? pal.genericThumbBg : QColor(34, 38, 44);
+	const QColor fgCol = pal.genericThumbFg.isValid() ? pal.genericThumbFg : QColor(127, 127, 127);
+
+	const QString cacheKey = QString("uz_generic_thumb_%1_%2_%3_%4_%5_%6")
+		.arg(safeW)
+		.arg(safeH)
+		.arg(physW)
+		.arg(physH)
+		.arg(bgCol.rgba(), 8, 16, QLatin1Char('0'))
+		.arg(fgCol.rgba(), 8, 16, QLatin1Char('0'));
 
 	QPixmap cachedPm;
 	if (QPixmapCache::find(cacheKey, &cachedPm))
@@ -636,12 +419,12 @@ QPixmap loadUZDoomGenericThumbnailPixmap(int width, int height, qreal dpr)
 	const qreal actualDpr = static_cast<qreal>(physH) / static_cast<qreal>(safeH);
 	QPixmap pm(physW, physH);
 	pm.setDevicePixelRatio(actualDpr);
-	pm.fill(Qt::white);
+	pm.fill(bgCol);
 
 	QPainter p(&pm);
 	p.setRenderHint(QPainter::Antialiasing, true);
 	p.setPen(Qt::NoPen);
-	p.setBrush(QColor(127, 127, 127));
+	p.setBrush(fgCol);
 
 	const qreal logicalW = static_cast<qreal>(physW) / actualDpr;
 	const qreal logicalH = static_cast<qreal>(physH) / actualDpr;

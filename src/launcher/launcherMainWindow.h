@@ -109,6 +109,8 @@ private slots:
 private:
 	void buildUi();
 	void rebuildMenus();
+	void rebuildThemeMenu();
+	void refreshThemeVisuals();
 	void retranslateUi();
 #ifdef HAS_UPDATER
 	void updateUpdaterMenuState();

@@ -61,6 +61,7 @@ public:
 
 	QWidget* bannerWidget() const;
 	void retranslateUi();
+	void refreshTheme();
 	void setBannerEnabled(bool enabled);
 
 	void checkForUpdate(bool force = false, QWidget* dialogParent = nullptr);

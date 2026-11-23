@@ -17,6 +17,7 @@
 #include "const.h"
 #include "flageditor.h"
 #include "loader.h"
+#include "theme.h"
 
 #include "doomdef.h"
 #include "findfile.h"
@@ -279,60 +280,31 @@ namespace
 	public:
 		explicit LogSyntaxHighlighter(QPlainTextEdit* editor)
 			: QSyntaxHighlighter(editor->document())
-			, edit(editor)
 		{
 			updateFormats();
 		}
 
 		void updateFormats()
 		{
-			const QPalette pal = edit ? edit->palette() : QApplication::palette();
-			const QColor base = pal.color(QPalette::Base);
-			const bool darkBg = base.lightness() < 128;
-			const bool highContrast = darkBg && base.lightness() <= 15 && pal.color(QPalette::Highlight) == QColor(255, 255, 0);
+			const LauncherThemeDefinition& theme = getActiveLauncherTheme();
+			const LauncherThemePalette& pal = theme.palette;
 
 			errorFmt = QTextCharFormat();
 			errorFmt.setFontWeight(QFont::Bold);
-			if (highContrast)
-			{
-				errorFmt.setForeground(QColor(255, 102, 102));
-			}
-			else if (darkBg)
-			{
-				errorFmt.setForeground(QColor(255, 128, 128));
-				errorFmt.setBackground(QColor(220, 50, 50, 42));
-			}
-			else
-			{
-				errorFmt.setForeground(QColor(180, 24, 24));
-				errorFmt.setBackground(QColor(220, 45, 45, 24));
-			}
+			errorFmt.setForeground(pal.logErrorFg);
+			if (pal.logErrorBg.isValid() && pal.logErrorBg.alpha() > 0)
+				errorFmt.setBackground(pal.logErrorBg);
 
 			warningFmt = QTextCharFormat();
-			if (highContrast)
-			{
+			if (theme.isHighContrast)
 				warningFmt.setFontWeight(QFont::Bold);
-				warningFmt.setForeground(QColor(255, 255, 0));
-			}
-			else if (darkBg)
-			{
-				warningFmt.setForeground(QColor(245, 199, 84));
-				warningFmt.setBackground(QColor(230, 175, 40, 32));
-			}
-			else
-			{
-				warningFmt.setForeground(QColor(140, 90, 0));
-				warningFmt.setBackground(QColor(230, 165, 0, 26));
-			}
+			warningFmt.setForeground(pal.logWarningFg);
+			if (pal.logWarningBg.isValid() && pal.logWarningBg.alpha() > 0)
+				warningFmt.setBackground(pal.logWarningBg);
 
 			headerFmt = QTextCharFormat();
 			headerFmt.setFontWeight(QFont::Bold);
-			if (highContrast)
-				headerFmt.setForeground(QColor(0, 255, 255));
-			else if (darkBg)
-				headerFmt.setForeground(QColor(123, 180, 247));
-			else
-				headerFmt.setForeground(QColor(27, 90, 166));
+			headerFmt.setForeground(pal.logHeaderFg);
 		}
 
 	protected:
@@ -356,7 +328,6 @@ namespace
 		}
 
 	private:
-		QPlainTextEdit* edit = nullptr;
 		QTextCharFormat errorFmt;
 		QTextCharFormat warningFmt;
 		QTextCharFormat headerFmt;
@@ -406,7 +377,6 @@ ProfileSettingsDialog::ProfileSettingsDialog(
 	bottomBar->addWidget(btnExport);
 
 	QPushButton* btnDelete = new QPushButton(LStr("LAUNCHER_DELETE_PROFILE", "Delete Profile") + QStringLiteral("..."), this);
-	btnDelete->setProperty("launcherRole", "danger");
 	connect(btnDelete, &QPushButton::clicked, this, &ProfileSettingsDialog::onDeleteProfile);
 	bottomBar->addWidget(btnDelete);
 

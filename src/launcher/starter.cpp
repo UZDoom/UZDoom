@@ -19,6 +19,7 @@
 #include "launcherMainWindow.h"
 #include "loader.h"
 #include "profile.h"
+#include "theme.h"
 
 #ifdef HAS_UPDATER
 #include "curl_loader.h"
@@ -56,17 +57,9 @@ namespace
 
 	int themeNameToEngineThemeId(const std::string& themeName)
 	{
-		switch (parseThemeName(themeName))
-		{
-		case LauncherTheme::Light:
-			return 2;
-		case LauncherTheme::Dark:
-		case LauncherTheme::HighContrast:
-			return 1;
-		case LauncherTheme::Auto:
-		default:
+		if (isAutoLauncherTheme(themeName))
 			return 0;
-		}
+		return isDarkLauncherTheme(themeName) ? 1 : 2;
 	}
 }
 
@@ -81,11 +74,13 @@ bool Starter::ExecModal(FStartupSelectionInfo& info)
 	const QString appDataRoot = QDir::cleanPath(QString::fromUtf8(M_GetAppDataPath(true).GetChars()));
 	const QString launcherRoot = QDir(appDataRoot).filePath("launcher");
 	const QString profilesRoot = QDir(launcherRoot).filePath("profiles");
+	const QString themesRoot = QDir(launcherRoot).filePath("themes");
 	QDir().mkpath(launcherRoot);
 	QDir().mkpath(profilesRoot);
 
 	LauncherConst::ROOT_DIR = QDir::cleanPath(launcherRoot).toStdString();
 	LauncherConst::PROFILE_DIR = QDir::cleanPath(profilesRoot).toStdString();
+	LauncherConst::THEMES_DIR = QDir::cleanPath(themesRoot).toStdString();
 	LauncherConst::CONFIG_FILE = QDir(launcherRoot).filePath("config.json").toStdString();
 	LauncherConst::EXEC_DIR = QDir::cleanPath(QCoreApplication::applicationDirPath()).toStdString();
 
