@@ -44,6 +44,7 @@ enum ENetConstants
 	STABILITYTICS = 17,
 	LOCALCMDTICS = (BACKUPTICS * MAXTICDUP),
 	MAX_MSGLEN = 14000,
+	MIN_MSGLEN = 5,			// Must always have at least CRC32 + packet type.
 };
 
 enum ENetCommand

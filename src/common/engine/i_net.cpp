@@ -569,7 +569,7 @@ static void GetPacket(sockaddr_in* const from = nullptr)
 			msgSize = 0;
 		}
 	}
-	else if (msgSize > 0)
+	else if (msgSize >= MIN_MSGLEN)
 	{
 		const uint8_t* dataStart = &TransmitBuffer[4];
 		const auto type = GetPacketType(*dataStart);
@@ -624,6 +624,7 @@ static void GetPacket(sockaddr_in* const from = nullptr)
 	else
 	{
 		client = -1;
+		msgSize = 0;
 	}
 
 	RemoteClient = client;
