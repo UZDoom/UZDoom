@@ -989,6 +989,7 @@ set (PCH_SOURCES
 	common/audio/music/i_music.cpp
 	common/audio/music/i_soundfont.cpp
 	common/audio/music/music_config.cpp
+	common/audio/music/s_trakinfo.cpp
 	common/2d/v_2ddrawer.cpp
 	common/2d/v_drawtext.cpp
 	common/2d/v_draw.cpp

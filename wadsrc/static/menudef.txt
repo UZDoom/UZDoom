@@ -2719,6 +2719,13 @@ OptionValue OplCores
 	3, "$OPTVAL_NUKEDOPL3"
 }
 
+OptionValue SoundtrackModes
+{
+	0, "$OPTVAL_OFF"
+	1, "$OPTVAL_SOUNDTRACK_ORIGINAL"
+	2, "$OPTVAL_SOUNDTRACK_REMIXED"
+}
+
 OptionMenu SoundOptions protected
 {
 	Title "$SNDMNU_TITLE"
@@ -2731,6 +2738,7 @@ OptionMenu SoundOptions protected
 	StaticText " "
 	Slider "$SNDMNU_MENUVOLUME",        "snd_menuvolume",      0, 1, 0.01, 0, "", 0, Gray, 100, "$VALFORMAT_PERCENT"
 	StaticText " "
+	Option "$SNDMNU_EXSNDTRK",          "mus_soundtrack",      "SoundtrackModes", "mus_has_trakinfo"
 	Submenu "$SNDMNU_MIDIDEVICE",       "MidiDevicesMenu"
 	Submenu "$SNDMNU_MIDIPLAYER",       "MidiPlayerOptions"
 	StaticText " "
