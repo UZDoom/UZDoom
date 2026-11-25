@@ -17,6 +17,7 @@ jobs:
       mode: ${{ steps.emit.outputs.mode }}
       branch: ${{ steps.branch.outputs.branch || steps.tag.outputs.branch }}
       primary: ${{ steps.branch.outputs.primary }}
+      opts: ${{ steps.emit.outputs.opts }}
     steps:
       - id: details
         shell: bash
@@ -67,6 +68,10 @@ jobs:
         id: emit
         run: |
           mode=${{ steps.branch.outputs.mode || steps.tag.outputs.mode }}
+          opts=
+          if [[ "$mode" == "preview" ]]; then
+            opts="-DTESTING_FEATURES=ON"
+          fi
           if [[ "${{ vars.PUBLISH_RELEASES }}" ]]; then
             if [[ -n "$mode" ]]; then
               echo "::notice::This build will be a '$mode' release"
@@ -78,6 +83,7 @@ jobs:
             mode=
           fi
           echo "mode=$mode" | tee -a "$GITHUB_OUTPUT"
+          echo "opts=$opts" | tee -a "$GITHUB_OUTPUT"
 
   ci-success:
     needs:
@@ -253,7 +259,7 @@ jobs:
       name: ${{ matrix.config.name }}
       os: ${{ matrix.config.os }}
       os_image: ${{ matrix.config.os_image || '' }}
-      build_opts: ${{ matrix.config.build_opts }} ${{ matrix.config.build_opts_extra }}
+      build_opts: ${{ needs.ci-init.outputs.opts }} ${{ matrix.config.build_opts }} ${{ matrix.config.build_opts_extra }}
       deps_cmdline: ${{ matrix.config.deps_cmdline }}
       extra_files: ${{ matrix.config.extra_files }}
       environment: ${{ needs.ci-init.outputs.mode }}
@@ -339,7 +345,7 @@ jobs:
       name: ${{ matrix.config.name }}
       os: ${{ matrix.config.os }}
       os_image: ${{ matrix.config.os_image || '' }}
-      build_opts: ${{ matrix.config.build_opts }} ${{ matrix.config.build_opts_extra }}
+      build_opts: ${{ needs.ci-init.outputs.opts }} ${{ matrix.config.build_opts }} ${{ matrix.config.build_opts_extra }}
       deps_cmdline: ${{ matrix.config.deps_cmdline }}
       build_type: ${{ matrix.config.build_type }}
       extra_files: ${{ matrix.config.extra_files }}
@@ -386,7 +392,7 @@ jobs:
       name: ${{ matrix.config.name }}
       os: ${{ matrix.config.os }}
       os_image: ${{ matrix.config.os_image || '' }}
-      build_opts: ${{ matrix.config.build_opts }} ${{ matrix.config.build_opts_extra }}
+      build_opts: ${{ needs.ci-init.outputs.opts }} ${{ matrix.config.build_opts }} ${{ matrix.config.build_opts_extra }}
       deps_cmdline: ${{ matrix.config.deps_cmdline }}
       build_type: ${{ matrix.config.build_type }}
       extra_files: ${{ matrix.config.extra_files }}
@@ -444,7 +450,7 @@ jobs:
       name: ${{ matrix.config.name }}
       os: ${{ matrix.config.os }}
       os_image: ${{ matrix.config.os_image || '' }}
-      build_opts: ${{ matrix.config.build_opts }} ${{ matrix.config.build_opts_extra }}
+      build_opts: ${{ needs.ci-init.outputs.opts }}  ${{ matrix.config.build_opts }} ${{ matrix.config.build_opts_extra }}
       deps_cmdline: ${{ matrix.config.deps_cmdline }}
       extra_files: ${{ matrix.config.extra_files }}
       environment: ${{ needs.ci-init.outputs.mode }}
