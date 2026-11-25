@@ -62,10 +62,14 @@ CVARD(Int, i_display_new_release, 1, CVAR_ARCHIVE|CVAR_GLOBALCONFIG, "Show relea
 CVARD(Bool, ui_remember_size, true,  CVAR_ARCHIVE|CVAR_GLOBALCONFIG, "Launcher retains size between launches");
 CVARD(Int, ui_launcher_width, 0,  CVAR_ARCHIVE|CVAR_GLOBALCONFIG, "Launcher width");
 CVARD(Int, ui_launcher_height, 0,  CVAR_ARCHIVE|CVAR_GLOBALCONFIG, "Launcher height");
+CVARD(Bool, ui_launcher_maximized, false, CVAR_ARCHIVE|CVAR_GLOBALCONFIG, "Launcher starts maximized");
 
 EXTERN_FARG(iwad);
 EXTERN_FARG(host);
 EXTERN_FARG(join);
+EXTERN_FARG(norun);
+
+extern bool batchrun;
 
 bool foundprio = false; // global to prevent iwad box from appearing
 
@@ -752,6 +756,9 @@ int FIWadManager::IdentifyVersion (std::vector<FileSys::ResourceName>&wadfiles, 
 			}
 		}
 	}
+	const bool forceLauncher = Args->CheckParm(FArg_showlauncher) != 0;
+	const bool headlessRun = batchrun || Args->CheckParm(FArg_norun) != 0;
+
 	TArray<FFoundWadInfo> picks;
 	if (numFoundWads < mFoundWads.Size())
 	{
@@ -809,6 +816,45 @@ int FIWadManager::IdentifyVersion (std::vector<FileSys::ResourceName>&wadfiles, 
 		}
 	}
 
+	const bool wantQueryLauncher = queryiwad || HoldingQueryKey(queryiwad_key);
+	if (!headlessRun && !havepicked && (forceLauncher || (!iwadparm && !foundprio && (wantQueryLauncher || picks.Size() == 0))))
+	{
+		TArray<WadStuff> wads;
+		for (auto& found : picks)
+		{
+			if (found.mInfoIndex >= 0)
+			{
+				WadStuff stuff;
+				stuff.Name = mIWadInfos[found.mInfoIndex].Name;
+				stuff.Path = found.mFullPath;
+				wads.Push(stuff);
+			}
+		}
+		FStartupSelectionInfo info2 = FStartupSelectionInfo(wads, *Args, 0);
+		info2.DefaultFileLoadBehaviour = i_exit_on_not_found;
+		info2.displayRelease = (i_display_new_release != 1) ? i_display_new_release : (i_is_new_release ? 1 : 0);
+		info2.notifyNewRelease = !!i_display_new_release;
+		if (ui_remember_size)
+		{
+			info2.LauncherWidth = ui_launcher_width;
+			info2.LauncherHeight = ui_launcher_height;
+			info2.LauncherMaximized = ui_launcher_maximized;
+		}
+		I_PickIWad(true, info2);
+		i_exit_on_not_found = info2.DefaultFileLoadBehaviour;
+		if (!info2.notifyNewRelease)
+			i_display_new_release = 0;
+		else if (i_display_new_release == 0)
+			i_display_new_release = 1;
+		if (ui_remember_size)
+		{
+			ui_launcher_width = info2.LauncherWidth;
+			ui_launcher_height = info2.LauncherHeight;
+			ui_launcher_maximized = info2.LauncherMaximized;
+		}
+		return -1;
+	}
+
 	// If we still haven't found a suitable IWAD let's error out.
 	if (picks.Size() == 0)
 	{
@@ -846,17 +892,17 @@ int FIWadManager::IdentifyVersion (std::vector<FileSys::ResourceName>&wadfiles, 
 	int pick = 0;
 
 	// Present the IWAD selection box.
-	bool showlauncher = Args->CheckParm(FArg_showlauncher);
+	bool showlauncher = forceLauncher;
 	bool alwaysshow = (queryiwad && !Args->CheckParm(FArg_iwad) && !foundprio) || showlauncher;
 
-	if (!havepicked && (alwaysshow || picks.Size() > 1))
+	if (!headlessRun && !havepicked && (alwaysshow || picks.Size() > 1))
 	{
 		TArray<WadStuff> wads;
 		for (auto & found : picks)
 		{
 			WadStuff stuff;
 			stuff.Name = mIWadInfos[found.mInfoIndex].Name;
-			stuff.Path = ExtractFileBase(found.mFullPath.GetChars());
+			stuff.Path = found.mFullPath;
 			wads.Push(stuff);
 		}
 
@@ -877,15 +923,19 @@ int FIWadManager::IdentifyVersion (std::vector<FileSys::ResourceName>&wadfiles, 
 		{
 			info.LauncherWidth = ui_launcher_width;
 			info.LauncherHeight = ui_launcher_height;
+			info.LauncherMaximized = ui_launcher_maximized;
 		}
 
 		const bool pickRes = I_PickIWad(queryiwad || showlauncher || HoldingQueryKey(queryiwad_key), info);
-		pick = info.SaveInfo();
-		disableautoload = !!(info.DefaultStartFlags & 1);
-		autoloadlights = !!(info.DefaultStartFlags & 2);
-		autoloadbrightmaps = !!(info.DefaultStartFlags & 4);
-		autoloadwidescreen = !!(info.DefaultStartFlags & 8);
-		i_loadsupportwad = !!(info.DefaultStartFlags & 16);
+		if (pickRes)
+		{
+			pick = info.SaveInfo();
+			disableautoload = !!(info.DefaultStartFlags & 1);
+			autoloadlights = !!(info.DefaultStartFlags & 2);
+			autoloadbrightmaps = !!(info.DefaultStartFlags & 4);
+			autoloadwidescreen = !!(info.DefaultStartFlags & 8);
+			i_loadsupportwad = !!(info.DefaultStartFlags & 16);
+		}
 		i_exit_on_not_found = info.DefaultFileLoadBehaviour;
 		if (!info.notifyNewRelease)
 			i_display_new_release = 0; // don't change truthy values
@@ -893,6 +943,7 @@ int FIWadManager::IdentifyVersion (std::vector<FileSys::ResourceName>&wadfiles, 
 		{
 			ui_launcher_width = info.LauncherWidth;
 			ui_launcher_height = info.LauncherHeight;
+			ui_launcher_maximized = info.LauncherMaximized;
 		}
 
 		if (!pickRes)

@@ -55,8 +55,26 @@ void SignalHandler(int signal);
 
 // ---------------------------------------------------------------------------
 
+static int s_cocoaQtModalDepth = 0;
+static void (*s_cocoaQtQuitCallback)() = nullptr;
+
+void I_CocoaSetQtModalActive(bool active)
+{
+	if (active)
+		++s_cocoaQtModalDepth;
+	else if (s_cocoaQtModalDepth > 0)
+		--s_cocoaQtModalDepth;
+}
+
+void I_CocoaSetQtQuitCallback(void (*cb)())
+{
+	s_cocoaQtQuitCallback = cb;
+}
+
 void Mac_I_FatalError(const char* const message)
 {
+	extern void I_NetDone();
+	I_NetDone();
 	I_SetMainWindowVisible(false);
 	S_StopMusic(true);
 
@@ -383,6 +401,8 @@ extern bool AppActive;
 - (void)processEvents:(NSTimer*)timer
 {
 	ZD_UNUSED(timer);
+	if (s_cocoaQtModalDepth > 0)
+		return;
 
 	NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
 
@@ -409,12 +429,24 @@ extern bool AppActive;
 
 - (NSApplicationTerminateReply)applicationShouldTerminate:(NSApplication *)sender
 {
+	if (s_cocoaQtModalDepth > 0)
+	{
+		if (s_cocoaQtQuitCallback)
+			s_cocoaQtQuitCallback();
+		return NSTerminateCancel;
+	}
 	[self sendExitEvent:sender];
 	return NSTerminateLater;
 }
 
 - (void)sendExitEvent:(id)sender
 {
+	if (s_cocoaQtModalDepth > 0)
+	{
+		if (s_cocoaQtQuitCallback)
+			s_cocoaQtQuitCallback();
+		return;
+	}
 	throw CExitEvent(0);
 }
 

@@ -55,7 +55,7 @@
 #include "m_random.h"
 #include "printf.h"
 #include "version.h"
-#include "widgets/netstartwindow.h"
+#include "launcher/netstartwindow.h"
 #include "filesystem.h"
 
 /* [Petteri] Get more portable: */
@@ -754,7 +754,7 @@ static void RemoveClientConnection(int client)
 			continue;
 
 		SetClientAck(i, client, false);
-		for (int i = 0; i < 4; ++i)
+		for (int j = 0; j < 4; ++j)
 			SendPacket(Connected[i].Address);
 	}
 }
@@ -1047,6 +1047,7 @@ static bool HostGame(int arg)
 	if (!I_NetLoop(Host_CheckForConnections, (void*)&connectedPlayers))
 	{
 		SendAbort();
+		I_NetDone();
 		throw CExitEvent(0);
 	}
 
@@ -1348,6 +1349,7 @@ static bool JoinGame(int arg)
 	if (!I_NetLoop(Guest_ContactHost, nullptr))
 	{
 		SendAbort();
+		I_NetDone();
 		throw CExitEvent(0);
 	}
 

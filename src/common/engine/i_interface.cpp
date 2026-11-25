@@ -206,7 +206,8 @@ int FStartupSelectionInfo::SaveInfo()
 	savenetfile = bSaveNetFile;
 	savenetargs = bSaveNetArgs;
 
-	defaultnetiwad = (*Wads)[DefaultNetIWAD].Name.GetChars();
+	if (Wads && DefaultNetIWAD >= 0 && DefaultNetIWAD < Wads->SSize())
+		defaultnetiwad = (*Wads)[DefaultNetIWAD].Name.GetChars();
 	defaultnetpage = DefaultNetPage;
 	defaultnetsavefile = savenetfile ? DefaultNetSaveFile.GetChars() : "";
 	defaultnetargs = savenetargs ? DefaultNetArgs.GetChars() : "";
@@ -223,7 +224,8 @@ int FStartupSelectionInfo::SaveInfo()
 	defaultnetjoinport = DefaultNetJoinPort;
 	defaultnetjointeam = DefaultNetJoinTeam;
 
-	defaultiwad = (*Wads)[DefaultIWAD].Name.GetChars();
+	if (Wads && DefaultIWAD >= 0 && DefaultIWAD < Wads->SSize())
+		defaultiwad = (*Wads)[DefaultIWAD].Name.GetChars();
 	saveargs = bSaveArgs;
 	defaultargs = saveargs ? DefaultArgs.GetChars() : "";
 

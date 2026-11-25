@@ -24,6 +24,9 @@
 #include <CoreFoundation/CoreFoundation.h>
 #include "SDL.h"
 
+void I_CocoaSetQtModalActive(bool) {}
+void I_CocoaSetQtQuitCallback(void (*)()) {}
+
 void Mac_I_FatalError(const char* errortext)
 {
 	// Close window or exit fullscreen and release mouse capture

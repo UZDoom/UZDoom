@@ -114,6 +114,7 @@ void InitWidgetResources(const char* filename)
 void CloseWidgetResources()
 {
 	delete WidgetResources;
+	WidgetResources = nullptr;
 }
 
 static std::vector<uint8_t> LoadFile(const char* name, bool root)

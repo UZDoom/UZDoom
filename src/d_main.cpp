@@ -48,7 +48,7 @@
 #include "c_dispatch.h"
 #include "cmdlib.h"
 #include "common/scripting/dap/DebugServer.h"
-#include "widgets/errorwindow.h"
+#include "launcher/errorwindow.h"
 #include "d_buttons.h"
 #include "d_dehacked.h"
 #include "d_event.h"
@@ -2405,6 +2405,59 @@ static void D_DoomInit()
 
 	if (!batchrun) Printf ("M_LoadDefaults: Load system defaults.\n");
 	M_LoadDefaults ();			// load before initing other systems
+
+	// Apply +set / +<cvar> early for CVARs used during startup (before normal + commands run),
+	// so changing renderer, support WADs, autoloads, or language takes effect on this launch.
+	static const char* const kEarlyCVars[] = {
+		"i_loadsupportwad",
+		"i_exit_on_not_found",
+		"vid_preferbackend",
+		"disableautoload",
+		"autoloadlights",
+		"autoloadbrightmaps",
+		"autoloadwidescreen",
+		"language",
+	};
+	auto isEarlyCVar = [&](const char* name) -> bool
+	{
+		for (const char* entry : kEarlyCVars)
+		{
+			if (stricmp(name, entry) == 0)
+				return true;
+		}
+		return false;
+	};
+	const int argc = Args->NumArgs();
+	for (int i = 1; i < argc; ++i)
+	{
+		const char* arg = Args->GetArg(i);
+		if (arg[0] != '+')
+			continue;
+
+		const char* cvarName = nullptr;
+		const char* cvarVal = nullptr;
+		if (stricmp(arg + 1, "set") == 0)
+		{
+			if (i + 2 < argc && isEarlyCVar(Args->GetArg(i + 1)))
+			{
+				cvarName = Args->GetArg(i + 1);
+				cvarVal = Args->GetArg(i + 2);
+				i += 2;
+			}
+		}
+		else if (arg[1] != '\0' && i + 1 < argc && isEarlyCVar(arg + 1))
+		{
+			cvarName = arg + 1;
+			cvarVal = Args->GetArg(i + 1);
+			++i;
+		}
+
+		if (cvarName && cvarVal && cvarVal[0] != '+')
+		{
+			if (FBaseCVar* cvar = FindCVar(cvarName, nullptr))
+				cvar->CmdSet(cvarVal);
+		}
+	}
 }
 
 //==========================================================================
@@ -2486,23 +2539,14 @@ static void AddAutoloadFiles(const char *autoname, std::vector<FileSys::Resource
 
 //==========================================================================
 //
-// CheckCmdLine
+// ApplyCmdLineGameModeFlags
 //
 //==========================================================================
 
-static void CheckCmdLine()
+static void ApplyCmdLineGameModeFlags()
 {
 	int flags = dmflags;
 	int flags3 = dmflags3;
-	int p;
-	const char *v;
-
-	if (!batchrun) Printf ("Checking cmd-line parameters...\n");
-	if (Args->CheckParm (FArg_nomonsters))	flags |= DF_NO_MONSTERS;
-	if (Args->CheckParm (FArg_respawn))		flags |= DF_MONSTERS_RESPAWN;
-	if (Args->CheckParm (FArg_fast))			flags |= DF_FAST_MONSTERS;
-
-	devparm = !!Args->CheckParm (FArg_devparm);
 
 	if (Args->CheckParm (FArg_altdeath))
 	{
@@ -2526,6 +2570,28 @@ static void CheckCmdLine()
 
 	dmflags = flags;
 	dmflags3 = flags3;
+}
+
+//==========================================================================
+//
+// CheckCmdLine
+//
+//==========================================================================
+
+static void CheckCmdLine()
+{
+	int flags = dmflags;
+	int p;
+	const char *v;
+
+	if (!batchrun) Printf ("Checking cmd-line parameters...\n");
+	if (Args->CheckParm (FArg_nomonsters))	flags |= DF_NO_MONSTERS;
+	if (Args->CheckParm (FArg_respawn))		flags |= DF_MONSTERS_RESPAWN;
+	if (Args->CheckParm (FArg_fast))			flags |= DF_FAST_MONSTERS;
+
+	devparm = !!Args->CheckParm (FArg_devparm);
+
+	dmflags = flags;
 
 	// get skill / episode / map from parms
 	setmap = false;
@@ -3709,6 +3775,9 @@ static int D_InitGame(const FIWADInfo* iwad_info, std::vector<FileSys::ResourceN
 	// Now that wads are loaded, define mod-specific cvars.
 	ParseCVarInfo();
 
+	// Apply -coop/-deathmatch/-altdeath defaults before +set/+dmflags commands so explicit flags win (#1717).
+	ApplyCmdLineGameModeFlags();
+
 	// Actually exec command line commands and exec files.
 	if (exec != NULL)
 	{
@@ -4033,6 +4102,8 @@ static int D_InitGame(const FIWADInfo* iwad_info, std::vector<FileSys::ResourceN
 		if (v)
 		{
 			FString file = G_BuildSaveName(v);
+			if (!FileExists(file) && FileExists(v))
+				file = v;
 			if (!FileExists(file))
 			{
 				I_FatalError("Cannot find savegame %s", file.GetChars());

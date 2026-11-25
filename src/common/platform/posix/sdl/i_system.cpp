@@ -47,18 +47,16 @@
 #endif
 
 #include "c_cvars.h"
+#include "hardware.h"
 #include "i_interface.h"
 #include "palutil.h"
 #include "printf.h"
+#include "s_music.h"
 #include "st_start.h"
 #include "v_font.h"
 #include "vm.h"
-#include "widgets/errorwindow.h"
-#include "widgets/launcherwindow.h"
-
-#if defined(__APPLE__)
-int I_PickIWad_Cocoa (WadStuff *wads, int numwads, bool showwin, int defaultiwad);
-#endif
+#include "launcher/errorwindow.h"
+#include "launcher/starter.h"
 
 double PerfToSec, PerfToMillisec;
 CVAR(String, queryiwad_key, "shift", CVAR_GLOBALCONFIG | CVAR_ARCHIVE);
@@ -108,6 +106,13 @@ void Mac_I_FatalError(const char* errortext);
 #ifdef __unix__
 void Unix_I_FatalError(const char* errortext)
 {
+	extern void I_NetDone();
+	I_NetDone();
+
+	// Cleanly tear down screen/Video and SDL video before showing the modal Qt error window.
+	I_ShutdownGraphics();
+	S_StopMusic(true);
+
 	if (CVMAbortException::stacktrace.IsNotEmpty())
 	{
 		Printf("%s", CVMAbortException::stacktrace.GetChars());
@@ -130,9 +135,6 @@ void Unix_I_FatalError(const char* errortext)
 	{
 		printf("\n%s\n", errortext);
 	}
-
-	// Close window or exit fullscreen and release mouse capture
-	SDL_QuitSubSystem(SDL_INIT_VIDEO);
 }
 #endif
 
@@ -341,17 +343,7 @@ bool I_PickIWad (bool showwin, FStartupSelectionInfo& info)
 		return true;
 	}
 
-#ifdef __APPLE__
-	const int ret = I_PickIWad_Cocoa(&(*info.Wads)[0], (int)info.Wads->Size(), showwin, info.DefaultIWAD);
-	if (ret >= 0)
-	{
-		info.DefaultIWAD = ret;
-		return true;
-	}
-	return false;
-#else
-	return LauncherWindow::ExecModal(info);
-#endif
+	return Starter::ExecModal(info);
 }
 
 void I_PutInClipboard (const char *str)
