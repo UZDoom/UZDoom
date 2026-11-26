@@ -20,17 +20,6 @@
 #include "hwrenderer/data/buffers.h"
 #include "v_video.h"
 
-enum
-{
-	LIGHTBUF_BINDINGPOINT = 1,
-	POSTPROCESS_BINDINGPOINT = 2,
-	VIEWPOINT_BINDINGPOINT = 3,
-	LIGHTNODES_BINDINGPOINT = 4,
-	LIGHTLINES_BINDINGPOINT = 5,
-	LIGHTLIST_BINDINGPOINT = 6,
-	BONEBUF_BINDINGPOINT = 7
-};
-
 enum class UniformType
 {
 	Undefined = -1,
@@ -178,15 +167,18 @@ struct VaryingFieldDesc
 enum
 {
 	SFlag_LegacyShader = 1, // legacy HardwareShader shader, DO NOT REUSE
+	SFlag_Global = 2,
 };
 
 struct UserShaderDesc
 {
 	FString shader;
+	FString vertshader;
 	MaterialShaderIndex shaderType;
 	FString defines;
 	bool disablealphatest = false;
 	uint8_t shaderFlags = 0;
+	TArray<VaryingFieldDesc> varyings;
 };
 
 extern TArray<UserShaderDesc> usershaders;

@@ -75,8 +75,8 @@ bool VkShaderManager::CompileNextShader()
 		assert(i < MATERIAL_SHADER_COUNT);
 
 		VkShaderProgram prog;
-		prog.vert = LoadVertShader(defaultshaders[i].ShaderName, mainvp, defaultshaders[i].Defines, static_cast<AllShaderIndex>(i));
-		prog.frag = LoadFragShader(defaultshaders[i].ShaderName, mainfp, defaultshaders[i].gettexelfunc, defaultshaders[i].lightfunc, defaultshaders[i].Defines, true, compilePass == GBUFFER_PASS, static_cast<AllShaderIndex>(i));
+		prog.vert = LoadVertShader(defaultshaders[i].ShaderName, mainvp, defaultshaders[i].Defines, nullptr, static_cast<AllShaderIndex>(i), nullptr);
+		prog.frag = LoadFragShader(defaultshaders[i].ShaderName, mainfp, defaultshaders[i].gettexelfunc, defaultshaders[i].lightfunc, defaultshaders[i].Defines, true, compilePass == GBUFFER_PASS, static_cast<AllShaderIndex>(i), nullptr);
 		mMaterialShaders[compilePass].push_back(std::move(prog));
 
 		compileIndex++;
@@ -93,8 +93,8 @@ bool VkShaderManager::CompileNextShader()
 		assert(i < MATERIAL_SHADER_COUNT);
 
 		VkShaderProgram natprog;
-		natprog.vert = LoadVertShader(defaultshaders[i].ShaderName, mainvp, defaultshaders[i].Defines, static_cast<AllShaderIndex>(i));
-		natprog.frag = LoadFragShader(defaultshaders[i].ShaderName, mainfp, defaultshaders[i].gettexelfunc, defaultshaders[i].lightfunc, defaultshaders[i].Defines, false, compilePass == GBUFFER_PASS, static_cast<AllShaderIndex>(i));
+		natprog.vert = LoadVertShader(defaultshaders[i].ShaderName, mainvp, defaultshaders[i].Defines, nullptr, static_cast<AllShaderIndex>(i), nullptr);
+		natprog.frag = LoadFragShader(defaultshaders[i].ShaderName, mainfp, defaultshaders[i].gettexelfunc, defaultshaders[i].lightfunc, defaultshaders[i].Defines, false, compilePass == GBUFFER_PASS, static_cast<AllShaderIndex>(i), nullptr);
 		mMaterialShadersNAT[compilePass].push_back(std::move(natprog));
 
 		compileIndex++;
@@ -112,12 +112,14 @@ bool VkShaderManager::CompileNextShader()
 
 		assert(shader.shaderType < MATERIAL_SHADER_COUNT);
 
+		auto * varyings = shader.vertshader.IsNotEmpty() && shader.varyings.Size() > 0 ? &shader.varyings : nullptr;
+
 		const FString& name = ExtractFileBase(shader.shader.GetChars());
 		FString defines = defaultshaders[shader.shaderType].Defines + shader.defines;
 
 		VkShaderProgram prog;
-		prog.vert = LoadVertShader(name, mainvp, defines.GetChars(), static_cast<AllShaderIndex>(shader.shaderType));
-		prog.frag = LoadFragShader(name, mainfp, shader.shader.GetChars(), defaultshaders[shader.shaderType].lightfunc, defines.GetChars(), true, compilePass == GBUFFER_PASS, static_cast<AllShaderIndex>(shader.shaderType));
+		prog.vert = LoadVertShader(name, mainvp, defines.GetChars(), shader.vertshader.IsNotEmpty() ? shader.vertshader.GetChars() : nullptr, static_cast<AllShaderIndex>(shader.shaderType), varyings);
+		prog.frag = LoadFragShader(name, mainfp, shader.shader.GetChars(), defaultshaders[shader.shaderType].lightfunc, defines.GetChars(), true, compilePass == GBUFFER_PASS, static_cast<AllShaderIndex>(shader.shaderType), varyings);
 		mMaterialShaders[compilePass].push_back(std::move(prog));
 
 		compileIndex++;
@@ -134,8 +136,8 @@ bool VkShaderManager::CompileNextShader()
 		assert(i < EFFECT_SHADER_COUNT);
 
 		VkShaderProgram prog;
-		prog.vert = LoadVertShader(effectshaders[i].ShaderName, effectshaders[i].vp, effectshaders[i].defines, static_cast<AllShaderIndex>(i + FIRST_EFFECT_SHADER));
-		prog.frag = LoadFragShader(effectshaders[i].ShaderName, effectshaders[i].fp1, effectshaders[i].fp2, effectshaders[i].fp3, effectshaders[i].defines, true, compilePass == GBUFFER_PASS, static_cast<AllShaderIndex>(i + FIRST_EFFECT_SHADER));
+		prog.vert = LoadVertShader(effectshaders[i].ShaderName, effectshaders[i].vp, effectshaders[i].defines, nullptr, static_cast<AllShaderIndex>(i + FIRST_EFFECT_SHADER), nullptr);
+		prog.frag = LoadFragShader(effectshaders[i].ShaderName, effectshaders[i].fp1, effectshaders[i].fp2, effectshaders[i].fp3, effectshaders[i].defines, true, compilePass == GBUFFER_PASS, static_cast<AllShaderIndex>(i + FIRST_EFFECT_SHADER), nullptr);
 		mEffectShaders[compilePass].push_back(std::move(prog));
 
 		compileIndex++;
@@ -360,7 +362,7 @@ static const char *shaderBindings = R"(
 	vec4 noise4(vec4) { return vec4(0); }
 )";
 
-std::unique_ptr<VulkanShader> VkShaderManager::LoadVertShader(FString shadername, const char *vert_lump, const char *defines, AllShaderIndex type)
+std::unique_ptr<VulkanShader> VkShaderManager::LoadVertShader(FString shadername, const char *vert_lump, const char *defines, const char * user_vert_lump, AllShaderIndex type, const TArray<VaryingFieldDesc> *varyings)
 {
 	FString code = GetTargetGlslVersion();
 	code << "#extension GL_GOOGLE_include_directive : enable\n";
@@ -369,12 +371,22 @@ std::unique_ptr<VulkanShader> VkShaderManager::LoadVertShader(FString shadername
 #ifdef NPOT_EMULATION
 	code << "#define NPOT_EMULATION\n";
 #endif
+	if(user_vert_lump)
+	{
+		code << "#define VERT_CUSTOM_V0\n";
+	}
 	code << shaderBindings;
 	code << "layout(set = 1, binding = 0, std140) uniform readonly ViewpointUBO" << ShaderInputsOutputs::GenerateStruct<HWViewpointUniforms>() << ";\n";
-	code << ShaderInputsOutputs::GenerateInputsOutputs(true, false, type, false, fb->device->EnabledFeatures.Features.shaderClipDistance);
+	code << ShaderInputsOutputs::GenerateInputsOutputs(true, false, type, false, fb->device->EnabledFeatures.Features.shaderClipDistance, varyings);
 	if (!fb->device->EnabledFeatures.Features.shaderClipDistance) code << "#define NO_CLIPDISTANCE_SUPPORT\n";
 	code << "#line 1\n";
 	code << LoadPrivateShaderLump(vert_lump).GetChars() << "\n";
+
+	if(user_vert_lump)
+	{
+		code << "\n#line 1\n";
+		code << LoadPublicShaderLump(user_vert_lump);
+	}
 
 	return ShaderBuilder()
 		.Type(ShaderType::Vertex)
@@ -385,7 +397,7 @@ std::unique_ptr<VulkanShader> VkShaderManager::LoadVertShader(FString shadername
 		.Create(shadername.GetChars(), fb->device.get());
 }
 
-std::unique_ptr<VulkanShader> VkShaderManager::LoadFragShader(FString shadername, const char *frag_lump, const char *material_lump, const char *light_lump, const char *defines, bool alphatest, bool gbufferpass, AllShaderIndex type)
+std::unique_ptr<VulkanShader> VkShaderManager::LoadFragShader(FString shadername, const char *frag_lump, const char *material_lump, const char *light_lump, const char *defines, bool alphatest, bool gbufferpass, AllShaderIndex type, const TArray<VaryingFieldDesc> *varyings)
 {
 	FString pre_placeholder = GetTargetGlslVersion();
 	pre_placeholder << "#extension GL_GOOGLE_include_directive : enable\n";
@@ -399,7 +411,7 @@ std::unique_ptr<VulkanShader> VkShaderManager::LoadFragShader(FString shadername
 #endif
 	code << shaderBindings;
 	code << "layout(set = 1, binding = 0, std140) uniform readonly ViewpointUBO" << ShaderInputsOutputs::GenerateStruct<HWViewpointUniforms>() << ";\n";
-	code << ShaderInputsOutputs::GenerateInputsOutputs(true, true, type, gbufferpass, fb->device->EnabledFeatures.Features.shaderClipDistance);
+	code << ShaderInputsOutputs::GenerateInputsOutputs(true, true, type, gbufferpass, fb->device->EnabledFeatures.Features.shaderClipDistance, varyings);
 	FString placeholder = "\n";
 
 	if (!fb->device->EnabledFeatures.Features.shaderClipDistance) code << "#define NO_CLIPDISTANCE_SUPPORT\n";
