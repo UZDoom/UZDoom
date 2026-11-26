@@ -40,7 +40,7 @@
 #include "v_draw.h"
 
 CVAR(Float, underwater_fade_scalar, 1.0f, CVAR_ARCHIVE) // [Nash] user-settable underwater blend intensity
-CVAR( Float, blood_fade_scalar, 1.0f, CVAR_ARCHIVE )	// [SP] Pulled from Skulltag - changed default from 0.5 to 1.0
+CVAR( Float, blood_fade_scalar, 0.8f, CVAR_ARCHIVE )	// [SP] Pulled from Skulltag - changed default from 0.5 to 1.0 (changed again from 1.0 to 0.8)
 CVAR( Float, pickup_fade_scalar, 1.0f, CVAR_ARCHIVE )	// [SP] Uses same logic as blood_fade_scalar except for pickups
 CVAR(Float, powerup_fade_scalar, 1.0f, CVAR_ARCHIVE) // [Sal] Adjust screen fades for all inventory items
 
@@ -88,7 +88,7 @@ void V_AddBlend (float r, float g, float b, float a, float v_blend[4])
 
 void V_AddPlayerBlend (player_t *CPlayer, float blend[4], float maxinvalpha, int maxpainblend)
 {
-	int cnt;
+	int cnt, bloodcnt;
 	auto Level = CPlayer->mo->Level;
 
 	// [RH] All powerups can affect the screen blending now
@@ -133,17 +133,20 @@ void V_AddPlayerBlend (player_t *CPlayer, float blend[4], float maxinvalpha, int
 
 	if (painFlash.a != 0)
 	{
-		cnt = DamageToAlpha[min (CPlayer->damagecount * painFlash.a / 255, (uint32_t)113)];
+		bloodcnt = (DamageToAlpha[min (CPlayer->damagecount * painFlash.a / 255, (uint32_t)113)]);
 
 		// [BC] Allow users to tone down the intensity of the blood on the screen.
-		cnt = (int)( cnt * blood_fade_scalar );
+		bloodcnt = (int)( bloodcnt * (blood_fade_scalar  + 0.2)); // "0.2" is here as a "20%" increase (default "blood_fade_scalar" 100% -> 80%, so 100% is now like the old-school red blend)
 
-		if (cnt)
+		if (bloodcnt)
 		{
-			if (cnt > maxpainblend)
-				cnt = maxpainblend;
+			if (bloodcnt > maxpainblend)
+				bloodcnt = maxpainblend;
 
-			V_AddBlend (painFlash.r / 255.f, painFlash.g / 255.f, painFlash.b / 255.f, cnt / 255.f, blend);
+			if (bloodcnt > maxinvalpha)
+				maxinvalpha = bloodcnt;
+
+			V_AddBlend (painFlash.r / 255.f, painFlash.g / 255.f, painFlash.b / 255.f, bloodcnt / 255.f, blend);
 		}
 	}
 
@@ -333,7 +336,7 @@ FVector4 V_CalcBlend(sector_t* viewsector, PalEntry* modulateColor)
 
 	if (player)
 	{
-		V_AddPlayerBlend(player, blend, 0.5, 175);
+		V_AddPlayerBlend(player, blend, 0.5, 225);
 	}
 
 	if (players[consoleplayer].camera != NULL)
