@@ -505,6 +505,7 @@ enum ActorRenderFlag2
 	RF2_INTERPOLATESCALE		= 0x1000,
 	RF2_INTERPOLATEALPHA		= 0x2000,
 	RF2_NODYNAMICLIGHTING		= 0x4000,	// [MC] Disable dynamic lighting effects on sprites/models
+	RF2_SETSPRITENORMAL			= 0x8000,	// [AFA] Set the sprite's normal and allow individual dynamic lights to affect sprites
 };
 
 // This translucency value produces the closest match to Heretic's TINTTAB.
