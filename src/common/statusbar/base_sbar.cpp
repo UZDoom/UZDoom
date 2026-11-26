@@ -360,7 +360,7 @@ void DStatusBarCore::SetScale()
 	if ((horz == 320 && vert == 200) || (horz == 640 && vert == 400))
 	{
 		refaspect = (4. / 3.);
-		if (!hud_aspectscale) aspectscale = 1 / 1.2;
+		if (ForcedScale || !hud_aspectscale) aspectscale = 1 / 1.2;
 	}
 
 	if (screenaspect < refaspect)
@@ -439,7 +439,10 @@ void DStatusBarCore::StatusbarToRealCoords(double& x, double& y, double& w, doub
 		int vres = VerticalResolution;
 		ValidateResolution(hres, vres);
 
-		VirtualToRealCoords(twod, x, y, w, h, hres, vres, true, true);
+		double oldH = h;
+		double aspectScale = ForcedScale || !hud_aspectscale ? 1.2 : 1.0;
+		VirtualToRealCoords(twod, x, y, w, h, hres, vres * aspectScale, true, true);
+		y += (h / oldH) * vres * (aspectScale - 1.0);
 	}
 	else
 	{
