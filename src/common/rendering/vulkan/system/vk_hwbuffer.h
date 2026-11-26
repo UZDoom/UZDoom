@@ -35,7 +35,7 @@
 
 class VulkanRenderDevice;
 
-class VkHardwareBuffer : virtual public IBuffer
+class VkHardwareBuffer : virtual public IBuffer, virtual public ILockableBuffer
 {
 public:
 	VkHardwareBuffer(VulkanRenderDevice* fb);
