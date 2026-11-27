@@ -506,6 +506,8 @@ public:
 		{ UCVarValue val; val.Bool = !!flag; SetGenericRep (val, CVAR_Bool); return val.Bool; }
 	inline operator int () const { return (ValueVar & BitVal); }
 	inline int operator *() const { return (ValueVar & BitVal); }
+	inline FIntCVar &GetValueVar() const { return ValueVar; }
+	inline uint32_t GetBitVal() const { return BitVal; }
 
 protected:
 	virtual UCVarValue DoSet (UCVarValue value, ECVarType type);

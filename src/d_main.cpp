@@ -821,6 +821,16 @@ CUSTOM_CVAR (Int, compatflags2, 0, CVAR_ARCHIVE|CVAR_SERVERINFO | CVAR_NOINITCAL
 	}
 }
 
+CUSTOM_CVAR (Bool, alwaysapplycompatflags, false, CVAR_ARCHIVE|CVAR_SERVERINFO | CVAR_NOINITCALL)
+{
+	for (auto Level : AllLevels())
+	{
+		Level->ApplyCompatibility();
+		Level->ApplyCompatibility2();
+		Level->SetCompatLineOnSide(true);
+	}
+}
+
 CUSTOM_CVAR(Int, compatmode, 0, CVAR_ARCHIVE|CVAR_NOINITCALL)
 {
 	int v, w = 0;

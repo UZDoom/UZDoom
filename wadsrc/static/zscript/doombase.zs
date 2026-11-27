@@ -452,6 +452,8 @@ struct LevelInfo native
 	native readonly int airsupply;
 	native readonly int compatflags;
 	native readonly int compatflags2;
+	native readonly int compatmask;
+	native readonly int compatmask2;
 	native readonly name deathsequence;
 	native readonly int fogdensity;
 	native readonly int outsidefogdensity;
