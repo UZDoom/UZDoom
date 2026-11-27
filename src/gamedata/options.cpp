@@ -197,8 +197,8 @@ void parseOptions()
 		setflag(lev.compatmask2, COMPATF2_RESERVEDLINEFLAG, opt.comp_reservedlineflag);
 		if (opt.comp_soul != -1)
 		{
-			setflag(lev.compatflags2, COMPATF2_NOSOULBOUNCE, opt.comp_soul != 0);
-			lev.compatmask2 |= COMPATF2_NOSOULBOUNCE;
+			setflag(lev.compatflags2, COMPATF2_NOSOULCEILBOUNCE, opt.comp_soul != 0);
+			lev.compatmask2 |= COMPATF2_NOSOULCEILBOUNCE;
 		}
 
 		/* later. these should be supported but are not implemented yet.

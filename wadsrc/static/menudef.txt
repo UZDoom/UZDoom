@@ -2533,7 +2533,7 @@ OptionMenu "CompatActorMenu" protected
 	Option "$CMPTMNU_VILEGHOSTS",					"compat_VILEGHOSTS", "YesNo"
 	Option "$CMPTMNU_NOBLOCKFRIENDS",				"compat_NOBLOCKFRIENDS", "YesNo"
 	Option "$CMPTMNU_LIMITPAIN",					"compat_LIMITPAIN", "YesNo"
-	Option "$CMPTMNU_NOSOULBOUNCE",					"compat_nosoulbounce", "YesNo"
+	Option "$CMPTMNU_NOSOULCEILBOUNCE",				"compat_nosoulceilbounce", "YesNo"
 	Option "$CMPTMNU_MBFMONSTERMOVE",				"compat_MBFMONSTERMOVE", "YesNo"
 	Option "$CMPTMNU_CROSSDROPOFF",					"compat_CROSSDROPOFF", "YesNo"
 	Option "$CMPTMNU_DROPOFF",						"compat_DROPOFF", "YesNo"

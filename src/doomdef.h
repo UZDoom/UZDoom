@@ -246,7 +246,7 @@ enum ELevelCompatFlag2 : uint32_t
 	COMPATF2_INFINITEMELEE		= 1 << 24, // Disable vertical Z-range check for melee attacks
 	COMPATF2_BOOMUSEBLOCKING	= 1 << 25, // All special lines block <use> unless Boom PassUse is set
 	COMPATF2_BOOMSCROLLSTRICT	= 1 << 26, // Use strict Boom scroller physics (e.g additive for players/voodoo dolls)
-	COMPATF2_NOSOULBOUNCE		= 1 << 27, // Charging Lost Souls do not bounce off ceilings
+	COMPATF2_NOSOULCEILBOUNCE		= 1 << 27, // Charging Lost Souls do not bounce off ceilings
 };
 using ELevelCompatFlags2 = TFlags<ELevelCompatFlag2>;
 DEFINE_TFLAGS_OPERATORS(ELevelCompatFlags2)
