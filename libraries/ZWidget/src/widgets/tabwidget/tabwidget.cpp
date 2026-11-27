@@ -192,6 +192,9 @@ void TabBar::OnGeometryChanged()
 	double w = GetWidth();
 	double h = GetHeight();
 	double x = 0.0;
+	double padY = 4.0;
+	double tabH = std::max(h - padY * 2.0, 0.0);
+	double gap = 6.0;
 
 	leftSpacer->SetFrameGeometry(Rect::xywh(x, 0.0, GetStyleDouble("spacer-left"), h));
 	x += GetStyleDouble("spacer-left");
@@ -199,8 +202,8 @@ void TabBar::OnGeometryChanged()
 	for (TabBarTab* tab : Tabs)
 	{
 		double tabWidth = tab->GetNoncontentLeft() + tab->GetPreferredWidth() + tab->GetNoncontentRight();
-		tab->SetFrameGeometry(Rect::xywh(x, 0.0, tabWidth, h));
-		x += tabWidth;
+		tab->SetFrameGeometry(Rect::xywh(x, padY, tabWidth, tabH));
+		x += tabWidth + gap;
 	}
 
 	rightSpacer->SetFrameGeometry(Rect::xywh(x, 0.0, std::max(w - x, 0.0), h));
@@ -271,7 +274,22 @@ double TabBarTab::GetPreferredWidth()
 {
 	double x = Icon ? 32.0 + 5.0 : 0.0;
 	if (Label) x += Label->GetPreferredWidth();
+	x += 12.0; // room for active indicator dot
 	return x;
+}
+
+void TabBarTab::OnPaint(Canvas* canvas)
+{
+	if (IsCurrent)
+	{
+		Colorf dotColor = GetStyleColor("accent-color");
+		if (dotColor.a <= 0.0f)
+			dotColor = GetStyleColor("color");
+		double dotSize = 4.0;
+		double dotX = GetWidth() - dotSize;
+		double dotY = (GetHeight() - dotSize) * 0.5;
+		canvas->fillRoundedRect(Rect::xywh(dotX, dotY, dotSize, dotSize), dotSize * 0.5, dotColor);
+	}
 }
 
 void TabBarTab::OnGeometryChanged()

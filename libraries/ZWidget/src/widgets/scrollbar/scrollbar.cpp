@@ -319,11 +319,13 @@ void Scrollbar::OnPaint(Canvas* canvas)
 
 	if (HIDE_SMALL_BAR && !paint) return;
 
-	canvas->fillRect(Rect::shrink(Rect::xywh(0.0, 0.0, GetWidth(), height), 4.0, 0.0, 4.0, 0.0), GetStyleColor("track-color"));
-
 	if (HIDE_SMALL_THUMB && !paint) return;
 
-	canvas->fillRect(Rect::shrink(rect_thumb, 4.0, 0.0, 4.0, 0.0), GetStyleColor("thumb-color"));
+	Rect thumb = Rect::shrink(rect_thumb, 5.0, 2.0, 5.0, 2.0);
+	if (thumb.width > 0.0 && thumb.height > 0.0)
+	{
+		canvas->fillRoundedRect(thumb, thumb.width * 0.5, GetStyleColor("thumb-color"));
+	}
 }
 
 // Calculates positions of all parts. Returns true if thumb position was changed compared to previously, false otherwise.

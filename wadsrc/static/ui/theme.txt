@@ -1,23 +1,23 @@
-// currently I match the fallbacks in themedata.cpp
+// Modern macOS-inspired theme
 
-accent #237887
+accent #5856D6
 anchor Center
 scale Contain
 
 [light]
 
-main   #f1eee2 #000000
-header #f5f4ef #000000
-button #efe8cd #000000
-hover  #a4c2e9 #000000
-click  #7ca2e9 #000000
-border #586e75 #bdb8a7
+main   #F5F5F7 #1D1D1F
+header #F5F5F7 #1D1D1F
+button #FFFFFF #1D1D1F
+hover  #ECEEFF #3B38C8
+click  #DFE2FF #2D2AB0
+border #E5E5EA #C7C7CC
 
 [dark]
 
-main   #002033 #ffffff
-header #001017 #ffffff
-button #003747 #ffffff
-hover  #a4c2e9 #000000
-click  #7ca2e9 #000000
-border #536078 #2b3e5b
+main   #1C1C1E #F5F5F7
+header #1C1C1E #F5F5F7
+button #2C2C2E #F5F5F7
+hover  #313052 #C7D2FE
+click  #3D3B6E #E0E7FF
+border #3A3A3C #48484A

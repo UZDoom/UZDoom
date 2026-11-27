@@ -441,8 +441,9 @@ public:
 
 				fb = new VulkanRenderDevice(nullptr, vid_fullscreen, m_vulkanSurface);
 			}
-			catch (std::exception const&)
+			catch (std::exception const& e)
 			{
+				Printf(TEXTCOLOR_RED "Vulkan initialization failed: %s. Falling back to OpenGL.\n", e.what());
 				ms_isVulkanEnabled = false;
 
 				SetupOpenGLView(ms_window, OpenGLProfile::Core);

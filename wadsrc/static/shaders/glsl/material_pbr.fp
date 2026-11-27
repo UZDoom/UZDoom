@@ -85,8 +85,8 @@ vec3 ProcessMaterialLight(Material material, vec3 ambientLight)
 	vec3 albedo = pow(material.Base.rgb, vec3(2.2)); // sRGB to linear
 	ambientLight = pow(ambientLight, vec3(2.2));
 
-	float metallic = material.Metallic;
-	float roughness = material.Roughness;
+	float metallic = clamp(material.Metallic, 0.0, 1.0);
+	float roughness = clamp(material.Roughness, 0.045, 1.0);
 	float ao = material.AO;
 
 	vec3 N = material.Normal;
@@ -111,7 +111,8 @@ vec3 ProcessMaterialLight(Material material, vec3 ambientLight)
 				vec4 lightspot1 = lights[i+2];
 				vec4 lightspot2 = lights[i+3];
 
-				vec3 L = normalize(lightpos.xyz - worldpos);
+				vec3 lightDir = lightpos.xyz - worldpos;
+				vec3 L = lightDir * inversesqrt(max(dot(lightDir, lightDir), 1e-6));
 				vec3 H = normalize(V + L);
 
 				float attenuation = linearDistanceAttenuation(lightpos);
@@ -151,7 +152,8 @@ vec3 ProcessMaterialLight(Material material, vec3 ambientLight)
 				vec4 lightspot1 = lights[i+2];
 				vec4 lightspot2 = lights[i+3];
 
-				vec3 L = normalize(lightpos.xyz - worldpos);
+				vec3 lightDir = lightpos.xyz - worldpos;
+				vec3 L = lightDir * inversesqrt(max(dot(lightDir, lightDir), 1e-6));
 				vec3 H = normalize(V + L);
 
 				float attenuation = linearDistanceAttenuation(lightpos);
@@ -189,7 +191,7 @@ vec3 ProcessMaterialLight(Material material, vec3 ambientLight)
 	vec3 F = fresnelSchlickRoughness(clamp(dot(N, V), 0.0, 1.0), F0, roughness);
 
 	vec3 kS = F;
-	vec3 kD = 1.0 - kS;
+	vec3 kD = (1.0 - kS) * (1.0 - metallic);
 
 	vec3 irradiance = ambientLight; // texture(irradianceMap, N).rgb
 	vec3 diffuse = irradiance * albedo;

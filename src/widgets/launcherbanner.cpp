@@ -172,7 +172,7 @@ LauncherBanner::LauncherBanner(Widget* parent, FName colors, float mix) : Widget
 
 double LauncherBanner::GetPreferredHeight()
 {
-	return Logo->GetPreferredHeight();
+	return std::min(Logo->GetPreferredHeight(), 132.0);
 }
 
 void LauncherBanner::OnGeometryChanged()

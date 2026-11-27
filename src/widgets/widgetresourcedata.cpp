@@ -108,7 +108,92 @@ void InitWidgetResources(const char* filename)
 		Theme::getBorder(COLOR_LIGHT),      Theme::getBorder(COLOR_HEAVY),
 	}}));
 
-	WidgetTheme::GetTheme()->GetStyle("lineedit")->SetDouble("noncontent-top", 6.0); // applicable to noto family fonts
+	auto themePtr = WidgetTheme::GetTheme();
+	auto cardBg = use_dark ? Colorf::fromRgb(0x2C2C2E) : Colorf::fromRgb(0xFFFFFF);
+	auto cardBorder = use_dark ? Colorf::fromRgb(0x3A3A3C) : Colorf::fromRgb(0xE5E5EA);
+	auto inputBorder = use_dark ? Colorf::fromRgb(0x48484A) : Colorf::fromRgb(0xD1D1D6);
+	auto mutedText = use_dark ? Colorf::fromRgb(0x98989D) : Colorf::fromRgb(0x6E6E73);
+	auto accent = Theme::getAccent();
+	auto none = Colorf::transparent();
+
+	for (const char* cls : { "listview", "lineedit", "textedit", "dropdown" })
+	{
+		if (auto* s = themePtr->GetStyle(cls))
+		{
+			s->SetColor("background-color", cardBg);
+			s->SetColor("border-left-color", inputBorder);
+			s->SetColor("border-top-color", inputBorder);
+			s->SetColor("border-right-color", inputBorder);
+			s->SetColor("border-bottom-color", inputBorder);
+		}
+	}
+
+	if (auto* lv = themePtr->GetStyle("listview"))
+	{
+		lv->SetColor("border-left-color", cardBorder);
+		lv->SetColor("border-top-color", cardBorder);
+		lv->SetColor("border-right-color", cardBorder);
+		lv->SetColor("border-bottom-color", cardBorder);
+	}
+
+	if (auto* le = themePtr->GetStyle("lineedit"))
+	{
+		le->SetDouble("noncontent-left", 10.0);
+		le->SetDouble("noncontent-top", 6.0);
+		le->SetDouble("noncontent-right", 10.0);
+		le->SetDouble("noncontent-bottom", 6.0);
+	}
+
+	if (auto* tb = themePtr->GetStyle("tabbar"))
+	{
+		tb->SetDouble("spacer-left", 20.0);
+		tb->SetColor("background-color", Theme::getMain(COLOR_BACKGROUND));
+	}
+
+	if (auto* ts = themePtr->GetStyle("tabbar-spacer"))
+	{
+		ts->SetDouble("noncontent-bottom", 0.0);
+		ts->SetColor("border-bottom-color", none);
+	}
+
+	if (auto* tab = themePtr->GetStyle("tabbar-tab"))
+	{
+		tab->SetDouble("border-radius", 8.0);
+		tab->SetDouble("noncontent-left", 14.0);
+		tab->SetDouble("noncontent-right", 14.0);
+		tab->SetDouble("noncontent-top", 4.0);
+		tab->SetDouble("noncontent-bottom", 4.0);
+		tab->SetColor("color", mutedText);
+		tab->SetColor("background-color", none);
+		tab->SetColor("border-left-color", none);
+		tab->SetColor("border-top-color", none);
+		tab->SetColor("border-right-color", none);
+		tab->SetColor("border-bottom-color", none);
+		tab->SetColor("hover", "color", Theme::getMain(COLOR_TEXT));
+		tab->SetColor("hover", "background-color", use_dark ? Colorf::fromRgb(0x2C2C2E) : Colorf::fromRgb(0xEBEBF0));
+		tab->SetColor("active", "color", Theme::getMain(COLOR_TEXT));
+		tab->SetColor("active", "background-color", cardBg);
+		tab->SetColor("active", "border-left-color", cardBorder);
+		tab->SetColor("active", "border-top-color", cardBorder);
+		tab->SetColor("active", "border-right-color", cardBorder);
+		tab->SetColor("active", "border-bottom-color", cardBorder);
+		tab->SetColor("active", "accent-color", accent);
+	}
+
+	if (auto* cb = themePtr->GetStyle("checkbox-label"))
+	{
+		cb->SetColor("checked-color", accent);
+		cb->SetColor("checked-outer-border-color", accent);
+		cb->SetColor("checked-inner-border-color", Colorf::fromRgb(0xFFFFFF));
+		cb->SetColor("unchecked-outer-border-color", inputBorder);
+		cb->SetColor("unchecked-inner-border-color", cardBg);
+	}
+
+	if (auto* sb = themePtr->GetStyle("scrollbar"))
+	{
+		sb->SetColor("track-color", none);
+		sb->SetColor("thumb-color", use_dark ? Colorf::fromRgb(0x636366) : Colorf::fromRgb(0xAEAEB2));
+	}
 }
 
 void CloseWidgetResources()

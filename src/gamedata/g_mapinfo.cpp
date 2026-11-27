@@ -1675,6 +1675,14 @@ DEFINE_MAP_OPTION(lightblendmode, false)
 			{
 				info->tonemap = ETonemapMode::Reinhard;
 			}
+			else if (parse.sc.Compare("ACES"))
+			{
+				info->tonemap = ETonemapMode::ACES;
+			}
+			else if (parse.sc.Compare("AgX"))
+			{
+				info->tonemap = ETonemapMode::AgX;
+			}
 			else
 			{
 				parse.sc.ScriptMessage("Invalid tonemap %s", parse.sc.String);

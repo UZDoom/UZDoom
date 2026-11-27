@@ -36,32 +36,43 @@ bool CheckboxLabel::GetChecked() const
 
 double CheckboxLabel::GetPreferredHeight()
 {
-	return 20.0;
+	return 24.0;
 }
 
 void CheckboxLabel::OnPaint(Canvas* canvas)
 {
-	// To do: add and use GetStyleImage for the checkbox
-	
-	double center = GridFitPoint(GetHeight() * 0.5);
+	double h = GetHeight();
+	double center = GridFitPoint(h * 0.5);
 	double borderwidth = GridFitSize(1.0);
-	double outerboxsize = GridFitSize(10.0);
-	double innerboxsize = outerboxsize - 2.0 * borderwidth;
-	double checkedsize = innerboxsize - 2.0 * borderwidth;
+	double boxSize = 16.0;
+	double boxY = GridFitPoint(center - boxSize * 0.5);
+	double radius = radiostyle ? boxSize * 0.5 : 4.5;
+	Rect box = Rect::xywh(0.0, boxY, boxSize, boxSize);
 
 	if (checked)
 	{
-		canvas->fillRect(Rect::xywh(0.0, center - 6.0 * borderwidth, outerboxsize, outerboxsize), GetStyleColor("checked-outer-border-color"));
-		canvas->fillRect(Rect::xywh(1.0 * borderwidth, center - 5.0 * borderwidth, innerboxsize, innerboxsize), GetStyleColor("checked-inner-border-color"));
-		canvas->fillRect(Rect::xywh(2.0 * borderwidth, center - 4.0 * borderwidth, checkedsize, checkedsize), GetStyleColor("checked-color"));
+		Colorf fill = GetStyleColor("checked-color");
+		Colorf check = GetStyleColor("checked-inner-border-color");
+		canvas->fillRoundedRect(box, radius, fill);
+		if (radiostyle)
+		{
+			canvas->fillRoundedRect(Rect::xywh(5.0, boxY + 5.0, 6.0, 6.0), 3.0, check);
+		}
+		else
+		{
+			canvas->line(Point(4.0, boxY + 8.5), Point(7.0, boxY + 11.5), check);
+			canvas->line(Point(7.0, boxY + 11.5), Point(12.0, boxY + 5.0), check);
+		}
 	}
 	else
 	{
-		canvas->fillRect(Rect::xywh(0.0, center - 6.0 * borderwidth, outerboxsize, outerboxsize), GetStyleColor("unchecked-outer-border-color"));
-		canvas->fillRect(Rect::xywh(1.0 * borderwidth, center - 5.0 * borderwidth, innerboxsize, innerboxsize), GetStyleColor("unchecked-inner-border-color"));
+		canvas->fillRoundedRect(box, radius, GetStyleColor("unchecked-inner-border-color"));
+		canvas->strokeRoundedRect(box, radius, borderwidth, GetStyleColor("unchecked-outer-border-color"));
 	}
 
-	canvas->drawText(Point(14.0, GetHeight() - 5.0), GetStyleColor("color"), text);
+	VerticalTextPosition vtp = canvas->verticalTextAlign();
+	double textY = (h - (vtp.bottom - vtp.top)) * 0.5 + vtp.baseline;
+	canvas->drawText(Point(24.0, textY), GetStyleColor("color"), text);
 }
 
 bool CheckboxLabel::OnMouseDown(const Point& pos, InputKey key)

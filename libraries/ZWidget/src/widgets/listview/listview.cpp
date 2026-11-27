@@ -114,7 +114,7 @@ void ListView::SetSelectedItem(int index)
 
 double ListView::getItemHeight()
 {
-	return 20.0;
+	return 30.0;
 }
 
 void ListView::ScrollToItem(int index)
@@ -148,14 +148,16 @@ void ListView::OnGeometryChanged()
 void ListView::OnPaint(Canvas* canvas)
 {
 	double y = -scrollbar->GetPosition();
-	double x = 2.0;
-	double w = GetWidth() - scrollbar->GetPreferredWidth() - 2.0;
+	double x = 12.0;
+	double w = GetWidth() - scrollbar->GetPreferredWidth() - 4.0;
 	double h = getItemHeight();
 
 	Colorf textColor = GetStyleColor("color");
 	Colorf selectionColor = GetStyleColor("selection-color");
 	Colorf selectionTextColor = GetStyleColor("selection-text");
 	Colorf currentTextColor;
+	VerticalTextPosition vtp = canvas->verticalTextAlign();
+	double textOffsetY = (h - (vtp.bottom - vtp.top)) * 0.5 + vtp.baseline;
 
 	// Make sure the text doesn't enter the scrollbar's area.
 	canvas->pushClip({ 0.0, 0.0, w, GetHeight() });
@@ -168,7 +170,7 @@ void ListView::OnPaint(Canvas* canvas)
 		{
 			if (index == selectedItem)
 			{
-				canvas->fillRect(Rect::xywh(x - 2.0, itemY, w, h), selectionColor);
+				canvas->fillRoundedRect(Rect::xywh(2.0, itemY + 2.0, std::max(w - 4.0, 0.0), std::max(h - 4.0, 0.0)), 7.0, selectionColor);
 				currentTextColor = selectionTextColor;
 			}
 			else
@@ -178,7 +180,7 @@ void ListView::OnPaint(Canvas* canvas)
 			double cx = x;
 			for (size_t entry = 0u; entry < item.size(); ++entry)
 			{
-				canvas->drawText(Point(cx, y + 15.0), currentTextColor, item[entry]);
+				canvas->drawText(Point(cx, itemY + textOffsetY), currentTextColor, item[entry]);
 				cx += columnwidths[entry];
 			}
 		}
@@ -195,7 +197,7 @@ bool ListView::OnMouseDown(const Point& pos, InputKey key)
 
 	if (key == InputKey::LeftMouse)
 	{
-		int index = (int)((pos.y - 5.0 + scrollbar->GetPosition()) / getItemHeight());
+		int index = (int)((pos.y + scrollbar->GetPosition()) / getItemHeight());
 		if (index >= 0 && (size_t)index < items.size())
 		{
 			SetSelectedItem(index);
@@ -322,10 +324,10 @@ double ListView::GetPreferredWidth()
 
 double ListView::GetPreferredHeight()
 {
-	return items.size()*20.0 + 10.0*2; // Items plus top/bottom padding
+	return items.size()*30.0 + 6.0*2; // Items plus top/bottom padding
 }
 
 double ListView::GetMinimumHeight() const
 {
-	return 20.0 + 10.0*2; // One item plus top/bottom padding
+	return 30.0 + 6.0*2; // One item plus top/bottom padding
 }

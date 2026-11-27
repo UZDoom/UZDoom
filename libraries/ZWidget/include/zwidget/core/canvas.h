@@ -63,6 +63,8 @@ public:
 	void popClip();
 
 	void fillRect(const Rect& box, const Colorf& color);
+	void fillRoundedRect(const Rect& box, double radius, const Colorf& color);
+	void strokeRoundedRect(const Rect& box, double radius, double lineWidth, const Colorf& color);
 	void line(const Point& p0, const Point& p1, const Colorf& color);
 
 	void drawText(const Point& pos, const Colorf& color, const std::string& text);
@@ -84,6 +86,8 @@ protected:
 	virtual std::unique_ptr<CanvasTexture> createTexture(int width, int height, const void* pixels, ImageFormat format = ImageFormat::B8G8R8A8) = 0;
 	virtual void drawLineAntialiased(float x0, float y0, float x1, float y1, Colorf color) = 0;
 	virtual void fillTile(float x, float y, float width, float height, Colorf color) = 0;
+	virtual void fillRoundedTile(float x, float y, float width, float height, float radius, Colorf color);
+	virtual void strokeRoundedTile(float x, float y, float width, float height, float radius, float lineWidth, Colorf color);
 	virtual void drawTile(CanvasTexture* texture, float x, float y, float width, float height, float u, float v, float uvwidth, float uvheight, Colorf color) = 0;
 	virtual void drawGlyph(CanvasTexture* texture, float x, float y, float width, float height, float u, float v, float uvwidth, float uvheight, Colorf color) = 0;
 

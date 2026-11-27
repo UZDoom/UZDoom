@@ -365,7 +365,7 @@ class SerpentLeader : Serpent
 	States
 	{
 	Missile:
-		SSPT N 5 A_SpawnProjectile("SerpentFX", 32, 0);
+		SSPT N 5 A_SpawnProjectile("SerpentFX", 32, 0, 0, CMF_AIMOFFSET);
 		Goto Dive;
 	}
 }

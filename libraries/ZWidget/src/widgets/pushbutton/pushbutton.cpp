@@ -30,13 +30,15 @@ double PushButton::GetPreferredWidth()
 
 double PushButton::GetPreferredHeight()
 {
-	return 20 + Widget::GetPreferredHeight();
+	return 22.0 + Widget::GetPreferredHeight();
 }
 
 void PushButton::OnPaint(Canvas* canvas)
 {
 	Rect box = canvas->measureText(text);
-	canvas->drawText(Point((GetWidth() - box.width) * 0.5, GetHeight() - 5.0), GetStyleColor("color"), text);
+	VerticalTextPosition vtp = canvas->verticalTextAlign();
+	double textY = (GetHeight() - (vtp.bottom - vtp.top)) * 0.5 + vtp.baseline;
+	canvas->drawText(Point((GetWidth() - box.width) * 0.5, textY), GetStyleColor("color"), text);
 }
 
 void PushButton::OnMouseMove(const Point& pos)

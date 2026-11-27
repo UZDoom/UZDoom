@@ -94,15 +94,27 @@ Colorf WidgetStyle::GetColor(const std::string& state, const std::string& proper
 void BasicWidgetStyle::Paint(Widget* widget, Canvas* canvas, Size size)
 {
 	Colorf bgcolor = widget->GetStyleColor("background-color");
-	if (bgcolor.a > 0.0f)
-		canvas->fillRect(Rect::xywh(0.0, 0.0, size.width, size.height), bgcolor);
+	double radius = widget->GetStyleDouble("border-radius");
+	double borderwidth = widget->GridFitSize(1.0);
 
 	Colorf borderleft = widget->GetStyleColor("border-left-color");
 	Colorf bordertop = widget->GetStyleColor("border-top-color");
 	Colorf borderright = widget->GetStyleColor("border-right-color");
 	Colorf borderbottom = widget->GetStyleColor("border-bottom-color");
 
-	double borderwidth = widget->GridFitSize(1.0);
+	if (radius > 0.0)
+	{
+		if (bgcolor.a > 0.0f)
+			canvas->fillRoundedRect(Rect::xywh(0.0, 0.0, size.width, size.height), radius, bgcolor);
+
+		Colorf borderColor = bordertop.a > 0.0f ? bordertop : (borderleft.a > 0.0f ? borderleft : (borderright.a > 0.0f ? borderright : borderbottom));
+		if (borderColor.a > 0.0f)
+			canvas->strokeRoundedRect(Rect::xywh(0.0, 0.0, size.width, size.height), radius, borderwidth, borderColor);
+		return;
+	}
+
+	if (bgcolor.a > 0.0f)
+		canvas->fillRect(Rect::xywh(0.0, 0.0, size.width, size.height), bgcolor);
 
 	if (bordertop.a > 0.0f)
 		canvas->fillRect(Rect::xywh(0.0, 0.0, size.width, borderwidth), bordertop);
@@ -187,10 +199,11 @@ WidgetTheme::WidgetTheme(const struct SimpleTheme &theme)
 	widget->SetColor("window-caption-color", bgLight);
 	widget->SetColor("window-caption-text-color", fgLight);
 
-	pushbutton->SetDouble("noncontent-left", 10.0);
-	pushbutton->SetDouble("noncontent-top", 5.0);
-	pushbutton->SetDouble("noncontent-right", 10.0);
-	pushbutton->SetDouble("noncontent-bottom", 5.0);
+	pushbutton->SetDouble("border-radius", 8.0);
+	pushbutton->SetDouble("noncontent-left", 14.0);
+	pushbutton->SetDouble("noncontent-top", 6.0);
+	pushbutton->SetDouble("noncontent-right", 14.0);
+	pushbutton->SetDouble("noncontent-bottom", 6.0);
 	pushbutton->SetColor("color", fgAction);
 	pushbutton->SetColor("background-color", bgAction);
 	pushbutton->SetColor("border-left-color", border);
@@ -202,10 +215,11 @@ WidgetTheme::WidgetTheme(const struct SimpleTheme &theme)
 	pushbutton->SetColor("down", "color", fgActive);
 	pushbutton->SetColor("down", "background-color", bgActive);
 
-	lineedit->SetDouble("noncontent-left", 5.0);
-	lineedit->SetDouble("noncontent-top", 3.0);
-	lineedit->SetDouble("noncontent-right", 5.0);
-	lineedit->SetDouble("noncontent-bottom", 3.0);
+	lineedit->SetDouble("border-radius", 8.0);
+	lineedit->SetDouble("noncontent-left", 10.0);
+	lineedit->SetDouble("noncontent-top", 6.0);
+	lineedit->SetDouble("noncontent-right", 10.0);
+	lineedit->SetDouble("noncontent-bottom", 6.0);
 	lineedit->SetColor("color", fgLight);
 	lineedit->SetColor("background-color", bgLight);
 	lineedit->SetColor("border-left-color", border);
@@ -217,10 +231,11 @@ WidgetTheme::WidgetTheme(const struct SimpleTheme &theme)
 	lineedit->SetColor("selection-text", fgHover);
 	lineedit->SetColor("no-focus-selection-text", fgHover);
 
-	textedit->SetDouble("noncontent-left", 8.0);
-	textedit->SetDouble("noncontent-top", 8.0);
-	textedit->SetDouble("noncontent-right", 8.0);
-	textedit->SetDouble("noncontent-bottom", 8.0);
+	textedit->SetDouble("border-radius", 10.0);
+	textedit->SetDouble("noncontent-left", 10.0);
+	textedit->SetDouble("noncontent-top", 10.0);
+	textedit->SetDouble("noncontent-right", 10.0);
+	textedit->SetDouble("noncontent-bottom", 10.0);
 	textedit->SetColor("color", fgLight);
 	textedit->SetColor("background-color", bgLight);
 	textedit->SetColor("border-left-color", border);
@@ -230,10 +245,11 @@ WidgetTheme::WidgetTheme(const struct SimpleTheme &theme)
 	textedit->SetColor("selection-color", bgHover);
 	textedit->SetColor("selection-text", fgHover);
 
-	listview->SetDouble("noncontent-left", 10.0);
-	listview->SetDouble("noncontent-top", 10.0);
-	listview->SetDouble("noncontent-right", 3.0);
-	listview->SetDouble("noncontent-bottom", 10.0);
+	listview->SetDouble("border-radius", 12.0);
+	listview->SetDouble("noncontent-left", 6.0);
+	listview->SetDouble("noncontent-top", 6.0);
+	listview->SetDouble("noncontent-right", 4.0);
+	listview->SetDouble("noncontent-bottom", 6.0);
 	listview->SetColor("color", fgLight);
 	listview->SetColor("background-color", bgLight);
 	listview->SetColor("border-left-color", border);
@@ -243,9 +259,10 @@ WidgetTheme::WidgetTheme(const struct SimpleTheme &theme)
 	listview->SetColor("selection-color", bgHover);
 	listview->SetColor("selection-text", fgHover);
 
-	dropdown->SetDouble("noncontent-left", 5.0);
+	dropdown->SetDouble("border-radius", 8.0);
+	dropdown->SetDouble("noncontent-left", 10.0);
 	dropdown->SetDouble("noncontent-top", 5.0);
-	dropdown->SetDouble("noncontent-right", 5.0);
+	dropdown->SetDouble("noncontent-right", 10.0);
 	dropdown->SetDouble("noncontent-bottom", 5.0);
 	dropdown->SetColor("color", fgLight);
 	dropdown->SetColor("background-color", bgLight);

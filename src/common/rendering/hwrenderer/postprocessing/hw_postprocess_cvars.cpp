@@ -41,7 +41,7 @@ CVAR(Float, gl_exposure_speed, 0.05f, CVAR_ARCHIVE)
 
 CUSTOM_CVAR(Int, gl_tonemap, 0, CVAR_ARCHIVE)
 {
-	if (self < 0 || self > 5)
+	if (self < 0 || self > 7)
 		self = 0;
 }
 

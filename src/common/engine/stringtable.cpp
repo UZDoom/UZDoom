@@ -601,6 +601,7 @@ void FStringTable::LoadLanguage (int lumpnum, const char* buffer, size_t size)
 
 	sc.OpenMem(fileSystem.GetFileFullPath(lumpnum).c_str(), buffer, (int)size);
 	sc.SetCMode (true);
+	sc.SetNoFatalErrors(true);
 	while (sc.GetString ())
 	{
 		if (sc.Compare ("["))
@@ -608,6 +609,7 @@ void FStringTable::LoadLanguage (int lumpnum, const char* buffer, size_t size)
 			activeMaps.Clear();
 			hasDefaultEntry = false;
 			sc.MustGetString ();
+			if (sc.ParseError) return;
 			do
 			{
 				size_t len = sc.StringLen;
@@ -615,12 +617,14 @@ void FStringTable::LoadLanguage (int lumpnum, const char* buffer, size_t size)
 				if (len < 1)
 				{
 					sc.ScriptError ("The language code may not be empty.");
+					return;
 				}
 				if (len == 1 && sc.String[0] == '~')
 				{
 					// deprecated and ignored
 					sc.ScriptMessage("Deprecated option '~' found in language list");
 					sc.MustGetString ();
+					if (sc.ParseError) return;
 					continue;
 				}
 				auto id = GetID(sc.String);
@@ -641,6 +645,7 @@ void FStringTable::LoadLanguage (int lumpnum, const char* buffer, size_t size)
 				}
 
 				sc.MustGetString ();
+				if (sc.ParseError) return;
 			} while (!sc.Compare ("]"));
 		}
 		else
@@ -656,38 +661,49 @@ void FStringTable::LoadLanguage (int lumpnum, const char* buffer, size_t size)
 					errordone = true;
 					return;
 				}
-#if 0
-				// FIXME: the next line (and probably any of the other ScriptError calls) causes a crash right now
-				sc.ScriptError ("Found a string without a language specified.");
-#else
-				if (!errordone) Printf("Found a string without a language specified.\n");
+				if (!errordone) sc.ScriptMessage("Found a string without a language specified.");
 				errordone = true;
 				return;
-#endif
 			}
 
 			bool skip = false;
 			if (sc.Compare("$"))
 			{
 				sc.MustGetStringName("ifgame");
+				if (sc.ParseError) return;
 				sc.MustGetStringName("(");
+				if (sc.ParseError) return;
 				sc.MustGetString();
+				if (sc.ParseError) return;
 				skip |= (!sysCallbacks.CheckGame || !sysCallbacks.CheckGame(sc.String));
 				sc.MustGetStringName(")");
+				if (sc.ParseError) return;
 				sc.MustGetString();
-
+				if (sc.ParseError) return;
 			}
 
 			FName strName (sc.String);
 			sc.MustGetStringName ("=");
+			if (sc.ParseError) return;
 			sc.MustGetString ();
+			if (sc.ParseError) return;
 			FString strText (sc.String, ProcessEscapes (sc.String));
-			sc.MustGetString ();
-			while (!sc.Compare (";"))
+			if (!sc.GetString ())
 			{
-				ProcessEscapes (sc.String);
-				strText += sc.String;
-				sc.MustGetString ();
+				sc.ScriptMessage("Missing ';' at end of LANGUAGE entry '%s'.", strName.GetChars());
+			}
+			else
+			{
+				while (!sc.Compare (";"))
+				{
+					ProcessEscapes (sc.String);
+					strText += sc.String;
+					if (!sc.GetString ())
+					{
+						sc.ScriptMessage("Missing ';' at end of LANGUAGE entry '%s'.", strName.GetChars());
+						break;
+					}
+				}
 			}
 			if (!skip)
 			{

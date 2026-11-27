@@ -80,10 +80,10 @@ vec2 RotateDirection(vec2 dir, vec2 cossin)
 vec4 GetJitter()
 {
 #if !defined(USE_RANDOM_TEXTURE)
-	return vec4(1,0,1,1);
-	//vec3 rand = noise3(TexCoord.x + TexCoord.y);
-	//float angle = 2.0 * PI * rand.x / NUM_DIRECTIONS;
-	//return vec4(cos(angle), sin(angle), rand.y, rand.z);
+	float r1 = fract(52.9829189 * fract(dot(gl_FragCoord.xy, vec2(0.06711056, 0.00583715))));
+	float r2 = fract(52.9829189 * fract(dot(gl_FragCoord.xy + vec2(17.0, 31.0), vec2(0.06711056, 0.00583715))));
+	float angle = 2.0 * PI * r1 / NUM_DIRECTIONS;
+	return vec4(cos(angle), sin(angle), r2, 1.0);
 #else
 	return texture(RandomTexture, gl_FragCoord.xy / RANDOM_TEXTURE_WIDTH);
 #endif
@@ -94,7 +94,7 @@ float ComputeSampleAO(vec3 kernelPos, vec3 normal, vec3 samplePos)
 {
 	vec3 v = samplePos - kernelPos;
 	float distanceSquare = dot(v, v);
-	float nDotV = dot(normal, v) * inversesqrt(distanceSquare);
+	float nDotV = dot(normal, v) * inversesqrt(max(distanceSquare, 1e-6));
 	return clamp(nDotV - NDotVBias, 0.0, 1.0) * clamp(distanceSquare * NegInvR2 + 1.0, 0.0, 1.0);
 }
 

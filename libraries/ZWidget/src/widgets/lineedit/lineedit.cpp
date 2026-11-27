@@ -1090,25 +1090,30 @@ void LineEdit::OnPaint(Canvas* canvas)
 	Size size_before = canvas->measureText(txt_before).size();
 	Size size_selected = canvas->measureText(txt_selected).size();
 
+	VerticalTextPosition vtp = canvas->verticalTextAlign();
+	double textOffsetY = (GetHeight() - (vtp.bottom - vtp.top)) * 0.5;
+	double baselineY = textOffsetY + vtp.baseline;
+
 	if (!txt_selected.empty())
 	{
 		// Draw selection box.
 		Rect selection_rect = GetSelectionRect();
+		selection_rect.y += textOffsetY;
 		canvas->fillRect(selection_rect, HasFocus() ? GetStyleColor("selection-color") : GetStyleColor("no-focus-selection-color"));
 	}
 
 	// Draw text before selection
 	if (!txt_before.empty())
 	{
-		canvas->drawText(Point(0.0, canvas->verticalTextAlign().baseline), GetStyleColor("color"), txt_before);
+		canvas->drawText(Point(0.0, baselineY), GetStyleColor("color"), txt_before);
 	}
 	if (!txt_selected.empty())
 	{
-		canvas->drawText(Point(size_before.width, canvas->verticalTextAlign().baseline), GetStyleColor("selection-text"), txt_selected);
+		canvas->drawText(Point(size_before.width, baselineY), GetStyleColor("selection-text"), txt_selected);
 	}
 	if (!txt_after.empty())
 	{
-		canvas->drawText(Point(size_before.width + size_selected.width, canvas->verticalTextAlign().baseline), GetStyleColor("color"), txt_after);
+		canvas->drawText(Point(size_before.width + size_selected.width, baselineY), GetStyleColor("color"), txt_after);
 	}
 
 	// draw cursor
@@ -1117,6 +1122,7 @@ void LineEdit::OnPaint(Canvas* canvas)
 		if (cursor_blink_visible)
 		{
 			Rect cursor_rect = GetCursorRect();
+			cursor_rect.y += textOffsetY;
 			canvas->fillRect(cursor_rect, GetStyleColor("color"));
 		}
 	}

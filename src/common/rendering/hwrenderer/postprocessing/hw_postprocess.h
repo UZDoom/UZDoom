@@ -49,6 +49,8 @@ enum class ETonemapMode : uint8_t
 	Reinhard,
 	Linear,
 	Palette,
+	ACES,
+	AgX,
 	NumTonemapModes
 };
 
@@ -591,6 +593,8 @@ private:
 	PPShader ReinhardShader = { "shaders/pp/tonemap.fp", "#define REINHARD\n", {} };
 	PPShader HejlDawsonShader = { "shaders/pp/tonemap.fp", "#define HEJLDAWSON\n", {} };
 	PPShader Uncharted2Shader = { "shaders/pp/tonemap.fp", "#define UNCHARTED2\n", {} };
+	PPShader ACESShader = { "shaders/pp/tonemap.fp", "#define ACES\n", {} };
+	PPShader AgXShader = { "shaders/pp/tonemap.fp", "#define AGX\n", {} };
 	PPShader PaletteShader = { "shaders/pp/tonemap.fp", "#define PALETTE\n", {} };
 	ETonemapMode level_tonemap = ETonemapMode::None;
 };

@@ -24,15 +24,20 @@
 #include "i_interface.h"
 #include "launcherwindow.h"
 #include "playgamepage.h"
+#include "themedata.h"
 #include "version.h"
 
 PlayGamePage::PlayGamePage(LauncherWindow* launcher, const FStartupSelectionInfo& info) : Widget(nullptr), Launcher(launcher)
 {
+	Colorf mutedText = Theme::getMode() == DARK ? Colorf::fromRgb(0x98989D) : Colorf::fromRgb(0x6E6E73);
 	WelcomeLabel = new TextLabel(this);
 	VersionLabel = new TextLabel(this);
 	VersionLabel->SetTextAlignment(TextLabelAlignment::Right);
+	VersionLabel->SetStyleColor("color", mutedText);
 	SelectLabel = new TextLabel(this);
+	SelectLabel->SetStyleColor("color", mutedText);
 	ParametersLabel = new TextLabel(this);
+	ParametersLabel->SetStyleColor("color", mutedText);
 	GamesList = new ListView(this);
 	ParametersEdit = new LineEdit(this);
 	SaveArgsCheckbox = new CheckboxLabel(this);
@@ -120,7 +125,7 @@ bool PlayGamePage::OnFileDrop(std::string path)
 
 void PlayGamePage::OnGeometryChanged()
 {
-	double y = 10.0;
+	double y = 12.0;
 
 	const double halfW = GetWidth() * 0.5;
 	WelcomeLabel->SetFrameGeometry(0.0, y, halfW, WelcomeLabel->GetPreferredHeight());
@@ -129,22 +134,22 @@ void PlayGamePage::OnGeometryChanged()
 	y += VersionLabel->GetPreferredHeight() + 10.0;
 
 	SelectLabel->SetFrameGeometry(0.0, y, GetWidth(), SelectLabel->GetPreferredHeight());
-	y += SelectLabel->GetPreferredHeight();
+	y += SelectLabel->GetPreferredHeight() + 4.0;
 
 	const double listViewTop = y;
 
 	y = GetHeight() - SaveArgsCheckbox->GetPreferredHeight();
 	SaveArgsCheckbox->SetFrameGeometry(0.0, y, GetWidth(), SaveArgsCheckbox->GetPreferredHeight());
 
-	const double editHeight = 24.0;
-	y -= editHeight + 2.0;
+	const double editHeight = 34.0;
+	y -= editHeight + 8.0;
 	ParametersEdit->SetFrameGeometry(0.0, y, GetWidth(), editHeight);
 
 	const double labelHeight = ParametersLabel->GetPreferredHeight();
-	y -= labelHeight;
+	y -= labelHeight + 4.0;
 	ParametersLabel->SetFrameGeometry(0.0, y, GetWidth(), labelHeight);
 
-	y -= 20.0;
+	y -= 14.0;
 	GamesList->SetFrameGeometry(0.0, listViewTop, GetWidth(), std::max(y - listViewTop, 0.0));
 
 	Launcher->UpdatePlayButton();

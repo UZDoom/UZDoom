@@ -947,6 +947,27 @@ ExpEmit FxBoolCast::Emit(VMFunctionBuilder *build)
 	}
 
 
+	if (from.RegType == REGT_STRING)
+	{
+		if (from.Konst)
+		{
+			ExpEmit tmp(build, REGT_STRING);
+			build->Emit(OP_LKS, tmp.RegNum, from.RegNum);
+			from = tmp;
+		}
+		ExpEmit len(build, REGT_INT);
+		build->Emit(OP_LENS, len.RegNum, from.RegNum);
+		from.Free(build);
+		if (NeedValue)
+		{
+			ExpEmit to(build, REGT_INT);
+			len.Free(build);
+			build->Emit(OP_CASTB, to.RegNum, len.RegNum, CASTB_I);
+			return to;
+		}
+		return len;
+	}
+
 	assert(!from.Konst);
 	assert(basex->ValueType->GetRegType() == REGT_INT || basex->ValueType->GetRegType() == REGT_FLOAT || basex->ValueType->GetRegType() == REGT_POINTER);
 

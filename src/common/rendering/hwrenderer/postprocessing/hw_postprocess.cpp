@@ -617,6 +617,8 @@ void PPTonemap::Render(PPRenderState *renderstate)
 	case ETonemapMode::Reinhard:		shader = &ReinhardShader; break;
 	case ETonemapMode::HejlDawson:	shader = &HejlDawsonShader; break;
 	case ETonemapMode::Uncharted2:	shader = &Uncharted2Shader; break;
+	case ETonemapMode::ACES:		shader = &ACESShader; break;
+	case ETonemapMode::AgX:			shader = &AgXShader; break;
 	case ETonemapMode::Palette:		shader = &PaletteShader; break;
 	}
 

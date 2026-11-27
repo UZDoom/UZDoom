@@ -271,6 +271,25 @@ void Canvas::fillRect(const Rect& box, const Colorf& color)
 	fillTile((float)((origin.x + box.x) * uiscale), (float)((origin.y + box.y) * uiscale), (float)(box.width * uiscale), (float)(box.height * uiscale), color);
 }
 
+void Canvas::fillRoundedRect(const Rect& box, double radius, const Colorf& color)
+{
+	fillRoundedTile((float)((origin.x + box.x) * uiscale), (float)((origin.y + box.y) * uiscale), (float)(box.width * uiscale), (float)(box.height * uiscale), (float)(radius * uiscale), color);
+}
+
+void Canvas::strokeRoundedRect(const Rect& box, double radius, double lineWidth, const Colorf& color)
+{
+	strokeRoundedTile((float)((origin.x + box.x) * uiscale), (float)((origin.y + box.y) * uiscale), (float)(box.width * uiscale), (float)(box.height * uiscale), (float)(radius * uiscale), (float)(lineWidth * uiscale), color);
+}
+
+void Canvas::fillRoundedTile(float x, float y, float width, float height, float radius, Colorf color)
+{
+	fillTile(x, y, width, height, color);
+}
+
+void Canvas::strokeRoundedTile(float x, float y, float width, float height, float radius, float lineWidth, Colorf color)
+{
+}
+
 void Canvas::drawImage(const std::shared_ptr<Image>& image, const Point& pos)
 {
 	auto& texture = imageTextures[image];
@@ -527,6 +546,8 @@ public:
 	void end() override;
 
 	void fillTile(float x, float y, float width, float height, Colorf color) override;
+	void fillRoundedTile(float x, float y, float width, float height, float radius, Colorf color) override;
+	void strokeRoundedTile(float x, float y, float width, float height, float radius, float lineWidth, Colorf color) override;
 	void drawTile(CanvasTexture* texture, float x, float y, float width, float height, float u, float v, float uvwidth, float uvheight, Colorf color) override;
 	void drawGlyph(CanvasTexture* texture, float x, float y, float width, float height, float u, float v, float uvwidth, float uvheight, Colorf color) override;
 	void drawLineAntialiased(float x0, float y0, float x1, float y1, Colorf color) override;
@@ -777,6 +798,144 @@ void BitmapCanvas::fillTile(float left, float top, float width, float height, Co
 				dline[x] = (a << 24) | (r << 16) | (g << 8) | b;
 				x++;
 			}
+		}
+	}
+}
+
+static inline float roundedBoxSDF(float px, float py, float cx, float cy, float halfW, float halfH, float r)
+{
+	float dx = std::abs(px - cx) - (halfW - r);
+	float dy = std::abs(py - cy) - (halfH - r);
+	float ox = std::max(dx, 0.0f);
+	float oy = std::max(dy, 0.0f);
+	return std::sqrt(ox * ox + oy * oy) + std::min(std::max(dx, dy), 0.0f) - r;
+}
+
+void BitmapCanvas::fillRoundedTile(float left, float top, float width, float height, float radius, Colorf color)
+{
+	if (width <= 0.0f || height <= 0.0f || color.a <= 0.0f)
+		return;
+
+	float r = std::min(std::max(radius, 0.0f), std::min(width, height) * 0.5f);
+	if (r <= 0.5f)
+	{
+		fillTile(left, top, width, height, color);
+		return;
+	}
+
+	int dwidth = this->width;
+	uint32_t* dest = this->pixels.data();
+
+	int x0 = std::max((int)std::floor(left), getClipMinX());
+	int y0 = std::max((int)std::floor(top), getClipMinY());
+	int x1 = std::min((int)std::ceil(left + width), getClipMaxX());
+	int y1 = std::min((int)std::ceil(top + height), getClipMaxY());
+	if (x1 <= x0 || y1 <= y0)
+		return;
+
+	float halfW = width * 0.5f;
+	float halfH = height * 0.5f;
+	float cx = left + halfW;
+	float cy = top + halfH;
+
+	uint32_t cred = (int32_t)clamp(color.r * 255.0f, 0.0f, 255.0f);
+	uint32_t cgreen = (int32_t)clamp(color.g * 255.0f, 0.0f, 255.0f);
+	uint32_t cblue = (int32_t)clamp(color.b * 255.0f, 0.0f, 255.0f);
+
+	for (int y = y0; y < y1; y++)
+	{
+		uint32_t* dline = dest + y * dwidth;
+		float py = y + 0.5f;
+		for (int x = x0; x < x1; x++)
+		{
+			float dist = roundedBoxSDF(x + 0.5f, py, cx, cy, halfW, halfH, r);
+			if (dist >= 0.5f)
+				continue;
+
+			float cov = clamp(0.5f - dist, 0.0f, 1.0f);
+			uint32_t calpha = (int32_t)clamp(color.a * cov * 255.0f, 0.0f, 255.0f);
+			if (calpha == 0)
+				continue;
+
+			uint32_t sa = calpha + (calpha >> 7);
+			if (sa >= 256)
+			{
+				dline[x] = (255u << 24) | (cred << 16) | (cgreen << 8) | cblue;
+			}
+			else
+			{
+				uint32_t invalpha = 256 - sa;
+				uint32_t dpixel = dline[x];
+				uint32_t dalpha = dpixel >> 24;
+				uint32_t dred = (dpixel >> 16) & 0xff;
+				uint32_t dgreen = (dpixel >> 8) & 0xff;
+				uint32_t dblue = dpixel & 0xff;
+
+				uint32_t a = (calpha * sa + dalpha * invalpha + 127) >> 8;
+				uint32_t r2 = (cred * sa + dred * invalpha + 127) >> 8;
+				uint32_t g = (cgreen * sa + dgreen * invalpha + 127) >> 8;
+				uint32_t b = (cblue * sa + dblue * invalpha + 127) >> 8;
+				dline[x] = (a << 24) | (r2 << 16) | (g << 8) | b;
+			}
+		}
+	}
+}
+
+void BitmapCanvas::strokeRoundedTile(float left, float top, float width, float height, float radius, float lineWidth, Colorf color)
+{
+	if (width <= 0.0f || height <= 0.0f || lineWidth <= 0.0f || color.a <= 0.0f)
+		return;
+
+	float r = std::min(std::max(radius, 0.0f), std::min(width, height) * 0.5f);
+	int dwidth = this->width;
+	uint32_t* dest = this->pixels.data();
+
+	int x0 = std::max((int)std::floor(left), getClipMinX());
+	int y0 = std::max((int)std::floor(top), getClipMinY());
+	int x1 = std::min((int)std::ceil(left + width), getClipMaxX());
+	int y1 = std::min((int)std::ceil(top + height), getClipMaxY());
+	if (x1 <= x0 || y1 <= y0)
+		return;
+
+	float halfW = width * 0.5f;
+	float halfH = height * 0.5f;
+	float cx = left + halfW;
+	float cy = top + halfH;
+
+	uint32_t cred = (int32_t)clamp(color.r * 255.0f, 0.0f, 255.0f);
+	uint32_t cgreen = (int32_t)clamp(color.g * 255.0f, 0.0f, 255.0f);
+	uint32_t cblue = (int32_t)clamp(color.b * 255.0f, 0.0f, 255.0f);
+
+	for (int y = y0; y < y1; y++)
+	{
+		uint32_t* dline = dest + y * dwidth;
+		float py = y + 0.5f;
+		for (int x = x0; x < x1; x++)
+		{
+			float dist = roundedBoxSDF(x + 0.5f, py, cx, cy, halfW, halfH, r);
+			if (dist >= 0.5f || dist <= -(lineWidth + 0.5f))
+				continue;
+
+			float outerCov = clamp(0.5f - dist, 0.0f, 1.0f);
+			float innerCov = clamp(0.5f - (dist + lineWidth), 0.0f, 1.0f);
+			float cov = std::max(0.0f, outerCov - innerCov);
+			uint32_t calpha = (int32_t)clamp(color.a * cov * 255.0f, 0.0f, 255.0f);
+			if (calpha == 0)
+				continue;
+
+			uint32_t sa = calpha + (calpha >> 7);
+			uint32_t invalpha = 256 - sa;
+			uint32_t dpixel = dline[x];
+			uint32_t dalpha = dpixel >> 24;
+			uint32_t dred = (dpixel >> 16) & 0xff;
+			uint32_t dgreen = (dpixel >> 8) & 0xff;
+			uint32_t dblue = dpixel & 0xff;
+
+			uint32_t a = (calpha * sa + dalpha * invalpha + 127) >> 8;
+			uint32_t r2 = (cred * sa + dred * invalpha + 127) >> 8;
+			uint32_t g = (cgreen * sa + dgreen * invalpha + 127) >> 8;
+			uint32_t b = (cblue * sa + dblue * invalpha + 127) >> 8;
+			dline[x] = (a << 24) | (r2 << 16) | (g << 8) | b;
 		}
 	}
 }

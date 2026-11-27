@@ -171,19 +171,15 @@ void Dropdown::OnPaint(Canvas* canvas)
 
 	auto vtp = canvas->verticalTextAlign();
 	double textY = (h-(vtp.bottom-vtp.top))/2.0 + vtp.baseline;
-	canvas->drawText(Point(7.0, textY), textColor, text);
+	canvas->drawText(Point(2.0, textY), textColor, text);
 
-	double arrowS = 8.0;
-	double arrowX = w - 3.0; // rightmost point, aligned with scrollbar
-	double arrowY = (h-arrowS)/2;
+	double arrowW = 8.0;
+	double arrowH = 4.5;
+	double arrowX = w - 12.0;
+	double arrowY = (h - arrowH) * 0.5;
 
-	Point p1(arrowX, arrowY);
-	Point p2(arrowX - arrowS, arrowY);
-	Point p3(arrowX - arrowS/2, arrowY + arrowS);
-
-	canvas->line(p1, p2, arrowColor);
-	canvas->line(p2, p3, arrowColor);
-	canvas->line(p3, p1, arrowColor);
+	canvas->line(Point(arrowX, arrowY), Point(arrowX + arrowW * 0.5, arrowY + arrowH), arrowColor);
+	canvas->line(Point(arrowX + arrowW * 0.5, arrowY + arrowH), Point(arrowX + arrowW, arrowY), arrowColor);
 }
 
 bool Dropdown::OnMouseDown(const Point& pos, InputKey key)

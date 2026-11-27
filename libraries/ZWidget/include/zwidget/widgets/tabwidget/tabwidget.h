@@ -62,7 +62,7 @@ public:
 	int GetCurrentIndex() const;
 	void SetCurrentIndex(int pageIndex);
 
-	double GetPreferredHeight() override { return 30.0; }
+	double GetPreferredHeight() override { return 38.0; }
 
 	std::function<void()> OnCurrentChanged;
 
@@ -99,6 +99,7 @@ public:
 	std::function<void()> OnClick;
 
 protected:
+	void OnPaint(Canvas* canvas) override;
 	void OnGeometryChanged() override;
 	bool OnMouseDown(const Point& pos, InputKey key) override;
 	bool OnMouseUp(const Point& pos, InputKey key) override;

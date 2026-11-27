@@ -1125,11 +1125,11 @@ FxExpression *FxCastForEachLoop::Resolve(FCompileContext &ctx)
 	}
 
 	PClass * varTypeClass = PClass::FindClass(fieldName);
-	varType = varTypeClass->VMType;
+	varType = varTypeClass ? varTypeClass->VMType : nullptr;
 
 	if(!varType)
 	{
-		ScriptPosition.Message(MSG_ERROR, "foreach(Type var : it ) - could not find class '%s'",className.GetChars());
+		ScriptPosition.Message(MSG_ERROR, "foreach(Type var : it ) - could not find class '%s'", fieldName.GetChars());
 		delete this;
 		return nullptr;
 	}
