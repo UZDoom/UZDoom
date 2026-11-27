@@ -248,6 +248,17 @@ void P_DoMissileDamage(AActor* inflictor, AActor* target);
 bool P_CheckPosition(AActor *thing, const DVector2 &pos, FCheckPosition &tm, bool actorsonly = false);
 AActor	*P_CheckOnmobj (AActor *thing);
 void	P_FakeZMovement (AActor *mo);
+
+constexpr double MIKOPORTAL_Z_UNDERFLOW = -32768.0;
+
+inline double P_WrapMikoportalZ(double z)
+{
+	// Emulate 16.16 signed fixed-point underflow wrapping into [-32768, 32768).
+	double shifted = fmod(z - MIKOPORTAL_Z_UNDERFLOW, 65536.0);
+	if (shifted < 0)
+		shifted += 65536.0;
+	return shifted + MIKOPORTAL_Z_UNDERFLOW;
+}
 bool	P_TryMove(AActor* thing, const DVector2 &pos, int dropoff, const secplane_t * onfloor, FCheckPosition &tm, bool missileCheck = false);
 bool	P_TryMove(AActor* thing, const DVector2 &pos, int dropoff, const secplane_t * onfloor = NULL, bool missilecheck = false);
 

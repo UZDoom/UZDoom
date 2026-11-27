@@ -2208,6 +2208,10 @@ void P_FakeZMovement(AActor *mo)
 	// adjust height
 	//
 	mo->AddZ(mo->Vel.Z);
+	if ((mo->Level->i_compatflags2 & COMPATF2_EMULATEMIKOPORTALS) && mo->Z() < MIKOPORTAL_Z_UNDERFLOW)
+	{
+		mo->SetZ(P_WrapMikoportalZ(mo->Z()));
+	}
 	if ((mo->flags&MF_FLOAT) && mo->target)
 	{ // float down towards target if too close
 		if (!(mo->flags & MF_SKULLFLY) && !(mo->flags & MF_INFLOAT))
