@@ -1517,6 +1517,7 @@ enum ECompatFlags
 	COMPATF2_INFINITEMELEE		= 1 << 24, // Disable vertical Z-range check for melee attacks
 	COMPATF2_BOOMUSEBLOCKING	= 1 << 25, // All special lines block <use> unless Boom PassUse is set
 	COMPATF2_BOOMSCROLLSTRICT	= 1 << 26, // Use strict(er) Boom scroller physics
+	COMPATF2_NOSOULBOUNCE		= 1 << 27, // Charging Lost Souls do not bounce off ceilings
 };
 
 enum HitWaterFlags

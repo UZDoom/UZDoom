@@ -173,6 +173,7 @@ static FCompatOption Options[] =
 	{ "infinitemelee",			COMPATF2_INFINITEMELEE, SLOT_COMPAT2 },
 	{ "boomuseblocking",		COMPATF2_BOOMUSEBLOCKING, SLOT_COMPAT2 },
 	{ "boomscrollstrict",		COMPATF2_BOOMSCROLLSTRICT, SLOT_COMPAT2 },
+	{ "nosoulbounce",			COMPATF2_NOSOULBOUNCE, SLOT_COMPAT2 },
 
 	{ NULL, 0, 0 }
 };
