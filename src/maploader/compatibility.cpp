@@ -167,7 +167,12 @@ static FCompatOption Options[] =
 	{ "noacsargcheck",			COMPATF2_NOACSARGCHECK, SLOT_COMPAT2 },
 	{ "novdolllockmsg",			COMPATF2_NOVDOLLLOCKMSG, SLOT_COMPAT2 },
 	{ "emulatemikoportals",		COMPATF2_EMULATEMIKOPORTALS, SLOT_COMPAT2 },
-	{ "transfersecret",			COMPATF2_TRANSFERSECRET, SLOT_COMPAT2},
+	{ "transfersecret",			COMPATF2_TRANSFERSECRET, SLOT_COMPAT2 },
+	{ "hitscanswitches",		COMPATF2_HITSCANSWITCHES, SLOT_COMPAT2 },
+	{ "monsterprojlines",		COMPATF2_MONSTERPROJLINES, SLOT_COMPAT2 },
+	{ "infinitemelee",			COMPATF2_INFINITEMELEE, SLOT_COMPAT2 },
+	{ "boomuseblocking",		COMPATF2_BOOMUSEBLOCKING, SLOT_COMPAT2 },
+	{ "boomscrollstrict",		COMPATF2_BOOMSCROLLSTRICT, SLOT_COMPAT2 },
 
 	{ NULL, 0, 0 }
 };

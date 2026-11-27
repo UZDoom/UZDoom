@@ -2292,15 +2292,18 @@ static void CheckForPushSpecial(line_t *line, int side, AActor *mobj, DVector2 *
 		}
 		else if (mobj->flags2 & MF2_IMPACT)
 		{
-			if ((mobj->Level->flags2 & LEVEL2_MISSILESACTIVATEIMPACT) ||
-				!(mobj->flags & MF_MISSILE) ||
-				(mobj->target == NULL))
+			if (!((mobj->flags & MF_MISSILE) && (mobj->Level->i_compatflags2 & COMPATF2_HITSCANSWITCHES)))
 			{
-				P_ActivateLine(line, mobj, side, SPAC_Impact);
-			}
-			else
-			{
-				P_ActivateLine(line, mobj->target, side, SPAC_Impact);
+				if ((mobj->Level->flags2 & LEVEL2_MISSILESACTIVATEIMPACT) ||
+					!(mobj->flags & MF_MISSILE) ||
+					(mobj->target == NULL))
+				{
+					P_ActivateLine(line, mobj, side, SPAC_Impact);
+				}
+				else
+				{
+					P_ActivateLine(line, mobj->target, side, SPAC_Impact);
+				}
 			}
 		}
 	}
@@ -2726,7 +2729,26 @@ bool P_TryMove(AActor *thing, const DVector2 &pos,
 				}
 				else if (thing->flags2 & MF2_PCROSS)
 				{
-					P_ActivateLine(ld, thing, oldside, SPAC_PCross);
+					if (!P_ActivateLine(ld, thing, oldside, SPAC_PCross) &&
+						(thing->Level->i_compatflags2 & COMPATF2_MONSTERPROJLINES) &&
+						(gameinfo.gametype & GAME_DoomChex) &&
+						(thing->flags & MF_MISSILE) &&
+						!(ld->activation & SPAC_AnyCross) &&
+						(ld->special == Door_Raise ||
+						 ld->special == Plat_DownWaitUpStay ||
+						 ld->special == Plat_DownWaitUpStayLip ||
+						 ld->special == Teleport ||
+						 ld->special == Teleport_NoFog ||
+						 ld->special == Teleport_Line) &&
+						!thing->IsKindOf(FName("Rocket")) &&
+						!thing->IsKindOf(FName("PlasmaBall")) &&
+						!thing->IsKindOf(FName("BFGBall")) &&
+						!thing->IsKindOf(FName("DoomImpBall")) &&
+						!thing->IsKindOf(FName("CacodemonBall")) &&
+						!thing->IsKindOf(FName("BaronBall")))
+					{
+						P_ActivateLine(ld, thing, oldside, SPAC_MCross);
+					}
 				}
 				else if ((ld->special == Teleport ||
 					ld->special == Teleport_NoFog ||
@@ -5806,8 +5828,11 @@ bool P_UseTraverse(AActor *usething, const DVector2 &start, const DVector2 &end,
 			{
 				P_LineOpening(open, NULL, in->d.line, it.InterceptPoint(in));
 			}
-			if (open.range <= 0 ||
-				(in->d.line->special != 0 && (usething->Level->i_compatflags & COMPATF_USEBLOCKING)))
+			const bool hasSpecial = (in->d.line->special != 0 || (in->d.line->flags2 & ML2_STATIC_SPECIAL));
+			const bool blocksUse = hasSpecial &&
+				((usething->Level->i_compatflags & COMPATF_USEBLOCKING) ||
+				 ((usething->Level->i_compatflags2 & COMPATF2_BOOMUSEBLOCKING) && !(in->d.line->flags2 & ML2_PASSUSE)));
+			if (open.range <= 0 || blocksUse)
 			{
 				// [RH] Give sector a chance to intercept the use
 
@@ -5867,9 +5892,10 @@ bool P_UseTraverse(AActor *usething, const DVector2 &start, const DVector2 &end,
 			//[RH] And now I've changed it again. If the line is of type
 			//	   SPAC_USE, then it eats the use. Everything else passes
 			//	   it through, including SPAC_USETHROUGH.
-			if (usething->Level->i_compatflags & COMPATF_USEBLOCKING)
+			if ((usething->Level->i_compatflags & COMPATF_USEBLOCKING) ||
+				(usething->Level->i_compatflags2 & COMPATF2_BOOMUSEBLOCKING))
 			{
-				if (in->d.line->activation & SPAC_UseThrough) continue;
+				if ((in->d.line->activation & SPAC_UseThrough) || (in->d.line->flags2 & ML2_PASSUSE)) continue;
 				else return true;
 			}
 			else
