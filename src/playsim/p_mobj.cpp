@@ -4305,7 +4305,7 @@ void AActor::CalcBones(bool recalc)
 		bool is_decoupled = flags9 & MF9_DECOUPLEDANIMATIONS;
 		double tic = GetModelTimer() + 1;
 
-		CalcModelFrameInfo frameinfo = CalcModelFrame(Level, smf, state, tics, modelData, this, is_decoupled, tic, 1.0);
+		CalcModelFrameInfo frameinfo = CalcModelFrame(Level, smf, state, tics, modelData, this, is_decoupled, tic, 1.0, nullptr);
 
 		ModelDrawInfo drawinfo;
 
@@ -4316,7 +4316,7 @@ void AActor::CalcBones(bool recalc)
 
 		for (unsigned i = 0; i < frameinfo.modelsamount; i++)
 		{
-			if (CalcModelOverrides(i, smf, modelData, frameinfo, drawinfo, is_decoupled))
+			if (CalcModelOverrides(i, smf, modelData, frameinfo, drawinfo, is_decoupled, nullptr))
 			{
 				if(!evaluatedSingle)
 				{ // [Jay] TODO per-model decoupled animations

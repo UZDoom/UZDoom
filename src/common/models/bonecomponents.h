@@ -198,3 +198,64 @@ struct AnimInfo
 double getCurrentFrame(const ModelAnim &anim, double tic, bool *looped);
 void calcFrame(const ModelAnim &anim, double tic, ModelAnimFrameInterp &inter);
 void calcFrames(const ModelAnim &curAnim, double tic, ModelAnimFrameInterp &to, float &inter);
+
+
+enum ESetAnimationFlags
+{
+	SAF_INSTANT = 1 << 0,
+	SAF_LOOP = 1 << 1,
+	SAF_NOOVERRIDE = 1 << 2,
+};
+
+class DAnimationFrame : public DObject
+{
+	DECLARE_ABSTRACT_CLASS(DAnimationFrame, DObject);
+};
+
+class DPrecalculatedAnimationFrame : public DAnimationFrame
+{
+	DECLARE_CLASS(DPrecalculatedAnimationFrame, DAnimationFrame);
+public:
+	TArray<TRS> frameData;
+
+	void Serialize(FSerializer& arc) override;
+};
+
+
+class DInterpolatedFrame : public DAnimationFrame
+{
+	DECLARE_CLASS(DInterpolatedFrame, DAnimationFrame);
+public:
+	float inter;	// = -1.0f;
+	int frame1;		// = -1;
+	int frame2;		// = -1;
+
+	void Serialize(FSerializer& arc) override;
+};
+
+class DAnimationSequence : public DObject
+{
+	DECLARE_CLASS(DAnimationSequence, DObject);
+public:
+	int firstFrame;			// = 0;
+	int lastFrame;			// = 0;
+	int loopFrame;			// = 0;
+	float framerate;		// = 0;
+	double startFrame;		// = 0;
+	int flags;				// = MODELANIM_NONE;
+	double startTic;		// = 0; // when the current animation started (changing framerates counts as restarting) (or when animation starts if interpolating from previous animation)
+	double switchOffset;	// = 0; // when the animation was changed -- where to interpolate the switch from
+
+	void Serialize(FSerializer& arc) override;
+};
+
+class DAnimationLayer : public DObject
+{
+	DECLARE_CLASS(DAnimationLayer, DObject);
+	HAS_OBJECT_POINTERS;
+public:
+	TObjPtr<DAnimationSequence*> curAnim;
+	TObjPtr<DAnimationFrame*> prevAnim;
+
+	void Serialize(FSerializer& arc) override;
+};

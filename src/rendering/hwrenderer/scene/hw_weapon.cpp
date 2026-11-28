@@ -850,7 +850,7 @@ void HWDrawInfo::PreparePlayerSprites3D(sector_t * viewsector, area_t in_area)
 		{
 			if (!(smf_flags & MDL_NOPERPIXELLIGHTING))
 			{
-				hw_GetDynModelLight(playermo, lightdata);
+				hw_GetDynModelLight(playermo, nullptr, lightdata);
 				hudsprite.lightindex = screen->mLights->UploadLights(lightdata);
 			}
 			else

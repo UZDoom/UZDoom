@@ -23,9 +23,14 @@ Class VisualThinker : Thinker native
 							Prev;
 	native FVector3			Vel;
 	native Vector2			Scale,
+							PrevScale,
 							Offset;
 	native float			Roll,
 							PrevRoll,
+							Angle,
+							PrevAngle,
+							Pitch,
+							PrevPitch,
 							Alpha;
 	native TextureID		Texture;
 	native TranslationID	Translation;
@@ -40,10 +45,23 @@ Class VisualThinker : Thinker native
 	FlagDef                 YFlip :             VisualThinkerFlags, 3;
 	FlagDef                 DontInterpolate :   VisualThinkerFlags, 4;
 	FlagDef                 AddLightLevel :     VisualThinkerFlags, 5;
+	FlagDef                 AnimsDecoupled :     VisualThinkerFlags, 9;
+	FlagDef                 OverrideModelTexture :     VisualThinkerFlags, 10;
+	FlagDef                 UseModelRenderStyle :     VisualThinkerFlags, 11;
 
 	native Color			scolor;
 
 	native Sector			CurSector; // can be null!
+
+	native void ClearModel();
+	native void SetModel(Class<Actor> model, SpriteID sprite, int frame);
+
+	native version("5.1") void SetAnimation(Name animName, double framerate = -1, int startFrame = -1, int loopFrame = -1, int endFrame = -1, int interpolateTics = -1, int flags = 0);
+	native version("5.1") ui void SetAnimationUI(Name animName, double framerate = -1, int startFrame = -1, int loopFrame = -1, int endFrame = -1, int interpolateTics = -1, int flags = 0);
+
+	native version("5.1") void SetAnimationFrameRate(double framerate);
+	native version("5.1") ui void SetAnimationFrameRateUI(double framerate);
+
 
 	virtual void BeginPlay() {}
 
@@ -104,5 +122,14 @@ Class VisualThinker : Thinker native
 	void DisableParticle()
 	{
 		VisualThinkerFlags &= ~VTF_IsParticle;
+	}
+	
+	void ClearInterpolation()
+	{
+		Prev = Pos;
+		PrevScale = Scale;
+		PrevAngle = Angle;
+		PrevPitch = Pitch;
+		PrevRoll = Roll;
 	}
 }

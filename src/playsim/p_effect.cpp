@@ -1168,7 +1168,7 @@ DEFINE_ACTION_FUNCTION_NATIVE(DVisualThinker, UpdateSpriteInfo, UpdateSpriteInfo
 
 bool DVisualThinker::ValidTexture()
 {
-	return ((flags & VTF_IsParticle) || PT.texture.isValid());
+	return ((flags & VTF_ParticleMask) || PT.texture.isValid());
 }
 
 // This runs just like Actor's, make sure to call Super.Tick() in ZScript.
@@ -1177,7 +1177,7 @@ void DVisualThinker::Tick()
 	if (ObjectFlags & OF_EuthanizeMe)
 		return;
 
-	if (!ValidTexture())
+	if (!ValidTexture() && !ModelClass)
 	{
 		Destroy();
 		return;
@@ -1192,6 +1192,9 @@ void DVisualThinker::Tick()
 	}
 	Prev = PT.Pos;
 	PrevRoll = PT.Roll;
+	PrevAngle = Angle;
+	PrevPitch = Pitch;
+	PrevScale = Scale;
 	// Handle crossing a line portal
 	DVector2 newxy = Level->GetPortalOffsetPosition(PT.Pos.X, PT.Pos.Y, PT.Vel.X, PT.Vel.Y);
 	PT.Pos.X = newxy.X;
@@ -1253,6 +1256,51 @@ float DVisualThinker::InterpolatedRoll(double ticFrac) const
 }
 
 
+DVector2 DVisualThinker::InterpolatedScale(double ticFrac) const
+{
+	if (flags & VTF_DontInterpolate) return Scale;
+
+	return PrevScale + (Scale - PrevScale) * ticFrac;
+}
+
+DRotator DVisualThinker::InterpolatedAngles(double ticFrac) const
+{
+	if (flags & VTF_DontInterpolate) return DRotator(DAngle::fromDeg(Pitch), DAngle::fromDeg(Angle), DAngle::fromDeg(PT.Roll));
+
+	return DRotator(
+				DRotator(DAngle::fromDeg(PrevPitch), DAngle::fromDeg(PrevAngle), DAngle::fromDeg(PrevRoll)),
+				DRotator(DAngle::fromDeg(Pitch), DAngle::fromDeg(Angle), DAngle::fromDeg(PT.Roll)),
+				ticFrac);
+}
+
+static void ClearModel(DVisualThinker * self)
+{
+	self->ModelClass = nullptr;
+}
+
+DEFINE_ACTION_FUNCTION_NATIVE(DVisualThinker, ClearModel, ClearModel)
+{
+	PARAM_SELF_PROLOGUE(DVisualThinker);
+	ClearModel(self);
+	return 0;
+}
+
+static void SetModel(DVisualThinker * self, PClass * modelClass, int modelSprite, int modelFrame)
+{
+	self->ModelClass = modelClass;
+	self->ModelSprite = modelSprite;
+	self->ModelFrame = modelFrame;
+}
+
+DEFINE_ACTION_FUNCTION_NATIVE(DVisualThinker, SetModel, SetModel)
+{
+	PARAM_SELF_PROLOGUE(DVisualThinker);
+	PARAM_CLASS(modelClass, AActor);
+	PARAM_INT(modelSprite);
+	PARAM_INT(modelFrame);
+	SetModel(self, modelClass, modelSprite, modelFrame);
+	return 0;
+}
 
 void DVisualThinker::SetTranslation(FName trname)
 {
@@ -1288,7 +1336,7 @@ DEFINE_ACTION_FUNCTION_NATIVE(DVisualThinker, SetTranslation, SetTranslation)
 
 int DVisualThinker::GetParticleType() const
 {
-	int flag = (flags & VTF_IsParticle);
+	int flag = (flags & VTF_ParticleMask);
 	switch (flag)
 	{
 	case VTF_ParticleSquare:
@@ -1389,6 +1437,16 @@ void DVisualThinker::Serialize(FSerializer& arc)
 	arc("pos", PT.Pos)
 		("vel", PT.Vel)
 		("prev", Prev)
+		("angle", Angle)
+		("prevAngle", PrevAngle)
+		("pitch", Pitch)
+		("prevPitch", PrevPitch)
+		("prevScale", PrevScale)
+		("modelClass", ModelClass)
+		("modelSprite", ModelSprite)
+		("modelFrame", ModelFrame)
+		("DecoupledAnim_curAnim", DecoupledAnim.curAnim)
+		("DecoupledAnim_prevAnim", DecoupledAnim.prevAnim)
 		("scale", Scale)
 		("roll", PT.Roll)
 		("prevroll", PrevRoll)
@@ -1417,7 +1475,12 @@ void DVisualThinker::Serialize(FSerializer& arc)
 	}
 }
 
-IMPLEMENT_CLASS(DVisualThinker, false, false);
+IMPLEMENT_CLASS(DVisualThinker, false, true);
+IMPLEMENT_POINTERS_START(DVisualThinker)
+	IMPLEMENT_POINTER(DecoupledAnim)
+IMPLEMENT_POINTERS_END;
+
+
 DEFINE_FIELD_NAMED(DVisualThinker, PT.color, SColor);
 DEFINE_FIELD_NAMED(DVisualThinker, PT.Pos, Pos);
 DEFINE_FIELD_NAMED(DVisualThinker, PT.Vel, Vel);
@@ -1431,6 +1494,11 @@ DEFINE_FIELD(DVisualThinker, Prev);
 DEFINE_FIELD(DVisualThinker, Scale);
 DEFINE_FIELD(DVisualThinker, Offset);
 DEFINE_FIELD(DVisualThinker, PrevRoll);
+DEFINE_FIELD(DVisualThinker, Angle);
+DEFINE_FIELD(DVisualThinker, Pitch);
+DEFINE_FIELD(DVisualThinker, PrevAngle);
+DEFINE_FIELD(DVisualThinker, PrevPitch);
+DEFINE_FIELD(DVisualThinker, PrevScale);
 DEFINE_FIELD(DVisualThinker, Translation);
 DEFINE_FIELD(DVisualThinker, LightLevel);
 DEFINE_FIELD(DVisualThinker, cursector);

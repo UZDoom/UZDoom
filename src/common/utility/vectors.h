@@ -1632,6 +1632,11 @@ struct TRotator
 	{
 	}
 
+	constexpr explicit TRotator (const TRotator &prev, const TRotator &cur, double ticFrac) // interpolated
+		: Pitch(prev.Pitch + deltaangle(prev.Pitch, cur.Pitch) * ticFrac), Yaw(prev.Yaw + deltaangle(prev.Yaw, cur.Yaw) * ticFrac), Roll(prev.Roll + deltaangle(prev.Roll, cur.Roll) * ticFrac)
+	{
+	}
+
 	constexpr TRotator(const TRotator &other) = default;
 	constexpr TRotator &operator= (const TRotator &other) = default;
 

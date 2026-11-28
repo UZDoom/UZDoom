@@ -48,26 +48,45 @@ EXTERN_CVAR (Bool, r_drawvoxels)
 extern TDeletingArray<FVoxel *> Voxels;
 extern TDeletingArray<FVoxelDef *> VoxelDefs;
 
-void RenderFrameModels(FModelRenderer* renderer, FLevelLocals* Level, const FSpriteModelFrame *smf, const FState* curState, int curTics, double tic, FTranslationID translation, AActor* actor);
+void RenderFrameModels(FModelRenderer* renderer, FLevelLocals* Level, const FSpriteModelFrame *smf, const FState* curState, int curTics, double tic, FTranslationID translation, AActor* actor, DVisualThinker* vt);
 
-void RenderModel(FModelRenderer *renderer, float x, float y, float z, FSpriteModelFrame *smf, AActor *actor, double ticFrac)
+void RenderModel(FModelRenderer *renderer, float x, float y, float z, FSpriteModelFrame *smf, HWSprite *spr, double ticFrac)
 {
-	int smf_flags = smf->getFlags(actor->modelData);
+	assert(spr->actor || spr->visualthinker);
+	AActor * actor = spr->actor;
+	FLevelLocals* Level = actor ? actor->Level : spr->visualthinker->Level;
+	int smf_flags = smf->getFlags(actor ? actor->modelData : (DActorModelData *)nullptr);
 	FTranslationID translation = NO_TRANSLATION;
 	if (!(smf_flags & MDL_IGNORETRANSLATION))
-		translation = actor->Translation;
+		translation = spr->translation;
 
-	VSMatrix objectToWorldMatrix = smf->ObjectToWorldMatrix(actor, x, y, z, ticFrac);
+	VSMatrix objectToWorldMatrix = actor ? smf->ObjectToWorldMatrix(actor, x, y, z, ticFrac) : smf->ObjectToWorldMatrix(spr->visualthinker, x, y, z, ticFrac);
 
-	const DVector2 scale = actor->InterpolatedScale(ticFrac);
+	const DVector2 scale = actor ? actor->InterpolatedScale(ticFrac) : spr->visualthinker->InterpolatedScale(ticFrac);
+
 	float scaleFactorX = scale.X * smf->xscale;
 	float scaleFactorY = scale.X * smf->yscale;
 	float scaleFactorZ = scale.Y * smf->zscale;
 	float orientation = scaleFactorX * scaleFactorY * scaleFactorZ;
 
-	renderer->BeginDrawModel(actor->RenderStyle, smf_flags, objectToWorldMatrix, orientation < 0);
-	RenderFrameModels(renderer, actor->Level, smf, actor->state, actor->tics, ticFrac, translation, actor);
-	renderer->EndDrawModel(actor->RenderStyle, smf_flags);
+	FRenderStyle RenderStyle;
+
+	if(actor)
+	{
+		RenderStyle = actor->RenderStyle;
+	}
+	else if(spr->visualthinker->flags & VTF_UseModelRenderStyle)
+	{
+		RenderStyle = spr->visualthinker->PT.style;
+	}
+	else
+	{
+		RenderStyle = spr->RenderStyle;
+	}
+
+	renderer->BeginDrawModel(RenderStyle, smf_flags, objectToWorldMatrix, orientation < 0);
+	RenderFrameModels(renderer, Level, smf, actor ? actor->state : nullptr, actor ? actor->tics : -1, ticFrac, translation, actor, spr->visualthinker);
+	renderer->EndDrawModel(RenderStyle, smf_flags);
 }
 
 VSMatrix FSpriteModelFrame::ObjectToWorldMatrix(AActor * actor, float x, float y, float z, double ticFrac)
@@ -128,6 +147,63 @@ VSMatrix FSpriteModelFrame::ObjectToWorldMatrix(AActor * actor, float x, float y
 	}
 
 	return ObjectToWorldMatrix(actor->Level, DVector3(x, y, z), DRotator(DAngle::fromDeg(pitch), DAngle::fromDeg(angle), DAngle::fromDeg(roll)), actor->InterpolatedScale(ticFrac), smf_flags, tic);
+}
+
+VSMatrix FSpriteModelFrame::ObjectToWorldMatrix(DVisualThinker * vt, float x, float y, float z, double ticFrac)
+{
+	int smf_flags = flags;
+
+	// Setup transformation.
+	DRotator angles = vt->InterpolatedAngles(ticFrac);
+
+	float angle = angles.Yaw.Degrees();
+	float pitch = 0;
+	float roll = 0;
+
+	// [BB] Workaround for the missing pitch information.
+	if ((smf_flags & MDL_PITCHFROMMOMENTUM))
+	{
+		const double x = vt->PT.Vel.X;
+		const double y = vt->PT.Vel.Y;
+		const double z = vt->PT.Vel.Z;
+
+		if (vt->PT.Vel.LengthSquared() > EQUAL_EPSILON)
+		{
+			// [BB] Calculate the pitch using spherical coordinates.
+			if (z || x || y) pitch = float(atan(z / sqrt(x*x + y*y)) / M_PI * 180);
+
+			// Correcting pitch if model is moving backwards
+			if (fabs(x) > EQUAL_EPSILON || fabs(y) > EQUAL_EPSILON)
+			{
+				if ((x * cos(angle * M_PI / 180) + y * sin(angle * M_PI / 180)) / sqrt(x * x + y * y) < 0) pitch *= -1;
+			}
+			else pitch = fabs(pitch);
+		}
+	}
+
+	// Added MDL_USEACTORPITCH and MDL_USEACTORROLL flags processing.
+	// If both flags MDL_USEACTORPITCH and MDL_PITCHFROMMOMENTUM are set, the pitch sums up the actor pitch and the velocity vector pitch.
+	if (smf_flags & MDL_USEACTORPITCH)
+	{
+		double d = angles.Pitch.Degrees();
+		if (smf_flags & MDL_BADROTATION) pitch += d;
+		else pitch -= d;
+	}
+	if (smf_flags & MDL_USEACTORROLL) roll += angles.Roll.Degrees();
+
+	/*
+	// [Nash] take SpriteRotation into account
+	angle += actor->SpriteRotation.Degrees();
+	*/
+
+	double tic = vt->Level->LocalWorldTimer;
+
+	if (!WorldPaused(true))
+	{
+		tic += ticFrac;
+	}
+
+	return ObjectToWorldMatrix(vt->Level, DVector3(x, y, z), DRotator(DAngle::fromDeg(pitch), DAngle::fromDeg(angle), DAngle::fromDeg(roll)), vt->InterpolatedScale(ticFrac), smf_flags, tic);
 }
 
 VSMatrix FSpriteModelFrame::ObjectToWorldMatrix(FLevelLocals *Level, DVector3 translation, DRotator rotation, DVector2 scaling, unsigned int flags, double tic)
@@ -309,7 +385,7 @@ void RenderHUDModel(FModelRenderer *renderer, DPSprite *psp, FVector3 translatio
 	auto trans = psp->GetTranslation();
 	if ((psp->Flags & PSPF_PLAYERTRANSLATED)) trans = psp->Owner->mo->Translation;
 
-	RenderFrameModels(renderer, playermo->Level, smf, psp->GetState(), psp->GetTics(), ticFrac, trans, psp->Caller);
+	RenderFrameModels(renderer, playermo->Level, smf, psp->GetState(), psp->GetTics(), ticFrac, trans, psp->Caller, nullptr);
 	renderer->EndDrawHUDModel(playermo->RenderStyle, smf_flags);
 }
 
@@ -366,7 +442,7 @@ void calcFrames(const ModelAnim &curAnim, double tic, ModelAnimFrameInterp &to, 
 	}
 }
 
-CalcModelFrameInfo CalcModelFrame(FLevelLocals *Level, const FSpriteModelFrame *smf, const FState *curState, const int curTics, DActorModelData* data, AActor* actor, bool is_decoupled, double tic, double ticFrac)
+CalcModelFrameInfo CalcModelFrame(FLevelLocals *Level, const FSpriteModelFrame *smf, const FState *curState, const int curTics, DActorModelData* data, AActor* actor, bool is_decoupled, double tic, double ticFrac, DVisualThinker* vt)
 {
 	// [BB] Frame interpolation: Find the FSpriteModelFrame smfNext which follows after smf in the animation
 	// and the scalar value inter ( element of [0,1) ), both necessary to determine the interpolated frame.
@@ -384,14 +460,19 @@ CalcModelFrameInfo CalcModelFrame(FLevelLocals *Level, const FSpriteModelFrame *
 
 	if(is_decoupled)
 	{
-		smfNext = smf = &BaseSpriteModelFrames[(data != nullptr && data->modelDef != nullptr) ? data->modelDef : actor->GetClass()];
+		smfNext = smf = &BaseSpriteModelFrames[(data != nullptr && data->modelDef != nullptr) ? data->modelDef : actor ? actor->GetClass() : vt->ModelClass];
 		if(data && !(data->anims.curAnim.flags & MODELANIM_NONE))
 		{
 			calcFrames(data->anims.curAnim, tic, decoupled_frame, inter);
 			decoupled_frame_prev = &data->anims.prevAnim;
 		}
+		else if(vt && !(vt->DecoupledAnim.curAnim.flags & MODELANIM_NONE)) // && (vt->flags & VTF_AnimsDecoupled) // VTF_AnimsDecoupled is always true if vt and is_decoupled
+		{
+			calcFrames(vt->DecoupledAnim.curAnim, tic, decoupled_frame, inter);
+			decoupled_frame_prev = &vt->DecoupledAnim.prevAnim;
+		}
 	}
-	else if (gl_interpolate_model_frames && !(smf_flags & MDL_NOINTERPOLATION))
+	else if (gl_interpolate_model_frames && curState && !(smf_flags & MDL_NOINTERPOLATION))
 	{
 		FState *nextState = curState->GetNextState();
 		if (curState != nextState && nextState)
@@ -454,7 +535,7 @@ CalcModelFrameInfo CalcModelFrame(FLevelLocals *Level, const FSpriteModelFrame *
 	};
 }
 
-bool CalcModelOverrides(int i, const FSpriteModelFrame *smf, DActorModelData* data, const CalcModelFrameInfo &info, ModelDrawInfo &out, bool is_decoupled)
+bool CalcModelOverrides(int i, const FSpriteModelFrame *smf, DActorModelData* data, const CalcModelFrameInfo &info, ModelDrawInfo &out, bool is_decoupled, DVisualThinker *vt)
 {
 	//reset drawinfo
 	out.modelid = -1;
@@ -536,7 +617,6 @@ bool CalcModelOverrides(int i, const FSpriteModelFrame *smf, DActorModelData* da
 
 			out.surfaceskinids = data->models[i].surfaceSkinIDs;
 			out.surfaceskinids.Resize(MD3_MAX_SURFACES);
-
 			for (unsigned surface = 0; surface < MD3_MAX_SURFACES; surface++)
 			{
 				if (sz2 > surface && (data->models[i].surfaceSkinIDs[surface].isValid()))
@@ -560,7 +640,7 @@ bool CalcModelOverrides(int i, const FSpriteModelFrame *smf, DActorModelData* da
 		out.animationid = smf->animationIDs[i];
 		out.modelframe = smf->modelframes[i];
 		if (info.smfNext) out.modelframenext = info.smfNext->modelframes[i];
-		out.skinid = smf->skinIDs[i];
+		out.skinid = (vt && (vt->flags & VTF_OverrideModelTexture) && vt->PT.texture.isValid())? vt->PT.texture : smf->skinIDs[i];
 	}
 
 	return (out.modelid >= 0 && out.modelid < Models.SSize());
@@ -672,20 +752,19 @@ static inline void RenderModelFrame(FModelRenderer *renderer, int i, const FSpri
 	mdl->RenderFrame(renderer, tex, drawinfo.modelframe, nextFrame ? drawinfo.modelframenext : drawinfo.modelframe, nextFrame ? frameinfo.inter : -1.f, translation, ssidp, boneStartingPosition, actor);
 }
 
-void RenderFrameModels(FModelRenderer *renderer, FLevelLocals *Level, const FSpriteModelFrame *smf, const FState *curState, int curTics, double ticFrac, FTranslationID translation, AActor* actor)
+void RenderFrameModels(FModelRenderer *renderer, FLevelLocals *Level, const FSpriteModelFrame *smf, const FState *curState, int curTics, double ticFrac, FTranslationID translation, AActor* actor, DVisualThinker* vt)
 {
-	
-	double tic = actor->GetModelTimer();
-	if (!WorldPaused(true) && !actor->isFrozen())
+	double tic = actor ? actor->GetModelTimer() : Level->LocalWorldTimer;
+	if (!WorldPaused(true) && (!actor || !actor->isFrozen()))
 	{
 		tic += ticFrac;
 	}
 
-	bool is_decoupled = (actor->flags9 & MF9_DECOUPLEDANIMATIONS);
+	bool is_decoupled = actor ? !!(actor->flags9 & MF9_DECOUPLEDANIMATIONS) : !!(vt->flags & VTF_AnimsDecoupled);
 
 	DActorModelData* modelData = actor ? actor->modelData.ForceGet() : nullptr;
 
-	CalcModelFrameInfo frameinfo = CalcModelFrame(Level, smf, curState, curTics, modelData, actor, is_decoupled, tic, ticFrac);
+	CalcModelFrameInfo frameinfo = CalcModelFrame(Level, smf, curState, curTics, modelData, actor, is_decoupled, tic, ticFrac, vt);
 	ModelDrawInfo drawinfo;
 
 	if (modelData)
@@ -696,7 +775,7 @@ void RenderFrameModels(FModelRenderer *renderer, FLevelLocals *Level, const FSpr
 
 	for (unsigned i = 0; i < frameinfo.modelsamount; i++)
 	{
-		if (CalcModelOverrides(i, smf, modelData, frameinfo, drawinfo, is_decoupled))
+		if (CalcModelOverrides(i, smf, modelData, frameinfo, drawinfo, is_decoupled, vt))
 		{
 			RenderModelFrame(renderer, i, smf, modelData, frameinfo, drawinfo, is_decoupled, tic, translation, boneStartingPosition, evaluatedSingle, actor);
 		}

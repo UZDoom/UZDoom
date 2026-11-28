@@ -20,6 +20,7 @@
 
 #include "palettecontainer.h"
 #include "hwrenderer/scene/hw_drawstructs.h"
+#include "bonecomponents.h"
 
 //===========================================================================
 //
@@ -36,16 +37,22 @@ enum EVisualThinkerFlags
 	VTF_DontInterpolate	= 1 << 4, // disable all interpolation
 	VTF_AddLightLevel	= 1 << 5, // adds sector light level to 'LightLevel'
 
-	VTF_ParticleDefault = 0x40,
-	VTF_ParticleSquare = 0x80,
-	VTF_ParticleRound = 0xC0,
-	VTF_ParticleSmooth = 0x100,
-	VTF_IsParticle = 0x1C0,			// Renders as a particle instead
+	VTF_ParticleDefault	= 0x040, // 1 << 6
+	VTF_ParticleSquare	= 0x080, // 1 << 7
+	VTF_ParticleRound	= 0x0C0, // 1 << 7 and 1 << 6
+	VTF_ParticleSmooth	= 0x100, // 1 << 8
+	VTF_ParticleMask	= 0x1C0, // 1 << 8 or 1 << 7 or 1 << 6 Renders as a particle instead
+
+	VTF_AnimsDecoupled	= 1 << 9, // decoupled anims
+	VTF_OverrideModelTexture	= 1 << 10, // decoupled anims
+	VTF_UseModelRenderStyle	= 1 << 11, // decoupled anims
 };
 
 class DVisualThinker : public DThinker
 {
 	DECLARE_CLASS(DVisualThinker, DThinker);
+	HAS_OBJECT_POINTERS;
+
 	void UpdateSector(subsector_t * newSubsector);
 
 	DVisualThinker* _next, * _prev;
@@ -56,10 +63,20 @@ public:
 	DVector2		Scale,
 					Offset;
 	float			PrevRoll;
+	float			Angle;
+	float			Pitch;
+	float			PrevAngle;
+	float			PrevPitch;
+	DVector2		PrevScale;
 	int16_t			LightLevel;
 	FTranslationID	Translation;
 	FTextureID		AnimatedTexture;
 	sector_t		*cursector;
+
+	PClass			*ModelClass;
+	int				ModelSprite;
+	int				ModelFrame;
+	AnimInfo		DecoupledAnim;
 
 	int flags;
 
@@ -79,6 +96,8 @@ public:
 	int GetLightLevel(sector_t *rendersector) const;
 	FVector3 InterpolatedPosition(double ticFrac) const;
 	float InterpolatedRoll(double ticFrac) const;
+	DVector2 InterpolatedScale(double ticFrac) const;
+	DRotator InterpolatedAngles(double ticFrac) const;
 
 	void Tick() override;
 	void UpdateSpriteInfo();

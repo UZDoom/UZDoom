@@ -316,7 +316,7 @@ void HWSprite::DrawSprite(HWDrawInfo *di, FRenderState &state, bool translucent)
 			}
 
 			FHWModelRenderer renderer(di, state, dynlightindex);
-			RenderModel(&renderer, x, y, z, modelframe, actor, Net_ModifyObjectFrac(actor, di->Viewpoint.TicFrac));
+			RenderModel(&renderer, x, y, z, modelframe, this, Net_ModifyObjectFrac(actor, di->Viewpoint.TicFrac));
 			state.SetVertexBuffer(screen->mVertexData);
 		}
 	}
@@ -600,9 +600,9 @@ inline void HWSprite::PutSprite(HWDrawInfo *di, bool translucent)
 	// That's a lot of checks...
 	if (modelframe && !modelframe->isVoxel && !(modelframeflags & MDL_NOPERPIXELLIGHTING) && RenderStyle.BlendOp != STYLEOP_Shadow
 		&& gl_light_sprites && di->Level->HasDynamicLights && !di->isFullbrightScene() && !fullbright
-		&& actor && !(actor->renderflags2 & RF2_NODYNAMICLIGHTING))
+		&& ((actor && !(actor->renderflags2 & RF2_NODYNAMICLIGHTING)) || (visualthinker && visualthinker->ModelClass)))
 	{
-		hw_GetDynModelLight(actor, lightdata);
+		hw_GetDynModelLight(actor, visualthinker, lightdata);
 		dynlightindex = screen->mLights->UploadLights(lightdata);
 	}
 	else
@@ -1424,6 +1424,7 @@ void HWSprite::Process(HWDrawInfo *di, AActor* thing, sector_t * sector, area_t 
 	}
 
 	particle = nullptr;
+	visualthinker = nullptr;
 
 	const bool drawWithXYBillboard = (!(actor->renderflags & RF_FORCEYBILLBOARD)
 		&& (actor->renderflags & RF_SPRITETYPEMASK) == RF_FACESPRITE
@@ -1473,7 +1474,7 @@ void HWSprite::ProcessParticle(HWDrawInfo *di, particle_t *particle, sector_t *s
 	if (!particle || particle->alpha <= 0)
 		return;
 
-	if (spr && !spr->ValidTexture())
+	if (spr && !spr->ValidTexture() && !spr->ModelClass)
 		return;
 
 	lightlevel = RescaleLightLevel(spr ? spr->GetLightLevel(sector) : sector->GetSpriteLight());
@@ -1487,6 +1488,7 @@ void HWSprite::ProcessParticle(HWDrawInfo *di, particle_t *particle, sector_t *s
 	bottomclip = -LARGE_VALUE;
 	index = 0;
 	actor = nullptr;
+	visualthinker = spr;
 	this->particle = particle;
 	fullbright = particle->flags & SPF_FULLBRIGHT;
 
@@ -1542,7 +1544,7 @@ void HWSprite::ProcessParticle(HWDrawInfo *di, particle_t *particle, sector_t *s
 		timefrac = 0.;
 
 
-	if (spr && !(spr->flags & VTF_IsParticle))
+	if (spr && !(spr->flags & VTF_ParticleMask))
 	{
 		AdjustVisualThinker(di, spr, sector);
 	}
@@ -1648,10 +1650,15 @@ void HWSprite::ProcessParticle(HWDrawInfo *di, particle_t *particle, sector_t *s
 		else hw_styleflags = STYLEHW_NoAlphaTest;
 	}
 
-	if (sector->e->XFloor.lightlist.Size() != 0 && !di->isFullbrightScene() && !fullbright)
+	if (sector->e->XFloor.lightlist.Size() != 0 && !di->isFullbrightScene() && !fullbright &&
+		RenderStyle.BlendOp != STYLEOP_Shadow && RenderStyle.BlendOp != STYLEOP_RevSub)
+	{
 		lightlist = &sector->e->XFloor.lightlist;
+	}
 	else
+	{
 		lightlist = nullptr;
+	}
 
 	PutSprite(di, hw_styleflags != STYLEHW_Solid);
 	rendered_sprites++;
@@ -1670,13 +1677,6 @@ void HWSprite::AdjustVisualThinker(HWDrawInfo* di, DVisualThinker* spr, sector_t
 	if (paused || spr->isFrozen())
 		timefrac = 0.;
 
-	bool custom_anim = ((spr->PT.flags & SPF_LOCAL_ANIM) && spr->PT.animData.ok);
-
-	texture = TexMan.GetGameTexture(
-			custom_anim
-			? TexAnim.UpdateStandaloneAnimation(spr->PT.animData, di->Level->LocalWorldTimer + timefrac)
-			: spr->PT.texture, !custom_anim);
-
 	if (spr->flags & VTF_DontInterpolate)
 		timefrac = 0.;
 
@@ -1685,51 +1685,157 @@ void HWSprite::AdjustVisualThinker(HWDrawInfo* di, DVisualThinker* spr, sector_t
 	y = interp.Y;
 	z = interp.Z;
 
-	offx = (float)spr->GetOffset(false);
-	offy = (float)spr->GetOffset(true);
-
-	if (spr->PT.flags & SPF_ROLL)
-		Angles.Roll = TAngle<double>::fromDeg(spr->InterpolatedRoll(timefrac));
-
-	auto& spi = texture->GetSpritePositioning(0);
-
-	vt = spi.GetSpriteVT();
-	vb = spi.GetSpriteVB();
-	ul = spi.GetSpriteUR();
-	ur = spi.GetSpriteUL();
-
-	auto r = spi.GetSpriteRect();
-	r.Scale(spr->Scale.X, spr->Scale.Y);
-
-	if ((spr->PT.flags & SPF_ROLL) && !(spr->PT.flags & SPF_STRETCHPIXELS))
+	if(spr->ModelClass)
 	{
-		double ps = di->Level->pixelstretch;
-		double mult = 1.0 / sqrt(ps); // shrink slightly
-		r.Scale(mult * ps, mult);
+		modelframe = FindModelFrame(GetDefaultByType(spr->ModelClass), spr->ModelSprite, spr->ModelFrame, false);
+		modelframeflags = modelframe ? modelframe->getFlags(nullptr) : 0;
+
+		x1 = x2 = x;
+		y1 = y2 = y;
+		z1 = z2 = z;
+
+		texture = nullptr;
+
+		Angles = spr->InterpolatedAngles(vp.TicFrac);
+
+		if(spr->flags & VTF_UseModelRenderStyle)
+		{
+			RenderStyle = spr->PT.style;
+
+			ThingColor = (RenderStyle.Flags & STYLEF_ColorIsFixed) ? spr->PT.color : 0xffffff;
+			ThingColor.a = 255;
+
+			OverrideShader = -1;
+			trans = spr->PT.alpha;
+			hw_styleflags = STYLEHW_Normal;
+
+			if (RenderStyle.BlendOp >= STYLEOP_Fuzz && RenderStyle.BlendOp <= STYLEOP_FuzzOrRevSub)
+			{
+				RenderStyle.CheckFuzz();
+				if (RenderStyle.BlendOp == STYLEOP_Fuzz)
+				{
+					if (gl_fuzztype != 0 && !(RenderStyle.Flags & STYLEF_InvertSource))
+					{
+						RenderStyle = LegacyRenderStyles[STYLE_Translucent];
+						OverrideShader = SHADER_NoTexture + gl_fuzztype;
+						trans = 0.99f;	// trans may not be 1 here
+						hw_styleflags = STYLEHW_NoAlphaTest;
+					}
+					else
+					{
+						// Without shaders only the standard effect is available.
+						RenderStyle.BlendOp = STYLEOP_Shadow;
+					}
+				}
+			}
+
+			if (RenderStyle.Flags & STYLEF_TransSoulsAlpha)
+			{
+				trans = transsouls;
+			}
+			else if (RenderStyle.Flags & STYLEF_Alpha1)
+			{
+				trans = 1.f;
+			}
+
+			if (trans >= 1.f - FLT_EPSILON && RenderStyle.BlendOp != STYLEOP_Shadow && (
+				(RenderStyle.SrcAlpha == STYLEALPHA_One && RenderStyle.DestAlpha == STYLEALPHA_Zero) ||
+				(RenderStyle.SrcAlpha == STYLEALPHA_Src && RenderStyle.DestAlpha == STYLEALPHA_InvSrc)
+				))
+			{
+				// This is a non-translucent sprite (i.e. STYLE_Normal or equivalent)
+				trans = 1.f;
+
+				RenderStyle.SrcAlpha = STYLEALPHA_One;
+				RenderStyle.DestAlpha = STYLEALPHA_Zero;
+				hw_styleflags = STYLEHW_Solid;
+			}
+
+			if ((RenderStyle.Flags & STYLEF_RedIsAlpha) || spr->PT.style >= STYLE_Normal)
+			{
+				if (hw_styleflags == STYLEHW_Solid)
+				{
+					RenderStyle.SrcAlpha = STYLEALPHA_Src;
+					RenderStyle.DestAlpha = STYLEALPHA_InvSrc;
+				}
+				hw_styleflags = STYLEHW_NoAlphaTest;
+			}
+
+			if (di->isFullbrightScene() && di->isStealthVision() && gl_enhanced_nightvision)
+			{
+				if (RenderStyle.BlendOp == STYLEOP_Shadow)
+				{
+					// enhanced vision makes them more visible!
+					trans = 0.5f;
+					FRenderStyle rs = RenderStyle;
+					RenderStyle = STYLE_Translucent;
+					RenderStyle.Flags = rs.Flags;	// Flags must be preserved, at this point it can only be STYLEF_InvertSource
+				}
+			}
+		}
+		else
+		{
+			RenderStyle = STYLE_Normal;
+			hw_styleflags = STYLEHW_Solid;
+			OverrideShader = -1;
+		}
 	}
-	if (spr->flags & VTF_FlipX)
+	else if(spr->PT.texture.isValid())
 	{
-		std::swap(ul,ur);
-		r.left = -r.width - r.left;	// mirror the sprite's x-offset
+		bool custom_anim = ((spr->PT.flags & SPF_LOCAL_ANIM) && spr->PT.animData.ok);
+
+		texture = TexMan.GetGameTexture(
+			custom_anim
+			? TexAnim.UpdateStandaloneAnimation(spr->PT.animData, di->Level->LocalWorldTimer + timefrac)
+			: spr->PT.texture, !custom_anim);
+
+		offx = (float)spr->GetOffset(false);
+		offy = (float)spr->GetOffset(true);
+
+		if (spr->PT.flags & SPF_ROLL)
+			Angles.Roll = TAngle<double>::fromDeg(spr->InterpolatedRoll(timefrac));
+
+		auto& spi = texture->GetSpritePositioning(0);
+
+		vt = spi.GetSpriteVT();
+		vb = spi.GetSpriteVB();
+		ul = spi.GetSpriteUR();
+		ur = spi.GetSpriteUL();
+
+		auto r = spi.GetSpriteRect();
+		auto scale = spr->InterpolatedScale(timefrac);
+		r.Scale(scale.X, scale.Y);
+
+		if ((spr->PT.flags & SPF_ROLL) && !(spr->PT.flags & SPF_STRETCHPIXELS))
+		{
+			double ps = di->Level->pixelstretch;
+			double mult = 1.0 / sqrt(ps); // shrink slightly
+			r.Scale(mult * ps, mult);
+		}
+		if (spr->flags & VTF_FlipX)
+		{
+			std::swap(ul,ur);
+			r.left = -r.width - r.left;	// mirror the sprite's x-offset
+		}
+		if (spr->flags & VTF_FlipY)	std::swap(vt,vb);
+
+		float viewvecX = vp.ViewVector.X;
+		float viewvecY = vp.ViewVector.Y;
+		float rightfac = -r.left;
+		float leftfac = rightfac - r.width;
+
+		x1 = x - viewvecY * leftfac;
+		x2 = x - viewvecY * rightfac;
+		y1 = y + viewvecX * leftfac;
+		y2 = y + viewvecX * rightfac;
+		z1 = z - r.top;
+		z2 = z1 - r.height;
+
+		// [BB] Translucent particles have to be rendered without the alpha test.
+		hw_styleflags = STYLEHW_NoAlphaTest;
 	}
-	if (spr->flags & VTF_FlipY)	std::swap(vt,vb);
-
-	float viewvecX = vp.ViewVector.X;
-	float viewvecY = vp.ViewVector.Y;
-	float rightfac = -r.left;
-	float leftfac = rightfac - r.width;
-
-	x1 = x - viewvecY * leftfac;
-	x2 = x - viewvecY * rightfac;
-	y1 = y + viewvecX * leftfac;
-	y2 = y + viewvecX * rightfac;
-	z1 = z - r.top;
-	z2 = z1 - r.height;
 
 	depth = (float)((x - vp.Pos.X) * vp.TanCos + (y - vp.Pos.Y) * vp.TanSin);
-
-	// [BB] Translucent particles have to be rendered without the alpha test.
-	hw_styleflags = STYLEHW_NoAlphaTest;
 }
 
 //==========================================================================

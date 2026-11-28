@@ -108,7 +108,7 @@ void FHWModelRenderer::SetInterpolation(double inter)
 
 void FHWModelRenderer::SetMaterial(FGameTexture *skin, bool clampNoFilter, FTranslationID translation, AActor * act)
 {
-	state.SetMaterial(skin, UF_Skin, 0, clampNoFilter ? CLAMP_NOFILTER : CLAMP_NONE, translation, -1, act->GetClass());
+	state.SetMaterial(skin, UF_Skin, 0, clampNoFilter ? CLAMP_NOFILTER : CLAMP_NONE, translation, -1, act ? act->GetClass() : nullptr);
 	state.SetLightIndex(modellightindex);
 }
 
