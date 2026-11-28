@@ -97,6 +97,11 @@ void FLevelLocals::TranslateLineDef (line_t *ld, maplinedef_t *mld, int lineinde
 	{
 		flags &= (ML_BLOCKING|ML_BLOCKMONSTERS|ML_TWOSIDED|ML_DONTPEGTOP|ML_DONTPEGBOTTOM|ML_SECRET|ML_SOUNDBLOCK|ML_DONTDRAW|ML_MAPPED);
 		ld->flags2 = 0;
+		passthrough = false;
+	}
+	else if (passthrough)
+	{
+		ld->flags2 |= ML2_PASSUSE;
 	}
 
 	if (lineindexforid >= 0)

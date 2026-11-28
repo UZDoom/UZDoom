@@ -5828,8 +5828,11 @@ bool P_UseTraverse(AActor *usething, const DVector2 &start, const DVector2 &end,
 			{
 				P_LineOpening(open, NULL, in->d.line, it.InterceptPoint(in));
 			}
-			if (open.range <= 0 ||
-				(in->d.line->special != 0 && (usething->Level->i_compatflags & COMPATF_USEBLOCKING)))
+			const bool hasSpecial = (in->d.line->special != 0 || (in->d.line->flags2 & ML2_STATIC_SPECIAL));
+			const bool blocksUse = hasSpecial &&
+				((usething->Level->i_compatflags & COMPATF_USEBLOCKING) ||
+				 ((usething->Level->i_compatflags2 & COMPATF2_BOOMUSEBLOCKING) && !(in->d.line->flags2 & ML2_PASSUSE)));
+			if (open.range <= 0 || blocksUse)
 			{
 				// [RH] Give sector a chance to intercept the use
 
@@ -5889,9 +5892,10 @@ bool P_UseTraverse(AActor *usething, const DVector2 &start, const DVector2 &end,
 			//[RH] And now I've changed it again. If the line is of type
 			//	   SPAC_USE, then it eats the use. Everything else passes
 			//	   it through, including SPAC_USETHROUGH.
-			if (usething->Level->i_compatflags & COMPATF_USEBLOCKING)
+			if ((usething->Level->i_compatflags & COMPATF_USEBLOCKING) ||
+				(usething->Level->i_compatflags2 & COMPATF2_BOOMUSEBLOCKING))
 			{
-				if (in->d.line->activation & SPAC_UseThrough) continue;
+				if ((in->d.line->activation & SPAC_UseThrough) || (in->d.line->flags2 & ML2_PASSUSE)) continue;
 				else return true;
 			}
 			else
