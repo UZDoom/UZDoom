@@ -2574,6 +2574,7 @@ OptionMenu "CompatPhysicsMenu" protected
 	Option "$CMPTMNU_NOPASSOVER",					"compat_nopassover", "YesNo"
 	Option "$CMPTMNU_INFINITEMELEE",				"compat_infinitemelee", "YesNo"
 	Option "$CMPTMNU_BOOMSCROLL",					"compat_BOOMSCROLL", "YesNo"
+	Option "$CMPTMNU_BOOMSCROLLSTRICT",				"compat_boomscrollstrict", "YesNo"
 	Option "$CMPTMNU_BADANGLES",					"compat_badangles", "YesNo"
 	Option "$CMPTMNU_WALLRUN",						"compat_WALLRUN", "YesNo"
 	Option "$CMPTMNU_RAVENSCROLL",					"compat_RAVENSCROLL", "YesNo"

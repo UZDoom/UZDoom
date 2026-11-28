@@ -246,6 +246,7 @@ enum ELevelCompatFlag2 : uint32_t
 	COMPATF2_MONSTERPROJLINES	= 1 << 24, // Doom II monster projectiles can trigger walkover linedef specials
 	COMPATF2_INFINITEMELEE		= 1 << 25, // Disable vertical Z-range check for melee attacks
 	COMPATF2_BOOMUSEBLOCKING	= 1 << 26, // All special lines block <use> unless Boom PassUse is set
+	COMPATF2_BOOMSCROLLSTRICT	= 1 << 27, // Use strict Boom scroller physics (e.g additive for players/voodoo dolls)
 };
 using ELevelCompatFlags2 = TFlags<ELevelCompatFlag2>;
 DEFINE_TFLAGS_OPERATORS(ELevelCompatFlags2)

@@ -1517,6 +1517,7 @@ enum ECompatFlags
 	COMPATF2_MONSTERPROJLINES	= 1 << 24, // Doom II's monster projectiles can trigger walkover linedef specials
 	COMPATF2_INFINITEMELEE		= 1 << 25, // Disable vertical Z-range check for melee attacks
 	COMPATF2_BOOMUSEBLOCKING	= 1 << 26, // All special lines block <use> unless Boom PassUse is set
+	COMPATF2_BOOMSCROLLSTRICT	= 1 << 27, // Use strict(er) Boom scroller physics
 };
 
 enum HitWaterFlags
