@@ -2729,7 +2729,26 @@ bool P_TryMove(AActor *thing, const DVector2 &pos,
 				}
 				else if (thing->flags2 & MF2_PCROSS)
 				{
-					P_ActivateLine(ld, thing, oldside, SPAC_PCross);
+					if (!P_ActivateLine(ld, thing, oldside, SPAC_PCross) &&
+						(thing->Level->i_compatflags2 & COMPATF2_MONSTERPROJLINES) &&
+						(gameinfo.gametype & GAME_DoomChex) &&
+						(thing->flags & MF_MISSILE) &&
+						!(ld->activation & SPAC_AnyCross) &&
+						(ld->special == Door_Raise ||
+						 ld->special == Plat_DownWaitUpStay ||
+						 ld->special == Plat_DownWaitUpStayLip ||
+						 ld->special == Teleport ||
+						 ld->special == Teleport_NoFog ||
+						 ld->special == Teleport_Line) &&
+						!thing->IsKindOf(FName("Rocket")) &&
+						!thing->IsKindOf(FName("PlasmaBall")) &&
+						!thing->IsKindOf(FName("BFGBall")) &&
+						!thing->IsKindOf(FName("DoomImpBall")) &&
+						!thing->IsKindOf(FName("CacodemonBall")) &&
+						!thing->IsKindOf(FName("BaronBall")))
+					{
+						P_ActivateLine(ld, thing, oldside, SPAC_MCross);
+					}
 				}
 				else if ((ld->special == Teleport ||
 					ld->special == Teleport_NoFog ||

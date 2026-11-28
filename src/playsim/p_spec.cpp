@@ -243,7 +243,8 @@ bool P_TestActivateLine (line_t *line, AActor *mo, int side, int activationType,
 		(lineActivation & SPAC_Cross) &&
 		activationType == SPAC_PCross &&
 		mo != NULL &&
-		mo->flags & MF_MISSILE)
+		(mo->flags & MF_MISSILE) &&
+		!(Level->i_compatflags2 & COMPATF2_MONSTERPROJLINES))
 	{ // Let missiles use regular player teleports
 		lineActivation |= SPAC_PCross;
 	}
