@@ -78,7 +78,6 @@
 #define WATER_SINK_SMALL_FACTOR	0.25
 #define WATER_SINK_SPEED		0.5
 #define WATER_JUMP_SPEED		3.5
-#define Z_UNDERFLOW             -32768.0
 
 // EXTERNAL FUNCTION PROTOTYPES --------------------------------------------
 
@@ -2456,7 +2455,20 @@ static double P_XYMovement (AActor *mo, DVector2 scroll)
 		mo->Vel.Y *= fac;
 	}
 	const double VELOCITY_THRESHOLD = 5000;	// don't let it move faster than this. Fixed point overflowed at 32768 but that's too much to make this safe.
-	if (mo->Vel.LengthSquared() >= VELOCITY_THRESHOLD*VELOCITY_THRESHOLD)
+	if (mo->Level->i_compatflags2 & COMPATF2_EMULATEMIKOPORTALS)
+	{
+		// Clamp horizontal and vertical velocity independently so unbounded
+		// Mikoportal falling speed never scales down horizontal momentum.
+		DVector2 hvel = mo->Vel.XY();
+		if (hvel.LengthSquared() >= VELOCITY_THRESHOLD * VELOCITY_THRESHOLD)
+		{
+			hvel.MakeResize(VELOCITY_THRESHOLD);
+			mo->Vel.X = hvel.X;
+			mo->Vel.Y = hvel.Y;
+		}
+		mo->Vel.Z = clamp(mo->Vel.Z, -VELOCITY_THRESHOLD, VELOCITY_THRESHOLD);
+	}
+	else if (mo->Vel.LengthSquared() >= VELOCITY_THRESHOLD*VELOCITY_THRESHOLD)
 	{
 		mo->Vel.MakeResize(VELOCITY_THRESHOLD);
 	}
@@ -2659,12 +2671,22 @@ static double P_XYMovement (AActor *mo, DVector2 scroll)
 				}
 				else
 				{ // slide against another actor
+					// In vanilla Doom, P_SlideMove's stairstep fallback never zeroes a
+					// player/voodoo doll's horizontal momentum when blocked by another actor.
+					// Actor-gated Mikoportals (e.g. KDiKDiZD) rely on this to keep sliding
+					// once the blocking actor is removed. See #2037.
+					const bool keepMikoVel = (mo->Level->i_compatflags2 & COMPATF2_EMULATEMIKOPORTALS)
+						&& player != NULL
+						&& (mo->floorz <= MIKOPORTAL_Z_UNDERFLOW
+							|| mo->Sector->floorplane.ZatPoint(mo) <= MIKOPORTAL_Z_UNDERFLOW
+							|| (mo->Z() > mo->floorz && mo->Z() + mo->Vel.Z < MIKOPORTAL_Z_UNDERFLOW));
 					DVector2 t;
 					t.X = 0, t.Y = onestep.Y;
 					walkplane = P_CheckSlopeWalk (mo, t);
 					if (P_TryMove (mo, mo->Pos().XY() + t, true, walkplane, tm))
 					{
-						mo->Vel.X = 0;
+						if (!keepMikoVel)
+							mo->Vel.X = 0;
 					}
 					else
 					{
@@ -2672,11 +2694,13 @@ static double P_XYMovement (AActor *mo, DVector2 scroll)
 						walkplane = P_CheckSlopeWalk (mo, t);
 						if (P_TryMove (mo, mo->Pos().XY() + t, true, walkplane, tm))
 						{
-							mo->Vel.Y = 0;
+							if (!keepMikoVel)
+								mo->Vel.Y = 0;
 						}
 						else
 						{
-							mo->Vel.X = mo->Vel.Y = 0;
+							if (!keepMikoVel)
+								mo->Vel.X = mo->Vel.Y = 0;
 						}
 					}
 					if (player && player->mo == mo)
@@ -2957,10 +2981,12 @@ static void P_ZMovement (AActor *mo, double oldfloorz)
 
 	mo->AddZ(mo->Vel.Z);
 
-	if (mo->Level->i_compatflags2 & COMPATF2_EMULATEMIKOPORTALS && mo->Z() < Z_UNDERFLOW)
+	bool wrappedMiko = false;
+	if ((mo->Level->i_compatflags2 & COMPATF2_EMULATEMIKOPORTALS) && mo->Z() < MIKOPORTAL_Z_UNDERFLOW)
 	{
-		mo->SetZ(mo->ceilingz);
+		mo->SetZ(P_WrapMikoportalZ(mo->Z()));
 		mo->Prev.Z = mo->Z();
+		wrappedMiko = true;
 	}
 
 	mo->CallFallAndSink(grav, oldfloorz);
@@ -3159,6 +3185,10 @@ static void P_ZMovement (AActor *mo, double oldfloorz)
 		{
 			mo->BlockingCeiling = mo->Sector;
 			mo->SetZ(mo->ceilingz - mo->Height);
+			if (wrappedMiko)
+			{
+				mo->Prev.Z = mo->Z();
+			}
 			if (mo->BounceFlags & BOUNCE_Ceilings)
 			{	// ceiling bounce
 				F3DFloor* ff = nullptr;
