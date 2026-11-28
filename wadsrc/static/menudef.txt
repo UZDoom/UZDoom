@@ -2390,6 +2390,8 @@ OptionMenu GameplayOptions protected
 {
 	Position -35
 	Title 	"$GMPLYMNU_TITLE"
+	ScrollTop 1
+	StaticText " "
 	//Indent 222
 	Submenu "$GMPLYMNU_DEATHMATCH",				"DeathmatchOptions"
 	Submenu "$GMPLYMNU_COOPERATIVE",			"CoopOptions"
@@ -2436,6 +2438,8 @@ OptionMenu DeathmatchOptions protected
 {
 	Position -35
 	Title 	"$GMPLYMNU_DEATHMATCH"
+	ScrollTop 1
+	StaticText " "
 
 	Option "$GMPLYMNU_WEAPONSSTAY",				"sv_weaponstay", "YesNo"
 	Option "$GMPLYMNU_ALLOWPOWERUPS",			"sv_noitems", "NoYes"
@@ -2458,6 +2462,8 @@ OptionMenu CoopOptions protected
 {
 	Position -35
 	Title 	"$GMPLYMNU_COOPERATIVE"
+	ScrollTop 1
+	StaticText " "
 
 	Option "$GMPLYMNU_MULTIPLAYERTHINGS",	 	"sv_nothingspawn", "NoYes"
 	Option "$GMPLYMNU_COOPTHINGS",	 			"sv_nocoopthings", "NoYes"
@@ -2503,7 +2509,10 @@ OptionMenu "CompatibilityOptions" protected
 {
 	Position -35
 	Title "$CMPTMNU_TITLE"
+	ScrollTop 1
+	StaticText " "
 	Option "$CMPTMNU_AUTO",							"sv_autocompat", "OnOff"
+	Option "$CMPTMNU_IGNOREWAD",					"alwaysapplycompatflags", "OnOff"
 	Option "$CMPTMNU_MODE",							"compatmode", "CompatModes", "", 1
 	StaticText " "
 	Submenu "$CMPTMNU_ACTORBEHAVIOR",				"CompatActorMenu"
@@ -2519,6 +2528,8 @@ OptionMenu "CompatActorMenu" protected
 {
 	Position -35
 	Title "$CMPTMNU_ACTORBEHAVIOR"
+	ScrollTop 1
+	StaticText " "
 	Option "$CMPTMNU_VILEGHOSTS",					"compat_VILEGHOSTS", "YesNo"
 	Option "$CMPTMNU_NOBLOCKFRIENDS",				"compat_NOBLOCKFRIENDS", "YesNo"
 	Option "$CMPTMNU_LIMITPAIN",					"compat_LIMITPAIN", "YesNo"
@@ -2536,6 +2547,8 @@ OptionMenu "CompatDehackedMenu" protected
 {
 	Position -35
 	Title "$CMPTMNU_DEHACKEDBEHAVIOR"
+	ScrollTop 1
+	StaticText " "
 	Option "$CMPTMNU_DEHHEALTH",					"compat_DEHHEALTH", "YesNo"
 	Option "$CMPTMNU_MUSHROOM",						"compat_MUSHROOM", "YesNo"
 	Class "CompatibilityMenu"
@@ -2545,6 +2558,8 @@ OptionMenu "CompatMapMenu" protected
 {
 	Position -35
 	Title "$CMPTMNU_MAPACTIONBEHAVIOR"
+	ScrollTop 1
+	StaticText " "
 	Option "$CMPTMNU_USEBLOCKING",					"compat_USEBLOCKING", "YesNo"
 	Option "$CMPTMNU_ANYBOSSDEATH",					"compat_ANYBOSSDEATH", "YesNo"
 	Option "$CMPTMNU_NODOORLIGHT",					"compat_NODOORLIGHT", "YesNo"
@@ -2567,6 +2582,8 @@ OptionMenu "CompatPhysicsMenu" protected
 {
 	Position -35
 	Title "$CMPTMNU_PHYSICSBEHAVIOR"
+	ScrollTop 1
+	StaticText " "
 	Option "$CMPTMNU_NOPASSOVER",					"compat_nopassover", "YesNo"
 	Option "$CMPTMNU_BOOMSCROLL",					"compat_BOOMSCROLL", "YesNo"
 	Option "$CMPTMNU_BADANGLES",					"compat_badangles", "YesNo"
@@ -2585,6 +2602,8 @@ OptionMenu "CompatRenderMenu" protected
 {
 	Position -35
 	Title "$CMPTMNU_RENDERINGBEHAVIOR"
+	ScrollTop 1
+	StaticText " "
 	Option "$CMPTMNU_POLYOBJ",						"compat_POLYOBJ", "YesNo"
 	Option "$CMPTMNU_MASKEDMIDTEX",					"compat_MASKEDMIDTEX", "YesNo"
 	Option "$CMPTMNU_SPRITESORT",					"compat_SPRITESORT", "YesNo"
@@ -2595,6 +2614,8 @@ OptionMenu "CompatSoundMenu" protected
 {
 	Position -35
 	Title "$CMPTMNU_SOUNDBEHAVIOR"
+	ScrollTop 1
+	StaticText " "
 	Option "$CMPTMNU_SOUNDSLOTS",					"compat_soundslots", "YesNo"
 	Option "$CMPTMNU_SILENTPICKUP",					"compat_SILENTPICKUP", "YesNo"
 	Option "$CMPTMNU_SILENTINSTANTFLOORS",			"compat_silentinstantfloors", "YesNo"

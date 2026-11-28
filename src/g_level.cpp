@@ -2520,16 +2520,83 @@ void FLevelLocals::SetCompatLineOnSide(bool state)
 	else for (auto &l : lines) l.flags &= ~ML_COMPATSIDE;
 }
 
+EXTERN_CVAR(Bool, alwaysapplycompatflags)
+
 ELevelCompatFlags FLevelLocals::GetCompatibility(ELevelCompatFlags mask)
 {
-	if (info == nullptr) return mask;
+	if (info == nullptr || alwaysapplycompatflags) return mask;
 	else return (mask & ~info->compatmask) | (info->compatflags & info->compatmask);
 }
 
 ELevelCompatFlags2 FLevelLocals::GetCompatibility2(ELevelCompatFlags2 mask)
 {
-	return (info == nullptr) ? mask
+	return (info == nullptr || alwaysapplycompatflags) ? mask
 		: (mask & ~info->compatmask2) | (info->compatflags2 & info->compatmask2);
+}
+
+// Reports whether the current level overrides a compat_* flag CVAR:
+//   0 = no override (user setting applies)
+//   1 = overridden to OFF by the WAD/MAPINFO
+//   2 = overridden to ON  by the WAD/MAPINFO
+//   3 = overridden to ON  by built-in compatibility.txt
+//   4 = WAD/MAPINFO requests OFF, but ignored (alwaysapplycompatflags is on)
+//   5 = WAD/MAPINFO requests ON,  but ignored (alwaysapplycompatflags is on)
+DEFINE_ACTION_FUNCTION(_CompatibilityMenu, GetCompatOverride)
+{
+	PARAM_PROLOGUE;
+	PARAM_POINTER(cv, FBaseCVar);
+
+	int status = 0;
+	if (gamestate == GS_LEVEL && primaryLevel != nullptr && cv != nullptr && cv->GetRealType() == CVAR_Flag)
+	{
+		auto *flagcv = static_cast<FFlagCVar *>(cv);
+		const uint32_t bit = flagcv->GetBitVal();
+		const char *parentName = flagcv->GetValueVar().GetName();
+
+		if (parentName != nullptr && stricmp(parentName, "compatflags") == 0)
+		{
+			if (primaryLevel->ii_compatflags & ELevelCompatFlags::FromInt(bit))
+			{
+				status = 3;
+			}
+			else if (primaryLevel->info != nullptr && (primaryLevel->info->compatmask & ELevelCompatFlags::FromInt(bit)))
+			{
+				bool wadOn = !!(primaryLevel->info->compatflags & ELevelCompatFlags::FromInt(bit));
+				status = alwaysapplycompatflags ? (wadOn ? 5 : 4) : (wadOn ? 2 : 1);
+			}
+		}
+		else if (parentName != nullptr && stricmp(parentName, "compatflags2") == 0)
+		{
+			if (primaryLevel->ii_compatflags2 & ELevelCompatFlags2::FromInt(bit))
+			{
+				status = 3;
+			}
+			else if (primaryLevel->info != nullptr && (primaryLevel->info->compatmask2 & ELevelCompatFlags2::FromInt(bit)))
+			{
+				bool wadOn = !!(primaryLevel->info->compatflags2 & ELevelCompatFlags2::FromInt(bit));
+				status = alwaysapplycompatflags ? (wadOn ? 5 : 4) : (wadOn ? 2 : 1);
+			}
+		}
+	}
+	ACTION_RETURN_INT(status);
+}
+
+// Returns the active COMPLVL / -complevel for CompatibilityMenu:
+//    0 = none
+//    1,2,3,4  = Vanilla, Boom, MBF, MBF21 (active)
+//   -1,-2,-3,-4 = same levels, but ignored because alwaysapplycompatflags is set
+extern int g_ActiveComplvl;
+
+DEFINE_ACTION_FUNCTION(_CompatibilityMenu, GetComplvlInfo)
+{
+	PARAM_PROLOGUE;
+	int res = 0;
+	if (g_ActiveComplvl >= 0)
+	{
+		res = g_ActiveComplvl + 1;
+		if (alwaysapplycompatflags) res = -res;
+	}
+	ACTION_RETURN_INT(res);
 }
 
 void FLevelLocals::ApplyCompatibility()

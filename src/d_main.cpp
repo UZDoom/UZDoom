@@ -803,33 +803,18 @@ CVAR(Flag, sv_pistolstart, dmflags3, DF3_PISTOL_START);
 //==========================================================================
 
 EXTERN_CVAR(Int, compatmode)
+static bool s_applyingCompatMode = false;
+static int s_pendingCompat1 = 0, s_pendingCompat2 = 0;
 
-CUSTOM_CVAR (Int, compatflags, 0, CVAR_ARCHIVE|CVAR_SERVERINFO | CVAR_NOINITCALL)
+static void GetCompatModeFlags(int mode, int &v, int &w)
 {
-	for (auto Level : AllLevels())
-	{
-		Level->ApplyCompatibility();
-	}
-}
+	v = 0;
+	w = 0;
 
-CUSTOM_CVAR (Int, compatflags2, 0, CVAR_ARCHIVE|CVAR_SERVERINFO | CVAR_NOINITCALL)
-{
-	for (auto Level : AllLevels())
-	{
-		Level->ApplyCompatibility2();
-		Level->SetCompatLineOnSide(true);
-	}
-}
-
-CUSTOM_CVAR(Int, compatmode, 0, CVAR_ARCHIVE|CVAR_NOINITCALL)
-{
-	int v, w = 0;
-
-	switch (self)
+	switch (mode)
 	{
 	default:
 	case 0:
-		v = 0;
 		break;
 
 	case 1:	// Doom2.exe compatible with a few relaxed settings
@@ -893,6 +878,65 @@ CUSTOM_CVAR(Int, compatmode, 0, CVAR_ARCHIVE|CVAR_NOINITCALL)
 			COMPATF_TRACE | COMPATF_HITSCAN | COMPATF_MISSILECLIP | COMPATF_CROSSDROPOFF | COMPATF_MASKEDMIDTEX | COMPATF_SOUNDTARGET;
 		w = COMPATF2_POINTONLINE | COMPATF2_EXPLODE1 | COMPATF2_EXPLODE2 | COMPATF2_AVOID_HAZARDS | COMPATF2_STAYONLIFT | COMPATF2_RESERVEDLINEFLAG | COMPATF2_EMULATEMIKOPORTALS | COMPATF2_TRANSFERSECRET;
 		break;
+	}
+}
+
+static void ResetCompatMode(int &pending, int val, int prev, bool isFlags2)
+{
+	if (pending > 0)
+	{
+		pending--;
+		return;
+	}
+	if (s_applyingCompatMode || compatmode == 0 || val == prev || demoplayback || savegamerestore) return;
+	int v, w;
+	GetCompatModeFlags(compatmode, v, w);
+	if (val != (isFlags2 ? w : v))
+	{
+		s_applyingCompatMode = true;
+		compatmode = 0;
+		s_applyingCompatMode = false;
+	}
+}
+
+CUSTOM_CVAR (Int, compatflags, 0, CVAR_ARCHIVE|CVAR_SERVERINFO | CVAR_NOINITCALL)
+{
+	ResetCompatMode(s_pendingCompat1, self, prev, false);
+	for (auto Level : AllLevels())
+	{
+		Level->ApplyCompatibility();
+	}
+}
+
+CUSTOM_CVAR (Int, compatflags2, 0, CVAR_ARCHIVE|CVAR_SERVERINFO | CVAR_NOINITCALL)
+{
+	ResetCompatMode(s_pendingCompat2, self, prev, true);
+	for (auto Level : AllLevels())
+	{
+		Level->ApplyCompatibility2();
+		Level->SetCompatLineOnSide(true);
+	}
+}
+
+CUSTOM_CVAR (Bool, alwaysapplycompatflags, false, CVAR_ARCHIVE|CVAR_SERVERINFO | CVAR_NOINITCALL)
+{
+	for (auto Level : AllLevels())
+	{
+		Level->ApplyCompatibility();
+		Level->ApplyCompatibility2();
+		Level->SetCompatLineOnSide(true);
+	}
+}
+
+CUSTOM_CVAR(Int, compatmode, 0, CVAR_ARCHIVE|CVAR_NOINITCALL)
+{
+	if (s_applyingCompatMode) return;
+	int v, w;
+	GetCompatModeFlags(self, v, w);
+	if (!netgame || players[consoleplayer].settings_controller)
+	{
+		s_pendingCompat1++;
+		s_pendingCompat2++;
 	}
 	compatflags = v;
 	compatflags2 = w;
