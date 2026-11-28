@@ -3166,12 +3166,16 @@ static void P_ZMovement (AActor *mo, double oldfloorz)
 				mo->FloorBounceMissile(ff != nullptr ? *ff->bottom.plane : mo->ceilingsector->ceilingplane, ff != nullptr);
 				/* if (!CanJump(mo)) */ return;
 			}
-			if (mo->flags & MF_SKULLFLY)
+			if (!(mo->Level->i_compatflags2 & COMPATF2_NOSOULCEILBOUNCE) && (mo->flags & MF_SKULLFLY))
 			{	// the skull slammed into something
 				mo->Vel.Z = -mo->Vel.Z;
 			}
 			if (mo->Vel.Z > 0)
 				mo->Vel.Z = 0;
+			if ((mo->Level->i_compatflags2 & COMPATF2_NOSOULCEILBOUNCE) && (mo->flags & MF_SKULLFLY))
+			{	// Zero upward velocity before negating so skulls do not bounce off ceilings
+				mo->Vel.Z = -mo->Vel.Z;
+			}
 			if ((mo->flags & MF_MISSILE) && !(mo->flags & MF_NOCLIP))
 			{
 				if (mo->flags3 & MF3_CEILINGHUGGER)
