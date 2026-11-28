@@ -2522,6 +2522,7 @@ OptionMenu "CompatActorMenu" protected
 	Option "$CMPTMNU_VILEGHOSTS",					"compat_VILEGHOSTS", "YesNo"
 	Option "$CMPTMNU_NOBLOCKFRIENDS",				"compat_NOBLOCKFRIENDS", "YesNo"
 	Option "$CMPTMNU_LIMITPAIN",					"compat_LIMITPAIN", "YesNo"
+	Option "$CMPTMNU_NOSOULCEILBOUNCE",				"compat_nosoulceilbounce", "YesNo"
 	Option "$CMPTMNU_MBFMONSTERMOVE",				"compat_MBFMONSTERMOVE", "YesNo"
 	Option "$CMPTMNU_CROSSDROPOFF",					"compat_CROSSDROPOFF", "YesNo"
 	Option "$CMPTMNU_DROPOFF",						"compat_DROPOFF", "YesNo"
@@ -2546,6 +2547,9 @@ OptionMenu "CompatMapMenu" protected
 	Position -35
 	Title "$CMPTMNU_MAPACTIONBEHAVIOR"
 	Option "$CMPTMNU_USEBLOCKING",					"compat_USEBLOCKING", "YesNo"
+	Option "$CMPTMNU_BOOMUSEBLOCKING",				"compat_boomuseblocking", "YesNo"
+	Option "$CMPTMNU_HITSCANSWITCHES",				"compat_hitscanswitches", "YesNo"
+	Option "$CMPTMNU_MONSTERPROJLINES",				"compat_monsterprojlines", "YesNo"
 	Option "$CMPTMNU_ANYBOSSDEATH",					"compat_ANYBOSSDEATH", "YesNo"
 	Option "$CMPTMNU_NODOORLIGHT",					"compat_NODOORLIGHT", "YesNo"
 	Option "$CMPTMNU_LIGHT",						"compat_LIGHT", "YesNo"
@@ -2568,7 +2572,9 @@ OptionMenu "CompatPhysicsMenu" protected
 	Position -35
 	Title "$CMPTMNU_PHYSICSBEHAVIOR"
 	Option "$CMPTMNU_NOPASSOVER",					"compat_nopassover", "YesNo"
+	Option "$CMPTMNU_INFINITEMELEE",				"compat_infinitemelee", "YesNo"
 	Option "$CMPTMNU_BOOMSCROLL",					"compat_BOOMSCROLL", "YesNo"
+	Option "$CMPTMNU_BOOMSCROLLSTRICT",				"compat_boomscrollstrict", "YesNo"
 	Option "$CMPTMNU_BADANGLES",					"compat_badangles", "YesNo"
 	Option "$CMPTMNU_WALLRUN",						"compat_WALLRUN", "YesNo"
 	Option "$CMPTMNU_RAVENSCROLL",					"compat_RAVENSCROLL", "YesNo"

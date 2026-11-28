@@ -1609,6 +1609,7 @@ void MapLoader::FinishLoadingLineDef(line_t *ld, int alpha)
 				}
 			}
 		}
+		ld->flags2 |= ML2_STATIC_SPECIAL;
 		ld->special = 0;
 		break;
 	}

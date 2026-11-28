@@ -2460,25 +2460,48 @@ static double P_XYMovement (AActor *mo, DVector2 scroll)
 	{
 		mo->Vel.MakeResize(VELOCITY_THRESHOLD);
 	}
-	move = mo->Vel.XY();
-	// [RH] Carrying sectors didn't work with low speeds in BOOM. This is
-	// because BOOM relied on the speed being fast enough to accumulate
-	// despite friction. If the speed is too low, then its movement will get
-	// cancelled, and it won't accumulate to the desired speed.
 	mo->flags4 &= ~MF4_SCROLLMOVE;
-	if (fabs(scroll.X) > CARRYSTOPSPEED)
+	const bool strictBoomScroll = !!(mo->Level->i_compatflags2 & COMPATF2_BOOMSCROLLSTRICT);
+	if (strictBoomScroll)
 	{
-		scroll.X *= CARRYFACTOR;
-		mo->Vel.X += scroll.X;
-		mo->flags4 |= MF4_SCROLLMOVE;
+		if (scroll.X != 0)
+		{
+			mo->Vel.X += scroll.X * CARRYFACTOR;
+			mo->flags4 |= MF4_SCROLLMOVE;
+		}
+		if (scroll.Y != 0)
+		{
+			mo->Vel.Y += scroll.Y * CARRYFACTOR;
+			mo->flags4 |= MF4_SCROLLMOVE;
+		}
+		if (mo->flags4 & MF4_SCROLLMOVE)
+		{
+			mo->Vel.X = clamp(mo->Vel.X, -maxmove, maxmove);
+			mo->Vel.Y = clamp(mo->Vel.Y, -maxmove, maxmove);
+		}
+		move = mo->Vel.XY();
 	}
-	if (fabs(scroll.Y) > CARRYSTOPSPEED)
+	else
 	{
-		scroll.Y *= CARRYFACTOR;
-		mo->Vel.Y += scroll.Y;
-		mo->flags4 |= MF4_SCROLLMOVE;
+		move = mo->Vel.XY();
+		// [RH] Carrying sectors didn't work with low speeds in BOOM. This is
+		// because BOOM relied on the speed being fast enough to accumulate
+		// despite friction. If the speed is too low, then its movement will get
+		// cancelled, and it won't accumulate to the desired speed.
+		if (fabs(scroll.X) > CARRYSTOPSPEED)
+		{
+			scroll.X *= CARRYFACTOR;
+			mo->Vel.X += scroll.X;
+			mo->flags4 |= MF4_SCROLLMOVE;
+		}
+		if (fabs(scroll.Y) > CARRYSTOPSPEED)
+		{
+			scroll.Y *= CARRYFACTOR;
+			mo->Vel.Y += scroll.Y;
+			mo->flags4 |= MF4_SCROLLMOVE;
+		}
+		move += scroll;
 	}
-	move += scroll;
 
 	if (move.isZero())
 	{
@@ -3166,12 +3189,16 @@ static void P_ZMovement (AActor *mo, double oldfloorz)
 				mo->FloorBounceMissile(ff != nullptr ? *ff->bottom.plane : mo->ceilingsector->ceilingplane, ff != nullptr);
 				/* if (!CanJump(mo)) */ return;
 			}
-			if (mo->flags & MF_SKULLFLY)
+			if (!(mo->Level->i_compatflags2 & COMPATF2_NOSOULCEILBOUNCE) && (mo->flags & MF_SKULLFLY))
 			{	// the skull slammed into something
 				mo->Vel.Z = -mo->Vel.Z;
 			}
 			if (mo->Vel.Z > 0)
 				mo->Vel.Z = 0;
+			if ((mo->Level->i_compatflags2 & COMPATF2_NOSOULCEILBOUNCE) && (mo->flags & MF_SKULLFLY))
+			{	// Zero upward velocity before negating so skulls do not bounce off ceilings
+				mo->Vel.Z = -mo->Vel.Z;
+			}
 			if ((mo->flags & MF_MISSILE) && !(mo->flags & MF_NOCLIP))
 			{
 				if (mo->flags3 & MF3_CEILINGHUGGER)
@@ -4867,7 +4894,9 @@ void AActor::Tick ()
 					}
 
 					waterheight = heightsec->floorplane.ZatPoint (pos);
-					if (waterheight > height && Z() >= waterheight)
+					if ((Level->i_compatflags2 & COMPATF2_BOOMSCROLLSTRICT)
+						? (waterheight <= height || Z() >= waterheight)
+						: (waterheight > height && Z() >= waterheight))
 					{
 						continue;
 					}
@@ -4879,9 +4908,10 @@ void AActor::Tick ()
 			}
 
 			// Some levels designed with Boom in mind actually want things to accelerate
-			// at neighboring scrolling sector boundaries. But it is only important for
-			// non-player objects.
-			if (player != NULL || !(Level->i_compatflags & COMPATF_BOOMSCROLL))
+			// at neighboring scrolling sector boundaries. Under strict Boom scroller
+			// compatibility, scrollers are additive for players and voodoo dolls as well.
+			if (!(Level->i_compatflags2 & COMPATF2_BOOMSCROLLSTRICT) &&
+				(player != NULL || !(Level->i_compatflags & COMPATF_BOOMSCROLL)))
 			{
 				if (countx > 1)
 				{

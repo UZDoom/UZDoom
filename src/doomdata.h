@@ -173,6 +173,8 @@ enum ELineFlags : uint32_t
 	// Flag words may not exceed 32 bit due to VM limitations.
 	ML2_BLOCKLANDMONSTERS		= 0x00000001,	// MBF21
 	ML2_RESERVEDLINEFLAG		= 0x00000002,	// MBF21
+	ML2_PASSUSE					= 0x00000004,	// BOOM PassUse flag preserved for all special line types
+	ML2_STATIC_SPECIAL			= 0x00000008,	// Line originally had a static map-init special that was cleared on load
 };
 
 

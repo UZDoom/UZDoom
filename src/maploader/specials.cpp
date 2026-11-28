@@ -876,6 +876,7 @@ void MapLoader::SpawnFriction()
 			}
 
 			P_SetSectorFriction (Level, l->args[0], length, false);
+			l->flags2 |= ML2_STATIC_SPECIAL;
 			l->special = 0;
 		}
 	}
@@ -1143,6 +1144,7 @@ void MapLoader::SpawnPushers()
 			auto itr = Level->GetSectorTagIterator(l->args[0]);
 			while ((s = itr.Next()) >= 0)
 				Level->CreateThinker<DPusher>(DPusher::p_wind, l->args[3] ? l : nullptr, l->args[1], l->args[2], nullptr, s);
+			l->flags2 |= ML2_STATIC_SPECIAL;
 			l->special = 0;
 			break;
 		}
@@ -1152,6 +1154,7 @@ void MapLoader::SpawnPushers()
 			auto itr = Level->GetSectorTagIterator(l->args[0]);
 			while ((s = itr.Next()) >= 0)
 				Level->CreateThinker<DPusher>(DPusher::p_current, l->args[3] ? l : nullptr, l->args[1], l->args[2], nullptr, s);
+			l->flags2 |= ML2_STATIC_SPECIAL;
 			l->special = 0;
 			break;
 		}
@@ -1183,6 +1186,7 @@ void MapLoader::SpawnPushers()
 					}
 				}
 			}
+			l->flags2 |= ML2_STATIC_SPECIAL;
 			l->special = 0;
 			break;
 		}
@@ -1212,6 +1216,7 @@ void MapLoader::SpawnScrollers()
 			{
 				copyscrollers.Push(line.Index());
 			}
+			line.flags2 |= ML2_STATIC_SPECIAL;
 			line.special = 0;
 		}
 	}
@@ -1428,6 +1433,10 @@ void MapLoader::SpawnScrollers()
 			// [RH] It wasn't a scroller after all, so restore the special.
 			l->special = special;
 			break;
+		}
+		if (special != 0 && l->special == 0)
+		{
+			l->flags2 |= ML2_STATIC_SPECIAL;
 		}
 	}
 }

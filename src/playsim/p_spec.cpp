@@ -243,9 +243,19 @@ bool P_TestActivateLine (line_t *line, AActor *mo, int side, int activationType,
 		(lineActivation & SPAC_Cross) &&
 		activationType == SPAC_PCross &&
 		mo != NULL &&
-		mo->flags & MF_MISSILE)
+		(mo->flags & MF_MISSILE) &&
+		!(Level->i_compatflags2 & COMPATF2_MONSTERPROJLINES))
 	{ // Let missiles use regular player teleports
 		lineActivation |= SPAC_PCross;
+	}
+	// Vanilla/Boom/MBF/MBF21: shootable switches are only activated by hitscans, not projectiles
+	if ((Level->i_compatflags2 & COMPATF2_HITSCANSWITCHES) &&
+		activationType == SPAC_PCross &&
+		(lineActivation & SPAC_Impact) &&
+		mo != NULL &&
+		(mo->flags & MF_MISSILE))
+	{
+		return false;
 	}
 	// BOOM's generalized line types that allow monster use can actually be
 	// activated by anything except projectiles.

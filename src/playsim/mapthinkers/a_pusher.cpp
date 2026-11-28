@@ -237,7 +237,14 @@ void DPusher::Tick ()
 	for ( ; node ; node = node->m_snext)
 	{
 		thing = node->m_thing;
-		if (!(thing->flags2 & MF2_WINDTHRUST) || (thing->flags & MF_NOCLIP))
+		bool pusharound = ((thing->flags2 & MF2_WINDTHRUST) && !(thing->flags & MF_NOCLIP));
+		if (Level->i_compatflags & COMPATF_MBFMONSTERMOVE)
+		{
+			pusharound = ((pusharound || thing->IsSentient() || (thing->flags & MF_SHOOTABLE))
+				&& !(thing->flags & MF_NOCLIP)
+				&& !(thing->player && (thing->flags & MF_NOGRAVITY)));
+		}
+		if (!pusharound)
 			continue;
 
 		sector_t *hsec = sec->GetHeightSec();
