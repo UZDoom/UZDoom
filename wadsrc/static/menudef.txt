@@ -2512,7 +2512,7 @@ OptionMenu "CompatibilityOptions" protected
 	ScrollTop 1
 	StaticText " "
 	Option "$CMPTMNU_AUTO",							"sv_autocompat", "OnOff"
-	Option "$CMPTMNU_IGNOREWAD",					"alwaysapplycompatflags", "YesNo"
+	Option "$CMPTMNU_IGNOREWAD",					"alwaysapplycompatflags", "OnOff"
 	Option "$CMPTMNU_MODE",							"compatmode", "CompatModes", "", 1
 	StaticText " "
 	Submenu "$CMPTMNU_ACTORBEHAVIOR",				"CompatActorMenu"

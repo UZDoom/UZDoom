@@ -2581,6 +2581,24 @@ DEFINE_ACTION_FUNCTION(_CompatibilityMenu, GetCompatOverride)
 	ACTION_RETURN_INT(status);
 }
 
+// Returns the active COMPLVL / -complevel for CompatibilityMenu:
+//    0 = none
+//    1,2,3,4  = Vanilla, Boom, MBF, MBF21 (active)
+//   -1,-2,-3,-4 = same levels, but ignored because alwaysapplycompatflags is set
+extern int g_ActiveComplvl;
+
+DEFINE_ACTION_FUNCTION(_CompatibilityMenu, GetComplvlInfo)
+{
+	PARAM_PROLOGUE;
+	int res = 0;
+	if (g_ActiveComplvl >= 0)
+	{
+		res = g_ActiveComplvl + 1;
+		if (alwaysapplycompatflags) res = -res;
+	}
+	ACTION_RETURN_INT(res);
+}
+
 void FLevelLocals::ApplyCompatibility()
 {
 	int old = i_compatflags;

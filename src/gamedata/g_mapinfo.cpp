@@ -65,6 +65,8 @@ enum CompatibilityLevels : int
 	COMPLVL_MBF21,
 };
 
+int g_ActiveComplvl = COMPLVL_NONE;
+
 //==========================================================================
 //
 //
@@ -2711,6 +2713,7 @@ void G_ParseMapInfo(FString basemapinfo)
 
 	ELevelCompatFlags flags1 = 0;
 	ELevelCompatFlags2 flags2 = 0;
+	g_ActiveComplvl = COMPLVL_NONE;
 
 	if (gameinfo.gametype == GAME_Doom)
 	{
@@ -2755,6 +2758,8 @@ void G_ParseMapInfo(FString basemapinfo)
 				else if (wishlevel.CompareNoCase("mbf21") == 0)	level = COMPLVL_MBF21;
 			}
 		}
+
+		g_ActiveComplvl = level;
 
 		switch (level)
 		{
