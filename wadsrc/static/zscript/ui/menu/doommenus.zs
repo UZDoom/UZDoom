@@ -64,8 +64,8 @@ class CompatibilityMenu : OptionMenu
 			(screen.GetWidth() - OptionWidth (s) * CleanXfac_1) / 2, 35 * CleanXfac_1, s,
 			DTA_CleanNoMove_1, true);
 
+		if (gamestate != GS_LEVEL) return;
 		int clInfo = GetComplvlInfo();
-		if (gamestate != GS_LEVEL && clInfo == 0) return;
 
 		int y = mDesc.mPosition;
 		if (y <= 0)
@@ -96,23 +96,20 @@ class CompatibilityMenu : OptionMenu
 
 				if (clInfo != 0 && opt.mCVar == CVar.FindCVar('compatmode'))
 				{
-					if (opt.mCVar.GetInt() == 0)
+					bool ign = (clInfo < 0);
+					bool outOfSpec = ((compatflags & ~mask1) != 0) || ((compatflags2 & ~mask2) != 0);
+					String lvlName;
+					switch (abs(clInfo))
 					{
-						bool outOfSpec = ((compatflags & ~mask1) != 0) || ((compatflags2 & ~mask2) != 0);
-						bool ign = (clInfo < 0) || outOfSpec;
-						String lvlName;
-						switch (abs(clInfo))
-						{
-						case 1: lvlName = "Vanilla"; break;
-						case 2: lvlName = "Boom"; break;
-						case 3: lvlName = "MBF"; break;
-						case 4: lvlName = "MBF21"; break;
-						}
-						if (lvlName.Length() > 0)
-						{
-							tag = ign ? String.Format("(%s, ignored)", lvlName) : String.Format("(%s)", lvlName);
-							col = ign ? Font.CR_DARKGRAY : OptionMenuSettings.mFontColorValue;
-						}
+					case 1: lvlName = "Vanilla"; break;
+					case 2: lvlName = "Boom"; break;
+					case 3: lvlName = "MBF"; break;
+					case 4: lvlName = "MBF21"; break;
+					}
+					if (lvlName.Length() > 0)
+					{
+						tag = ign ? String.Format("(%s, ignored)", lvlName) : (outOfSpec ? String.Format("(+ %s)", lvlName) : String.Format("(%s)", lvlName));
+						col = ign ? Font.CR_DARKGRAY : (outOfSpec ? Font.CR_RED : OptionMenuSettings.mFontColorValue);
 					}
 				}
 				else if (gamestate == GS_LEVEL)
