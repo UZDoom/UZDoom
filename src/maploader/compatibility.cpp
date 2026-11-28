@@ -171,6 +171,7 @@ static FCompatOption Options[] =
 	{ "nosoulceilbounce",		COMPATF2_NOSOULCEILBOUNCE, SLOT_COMPAT2 },
 	{ "hitscanswitches",		COMPATF2_HITSCANSWITCHES, SLOT_COMPAT2 },
 	{ "monsterprojlines",		COMPATF2_MONSTERPROJLINES, SLOT_COMPAT2 },
+	{ "infinitemelee",			COMPATF2_INFINITEMELEE, SLOT_COMPAT2 },
 
 	{ NULL, 0, 0 }
 };

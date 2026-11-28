@@ -244,6 +244,7 @@ enum ELevelCompatFlag2 : uint32_t
 	COMPATF2_NOSOULCEILBOUNCE	= 1 << 22, // Charging Lost Souls do not bounce off ceilings
 	COMPATF2_HITSCANSWITCHES	= 1 << 23, // Only hitscan attacks can trigger shootable switches (no projectiles)
 	COMPATF2_MONSTERPROJLINES	= 1 << 24, // Doom II monster projectiles can trigger walkover linedef specials
+	COMPATF2_INFINITEMELEE		= 1 << 25, // Disable vertical Z-range check for melee attacks
 };
 using ELevelCompatFlags2 = TFlags<ELevelCompatFlag2>;
 DEFINE_TFLAGS_OPERATORS(ELevelCompatFlags2)

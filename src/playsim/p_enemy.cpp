@@ -271,7 +271,9 @@ int P_CheckMeleeRange (AActor* actor, double range)
 		return false;
 
 	// [RH] Don't melee things too far above or below actor.
-	if (!(actor->flags5 & MF5_NOVERTICALMELEERANGE))
+	if (!(actor->flags5 & MF5_NOVERTICALMELEERANGE) &&
+		!(actor->Level->i_compatflags & COMPATF_NO_PASSMOBJ) &&
+		!(actor->Level->i_compatflags2 & COMPATF2_INFINITEMELEE))
 	{
 		if (pl->Z() > actor->Top())
 			return false;
