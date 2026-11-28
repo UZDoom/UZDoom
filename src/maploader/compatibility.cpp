@@ -169,6 +169,7 @@ static FCompatOption Options[] =
 	{ "emulatemikoportals",		COMPATF2_EMULATEMIKOPORTALS, SLOT_COMPAT2 },
 	{ "transfersecret",			COMPATF2_TRANSFERSECRET, SLOT_COMPAT2 },
 	{ "nosoulceilbounce",		COMPATF2_NOSOULCEILBOUNCE, SLOT_COMPAT2 },
+	{ "hitscanswitches",		COMPATF2_HITSCANSWITCHES, SLOT_COMPAT2 },
 
 	{ NULL, 0, 0 }
 };

@@ -1513,6 +1513,7 @@ enum ECompatFlags
 	COMPATF2_RESERVEDLINEFLAG	= 1 << 20,	// disable certain linedef flag features that may clash with certain maps
 	COMPATF2_TRANSFERSECRET	= 1 << 21, // Allow Boom's Transfer Specials to transfer Secrets
 	COMPATF2_NOSOULCEILBOUNCE	= 1 << 22, // Charging Lost Souls do not bounce off ceilings
+	COMPATF2_HITSCANSWITCHES	= 1 << 23, // Only hitscan attacks can trigger shootable switches (no projectiles)
 };
 
 enum HitWaterFlags

@@ -2292,15 +2292,18 @@ static void CheckForPushSpecial(line_t *line, int side, AActor *mobj, DVector2 *
 		}
 		else if (mobj->flags2 & MF2_IMPACT)
 		{
-			if ((mobj->Level->flags2 & LEVEL2_MISSILESACTIVATEIMPACT) ||
-				!(mobj->flags & MF_MISSILE) ||
-				(mobj->target == NULL))
+			if (!((mobj->flags & MF_MISSILE) && (mobj->Level->i_compatflags2 & COMPATF2_HITSCANSWITCHES)))
 			{
-				P_ActivateLine(line, mobj, side, SPAC_Impact);
-			}
-			else
-			{
-				P_ActivateLine(line, mobj->target, side, SPAC_Impact);
+				if ((mobj->Level->flags2 & LEVEL2_MISSILESACTIVATEIMPACT) ||
+					!(mobj->flags & MF_MISSILE) ||
+					(mobj->target == NULL))
+				{
+					P_ActivateLine(line, mobj, side, SPAC_Impact);
+				}
+				else
+				{
+					P_ActivateLine(line, mobj->target, side, SPAC_Impact);
+				}
 			}
 		}
 	}

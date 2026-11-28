@@ -2547,6 +2547,7 @@ OptionMenu "CompatMapMenu" protected
 	Position -35
 	Title "$CMPTMNU_MAPACTIONBEHAVIOR"
 	Option "$CMPTMNU_USEBLOCKING",					"compat_USEBLOCKING", "YesNo"
+	Option "$CMPTMNU_HITSCANSWITCHES",				"compat_hitscanswitches", "YesNo"
 	Option "$CMPTMNU_ANYBOSSDEATH",					"compat_ANYBOSSDEATH", "YesNo"
 	Option "$CMPTMNU_NODOORLIGHT",					"compat_NODOORLIGHT", "YesNo"
 	Option "$CMPTMNU_LIGHT",						"compat_LIGHT", "YesNo"
