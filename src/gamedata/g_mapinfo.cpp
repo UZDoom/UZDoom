@@ -2738,12 +2738,13 @@ void G_ParseMapInfo(FString basemapinfo)
 			if (comp >= 0)
 			{
 				auto complvl = fileSystem.ReadFile(comp);
-				wishlevel    = complvl.string();
+				wishlevel    = FString(complvl.string(), complvl.size());
+				wishlevel.StripLeftRight();
 
-				if (wishlevel.CompareNoCase("vanilla"))	level = COMPLVL_VANILLA;
-				else if (wishlevel.CompareNoCase("boom"))	level = COMPLVL_BOOM;
-				else if (wishlevel.CompareNoCase("mbf"))	level = COMPLVL_MBF;
-				else if (wishlevel.CompareNoCase("mbf21"))	level = COMPLVL_MBF21;
+				if (wishlevel.CompareNoCase("vanilla") == 0)	level = COMPLVL_VANILLA;
+				else if (wishlevel.CompareNoCase("boom") == 0)	level = COMPLVL_BOOM;
+				else if (wishlevel.CompareNoCase("mbf") == 0)	level = COMPLVL_MBF;
+				else if (wishlevel.CompareNoCase("mbf21") == 0)	level = COMPLVL_MBF21;
 			}
 		}
 
@@ -2774,15 +2775,16 @@ void G_ParseMapInfo(FString basemapinfo)
 				         COMPATF_INVISIBILITY;
 
 				flags2 = COMPATF2_EXPLODE1 | COMPATF2_AVOID_HAZARDS | COMPATF2_STAYONLIFT | COMPATF2_POINTONLINE |
-			             COMPATF2_TRANSFERSECRET | COMPATF2_RESERVEDLINEFLAG;
+				         COMPATF2_EMULATEMIKOPORTALS | COMPATF2_TRANSFERSECRET | COMPATF2_RESERVEDLINEFLAG;
 				break;
 			case COMPLVL_MBF21:
 				Printf("Applied MBF21 compatibility level.\n");
 				flags1 = COMPATF_TRACE | COMPATF_SOUNDTARGET | COMPATF_BOOMSCROLL | COMPATF_MISSILECLIP |
-				         COMPATF_MUSHROOM | COMPATF_MASKEDMIDTEX | COMPATF_INVISIBILITY;
+				         COMPATF_CROSSDROPOFF | COMPATF_MUSHROOM | COMPATF_MBFMONSTERMOVE | COMPATF_NOBLOCKFRIENDS |
+				         COMPATF_MASKEDMIDTEX | COMPATF_INVISIBILITY;
 
 				flags2 = COMPATF2_EXPLODE1 | COMPATF2_AVOID_HAZARDS | COMPATF2_STAYONLIFT | COMPATF2_POINTONLINE |
-			             COMPATF2_TRANSFERSECRET | COMPATF2_RESERVEDLINEFLAG;
+				         COMPATF2_EMULATEMIKOPORTALS | COMPATF2_TRANSFERSECRET | COMPATF2_RESERVEDLINEFLAG;
 				break;
 		}
 	}
@@ -2804,6 +2806,16 @@ void G_ParseMapInfo(FString basemapinfo)
 	gamedefaults.compatmask |= flags1;
 	gamedefaults.compatflags2 |= flags2;
 	gamedefaults.compatmask2 |= flags2;
+	if (flags1 != 0 || flags2 != 0)
+	{
+		for (auto &lev : wadlevelinfos)
+		{
+			lev.compatflags |= flags1;
+			lev.compatmask |= flags1;
+			lev.compatflags2 |= flags2;
+			lev.compatmask2 |= flags2;
+		}
+	}
 
 	static const char* mapinfonames[] = { "MAPINFO", "ZMAPINFO", "UMAPINFO", NULL };
 	int nindex;
